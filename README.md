@@ -1,0 +1,3 @@
+# BlitzWord
+
+Initial repository commit.
