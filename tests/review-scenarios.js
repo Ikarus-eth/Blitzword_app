@@ -18,7 +18,7 @@ window.makeReviewSave=function(scenario){
       if(!q.correct){C.startTeaching(s,q.target,'battle',now);C.leaveTeaching(s,now);}
       C.prepareBattle(s,now);
     }
-    if(scenario==='summary'){s.session.elapsedMs=s.session.targetMs;C.completeSession(s,now);}
+    if(scenario==='summary'){s.session.elapsedMs=s.session.targetMs;}
   }
   return s;
 };

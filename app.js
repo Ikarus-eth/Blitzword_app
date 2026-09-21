@@ -8,7 +8,7 @@ const heroAssets=[maleHeroSheet,maleHeroSheet,maleHeroSheet,'assets/hero4.webp',
 const malePortraitCrops=[{x:183,y:145},{x:636,y:145},{x:1099,y:145}];
 const narrator=BlitzAudio.narrator({synth:window.speechSynthesis,Utterance:window.SpeechSynthesisUtterance});
 let store,state,paused=true,playing=false,blocked=false,lastTick=performance.now(),timer=null,epoch=0;
-const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:374,h:538},{x:1154,y:0,w:382,h:538},{x:0,y:538,w:384,h:486},{x:384,y:538,w:384,h:486},{x:768,y:538,w:384,h:486},{x:1152,y:538,w:384,h:486}];
+const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:374,h:538},{x:1154,y:0,w:382,h:538},{x:0,y:538,w:384,h:486},{x:384,y:538,w:384,h:486},{x:768,y:630,w:384,h:370},{x:1152,y:650,w:384,h:350}];
 let spriteSerial=0;
 function paintSprite(element,index) {
   const crop=spriteCrops[index],clip='sprite-crop-'+(++spriteSerial);
@@ -263,6 +263,7 @@ function renderSummary() {
   show('summary');playing=false;paused=true;cancelWork();const session=state.session;
   $('#summaryTitle').textContent=session.elapsedMs>=session.targetMs?'Challenge complete':'Practice saved';
   const records=state.campaign.battleRecords.filter(r=>r.sessionId===session.id),words=[...new Set(records.map(r=>r.target))];
+  $('#summaryDetail').hidden=words.length===0;
   $('#summaryWords').replaceChildren();
   words.forEach(word=>{const chip=document.createElement('span');chip.textContent=word;$('#summaryWords').append(chip);});
   $('#summaryDetail').innerHTML=`<div><strong>${words.length}</strong><span>words practiced</span></div><div><strong>${session.victories}</strong><span>${session.victories===1?'battle':'battles'} won</span></div>`;
