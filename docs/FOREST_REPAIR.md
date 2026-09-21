@@ -24,3 +24,15 @@ Briefs: landscape storybook watercolor and pencil, emerald woodland and warm amb
 - Published browser review verified forest setup, all three male hero choices, illustrated teaching, four choices plus help, and HUD separation at 1024×768, 768×1024 and 390×844. A live seven-attempt help-heavy demonstration reached the handoff; eight assessment misses then entered campaign practice. This Chrome viewport review is not a physical Safari/iPad test. Atlas clipping was corrected following visual inspection.
 
 Limitations: a six-word practice slice remains; the full planned chapter and enemy variety are separate work. Sprite movements are simple post-answer reactions, not multi-frame character animation. No professional narration clips were supplied. Native Safari keyboard and voice behavior need a physical iPad check.
+
+## All-screen child UX pass
+
+Camp now shows the selected full-length hero beside Pip. Hero selection has a Back control, an explicit selected state, and stacked character cards on narrow phones. Start and hero buttons name the next step. The existing device-reset action is tucked inside Grown-up settings instead of appearing beside the opening logo. It still requires a destructive-reset confirmation; this repair did not reset learner data.
+
+The handoff explains the question-mark control. A still Pip accompanies the reading check without revealing the answer. Results show the hero and Pip, gentle defeat wording, visible choice labels, and an explicit Back to camp button. Summary uses word chips and factual practice counts; an empty session does not show two large zero scores. Pause prioritizes Keep playing and Finish for now, with narrator and pacing controls in an expandable settings section. Saving failures use the same visual language and explain when a grown-up is needed; the underlying error remains visible.
+
+Save retry now restores setup or camp when play has not begun, and resumes through Pause when a committed answer was awaiting persistence. Regression flows verify that retries do not duplicate that answer.
+
+Further visual checks covered start, female and male hero selection, camp, illustrated teaching, battle, reading check, handoff, victory, retry, summary, pause and an unreadable-save state. Review used the real application in `tests/visual-review.html`, with test-only memory-backed fixtures that never read or alter learner storage. Sizes reviewed include 1024×768, 768×1024, 390×844 and 844×390. Phone hero cards, start-form spacing, lower-row sprite crops and landscape summary controls were corrected after screenshot review. Expanded adult settings may scroll on short screens.
+
+`tests/ui-flow.cjs` now runs six controller flows: the three first-battle exits, returning victory and defeat into chosen difficulty and a new session, and storage failure/retry at setup, camp and an answered question. All six pass alongside the 27 core/audio/storage tests. Browser logs showed extension metadata messages but no application errors in the inspected flows. These checks do not replace a physical iPad/Safari and voice-quality check.

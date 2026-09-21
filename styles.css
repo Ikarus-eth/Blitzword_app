@@ -59,7 +59,7 @@ body{overflow:hidden}button,input,select{font:inherit}button{cursor:pointer;touc
 }
 @media(max-height:420px){#setup{overflow:auto}.setupCard{max-height:100%;overflow:auto}.backButton{min-height:40px;font-size:17px}.heroGo{min-height:45px}}
 @media(max-width:480px) and (orientation:portrait){
- .setupCard{width:90%;padding:18px}.choiceRow{gap:6px}.chip{width:44px;height:44px}.setupPip{top:16%;height:24%}
+ .setupCard{width:90vw;padding:18px}.choiceRow{gap:6px}.chip{width:44px;height:44px}.setupPip{top:16%;height:24%}
  #hero{gap:14px;padding-top:68px}.heroTitle{font-size:29px}.heroGrid{grid-template-columns:1fr;gap:10px}.heroCard{display:flex;align-items:center;justify-content:center;padding:6px 14px;min-height:145px}.heroCard .sceneSprite{width:47%;height:135px}.heroName{width:47%;margin:0;font-size:25px}.heroGo{min-height:58px}
 }
 @media(max-width:480px) and (max-height:700px) and (orientation:portrait){
