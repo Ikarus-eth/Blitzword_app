@@ -7,10 +7,12 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="theme-color" content="#173d2f" />
 <title>BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=heroes-20260921" />
+<link rel="stylesheet" href="styles.css?v=practice-20260921" />
 </head>
 <body><main class="app" id="app">
 <button id="resetBtn" class="smallReset" title="Reset" aria-label="Reset">↺</button>
+<button id="pauseBtn" class="pauseButton" aria-label="Pause" hidden>Ⅱ</button>
+<button id="wordReady" class="roundButton wordReady" aria-label="Ready to choose" hidden>→</button>
 
 <section id="setup" class="screen active forest">
   <div class="setupBrand"><div class="logo">BlitzWord<span class="leaf">◆</span></div><div class="tag">Win the reading battle</div></div>
@@ -38,12 +40,13 @@
     <div class="routeHero"><span id="routeHeroImg" class="heroPortrait" role="img" aria-label="Selected hero"></span><img class="routePip" src="assets/pip.webp" alt="Pip"/></div>
     <div class="routeTitle">Ready?</div>
     <p class="routeSub" id="routeName"></p>
-    <div class="routeButtons"><button id="tryBattle" class="greenButton">Try a battle</button><button id="checkFirst" class="secondaryButton">Reading check first</button></div>
+    <div class="routeButtons"><button id="continueAdventure" class="greenButton" hidden>Continue adventure</button><button id="tryBattle" class="greenButton">Try a battle</button><button id="checkFirst" class="secondaryButton">Reading check first</button></div>
+    <p id="sessionNote" class="sessionNote"></p>
   </div>
 </section>
 
 <section id="teaching" class="screen">
-  <div class="teachCard parchment"><div class="teachSentence">The hero <span class="targetWord">sat</span> on the rock.</div><div class="teachScene" aria-label="The hero sitting on a rock with Pip"><div class="teachRock"></div><span id="teachHeroImg" class="teachHero heroPortrait" role="img" aria-label="Selected hero"></span><img class="teachPip" src="assets/pip.webp" alt="Pip"/></div><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay">🔊</button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
+  <div class="teachCard parchment"><div id="teachSentence" class="teachSentence"></div><img id="teachIllustration" class="teachIllustration" alt=""/><p id="lessonStatus" class="lessonStatus" aria-live="polite"></p><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay">🔊</button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
 </section>
 
 <section id="assessment" class="screen playfield">
@@ -52,16 +55,39 @@
 
 <section id="battle" class="screen playfield">
   <div class="battleShell">
-    <div class="topHud"><div id="heroHearts" class="hearts"></div><div class="enemyHud"><div class="enemyBar"><div id="enemyFill" class="enemyFill"></div></div><div id="enemyFace" class="enemyFace">🪨</div></div></div>
+    <div class="topHud"><div id="heroHearts" class="hearts" role="img"></div><div class="enemyHud"><div id="enemyHealth" class="enemyBar" role="img"><div id="enemyFill" class="enemyFill"></div></div><div id="enemyFace" class="enemyFace">🪨</div></div></div>
     <div class="battleCenter"><div id="battleScroll" class="scroll parchment"></div></div><div id="battleAnswers" class="answers"></div>
   </div>
   <span id="battleHeroImg" class="heroBadge heroPortrait" role="img" aria-label="Hero"></span><img class="pipBadge" src="assets/pip.webp" alt="Pip"/>
   <div id="feedback" class="feedback">✓</div>
-  <div id="correction" class="correction"><div class="correctionCard parchment"><div class="fieldLabel">The word was</div><div id="correctWord" class="correctWord"></div><div class="correctionControls"><button id="correctReplay" class="replay" aria-label="Replay">🔊</button><button id="correctContinue" class="roundButton" aria-label="Continue">→</button></div></div></div>
+  <div id="correction" class="correction"><div class="correctionCard parchment"><div class="fieldLabel">The word was</div><div id="correctWord" class="correctWord"></div><p id="correctionNote"></p><div class="correctionControls"><button id="correctReplay" class="replay" aria-label="Replay">🔊</button><button id="correctContinue" class="roundButton" aria-label="Continue">→</button></div></div></div>
 </section>
 
 <section id="result" class="screen">
   <div class="resultCard parchment"><div id="resultIcon" class="resultIcon"></div><div id="resultTitle" class="resultTitle"></div><div id="checkpoint" class="checkpoint"></div><div id="opponents" class="opponents"></div><button id="resultNext" class="greenButton resultNext">→</button></div>
 </section>
+<section id="summary" class="screen forest">
+  <div class="summaryCard parchment">
+    <img src="assets/pip.webp" alt="Pip" class="summaryPip"/>
+    <h2 id="summaryTitle">Challenge complete</h2>
+    <p id="summaryDetail"></p><p id="summaryWords"></p>
+    <p class="sessionNote">Your progress is saved.</p>
+    <div class="routeButtons"><button id="anotherChallenge" class="greenButton">Another challenge</button><button id="doneToday" class="secondaryButton">Done for today</button></div>
+  </div>
+</section>
+<div id="pausePanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="pauseTitle" hidden>
+  <div class="pauseCard parchment"><h2 id="pauseTitle">Paused</h2><p id="pauseTime"></p>
+    <label id="paceSetting" class="paceSetting"><input id="selfPacedSetting" type="checkbox"/> Take my time with each word</label>
+    <div class="routeButtons"><button id="pauseResume" class="greenButton">Continue</button><button id="pauseFinish" class="secondaryButton">Finish for now</button></div>
+  </div>
+</div>
+<div id="saveNotice" class="modalLayer saveNotice" role="alertdialog" aria-modal="true" aria-labelledby="saveTitle" hidden>
+  <div class="pauseCard parchment"><h2 id="saveTitle">Saving paused</h2><p id="saveMessage"></p>
+    <div class="routeButtons"><button id="retrySave" class="greenButton">Try saving again</button><button id="reloadSaved" class="secondaryButton">Reload saved progress</button></div>
+  </div>
+</div>
 </main>
-<script src="app.js?v=heroes-20260921"></script></body></html>
+<script src="content.js?v=practice-20260921"></script>
+<script src="game-core.js?v=practice-20260921"></script>
+<script src="storage.js?v=practice-20260921"></script>
+<script src="app.js?v=practice-20260921"></script></body></html>

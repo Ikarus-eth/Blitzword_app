@@ -31,3 +31,46 @@ button,input{font:inherit}.app{width:100%;height:100%;position:relative;backgrou
 @media (orientation:portrait){#setup{flex-direction:column;gap:20px;overflow:auto}.setupBrand{width:100%;margin-top:3vh}.setupCard{width:min(88vw,640px)}.heroGrid{grid-template-columns:1fr;max-height:64vh;overflow:auto;padding:8px}.heroCard{display:grid;grid-template-columns:120px 1fr;align-items:center}.heroCard .heroPortrait{width:115px;height:115px}.answers{grid-template-columns:1fr 1fr;max-width:680px}.routePanel{padding:24px}.scroll{width:78vw}.enemyHud{width:52vw}.heroBadge{width:78px;height:78px}.pipBadge{left:86px;width:66px;height:82px}.screen{overflow:auto}}
 /* Portraits are viewports onto approved artwork, never generated substitutes. */
 .heroPortrait{display:inline-block;flex-shrink:0;background-repeat:no-repeat;background-position:center;background-size:cover}
+[hidden]{display:none!important}
+button:disabled{opacity:.45;cursor:wait}
+.lessonStatus:empty{display:none}.lessonStatus{font-size:16px;margin:0;text-align:center}
+button{touch-action:manipulation}button:focus-visible,input:focus-visible{outline:4px solid #246bcb;outline-offset:4px}
+.mask{animation:none}
+.pauseButton{position:absolute;z-index:30;top:max(18px,env(safe-area-inset-top));left:calc(50% - 24px);width:48px;height:48px;border-radius:50%;border:2px solid #fff4d5;background:#234d3c;color:white;font:700 23px Arial,sans-serif;cursor:pointer}
+.wordReady{position:absolute;z-index:15;left:calc(50% - 37px);bottom:max(40px,env(safe-area-inset-bottom))}
+.sessionNote{font-size:17px;line-height:1.4;color:#526550;margin:16px 0 0}
+.modalLayer{position:absolute;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(10,29,22,.92)}
+.pauseCard,.summaryCard{width:min(620px,90vw);padding:30px;text-align:center;max-height:90vh;overflow:auto}
+.pauseCard h2,.summaryCard h2{font-size:clamp(28px,4vw,42px);margin:8px 0 14px}
+.pauseCard p{font-size:19px;line-height:1.5}
+.paceSetting{display:flex;align-items:center;gap:12px;text-align:left;font-size:20px;padding:20px 5px;margin-bottom:15px}
+.paceSetting input{width:26px;height:26px;accent-color:#226948;flex-shrink:0}
+.saveNotice{z-index:100}
+#summary{align-items:center;justify-content:center}
+.summaryPip{width:115px;height:140px;object-fit:contain}
+#summaryDetail{font-size:22px}#summaryWords{font-size:23px;line-height:1.6;color:#3b6545;margin:20px 0}
+.summaryCard .routeButtons{margin-top:22px}
+.opponents.single{grid-template-columns:1fr;max-width:270px}
+#teaching{padding-top:max(72px,env(safe-area-inset-top));align-items:center;justify-content:center}
+.teachCard{width:min(890px,90vw);max-height:calc(100dvh - 100px);padding:20px 28px;display:flex;flex-direction:column;align-items:center;gap:12px;overflow:auto}
+.teachSentence{font-size:clamp(25px,3.4vw,43px);line-height:1.4;margin:0;flex-shrink:0;text-align:center}
+.teachIllustration{display:block;min-height:0;max-height:calc(100dvh - 310px);width:auto;max-width:100%;object-fit:contain;border-radius:17px;border:2px solid #baab86}
+.teachControls{margin:0;flex-shrink:0;display:flex;justify-content:center;gap:20px}
+.targetWord.spoken{background:#ffd631;box-shadow:0 0 0 4px rgba(255,214,49,.35)}
+#correctionNote{font-size:20px;line-height:1.4;color:#426346;min-height:1.4em}
+.pipBadge{display:block;position:absolute;left:124px;bottom:20px;width:72px;height:94px;object-fit:contain;pointer-events:none}
+@media (orientation:portrait){
+  .pauseButton{top:max(18px,env(safe-area-inset-top))}
+  #battle .answers{width:90vw;margin:12px auto 125px;gap:10px}
+  .pipBadge{left:105px;bottom:20px;width:65px;height:80px}
+  .teachCard{width:90vw;padding:18px;gap:18px}
+  .teachIllustration{max-height:50dvh;width:100%;height:auto}
+  .teachSentence{font-size:clamp(25px,4.5vw,40px)}
+  .wordReady{bottom:130px}
+}
+@media (max-height:600px) and (orientation:landscape){
+  .teachCard{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:12px;max-height:calc(100dvh - 82px);padding:12px 20px}
+  .teachSentence{grid-column:1/-1;font-size:26px}.teachIllustration{max-height:calc(100dvh - 180px);width:100%}
+  .teachControls{flex-direction:column}.teachControls button{width:60px;height:60px}
+  .pauseCard,.summaryCard{padding:18px}.summaryPip{height:65px}.summaryCard h2{font-size:28px}
+}
