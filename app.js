@@ -11,8 +11,10 @@ let store,state,paused=true,playing=false,blocked=false,lastTick=performance.now
 const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:374,h:538},{x:1154,y:0,w:382,h:538},{x:0,y:538,w:384,h:486},{x:384,y:538,w:384,h:486},{x:768,y:538,w:384,h:486},{x:1152,y:538,w:384,h:486}];
 let spriteSerial=0;
 function paintSprite(element,index) {
-  const crop=spriteCrops[index],clip='sprite-crop-'+(++spriteSerial);element.dataset.sprite=String(index);element.style.backgroundImage='none';
-  element.innerHTML=`<svg viewBox="${crop.x} ${crop.y} ${crop.w} ${crop.h}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><defs><clipPath id="${clip}"><rect x="${crop.x}" y="${crop.y}" width="${crop.w}" height="${crop.h}"/></clipPath></defs><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip})"/></svg>`;
+  const crop=spriteCrops[index],clip='sprite-crop-'+(++spriteSerial);
+  const shape=index===1?'<polygon points="384,0 780,0 780,350 765,394 810,525 384,538"/>':index===2?'<polygon points="820,0 1154,0 1154,538 820,538 810,486 790,440 780,360"/>':`<rect x="${crop.x}" y="${crop.y}" width="${crop.w}" height="${crop.h}"/>`;
+  element.dataset.sprite=String(index);element.style.backgroundImage='none';
+  element.innerHTML=`<svg viewBox="${crop.x} ${crop.y} ${crop.w} ${crop.h}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><defs><clipPath id="${clip}">${shape}</clipPath></defs><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip})"/></svg>`;
 }
 function paintHero(element,index) {
   if(element.classList.contains('sceneSprite')){paintSprite(element,index);element.setAttribute('aria-label',classes[index%3]+' hero');return;}
