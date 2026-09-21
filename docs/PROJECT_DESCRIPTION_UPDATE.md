@@ -1,0 +1,7 @@
+# Add to BlitzWord project instructions
+
+Character reference update, approved 21 September 2026: use the final mixed male Rowanfire lineup in `Ikarus-eth/Blitzword_app/assets/rowanfire-boys-2026-09-21.png`. Male Mage: ash-blond soft waves. Male Knight: golden-blond tousled hair. Male Archer: chestnut side-swept hair. All three use the faces selected from comparison sheet 4 and the exact outfits, equipment and proportions in the final combined lineup. This replaces every older male depiction, including the boys in the original Option 17 character bible and earlier screen mockups. The original Option 17 sheet remains authoritative for the female heroes only; Pip remains Ember Guardian. Follow the current repository `docs/BLITZWORD_PRODUCT_SPEC.md` and `docs/BLITZWORD_REFERENCE_IMAGES.md`. Treat older attached images as layout references only wherever they conflict with the current character identities. Do not reintroduce old male assets or reset learner data during art updates.
+
+## Project attachment maintenance
+
+Attach the approved mixed male lineup from this conversation. Replace older product-spec and reference-guide attachments with the current two Markdown files. Keep the original six-character bible for its female references, with the instruction above limiting its authority. Older battle and teaching mockups may remain for their layouts; their male characters are superseded. Remove the five unselected comparison sheets from active project reference attachments if they were added there.
