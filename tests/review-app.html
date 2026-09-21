@@ -1,7 +1,11 @@
 <!doctype html><html lang="en"><meta charset="utf-8"><title>Isolated BlitzWord review</title><script>
 // This separate test entry uses only memory. It never reads or writes learner saves.
+const scene=new URLSearchParams(location.search).get('scene')||'setup';
 fetch('../index.html?review='+Date.now(),{cache:'no-store'}).then(r=>r.text()).then(html=>{
- const override=`<script>window.BlitzStorage={...BlitzStorage,KEY:'blitzword_visual_review',AdventureStore:class extends BlitzStorage.AdventureStore{constructor(){const data=new Map();super({getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v),removeItem:k=>data.delete(k)});}}};<\/script>`;
- html=html.replace('<head>','<head><base href="../">').replace('<script src="app.js',override+'<script src="app.js');
+ const safeScene=JSON.stringify(scene).replace(/</g,'\\u003c');
+ const override=`<script src="tests/review-scenarios.js?v=r5"><\/script><script>
+ window.reviewScene=${safeScene};window.BlitzStorage={...BlitzStorage,AdventureStore:class extends BlitzStorage.AdventureStore{constructor(){const data=new Map([[BlitzStorage.KEY,window.reviewScene==='error'?'broken save':JSON.stringify(makeReviewSave(window.reviewScene))]]);super({getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v),removeItem:k=>data.delete(k)});}}};<\/script>`;
+ const activate=`<script>if(!['setup','heroes','route','error'].includes(window.reviewScene)){document.getElementById('continueAdventure').click();if(window.reviewScene==='pause')document.getElementById('pauseBtn').click();}<\/script>`;
+ html=html.replace('<head>','<head><base href="../">').replace('<script src="app.js',override+'<script src="app.js').replace('</body>',activate+'</body>');
  document.open();document.write(html);document.close();
 });</script></html>
