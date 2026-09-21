@@ -676,3 +676,10 @@ Implemented: Continue adventure; individual answer saving; unfinished battle and
 Four Pip illustrations live in `assets/teaching/`. See `TEACHING_SLICE.md` for exact word-to-sentence mappings, asset paths, prompts, review and limitations. These replace the portrait-on-rock teaching placeholder for this slice. The male and female hero references remain unchanged. Pip is now visible beside the hero portrait in battle.
 
 The broader chapter, full battle-scene artwork, dragon growth, parent reporting, remote analytics, native iOS packaging, payments and offline asset caching remain unimplemented. Browser speech highlights the spoken target when word-boundary events are available; voices without those events retain the static highlight and underline.
+
+
+## 21. Forest and first-battle repair — 21 September 2026
+
+The opening form now includes hatchling Pip in an illustrated mystical forest. Native name entry disables autocorrection and spellcheck. Battle uses full-length approved hero appearances, Pip and Thornling with separate word, answer, health and pause regions. Four equal choices and a separate `?` help action are always available during selection. Help is supported practice without damage.
+
+Wrong answers open the reviewed teaching image and highlighted sentence directly, replacing the intermediate correction modal. The optional demonstration has a maximum of seven total attempts including the guided example, then a saved handoff to the existing reading check. Victory and defeat can end it sooner. Assessment logic is preserved. Natural-pitch device narration and narrator choice replace pitch-shifted speech; prerecorded narration is still pending. See `FOREST_REPAIR.md` for assets, verification and limitations.

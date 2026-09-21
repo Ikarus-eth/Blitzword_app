@@ -16,7 +16,7 @@
       learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[]},
       campaign:{wins:0,checkpointWins:0,enemyStrength:3,battleRecords:[]},
       settings:{selfPaced:false}, activity:'route', screen:'setup', battle:null,
-      teaching:null, result:null, session:null, sessions:[], demoComplete:false};
+      teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false};
   }
   function migrate(old) {
     if (!old || typeof old !== 'object' || Array.isArray(old)) throw new Error('Invalid saved adventure');
@@ -113,7 +113,7 @@
     if (!b || b.resolved) return;
     if (b.question && !b.question.answeredAt) return b.question;
     if (b.question) b.question.phase='done';
-    if (b.heroHealth<=0 || b.enemyHealth<=0) { resolveBattle(s,now); return; }
+    if (b.heroHealth<=0 || b.enemyHealth<=0 || (b.demo && b.turn>=7)) { resolveBattle(s,now); return; }
     if (!b.demo && isSessionDue(s)) { completeSession(s,now); return; }
     const item=b.demo ? byWord[Content.demoWords[b.turn % Content.demoWords.length]] : selectPracticeWord(s,now);
     const word=s.learning.words[item.w];
@@ -143,7 +143,8 @@
   }
   function answerBattle(s,opt,now) {
     const b=s.battle,q=b?.question;
-    if (!q || q.answeredAt || q.phase!=='choices' || !q.options.includes(opt)) return null;
+    if (!q || q.answeredAt || q.phase!=='choices' || (opt!=='?'&&!q.options.includes(opt))) return null;
+    if(opt==='?'&&!q.supportReasons.includes('help-request'))q.supportReasons.push('help-request');
     const rec=observation(s,q,opt,now,b.demo?'demoBattle':'battle');
     rec.battleId=b.id; rec.sessionId=b.demo?null:s.session.id;
     rec.heroHealthBefore=b.heroHealth; rec.enemyHealthBefore=b.enemyHealth;
@@ -210,12 +211,18 @@
     const b=s.battle;
     if (!b || b.resolved) return;
     b.resolved=true;
-    if (b.demo) { s.demoComplete=true; s.battle=null; startAssessment(s,now); return; }
+    if (b.demo) { s.demoComplete=true; s.handoff={victory:b.enemyHealth<=0};s.battle=null;s.activity='handoff';return; }
     const victory=b.enemyHealth<=0;
     if (victory) { s.campaign.wins++; s.session.victories++; if (s.campaign.wins%2===0) s.campaign.checkpointWins=s.campaign.wins; }
     else s.campaign.wins=s.campaign.checkpointWins;
     s.result={victory,strength:b.maxHealth,battleId:b.id}; s.activity='result';
     if (isSessionDue(s)) completeSession(s,now);
+  }
+  function leaveHandoff(s,now){
+    if(!s.handoff)return false;
+    s.handoff=null;
+    if(s.assessment.done)startBattle(s,now);else startAssessment(s,now);
+    return true;
   }
   function startAssessment(s,now) {
     if (s.assessment.done) return false;
@@ -279,5 +286,6 @@
   }
   return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
-    startAssessment,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment};
+    startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment};
 });
+

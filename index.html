@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="theme-color" content="#173d2f" />
 <title>BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=practice-20260921" />
+<link rel="stylesheet" href="styles.css?v=forest-20260921-r1" />
 </head>
 <body><main class="app" id="app">
 <button id="resetBtn" class="smallReset" title="Reset" aria-label="Reset">↺</button>
@@ -16,10 +16,11 @@
 
 <section id="setup" class="screen active forest">
   <div class="setupBrand"><div class="logo">BlitzWord<span class="leaf">◆</span></div><div class="tag">Win the reading battle</div></div>
+  <span class="sceneSprite setupPip" data-sprite="6" role="img" aria-label="Pip, your dragon companion"></span>
   <div class="setupCard parchment">
-    <h2>Set up</h2>
-    <div class="fieldLabel">Your name</div>
-    <input id="nameInput" class="nameInput" maxlength="18" autocomplete="off" placeholder="Name" />
+    
+    <label class="fieldLabel" for="nameInput">Your name</label>
+    <input id="nameInput" class="nameInput" maxlength="18" autocomplete="off" autocorrect="off" autocapitalize="words" spellcheck="false" enterkeyhint="next" placeholder="Name" />
     <div class="fieldLabel">How old are you?</div><div class="choiceRow" id="ageChoices"></div>
     <div class="fieldLabel">Pick your hero look</div>
     <div class="choiceRow">
@@ -50,19 +51,22 @@
 </section>
 
 <section id="assessment" class="screen playfield">
-  <div class="battleShell"><div class="topHud"><div class="assessmentMark">✦</div></div><div class="battleCenter"><div id="assessmentScroll" class="scroll parchment"></div></div><div id="assessmentAnswers" class="answers"></div><button id="assessmentUnsure" class="unsure" aria-label="I'm not sure">?</button></div>
+  <div class="battleShell"><div class="topHud"><div class="modeLabel">Reading check</div><div id="assessmentProgress" class="assessmentProgress"></div></div><div class="battleCenter"><div id="assessmentScroll" class="scroll parchment"></div></div><div class="answerDock"><div id="assessmentAnswers" class="answers"></div><button id="assessmentUnsure" class="unsure" aria-label="I'm not sure" hidden>?</button></div></div>
 </section>
 
 <section id="battle" class="screen playfield">
   <div class="battleShell">
-    <div class="topHud"><div id="heroHearts" class="hearts" role="img"></div><div class="enemyHud"><div id="enemyHealth" class="enemyBar" role="img"><div id="enemyFill" class="enemyFill"></div></div><div id="enemyFace" class="enemyFace">🪨</div></div></div>
-    <div class="battleCenter"><div id="battleScroll" class="scroll parchment"></div></div><div id="battleAnswers" class="answers"></div>
+    <div class="topHud"><div id="heroHearts" class="hearts" role="img"></div><div id="battleMode" class="modeLabel">Adventure</div><div class="enemyHud"><div id="enemyHealth" class="enemyBar" role="img"><div id="enemyFill" class="enemyFill"></div></div></div></div>
+    <div class="battleCenter"><div id="battleScroll" class="scroll parchment"></div></div><div class="answerDock"><div id="battleAnswers" class="answers"></div><button id="battleUnsure" class="unsure" aria-label="I'm not sure" hidden>?</button></div>
   </div>
-  <span id="battleHeroImg" class="heroBadge heroPortrait" role="img" aria-label="Hero"></span><img class="pipBadge" src="assets/pip.webp" alt="Pip"/>
+  <span id="battleHeroImg" class="sceneSprite battleHero" role="img" aria-label="Hero"></span><span class="sceneSprite battlePip" data-sprite="6" role="img" aria-label="Pip"></span><span id="enemyFace" class="sceneSprite battleEnemy" data-sprite="7" role="img" aria-label="Thornling"></span>
   <div id="feedback" class="feedback">✓</div>
-  <div id="correction" class="correction"><div class="correctionCard parchment"><div class="fieldLabel">The word was</div><div id="correctWord" class="correctWord"></div><p id="correctionNote"></p><div class="correctionControls"><button id="correctReplay" class="replay" aria-label="Replay">🔊</button><button id="correctContinue" class="roundButton" aria-label="Continue">→</button></div></div></div>
+
 </section>
 
+<section id="handoff" class="screen forest">
+  <div class="handoffCard parchment"><span class="sceneSprite handoffPip" data-sprite="6" role="img" aria-label="Pip"></span><h1 id="handoffTitle">The path is clear!</h1><p>A quiet moment to find your starting point.</p><button id="handoffNext" class="greenButton">Reading check →</button></div>
+</section>
 <section id="result" class="screen">
   <div class="resultCard parchment"><div id="resultIcon" class="resultIcon"></div><div id="resultTitle" class="resultTitle"></div><div id="checkpoint" class="checkpoint"></div><div id="opponents" class="opponents"></div><button id="resultNext" class="greenButton resultNext">→</button></div>
 </section>
@@ -77,6 +81,7 @@
 </section>
 <div id="pausePanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="pauseTitle" hidden>
   <div class="pauseCard parchment"><h2 id="pauseTitle">Paused</h2><p id="pauseTime"></p>
+    <label class="voiceSetting" for="voiceChoice">Narrator</label><select id="voiceChoice" aria-label="Narrator"></select><button id="previewVoice" class="voicePreview">Listen</button>
     <label id="paceSetting" class="paceSetting"><input id="selfPacedSetting" type="checkbox"/> Take my time with each word</label>
     <div class="routeButtons"><button id="pauseResume" class="greenButton">Continue</button><button id="pauseFinish" class="secondaryButton">Finish for now</button></div>
   </div>
@@ -87,7 +92,9 @@
   </div>
 </div>
 </main>
-<script src="content.js?v=practice-20260921"></script>
-<script src="game-core.js?v=practice-20260921"></script>
-<script src="storage.js?v=practice-20260921"></script>
-<script src="app.js?v=practice-20260921"></script></body></html>
+<script src="content.js?v=forest-20260921-r1"></script>
+<script src="game-core.js?v=forest-20260921-r1"></script>
+<script src="storage.js?v=forest-20260921-r1"></script>
+<script src="audio.js?v=forest-20260921-r1"></script>
+<script src="app.js?v=forest-20260921-r1"></script></body></html>
+

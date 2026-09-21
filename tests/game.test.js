@@ -127,3 +127,29 @@ test('every practice target has four distinct choices, a reviewed illustration a
   const fs=require('node:fs'),path=require('node:path');
   for(const item of Content.words){assert.equal(new Set(item.d).size,4);assert.ok(item.d.includes(item.w));assert.match(item.sentence,new RegExp('\\b'+item.w+'\\b','i'));assert.ok(fs.statSync(path.join(__dirname,'../assets/teaching',item.image+'.webp')).size>1000);}
 });
+
+
+test('demo win, defeat and repeated help each finish once and survive handoff reload',()=>{
+  for(const route of ['win','lose','help']){
+    let s=fresh();Core.startBattle(s,START,{demo:true});let count=0;
+    while(s.activity==='battle'&&count<10){
+      const q=present(s,START+count*5000);if(!q)break;
+      Core.answerBattle(s,route==='win'?q.target:route==='help'?'?':q.options.find(x=>x!==q.target),START+count*5000);
+      if(!s.battle.question.correct){Core.startTeaching(s,q.target,'battle',START+count*5000+500);Core.leaveTeaching(s,START+count*5000+1000);}
+      Core.prepareBattle(s,START+count*5000+2000);count++;
+    }
+    assert.equal(s.activity,'handoff',route);assert.ok(count<=7);assert.equal(s.demoComplete,true);
+    assert.equal(s.campaign.wins,0);assert.equal(s.assessment.progress,null);
+    const records=s.campaign.battleRecords.length;s=roundtrip(s);
+    assert.equal(Core.leaveHandoff(s,START+60000),true);assert.equal(s.activity,'assessment');
+    assert.equal(Core.leaveHandoff(s,START+61000),false);assert.equal(s.campaign.battleRecords.length,records);
+    Core.prepareAssessment(s,START+62000);assert.ok(s.assessment.progress.question);
+  }
+});
+test('battle question-mark help opens support without damage or independent credit',()=>{
+  const s=campaign(),q=present(s),r=Core.answerBattle(s,'?',START);
+  assert.equal(r.firstResponse,'?');assert.equal(r.supported,true);assert.equal(r.correct,false);
+  assert.equal(s.battle.heroHealth,3);assert.equal(s.battle.enemyHealth,3);assert.equal(s.session.independent,0);
+  Core.startTeaching(s,q.target,'battle',START+1000);Core.leaveTeaching(s,START+2000);
+  assert.notEqual(present(s,START+3000).target,q.target);
+});
