@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="theme-color" content="#173d2f" />
 <title>BlitzWord</title>
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=heroes-20260921" />
 </head>
 <body><main class="app" id="app">
 <button id="resetBtn" class="smallReset" title="Reset" aria-label="Reset">↺</button>
@@ -21,8 +21,8 @@
     <div class="fieldLabel">How old are you?</div><div class="choiceRow" id="ageChoices"></div>
     <div class="fieldLabel">Pick your hero look</div>
     <div class="choiceRow">
-      <button class="genderCard" data-gender="boy"><img src="assets/hero1.webp" alt="Boy hero"/><span>Boy</span></button>
-      <button class="genderCard" data-gender="girl"><img src="assets/hero4.webp" alt="Girl hero"/><span>Girl</span></button>
+      <button class="genderCard" data-gender="boy"><span class="heroPortrait" data-hero-index="0" role="img" aria-label="Boy hero"></span><span>Boy</span></button>
+      <button class="genderCard" data-gender="girl"><span class="heroPortrait" data-hero-index="3" role="img" aria-label="Girl hero"></span><span>Girl</span></button>
     </div>
     <button id="setupNext" class="greenButton setupGo" aria-label="Continue">→</button>
   </div>
@@ -35,7 +35,7 @@
 
 <section id="route" class="screen forest">
   <div class="routePanel parchment">
-    <div class="routeHero"><img id="routeHeroImg" alt="Selected hero"/><img class="routePip" src="assets/pip.webp" alt="Pip"/></div>
+    <div class="routeHero"><span id="routeHeroImg" class="heroPortrait" role="img" aria-label="Selected hero"></span><img class="routePip" src="assets/pip.webp" alt="Pip"/></div>
     <div class="routeTitle">Ready?</div>
     <p class="routeSub" id="routeName"></p>
     <div class="routeButtons"><button id="tryBattle" class="greenButton">Try a battle</button><button id="checkFirst" class="secondaryButton">Reading check first</button></div>
@@ -43,7 +43,7 @@
 </section>
 
 <section id="teaching" class="screen">
-  <div class="teachCard parchment"><div class="teachSentence">The hero <span class="targetWord">sat</span> on the rock.</div><div class="teachScene" aria-label="The hero sitting on a rock with Pip"><div class="teachRock"></div><img id="teachHeroImg" class="teachHero" alt="Selected hero"/><img class="teachPip" src="assets/pip.webp" alt="Pip"/></div><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay">🔊</button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
+  <div class="teachCard parchment"><div class="teachSentence">The hero <span class="targetWord">sat</span> on the rock.</div><div class="teachScene" aria-label="The hero sitting on a rock with Pip"><div class="teachRock"></div><span id="teachHeroImg" class="teachHero heroPortrait" role="img" aria-label="Selected hero"></span><img class="teachPip" src="assets/pip.webp" alt="Pip"/></div><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay">🔊</button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
 </section>
 
 <section id="assessment" class="screen playfield">
@@ -55,7 +55,7 @@
     <div class="topHud"><div id="heroHearts" class="hearts"></div><div class="enemyHud"><div class="enemyBar"><div id="enemyFill" class="enemyFill"></div></div><div id="enemyFace" class="enemyFace">🪨</div></div></div>
     <div class="battleCenter"><div id="battleScroll" class="scroll parchment"></div></div><div id="battleAnswers" class="answers"></div>
   </div>
-  <img id="battleHeroImg" class="heroBadge" alt="Hero"/><img class="pipBadge" src="assets/pip.webp" alt="Pip"/>
+  <span id="battleHeroImg" class="heroBadge heroPortrait" role="img" aria-label="Hero"></span><img class="pipBadge" src="assets/pip.webp" alt="Pip"/>
   <div id="feedback" class="feedback">✓</div>
   <div id="correction" class="correction"><div class="correctionCard parchment"><div class="fieldLabel">The word was</div><div id="correctWord" class="correctWord"></div><div class="correctionControls"><button id="correctReplay" class="replay" aria-label="Replay">🔊</button><button id="correctContinue" class="roundButton" aria-label="Continue">→</button></div></div></div>
 </section>
@@ -64,4 +64,4 @@
   <div class="resultCard parchment"><div id="resultIcon" class="resultIcon"></div><div id="resultTitle" class="resultTitle"></div><div id="checkpoint" class="checkpoint"></div><div id="opponents" class="opponents"></div><button id="resultNext" class="greenButton resultNext">→</button></div>
 </section>
 </main>
-<script src="app.js"></script></body></html>
+<script src="app.js?v=heroes-20260921"></script></body></html>

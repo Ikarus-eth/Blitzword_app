@@ -1,0 +1,668 @@
+# BlitzWord — Current Product Spec
+
+Status: working specification synthesized from the approved BlitzWord project decisions through 21 September 2026. This file contains product behavior and design decisions, not credentials.
+
+## Source-of-truth order
+
+1. Implemented behavior in `Ikarus-eth/Blitzword_app`.
+2. This specification for approved but not-yet-implemented behavior.
+3. Named reference images for visual direction.
+4. Earlier chats and superseded mockups only when they do not conflict with the above.
+
+When implementation differs from this spec unintentionally, treat it as a discrepancy to review rather than silently redefining the product.
+
+## 1. Product thesis
+
+BlitzWord is for children who can already handle basic letters/sounds and simple words but still expend too much effort reading. Their comprehension and interests can be well ahead of what they can comfortably read alone. The product trains accurate, confident word recognition and retention through competitive battles and visible progress without using babyish material.
+
+Reading is the gameplay action. The child should not complete educational tasks merely to unlock unrelated entertainment.
+
+## 2. World and chapter-one story
+
+The provisional world is a mysterious forest. A child-selected hero protects creatures, rescues a hatchling dragon companion, and searches for its stolen siblings.
+
+The dragon companion starts with the name **Pip**. Once Pip appears, Pip must remain the same recognizable character across battles, teaching scenes, story moments, rewards, and later growth stages. The child can rename Pip later in the game; renaming changes the displayed name only, never Pip's visual identity or progression.
+
+The free first chapter contains about 30 target words. Pip grows through the chapter and reaches a rideable stage at the end of the free chapter. Growth must feel like the same dragon maturing, not a replacement character. The story can progress before 30-day retention has been demonstrated; retention continues in later practice.
+
+No world map is required for v1. Story progress can be represented through encounters, checkpoints, environment changes, and the dragon's growth.
+
+## 3. Onboarding and starting screens
+
+### Approved setup
+
+Use one compact parent-and-child setup flow that captures:
+
+- child name or nickname;
+- age;
+- gender presentation for avatar selection.
+
+The hero uses the child's entered name throughout the game. Treat the name as local display data; do not include it in analytics or logs unless a future privacy design explicitly approves that.
+
+### Starting screen direction
+
+The selected starting-screen direction is the previously approved option A. Required copy/detail from that review:
+
+- primary caption: `Win the reading battle`;
+- minimize explanatory text;
+- green primary button should not contain a written word.
+
+A clean final reference image should be appended as `01_starting_and_hero_flow.png`. Do not use older contact-sheet wording as final UI copy where it conflicts with this spec.
+
+### Hero selection
+
+Offer Mage, Knight, and Archer. Each has two gender-differentiated appearances, for six hero appearances total. They have identical gameplay ability and reading difficulty. Hero switching can be allowed later.
+
+Approved visual direction: **Option 17 — Rowanfire Companions**. This establishes the shared art direction. The original `00a_heroes_character_bible.png` remains authoritative for the three female identities; the male revision below is authoritative for the boys. The shared visual language combines forest greens, natural leather and wood, warm cream cloth, and restrained ember-red accents so the heroes belong naturally beside Pip's Ember Guardian design. Rowan leaves/berries and related woodland motifs may appear as small identifying details, but should not become decorative clutter.
+
+Class-specific visual anchors from the selected direction:
+
+- Mage A/B: forest-and-ember robes, natural wood staff, warm orange ember light, subtle rowan/leaf details;
+- Knight A/B: practical silver armour, red scarf/cape accents, red-and-gold botanical shield language, grounded forest materials;
+- Archer A/B: predominantly forest-green clothing and leather equipment with small red/rowan accents, simple wooden bow and quiver.
+
+Do not reinterpret Option 17 as a general palette prompt. Use the exact identities from the applicable current reference: the 21 September male lineup for the boys and the original Option 17 sheet for the girls.
+
+### Approved male hero revision — 21 September 2026
+
+The approved complete male lineup is `assets/rowanfire-boys-2026-09-21.png` in `Ikarus-eth/Blitzword_app`. It replaces all earlier male hero depictions, including the boys in the original Option 17 character bible and the five comparison sheets. The final combined lineup is authoritative; the comparisons only record how it was selected.
+
+| Hero | Hair colour | Hairstyle | Face and outfit |
+| --- | --- | --- | --- |
+| Male Mage | Ash blond | Soft medium-short waves | Approved sheet 4 face; final lineup's Rowanfire robes and ember staff |
+| Male Knight | Golden blond | Short and tousled | Approved sheet 4 face; final lineup's armour, red scarf and botanical shield |
+| Male Archer | Chestnut | Soft side-swept fringe | Approved sheet 4 face; final lineup's green cloak, leather equipment and bow |
+
+Preserve the final lineup's exact face, skin tone, child proportions, clothing, equipment and hair identity in every later screen or illustration. Female Mage, Knight and Archer retain their approved Option 17 identities. Pip retains the Ember Guardian identity.
+
+The original `00a_heroes_character_bible.png` remains authoritative only for the three female heroes. Earlier onboarding, battle and teaching images remain composition/flow references only; their male characters must never override this revision. If an attachment conflicts with this section, follow this section and the final male lineup. Do not generate new boys from an old six-character sheet.
+
+### Character coherence rule
+
+The six heroes are six fixed, reusable characters, not six prompts that may be reinterpreted from scene to scene. Maintain an authoritative visual reference for each hero covering face, hair, skin tone, body proportions, outfit silhouette, materials, signature colours, equipment, and age range. Every onboarding screen, battle, teaching image, story illustration, victory/defeat scene, and later marketing mockup must use those same identities.
+
+Class differences should read immediately through silhouette and equipment while all six remain part of the same visual world:
+
+- Mage: consistent robe/cloak language and staff/wand family;
+- Knight: consistent armour, shield/sword language, and proportions;
+- Archer: consistent bow/quiver language, cloak, and proportions.
+
+Do not casually change hairstyle, face shape, costume construction, weapon design, or signature colours between generated assets. Pose, expression, camera angle, lighting, weather, and minor dirt/damage may change.
+
+Pip follows the same rule. The approved visual direction is **Ember Guardian** and the selected reference image should be stored as `00b_pip_character_bible.png`. Preserve its orange/ember scale palette, cream underside, darker wing membranes with warm flame-like markings, horn structure, facial identity, dorsal spines, tail form, and overall silhouette across every scene.
+
+Pip's growth should visibly shift from a young companion toward a protector. The hatchling can remain approachable and youthful, but each later stage should become less baby-like through a longer muzzle, stronger neck and shoulders, larger wings, more confident stance, and more pronounced horns/spines. The rideable stage should read as a strong, capable guardian rather than an oversized cute hatchling, while remaining unmistakably the same Pip.
+
+Use `Pick your hero`, not `Choose your hero` or `Continue`.
+
+After hero selection, the child can enter an optional first battle before assessment. The primary route is `Try a battle`; `Reading check first` remains a secondary route. Both routes lead to assessment before the personalized campaign.
+
+## 4. Optional first battle before assessment
+
+The first optional encounter is a guided taste of the game, not a substitute for assessment.
+
+Current direction:
+
+- forest path;
+- help a fox get past a small thorn creature;
+- one short spoken introduction instead of a separate story-text screen;
+- one guided example with an illustrated, narrated teaching sentence;
+- roughly six battle turns;
+- begin self-paced;
+- preserve the separation of word exposure, masking, answer selection, and feedback;
+- the first independent mistake is explicitly a practice turn and does not remove health;
+- subsequent independent mistakes can remove hearts and defeat is possible;
+- guided/helped answers do not cost health and do not count as independent mastery evidence;
+- after a completed or lost encounter, proceed to assessment.
+
+## 5. Assessment
+
+Do not implement the revised assessment yet until its flow and item logic are fully reviewed. The following replaces the older assessment direction as the current approved guidance.
+
+### Assessment purpose
+
+The initial assessment should feel like the actual game, not like a separate school test.
+
+The core mechanic must remain the BlitzWord battle mechanic:
+
+1. fixation;
+2. word shown briefly on a scroll;
+3. neutral fixed-size mask that does not reveal word length;
+4. four written answer choices on scrolls;
+5. a `?` button for `I’m not sure`;
+6. feedback after the answer.
+
+There should be no separate `hear a word and choose it` mechanic. Do not make the assessment audio-led.
+
+### Child flow
+
+- Skip the earlier parent-scored read-aloud screen entirely.
+- Start directly with very easy visual-recognition items, then adapt upward depending on performance.
+- The child should never need to read instructions. Any instructions should be visual and/or narrated very briefly, but the assessment itself is based on seeing a written word briefly and then selecting it.
+- Keep the same interaction pattern throughout the assessment. Do not redesign the screen between easy, phonics, and harder questions.
+- After the assessment, go directly into the first encounter. No child-facing results screen.
+- The parent summary can exist later in the parent area, but it should not interrupt the child flow.
+
+### Visual design
+
+Follow the established BlitzWord visual direction and the selected battle flow.
+
+- All words and answer choices appear on parchment scrolls.
+- Use the same forest/adventure visual language as the rest of the game.
+- Do not introduce generic cards, modern quiz UI, or parent-control looking chrome.
+- The assessment should be visually calmer than combat but clearly feel like the same game world.
+- Keep the screen readable and stable. Calmer does not mean a different mechanic.
+
+### Opening words and progression
+
+Begin with simple familiar candidates such as:
+
+- `you`
+- `cat`
+- `car`
+- `can`
+
+These are not necessarily the final exact first four, but they represent the intended starting difficulty.
+
+Then make words progressively harder by adding different spelling patterns and sounds.
+
+Potential theme-fitting harder candidates include:
+
+- `fox`
+- `map`
+- `rock`
+- `tree`
+- `green`
+- `ship`
+- `cave`
+- `dragon`
+- `forest`
+- `star`
+- `shark`
+- `night`
+
+Prefer words that fit the fantasy/forest/game world where possible. If educational coverage requires a less thematic word, educational value takes priority.
+
+### Distractor philosophy
+
+This is a critical design rule.
+
+The child must not be able to solve the task by noticing only:
+
+- first letter;
+- last letter;
+- word length;
+- rough word shape.
+
+Each target gets three close distractors.
+
+Prefer real words where possible. Ideally, two or three of the four options are real words. When suitable close real-word neighbours do not exist, use one or two plausible made-up forms.
+
+Examples of intended logic:
+
+Target: `can`
+
+- `can`
+- `cat`
+- `cap`
+- `cen`
+
+Target: `cat`
+
+- `cat`
+- `can`
+- `cap`
+- `cet`
+
+Target: `rock`
+
+- `rock`
+- `lock`
+- `rack`
+- `ruck`
+
+Target: `night`
+
+- `night`
+- `light`
+- `right`
+- `nigth`
+
+For `you`, the options should also be visually close enough that the child must inspect the full spelling. Examples can include:
+
+- `you`
+- `your`
+- `yuo`
+- another reviewed close form
+
+Do not mechanically copy example distractors without checking them. The principle matters more than the sample list.
+
+Made-up words are acceptable in this recognition task because they are distractors, not teaching targets. They must never accidentally duplicate a real curriculum word.
+
+### Adaptive scope
+
+Assessment length should depend on both accuracy and time spent.
+
+- A child who struggles on early words such as `can` should not be forced through a long assessment.
+- A better/faster reader should receive more questions and harder patterns.
+
+Working direction:
+
+- struggling child: roughly 8–12 scored items;
+- typical child: perhaps 12–18;
+- strong child: more and harder probes, never more than 25.
+
+Do not freeze these as rigid counts yet. The assessment should stop when there is enough evidence for a useful starting point, not when a fixed checklist is exhausted. Do not visibly label difficulty or tell the child they are moving up or down.
+
+### Difficulty varies on two separate axes
+
+1. Word complexity
+   - simple CVC words;
+   - close vowel contrasts;
+   - consonant blends / digraphs;
+   - long vowels;
+   - r-controlled vowels;
+   - more complex multi-letter patterns;
+   - eventually somewhat longer words.
+2. Exposure duration
+   - start generous;
+   - shorten only when accuracy supports it;
+   - if performance drops, move back toward a comfortable duration.
+
+Do not change both dramatically at once if that would make the result hard to interpret. The purpose is to find a reasonable starting region, not the absolute shortest exposure the child can survive.
+
+### Assessment outputs for v1
+
+Even if the app cannot yet fully use all the data, store useful item-level observations.
+
+At minimum, the assessment should influence:
+
+- which words enter the child’s initial practice pool;
+- which words are treated as already familiar;
+- which words require more repetition;
+- starting exposure duration;
+- whether certain spelling patterns appear to need additional practice.
+
+Keep observed data separate from inferred ability.
+
+Examples:
+
+Observed:
+
+- `rock`, correct at 1500 ms;
+- `lock`, incorrect at 1500 ms;
+- selected `rack`;
+- response time 2.3 s.
+
+Inference:
+
+- possible difficulty distinguishing this vowel/spelling contrast.
+
+Do not turn one mistake into a phonics diagnosis.
+
+### Curriculum consequence
+
+For v1, use the full reviewed curriculum/library as the source pool rather than restricting personalization to only a tiny fixed 20-word subset.
+
+The free chapter can still contain roughly 20–30 target words in practice, but the assessment may select those from a wider reviewed library. Personalization is one of the core advantages of BlitzWord.
+
+### Teaching moments after assessment
+
+Assessment itself does not become a teaching screen. When the child later needs support during practice, use the teaching-moment flow in Section 7: reviewed sentence + illustration, synchronized narration/highlight, combat paused, no health cost, and delayed recheck after intervening material.
+
+### Pending assessment design work
+
+The following still need explicit design review before implementation:
+
+- exact first 8–12 candidate target words;
+- final distractor sets;
+- thresholds for increasing word complexity;
+- thresholds for shortening exposure duration;
+- early-stop logic for struggling readers;
+- continuation logic for stronger readers;
+- exact learner-model fields written afterward.
+
+When reviewing the next assessment design pass, compare options screen by screen and prefer the version that preserves mechanic consistency, reading validity, and calm child-facing presentation.
+
+## 6. Selected battle screen: scroll flow
+
+Visual reference: `02_battle_scroll_flow_SELECTED.png`.
+
+The selected direction is an ancient scroll inside the battle scene. The scroll holds the target word during exposure and becomes a neutral mask before the answer tiles appear.
+
+### Battle sequence
+
+1. Encounter state shows hero, companion, enemy, hero hearts, enemy health bar, pause, and environment. Child-facing text is minimal.
+2. Fixation briefly centers attention.
+3. Word appears clearly on the scroll for the selected exposure duration. No answer choices are visible. Characters and combat effects stay still.
+4. Word disappears behind a neutral mask that does not reveal word length. Do not use a number of question marks, dashes, blocks, or blanks matching the number of letters.
+5. Four equal answer choices appear. Distractors should be confusable enough that precise reading is required; avoid answer-position or picture cues.
+6. Correct independent answer: speak the target word, then animate the hero's attack and remove one enemy heart. Feedback stays brief and the next item continues quickly.
+7. Wrong independent answer: speak/show the correct target, remove one hero heart, and animate the enemy reaction only after the answer is locked. The correction remains available until the child continues; replay is available.
+8. Battle resolves when enemy health reaches zero or hero health reaches zero.
+
+Battle reactions must never animate during fixation or word exposure. Teaching also pauses combat.
+
+## 7. Teaching moments
+
+A teaching moment is supported meaning/pronunciation practice, not another test. Combat pauses completely.
+
+### Trigger and return flow
+
+Trigger teaching for:
+
+- a newly introduced word answered incorrectly;
+- repeated difficulty with a word;
+- selected review moments where extra reinforcement is useful.
+
+Replay/help never costs health. Do not retest the target immediately after teaching; insert intervening material first. A supported teaching response is not independent mastery evidence.
+
+### Screen composition
+
+Use one reviewed teaching card with:
+
+1. one short sentence on parchment, usually about 3–7 words;
+2. the target word in the sentence, yellow-highlighted and underlined;
+3. one large illustration below the sentence;
+4. replay and continue controls only;
+5. no combat movement, health loss, or competing UI.
+
+Narrate the complete sentence slowly and clearly in a calm, deep voice. Highlight the target word in sync when it is spoken. Keep the rest of the sentence visually neutral.
+
+The companion should normally be the subject or central participant. Use the companion's current name dynamically; it starts as `Pip` but may be renamed later. The selected hero can be the central actor when that makes the concept clearer, as in `The hero sat on the rock.`
+
+### Image teaching rule
+
+Every image should teach through a tiny story: an obvious action, relationship, comparison, sequence, or interaction. The child should be able to infer the sentence meaning from the scene before hearing the narration.
+
+- Concrete nouns: make the object unmistakable and show Pip/hero using or interacting with it rather than standing beside it.
+- Verbs: show the most diagnostic instant of the action, e.g. jumping visibly midair between two surfaces.
+- Relational/abstract words: encode the relationship explicitly; do not expect proximity alone to teach it.
+- Remove decorative details that create competing interpretations.
+
+Expressions, gaze, pointing, distance, body position, sequencing, and object scale are instructional tools and should be used deliberately.
+
+### Approved concepts for difficult high-frequency words
+
+Use these as teaching-pattern references, not mandatory sentence templates:
+
+- `they`: several characters actively do the same thing together; Pip stays visibly separate from the group.
+- `that`: a prominent object is clearly farther away and Pip points toward it.
+- `this`: use a direct comparison; Pip points to the nearby/relevant item, e.g. two hats of clearly different sizes.
+- `me`: make Pip unmistakably the referent/recipient, e.g. Pip points to itself or another character hugs Pip.
+- `then`: show a visibly ordered two-step sequence, e.g. Pip eats, then naps.
+- `think`: show visible pondering plus a thought bubble; the thought object exists only in the bubble, not physically in the scene.
+
+### Asset development
+
+Pre-generate and review all teaching illustrations, sentences, narration, and highlight timing. No live image generation during play.
+
+Use the approved teaching-card reference for composition and tone, and the character bible for the exact selected hero/Pip identity. Keep recurring characters visually coherent across all assets.
+
+For visually obvious words, create the strongest concept directly. For abstract, relational, or ambiguous words, first compare three meaningfully different A/B/C concepts that test different teaching mechanisms rather than camera angles. Choose based primarily on whether a young child can infer the target meaning, whether sentence and image say exactly the same thing, and whether any misleading cue remains.
+
+The Mentava list may supply candidate vocabulary and sound-pattern context, but its order is not a reading-frequency ranking and does not determine early-curriculum priority.
+
+If teaching interruptions become frequent, reduce new-word introductions rather than compressing or skipping the teaching moment.
+
+## 8. Daily practice and challenge structure
+
+A challenge should aim for roughly seven minutes, within a practical 5–10 minute range. One completed challenge is a meaningful daily session; motivated children can do two or three.
+
+The stopping point should occur at a natural boundary. Do not force the child to continue until an enemy is defeated. Save unfinished fights exactly.
+
+### Word mix
+
+Each challenge mixes:
+
+- retained/review words due for another independent check;
+- currently unfinished words;
+- difficult words receiving extra practice;
+- new targets when capacity permits.
+
+Allow up to six new words in a challenge, but treat six as a ceiling, not a quota. Introduce fewer or none when unfinished material, errors, or teaching moments already consume capacity.
+
+Aim for a productive level of difficulty rather than a fixed error quota. Working hypothesis: familiar-word unassisted accuracy around 85–90% is a reasonable starting calibration range. The often-cited 85% rule does not directly validate an exact failure rate for young children's four-choice reading practice, so measure retention, frustration, and return behavior rather than optimizing blindly to one percentage.
+
+## 9. Speed / movement system
+
+Theme exposure speed as movement:
+
+1. Crouch
+2. Walk
+3. Run
+4. Ride
+5. Fly
+
+Crouch, Walk, and Run are available in the free chapter. Ride and Fly are locked until the free chapter has been completed and are part of the larger paid expansion. Pip reaches a rideable stage at the end of the free chapter whether or not the parent purchases. Ride and Fly remain locked content until the expansion is purchased.
+
+Movement level changes exposure speed, not curriculum difficulty or enemy strength. The story remains completable at the free movement levels.
+
+### Speed nudges
+
+Offer a slower/faster suggestion between battles, not while the child is reading. Initial calibration rule:
+
+- suggest one step slower when recent independent accuracy on familiar words is below roughly 80%;
+- suggest one step faster when it is above roughly 90% with enough observations;
+- the child can decline either nudge;
+- concentrated errors on specific words should trigger word-level support before assuming global speed is the problem.
+
+Thresholds and minimum sample size are provisional and should be tuned from real usage and retention data.
+
+## 10. Battle difficulty, routes, checkpoints, and defeat
+
+The hero always has three hearts.
+
+Enemy strength is primarily enemy health:
+
+- minimum three hearts;
+- stronger is always possible by adding hearts;
+- weaker means fewer hearts, down to the three-heart floor.
+
+Each independent correct answer removes one enemy heart. Each independent wrong answer removes one hero heart. Helped/teaching interactions do not deal damage.
+
+### After every battle
+
+After a victory, offer two visual choices:
+
+- same-strength opponent;
+- stronger opponent.
+
+After a defeat, offer:
+
+- same-strength opponent;
+- weaker opponent, down to the three-heart floor.
+
+Use large enemy portraits and simple visual strength cues rather than instructional text. Same strength usually means a different creature so repetition is avoided.
+
+### Checkpoints
+
+Secure a checkpoint after every two victories.
+
+A defeat rolls campaign progress back to the previous checkpoint, so an unsecured earlier victory can be lost. This is intentional: defeat needs to hurt.
+
+Never roll back learning observations, retention evidence, practice credit, unlocked permanent content, or dragon growth. Quitting or pausing is not defeat and should preserve the exact current fight state.
+
+## 11. Enemy library
+
+Build toward at least 100 different enemies / mythical-creature types so the child does not repeatedly see the same opponent.
+
+Creature identity, size variant, and health are separate properties. Examples can include baby troll, adult troll, and giant troll, as well as unrelated creatures. Size should visually matter without determining the learning difficulty by itself.
+
+Avoid recently encountered creature types when alternatives exist. Rematches may deliberately preserve identity when narratively useful.
+
+Do not build 100 pieces of final art before the core loop works. Start the implementation with a small reviewed set and make the data model capable of scaling to the full library.
+
+## 12. Chapter progression, reliability, and retention
+
+First free chapter: approximately 30 target words.
+
+Working chapter-completion rule:
+
+- all chapter targets have been introduced;
+- at least about 80% meet the current reliability criterion under independent checks;
+- the final chapter encounter is won.
+
+Do not require a 30-day wait before story completion. Time is not a campaign gate.
+
+Retention is continuous. Continue checking previously successful words over at least 30 days using expanding gaps such as roughly 1, 3, 7, 14, and 30 days. A miss shortens the next interval and may trigger more support. A chapter remains completed even if a later retention check fails; the word returns to practice.
+
+Do not call short-term success long-term mastery. Record actual time since the last exposure/help when interpreting retention evidence.
+
+## 13. Curriculum and distractors
+
+Use reviewed curriculum pools rather than a pure frequency ranking. Frequency is one input alongside early-reader relevance, BlitzWord's forest/fantasy world, sound-spelling coverage, and usefulness for assessment and teaching moments.
+
+Use these references when reviewing English vocabulary:
+
+- 2024 Children's Picture Book (CPB) frequency data;
+- Dolch 220;
+- Fry 1,000 Instant Words;
+- Mentava Alphabet Sounds examples for phonics/sound-comparison coverage.
+
+Mentava is a source of candidate examples, not a validated BlitzWord curriculum or assessment.
+
+### Working curriculum pools
+
+| Tier | Working size | Role |
+|---|---:|---|
+| Free chapter | ~20–30 active target words | Personalized starting set selected from the broader reviewed library |
+| Core curriculum | 200 words | First major pool combining high-frequency words, theme vocabulary, and broad sound-spelling coverage |
+| Broader curriculum | 1,000 words | Future expansion pool; its first 200 are exactly the Core 200 |
+
+These sizes are content pools, not developmental milestones. The assessment may sample from the wider reviewed curriculum rather than only the child's free-chapter words.
+
+Current Core 200 coverage in `blitzword_curriculum_200_1000.xlsx`:
+
+- all 100 inspected CPB top-100 words;
+- 144 of the Dolch 220;
+- 121 of Fry's first 200;
+- 65 Mentava examples;
+- at least one example from all 68 extracted Mentava sound/comparison groups.
+
+After the approved theme filter, every extracted Mentava group still retains at least three usable examples. If the word lists change, re-check this coverage rather than assuming it remains true.
+
+### Theme filtering
+
+Default rule:
+
+- prefer words that fit naturally into a fantasy/forest/adventure world;
+- allow ordinary relationship/life words where child relevance clearly outweighs theme mismatch;
+- generally exclude modern technology, transport, institutional, and technical vocabulary when good alternatives exist.
+
+Approved exceptions and exclusions:
+
+| Word | Decision | Reason |
+|---|---|---|
+| `car` | Keep | Familiar, useful, and valuable for assessment |
+| `mom` | Keep | Highly child-relevant |
+| `dad` | Keep | Highly child-relevant |
+| `school` | Keep in 1,000, not Core 200 | Important everyday vocabulary despite weak theme fit |
+| `bus` | Remove | Modern transport; not important enough to break theme |
+| `train` | Remove | Modern transport; not important enough to break theme |
+| `doctor` | Remove | Profession does not justify the theme break |
+| `plane` | Exclude | Modern transport and unnecessary for coverage |
+| `phone` | Exclude for now | Modern object; insufficient reason to override theme |
+| `computer`, `android`, `astronaut`, `helicopter`, `taxi`, `x-ray`, `robot`, `rocket`, `whiteboard`, `vacuum` | Exclude | Clearly outside the current world and unnecessary for phonics coverage |
+
+Keep content rules and reviewed vocabulary fixed, but personalize which words the child starts with, their order, repetition, review timing, teaching support, and which sound-spelling patterns receive extra attention. Do not generate unrestricted bespoke vocabularies per child.
+
+For each independent four-choice check, distractors should reduce guessing by superficial word shape. Prefer close real words; use reviewed pseudo-words where needed. Do not use pictures, colours, answer position, or mask length as shortcuts, and never allow a pseudo-word to collide with a real curriculum word.
+
+Optional phonics side quests can come later if repeated pattern difficulties justify them between encounters. Do not build a comprehensive phonics engine into v1.
+
+Curriculum artifact: `blitzword_curriculum_200_1000.xlsx`.
+
+## 14. Character and asset consistency
+
+Character coherence is a product requirement, not optional art polish.
+
+The authoritative character-bible references are now:
+
+- `00a_heroes_character_bible.png` — **Option 17: Rowanfire Companions**, containing all six fixed selectable hero appearances;
+- `00b_pip_character_bible.png` — **Ember Guardian**, containing Pip's approved hatchling-to-rideable growth direction.
+
+Treat these two images as equally authoritative and use them together for any scene containing both hero and Pip. The shared production palette is forest green / natural wood / leather / cream with ember-red and warm orange accents. Red should connect the heroes to Ember Guardian without overwhelming the forest setting.
+
+Extend the bible over time with expression/pose references and scale references where needed, but do not redesign the core identities.
+
+For every new generated asset, use the relevant approved references as the visual source. Reject assets that are attractive but depict a different-looking hero or dragon.
+
+Enemy variety can be broad, but recurring enemy families should also be internally coherent. A baby troll, adult troll, and giant troll should clearly belong to the same creature family while differing in size, proportions, age cues, and details.
+
+Do not bake child-facing text into illustrations. UI text, target words, teaching sentences, highlights, health, and controls are separate interface layers so they remain readable, localizable, and testable.
+
+## 15. Commercial structure
+
+Meaningful free chapter:
+
+- onboarding;
+- assessment;
+- teaching;
+- continuing practice;
+- about 20–30 personalized active targets;
+- parent summary;
+- dragon grows to rideable stage.
+
+Paid expansion:
+
+- one-time purchase direction;
+- initially expands toward the reviewed Core 200;
+- unlocks Ride and Fly after the free chapter has been completed;
+- includes additional self-contained content rather than requiring a subscription to retain already unlocked practice.
+
+The 1,000-word list is a future curriculum pool, not a currently approved App Store package or pricing promise. Defer commercial packaging beyond the Core 200 until usage, learning, retention, and payment evidence justify it.
+
+The commercial validation plan is to reach actual App Store users quickly, run modest acquisition tests, observe installs/activation/return/learning/friction/payment, and iterate the product every few days. Do not substitute beta signup counts for real installs and active use.
+
+## 16. Parent and child separation
+
+Child UI: minimal text, large visual choices, voice where useful, no purchase decisions.
+
+Parent area: assessment summary, progress, current difficulties, recent practice, retention, and purchase/restore controls behind a parental gate.
+
+Do not market BlitzWord as diagnosing or treating dyslexia or other conditions.
+
+## 17. Data and analytics
+
+Keep learner observations language-specific. Separate raw observations from inferred ability state.
+
+Track at minimum:
+
+- task type;
+- target;
+- alternatives;
+- first response;
+- correctness;
+- exposure duration;
+- response time;
+- assistance/support;
+- date/time;
+- battle context where useful;
+- teaching exposure;
+- later independent checks.
+
+Measure whether teaching transfers to later ordinary reading items. Do not treat performance inside a supported teaching scene as proof of independent learning.
+
+For commercial validation, distinguish installs, assessment completion, first-battle completion, active sessions, return, learning/retention, friction, and payment. Avoid unnecessary child identifiers in analytics.
+
+## 18. Current implementation sequence
+
+1. Build the approved onboarding/start screens and local child profile.
+2. Build one complete selected scroll battle encounter with save/resume, correct/wrong feedback, victory/defeat, enemy health, and one reviewed teaching moment.
+3. Build the adaptive assessment handoff.
+4. Connect encounters into the roughly seven-minute challenge, opponent choices, speed nudges, and two-victory checkpoints.
+5. Connect the 30-word free chapter and dragon growth.
+6. Package for iPad/TestFlight and verify persistence, offline behavior, audio, orientation, parental gate, privacy, and one-time-purchase restoration.
+7. Launch publicly only after explicit release approval, then run small acquisition tests and iterate from observed use.
+
+## 19. Open questions to decide later
+
+- Final exact chapter-one 30-word set.
+- Exact teaching-trigger thresholds and how many retries before/after teaching.
+- Exact assessment stopping rules and parent result presentation.
+- Exact mapping of Crouch/Walk/Run/Ride/Fly to exposure durations.
+- Exact enemy-heart progression step after choosing stronger/weaker.
+- What the second option becomes when the child is already at the three-heart enemy floor.
+- Final paid expansion price and App Store launch market/campaign settings.
+- Final art production pipeline for the 100-enemy library.
