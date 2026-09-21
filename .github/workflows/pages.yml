@@ -23,6 +23,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Check scripts and practice regressions
+        run: |
+          node --check app.js
+          node --check game-core.js
+          node --check storage.js
+          node --test tests/*.test.js
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site

@@ -666,3 +666,13 @@ For commercial validation, distinguish installs, assessment completion, first-ba
 - What the second option becomes when the child is already at the three-heart enemy floor.
 - Final paid expansion price and App Store launch market/campaign settings.
 - Final art production pipeline for the 100-enemy library.
+
+## 20. Implemented practice slice — 21 September 2026
+
+Option A adds persistent returning play and one approximately seven-minute challenge using six reviewed targets: sat, rock, tree, green, fox and cave. This milestone does not complete the planned 30-word free chapter. The remaining curriculum and all older observations are preserved; this practice selector is limited to words with reviewed teaching support.
+
+Implemented: Continue adventure; individual answer saving; unfinished battle and assessment resume; pause/background handling; recoverable local saves; teaching/correction support records; two-intervening-answer rechecks; due review gaps; session summaries; free self-paced demonstration; optional self-paced campaign practice; and idempotent checkpoint/defeat handling. At the three-heart floor, defeat offers one same-strength opponent rather than a duplicate weaker choice. The approved assessment item pools and numeric adaptation rules are preserved, with interrupted attempts separated from independent calibration evidence.
+
+Four Pip illustrations live in `assets/teaching/`. See `TEACHING_SLICE.md` for exact word-to-sentence mappings, asset paths, prompts, review and limitations. These replace the portrait-on-rock teaching placeholder for this slice. The male and female hero references remain unchanged. Pip is now visible beside the hero portrait in battle.
+
+The broader chapter, full battle-scene artwork, dragon growth, parent reporting, remote analytics, native iOS packaging, payments and offline asset caching remain unimplemented. Browser speech highlights the spoken target when word-boundary events are available; voices without those events retain the static highlight and underline.
