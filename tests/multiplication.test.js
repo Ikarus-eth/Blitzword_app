@@ -22,7 +22,7 @@ test('all 100 multiplication facts are available, with no consecutive equivalent
  for(let i=0;i<100;i++){const q=C.prepareMath(s);assert.ok(q.a>=1&&q.a<=10&&q.b>=1&&q.b<=10);seen.add(q.a+'x'+q.b);const signature=[Math.min(q.a,q.b),Math.max(q.a,q.b)].join('x');if(i<95)assert.ok(!recent.includes(signature));recent=[...recent,signature].slice(-2);C.answerMath(s,q.a*q.b,NOW);}
  assert.equal(seen.size,100);
 });
-test('correct answers score once; mistakes and invalid answers do not; reading evidence is untouched',()=>{
+test('correct answers earn XP once; invalid answers are ignored and reading evidence is untouched',()=>{
  const s=challenge(),before=JSON.stringify(s.learning),wins=s.campaign.wins,q=s.math.round.question;
  assert.equal(C.answerMath(s,'bad',NOW),null);C.answerMath(s,q.a*q.b,NOW);assert.equal(C.answerMath(s,q.a*q.b,NOW),null);assert.equal(s.dragon.xp,1);
  C.prepareMath(s);C.answerMath(s,'0',NOW);assert.equal(s.math.round.correct,1);assert.equal(s.dragon.xp,1);assert.equal(JSON.stringify(s.learning),before);assert.equal(s.campaign.wins,wins);
@@ -41,4 +41,18 @@ test('math timing has its own parent total and counts once towards growth and se
 });
 test('pending multiplication precedes session summary without losing the reading victory',()=>{
  const s=fresh();battle(s);battle(s);C.recordTime(s,C.TARGET_MS,'practice',NOW);battle(s);assert.equal(s.activity,'mathIntro');assert.equal(s.result.victory,true);C.leaveMath(s,NOW);assert.equal(s.activity,'summary');assert.ok(s.session.completedAt);assert.equal(s.math.round,null);
+});
+test('wrong answers remove one point, including below zero, exactly once; permanent XP survives',()=>{
+ let s=challenge();const q=s.math.round.question;C.answerMath(s,0,NOW);
+ assert.equal(C.mathScore(s.math.round),-1);assert.equal(s.math.round.wrong,1);assert.equal(s.math.round.answers.at(-1).points,-1);
+ assert.equal(C.answerMath(s,0,NOW),null);assert.equal(C.mathScore(s.math.round),-1);
+ s=C.migrate(C.copy(s));assert.equal(C.mathScore(s.math.round),-1);
+ const next=C.prepareMath(s);C.answerMath(s,next.a*next.b,NOW);assert.equal(C.mathScore(s.math.round),0);assert.equal(s.math.round.correct,1);assert.equal(s.dragon.xp,1);
+ C.prepareMath(s);C.answerMath(s,0,NOW);assert.equal(s.dragon.xp,1);C.tickMath(s,60000,NOW);assert.equal(s.math.best,-1);assert.equal(s.math.records[0].score,-1);assert.equal(s.math.round.beaten,false);
+});
+test('target and PR use net score; a saved legacy round keeps its scoring and records',()=>{
+ const s=challenge(4);for(let i=0;i<5;i++){const q=C.prepareMath(s);C.answerMath(s,q.a*q.b,NOW);}for(let i=0;i<4;i++){C.prepareMath(s);C.answerMath(s,0,NOW);}
+ C.tickMath(s,60000,NOW);assert.equal(s.math.round.correct,5);assert.equal(s.math.records[0].score,1);assert.equal(s.math.best,4);assert.equal(s.math.round.beaten,false);
+ let legacy=challenge(12);delete legacy.math.round.scoringVersion;delete legacy.math.round.score;delete legacy.math.round.wrong;legacy.math.round.correct=3;
+ legacy=C.migrate(C.copy(legacy));C.answerMath(legacy,0,NOW);assert.equal(C.mathScore(legacy.math.round),3);C.tickMath(legacy,60000,NOW);assert.equal(legacy.math.records[0].scoringVersion,1);assert.equal(legacy.math.best,12);
 });

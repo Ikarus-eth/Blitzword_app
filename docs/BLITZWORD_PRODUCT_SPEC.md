@@ -714,3 +714,21 @@ The user's latest requirements supersede the prior six-word limit and rapid/capp
 The first new dragon form requires 250 XP, 250 interaction-confirmed practice minutes and 14 elapsed days since practice began. All conditions are required. Later forms require 750 and 1,500 XP/minutes respectively, remain subject to the 14-day minimum, and rideable Pip additionally requires chapter completion. Previously earned forms/XP are preserved. This explicitly replaces the earlier expectation that a single day's chapter completion grants a rideable dragon.
 
 Parent reporting uses an idle-aware local activity ledger, with older foreground/waiting totals kept separate and excluded from growth. Unconfirmed intervals are discarded on 30-second inactivity, blur/background or suspended timers. The dashboard explains conservative undercounting and device-local scope. See `ACTIVE_PLAY_RELEASE.md` for exact rules, curriculum provenance, artwork and tests.
+
+## 25. Child interface and multiplication revision — 22 September 2026
+
+The user's post-release feedback requests less text and fewer simultaneous progress measures. The campaign home now emphasizes one selected destination and its play button; a compact Pip portrait, XP badge and single growth bar remain. Detailed growth gates, practice counts and historical timing belong in Parents. The child growth bar is limited by every remaining gate, not XP alone. Setup labels and continuation buttons are shorter. The fixed neutral mask is a static galaxy identical for every word. Normal correct feedback uses the revealed word and combat reaction, without the green check badge. Supported answers remain labelled Practice.
+
+Pip now hops and sends a small ember alongside selected successful attacks, celebrates a final blow, and recoils from enemy attacks. These effects never change damage and only occur after an answer. Reading exposure and answer selection remain free of animation and soundscape. Reduced motion suppresses movement.
+
+Crawl, Walk and Run are selectable on the map and in pause. Crawl is untimed; Walk uses 1,800 ms; Run uses 950 ms. Until the child chooses a mode, the existing assessment-calibrated exposure is retained. A saved question keeps its recorded exposure; changes apply to new questions. Ride (600 ms) and Fly (350 ms) additionally require rideable Pip, chapter completion and the existing paid-expansion entitlement. No payment flow or entitlement grant is added. Assessment itself is unchanged.
+
+New multiplication rounds award +1 point per correct answer and −1 per wrong answer, including scores below zero. PR and enemy targets use net score. Correct responses still grant permanent XP; mistakes never subtract earned XP, story progress or reading observations. Existing PRs are preserved, and a round already in progress retains its original scoring rules until it finishes. A remaining-time ring supplements the numeric countdown. A synthesized forest ambience and gentle last-ten-second tones can be muted; ambience/effects fade for narration, pause, background and reading selections.
+
+The missing shared teaching illustrations were a confirmed SVG visibility bug: setting the SVG's `.hidden` property did not remove its `hidden` attribute. Visibility now toggles the actual attribute. All existing artwork remains unchanged.
+
+The new fullscreen button requests fullscreen from an explicit tap on browsers that support it; a web manifest requests fullscreen/standalone presentation. The operating system controls the status bar. No learner data is cleared or moved to another browser context.
+
+Core 200 means a mixed curated curriculum, not the 200 most frequent words. In the supplied workbook, water is Fry 84; bird is included for phonics and theme. The current chapter's 30-word selection is unchanged.
+
+Prerecorded deep male narration is still pending. `NARRATION_CORPUS.json` contains the complete deduplicated fixed-word, teaching-sentence, correction and encounter recording list. `node scripts/prepare-narration.cjs` reproduces it without making network calls. No recordings or premium narrator are claimed until generation, listening review and integration have completed.

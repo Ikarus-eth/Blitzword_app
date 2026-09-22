@@ -1,0 +1,11 @@
+{
+  "name": "BlitzWord",
+  "short_name": "BlitzWord",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "background_color": "#142b23",
+  "theme_color": "#173d2f"
+}

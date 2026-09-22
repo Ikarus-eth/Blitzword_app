@@ -10,7 +10,7 @@ function boot(saved,options={}){
  window.localStorage=storage;
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.selected=option.value===value;}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>true,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
- const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){}},confirm:()=>false,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){}},confirm:()=>false,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -27,12 +27,12 @@ function mathSave(best=8){
  for(let i=0;i<3;i++){Core.startBattle(s,Date.UTC(2026,8,22),{strength:3});s.battle.enemyHealth=0;Core.resolveBattle(s,Date.UTC(2026,8,22));}return s;
 }
 {
- let ui=boot(mathSave());ui.resume();assert.ok(ui.get('mathIntro').classList.contains('active'));assert.equal(ui.get('mathRevivedEnemy').dataset.enemy,ui.state().battle.enemyId);assert.match(ui.get('mathIntroTarget').textContent,/6 correct/);
+ let ui=boot(mathSave());ui.resume();assert.ok(ui.get('mathIntro').classList.contains('active'));assert.equal(ui.get('mathRevivedEnemy').dataset.enemy,ui.state().battle.enemyId);assert.match(ui.get('mathIntroTarget').textContent,/6 points/);
  ui.advance(60000);assert.equal(Core.parentProgress(ui.state()).activeMs,0);ui.click(ui.get('mathStart'));assert.equal(ui.get('mathTime').textContent,'60s');
  const key=value=>ui.click(ui.get('mathKeys').querySelector('[data-key="'+value+'"]'));
  ui.advance(4000);key('1');const problem=ui.state().math.round.question.id;ui.click(ui.get('homeBtn'));const remaining=ui.state().math.round.elapsedMs;
  ui.advance(60000);ui=boot(ui.state());ui.resume();assert.equal(ui.state().math.round.question.id,problem);assert.equal(ui.get('mathInput').textContent,'1');assert.equal(ui.state().math.round.elapsedMs,remaining);
- key('back');const q=ui.state().math.round.question;for(const digit of String(q.a*q.b))key(digit);key('enter');assert.equal(ui.get('mathFeedback').textContent,'✓ +1 XP');assert.equal(ui.state().dragon.xp,1);ui.tick();
+ key('back');const q=ui.state().math.round.question;for(const digit of String(q.a*q.b))key(digit);key('enter');assert.equal(ui.get('mathFeedback').textContent,'+1');assert.equal(ui.state().dragon.xp,1);ui.tick();
  ui.advance(3000);const credited=Core.parentProgress(ui.state()).activeMs;ui.visibility(true);assert.equal(ui.get('pausePanel').hidden,false);const elapsed=ui.state().math.round.elapsedMs;ui.advance(120000,true);ui.visibility(false);ui.click(ui.get('pauseResume'));assert.equal(ui.state().math.round.elapsedMs,elapsed);assert.equal(Core.parentProgress(ui.state()).activeMs,credited);
  ui.advance(30000);assert.equal(ui.get('pausePanel').hidden,false);assert.equal(Core.parentProgress(ui.state()).activeMs,credited);ui.click(ui.get('pauseResume'));
  for(let i=0;i<65&&ui.state().math.round.status==='playing';i++){ui.advance(1000);if(ui.state().math.round.status==='playing')key('back');}
@@ -112,12 +112,12 @@ for(const victory of [true,false]){
 {
  let s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
  s.dragon.xp=249;s.timing.firstPracticeAt='2000-01-01T00:00:00.000Z';s.timing.days={'2026-09-22':{practice:250*60000,assessment:0,demo:0,idle:0}};s=Core.migrate(s);Core.startBattle(s,Date.now());
- let ui=boot(s);assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('dragonXP').textContent,'249 XP');assert.match(ui.get('dragonNext').textContent,/1 XP · 0 active min · 0 days to Young Pip/);assert.equal(ui.get('dragonStages').children.length,4);
+ let ui=boot(s);assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('dragonXP').textContent,'249 XP');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('dragonStages').children.length,4);
  const id=ui.state().battle.id;ui.click(ui.get('mapNodes').querySelector('[data-area="hidden-nest"]'));
  assert.equal(ui.get('mapAreaTitle').textContent,'Hidden Nest');assert.equal(ui.get('mapContinue').disabled,true);assert.equal(ui.state().battle.id,id);assert.equal(ui.get('mapAreaStatus').textContent,'Further along the trail');
  ui.click(ui.get('mapNodes').querySelector('[data-area="lantern-trail"]'));ui.resume();ui.ready();assert.equal(ui.state().battle.question.target,'on');
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip grew! Young Pip');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'1');
- ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'250 XP');assert.equal(ui.get('dragonStage').textContent,'Young Pip');assert.match(ui.get('dragonNext').textContent,/500 XP · 500 active min · 0 days to Growing Pip/);assert.equal(ui.get('mapPip').dataset.growth,'1');
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'250 XP');assert.equal(ui.get('dragonStage').textContent,'Young Pip');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('mapPip').dataset.growth,'1');
  const answers=ui.state().campaign.battleRecords.length;ui.resume();ui.until(()=>ui.state().battle.question.target!=='on');assert.equal(ui.state().campaign.battleRecords.length,answers);
  ui.click(ui.get('homeBtn'));ui.click(ui.get('mapSettings'));ui.click(ui.get('heroGrid').children[1]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.get('dragonXP').textContent,'250 XP');
  console.log('PASS map future previews, XP stage unlock, reload, exact resume and hero change');
@@ -141,9 +141,29 @@ for(const victory of [true,false]){
  console.log('PASS idle auto-pause, background/sleep exclusion, gated parent totals and reload');
 }
 {
- for(const word of ['water','small','night','magic']){
+ for(const word of ['water','bird','small','night','magic']){
   const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());Core.startTeaching(s,word,'battle',Date.now());
-  const ui=boot(s);ui.resume();assert.equal(ui.get('teachAtlas').hidden,false);assert.equal(ui.get('teachIllustration').hidden,true);assert.equal(ui.get('teachContinue').disabled,false);assert.equal(ui.get('teachAtlas').getAttribute('aria-label'),Core.byWord[word].alt);ui.click(ui.get('teachContinue'));assert.equal(ui.state().activity,'battle');
+  const ui=boot(s);ui.resume();assert.equal(ui.get('teachAtlas').hasAttribute('hidden'),false);assert.equal(ui.get('teachIllustration').hidden,true);assert.equal(ui.get('teachContinue').disabled,false);assert.equal(ui.get('teachAtlas').getAttribute('aria-label'),Core.byWord[word].alt);ui.click(ui.get('teachContinue'));assert.equal(ui.state().activity,'battle');
  }
  console.log('PASS all four new teaching scenes and return to battle');
+}
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());
+ let ui=boot(s);ui.click(ui.get('mapSpeed'));assert.equal(ui.get('speedPanel').hidden,false);
+ assert.equal(ui.get('speedChoices').querySelector('[data-speed="ride"]').disabled,true);
+ ui.click(ui.get('speedChoices').querySelector('[data-speed="run"]'));ui.click(ui.get('speedClose'));ui=boot(ui.state());ui.resume();ui.ready();
+ assert.equal(ui.state().battle.question.exposureMs,950);const question=Core.copy(ui.state().battle.question);
+ ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseSpeed'));ui.click(ui.get('speedChoices').querySelector('[data-speed="crawl"]'));ui.click(ui.get('speedClose'));
+ assert.deepEqual(ui.state().battle.question,question);ui.click(ui.get('pauseResume'));assert.equal(ui.state().battle.question.exposureMs,950);
+ ui.click([...ui.get('battleAnswers').children].find(x=>x.textContent===question.target));ui.until(()=>ui.state().battle.question.id!==question.id);
+ assert.equal(ui.state().battle.question.exposureMs,null);assert.equal(ui.get('feedback').textContent,'');
+ console.log('PASS child speed choices, locked modes, saved exposure and next-word application');
+}
+{
+ const ui=boot(mathSave());ui.resume();ui.click(ui.get('mathStart'));ui.advance(10000);
+ assert.equal(ui.get('mathTime').textContent,'50s');assert.ok(Number(ui.get('mathTimeRing').style.strokeDashoffset)>16);
+ ui.click(ui.get('mathKeys').querySelector('[data-key="0"]'));ui.click(ui.get('mathKeys').querySelector('[data-key="enter"]'));
+ assert.equal(ui.get('mathScore').textContent,'-1');assert.match(ui.get('mathFeedback').textContent,/−1/);assert.equal(ui.state().dragon.xp,0);
+ const saved=ui.state();ui.click(ui.get('homeBtn'));const next=boot(saved);next.resume();assert.equal(next.get('mathScore').textContent,'-1');assert.equal(next.get('mathTime').textContent,'50s');
+ console.log('PASS visual countdown and negative score survive Home and reload');
 }

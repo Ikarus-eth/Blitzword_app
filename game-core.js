@@ -18,7 +18,7 @@
       dragon:{awards:{},stage:0,xp:null},story:{clearedAreas:[],chapterComplete:false},
       timing:{version:1,days:{},firstPracticeAt:null},
       math:{best:null,winStreak:0,round:null,records:[]},
-      settings:{selfPaced:false}, activity:'route', screen:'setup', battle:null,
+      settings:{selfPaced:false,speed:null,soundscape:true}, activity:'route', screen:'setup', battle:null,
       teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false};
   }
   function migrate(old) {
@@ -113,8 +113,24 @@
   function getQuestion(s) { return s.activity === 'assessment' ? s.assessment.progress?.question : s.battle?.question; }
   function makeQuestion(s,item,now,random,extra={}) {
     return {id:id(s,'answer'),target:item.w,options:shuffle(item.d,random),phase:'ready',
-      exposureMs:s.settings.selfPaced?null:s.assessment.exposure,wordViewedMs:0,responseMs:0,
+      exposureMs:practiceExposure(s),wordViewedMs:0,responseMs:0,
       supportReasons:[],answeredAt:null,correct:null,needsTeaching:false,...extra};
+  }
+  const SPEEDS=[{id:'crawl',name:'Crawl',ms:null},{id:'walk',name:'Walk',ms:1800},{id:'run',name:'Run',ms:950},{id:'ride',name:'Ride',ms:600},{id:'fly',name:'Fly',ms:350}];
+  function speedChoices(s){
+    return SPEEDS.map((mode,i)=>({...mode,locked:i>=3&&(s.dragon.stage<3||!s.story.chapterComplete||s.entitlements?.expansion!==true)}));
+  }
+  function practiceExposure(s){
+    if(s.settings.selfPaced)return null;
+    const selected=speedChoices(s).find(mode=>mode.id===s.settings.speed&&!mode.locked);
+    return selected?selected.ms:s.assessment.exposure;
+  }
+  function chooseSpeed(s,speed){
+    const choice=speedChoices(s).find(mode=>mode.id===speed&&!mode.locked);
+    if(!choice)return false;
+    s.settings.speed=speed;s.settings.selfPaced=speed==='crawl';
+    // The saved question keeps its original exposure. A choice applies to new questions only.
+    return true;
   }
   function recentAccuracy(s) {
     const records = s.campaign.battleRecords.filter(r => r.task === 'battle' && !r.supported).slice(-8);
@@ -221,7 +237,7 @@
       if (!word.familiar && !s.session.newWords.includes(item.w)) s.session.newWords.push(item.w);
     }
     const guided=b.demo && b.turn===0;
-    b.question=makeQuestion(s,item,now,random,{exposureMs:b.demo?null:(s.settings.selfPaced?null:s.assessment.exposure),
+    b.question=makeQuestion(s,item,now,random,{exposureMs:b.demo?null:practiceExposure(s),
       isNew,guided,supportReasons:guided?['guided-example']:[],retentionDue:word.reviewStage>=0 && word.dueAt<=now});
     b.turn++;
     return b.question;
@@ -324,12 +340,13 @@
     if(victory&&b.finalEncounter&&chapterReady&&Content.areas.every(area=>area.available&&s.story.clearedAreas.includes(area.id))){s.story.chapterComplete=true;syncProgress(s);}
     s.result={victory,strength:b.maxHealth,battleId:b.id,enemyId:b.enemyId||'thornling',chapterComplete:s.story.chapterComplete}; s.activity='result';
     if(victory&&s.math.winStreak%3===0){
-      s.math.round={id:id(s,'math'),battleId:b.id,enemyId:b.enemyId||'thornling',status:'intro',bestAtStart:s.math.best,target:Math.max(1,(s.math.best||0)-2),elapsedMs:0,correct:0,answers:[],question:null,bag:[],recent:[]};
+      s.math.round={id:id(s,'math'),battleId:b.id,enemyId:b.enemyId||'thornling',status:'intro',bestAtStart:s.math.best,target:Math.max(1,(s.math.best||0)-2),elapsedMs:0,correct:0,score:0,wrong:0,scoringVersion:2,answers:[],question:null,bag:[],recent:[]};
       s.activity='mathIntro';
     }else if (isSessionDue(s)) completeSession(s,now);
   }
   function startMath(s,now){
     const r=s.math.round;if(!r||r.status!=='intro')return false;
+    r.scoringVersion=2;r.score=0;r.wrong=0;
     beginSession(s,now);r.status='playing';r.startedAt=iso(now);s.activity='mathChallenge';prepareMath(s);return true;
   }
   function prepareMath(s,random=Math.random){
@@ -345,8 +362,11 @@
     if(!r||r.status!=='playing'||r.elapsedMs>=60000||!q||q.phase!=='answer'||!/^\d{1,3}$/.test(String(value)))return null;
     const rec={id:q.id,task:'multiplication',a:q.a,b:q.b,response:Number(value),correct:Number(value)===q.a*q.b,elapsedMs:r.elapsedMs,at:iso(now)};
     q.phase='feedback';q.correct=rec.correct;q.input=String(value);r.answers.push(rec);
-    if(rec.correct){r.correct++;s.dragon.xp++;syncProgress(s,now);}return rec;
+    if(rec.correct){r.correct++;s.dragon.xp++;syncProgress(s,now);}
+    if(r.scoringVersion===2){rec.points=rec.correct?1:-1;r.score+=rec.points;if(!rec.correct)r.wrong++;}
+    return rec;
   }
+  function mathScore(r){return r.scoringVersion===2?r.score:r.correct;}
   function tickMath(s,ms,now){
     const r=s.math.round;if(!r||r.status!=='playing'||!Number.isFinite(ms)||ms<=0)return false;
     r.elapsedMs=Math.min(60000,r.elapsedMs+ms);
@@ -354,9 +374,10 @@
   }
   function finishMath(s,now){
     const r=s.math.round;if(!r||r.status!=='playing'||r.elapsedMs<60000)return false;
-    r.status='result';r.finishedAt=iso(now);r.beaten=r.correct>=r.target;r.newBest=s.math.best===null||r.correct>s.math.best;
-    s.math.best=Math.max(s.math.best||0,r.correct);
-    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score:r.correct,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});
+    const score=mathScore(r);
+    r.status='result';r.finishedAt=iso(now);r.beaten=score>=r.target;r.newBest=s.math.best===null||score>s.math.best;
+    s.math.best=Math.max(s.math.best??score,score);
+    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score,correct:r.correct,wrong:r.wrong||0,scoringVersion:r.scoringVersion||1,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});
     s.activity='mathResult';return true;
   }
   function leaveMath(s,now){
@@ -433,5 +454,5 @@
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,recordTime,parentProgress,dayKey,
-    startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath};
+    startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed};
 });
