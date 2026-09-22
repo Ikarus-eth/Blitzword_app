@@ -8,7 +8,7 @@ const sound=BlitzSound.create({AudioContext:window.AudioContext||window.webkitAu
 const maleHeroSheet='assets/rowanfire-boys-2026-09-21.png';
 const heroAssets=[maleHeroSheet,maleHeroSheet,maleHeroSheet,'assets/hero4.webp','assets/hero5.webp','assets/hero6.webp'];
 const malePortraitCrops=[{x:183,y:145},{x:636,y:145},{x:1099,y:145}];
-const narrator=BlitzAudio.narrator({synth:window.speechSynthesis,Utterance:window.SpeechSynthesisUtterance});
+const narrator=BlitzAudio.narrator({synth:window.speechSynthesis,Utterance:window.SpeechSynthesisUtterance,AudioContext:window.AudioContext||window.webkitAudioContext,fetchAudio:window.fetch?.bind(window),clips:window.BlitzNarration?.clips||{}});
 let store,state,paused=true,playing=false,blocked=false,lastTick=performance.now(),timer=null,epoch=0;
 const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:374,h:538},{x:1154,y:0,w:382,h:538},{x:0,y:538,w:384,h:486},{x:384,y:538,w:384,h:486},{x:768,y:630,w:384,h:370},{x:1152,y:650,w:384,h:350}];
 let spriteSerial=0;
@@ -521,7 +521,8 @@ $('#fullscreenBtn').onclick=async()=>{
 function fullscreenChanged(){const active=!!(document.fullscreenElement||document.webkitFullscreenElement);$('#fullscreenBtn').setAttribute('aria-label',active?'Exit fullscreen':'Enter fullscreen');$('#fullscreenBtn').setAttribute('aria-pressed',String(active));}
 document.addEventListener('fullscreenchange',fullscreenChanged);document.addEventListener('webkitfullscreenchange',fullscreenChanged);
 $('#soundBtn').onclick=()=>{state.settings.soundscape=state.settings.soundscape===false;syncSound();if(state.settings.soundscape)sound.unlock();$('#soundBtn').setAttribute('aria-pressed',String(state.settings.soundscape));$('#soundBtn').setAttribute('aria-label',state.settings.soundscape?'Mute soundscape':'Enable soundscape');save();};
-document.addEventListener('pointerdown',()=>sound.unlock(),{passive:true});document.addEventListener('keydown',()=>sound.unlock());
+function unlockAudio(){sound.unlock();narrator.unlock();}
+document.addEventListener('pointerdown',unlockAudio,{passive:true});document.addEventListener('keydown',unlockAudio);
 
 $('#reloadSaved').onclick=()=>location.reload();
 $$('[data-sprite]').forEach(el=>paintSprite(el,Number(el.dataset.sprite)));
@@ -585,9 +586,9 @@ $('#resetBtn').onclick=()=>{if(confirm('Erase the profile and all saved reading 
   // Explicit existing reset action only. Never reset during deployment or migration.
   for(const suffix of ['','_backup','_legacy_backup','_unreadable_backup'])localStorage.removeItem(KEY+suffix);location.reload();
 }};
-document.addEventListener('visibilitychange',()=>{if(document.hidden){account();pause('away');}});
-window.addEventListener('pagehide',()=>{if(!blocked){account();pause('away');if(!playing)save();}});
-window.addEventListener('blur',()=>{windowFocused=false;account();pause('away');});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){account();pause('away');narrator.cancel();}});
+window.addEventListener('pagehide',()=>{narrator.cancel();if(!blocked){account();pause('away');if(!playing)save();}});
+window.addEventListener('blur',()=>{windowFocused=false;account();pause('away');narrator.cancel();});
 window.addEventListener('focus',()=>{windowFocused=true;});
 window.addEventListener('storage',event=>{if(event.key===KEY&&event.newValue!==store.expected)storageProblem(Object.assign(new Error('Another tab updated this adventure. Reload to use its saved progress.'),{code:'conflict'}));});
 setInterval(()=>{

@@ -732,3 +732,7 @@ The new fullscreen button requests fullscreen from an explicit tap on browsers t
 Core 200 means a mixed curated curriculum, not the 200 most frequent words. In the supplied workbook, water is Fry 84; bird is included for phonics and theme. The current chapter's 30-word selection is unchanged.
 
 Prerecorded deep male narration is still pending. `NARRATION_CORPUS.json` contains the complete deduplicated fixed-word, teaching-sentence, correction and encounter recording list. `node scripts/prepare-narration.cjs` reproduces it without making network calls. No recordings or premium narrator are claimed until generation, listening review and integration have completed.
+
+### Recorded narration update — 22 September 2026
+
+The subsequent recorded-voice release replaces fixed browser narration with 165 local MP3 clips in a British adult male voice. Recordings cover all implemented spoken words, teaching sentences and fixed instruction/correction/encounter variants. Playback waits for audio completion before the existing attack, stops on pause/Home/background, and falls back to browser speech on failure. Target highlighting stays static because verified word-boundary timing is not available. Generation and integration are complete; listening review and physical iPad verification remain outstanding. See `NARRATION_RELEASE.md` and `NARRATION_GENERATION.json` for provenance and limits.
