@@ -24,3 +24,7 @@ node --test tests/*.test.js
 GitHub Pages deploys `main` after the script and regression checks pass. Use task branches and pull requests. The previous main commit is the rollback point; never reset learner data to roll back artwork or gameplay.
 
 See `docs/BLITZWORD_PRODUCT_SPEC.md` for the larger approved product direction and `docs/TEACHING_SLICE.md` for this slice's content review and asset provenance.
+
+## Repository access check
+
+README write-access test completed on 2026-09-22. This documentation-only branch does not deploy game changes.
