@@ -1,0 +1,1661 @@
+{
+  "voice": "Tom",
+  "model": "eleven_multilingual_v2",
+  "speed": 0.88,
+  "clips": [
+    {
+      "id": "en-male-057",
+      "text": "Pip can jump over water.",
+      "taskId": "23de63c5-26cc-4b0f-9b00-1b2ecbb3c1d3",
+      "status": "downloaded",
+      "file": "assets/narration/en-male-057.mp3",
+      "duration": 1.933061,
+      "bytes": 31391,
+      "sha256": "011ac5955d621fe8fb4f9ddeac7dd9d75023ecfa912ebbaca0ffa7ec9319296f"
+    },
+    {
+      "id": "en-male-001",
+      "text": "on",
+      "file": "assets/narration/en-male-001.mp3",
+      "taskId": "6eb20d78-eba5-4851-abdc-9e36cfdf9443",
+      "status": "downloaded",
+      "duration": 0.679184,
+      "bytes": 11328,
+      "sha256": "6cc471838ad26ca57bb91b2edf75246509e620e9ff035767365b7572392e54a5"
+    },
+    {
+      "id": "en-male-002",
+      "text": "rock",
+      "file": "assets/narration/en-male-002.mp3",
+      "taskId": "7ab1c77e-9861-44d3-b173-3e7d437a1c5a",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "c4dbb25b2135c88d681193f7ea21f4a0fc90d19e2245634179219a5de0186275"
+    },
+    {
+      "id": "en-male-003",
+      "text": "tree",
+      "file": "assets/narration/en-male-003.mp3",
+      "taskId": "885ee6d5-ac2f-4164-aba6-57325c2302a6",
+      "status": "downloaded",
+      "duration": 0.862041,
+      "bytes": 14254,
+      "sha256": "3f1c3586f195a62d8ff9fb98d3f8301baf8256ddeab67fdf6d776e02f1745d4d"
+    },
+    {
+      "id": "en-male-004",
+      "text": "green",
+      "file": "assets/narration/en-male-004.mp3",
+      "taskId": "7ba1a9e8-9ff7-4b00-9fd3-ffce9cf56033",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "e67d18e7092bccc6fca22538856d80e24837e36b9253770d2faafbde582452ab"
+    },
+    {
+      "id": "en-male-005",
+      "text": "fox",
+      "file": "assets/narration/en-male-005.mp3",
+      "taskId": "81353b3f-d435-484f-8c0a-86078b4ae033",
+      "status": "downloaded",
+      "duration": 0.862041,
+      "bytes": 14254,
+      "sha256": "f6d37431e769f2ca486626845672b04ac4be2b066b09c47b914b7b16db913d1a"
+    },
+    {
+      "id": "en-male-006",
+      "text": "cave",
+      "file": "assets/narration/en-male-006.mp3",
+      "taskId": "7c3a0ad0-210a-4028-8319-691ec6f4fae3",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "685490bb22838f1694dfd390a626a726573264c62f3169b856b38fd8d99ff092"
+    },
+    {
+      "id": "en-male-007",
+      "text": "water",
+      "file": "assets/narration/en-male-007.mp3",
+      "taskId": "d4726a9d-ecbc-463e-bbf4-8054cf25509c",
+      "status": "downloaded",
+      "duration": 0.862041,
+      "bytes": 14254,
+      "sha256": "1aa4585739233b56672f4e03a3a13ae470ff17f046d6a044a091c94f848eb2eb"
+    },
+    {
+      "id": "en-male-008",
+      "text": "bird",
+      "file": "assets/narration/en-male-008.mp3",
+      "taskId": "70817398-4648-4226-9737-fe8d91c10062",
+      "status": "downloaded",
+      "duration": 1.018776,
+      "bytes": 16762,
+      "sha256": "ac0be90aac54545cf4e7fda3e95254bb08761f54b531417ccc3278645a3abfd9"
+    },
+    {
+      "id": "en-male-009",
+      "text": "wing",
+      "file": "assets/narration/en-male-009.mp3",
+      "taskId": "6781ae69-ad05-4813-a4f0-0356ed3103dd",
+      "status": "downloaded",
+      "duration": 0.783673,
+      "bytes": 13000,
+      "sha256": "96b255ae04645d0459ef43badb5c0f49ef5ffac4f4b2a1ea5f02e404b8449f0c"
+    },
+    {
+      "id": "en-male-010",
+      "text": "jump",
+      "file": "assets/narration/en-male-010.mp3",
+      "taskId": "13973c78-9a4f-4a40-bd16-5dab220e47bf",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "2d34341724956008ff93270b064e139fc73c39255c1108698548db90cca9625f"
+    },
+    {
+      "id": "en-male-011",
+      "text": "over",
+      "file": "assets/narration/en-male-011.mp3",
+      "taskId": "8744af9d-e7c4-43aa-8747-5e8ab44455e5",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "22060d79f1d591e855eae1f58dbc7e9cff67f57bc7b46750b0f0960658a21b5c"
+    },
+    {
+      "id": "en-male-012",
+      "text": "up",
+      "file": "assets/narration/en-male-012.mp3",
+      "taskId": "7e797f7e-2d9b-48c0-8493-3ac4d2602689",
+      "status": "downloaded",
+      "duration": 0.653061,
+      "bytes": 10911,
+      "sha256": "f56b3cf316c6d6dc4fcea084696c0ce448c4cfc7cb39612b8c93e85b0e832892"
+    },
+    {
+      "id": "en-male-013",
+      "text": "big",
+      "file": "assets/narration/en-male-013.mp3",
+      "taskId": "53dc4f01-55ce-4b5e-be2e-fea7c03a0967",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "ec000c31dd20898adcb2d49bbe2aa1efece9a7584e11f4d9b4725250253e6eb3"
+    },
+    {
+      "id": "en-male-014",
+      "text": "small",
+      "file": "assets/narration/en-male-014.mp3",
+      "taskId": "d97bfa20-b385-49b9-bbd0-ce780b5ed067",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "738c0c173f54a6f760005db5bda4a24908d3ea5ae600d692b7faccfe6cab0f12"
+    },
+    {
+      "id": "en-male-015",
+      "text": "two",
+      "file": "assets/narration/en-male-015.mp3",
+      "taskId": "31543018-461b-4626-b003-44d6800539c1",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "64294cac58c7a2cf2e6812e1c898cc2519e276f41db5546d5ee5167f47204457"
+    },
+    {
+      "id": "en-male-016",
+      "text": "red",
+      "file": "assets/narration/en-male-016.mp3",
+      "taskId": "02ae67a2-67d1-46c2-a01b-7f2501fd2db9",
+      "status": "downloaded",
+      "duration": 0.783673,
+      "bytes": 13000,
+      "sha256": "51c22af1b6c4008de301a322dc45ff0a761b9c9632779911d78dcd9d4c777cb4"
+    },
+    {
+      "id": "en-male-017",
+      "text": "book",
+      "file": "assets/narration/en-male-017.mp3",
+      "taskId": "8a39ae3f-2cb3-4cf7-a1c5-411218c8cf92",
+      "status": "downloaded",
+      "duration": 1.018776,
+      "bytes": 16762,
+      "sha256": "91a159f0591057d1767aa3ce8fb1776e4f753bb37125d4df4a0e2801225866df"
+    },
+    {
+      "id": "en-male-018",
+      "text": "open",
+      "file": "assets/narration/en-male-018.mp3",
+      "taskId": "63eb3608-e12d-4529-9d93-ca3e5e3f4681",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "3b7d6cece60a0fcea2928121b0f479d4c364402f762a2a60cf8e7b604ff7bf26"
+    },
+    {
+      "id": "en-male-019",
+      "text": "night",
+      "file": "assets/narration/en-male-019.mp3",
+      "taskId": "f8e81d70-cf8b-44a9-8e47-519293dec630",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "789a998142573966660f38bc20f636a9d321fa620af090bb7482925f7fe10f84"
+    },
+    {
+      "id": "en-male-020",
+      "text": "moon",
+      "file": "assets/narration/en-male-020.mp3",
+      "taskId": "f26f12b4-56d4-4d1d-803a-cf3239dcb4f3",
+      "status": "downloaded",
+      "duration": 0.862041,
+      "bytes": 14254,
+      "sha256": "4e10d56ab7fffe5bd37b8559d941f395cf9940d482d56538273892d8ff16f527"
+    },
+    {
+      "id": "en-male-021",
+      "text": "light",
+      "file": "assets/narration/en-male-021.mp3",
+      "taskId": "152aafcf-f18b-4e7a-988d-2156faec8a88",
+      "status": "downloaded",
+      "duration": 1.567347,
+      "bytes": 25539,
+      "sha256": "a78d28c48b11e37fdb73917e24bb52729c14a77bd335c1572db4ba745de5e03c"
+    },
+    {
+      "id": "en-male-022",
+      "text": "fire",
+      "file": "assets/narration/en-male-022.mp3",
+      "taskId": "43933215-49e4-4445-9831-84b03e73c03b",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "311532ea387a7817b7ed16b3ba5159eda9976468a878d526bfa79addecbe411d"
+    },
+    {
+      "id": "en-male-023",
+      "text": "owl",
+      "file": "assets/narration/en-male-023.mp3",
+      "taskId": "68fc647c-d0ee-473c-9c4c-ecb5e2e9eadf",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "7c772e49fd5c8d735aebc7e19f684b9f788a9322f21eb44519647de47812b3dd"
+    },
+    {
+      "id": "en-male-024",
+      "text": "forest",
+      "file": "assets/narration/en-male-024.mp3",
+      "taskId": "339956e5-9b09-4519-9651-2485288d3815",
+      "status": "downloaded",
+      "duration": 1.018776,
+      "bytes": 16762,
+      "sha256": "fbc5e88e8473587de632db9b33aa651c142d00594212abe5a6662b7a7a8216ed"
+    },
+    {
+      "id": "en-male-025",
+      "text": "dragon",
+      "file": "assets/narration/en-male-025.mp3",
+      "taskId": "e5940a18-74a4-44cf-b630-65ecf7fdcc24",
+      "status": "downloaded",
+      "duration": 1.07102,
+      "bytes": 17598,
+      "sha256": "57147347181380bb764c35f41f285ebd15593d73f8765d5071f758f8d5bb6c6d"
+    },
+    {
+      "id": "en-male-026",
+      "text": "treasure",
+      "file": "assets/narration/en-male-026.mp3",
+      "taskId": "e2a5dff6-966e-47e7-9e57-72c3fcb414f6",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "a29ba8755f06e77b49351021374ccb369536d894be63fd3d74dff35fc1396818"
+    },
+    {
+      "id": "en-male-027",
+      "text": "coin",
+      "file": "assets/narration/en-male-027.mp3",
+      "taskId": "2cfc0bd7-52a2-4b0e-a220-b8514e9e1e2a",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "a5e68ff08abbe9a1b57b7afef526c7711e88ffb532659cc2f8ff91fc4b0e5824"
+    },
+    {
+      "id": "en-male-028",
+      "text": "gate",
+      "file": "assets/narration/en-male-028.mp3",
+      "taskId": "ebbf5868-9975-4897-92ee-a957965364b2",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "14a91eb7f23c382cf5b9864033f9edf5ed8b8de291e24fc206f4115ca958f496"
+    },
+    {
+      "id": "en-male-029",
+      "text": "castle",
+      "file": "assets/narration/en-male-029.mp3",
+      "taskId": "3951916a-ee08-4640-8f74-cff489a0fd72",
+      "status": "downloaded",
+      "duration": 1.07102,
+      "bytes": 17598,
+      "sha256": "b7c1198a79776df662e18401876e44cc778a959725808a4d63420b5cec249e0a"
+    },
+    {
+      "id": "en-male-030",
+      "text": "magic",
+      "file": "assets/narration/en-male-030.mp3",
+      "taskId": "ebfc5747-bf0b-4013-a9b0-d13e03cc3b5d",
+      "status": "downloaded",
+      "duration": 0.966531,
+      "bytes": 15926,
+      "sha256": "4c28b970f2f82ae703b1abf3cdaeb037494c46ba20f37d8827e7c472767ca7b3"
+    },
+    {
+      "id": "en-male-031",
+      "text": "sat",
+      "file": "assets/narration/en-male-031.mp3",
+      "taskId": "c8987913-4231-4799-99d5-a069c65d884e",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "2b7ab7d7ff1ffd5771d52ccbc3db7debfedf5a676266519b09da084d13aca1bd"
+    },
+    {
+      "id": "en-male-032",
+      "text": "you",
+      "file": "assets/narration/en-male-032.mp3",
+      "taskId": "452cb19d-92d1-4df9-a498-a966ebac66b0",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "85214c638172fe6637a47dcfef5107225fb645ac11712c4ea0bb9df989316efe"
+    },
+    {
+      "id": "en-male-033",
+      "text": "cat",
+      "file": "assets/narration/en-male-033.mp3",
+      "taskId": "2746a387-f35e-4a6b-9945-e6ba143652b4",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "037b63cf298bb6ec201b2dfb79eea76cb1ecdbbfba68fdd482f070c39fbc40fa"
+    },
+    {
+      "id": "en-male-034",
+      "text": "car",
+      "file": "assets/narration/en-male-034.mp3",
+      "taskId": "30eee219-6267-4fa3-9097-abbe4d9e403b",
+      "status": "downloaded",
+      "duration": 1.07102,
+      "bytes": 17598,
+      "sha256": "920c556c4b6ac82f89aa6506df09dddb0904422fb97364596112afee606a5561"
+    },
+    {
+      "id": "en-male-035",
+      "text": "can",
+      "file": "assets/narration/en-male-035.mp3",
+      "taskId": "c64dae34-cc2b-4154-b485-fb9cd2d81cff",
+      "status": "downloaded",
+      "duration": 0.835918,
+      "bytes": 13836,
+      "sha256": "6e19f1592c8b86fcd4ad569c7dd0075912fd717a0fcf860c6c6b64d5ff25b75c"
+    },
+    {
+      "id": "en-male-036",
+      "text": "map",
+      "file": "assets/narration/en-male-036.mp3",
+      "taskId": "2df8065e-34c7-469d-bf69-cc1be809ae29",
+      "status": "downloaded",
+      "duration": 0.966531,
+      "bytes": 15926,
+      "sha256": "374f6ee9aabe14f39c89b6726b629d392793bcce690a6d390b2131b8d64938b5"
+    },
+    {
+      "id": "en-male-037",
+      "text": "ship",
+      "file": "assets/narration/en-male-037.mp3",
+      "taskId": "6f23b03e-af1a-497c-947f-a7df273c3d60",
+      "status": "downloaded",
+      "duration": 1.671837,
+      "bytes": 27211,
+      "sha256": "6270f7a45c51becbc4f1353a78d1a619c3a4b62ad1af3c44276af2624f8e11f6"
+    },
+    {
+      "id": "en-male-038",
+      "text": "star",
+      "file": "assets/narration/en-male-038.mp3",
+      "taskId": "c20b9d17-a86d-4fa3-a3ce-edfd7a163707",
+      "status": "downloaded",
+      "duration": 0.966531,
+      "bytes": 15926,
+      "sha256": "b7482621aeb400c4f3d3e00da1d7c11a5f6d6944f47b2a69287394b714bbd4f1"
+    },
+    {
+      "id": "en-male-039",
+      "text": "shark",
+      "file": "assets/narration/en-male-039.mp3",
+      "taskId": "05c0323f-223f-44fd-a555-a907d8f0df7a",
+      "status": "downloaded",
+      "duration": 0.966531,
+      "bytes": 15926,
+      "sha256": "388b13a6a15c893c9295db92406bc124e69a5d11464eeec24a6554c53f6706ca"
+    },
+    {
+      "id": "en-male-040",
+      "text": "bright",
+      "file": "assets/narration/en-male-040.mp3",
+      "taskId": "75bc6e19-8e74-4f05-b340-255d4107d4dc",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "260d79d1d7eba3ffbf8ce709a312a1f68e8e9b6053b8286638b2a03ee428bb23"
+    },
+    {
+      "id": "en-male-041",
+      "text": "stone",
+      "file": "assets/narration/en-male-041.mp3",
+      "taskId": "400fd8d5-69d9-4eb0-b8c6-842a2632141d",
+      "status": "downloaded",
+      "duration": 1.018776,
+      "bytes": 16762,
+      "sha256": "657dfbd13d7138d936797fd6173604a305e6860260ce29e96daf0c0839eade5e"
+    },
+    {
+      "id": "en-male-042",
+      "text": "storm",
+      "file": "assets/narration/en-male-042.mp3",
+      "taskId": "ba6e8902-e190-4c30-b058-f97ccea6ca79",
+      "status": "downloaded",
+      "duration": 0.966531,
+      "bytes": 15926,
+      "sha256": "92c5c05649e0d8f0c4ac28acd976733cb456bb55be068956893a51f83ac228e6"
+    },
+    {
+      "id": "en-male-043",
+      "text": "shadow",
+      "file": "assets/narration/en-male-043.mp3",
+      "taskId": "b10684bc-7408-448a-affa-b3d9fb9c64a4",
+      "status": "downloaded",
+      "duration": 0.914286,
+      "bytes": 15090,
+      "sha256": "533543011b581394f2a006ee26875a0fa54100fa4882e21bdb6127644c970c0f"
+    },
+    {
+      "id": "en-male-044",
+      "text": "silver",
+      "file": "assets/narration/en-male-044.mp3",
+      "taskId": "d6cd7d42-2b50-4003-bcc5-628318c82591",
+      "status": "downloaded",
+      "duration": 0.966531,
+      "bytes": 15926,
+      "sha256": "806d1189b432faa0d0af315a173120809309a4ed0a34aff3a6a03fbe6ebdc1d3"
+    },
+    {
+      "id": "en-male-045",
+      "text": "whisper",
+      "file": "assets/narration/en-male-045.mp3",
+      "taskId": "2093a550-6af8-41e0-980f-1c648a71e2f8",
+      "status": "downloaded",
+      "duration": 0.966531,
+      "bytes": 15926,
+      "sha256": "bfc068450b83e4bf7b281efe4636d72f6e0aae60f1f74212604fb53a806acac2"
+    },
+    {
+      "id": "en-male-046",
+      "text": "journey",
+      "file": "assets/narration/en-male-046.mp3",
+      "taskId": "b8484832-1029-4724-990b-80c2cbb152f3",
+      "status": "downloaded",
+      "duration": 1.018776,
+      "bytes": 16762,
+      "sha256": "fbb4eba06c4d0f39e2bb6afd0c51bc89bcee10905933b86e94da077d85aea52e"
+    },
+    {
+      "id": "en-male-047",
+      "text": "lantern",
+      "file": "assets/narration/en-male-047.mp3",
+      "taskId": "a3ac9b53-4cfa-46b6-a46e-ab0259422171",
+      "status": "downloaded",
+      "duration": 0.966531,
+      "bytes": 15926,
+      "sha256": "bb67d7c0c25db6f63f5065a6a4c3bc4c48ac6e94095379a689f48a9bf51b2279"
+    },
+    {
+      "id": "en-male-048",
+      "text": "creature",
+      "file": "assets/narration/en-male-048.mp3",
+      "taskId": "0005aba4-a3c1-4e98-8855-3c4327119ff0",
+      "status": "downloaded",
+      "duration": 1.07102,
+      "bytes": 17598,
+      "sha256": "9bc3ff39020be86e6a75bcdaab66449934bef7ae3088b2b4788b197daeb3843b"
+    },
+    {
+      "id": "en-male-049",
+      "text": "Pip is on the rock.",
+      "file": "assets/narration/en-male-049.mp3",
+      "taskId": "97fa874b-aca9-4f94-b5a3-8eab2778dcca",
+      "status": "downloaded",
+      "duration": 1.671837,
+      "bytes": 27211,
+      "sha256": "e19492a6d00e43461c40ede01abae7599f561a04b4bffa13f06bbbb1552cfb99"
+    },
+    {
+      "id": "en-male-050",
+      "text": "Practice turn. You keep your heart. Pip is on the rock.",
+      "file": "assets/narration/en-male-050.mp3",
+      "taskId": "62de14a5-5398-49ec-9e41-a31d3ca40601",
+      "status": "downloaded",
+      "duration": 4.440816,
+      "bytes": 71515,
+      "sha256": "4dffa47a61294eb2b7fdc2d6531244bc3deb04b8af8a98d72db039114bdf1d2c"
+    },
+    {
+      "id": "en-male-051",
+      "text": "The tree is green.",
+      "file": "assets/narration/en-male-051.mp3",
+      "taskId": "5225af79-671a-44e2-a413-bd73536571cc",
+      "status": "downloaded",
+      "duration": 1.515102,
+      "bytes": 24703,
+      "sha256": "a79bbe6d1fea581c41522ad1e00bfbb9672a98c07ba4273c7808e5ca42239476"
+    },
+    {
+      "id": "en-male-052",
+      "text": "Practice turn. You keep your heart. The tree is green.",
+      "file": "assets/narration/en-male-052.mp3",
+      "taskId": "f70fb557-e661-4244-b76c-87d384952788",
+      "status": "downloaded",
+      "duration": 5.433469,
+      "bytes": 87397,
+      "sha256": "2f63936c32e96af0eebb4e3e84f9ba35b14ddd95198f632b81517adae2f97ec3"
+    },
+    {
+      "id": "en-male-053",
+      "text": "Pip follows the fox.",
+      "file": "assets/narration/en-male-053.mp3",
+      "taskId": "6be39ab6-51d0-4858-a0b0-1fe8521b689f",
+      "status": "downloaded",
+      "duration": 1.750204,
+      "bytes": 28465,
+      "sha256": "d5b98955b58ddb32cf3b64143b696d2c31ca2d972d154967bb3093492080c485"
+    },
+    {
+      "id": "en-male-054",
+      "text": "Practice turn. You keep your heart. Pip follows the fox.",
+      "file": "assets/narration/en-male-054.mp3",
+      "taskId": "04f19fc4-a8e2-4ecf-95c2-218bb8888fe2",
+      "status": "downloaded",
+      "duration": 5.459592,
+      "bytes": 87815,
+      "sha256": "c65276305a7103524f4c3cb33e3da072df91a1a7fb1847beb1bc3e9be4d8c09c"
+    },
+    {
+      "id": "en-male-055",
+      "text": "Pip is by the cave.",
+      "file": "assets/narration/en-male-055.mp3",
+      "taskId": "a9e17909-248c-48a2-ac94-4c3902fa2ac6",
+      "status": "downloaded",
+      "duration": 1.750204,
+      "bytes": 28465,
+      "sha256": "292f8eb0ed4e43d6abe1da36f21ff21bbd8915db0d84515d73508c5520a8329d"
+    },
+    {
+      "id": "en-male-056",
+      "text": "Practice turn. You keep your heart. Pip is by the cave.",
+      "file": "assets/narration/en-male-056.mp3",
+      "taskId": "c081a0e4-2506-4aac-b8de-380974237258",
+      "status": "downloaded",
+      "duration": 4.597551,
+      "bytes": 74022,
+      "sha256": "2eb30ad530168d0b80d7179a3fa452c039adadb9d66e361470c873e659d72caf"
+    },
+    {
+      "id": "en-male-058",
+      "text": "Practice turn. You keep your heart. Pip can jump over water.",
+      "file": "assets/narration/en-male-058.mp3",
+      "taskId": "3193c007-6ab1-4ec0-9fef-545a1b359b8f",
+      "status": "downloaded",
+      "duration": 5.746939,
+      "bytes": 92413,
+      "sha256": "1683377ff104a53df32c8c5486b084b4e12386c22f919aad8324c52d55fdd839"
+    },
+    {
+      "id": "en-male-059",
+      "text": "The bird flies up.",
+      "file": "assets/narration/en-male-059.mp3",
+      "taskId": "f11185a7-de05-4d4e-af45-8d5f68db0862",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "89e29f08ae7dc54dace3a8709375aa71df624206b97b3681ef6942027dee6cb4"
+    },
+    {
+      "id": "en-male-060",
+      "text": "Practice turn. You keep your heart. The bird flies up.",
+      "file": "assets/narration/en-male-060.mp3",
+      "taskId": "38743016-8a78-4658-80f7-88f3eaa27e9c",
+      "status": "downloaded",
+      "duration": 4.963265,
+      "bytes": 79874,
+      "sha256": "c2536e1d49c9b2492312e7f9402d17127ce32e33ca23c13f23d0bb9e34cd99fc"
+    },
+    {
+      "id": "en-male-061",
+      "text": "The bird has a wing.",
+      "file": "assets/narration/en-male-061.mp3",
+      "taskId": "ac61886c-ccac-44ee-8bac-809cbd3fd9ff",
+      "status": "downloaded",
+      "duration": 1.567347,
+      "bytes": 25539,
+      "sha256": "53cac143dbc30ca7df6ec6f3c6fb2e0fe594ae2a7cc800f376265399d92a1836"
+    },
+    {
+      "id": "en-male-062",
+      "text": "Practice turn. You keep your heart. The bird has a wing.",
+      "file": "assets/narration/en-male-062.mp3",
+      "taskId": "6ae99f18-b3a6-4a33-8467-6fe501d5e0de",
+      "status": "downloaded",
+      "duration": 5.564082,
+      "bytes": 89487,
+      "sha256": "89ca5962f1197f40be76461e8699b967188df547d4cfc8d68ad3ae04e3a11309"
+    },
+    {
+      "id": "en-male-063",
+      "text": "The open book is big.",
+      "file": "assets/narration/en-male-063.mp3",
+      "taskId": "229946e7-18ce-4a15-939a-67a9a4ef9929",
+      "status": "downloaded",
+      "duration": 1.750204,
+      "bytes": 28465,
+      "sha256": "6fe8d336b8b1eb0379015dc05ba22cead29f117fc311ea814394f44022818abc"
+    },
+    {
+      "id": "en-male-064",
+      "text": "Practice turn. You keep your heart. The open book is big.",
+      "file": "assets/narration/en-male-064.mp3",
+      "taskId": "5eb501b0-44c8-4b6a-9635-e9d3882143bc",
+      "status": "downloaded",
+      "duration": 4.91102,
+      "bytes": 79038,
+      "sha256": "e8966173fd4986e1e475cacee4e7dd5536ce78144c222f62ee3cd302ca18ecd3"
+    },
+    {
+      "id": "en-male-065",
+      "text": "The closed book is small.",
+      "file": "assets/narration/en-male-065.mp3",
+      "taskId": "fdfaa9a0-0e66-4afe-8f62-59e12dac4305",
+      "status": "downloaded",
+      "duration": 1.750204,
+      "bytes": 28465,
+      "sha256": "b0c195c0cf35b3b0dc1bcc38b1b37a964d69084ca765e4b40a6fee7a7919d3e0"
+    },
+    {
+      "id": "en-male-066",
+      "text": "Practice turn. You keep your heart. The closed book is small.",
+      "file": "assets/narration/en-male-066.mp3",
+      "taskId": "52769df0-509b-40b9-ba15-dfaf4bfa4aa8",
+      "status": "downloaded",
+      "duration": 6.530612,
+      "bytes": 104951,
+      "sha256": "43d8a1308f9dd339807e2d4c961263dc4dbcedaff046393b313c9815a99f994d"
+    },
+    {
+      "id": "en-male-067",
+      "text": "Pip has two books.",
+      "file": "assets/narration/en-male-067.mp3",
+      "taskId": "dd627163-7810-4cb6-b3e9-8f30f2b234ef",
+      "status": "downloaded",
+      "duration": 1.697959,
+      "bytes": 27629,
+      "sha256": "8e2ff55ede38eb336e54140d6b1fb86429e363ac971ac1a6931960ad79b0e052"
+    },
+    {
+      "id": "en-male-068",
+      "text": "Practice turn. You keep your heart. Pip has two books.",
+      "file": "assets/narration/en-male-068.mp3",
+      "taskId": "149ef265-c5ad-4d8e-8482-40fb16207baf",
+      "status": "downloaded",
+      "duration": 4.205714,
+      "bytes": 67753,
+      "sha256": "ae58a47473442676a0c1e870852af466c4b771d6d505a205193579333168d9f8"
+    },
+    {
+      "id": "en-male-069",
+      "text": "The books are red.",
+      "file": "assets/narration/en-male-069.mp3",
+      "taskId": "87b158ad-b062-4aed-95d4-8ff67ec404cc",
+      "status": "downloaded",
+      "duration": 1.48898,
+      "bytes": 24285,
+      "sha256": "fd8e7a7a14b4493ac9b630d12a6d1128262498b1266115288b6de4a0fca67260"
+    },
+    {
+      "id": "en-male-070",
+      "text": "Practice turn. You keep your heart. The books are red.",
+      "file": "assets/narration/en-male-070.mp3",
+      "taskId": "8fa5312b-4067-49fa-9cdb-85fdb646f401",
+      "status": "downloaded",
+      "duration": 4.780408,
+      "bytes": 76948,
+      "sha256": "491e1c62c2c333390cdd5e41132a687f5e1230b1f1e7de5baf6725dec9f6e97d"
+    },
+    {
+      "id": "en-male-071",
+      "text": "The big book is open.",
+      "file": "assets/narration/en-male-071.mp3",
+      "taskId": "749dfaf9-f426-498c-850d-4c0a7c1b49b7",
+      "status": "downloaded",
+      "duration": 1.697959,
+      "bytes": 27629,
+      "sha256": "8bf7cf6cfa59ae65397ec5ba19e3f2954338ecb4830c7deb6cd82c146221c532"
+    },
+    {
+      "id": "en-male-072",
+      "text": "Practice turn. You keep your heart. The big book is open.",
+      "file": "assets/narration/en-male-072.mp3",
+      "taskId": "9ba0069a-1836-4a0e-8a47-d2c385b3a0f7",
+      "status": "downloaded",
+      "duration": 5.250612,
+      "bytes": 84471,
+      "sha256": "fd332c50aa9211fd04bfe2fde466017960dbd135fd0490ff0379ee439d7fc46f"
+    },
+    {
+      "id": "en-male-073",
+      "text": "The moon shines at night.",
+      "file": "assets/narration/en-male-073.mp3",
+      "taskId": "e4892d75-c4fb-4169-ab42-be4ce21cdc02",
+      "status": "downloaded",
+      "duration": 1.854694,
+      "bytes": 30137,
+      "sha256": "47d48518a455cdb97caf7b6954f4f76bb8b1f582aa2d999f0cce3f94607504ca"
+    },
+    {
+      "id": "en-male-074",
+      "text": "Practice turn. You keep your heart. The moon shines at night.",
+      "file": "assets/narration/en-male-074.mp3",
+      "taskId": "a8ab9d33-2579-4d6d-91ac-ef8657b854cd",
+      "status": "downloaded",
+      "duration": 5.198367,
+      "bytes": 83635,
+      "sha256": "7176d7b72b6e8f22f4b6c2b3b0d4f7885c3d70bb4d935a45a25a9c415f9db698"
+    },
+    {
+      "id": "en-male-075",
+      "text": "The fire gives light.",
+      "file": "assets/narration/en-male-075.mp3",
+      "taskId": "f3b244f0-7d2c-4711-bceb-d4df3c675ded",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "b4a00fdd3379fafa558c6fd8c4667c9ac278007221fc6bb988a8f95e2f69f234"
+    },
+    {
+      "id": "en-male-076",
+      "text": "Practice turn. You keep your heart. The fire gives light.",
+      "file": "assets/narration/en-male-076.mp3",
+      "taskId": "7d9fab42-b379-4432-afa5-45cb7492b3f3",
+      "status": "downloaded",
+      "duration": 4.623673,
+      "bytes": 74440,
+      "sha256": "1d4bc31bc6b8ab8728bb8504e903f163fb82221c013063d182fe6b44ea953052"
+    },
+    {
+      "id": "en-male-077",
+      "text": "An owl sits on the branch.",
+      "file": "assets/narration/en-male-077.mp3",
+      "taskId": "23818253-4e6e-4cf8-8405-a08048c9e392",
+      "status": "downloaded",
+      "duration": 1.985306,
+      "bytes": 32226,
+      "sha256": "be4b03cae6c6f68bb6ae9059055d8ea1193ec2f5bc9077acd4353e0e14f8c3dc"
+    },
+    {
+      "id": "en-male-078",
+      "text": "Practice turn. You keep your heart. An owl sits on the branch.",
+      "file": "assets/narration/en-male-078.mp3",
+      "taskId": "73397d3f-8e31-4b16-863e-25854d702933",
+      "status": "downloaded",
+      "duration": 5.746939,
+      "bytes": 92413,
+      "sha256": "c320056e7dedcd6af836f9fb71e5f43763aeb44d566df072762f4a4fddc22e66"
+    },
+    {
+      "id": "en-male-079",
+      "text": "Pip is in the forest.",
+      "file": "assets/narration/en-male-079.mp3",
+      "taskId": "69daefcf-4df5-48b9-b270-c1a7a04f1dae",
+      "status": "downloaded",
+      "duration": 1.671837,
+      "bytes": 27211,
+      "sha256": "a03a0c73c89f296b8e0d68d44c14e72325a6df1dfe28d4fa800b09b5c4193f2d"
+    },
+    {
+      "id": "en-male-080",
+      "text": "Practice turn. You keep your heart. Pip is in the forest.",
+      "file": "assets/narration/en-male-080.mp3",
+      "taskId": "48c22f87-76ff-4bf5-aad8-a763292022d4",
+      "status": "downloaded",
+      "duration": 5.381224,
+      "bytes": 86561,
+      "sha256": "2113059971b7dc303ace3d498a6cec6a27c7657d4cc2ed832f1d3cd706bd825f"
+    },
+    {
+      "id": "en-male-081",
+      "text": "Pip is a dragon.",
+      "file": "assets/narration/en-male-081.mp3",
+      "taskId": "15344f08-e1ed-4786-9b59-15db0d7d4925",
+      "status": "downloaded",
+      "duration": 1.567347,
+      "bytes": 25539,
+      "sha256": "058abb399a27155d01394e21ad3605040e7ff294b5b48e4f5c7beb10eb480059"
+    },
+    {
+      "id": "en-male-082",
+      "text": "Practice turn. You keep your heart. Pip is a dragon.",
+      "file": "assets/narration/en-male-082.mp3",
+      "taskId": "b96ece1c-58ff-4d4c-b18e-1121caa96e67",
+      "status": "downloaded",
+      "duration": 5.381224,
+      "bytes": 86561,
+      "sha256": "52f2cea922a7770bfb6db2525b7ccf6366fe48442afffaf4abb0bcfdf47c91af"
+    },
+    {
+      "id": "en-male-083",
+      "text": "Pip finds the treasure.",
+      "file": "assets/narration/en-male-083.mp3",
+      "taskId": "8ae50b9e-b874-4d28-b747-c17d6866458f",
+      "status": "downloaded",
+      "duration": 1.697959,
+      "bytes": 27629,
+      "sha256": "ecdaf845efe91444431a14651f944c79101b0e67167fab4f4c2b10853f38989a"
+    },
+    {
+      "id": "en-male-084",
+      "text": "Practice turn. You keep your heart. Pip finds the treasure.",
+      "file": "assets/narration/en-male-084.mp3",
+      "taskId": "7f89f0c1-41a7-46b1-a772-7509dc46558f",
+      "status": "downloaded",
+      "duration": 5.276735,
+      "bytes": 84889,
+      "sha256": "708dab55bde862f9fae0cb3d20fd5d236cf5c00331497437cd4b3b249d428e37"
+    },
+    {
+      "id": "en-male-085",
+      "text": "A coin floats above the chest.",
+      "file": "assets/narration/en-male-085.mp3",
+      "taskId": "db31074a-99bf-443e-8ac5-703163af12a2",
+      "status": "downloaded",
+      "duration": 2.403265,
+      "bytes": 38914,
+      "sha256": "08b2a1bbff95a9e0abb3d7e8f2e33efd60d50a8cb22f17e65a9a2b01c331fa07"
+    },
+    {
+      "id": "en-male-086",
+      "text": "Practice turn. You keep your heart. A coin floats above the chest.",
+      "file": "assets/narration/en-male-086.mp3",
+      "taskId": "67099a27-1db6-4474-bbd0-5fcb40c7e246",
+      "status": "downloaded",
+      "duration": 7.000816,
+      "bytes": 112475,
+      "sha256": "dc4311f9d8462114a0f644ce25abf9deb76a3298e8882cfaadeb1b0c85ee4a2d"
+    },
+    {
+      "id": "en-male-087",
+      "text": "The gate is by the castle.",
+      "file": "assets/narration/en-male-087.mp3",
+      "taskId": "9fb2f2cb-9aea-46ae-be0a-a2d7627eb6e7",
+      "status": "downloaded",
+      "duration": 1.802449,
+      "bytes": 29301,
+      "sha256": "9797bf8fa9a66cc74f3a50de1df2359bf06c555f33eaf15ce61010ddf13c2018"
+    },
+    {
+      "id": "en-male-088",
+      "text": "Practice turn. You keep your heart. The gate is by the castle.",
+      "file": "assets/narration/en-male-088.mp3",
+      "taskId": "0d6fb97e-d97a-4e5b-88f6-cf47672b85ab",
+      "status": "downloaded",
+      "duration": 5.511837,
+      "bytes": 88651,
+      "sha256": "a71851da5d99eb8350204990edb89788aa414e18b73ff2a5898d77a25bad642f"
+    },
+    {
+      "id": "en-male-089",
+      "text": "Pip uses magic to lift a coin.",
+      "file": "assets/narration/en-male-089.mp3",
+      "taskId": "af55b6a3-0815-4b63-8aa6-12e7e9718acc",
+      "status": "downloaded",
+      "duration": 2.533878,
+      "bytes": 41004,
+      "sha256": "5deceeee59e3d5349ce43a22b1b70266afd967059a62c9da0c8822d480c79c2b"
+    },
+    {
+      "id": "en-male-090",
+      "text": "Practice turn. You keep your heart. Pip uses magic to lift a coin.",
+      "file": "assets/narration/en-male-090.mp3",
+      "taskId": "8c5d66f7-08df-4c80-8491-db9bce9dab06",
+      "status": "downloaded",
+      "duration": 6.635102,
+      "bytes": 106623,
+      "sha256": "290dfb50b20b812eb75aaf68a040eae8d6f02ba8f2089c04859bdad0d4088dc0"
+    },
+    {
+      "id": "en-male-091",
+      "text": "Pip sat on the rock.",
+      "file": "assets/narration/en-male-091.mp3",
+      "taskId": "563f8baa-9fd6-4a56-ab71-db54d64940da",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "ff916e7b88f7caececbb2171d12533cb1fec7d37e78a29b3fdc0f43ba6716fc9"
+    },
+    {
+      "id": "en-male-092",
+      "text": "Practice turn. You keep your heart. Pip sat on the rock.",
+      "file": "assets/narration/en-male-092.mp3",
+      "taskId": "861764b7-95d2-41a6-8f93-a73d09b1e4a2",
+      "status": "downloaded",
+      "duration": 5.01551,
+      "bytes": 80710,
+      "sha256": "859207e229420aabb475a2f9ee6e94afa1edf016f6cbeef850673d177b19e0a2"
+    },
+    {
+      "id": "en-male-093",
+      "text": "The word was on.",
+      "file": "assets/narration/en-male-093.mp3",
+      "taskId": "9f1c19cd-d563-432a-8c67-44f6cdb90581",
+      "status": "downloaded",
+      "duration": 1.436735,
+      "bytes": 23449,
+      "sha256": "6efff1446ba18103085dd5343791c01c57b970976f22113540fb2cc9c5449534"
+    },
+    {
+      "id": "en-male-094",
+      "text": "Practice turn. You keep your heart. The word was on.",
+      "file": "assets/narration/en-male-094.mp3",
+      "taskId": "f5592876-5131-417a-95dd-a6e978d211cb",
+      "status": "downloaded",
+      "duration": 5.459592,
+      "bytes": 87815,
+      "sha256": "735d1afeda3cc9b7565df1f3d5223696f58d4e282678d5b86579076e9bf1ae76"
+    },
+    {
+      "id": "en-male-095",
+      "text": "The word was rock.",
+      "file": "assets/narration/en-male-095.mp3",
+      "taskId": "d78ba1e8-b1cb-4bb6-9688-0f841253cb2d",
+      "status": "downloaded",
+      "duration": 1.48898,
+      "bytes": 24285,
+      "sha256": "eec8e8ae26183c687aec2c9219031caf1502ea976653c47d718151fb8f5afc76"
+    },
+    {
+      "id": "en-male-096",
+      "text": "Practice turn. You keep your heart. The word was rock.",
+      "file": "assets/narration/en-male-096.mp3",
+      "taskId": "6d372093-9ac2-480e-879d-ff43dc599a7f",
+      "status": "downloaded",
+      "duration": 5.276735,
+      "bytes": 84889,
+      "sha256": "51e1675d268eda72d05af7e3abd8b24109adda35edf0550393a81fd6bb48b16d"
+    },
+    {
+      "id": "en-male-097",
+      "text": "The word was tree.",
+      "file": "assets/narration/en-male-097.mp3",
+      "taskId": "75e22737-5a6c-415f-844a-70ffb2d9f13f",
+      "status": "downloaded",
+      "duration": 1.671837,
+      "bytes": 27211,
+      "sha256": "fccb74a3bb6b3b8723f972314e4faeabcdd2e2d329cb9c8edd31def856f357a5"
+    },
+    {
+      "id": "en-male-098",
+      "text": "Practice turn. You keep your heart. The word was tree.",
+      "file": "assets/narration/en-male-098.mp3",
+      "taskId": "47fe3d0d-ed0f-4400-9fbe-7b4b023ad63c",
+      "status": "downloaded",
+      "duration": 4.545306,
+      "bytes": 73186,
+      "sha256": "b6b86632abe8c53d034d473a3e899a07a26c33721d37e7d658044c890342e0ac"
+    },
+    {
+      "id": "en-male-099",
+      "text": "The word was green.",
+      "file": "assets/narration/en-male-099.mp3",
+      "taskId": "ac15e8ba-4f2a-4fe5-9845-47750908a798",
+      "status": "downloaded",
+      "duration": 1.567347,
+      "bytes": 25539,
+      "sha256": "9874afaac916de8524b2aff1b61f8694f06b873cf2f33f0b30efd89757bcda07"
+    },
+    {
+      "id": "en-male-100",
+      "text": "Practice turn. You keep your heart. The word was green.",
+      "file": "assets/narration/en-male-100.mp3",
+      "taskId": "e1120b2d-a631-4cb7-924a-4d01759b03c8",
+      "status": "downloaded",
+      "duration": 5.01551,
+      "bytes": 80710,
+      "sha256": "59cbe5a5f13527ab8b05c83dc0528661033c0bed4355b0ec56cff121f1a7043b"
+    },
+    {
+      "id": "en-male-101",
+      "text": "The word was fox.",
+      "file": "assets/narration/en-male-101.mp3",
+      "taskId": "0c924339-4eed-4574-a935-fad757f67e1e",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "a6b12f18201c7cb8f9d2887815e99f6d9524533a9dcdc11dc4326c1e3e11b084"
+    },
+    {
+      "id": "en-male-102",
+      "text": "Practice turn. You keep your heart. The word was fox.",
+      "file": "assets/narration/en-male-102.mp3",
+      "taskId": "2b7448a5-4bcb-4810-8a32-b9c3bc7ed22e",
+      "status": "downloaded",
+      "duration": 5.146122,
+      "bytes": 82799,
+      "sha256": "aa004eb29e1454b94a1eb4aa289e3310d12888a477d19a78e49ba54e5d508c37"
+    },
+    {
+      "id": "en-male-103",
+      "text": "The word was cave.",
+      "file": "assets/narration/en-male-103.mp3",
+      "taskId": "1cf445cd-c8f4-4904-bc71-31ed87db431a",
+      "status": "downloaded",
+      "duration": 1.697959,
+      "bytes": 27629,
+      "sha256": "d02f6acd38d4310fe13b6d43736daee7382d0c512e42b0158c1105f8bf7c393b"
+    },
+    {
+      "id": "en-male-104",
+      "text": "Practice turn. You keep your heart. The word was cave.",
+      "file": "assets/narration/en-male-104.mp3",
+      "taskId": "eb836671-11d6-40b9-ae6c-9c57d25ebfbf",
+      "status": "downloaded",
+      "duration": 5.511837,
+      "bytes": 88651,
+      "sha256": "8efa2d6b66742b10f3158cf7a5425a640ccaee883754ea6db4c62547f9eb6df7"
+    },
+    {
+      "id": "en-male-105",
+      "text": "The word was water.",
+      "file": "assets/narration/en-male-105.mp3",
+      "taskId": "1e4cbc9e-4659-4c0a-8d56-914266b0aedc",
+      "status": "downloaded",
+      "duration": 1.671837,
+      "bytes": 27211,
+      "sha256": "94816823bf41e3632c504cdee1f4e52087125001fa38edc1aa72309d5000ab39"
+    },
+    {
+      "id": "en-male-106",
+      "text": "Practice turn. You keep your heart. The word was water.",
+      "file": "assets/narration/en-male-106.mp3",
+      "taskId": "bd7ce8d4-d4fc-4f41-872b-7d67eb97a0f7",
+      "status": "downloaded",
+      "duration": 4.623673,
+      "bytes": 74440,
+      "sha256": "87bc155361beed8b7a71b192876ba6fbf7a13f6a1fac537f18b41cc1738d1e88"
+    },
+    {
+      "id": "en-male-107",
+      "text": "The word was bird.",
+      "file": "assets/narration/en-male-107.mp3",
+      "taskId": "c609d9df-cde9-4a60-9a91-51e062307c2b",
+      "status": "downloaded",
+      "duration": 1.671837,
+      "bytes": 27211,
+      "sha256": "6eb2eefab182c9685802eba75594b99492310a9c2d645d6f94eba43097b8fcf3"
+    },
+    {
+      "id": "en-male-108",
+      "text": "Practice turn. You keep your heart. The word was bird.",
+      "file": "assets/narration/en-male-108.mp3",
+      "taskId": "e3d9aed5-bc3b-460a-b9f0-c03cfe92b2f1",
+      "status": "downloaded",
+      "duration": 4.858776,
+      "bytes": 78202,
+      "sha256": "9ec28e142a817be894a3ae53528a240792bf9b216aeab29fef8a474358f82b1e"
+    },
+    {
+      "id": "en-male-109",
+      "text": "The word was wing.",
+      "file": "assets/narration/en-male-109.mp3",
+      "taskId": "ac3425bb-ede6-4c33-a8d4-775e50496cfd",
+      "status": "downloaded",
+      "duration": 1.567347,
+      "bytes": 25539,
+      "sha256": "b78c805976888a8d2d2d72beb7959caa166b6cdd8957efc72603d62a0ecec618"
+    },
+    {
+      "id": "en-male-110",
+      "text": "Practice turn. You keep your heart. The word was wing.",
+      "file": "assets/narration/en-male-110.mp3",
+      "taskId": "90798f49-b345-461e-9e8b-b6678d3a0bd8",
+      "status": "downloaded",
+      "duration": 5.564082,
+      "bytes": 89487,
+      "sha256": "a85ad4f4148a020138153ded29ecde3537c8f506ad12102a9592b0ad49c683ba"
+    },
+    {
+      "id": "en-male-111",
+      "text": "The word was jump.",
+      "file": "assets/narration/en-male-111.mp3",
+      "taskId": "29da598d-b057-4ef4-81b2-c26de70256d2",
+      "status": "downloaded",
+      "duration": 1.515102,
+      "bytes": 24703,
+      "sha256": "5e3ca411c25f97269c72f1655c59a6d47cde1dfea8d9d8d9cd954b65afcfab1a"
+    },
+    {
+      "id": "en-male-112",
+      "text": "Practice turn. You keep your heart. The word was jump.",
+      "file": "assets/narration/en-male-112.mp3",
+      "taskId": "79828ec5-1a7c-48c4-82e1-b13c9ab5ba5c",
+      "status": "downloaded",
+      "duration": 4.545306,
+      "bytes": 73186,
+      "sha256": "88249a200dbf8299d379fffe80510492319face434102c03c606d745cf8d95e8"
+    },
+    {
+      "id": "en-male-113",
+      "text": "The word was over.",
+      "file": "assets/narration/en-male-113.mp3",
+      "taskId": "0ce0f51c-df03-4440-82d3-6ba30d426801",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "0fdc70914a2bd2925e5ffc6da3cff8d26dae977bfa613e1590873d2e9ea428ad"
+    },
+    {
+      "id": "en-male-114",
+      "text": "Practice turn. You keep your heart. The word was over.",
+      "file": "assets/narration/en-male-114.mp3",
+      "taskId": "87c5684f-5aef-44e1-a1a9-2c2ac67998e6",
+      "status": "downloaded",
+      "duration": 4.780408,
+      "bytes": 76948,
+      "sha256": "2370b8704657b817db63b9e5125c75d68abf1cfffd71d0530f4fc2b2c79d1df7"
+    },
+    {
+      "id": "en-male-115",
+      "text": "The word was up.",
+      "file": "assets/narration/en-male-115.mp3",
+      "taskId": "932bc9bd-06fb-49c9-aac5-7b456ff0181f",
+      "status": "downloaded",
+      "duration": 1.28,
+      "bytes": 20942,
+      "sha256": "30cc5c209cd122c176adb12a14df804e754d666bda617fd5cb6b148198825d22"
+    },
+    {
+      "id": "en-male-116",
+      "text": "Practice turn. You keep your heart. The word was up.",
+      "file": "assets/narration/en-male-116.mp3",
+      "taskId": "28c2b501-14ac-4bf1-833e-069273f5a07f",
+      "status": "downloaded",
+      "duration": 5.041633,
+      "bytes": 81128,
+      "sha256": "38211ab0d573f11ef5118b133939cdd35dd84ba42bab19fb7d65e67879e3eaa9"
+    },
+    {
+      "id": "en-male-117",
+      "text": "The word was big.",
+      "file": "assets/narration/en-male-117.mp3",
+      "taskId": "84465a5d-6bef-4b81-9dc4-aa4f4f23692b",
+      "status": "downloaded",
+      "duration": 1.515102,
+      "bytes": 24703,
+      "sha256": "5adc227c77c4f8d39113c05f3d15eb4f4b77f02a4733408081db8fcc7da597cb"
+    },
+    {
+      "id": "en-male-118",
+      "text": "Practice turn. You keep your heart. The word was big.",
+      "file": "assets/narration/en-male-118.mp3",
+      "taskId": "6c5960d2-dc4f-4957-85b3-0e8fb1223e44",
+      "status": "downloaded",
+      "duration": 4.493061,
+      "bytes": 72351,
+      "sha256": "e5a60e80d238ab906002d653150cae93bcfcb37dc9fa0fd765f2b0a1f41765c7"
+    },
+    {
+      "id": "en-male-119",
+      "text": "The word was small.",
+      "file": "assets/narration/en-male-119.mp3",
+      "taskId": "d72cd425-c24a-4861-81ab-5df98577f7b3",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "4c784b9b4cb36fb600040cea3953bc52f621bef34d9aa28f2fc71c0d03107305"
+    },
+    {
+      "id": "en-male-120",
+      "text": "Practice turn. You keep your heart. The word was small.",
+      "file": "assets/narration/en-male-120.mp3",
+      "taskId": "e5c0bee3-46a1-4f35-a8fe-5be6e66dd012",
+      "status": "downloaded",
+      "duration": 5.276735,
+      "bytes": 84889,
+      "sha256": "002359da7cc09956f3f9c4563fc120da429d1ae06435102fa06e4c5a547820d2"
+    },
+    {
+      "id": "en-male-121",
+      "text": "The word was two.",
+      "file": "assets/narration/en-male-121.mp3",
+      "taskId": "e0bdf4cb-7fca-4c2f-a1a6-16f7f77e6de3",
+      "status": "downloaded",
+      "duration": 1.436735,
+      "bytes": 23449,
+      "sha256": "b76b44daa5742517151d5d8cedc4d51361f643d7552cb2fbeb0bf12f49930abf"
+    },
+    {
+      "id": "en-male-122",
+      "text": "Practice turn. You keep your heart. The word was two.",
+      "file": "assets/narration/en-male-122.mp3",
+      "taskId": "e86204e3-9b1d-4b8f-b817-5d49edccce19",
+      "status": "downloaded",
+      "duration": 4.493061,
+      "bytes": 72351,
+      "sha256": "b0e83f31016506cedd09dd1d695640510699343c3af9f4fc3bfb095756ee952e"
+    },
+    {
+      "id": "en-male-123",
+      "text": "The word was red.",
+      "file": "assets/narration/en-male-123.mp3",
+      "taskId": "eeccf57b-98a0-4e70-a80f-b4ee97c2d4df",
+      "status": "downloaded",
+      "duration": 1.48898,
+      "bytes": 24285,
+      "sha256": "c19133d98fc04915a9c4f2beb438fb2824cbd2ca867ecbd8903d7417a640ec0d"
+    },
+    {
+      "id": "en-male-124",
+      "text": "Practice turn. You keep your heart. The word was red.",
+      "file": "assets/narration/en-male-124.mp3",
+      "taskId": "e649d421-ab5d-43d4-99ec-36e1f9094051",
+      "status": "downloaded",
+      "duration": 4.414694,
+      "bytes": 71097,
+      "sha256": "f2f539f8dff4b5c1825625bfbe4fc0a533f3a6f3a7720038fa92db9cd216fe24"
+    },
+    {
+      "id": "en-male-125",
+      "text": "The word was book.",
+      "file": "assets/narration/en-male-125.mp3",
+      "taskId": "18fd345c-3edb-4625-b361-57e7e649710c",
+      "status": "downloaded",
+      "duration": 1.515102,
+      "bytes": 24703,
+      "sha256": "cb3cd587a415642ec0f846cb5b91f56ce9b202a9692bfb1c2f714fd611ac08e0"
+    },
+    {
+      "id": "en-male-126",
+      "text": "Practice turn. You keep your heart. The word was book.",
+      "file": "assets/narration/en-male-126.mp3",
+      "taskId": "7f175cf1-c435-461e-acfc-58e43093e4ad",
+      "status": "downloaded",
+      "duration": 5.564082,
+      "bytes": 89487,
+      "sha256": "1e27c16fe2cc619fbd2d1a453ad588a18ae87f19feeca76929b041bd9d8a24d6"
+    },
+    {
+      "id": "en-male-127",
+      "text": "The word was open.",
+      "file": "assets/narration/en-male-127.mp3",
+      "taskId": "17a67ec2-532e-456c-b523-d66c5a793ea8",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "4f3ae31e6d54f4b3ede79898d07dc7f0c53c4eba8fa57b75f97e3172f3b3fafe"
+    },
+    {
+      "id": "en-male-128",
+      "text": "Practice turn. You keep your heart. The word was open.",
+      "file": "assets/narration/en-male-128.mp3",
+      "taskId": "f36ca381-1eb4-4500-8af2-f50fe21fae08",
+      "status": "downloaded",
+      "duration": 5.276735,
+      "bytes": 84889,
+      "sha256": "92987d94d1dedf38f0be25a044c5fc9ec1a685e9cb14b9ffde2768acc8d75de7"
+    },
+    {
+      "id": "en-male-129",
+      "text": "The word was night.",
+      "file": "assets/narration/en-male-129.mp3",
+      "taskId": "7ab60916-956f-4e53-8449-3c367b1a5390",
+      "status": "downloaded",
+      "duration": 1.515102,
+      "bytes": 24703,
+      "sha256": "5f55cb163862131e5e889fa317cac355c8136ef91251d65810ff453d0526187f"
+    },
+    {
+      "id": "en-male-130",
+      "text": "Practice turn. You keep your heart. The word was night.",
+      "file": "assets/narration/en-male-130.mp3",
+      "taskId": "3b9adc4d-353e-4a2a-b6a9-9d967284c8d9",
+      "status": "downloaded",
+      "duration": 4.310204,
+      "bytes": 69425,
+      "sha256": "dd17e43759eb0bb3e49ab98c1ad80f0473f33481adb80db255e84f7fb67217e2"
+    },
+    {
+      "id": "en-male-131",
+      "text": "The word was moon.",
+      "file": "assets/narration/en-male-131.mp3",
+      "taskId": "72afb77d-6ffe-4f60-ac29-da857bb7bae2",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "0838f6cab66544dc0830fb366ab00e1609c1f6afaec21cba442e20cbbb09f555"
+    },
+    {
+      "id": "en-male-132",
+      "text": "Practice turn. You keep your heart. The word was moon.",
+      "file": "assets/narration/en-male-132.mp3",
+      "taskId": "cd4c3e08-7f27-4e9b-9721-da91adee9199",
+      "status": "downloaded",
+      "duration": 4.728163,
+      "bytes": 76112,
+      "sha256": "54a5d07138a72fbfb8e59ce1766f97f0ae9f2871b3754e1a9d46c19065957361"
+    },
+    {
+      "id": "en-male-133",
+      "text": "The word was light.",
+      "file": "assets/narration/en-male-133.mp3",
+      "taskId": "2884daca-34de-4d3b-bf75-41b64b98a94a",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "628887650461077158cd1c25e116bc1e334d0ce4febe8d5f9666a9e4bde1c089"
+    },
+    {
+      "id": "en-male-134",
+      "text": "Practice turn. You keep your heart. The word was light.",
+      "file": "assets/narration/en-male-134.mp3",
+      "taskId": "cb8ffad4-eb09-4a3d-a756-8ba96cd7fe61",
+      "status": "downloaded",
+      "duration": 4.597551,
+      "bytes": 74022,
+      "sha256": "333b78c85ba6659d342e25e47def2f520913551145ac076b6db12dce827f0d7d"
+    },
+    {
+      "id": "en-male-135",
+      "text": "The word was fire.",
+      "file": "assets/narration/en-male-135.mp3",
+      "taskId": "84597851-3876-49d3-bf32-f5b125b146e1",
+      "status": "downloaded",
+      "duration": 1.567347,
+      "bytes": 25539,
+      "sha256": "e397ca3103d7ca687e3950498904656911e2d37c83ae26cfc4af4404f0420f88"
+    },
+    {
+      "id": "en-male-136",
+      "text": "Practice turn. You keep your heart. The word was fire.",
+      "file": "assets/narration/en-male-136.mp3",
+      "taskId": "15ca5f06-84b8-49fd-865d-018426115c9d",
+      "status": "downloaded",
+      "duration": 5.041633,
+      "bytes": 81128,
+      "sha256": "dd49bc8653a42dd921fb26d953efc88140f72b670d3248d8e2f372c7e2ea3ae5"
+    },
+    {
+      "id": "en-male-137",
+      "text": "The word was owl.",
+      "file": "assets/narration/en-male-137.mp3",
+      "taskId": "dbd51a44-8746-446c-95fa-f67a7c813308",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "0ae378c5e05bc829cff60bfacb0f9787d85971c77faea6f4409381a00d099413"
+    },
+    {
+      "id": "en-male-138",
+      "text": "Practice turn. You keep your heart. The word was owl.",
+      "file": "assets/narration/en-male-138.mp3",
+      "taskId": "cc5064e7-6ad8-45b6-9f4f-e44cfffe44d2",
+      "status": "downloaded",
+      "duration": 5.041633,
+      "bytes": 81128,
+      "sha256": "53838334170478b1857f5a999a9f891a0b3f7697d65ccdedc45cd17e5c35c3ce"
+    },
+    {
+      "id": "en-male-139",
+      "text": "The word was forest.",
+      "file": "assets/narration/en-male-139.mp3",
+      "taskId": "07b366ed-0499-4fc0-af14-2eb548e7a7a9",
+      "status": "downloaded",
+      "duration": 1.697959,
+      "bytes": 27629,
+      "sha256": "7403b7b75549263e3872fd7cc06d97bd1af4e2f6205354ccaa8652332dcffadf"
+    },
+    {
+      "id": "en-male-140",
+      "text": "Practice turn. You keep your heart. The word was forest.",
+      "file": "assets/narration/en-male-140.mp3",
+      "taskId": "c6a79b0e-4bdb-4be0-b88a-2c5c11ab9713",
+      "status": "downloaded",
+      "duration": 5.146122,
+      "bytes": 82799,
+      "sha256": "386b35e7377c7a63f3f9fe2f41b2f8b4c2e206c8788392ff9be90c2073549d29"
+    },
+    {
+      "id": "en-male-141",
+      "text": "The word was dragon.",
+      "file": "assets/narration/en-male-141.mp3",
+      "taskId": "9503e7c6-b651-40aa-8764-74b6b23bd0aa",
+      "status": "downloaded",
+      "duration": 1.671837,
+      "bytes": 27211,
+      "sha256": "cb0b309313158b70feb253fcaa09246ec616d802190fd8a968ae5b820eedb0e0"
+    },
+    {
+      "id": "en-male-142",
+      "text": "Practice turn. You keep your heart. The word was dragon.",
+      "file": "assets/narration/en-male-142.mp3",
+      "taskId": "a49bb752-be9d-41bb-bf6f-46de7480a35f",
+      "status": "downloaded",
+      "duration": 4.545306,
+      "bytes": 73186,
+      "sha256": "ed7367637df3333c44fe5a32946013d599bfb3d99a8a22208f9c801b6ccb7fd0"
+    },
+    {
+      "id": "en-male-143",
+      "text": "The word was treasure.",
+      "file": "assets/narration/en-male-143.mp3",
+      "taskId": "26de5339-5f15-4417-96f9-c4fbcb7a61bc",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "73fee7d1a9ce33508babc0dc67ea618fa0e86f01260465ec54c738579346ee8e"
+    },
+    {
+      "id": "en-male-144",
+      "text": "Practice turn. You keep your heart. The word was treasure.",
+      "file": "assets/narration/en-male-144.mp3",
+      "taskId": "728abafd-a782-46be-8805-868b6ea8261d",
+      "status": "downloaded",
+      "duration": 5.198367,
+      "bytes": 83635,
+      "sha256": "fb77368191d7c86f0ace4d5d8174cfdcc0cf43edd9569af08f3049c6972dee0b"
+    },
+    {
+      "id": "en-male-145",
+      "text": "The word was coin.",
+      "file": "assets/narration/en-male-145.mp3",
+      "taskId": "c712007c-538f-4554-9d92-3f054b6cf7d9",
+      "status": "downloaded",
+      "duration": 1.671837,
+      "bytes": 27211,
+      "sha256": "a0fad8a99e8d1fb76eefa596bf6ba0a20f59811b9fb0a5e5ca4df61201d94603"
+    },
+    {
+      "id": "en-male-146",
+      "text": "Practice turn. You keep your heart. The word was coin.",
+      "file": "assets/narration/en-male-146.mp3",
+      "taskId": "0b158cc3-4f9a-4ff3-a028-bd4dac80a47b",
+      "status": "downloaded",
+      "duration": 5.381224,
+      "bytes": 86561,
+      "sha256": "90da537c02cc5bba918fc9079f4a800d3fcfae0e8d19559352918ecb40c9f158"
+    },
+    {
+      "id": "en-male-147",
+      "text": "The word was gate.",
+      "file": "assets/narration/en-male-147.mp3",
+      "taskId": "009c8b23-937b-4e56-80e2-0dd2ff4994c4",
+      "status": "downloaded",
+      "duration": 1.48898,
+      "bytes": 24285,
+      "sha256": "3b08dd438dd7c1492c68853cfd7a4710391a44937cebe02fa18fe04464a29040"
+    },
+    {
+      "id": "en-male-148",
+      "text": "Practice turn. You keep your heart. The word was gate.",
+      "file": "assets/narration/en-male-148.mp3",
+      "taskId": "1050ae21-d91b-431a-ac24-75be2e6736e9",
+      "status": "downloaded",
+      "duration": 5.198367,
+      "bytes": 83635,
+      "sha256": "305c1c3d32fec041125968092a4433405699cc5728e0e877d3a8b8064dee94d2"
+    },
+    {
+      "id": "en-male-149",
+      "text": "The word was castle.",
+      "file": "assets/narration/en-male-149.mp3",
+      "taskId": "6a0c89ce-bc35-46ea-9744-158a10b56c13",
+      "status": "downloaded",
+      "duration": 1.697959,
+      "bytes": 27629,
+      "sha256": "40931b3beac4b00ff1c1080ec5f1e654e41889e5855b98cc5d97571c18f6e27e"
+    },
+    {
+      "id": "en-male-150",
+      "text": "Practice turn. You keep your heart. The word was castle.",
+      "file": "assets/narration/en-male-150.mp3",
+      "taskId": "87c66564-ad96-4cf8-a6e3-9ba4af93c8ee",
+      "status": "downloaded",
+      "duration": 4.91102,
+      "bytes": 79038,
+      "sha256": "53606e5c366a85a7dc6e5d383dae0b9b453e37689157848de40e74200f00a35e"
+    },
+    {
+      "id": "en-male-151",
+      "text": "The word was magic.",
+      "file": "assets/narration/en-male-151.mp3",
+      "taskId": "2b1668e9-3c7e-4d53-84c7-20c6abf6a823",
+      "status": "downloaded",
+      "duration": 1.619592,
+      "bytes": 26375,
+      "sha256": "c9e46c6309b58ae86d4e4ae99e211c5ca8c2bf89fc95c75231f3ba30e04929f6"
+    },
+    {
+      "id": "en-male-152",
+      "text": "Practice turn. You keep your heart. The word was magic.",
+      "file": "assets/narration/en-male-152.mp3",
+      "taskId": "f2096c0c-da10-4169-b619-0fe7bfddced8",
+      "status": "downloaded",
+      "duration": 4.858776,
+      "bytes": 78202,
+      "sha256": "8dbf5e96650d11e4b5b835e420098fb0e0631d073403b693dea4b3c8a54fe143"
+    },
+    {
+      "id": "en-male-153",
+      "text": "The word was sat.",
+      "file": "assets/narration/en-male-153.mp3",
+      "taskId": "af9d4f7c-6c0d-42eb-8ab1-b64c436aba6b",
+      "status": "downloaded",
+      "duration": 1.48898,
+      "bytes": 24285,
+      "sha256": "2cec240a28d6431f3d1ddef0f214ef1aceee9d30bbb5e687e6e2022b1657a999"
+    },
+    {
+      "id": "en-male-154",
+      "text": "Practice turn. You keep your heart. The word was sat.",
+      "file": "assets/narration/en-male-154.mp3",
+      "taskId": "e1411de6-239b-4aa8-8665-672ee9cfe54b",
+      "status": "downloaded",
+      "duration": 4.675918,
+      "bytes": 75276,
+      "sha256": "19c83d1b72ff9414ca2e9de378b9d9db82ce8e285a2f1cf73efd1171f7f7548b"
+    },
+    {
+      "id": "en-male-155",
+      "text": "A Thornling is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-155.mp3",
+      "taskId": "2326bb19-2e8c-49db-ac3d-abf0b2452c98",
+      "status": "downloaded",
+      "duration": 3.239184,
+      "bytes": 52288,
+      "sha256": "0374e666c3149c2889809cdf3791151907c17888a1e507085dc4d9298625dd92"
+    },
+    {
+      "id": "en-male-156",
+      "text": "Reading check complete. Now your first chapter begins. A Thornling is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-156.mp3",
+      "taskId": "2d75485f-1a23-41ee-80f2-bef5f5449359",
+      "status": "downloaded",
+      "duration": 9.456327,
+      "bytes": 151763,
+      "sha256": "76db3ba6238918afcfb0cf955bddf06ad9f7db51b647a60ded9935a8309ea24b"
+    },
+    {
+      "id": "en-male-157",
+      "text": "A Moss Golem is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-157.mp3",
+      "taskId": "b2de57e7-9804-4f88-a943-63d72a03e5a9",
+      "status": "downloaded",
+      "duration": 3.369796,
+      "bytes": 54378,
+      "sha256": "2d485723ab59f96413e626a6b8bb33d1b9c3bbc901ddf5b637cc44f429e50e2a"
+    },
+    {
+      "id": "en-male-158",
+      "text": "Reading check complete. Now your first chapter begins. A Moss Golem is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-158.mp3",
+      "taskId": "4eea2c08-ead7-4688-9172-da1821542df4",
+      "status": "downloaded",
+      "duration": 9.221224,
+      "bytes": 148001,
+      "sha256": "b6002bc26ee7c641012328eec26089bebb2e74a2e61c1d4730cc988e69db3a55"
+    },
+    {
+      "id": "en-male-159",
+      "text": "A Moon Moth is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-159.mp3",
+      "taskId": "725ccd1e-9ab3-4c41-804e-184b9d70bebc",
+      "status": "downloaded",
+      "duration": 3.474286,
+      "bytes": 56050,
+      "sha256": "a51c3b004452c75de270b730a28bbee33673f8354a9a30ad6c47c780cc8332aa"
+    },
+    {
+      "id": "en-male-160",
+      "text": "Reading check complete. Now your first chapter begins. A Moon Moth is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-160.mp3",
+      "taskId": "03fca477-9ebb-4806-9bba-b95e3af822bd",
+      "status": "downloaded",
+      "duration": 10.266122,
+      "bytes": 164719,
+      "sha256": "0002d13c993037fef51fcaeb6068cb4e9970ec7b4348a6204352d5703f822841"
+    },
+    {
+      "id": "en-male-161",
+      "text": "A Root Sprite is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-161.mp3",
+      "taskId": "ef3dab13-e055-4162-8f44-4f765a25f4da",
+      "status": "downloaded",
+      "duration": 3.291429,
+      "bytes": 53124,
+      "sha256": "dc727493cd4e7ca4e89618505bba0f3937f0bc25b51cb0130ec1e1bf3f81ed87"
+    },
+    {
+      "id": "en-male-162",
+      "text": "Reading check complete. Now your first chapter begins. A Root Sprite is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-162.mp3",
+      "taskId": "c14c7ce8-c176-456d-a1ae-02219c5090a4",
+      "status": "downloaded",
+      "duration": 10.292245,
+      "bytes": 165137,
+      "sha256": "ba8ad4d7276c3b04b3324a4dfcbb485093bbc436732a18947c1e4779821a880c"
+    },
+    {
+      "id": "en-male-163",
+      "text": "A Cave Troll is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-163.mp3",
+      "taskId": "1c96916c-7bd5-4d40-91fa-41aeb6c8231b",
+      "status": "downloaded",
+      "duration": 3.239184,
+      "bytes": 52288,
+      "sha256": "78cf1fadbd0c677f8f8b7b084adbfa7feecbd94c03d1a8d9e8213b749f18e7f9"
+    },
+    {
+      "id": "en-male-164",
+      "text": "Reading check complete. Now your first chapter begins. A Cave Troll is on the path. Ready to battle?",
+      "file": "assets/narration/en-male-164.mp3",
+      "taskId": "ed005c41-02c3-4ace-8a0a-1c7557989faa",
+      "status": "downloaded",
+      "duration": 9.613061,
+      "bytes": 154271,
+      "sha256": "a03bfeb4c6628d26817659a2c826626ff340c15118f853a1a6e615b4154843a7"
+    },
+    {
+      "id": "en-male-165",
+      "text": "Let’s try a few words. Look at the word. When it hides, tap the same word. Tap the question mark if you are not sure.",
+      "file": "assets/narration/en-male-165.mp3",
+      "taskId": "93061bf1-f5c8-4cf6-a052-acc079ab90f4",
+      "status": "downloaded",
+      "duration": 10.109388,
+      "bytes": 162212,
+      "sha256": "dcc6fad4f0f10c1dce06e6031112d1c232333f3e3e7c356fcafc05fdc23b55d8"
+    }
+  ],
+  "listeningReview": "Not performed in this environment; user listening and physical iPad playback review remain outstanding.",
+  "clipCount": 165,
+  "bytes": 7751549,
+  "durationSeconds": 479.713
+}

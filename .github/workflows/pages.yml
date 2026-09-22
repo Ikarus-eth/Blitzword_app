@@ -37,7 +37,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site/tests
-          cp index.html styles.css app.js content.js game-core.js storage.js audio.js soundscape.js engagement.js manifest.webmanifest _site/
+          cp index.html styles.css app.js content.js game-core.js storage.js audio.js narration.js soundscape.js engagement.js manifest.webmanifest _site/
           cp -R assets _site/assets
           cp tests/visual-review.html tests/review-app.html tests/review-scenarios.js _site/tests/
       - name: Upload static site
