@@ -4,14 +4,14 @@ This is a small implementation milestone for option A, not the complete free cha
 
 | Target | Sentence | Production illustration |
 | --- | --- | --- |
-| sat | Pip sat on the rock. | assets/teaching/sat-rock.webp |
-| rock | Pip sat on the rock. | assets/teaching/sat-rock.webp |
+| on | Pip is on the rock. | assets/teaching/sat-rock.webp |
+| rock | Pip is on the rock. | assets/teaching/sat-rock.webp |
 | tree | The tree is green. | assets/teaching/green-tree.webp |
 | green | The tree is green. | assets/teaching/green-tree.webp |
 | fox | Pip follows the fox. | assets/teaching/fox.webp |
 | cave | Pip is by the cave. | assets/teaching/cave.webp |
 
-All target words and distractor sets come from the previously implemented practice/assessment pools. Distractors were checked for distinct options, exactly one target, and close real-word or plausible spelling contrasts. Existing assessment pools, exposure steps, axes and numerical stop thresholds are retained. Interrupted exposure is now explicitly supported evidence and excluded from calibration blocks; the existing 25-observation ceiling remains.
+The original slice used `sat` from the prototype. The first-session correction replaces new `sat` selections with Core 200 word `on`; historical saves remain supported. See `FIRST_SESSION_FEEDBACK.md`. Distractors were checked for distinct options, exactly one target, and close real-word or plausible spelling contrasts. Existing assessment pools, exposure steps, axes and numerical stop thresholds are retained. Interrupted exposure is now explicitly supported evidence and excluded from calibration blocks; the existing 25-observation ceiling remains.
 
 ## Illustration review
 

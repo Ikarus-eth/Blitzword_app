@@ -23,18 +23,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Install test dependencies
+        run: npm ci --ignore-scripts
       - name: Check scripts and practice regressions
         run: |
           node --check app.js
           node --check game-core.js
           node --check storage.js
-          node --test tests/*.test.js
+          node --check engagement.js
+          npm test
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Prepare static site
+        run: |
+          mkdir -p _site/tests
+          cp index.html styles.css app.js content.js game-core.js storage.js audio.js engagement.js _site/
+          cp -R assets _site/assets
+          cp tests/visual-review.html tests/review-app.html tests/review-scenarios.js _site/tests/
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

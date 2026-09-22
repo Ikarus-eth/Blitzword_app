@@ -125,7 +125,7 @@ test('a stale tab cannot overwrite another tab’s saved answers',()=>{
 });
 test('every practice target has four distinct choices, a reviewed illustration and its sentence',()=>{
   const fs=require('node:fs'),path=require('node:path');
-  for(const item of Content.words){assert.equal(new Set(item.d).size,4);assert.ok(item.d.includes(item.w));assert.match(item.sentence,new RegExp('\\b'+item.w+'\\b','i'));assert.ok(fs.statSync(path.join(__dirname,'../assets/teaching',item.image+'.webp')).size>1000);}
+  for(const item of Content.words){assert.equal(new Set(item.d).size,4);assert.ok(item.d.includes(item.w));assert.match(item.sentence,new RegExp('\\b'+item.w+'\\b','i'));assert.ok(fs.statSync(path.join(__dirname,'../assets/teaching',item.image+(item.crop?'.png':'.webp'))).size>1000);}
 });
 
 
@@ -152,4 +152,35 @@ test('battle question-mark help opens support without damage or independent cred
   assert.equal(s.battle.heroHealth,3);assert.equal(s.battle.enemyHealth,3);assert.equal(s.session.independent,0);
   Core.startTeaching(s,q.target,'battle',START+1000);Core.leaveTeaching(s,START+2000);
   assert.notEqual(present(s,START+3000).target,q.target);
+});
+
+test('campaign offers different enemy types after wins and preserves the selected portrait on reload',()=>{
+  let s=campaign(),previous=s.battle.enemyId;
+  const encountered=new Set([previous]);
+  for(let i=0;i<12;i++){
+    s.battle.enemyHealth=0;Core.resolveBattle(s,START+i*10000);
+    const options=Core.enemyChoices(s);assert.ok(options.length>=2);assert.ok(options.every(enemy=>enemy.id!==previous));
+    const chosen=options[i%2].id;
+    Core.startBattle(s,START+i*10000+1000,{enemyId:chosen,strength:3+i});
+    assert.equal(s.battle.enemyId,chosen);assert.notEqual(s.battle.enemyId,previous);
+    s=roundtrip(s);assert.equal(s.battle.enemyId,chosen);assert.equal(s.battle.maxHealth,3+i);previous=chosen;encountered.add(chosen);
+  }
+  assert.equal(encountered.size,5);
+});
+test('stronger choices visibly grow while health and reading exposure remain separate',()=>{
+  const s=campaign();const exposure=s.assessment.exposure;
+  for(let health=4;health<=20;health++)assert.ok(Core.enemyScale(health)>Core.enemyScale(health-1));
+  Core.startBattle(s,START,{strength:12});assert.equal(s.battle.maxHealth,12);assert.equal(s.assessment.exposure,exposure);
+});
+test('new practice uses the reviewed Core 200 slice while legacy sat questions and evidence survive',()=>{
+  const s=campaign();assert.ok(Content.words.some(item=>item.w==='on'));assert.ok(!Content.words.some(item=>item.w==='sat'));assert.ok(!Content.demoWords.includes('sat'));
+  const q=present(s);q.target='sat';q.options=['sat','set','sap','sad'];s.learning.words.sat.independentCorrect=4;
+  const saved=roundtrip(s);assert.equal(saved.battle.question.target,'sat');assert.equal(saved.learning.words.sat.independentCorrect,4);
+  Core.answerBattle(saved,'set',START);Core.startTeaching(saved,'sat','battle',START);Core.leaveTeaching(saved,START+1000);
+  assert.notEqual(Core.prepareBattle(saved,START+2000).target,'sat');assert.equal(saved.campaign.battleRecords.at(-1).target,'sat');
+});
+test('chapter words measure introduction, never mastery, and survive defeat',()=>{
+  const s=campaign();present(s);const before=Core.chapterProgress(s);assert.equal(before.found,1);assert.equal(before.goal,30);
+  s.battle.heroHealth=0;Core.resolveBattle(s,START);assert.equal(Core.chapterProgress(s).found,before.found);
+  assert.equal(s.learning.words.on.independentCorrect,0);
 });

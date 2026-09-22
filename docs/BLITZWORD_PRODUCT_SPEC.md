@@ -25,7 +25,7 @@ The dragon companion starts with the name **Pip**. Once Pip appears, Pip must re
 
 The free first chapter contains about 30 target words. Pip grows through the chapter and reaches a rideable stage at the end of the free chapter. Growth must feel like the same dragon maturing, not a replacement character. The story can progress before 30-day retention has been demonstrated; retention continues in later practice.
 
-No world map is required for v1. Story progress can be represented through encounters, checkpoints, environment changes, and the dragon's growth.
+Updated 22 September 2026: the requested campaign map is now the campaign Home screen. Show visible story milestones and permanent Pip XP with the next growth stage and its threshold. See section 23 and `CAMPAIGN_MAP_AND_GROWTH.md` for the current implementation and content limits.
 
 ## 3. Onboarding and starting screens
 
@@ -683,3 +683,34 @@ The broader chapter, full battle-scene artwork, dragon growth, parent reporting,
 The opening form now includes hatchling Pip in an illustrated mystical forest. Native name entry disables autocorrection and spellcheck. Battle uses full-length approved hero appearances, Pip and Thornling with separate word, answer, health and pause regions. Four equal choices and a separate `?` help action are always available during selection. Help is supported practice without damage.
 
 Wrong answers open the reviewed teaching image and highlighted sentence directly, replacing the intermediate correction modal. The optional demonstration has a maximum of seven total attempts including the guided example, then a saved handoff to the existing reading check. Victory and defeat can end it sooner. Assessment logic is preserved. Natural-pitch device narration and narrator choice replace pitch-shifted speech; prerecorded narration is still pending. See `FOREST_REPAIR.md` for assets, verification and limitations.
+
+
+## 22. First-session feedback implementation — 21 September 2026
+
+The latest corrections are recorded in `FIRST_SESSION_FEEDBACK.md`. They supersede the previous direct-to-example wrong-answer flow. Show the actual selected word and correct target first, hold for a tap, then show the teaching illustration. Add a clear narrated/visual reading-check entry and Chapter 1 encounter handoff without changing assessment scoring. Show introduced-word progress toward 30 separately from checkpoints and retention. The current six-word slice cannot yet complete that chapter.
+
+Use distinct visual creature choices with short labels and hearts. Never repeat a won creature more than twice consecutively; the current five-species selector avoids the two most recent encounters altogether. Size grows with health within safe scene bounds, without changing reading exposure. Directed attacks and impact effects occur only after an answer. Remove the generic Adventure combat label and provide Home with exact save/resume behavior.
+
+The supplied Core 200 excludes `sat`. New practice uses `on` and “Pip is on the rock.” Preserve historical `sat` evidence and pending saved teaching/questions. Do not infer that example words from reference art automatically belong in the early curriculum.
+
+
+## 23. Campaign map and Pip growth — 22 September 2026
+
+This update supersedes the earlier no-map direction and introduced-word chapter meter. Campaign Home is an illustrated map of Lantern Trail, Fox Crossing, Old Grove, Lantern Ruins and Hidden Nest. Chapter progress counts permanently explored story areas out of five; local word/practice progress and checkpoints remain visible separately. Reading-check completion explicitly introduces the map before the first campaign word. Home always preserves the exact current activity.
+
+The first two independent correct campaign answers per target award 5 XP each. Demo, assessment, help and speed give no extra XP. Repetition beyond those two credits cannot farm XP. Mistakes and defeat never remove XP or an earned form. XP is a game reward, not a reading score or proof of retention. Existing qualifying campaign observations recover credit once on migration.
+
+Stages: Hatchling 0 XP; Young 60 XP; Growing 180 XP; Rideable 300 XP plus final Chapter 1 victory. Forms follow the approved Ember Guardian bible. Cleared areas stay cleared after later practice errors. Current first-area completion requires all six words introduced, at least five with two practice successes, and the two-win checkpoint secured. The planned finale additionally requires all chapter words introduced, at least 80% with two practice successes, and all playable areas explored.
+
+Only Lantern Trail has reviewed playable content. Four later locations are previews labelled Coming soon. The current practice slice can reach Young Pip; it cannot complete the chapter or reach the two later stages through repeated battles. The remaining 24 words, their teaching support, area-specific encounters and final boss remain future work. The existing teaching illustrations continue to depict hatchling Pip; later-form teaching variants are not part of this update.
+
+See `CAMPAIGN_MAP_AND_GROWTH.md` for art provenance, verification and deployment status.
+
+
+## 24. Active play release — 22 September 2026
+
+The user's latest requirements supersede the prior six-word limit and rapid/capped growth rules. All five Chapter 1 places now have six fixed Core 200 targets and teaching support. The final guardian is playable, followed by unlimited review across the chapter. Correct independent review answers continue to earn 1 XP. At most six new targets are introduced per approximately seven-minute challenge; challenges can be repeated today without a daily cap.
+
+The first new dragon form requires 250 XP, 250 interaction-confirmed practice minutes and 14 elapsed days since practice began. All conditions are required. Later forms require 750 and 1,500 XP/minutes respectively, remain subject to the 14-day minimum, and rideable Pip additionally requires chapter completion. Previously earned forms/XP are preserved. This explicitly replaces the earlier expectation that a single day's chapter completion grants a rideable dragon.
+
+Parent reporting uses an idle-aware local activity ledger, with older foreground/waiting totals kept separate and excluded from growth. Unconfirmed intervals are discarded on 30-second inactivity, blur/background or suspended timers. The dashboard explains conservative undercounting and device-local scope. See `ACTIVE_PLAY_RELEASE.md` for exact rules, curriculum provenance, artwork and tests.

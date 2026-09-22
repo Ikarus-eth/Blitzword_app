@@ -6,7 +6,7 @@
   const DAY = 86400000;
   const GAPS = [1,3,7,14,30];
   const TARGET_MS = 7 * 60 * 1000;
-  const byWord = Object.fromEntries(Content.words.map(item => [item.w,item]));
+  const byWord = Object.fromEntries([...Content.words,...Content.legacyWords].map(item => [item.w,item]));
   const iso = now => new Date(now).toISOString();
   const copy = value => JSON.parse(JSON.stringify(value));
   function fresh() {
@@ -15,6 +15,9 @@
       assessment:{done:false,records:[],level:0,exposure:1800,lastAxis:'exposure',progress:null},
       learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[]},
       campaign:{wins:0,checkpointWins:0,enemyStrength:3,battleRecords:[]},
+      dragon:{awards:{},stage:0,xp:null},story:{clearedAreas:[],chapterComplete:false},
+      timing:{version:1,days:{},firstPracticeAt:null},
+      math:{best:null,winStreak:0,round:null,records:[]},
       settings:{selfPaced:false}, activity:'route', screen:'setup', battle:null,
       teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false};
   }
@@ -22,7 +25,7 @@
     if (!old || typeof old !== 'object' || Array.isArray(old)) throw new Error('Invalid saved adventure');
     const base = fresh();
     const s = {...base,...copy(old)};
-    for (const key of ['profile','assessment','learning','campaign','settings']) s[key] = {...base[key],...s[key]};
+    for (const key of ['profile','assessment','learning','campaign','settings','dragon','story','timing','math']) s[key] = {...base[key],...s[key]};
     for (const [container,key] of [[s.assessment,'records'],[s.learning,'teaching'],[s.learning,'supportedWords'],[s.learning,'recent'],[s.campaign,'battleRecords'],[s,'sessions']]) {
       if (!Array.isArray(container[key])) throw new Error('Invalid saved records');
     }
@@ -33,7 +36,7 @@
       s.schemaVersion = 2;
     }
     s.learning.words = s.learning.words || {};
-    for (const item of Content.words) {
+    for (const item of Object.values(byWord)) {
       if (!s.learning.words[item.w]) {
         const evidence = s.assessment.records.filter(r => r.target === item.w);
         const oldHelp = s.learning.teaching.filter(r => r.target === item.w).at(-1);
@@ -44,6 +47,21 @@
           reviewStage:-1, dueAt:0, observations:0};
       }
     }
+    // Previous timing counted foreground waiting. Preserve it as legacy, never verified play.
+    if(s.session&&!s.session.timingVersion){s.session.legacyElapsedMs=s.session.elapsedMs||0;s.session.elapsedMs=0;s.session.timingVersion=1;}
+    if(!Number.isFinite(s.dragon.xp)){
+      const historical={};
+      for(const record of s.campaign.battleRecords){
+        if(record.task==='battle'&&record.correct===true&&record.supported===false&&typeof record.target==='string')historical[record.target]=Math.min(2,(historical[record.target]||0)+1);
+      }
+      for(const [word,count] of Object.entries(historical))s.dragon.awards[word]=Math.max(s.dragon.awards[word]||0,count);
+      s.dragon.xp=Object.values(s.dragon.awards).reduce((sum,count)=>sum+Math.min(2,count)*5,0);
+    }
+    if(!s.timing.firstPracticeAt){
+      const dates=s.campaign.battleRecords.filter(r=>r.task==='battle'&&Number.isFinite(Date.parse(r.at))).map(r=>r.at).sort();
+      if(dates.length)s.timing.firstPracticeAt=dates[0];
+    }
+    syncProgress(s);
     return s;
   }
   function id(s, prefix) { return prefix + '-' + s.nextId++; }
@@ -54,7 +72,7 @@
   }
   function beginSession(s, now) {
     if (s.session && !s.session.completedAt) return s.session;
-    s.session = {id:id(s,'session'),startedAt:iso(now),elapsedMs:0,targetMs:TARGET_MS,
+    s.session = {id:id(s,'session'),startedAt:iso(now),elapsedMs:0,targetMs:TARGET_MS,timingVersion:1,
       newWords:[],answers:0,independent:0,correct:0,teaching:0,victories:0,completedAt:null};
     return s.session;
   }
@@ -64,9 +82,32 @@
     s.sessions.push(copy(s.session));
     s.activity = 'summary';
   }
-  function addActiveTime(s, ms) {
-    if (s.session && !s.session.completedAt && ['battle','teaching','result'].includes(s.activity) && !s.battle?.demo)
-      s.session.elapsedMs += Math.max(0,ms);
+  function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function recordTime(s,ms,category,now){
+    if(!Number.isFinite(ms)||ms<=0||!['practice','math','assessment','demo','idle'].includes(category))return;
+    let cursor=now-ms;
+    while(cursor<now){
+      const d=new Date(cursor),next=new Date(d.getFullYear(),d.getMonth(),d.getDate()+1).getTime(),end=Math.min(now,next);
+      const day=s.timing.days[dayKey(cursor)] ||= {practice:0,math:0,assessment:0,demo:0,idle:0};day[category]=(day[category]||0)+end-cursor;cursor=end;
+    }
+    if(category==='practice'||category==='math'){
+      if(!s.timing.firstPracticeAt)s.timing.firstPracticeAt=iso(now-ms);
+      if(s.session&&!s.session.completedAt)s.session.elapsedMs+=ms;
+    }
+    syncProgress(s,now);
+  }
+  function addActiveTime(s,ms,now=Date.now()){
+    if(s.session&&!s.session.completedAt&&['battle','teaching'].includes(s.activity)&&!s.battle?.demo)recordTime(s,ms,'practice',now);
+  }
+  function parentProgress(s,now=Date.now()){
+    const totals={practice:0,math:0,assessment:0,demo:0,idle:0};
+    for(const day of Object.values(s.timing.days))for(const key of Object.keys(totals))totals[key]+=day[key]||0;
+    const sessions=new Map(s.sessions.map(x=>[x.id,x]));if(s.session)sessions.set(s.session.id,s.session);
+    const legacyMs=[...sessions.values()].reduce((sum,x)=>sum+(x.timingVersion?x.legacyElapsedMs||0:x.elapsedMs||0),0);
+    const records=s.campaign.battleRecords.filter(r=>r.task==='battle'),independent=records.filter(r=>!r.supported);
+    return {totals,activeMs:totals.practice+totals.math+totals.assessment+totals.demo,today:s.timing.days[dayKey(now)]||{practice:0,math:0,assessment:0,demo:0,idle:0},legacyMs,
+      days:Object.entries(s.timing.days).sort((a,b)=>b[0].localeCompare(a[0])),answers:records.length,independent:independent.length,correct:independent.filter(r=>r.correct).length,
+      introduced:Content.words.filter(x=>s.learning.words[x.w]?.introducedAt).length,practiced:Content.words.filter(x=>s.learning.words[x.w]?.practiceSuccesses>=2).length};
   }
   function isSessionDue(s) { return !!s.session && !s.session.completedAt && s.session.elapsedMs >= s.session.targetMs; }
   function getQuestion(s) { return s.activity === 'assessment' ? s.assessment.progress?.question : s.battle?.question; }
@@ -81,8 +122,10 @@
   }
   function selectPracticeWord(s,now) {
     const L=s.learning, recent=L.recent.slice(-2);
+    const accessible=storyProgress(s).areas.filter(a=>['current','cleared'].includes(a.status));
+    const allowed=new Set(accessible.flatMap(a=>a.words)),pool=Content.words.filter(item=>allowed.has(item.w));
     const eligible=item => !recent.includes(item.w) && L.sequence >= L.words[item.w].eligibleAfter;
-    const introduced=Content.words.filter(item => L.words[item.w].introducedAt);
+    const introduced=pool.filter(item => L.words[item.w].introducedAt);
     const existing=introduced.filter(eligible).sort((a,b)=>L.words[a.w].lastSequence-L.words[b.w].lastSequence);
     const due=existing.filter(item => L.words[item.w].dueAt <= now);
     const urgent=due.find(item => L.words[item.w].reviewStage>=0 || L.words[item.w].consecutiveMisses>0);
@@ -90,22 +133,77 @@
     const unfinished=introduced.filter(item => L.words[item.w].practiceSuccesses < 2).length;
     const canIntroduce=(s.session?.newWords.length||0)<6 && (introduced.length<3 || (unfinished<4 && recentAccuracy(s)>=.8));
     if (canIntroduce) {
-      const unseen=Content.words.filter(item => !L.words[item.w].introducedAt && eligible(item));
+      const unseen=pool.filter(item => !L.words[item.w].introducedAt && eligible(item));
       unseen.sort((a,b)=>Number(L.words[b.w].assessmentMiss)-Number(L.words[a.w].assessmentMiss));
       if (unseen.length) return unseen[0];
     }
     if (due.length) return due[0];
     if (existing.length) return existing[0];
     // A tiny starting pool needs distinct intervening material after help.
-    const filler=Content.words.find(item=>eligible(item) && (L.words[item.w].introducedAt || (s.session?.newWords.length||0)<6));
+    const filler=pool.find(item=>eligible(item) && (L.words[item.w].introducedAt || (s.session?.newWords.length||0)<6));
     if (!filler) throw new Error('No eligible reviewed word');
     return filler;
   }
-  function startBattle(s,now,{demo=false,strength=null}={}) {
+  function enemyChoices(s) {
+    const recent=(s.campaign.enemyHistory||[]).slice(-2).map(entry=>entry.enemyId);
+    // Old saves had only Thornling. Avoid it immediately after their saved encounter too.
+    if(s.battle)recent.push(s.battle.enemyId||'thornling');
+    const choices=Content.enemies.filter(enemy=>!recent.includes(enemy.id));
+    const history=(s.campaign.enemyHistory||[]).map(entry=>entry.enemyId);
+    return choices.sort((a,b)=>history.lastIndexOf(a.id)-history.lastIndexOf(b.id));
+  }
+  function enemyScale(health) { return .78 + .65*(1-Math.exp(-(Math.max(3,health)-3)/5)); }
+  function chapterProgress(s) {
+    return {found:Content.words.filter(item=>s.learning.words[item.w]?.introducedAt).length,
+      goal:Content.chapterWordGoal,checkpoint:s.campaign.checkpointWins/2,
+      nextCheckpoint:s.campaign.wins-s.campaign.checkpointWins};
+  }
+  function areaProgress(s,area) {
+    const total=area.words.length;
+    return {introduced:area.words.filter(word=>s.learning.words[word]?.introducedAt).length,
+      reliable:area.words.filter(word=>(s.learning.words[word]?.practiceSuccesses||0)>=2).length,
+      required:Math.ceil(total*.8),total,
+      wins:Math.max(0,Math.min(2,s.campaign.wins-(area.checkpoint-2))),
+      secured:s.campaign.checkpointWins>=area.checkpoint};
+  }
+  function dragonProgress(s,now=Date.now()){
+    const xp=s.dragon.xp||0,stage=s.dragon.stage,next=Content.dragonStages[stage+1]||null;
+    const activeMs=Object.values(s.timing.days).reduce((sum,d)=>sum+(d.practice||0)+(d.math||0),0);
+    const elapsedDays=s.timing.firstPracticeAt?Math.max(0,(now-Date.parse(s.timing.firstPracticeAt))/DAY):0;
+    const remaining=next?Math.max(0,next.xp-xp):0,minutesRemaining=next?Math.max(0,Math.ceil((next.minMinutes*60000-activeMs)/60000)):0,daysRemaining=next?Math.max(0,Math.ceil(next.minDays-elapsedDays)):0;
+    return {xp,stage,current:Content.dragonStages[stage],next,remaining,activeMs,elapsedDays,minutesRemaining,daysRemaining,
+      fraction:next?Math.max(0,Math.min(1,(xp-Content.dragonStages[stage].xp)/(next.xp-Content.dragonStages[stage].xp))):1};
+  }
+  function syncProgress(s,now=Date.now()){
+    for(let i=0;i<Content.areas.length;i++){
+      const area=Content.areas[i],p=areaProgress(s,area),previous=i===0||s.story.clearedAreas.includes(Content.areas[i-1].id);
+      if(area.available&&p.total>0&&previous&&p.introduced===p.total&&p.reliable>=p.required&&p.secured&&!s.story.clearedAreas.includes(area.id))s.story.clearedAreas.push(area.id);
+    }
+    const p=dragonProgress(s,now);
+    for(let stage=s.dragon.stage+1;stage<Content.dragonStages.length;stage++){
+      const next=Content.dragonStages[stage];
+      if(p.xp>=next.xp&&p.activeMs>=next.minMinutes*60000&&p.elapsedDays>=next.minDays&&(!next.requiresChapter||s.story.chapterComplete))s.dragon.stage=stage;
+      else break;
+    }
+  }
+  function storyProgress(s){
+    const cleared=Content.areas.filter(area=>s.story.clearedAreas.includes(area.id)).length;
+    return {cleared,total:Content.areas.length,complete:s.story.chapterComplete,
+      areas:Content.areas.map((area,i)=>({...area,...areaProgress(s,area),
+        status:s.story.clearedAreas.includes(area.id)?'cleared':!area.available?'future':i===0||s.story.clearedAreas.includes(Content.areas[i-1].id)?'current':'locked'}))};
+  }
+  function startBattle(s,now,{demo=false,strength=null,enemyId=null,fromAssessment=false}={}) {
     if (!demo) beginSession(s,now);
-    const health=demo?5:Math.max(3,strength || s.campaign.enemyStrength || 3);
+    const finalEncounter=!demo&&!s.story.chapterComplete&&s.story.clearedAreas.length===Content.areas.length;
+    const health=demo?5:Math.max(finalEncounter?6:3,strength || s.campaign.enemyStrength || 3);
+    const available=enemyChoices(s);
+    const chosen=demo?'thornling':available.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
     s.battle={id:id(s,'battle'),demo,heroHealth:3,enemyHealth:health,maxHealth:health,
+      enemyId:chosen,introPending:!demo,fromAssessment,finalEncounter,areaId:storyProgress(s).areas.find(a=>a.status==='current')?.id||Content.areas.at(-1).id,
       firstMistakeFree:demo,turn:0,question:null,resolved:false};
+    if(!s.campaign.enemyHistory)s.campaign.enemyHistory=[];
+    s.campaign.enemyHistory.push({battleId:s.battle.id,enemyId:chosen});
+    s.campaign.enemyHistory=s.campaign.enemyHistory.slice(-12);
     s.result=null; s.activity='battle';
   }
   function prepareBattle(s,now,random=Math.random) {
@@ -148,7 +246,7 @@
     const rec=observation(s,q,opt,now,b.demo?'demoBattle':'battle');
     rec.battleId=b.id; rec.sessionId=b.demo?null:s.session.id;
     rec.heroHealthBefore=b.heroHealth; rec.enemyHealthBefore=b.enemyHealth;
-    q.correct=rec.correct; q.answeredAt=rec.at; q.phase=rec.correct?'feedback':'correction';
+    q.correct=rec.correct; q.firstResponse=opt; q.answeredAt=rec.at; q.phase=rec.correct?'feedback':'correction';
     q.freeMistake=!rec.correct && !rec.supported && b.firstMistakeFree;
     if (!rec.supported) {
       if (rec.correct) b.enemyHealth--;
@@ -178,6 +276,10 @@
       s.session.answers++;
       if (!rec.supported) { s.session.independent++; if (rec.correct) s.session.correct++; }
     }
+    q.xpEarned=0;
+    if(!b.demo&&rec.correct&&!rec.supported){s.dragon.xp++;q.xpEarned=1;}
+    const stageBefore=s.dragon.stage;syncProgress(s,now);q.grewTo=s.dragon.stage>stageBefore?s.dragon.stage:null;
+    rec.xpEarned=q.xpEarned;
     if (!rec.correct) noteSupport(s,q.target,'correction',now);
     return rec;
   }
@@ -213,10 +315,53 @@
     b.resolved=true;
     if (b.demo) { s.demoComplete=true; s.handoff={victory:b.enemyHealth<=0};s.battle=null;s.activity='handoff';return; }
     const victory=b.enemyHealth<=0;
+    s.math.winStreak=victory?s.math.winStreak+1:0;
     if (victory) { s.campaign.wins++; s.session.victories++; if (s.campaign.wins%2===0) s.campaign.checkpointWins=s.campaign.wins; }
     else s.campaign.wins=s.campaign.checkpointWins;
-    s.result={victory,strength:b.maxHealth,battleId:b.id}; s.activity='result';
-    if (isSessionDue(s)) completeSession(s,now);
+    syncProgress(s);
+    // The future final encounter must be explicitly designated and all areas ready.
+    const chapterReady=Content.words.length>=Content.chapterWordGoal&&Content.words.every(item=>s.learning.words[item.w]?.introducedAt)&&Content.words.filter(item=>(s.learning.words[item.w]?.practiceSuccesses||0)>=2).length>=Math.ceil(Content.words.length*.8);
+    if(victory&&b.finalEncounter&&chapterReady&&Content.areas.every(area=>area.available&&s.story.clearedAreas.includes(area.id))){s.story.chapterComplete=true;syncProgress(s);}
+    s.result={victory,strength:b.maxHealth,battleId:b.id,enemyId:b.enemyId||'thornling',chapterComplete:s.story.chapterComplete}; s.activity='result';
+    if(victory&&s.math.winStreak%3===0){
+      s.math.round={id:id(s,'math'),battleId:b.id,enemyId:b.enemyId||'thornling',status:'intro',bestAtStart:s.math.best,target:Math.max(1,(s.math.best||0)-2),elapsedMs:0,correct:0,answers:[],question:null,bag:[],recent:[]};
+      s.activity='mathIntro';
+    }else if (isSessionDue(s)) completeSession(s,now);
+  }
+  function startMath(s,now){
+    const r=s.math.round;if(!r||r.status!=='intro')return false;
+    beginSession(s,now);r.status='playing';r.startedAt=iso(now);s.activity='mathChallenge';prepareMath(s);return true;
+  }
+  function prepareMath(s,random=Math.random){
+    const r=s.math.round;if(!r||r.status!=='playing'||r.elapsedMs>=60000)return null;
+    if(r.question?.phase==='answer')return r.question;
+    if(!r.bag.length)r.bag=shuffle(Array.from({length:100},(_,i)=>[Math.floor(i/10)+1,i%10+1]),random);
+    let index=r.bag.findIndex(([a,b])=>!r.recent.includes([Math.min(a,b),Math.max(a,b)].join('x')));if(index<0)index=0;
+    const [a,b]=r.bag.splice(index,1)[0];r.recent.push([Math.min(a,b),Math.max(a,b)].join('x'));r.recent=r.recent.slice(-2);
+    r.question={id:id(s,'product'),a,b,input:'',phase:'answer',correct:null};return r.question;
+  }
+  function answerMath(s,value,now){
+    const r=s.math.round,q=r?.question;
+    if(!r||r.status!=='playing'||r.elapsedMs>=60000||!q||q.phase!=='answer'||!/^\d{1,3}$/.test(String(value)))return null;
+    const rec={id:q.id,task:'multiplication',a:q.a,b:q.b,response:Number(value),correct:Number(value)===q.a*q.b,elapsedMs:r.elapsedMs,at:iso(now)};
+    q.phase='feedback';q.correct=rec.correct;q.input=String(value);r.answers.push(rec);
+    if(rec.correct){r.correct++;s.dragon.xp++;syncProgress(s,now);}return rec;
+  }
+  function tickMath(s,ms,now){
+    const r=s.math.round;if(!r||r.status!=='playing'||!Number.isFinite(ms)||ms<=0)return false;
+    r.elapsedMs=Math.min(60000,r.elapsedMs+ms);
+    if(r.elapsedMs>=60000){finishMath(s,now);return true;}return false;
+  }
+  function finishMath(s,now){
+    const r=s.math.round;if(!r||r.status!=='playing'||r.elapsedMs<60000)return false;
+    r.status='result';r.finishedAt=iso(now);r.beaten=r.correct>=r.target;r.newBest=s.math.best===null||r.correct>s.math.best;
+    s.math.best=Math.max(s.math.best||0,r.correct);
+    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score:r.correct,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});
+    s.activity='mathResult';return true;
+  }
+  function leaveMath(s,now){
+    const r=s.math.round;if(!r||!['intro','result'].includes(r.status))return false;
+    s.math.round=null;s.activity='result';if(isSessionDue(s))completeSession(s,now);return true;
   }
   function leaveHandoff(s,now){
     if(!s.handoff)return false;
@@ -254,7 +399,7 @@
         s.learning.words[item.w].familiar=seen.some(r=>r.correct&&!r.supported);
         s.learning.words[item.w].assessmentMiss=seen.some(r=>!r.correct);
       }
-      startBattle(s,now); return;
+      startBattle(s,now,{fromAssessment:true}); return;
     }
     let level=a.level,item;
     for(let guard=0;guard<6;guard++){
@@ -286,6 +431,7 @@
   }
   return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
-    startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment};
+    startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
+    enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,recordTime,parentProgress,dayKey,
+    startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath};
 });
-
