@@ -1,0 +1,1001 @@
+{
+  "status": "awaiting generation and listening review",
+  "language": "en-GB",
+  "direction": "A deep adult male British English voice. Warm, calm, clear natural articulation suitable for children learning to read. Moderate pace, no music, no dramatic character acting, no added words. Keep vowels and final consonants intelligible. Do not artificially pitch-shift recordings.",
+  "wordCount": 48,
+  "sentenceCount": 22,
+  "clipCount": 165,
+  "characters": 5049,
+  "clips": [
+    {
+      "id": "en-male-001",
+      "text": "on",
+      "kind": "word",
+      "file": "assets/narration/en-male-001.mp3"
+    },
+    {
+      "id": "en-male-002",
+      "text": "rock",
+      "kind": "word",
+      "file": "assets/narration/en-male-002.mp3"
+    },
+    {
+      "id": "en-male-003",
+      "text": "tree",
+      "kind": "word",
+      "file": "assets/narration/en-male-003.mp3"
+    },
+    {
+      "id": "en-male-004",
+      "text": "green",
+      "kind": "word",
+      "file": "assets/narration/en-male-004.mp3"
+    },
+    {
+      "id": "en-male-005",
+      "text": "fox",
+      "kind": "word",
+      "file": "assets/narration/en-male-005.mp3"
+    },
+    {
+      "id": "en-male-006",
+      "text": "cave",
+      "kind": "word",
+      "file": "assets/narration/en-male-006.mp3"
+    },
+    {
+      "id": "en-male-007",
+      "text": "water",
+      "kind": "word",
+      "file": "assets/narration/en-male-007.mp3"
+    },
+    {
+      "id": "en-male-008",
+      "text": "bird",
+      "kind": "word",
+      "file": "assets/narration/en-male-008.mp3"
+    },
+    {
+      "id": "en-male-009",
+      "text": "wing",
+      "kind": "word",
+      "file": "assets/narration/en-male-009.mp3"
+    },
+    {
+      "id": "en-male-010",
+      "text": "jump",
+      "kind": "word",
+      "file": "assets/narration/en-male-010.mp3"
+    },
+    {
+      "id": "en-male-011",
+      "text": "over",
+      "kind": "word",
+      "file": "assets/narration/en-male-011.mp3"
+    },
+    {
+      "id": "en-male-012",
+      "text": "up",
+      "kind": "word",
+      "file": "assets/narration/en-male-012.mp3"
+    },
+    {
+      "id": "en-male-013",
+      "text": "big",
+      "kind": "word",
+      "file": "assets/narration/en-male-013.mp3"
+    },
+    {
+      "id": "en-male-014",
+      "text": "small",
+      "kind": "word",
+      "file": "assets/narration/en-male-014.mp3"
+    },
+    {
+      "id": "en-male-015",
+      "text": "two",
+      "kind": "word",
+      "file": "assets/narration/en-male-015.mp3"
+    },
+    {
+      "id": "en-male-016",
+      "text": "red",
+      "kind": "word",
+      "file": "assets/narration/en-male-016.mp3"
+    },
+    {
+      "id": "en-male-017",
+      "text": "book",
+      "kind": "word",
+      "file": "assets/narration/en-male-017.mp3"
+    },
+    {
+      "id": "en-male-018",
+      "text": "open",
+      "kind": "word",
+      "file": "assets/narration/en-male-018.mp3"
+    },
+    {
+      "id": "en-male-019",
+      "text": "night",
+      "kind": "word",
+      "file": "assets/narration/en-male-019.mp3"
+    },
+    {
+      "id": "en-male-020",
+      "text": "moon",
+      "kind": "word",
+      "file": "assets/narration/en-male-020.mp3"
+    },
+    {
+      "id": "en-male-021",
+      "text": "light",
+      "kind": "word",
+      "file": "assets/narration/en-male-021.mp3"
+    },
+    {
+      "id": "en-male-022",
+      "text": "fire",
+      "kind": "word",
+      "file": "assets/narration/en-male-022.mp3"
+    },
+    {
+      "id": "en-male-023",
+      "text": "owl",
+      "kind": "word",
+      "file": "assets/narration/en-male-023.mp3"
+    },
+    {
+      "id": "en-male-024",
+      "text": "forest",
+      "kind": "word",
+      "file": "assets/narration/en-male-024.mp3"
+    },
+    {
+      "id": "en-male-025",
+      "text": "dragon",
+      "kind": "word",
+      "file": "assets/narration/en-male-025.mp3"
+    },
+    {
+      "id": "en-male-026",
+      "text": "treasure",
+      "kind": "word",
+      "file": "assets/narration/en-male-026.mp3"
+    },
+    {
+      "id": "en-male-027",
+      "text": "coin",
+      "kind": "word",
+      "file": "assets/narration/en-male-027.mp3"
+    },
+    {
+      "id": "en-male-028",
+      "text": "gate",
+      "kind": "word",
+      "file": "assets/narration/en-male-028.mp3"
+    },
+    {
+      "id": "en-male-029",
+      "text": "castle",
+      "kind": "word",
+      "file": "assets/narration/en-male-029.mp3"
+    },
+    {
+      "id": "en-male-030",
+      "text": "magic",
+      "kind": "word",
+      "file": "assets/narration/en-male-030.mp3"
+    },
+    {
+      "id": "en-male-031",
+      "text": "sat",
+      "kind": "word",
+      "file": "assets/narration/en-male-031.mp3"
+    },
+    {
+      "id": "en-male-032",
+      "text": "you",
+      "kind": "word",
+      "file": "assets/narration/en-male-032.mp3"
+    },
+    {
+      "id": "en-male-033",
+      "text": "cat",
+      "kind": "word",
+      "file": "assets/narration/en-male-033.mp3"
+    },
+    {
+      "id": "en-male-034",
+      "text": "car",
+      "kind": "word",
+      "file": "assets/narration/en-male-034.mp3"
+    },
+    {
+      "id": "en-male-035",
+      "text": "can",
+      "kind": "word",
+      "file": "assets/narration/en-male-035.mp3"
+    },
+    {
+      "id": "en-male-036",
+      "text": "map",
+      "kind": "word",
+      "file": "assets/narration/en-male-036.mp3"
+    },
+    {
+      "id": "en-male-037",
+      "text": "ship",
+      "kind": "word",
+      "file": "assets/narration/en-male-037.mp3"
+    },
+    {
+      "id": "en-male-038",
+      "text": "star",
+      "kind": "word",
+      "file": "assets/narration/en-male-038.mp3"
+    },
+    {
+      "id": "en-male-039",
+      "text": "shark",
+      "kind": "word",
+      "file": "assets/narration/en-male-039.mp3"
+    },
+    {
+      "id": "en-male-040",
+      "text": "bright",
+      "kind": "word",
+      "file": "assets/narration/en-male-040.mp3"
+    },
+    {
+      "id": "en-male-041",
+      "text": "stone",
+      "kind": "word",
+      "file": "assets/narration/en-male-041.mp3"
+    },
+    {
+      "id": "en-male-042",
+      "text": "storm",
+      "kind": "word",
+      "file": "assets/narration/en-male-042.mp3"
+    },
+    {
+      "id": "en-male-043",
+      "text": "shadow",
+      "kind": "word",
+      "file": "assets/narration/en-male-043.mp3"
+    },
+    {
+      "id": "en-male-044",
+      "text": "silver",
+      "kind": "word",
+      "file": "assets/narration/en-male-044.mp3"
+    },
+    {
+      "id": "en-male-045",
+      "text": "whisper",
+      "kind": "word",
+      "file": "assets/narration/en-male-045.mp3"
+    },
+    {
+      "id": "en-male-046",
+      "text": "journey",
+      "kind": "word",
+      "file": "assets/narration/en-male-046.mp3"
+    },
+    {
+      "id": "en-male-047",
+      "text": "lantern",
+      "kind": "word",
+      "file": "assets/narration/en-male-047.mp3"
+    },
+    {
+      "id": "en-male-048",
+      "text": "creature",
+      "kind": "word",
+      "file": "assets/narration/en-male-048.mp3"
+    },
+    {
+      "id": "en-male-049",
+      "text": "Pip is on the rock.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-049.mp3"
+    },
+    {
+      "id": "en-male-050",
+      "text": "Practice turn. You keep your heart. Pip is on the rock.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-050.mp3"
+    },
+    {
+      "id": "en-male-051",
+      "text": "The tree is green.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-051.mp3"
+    },
+    {
+      "id": "en-male-052",
+      "text": "Practice turn. You keep your heart. The tree is green.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-052.mp3"
+    },
+    {
+      "id": "en-male-053",
+      "text": "Pip follows the fox.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-053.mp3"
+    },
+    {
+      "id": "en-male-054",
+      "text": "Practice turn. You keep your heart. Pip follows the fox.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-054.mp3"
+    },
+    {
+      "id": "en-male-055",
+      "text": "Pip is by the cave.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-055.mp3"
+    },
+    {
+      "id": "en-male-056",
+      "text": "Practice turn. You keep your heart. Pip is by the cave.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-056.mp3"
+    },
+    {
+      "id": "en-male-057",
+      "text": "Pip can jump over water.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-057.mp3"
+    },
+    {
+      "id": "en-male-058",
+      "text": "Practice turn. You keep your heart. Pip can jump over water.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-058.mp3"
+    },
+    {
+      "id": "en-male-059",
+      "text": "The bird flies up.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-059.mp3"
+    },
+    {
+      "id": "en-male-060",
+      "text": "Practice turn. You keep your heart. The bird flies up.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-060.mp3"
+    },
+    {
+      "id": "en-male-061",
+      "text": "The bird has a wing.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-061.mp3"
+    },
+    {
+      "id": "en-male-062",
+      "text": "Practice turn. You keep your heart. The bird has a wing.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-062.mp3"
+    },
+    {
+      "id": "en-male-063",
+      "text": "The open book is big.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-063.mp3"
+    },
+    {
+      "id": "en-male-064",
+      "text": "Practice turn. You keep your heart. The open book is big.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-064.mp3"
+    },
+    {
+      "id": "en-male-065",
+      "text": "The closed book is small.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-065.mp3"
+    },
+    {
+      "id": "en-male-066",
+      "text": "Practice turn. You keep your heart. The closed book is small.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-066.mp3"
+    },
+    {
+      "id": "en-male-067",
+      "text": "Pip has two books.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-067.mp3"
+    },
+    {
+      "id": "en-male-068",
+      "text": "Practice turn. You keep your heart. Pip has two books.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-068.mp3"
+    },
+    {
+      "id": "en-male-069",
+      "text": "The books are red.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-069.mp3"
+    },
+    {
+      "id": "en-male-070",
+      "text": "Practice turn. You keep your heart. The books are red.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-070.mp3"
+    },
+    {
+      "id": "en-male-071",
+      "text": "The big book is open.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-071.mp3"
+    },
+    {
+      "id": "en-male-072",
+      "text": "Practice turn. You keep your heart. The big book is open.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-072.mp3"
+    },
+    {
+      "id": "en-male-073",
+      "text": "The moon shines at night.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-073.mp3"
+    },
+    {
+      "id": "en-male-074",
+      "text": "Practice turn. You keep your heart. The moon shines at night.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-074.mp3"
+    },
+    {
+      "id": "en-male-075",
+      "text": "The fire gives light.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-075.mp3"
+    },
+    {
+      "id": "en-male-076",
+      "text": "Practice turn. You keep your heart. The fire gives light.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-076.mp3"
+    },
+    {
+      "id": "en-male-077",
+      "text": "An owl sits on the branch.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-077.mp3"
+    },
+    {
+      "id": "en-male-078",
+      "text": "Practice turn. You keep your heart. An owl sits on the branch.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-078.mp3"
+    },
+    {
+      "id": "en-male-079",
+      "text": "Pip is in the forest.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-079.mp3"
+    },
+    {
+      "id": "en-male-080",
+      "text": "Practice turn. You keep your heart. Pip is in the forest.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-080.mp3"
+    },
+    {
+      "id": "en-male-081",
+      "text": "Pip is a dragon.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-081.mp3"
+    },
+    {
+      "id": "en-male-082",
+      "text": "Practice turn. You keep your heart. Pip is a dragon.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-082.mp3"
+    },
+    {
+      "id": "en-male-083",
+      "text": "Pip finds the treasure.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-083.mp3"
+    },
+    {
+      "id": "en-male-084",
+      "text": "Practice turn. You keep your heart. Pip finds the treasure.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-084.mp3"
+    },
+    {
+      "id": "en-male-085",
+      "text": "A coin floats above the chest.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-085.mp3"
+    },
+    {
+      "id": "en-male-086",
+      "text": "Practice turn. You keep your heart. A coin floats above the chest.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-086.mp3"
+    },
+    {
+      "id": "en-male-087",
+      "text": "The gate is by the castle.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-087.mp3"
+    },
+    {
+      "id": "en-male-088",
+      "text": "Practice turn. You keep your heart. The gate is by the castle.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-088.mp3"
+    },
+    {
+      "id": "en-male-089",
+      "text": "Pip uses magic to lift a coin.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-089.mp3"
+    },
+    {
+      "id": "en-male-090",
+      "text": "Practice turn. You keep your heart. Pip uses magic to lift a coin.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-090.mp3"
+    },
+    {
+      "id": "en-male-091",
+      "text": "Pip sat on the rock.",
+      "kind": "teaching",
+      "file": "assets/narration/en-male-091.mp3"
+    },
+    {
+      "id": "en-male-092",
+      "text": "Practice turn. You keep your heart. Pip sat on the rock.",
+      "kind": "supported-teaching",
+      "file": "assets/narration/en-male-092.mp3"
+    },
+    {
+      "id": "en-male-093",
+      "text": "The word was on.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-093.mp3"
+    },
+    {
+      "id": "en-male-094",
+      "text": "Practice turn. You keep your heart. The word was on.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-094.mp3"
+    },
+    {
+      "id": "en-male-095",
+      "text": "The word was rock.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-095.mp3"
+    },
+    {
+      "id": "en-male-096",
+      "text": "Practice turn. You keep your heart. The word was rock.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-096.mp3"
+    },
+    {
+      "id": "en-male-097",
+      "text": "The word was tree.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-097.mp3"
+    },
+    {
+      "id": "en-male-098",
+      "text": "Practice turn. You keep your heart. The word was tree.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-098.mp3"
+    },
+    {
+      "id": "en-male-099",
+      "text": "The word was green.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-099.mp3"
+    },
+    {
+      "id": "en-male-100",
+      "text": "Practice turn. You keep your heart. The word was green.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-100.mp3"
+    },
+    {
+      "id": "en-male-101",
+      "text": "The word was fox.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-101.mp3"
+    },
+    {
+      "id": "en-male-102",
+      "text": "Practice turn. You keep your heart. The word was fox.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-102.mp3"
+    },
+    {
+      "id": "en-male-103",
+      "text": "The word was cave.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-103.mp3"
+    },
+    {
+      "id": "en-male-104",
+      "text": "Practice turn. You keep your heart. The word was cave.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-104.mp3"
+    },
+    {
+      "id": "en-male-105",
+      "text": "The word was water.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-105.mp3"
+    },
+    {
+      "id": "en-male-106",
+      "text": "Practice turn. You keep your heart. The word was water.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-106.mp3"
+    },
+    {
+      "id": "en-male-107",
+      "text": "The word was bird.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-107.mp3"
+    },
+    {
+      "id": "en-male-108",
+      "text": "Practice turn. You keep your heart. The word was bird.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-108.mp3"
+    },
+    {
+      "id": "en-male-109",
+      "text": "The word was wing.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-109.mp3"
+    },
+    {
+      "id": "en-male-110",
+      "text": "Practice turn. You keep your heart. The word was wing.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-110.mp3"
+    },
+    {
+      "id": "en-male-111",
+      "text": "The word was jump.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-111.mp3"
+    },
+    {
+      "id": "en-male-112",
+      "text": "Practice turn. You keep your heart. The word was jump.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-112.mp3"
+    },
+    {
+      "id": "en-male-113",
+      "text": "The word was over.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-113.mp3"
+    },
+    {
+      "id": "en-male-114",
+      "text": "Practice turn. You keep your heart. The word was over.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-114.mp3"
+    },
+    {
+      "id": "en-male-115",
+      "text": "The word was up.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-115.mp3"
+    },
+    {
+      "id": "en-male-116",
+      "text": "Practice turn. You keep your heart. The word was up.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-116.mp3"
+    },
+    {
+      "id": "en-male-117",
+      "text": "The word was big.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-117.mp3"
+    },
+    {
+      "id": "en-male-118",
+      "text": "Practice turn. You keep your heart. The word was big.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-118.mp3"
+    },
+    {
+      "id": "en-male-119",
+      "text": "The word was small.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-119.mp3"
+    },
+    {
+      "id": "en-male-120",
+      "text": "Practice turn. You keep your heart. The word was small.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-120.mp3"
+    },
+    {
+      "id": "en-male-121",
+      "text": "The word was two.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-121.mp3"
+    },
+    {
+      "id": "en-male-122",
+      "text": "Practice turn. You keep your heart. The word was two.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-122.mp3"
+    },
+    {
+      "id": "en-male-123",
+      "text": "The word was red.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-123.mp3"
+    },
+    {
+      "id": "en-male-124",
+      "text": "Practice turn. You keep your heart. The word was red.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-124.mp3"
+    },
+    {
+      "id": "en-male-125",
+      "text": "The word was book.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-125.mp3"
+    },
+    {
+      "id": "en-male-126",
+      "text": "Practice turn. You keep your heart. The word was book.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-126.mp3"
+    },
+    {
+      "id": "en-male-127",
+      "text": "The word was open.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-127.mp3"
+    },
+    {
+      "id": "en-male-128",
+      "text": "Practice turn. You keep your heart. The word was open.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-128.mp3"
+    },
+    {
+      "id": "en-male-129",
+      "text": "The word was night.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-129.mp3"
+    },
+    {
+      "id": "en-male-130",
+      "text": "Practice turn. You keep your heart. The word was night.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-130.mp3"
+    },
+    {
+      "id": "en-male-131",
+      "text": "The word was moon.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-131.mp3"
+    },
+    {
+      "id": "en-male-132",
+      "text": "Practice turn. You keep your heart. The word was moon.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-132.mp3"
+    },
+    {
+      "id": "en-male-133",
+      "text": "The word was light.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-133.mp3"
+    },
+    {
+      "id": "en-male-134",
+      "text": "Practice turn. You keep your heart. The word was light.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-134.mp3"
+    },
+    {
+      "id": "en-male-135",
+      "text": "The word was fire.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-135.mp3"
+    },
+    {
+      "id": "en-male-136",
+      "text": "Practice turn. You keep your heart. The word was fire.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-136.mp3"
+    },
+    {
+      "id": "en-male-137",
+      "text": "The word was owl.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-137.mp3"
+    },
+    {
+      "id": "en-male-138",
+      "text": "Practice turn. You keep your heart. The word was owl.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-138.mp3"
+    },
+    {
+      "id": "en-male-139",
+      "text": "The word was forest.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-139.mp3"
+    },
+    {
+      "id": "en-male-140",
+      "text": "Practice turn. You keep your heart. The word was forest.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-140.mp3"
+    },
+    {
+      "id": "en-male-141",
+      "text": "The word was dragon.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-141.mp3"
+    },
+    {
+      "id": "en-male-142",
+      "text": "Practice turn. You keep your heart. The word was dragon.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-142.mp3"
+    },
+    {
+      "id": "en-male-143",
+      "text": "The word was treasure.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-143.mp3"
+    },
+    {
+      "id": "en-male-144",
+      "text": "Practice turn. You keep your heart. The word was treasure.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-144.mp3"
+    },
+    {
+      "id": "en-male-145",
+      "text": "The word was coin.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-145.mp3"
+    },
+    {
+      "id": "en-male-146",
+      "text": "Practice turn. You keep your heart. The word was coin.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-146.mp3"
+    },
+    {
+      "id": "en-male-147",
+      "text": "The word was gate.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-147.mp3"
+    },
+    {
+      "id": "en-male-148",
+      "text": "Practice turn. You keep your heart. The word was gate.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-148.mp3"
+    },
+    {
+      "id": "en-male-149",
+      "text": "The word was castle.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-149.mp3"
+    },
+    {
+      "id": "en-male-150",
+      "text": "Practice turn. You keep your heart. The word was castle.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-150.mp3"
+    },
+    {
+      "id": "en-male-151",
+      "text": "The word was magic.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-151.mp3"
+    },
+    {
+      "id": "en-male-152",
+      "text": "Practice turn. You keep your heart. The word was magic.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-152.mp3"
+    },
+    {
+      "id": "en-male-153",
+      "text": "The word was sat.",
+      "kind": "correction",
+      "file": "assets/narration/en-male-153.mp3"
+    },
+    {
+      "id": "en-male-154",
+      "text": "Practice turn. You keep your heart. The word was sat.",
+      "kind": "practice-correction",
+      "file": "assets/narration/en-male-154.mp3"
+    },
+    {
+      "id": "en-male-155",
+      "text": "A Thornling is on the path. Ready to battle?",
+      "kind": "encounter",
+      "file": "assets/narration/en-male-155.mp3"
+    },
+    {
+      "id": "en-male-156",
+      "text": "Reading check complete. Now your first chapter begins. A Thornling is on the path. Ready to battle?",
+      "kind": "first-encounter",
+      "file": "assets/narration/en-male-156.mp3"
+    },
+    {
+      "id": "en-male-157",
+      "text": "A Moss Golem is on the path. Ready to battle?",
+      "kind": "encounter",
+      "file": "assets/narration/en-male-157.mp3"
+    },
+    {
+      "id": "en-male-158",
+      "text": "Reading check complete. Now your first chapter begins. A Moss Golem is on the path. Ready to battle?",
+      "kind": "first-encounter",
+      "file": "assets/narration/en-male-158.mp3"
+    },
+    {
+      "id": "en-male-159",
+      "text": "A Moon Moth is on the path. Ready to battle?",
+      "kind": "encounter",
+      "file": "assets/narration/en-male-159.mp3"
+    },
+    {
+      "id": "en-male-160",
+      "text": "Reading check complete. Now your first chapter begins. A Moon Moth is on the path. Ready to battle?",
+      "kind": "first-encounter",
+      "file": "assets/narration/en-male-160.mp3"
+    },
+    {
+      "id": "en-male-161",
+      "text": "A Root Sprite is on the path. Ready to battle?",
+      "kind": "encounter",
+      "file": "assets/narration/en-male-161.mp3"
+    },
+    {
+      "id": "en-male-162",
+      "text": "Reading check complete. Now your first chapter begins. A Root Sprite is on the path. Ready to battle?",
+      "kind": "first-encounter",
+      "file": "assets/narration/en-male-162.mp3"
+    },
+    {
+      "id": "en-male-163",
+      "text": "A Cave Troll is on the path. Ready to battle?",
+      "kind": "encounter",
+      "file": "assets/narration/en-male-163.mp3"
+    },
+    {
+      "id": "en-male-164",
+      "text": "Reading check complete. Now your first chapter begins. A Cave Troll is on the path. Ready to battle?",
+      "kind": "first-encounter",
+      "file": "assets/narration/en-male-164.mp3"
+    },
+    {
+      "id": "en-male-165",
+      "text": "Let’s try a few words. Look at the word. When it hides, tap the same word. Tap the question mark if you are not sure.",
+      "kind": "instructions",
+      "file": "assets/narration/en-male-165.mp3"
+    }
+  ]
+}

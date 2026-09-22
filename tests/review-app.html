@@ -3,7 +3,7 @@
 const scene=new URLSearchParams(location.search).get('scene')||'setup';
 fetch('../index.html?review='+Date.now(),{cache:'no-store'}).then(r=>r.text()).then(html=>{
  const safeScene=JSON.stringify(scene).replace(/</g,'\\u003c');
- const override=`<script src="tests/review-scenarios.js?v=math-r2"><\/script><script>
+ const override=`<script src="tests/review-scenarios.js?v=child-ui-r1"><\/script><script>
  window.reviewScene=${safeScene};const learnerStorageKey=BlitzStorage.KEY;window.BlitzStorage={...BlitzStorage,KEY:'blitzword_visual_review',AdventureStore:class extends BlitzStorage.AdventureStore{constructor(){const data=new Map([[learnerStorageKey,window.reviewScene==='error'?'broken save':JSON.stringify(makeReviewSave(window.reviewScene))]]);super({getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v),removeItem:k=>data.delete(k)});}}};<\/script>`;
  const activate=`<script>if(window.reviewScene==='parents'){document.getElementById('mapParents').click();}else if(!['setup','heroes','route','error'].includes(window.reviewScene)&&!window.reviewScene.startsWith('map')){document.getElementById(document.getElementById('campaignMap').classList.contains('active')?'mapContinue':'continueAdventure').click();if(['pause','summary'].includes(window.reviewScene))document.getElementById('pauseBtn').click();if(window.reviewScene==='summary')document.getElementById('pauseFinish').click();}<\/script>`;
  html=html.replace('<head>','<head><base href="../">').replace('<script src="app.js',override+'<script src="app.js').replace('</body>',activate+'</body>');
