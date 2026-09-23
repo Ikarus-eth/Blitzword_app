@@ -3,6 +3,7 @@ const C=require('../game-core');
 const NOW=Date.UTC(2026,8,22);
 function fresh(){const s=C.migrate(C.fresh());s.assessment.done=true;return s;}
 function battle(s,win=true,demo=false){C.startBattle(s,NOW,{strength:3,enemyId:'thornling',demo});s.battle.enemyHealth=win?0:3;s.battle.heroHealth=win?3:0;C.resolveBattle(s,NOW);}
+function wrong(s){const q=s.math.round.question;return q.options.find(n=>n!==q.a*q.b);}
 function challenge(best=null){const s=fresh();s.math.best=best;for(let i=0;i<3;i++)battle(s);C.startMath(s,NOW);return s;}
 test('every third consecutive campaign victory revives exactly the defeated enemy',()=>{
  const s=fresh();for(let win=1;win<=6;win++){
@@ -25,7 +26,7 @@ test('all 100 multiplication facts are available, with no consecutive equivalent
 test('correct answers earn XP once; invalid answers are ignored and reading evidence is untouched',()=>{
  const s=challenge(),before=JSON.stringify(s.learning),wins=s.campaign.wins,q=s.math.round.question;
  assert.equal(C.answerMath(s,'bad',NOW),null);C.answerMath(s,q.a*q.b,NOW);assert.equal(C.answerMath(s,q.a*q.b,NOW),null);assert.equal(s.dragon.xp,1);
- C.prepareMath(s);C.answerMath(s,'0',NOW);assert.equal(s.math.round.correct,1);assert.equal(s.dragon.xp,1);assert.equal(JSON.stringify(s.learning),before);assert.equal(s.campaign.wins,wins);
+ C.prepareMath(s);C.answerMath(s,wrong(s),NOW);assert.equal(s.math.round.correct,1);assert.equal(s.dragon.xp,1);assert.equal(JSON.stringify(s.learning),before);assert.equal(s.campaign.wins,wins);
 });
 test('60-second boundary finishes once, rejects late answers and updates PR only upwards',()=>{
  const s=challenge(5);for(let i=0;i<4;i++){const q=C.prepareMath(s);C.answerMath(s,q.a*q.b,NOW);}
@@ -33,8 +34,8 @@ test('60-second boundary finishes once, rejects late answers and updates PR only
  assert.equal(C.tickMath(s,1000,NOW),false);assert.equal(C.finishMath(s,NOW),false);assert.equal(C.answerMath(s,1,NOW),null);assert.equal(s.math.records.length,1);
  const first=challenge();C.tickMath(first,60000,NOW);assert.equal(first.math.best,0);assert.equal(first.math.round.beaten,false);assert.equal(first.math.records[0].elapsedMs,60000);
 });
-test('saved countdown, typed digits, problem, target and XP survive reload',()=>{
- let s=challenge(12);s.math.round.question.input='10';C.tickMath(s,12345,NOW);const before=JSON.stringify(s.math.round);s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(JSON.stringify(s.math.round),before);assert.equal(C.startMath(s,NOW),false);assert.equal(C.leaveMath(s,NOW),false);
+test('saved countdown, choice order, problem, target and XP survive reload',()=>{
+ let s=challenge(12);C.tickMath(s,12345,NOW);const before=JSON.stringify(s.math.round);s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(JSON.stringify(s.math.round),before);assert.equal(C.startMath(s,NOW),false);assert.equal(C.leaveMath(s,NOW),false);
 });
 test('math timing has its own parent total and counts once towards growth and session',()=>{
  const s=challenge();C.recordTime(s,10000,'math',NOW);const p=C.parentProgress(s,NOW);assert.equal(p.totals.math,10000);assert.equal(p.totals.practice,0);assert.equal(p.activeMs,10000);assert.equal(C.dragonProgress(s,NOW).activeMs,10000);assert.equal(s.session.elapsedMs,10000);
@@ -43,16 +44,28 @@ test('pending multiplication ends on the XP result without losing the reading vi
  const s=fresh();battle(s);battle(s);C.recordTime(s,C.TARGET_MS,'practice',NOW);battle(s);assert.equal(s.activity,'mathIntro');assert.equal(s.result.victory,true);const reward=C.copy(s.result);C.leaveMath(s,NOW);assert.equal(s.activity,'result');assert.deepEqual(s.result,reward);assert.ok(s.session.completedAt);assert.equal(s.math.round,null);
 });
 test('wrong answers remove one point, including below zero, exactly once; permanent XP survives',()=>{
- let s=challenge();const q=s.math.round.question;C.answerMath(s,0,NOW);
+ let s=challenge();const q=s.math.round.question;C.answerMath(s,wrong(s),NOW);
  assert.equal(C.mathScore(s.math.round),-1);assert.equal(s.math.round.wrong,1);assert.equal(s.math.round.answers.at(-1).points,-1);
- assert.equal(C.answerMath(s,0,NOW),null);assert.equal(C.mathScore(s.math.round),-1);
+ assert.equal(C.answerMath(s,wrong(s),NOW),null);assert.equal(C.mathScore(s.math.round),-1);
  s=C.migrate(C.copy(s));assert.equal(C.mathScore(s.math.round),-1);
  const next=C.prepareMath(s);C.answerMath(s,next.a*next.b,NOW);assert.equal(C.mathScore(s.math.round),0);assert.equal(s.math.round.correct,1);assert.equal(s.dragon.xp,1);
- C.prepareMath(s);C.answerMath(s,0,NOW);assert.equal(s.dragon.xp,1);C.tickMath(s,60000,NOW);assert.equal(s.math.best,-1);assert.equal(s.math.records[0].score,-1);assert.equal(s.math.round.beaten,false);
+ C.prepareMath(s);C.answerMath(s,wrong(s),NOW);assert.equal(s.dragon.xp,1);C.tickMath(s,60000,NOW);assert.equal(s.math.best,-1);assert.equal(s.math.records[0].score,-1);assert.equal(s.math.round.beaten,false);
 });
 test('target and PR use net score; a saved legacy round keeps its scoring and records',()=>{
- const s=challenge(4);for(let i=0;i<5;i++){const q=C.prepareMath(s);C.answerMath(s,q.a*q.b,NOW);}for(let i=0;i<4;i++){C.prepareMath(s);C.answerMath(s,0,NOW);}
+ const s=challenge(4);for(let i=0;i<5;i++){const q=C.prepareMath(s);C.answerMath(s,q.a*q.b,NOW);}for(let i=0;i<4;i++){C.prepareMath(s);C.answerMath(s,wrong(s),NOW);}
  C.tickMath(s,60000,NOW);assert.equal(s.math.round.correct,5);assert.equal(s.math.records[0].score,1);assert.equal(s.math.best,4);assert.equal(s.math.round.beaten,false);
  let legacy=challenge(12);delete legacy.math.round.scoringVersion;delete legacy.math.round.score;delete legacy.math.round.wrong;legacy.math.round.correct=3;
- legacy=C.migrate(C.copy(legacy));C.answerMath(legacy,0,NOW);assert.equal(C.mathScore(legacy.math.round),3);C.tickMath(legacy,60000,NOW);assert.equal(legacy.math.records[0].scoringVersion,1);assert.equal(legacy.math.best,12);
+ legacy=C.migrate(C.copy(legacy));C.answerMath(legacy,wrong(legacy),NOW);assert.equal(C.mathScore(legacy.math.round),3);C.tickMath(legacy,60000,NOW);assert.equal(legacy.math.records[0].scoringVersion,1);assert.equal(legacy.math.best,12);
+});
+
+test('all multiplication choices are unique, in range, contain one answer, and reject non-choices',()=>{
+ const s=challenge();const positions=new Set();
+ for(let i=0;i<100;i++){const q=C.prepareMath(s);assert.equal(q.options.length,4);assert.equal(new Set(q.options).size,4);assert.ok(q.options.every(n=>Number.isInteger(n)&&n>=1&&n<=100));assert.equal(q.options.filter(n=>n===q.a*q.b).length,1);positions.add(q.options.indexOf(q.a*q.b));assert.equal(C.answerMath(s,0,NOW),null);assert.equal(C.answerMath(s,101,NOW),null);C.answerMath(s,q.a*q.b,NOW);}
+ assert.ok(positions.size>1,'answer position must vary');
+});
+test('a saved typed round converts once without changing elapsed time, score, target or accepted answers',()=>{
+ let s=challenge(15);const q=s.math.round.question;delete q.options;delete s.math.round.inputMode;q.input='12';s.math.round.elapsedMs=12345;s.math.round.score=4;s.math.round.correct=5;s.math.round.wrong=1;
+ const existing=[{id:'old',response:12,correct:true,inputMode:'typed'}];s.math.round.answers=C.copy(existing);
+ s=C.migrate(s);assert.equal(s.math.round.inputMode,'choice');assert.equal(s.math.round.elapsedMs,12345);assert.equal(s.math.round.score,4);assert.equal(s.math.round.target,13);assert.deepEqual(s.math.round.answers,existing);assert.equal(s.math.best,15);assert.equal(s.math.round.question.id,q.id);assert.equal(s.math.round.question.legacyInput,'12');assert.equal(s.math.round.question.input,'');
+ const saved=C.copy(s.math.round);assert.deepEqual(C.migrate(s).math.round,saved);
 });

@@ -1,6 +1,16 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const C=require('../content'),Core=require('../game-core');
 const now=Date.UTC(2026,8,22),fresh=()=>Core.migrate(Core.fresh());
+test('reviewed practice alternatives require more than first-letter or length guessing',()=>{
+ for(const {w,d} of C.words){
+  assert.equal(new Set(d).size,4,w);assert.equal(d.filter(x=>x===w).length,1,w);
+  const wrong=d.filter(x=>x!==w);assert.ok(wrong.some(x=>x.length===w.length),'same-length alternative: '+w);
+  if(w.length>1)assert.ok(wrong.filter(x=>x[0]===w[0]).length>=2,'same-initial alternatives: '+w);
+ }
+ assert.deepEqual(C.words.find(x=>x.w==='treasure').d,['treasure','traesure','trasure','treason']);
+ // An in-flight old question retains its exact choices on reload.
+ const s=fresh();Core.startBattle(s,now);const q=Core.prepareBattle(s,now);q.options=['on','in','an','no'];assert.deepEqual(Core.migrate(s).battle.question.options,q.options);
+});
 test('the full approved Core 200 is allocated exactly once across seven playable chapters',()=>{
  assert.equal(C.words.length,200);assert.equal(new Set(C.words.map(x=>x.w)).size,200);assert.equal(C.chapters.length,7);assert.equal(C.areas.length,35);
  assert.deepEqual(C.chapters.map(c=>c.words.length),[30,30,30,30,30,30,20]);

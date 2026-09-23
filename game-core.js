@@ -18,6 +18,7 @@
       dragon:{awards:{},stage:0,xp:null},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false},
       timing:{version:1,days:{},firstPracticeAt:null},
       math:{best:null,winStreak:0,round:null,records:[]},
+      rewards:{shield:false,readingWins:0,shieldEarnedAt:null},
       settings:{selfPaced:false,speed:null,soundscape:true}, activity:'route', screen:'setup', battle:null,
       teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false};
   }
@@ -25,7 +26,16 @@
     if (!old || typeof old !== 'object' || Array.isArray(old)) throw new Error('Invalid saved adventure');
     const base = fresh();
     const s = {...base,...copy(old)};
-    for (const key of ['profile','assessment','learning','campaign','settings','dragon','story','timing','math']) s[key] = {...base[key],...s[key]};
+    for (const key of ['profile','assessment','learning','campaign','settings','dragon','story','timing','math','rewards']) s[key] = {...base[key],...s[key]};
+    s.rewards.shield=s.rewards.shield===true;
+    s.rewards.readingWins=Math.max(0,Math.min(3,Number(s.rewards.readingWins)||0));
+    // Convert the pending UI only. Keep time, factors, accepted answers and old PRs.
+    if(s.math.round){
+      const r=s.math.round,q=r.question;
+      if(!r.inputMode)r.previousInputMode='typed';
+      r.inputMode='choice';
+      if(q&&!q.options){q.options=mathChoices(q.a,q.b);if(q.phase==='answer'&&q.input){q.legacyInput=q.input;q.input='';}}
+    }
     for (const [container,key] of [[s.assessment,'records'],[s.learning,'teaching'],[s.learning,'supportedWords'],[s.learning,'recent'],[s.campaign,'battleRecords'],[s,'sessions']]) {
       if (!Array.isArray(container[key])) throw new Error('Invalid saved records');
     }
@@ -274,9 +284,10 @@
     if (!rec.supported) {
       if (rec.correct) b.enemyHealth--;
       else if (b.firstMistakeFree) b.firstMistakeFree=false;
+      else if(!b.demo&&s.rewards.shield){s.rewards.shield=false;q.shieldUsed=true;rec.shieldUsed=true;}
       else b.heroHealth--;
     }
-    rec.healthChanged=!rec.supported && !q.freeMistake;
+    rec.healthChanged=!rec.supported && !q.freeMistake && !q.shieldUsed;
     s.campaign.battleRecords.push(rec);
     const L=s.learning,w=L.words[q.target];
     L.sequence++; L.recent.push(q.target); L.recent=L.recent.slice(-6);
@@ -339,6 +350,7 @@
     if (b.demo) { s.demoComplete=true; s.handoff={victory:b.enemyHealth<=0};s.battle=null;s.activity='handoff';return; }
     const victory=b.enemyHealth<=0;
     s.math.winStreak=victory?s.math.winStreak+1:0;
+    s.rewards.readingWins=victory?Math.min(3,s.rewards.readingWins+1):0;
     if (victory) { s.campaign.wins++; s.session.victories++; if (s.campaign.wins%2===0) s.campaign.checkpointWins=s.campaign.wins; }
     else s.campaign.wins=s.campaign.checkpointWins;
     syncProgress(s);
@@ -350,7 +362,7 @@
     const xpEarned=s.campaign.battleRecords.filter(r=>r.battleId===b.id).reduce((sum,r)=>sum+(r.xpEarned||0),0);
     s.result={victory,strength:b.maxHealth,battleId:b.id,enemyId:b.enemyId||'thornling',chapterComplete:s.story.chapterComplete,chapterJustComplete,xpEarned}; s.activity='result';
     if(victory&&s.math.winStreak%3===0){
-      s.math.round={id:id(s,'math'),battleId:b.id,enemyId:b.enemyId||'thornling',status:'intro',bestAtStart:s.math.best,target:Math.max(1,(s.math.best||0)-2),elapsedMs:0,correct:0,score:0,wrong:0,scoringVersion:2,answers:[],question:null,bag:[],recent:[]};
+      s.math.round={id:id(s,'math'),battleId:b.id,enemyId:b.enemyId||'thornling',status:'intro',inputMode:'choice',shieldEligible:s.rewards.readingWins>=3,bestAtStart:s.math.best,target:Math.max(1,(s.math.best||0)-2),elapsedMs:0,correct:0,score:0,wrong:0,scoringVersion:2,answers:[],question:null,bag:[],recent:[]};
       s.activity='mathIntro';
     }else if (isSessionDue(s)) {completeSession(s,now);s.activity='result';}
   }
@@ -359,18 +371,24 @@
     r.scoringVersion=2;r.score=0;r.wrong=0;
     beginSession(s,now);r.status='playing';r.startedAt=iso(now);s.activity='mathChallenge';prepareMath(s);return true;
   }
+  function mathChoices(a,b,random=Math.random){
+    const answer=a*b;
+    const neighbours=[a*(b-1),a*(b+1),(a-1)*b,(a+1)*b,answer-1,answer+1,answer-10,answer+10,answer-2,answer+2];
+    const wrong=[...new Set(neighbours)].filter(n=>n>=1&&n<=100&&n!==answer);
+    return shuffle([answer,...shuffle(wrong,random).slice(0,3)],random);
+  }
   function prepareMath(s,random=Math.random){
     const r=s.math.round;if(!r||r.status!=='playing'||r.elapsedMs>=60000)return null;
-    if(r.question?.phase==='answer')return r.question;
+    if(r.question?.phase==='answer'){if(!r.question.options)r.question.options=mathChoices(r.question.a,r.question.b,random);return r.question;}
     if(!r.bag.length)r.bag=shuffle(Array.from({length:100},(_,i)=>[Math.floor(i/10)+1,i%10+1]),random);
     let index=r.bag.findIndex(([a,b])=>!r.recent.includes([Math.min(a,b),Math.max(a,b)].join('x')));if(index<0)index=0;
     const [a,b]=r.bag.splice(index,1)[0];r.recent.push([Math.min(a,b),Math.max(a,b)].join('x'));r.recent=r.recent.slice(-2);
-    r.question={id:id(s,'product'),a,b,input:'',phase:'answer',correct:null};return r.question;
+    r.question={id:id(s,'product'),a,b,options:mathChoices(a,b,random),input:'',phase:'answer',correct:null};return r.question;
   }
   function answerMath(s,value,now){
     const r=s.math.round,q=r?.question;
-    if(!r||r.status!=='playing'||r.elapsedMs>=60000||!q||q.phase!=='answer'||!/^\d{1,3}$/.test(String(value)))return null;
-    const rec={id:q.id,task:'multiplication',a:q.a,b:q.b,response:Number(value),correct:Number(value)===q.a*q.b,elapsedMs:r.elapsedMs,at:iso(now)};
+    if(!r||r.status!=='playing'||r.elapsedMs>=60000||!q||q.phase!=='answer'||!/^\d{1,3}$/.test(String(value))||!q.options?.includes(Number(value)))return null;
+    const rec={id:q.id,task:'multiplication',inputMode:'choice',alternatives:[...q.options],a:q.a,b:q.b,response:Number(value),correct:Number(value)===q.a*q.b,elapsedMs:r.elapsedMs,at:iso(now)};
     q.phase='feedback';q.correct=rec.correct;q.input=String(value);r.answers.push(rec);
     if(rec.correct){r.correct++;s.dragon.xp++;syncProgress(s,now);}
     if(r.scoringVersion===2){rec.points=rec.correct?1:-1;r.score+=rec.points;if(!rec.correct)r.wrong++;}
@@ -387,11 +405,15 @@
     const score=mathScore(r);
     r.status='result';r.finishedAt=iso(now);r.beaten=score>=r.target;r.newBest=s.math.best===null||score>s.math.best;
     s.math.best=Math.max(s.math.best??score,score);
-    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score,correct:r.correct,wrong:r.wrong||0,scoringVersion:r.scoringVersion||1,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});
+    r.shieldEarned=!!(r.beaten&&r.shieldEligible&&s.rewards.readingWins>=3&&!s.rewards.shield);
+    if(r.shieldEarned){s.rewards.shield=true;s.rewards.shieldEarnedAt=iso(now);}
+    s.rewards.readingWins=0;
+    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score,correct:r.correct,wrong:r.wrong||0,inputMode:r.inputMode,scoringVersion:r.scoringVersion||1,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,shieldEarned:r.shieldEarned,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});
     s.activity='mathResult';return true;
   }
   function leaveMath(s,now){
     const r=s.math.round;if(!r||!['intro','result'].includes(r.status))return false;
+    if(r.status==='intro')s.rewards.readingWins=0;
     s.math.round=null;s.activity='result';if(isSessionDue(s)){completeSession(s,now);s.activity='result';}return true;
   }
   function leaveHandoff(s,now){

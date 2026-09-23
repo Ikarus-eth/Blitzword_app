@@ -56,16 +56,16 @@ function mathSave(best=8){
 {
  let ui=boot(mathSave());ui.resume();assert.ok(ui.get('mathIntro').classList.contains('active'));assert.equal(ui.get('mathRevivedEnemy').dataset.enemy,ui.state().battle.enemyId);assert.equal(ui.get('mathIntroTarget').textContent,'6');assert.equal(ui.get('mathIntroGoal').getAttribute('aria-label'),'Goal: 6 points');
  ui.advance(60000);assert.equal(Core.parentProgress(ui.state()).activeMs,0);ui.click(ui.get('mathStart'));assert.equal(ui.get('mathTime').textContent,'60s');
- const key=value=>ui.click(ui.get('mathKeys').querySelector('[data-key="'+value+'"]'));
- ui.advance(4000);key('1');const problem=ui.state().math.round.question.id;ui.click(ui.get('homeBtn'));const remaining=ui.state().math.round.elapsedMs;
- ui.advance(60000);ui=boot(ui.state());ui.resume();assert.equal(ui.state().math.round.question.id,problem);assert.equal(ui.get('mathInput').textContent,'1');assert.equal(ui.state().math.round.elapsedMs,remaining);
- key('back');const q=ui.state().math.round.question;for(const digit of String(q.a*q.b))key(digit);key('enter');assert.equal(ui.get('mathFeedback').textContent,'+1');assert.equal(ui.state().dragon.xp,1);ui.tick();
+ const choose=value=>ui.click(ui.get('mathAnswers').querySelector('[data-value="'+value+'"]'));assert.equal(ui.get('mathKeys'),null);assert.equal(ui.get('mathAnswers').children.length,4);
+ ui.advance(4000);const choices=ui.state().math.round.question.options;const problem=ui.state().math.round.question.id;ui.click(ui.get('homeBtn'));const remaining=ui.state().math.round.elapsedMs;
+ ui.advance(60000);ui=boot(ui.state());ui.resume();assert.equal(ui.state().math.round.question.id,problem);assert.equal(ui.get('mathInput').textContent,'?');assert.deepEqual(ui.state().math.round.question.options,choices);assert.equal(ui.state().math.round.elapsedMs,remaining);
+ const q=ui.state().math.round.question;choose(q.a*q.b);assert.equal(ui.get('mathFeedback').textContent,'+1');assert.equal(ui.state().dragon.xp,1);ui.tick();
  ui.advance(3000);const credited=Core.parentProgress(ui.state()).activeMs;ui.visibility(true);assert.equal(ui.get('pausePanel').hidden,false);const elapsed=ui.state().math.round.elapsedMs;ui.advance(120000,true);ui.visibility(false);ui.click(ui.get('pauseResume'));assert.equal(ui.state().math.round.elapsedMs,elapsed);assert.equal(Core.parentProgress(ui.state()).activeMs,credited);
  ui.advance(30000);assert.equal(ui.get('pausePanel').hidden,false);assert.equal(Core.parentProgress(ui.state()).activeMs,credited);ui.click(ui.get('pauseResume'));
- for(let i=0;i<65&&ui.state().math.round.status==='playing';i++){ui.advance(1000);if(ui.state().math.round.status==='playing')key('back');}
+ for(let i=0;i<65&&ui.state().math.round.status==='playing';i++){ui.advance(1000);if(ui.state().math.round.status==='playing'){const q=ui.state().math.round.question;if(q.phase==='answer')choose(q.options.find(n=>n!==q.a*q.b));if(ui.state().math.round.status==='playing')ui.tick();}}
  assert.ok(ui.get('mathResult').classList.contains('active'));assert.equal(ui.state().math.round.elapsedMs,60000);assert.equal(ui.state().math.records.length,1);assert.equal(ui.state().math.best,8);assert.equal(ui.state().result.victory,true);assert.equal(ui.state().math.round.correct,1);
  const p=Core.parentProgress(ui.state());assert.equal(p.totals.practice,0);assert.equal(p.activeMs,p.totals.math);assert.ok(p.totals.math>4000&&p.totals.math<60000);ui=boot(ui.state());ui.resume();assert.ok(ui.get('mathResult').classList.contains('active'));assert.equal(ui.state().math.records.length,1);ui.click(ui.get('mathContinue'));assert.ok(ui.get('result').classList.contains('active'));assert.equal(ui.state().math.round,null);
- console.log('PASS multiplication revival, keypad, exact saved resume, idle/background pause, deadline, PR and separate parent time');
+ console.log('PASS multiplication choices, exact saved resume, idle/background pause, deadline, PR and separate parent time');
 }
 {
  const ui=boot(mathSave(null));ui.resume();ui.click(ui.get('mathSkip'));assert.equal(ui.state().math.round,null);assert.equal(ui.state().math.best,null);assert.equal(ui.state().campaign.wins,3);assert.ok(ui.get('result').classList.contains('active'));
@@ -205,7 +205,7 @@ for(const victory of [true,false]){
 {
  const ui=boot(mathSave());ui.resume();ui.click(ui.get('mathStart'));ui.advance(10000);
  assert.equal(ui.get('mathTime').textContent,'50s');assert.ok(Number(ui.get('mathTimeRing').style.strokeDashoffset)>16);
- ui.click(ui.get('mathKeys').querySelector('[data-key="0"]'));ui.click(ui.get('mathKeys').querySelector('[data-key="enter"]'));
+ const q=ui.state().math.round.question;ui.click(ui.get('mathAnswers').querySelector('[data-value="'+q.options.find(n=>n!==q.a*q.b)+'"]'));
  assert.equal(ui.get('mathScore').textContent,'-1');assert.match(ui.get('mathFeedback').textContent,/−1/);assert.equal(ui.state().dragon.xp,0);
  const saved=ui.state();ui.click(ui.get('homeBtn'));const next=boot(saved);next.resume();assert.equal(next.get('mathScore').textContent,'-1');assert.equal(next.get('mathTime').textContent,'50s');
  console.log('PASS visual countdown and negative score survive Home and reload');
@@ -218,4 +218,25 @@ for(const victory of [true,false]){
  const lowest=Core.migrate(Core.fresh());lowest.profile.name='Reader';lowest.assessment.done=true;Core.startBattle(lowest,Date.now(),{strength:3});lowest.battle.heroHealth=0;Core.resolveBattle(lowest,Date.now());
  const retry=boot(lowest);retry.resume();assert.equal(retry.get('opponents').children.length,2);assert.ok([...retry.get('opponents').children].every(card=>card.querySelector('.opponentName').textContent.trim()==='= Same'));
  console.log('PASS compact duel loss feedback, score/goal and minimum-strength retry');
+}
+
+{
+ const s=mathSave();const ui=boot(s);ui.resume();ui.click(ui.get('mathStart'));const q=ui.state().math.round.question;
+ const oldButton=ui.get('mathAnswers').querySelector('[data-value="'+q.a*q.b+'"]');ui.click(oldButton);oldButton.onclick();assert.equal(ui.state().math.round.answers.length,1);ui.tick();oldButton.onclick();assert.equal(ui.state().math.round.answers.length,1);
+ ui.click(ui.get('pauseBtn'));const next=ui.state().math.round.question;ui.get('mathAnswers').querySelector('[data-value="'+next.a*next.b+'"]').onclick();assert.equal(ui.state().math.round.answers.length,1);
+ console.log('PASS queued old taps, repeated taps and paused multiple-choice answers are ignored');
+}
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.rewards.shield=true;
+ for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date().toISOString();}
+ Core.startBattle(s,Date.now());s.battle.introPending=false;Core.prepareBattle(s,Date.now());
+ const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();assert.equal(ui.get('heroHearts').querySelectorAll('.heldShield').length,1);
+ const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));assert.equal(ui.state().battle.heroHealth,3);assert.equal(ui.state().rewards.shield,false);assert.equal(ui.get('combatEffects').className,'combatEffects');ui.finishSpeech();assert.ok(ui.get('combatEffects').classList.contains('shieldBlock'));assert.equal(ui.get('battleHeroImg').classList.contains('heroHit'),false);ui.click(ui.get('pauseBtn'));assert.equal(ui.get('combatEffects').className,'combatEffects');
+ console.log('PASS shield blocks one hit only after narration, then cancels on pause');
+}
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());s.battle.heroHealth=0;Core.resolveBattle(s,Date.now());
+ let ui=boot(s);ui.resume();assert.equal(ui.get('defeatScene').hidden,false);assert.equal(ui.state().result.defeatShown,true);ui.click(ui.get('pauseBtn'));assert.equal(ui.get('defeatScene').hidden,true);ui.click(ui.get('pauseResume'));assert.equal(ui.get('defeatScene').hidden,true);
+ ui=boot(ui.state());ui.resume();assert.equal(ui.get('defeatScene').hidden,true);assert.equal(ui.get('opponents').children.length,2);
+ console.log('PASS defeat reaction cancels on pause and cannot replay after reload');
 }
