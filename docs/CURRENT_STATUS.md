@@ -26,6 +26,65 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 - Physical iPad behavior and listening remain unverified. XP pacing is calibrated by deterministic simulations, not observed child play.
 - An additional dragon after full growth is an optional future idea, not an approved unfinished feature. Pip remains a provisional child-facing label; no commercial rename is established. Native App Store packaging remains a later phase after web iteration.
 
+### Approved plan — 23 September 2026
+
+The user approved these points on 23 September 2026. Build them one at a time in this order: 1, 2, 3, 4, 6, 7, 8. After each point, stop, report and wait for the user's "go" ([working rules](../CLAUDE.md)). Status of every point: **approved, not started**. The evidence comes from a read-only handover review; re-check it against current `main` before acting on it.
+
+| # | Point | Status |
+|---|---|---|
+| 1 | Durable saves: 1b backup file first, then 1a smaller save | Approved, not started |
+| 2 | Rotating distractor pools (option b) | Approved, not started |
+| 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
+| 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
+| 5 | Narration | No change; audio is handled separately |
+| 6 | Story sentences a child can read (option c) | Approved, not started; sentence list needs approval before building |
+| 7 | Speed suggestions, two new steps, per-word quick status | Approved, not started |
+| 8 | Parent view: word map, tricky list, weekly retention | Approved, not started |
+
+**1. Durable saves.** Two releases with a stop in between.
+- Evidence: every answer is stored forever. The whole save is rewritten every second while playing and duplicated as `_backup`. At 15 min/day the save grows by about 60k characters per day; with the duplicate it passes Chromium's measured 5.2M-character localStorage limit around day 40 (around day 14 at 45 min/day). At the limit `save()` throws and play blocks.
+- 1b first: Parents gets "Save backup file", which downloads the full save as a dated file and must work on iPad Safari, and "Restore from file", which validates with the existing `migrate()`, keeps the current save in a backup key before replacing it and asks the parent to confirm. Release it, then stop so the user can save a backup from the iPad.
+- 1a next: keep per-word summaries and the last ~500 raw answers. Roll older answers into daily and per-word totals that keep what point 8 needs: attempts, correct answers, counts of each wrong choice, which letter positions differed, response-time statistics and review results. Save on meaningful events, at most every ~10 s for the time ledger, and on pause and page hide, instead of every second. Keep one backup copy of the compact save. Migrate existing saves in place with no loss of XP, dragon forms, cleared chapters, word states, number-duel records, shields or settings. A test simulates 90 days at 45 min/day and fails if the save passes ~1M characters.
+
+**2. Rotating distractor pools (option b only).**
+- Evidence: each word always gets the same three distractors. Picking the option most similar to the other three (lowest total edit distance, an adjacent swap counting as one edit) is right 90% of the time on the 200 practice sets without seeing the word; chance is 25%. Children also check the first and last letter, so same-position sets such as night/light/right/might are rejected: one letter solves them.
+- Build: 5–7 candidates per word; draw 3 per question so that every drawn set meets all of these: (i) the target's first letter alone, last letter alone, first and last letters together, and word length each match at least 2 of the 4 options; (ii) across all words, the "middle option" guess is right no more than ~35% of the time; (iii) real words and pronounceable non-words are preferred, and a non-word is never a curriculum word. Questions already saved keep their options. Automated tests check (i) and (ii) over all 200 words across many sampled draws. The reading-check items have the same weakness: report their scores and ask the user before changing them.
+
+**3. Scheduling: bug fix plus cap and refill (option a).**
+- Bug: after a miss on a word with `reviewStage` 1 or higher, correct answers within 24 h of help never reschedule it, so it stays due and repeats all day. Fix: directly after `} else if (w.reviewStage<0) w.dueAt=now+15000;` add `else if (now>=w.dueAt) w.dueAt=Date.parse(w.lastHelpAt)+DAY;`, with a regression test. Handover simulation of review days: distinct words per day rise from ~20 to ~70; the most any word repeats in a day drops from 9–14 to 3–4.
+- Evidence for the cap: one answer takes about 4.4 s of speech and animation plus the child's response, so a 10-minute chapter holds about 75–95 answers over 6 words. In simulation, 35–55% of daily turns go to current-chapter words that are already correct twice and not due until tomorrow.
+- Build: after 3 correct answers today, a current-chapter word is skipped for the rest of the day. Freed turns go, in order, to (1) words due for review; (2) older words not seen today, least recently seen first; (3) up to 3 new words from the next chapter, only while recent accuracy is 80% or higher, counted as introduced; (4) if nothing is left, current-chapter words again, one step faster on the ladder 2200/1800/1500/1200/950 ms (Crawl stays self-paced; Ride and Fly stay locked). The 10-minute chapter minimum and all chapter objectives stay unchanged. Re-run the scheduling simulation and report the share of turns on already-secured words and distinct words per day, before and after.
+
+**4. Corrections and teaching (a + b).**
+- Evidence: every miss and every "?" opens the full picture card. The computed `q.needsTeaching` is never used.
+- 4a contrast correction: show the chosen word above the correct word, letters aligned, with the differing letters highlighted. Speak both words ("You chose rack. The word is rock.").
+- 4b adaptive depth using `needsTeaching`: the full picture card appears only for new words, two or more misses in a row, and missed reviews. Otherwise show the contrast and continue. "?" answers show the word without a contrast and follow the same rule.
+- Keep: help costs no heart, supported answers are not mastery evidence, and the recheck after two intervening items stays.
+
+**5. Narration.** No change now. Recordings play where they exist and the iPad's voice covers the rest, as narration already works. Audio is being handled separately.
+
+**6. Story sentences a child can read (option c).**
+- Evidence: only 62% of the words in the 34 child-read story sentences have been taught when the sentence appears; 26 of 34 contain untaught words; "I read it" is unchecked.
+- Build: rewrite the 34 sentences so every word is taught before that chapter (the dragon's name is fine). Where that is impossible in early chapters, allow at most one untaught word, which the child can tap to hear. Replace "I read it" with a two-picture question, "Which picture shows what you read?", using existing approved images only: teaching atlases, chapter scenery and character art. List any sentence without a fitting picture instead of generating art. The question never blocks progress: a wrong pick shows the right picture and continues, earns no XP and is recorded for the parent view.
+- Gate: show the user all 34 sentences with their picture pairs for approval before building.
+
+**7. Speed (all three).**
+- 7a: between battles, suggest a speed change as in spec section 9: one step slower below ~80% independent accuracy on familiar words, one step faster above ~90%, based on at least 20 recent answers. The child can say no. Words with concentrated errors get word-level help first.
+- 7b: add 1500 ms and 1200 ms steps between Walk (1800 ms) and Run (950 ms). The Speed panel must highlight the step actually in use, including the reading-check default; today it shows Walk even at 1500 ms. Propose names and simple line icons for the two new steps at the stop.
+- 7c: per-word "quick" status: correct in under ~1.5 s at 950 ms or faster. Words that are accurate but slow stay in review. Show quick status in the parent view.
+
+**8. Parent view (all three).**
+- 8a: a map of the 200 words coloured new / learning / secured / kept after 7 days / kept after 30 days, with a quick marker. Tapping a word shows its history.
+- 8b: tricky list: the most common mix-ups (target → chosen, with count), where in the word errors happen (start / middle / end, vowel / consonant), and the slowest words.
+- 8c: weekly retention: the share of words answered correctly on the first try when last seen at least a day ago.
+- Put learning at the top of the parent screen and sound settings at the bottom.
+
+### Parked — do not build
+
+- **9. Rewards and pacing:** discuss with the user first. Evidence: a won battle gives about +9 XP against a 3,000 XP first stage. `scripts/calibrate-xp.cjs` line 19 assumes one answer per 24 s, but the measured cycle is about 6–10 s. At 8–10 s, the same model gives first growth on day 7–8 instead of 14 and full growth on day 32–37 instead of 70, at 15 min/day. Ideas on the table: a spellbook of word cards that upgrade with retention; visible steps inside each growth stage; thresholds recalibrated from real answer logs.
+- **10. Number duel:** later. Evidence: age is collected but unused; all 100 facts from 1×1 to 10×10 come up at random with −1 per wrong answer; picking the middle number scores 41%. Ideas: levels by age and results, per-fact tracking, balanced distractors.
+- **Options not chosen:** offline cache (1c); same-position distractor sets (2a, rejected); font or case change on the flash (2c); rolling word pool (3b); test-out (3c); splitting the 8 look-alike pairs that share a chapter; sound-it-out cards (4c); say-it moments (6a); meaning duels (6b).
+
 ## Fullscreen removal — 23 September 2026
 
 Removed the fullscreen control, notice and browser API handlers. JavaScript syntax checks, all 110 core tests and 33 UI-flow groups pass locally. This records implementation and local testing; the Pages workflow records deployment separately.
