@@ -15,6 +15,7 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 | Chapter stories and labels | 34 illustrated transitions after the guided first encounter; narrated introduction, one child-read sentence, optional Listen and child confirmation. Pause/Home/Rest/reload preserve progress. Labels identify the actual campaign and chapter. | [Chapter stories](CHAPTER_STORIES_RELEASE.md) |
 | Choices and number duels | Close distractors, multiple-choice-only multiplication, 60 seconds, net +1/−1 scoring, PR-based target, compact results and defeat reactions. Three reading wins plus a won duel earn one non-stacking shield. | [Choices and shields](CHOICES_SHIELD_RELEASE.md) |
 | Combat and presentation | Mage staff/lightning, Pip assists/final blows, answer-locked reactions, cancellation and reduced motion; teaching-image framing, enemy names and Easier-left/Same-right defeat choices. | [Combat](COMBAT_REACTIONS.md), [child feedback](SEPT23_CHILD_FEEDBACK.md) |
+| Game controls | Fullscreen button, handlers and notice removed at the user’s request. The existing flexible toolbar closes the gap; sound, pause and Home remain. Home Screen presentation and learner saves are unchanged. | [Product specification](BLITZWORD_PRODUCT_SPEC.md) |
 | Soundscape | Approved adaptive forest music and effects are integrated and deployed, with scene changes, speech priority and independent saved controls. | [Soundscape](SOUNDSCAPE_RELEASE.md) |
 
 ## Outstanding work and ownership
@@ -25,10 +26,14 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 - Physical iPad behavior and listening remain unverified. XP pacing is calibrated by deterministic simulations, not observed child play.
 - An additional dragon after full growth is an optional future idea, not an approved unfinished feature. Pip remains a provisional child-facing label; no commercial rename is established. Native App Store packaging remains a later phase after web iteration.
 
-## Verified release checkpoint
+## Fullscreen removal — 23 September 2026
 
-The chapter-scenery implementation merged as `a9d39efef14200dd9494b8c779182cc64ec9e73d` in [PR #28](https://github.com/Ikarus-eth/Blitzword_app/pull/28). [Pages run 35833726978](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35833726978) completed successfully for that exact commit, including the deployment step. The live [web app](https://ikarus-eth.github.io/Blitzword_app/) reports build `chapter-scenery-20260923-r1`, scenery marker `35-chapters-20260923-r1`, and the unchanged soundscape marker `forest-v2-20260923`.
+Removed the fullscreen control, notice and browser API handlers. JavaScript syntax checks, all 110 core tests and 33 UI-flow groups pass locally. This records implementation and local testing; the Pages workflow records deployment separately.
+
+## Previous verified release checkpoint
+
+The chapter-scenery implementation merged as `a9d39efef14200dd9494b8c779182cc64ec9e73d` in [PR #28](https://github.com/Ikarus-eth/Blitzword_app/pull/28). [Pages run 35833726978](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35833726978) completed successfully for that exact commit, including the deployment step. At that checkpoint, the live [web app](https://ikarus-eth.github.io/Blitzword_app/) reported build `chapter-scenery-20260923-r1`, scenery marker `35-chapters-20260923-r1`, and the unchanged soundscape marker `forest-v2-20260923`.
 
 All 110 core tests and 33 UI-flow groups passed. All 35 background files decode, have distinct hashes and map to the existing stable chapter IDs. Live HTTP 200 responses and source-byte equality were verified for all 35 backgrounds plus seven app/review files on 23 September 2026; see [the deployment record](CHAPTER_SCENERY_DEPLOYMENT.json). These checks establish integration and delivery, not rendered layout quality. Actual browser viewport checks were blocked by the browser security-policy service; no physical iPad test occurred.
 
-This documentation checkpoint adds no runtime or asset changes. Subsequent documentation-only deployments retain the same application bytes and build marker. The previous checkpoint remains available in Git history and the dated chapter-story and soundscape release notes.
+That documentation checkpoint added no runtime or asset changes. The fullscreen-removal update uses build marker `remove-fullscreen-20260923-r1` and updates the stylesheet/script cache versions. The previous checkpoint remains available in Git history and the dated chapter-story and soundscape release notes.

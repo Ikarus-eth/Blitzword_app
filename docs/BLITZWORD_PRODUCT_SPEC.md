@@ -729,7 +729,7 @@ New multiplication rounds award +1 point per correct answer and −1 per wrong a
 
 The missing shared teaching illustrations were a confirmed SVG visibility bug: setting the SVG's `.hidden` property did not remove its `hidden` attribute. Visibility now toggles the actual attribute. All existing artwork remains unchanged.
 
-The new fullscreen button requests fullscreen from an explicit tap on browsers that support it; a web manifest requests fullscreen/standalone presentation. The operating system controls the status bar. No learner data is cleared or moved to another browser context.
+The fullscreen button introduced at this milestone was removed at the user’s request on 23 September 2026 because it was buggy. The app has no fullscreen toggle, fullscreen event handlers or unavailable-fullscreen notice. The existing web manifest and Home Screen presentation remain unchanged; the operating system controls the status bar. No learner data is cleared or moved to another browser context.
 
 Core 200 means a mixed curated curriculum, not the 200 most frequent words. In the supplied workbook, water is Fry 84; bird is included for phonics and theme. The current chapter's 30-word selection is unchanged.
 
