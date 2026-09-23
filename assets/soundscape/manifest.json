@@ -1,0 +1,108 @@
+{
+  "version": "forest-v2",
+  "sampleRate": 32000,
+  "tracks": {
+    "home": {
+      "duration": 80,
+      "bar": 2.5,
+      "layers": {
+        "bed": {
+          "file": "home-bed.mp3",
+          "sha256": "92427f38907005562a647c448eb873d0634e51fb80e747342b115fe1136c65e4",
+          "bytes": 801045,
+          "peak_dbfs": -9.24,
+          "boundary_step": 0.01669
+        },
+        "accents": {
+          "file": "home-accents.mp3",
+          "sha256": "d5ab40dc0f2eb699dbc0e1ca1794f3de839963fdd9f63c900ab0275bf35e1e4c",
+          "bytes": 801045,
+          "peak_dbfs": -26.48,
+          "boundary_step": 0.00015
+        }
+      }
+    },
+    "battle": {
+      "duration": 64,
+      "bar": 2,
+      "layers": {
+        "bed": {
+          "file": "battle-bed.mp3",
+          "sha256": "d7fcecee9227ada008e6abc8f620902b3b7713e672823f5ca07a28d814e3f13d",
+          "bytes": 640845,
+          "peak_dbfs": -10.77,
+          "boundary_step": 0.01229
+        },
+        "accents": {
+          "file": "battle-accents.mp3",
+          "sha256": "95990fe4f841144c42cc726244a19adced6aa8b8210178d39b944b7c595bc5a0",
+          "bytes": 640845,
+          "peak_dbfs": -32.32,
+          "boundary_step": 1e-05
+        }
+      }
+    },
+    "duel": {
+      "duration": 48,
+      "bar": 1.5,
+      "layers": {
+        "bed": {
+          "file": "duel-bed.mp3",
+          "sha256": "80b147ea10047ee4381d4f04508f4305707b561242664a46b515067c49b960e9",
+          "bytes": 481005,
+          "peak_dbfs": -9.82,
+          "boundary_step": 0.03205
+        },
+        "accents": {
+          "file": "duel-accents.mp3",
+          "sha256": "b503b184ebe7e167274143aa03ed8333c8a31109b9b9d4ee50b2ebdd1fd5f772",
+          "bytes": 481005,
+          "peak_dbfs": -32.47,
+          "boundary_step": 1e-05
+        }
+      }
+    },
+    "transition": {
+      "duration": 20,
+      "bar": 2.5,
+      "layers": {
+        "bed": {
+          "file": "transition-bed.mp3",
+          "sha256": "81fb87a43c70cfe460295fed798fc4766b1fd212e57ee98ff913083c08120064",
+          "bytes": 200925,
+          "peak_dbfs": -10.64,
+          "boundary_step": 0.0191
+        },
+        "accents": {
+          "file": "transition-accents.mp3",
+          "sha256": "37090adb549cc1417a4677e7f06e036586e17a8e1a86f8e7849d0d31c496cec4",
+          "bytes": 200925,
+          "peak_dbfs": -26.59,
+          "boundary_step": 0.00016
+        }
+      }
+    },
+    "victory": {
+      "duration": 16,
+      "bar": 2,
+      "layers": {
+        "bed": {
+          "file": "victory-bed.mp3",
+          "sha256": "cdd4491f6ce93ade69b2dc8509f670fc0c3b3db18987d4f55ec5d04d5fc6cffc",
+          "bytes": 160965,
+          "peak_dbfs": -9.65,
+          "boundary_step": 0.01579
+        },
+        "accents": {
+          "file": "victory-accents.mp3",
+          "sha256": "9c7473afcbbfca93e7a8f6f2b28c0ac9ef554c60034f212bc30dd03c8321a6a4",
+          "bytes": 160965,
+          "peak_dbfs": -26.09,
+          "boundary_step": 0.0032
+        }
+      }
+    }
+  },
+  "provenance": "Original synthesized compositions derived from the user-approved forest sketch. No external samples.",
+  "validation": "Decoded lengths, peaks and boundaries checked. Physical iPad listening still required."
+}

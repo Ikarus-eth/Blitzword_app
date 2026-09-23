@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -31,6 +31,8 @@ jobs:
           node --check game-core.js
           node --check storage.js
           node --check engagement.js
+          node --check soundscape.js
+          node --check audio.js
           npm test
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -40,10 +42,25 @@ jobs:
           cp index.html styles.css app.js content.js game-core.js storage.js audio.js narration.js soundscape.js engagement.js manifest.webmanifest _site/
           cp -R assets _site/assets
           cp tests/visual-review.html tests/review-app.html tests/review-scenarios.js _site/tests/
+      # Serialize releases and skip stale runs, including manual reruns of old commits.
+      - name: Check that this release is still current main
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          latest="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq '.object.sha')"
+          if [ "$latest" = "$GITHUB_SHA" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            echo "A newer main commit exists; its workflow owns deployment."
+          fi
       - name: Upload static site
+        if: steps.current.outputs.deploy == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
       - name: Deploy to GitHub Pages
+        if: steps.current.outputs.deploy == 'true'
         id: deployment
         uses: actions/deploy-pages@v4

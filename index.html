@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta name="blitzword-soundscape" content="forest-v2-20260923" />
 <meta name="blitzword-build" content="success-xp-20260923-r3" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -10,7 +11,7 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=success-xp-20260923-r3" />
+<link rel="stylesheet" href="styles.css?v=soundscape-20260923-r1" />
 </head>
 <body><main class="app" id="app">
 <div id="chapterScenery" class="chapterScenery" aria-hidden="true" hidden></div>
@@ -131,6 +132,14 @@
       <p>Recorded British male narration. Backup voice if a recording cannot play:</p>
       <label class="voiceSetting" for="voiceChoice">Backup voice</label><div class="voiceRow"><select id="voiceChoice" aria-label="Backup voice"></select><button id="previewVoice" class="voicePreview">Listen to narrator</button></div>
       <label id="paceSetting" class="paceSetting"><input id="selfPacedSetting" type="checkbox"/> Take my time with each word</label>
+      <fieldset class="soundSettings"><legend>Sound</legend>
+<label class="soundPreset"><input type="checkbox" data-audio-quiet/> Quiet play (keep narration)</label>
+<label class="soundSlider">Music <input type="range" min="0" max="100" step="5" data-audio-volume="music" aria-label="Music volume"/><output></output></label>
+<label class="soundSlider">Forest <input type="range" min="0" max="100" step="5" data-audio-volume="ambience" aria-label="Forest ambience volume"/><output></output></label>
+<label class="soundSlider">Effects <input type="range" min="0" max="100" step="5" data-audio-volume="effects" aria-label="Effects volume"/><output></output></label>
+<label class="soundSlider">Narrator <input type="range" min="0" max="100" step="5" data-audio-volume="speech" aria-label="Narrator volume"/><output></output></label>
+<label class="soundPreset"><input type="checkbox" data-audio-countdown/> Gentle cue for the final three seconds of a number duel</label>
+</fieldset>
       <button id="resetBtn" class="textButton resetLink">Reset this device…</button>
     </details>
   </div>
@@ -147,6 +156,14 @@
 <div id="dragonNamePanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="dragonNameTitle" hidden><div class="nameDragonCard parchment"><h2 id="dragonNameTitle">Your dragon grew!</h2><p>What shall we call your dragon?</p><label for="dragonNameInput">Name</label><input id="dragonNameInput" class="nameInput" maxlength="18" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"/><p id="dragonNameMessage" role="status"></p><button id="dragonNameSave" class="greenButton">Save name</button><button id="dragonNameLater" class="textButton">Later</button></div></div>
 <section id="parentDashboard" class="screen parentDashboard">
  <header class="parentHeader"><div><div class="mapEyebrow">Parents</div><h1>Practice and progress</h1></div><button id="parentHome" class="secondaryButton">Back to map</button></header>
+ <article class="parentInfo"><fieldset class="soundSettings"><legend>Sound</legend>
+<label class="soundPreset"><input type="checkbox" data-audio-quiet/> Quiet play (keep narration)</label>
+<label class="soundSlider">Music <input type="range" min="0" max="100" step="5" data-audio-volume="music" aria-label="Music volume"/><output></output></label>
+<label class="soundSlider">Forest <input type="range" min="0" max="100" step="5" data-audio-volume="ambience" aria-label="Forest ambience volume"/><output></output></label>
+<label class="soundSlider">Effects <input type="range" min="0" max="100" step="5" data-audio-volume="effects" aria-label="Effects volume"/><output></output></label>
+<label class="soundSlider">Narrator <input type="range" min="0" max="100" step="5" data-audio-volume="speech" aria-label="Narrator volume"/><output></output></label>
+<label class="soundPreset"><input type="checkbox" data-audio-countdown/> Gentle cue for the final three seconds of a number duel</label>
+</fieldset></article>
  <div class="parentStats">
   <article><span>Active play today</span><strong id="parentToday"></strong></article><article><span>Total active play</span><strong id="parentTotal"></strong></article><article><span>Practice towards Pip’s growth</span><strong id="parentPractice"></strong></article><article><span>Observed idle time excluded</span><strong id="parentIdle"></strong></article>
  </div>
@@ -162,8 +179,8 @@
 <script src="content.js?v=success-xp-20260923-r3"></script>
 <script src="game-core.js?v=success-xp-20260923-r3"></script>
 <script src="storage.js?v=core200-20260922-r1"></script>
-<script src="soundscape.js?v=success-xp-20260923-r3"></script>
+<script src="soundscape.js?v=soundscape-20260923-r1"></script>
 <script src="narration.js?v=core200-20260922-r1"></script>
-<script src="audio.js?v=success-xp-20260923-r3"></script>
+<script src="audio.js?v=soundscape-20260923-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
-<script src="app.js?v=success-xp-20260923-r3"></script></body></html>
+<script src="app.js?v=soundscape-20260923-r1"></script></body></html>
