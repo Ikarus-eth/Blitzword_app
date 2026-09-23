@@ -1,0 +1,263 @@
+{
+  "verifiedAt": "2026-09-23T07:51:38.255726+00:00",
+  "implementationMerge": "a9d39efef14200dd9494b8c779182cc64ec9e73d",
+  "pagesRun": 35833726978,
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 28135,
+      "sha256": "00815f995ec691775a99920d2d21e3f57f73329d7f324502e9a21aa1d5e80f95",
+      "build": "chapter-scenery-20260923-r1",
+      "scenery": "35-chapters-20260923-r1"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 68695,
+      "sha256": "96e77e85099a7515e23390cf7b13e35196ad51bce5525f2d4a1e96360ae07f96"
+    },
+    {
+      "path": "content.js",
+      "status": 200,
+      "bytes": 59140,
+      "sha256": "41e317b04863d668ef909b68640afc88cc9fd57cef734cea1f476fcb2fc82e0e"
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "bytes": 88424,
+      "sha256": "7900192194b0b1b41b449ead6260116c6ab4556911a2288b542a8c99bbfff502"
+    },
+    {
+      "path": "tests/review-app.html",
+      "status": 200,
+      "bytes": 2623,
+      "sha256": "653c752c9654a6de11e7ed2f4dd17ca2e99d49dc69fe9e0184145441627ca8c6"
+    },
+    {
+      "path": "tests/review-scenarios.js",
+      "status": 200,
+      "bytes": 5338,
+      "sha256": "c31fac42e9c1d1c242bd1c48e8bdce0eda1626d040644b52558ce6931ef98c86"
+    },
+    {
+      "path": "tests/scenery-review.html",
+      "status": 200,
+      "bytes": 2344,
+      "sha256": "05d41e1b4184f2361e8a8eeeb43f696f1cb7b3df037a40de7a19568444d9c747"
+    },
+    {
+      "path": "assets/forest-clearing.webp",
+      "status": 200,
+      "bytes": 637316,
+      "sha256": "db0d78b5d6f6a0fca570e16ccf18a1867537ffbb6918cd3f84ad7cfa29be6617"
+    },
+    {
+      "path": "assets/scenery/fox-crossing.webp",
+      "status": 200,
+      "bytes": 422790,
+      "sha256": "b3d3224139c23ea371c7ccbd222895f43400adc2b2fed4975ea873c3cce21381"
+    },
+    {
+      "path": "assets/scenery/old-grove.webp",
+      "status": 200,
+      "bytes": 440804,
+      "sha256": "e44608d65c096767ca15198136c07fb9ebd8bf1936257349b98a4e042ca8b3b7"
+    },
+    {
+      "path": "assets/scenery/lantern-ruins.webp",
+      "status": 200,
+      "bytes": 336882,
+      "sha256": "bc02cf976eadbbb3a646610140948b9ac22e54d38ebe1b43bdfa6191905725bf"
+    },
+    {
+      "path": "assets/scenery/hidden-nest.webp",
+      "status": 200,
+      "bytes": 416676,
+      "sha256": "6a5fa516e57b7a3688203926aa210609a1d16941944ed49e667dfef6b9a28502"
+    },
+    {
+      "path": "assets/scenery/chapter-2-place-1.webp",
+      "status": 200,
+      "bytes": 542710,
+      "sha256": "04aba31b18cca5da843f03451f33c9ef071ad53ed615817ca4bd144742726b98"
+    },
+    {
+      "path": "assets/scenery/chapter-2-place-2.webp",
+      "status": 200,
+      "bytes": 406784,
+      "sha256": "8c2e7d23b5b08d52ba48b7dae1e9ad89a756e4122cc63753f62ebfcc34c4768d"
+    },
+    {
+      "path": "assets/scenery/chapter-2-place-3.webp",
+      "status": 200,
+      "bytes": 335520,
+      "sha256": "72d94be3b1c714a7e5fd047f8aa24a673f7e23ffedea8272aab403ecdfb5112f"
+    },
+    {
+      "path": "assets/scenery/chapter-2-place-4.webp",
+      "status": 200,
+      "bytes": 454908,
+      "sha256": "9ff480818bdbe98aa8126a07ceb443d5128376c99f37d0f6cfa80d2200eed0c5"
+    },
+    {
+      "path": "assets/scenery/chapter-2-place-5.webp",
+      "status": 200,
+      "bytes": 472040,
+      "sha256": "2009235b4bc436816cde5e0b11ef873d2f82e56e6c467e083ba5b708feb967b2"
+    },
+    {
+      "path": "assets/scenery/chapter-3-place-1.webp",
+      "status": 200,
+      "bytes": 423620,
+      "sha256": "3120e0f813339fdb80807686827332dc1dafbf9d42089838e7261fe98c4aee6d"
+    },
+    {
+      "path": "assets/scenery/chapter-3-place-2.webp",
+      "status": 200,
+      "bytes": 520156,
+      "sha256": "d98302d7c7c6eb908675c103fb89fb0d8c7a38a2000d3bb6148bf6e60e71d012"
+    },
+    {
+      "path": "assets/scenery/chapter-3-place-3.webp",
+      "status": 200,
+      "bytes": 543664,
+      "sha256": "18238e859c9ff5405f0f8dcddb5a0a13db0a9da3c9ef87b175ba5a46e1d8a2a9"
+    },
+    {
+      "path": "assets/scenery/chapter-3-place-4.webp",
+      "status": 200,
+      "bytes": 406690,
+      "sha256": "4d2534ce00f45dc2f888c8ff96c20f06c05be5e8f57795a6c3b8ac0090738cb1"
+    },
+    {
+      "path": "assets/scenery/chapter-3-place-5.webp",
+      "status": 200,
+      "bytes": 512856,
+      "sha256": "314e8fe5d4e20971361b2e8bcc58846f0ca28d2c7c689bb226cf445e25e14ca7"
+    },
+    {
+      "path": "assets/scenery/chapter-4-place-1.webp",
+      "status": 200,
+      "bytes": 380470,
+      "sha256": "c678f5e5ebb9774913efc06417866116657f68679fbaee7d391b62e9b5d7a6a8"
+    },
+    {
+      "path": "assets/scenery/chapter-4-place-2.webp",
+      "status": 200,
+      "bytes": 363588,
+      "sha256": "1552c4ac9fa9aa118d676ff43f1c76147b76148e8fff24e806c294802b8463a2"
+    },
+    {
+      "path": "assets/scenery/chapter-4-place-3.webp",
+      "status": 200,
+      "bytes": 432518,
+      "sha256": "c481a72c8647144db554e7c9b9c49edc96cc6617e53701ebe2f7155d612d1472"
+    },
+    {
+      "path": "assets/scenery/chapter-4-place-4.webp",
+      "status": 200,
+      "bytes": 421000,
+      "sha256": "d193f91ae495152cf842d48a585ae1d413020cf6d8288d5d6d1d5a899c9196d7"
+    },
+    {
+      "path": "assets/scenery/chapter-4-place-5.webp",
+      "status": 200,
+      "bytes": 204006,
+      "sha256": "fd6bd0083af797e8f1624618302eca7b94ec440c71e632ce6b8b06d93fbb7ffc"
+    },
+    {
+      "path": "assets/scenery/chapter-5-place-1.webp",
+      "status": 200,
+      "bytes": 295750,
+      "sha256": "aeeec1055a2324a576bf3a46e9ce1484c53eab14cea80164c5e3adc209bf1be8"
+    },
+    {
+      "path": "assets/scenery/chapter-5-place-2.webp",
+      "status": 200,
+      "bytes": 434226,
+      "sha256": "a745196acab452cd7b319b7295dec94a1d57f10275c72e5f224bdb8900de95a3"
+    },
+    {
+      "path": "assets/scenery/chapter-5-place-3.webp",
+      "status": 200,
+      "bytes": 364232,
+      "sha256": "c3018dc42b2340bd52c35bc60b104319a7652d5990c84e2e000b9e10ac6d9468"
+    },
+    {
+      "path": "assets/scenery/chapter-5-place-4.webp",
+      "status": 200,
+      "bytes": 321918,
+      "sha256": "489474652e2ce831e6072e266214049710dcd040c51711d70421d62bf80a12d5"
+    },
+    {
+      "path": "assets/scenery/chapter-5-place-5.webp",
+      "status": 200,
+      "bytes": 388020,
+      "sha256": "aafbde633ff7a848b148d9917c76f2b3c51e027413f4cf3bae35a71b54a38b89"
+    },
+    {
+      "path": "assets/scenery/chapter-6-place-1.webp",
+      "status": 200,
+      "bytes": 390526,
+      "sha256": "86d710965eb05ab7f120f9d9915c118c881754e903c3f6c7c8c886186ef26202"
+    },
+    {
+      "path": "assets/scenery/chapter-6-place-2.webp",
+      "status": 200,
+      "bytes": 253786,
+      "sha256": "9f0e7882675e3da34cf0345e8d17205e8be393065bee8e1ae9d64d43df7946a4"
+    },
+    {
+      "path": "assets/scenery/chapter-6-place-3.webp",
+      "status": 200,
+      "bytes": 364474,
+      "sha256": "0bf4fd1d7019babe8400e0a4edf1a8efd83487cac0b70d6907c5035a5238bbc2"
+    },
+    {
+      "path": "assets/scenery/chapter-6-place-4.webp",
+      "status": 200,
+      "bytes": 357064,
+      "sha256": "358c743762240b7c81802d530412f70e395eb1e8efb5cb96c20a4d4b5881636f"
+    },
+    {
+      "path": "assets/scenery/chapter-6-place-5.webp",
+      "status": 200,
+      "bytes": 369648,
+      "sha256": "b55cc31fce5679ef6a30ff14cf59c74ef5e5fd173b290b8be733225025cca748"
+    },
+    {
+      "path": "assets/scenery/chapter-7-place-1.webp",
+      "status": 200,
+      "bytes": 367288,
+      "sha256": "24a070ad238798a6366f0935ce3103e081d59893bf9b85f457b17ec6ef80f26a"
+    },
+    {
+      "path": "assets/scenery/chapter-7-place-2.webp",
+      "status": 200,
+      "bytes": 332466,
+      "sha256": "9de6e891feae6bd3983200919aac110e57c4e70e743ef06eb92209bf22d61572"
+    },
+    {
+      "path": "assets/scenery/chapter-7-place-3.webp",
+      "status": 200,
+      "bytes": 302792,
+      "sha256": "d3e42226ba89a19b290467c495bcae73c0dcf71d77609a55ac429b92c50fb2e9"
+    },
+    {
+      "path": "assets/scenery/chapter-7-place-4.webp",
+      "status": 200,
+      "bytes": 338762,
+      "sha256": "c8a9175c7f2f8f4183d69f1e05f6e695df9c2a809484e1d91a434f19166f8b76"
+    },
+    {
+      "path": "assets/scenery/chapter-7-place-5.webp",
+      "status": 200,
+      "bytes": 385624,
+      "sha256": "39a8fc1616c4d4d3a36cb7faea7d5ea3fce56432ebb8a7aecddea7ac7e221662"
+    }
+  ],
+  "renderedReview": "Blocked: browser admin-enforced security policy could not be verified; no physical iPad test."
+}
