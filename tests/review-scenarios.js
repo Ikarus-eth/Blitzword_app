@@ -10,6 +10,17 @@ window.makeReviewSave=function(scenario){
   if(scenario==='handoff'){s.demoComplete=true;s.handoff={victory:true};s.activity='handoff';return s;}
   if(scenario==='assessment'){C.startAssessment(s,now);return s;}
   s.assessment.done=true;s.demoComplete=true;s.settings.selfPaced=true;
+  if(scenario.startsWith('scenery-')){
+    const [,mode,number]=scenario.split('-'),index=Number(number),area=BlitzContent.areas[index];
+    s.story.clearedAreas=BlitzContent.areas.slice(0,index).map(a=>a.id);
+    s.story.completedChapters=BlitzContent.chapters.slice(0,Math.floor(index/5)).map(c=>c.id);
+    for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
+    s.settings.soundscape=false;
+    C.startBattle(s,now,{strength:4});
+    if(mode==='story'){C.beginChapterStory(s,now);if(s.story.scene){s.story.scene.introHeard=true;C.advanceChapterStory(s,now);}}
+    else {s.story.scenes[area.id]={completedAt:new Date(now).toISOString()};if(mode==='battle'){s.battle.introPending=false;C.prepareBattle(s,now);s.battle.question.phase='choices';}}
+    return s;
+  }
   if(scenario==='map-chapter-2'){
     s.story.chapterComplete=true;s.story.completedChapters=['chapter-1'];
     for(const item of BlitzContent.words.slice(0,30)){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].practiceSuccesses=2;}

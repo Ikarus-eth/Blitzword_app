@@ -209,10 +209,29 @@ function show(id) {
   $('#backBtn').hidden=id!=='hero';
   if(!['battle','assessment'].includes(id))$('#wordReady').hidden=true;
   state.screen=id;syncSound();updateDailyXP();updateDragonLabels();
-  const chapter=['battle','teaching','result'].includes(id)&&state.battle?.chapterId?Content.chapters.find(c=>c.id===state.battle.chapterId):Core.currentChapter(state);
-  const scene=chapter?.scene;$('#chapterScenery').hidden=scene===null||scene===undefined||['setup','hero','route','assessment','parentDashboard'].includes(id);
-  if(scene!==null&&scene!==undefined)$('#chapterScenery').style.backgroundPosition=(scene%3*50)+'% '+(scene<3?0:100)+'%';
+  renderScenery(id);
   $$('#'+id+' [data-sprite="6"]').forEach(element=>paintPip(element));
+}
+// Scenery is presentation only: derive it from saved encounter/story IDs, never save an image URL.
+function renderScenery(screen){
+  const layer=$('#chapterScenery');
+  if(screen==='campaignMap'){
+    const scene=Core.currentChapter(state).scene;
+    layer.hidden=scene===null;layer.dataset.area='';
+    layer.style.backgroundImage=scene===null?'none':'url("assets/chapter-scenes.webp")';
+    layer.style.backgroundSize='300% 200%';
+    layer.style.backgroundPosition=(scene%3*50)+'% '+(scene<3?0:100)+'%';
+    return;
+  }
+  const active=['battle','teaching','result','chapterStory','mathIntro','mathChallenge','mathResult','summary','handoff'].includes(screen);
+  layer.hidden=!active;if(!active)return;
+  const areaId=(screen==='chapterStory'?state.story.scene?.areaId:null)
+    ||(screen.startsWith('math')?state.math.round?.areaId:null)
+    ||state.battle?.areaId||Core.chapterLocation(state).area.id;
+  const art=Content.chapterBackgrounds[areaId]||Content.chapterBackgrounds['lantern-trail'];
+  layer.dataset.area=areaId;layer.style.backgroundSize='cover';layer.style.backgroundPosition='center';
+  // Multiple CSS layers give an immediate fallback on 404/slow image loading. No preload loop.
+  layer.style.backgroundImage=`url("${art.src}"),url("assets/forest-clearing.webp")`;
 }
 function speak(text,{onEnd=null,onBoundary=null}={}) {
   const token=epoch;syncSound();sound.configure({narrating:true});
@@ -522,9 +541,11 @@ function renderChapterStory(){
   $('#storyLocation').textContent='Campaign '+place.campaignNumber+' · Chapter '+place.chapterNumber;
   $('#storyTitle').textContent=place.area.name;
   $('#storyPicture').setAttribute('aria-label',dragonText('Pip and your hero at ')+place.area.name);
-  const crop=content.scene===null?[0,0,1536,1024]:[(content.scene%3)*512,Math.floor(content.scene/3)*512,512,512];
-  $('#storyBackdrop').setAttribute('viewBox',crop.join(' '));
-  $('#storyLandscape').setAttribute('href',content.scene===null?'assets/forest-clearing.webp':'assets/chapter-scenes.webp');
+  const art=Content.chapterBackgrounds[scene.areaId]||Content.chapterBackgrounds['lantern-trail'];
+  const landscape=$('#storyLandscape');
+  $('#storyPicture').style.setProperty('--scene-ratio',art.width/art.height);
+  landscape.onerror=()=>{landscape.onerror=null;landscape.src='assets/forest-clearing.webp';};
+  landscape.src=art.src;
   paintHero($('#storyHero'),heroIndex());paintPip($('#storyPip'));
   const reading=scene.phase==='read';$('#chapterStory').dataset.phase=scene.phase;
   $('#storyNarration').hidden=reading;$('#storyNarration').textContent=dragonText(content.narration);

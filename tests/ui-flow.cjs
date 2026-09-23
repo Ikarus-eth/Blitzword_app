@@ -312,3 +312,41 @@ function storySave(index=7){
  ui.click(ui.get('storyNext'));assert.match(ui.get('encounterChapter').querySelector('[role="progressbar"]').getAttribute('aria-label'),/Campaign 2, River Path: 2 of 5 chapters completed. Chapter 3, Reed Path/);
  console.log('PASS chosen dragon name in story speech and sentence, and actual campaign/chapter accessibility labels');
 }
+
+// Scenery follows saved chapter identity through every entry and return route.
+for(let i=0;i<Content.areas.length;i++){
+ let ui=boot(storySave(i),{heldNarration:true});ui.resume();const area=Content.areas[i],src=Content.chapterBackgrounds[area.id].src;
+ const check=()=>{assert.equal(ui.get('chapterScenery').dataset.area,area.id);assert.ok(ui.get('chapterScenery').style.backgroundImage.includes(src));};
+ check();if(i){assert.equal(ui.get('storyLandscape').getAttribute('src'),src);ui.finishSpeech();ui.click(ui.get('storyNext'));}
+ ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseResume'));check();ui.click(ui.get('homeBtn'));
+ ui=boot(ui.state(),{heldNarration:true});ui.resume();check();
+ if(i)ui.click(ui.get('storyNext'));check();assert.equal(ui.get('encounterIntro').hidden,false);
+ ui.click(ui.get('encounterStart'));check();ui.click(ui.get('homeBtn'));ui=boot(ui.state());ui.resume();check();
+}
+console.log('PASS all 35 chapter backgrounds at story, encounter, battle, Pause/Home/reload');
+{
+ // A resolved encounter can belong to the previous campaign after progress advances.
+ const s=storySave(4);s.battle.introPending=false;s.story.completedChapters=['chapter-1'];s.story.clearedAreas=Content.areas.slice(0,5).map(a=>a.id);
+ const ui=boot(s);ui.resume();assert.equal(ui.get('chapterScenery').dataset.area,'hidden-nest');
+ assert.ok(ui.get('chapterScenery').style.backgroundImage.includes('hidden-nest.webp'));
+ console.log('PASS saved encounter scenery remains in previous campaign across progress boundary');
+}
+{
+ const s=storySave(30);s.battle.areaId='chapter-2-place-2';s.battle.chapterId='chapter-2';s.battle.introPending=false;
+ let ui=boot(s);ui.resume();assert.equal(ui.get('chapterScenery').dataset.area,'chapter-2-place-2');
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state());ui.resume();assert.equal(ui.get('chapterScenery').dataset.area,'chapter-2-place-2');
+ console.log('PASS resumed completed-chapter visit uses saved area, independent of current campaign');
+}
+{
+ const area='chapter-2-place-3',original=Content.chapterBackgrounds[area];
+ try{
+  Content.chapterBackgrounds[area]={...original,src:'assets/scenery/missing-review-only.webp'};
+  const ui=boot(storySave(7),{heldNarration:true});ui.resume();
+  const img=ui.get('storyLandscape');img.onerror();assert.equal(img.src,'assets/forest-clearing.webp');assert.equal(img.onerror,null);
+  assert.ok(ui.get('chapterScenery').style.backgroundImage.includes('assets/forest-clearing.webp'));
+  ui.finishSpeech();ui.click(ui.get('storyNext'));ui.click(ui.get('storyNext'));assert.equal(ui.get('encounterIntro').hidden,false);
+  delete Content.chapterBackgrounds[area];ui.click(ui.get('encounterStart'));
+  assert.ok(ui.get('chapterScenery').style.backgroundImage.includes('assets/forest-clearing.webp'));
+ }finally{Content.chapterBackgrounds[area]=original;}
+ console.log('PASS missing artwork and missing mapping fall back without blocking story or battle');
+}

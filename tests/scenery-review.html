@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter scenery review</title>
+<style>body{margin:12px;background:#19362b;color:#fff7de;font:15px system-ui}header{display:flex;gap:16px;align-items:center;margin-bottom:12px}select,a{font:inherit;padding:8px}a{color:#ffe6a0}#scenes{display:grid;grid-template-columns:repeat(5,250px);gap:12px}h2{font-size:17px;margin:4px 0 12px}.frame{overflow:hidden;position:relative;background:#10281d;margin-bottom:8px}iframe{border:0;transform-origin:top left}small{display:block;margin:8px 0}</style>
+<header><h1 style="font-size:20px">Scenery review</h1><label>Campaign <select id="campaign"></select></label><label>Screen <select id="mode"><option value="battle">Battle</option><option value="story">Story</option><option value="encounter">Encounter</option></select></label><span>Isolated saves · rendered at each labelled viewport</span></header><div id="scenes"></div><script src="../content.js"></script><script>
+const p=new URLSearchParams(location.search),campaign=document.querySelector('#campaign'),mode=document.querySelector('#mode');
+BlitzContent.chapters.forEach((c,i)=>campaign.add(new Option((i+1)+' '+c.name,i)));campaign.value=p.get('campaign')||0;mode.value=p.get('mode')||'battle';
+for(const input of [campaign,mode])input.onchange=()=>{location.search=new URLSearchParams({campaign:campaign.value,mode:mode.value})};
+const first=Number(campaign.value)*5;
+for(let i=first;i<first+5;i++){
+ const card=document.createElement('article'),h=document.createElement('h2');h.textContent=(i+1)+'. '+BlitzContent.areas[i].name;card.append(h);
+ for(const [label,w,height] of [['Tablet landscape',1024,768],['Tablet portrait',768,1024],['Phone',390,844]]){
+  const small=document.createElement('small');small.textContent=label+' '+w+' × '+height;card.append(small);
+  const box=document.createElement('div');box.className='frame';box.style.width='250px';box.style.height=(height*250/w)+'px';
+  const frame=document.createElement('iframe');frame.title=h.textContent+' '+label;frame.width=w;frame.height=height;frame.style.transform='scale('+250/w+')';frame.src='review-app.html?scene=scenery-'+mode.value+'-'+i;box.append(frame);card.append(box);
+ }
+ document.querySelector('#scenes').append(card);
+}
+</script></html>
