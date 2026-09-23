@@ -36,7 +36,7 @@ npm ci --ignore-scripts
 npm test
 ```
 
-GitHub Pages deploys `main` after the script and regression checks pass. Use task branches and pull requests. The previous main commit is the rollback point; never reset learner data to roll back artwork or gameplay.
+GitHub Pages deploys `main` after the script and regression checks pass. To confirm what is live, compare the `blitzword-build` meta tag on the live page with `index.html` on `main`. Use task branches and pull requests. The previous main commit is the rollback point; never reset learner data to roll back artwork or gameplay.
 
 See [the product specification](docs/BLITZWORD_PRODUCT_SPEC.md) for approved direction and [Core 200](docs/CORE200_RELEASE.md) for curriculum and asset provenance. The older six-word teaching slice is retained as historical documentation.
 
