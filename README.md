@@ -4,6 +4,8 @@ An iPad-first English reading game. Play the current web build at https://ikarus
 
 See [current implementation and outstanding work](docs/CURRENT_STATUS.md) first. Older release notes describe their own milestones, not the current backlog.
 
+For ChatGPT project setup and attachment cleanup, use the [project maintenance guide](docs/PROJECT_DESCRIPTION_UPDATE.md). Keep changing rules in GitHub rather than uploading repeated documentation snapshots.
+
 ## Current gameplay
 
 Setup and hero selection lead to an optional guided battle or the existing adaptive reading check. A battle is one enemy. A chapter is one map field and requires at least ten interaction-confirmed active minutes, three reading wins, a played number duel and its learning objectives. If the duel ends at eight minutes, another battle continues the chapter. Pause/Home/reload preserve it. A campaign is one map of five chapters; seven campaigns contain the existing 200 words. After the story, review chapters continue the daily one-chapter goal.
