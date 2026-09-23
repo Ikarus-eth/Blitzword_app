@@ -1,0 +1,29 @@
+name: ElevenLabs one gate sentence
+on:
+  push:
+    branches: [audio/one-gate-sentence-20260923]
+    paths: [scripts/test-elevenlabs-gate-sentence.py, .github/workflows/elevenlabs-one-sentence.yml]
+permissions:
+  contents: read
+concurrency:
+  group: elevenlabs-one-gate-sentence
+  cancel-in-progress: false
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Generate only the requested gate sentence
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/test-elevenlabs-gate-sentence.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: BlitzWord-gate-sentence-Daniel
+          path: narration-sample/
+          if-no-files-found: ignore
+          retention-days: 30
