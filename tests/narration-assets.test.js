@@ -23,6 +23,6 @@ test('unrecorded expansion words use the immediate speech fallback without reque
  const n=narrator({clips:manifest.clips,fetchAudio:()=>{downloads++;throw Error('Unexpected download');},AudioContext:function(){throw Error('Unexpected audio request');},synth:{cancel(){},resume(){},getVoices(){return[];},speak:u=>spoken.push(u.text)},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule:()=>{}});
  const missing=C.words.slice(30).flatMap(item=>[item.w,item.sentence]).filter(text=>!manifest.clips[text]);
  assert.ok(missing.length>300);
- for(const text of missing){n.speak(text);assert.equal(spoken.at(-1),text);}
+ for(const text of missing){n.speak(text);assert.equal(spoken.at(-1),text.replace(/\bgate\b/gi,w=>w[0]==='G'?'Gait':'gait'));}
  assert.equal(downloads,0);assert.equal(spoken.length,missing.length);
 });
