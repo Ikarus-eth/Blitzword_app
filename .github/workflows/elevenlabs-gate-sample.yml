@@ -1,0 +1,36 @@
+name: ElevenLabs gate voice sample
+
+on:
+  push:
+    branches: [audio/gate-elevenlabs-test-20260923]
+    paths:
+      - scripts/test-elevenlabs-gate.py
+      - .github/workflows/elevenlabs-gate-sample.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: elevenlabs-gate-sample
+  cancel-in-progress: false
+
+jobs:
+  sample:
+    if: github.repository == 'Ikarus-eth/Blitzword_app'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Generate the single requested word
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/test-elevenlabs-gate.py
+      - name: Save sample and timing data for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: BlitzWord-gate-Daniel
+          path: narration-sample/
+          if-no-files-found: error
+          retention-days: 30
