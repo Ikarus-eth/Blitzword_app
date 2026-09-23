@@ -16,7 +16,7 @@
       assessment:{done:false,records:[],level:0,exposure:1800,lastAxis:'exposure',progress:null},
       learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[]},
       campaign:{wins:0,checkpointWins:0,enemyStrength:3,battleRecords:[]},
-      dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{}},
+      dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{},scenes:{},scene:null},
       timing:{version:1,days:{},firstPracticeAt:null},
       math:{best:null,winStreak:0,round:null,records:[]},
       rewards:{shield:false,readingWins:0,shieldEarnedAt:null,xpDays:{},speedHistory:{}},
@@ -74,7 +74,7 @@
       if(dates.length)s.timing.firstPracticeAt=dates[0];
     }
     if(s.story.chapterComplete&&!s.story.completedChapters.includes('chapter-1'))s.story.completedChapters.push('chapter-1');
-    s.story.chapters ||= {};s.story.dailyChapters ||= {};s.rewards.xpDays ||= {};s.rewards.speedHistory ||= {};
+    s.story.chapters ||= {};s.story.dailyChapters ||= {};s.story.scenes ||= {};s.rewards.xpDays ||= {};s.rewards.speedHistory ||= {};
     if(s.battle&&s.battle.xpEarned===undefined){
       const reading=s.campaign.battleRecords.filter(r=>r.battleId===s.battle.id).reduce((n,r)=>n+(r.xpEarned||0),0);
       const math=s.math.round?.battleId===s.battle.id?s.math.round.correct:s.math.records.filter(r=>r.battleId===s.battle.id).reduce((n,r)=>n+(r.xpEarned??r.correct),0);
@@ -249,6 +249,27 @@
   }
   function enemyScale(health) { return .78 + .65*(1-Math.exp(-(Math.max(3,health)-3)/5)); }
   function currentChapter(s){return Content.chapters.find(chapter=>!s.story.completedChapters.includes(chapter.id))||Content.chapters.at(-1);}
+  function chapterLocation(s,areaId=null){
+    const campaign=areaId?Content.chapters.find(c=>c.id===Content.areas.find(a=>a.id===areaId)?.chapterId):currentChapter(s);
+    const areas=Content.areas.filter(a=>a.chapterId===campaign.id);
+    const area=areas.find(a=>a.id===areaId)||areas.find(a=>!s.story.clearedAreas.includes(a.id))||areas.at(-1);
+    return {campaign,area,campaignNumber:Content.chapters.indexOf(campaign)+1,chapterNumber:areas.indexOf(area)+1,total:areas.length,cleared:areas.filter(a=>s.story.clearedAreas.includes(a.id)).length};
+  }
+  function beginChapterStory(s,now){
+    if(s.story.scene){s.activity='chapterStory';return true;}
+    const b=s.battle,area=Content.areas.find(a=>a.id===b?.areaId),index=Content.areas.indexOf(area);
+    // The initial guided battle keeps its approved short introduction. Never interrupt a saved question.
+    if(!b||b.demo||b.finalEncounter||b.reviewId||b.resolved||b.question||b.turn||index<=0||!s.story.clearedAreas.includes(Content.areas[index-1].id)||s.story.scenes[area.id]||s.story.clearedAreas.includes(area.id))return false;
+    s.story.scene={areaId:area.id,battleId:b.id,phase:'intro',introHeard:false,helped:false,startedAt:iso(now)};
+    s.activity='chapterStory';return true;
+  }
+  function advanceChapterStory(s,now){
+    const scene=s.story.scene;if(!scene||s.activity!=='chapterStory')return false;
+    if(scene.phase==='intro'){if(!scene.introHeard)return false;scene.phase='read';return true;}
+    if(scene.phase!=='read')return false;
+    s.story.scenes[scene.areaId]={completedAt:iso(now),helped:scene.helped};
+    s.story.scene=null;s.activity='battle';return true;
+  }
   function chapterProgress(s) {
     const chapter=currentChapter(s);
     return {found:chapter.words.filter(word=>s.learning.words[word]?.introducedAt).length,
@@ -568,6 +589,6 @@
   return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,bonusProgress,nameDragon,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
-    enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,recordTime,parentProgress,dayKey,
+    enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed};
 });

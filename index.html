@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="blitzword-soundscape" content="forest-v2-20260923" />
-<meta name="blitzword-build" content="success-xp-20260923-r3" />
+<meta name="blitzword-build" content="chapter-stories-20260923-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=soundscape-20260923-r1" />
+<link rel="stylesheet" href="styles.css?v=chapter-stories-20260923-r1" />
 </head>
 <body><main class="app" id="app">
 <div id="chapterScenery" class="chapterScenery" aria-hidden="true" hidden></div>
@@ -101,6 +101,19 @@
   <div id="encounterIntro" class="encounterLayer" hidden><div class="encounterCard parchment"><p id="encounterLead" class="encounterLead"></p><h1 id="encounterTitle">Forest path</h1><div id="encounterChapter" class="chapterPanel"></div><div class="encounterOpponent"><span id="encounterEnemy" class="sceneSprite"></span><span id="encounterHearts" class="visualHearts"></span></div><button id="encounterStart" class="greenButton" aria-label="Start battle">Play</button></div></div>
 </section>
 
+<section id="chapterStory" class="screen chapterStory" aria-labelledby="storyTitle">
+  <div class="storyCard">
+    <header class="storyHeader"><span id="storyLocation"></span><h1 id="storyTitle"></h1></header>
+    <div id="storyPicture" class="storyPicture" role="img">
+      <svg id="storyBackdrop" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image id="storyLandscape" width="1536" height="1024"/></svg>
+      <span id="storyHero" class="sceneSprite" aria-hidden="true"></span><span id="storyPip" class="sceneSprite" aria-hidden="true"></span>
+    </div>
+    <div class="storyReading parchment"><span id="storyPrompt"></span><p id="storyNarration"></p><p id="storySentence" hidden></p>
+      <div class="storyActions"><button id="storyListen" class="secondaryButton" aria-label="Listen to the story">Listen</button><button id="storyNext" class="greenButton">Read</button></div>
+    </div>
+  </div>
+</section>
+
 <section id="handoff" class="screen forest">
   <div class="handoffCard parchment"><span class="sceneSprite handoffPip" data-sprite="6" role="img" aria-label="Pip"></span><h1 id="handoffTitle">The path is clear!</h1><p>Let’s try a few words.<br>Tap <span class="helpKey">?</span> whenever you’re not sure.</p><button id="handoffNext" class="greenButton">Play</button></div>
 </section>
@@ -176,11 +189,11 @@
 </section>
 <div id="parentGate" class="parentGate" role="dialog" aria-modal="true" aria-labelledby="parentGateTitle" hidden><div class="parchment"><h2 id="parentGateTitle">For a grown-up</h2><label id="parentQuestion" for="parentAnswer"></label><input id="parentAnswer" type="text" inputmode="numeric" autocomplete="off"/><p id="parentGateMessage" aria-live="polite"></p><button id="parentUnlock" class="greenButton">Open dashboard</button><button id="parentCancel" class="textButton">Back</button></div></div>
 </main>
-<script src="content.js?v=success-xp-20260923-r3"></script>
-<script src="game-core.js?v=success-xp-20260923-r3"></script>
+<script src="content.js?v=chapter-stories-20260923-r1"></script>
+<script src="game-core.js?v=chapter-stories-20260923-r1"></script>
 <script src="storage.js?v=core200-20260922-r1"></script>
 <script src="soundscape.js?v=soundscape-20260923-r1"></script>
 <script src="narration.js?v=core200-20260922-r1"></script>
 <script src="audio.js?v=soundscape-20260923-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
-<script src="app.js?v=soundscape-20260923-r1"></script></body></html>
+<script src="app.js?v=chapter-stories-20260923-r1"></script></body></html>

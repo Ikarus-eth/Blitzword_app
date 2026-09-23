@@ -2151,6 +2151,45 @@
       areas.push({id:chapter.id+'-place-'+(i+1),chapterId:chapter.id,name:placeNames[c][i],shortName:placeNames[c][i].split(' ').at(-1),x:coords[i][0],y:coords[i][1],available:true,words:targets,checkpoint:(c*5+i+1)*2,goal:'Explore '+placeNames[c][i]+'.',discovery:'The path is open.'});
     }}
   });
+  // One short transition for each later map field. Reuse approved scenery and character art.
+  const storyLines = [
+    ['The forest path is open. Pip is ready to explore with you.', 'Pip is on the path.'],
+    ['A fox waits beside the stream. Pip follows it to a safe place to cross.', 'Pip can jump over water.'],
+    ['Beyond the stream, old trees shelter a red book. Pip stops to look inside.', 'The big book is open.'],
+    ['The book shows a trail of lights. Pip follows them as the forest grows dark.', 'The fire gives light.'],
+    ['An owl has shown you the hidden nest. A little spark shines beside its gate.', 'Pip is a dragon.'],
+    ['A bright stream leads away from the nest. Pip wants to see where it goes.', 'We go to the river.'],
+    ['You reach a stone bridge. Pip waits for you before crossing to the other side.', 'We can cross the bridge.'],
+    ['Tall reeds whisper beside the river. A narrow path leads you both onward.', 'Pip is by the river.'],
+    ['The river opens into a still blue pool. Pip stops beside the clear water.', 'The water is blue.'],
+    ['A gate stands at the end of the river path. Warm light shines through it.', 'We can see the gate.'],
+    ['Beyond the gate, golden leaves cover a winding path. Pip finds the next trail.', 'The tree is big.'],
+    ['The trees grow close together. Pip finds a cosy space among the leaves.', 'Pip is in the den.'],
+    ['Moss covers a line of old steps. You and Pip climb them one at a time.', 'We go up the steps.'],
+    ['The roots form an arch across the path. Pip waits beneath it for you.', 'We go under the tree.'],
+    ['The oldest oak stands ahead. Its branches point towards a distant glow.', 'The old tree is tall.'],
+    ['A stone path winds towards the glow. Pip follows the warm light between the trees.', 'We walk on the path.'],
+    ['Small lamps light the grove. Pip pauses to watch their gentle glow.', 'The light is warm.'],
+    ['An old wall rises beside the trail. There is a way through for you and Pip.', 'We can see the wall.'],
+    ['A golden door glows in the stone. Pip waits while you find the way inside.', 'The door is gold.'],
+    ['The hall is full of soft light. A window shows the moon above the next wood.', 'We are in the hall.'],
+    ['Moonlight leads you into a quiet wood. Pip stays close beside you.', 'The moon is up.'],
+    ['An owl watches from a high branch. Pip looks up to follow its gaze.', 'The owl is in the tree.'],
+    ['Stars shine in a still pool. Pip stops beside the water to look.', 'The stars shine at night.'],
+    ['A dark arch opens between the trees. Moonlight shows a path through it.', 'We can see the moon.'],
+    ['You reach a sheltered nest beneath the moon. A blue glow shines beyond the wood.', 'Pip can rest here.'],
+    ['The blue glow comes from a cave. Pip peeks inside, then waits for you.', 'We go into the cave.'],
+    ['Blue stones shine along the cave wall. Pip follows their light into the mountain.', 'The stone is blue.'],
+    ['A deep pool fills the quiet cave. You and Pip take the dry path beside it.', 'The water is still.'],
+    ['The cave opens into a glowing hall. Pip looks at the lights all around you.', 'We can see the light.'],
+    ['A crystal gate opens towards the sky. Pip can feel the warm air beyond it.', 'The gate is open.'],
+    ['Sunlight warms the hill path. Pip looks up at a castle high above you.', 'We go up the hill.'],
+    ['Stone steps climb towards the clouds. You and Pip take the next step together.', 'The clouds are white.'],
+    ['A high bridge stretches towards the keep. Pip stays beside you as you cross.', 'We cross the high bridge.'],
+    ['The tower is close now. Pip looks up at its bright flags in the sky.', 'The tower is tall.'],
+    ['You have reached the sky keep together. Pip is ready for the final path.', 'We are at the castle.']
+  ];
+  const chapterStories=Object.fromEntries(areas.map((area,i)=>[area.id,{narration:storyLines[i][0],sentence:storyLines[i][1],scene:chapters.find(c=>c.id===area.chapterId).scene}]));
   const dragonStages = [
     {name:'Small Pip',xp:0,crop:[150,160,409,307],scale:1},
     {name:'Big Pip',xp:3000,crop:[838,11,542,460],scale:1.14},
@@ -2158,5 +2197,5 @@
     {name:'Ride on Pip',xp:13400,crop:[869,464,657,533],scale:1.45}
   ];
   const teachingSource=item=>'assets/teaching/'+item.image+(item.image==='core-teaching'?'.webp':item.crop?'.png':'.webp');
-  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, dragonStages, chapterWordGoal:30};
+  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, chapterStories, dragonStages, chapterWordGoal:30};
 });
