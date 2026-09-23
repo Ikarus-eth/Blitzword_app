@@ -17,8 +17,9 @@ window.makeReviewSave=function(scenario){
     Object.assign(s,C.migrate(s));
   }
   C.startBattle(s,now,{strength:4});C.prepareBattle(s,now);
+  if(['battle-shield','map-shield'].includes(scenario))s.rewards.shield=true;
   if(scenario.startsWith('math-')){
-    s.math.best=18;s.math.winStreak=2;s.battle.enemyHealth=0;C.resolveBattle(s,now);
+    s.math.best=18;s.math.winStreak=2;s.rewards.readingWins=2;s.battle.enemyHealth=0;C.resolveBattle(s,now);
     if(scenario!=='math-intro')C.startMath(s,now);
     if(['math-result','math-loss'].includes(scenario)){for(let i=0;i<(scenario==='math-loss'?3:20);i++){const q=C.prepareMath(s);C.answerMath(s,q.a*q.b,now);}C.tickMath(s,60000,now);}
     return s;
@@ -31,7 +32,7 @@ window.makeReviewSave=function(scenario){
     }
     return C.migrate(s);
   }
-  if(['battle','pause'].includes(scenario)||scenario.startsWith('attack-'))s.battle.introPending=false;
+  if(['battle','battle-shield','pause'].includes(scenario)||scenario.startsWith('attack-'))s.battle.introPending=false;
   if(scenario.startsWith('attack-')){
     for(const item of BlitzContent.words){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].familiar=true;}
     // One real, unassisted answer produces the preview. Never mutate learner storage.
@@ -39,12 +40,12 @@ window.makeReviewSave=function(scenario){
     if(scenario.includes('final'))s.battle.enemyHealth=1;
     C.answerBattle(s,s.battle.question.target,now);
   }
-  if(['victory','retry','summary'].includes(scenario)){
+  if(['victory','retry','retry-escape','summary'].includes(scenario)){
     // A real core transition supplies all result fields and avoids fake controller state.
     for(const item of BlitzContent.words){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].familiar=true;}
     while(s.activity==='battle'){
       const q=C.prepareBattle(s,now);q.phase='choices';
-      C.answerBattle(s,scenario==='retry'?q.options.find(w=>w!==q.target):q.target,now);
+      C.answerBattle(s,scenario.startsWith('retry')?q.options.find(w=>w!==q.target):q.target,now);
       if(!q.correct){C.startTeaching(s,q.target,'battle',now);C.leaveTeaching(s,now);}
       C.prepareBattle(s,now);
     }

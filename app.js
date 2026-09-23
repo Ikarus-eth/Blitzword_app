@@ -14,6 +14,7 @@ const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:37
 let spriteSerial=0;
 let selectedMapArea=null;
 const COMBAT_MS=1200;
+const shieldIcon='<svg viewBox="0 0 40 44" aria-hidden="true"><path d="M20 3L35 9V23Q34 33 20 41Q6 33 5 23V9Z"/><path d="M20 10V32M12 20H28"/></svg>';
 // Separate the original staff and gripping hand; retain the approved artwork.
 const mageRig={
   0:{pivot:[112,234],tip:[107,102],path:'M24 25H175V193L139 209L132 263L159 538H129L110 273L87 253L78 218L93 195L25 190Z',repair:'M110 273L132 263L159 538H129Z'},
@@ -114,6 +115,7 @@ function renderMap(){
   $('#dragonNext').textContent=growth.next?'Growing together':'Ready to ride';$('#mapGrowthSummary').textContent='';
   const fraction=growth.fraction;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext','XP towards growth. '+growthCaption(growth));
   $('#dragonTapHint').textContent=growth.next?'XP · Tap Pip':'Tap Pip';
+  $('#mapShield').hidden=!state.rewards.shield;$('#mapShield').innerHTML=shieldIcon;
   const stages=$('#dragonStages');stages.replaceChildren();Content.dragonStages.forEach((stage,i)=>{
     const item=document.createElement('li');item.className=i===growth.stage?'current':i<growth.stage?'earned':'future';
     const art=document.createElement('span');art.className='stagePortrait';paintPip(art,i);
@@ -122,6 +124,8 @@ function renderMap(){
   });save();
 }
 function clearCombat(){
+  $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
+  $('#heroHearts').classList.remove('shieldBlocked');
   $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();
   $('#battleHeroImg').classList.remove('attack','mageCast','heroHit','heroDefeated');
   $('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
@@ -144,7 +148,7 @@ function account(){
   const category=activityCategory(),delta=playClock.sample({mono:now,wall:Date.now(),category,visible:!document.hidden,focused:windowFocused});
   drainExcluded();
   if(category==='math'){
-    if(Core.tickMath(state,delta,Date.now())){playClock.discard();drainExcluded();cancelWork();sound.cue('finish');renderMath();}
+    if(Core.tickMath(state,delta,Date.now())){playClock.discard();drainExcluded();cancelWork();if(state.math.round.beaten)sound.cue('finish');renderMath();}
     else updateMathHud();
   }
   const q=Core.getQuestion(state);
@@ -339,27 +343,29 @@ function renderMath(){
     $('#mathResultGoal').textContent=String(r.target);
     $('#mathResultDetail').textContent='+'+r.correct+' XP';
     $('#mathResultBest').textContent=r.newBest&&r.beaten?'New best!':'Best '+state.math.best;
-    $('#mathResultMessage').textContent=Core.mathScore(r)+' points. Goal '+r.target+'. '+r.correct+' correct, '+(r.wrong||0)+' wrong. '+(r.beaten?'Number duel won.':'Number duel lost. Your reading victory and earned XP are safe.');return;
+    $('#mathShieldReward').hidden=!r.shieldEarned;$('#mathShieldReward').innerHTML=shieldIcon+'<span>+1 shield</span>';
+    $('#mathResultMessage').textContent=Core.mathScore(r)+' points. Goal '+r.target+'. '+r.correct+' correct, '+(r.wrong||0)+' wrong. '+(r.beaten?'Number duel won.':'Number duel lost. Your reading victory and earned XP are safe.');
+    if(!r.beaten)defeatReaction(r,r.enemyId,state.battle?.maxHealth||3);return;
   }
   paintEnemy($('#mathEnemy'),r.enemyId,state.battle?.maxHealth||3);updateMathHud();
   const q=r.question||Core.prepareMath(state);$('#mathEquation').textContent=q.a+' × '+q.b+' =';
-  $('#mathInput').textContent=q.input||'?';$('#mathFeedback').textContent='';
-  $$('#mathKeys button').forEach(button=>button.disabled=q.phase!=='answer');
+  $('#mathInput').textContent=q.phase==='feedback'?q.input:'?';$('#mathFeedback').textContent='';
+  const answers=$('#mathAnswers');answers.replaceChildren();
+  for(const value of q.options){
+    const button=document.createElement('button');button.type='button';button.textContent=String(value);button.dataset.value=String(value);button.disabled=q.phase!=='answer';
+    if(q.phase==='feedback'&&String(value)===q.input)button.classList.add(q.correct?'mathCorrect':'mathWrong');
+    button.onclick=()=>mathAnswer(value,q.id);answers.append(button);
+  }
   if(q.phase==='feedback'){
     $('#mathFeedback').classList.toggle('wrong',!q.correct);
     $('#mathFeedback').textContent=q.correct?'+1':(r.scoringVersion===2?'−1  ·  ':'')+q.a+' × '+q.b+' = '+q.a*q.b;
-    later(()=>{Core.prepareMath(state);if(save())renderMath();},q.correct?180:700);
+    later(()=>{Core.prepareMath(state);if(save())renderMath();},q.correct?400:850);
   }
 }
-function mathKey(key){
-  if(state.activity!=='mathChallenge'||!confirmActivity())return;
+function mathAnswer(value,questionId){
+  if(paused||blocked||state.activity!=='mathChallenge'||state.math.round?.question?.id!==questionId||!confirmActivity())return;
   const r=state.math.round,q=r?.question;if(r?.status!=='playing'||q?.phase!=='answer')return;
-  if(key==='enter'){
-    if(!q.input)return;
-    const answer=Core.answerMath(state,q.input,Date.now());if(answer&&save()){sound.cue(answer.correct?'correct':'wrong');renderMath();}return;
-  }
-  if(key==='back')q.input=q.input.slice(0,-1);else if(/^\d$/.test(key)&&q.input.length<3)q.input=(q.input==='0'?'':q.input)+key;
-  $('#mathInput').textContent=q.input||'?';save();
+  const answer=Core.answerMath(state,value,Date.now());if(answer&&save()){sound.cue(answer.correct?'correct':'wrong');renderMath();}
 }
 function stageElements(){return state.activity==='assessment'?[$('#assessmentScroll'),$('#assessmentAnswers')]:[$('#battleScroll'),$('#battleAnswers')];}
 function setPhase(q,phase){account();q.phase=phase;return save();}
@@ -442,7 +448,7 @@ function combatReaction(correct){
     effects.insertAdjacentHTML('beforeend',`<svg class="castBeam" viewBox="0 0 ${box.width} ${box.height}" preserveAspectRatio="none"><polyline class="lightningGlow" points="${points}"/><polyline class="lightningCore" points="${points}"/><circle class="staffSpark" cx="${start.x}" cy="${start.y}" r="10"/></svg>`);
   }
   if(correct){$('#battleHeroImg').classList.add(state.profile.heroClass==='Mage'?'mageCast':'attack');$('#enemyFace').classList.add(state.battle.enemyHealth<=0?'enemyDefeated':'enemyHit');}
-  else{$('#enemyFace').classList.add('enemyAttack');$('#battleHeroImg').classList.add(state.battle.heroHealth<=0?'heroDefeated':'heroHit');}
+  else{$('#enemyFace').classList.add('enemyAttack');if(state.battle.question.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}else $('#battleHeroImg').classList.add(state.battle.heroHealth<=0?'heroDefeated':'heroHit');}
   const pip=$('#battle .battlePip');
   if(correct&&(state.campaign.battleRecords.length%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip');}
   else if(!correct)pip.classList.add('pipDodge');
@@ -463,8 +469,8 @@ function correction(animate=false) {
   const replay=document.createElement('button');replay.className='replay';replay.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg>';replay.setAttribute('aria-label','Replay the correct word');
   replay.onclick=()=>{Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak('The word was '+q.target+'.');};
   $('#battleAnswers').append(replay,next);
-  if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);
-  speak((q.freeMistake?'Practice turn. You keep your heart. ':'')+'The word was '+q.target+'.');
+  if(q.shieldUsed){$('#feedback').textContent='Shield saved a heart';$('#feedback').classList.add('show');}
+  speak((q.freeMistake?'Practice turn. You keep your heart. ':q.shieldUsed?'Your shield stopped the hit. ':'')+'The word was '+q.target+'.',{onEnd:()=>{if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);}});
 }
 
 function advanceBattle(){account();cancelWork();Core.prepareBattle(state,Date.now());if(save())renderActivity();}
@@ -472,6 +478,7 @@ function renderHud() {
   const b=state.battle;$('#heroHearts').replaceChildren();
   for(let i=0;i<3;i++){const heart=document.createElement('span');heart.className='heart'+(i<b.heroHealth?'':' off');heart.textContent='♥';$('#heroHearts').append(heart);}
   $('#heroHearts').setAttribute('aria-label',`${b.heroHealth} of 3 hearts`);
+  if(state.rewards.shield&&!b.demo){const shield=document.createElement('span');shield.className='heldShield';shield.innerHTML=shieldIcon;$('#heroHearts').append(shield);$('#heroHearts').setAttribute('aria-label',`${b.heroHealth} of 3 hearts, one shield protects the next hit`);}
   $('#enemyFill').style.width=(100*b.enemyHealth/b.maxHealth)+'%';
   $('#enemyHealth').setAttribute('aria-label',`Enemy health: ${b.enemyHealth} of ${b.maxHealth}`);
   $('#enemyCount').textContent=b.enemyHealth+' / '+b.maxHealth;
@@ -525,6 +532,7 @@ function renderResult() {
   $('#resultXPDetail').textContent=growth.xp+' / '+(growth.next?.xp||growth.xp)+' XP';
   $('#resultGrowthFill').style.width=(growth.fraction*100)+'%';$('#resultGrowthBar').setAttribute('aria-valuenow',String(Math.round(growth.fraction*100)));
   $('#resultGrowthNote').textContent=growth.next?'Pip is growing · Tap to see':'Pip is ready to ride';
+  $('#resultShield').hidden=!state.rewards.shield;$('#resultShield').innerHTML=shieldIcon+'<span>1 shield</span>';
   const progress=Core.chapterProgress(state);
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');
   const enemies=Core.enemyChoices(state,result.strength);
@@ -542,6 +550,14 @@ function renderResult() {
     button.onclick=()=>{playClock.reset(performance.now());account();if(Core.isSessionDue(state))Core.completeSession(state,Date.now());
       state.campaign.enemyStrength=choice.hp;Core.startBattle(state,Date.now(),{strength:choice.hp,enemyId:choice.enemy.id});if(save())renderActivity();};box.append(button);
   });box.classList.toggle('single',choices.length===1);
+  if(!result.victory)defeatReaction(result,result.enemyId,result.strength);
+}
+function defeatReaction(result,enemyId,strength){
+  if(result.defeatShown||paused||blocked)return;
+  result.defeatShown=true;if(!save())return;
+  const scene=$('#defeatScene');paintEnemy($('#defeatEnemy'),enemyId,strength);
+  scene.hidden=false;scene.classList.add('escaping');sound.cue('chuckle');
+  later(()=>{scene.hidden=true;scene.classList.remove('escaping');},2200);
 }
 function renderSummary() {
   show('summary');playing=false;paused=true;cancelWork();const session=state.session;
@@ -650,12 +666,6 @@ $('#parentAnswer').addEventListener('keydown',e=>{if(e.key==='Enter')$('#parentU
 $('#parentHome').onclick=home;
 $('#mathStart').onclick=()=>{if(Core.startMath(state,Date.now())){sound.resetCountdown();playClock.reset(performance.now());if(save())renderActivity();}};
 $('#mathSkip').onclick=$('#mathContinue').onclick=()=>{if(Core.leaveMath(state,Date.now())&&save())renderActivity();};
-$$('#mathKeys button').forEach(button=>button.onclick=()=>mathKey(button.dataset.key));
-document.addEventListener('keydown',event=>{
-  if(state.activity!=='mathChallenge'||paused||blocked||event.repeat||event.ctrlKey||event.metaKey||event.altKey)return;
-  const key=/^\d$/.test(event.key)?event.key:event.key==='Enter'?'enter':event.key==='Backspace'?'back':null;
-  if(key){event.preventDefault();mathKey(key);}
-});
 $('#assessmentStart').onclick=()=>{playClock.reset(performance.now());state.assessment.instructionsSeen=true;if(save())renderActivity();};
 $('#encounterStart').onclick=()=>{playClock.reset(performance.now());state.battle.introPending=false;if(save())renderActivity();};
 $('#pauseBtn').onclick=()=>pause();$('#pauseResume').onclick=enter;$('#pauseFinish').onclick=finishForNow;

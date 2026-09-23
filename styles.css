@@ -275,3 +275,25 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 .srOnly{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
 @media(max-width:600px){.creatureName{font-size:15px}.speedChoice>.pacePicture{width:48px;height:48px}.duelCard{padding:20px;gap:10px}.duelBadge{min-width:115px;padding:9px 12px}.duelCard>.duelCreature{height:145px}.duelHeading{font-size:29px}}
 @media(max-height:580px) and (orientation:landscape){.teachCard{grid-template-columns:minmax(0,1fr) 76px}.duelCard{width:min(690px,100%);display:grid;grid-template-columns:180px minmax(0,1fr);gap:8px 25px;padding:16px 25px}.duelCard>.duelCreature{grid-column:1;grid-row:1/6;width:180px;height:175px}.duelCard>:not(.duelCreature){grid-column:2}.duelBadges{margin:0}.duelHeading{font-size:27px}.duelCard .duelEnemyName{font-size:20px}.duelRewards{margin:0}.duelScore{justify-content:center}.duelCard .greenButton{justify-self:center;min-height:46px}.duelCard .duelActions{margin:0}.duelResultCard h1{font-size:27px}}
+
+/* Multiple-choice number duels and a single earned shield. */
+.mathAnswers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:6px}
+.mathAnswers button{min-height:90px;padding:12px;border:2px solid #b9a36b;border-radius:19px;background:#fff5d9;color:#2b4936;box-shadow:0 3px 0 #ab9865;font:38px var(--reading-font);font-variant-numeric:tabular-nums;touch-action:manipulation}
+.mathAnswers button:active{transform:translateY(2px)}.mathAnswers button:disabled{opacity:.8;cursor:default}.mathAnswers .mathCorrect{border-color:#4e7950;background:#dce5b7}.mathAnswers .mathWrong{border-color:#9d624c;background:#f0d4b8}
+.heldShield{display:inline-flex;width:34px;height:39px;align-items:center;margin-left:5px;color:#426779}
+.heldShield svg,.shieldReward svg,.mapShield svg{width:100%;height:100%;fill:#d5e4cb;stroke:#426779;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.shieldReward{display:flex;align-items:center;justify-content:center;gap:9px;color:#345567;font:20px var(--reading-font)}.shieldReward svg{width:29px;height:32px}
+.resultShield{grid-column:2}.mapShield{display:block;position:absolute;right:9px;top:6px;width:25px;height:28px}
+.shieldBlocked{animation:shieldGlow 1s ease-out}.combatEffects.shieldBlock .pipShield{display:block;left:12%;bottom:25%;width:100px;height:130px;border:4px solid #bee5e5;border-radius:45% 45% 55% 55%;box-shadow:0 0 25px #6ec9e5;animation:shieldGlow 1s ease-out}
+@keyframes shieldGlow{0%,35%{filter:drop-shadow(0 0 14px #77c7e7)}100%{filter:none}}
+.defeatScene{position:absolute;z-index:75;left:50%;top:24%;width:270px;height:230px;transform:translateX(-50%);pointer-events:none}
+#defeatEnemy{position:absolute;left:30px;bottom:20px;width:190px;height:170px;filter:drop-shadow(0 8px 4px #17352655)}
+.enemyChuckle,.escapeCaption{position:absolute;padding:7px 16px;border:1px solid #b49b63;border-radius:20px;background:#fff2cc;color:#3d5037;font:23px var(--reading-font);white-space:nowrap}
+.enemyChuckle{top:0;right:0}.escapeCaption{left:65px;bottom:0;opacity:0}
+.escaping #defeatEnemy{animation:enemyEscape 2.1s ease-in forwards}.escaping .enemyChuckle{animation:chuckleBubble 2.1s forwards}.escaping .escapeCaption{animation:escapeCaption 2.1s forwards}
+@keyframes enemyEscape{0%,12%,24%,36%{transform:translateY(0) scale(1)}6%,18%,30%{transform:translateY(-8px) scale(1.03,.94)}46%{transform:translateX(0)}60%{transform:translate(50px,-12px) rotate(6deg)}72%{transform:translate(100px,0) rotate(-6deg)}84%{transform:translate(160px,-12px) rotate(6deg);opacity:.7}100%{transform:translate(270px,0);opacity:0}}
+@keyframes chuckleBubble{0%,35%{opacity:1}45%,100%{opacity:0}}
+@keyframes escapeCaption{0%,50%{opacity:0}65%,100%{opacity:1}}
+@media(max-width:600px){.mathAnswers{gap:12px}.mathAnswers button{min-height:82px;font-size:35px}.heldShield{width:27px;height:31px}.defeatScene{top:29%}}
+@media(max-height:580px) and (orientation:landscape){.mathAnswers{grid-column:2;grid-row:1/5;gap:12px;align-self:center;margin:0}.mathAnswers button{min-height:78px;font-size:35px}.defeatScene{top:16%}.heldShield{height:30px;width:26px}}
+@media(prefers-reduced-motion:reduce){.escaping #defeatEnemy,.escaping .enemyChuckle,.escaping .escapeCaption,.shieldBlocked,.combatEffects.shieldBlock .pipShield{animation:none!important}.escaping #defeatEnemy{opacity:.65}.escaping .enemyChuckle{display:none}.escaping .escapeCaption{opacity:1}.combatEffects.shieldBlock .pipShield{display:none}}
