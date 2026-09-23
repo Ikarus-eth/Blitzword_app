@@ -1,0 +1,28 @@
+name: Preserve generated gate sentence
+on:
+  push:
+    branches: [audio/one-gate-sentence-20260923]
+    paths: [.github/workflows/elevenlabs-deliver-one.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: audio/one-gate-sentence-20260923
+      - name: Recover the completed recording without regeneration
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 35839567815 --repo Ikarus-eth/Blitzword_app --name BlitzWord-gate-sentence-Daniel --dir /tmp/one-recording
+          mkdir -p assets/narration/sources
+          cp /tmp/one-recording/BlitzWord_gate_sentence_Daniel.* assets/narration/sources/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/narration/sources/BlitzWord_gate_sentence_Daniel.*
+          git commit -m 'Preserve the single generated gate sentence and timing receipt'
+          git push origin HEAD:audio/one-gate-sentence-20260923
