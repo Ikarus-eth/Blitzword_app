@@ -25,3 +25,11 @@ test('gate uses the English homophone without downloading the reported clip or c
  assert.equal(downloads,0);assert.equal(done,4);
  n.speak('gate',{onEnd:()=>done++});n.cancel();utterance.onend();assert.equal(done,4);
 });
+
+
+test('speech volume applies to fallback and a muted narrator still completes exactly once',()=>{
+ let utterance,done=0;
+ const n=narrator({synth:{cancel(){},resume(){},getVoices(){return[]},speak(u){utterance=u}},Utterance:function(t){this.text=t},schedule:()=>1,unschedule(){}});
+ n.configure({volume:.35});n.speak('fox',{onEnd:()=>done++});assert.equal(utterance.volume,.35);utterance.onend();assert.equal(done,1);
+ n.configure({volume:0});utterance=null;n.speak('tree',{onEnd:()=>done++});assert.equal(utterance,null);assert.equal(done,2);
+});

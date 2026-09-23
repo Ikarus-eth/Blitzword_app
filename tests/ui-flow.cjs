@@ -264,3 +264,14 @@ for(const victory of [true,false]){
  Object.assign(Core.chapterState(s,s.battle.areaId),{activeMs:480000,wins:3,duels:1});const ui=boot(s);ui.resume();assert.equal(ui.get('resultMessage').textContent,'One more battle!');ui.click(ui.get('opponents').children[0]);assert.equal(ui.state().battle.areaId,'lantern-trail');assert.equal(ui.state().story.clearedAreas.length,0);
  console.log('PASS eight-minute chapter continues with another enemy and preserves chapter minutes');
 }
+
+// Audio settings survive Home/reload without modifying XP, learning or speech defaults.
+{
+ const ui=boot(mathSave());ui.resume();ui.click(ui.get('mathStart'));ui.click(ui.get('pauseBtn'));
+ const panel=ui.get('grownupSettings'),music=panel.querySelector('[data-audio-volume="music"]'),quiet=panel.querySelector('[data-audio-quiet]');
+ const xp=ui.state().dragon.xp;music.value='25';music.oninput();music.onchange();quiet.checked=true;quiet.onchange();
+ assert.equal(ui.state().settings.audio.music,.25);assert.equal(ui.state().settings.audio.speech,1);assert.equal(ui.state().settings.audio.quiet,true);assert.equal(ui.state().dragon.xp,xp);
+ const reloaded=boot(ui.state());reloaded.resume();reloaded.click(reloaded.get('pauseBtn'));
+ assert.equal(reloaded.get('grownupSettings').querySelector('[data-audio-volume="music"]').value,'25');assert.equal(reloaded.get('grownupSettings').querySelector('[data-audio-quiet]').checked,true);
+ console.log('PASS separate audio controls and quiet preset persist without changing earned XP');
+}

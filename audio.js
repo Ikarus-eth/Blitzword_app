@@ -19,12 +19,12 @@
   }
   // Completion fallback must be independent of the question/animation timer.
   function narrator({synth,Utterance,AudioContext,fetchAudio,clips={},schedule=setTimeout,unschedule=clearTimeout}) {
-    let generation=0,watchdog=null,context=null,source=null;
+    let generation=0,watchdog=null,context=null,source=null,output=null,volume=1;
     const buffers=new Map();
     // Unlock within a real tap/key event. Reuse the context after async downloads.
     function unlock(){
       if(!AudioContext||!fetchAudio)return;
-      try{context=context||new AudioContext();context.resume()?.catch(()=>{});}catch{}
+      try{context=context||new AudioContext();if(!output&&context.createGain){output=context.createGain();output.gain.value=volume;output.connect(context.destination);}context.resume()?.catch(()=>{});}catch{}
     }
     function stopRecording(){if(source){source.onended=null;try{source.stop();}catch{}source.disconnect();source=null;}}
     function cancel(){generation++;unschedule(watchdog);watchdog=null;stopRecording();if(synth)synth.cancel();}
@@ -35,13 +35,14 @@
       const spokenText=text.replace(/\bgate\b/gi,word=>word[0]==='G'?'Gait':'gait');
       const current=()=>!finished&&token===generation;
       const finish=()=>{if(!current())return;finished=true;unschedule(watchdog);watchdog=null;stopRecording();onEnd();};
+      if(volume===0){finish();return;}
       let fallbackStarted=false;
       function fallback(){
         if(!current()||fallbackStarted)return;fallbackStarted=true;unschedule(watchdog);stopRecording();
         if(!synth||!Utterance){finish();return;}
         const utterance=new Utterance(spokenText),voice=chooseVoice(synth.getVoices(),preferred);
         if(voice)utterance.voice=voice;
-        utterance.lang=voice?.lang||'en-GB';utterance.rate=.92;utterance.pitch=1;
+        utterance.volume=volume;utterance.lang=voice?.lang||'en-GB';utterance.rate=.92;utterance.pitch=1;
         utterance.onend=finish;utterance.onerror=finish;
         utterance.onboundary=e=>{if(current())onBoundary(e);};
         watchdog=schedule(()=>{if(current())synth.cancel();finish();},Math.max(2200,text.split(/\s+/).length*800+1400));
@@ -62,12 +63,12 @@
         if(!current()||fallbackStarted)return;
         if(context.state!=='running'){fallback();return;}
         unschedule(watchdog);
-        source=context.createBufferSource();source.buffer=buffer;source.connect(context.destination);source.onended=finish;
+        source=context.createBufferSource();source.buffer=buffer;source.connect(output||context.destination);source.onended=finish;
         watchdog=schedule(finish,Math.ceil(buffer.duration*1000)+1500);
         source.start();
       }).catch(fallback);
     }
-    return {speak,cancel,unlock};
+    return {speak,cancel,unlock,configure(options={}){if(typeof options.volume==='number'&&Number.isFinite(options.volume))volume=Math.max(0,Math.min(1,options.volume));if(output)output.gain.value=volume;}};
   }
   return {chooseVoice,rankVoice,narrator};
 });
