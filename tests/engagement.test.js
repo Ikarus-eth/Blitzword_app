@@ -28,11 +28,15 @@ test('legacy foreground time remains separate across reload and session rollover
  Core.recordTime(s,10000,'practice',START);s=Core.migrate(JSON.parse(JSON.stringify(s)));assert.equal(Core.parentProgress(s).legacyMs,900000);assert.equal(Core.parentProgress(s).activeMs,10000);
  Core.completeSession(s,START);Core.beginSession(s,START+1000);assert.equal(Core.parentProgress(s).legacyMs,900000);assert.equal(Core.parentProgress(s).activeMs,10000);
 });
-test('five hours of mixed practice spans all 200 words, seven chapters, pauses and saved reloads',()=>{
+test('extended mixed practice covers five-hour capacity then all 35 ten-minute chapters and seven campaigns',()=>{
  let s=Core.migrate(Core.fresh()),mono=0,turns=0;const clock=new Clock(),seen=new Set(),enemies=new Set();clock.reset(0);s.assessment.done=true;Core.startBattle(s,START);
  function practice(ms){for(let step=0;step<ms;step+=1000){mono+=1000;clock.sample({mono,wall:START+mono,category:'practice'});}for(const part of clock.confirm(mono))Core.recordTime(s,part.ms,part.category,part.end);}
- while(Core.parentProgress(s).totals.practice<300*60000&&turns<2400){
-  if(s.activity==='mathIntro')Core.leaveMath(s,START+mono);
+ while(Core.parentProgress(s).totals.practice<420*60000&&turns<3000){
+  if(s.activity==='mathIntro'){
+   Core.startMath(s,START+mono);
+   for(let i=0;i<10;i++){for(let j=0;j<6;j++){mono+=1000;clock.sample({mono,wall:START+mono,category:'math'});}for(const part of clock.confirm(mono))Core.recordTime(s,part.ms,part.category,part.end);const q=Core.prepareMath(s);Core.answerMath(s,q.a*q.b,START+mono);Core.tickMath(s,6000,START+mono);}
+   Core.leaveMath(s,START+mono);
+  }
   if(s.activity==='summary'){Core.beginSession(s,START+mono);s.activity=s.result?'result':'battle';}
   if(s.activity==='result'){enemies.add(s.result.enemyId);Core.startBattle(s,START+mono,{strength:4,enemyId:Core.enemyChoices(s,4)[0].id});}
   const q=Core.prepareBattle(s,START+mono);if(!q)continue;
@@ -49,8 +53,8 @@ test('five hours of mixed practice spans all 200 words, seven chapters, pauses a
    s=Core.migrate(JSON.parse(JSON.stringify(s)));
   }
  }
- const p=Core.parentProgress(s);assert.equal(p.totals.practice,18000000);assert.equal(p.activeMs,18000000);assert.ok(mono>=325*60000);assert.equal(seen.size,200);assert.ok(enemies.size>=5);assert.equal(s.story.completedChapters.length,7);assert.equal(s.story.clearedAreas.length,35);assert.equal(s.story.chapterComplete,true);assert.ok(s.dragon.xp>=300);assert.equal(s.dragon.stage,0);assert.ok(s.sessions.length>=40);assert.ok(s.sessions.every(x=>x.newWords.length<=6));
+ const p=Core.parentProgress(s);assert.equal(p.totals.practice,25200000);assert.equal(p.activeMs,p.totals.practice+p.totals.math);assert.ok(mono>=445*60000);assert.equal(seen.size,200);assert.ok(enemies.size>=5);assert.equal(s.story.completedChapters.length,7);assert.equal(s.story.clearedAreas.length,35);assert.equal(s.story.chapterComplete,true);assert.ok(s.dragon.xp>=300);assert.equal(s.dragon.stage,3);assert.ok(s.sessions.length>=35);assert.ok(s.sessions.every(x=>x.newWords.length<=6));
  // Continue after a full hour and chapter completion; XP and play remain available.
- Core.beginSession(s,START+mono);Core.startBattle(s,START+mono);const q=Core.prepareBattle(s,START+mono);q.phase='choices';const before=s.dragon.xp;Core.answerBattle(s,q.target,START+mono);assert.equal(s.dragon.xp,before+1);
- console.log('Five-hour simulation:',JSON.stringify({turns,words:seen.size,enemies:enemies.size,areas:s.story.clearedAreas.length,activeMinutes:p.activeMs/60000,wallMinutes:mono/60000,xp:s.dragon.xp,challenges:s.sessions.length}));
+ Core.beginSession(s,START+mono);Core.startBattle(s,START+mono);const q=Core.prepareBattle(s,START+mono);q.phase='choices';const before=s.dragon.xp;Core.answerBattle(s,q.target,START+mono);assert.equal(s.dragon.xp,before+3*Core.XP_MULTIPLIER);
+ console.log('Extended progression simulation:',JSON.stringify({turns,words:seen.size,enemies:enemies.size,areas:s.story.clearedAreas.length,activeMinutes:p.activeMs/60000,wallMinutes:mono/60000,xp:s.dragon.xp,challenges:s.sessions.length}));
 });

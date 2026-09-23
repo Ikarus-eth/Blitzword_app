@@ -1,0 +1,755 @@
+{
+  "assumptions": {
+    "readingAttemptSeconds": 24,
+    "readingAccuracy": 0.9,
+    "mathAnswerSeconds": 6,
+    "mathAccuracy": 0.9,
+    "speed": "Walk",
+    "enemyHealth": 6,
+    "multiplier": 1.75
+  },
+  "results": [
+    {
+      "minutes": 15,
+      "days": 70,
+      "growth": [
+        {
+          "day": 14,
+          "stage": 1,
+          "xp": 3041.25
+        },
+        {
+          "day": 42,
+          "stage": 2,
+          "xp": 8968
+        },
+        {
+          "day": 70,
+          "stage": 3,
+          "xp": 13451.5
+        }
+      ],
+      "daily": [
+        {
+          "day": 1,
+          "xp": 210,
+          "earned": 210,
+          "chapters": 1,
+          "words": 6
+        },
+        {
+          "day": 2,
+          "xp": 404.25,
+          "earned": 194.25,
+          "chapters": 2,
+          "words": 10
+        },
+        {
+          "day": 3,
+          "xp": 619.5,
+          "earned": 215.25,
+          "chapters": 3,
+          "words": 17
+        },
+        {
+          "day": 4,
+          "xp": 868.5,
+          "earned": 249,
+          "chapters": 5,
+          "words": 27
+        },
+        {
+          "day": 5,
+          "xp": 1070.75,
+          "earned": 202.25,
+          "chapters": 6,
+          "words": 31
+        },
+        {
+          "day": 6,
+          "xp": 1305,
+          "earned": 234.25,
+          "chapters": 7,
+          "words": 37
+        },
+        {
+          "day": 7,
+          "xp": 1539,
+          "earned": 234,
+          "chapters": 8,
+          "words": 42
+        },
+        {
+          "day": 8,
+          "xp": 1745.25,
+          "earned": 206.25,
+          "chapters": 9,
+          "words": 46
+        },
+        {
+          "day": 9,
+          "xp": 1975.5,
+          "earned": 230.25,
+          "chapters": 10,
+          "words": 52
+        },
+        {
+          "day": 10,
+          "xp": 2236.5,
+          "earned": 261,
+          "chapters": 12,
+          "words": 62
+        },
+        {
+          "day": 11,
+          "xp": 2447.75,
+          "earned": 211.25,
+          "chapters": 13,
+          "words": 67
+        },
+        {
+          "day": 12,
+          "xp": 2634,
+          "earned": 186.25,
+          "chapters": 14,
+          "words": 70
+        },
+        {
+          "day": 13,
+          "xp": 2851,
+          "earned": 217,
+          "chapters": 15,
+          "words": 76
+        },
+        {
+          "day": 14,
+          "xp": 3041.25,
+          "earned": 190.25,
+          "chapters": 16,
+          "words": 79
+        },
+        {
+          "day": 15,
+          "xp": 3273.5,
+          "earned": 232.25,
+          "chapters": 18,
+          "words": 87
+        },
+        {
+          "day": 16,
+          "xp": 3481.5,
+          "earned": 208,
+          "chapters": 19,
+          "words": 91
+        },
+        {
+          "day": 17,
+          "xp": 3719.75,
+          "earned": 238.25,
+          "chapters": 20,
+          "words": 99
+        },
+        {
+          "day": 18,
+          "xp": 3934,
+          "earned": 214.25,
+          "chapters": 21,
+          "words": 105
+        },
+        {
+          "day": 19,
+          "xp": 4151,
+          "earned": 217,
+          "chapters": 22,
+          "words": 111
+        },
+        {
+          "day": 20,
+          "xp": 4367.25,
+          "earned": 216.25,
+          "chapters": 24,
+          "words": 116
+        },
+        {
+          "day": 21,
+          "xp": 4597.5,
+          "earned": 230.25,
+          "chapters": 25,
+          "words": 123
+        },
+        {
+          "day": 22,
+          "xp": 4817.5,
+          "earned": 220,
+          "chapters": 26,
+          "words": 128
+        },
+        {
+          "day": 23,
+          "xp": 5027.75,
+          "earned": 210.25,
+          "chapters": 27,
+          "words": 134
+        },
+        {
+          "day": 24,
+          "xp": 5235,
+          "earned": 207.25,
+          "chapters": 28,
+          "words": 137
+        },
+        {
+          "day": 25,
+          "xp": 5461,
+          "earned": 226,
+          "chapters": 30,
+          "words": 142
+        },
+        {
+          "day": 26,
+          "xp": 5674.25,
+          "earned": 213.25,
+          "chapters": 30,
+          "words": 147
+        },
+        {
+          "day": 27,
+          "xp": 5870.5,
+          "earned": 196.25,
+          "chapters": 32,
+          "words": 151
+        },
+        {
+          "day": 28,
+          "xp": 6074.5,
+          "earned": 204,
+          "chapters": 33,
+          "words": 155
+        },
+        {
+          "day": 29,
+          "xp": 6265.75,
+          "earned": 191.25,
+          "chapters": 34,
+          "words": 159
+        },
+        {
+          "day": 30,
+          "xp": 6496,
+          "earned": 230.25,
+          "chapters": 35,
+          "words": 167
+        },
+        {
+          "day": 31,
+          "xp": 6753,
+          "earned": 257,
+          "chapters": 35,
+          "words": 174
+        },
+        {
+          "day": 32,
+          "xp": 7007.25,
+          "earned": 254.25,
+          "chapters": 35,
+          "words": 182
+        },
+        {
+          "day": 33,
+          "xp": 7250.5,
+          "earned": 243.25,
+          "chapters": 35,
+          "words": 189
+        },
+        {
+          "day": 34,
+          "xp": 7463.5,
+          "earned": 213,
+          "chapters": 35,
+          "words": 190
+        },
+        {
+          "day": 35,
+          "xp": 7694.75,
+          "earned": 231.25,
+          "chapters": 35,
+          "words": 191
+        },
+        {
+          "day": 36,
+          "xp": 7901,
+          "earned": 206.25,
+          "chapters": 35,
+          "words": 191
+        },
+        {
+          "day": 37,
+          "xp": 8086,
+          "earned": 185,
+          "chapters": 35,
+          "words": 191
+        },
+        {
+          "day": 38,
+          "xp": 8258.25,
+          "earned": 172.25,
+          "chapters": 35,
+          "words": 191
+        },
+        {
+          "day": 39,
+          "xp": 8412.5,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 191
+        },
+        {
+          "day": 40,
+          "xp": 8605.5,
+          "earned": 193,
+          "chapters": 35,
+          "words": 195
+        },
+        {
+          "day": 41,
+          "xp": 8795.75,
+          "earned": 190.25,
+          "chapters": 35,
+          "words": 198
+        },
+        {
+          "day": 42,
+          "xp": 8968,
+          "earned": 172.25,
+          "chapters": 35,
+          "words": 199
+        },
+        {
+          "day": 43,
+          "xp": 9149,
+          "earned": 181,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 44,
+          "xp": 9311.25,
+          "earned": 162.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 45,
+          "xp": 9478.5,
+          "earned": 167.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 46,
+          "xp": 9643.5,
+          "earned": 165,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 47,
+          "xp": 9810.75,
+          "earned": 167.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 48,
+          "xp": 9965,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 49,
+          "xp": 10122,
+          "earned": 157,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 50,
+          "xp": 10286.25,
+          "earned": 164.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 51,
+          "xp": 10440.5,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 52,
+          "xp": 10601.5,
+          "earned": 161,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 53,
+          "xp": 10755.75,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 54,
+          "xp": 10920,
+          "earned": 164.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 55,
+          "xp": 11077,
+          "earned": 157,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 56,
+          "xp": 11231.25,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 57,
+          "xp": 11390.5,
+          "earned": 159.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 58,
+          "xp": 11551.5,
+          "earned": 161,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 59,
+          "xp": 11710.75,
+          "earned": 159.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 60,
+          "xp": 11865,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 61,
+          "xp": 12022,
+          "earned": 157,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 62,
+          "xp": 12186.25,
+          "earned": 164.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 63,
+          "xp": 12340.5,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 64,
+          "xp": 12501.5,
+          "earned": 161,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 65,
+          "xp": 12655.75,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 66,
+          "xp": 12820,
+          "earned": 164.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 67,
+          "xp": 12977,
+          "earned": 157,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 68,
+          "xp": 13131.25,
+          "earned": 154.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 69,
+          "xp": 13290.5,
+          "earned": 159.25,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 70,
+          "xp": 13451.5,
+          "earned": 161,
+          "chapters": 35,
+          "words": 200
+        }
+      ],
+      "totalXP": 13451.5,
+      "chapters": 35,
+      "campaigns": 7,
+      "readingAttempts": 2335,
+      "mathAttempts": 1044
+    },
+    {
+      "minutes": 45,
+      "days": 28,
+      "growth": [
+        {
+          "day": 5,
+          "stage": 1,
+          "xp": 3567.5
+        },
+        {
+          "day": 13,
+          "stage": 2,
+          "xp": 9234.5
+        },
+        {
+          "day": 21,
+          "stage": 3,
+          "xp": 13642.5
+        }
+      ],
+      "daily": [
+        {
+          "day": 1,
+          "xp": 713.5,
+          "earned": 713.5,
+          "chapters": 3,
+          "words": 22
+        },
+        {
+          "day": 2,
+          "xp": 1377,
+          "earned": 663.5,
+          "chapters": 7,
+          "words": 37
+        },
+        {
+          "day": 3,
+          "xp": 2065.5,
+          "earned": 688.5,
+          "chapters": 10,
+          "words": 53
+        },
+        {
+          "day": 4,
+          "xp": 2794,
+          "earned": 728.5,
+          "chapters": 14,
+          "words": 75
+        },
+        {
+          "day": 5,
+          "xp": 3567.5,
+          "earned": 773.5,
+          "chapters": 18,
+          "words": 95
+        },
+        {
+          "day": 6,
+          "xp": 4306,
+          "earned": 738.5,
+          "chapters": 21,
+          "words": 110
+        },
+        {
+          "day": 7,
+          "xp": 5075.5,
+          "earned": 769.5,
+          "chapters": 25,
+          "words": 128
+        },
+        {
+          "day": 8,
+          "xp": 5775,
+          "earned": 699.5,
+          "chapters": 28,
+          "words": 141
+        },
+        {
+          "day": 9,
+          "xp": 6516.5,
+          "earned": 741.5,
+          "chapters": 32,
+          "words": 160
+        },
+        {
+          "day": 10,
+          "xp": 7292,
+          "earned": 775.5,
+          "chapters": 35,
+          "words": 182
+        },
+        {
+          "day": 11,
+          "xp": 8012.5,
+          "earned": 720.5,
+          "chapters": 35,
+          "words": 194
+        },
+        {
+          "day": 12,
+          "xp": 8661,
+          "earned": 648.5,
+          "chapters": 35,
+          "words": 199
+        },
+        {
+          "day": 13,
+          "xp": 9234.5,
+          "earned": 573.5,
+          "chapters": 35,
+          "words": 199
+        },
+        {
+          "day": 14,
+          "xp": 9836,
+          "earned": 601.5,
+          "chapters": 35,
+          "words": 199
+        },
+        {
+          "day": 15,
+          "xp": 10400.5,
+          "earned": 564.5,
+          "chapters": 35,
+          "words": 199
+        },
+        {
+          "day": 16,
+          "xp": 10937,
+          "earned": 536.5,
+          "chapters": 35,
+          "words": 199
+        },
+        {
+          "day": 17,
+          "xp": 11482.5,
+          "earned": 545.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 18,
+          "xp": 12028,
+          "earned": 545.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 19,
+          "xp": 12564.5,
+          "earned": 536.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 20,
+          "xp": 13105,
+          "earned": 540.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 21,
+          "xp": 13642.5,
+          "earned": 537.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 22,
+          "xp": 14184,
+          "earned": 541.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 23,
+          "xp": 14716.5,
+          "earned": 532.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 24,
+          "xp": 15253,
+          "earned": 536.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 25,
+          "xp": 15790.5,
+          "earned": 537.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 26,
+          "xp": 16332,
+          "earned": 541.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 27,
+          "xp": 16864.5,
+          "earned": 532.5,
+          "chapters": 35,
+          "words": 200
+        },
+        {
+          "day": 28,
+          "xp": 17401,
+          "earned": 536.5,
+          "chapters": 35,
+          "words": 200
+        }
+      ],
+      "totalXP": 17401,
+      "chapters": 35,
+      "campaigns": 7,
+      "readingAttempts": 2800,
+      "mathAttempts": 1260
+    }
+  ]
+}

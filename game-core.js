@@ -5,20 +5,21 @@
   'use strict';
   const DAY = 86400000;
   const GAPS = [1,3,7,14,30];
-  const TARGET_MS = 7 * 60 * 1000;
+  const TARGET_MS = 10 * 60 * 1000;
+  const XP_MULTIPLIER = 1.75, DAILY_XP = 20;
   const byWord = Object.fromEntries([...Content.words,...Content.legacyWords].map(item => [item.w,item]));
   const iso = now => new Date(now).toISOString();
   const copy = value => JSON.parse(JSON.stringify(value));
   function fresh() {
-    return {schemaVersion:2, revision:0, nextId:1,
+    return {schemaVersion:2, xpRulesVersion:1, chapterRulesVersion:1, revision:0, nextId:1,
       profile:{name:'',age:7,gender:'boy',heroClass:'Mage',heroIndex:0},
       assessment:{done:false,records:[],level:0,exposure:1800,lastAxis:'exposure',progress:null},
       learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[]},
       campaign:{wins:0,checkpointWins:0,enemyStrength:3,battleRecords:[]},
-      dragon:{awards:{},stage:0,xp:null},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false},
+      dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{}},
       timing:{version:1,days:{},firstPracticeAt:null},
       math:{best:null,winStreak:0,round:null,records:[]},
-      rewards:{shield:false,readingWins:0,shieldEarnedAt:null},
+      rewards:{shield:false,readingWins:0,shieldEarnedAt:null,xpDays:{},speedHistory:{}},
       settings:{selfPaced:false,speed:null,soundscape:true}, activity:'route', screen:'setup', battle:null,
       teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false};
   }
@@ -32,6 +33,7 @@
     // Convert the pending UI only. Keep time, factors, accepted answers and old PRs.
     if(s.math.round){
       const r=s.math.round,q=r.question;
+      r.areaId ||= s.battle?.areaId;
       if(!r.inputMode)r.previousInputMode='typed';
       r.inputMode='choice';
       if(q&&!q.options){q.options=mathChoices(q.a,q.b);if(q.phase==='answer'&&q.input){q.legacyInput=q.input;q.input='';}}
@@ -72,6 +74,23 @@
       if(dates.length)s.timing.firstPracticeAt=dates[0];
     }
     if(s.story.chapterComplete&&!s.story.completedChapters.includes('chapter-1'))s.story.completedChapters.push('chapter-1');
+    s.story.chapters ||= {};s.story.dailyChapters ||= {};s.rewards.xpDays ||= {};s.rewards.speedHistory ||= {};
+    if(s.battle&&s.battle.xpEarned===undefined){
+      const reading=s.campaign.battleRecords.filter(r=>r.battleId===s.battle.id).reduce((n,r)=>n+(r.xpEarned||0),0);
+      const math=s.math.round?.battleId===s.battle.id?s.math.round.correct:s.math.records.filter(r=>r.battleId===s.battle.id).reduce((n,r)=>n+(r.xpEarned??r.correct),0);
+      s.battle.xpEarned=reading+math;if(s.result?.battleId===s.battle.id)s.result.xpEarned=s.battle.xpEarned;
+    }
+    s.dragon.name=cleanDragonName(s.dragon.name)||'Pip';s.dragon.named=s.dragon.named===true;
+    if(old.xpRulesVersion!==1){
+      // Preserve existing totals and already-earned forms; never reprice historical answers.
+      for(const w of Object.values(s.learning.words))if(w.independentCorrect>=3){w.securedAt=w.lastSeenAt||iso(Date.now());w.wordXPClaimed=true;}
+      s.xpRulesVersion=1;
+    }
+    if(old.chapterRulesVersion!==1){
+      // Completed fields are grandfathered. Unattributable old minutes are not fabricated.
+      s.chapterRulesVersion=1;
+      for(const a of Content.areas){const wins=Math.max(0,Math.min(2,s.campaign.wins-(a.checkpoint-2)));if(wins&&!s.story.clearedAreas.includes(a.id))chapterState(s,a.id).wins=wins;}
+    }
     syncProgress(s);
     return s;
   }
@@ -94,16 +113,58 @@
     s.activity = 'summary';
   }
   function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function bonusProgress(s,now=Date.now()){
+    const d=s.timing.days[dayKey(now)]||{},activeMs=(d.practice||0)+(d.math||0);
+    return {activeMs,active:activeMs>=TARGET_MS,multiplier:activeMs>=TARGET_MS?XP_MULTIPLIER:1,remainingMs:Math.max(0,TARGET_MS-activeMs),chapters:s.story.dailyChapters?.[dayKey(now)]||0};
+  }
+  function awardXP(s,base,kind,now,{boost=false}={}){
+    const extra=boost&&bonusProgress(s,now).active?base*(XP_MULTIPLIER-1):0,amount=base+extra;
+    s.dragon.xp+=amount;
+    const day=s.rewards.xpDays[dayKey(now)] ||= {total:0,boost:0};day.total+=amount;day.boost+=extra;day[kind]=(day[kind]||0)+base;
+    if(s.battle&&!s.battle.demo)s.battle.xpEarned=(s.battle.xpEarned||0)+amount;
+    return amount;
+  }
+  function cleanDragonName(name){return typeof name==='string'?Array.from(name.replace(/[\u0000-\u001f\u007f<>]/g,'').replace(/\s+/g,' ').trim()).slice(0,18).join(''):'';}
+  function nameDragon(s,name){if(s.dragon.stage<1)return false;const clean=cleanDragonName(name);if(!clean)return false;s.dragon.name=clean;s.dragon.named=true;return true;}
+  function chapterState(s,areaId){return s.story.chapters[areaId] ||= {activeMs:0,wins:0,duels:0,attempts:0,correct:0};}
+  function activeChapterState(s){return s.battle?.reviewId?s.story.review: s.battle?.areaId?chapterState(s,s.battle.areaId):null;}
+  function completeReviewChapter(s,now){
+    const p=s.story.review;if(!s.battle?.reviewId||!p||p.completedAt||!s.battle.resolved||p.activeMs<TARGET_MS||p.wins<3||p.duels<1||s.math.round&&s.math.round.status!=='result')return;
+    p.completedAt=iso(now);s.story.dailyChapters[dayKey(now)]=(s.story.dailyChapters[dayKey(now)]||0)+1;
+    const accuracy=p.attempts?p.correct/p.attempts:0;p.accuracyXP=p.attempts>=10?(accuracy>=.9?10:accuracy>=.8?5:0):0;
+    if(p.accuracyXP)awardXP(s,p.accuracyXP,'accuracy',now);
+    if(s.result){s.result.reviewJustComplete=true;s.result.xpEarned=s.battle.xpEarned||0;}
+  }
+  function readingXP(s,q,rec,w,now){
+    const key=String(q.exposureMs),history=s.rewards.speedHistory[key] ||= [];
+    if(!rec.supported){history.push(rec.correct);if(history.length>20)history.shift();}
+    if(!rec.correct||rec.supported)return 0;
+    const fast=!!w.securedAt&&q.exposureMs!==null&&q.exposureMs<=950&&rec.timingValid&&history.length===20&&history.filter(Boolean).length>=18;
+    let xp=awardXP(s,3+(fast?1:0),'answers',now,{boost:true});rec.speedXP=fast?1:0;
+    if(!w.wordXPClaimed){
+      const trail=w.xpEvidence ||= [];
+      if(!trail.length||s.learning.sequence-trail.at(-1).sequence>=3)trail.push({sequence:s.learning.sequence,battleId:s.battle.id});
+      if(trail.length>3)trail.shift();
+      if(trail.length===3&&new Set(trail.map(x=>x.battleId)).size>=2){w.wordXPClaimed=true;w.securedAt=iso(now);xp+=awardXP(s,8,'words',now);rec.newWordXP=8;}
+    }else if(!w.retentionXPClaimed&&rec.retentionCheck&&now-Date.parse(w.securedAt)>=DAY&&(!w.lastHelpAt||now-Date.parse(w.lastHelpAt)>=DAY)){
+      w.retentionXPClaimed=true;xp+=awardXP(s,4,'retention',now);rec.retentionXP=4;
+    }
+    return xp;
+  }
   function recordTime(s,ms,category,now){
     if(!Number.isFinite(ms)||ms<=0||!['practice','math','assessment','demo','idle'].includes(category))return;
     let cursor=now-ms;
     while(cursor<now){
       const d=new Date(cursor),next=new Date(d.getFullYear(),d.getMonth(),d.getDate()+1).getTime(),end=Math.min(now,next);
-      const day=s.timing.days[dayKey(cursor)] ||= {practice:0,math:0,assessment:0,demo:0,idle:0};day[category]=(day[category]||0)+end-cursor;cursor=end;
+      const day=s.timing.days[dayKey(cursor)] ||= {practice:0,math:0,assessment:0,demo:0,idle:0};
+      const before=(day.practice||0)+(day.math||0);day[category]=(day[category]||0)+end-cursor;
+      if(['practice','math'].includes(category)&&before<TARGET_MS&&(day.practice||0)+(day.math||0)>=TARGET_MS)awardXP(s,DAILY_XP,'daily',end-1);
+      cursor=end;
     }
     if(category==='practice'||category==='math'){
       if(!s.timing.firstPracticeAt)s.timing.firstPracticeAt=iso(now-ms);
       if(s.session&&!s.session.completedAt)s.session.elapsedMs+=ms;
+      if(s.battle&&!s.battle.demo&&!s.battle.finalEncounter&&(s.battle.reviewId||!s.story.clearedAreas.includes(s.battle.areaId)))activeChapterState(s).activeMs+=ms;
     }
     syncProgress(s,now);
   }
@@ -150,7 +211,12 @@
   function selectPracticeWord(s,now) {
     const L=s.learning, recent=L.recent.slice(-2);
     const accessible=Content.areas.filter(a=>s.story.clearedAreas.includes(a.id)||storyProgress(s).areas.some(p=>p.id===a.id&&p.status==='current'));
-    const allowed=new Set(accessible.flatMap(a=>a.words)),pool=Content.words.filter(item=>allowed.has(item.w));
+    const allowed=new Set(accessible.flatMap(a=>a.words));
+    const current=storyProgress(s).areas.find(a=>a.status==='current');
+    const oldDue=Content.words.filter(item=>allowed.has(item.w)&&!current?.words.includes(item.w)&&L.words[item.w].introducedAt&&L.words[item.w].dueAt<=now&&!recent.includes(item.w)&&L.sequence>=L.words[item.w].eligibleAfter).sort((a,b)=>L.words[a.w].lastSequence-L.words[b.w].lastSequence);
+    // Reserve two of three turns for the current field so old reviews cannot block a new chapter indefinitely.
+    if(current&&L.sequence%3===2&&oldDue.length)return oldDue[0];
+    const pool=Content.words.filter(item=>current?current.words.includes(item.w):allowed.has(item.w));
     const eligible=item => !recent.includes(item.w) && L.sequence >= L.words[item.w].eligibleAfter;
     const introduced=pool.filter(item => L.words[item.w].introducedAt);
     const existing=introduced.filter(eligible).sort((a,b)=>L.words[a.w].lastSequence-L.words[b.w].lastSequence);
@@ -190,32 +256,37 @@
       nextCheckpoint:s.campaign.wins-s.campaign.checkpointWins};
   }
   function areaProgress(s,area) {
-    const total=area.words.length;
+    const total=area.words.length,p=chapterState(s,area.id),complete=s.story.clearedAreas.includes(area.id);
     return {introduced:area.words.filter(word=>s.learning.words[word]?.introducedAt).length,
       reliable:area.words.filter(word=>(s.learning.words[word]?.practiceSuccesses||0)>=2).length,
-      required:Math.ceil(total*.8),total,
-      wins:Math.max(0,Math.min(2,s.campaign.wins-(area.checkpoint-2))),
-      secured:s.campaign.checkpointWins>=area.checkpoint};
+      required:Math.ceil(total*.8),total,wins:p.wins,secured:p.wins>=3,activeMs:p.activeMs,duels:p.duels,
+      complete,remainingMs:Math.max(0,TARGET_MS-p.activeMs)};
   }
   function dragonProgress(s,now=Date.now()){
     const xp=s.dragon.xp||0,stage=s.dragon.stage,next=Content.dragonStages[stage+1]||null;
     const activeMs=Object.values(s.timing.days).reduce((sum,d)=>sum+(d.practice||0)+(d.math||0),0);
-    const elapsedDays=s.timing.firstPracticeAt?Math.max(0,(now-Date.parse(s.timing.firstPracticeAt))/DAY):0;
-    const remaining=next?Math.max(0,next.xp-xp):0,minutesRemaining=next?Math.max(0,Math.ceil((next.minMinutes*60000-activeMs)/60000)):0,daysRemaining=next?Math.max(0,Math.ceil(next.minDays-elapsedDays)):0;
-    return {xp,stage,current:Content.dragonStages[stage],next,remaining,activeMs,elapsedDays,minutesRemaining,daysRemaining,
+    return {xp,stage,current:Content.dragonStages[stage],next,remaining:next?Math.max(0,next.xp-xp):0,activeMs,
+      minutesRemaining:0,daysRemaining:0,elapsedDays:0,
       fraction:next?Math.max(0,Math.min(1,(xp-Content.dragonStages[stage].xp)/(next.xp-Content.dragonStages[stage].xp))):1};
   }
   function syncProgress(s,now=Date.now()){
-    for(let i=0;i<Content.areas.length;i++){
+    for (let i=0;i<Content.areas.length;i++){
       const area=Content.areas[i],p=areaProgress(s,area),previous=i===0||s.story.clearedAreas.includes(Content.areas[i-1].id);
-      const c=Content.chapters.findIndex(chapter=>chapter.id===area.chapterId),chapterOpen=c===0||s.story.completedChapters.includes(Content.chapters[c-1].id);
-      if(area.available&&chapterOpen&&p.total>0&&previous&&p.introduced===p.total&&p.reliable>=p.required&&p.secured&&!s.story.clearedAreas.includes(area.id))s.story.clearedAreas.push(area.id);
+      const c=Content.chapters.findIndex(chapter=>chapter.id===area.chapterId),campaignOpen=c===0||s.story.completedChapters.includes(Content.chapters[c-1].id);
+      const betweenBattles=!s.battle||s.battle.resolved||s.battle.areaId!==area.id;
+      const duelPending=s.math.round?.areaId===area.id&&s.math.round.status!=='result';
+      if(area.available&&campaignOpen&&previous&&p.total>0&&p.introduced===p.total&&p.reliable>=p.required&&p.secured&&p.activeMs>=TARGET_MS&&p.duels>=1&&betweenBattles&&!duelPending&&!p.complete){
+        s.story.clearedAreas.push(area.id);const progress=chapterState(s,area.id);progress.completedAt=iso(now);
+        s.story.dailyChapters[dayKey(now)]=(s.story.dailyChapters[dayKey(now)]||0)+1;
+        const accuracy=progress.attempts?progress.correct/progress.attempts:0;
+        progress.accuracyXP=progress.attempts>=10?(accuracy>=.9?10:accuracy>=.8?5:0):0;
+        if(progress.accuracyXP)awardXP(s,progress.accuracyXP,'accuracy',now);
+        if(s.result&&s.battle?.areaId===area.id){s.result.fieldJustComplete=area.id;s.result.xpEarned=s.battle.xpEarned||0;}
+      }
     }
-    const p=dragonProgress(s,now);
+    completeReviewChapter(s,now);
     for(let stage=s.dragon.stage+1;stage<Content.dragonStages.length;stage++){
-      const next=Content.dragonStages[stage];
-      if(p.xp>=next.xp&&p.activeMs>=next.minMinutes*60000&&p.elapsedDays>=next.minDays&&(!next.requiresChapter||s.story.chapterComplete))s.dragon.stage=stage;
-      else break;
+      if(s.dragon.xp>=Content.dragonStages[stage].xp)s.dragon.stage=stage;else break;
     }
   }
   function storyProgress(s){
@@ -234,7 +305,11 @@
     const chosen=demo?'thornling':available.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
     s.battle={id:id(s,'battle'),demo,heroHealth:3,enemyHealth:health,maxHealth:health,
       enemyId:chosen,introPending:!demo,fromAssessment,finalEncounter,chapterId:chapter.id,areaId:story.areas.find(a=>a.status==='current')?.id||story.areas.at(-1).id,xpStart:s.dragon.xp,
-      firstMistakeFree:demo,turn:0,question:null,resolved:false};
+      firstMistakeFree:demo,turn:0,question:null,resolved:false,xpEarned:0};
+    if(!demo&&story.complete){
+      if(!s.story.review||s.story.review.completedAt)s.story.review={id:id(s,'reviewChapter'),activeMs:0,wins:0,duels:0,attempts:0,correct:0};
+      s.battle.reviewId=s.story.review.id;
+    }
     if(!s.campaign.enemyHistory)s.campaign.enemyHistory=[];
     s.campaign.enemyHistory.push({battleId:s.battle.id,enemyId:chosen});
     s.campaign.enemyHistory=s.campaign.enemyHistory.slice(-12);
@@ -300,7 +375,7 @@
           w.reviewStage=Math.min(GAPS.length-1,w.reviewStage+1); w.dueAt=now+GAPS[w.reviewStage]*DAY;
         } else if (w.reviewStage<0) w.dueAt=now+15000;
       } else {
-        w.consecutiveMisses++; w.practiceSuccesses=0;
+        w.consecutiveMisses++; w.practiceSuccesses=0;w.xpEvidence=[];
         w.reviewStage=Math.max(-1,w.reviewStage-1); w.dueAt=now+60000;
         w.eligibleAfter=L.sequence+2;
         q.needsTeaching=q.isNew || w.independentCorrect===0 || w.consecutiveMisses>=2 || q.retentionDue;
@@ -311,7 +386,10 @@
       if (!rec.supported) { s.session.independent++; if (rec.correct) s.session.correct++; }
     }
     q.xpEarned=0;
-    if(!b.demo&&rec.correct&&!rec.supported){s.dragon.xp++;q.xpEarned=1;}
+    if(!b.demo){
+      const p=activeChapterState(s);if(!rec.supported){p.attempts++;if(rec.correct)p.correct++;}
+      q.xpEarned=readingXP(s,q,rec,w,now);
+    }
     const stageBefore=s.dragon.stage;syncProgress(s,now);q.grewTo=s.dragon.stage>stageBefore?s.dragon.stage:null;
     rec.xpEarned=q.xpEarned;
     if (!rec.correct) noteSupport(s,q.target,'correction',now);
@@ -353,23 +431,25 @@
     s.rewards.readingWins=victory?Math.min(3,s.rewards.readingWins+1):0;
     if (victory) { s.campaign.wins++; s.session.victories++; if (s.campaign.wins%2===0) s.campaign.checkpointWins=s.campaign.wins; }
     else s.campaign.wins=s.campaign.checkpointWins;
-    syncProgress(s);
+    if(victory&&!b.finalEncounter)activeChapterState(s).wins++;
     // The future final encounter must be explicitly designated and all areas ready.
     const chapter=Content.chapters.find(c=>c.id===(b.chapterId||'chapter-1'));
     const chapterReady=chapter.words.every(word=>s.learning.words[word]?.introducedAt)&&chapter.words.filter(word=>(s.learning.words[word]?.practiceSuccesses||0)>=2).length>=Math.ceil(chapter.words.length*.8);
     const chapterJustComplete=victory&&b.finalEncounter&&chapterReady&&Content.areas.filter(a=>a.chapterId===chapter.id).every(area=>s.story.clearedAreas.includes(area.id))&&!s.story.completedChapters.includes(chapter.id);
     if(chapterJustComplete){s.story.completedChapters.push(chapter.id);if(chapter.id==='chapter-1')s.story.chapterComplete=true;s.story.mapPending=true;syncProgress(s);}
-    const xpEarned=s.campaign.battleRecords.filter(r=>r.battleId===b.id).reduce((sum,r)=>sum+(r.xpEarned||0),0);
+    const xpEarned=b.xpEarned??s.campaign.battleRecords.filter(r=>r.battleId===b.id).reduce((sum,r)=>sum+(r.xpEarned||0),0);
     s.result={victory,strength:b.maxHealth,battleId:b.id,enemyId:b.enemyId||'thornling',chapterComplete:s.story.chapterComplete,chapterJustComplete,xpEarned}; s.activity='result';
-    if(victory&&s.math.winStreak%3===0){
-      s.math.round={id:id(s,'math'),battleId:b.id,enemyId:b.enemyId||'thornling',status:'intro',inputMode:'choice',shieldEligible:s.rewards.readingWins>=3,bestAtStart:s.math.best,target:Math.max(1,(s.math.best||0)-2),elapsedMs:0,correct:0,score:0,wrong:0,scoringVersion:2,answers:[],question:null,bag:[],recent:[]};
+    const field=activeChapterState(s);
+    if(victory&&(s.math.winStreak%3===0||(!b.finalEncounter&&field.wins>=3&&field.wins%3===0&&field.duels===0))){
+      s.math.round={id:id(s,'math'),battleId:b.id,areaId:b.areaId,enemyId:b.enemyId||'thornling',status:'intro',inputMode:'choice',shieldEligible:s.rewards.readingWins>=3,bestAtStart:s.math.best,target:Math.max(1,(s.math.best||0)-2),elapsedMs:0,correct:0,score:0,wrong:0,scoringVersion:2,answers:[],question:null,bag:[],recent:[]};
       s.activity='mathIntro';
     }else if (isSessionDue(s)) {completeSession(s,now);s.activity='result';}
+    syncProgress(s,now);if(s.result)s.result.xpEarned=b.xpEarned??xpEarned;
   }
   function startMath(s,now){
     const r=s.math.round;if(!r||r.status!=='intro')return false;
     r.scoringVersion=2;r.score=0;r.wrong=0;
-    beginSession(s,now);r.status='playing';r.startedAt=iso(now);s.activity='mathChallenge';prepareMath(s);return true;
+    beginSession(s,now);r.status='playing';r.startedAt=iso(now);r.xpStart=s.dragon.xp;s.activity='mathChallenge';prepareMath(s);return true;
   }
   function mathChoices(a,b,random=Math.random){
     const answer=a*b;
@@ -390,7 +470,7 @@
     if(!r||r.status!=='playing'||r.elapsedMs>=60000||!q||q.phase!=='answer'||!/^\d{1,3}$/.test(String(value))||!q.options?.includes(Number(value)))return null;
     const rec={id:q.id,task:'multiplication',inputMode:'choice',alternatives:[...q.options],a:q.a,b:q.b,response:Number(value),correct:Number(value)===q.a*q.b,elapsedMs:r.elapsedMs,at:iso(now)};
     q.phase='feedback';q.correct=rec.correct;q.input=String(value);r.answers.push(rec);
-    if(rec.correct){r.correct++;s.dragon.xp++;syncProgress(s,now);}
+    if(rec.correct){r.correct++;rec.xpEarned=awardXP(s,1,'math',now,{boost:true});syncProgress(s,now);}
     if(r.scoringVersion===2){rec.points=rec.correct?1:-1;r.score+=rec.points;if(!rec.correct)r.wrong++;}
     return rec;
   }
@@ -408,7 +488,10 @@
     r.shieldEarned=!!(r.beaten&&r.shieldEligible&&s.rewards.readingWins>=3&&!s.rewards.shield);
     if(r.shieldEarned){s.rewards.shield=true;s.rewards.shieldEarnedAt=iso(now);}
     s.rewards.readingWins=0;
-    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score,correct:r.correct,wrong:r.wrong||0,inputMode:r.inputMode,scoringVersion:r.scoringVersion||1,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,shieldEarned:r.shieldEarned,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});
+    if(r.areaId)activeChapterState(s).duels++;
+    syncProgress(s,now);r.xpEarned=s.dragon.xp-(r.xpStart??s.dragon.xp-r.correct);
+    if(s.result&&s.battle)s.result.xpEarned=s.battle.xpEarned??s.result.xpEarned;
+    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score,correct:r.correct,wrong:r.wrong||0,inputMode:r.inputMode,scoringVersion:r.scoringVersion||1,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,shieldEarned:r.shieldEarned,xpEarned:r.xpEarned,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});
     s.activity='mathResult';return true;
   }
   function leaveMath(s,now){
@@ -482,7 +565,7 @@
       q.phase='ready';
     }
   }
-  return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,beginSession,completeSession,addActiveTime,isSessionDue,
+  return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,bonusProgress,nameDragon,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,recordTime,parentProgress,dayKey,

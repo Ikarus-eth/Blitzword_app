@@ -1,14 +1,16 @@
 # BlitzWord
 
-Multiplication bonus: after each three consecutive reading wins, the defeated enemy offers a 60-second 1–10 times-table challenge. Saved PR, a target of PR − 2 (minimum 1), 1 XP per correct answer, and separately tracked active multiplication time are included. See [challenge behavior and tests](docs/MULTIPLICATION_CHALLENGE.md).
+Multiplication bonus: after each three consecutive reading wins, the defeated enemy offers a 60-second 1–10 times-table challenge. Saved PR, a target of PR − 2 (minimum 1), 1 XP per correct answer before the daily multiplier, and separately tracked active multiplication time are included. See [challenge behavior and tests](docs/MULTIPLICATION_CHALLENGE.md).
 
 An iPad-first English reading game. Play the current web build at https://ikarus-eth.github.io/Blitzword_app/.
 
 ## Current playable slice
 
-Setup and hero selection lead to an optional guided battle or the existing adaptive reading check. Returning players can continue their saved reading check or campaign without repeating setup. Campaign challenges aim for seven active minutes, then close the session after the enemy or hero reaches zero health. Finishing early is allowed; an unfinished fight continues in the next challenge.
+Setup and hero selection lead to an optional guided battle or the existing adaptive reading check. A battle is one enemy. A chapter is one map field and requires at least ten interaction-confirmed active minutes, three reading wins, a played number duel and its learning objectives. If the duel ends at eight minutes, another battle continues the chapter. Pause/Home/reload preserve it. A campaign is one map of five chapters; seven campaigns contain the existing 200 words. After the story, review chapters continue the daily one-chapter goal.
 
-The playable campaign contains the approved Core 200 words across seven chapters and 35 places. Each word has a fixed teaching sentence, illustration support and four-choice spelling check. A five-hour simulation covers the entire pool, all chapters, mistakes, help, pauses, reloads and continued review. Individual story duration depends on the child. See [release behavior and verification](docs/CORE200_RELEASE.md). Pip’s existing XP, active-practice-minute and elapsed-day growth requirements remain in place.
+Growth is XP-only, at 3,000 / 8,900 / 13,400 XP. The child chooses the dragon’s name on its first evolution. Correct reading earns 3 XP; new words, delayed recall, accurate chapters and reliable faster reading earn extra. At ten active minutes each day, a one-time 20 XP reward unlocks a small, static ×1.75 badge and boosted correct-answer XP for the rest of the day. Idle, menus, demo and assessment cannot earn this reward. Existing XP, forms and cleared locations are preserved. See [success XP rules and calibration](docs/SUCCESS_XP_RELEASE.md).
+
+The earlier seven-minute session and day/minute growth gates are superseded. The extended automated run verifies five-hour capacity and continues through all 35 ten-minute chapters; it is not evidence of human enjoyment. Separate deterministic pacing simulations model 15 and 45 active minutes a day. Distinct background art for every individual field and chapter story interludes remain separate outstanding work; this release retains the approved existing scenery.
 
 Home → Parents opens the parent dashboard behind an arithmetic gate. Time is confirmed by meaningful game actions. Thirty seconds without a game action auto-pauses and discards unconfirmed time; menus, results, background tabs and device sleep do not count. Older waiting-inclusive totals remain separately labelled. See `docs/ACTIVE_PLAY_RELEASE.md` for exact timing behavior and limitations.
 

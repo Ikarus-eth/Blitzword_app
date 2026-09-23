@@ -35,10 +35,10 @@ test('old completed chapters migrate without erasing progress, and a new finale 
  let s=fresh();delete s.story.completedChapters;s.story.chapterComplete=true;s.story.clearedAreas=C.areas.slice(0,5).map(a=>a.id);s.dragon.xp=98;
  s=Core.migrate(s);assert.equal(Core.currentChapter(s).id,'chapter-2');assert.equal(s.dragon.xp,98);assert.equal(s.story.clearedAreas.length,5);
  const chapter=Core.currentChapter(s);for(const word of chapter.words){s.learning.words[word].introducedAt=new Date(now).toISOString();s.learning.words[word].practiceSuccesses=2;}
- s.campaign.wins=20;s.campaign.checkpointWins=20;s=Core.migrate(s);Core.startBattle(s,now);assert.equal(s.battle.finalEncounter,true);
+ s.campaign.wins=20;s.campaign.checkpointWins=20;for(const a of C.areas.filter(a=>a.chapterId===chapter.id))Object.assign(Core.chapterState(s,a.id),{wins:3,duels:1,activeMs:600000});s=Core.migrate(s);Core.startBattle(s,now);assert.equal(s.battle.finalEncounter,true);
  s.battle.enemyHealth=0;Core.resolveBattle(s,now);assert.equal(s.story.mapPending,true);assert.equal(s.result.chapterJustComplete,true);assert.equal(Core.currentChapter(s).id,'chapter-3');
 });
 test('battle rewards sum accepted answers and cannot count duplicated delivery',()=>{
  const s=fresh();Core.startBattle(s,now);for(let i=0;i<3;i++){const q=Core.prepareBattle(s,now+i);q.phase='choices';Core.answerBattle(s,q.target,now+i);Core.answerBattle(s,q.target,now+i);}
- Core.prepareBattle(s,now+10);assert.equal(s.result.xpEarned,3);assert.equal(s.dragon.xp,3);assert.equal(s.result.victory,true);
+ Core.prepareBattle(s,now+10);assert.equal(s.result.xpEarned,9);assert.equal(s.dragon.xp,9);assert.equal(s.result.victory,true);
 });
