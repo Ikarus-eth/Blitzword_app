@@ -2,7 +2,7 @@
 window.makeReviewSave=function(scenario){
   const C=BlitzCore,s=C.migrate(C.fresh()),now=Date.now();
   if(scenario==='setup')return s;
-  s.profile={name:'Éva',age:7,gender:scenario==='heroes'?'girl':'boy',heroClass:'Archer',heroIndex:2};
+  s.profile={name:'Éva',age:7,gender:scenario==='heroes'||scenario.includes('female')?'girl':'boy',heroClass:scenario.includes('mage')?'Mage':scenario.includes('knight')?'Knight':'Archer',heroIndex:2};
   s.screen=scenario==='heroes'?'hero':'route';
   if(['route','heroes'].includes(scenario))return s;
   if(scenario==='teaching'){C.startTeaching(s,'tree','demo',now);return s;}
@@ -14,7 +14,7 @@ window.makeReviewSave=function(scenario){
     s.story.chapterComplete=true;s.story.completedChapters=['chapter-1'];
     for(const item of BlitzContent.words.slice(0,30)){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].practiceSuccesses=2;}
     s.campaign.wins=10;s.campaign.checkpointWins=10;s.dragon.xp=320;
-    C.syncProgress(s,now);
+    Object.assign(s,C.migrate(s));
   }
   C.startBattle(s,now,{strength:4});C.prepareBattle(s,now);
   if(scenario.startsWith('math-')){
@@ -24,14 +24,21 @@ window.makeReviewSave=function(scenario){
     return s;
   }
   if(scenario.startsWith('map')||scenario==='parents'){
-    if(scenario!=='map'){
+    if(scenario!=='map'&&scenario!=='map-chapter-2'){
       for(const item of BlitzContent.words.slice(0,6)){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].practiceSuccesses=2;}
       s.campaign.wins=2;s.campaign.checkpointWins=2;
       s.dragon.xp=scenario==='map-near-growth'?249:250;s.timing.firstPracticeAt=new Date(now-14*C.DAY).toISOString();C.recordTime(s,250*60000,'practice',now);
     }
     return C.migrate(s);
   }
-  if(['battle','pause'].includes(scenario))s.battle.introPending=false;
+  if(['battle','pause'].includes(scenario)||scenario.startsWith('attack-'))s.battle.introPending=false;
+  if(scenario.startsWith('attack-')){
+    for(const item of BlitzContent.words){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].familiar=true;}
+    // One real, unassisted answer produces the preview. Never mutate learner storage.
+    s.battle.question.supportReasons=[];s.battle.question.phase='choices';
+    if(scenario.includes('final'))s.battle.enemyHealth=1;
+    C.answerBattle(s,s.battle.question.target,now);
+  }
   if(['victory','retry','summary'].includes(scenario)){
     // A real core transition supplies all result fields and avoids fake controller state.
     for(const item of BlitzContent.words){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].familiar=true;}

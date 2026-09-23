@@ -13,11 +13,22 @@ let store,state,paused=true,playing=false,blocked=false,lastTick=performance.now
 const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:374,h:538},{x:1154,y:0,w:382,h:538},{x:0,y:538,w:384,h:486},{x:384,y:538,w:384,h:486},{x:768,y:630,w:384,h:370},{x:1152,y:650,w:384,h:350}];
 let spriteSerial=0;
 let selectedMapArea=null;
+const COMBAT_MS=1200;
+// Separate the original staff and gripping hand; retain the approved artwork.
+const mageRig={
+  0:{pivot:[112,234],tip:[107,102],path:'M24 25H175V193L139 209L132 263L159 538H129L110 273L87 253L78 218L93 195L25 190Z'},
+  3:{pivot:[1430,230],tip:[1453,100],path:'M1388 25H1520V179L1460 211L1454 254L1388 538H1357L1415 256L1409 218L1420 184L1371 170Z'}
+};
 function paintSprite(element,index) {
   const crop=spriteCrops[index],clip='sprite-crop-'+(++spriteSerial);
   const shape=index===1?'<polygon points="384,0 780,0 780,350 765,394 810,525 384,538"/>':index===2?'<polygon points="820,0 1154,0 1154,538 820,538 810,486 790,440 780,360"/>':`<rect x="${crop.x}" y="${crop.y}" width="${crop.w}" height="${crop.h}"/>`;
   element.dataset.sprite=String(index);element.style.backgroundImage='none';
   element.innerHTML=`<svg viewBox="${crop.x} ${crop.y} ${crop.w} ${crop.h}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><defs><clipPath id="${clip}">${shape}</clipPath></defs><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip})"/></svg>`;
+  if(element.id==='battleHeroImg'&&mageRig[index]){
+    const rig=mageRig[index],[px,py]=rig.pivot;
+    const body=`M${crop.x} ${crop.y}h${crop.w}v${crop.h}h-${crop.w}Z ${rig.path}`;
+    element.innerHTML=`<svg viewBox="${crop.x} ${crop.y} ${crop.w} ${crop.h}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:visible"><defs><clipPath id="${clip}-body"><path d="${body}" clip-rule="evenodd"/></clipPath><clipPath id="${clip}-arm"><path d="${rig.path}"/></clipPath></defs><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip}-body)"/><g transform="translate(${px} ${py})"><g class="staffArm"><g transform="translate(${-px} ${-py})"><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip}-arm)"/></g></g></g></svg>`;
+  }
 }
 function paintHero(element,index) {
   if(element.classList.contains('sceneSprite')){paintSprite(element,index);element.setAttribute('aria-label',classes[index%3]+' hero');return;}
@@ -109,7 +120,13 @@ function renderMap(){
     item.append(art,label,xp);stages.append(item);
   });save();
 }
-function cancelWork(){clearTimeout(timer);timer=null;epoch++;narrator.cancel();sound.configure({narrating:false});}
+function clearCombat(){
+  $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();
+  $('#battleHeroImg').classList.remove('attack','mageCast','heroHit','heroDefeated');
+  $('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
+  $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
+}
+function cancelWork(){clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
 function activityCategory(){
   if(!state||paused||blocked||!playing)return null;
@@ -386,14 +403,42 @@ function correctFeedback() {
   $('#feedback').textContent=supported?'Practice':'';$('#feedback').classList.toggle('show',supported);
   $('#battleScroll').classList.add('wordSuccess');
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?'Pip grew! '+Content.dragonStages[q.grewTo].name:'+'+q.xpEarned+' XP';paintPip($('#battle .battlePip'));}
-  speak(q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,1150);}});
+  speak(q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
+}
+function combatGeometry(effects){
+  const box=effects.getBoundingClientRect?.();
+  if(!box?.width||!box?.height)return null;
+  const point=(element,x,y)=>{const r=element.getBoundingClientRect();return {x:r.left-box.left+r.width*x,y:r.top-box.top+r.height*y};};
+  const hero=$('#battleHeroImg'),enemy=$('#enemyFace'),pip=$('#battle .battlePip');
+  const end=point(enemy,.5,.45),start=point(hero,.65,.45),flame=point(pip,.86,.35);
+  const rig=mageRig[heroIndex()];
+  if(rig){
+    const r=hero.getBoundingClientRect(),crop=spriteCrops[heroIndex()],scale=Math.min(r.width/crop.w,r.height/crop.h),angle=32*Math.PI/180;
+    const [px,py]=rig.pivot,dx=rig.tip[0]-px,dy=rig.tip[1]-py;
+    start.x=r.left-box.left+(r.width-crop.w*scale)/2+(px+dx*Math.cos(angle)-dy*Math.sin(angle)-crop.x)*scale;
+    start.y=r.bottom-box.top-crop.h*scale+(py+dx*Math.sin(angle)+dy*Math.cos(angle)-crop.y)*scale;
+  }
+  effects.style.setProperty('--shot-start',start.x+'px');effects.style.setProperty('--shot-end',end.x+'px');effects.style.setProperty('--shot-y',end.y+'px');
+  effects.style.setProperty('--pip-x',flame.x+'px');effects.style.setProperty('--pip-y',flame.y+'px');
+  effects.style.setProperty('--pip-distance',Math.hypot(end.x-flame.x,end.y-flame.y)+'px');
+  effects.style.setProperty('--pip-angle',Math.atan2(end.y-flame.y,end.x-flame.x)+'rad');
+  return {box,start,end};
 }
 function combatReaction(correct){
+  const q=state.battle?.question;
+  if(paused||blocked||state.activity!=='battle'||!q?.answeredAt||q.correct!==correct||q.supportReasons.length)return;
   const effects=$('#combatEffects');effects.className='combatEffects '+(correct?'heroStrike ':'enemyStrike ')+state.profile.heroClass.toLowerCase();
-  if(correct){$('#battleHeroImg').classList.add('attack');$('#enemyFace').classList.add(state.battle.enemyHealth<=0?'enemyDefeated':'enemyHit');}
+  effects.removeAttribute('style');
+  const geometry=correct?combatGeometry(effects):null;
+  if(correct&&state.profile.heroClass==='Mage'&&geometry){
+    const {box,start,end}=geometry,dx=end.x-start.x,dy=end.y-start.y;
+    const points=[0,.18,.31,.43,.58,.72,.87,1].map((t,i)=>`${start.x+dx*t},${start.y+dy*t+(i===0||i===7?0:(i%2?12:-12))}`).join(' ');
+    effects.insertAdjacentHTML('beforeend',`<svg class="castBeam" viewBox="0 0 ${box.width} ${box.height}" preserveAspectRatio="none"><polyline class="lightningGlow" points="${points}"/><polyline class="lightningCore" points="${points}"/><circle class="staffSpark" cx="${start.x}" cy="${start.y}" r="10"/></svg>`);
+  }
+  if(correct){$('#battleHeroImg').classList.add(state.profile.heroClass==='Mage'?'mageCast':'attack');$('#enemyFace').classList.add(state.battle.enemyHealth<=0?'enemyDefeated':'enemyHit');}
   else{$('#enemyFace').classList.add('enemyAttack');$('#battleHeroImg').classList.add(state.battle.heroHealth<=0?'heroDefeated':'heroHit');}
   const pip=$('#battle .battlePip');
-  if(correct&&(state.campaign.battleRecords.length%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add(state.battle.enemyHealth<=0?'pipCelebrate':'pipAssist');sound.cue('pip');}
+  if(correct&&(state.campaign.battleRecords.length%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip');}
   else if(!correct)pip.classList.add('pipDodge');
 }
 function correction(animate=false) {
@@ -450,7 +495,7 @@ function renderTeaching() {
   illustration.onload=pictureReady;
   illustration.onerror=()=>{if(token!==epoch)return;$('#lessonStatus').textContent='The picture could not load. You can listen or continue.';pictureReady();};
   illustration.hidden=!!item.crop;$('#teachAtlas').toggleAttribute('hidden',!item.crop);
-  if(item.crop){const crop=item.crop.map((v,i)=>i<2?v+4:v-8);$('#teachAtlas').setAttribute('viewBox',crop.join(' '));$('#teachAtlas').setAttribute('aria-label',item.alt);const atlas=$('#teachAtlas image');atlas.setAttribute('href',Content.teachingSource(item));atlas.setAttribute('width','1536');atlas.setAttribute('height',item.image==='core-teaching'?'2048':'1024');}
+  if(item.crop){const crop=item.crop.map((v,i)=>i<2?v+4:v-8);$('#teachAtlas').setAttribute('viewBox',crop.join(' '));$('#teachAtlas').setAttribute('aria-label',item.alt);const atlas=$('#teachAtlas image');atlas.setAttribute('href',Content.teachingSource(item));atlas.setAttribute('width','1536');atlas.setAttribute('height',item.image==='core-teaching'?'2048':'1024');$('#teachAtlas').querySelector('defs')?.remove();$('#teachAtlas').insertAdjacentHTML('afterbegin',`<defs><clipPath id="teachingCell"><rect x="${crop[0]}" y="${crop[1]}" width="${crop[2]}" height="${crop[3]}"/></clipPath></defs>`);atlas.setAttribute('clip-path','url(#teachingCell)');}
   illustration.src=Content.teachingSource(item);illustration.alt=item.alt;
   if(illustration.complete&&illustration.naturalWidth)pictureReady();
 }

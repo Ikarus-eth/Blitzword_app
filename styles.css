@@ -226,3 +226,21 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 .greenButton,.roundButton,.replay,.wordReady{background:linear-gradient(180deg,#f5e6c4,#e3ca91);color:#314b38;border:1px solid #b49a63;box-shadow:0 3px 0 #77653f66;text-shadow:none;font-family:var(--reading-font);}
 .greenButton:hover,.roundButton:hover,.replay:hover{background:#f8e9c6;filter:none}.greenButton:active,.roundButton:active,.replay:active{box-shadow:none;transform:translateY(2px)}
 .replay svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.secondaryButton{background:#eee0bd;color:#354f3b;border:1px solid #bca572;box-shadow:none}.instructionSteps>span{font-variant-emoji:text}.mapNode small{font-family:var(--reading-font)}
+
+/* Answer-locked combat: 1.2s wind-up, cast, impact and recovery. */
+.staffArm{transform-origin:0 0;transform-box:view-box}
+.mageCast .staffArm{animation:staff-cast 1.2s ease-in-out both}
+.mage.heroStrike .projectile{display:none}
+.castBeam{position:absolute;inset:0;width:100%;height:100%;overflow:visible;opacity:0;animation:staff-lightning 1.2s linear both}
+.castBeam polyline{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.lightningGlow{stroke:#e9b253;stroke-width:12;opacity:.42;filter:blur(5px)}
+.lightningCore{stroke:#fff3ba;stroke-width:3;filter:drop-shadow(0 0 4px #ffb94f)}
+.staffSpark{fill:#fff6cc;filter:drop-shadow(0 0 7px #ffd66c)}
+.heroStrike .projectile,.heroStrike .impact,.heroStrike .damageNumber,.enemyStrike .projectile,.enemyStrike .impact,.enemyStrike .damageNumber,.attack,.enemyHit,.enemyDefeated,.enemyAttack,.heroHit,.heroDefeated{animation-duration:1.2s}
+.pipStrike .pipEmber{left:var(--pip-x,38%);top:var(--pip-y,65%);bottom:auto;width:38px;height:20px;transform-origin:0 50%;rotate:var(--pip-angle,0rad);animation:pip-fire 1.2s ease-in both}
+.pipAssist{animation:pip-cast 1.2s ease-out both}.pipFinisher{filter:drop-shadow(0 0 10px #f5c565)}
+@keyframes staff-cast{0%,100%{transform:rotate(0deg)}16%{transform:rotate(-7deg)}30%,64%{transform:rotate(32deg)}82%{transform:rotate(6deg)}}
+@keyframes staff-lightning{0%,35%{opacity:0}36%,55%{opacity:1}67%,100%{opacity:0}}
+@keyframes pip-cast{0%,100%{translate:0 0;rotate:0deg}18%{translate:-5px 5px;rotate:-5deg}32%,55%{translate:0 0;rotate:0deg}75%{translate:0 -10px;rotate:4deg}}
+@keyframes pip-fire{0%,31%{opacity:0;transform:translateX(0) scale(.5)}33%{opacity:1;transform:translateX(0) scale(1)}55%{opacity:1;transform:translateX(var(--pip-distance,30vw)) scale(1.2)}65%,100%{opacity:0;transform:translateX(var(--pip-distance,30vw)) scale(2)}}
+@media(prefers-reduced-motion:reduce){.castBeam,.pipStrike .pipEmber{display:none}.mageCast .staffArm{transform:none}.pipFinisher{filter:none}}
