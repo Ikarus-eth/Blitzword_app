@@ -20,7 +20,7 @@ window.makeReviewSave=function(scenario){
     const index=scenario==='story-fox'?1:scenario==='story-sky'?34:7;
     s.story.clearedAreas=BlitzContent.areas.slice(0,index).map(a=>a.id);
     s.story.completedChapters=BlitzContent.chapters.slice(0,Math.floor(index/5)).map(c=>c.id);
-    s.dragon.name='Ember';s.dragon.named=true;s.dragon.namingPromptSeen=true;
+    s.dragon.xp=3000;s.dragon.name='Ember';s.dragon.named=true;s.dragon.namingPromptSeen=true;
     C.startBattle(s,now,{strength:4});
     if(scenario!=='map-later-chapter'){C.beginChapterStory(s,now);if(scenario!=='story-intro'){s.story.scene.introHeard=true;C.advanceChapterStory(s,now);}}
     return s;
