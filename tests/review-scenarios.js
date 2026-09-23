@@ -16,6 +16,15 @@ window.makeReviewSave=function(scenario){
     s.campaign.wins=10;s.campaign.checkpointWins=10;s.dragon.xp=320;s.story.clearedAreas=BlitzContent.areas.slice(0,5).map(a=>a.id);
     Object.assign(s,C.migrate(s));
   }
+  if(scenario.startsWith('story-')||scenario==='map-later-chapter'){
+    const index=scenario==='story-fox'?1:scenario==='story-sky'?34:7;
+    s.story.clearedAreas=BlitzContent.areas.slice(0,index).map(a=>a.id);
+    s.story.completedChapters=BlitzContent.chapters.slice(0,Math.floor(index/5)).map(c=>c.id);
+    s.dragon.name='Ember';s.dragon.named=true;s.dragon.namingPromptSeen=true;
+    C.startBattle(s,now,{strength:4});
+    if(scenario!=='map-later-chapter'){C.beginChapterStory(s,now);if(scenario!=='story-intro'){s.story.scene.introHeard=true;C.advanceChapterStory(s,now);}}
+    return s;
+  }
   C.startBattle(s,now,{strength:4});C.prepareBattle(s,now);
   if(['battle-bonus','map-bonus','math-bonus'].includes(scenario)){C.recordTime(s,25*60000,'practice',now);s.dragon.namingPromptSeen=true;}
   if(scenario==='name-dragon'){s.dragon.xp=3000;return C.migrate(s);}

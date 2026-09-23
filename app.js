@@ -80,10 +80,10 @@ function growthCaption(p){
   return Math.ceil(p.remaining)+' XP to '+dragonText(p.next.name);
 }
 function renderChapter(element,compact=false){
-  const p=Core.storyProgress(state);element.replaceChildren();
-  const title=document.createElement('span');title.className='chapterLabel';title.textContent='Campaign '+p.chapterNumber;
+  const p=Core.chapterLocation(state,state.battle?.areaId);element.replaceChildren();
+  const title=document.createElement('span');title.className='chapterLabel';title.textContent='Campaign '+p.campaignNumber+' · Chapter '+p.chapterNumber;
   const count=document.createElement('span');count.className='chapterCount';count.textContent=p.cleared+' / '+p.total+(compact?'':' chapters');
-  const track=document.createElement('span');track.className='chapterTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label','Campaign '+p.chapterNumber+' chapters completed');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.cleared));
+  const track=document.createElement('span');track.className='chapterTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label','Campaign '+p.campaignNumber+', '+p.campaign.name+': '+p.cleared+' of '+p.total+' chapters completed. Chapter '+p.chapterNumber+', '+p.area.name);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.cleared));
   const fill=document.createElement('span');fill.style.width=(100*p.cleared/p.total)+'%';track.append(fill);element.append(title,count,track);
 }
 function renderMap(){
@@ -98,13 +98,14 @@ function renderMap(){
   });
   $('#chapterCelebration').hidden=!state.story.mapPending;$('#chapterCelebration').textContent=progress.complete?'All done!':'New path!';
   const current=progress.areas.find(area=>area.status==='current')||progress.areas.filter(area=>area.available).at(-1);
+  const location=Core.chapterLocation(state,current.id);terrain.setAttribute('aria-label','Campaign '+location.campaignNumber+', '+dragonText(location.campaign.name)+' map. Chapter '+location.chapterNumber+', '+current.name);
   selectedMapArea=selectedMapArea||current.id;
   const selected=progress.areas.find(area=>area.id===selectedMapArea)||current;
   const nodes=$('#mapNodes');nodes.replaceChildren();
   progress.areas.forEach((area,i)=>{
     const button=document.createElement('button');button.className='mapNode '+area.status+(area.id===selected.id?' selected':'');
     button.style.left=`clamp(52px,${area.x}%,calc(100% - 52px))`;button.style.top=area.y+'%';button.dataset.area=area.id;
-    button.setAttribute('aria-label',area.name+', '+(area.status==='future'?'coming soon':area.status==='cleared'?'explored':area.status==='current'?'current destination':'locked'));
+    button.setAttribute('aria-label','Chapter '+(i+1)+', '+area.name+', '+(area.status==='future'?'coming soon':area.status==='cleared'?'explored':area.status==='current'?'current destination':'locked'));
     button.setAttribute('aria-pressed',String(area.id===selected.id));
     const marker=document.createElement('span');marker.className='mapMarker';marker.textContent=area.status==='cleared'?'✓':String(i+1);
     const label=document.createElement('span');label.className='mapNodeName';label.textContent=area.shortName||area.name;
@@ -113,7 +114,7 @@ function renderMap(){
   });
   const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.style.left=`clamp(54px,${Math.max(9,current.x-9)}%,calc(100% - 54px))`;hero.style.top=`clamp(82px,${current.y-3}%,calc(100% - 100px))`;
   $('#mapStory').textContent=progress.cleared+' / '+progress.total+' chapters';
-  $('#mapStory').setAttribute('aria-label',progress.cleared+' of '+progress.total+' chapters completed');
+  $('#mapStory').setAttribute('aria-label','Campaign '+location.campaignNumber+': '+progress.cleared+' of '+progress.total+' chapters completed');
   $('#mapAreaTitle').textContent=selected.shortName||selected.name;
   $('#mapAreaStatus').textContent=selected.status==='future'?'Coming soon':selected.status==='cleared'?'Trail explored':selected.status==='locked'?'Further along the trail':state.battle?.fromAssessment&&!state.battle.mapSeen?'Reading check complete · Your first chapter':'Your next story step';
   $('#mapAreaGoal').textContent=selected.status==='cleared'?selected.discovery:selected.goal;
@@ -168,7 +169,7 @@ function account(){
   }
   const q=Core.getQuestion(state);
   if(category&&category!=='math'&&q&&!q.answeredAt){if(q.phase==='word')q.wordViewedMs+=delta;if(q.phase==='choices')q.responseMs+=delta;}
-  if(category&&playClock.expired&&!document.hidden&&windowFocused)pause('idle');
+  if((category||state.activity==='chapterStory')&&playClock.expired&&!document.hidden&&windowFocused)pause('idle');
 }
 function confirmActivity(){
   account();if(paused||blocked||playClock.expired)return false;
@@ -203,7 +204,7 @@ function storageProblem(error) {
 function save(){account();try{store.save(state);return true;}catch(e){storageProblem(e);return false;}}
 function show(id) {
   $$('.screen').forEach(el=>el.classList.toggle('active',el.id===id));
-  $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge'].includes(id);
+  $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge','chapterStory'].includes(id);
   $('#homeBtn').hidden=['setup','route','campaignMap','parentDashboard'].includes(id);
   $('#backBtn').hidden=id!=='hero';
   if(!['battle','assessment'].includes(id))$('#wordReady').hidden=true;
@@ -259,8 +260,9 @@ function enter() {
 function continueAdventure() {
   if(state.session?.completedAt) {
     Core.beginSession(state,Date.now());
-    state.activity=state.math.round?mathActivity():state.teaching?'teaching':state.result?'result':state.battle&&!state.battle.resolved?'battle':'route';
+    state.activity=state.story.scene?'chapterStory':state.math.round?mathActivity():state.teaching?'teaching':state.result?'result':state.battle&&!state.battle.resolved?'battle':'route';
   }
+  if(state.story.scene)state.activity='chapterStory';
   if(state.activity==='route') {
     if(state.math.round)state.activity=mathActivity();
     else if(state.handoff)state.activity='handoff';
@@ -299,12 +301,14 @@ function renderActivity() {
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge');
   $('#combatEffects').className='combatEffects';$('#battle').classList.remove('correcting');
   $('#encounterIntro').hidden=true;$('#assessmentIntro').hidden=true;
+  if(state.activity==='chapterStory'){renderChapterStory();return;}
   if(state.activity.startsWith('math')){renderMath();return;}
   if(state.story.mapPending){selectedMapArea=null;home();return;}
   if(state.activity==='handoff'){renderHandoff();return;}
   if(state.activity==='battle') {
     if(!state.battle)Core.startBattle(state,Date.now());
     if(state.battle.fromAssessment&&!state.battle.mapSeen){home();return;}
+    if(Core.beginChapterStory(state,Date.now())){if(save())renderChapterStory();return;}
     if(state.battle.introPending){renderEncounter();return;}
     if(!state.battle.question||state.battle.question.phase==='done')Core.prepareBattle(state,Date.now());
     if(!save())return;
@@ -511,6 +515,36 @@ function renderEncounter(){
   paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
   speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+'A '+Content.enemyAt(enemy.family).name+' is on the path. Ready to battle?');save();
 }
+function renderChapterStory(){
+  const scene=state.story.scene;if(!scene){state.activity='battle';renderActivity();return;}
+  show('chapterStory');
+  const place=Core.chapterLocation(state,scene.areaId),content=Content.chapterStories[scene.areaId];
+  $('#storyLocation').textContent='Campaign '+place.campaignNumber+' · Chapter '+place.chapterNumber;
+  $('#storyTitle').textContent=place.area.name;
+  $('#storyPicture').setAttribute('aria-label',dragonText('Pip and your hero at ')+place.area.name);
+  const crop=content.scene===null?[0,0,1536,1024]:[(content.scene%3)*512,Math.floor(content.scene/3)*512,512,512];
+  $('#storyBackdrop').setAttribute('viewBox',crop.join(' '));
+  $('#storyLandscape').setAttribute('href',content.scene===null?'assets/forest-clearing.webp':'assets/chapter-scenes.webp');
+  paintHero($('#storyHero'),heroIndex());paintPip($('#storyPip'));
+  const reading=scene.phase==='read';$('#chapterStory').dataset.phase=scene.phase;
+  $('#storyNarration').hidden=reading;$('#storyNarration').textContent=dragonText(content.narration);
+  $('#storySentence').hidden=!reading;$('#storySentence').textContent=dragonText(content.sentence);
+  $('#storyPrompt').textContent=reading?'Your turn to read':'A new chapter';
+  $('#storyNext').textContent=reading?'I read it':'Read';$('#storyNext').disabled=!reading&&!scene.introHeard;
+  $('#storyListen').setAttribute('aria-label',reading?'Listen to the sentence':'Listen to the story');
+  if(!reading&&!scene.introHeard)narrateChapterStory();
+}
+function narrateChapterStory(){
+  const scene=state.story.scene;if(!scene||paused||blocked)return;
+  const content=Content.chapterStories[scene.areaId],reading=scene.phase==='read';
+  if(reading){scene.helped=true;if(!save())return;}
+  $('#storyNext').disabled=true;
+  speak(reading?content.sentence:content.narration,{onEnd:()=>{
+    if(state.story.scene!==scene)return;
+    if(!reading){scene.introHeard=true;if(!save())return;}
+    $('#storyNext').disabled=false;
+  }});
+}
 function renderTeaching() {
   show('teaching');$('#wordReady').hidden=true;
   const item={...Core.byWord[state.teaching.target]};item.sentence=dragonText(item.sentence);const sentence=$('#teachSentence');sentence.replaceChildren();
@@ -597,10 +631,10 @@ function syncSound(){
   if(!state)return;
   const q=Core.getQuestion(state),reading=['battle','assessment'].includes(state.screen)&&q&&!q.answeredAt;
   const screen=state.screen,volumes=BlitzSound.settings(state.settings.audio);
-  const scene=screen==='battle'?'battle':screen==='mathChallenge'?'duel':screen==='result'?(state.result?.victory?'victory':'defeat'):screen==='mathResult'?(state.math.round?.beaten?'victory':'defeat'):['teaching','handoff','mathIntro'].includes(screen)?'transition':'home';
+  const scene=screen==='battle'?'battle':screen==='mathChallenge'?'duel':screen==='result'?(state.result?.victory?'victory':'defeat'):screen==='mathResult'?(state.math.round?.beaten?'victory':'defeat'):['teaching','handoff','mathIntro','chapterStory'].includes(screen)?'transition':'home';
   sound.configure({enabled:state.settings.soundscape!==false,scene,volumes,
     suspended:blocked||document.hidden||!windowFocused||(playing&&paused),
-    quiet:!!reading||screen==='assessment'||screen==='parentDashboard'||screen==='teaching'});
+    quiet:!!reading||screen==='assessment'||screen==='parentDashboard'||screen==='teaching'||screen==='chapterStory'});
   narrator.configure?.({volume:volumes.speech});
 }
 function populateSoundSettings(){
@@ -720,6 +754,8 @@ $('#previewVoice').onclick=()=>speak('Pip is on the rock.');
 window.speechSynthesis?.addEventListener('voiceschanged',()=>{if(!$('#pausePanel').hidden)populateVoices();});
 $('#teachReplay').onclick=()=>{if(!confirmActivity())return;const teaching=state.teaching;Core.startTeaching(state,teaching.target,teaching.returnTo,Date.now(),{replay:true});if(save())narrateTeaching();};
 $('#teachContinue').onclick=()=>{if(!confirmActivity())return;Core.leaveTeaching(state,Date.now());if(save())advanceBattle();};
+$('#storyListen').onclick=()=>{if(confirmActivity())narrateChapterStory();};
+$('#storyNext').onclick=()=>{if(!confirmActivity()||$('#storyNext').disabled)return;cancelWork();if(Core.advanceChapterStory(state,Date.now())&&save())renderActivity();};
 $('#resultNext').onclick=home;
 $('#anotherChallenge').onclick=continueAdventure;$('#doneToday').onclick=home;
 $('#retrySave').onclick=()=>{try{store.save(state);blocked=false;$('#saveNotice').hidden=true;if(playing)showPausePanel();else if(state.screen==='route')home();else show(state.screen);}catch(e){storageProblem(e);}};

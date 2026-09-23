@@ -11,8 +11,8 @@ function boot(saved,options={}){
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.selected=option.value===value;}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>true,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
- let speechEnd=null;
- const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){}},confirm:()=>false,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ let speechEnd=null;const speechTexts=[];
+ const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){}},confirm:()=>false,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -22,7 +22,7 @@ function boot(saved,options={}){
  function resume(){const map=get('campaignMap').classList.contains('active');assert.ok(map||get('route').classList.contains('active'));click(get(map?'mapContinue':'continueAdventure'));}
  function advance(ms,suspended=false){if(suspended){now+=ms;heartbeat();}else for(let elapsed=0;elapsed<ms;elapsed+=1000){now+=Math.min(1000,ms-elapsed);heartbeat();}}
  function visibility(hidden){Object.defineProperty(document,'hidden',{value:hidden,configurable:true});document.dispatchEvent(new window.Event('visibilitychange'));}
- return {state,get,click,tick,until,ready,resume,advance,visibility,document,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
+ return {state,get,click,tick,until,ready,resume,advance,visibility,document,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
 }
 // A scored hit waits for narration, adds no extra damage, and cancels on Home/pause.
 for(const gender of ['boy','girl'])for(const heroClass of ['Mage','Knight','Archer']){
@@ -274,4 +274,41 @@ for(const victory of [true,false]){
  const reloaded=boot(ui.state());reloaded.resume();reloaded.click(reloaded.get('pauseBtn'));
  assert.equal(reloaded.get('grownupSettings').querySelector('[data-audio-volume="music"]').value,'25');assert.equal(reloaded.get('grownupSettings').querySelector('[data-audio-quiet]').checked,true);
  console.log('PASS separate audio controls and quiet preset persist without changing earned XP');
+}
+
+function storySave(index=7){
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
+ s.story.clearedAreas=Content.areas.slice(0,index).map(a=>a.id);s.story.completedChapters=Content.chapters.slice(0,Math.floor(index/5)).map(c=>c.id);
+ Core.startBattle(s,Date.UTC(2026,8,22));return s;
+}
+{
+ let ui=boot(storySave(),{heldNarration:true});ui.resume();
+ assert.equal(ui.state().activity,'chapterStory');assert.equal(ui.get('pauseBtn').hidden,false);assert.equal(ui.get('storyNext').disabled,true);
+ assert.equal(ui.get('storySentence').hidden,true);assert.equal(ui.speechTexts.length,1);const stale=ui.pendingSpeech();
+ ui.click(ui.get('pauseBtn'));stale();assert.equal(ui.state().story.scene.introHeard,false);
+ ui.click(ui.get('pauseResume'));ui.finishSpeech();assert.equal(ui.get('storyNext').disabled,false);ui.click(ui.get('storyNext'));
+ assert.equal(ui.state().story.scene.phase,'read');assert.equal(ui.get('storySentence').hidden,false);assert.equal(ui.speechTexts.length,2);
+ const battle=Core.copy(ui.state().battle),xp=ui.state().dragon.xp;
+ ui.click(ui.get('storyListen'));assert.equal(ui.state().story.scene.helped,true);assert.equal(ui.get('storyNext').disabled,true);
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{heldNarration:true});ui.resume();assert.equal(ui.state().story.scene.phase,'read');assert.equal(ui.speechTexts.length,0);
+ assert.deepEqual(ui.state().battle,battle);assert.equal(ui.state().dragon.xp,xp);assert.equal(ui.state().campaign.battleRecords.length,0);
+ ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseFinish'));assert.equal(ui.state().activity,'summary');ui.click(ui.get('anotherChallenge'));assert.equal(ui.state().story.scene.phase,'read');
+ ui.click(ui.get('storyNext'));assert.equal(ui.state().activity,'battle');assert.equal(ui.state().story.scene,null);assert.equal(ui.state().story.scenes[battle.areaId].helped,true);
+ assert.equal(ui.state().battle.id,battle.id);ui=boot(ui.state());ui.resume();assert.equal(ui.get('chapterStory').classList.contains('active'),false);
+ console.log('PASS chapter story narration lock, separate reading, Listen help, Pause, Home, reload and Rest resume without extra scoring');
+}
+{
+ const s=storySave(1);let ui=boot(s,{heldNarration:true});ui.resume();ui.advance(30000);assert.equal(ui.get('pausePanel').hidden,false);assert.equal(ui.state().story.scene.phase,'intro');
+ assert.equal(Core.parentProgress(ui.state()).activeMs,0);ui=boot(ui.state(),{heldNarration:true});ui.resume();ui.finishSpeech();ui.click(ui.get('storyNext'));
+ ui.advance(30000);assert.equal(ui.get('pausePanel').hidden,false);assert.equal(ui.state().story.scene.phase,'read');assert.equal(Core.parentProgress(ui.state()).activeMs,0);
+ ui.click(ui.get('pauseResume'));assert.equal(ui.state().story.scene.phase,'read');
+ console.log('PASS story idle pause preserves each phase without time or daily XP credit');
+}
+{
+ const s=storySave(7);s.dragon.xp=3000;s.dragon.named=true;s.dragon.name='Ember';s.dragon.namingPromptSeen=true;
+ const ui=boot(s,{heldNarration:true});assert.match(ui.document.querySelector('.mapTerrain').getAttribute('aria-label'),/Campaign 2, River Path map. Chapter 3, Reed Path/);
+ assert.match(ui.get('mapNodes').children[2].getAttribute('aria-label'),/Chapter 3, Reed Path, current/);
+ ui.resume();assert.equal(ui.get('storyLocation').textContent,'Campaign 2 · Chapter 3');assert.equal(ui.speechTexts[0],Content.chapterStories[s.battle.areaId].narration);ui.finishSpeech();ui.click(ui.get('storyNext'));assert.equal(ui.get('storySentence').textContent,'Ember is by the river.');ui.click(ui.get('storyListen'));assert.equal(ui.speechTexts.at(-1),'Ember is by the river.');ui.finishSpeech();
+ ui.click(ui.get('storyNext'));assert.match(ui.get('encounterChapter').querySelector('[role="progressbar"]').getAttribute('aria-label'),/Campaign 2, River Path: 2 of 5 chapters completed. Chapter 3, Reed Path/);
+ console.log('PASS chosen dragon name in story speech and sentence, and actual campaign/chapter accessibility labels');
 }
