@@ -39,8 +39,8 @@ test('saved countdown, typed digits, problem, target and XP survive reload',()=>
 test('math timing has its own parent total and counts once towards growth and session',()=>{
  const s=challenge();C.recordTime(s,10000,'math',NOW);const p=C.parentProgress(s,NOW);assert.equal(p.totals.math,10000);assert.equal(p.totals.practice,0);assert.equal(p.activeMs,10000);assert.equal(C.dragonProgress(s,NOW).activeMs,10000);assert.equal(s.session.elapsedMs,10000);
 });
-test('pending multiplication precedes session summary without losing the reading victory',()=>{
- const s=fresh();battle(s);battle(s);C.recordTime(s,C.TARGET_MS,'practice',NOW);battle(s);assert.equal(s.activity,'mathIntro');assert.equal(s.result.victory,true);C.leaveMath(s,NOW);assert.equal(s.activity,'summary');assert.ok(s.session.completedAt);assert.equal(s.math.round,null);
+test('pending multiplication ends on the XP result without losing the reading victory at the session boundary',()=>{
+ const s=fresh();battle(s);battle(s);C.recordTime(s,C.TARGET_MS,'practice',NOW);battle(s);assert.equal(s.activity,'mathIntro');assert.equal(s.result.victory,true);const reward=C.copy(s.result);C.leaveMath(s,NOW);assert.equal(s.activity,'result');assert.deepEqual(s.result,reward);assert.ok(s.session.completedAt);assert.equal(s.math.round,null);
 });
 test('wrong answers remove one point, including below zero, exactly once; permanent XP survives',()=>{
  let s=challenge();const q=s.math.round.question;C.answerMath(s,0,NOW);

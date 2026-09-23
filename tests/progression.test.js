@@ -37,7 +37,7 @@ test('first growth requires XP AND 250 confirmed minutes AND 14 elapsed days',()
  const now=Date.now();let s=fresh();s.dragon.xp=250;s.timing.firstPracticeAt=new Date(now-13*Core.DAY).toISOString();
  Core.recordTime(s,250*60000,'practice',now);assert.equal(s.dragon.stage,0);assert.equal(Core.dragonProgress(s,now).daysRemaining,1);
  s.timing.firstPracticeAt=new Date(now-14*Core.DAY).toISOString();s.timing.days={};Core.recordTime(s,249*60000,'practice',now);assert.equal(s.dragon.stage,0);
- Core.recordTime(s,60000,'practice',now);assert.equal(s.dragon.stage,1);assert.equal(Core.dragonProgress(s,now).current.name,'Young Pip');
+ Core.recordTime(s,60000,'practice',now);assert.equal(s.dragon.stage,1);assert.equal(Core.dragonProgress(s,now).current.name,'Big Pip');
  let missingXP=fresh();missingXP.dragon.xp=249;missingXP.timing.firstPracticeAt=new Date(now-14*Core.DAY).toISOString();Core.recordTime(missingXP,250*60000,'practice',now);assert.equal(missingXP.dragon.stage,0);
  missingXP.dragon.xp=250;missingXP=roundtrip(missingXP);assert.equal(missingXP.dragon.stage,1);
  s.dragon.xp=1500;Core.recordTime(s,1250*60000,'practice',now);assert.equal(s.dragon.stage,2);s.story.chapterComplete=true;s=roundtrip(s);assert.equal(s.dragon.stage,3);

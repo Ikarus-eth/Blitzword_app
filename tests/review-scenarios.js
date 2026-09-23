@@ -9,7 +9,14 @@ window.makeReviewSave=function(scenario){
   if(scenario.startsWith('lesson-')){C.startTeaching(s,scenario.slice(7),'demo',now);return s;}
   if(scenario==='handoff'){s.demoComplete=true;s.handoff={victory:true};s.activity='handoff';return s;}
   if(scenario==='assessment'){C.startAssessment(s,now);return s;}
-  s.assessment.done=true;s.demoComplete=true;s.settings.selfPaced=true;C.startBattle(s,now,{strength:4});C.prepareBattle(s,now);
+  s.assessment.done=true;s.demoComplete=true;s.settings.selfPaced=true;
+  if(scenario==='map-chapter-2'){
+    s.story.chapterComplete=true;s.story.completedChapters=['chapter-1'];
+    for(const item of BlitzContent.words.slice(0,30)){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].practiceSuccesses=2;}
+    s.campaign.wins=10;s.campaign.checkpointWins=10;s.dragon.xp=320;
+    C.syncProgress(s,now);
+  }
+  C.startBattle(s,now,{strength:4});C.prepareBattle(s,now);
   if(scenario.startsWith('math-')){
     s.math.best=18;s.math.winStreak=2;s.battle.enemyHealth=0;C.resolveBattle(s,now);
     if(scenario!=='math-intro')C.startMath(s,now);

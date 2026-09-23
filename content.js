@@ -4,7 +4,7 @@
   else root.BlitzContent = content;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function() {
   'use strict';
-  // Thirty Core 200 targets with fixed, illustrated teaching support.
+  // Full approved Core 200. Existing first-chapter order and saved targets are preserved.
   // Artwork teaches meaning only; it is never displayed with answer choices.
   const words = [
     {w:'on', d:['on','in','an','no'], sentence:'Pip is on the rock.', image:'sat-rock', alt:'Pip rests on top of a broad gray rock.'},
@@ -38,6 +38,2912 @@
     {"w":"castle","d":["castle","cattle","candle","castles"],"sentence":"The gate is by the castle.","image":"chapter-teaching","crop":[768,512,768,512],"alt":"Pip magically lifts a coin from a treasure chest beside a castle gate."},
     {"w":"magic","d":["magic","magma","music","magnet"],"sentence":"Pip uses magic to lift a coin.","image":"chapter-teaching","crop":[768,512,768,512],"alt":"Pip magically lifts a coin from a treasure chest beside a castle gate."}
   ];
+  words.push(...[
+  {
+    "w": "the",
+    "d": [
+      "the",
+      "then",
+      "them",
+      "they"
+    ],
+    "sentence": "The tree is green.",
+    "alt": "The tree is green.",
+    "image": "green-tree"
+  },
+  {
+    "w": "and",
+    "d": [
+      "and",
+      "ant",
+      "end",
+      "hand"
+    ],
+    "sentence": "The mom and dad hold hands.",
+    "alt": "The mom and dad hold hands.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "a",
+    "d": [
+      "a",
+      "an",
+      "at",
+      "as"
+    ],
+    "sentence": "A cat is by the house.",
+    "alt": "A cat is by the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "to",
+    "d": [
+      "to",
+      "too",
+      "do",
+      "so"
+    ],
+    "sentence": "Pip walks to the cave.",
+    "alt": "Pip walks to the cave.",
+    "image": "cave"
+  },
+  {
+    "w": "i",
+    "d": [
+      "i",
+      "it",
+      "in",
+      "is"
+    ],
+    "sentence": "I can draw a map.",
+    "alt": "I can draw a map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "you",
+    "d": [
+      "you",
+      "your",
+      "yuo",
+      "yue"
+    ],
+    "sentence": "Can you see the fox?",
+    "alt": "Can you see the fox?",
+    "image": "fox"
+  },
+  {
+    "w": "in",
+    "d": [
+      "in",
+      "on",
+      "if",
+      "is"
+    ],
+    "sentence": "The shark is in the water.",
+    "alt": "The shark is in the water.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "of",
+    "d": [
+      "of",
+      "off",
+      "if",
+      "on"
+    ],
+    "sentence": "The top of the tree is green.",
+    "alt": "The top of the tree is green.",
+    "image": "green-tree"
+  },
+  {
+    "w": "it",
+    "d": [
+      "it",
+      "is",
+      "in",
+      "if"
+    ],
+    "sentence": "It is a red ball.",
+    "alt": "It is a red ball.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "he",
+    "d": [
+      "he",
+      "her",
+      "we",
+      "be"
+    ],
+    "sentence": "He has a magic staff.",
+    "alt": "He has a magic staff.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "is",
+    "d": [
+      "is",
+      "it",
+      "in",
+      "as"
+    ],
+    "sentence": "Pip is on the rock.",
+    "alt": "Pip is on the rock.",
+    "image": "sat-rock"
+  },
+  {
+    "w": "was",
+    "d": [
+      "was",
+      "has",
+      "war",
+      "way"
+    ],
+    "sentence": "The pan was by the fire.",
+    "alt": "The pan was by the fire.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "for",
+    "d": [
+      "for",
+      "far",
+      "fox",
+      "fir"
+    ],
+    "sentence": "This book is for the child.",
+    "alt": "This book is for the child.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "that",
+    "d": [
+      "that",
+      "than",
+      "chat",
+      "what"
+    ],
+    "sentence": "That is a tall tree.",
+    "alt": "That is a tall tree.",
+    "image": "green-tree"
+  },
+  {
+    "w": "with",
+    "d": [
+      "with",
+      "wish",
+      "witch",
+      "width"
+    ],
+    "sentence": "The child is with mom and dad.",
+    "alt": "The child is with mom and dad.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "but",
+    "d": [
+      "but",
+      "bat",
+      "bun",
+      "bit"
+    ],
+    "sentence": "The book is big, but Pip is small.",
+    "alt": "The book is big, but Pip is small.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "his",
+    "d": [
+      "his",
+      "has",
+      "him",
+      "hits"
+    ],
+    "sentence": "The wizard holds his staff.",
+    "alt": "The wizard holds his staff.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "all",
+    "d": [
+      "all",
+      "ill",
+      "ale",
+      "ball"
+    ],
+    "sentence": "All three animals are by the fence.",
+    "alt": "All three animals are by the fence.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "they",
+    "d": [
+      "they",
+      "them",
+      "then",
+      "the"
+    ],
+    "sentence": "They hold hands.",
+    "alt": "They hold hands.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "my",
+    "d": [
+      "my",
+      "by",
+      "me",
+      "may"
+    ],
+    "sentence": "This is my map.",
+    "alt": "This is my map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "so",
+    "d": [
+      "so",
+      "to",
+      "go",
+      "no"
+    ],
+    "sentence": "The tree is so tall.",
+    "alt": "The tree is so tall.",
+    "image": "green-tree"
+  },
+  {
+    "w": "be",
+    "d": [
+      "be",
+      "he",
+      "by",
+      "me"
+    ],
+    "sentence": "Be kind to the cat.",
+    "alt": "Be kind to the cat.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "she",
+    "d": [
+      "she",
+      "see",
+      "the",
+      "shy"
+    ],
+    "sentence": "She is a queen.",
+    "alt": "She is a queen.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "at",
+    "d": [
+      "at",
+      "an",
+      "as",
+      "it"
+    ],
+    "sentence": "Pip is at the cave.",
+    "alt": "Pip is at the cave.",
+    "image": "cave"
+  },
+  {
+    "w": "are",
+    "d": [
+      "are",
+      "art",
+      "arm",
+      "our"
+    ],
+    "sentence": "The books are red.",
+    "alt": "The books are red.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "one",
+    "d": [
+      "one",
+      "once",
+      "owe",
+      "ore"
+    ],
+    "sentence": "One cat is by the house.",
+    "alt": "One cat is by the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "said",
+    "d": [
+      "said",
+      "sand",
+      "sail",
+      "paid"
+    ],
+    "sentence": "The child said, \"I can draw.\"",
+    "alt": "The child said, \"I can draw.\"",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "what",
+    "d": [
+      "what",
+      "that",
+      "wham",
+      "whit"
+    ],
+    "sentence": "What is in the sea?",
+    "alt": "What is in the sea?",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "this",
+    "d": [
+      "this",
+      "thus",
+      "thin",
+      "his"
+    ],
+    "sentence": "This book is open.",
+    "alt": "This book is open.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "when",
+    "d": [
+      "when",
+      "then",
+      "went",
+      "whom"
+    ],
+    "sentence": "The moon shines when it is night.",
+    "alt": "The moon shines when it is night.",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      512,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "we",
+    "d": [
+      "we",
+      "me",
+      "he",
+      "wet"
+    ],
+    "sentence": "We can hold hands.",
+    "alt": "We can hold hands.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "me",
+    "d": [
+      "me",
+      "my",
+      "we",
+      "be"
+    ],
+    "sentence": "Come with me to the house.",
+    "alt": "Come with me to the house.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "have",
+    "d": [
+      "have",
+      "gave",
+      "hate",
+      "hive"
+    ],
+    "sentence": "The animals have a fence.",
+    "alt": "The animals have a fence.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "as",
+    "d": [
+      "as",
+      "at",
+      "an",
+      "is"
+    ],
+    "sentence": "The child draws as he reads.",
+    "alt": "The child reads an open book and draws a map at a desk.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "do",
+    "d": [
+      "do",
+      "go",
+      "to",
+      "so"
+    ],
+    "sentence": "Do you see the moon?",
+    "alt": "Do you see the moon?",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      512,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "like",
+    "d": [
+      "like",
+      "lake",
+      "line",
+      "bike"
+    ],
+    "sentence": "I like this book.",
+    "alt": "I like this book.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "out",
+    "d": [
+      "out",
+      "our",
+      "cut",
+      "oat"
+    ],
+    "sentence": "Pip is out of the cave.",
+    "alt": "Pip is out of the cave.",
+    "image": "cave"
+  },
+  {
+    "w": "can",
+    "d": [
+      "can",
+      "cat",
+      "cap",
+      "canes"
+    ],
+    "sentence": "Pip can jump over water.",
+    "alt": "Pip can jump over water.",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "her",
+    "d": [
+      "her",
+      "he",
+      "here",
+      "hen"
+    ],
+    "sentence": "The queen holds her sword.",
+    "alt": "The queen holds her sword.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "not",
+    "d": [
+      "not",
+      "hot",
+      "nut",
+      "now"
+    ],
+    "sentence": "The closed book is not open.",
+    "alt": "The closed book is not open.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "then",
+    "d": [
+      "then",
+      "them",
+      "than",
+      "when"
+    ],
+    "sentence": "Read the book, then draw a map.",
+    "alt": "Read the book, then draw a map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "your",
+    "d": [
+      "your",
+      "you",
+      "tour",
+      "yore"
+    ],
+    "sentence": "Hold your mom's hand.",
+    "alt": "Hold your mom's hand.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "no",
+    "d": [
+      "no",
+      "on",
+      "so",
+      "go"
+    ],
+    "sentence": "There is no bird in the pan.",
+    "alt": "There is no bird in the pan.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "there",
+    "d": [
+      "there",
+      "these",
+      "three",
+      "where"
+    ],
+    "sentence": "There is a fox on the path.",
+    "alt": "There is a fox on the path.",
+    "image": "fox"
+  },
+  {
+    "w": "day",
+    "d": [
+      "day",
+      "say",
+      "dry",
+      "dad"
+    ],
+    "sentence": "The lion rests in the day.",
+    "alt": "The lion rests in the day.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "just",
+    "d": [
+      "just",
+      "must",
+      "dust",
+      "jest"
+    ],
+    "sentence": "Just one cat is by the house.",
+    "alt": "Just one cat is by the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "it's",
+    "d": [
+      "it's",
+      "its",
+      "isn't",
+      "that's"
+    ],
+    "sentence": "It's a red car.",
+    "alt": "It's a red car.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "see",
+    "d": [
+      "see",
+      "sea",
+      "set",
+      "bee"
+    ],
+    "sentence": "I see a fox.",
+    "alt": "I see a fox.",
+    "image": "fox"
+  },
+  {
+    "w": "little",
+    "d": [
+      "little",
+      "litter",
+      "brittle",
+      "letter"
+    ],
+    "sentence": "The little cat is by the house.",
+    "alt": "The little cat is by the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "time",
+    "d": [
+      "time",
+      "tame",
+      "tide",
+      "lime"
+    ],
+    "sentence": "It is time to read.",
+    "alt": "It is time to read.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "from",
+    "d": [
+      "from",
+      "form",
+      "frog",
+      "frond"
+    ],
+    "sentence": "Light comes from the fire.",
+    "alt": "Light comes from the fire.",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      512,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "had",
+    "d": [
+      "had",
+      "has",
+      "hat",
+      "ham"
+    ],
+    "sentence": "The child had a book to read.",
+    "alt": "The child had a book to read.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "now",
+    "d": [
+      "now",
+      "new",
+      "not",
+      "how"
+    ],
+    "sentence": "Pip can jump now.",
+    "alt": "Pip can jump now.",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "will",
+    "d": [
+      "will",
+      "well",
+      "wall",
+      "wild"
+    ],
+    "sentence": "The child will draw a map.",
+    "alt": "The child will draw a map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "i'm",
+    "d": [
+      "i'm",
+      "i'll",
+      "i'd",
+      "i've"
+    ],
+    "sentence": "I'm drawing a map.",
+    "alt": "I'm drawing a map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "go",
+    "d": [
+      "go",
+      "so",
+      "no",
+      "got"
+    ],
+    "sentence": "Go to the house.",
+    "alt": "Go to the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "were",
+    "d": [
+      "were",
+      "where",
+      "ware",
+      "here"
+    ],
+    "sentence": "The books were by Pip.",
+    "alt": "The books were by Pip.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "too",
+    "d": [
+      "too",
+      "to",
+      "two",
+      "top"
+    ],
+    "sentence": "The big book is too big for Pip.",
+    "alt": "The big book is too big for Pip.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "them",
+    "d": [
+      "them",
+      "then",
+      "they",
+      "hem"
+    ],
+    "sentence": "Mom and dad have a child between them.",
+    "alt": "Mom and dad have a child between them.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "him",
+    "d": [
+      "him",
+      "his",
+      "ham",
+      "hum"
+    ],
+    "sentence": "The wizard has a unicorn by him.",
+    "alt": "The wizard has a unicorn by him.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "some",
+    "d": [
+      "some",
+      "same",
+      "come",
+      "home"
+    ],
+    "sentence": "Some leaves are on the tree.",
+    "alt": "Some leaves are on the tree.",
+    "image": "green-tree"
+  },
+  {
+    "w": "get",
+    "d": [
+      "get",
+      "got",
+      "gem",
+      "jet"
+    ],
+    "sentence": "Get the red ball.",
+    "alt": "Get the red ball.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "if",
+    "d": [
+      "if",
+      "of",
+      "it",
+      "in"
+    ],
+    "sentence": "If it rains, the ground gets wet.",
+    "alt": "If it rains, the ground gets wet.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "good",
+    "d": [
+      "good",
+      "food",
+      "wood",
+      "goon"
+    ],
+    "sentence": "This is a good book.",
+    "alt": "This is a good book.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "don't",
+    "d": [
+      "don't",
+      "doesn't",
+      "won't",
+      "didn't"
+    ],
+    "sentence": "Don't touch the hot pan.",
+    "alt": "Don't touch the hot pan.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "down",
+    "d": [
+      "down",
+      "dawn",
+      "town",
+      "gown"
+    ],
+    "sentence": "The rain falls down.",
+    "alt": "The rain falls down.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "by",
+    "d": [
+      "by",
+      "my",
+      "be",
+      "bay"
+    ],
+    "sentence": "Pip is by the cave.",
+    "alt": "Pip is by the cave.",
+    "image": "cave"
+  },
+  {
+    "w": "how",
+    "d": [
+      "how",
+      "now",
+      "who",
+      "hew"
+    ],
+    "sentence": "How tall is the tree?",
+    "alt": "How tall is the tree?",
+    "image": "green-tree"
+  },
+  {
+    "w": "know",
+    "d": [
+      "know",
+      "knew",
+      "snow",
+      "knob"
+    ],
+    "sentence": "I know where the house is.",
+    "alt": "I know where the house is.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "an",
+    "d": [
+      "an",
+      "at",
+      "as",
+      "on"
+    ],
+    "sentence": "An owl sits on the branch.",
+    "alt": "An owl sits on the branch.",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      512,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "oh",
+    "d": [
+      "oh",
+      "on",
+      "of",
+      "ho"
+    ],
+    "sentence": "Oh, a friendly ghost!",
+    "alt": "Oh, a friendly ghost!",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "more",
+    "d": [
+      "more",
+      "mare",
+      "move",
+      "core"
+    ],
+    "sentence": "The big book has more pages.",
+    "alt": "The big book has more pages.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "their",
+    "d": [
+      "their",
+      "there",
+      "heir",
+      "theirs"
+    ],
+    "sentence": "Mom and dad hold their child's hands.",
+    "alt": "Mom and dad hold their child's hands.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "could",
+    "d": [
+      "could",
+      "would",
+      "cold",
+      "cloud"
+    ],
+    "sentence": "The child could read the book.",
+    "alt": "The child could read the book.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "about",
+    "d": [
+      "about",
+      "abort",
+      "shout",
+      "above"
+    ],
+    "sentence": "This book is about a map.",
+    "alt": "This book is about a map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "back",
+    "d": [
+      "back",
+      "buck",
+      "pack",
+      "bank"
+    ],
+    "sentence": "Pip can go back to the cave.",
+    "alt": "Pip can go back to the cave.",
+    "image": "cave"
+  },
+  {
+    "w": "who",
+    "d": [
+      "who",
+      "how",
+      "why",
+      "whom"
+    ],
+    "sentence": "Who is by the unicorn?",
+    "alt": "Who is by the unicorn?",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "or",
+    "d": [
+      "or",
+      "on",
+      "of",
+      "ore"
+    ],
+    "sentence": "Is it a cat or a fox?",
+    "alt": "Is it a cat or a fox?",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "make",
+    "d": [
+      "make",
+      "made",
+      "take",
+      "male"
+    ],
+    "sentence": "The wizard can make a spell.",
+    "alt": "The wizard can make a spell.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "into",
+    "d": [
+      "into",
+      "onto",
+      "info",
+      "intro"
+    ],
+    "sentence": "Pip looks into the cave.",
+    "alt": "Pip looks into the cave.",
+    "image": "cave"
+  },
+  {
+    "w": "look",
+    "d": [
+      "look",
+      "lock",
+      "book",
+      "loop"
+    ],
+    "sentence": "Look at the fox.",
+    "alt": "Look at the fox.",
+    "image": "fox"
+  },
+  {
+    "w": "very",
+    "d": [
+      "very",
+      "vary",
+      "verge",
+      "veery"
+    ],
+    "sentence": "The tree is very tall.",
+    "alt": "The tree is very tall.",
+    "image": "green-tree"
+  },
+  {
+    "w": "would",
+    "d": [
+      "would",
+      "could",
+      "wound",
+      "wood"
+    ],
+    "sentence": "Would you like this book?",
+    "alt": "Would you like this book?",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "right",
+    "d": [
+      "right",
+      "light",
+      "night",
+      "rigid"
+    ],
+    "sentence": "The fox is right by Pip.",
+    "alt": "The fox is right by Pip.",
+    "image": "fox"
+  },
+  {
+    "w": "here",
+    "d": [
+      "here",
+      "her",
+      "hire",
+      "were"
+    ],
+    "sentence": "The cat is here.",
+    "alt": "The cat is here.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "love",
+    "d": [
+      "love",
+      "live",
+      "dove",
+      "lose"
+    ],
+    "sentence": "Mom and dad love their child.",
+    "alt": "Mom and dad love their child.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "way",
+    "d": [
+      "way",
+      "was",
+      "day",
+      "may"
+    ],
+    "sentence": "The map shows the way.",
+    "alt": "The map shows the way.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "did",
+    "d": [
+      "did",
+      "dad",
+      "dig",
+      "dip"
+    ],
+    "sentence": "Did you see the owl?",
+    "alt": "Did you see the owl?",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      512,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "new",
+    "d": [
+      "new",
+      "now",
+      "few",
+      "mew"
+    ],
+    "sentence": "The child draws a new map.",
+    "alt": "The child draws a new map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "come",
+    "d": [
+      "come",
+      "some",
+      "home",
+      "cone"
+    ],
+    "sentence": "Come to the house.",
+    "alt": "Come to the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "our",
+    "d": [
+      "our",
+      "out",
+      "or",
+      "sour"
+    ],
+    "sentence": "This is our house.",
+    "alt": "This is our house.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "want",
+    "d": [
+      "want",
+      "went",
+      "wand",
+      "wasn't"
+    ],
+    "sentence": "I want to read this book.",
+    "alt": "I want to read this book.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "made",
+    "d": [
+      "made",
+      "make",
+      "mad",
+      "mate"
+    ],
+    "sentence": "The wizard made a spell.",
+    "alt": "The wizard made a spell.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "around",
+    "d": [
+      "around",
+      "aground",
+      "round",
+      "abound"
+    ],
+    "sentence": "Trees grow around the cave.",
+    "alt": "Trees grow around the cave.",
+    "image": "cave"
+  },
+  {
+    "w": "after",
+    "d": [
+      "after",
+      "alter",
+      "aster",
+      "raft"
+    ],
+    "sentence": "Draw a map after you read.",
+    "alt": "Draw a map after you read.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "again",
+    "d": [
+      "again",
+      "against",
+      "gain",
+      "align"
+    ],
+    "sentence": "Read the book again.",
+    "alt": "Read the book again.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "always",
+    "d": [
+      "always",
+      "away",
+      "alway",
+      "allays"
+    ],
+    "sentence": "Always be kind to animals.",
+    "alt": "Always be kind to animals.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "any",
+    "d": [
+      "any",
+      "and",
+      "ant",
+      "many"
+    ],
+    "sentence": "Can you see any birds?",
+    "alt": "Can you see any birds?",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "ask",
+    "d": [
+      "ask",
+      "ash",
+      "ark",
+      "asp"
+    ],
+    "sentence": "Ask dad to read a book.",
+    "alt": "Ask dad to read a book.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "away",
+    "d": [
+      "away",
+      "awry",
+      "always",
+      "way"
+    ],
+    "sentence": "The fox walks away.",
+    "alt": "The fox walks away.",
+    "image": "fox"
+  },
+  {
+    "w": "because",
+    "d": [
+      "because",
+      "become",
+      "became",
+      "becase"
+    ],
+    "sentence": "The ground is wet because it rains.",
+    "alt": "The ground is wet because it rains.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "before",
+    "d": [
+      "before",
+      "befall",
+      "become",
+      "befoe"
+    ],
+    "sentence": "Read before you draw.",
+    "alt": "Read before you draw.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "best",
+    "d": [
+      "best",
+      "vest",
+      "bent",
+      "rest"
+    ],
+    "sentence": "This is my best map.",
+    "alt": "This is my best map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "both",
+    "d": [
+      "both",
+      "bath",
+      "moth",
+      "booth"
+    ],
+    "sentence": "Both books are red.",
+    "alt": "Both books are red.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "bring",
+    "d": [
+      "bring",
+      "brink",
+      "being",
+      "brine"
+    ],
+    "sentence": "Bring the book to the desk.",
+    "alt": "Bring the book to the desk.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "carry",
+    "d": [
+      "carry",
+      "curry",
+      "marry",
+      "carve"
+    ],
+    "sentence": "The queen can carry the sword.",
+    "alt": "The queen can carry the sword.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "cut",
+    "d": [
+      "cut",
+      "cat",
+      "cup",
+      "put"
+    ],
+    "sentence": "A sword can cut.",
+    "alt": "A sword can cut.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "every",
+    "d": [
+      "every",
+      "ever",
+      "very",
+      "entry"
+    ],
+    "sentence": "Every animal is by the fence.",
+    "alt": "Every animal is by the fence.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "fast",
+    "d": [
+      "fast",
+      "last",
+      "fist",
+      "cast"
+    ],
+    "sentence": "A car can go fast.",
+    "alt": "A car can go fast.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "find",
+    "d": [
+      "find",
+      "fine",
+      "fund",
+      "mind"
+    ],
+    "sentence": "Find the bird above the water.",
+    "alt": "Find the bird above the water.",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "first",
+    "d": [
+      "first",
+      "fist",
+      "thirst",
+      "firm"
+    ],
+    "sentence": "First read, then draw.",
+    "alt": "First read, then draw.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "found",
+    "d": [
+      "found",
+      "round",
+      "sound",
+      "fund"
+    ],
+    "sentence": "Pip found the treasure.",
+    "alt": "Pip found the treasure.",
+    "image": "chapter-teaching",
+    "crop": [
+      768,
+      512,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "gave",
+    "d": [
+      "gave",
+      "gate",
+      "have",
+      "gaze"
+    ],
+    "sentence": "Dad gave the child his hand.",
+    "alt": "Dad gave the child his hand.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "hold",
+    "d": [
+      "hold",
+      "cold",
+      "held",
+      "fold"
+    ],
+    "sentence": "Mom and dad hold hands.",
+    "alt": "Mom and dad hold hands.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "hot",
+    "d": [
+      "hot",
+      "hat",
+      "hit",
+      "not"
+    ],
+    "sentence": "The pan is hot.",
+    "alt": "The pan is hot.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "keep",
+    "d": [
+      "keep",
+      "deep",
+      "keen",
+      "weep"
+    ],
+    "sentence": "Keep the book open.",
+    "alt": "Keep the book open.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "kind",
+    "d": [
+      "kind",
+      "king",
+      "bind",
+      "wind"
+    ],
+    "sentence": "Be kind to the cat.",
+    "alt": "Be kind to the cat.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "long",
+    "d": [
+      "long",
+      "song",
+      "lung",
+      "lone"
+    ],
+    "sentence": "The snake is long.",
+    "alt": "The snake is long.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "many",
+    "d": [
+      "many",
+      "mane",
+      "man",
+      "any"
+    ],
+    "sentence": "The tree has many leaves.",
+    "alt": "The tree has many leaves.",
+    "image": "green-tree"
+  },
+  {
+    "w": "off",
+    "d": [
+      "off",
+      "of",
+      "oft",
+      "uff"
+    ],
+    "sentence": "The bird is off the ground.",
+    "alt": "The bird is off the ground.",
+    "image": "chapter-teaching",
+    "crop": [
+      0,
+      0,
+      768,
+      512
+    ]
+  },
+  {
+    "w": "only",
+    "d": [
+      "only",
+      "oily",
+      "lonely",
+      "once"
+    ],
+    "sentence": "Only one cat is by the house.",
+    "alt": "Only one cat is by the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "own",
+    "d": [
+      "own",
+      "owl",
+      "owe",
+      "on"
+    ],
+    "sentence": "The child draws his own map.",
+    "alt": "The child draws his own map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "pull",
+    "d": [
+      "pull",
+      "full",
+      "pill",
+      "pullt"
+    ],
+    "sentence": "Pull the pan away from the fire.",
+    "alt": "Pull the pan away from the fire.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "read",
+    "d": [
+      "read",
+      "red",
+      "road",
+      "real"
+    ],
+    "sentence": "The child can read a book.",
+    "alt": "The child can read a book.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "run",
+    "d": [
+      "run",
+      "ran",
+      "fun",
+      "rug"
+    ],
+    "sentence": "The fox can run.",
+    "alt": "The fox can run.",
+    "image": "fox"
+  },
+  {
+    "w": "saw",
+    "d": [
+      "saw",
+      "say",
+      "raw",
+      "paw"
+    ],
+    "sentence": "Pip saw a fox.",
+    "alt": "Pip saw a fox.",
+    "image": "fox"
+  },
+  {
+    "w": "show",
+    "d": [
+      "show",
+      "snow",
+      "slow",
+      "shot"
+    ],
+    "sentence": "Show me the map.",
+    "alt": "Show me the map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "sit",
+    "d": [
+      "sit",
+      "sat",
+      "hit",
+      "six"
+    ],
+    "sentence": "Pip can sit on the rock.",
+    "alt": "Pip can sit on the rock.",
+    "image": "sat-rock"
+  },
+  {
+    "w": "sleep",
+    "d": [
+      "sleep",
+      "sheep",
+      "sleet",
+      "steep"
+    ],
+    "sentence": "The lion can sleep on the grass.",
+    "alt": "The lion can sleep on the grass.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "start",
+    "d": [
+      "start",
+      "smart",
+      "stark",
+      "stare"
+    ],
+    "sentence": "Start to draw a map.",
+    "alt": "Start to draw a map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "stop",
+    "d": [
+      "stop",
+      "step",
+      "shop",
+      "slop"
+    ],
+    "sentence": "Stop by the house.",
+    "alt": "Stop by the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "take",
+    "d": [
+      "take",
+      "lake",
+      "tale",
+      "tame"
+    ],
+    "sentence": "Take the red ball.",
+    "alt": "Take the red ball.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "tell",
+    "d": [
+      "tell",
+      "tall",
+      "bell",
+      "till"
+    ],
+    "sentence": "Tell me about the book.",
+    "alt": "Tell me about the book.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "thank",
+    "d": [
+      "thank",
+      "think",
+      "shank",
+      "thanks"
+    ],
+    "sentence": "Thank mom and dad.",
+    "alt": "Thank mom and dad.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "think",
+    "d": [
+      "think",
+      "thank",
+      "thick",
+      "thing"
+    ],
+    "sentence": "Think about the map.",
+    "alt": "Think about the map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "walk",
+    "d": [
+      "walk",
+      "talk",
+      "wake",
+      "wall"
+    ],
+    "sentence": "Pip and the fox walk.",
+    "alt": "Pip and the fox walk.",
+    "image": "fox"
+  },
+  {
+    "w": "white",
+    "d": [
+      "white",
+      "while",
+      "whine",
+      "write"
+    ],
+    "sentence": "The unicorn is white.",
+    "alt": "The unicorn is white.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "wish",
+    "d": [
+      "wish",
+      "with",
+      "fish",
+      "wash"
+    ],
+    "sentence": "I wish I had a unicorn.",
+    "alt": "I wish I had a unicorn.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "work",
+    "d": [
+      "work",
+      "word",
+      "worm",
+      "fork"
+    ],
+    "sentence": "Drawing a map takes work.",
+    "alt": "Drawing a map takes work.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "write",
+    "d": [
+      "write",
+      "white",
+      "wrote",
+      "writer"
+    ],
+    "sentence": "The child can write with a pen.",
+    "alt": "The child can write with a pen.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "cat",
+    "d": [
+      "cat",
+      "can",
+      "cap",
+      "bat"
+    ],
+    "sentence": "The cat is by the house.",
+    "alt": "The cat is by the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "car",
+    "d": [
+      "car",
+      "cat",
+      "can",
+      "bar"
+    ],
+    "sentence": "The car is on the path.",
+    "alt": "The car is on the path.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "house",
+    "d": [
+      "house",
+      "horse",
+      "mouse",
+      "hose"
+    ],
+    "sentence": "The cat is by the house.",
+    "alt": "The cat is by the house.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "mom",
+    "d": [
+      "mom",
+      "mop",
+      "mum",
+      "tom"
+    ],
+    "sentence": "Mom holds the child's hand.",
+    "alt": "Mom holds the child's hand.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "dad",
+    "d": [
+      "dad",
+      "day",
+      "did",
+      "bad"
+    ],
+    "sentence": "Dad holds the child's hand.",
+    "alt": "Dad holds the child's hand.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "ship",
+    "d": [
+      "ship",
+      "shop",
+      "shin",
+      "chip"
+    ],
+    "sentence": "The ship is on the sea.",
+    "alt": "The ship is on the sea.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "shark",
+    "d": [
+      "shark",
+      "sharp",
+      "share",
+      "shirk"
+    ],
+    "sentence": "The shark is under the ship.",
+    "alt": "The shark is under the ship.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "map",
+    "d": [
+      "map",
+      "man",
+      "mat",
+      "mop"
+    ],
+    "sentence": "The child draws a map.",
+    "alt": "The child draws a map.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "queen",
+    "d": [
+      "queen",
+      "queer",
+      "quean",
+      "green"
+    ],
+    "sentence": "The queen holds a sword.",
+    "alt": "The queen holds a sword.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "snake",
+    "d": [
+      "snake",
+      "snack",
+      "stake",
+      "shake"
+    ],
+    "sentence": "The snake is on the wet ground.",
+    "alt": "The snake is on the wet ground.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "spell",
+    "d": [
+      "spell",
+      "spill",
+      "shell",
+      "smell"
+    ],
+    "sentence": "The wizard makes a spell.",
+    "alt": "The wizard makes a spell.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "sword",
+    "d": [
+      "sword",
+      "sworn",
+      "swore",
+      "word"
+    ],
+    "sentence": "The queen holds a sword.",
+    "alt": "The queen holds a sword.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "rain",
+    "d": [
+      "rain",
+      "rein",
+      "raid",
+      "pain"
+    ],
+    "sentence": "The rain makes the ground wet.",
+    "alt": "The rain makes the ground wet.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "child",
+    "d": [
+      "child",
+      "chill",
+      "chide",
+      "children"
+    ],
+    "sentence": "The child holds hands with mom and dad.",
+    "alt": "The child holds hands with mom and dad.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "ghost",
+    "d": [
+      "ghost",
+      "ghast",
+      "ghoul",
+      "ghest"
+    ],
+    "sentence": "The ghost is by the cave.",
+    "alt": "The ghost is by the cave.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "unicorn",
+    "d": [
+      "unicorn",
+      "uniform",
+      "unihorn",
+      "unicorns"
+    ],
+    "sentence": "The unicorn is by the wizard.",
+    "alt": "The unicorn is by the wizard.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "lion",
+    "d": [
+      "lion",
+      "loin",
+      "line",
+      "ion"
+    ],
+    "sentence": "The lion is on the grass.",
+    "alt": "The lion is on the grass.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "pig",
+    "d": [
+      "pig",
+      "big",
+      "pin",
+      "peg"
+    ],
+    "sentence": "The pig is by the fence.",
+    "alt": "The pig is by the fence.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "yellow",
+    "d": [
+      "yellow",
+      "yellows",
+      "yallow",
+      "fellow"
+    ],
+    "sentence": "The lion has a yellow mane.",
+    "alt": "The lion has a yellow mane.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "wizard",
+    "d": [
+      "wizard",
+      "lizard",
+      "wizened",
+      "wizards"
+    ],
+    "sentence": "The wizard has a staff.",
+    "alt": "The wizard has a staff.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      512,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "chicken",
+    "d": [
+      "chicken",
+      "chickens",
+      "thicken",
+      "checkin"
+    ],
+    "sentence": "The chicken is by the fence.",
+    "alt": "The chicken is by the fence.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "man",
+    "d": [
+      "man",
+      "map",
+      "men",
+      "pan"
+    ],
+    "sentence": "The man holds the child's hand.",
+    "alt": "The man holds the child's hand.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "wet",
+    "d": [
+      "wet",
+      "wit",
+      "web",
+      "pet"
+    ],
+    "sentence": "The ground is wet.",
+    "alt": "The ground is wet.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "bat",
+    "d": [
+      "bat",
+      "cat",
+      "bag",
+      "bit"
+    ],
+    "sentence": "The bat flies by the cave.",
+    "alt": "The bat flies by the cave.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1024,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "yes",
+    "d": [
+      "yes",
+      "yet",
+      "yew",
+      "yea"
+    ],
+    "sentence": "Yes, the book is open.",
+    "alt": "Yes, the book is open.",
+    "image": "core-teaching",
+    "crop": [
+      1024,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "pan",
+    "d": [
+      "pan",
+      "pen",
+      "pat",
+      "can"
+    ],
+    "sentence": "The pan is by the fire.",
+    "alt": "The pan is by the fire.",
+    "image": "core-teaching",
+    "crop": [
+      512,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "bell",
+    "d": [
+      "bell",
+      "ball",
+      "belt",
+      "tell"
+    ],
+    "sentence": "The bell is by the door.",
+    "alt": "The bell is by the door.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "mule",
+    "d": [
+      "mule",
+      "mile",
+      "mute",
+      "mole"
+    ],
+    "sentence": "The mule is by the fence.",
+    "alt": "The mule is by the fence.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1536,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "ball",
+    "d": [
+      "ball",
+      "bell",
+      "bull",
+      "fall"
+    ],
+    "sentence": "The ball is by the cat.",
+    "alt": "The ball is by the cat.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "w": "thin",
+    "d": [
+      "thin",
+      "this",
+      "than",
+      "chin"
+    ],
+    "sentence": "The snake is thin.",
+    "alt": "The snake is thin.",
+    "image": "core-teaching",
+    "crop": [
+      0,
+      1024,
+      512,
+      512
+    ]
+  }
+]);
   // Existing assessment items, axes, and stopping thresholds are preserved.
   const assessmentPools = [
     [{w:'you',d:['you','your','yuo','yue']},{w:'cat',d:['cat','can','cap','cet']},{w:'car',d:['car','cat','can','cor']},{w:'can',d:['can','cat','cap','cen']},{w:'fox',d:['fox','box','fix','fax']},{w:'map',d:['map','man','mat','mop']}],
@@ -56,6 +2962,18 @@
     {id:'root-sprite',name:'Root Sprite',crop:[143,513,487,500]},
     {id:'cave-troll',name:'Cave Troll',crop:[812,510,654,514]}
   ];
+  enemies.forEach(enemy=>{enemy.minHealth=3;enemy.maxHealth=5;enemy.tier=0;enemy.family=enemy.id;});
+  function enemyAt(id){
+    const direct=enemies.find(enemy=>enemy.id===id);if(direct)return direct;
+    const match=/^(.*)-tier-(\d+)$/.exec(id||'');if(!match)return enemies[0];
+    const base=enemies.find(enemy=>enemy.id===match[1]),tier=Number(match[2]);if(!base||tier<1||!Number.isSafeInteger(tier))return enemies[0];
+    const title=['','Woodland','Great','Ancient','Elder'][tier]||'Elder '+tier;
+    return {...base,id,name:title+' '+base.name,tier,minHealth:3+tier*3,maxHealth:5+tier*3};
+  }
+  function enemiesForHealth(health){
+    const tier=Math.max(0,Math.floor((health-3)/3));
+    return enemies.map(enemy=>tier?enemyAt(enemy.id+'-tier-'+tier):enemy);
+  }
   // Each place has six fixed targets. Earlier places remain available for review.
   const areas = [
     {id:'lantern-trail',name:'Lantern Trail',x:17,y:73,available:true,words:words.slice(0,6).map(item=>item.w),checkpoint:2,goal:'Follow the ember trail.',discovery:'Ember scales lead towards the river.'},
@@ -64,11 +2982,31 @@
     {id:'lantern-ruins',name:'Lantern Ruins',x:63,y:24,available:true,words:words.slice(18,24).map(item=>item.w),checkpoint:8,goal:'Follow the lights through the ruins.',discovery:'An owl shows the way to the hidden nest.'},
     {id:'hidden-nest',name:'Hidden Nest',x:89,y:19,available:true,words:words.slice(24,30).map(item=>item.w),checkpoint:10,goal:'Find the way to Pip’s siblings.',discovery:'The nest is close. Face its guardian.'}
   ];
-  const dragonStages = [
-    {name:'Hatchling Pip',xp:0,crop:[150,160,409,307],scale:1},
-    {name:'Young Pip',xp:250,minMinutes:250,minDays:14,crop:[838,11,542,460],scale:1.14},
-    {name:'Growing Pip',xp:750,minMinutes:750,minDays:14,crop:[88,494,615,491],scale:1.3},
-    {name:'Rideable Pip',xp:1500,minMinutes:1500,minDays:14,crop:[869,464,657,533],scale:1.45,requiresChapter:true}
+  const chapters=[
+    {id:'chapter-1',name:'Pip',scene:null},
+    {id:'chapter-2',name:'River Path',scene:0},
+    {id:'chapter-3',name:'Old Oak',scene:1},
+    {id:'chapter-4',name:'Lost Lights',scene:2},
+    {id:'chapter-5',name:'Moon Wood',scene:3},
+    {id:'chapter-6',name:'Crystal Cave',scene:4},
+    {id:'chapter-7',name:'Sky Keep',scene:5}
   ];
-  return {words, legacyWords, assessmentPools, demoWords, enemies, areas, dragonStages, chapterWordGoal:30};
+  const placeNames=[[],['River Bank','Stone Bridge','Reed Path','Blue Pool','River Gate'],['Oak Path','Leaf Den','Moss Steps','Root Arch','Old Oak'],['Stone Path','Lamp Grove','Old Wall','Gold Door','Light Hall'],['Moon Path','Owl Tree','Star Pool','Night Arch','Moon Nest'],['Cave Mouth','Blue Stone','Deep Pool','Glow Hall','Crystal Gate'],['Hill Path','Cloud Steps','Sky Bridge','High Tower','Sky Keep']];
+  areas.forEach((a,i)=>{a.chapterId='chapter-1';a.shortName=['Path','Fox','Trees','Cave','Home'][i];});
+  const coords=areas.map(a=>[a.x,a.y]);
+  chapters.forEach((chapter,c)=>{
+    chapter.words=words.slice(c*30,Math.min(words.length,(c+1)*30)).map(item=>item.w);
+    if(c){const width=Math.ceil(chapter.words.length/5);for(let i=0;i<5;i++){
+      const targets=chapter.words.slice(i*width,(i+1)*width);if(!targets.length)continue;
+      areas.push({id:chapter.id+'-place-'+(i+1),chapterId:chapter.id,name:placeNames[c][i],shortName:placeNames[c][i].split(' ').at(-1),x:coords[i][0],y:coords[i][1],available:true,words:targets,checkpoint:(c*5+i+1)*2,goal:'Explore '+placeNames[c][i]+'.',discovery:'The path is open.'});
+    }}
+  });
+  const dragonStages = [
+    {name:'Small Pip',xp:0,crop:[150,160,409,307],scale:1},
+    {name:'Big Pip',xp:250,minMinutes:250,minDays:14,crop:[838,11,542,460],scale:1.14},
+    {name:'Bigger Pip',xp:750,minMinutes:750,minDays:14,crop:[88,494,615,491],scale:1.3},
+    {name:'Ride on Pip',xp:1500,minMinutes:1500,minDays:14,crop:[869,464,657,533],scale:1.45,requiresChapter:true}
+  ];
+  const teachingSource=item=>'assets/teaching/'+item.image+(item.image==='core-teaching'?'.webp':item.crop?'.png':'.webp');
+  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, dragonStages, chapterWordGoal:30};
 });

@@ -30,7 +30,7 @@ function paintHero(element,index) {
 }
 function heroIndex(){return (state.profile.gender==='boy'?0:3)+classes.indexOf(state.profile.heroClass);}
 function paintEnemy(element,enemyId,health=3){
-  const enemy=Content.enemies.find(item=>item.id===enemyId)||Content.enemies[0];
+  const enemy=Content.enemyAt(enemyId);
   element.dataset.enemy=enemy.id;element.style.setProperty('--enemy-scale',Core.enemyScale(health));
   element.style.setProperty('--enemy-aspect',enemy.crop?enemy.crop[2]/enemy.crop[3]:spriteCrops[enemy.sprite].w/spriteCrops[enemy.sprite].h);
   element.setAttribute('role','img');element.setAttribute('aria-label',enemy.name);
@@ -53,7 +53,7 @@ function growthCaption(p){
 }
 function renderChapter(element,compact=false){
   const p=Core.storyProgress(state);element.replaceChildren();
-  const title=document.createElement('span');title.className='chapterLabel';title.textContent='Chapter 1';
+  const title=document.createElement('span');title.className='chapterLabel';title.textContent='Chapter '+p.chapterNumber;
   const count=document.createElement('span');count.className='chapterCount';count.textContent=p.cleared+' / '+p.total+(compact?'':' places explored');
   const track=document.createElement('span');track.className='chapterTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label','Chapter 1 places explored');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.cleared));
   const fill=document.createElement('span');fill.style.width=(100*p.cleared/p.total)+'%';track.append(fill);element.append(title,count,track);
@@ -61,6 +61,14 @@ function renderChapter(element,compact=false){
 function renderMap(){
   show('campaignMap');$('#pausePanel').hidden=true;
   const progress=Core.storyProgress(state),growth=Core.dragonProgress(state);
+  const terrain=$('.mapTerrain'),mapScene=progress.chapter.scene;
+  terrain.style.backgroundImage=mapScene===null?'url("assets/campaign-forest.png")':'url("assets/chapter-scenes.webp")';
+  terrain.style.backgroundSize=mapScene===null?'100% 100%':'300% 200%';terrain.style.backgroundPosition=mapScene===null?'center':(mapScene%3*50)+'% '+(mapScene<3?0:100)+'%';
+  $('#mapTitle').textContent=progress.chapter.name;
+  $('#chapterSelect').replaceChildren();Content.chapters.forEach((chapter,i)=>{
+    const chip=document.createElement('span');chip.className='chapterBead'+(chapter.id===progress.chapter.id?' current':'')+(state.story.completedChapters.includes(chapter.id)?' complete':'');chip.textContent=String(i+1);chip.setAttribute('aria-label','Chapter '+(i+1)+(state.story.completedChapters.includes(chapter.id)?' complete':chapter.id===progress.chapter.id?' current':' locked'));$('#chapterSelect').append(chip);
+  });
+  $('#chapterCelebration').hidden=!state.story.mapPending;$('#chapterCelebration').textContent=progress.complete?'All done!':'New path!';
   const current=progress.areas.find(area=>area.status==='current')||progress.areas.filter(area=>area.available).at(-1);
   selectedMapArea=selectedMapArea||current.id;
   const selected=progress.areas.find(area=>area.id===selectedMapArea)||current;
@@ -71,14 +79,14 @@ function renderMap(){
     button.setAttribute('aria-label',area.name+', '+(area.status==='future'?'coming soon':area.status==='cleared'?'explored':area.status==='current'?'current destination':'locked'));
     button.setAttribute('aria-pressed',String(area.id===selected.id));
     const marker=document.createElement('span');marker.className='mapMarker';marker.textContent=area.status==='cleared'?'✓':String(i+1);
-    const label=document.createElement('span');label.className='mapNodeName';label.textContent=area.name;
-    const status=document.createElement('small');status.textContent=area.status==='future'?'Coming soon':area.status==='cleared'?'Explored':area.status==='current'?'You are here':'Locked';
+    const label=document.createElement('span');label.className='mapNodeName';label.textContent=area.shortName||area.name;
+    const status=document.createElement('small');status.textContent=area.status==='future'?'Soon':area.status==='cleared'?'Done':area.status==='current'?'Here':'Later';
     button.append(marker,label,status);button.onclick=()=>{selectedMapArea=area.id;renderMap();};nodes.append(button);
   });
-  const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.style.left=current.x+'%';hero.style.top=(current.y-9)+'%';
+  const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.style.left=`clamp(54px,${Math.max(9,current.x-9)}%,calc(100% - 54px))`;hero.style.top=`clamp(82px,${current.y-3}%,calc(100% - 100px))`;
   $('#mapStory').textContent=progress.cleared+' / '+progress.total+' places explored';
   $('#mapStory').setAttribute('aria-label',progress.cleared+' of '+progress.total+' story areas explored');
-  $('#mapAreaTitle').textContent=selected.name;
+  $('#mapAreaTitle').textContent=selected.shortName||selected.name;
   $('#mapAreaStatus').textContent=selected.status==='future'?'Coming soon':selected.status==='cleared'?'Trail explored':selected.status==='locked'?'Further along the trail':state.battle?.fromAssessment&&!state.battle.mapSeen?'Reading check complete · Chapter 1 begins':'Your next story step';
   $('#mapAreaGoal').textContent=selected.status==='cleared'?selected.discovery:selected.goal;
   const markers=$('#mapAreaProgress');markers.replaceChildren();
@@ -89,10 +97,11 @@ function renderMap(){
     markers.append(wins,words,practice);
   }
   const start=$('#mapContinue');start.disabled=selected.status==='future'||selected.status==='locked';
-  start.textContent=start.disabled?'Locked':'▶';start.setAttribute('aria-label',start.disabled?'Explore the earlier place first':state.math.round?'Continue multiplication':state.teaching?'Continue the example':state.battle?.question?'Continue battle':'Explore '+selected.name);
+  start.textContent=start.disabled?'Locked':'Play';start.setAttribute('aria-label',start.disabled?'Explore the earlier place first':state.math.round?'Continue multiplication':state.teaching?'Continue the example':state.battle?.question?'Continue battle':'Explore '+selected.name);
   paintPip($('#mapPip'));$('#dragonStage').textContent=growth.current.name;$('#dragonXP').textContent=growth.xp+' XP';
   $('#dragonNext').textContent=growth.next?'Growing together':'Ready to ride';$('#mapGrowthSummary').textContent='';
-  const fraction=growth.next?Math.min(growth.fraction,growth.activeMs/(growth.next.minMinutes*60000),growth.elapsedDays/growth.next.minDays,growth.next.requiresChapter&&!state.story.chapterComplete?0:1):1;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext',growthCaption(growth));
+  const fraction=growth.fraction;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext','XP towards growth. '+growthCaption(growth));
+  $('#dragonTapHint').textContent=growth.next?'XP · Tap Pip':'Tap Pip';
   const stages=$('#dragonStages');stages.replaceChildren();Content.dragonStages.forEach((stage,i)=>{
     const item=document.createElement('li');item.className=i===growth.stage?'current':i<growth.stage?'earned':'future';
     const art=document.createElement('span');art.className='stagePortrait';paintPip(art,i);
@@ -162,6 +171,9 @@ function show(id) {
   $('#backBtn').hidden=id!=='hero';
   if(!['battle','assessment'].includes(id))$('#wordReady').hidden=true;
   state.screen=id;syncSound();
+  const chapter=['battle','teaching','result'].includes(id)&&state.battle?.chapterId?Content.chapters.find(c=>c.id===state.battle.chapterId):Core.currentChapter(state);
+  const scene=chapter?.scene;$('#chapterScenery').hidden=scene===null||scene===undefined||['setup','hero','route','assessment','parentDashboard'].includes(id);
+  if(scene!==null&&scene!==undefined)$('#chapterScenery').style.backgroundPosition=(scene%3*50)+'% '+(scene<3?0:100)+'%';
   $$('#'+id+' [data-sprite="6"]').forEach(element=>paintPip(element));
 }
 function speak(text,{onEnd=null,onBoundary=null}={}) {
@@ -193,12 +205,12 @@ function home() {
   selectedMapArea=null;
   if(state.assessment.done){renderMap();return;}
   paintHero($('#routeHeroImg'),heroIndex());
-  $('#routeTitle').textContent=state.profile.name+', ready to explore?';
+  $('#routeTitle').textContent='Hi, '+state.profile.name+'!';
   $('#routeName').textContent='Pip is coming with you.';
   $('#homeChapter').hidden=!state.assessment.done;if(state.assessment.done)renderChapter($('#homeChapter'));
   const resumable=state.assessment.done||state.battle||state.teaching||state.assessment.progress||state.demoComplete;
   $('#continueAdventure').hidden=!resumable;
-  $('#continueAdventure').textContent=state.session?.completedAt?'Keep exploring →':(state.assessment.progress?'Continue reading check →':'Keep exploring →');
+  $('#continueAdventure').textContent='Play';
   $('#tryBattle').hidden=!!resumable;$('#checkFirst').hidden=!!resumable;
   $('#sessionNote').textContent=store.recovered?'Your last saved copy was recovered.':resumable?'Your progress is saved on this device.':'';
   show('route');save();
@@ -250,6 +262,7 @@ function renderActivity() {
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge');
   $('#combatEffects').className='combatEffects';$('#battle').classList.remove('correcting');
   $('#encounterIntro').hidden=true;$('#assessmentIntro').hidden=true;
+  if(state.story.mapPending){selectedMapArea=null;home();return;}
   if(state.activity.startsWith('math')){renderMath();return;}
   if(state.activity==='handoff'){renderHandoff();return;}
   if(state.activity==='battle') {
@@ -291,7 +304,7 @@ function updateMathHud(){
 }
 function renderMath(){
   const r=state.math.round;if(!r){home();return;}
-  const enemy=Content.enemies.find(e=>e.id===r.enemyId)||Content.enemies[0];show(mathActivity());
+  const enemy=Content.enemyAt(r.enemyId);show(mathActivity());
   if(r.status==='intro'){
     paintEnemy($('#mathRevivedEnemy'),r.enemyId,state.battle?.maxHealth||3);
     $('#mathIntroTitle').textContent=enemy.name+' rises again!';
@@ -396,7 +409,7 @@ function correction(animate=false) {
   const correct=document.createElement('div');correct.className='correctWord';const label=document.createElement('small');label.textContent='Word shown';const target=document.createElement('span');target.textContent=q.target;correct.append(label,target);scroll.append(correct);
   const next=document.createElement('button');next.className='greenButton correctionNext';next.textContent='→';next.setAttribute('aria-label','See the example');
   next.onclick=()=>{if(!confirmActivity())return;Core.startTeaching(state,q.target,'battle',Date.now());if(save())renderActivity();};
-  const replay=document.createElement('button');replay.className='replay';replay.textContent='🔊';replay.setAttribute('aria-label','Replay the correct word');
+  const replay=document.createElement('button');replay.className='replay';replay.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg>';replay.setAttribute('aria-label','Replay the correct word');
   replay.onclick=()=>{Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak('The word was '+q.target+'.');};
   $('#battleAnswers').append(replay,next);
   if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);
@@ -418,11 +431,11 @@ function renderEncounter(){
   show('battle');paintHero($('#battleHeroImg'),heroIndex());renderHud();
   $('#battleScroll').textContent='';$('#battleAnswers').replaceChildren();$('#battleUnsure').hidden=true;$('#wordReady').hidden=true;
   $('#encounterIntro').hidden=false;
-  const b=state.battle,enemy=Content.enemies.find(item=>item.id===b.enemyId)||Content.enemies[0];
-  $('#encounterLead').textContent=b.finalEncounter?'Final chapter battle':b.fromAssessment?'Reading check complete':'Next encounter';
+  const b=state.battle,enemy=Content.enemyAt(b.enemyId);
+  $('#encounterLead').textContent=b.finalEncounter?'Last fight':b.fromAssessment?'Let’s play':'Ready?';
   $('#encounterTitle').textContent=Content.areas.find(area=>area.id===b.areaId)?.name||'Lantern Trail';renderChapter($('#encounterChapter'));
   paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
-  speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+'A '+enemy.name+' is on the path. Ready to battle?');save();
+  speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+'A '+Content.enemyAt(enemy.family).name+' is on the path. Ready to battle?');save();
 }
 function renderTeaching() {
   show('teaching');$('#wordReady').hidden=true;
@@ -437,13 +450,13 @@ function renderTeaching() {
   illustration.onload=pictureReady;
   illustration.onerror=()=>{if(token!==epoch)return;$('#lessonStatus').textContent='The picture could not load. You can listen or continue.';pictureReady();};
   illustration.hidden=!!item.crop;$('#teachAtlas').toggleAttribute('hidden',!item.crop);
-  if(item.crop){const crop=item.crop.map((v,i)=>i<2?v+4:v-8);$('#teachAtlas').setAttribute('viewBox',crop.join(' '));$('#teachAtlas').setAttribute('aria-label',item.alt);}
-  illustration.src='assets/teaching/'+item.image+(item.crop?'.png':'.webp');illustration.alt=item.alt;
+  if(item.crop){const crop=item.crop.map((v,i)=>i<2?v+4:v-8);$('#teachAtlas').setAttribute('viewBox',crop.join(' '));$('#teachAtlas').setAttribute('aria-label',item.alt);const atlas=$('#teachAtlas image');atlas.setAttribute('href',Content.teachingSource(item));atlas.setAttribute('width','1536');atlas.setAttribute('height',item.image==='core-teaching'?'2048':'1024');}
+  illustration.src=Content.teachingSource(item);illustration.alt=item.alt;
   if(illustration.complete&&illustration.naturalWidth)pictureReady();
 }
 function narrateTeaching() {
   const item=Core.byWord[state.teaching.target],prefix=state.battle?.question?.freeMistake?'Practice turn. You keep your heart. ':'';
-  const start=prefix.length+item.sentence.toLowerCase().indexOf(item.w),end=start+item.w.length;
+  const start=prefix.length+new RegExp('\\b'+item.w+'\\b','i').exec(item.sentence).index,end=start+item.w.length;
   const target=$('#teachSentence .targetWord');target.classList.remove('spoken');
   speak(prefix+item.sentence,{onBoundary:event=>target.classList.toggle('spoken',event.charIndex>=start&&event.charIndex<end),onEnd:()=>target.classList.remove('spoken')});
 }
@@ -455,14 +468,18 @@ function renderResult() {
   show('result');const result=state.result;if(!result){home();return;}
   paintHero($('#resultHero'),heroIndex());
   $('#resultTitle').textContent=result.victory?'You did it!':'Let’s try again';
-  $('#resultMessage').textContent=result.chapterComplete?'Pip found the hidden nest! Keep practicing together.':Core.storyProgress(state).areas.find(a=>a.id===state.battle?.areaId&&a.status==='cleared')?.discovery||'';renderChapter($('#resultChapter'));
-  const growth=Core.dragonProgress(state);$('#resultGrowth').textContent='Pip · '+growth.xp+' XP';
+  $('#resultMessage').textContent=result.chapterJustComplete?'A new path is ready!':Core.storyProgress(state).areas.find(a=>a.id===state.battle?.areaId&&a.status==='cleared')?.discovery||'';renderChapter($('#resultChapter'));
+  const growth=Core.dragonProgress(state),math=state.math.records.filter(r=>r.battleId===result.battleId).reduce((n,r)=>n+r.correct,0);
+  $('#resultXP').textContent='+'+((result.xpEarned??state.campaign.battleRecords.filter(r=>r.battleId===result.battleId).reduce((n,r)=>n+(r.xpEarned||0),0))+math)+' XP';
+  $('#resultXPDetail').textContent=growth.xp+' / '+(growth.next?.xp||growth.xp)+' XP';
+  $('#resultGrowthFill').style.width=(growth.fraction*100)+'%';$('#resultGrowthBar').setAttribute('aria-valuenow',String(Math.round(growth.fraction*100)));
+  $('#resultGrowthNote').textContent=growth.next?'Pip is growing · Tap to see':'Pip is ready to ride';
   const progress=Core.chapterProgress(state);
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');
-  const enemies=Core.enemyChoices(state);
+  const enemies=Core.enemyChoices(state,result.strength);
   const choices=[{hp:result.strength,label:'Same',symbol:'=',enemy:enemies[0]}];
-  if(result.victory)choices.push({hp:result.strength+1,label:'Stronger',symbol:'↑',enemy:enemies[1]});
-  else if(result.strength>3)choices.push({hp:result.strength-1,label:'Easier',symbol:'↓',enemy:enemies[1]});
+  if(result.victory)choices.push({hp:result.strength+1,label:'Stronger',symbol:'↑',enemy:Core.enemyChoices(state,result.strength+1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength+1)[0]});
+  else if(result.strength>3)choices.push({hp:result.strength-1,label:'Easier',symbol:'↓',enemy:Core.enemyChoices(state,result.strength-1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength-1)[0]});
   else choices.push({hp:3,label:'Same',symbol:'=',enemy:enemies[1]});
   const box=$('#opponents');box.replaceChildren();
   choices.forEach(choice=>{
@@ -470,13 +487,13 @@ function renderResult() {
     button.setAttribute('aria-label',`${choice.enemy.name}, ${choice.label.toLowerCase()} strength, ${choice.hp} hearts`);
     button.innerHTML=`<div class="opponentStage"><div class="opponentMonster sceneSprite"></div></div><div class="opponentName"><span aria-hidden="true">${choice.symbol}</span> ${choice.label}</div><div class="miniHearts visualHearts"></div>`;
     button.dataset.enemy=choice.enemy.id;paintEnemy(button.querySelector('.opponentMonster'),choice.enemy.id,choice.hp);healthSymbols(button.querySelector('.miniHearts'),choice.hp);
-    button.onclick=()=>{playClock.reset(performance.now());account();if(Core.isSessionDue(state)){Core.completeSession(state,Date.now());if(save())renderActivity();return;}
+    button.onclick=()=>{playClock.reset(performance.now());account();if(Core.isSessionDue(state))Core.completeSession(state,Date.now());
       state.campaign.enemyStrength=choice.hp;Core.startBattle(state,Date.now(),{strength:choice.hp,enemyId:choice.enemy.id});if(save())renderActivity();};box.append(button);
   });box.classList.toggle('single',choices.length===1);
 }
 function renderSummary() {
   show('summary');playing=false;paused=true;cancelWork();const session=state.session;
-  $('#summaryTitle').textContent=session.elapsedMs>=session.targetMs?'Challenge complete':'Practice saved';
+  $('#summaryTitle').textContent=state.battle&&!state.battle.resolved?'Saved':session.elapsedMs>=session.targetMs?'Well done!':'Saved';
   const records=state.campaign.battleRecords.filter(r=>r.sessionId===session.id),words=[...new Set(records.map(r=>r.target))];
   $('#summaryDetail').hidden=words.length===0;
   $('#summaryWords').replaceChildren();
@@ -485,7 +502,7 @@ function renderSummary() {
 }
 
 function galaxyMask(){
-  return '<svg class="mask galaxyMask" viewBox="0 0 160 94" aria-hidden="true"><ellipse class="nebula" cx="80" cy="47" rx="66" ry="31"/><g class="galaxyArms"><path d="M78 48c-12-7 0-18 16-10s12 26-13 27-47-21-22-34 65-3 60 22-76 41-93 8S61 4 100 16"/><path d="M80 47c10 8-4 16-17 8s-9-27 17-28 48 22 21 35-66 0-58-24S113 6 132 36"/></g><g class="galaxyStars"><circle cx="80" cy="47" r="5"/><circle cx="33" cy="26" r="2"/><circle cx="119" cy="66" r="2"/><circle cx="131" cy="23" r="1.5"/><circle cx="55" cy="74" r="1.5"/><path d="M20 48h8m-4-4v8M111 14h6m-3-3v6M95 77h6m-3-3v6"/></g></svg>';
+  return '<svg class="mask forestSpiral" viewBox="0 0 180 110" aria-hidden="true"><path class="spiralGlow" d="M92 53c-12-8-25 0-21 9 6 15 39 10 49-5 15-24-20-41-50-25-30 15-34 43-3 52 36 10 84-13 89-39 6-30-49-39-84-24-36 15-62 40-57 64"/><path class="spiralLine" d="M92 53c-12-8-25 0-21 9 6 15 39 10 49-5 15-24-20-41-50-25-30 15-34 43-3 52 36 10 84-13 89-39 6-30-49-39-84-24-36 15-62 40-57 64"/></svg>';
 }
 function syncSound(){
   if(!state)return;
@@ -493,8 +510,8 @@ function syncSound(){
   sound.configure({enabled:state.settings.soundscape!==false,quiet:blocked||document.hidden||!windowFocused||(playing&&paused)||reading||state.screen==='assessment'||state.screen==='parentDashboard'});
 }
 function paceIcon(id){
-  const paths={crawl:'M5 17h14M6 15l4-5 5 3 3 4M10 10l-3 1-2 3M15 13l1-3',walk:'M11 8l-2 5 4 3 1 5M9 13l-3 7M11 8l4 4 4 1',run:'M13 8l-5 4 4 3 5-1 4 3M12 15l-5 5H3M13 8l3 4 4-3',ride:'M3 17l3-6 8 2 5-6 2 4-3 4-2 5M7 13l1 7M10 7l3 3 3-1',fly:'M12 14Q5 1 2 5l3 9 7 3 7-3 3-9q-5-4-10 9M12 14v7'};
-  return '<svg viewBox="0 0 24 24" aria-hidden="true">'+(['crawl','walk','run'].includes(id)?'<circle cx="'+(id==='crawl'?16:13)+'" cy="5" r="2"/>':'')+'<path d="'+paths[id]+'"/></svg>';
+  const count=['crawl','walk','run','ride','fly'].indexOf(id)+1;
+  return '<span class="paceSteps" aria-hidden="true">'+Array.from({length:3},(_,i)=>'<i class="'+(i<Math.min(3,count)?'filled':'')+'"></i>').join('')+'</span>';
 }
 function openSpeed(){
   const box=$('#speedChoices');box.replaceChildren();
@@ -503,10 +520,25 @@ function openSpeed(){
     button.setAttribute('aria-pressed',String((state.settings.selfPaced?'crawl':state.settings.speed||'walk')===mode.id));
     button.setAttribute('aria-label',mode.name+(mode.locked?', locked: rideable Pip and expansion required':''));
     button.innerHTML=paceIcon(mode.id)+'<span>'+mode.name+'</span>'+(mode.locked?'<svg class="paceLock" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>':'');
-    button.onclick=()=>{if(Core.chooseSpeed(state,mode.id)&&save())openSpeed();};box.append(button);
+    button.onclick=()=>{if(Core.chooseSpeed(state,mode.id)&&save()){$('#speedPanel').hidden=true;$('#mapSpeed').textContent=mode.name;}};box.append(button);
   }
-  $('#speedNote').textContent='Slower is always okay. Changes start with the next word.';$('#speedPanel').hidden=false;
+  $('#speedNote').textContent='';$('#speedPanel').hidden=false;
 }
+function openGrowth(){
+  const g=Core.dragonProgress(state);paintPip($('#growthPip'));paintPip($('#growthNextPip'),Math.min(g.stage+1,3));
+  $('#growthTitle').textContent=g.next?'Pip is growing':'Pip can ride';
+  $('#growthNextName').textContent=g.next?.name||g.current.name;
+  const rows=$('#growthMeters');rows.replaceChildren();
+  const meters=g.next?[['XP',g.xp,g.next.xp],['Minutes',Math.floor(g.activeMs/60000),g.next.minMinutes],['Days',Math.floor(g.elapsedDays),g.next.minDays]]:[['XP',g.xp,g.xp||1]];
+  meters.forEach(([label,value,max])=>{const row=document.createElement('div');row.className='growthMeter';const heading=document.createElement('span');heading.textContent=label;const valueEl=document.createElement('strong');valueEl.textContent=Math.min(value,max)+' / '+max;const track=document.createElement('div');track.className='growthTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label',label);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(max));track.setAttribute('aria-valuenow',String(Math.min(value,max)));const fill=document.createElement('span');fill.style.width=(Math.min(1,value/max)*100)+'%';track.append(fill);row.append(heading,valueEl,track);rows.append(row);});
+  $('#growthChapterGate').hidden=!g.next?.requiresChapter||state.story.chapterComplete;
+  $('#growthPanel').hidden=false;
+}
+$('#dragonPanel').onclick=$('#resultGrowth').onclick=openGrowth;
+$('#dragonPanel').onkeydown=event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openGrowth();}};
+$('#growthClose').onclick=()=>{$('#growthPanel').hidden=true;};
+document.addEventListener('contextmenu',event=>{if(!event.target.closest('input,textarea,#parentDashboard'))event.preventDefault();});
+document.addEventListener('selectstart',event=>{if(!event.target.closest('input,textarea,#parentDashboard'))event.preventDefault();});
 $('#mapSpeed').onclick=$('#pauseSpeed').onclick=openSpeed;
 $('#speedClose').onclick=()=>{$('#speedPanel').hidden=true;};
 $('#fullscreenBtn').onclick=async()=>{
@@ -548,6 +580,7 @@ $('#mapContinue').onclick=()=>{
   if(blocked)return;
   const area=Core.storyProgress(state).areas.find(item=>item.id===selectedMapArea);
   if(!area||!['current','cleared'].includes(area.status))return;
+  state.story.mapPending=false;
   if(state.battle?.fromAssessment&&!state.battle.mapSeen){state.battle.mapSeen=true;state.battle.introPending=false;}
   continueAdventure();
 };
@@ -593,7 +626,7 @@ window.addEventListener('focus',()=>{windowFocused=true;});
 window.addEventListener('storage',event=>{if(event.key===KEY&&event.newValue!==store.expected)storageProblem(Object.assign(new Error('Another tab updated this adventure. Reload to use its saved progress.'),{code:'conflict'}));});
 setInterval(()=>{
   account();if(paused||blocked||!playing)return;
-  if(state.activity==='result'&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());if(save())renderActivity();}else save();
+  if(state.activity==='result'&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());state.activity='result';if(save())renderActivity();}else save();
 },1000);
 Core.interruptQuestion(state);
 renderHeroes();paintHero($('#battleHeroImg'),heroIndex());

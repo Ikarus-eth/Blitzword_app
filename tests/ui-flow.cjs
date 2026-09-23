@@ -47,9 +47,9 @@ function mathSave(best=8){
 for(const mode of ['win','lose','help']){
  let ui=boot();ui.get('nameInput').value='Éva';ui.click(ui.get('setupNext'));ui.click(ui.get('heroNext'));ui.click(ui.get('tryBattle'));
  assert.equal(ui.state().activity,'teaching');assert.equal(ui.get('teachContinue').disabled,false);ui.click(ui.get('teachContinue'));
- for(let turns=0;turns<8&&ui.state().activity==='battle';turns++){
+ for(let turns=0;turns<20&&ui.state().activity==='battle';turns++){
   ui.ready();const q=ui.state().battle.question;assert.equal(ui.get('battleAnswers').children.length,4);assert.equal(ui.get('battleUnsure').hidden,false);
-  if(mode==='help')ui.click(ui.get('battleUnsure'));else ui.click([...ui.get('battleAnswers').children].find(b=>mode==='win'?b.textContent===q.target:b.textContent!==q.target));
+  if(mode==='help'&&turns<8)ui.click(ui.get('battleUnsure'));else ui.click([...ui.get('battleAnswers').children].find(b=>mode==='win'||mode==='help'?b.textContent===q.target:b.textContent!==q.target));
   if(!ui.state().battle.question.correct){
    assert.equal(ui.state().activity,'battle');assert.equal(ui.state().battle.question.phase,'correction');
    assert.equal(ui.get('battleScroll').querySelector('.correctWord span').textContent,q.target);
@@ -114,16 +114,32 @@ for(const victory of [true,false]){
  s.dragon.xp=249;s.timing.firstPracticeAt='2000-01-01T00:00:00.000Z';s.timing.days={'2026-09-22':{practice:250*60000,assessment:0,demo:0,idle:0}};s=Core.migrate(s);Core.startBattle(s,Date.now());
  let ui=boot(s);assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('dragonXP').textContent,'249 XP');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('dragonStages').children.length,4);
  const id=ui.state().battle.id;ui.click(ui.get('mapNodes').querySelector('[data-area="hidden-nest"]'));
- assert.equal(ui.get('mapAreaTitle').textContent,'Hidden Nest');assert.equal(ui.get('mapContinue').disabled,true);assert.equal(ui.state().battle.id,id);assert.equal(ui.get('mapAreaStatus').textContent,'Further along the trail');
+ assert.equal(ui.get('mapAreaTitle').textContent,'Home');assert.equal(ui.get('mapContinue').disabled,true);assert.equal(ui.state().battle.id,id);assert.equal(ui.get('mapAreaStatus').textContent,'Further along the trail');
  ui.click(ui.get('mapNodes').querySelector('[data-area="lantern-trail"]'));ui.resume();ui.ready();assert.equal(ui.state().battle.question.target,'on');
- ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip grew! Young Pip');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'1');
- ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'250 XP');assert.equal(ui.get('dragonStage').textContent,'Young Pip');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('mapPip').dataset.growth,'1');
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip grew! Big Pip');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'1');
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'250 XP');assert.equal(ui.get('dragonStage').textContent,'Big Pip');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('mapPip').dataset.growth,'1');
  const answers=ui.state().campaign.battleRecords.length;ui.resume();ui.until(()=>ui.state().battle.question.target!=='on');assert.equal(ui.state().campaign.battleRecords.length,answers);
  ui.click(ui.get('homeBtn'));ui.click(ui.get('mapSettings'));ui.click(ui.get('heroGrid').children[1]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.get('dragonXP').textContent,'250 XP');
  console.log('PASS map future previews, XP stage unlock, reload, exact resume and hero change');
 }
 
 // Idle, suspension and parent reporting use the actual controller and timer callbacks.
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=98;Core.startBattle(s,Date.now());
+ const ui=boot(s);assert.equal(ui.get('dragonProgress').querySelector('span').style.width,'39.2%');
+ ui.click(ui.get('dragonPanel'));assert.equal(ui.get('growthPanel').hidden,false);assert.match(ui.get('growthMeters').textContent,/98 \/ 250/);assert.match(ui.get('growthMeters').textContent,/Days/);ui.click(ui.get('growthClose'));
+ assert.equal(ui.get('growthPanel').hidden,true);
+ console.log('PASS Pip tap shows separate XP, time and day progress without hiding earned XP');
+}
+{
+ let s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
+ for(const word of Content.chapters[0].words){s.learning.words[word].introducedAt=new Date().toISOString();s.learning.words[word].practiceSuccesses=2;}
+ s.campaign.wins=10;s.campaign.checkpointWins=10;s=Core.migrate(s);Core.startBattle(s,Date.now());s.battle.enemyHealth=0;Core.resolveBattle(s,Date.now());
+ const ui=boot(s);assert.equal(ui.get('campaignMap').classList.contains('active'),true);assert.equal(ui.get('chapterCelebration').hidden,false);assert.equal(ui.get('mapTitle').textContent,'River Path');assert.equal(ui.get('chapterScenery').hidden,false);
+ ui.resume();assert.equal(ui.state().story.mapPending,false);assert.equal(ui.get('result').classList.contains('active'),true);assert.ok(ui.get('resultGrowthBar'));
+ ui.click(ui.get('opponents').children[0]);assert.equal(ui.state().battle.chapterId,'chapter-2');assert.equal(ui.state().story.chapterComplete,true);
+ console.log('PASS chapter finale opens the next map, then rewards and the next chapter without resetting progress');
+}
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());
  let ui=boot(s);ui.resume();ui.ready();const qid=ui.state().battle.question.id;
@@ -151,9 +167,9 @@ for(const victory of [true,false]){
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());
  let ui=boot(s);ui.click(ui.get('mapSpeed'));assert.equal(ui.get('speedPanel').hidden,false);
  assert.equal(ui.get('speedChoices').querySelector('[data-speed="ride"]').disabled,true);
- ui.click(ui.get('speedChoices').querySelector('[data-speed="run"]'));ui.click(ui.get('speedClose'));ui=boot(ui.state());ui.resume();ui.ready();
+ ui.click(ui.get('speedChoices').querySelector('[data-speed="run"]'));assert.equal(ui.get('speedPanel').hidden,true);ui=boot(ui.state());ui.resume();ui.ready();
  assert.equal(ui.state().battle.question.exposureMs,950);const question=Core.copy(ui.state().battle.question);
- ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseSpeed'));ui.click(ui.get('speedChoices').querySelector('[data-speed="crawl"]'));ui.click(ui.get('speedClose'));
+ ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseSpeed'));ui.click(ui.get('speedChoices').querySelector('[data-speed="crawl"]'));assert.equal(ui.get('speedPanel').hidden,true);
  assert.deepEqual(ui.state().battle.question,question);ui.click(ui.get('pauseResume'));assert.equal(ui.state().battle.question.exposureMs,950);
  ui.click([...ui.get('battleAnswers').children].find(x=>x.textContent===question.target));ui.until(()=>ui.state().battle.question.id!==question.id);
  assert.equal(ui.state().battle.question.exposureMs,null);assert.equal(ui.get('feedback').textContent,'');
