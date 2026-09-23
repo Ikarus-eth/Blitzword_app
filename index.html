@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="blitzword-build" content="core200-attacks-20260923-r4" />
+<meta name="blitzword-build" content="child-feedback-20260923-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=core200-attacks-20260923-r4" />
+<link rel="stylesheet" href="styles.css?v=child-feedback-20260923-r1" />
 </head>
 <body><main class="app" id="app">
 <div id="chapterScenery" class="chapterScenery" aria-hidden="true" hidden></div>
@@ -77,7 +77,7 @@
 </section>
 
 <section id="teaching" class="screen">
-  <div class="teachCard parchment"><div id="teachSentence" class="teachSentence"></div><img id="teachIllustration" class="teachIllustration" alt=""/><svg id="teachAtlas" class="teachIllustration" role="img" hidden viewBox="0 0 768 512"><image href="assets/teaching/chapter-teaching.png" width="1536" height="1024"/></svg><p id="lessonStatus" class="lessonStatus" aria-live="polite"></p><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg></button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
+  <div class="teachCard parchment"><div id="teachSentence" class="teachSentence"></div><div class="teachArt"><img id="teachIllustration" class="teachIllustration" alt=""/><svg id="teachAtlas" class="teachIllustration" role="img" hidden preserveAspectRatio="xMidYMid meet" viewBox="0 0 768 512"><image href="assets/teaching/chapter-teaching.png" width="1536" height="1024"/></svg></div><p id="lessonStatus" class="lessonStatus" aria-live="polite"></p><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg></button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
 </section>
 
 <section id="assessment" class="screen playfield">
@@ -106,13 +106,13 @@
   <div class="resultCard parchment"><div class="resultCompanions"><span id="resultHero" class="sceneSprite" role="img" aria-label="Your hero"></span><span class="sceneSprite" data-sprite="6" role="img" aria-label="Pip"></span></div><h1 id="resultTitle" class="resultTitle"></h1><p id="resultMessage" class="resultMessage"></p><div id="checkpoint" class="checkpoint"></div><div id="resultChapter" class="chapterPanel"></div><button id="resultGrowth" class="resultGrowth" aria-label="See Pip’s growth"><strong id="resultXP" class="resultXP"></strong><span id="resultXPDetail"></span><span id="resultGrowthBar" class="growthTrack" role="progressbar" aria-label="Pip XP towards next growth" aria-valuemin="0" aria-valuemax="100"><span id="resultGrowthFill"></span></span><span id="resultGrowthNote"></span></button><div id="opponents" class="opponents"></div><button id="resultNext" class="secondaryButton resultNext">Map</button></div>
 </section>
 <section id="mathIntro" class="screen forest mathScreen">
- <div class="mathIntroCard parchment"><div class="eyebrow">1 × 1</div><span id="mathRevivedEnemy" class="sceneSprite mathRevival" role="img"></span><h1 id="mathIntroTitle"></h1><p>60 seconds</p><div class="mathRules"><span>Correct <b>+1</b></span><span>Wrong <b>−1</b></span></div><p id="mathIntroPR"></p><strong id="mathIntroTarget" class="mathTargetBadge"></strong><button id="mathStart" class="greenButton" aria-label="Start 60-second challenge">Play</button><button id="mathSkip" class="textButton">Not now</button></div>
+ <div class="mathIntroCard duelCard parchment"><div class="duelHeading">1 × 1</div><span id="mathRevivedEnemy" class="sceneSprite duelCreature" role="img"></span><h1 id="mathIntroTitle" class="duelEnemyName"></h1><div class="duelBadges"><div class="duelBadge" aria-label="60 seconds"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="17" r="11"/><path d="M16 10V17L21 20M12 2H20M16 2V6"/></svg><strong>60s</strong></div><div id="mathIntroGoal" class="duelBadge"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5"/><path d="M16 1V7M16 25V31M1 16H7M25 16H31"/></svg><span><small>Goal</small><strong id="mathIntroTarget"></strong></span></div></div><div class="mathRules" aria-label="Correct answer plus one point; wrong answer minus one point"><span>+1</span><span>−1</span></div><p id="mathIntroPR" class="duelBest"></p><div class="duelActions"><button id="mathStart" class="greenButton" aria-label="Start 60-second challenge">Play</button><button id="mathSkip" class="textButton">Later</button></div></div>
 </section>
 <section id="mathChallenge" class="screen forest mathScreen">
  <div class="mathArena parchment"><div class="mathHud"><div><small>Score</small><strong id="mathScore">0</strong></div><div class="mathClock" id="mathClock"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="clockTrack" cx="50" cy="50" r="43"/><circle id="mathTimeRing" class="clockRemaining" cx="50" cy="50" r="43" pathLength="100"/></svg><strong id="mathTime" role="timer" aria-label="Time remaining">60s</strong></div><div><small>Best</small><strong id="mathPR">—</strong></div></div><div class="mathOpponent"><span id="mathEnemy" class="sceneSprite" role="img"></span><div><span>Goal <strong id="mathTarget">1</strong></span><div id="mathTargetBar" class="dragonProgress" role="progressbar" aria-label="Points towards enemy target" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><span></span></div></div></div><div class="mathProblem"><span id="mathEquation"></span><output id="mathInput" aria-label="Your answer">?</output></div><div id="mathFeedback" class="mathFeedback" role="status" aria-live="polite"></div><div id="mathKeys" class="mathKeys" role="group" aria-label="Answer keypad"><button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button><button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button data-key="back" aria-label="Delete last digit">⌫</button><button data-key="0">0</button><button data-key="enter" class="mathSubmit" aria-label="Submit answer">↵</button></div></div>
 </section>
 <section id="mathResult" class="screen forest mathScreen">
- <div class="mathIntroCard parchment"><div class="eyebrow">Time’s up</div><span id="mathResultEnemy" class="sceneSprite" role="img"></span><h1 id="mathResultTitle"></h1><strong id="mathResultScore" class="mathExample"></strong><p id="mathResultDetail"></p><p id="mathResultMessage"></p><button id="mathContinue" class="greenButton">Play</button></div>
+ <div class="mathIntroCard duelCard duelResultCard parchment"><h1 id="mathResultTitle"></h1><span id="mathResultEnemy" class="sceneSprite duelCreature" role="img"></span><div class="duelScore"><strong id="mathResultScore"></strong><span>Goal <b id="mathResultGoal"></b></span></div><div class="duelRewards"><strong id="mathResultDetail"></strong><span id="mathResultBest"></span></div><p id="mathResultMessage" class="srOnly" role="status"></p><button id="mathContinue" class="greenButton" aria-label="Continue to reading rewards">Next</button></div>
 </section>
 <section id="summary" class="screen forest">
   <div class="summaryCard parchment">
@@ -161,6 +161,6 @@
 <script src="storage.js?v=core200-20260922-r1"></script>
 <script src="soundscape.js?v=core200-20260922-r1"></script>
 <script src="narration.js?v=core200-20260922-r1"></script>
-<script src="audio.js?v=core200-20260922-r1"></script>
+<script src="audio.js?v=child-feedback-20260923-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
-<script src="app.js?v=core200-attacks-20260923-r4"></script></body></html>
+<script src="app.js?v=child-feedback-20260923-r1"></script></body></html>

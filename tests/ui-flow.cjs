@@ -54,7 +54,7 @@ function mathSave(best=8){
  for(let i=0;i<3;i++){Core.startBattle(s,Date.UTC(2026,8,22),{strength:3});s.battle.enemyHealth=0;Core.resolveBattle(s,Date.UTC(2026,8,22));}return s;
 }
 {
- let ui=boot(mathSave());ui.resume();assert.ok(ui.get('mathIntro').classList.contains('active'));assert.equal(ui.get('mathRevivedEnemy').dataset.enemy,ui.state().battle.enemyId);assert.match(ui.get('mathIntroTarget').textContent,/6 points/);
+ let ui=boot(mathSave());ui.resume();assert.ok(ui.get('mathIntro').classList.contains('active'));assert.equal(ui.get('mathRevivedEnemy').dataset.enemy,ui.state().battle.enemyId);assert.equal(ui.get('mathIntroTarget').textContent,'6');assert.equal(ui.get('mathIntroGoal').getAttribute('aria-label'),'Goal: 6 points');
  ui.advance(60000);assert.equal(Core.parentProgress(ui.state()).activeMs,0);ui.click(ui.get('mathStart'));assert.equal(ui.get('mathTime').textContent,'60s');
  const key=value=>ui.click(ui.get('mathKeys').querySelector('[data-key="'+value+'"]'));
  ui.advance(4000);key('1');const problem=ui.state().math.round.question.id;ui.click(ui.get('homeBtn'));const remaining=ui.state().math.round.elapsedMs;
@@ -102,7 +102,7 @@ for(const victory of [true,false]){
  const ui=boot(s);ui.resume();assert.ok(ui.get('result').classList.contains('active'));assert.equal(ui.get('opponents').children.length,2);
  assert.equal(ui.get('resultHero').dataset.sprite,'4');const wins=ui.state().campaign.wins;
  ui.click(ui.get('resultNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));ui.resume();assert.equal(ui.state().campaign.wins,wins);
- const chosen=ui.get('opponents').children[1].dataset.enemy;ui.click(ui.get('opponents').children[1]);assert.equal(ui.state().battle.maxHealth,victory?5:3);assert.equal(ui.state().campaign.wins,wins);assert.equal(ui.state().battle.enemyId,chosen);ui.click(ui.get('encounterStart'));
+ const cards=[...ui.get('opponents').children];assert.ok(cards.every(card=>card.querySelector('.creatureName').textContent===Content.enemyAt(card.dataset.enemy).name));assert.deepEqual(cards.map(card=>card.querySelector('.opponentName').textContent.trim()),victory?['= Same','↑ Stronger']:['↓ Easier','= Same']);const chosenCard=cards[victory?1:0];const chosen=chosenCard.dataset.enemy;ui.click(chosenCard);assert.equal(ui.state().battle.maxHealth,victory?5:3);assert.equal(ui.state().campaign.wins,wins);assert.equal(ui.state().battle.enemyId,chosen);ui.click(ui.get('encounterStart'));
  ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseFinish'));assert.ok(ui.get('summary').classList.contains('active'));assert.ok(ui.state().session.completedAt);
  const oldSession=ui.state().session.id;ui.click(ui.get('anotherChallenge'));assert.notEqual(ui.state().session.id,oldSession);assert.ok(ui.get('battle').classList.contains('active'));
  console.log('PASS returning',victory?'victory':'retry','→ chosen strength → finish → summary → new challenge');
@@ -186,14 +186,14 @@ for(const victory of [true,false]){
 {
  for(const word of ['water','bird','small','night','magic']){
   const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());Core.startTeaching(s,word,'battle',Date.now());
-  const ui=boot(s);ui.resume();assert.equal(ui.get('teachAtlas').hasAttribute('hidden'),false);assert.equal(ui.get('teachIllustration').hidden,true);assert.equal(ui.get('teachContinue').disabled,false);assert.equal(ui.get('teachAtlas').getAttribute('aria-label'),Core.byWord[word].alt);ui.click(ui.get('teachContinue'));assert.equal(ui.state().activity,'battle');
+  const ui=boot(s);ui.resume();assert.equal(ui.get('teachAtlas').hasAttribute('hidden'),false);assert.equal(ui.get('teachIllustration').hidden,true);assert.equal(ui.get('teachContinue').disabled,false);assert.equal(ui.get('teachAtlas').getAttribute('aria-label'),Core.byWord[word].alt);assert.equal(ui.get('teachAtlas').getAttribute('viewBox'),Core.byWord[word].crop.join(' '));assert.equal(ui.get('teachAtlas').parentElement.className,'teachArt');ui.click(ui.get('teachContinue'));assert.equal(ui.state().activity,'battle');
  }
  console.log('PASS all four new teaching scenes and return to battle');
 }
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());
  let ui=boot(s);ui.click(ui.get('mapSpeed'));assert.equal(ui.get('speedPanel').hidden,false);
- assert.equal(ui.get('speedChoices').querySelector('[data-speed="ride"]').disabled,true);
+ assert.equal(ui.get('speedChoices').querySelector('[data-speed="ride"]').disabled,true);const icons=[...ui.get('speedChoices').querySelectorAll('.pacePicture')];assert.equal(icons.length,5);assert.equal(new Set(icons.map(icon=>icon.innerHTML)).size,5);
  ui.click(ui.get('speedChoices').querySelector('[data-speed="run"]'));assert.equal(ui.get('speedPanel').hidden,true);ui=boot(ui.state());ui.resume();ui.ready();
  assert.equal(ui.state().battle.question.exposureMs,950);const question=Core.copy(ui.state().battle.question);
  ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseSpeed'));ui.click(ui.get('speedChoices').querySelector('[data-speed="crawl"]'));assert.equal(ui.get('speedPanel').hidden,true);
@@ -209,4 +209,13 @@ for(const victory of [true,false]){
  assert.equal(ui.get('mathScore').textContent,'-1');assert.match(ui.get('mathFeedback').textContent,/−1/);assert.equal(ui.state().dragon.xp,0);
  const saved=ui.state();ui.click(ui.get('homeBtn'));const next=boot(saved);next.resume();assert.equal(next.get('mathScore').textContent,'-1');assert.equal(next.get('mathTime').textContent,'50s');
  console.log('PASS visual countdown and negative score survive Home and reload');
+}
+
+// Results distinguish loss from a new record and keep the three-heart floor honest.
+{
+ const s=mathSave(null);Core.startMath(s,Date.now());Core.tickMath(s,60000,Date.now());
+ const ui=boot(s);ui.resume();assert.equal(ui.get('mathResultTitle').textContent,'Try again');assert.equal(ui.get('mathResult').dataset.outcome,'lost');assert.equal(ui.get('mathResultScore').textContent,'0');assert.equal(ui.get('mathResultGoal').textContent,'1');assert.match(ui.get('mathResultMessage').textContent,/reading victory and earned XP are safe/);
+ const lowest=Core.migrate(Core.fresh());lowest.profile.name='Reader';lowest.assessment.done=true;Core.startBattle(lowest,Date.now(),{strength:3});lowest.battle.heroHealth=0;Core.resolveBattle(lowest,Date.now());
+ const retry=boot(lowest);retry.resume();assert.equal(retry.get('opponents').children.length,2);assert.ok([...retry.get('opponents').children].every(card=>card.querySelector('.opponentName').textContent.trim()==='= Same'));
+ console.log('PASS compact duel loss feedback, score/goal and minimum-strength retry');
 }

@@ -30,13 +30,16 @@
     function cancel(){generation++;unschedule(watchdog);watchdog=null;stopRecording();if(synth)synth.cancel();}
     function speak(text,{preferred='',onEnd=()=>{},onBoundary=()=>{}}={}) {
       cancel();const token=generation;let finished=false;
+      // The reported gate recording is ambiguous. Speak its exact homophone in
+      // English until that clip is re-recorded; equal length preserves boundaries.
+      const spokenText=text.replace(/\bgate\b/gi,word=>word[0]==='G'?'Gait':'gait');
       const current=()=>!finished&&token===generation;
       const finish=()=>{if(!current())return;finished=true;unschedule(watchdog);watchdog=null;stopRecording();onEnd();};
       let fallbackStarted=false;
       function fallback(){
         if(!current()||fallbackStarted)return;fallbackStarted=true;unschedule(watchdog);stopRecording();
         if(!synth||!Utterance){finish();return;}
-        const utterance=new Utterance(text),voice=chooseVoice(synth.getVoices(),preferred);
+        const utterance=new Utterance(spokenText),voice=chooseVoice(synth.getVoices(),preferred);
         if(voice)utterance.voice=voice;
         utterance.lang=voice?.lang||'en-GB';utterance.rate=.92;utterance.pitch=1;
         utterance.onend=finish;utterance.onerror=finish;
@@ -44,7 +47,7 @@
         watchdog=schedule(()=>{if(current())synth.cancel();finish();},Math.max(2200,text.split(/\s+/).length*800+1400));
         try{synth.resume();synth.speak(utterance);}catch{finish();}
       }
-      const clip=clips[text];
+      const clip=spokenText===text?clips[text]:null;
       if(!clip||!AudioContext||!fetchAudio){fallback();return;}
       unlock();if(!context){fallback();return;}
       // A stalled download must not block the lesson. A late response cannot interrupt fallback speech.

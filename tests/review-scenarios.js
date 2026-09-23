@@ -20,7 +20,7 @@ window.makeReviewSave=function(scenario){
   if(scenario.startsWith('math-')){
     s.math.best=18;s.math.winStreak=2;s.battle.enemyHealth=0;C.resolveBattle(s,now);
     if(scenario!=='math-intro')C.startMath(s,now);
-    if(scenario==='math-result'){for(let i=0;i<20;i++){const q=C.prepareMath(s);C.answerMath(s,q.a*q.b,now);}C.tickMath(s,60000,now);}
+    if(['math-result','math-loss'].includes(scenario)){for(let i=0;i<(scenario==='math-loss'?3:20);i++){const q=C.prepareMath(s);C.answerMath(s,q.a*q.b,now);}C.tickMath(s,60000,now);}
     return s;
   }
   if(scenario.startsWith('map')||scenario==='parents'){

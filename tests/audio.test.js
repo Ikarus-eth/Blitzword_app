@@ -14,3 +14,14 @@ test('missing speech completion advances once and cancellation cannot advance an
 test('unavailable speech never blocks the child',()=>{
  let done=0;narrator({}).speak('sat',{onEnd:()=>done++});assert.equal(done,1);
 });
+
+test('gate uses the English homophone without downloading the reported clip or changing boundaries',()=>{
+ let utterance,downloads=0,done=0,boundary;
+ const clips=require('../narration').clips;
+ const n=narrator({clips,AudioContext:function(){throw Error('Unexpected audio context');},fetchAudio(){downloads++;},synth:{cancel(){},resume(){},getVoices(){return[];},speak(u){utterance=u;}},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule(){}});
+ for(const text of ['gate','The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The gate is by the castle.']){
+  n.speak(text,{onEnd:()=>done++,onBoundary:e=>boundary=e.charIndex});assert.equal(utterance.text,text.replace(/gate/g,'gait'));assert.equal(utterance.text.length,text.length);assert.equal(utterance.lang,'en-GB');utterance.onboundary({charIndex:text.indexOf('gate')});assert.equal(boundary,text.indexOf('gate'));utterance.onend();
+ }
+ assert.equal(downloads,0);assert.equal(done,4);
+ n.speak('gate',{onEnd:()=>done++});n.cancel();utterance.onend();assert.equal(done,4);
+});

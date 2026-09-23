@@ -325,16 +325,21 @@ function renderMath(){
   const enemy=Content.enemyAt(r.enemyId);show(mathActivity());
   if(r.status==='intro'){
     paintEnemy($('#mathRevivedEnemy'),r.enemyId,state.battle?.maxHealth||3);
-    $('#mathIntroTitle').textContent=enemy.name+' rises again!';
-    $('#mathIntroPR').textContent=r.bestAtStart===null?'Set your first personal record': 'Your personal record: '+r.bestAtStart;
-    $('#mathIntroTarget').textContent='Enemy target: '+r.target+' points';return;
+    $('#mathIntroTitle').textContent=enemy.name;
+    $('#mathIntroPR').textContent=r.bestAtStart===null?'':'Best '+r.bestAtStart;
+    $('#mathIntroPR').hidden=r.bestAtStart===null;
+    $('#mathIntroTarget').textContent=String(r.target);
+    $('#mathIntroGoal').setAttribute('aria-label','Goal: '+r.target+' points');return;
   }
   if(r.status==='result'){
     paintEnemy($('#mathResultEnemy'),r.enemyId,state.battle?.maxHealth||3);
-    $('#mathResultTitle').textContent=r.newBest?'New personal record!':r.beaten?'Challenge won!':'Good practice!';
-    $('#mathResultScore').textContent=Core.mathScore(r)+' points';
-    $('#mathResultDetail').textContent=r.correct+' correct · '+(r.wrong||0)+' wrong · PR '+state.math.best+' · +'+r.correct+' XP';
-    $('#mathResultMessage').textContent=r.beaten?enemy.name+' bows to your number power.': 'Your reading victory is safe. Try again after three more wins.';return;
+    $('#mathResultTitle').textContent=r.beaten?'You won!':'Try again';
+    $('#mathResult').dataset.outcome=r.beaten?'won':'lost';
+    $('#mathResultScore').textContent=String(Core.mathScore(r));
+    $('#mathResultGoal').textContent=String(r.target);
+    $('#mathResultDetail').textContent='+'+r.correct+' XP';
+    $('#mathResultBest').textContent=r.newBest&&r.beaten?'New best!':'Best '+state.math.best;
+    $('#mathResultMessage').textContent=Core.mathScore(r)+' points. Goal '+r.target+'. '+r.correct+' correct, '+(r.wrong||0)+' wrong. '+(r.beaten?'Number duel won.':'Number duel lost. Your reading victory and earned XP are safe.');return;
   }
   paintEnemy($('#mathEnemy'),r.enemyId,state.battle?.maxHealth||3);updateMathHud();
   const q=r.question||Core.prepareMath(state);$('#mathEquation').textContent=q.a+' × '+q.b+' =';
@@ -496,7 +501,7 @@ function renderTeaching() {
   illustration.onload=pictureReady;
   illustration.onerror=()=>{if(token!==epoch)return;$('#lessonStatus').textContent='The picture could not load. You can listen or continue.';pictureReady();};
   illustration.hidden=!!item.crop;$('#teachAtlas').toggleAttribute('hidden',!item.crop);
-  if(item.crop){const crop=item.crop.map((v,i)=>i<2?v+4:v-8);$('#teachAtlas').setAttribute('viewBox',crop.join(' '));$('#teachAtlas').setAttribute('aria-label',item.alt);const atlas=$('#teachAtlas image');atlas.setAttribute('href',Content.teachingSource(item));atlas.setAttribute('width','1536');atlas.setAttribute('height',item.image==='core-teaching'?'2048':'1024');$('#teachAtlas').querySelector('defs')?.remove();$('#teachAtlas').insertAdjacentHTML('afterbegin',`<defs><clipPath id="teachingCell"><rect x="${crop[0]}" y="${crop[1]}" width="${crop[2]}" height="${crop[3]}"/></clipPath></defs>`);atlas.setAttribute('clip-path','url(#teachingCell)');}
+  if(item.crop){const crop=item.crop;$('#teachAtlas').setAttribute('viewBox',crop.join(' '));$('#teachAtlas').setAttribute('aria-label',item.alt);const atlas=$('#teachAtlas image');atlas.setAttribute('href',Content.teachingSource(item));atlas.setAttribute('width','1536');atlas.setAttribute('height',item.image==='core-teaching'?'2048':'1024');$('#teachAtlas').querySelector('defs')?.remove();$('#teachAtlas').insertAdjacentHTML('afterbegin',`<defs><clipPath id="teachingCell" clipPathUnits="userSpaceOnUse"><rect x="${crop[0]}" y="${crop[1]}" width="${crop[2]}" height="${crop[3]}"/></clipPath></defs>`);atlas.setAttribute('clip-path','url(#teachingCell)');}
   illustration.src=Content.teachingSource(item);illustration.alt=item.alt;
   if(illustration.complete&&illustration.naturalWidth)pictureReady();
 }
@@ -525,13 +530,14 @@ function renderResult() {
   const enemies=Core.enemyChoices(state,result.strength);
   const choices=[{hp:result.strength,label:'Same',symbol:'=',enemy:enemies[0]}];
   if(result.victory)choices.push({hp:result.strength+1,label:'Stronger',symbol:'↑',enemy:Core.enemyChoices(state,result.strength+1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength+1)[0]});
-  else if(result.strength>3)choices.push({hp:result.strength-1,label:'Easier',symbol:'↓',enemy:Core.enemyChoices(state,result.strength-1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength-1)[0]});
+  else if(result.strength>3)choices.unshift({hp:result.strength-1,label:'Easier',symbol:'↓',enemy:Core.enemyChoices(state,result.strength-1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength-1)[0]});
   else choices.push({hp:3,label:'Same',symbol:'=',enemy:enemies[1]});
   const box=$('#opponents');box.replaceChildren();
   choices.forEach(choice=>{
     const button=document.createElement('button');button.className='opponentCard';button.setAttribute('aria-label',`${choice.label}, ${choice.hp} hearts`);
     button.setAttribute('aria-label',`${choice.enemy.name}, ${choice.label.toLowerCase()} strength, ${choice.hp} hearts`);
-    button.innerHTML=`<div class="opponentStage"><div class="opponentMonster sceneSprite"></div></div><div class="opponentName"><span aria-hidden="true">${choice.symbol}</span> ${choice.label}</div><div class="miniHearts visualHearts"></div>`;
+    button.innerHTML=`<div class="opponentStage"><div class="opponentMonster sceneSprite"></div></div><div class="creatureName"></div><div class="opponentName"><span aria-hidden="true">${choice.symbol}</span> ${choice.label}</div><div class="miniHearts visualHearts"></div>`;
+    button.querySelector('.creatureName').textContent=choice.enemy.name;
     button.dataset.enemy=choice.enemy.id;paintEnemy(button.querySelector('.opponentMonster'),choice.enemy.id,choice.hp);healthSymbols(button.querySelector('.miniHearts'),choice.hp);
     button.onclick=()=>{playClock.reset(performance.now());account();if(Core.isSessionDue(state))Core.completeSession(state,Date.now());
       state.campaign.enemyStrength=choice.hp;Core.startBattle(state,Date.now(),{strength:choice.hp,enemyId:choice.enemy.id});if(save())renderActivity();};box.append(button);
@@ -556,8 +562,14 @@ function syncSound(){
   sound.configure({enabled:state.settings.soundscape!==false,quiet:blocked||document.hidden||!windowFocused||(playing&&paused)||reading||state.screen==='assessment'||state.screen==='parentDashboard'});
 }
 function paceIcon(id){
-  const count=['crawl','walk','run','ride','fly'].indexOf(id)+1;
-  return '<span class="paceSteps" aria-hidden="true">'+Array.from({length:3},(_,i)=>'<i class="'+(i<Math.min(3,count)?'filled':'')+'"></i>').join('')+'</span>';
+  const drawings={
+    crawl:'<circle cx="43" cy="19" r="5"/><path d="M37 29L22 31L17 43H8M24 32L31 42H22M37 29L43 42H52M36 31L34 43H41"/>',
+    walk:'<circle cx="34" cy="11" r="5"/><path d="M32 21L28 36L18 53M28 36L40 43L44 53M31 23L41 31L49 31M30 24L21 31L15 39"/>',
+    run:'<circle cx="41" cy="10" r="5"/><path d="M37 20L27 34L16 30L9 37M27 34L39 40L32 52M35 21L44 28L53 21M34 23L24 19L17 25M7 48H19M5 17H16"/>',
+    ride:'<path d="M7 41Q17 47 23 35L42 35L45 22L51 18L54 27L60 31L58 37L49 38L46 48H40L40 41H27L22 49H16L19 40M46 23L44 16M51 19L55 14"/><circle cx="32" cy="12" r="4"/><path d="M31 20L28 29L36 34L33 41M31 22L41 25L47 24"/><circle cx="52" cy="29" r="1"/>',
+    fly:'<path d="M5 42L23 35L41 35L47 24L52 23L56 30L62 32L59 37L48 38L42 45L35 45M24 35L13 12L29 20L37 35M26 35L13 48L29 43M47 24L47 18"/><circle cx="39" cy="13" r="4"/><path d="M38 21L34 29L42 34L39 40M39 22L47 26"/><circle cx="54" cy="30" r="1"/>'
+  };
+  return '<svg class="pacePicture" viewBox="0 0 64 64" aria-hidden="true">'+drawings[id]+'</svg>';
 }
 function openSpeed(){
   const box=$('#speedChoices');box.replaceChildren();

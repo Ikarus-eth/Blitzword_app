@@ -244,3 +244,34 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 @keyframes pip-cast{0%,100%{translate:0 0;rotate:0deg}18%{translate:-5px 5px;rotate:-5deg}32%,55%{translate:0 0;rotate:0deg}75%{translate:0 -10px;rotate:4deg}}
 @keyframes pip-fire{0%,31%{opacity:0;transform:translateX(0) scale(.5)}33%{opacity:1;transform:translateX(0) scale(1)}55%{opacity:1;transform:translateX(var(--pip-distance,30vw)) scale(1.2)}65%,100%{opacity:0;transform:translateX(var(--pip-distance,30vw)) scale(2)}}
 @media(prefers-reduced-motion:reduce){.castBeam,.pipStrike .pipEmber{display:none}.mageCast .staffArm{transform:none}.pipFinisher{filter:none}}
+
+/* September 23: keep the whole lesson inside its grid cell, including Safari. */
+.teachCard{grid-template-columns:minmax(0,1fr);min-width:0}
+.teachArt{position:relative;min-width:0;min-height:0;width:100%;overflow:hidden;border-radius:15px}
+.teachArt>.teachIllustration{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:100%;min-width:0;object-fit:contain;object-position:center;overflow:hidden;border-radius:0}
+.creatureName{font:17px/1.2 var(--reading-font);color:#4b593b;margin:6px 0;overflow-wrap:anywhere}
+.opponentName{margin-top:3px}
+.speedChoice>.pacePicture{width:58px;height:58px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.speedChoice .paceLock{left:auto;right:6px;top:6px;width:16px;height:16px}
+.speedChoice:disabled{opacity:.65}.speedChoice:disabled .pacePicture{opacity:.75}
+.duelCard{font-family:var(--reading-font);width:min(470px,100%);padding:24px 30px;gap:10px;border-color:#c7a96b}
+.duelHeading{font-size:32px;letter-spacing:.08em;color:#536044}
+.duelCard>.duelCreature{width:210px;height:160px;filter:drop-shadow(0 7px 5px #31432c22)}
+.duelCard .duelEnemyName{font-size:23px;font-weight:400}
+.duelBadges{display:flex;justify-content:center;gap:18px;width:100%;margin:5px 0}
+.duelBadge{display:flex;gap:10px;align-items:center;justify-content:center;border:1px solid #baa76f;border-radius:18px;padding:10px 16px;min-width:135px;background:#eedaa9}
+.duelBadge svg{width:32px;height:32px;fill:none;stroke:#526446;stroke-width:2;stroke-linecap:round}
+.duelBadge small{display:block;font-size:13px;line-height:1}.duelBadge strong{font-size:32px;font-weight:400}
+.duelCard .mathRules{gap:22px;font-size:23px}.duelCard .mathRules span:last-child{color:#974c38}
+.duelCard .duelBest{font-size:16px;color:#5c644b;margin:0}
+.duelActions{display:flex;align-items:center;justify-content:center;gap:20px;width:100%;margin-top:4px}
+.duelCard .greenButton{width:auto;min-width:140px;min-height:54px;margin-top:0;font:25px var(--reading-font);padding:8px 26px}
+.duelCard .textButton{font:18px var(--reading-font);color:#536044}
+.duelResultCard h1{font-size:31px;font-weight:400}.duelScore{display:flex;align-items:center;gap:18px}
+.duelScore>strong{font-size:58px;line-height:1.1;font-weight:400;color:#365f43}.duelScore>span{font-size:19px;color:#65704f}.duelScore b{font-weight:400}
+.duelRewards{display:flex;align-items:center;justify-content:center;gap:20px;margin:6px 0 12px;font-size:17px}
+.duelRewards>strong{background:#ecd69d;border:1px solid #bda165;border-radius:30px;padding:7px 14px;font-weight:400}
+#mathResult[data-outcome=lost] .duelScore>strong{color:#985b42}
+.srOnly{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
+@media(max-width:600px){.creatureName{font-size:15px}.speedChoice>.pacePicture{width:48px;height:48px}.duelCard{padding:20px;gap:10px}.duelBadge{min-width:115px;padding:9px 12px}.duelCard>.duelCreature{height:145px}.duelHeading{font-size:29px}}
+@media(max-height:580px) and (orientation:landscape){.teachCard{grid-template-columns:minmax(0,1fr) 76px}.duelCard{width:min(690px,100%);display:grid;grid-template-columns:180px minmax(0,1fr);gap:8px 25px;padding:16px 25px}.duelCard>.duelCreature{grid-column:1;grid-row:1/6;width:180px;height:175px}.duelCard>:not(.duelCreature){grid-column:2}.duelBadges{margin:0}.duelHeading{font-size:27px}.duelCard .duelEnemyName{font-size:20px}.duelRewards{margin:0}.duelScore{justify-content:center}.duelCard .greenButton{justify-self:center;min-height:46px}.duelCard .duelActions{margin:0}.duelResultCard h1{font-size:27px}}
