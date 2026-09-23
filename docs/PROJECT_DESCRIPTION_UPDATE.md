@@ -1,36 +1,29 @@
 # Maintaining the ChatGPT project
 
-Keep changing product rules, implementation status and release evidence in this repository. Keep the ChatGPT project instructions short and stable. Uploaded copies of the specification or status page can drift from main.
+Maintain changing rules, status, curriculum and approved production assets in GitHub. The ChatGPT project needs only stable instructions and no standing file attachments. This supersedes the earlier recommendation to retain the curriculum, battle-flow and teaching-card attachments.
 
 ## Copy into the project instructions
 
-BlitzWord is maintained in https://github.com/Ikarus-eth/Blitzword_app.
+BlitzWord is maintained at https://github.com/Ikarus-eth/Blitzword_app.
 
-Before project work, read current main's README.md and docs/CURRENT_STATUS.md. Read docs/BLITZWORD_PRODUCT_SPEC.md for relevant approved rules and docs/BLITZWORD_REFERENCE_IMAGES.md for art decisions. Use GitHub as the maintained source for documentation, code and approved production assets. Latest explicit user decisions take precedence; record accepted changes in GitHub and keep CURRENT_STATUS.md aligned with verified implementation.
+Use the current main branch as the maintained source for documentation, code, curriculum and approved production assets. Before working, read README.md and docs/CURRENT_STATUS.md. Consult docs/BLITZWORD_PRODUCT_SPEC.md for approved product rules and docs/BLITZWORD_REFERENCE_IMAGES.md for artwork decisions. The original curriculum workbook is curriculum/BLITZWORD_CURRICULUM_200_1000.xlsx; playable content is in content.js.
 
-Project attachments are source material or visual references, not current implementation status. Old mockups must not override approved characters or later gameplay decisions. Preserve the existing app, learner saves and parallel work. Use the existing GitHub Pages deployment route unless the user explicitly changes it.
+This project requires no standing file attachments. The old setup, battle-scroll and teaching-card mockups are retired. Retrieve current references from GitHub and do not reconstruct the app from old attachments or memory.
 
-Distinguish proposed, implemented, tested and deployed work. Verify deployment before claiming something is live. If source access fails, name the exact blocker and do not reconstruct the project from old attachments or memory. Do not repeat a failed operation without new evidence or a concrete fix.
+Latest explicit user decisions take precedence over earlier documentation. Record accepted changes in GitHub and keep CURRENT_STATUS.md aligned with verified implementation. Historical release notes describe earlier milestones, not the current backlog.
 
-## One-time attachment cleanup
+Continue the existing app, preserve learner saves and parallel work, and use the existing GitHub Pages deployment route unless explicitly instructed otherwise. Check current main before merging and preserve intervening changes.
 
-These actions concern active ChatGPT project attachments, not deleting repository history or original source files.
+Distinguish proposed, implemented, tested and deployed work. Verify deployment before claiming something is live. If source access fails, report the exact blocker. Retry a failed operation only with new evidence or a concrete fix.
 
-| Attachment | Action |
-|---|---|
-| Any uploaded BLITZWORD_PRODUCT_SPEC*.md copy, including numbered and UPDATED variants | Remove from active project attachments. Read docs/BLITZWORD_PRODUCT_SPEC.md on current main instead. Do not upload another snapshot. |
-| Any uploaded BLITZWORD_REFERENCE_IMAGES*.md copy | Remove from active project attachments. Read docs/BLITZWORD_REFERENCE_IMAGES.md on current main instead. |
-| 9bdd6498-fbaa-4dcf-b12f-0c62908fc422.png | Remove from active attachments or archive outside the active set. This is the old setup/hero mockup with superseded characters and presentation. |
-| 02_battle_scroll_flow_SELECTED(1).png | Keep as a selected layout/flow reference only. Its sample words, characters and exact UI are not current rules. |
-| 735017dc-8764-465e-9cd9-b351be85ba03(1).png | Keep as the teaching-card composition reference only. Current character identities and gameplay rules come from the repository. |
-| BLITZWORD_CURRICULUM_200_1000(1)(1).xlsx | Keep as original curriculum source material. It is not replaced by a documentation update. |
+## One-time cleanup
 
-If old recovery handovers, duplicate specs or unselected comparison sheets are also attached, archive them outside the active reference set. Keep recovery backups until their unique source material has been safely preserved. The enemy selection work in the parallel thread is active work and is not included in this cleanup.
+The original curriculum workbook is now preserved in [curriculum](../curriculum/README.md). Remove all six old standing attachments from the ChatGPT project: the specification, reference guide, setup mockup, battle-scroll mockup, teaching-card mockup and curriculum workbook. The user manages the project attachment list; this repository update does not claim those attachments were removed.
 
-The approved male Rowanfire lineup already lives at assets/rowanfire-boys-2026-09-21.png. The reference guide identifies the current female hero and Pip sources. Retrieve production assets from GitHub when relevant instead of requiring repeated uploads.
+There is no replacement documentation file to upload. Paste the instructions above into the project description/instructions. Removing an active attachment does not require destroying independent recovery backups or original local files. Active work in parallel threads remains preserved.
 
 ## Ongoing maintenance
 
-Update documentation with the related code or approved decision. Keep CURRENT_STATUS.md concise, and identify dated release notes as history. Keep task branches and pull requests based on current real main so parallel work is preserved. Evidence of successful tests or uploaded files is not evidence of deployment.
+Keep new approved references and source material in GitHub with their provenance. Until a new artifact is preserved there, do not discard its only copy. Update documentation with the related code or accepted decision, using task branches and pull requests based on current real main.
 
-Only update the ChatGPT project instructions again if the repository location or working process changes. New product decisions and completion status belong in GitHub. Attaching a file does not make it authoritative over current approved rules.
+Only change the ChatGPT project instructions again if the repository location or working process changes. Product decisions and completion status belong in GitHub.

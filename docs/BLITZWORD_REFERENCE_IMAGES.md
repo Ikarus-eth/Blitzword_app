@@ -1,6 +1,6 @@
 # BlitzWord — Reference Image Plan
 
-Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`.
+Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
 ### Approved male hero revision — 21 September 2026
 
@@ -14,7 +14,7 @@ The approved complete male lineup is `assets/rowanfire-boys-2026-09-21.png` in `
 
 Preserve the final lineup's exact face, skin tone, child proportions, clothing, equipment and hair identity in every later screen or illustration. Female Mage, Knight and Archer retain their approved Option 17 identities. Pip retains the Ember Guardian identity.
 
-The original `00a_heroes_character_bible.png` remains authoritative only for the three female heroes. Earlier onboarding, battle and teaching images remain composition/flow references only; their male characters must never override this revision. If an attachment conflicts with this section, follow this section and the final male lineup. Do not generate new boys from an old six-character sheet.
+The original `00a_heroes_character_bible.png` records the approval of the three female heroes; their production portraits and full-body art are preserved in the repository. The user retired the earlier setup, battle-scroll and teaching-card mockups on 23 September 2026. They are no longer active composition, flow or character references. Do not generate new boys from an old six-character sheet.
 
 ## Active references
 
@@ -42,7 +42,7 @@ Class anchors:
 
 Do not treat the sheet merely as palette inspiration. The three female figures remain recurring characters; use the final revised male lineup for the boys.
 
-### 00b_pip_character_bible.png — append now
+### Ember Guardian Pip — approved identity
 
 Selected reference: **Ember Guardian**.
 
@@ -55,7 +55,7 @@ This is the authoritative visual direction for Pip and Pip's growth stages. Pres
 
 Growth direction is important: Pip starts youthful and approachable but becomes progressively stronger, more confident, and more protector-like. Later stages should have a longer muzzle, stronger neck/shoulders, larger wings, stronger horns/spines, and a more grounded guardian stance. Rideable Pip should feel powerful enough to protect and carry the hero, not like a baby dragon enlarged.
 
-Use each reference only for its subject: the revised male lineup for boys, `00a_heroes_character_bible.png` for girls, and `00b_pip_character_bible.png` for Pip. When hero and Pip appear together, their palette should feel intentionally connected: forest greens and natural materials on the heroes, ember-red/orange accents shared with Pip.
+Use the revised male lineup for the boys, the approved female identities preserved in `assets/hero4.webp` through `assets/hero6.webp` and `assets/forest-characters.webp` for the girls, and `assets/pip.webp`, `assets/forest-characters.webp` and `assets/pip-growth.png` for Pip. The historical character-bible filenames record provenance; they are not required project attachments. When hero and Pip appear together, their palette should feel intentionally connected: forest greens and natural materials on the heroes, ember-red/orange accents shared with Pip.
 
 Rules for both sheets:
 
@@ -64,63 +64,17 @@ Rules for both sheets:
 - the dragon companion begins with the name `Pip`; a later rename changes only the displayed name, never the visual identity;
 - do not bake labels or child-facing text into reusable character art.
 
-### 01_starting_and_hero_flow.png — regenerate cleanly before appending
+## Retired mockups — 23 September 2026
 
-Should show the approved onboarding/start direction only:
-
-- first-screen direction option A;
-- exact caption `Win the reading battle`;
-- minimal child-facing text;
-- local name/nickname, age, and gender setup;
-- Mage / Knight / Archer hero selection using the exact identities from the revised male lineup and original female character reference;
-- `Pick your hero` wording;
-- green primary button without a written label;
-- visual continuation to `Try a battle` as primary and `Reading check first` as secondary.
-
-Do not append the earlier broad v1 contact sheet as the authoritative start reference because its wording and screen sequence are now partly superseded.
-
-### 02_battle_scroll_flow_SELECTED.png — append now
-
-This is the selected first battle flow. Treat it as the visual basis for the scroll, scene composition, hero/enemy framing, and compact answer choices. Replace any placeholder hero/dragon depiction with the selected hero identity and Pip from the authoritative character bible.
-
-Corrections that the written spec overrides even if the image differs:
-
-- neutral mask must not reveal letter count;
-- enemy health bar is required;
-- hero has three hearts;
-- combat animates only after an answer;
-- wrong-answer correction can hold until continue;
-- teaching moments are separate pre-generated scenes when needed;
-- minimize child-facing labels and explanatory copy.
-
-### 03_teaching_moments_reference.png — append now
-
-Source image: the provided `BlitzWord Reading Card Concepts (Set 1)` sheet.
-
-Use it as the visual baseline for teaching moments:
-
-- short sentence on parchment above one large illustration;
-- target word highlighted yellow and underlined;
-- one visually dominant teaching idea;
-- Pip/selected hero actively demonstrates the meaning rather than posing beside an object;
-- calm forest/fantasy setting with minimal competing detail;
-- consistent Pip and hero identity from the character bible.
-
-The sheet also establishes useful visual mechanisms for harder words: active group vs separate Pip for `they`, distance + pointing for `that`, comparison + pointing for `this`, clear self/recipient relation for `me`, two-step sequence for `then`, and a thought bubble for `think`.
-
-Treat this as a teaching-card reference, not a final UI screenshot. In the app, sentence text, yellow highlight, underline, narration timing, replay, and continue remain separate UI/audio layers.
-
-### No assessment reference image appended yet
-
-Do not append an assessment board at this stage. The assessment behavior is defined in `BLITZWORD_PRODUCT_SPEC.md` and still needs a dedicated screen-by-screen design review before any assessment image becomes authoritative.
+The user retired the old setup/hero sheet (`9bdd6498-fbaa-4dcf-b12f-0c62908fc422.png`), battle-scroll sheet (`02_battle_scroll_flow_SELECTED(1).png`) and teaching-card sheet (`735017dc-8764-465e-9cd9-b351be85ba03(1).png`). Do not request their reattachment, regenerate them as a recovery step or treat their composition, text, characters or flow as current requirements. Read the current specification and inspect the existing implementation for the task at hand. Implementation/specification discrepancies still require review rather than silently changing the approved rules.
 
 ## Rule for future references
 
-When a screen or flow is approved, save one clean image with a stable filename and add the exact corresponding behavior to the spec. Avoid keeping multiple near-identical old mockups as equal references; archive or clearly mark superseded ones.
+When a screen or flow is approved, preserve one clean image in GitHub with a stable filename and provenance, and add the exact corresponding behavior to the spec. Avoid keeping multiple near-identical old mockups as equal references; archive or clearly mark superseded ones.
 
 Before approving any image containing a recurring character, check it against the character bible. Reject visual drift in face, hair, costume, equipment, proportions, or Pip's defining features even when the individual illustration looks good.
 
-## Runtime portraits and replacement coverage
+## Portrait sources and historical replacement coverage
 
 `assets/rowanfire-boys-2026-09-21.png` contains the exact approved 1536 × 1024 male lineup. The game renders square CSS viewports onto that source without redrawing, recolouring or altering the chosen faces. Sheet labels and neighbouring heroes remain outside every portrait viewport.
 
@@ -136,4 +90,4 @@ Before approving any image containing a recurring character, check it against th
 
 The shared portrait renderer covers setup, hero selection, route, teaching and battle, including saved profiles on reload. Earlier male files `assets/hero1.webp`, `assets/hero2.webp` and `assets/hero3.webp` are removed from the active repository and deployment. Historical commits are rollback records, not active references or fallback assets. Versioned script/style URLs and the new source filename refresh cached assets when the page reloads. A tab already running an earlier release needs a reload; this artwork change does not reset local learning or campaign data.
 
-The current game displays portraits, including in its existing teaching composition. This artwork revision does not claim to implement a new sitting pose, full-body battle animation or other unimplemented behaviour.
+The portrait-replacement details above describe that earlier art milestone. The current game also renders full-body battle/story sprites from `assets/forest-characters.webp`, growth forms from `assets/pip-growth.png`, and answer-locked combat reactions. See [combat reactions](COMBAT_REACTIONS.md), [chapter stories](CHAPTER_STORIES_RELEASE.md) and [current status](CURRENT_STATUS.md); this paragraph does not introduce new artwork or animations.
