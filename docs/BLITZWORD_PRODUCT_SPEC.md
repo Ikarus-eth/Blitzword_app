@@ -1,11 +1,11 @@
 # BlitzWord — Current Product Spec
 
-Status: working specification synthesized from the approved BlitzWord project decisions through 21 September 2026. This file contains product behavior and design decisions, not credentials.
+Status: approved direction with implementation updates through 23 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
 
 ## Source-of-truth order
 
-1. Implemented behavior in `Ikarus-eth/Blitzword_app`.
-2. This specification for approved but not-yet-implemented behavior.
+1. Latest explicit user decisions determine intended behavior.
+2. Current repository code and verified deployment determine what is implemented; [current status](CURRENT_STATUS.md) records the checked checkpoint. This specification records approved direction and dated changes.
 3. Named reference images for visual direction.
 4. Earlier chats and superseded mockups only when they do not conflict with the above.
 
@@ -23,9 +23,9 @@ The provisional world is a mysterious forest. A child-selected hero protects cre
 
 The dragon companion starts with the name **Pip**. Once Pip appears, Pip must remain the same recognizable character across battles, teaching scenes, story moments, rewards, and later growth stages. The child can rename Pip later in the game; renaming changes the displayed name only, never Pip's visual identity or progression.
 
-The free first chapter contains about 30 target words. Pip grows through the chapter and reaches a rideable stage at the end of the free chapter. Growth must feel like the same dragon maturing, not a replacement character. The story can progress before 30-day retention has been demonstrated; retention continues in later practice.
+Under the current terminology, the first campaign contains about 30 target words across five chapters. Growth depends on cumulative XP, not campaign completion: thresholds are 3,000 / 8,900 / 13,400, with naming unlocked at the first evolution. Existing movement and purchase locks remain separate. Growth must feel like the same dragon maturing, not a replacement character. Story progress does not require 30-day retention; retention continues in later practice.
 
-Updated 22 September 2026: the requested campaign map is now the campaign Home screen. Show visible story milestones and permanent Pip XP with the next growth stage and its threshold. See section 23 and `CAMPAIGN_MAP_AND_GROWTH.md` for the current implementation and content limits.
+The campaign map is the campaign Home screen. Show visible story milestones and permanent Pip XP with the next growth stage and its threshold. See section 27 and [XP and chapter pacing](SUCCESS_XP_RELEASE.md) for current rules. Section 23 and `CAMPAIGN_MAP_AND_GROWTH.md` describe the earlier map milestone.
 
 ## 3. Onboarding and starting screens
 
@@ -656,7 +656,9 @@ For commercial validation, distinguish installs, assessment completion, first-ba
 6. Package for iPad/TestFlight and verify persistence, offline behavior, audio, orientation, parental gate, privacy, and one-time-purchase restoration.
 7. Launch publicly only after explicit release approval, then run small acquisition tests and iterate from observed use.
 
-## 19. Open questions to decide later
+## 19. Historical open questions from the initial specification
+
+This list records the original decision backlog, not current missing features. Implemented assessment, teaching, speed and curriculum rules should not be reopened from this list. See [current status](CURRENT_STATUS.md) for remaining work and its ownership.
 
 - Final exact chapter-one 30-word set.
 - Exact teaching-trigger thresholds and how many retries before/after teaching.
@@ -667,7 +669,7 @@ For commercial validation, distinguish installs, assessment completion, first-ba
 - Final paid expansion price and App Store launch market/campaign settings.
 - Final art production pipeline for the 100-enemy library.
 
-## 20. Implemented practice slice — 21 September 2026
+## 20. Historical milestone: Implemented practice slice — 21 September 2026
 
 Option A adds persistent returning play and one approximately seven-minute challenge using six reviewed targets: sat, rock, tree, green, fox and cave. This milestone does not complete the planned 30-word free chapter. The remaining curriculum and all older observations are preserved; this practice selector is limited to words with reviewed teaching support.
 
@@ -678,14 +680,14 @@ Four Pip illustrations live in `assets/teaching/`. See `TEACHING_SLICE.md` for e
 The broader chapter, full battle-scene artwork, dragon growth, parent reporting, remote analytics, native iOS packaging, payments and offline asset caching remain unimplemented. Browser speech highlights the spoken target when word-boundary events are available; voices without those events retain the static highlight and underline.
 
 
-## 21. Forest and first-battle repair — 21 September 2026
+## 21. Historical milestone: Forest and first-battle repair — 21 September 2026
 
 The opening form now includes hatchling Pip in an illustrated mystical forest. Native name entry disables autocorrection and spellcheck. Battle uses full-length approved hero appearances, Pip and Thornling with separate word, answer, health and pause regions. Four equal choices and a separate `?` help action are always available during selection. Help is supported practice without damage.
 
 Wrong answers open the reviewed teaching image and highlighted sentence directly, replacing the intermediate correction modal. The optional demonstration has a maximum of seven total attempts including the guided example, then a saved handoff to the existing reading check. Victory and defeat can end it sooner. Assessment logic is preserved. Natural-pitch device narration and narrator choice replace pitch-shifted speech; prerecorded narration is still pending. See `FOREST_REPAIR.md` for assets, verification and limitations.
 
 
-## 22. First-session feedback implementation — 21 September 2026
+## 22. Historical milestone: First-session feedback implementation — 21 September 2026
 
 The latest corrections are recorded in `FIRST_SESSION_FEEDBACK.md`. They supersede the previous direct-to-example wrong-answer flow. Show the actual selected word and correct target first, hold for a tap, then show the teaching illustration. Add a clear narrated/visual reading-check entry and Chapter 1 encounter handoff without changing assessment scoring. Show introduced-word progress toward 30 separately from checkpoints and retention. The current six-word slice cannot yet complete that chapter.
 
@@ -694,7 +696,7 @@ Use distinct visual creature choices with short labels and hearts. Never repeat 
 The supplied Core 200 excludes `sat`. New practice uses `on` and “Pip is on the rock.” Preserve historical `sat` evidence and pending saved teaching/questions. Do not infer that example words from reference art automatically belong in the early curriculum.
 
 
-## 23. Campaign map and Pip growth — 22 September 2026
+## 23. Historical milestone: Campaign map and Pip growth — 22 September 2026
 
 This update supersedes the earlier no-map direction and introduced-word chapter meter. Campaign Home is an illustrated map of Lantern Trail, Fox Crossing, Old Grove, Lantern Ruins and Hidden Nest. Chapter progress counts permanently explored story areas out of five; local word/practice progress and checkpoints remain visible separately. Reading-check completion explicitly introduces the map before the first campaign word. Home always preserves the exact current activity.
 
@@ -707,7 +709,7 @@ Only Lantern Trail has reviewed playable content. Four later locations are previ
 See `CAMPAIGN_MAP_AND_GROWTH.md` for art provenance, verification and deployment status.
 
 
-## 24. Active play release — 22 September 2026
+## 24. Historical milestone: Active play release — 22 September 2026
 
 The user's latest requirements supersede the prior six-word limit and rapid/capped growth rules. All five Chapter 1 places now have six fixed Core 200 targets and teaching support. The final guardian is playable, followed by unlimited review across the chapter. Correct independent review answers continue to earn 1 XP. At most six new targets are introduced per approximately seven-minute challenge; challenges can be repeated today without a daily cap.
 
@@ -715,7 +717,7 @@ The first new dragon form requires 250 XP, 250 interaction-confirmed practice mi
 
 Parent reporting uses an idle-aware local activity ledger, with older foreground/waiting totals kept separate and excluded from growth. Unconfirmed intervals are discarded on 30-second inactivity, blur/background or suspended timers. The dashboard explains conservative undercounting and device-local scope. See `ACTIVE_PLAY_RELEASE.md` for exact rules, curriculum provenance, artwork and tests.
 
-## 25. Child interface and multiplication revision — 22 September 2026
+## 25. Historical milestone: Child interface and multiplication revision — 22 September 2026
 
 The user's post-release feedback requests less text and fewer simultaneous progress measures. The campaign home now emphasizes one selected destination and its play button; a compact Pip portrait, XP badge and single growth bar remain. Detailed growth gates, practice counts and historical timing belong in Parents. The child growth bar is limited by every remaining gate, not XP alone. Setup labels and continuation buttons are shorter. The fixed neutral mask is a static galaxy identical for every word. Normal correct feedback uses the revealed word and combat reaction, without the green check badge. Supported answers remain labelled Practice.
 
@@ -735,10 +737,10 @@ Prerecorded deep male narration is still pending. `NARRATION_CORPUS.json` contai
 
 ### Recorded narration update — 22 September 2026
 
-The subsequent recorded-voice release replaces fixed browser narration with 165 local MP3 clips in a British adult male voice. Recordings cover all implemented spoken words, teaching sentences and fixed instruction/correction/encounter variants. Playback waits for audio completion before the existing attack, stops on pause/Home/background, and falls back to browser speech on failure. Target highlighting stays static because verified word-boundary timing is not available. Generation and integration are complete; listening review and physical iPad verification remain outstanding. See `NARRATION_RELEASE.md` and `NARRATION_GENERATION.json` for provenance and limits.
+The recorded-voice milestone added 165 local MP3 clips in a British adult male voice for its then-current content. This is not complete prerecorded coverage of the now-playable Core 200 or new stories. Playback waits for audio completion before attacks, stops on pause/Home/background, and uses browser speech for unrecorded text or playback failure. Recorded target highlighting stays static because verified word-boundary timing is unavailable. Expanded narration remains outstanding. See [narration history](NARRATION_RELEASE.md) and `NARRATION_GENERATION.json` for provenance and limits.
 
 
-## 26. Core 200 and combat-boundary update — 22 September 2026
+## 26. Historical milestone: Core 200 and combat-boundary update — 22 September 2026
 
 The latest requested release makes all 200 approved words playable in seven chapters and 35 places. See `CORE200_RELEASE.md` for exact curriculum, progression and verification. Battles, including the demo, now end only at zero hero or enemy health. The seven-minute target waits for the combat boundary. Pausing preserves the living encounter. Chapter completion opens the campaign map. Creature variants have fixed three-point HP intervals and recent appearance families are excluded from opponent choices.
 
@@ -750,8 +752,14 @@ This section supersedes earlier growth/time and chapter terminology. See `SUCCES
 
 Evolution depends only on cumulative XP: 3,000 / 8,900 / 13,400. Remove minimum minutes, elapsed days and campaign completion from evolution, while preserving earned forms and separate movement/purchase locks. The first evolution unlocks the child's choice of companion name. Correct unaided reading earns 3 XP, with once-only new-word and delayed-retention bonuses, reliable faster-review bonuses and chapter accuracy rewards. At ten active minutes each local date, award 20 XP once and apply a visible but small ×1.75 multiplier to correct-answer XP for the rest of the date. No penalty is imposed for stopping early or missing a day. No new pet is added yet.
 
-The model aims for evolution at two, six and ten weeks at fifteen active minutes daily, and full growth in three weeks at forty-five minutes daily. These are calibration targets, not time gates or guarantees for individual children. Artwork per field and chapter-story interludes remain separate work. Audio generation remains deferred.
+The model aims for evolution at two, six and ten weeks at fifteen active minutes daily, and full growth in three weeks at forty-five minutes daily. These are calibration targets, not time gates or guarantees for individual children. Distinct artwork per field remains outstanding. Chapter-story interludes were implemented in the subsequent update below. Expanded prerecorded narration remains outstanding.
 
 ## Chapter-story implementation — 23 September 2026
 
 Chapter entry now includes a short illustrated narration followed by one simple untimed sentence and child confirmation. The initial guided encounter keeps its existing introduction; the other 34 map fields have saved story transitions. Pause, Home, Rest and reload preserve the phase and pending battle. Optional Listen records help without creating mastery, XP or chapter-time evidence. The chosen dragon name is used in the story. Map/progress labels distinguish the campaign from the chapter within it. Existing approved scene and character art and the current speech fallback are reused. See `CHAPTER_STORIES_RELEASE.md` for migration and verification details.
+
+## Soundscape and remaining work — 23 September 2026
+
+The adaptive forest soundscape is implemented and deployed, including scene music, result cues, speech priority, cancellation and independent saved controls. It is separate from the unfinished expansion of prerecorded narration. See [soundscape behavior](SOUNDSCAPE_RELEASE.md).
+
+Enemy artwork and creature-specific health ranges are assigned to the user's parallel thread. Distinct background art for every chapter remains unfinished. An additional dragon is an optional future idea. This documentation update adds no gameplay or audio changes; [current status](CURRENT_STATUS.md) tracks the remaining work and verification limits.

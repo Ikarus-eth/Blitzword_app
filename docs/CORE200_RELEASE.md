@@ -1,5 +1,7 @@
 # Core 200 and September 22 play feedback
 
+> Historical release note. This note preserves the original Core 200 milestone and its test results. The later XP release renames its seven chapters as campaigns and 35 places as chapters, requires at least ten active minutes per new chapter, and replaces time/day growth gates with XP-only evolution. The older five-hour full-completion result below is historical; current tests verify five-hour capacity and continue beyond five hours to finish all content. See [current status](CURRENT_STATUS.md).
+
 The playable curriculum now contains all 200 unique words from the supplied `BLITZWORD_CURRICULUM_200_1000(1)(1).xlsx`, sheet `BlitzWord 200`. This is the approved mixed curriculum, not a frequency ranking. Existing Chapter 1 targets, order, observations and identifiers remain intact. The other 170 targets are appended in workbook order, each with a fixed sentence and three distinct distractors. Close real words are preferred; the remaining spelling contrasts are distractors only.
 
 Seven chapters contain 30, 30, 30, 30, 30, 30 and 20 words. Each has five places. A place requires all its words introduced, at least 80% practiced successfully twice, and its secured checkpoint. A final encounter completes each chapter. The map opens after the finale. No date or elapsed-time gate blocks story chapters. The web preview makes all 200 words playable as requested; it does not grant a purchase entitlement or unlock Ride/Fly.

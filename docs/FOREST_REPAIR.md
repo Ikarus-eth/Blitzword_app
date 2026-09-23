@@ -1,5 +1,7 @@
 # Forest and first-battle repair — 21 September 2026
 
+> Historical release note. This is a historical milestone. Its narration and content limitations are superseded by the 165-clip narration release and Core 200; expanded recordings remain outstanding. See [current status](CURRENT_STATUS.md).
+
 The opening form now places Pip in an illustrated forest. Name entry disables browser autocorrection and spellcheck, preserves accented names, and retains the native keyboard. The selected six hero identities are rendered as full-length characters in selection and battle. A visible Thornling replaces the emoji enemy.
 
 The battle reserves separate regions for health, pause, word presentation, characters and answers. There are four equal answer tiles and a separate question-mark help control. The word, fixed-size mask and choices retain their sequence. Characters stay still until an answer is committed. Help records supported practice and does not remove health or produce independent credit.

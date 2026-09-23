@@ -1,6 +1,8 @@
 # Recorded narration release
 
-The fixed spoken content now uses local MP3 recordings generated with Runway's Tom preset: an adult British male voice, with steady delivery at speed 0.88. No pitch shifting was applied. The 165 deduplicated clips cover all 48 implemented/assessment/legacy words, 22 teaching sentences, supported-teaching variants, corrections, encounter introductions and reading-check instructions. This does not add the entire future Core 200 curriculum to the game.
+This note records the original 165-clip release. Its generation history describes that release's smaller curriculum, not full current coverage. All 200 curriculum targets are now playable; expanded prerecorded coverage remains outstanding. Unrecorded words, teaching sentences, chapter stories and personalized text use the immediate browser-speech fallback. See [current status](CURRENT_STATUS.md) and [Core 200](CORE200_RELEASE.md).
+
+The preserved MP3s were generated with Runway's Tom preset: an adult British male voice, with steady delivery at speed 0.88. No pitch shifting was applied. The 165 deduplicated clips include curriculum/assessment/legacy words, teaching and supported-teaching variants, corrections, encounter introductions and reading-check instructions. Text containing the reported mispronounced “gate” bypasses its recording and speaks the homophone “gait” through the existing fallback; displayed text stays unchanged.
 
 Generation used 226 existing Runway credits. No subscription or credit purchase was made. `NARRATION_GENERATION.json` retains the original task IDs, audio durations and SHA-256 hashes. Signed download URLs and account credentials are not stored in the repository. `scripts/build-narration.cjs` validates the downloaded MP3s and builds the exact-text `narration.js` lookup without generating new recordings.
 

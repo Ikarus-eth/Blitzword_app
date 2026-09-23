@@ -4,6 +4,6 @@ This change addresses the feedback after the recovered release. It simplifies se
 
 Verification covers saved questions retaining their exposure, locked Ride/Fly, unchanged assessment calibration, negative scores, PR/target calculation, old-round compatibility, Home/reload, permanent XP, and the actual hidden attribute on teaching SVGs. The existing one-hour gameplay simulation and all other save/migration tests are retained.
 
-Prerecorded narration is implemented by the subsequent recorded-voice release. See `NARRATION_RELEASE.md` for generation provenance, playback behavior and verification limits. The soundscape remains separate, locally synthesized audio.
+The subsequent recorded-voice release added 165 clips; expanded Core 200 narration remains outstanding. See [narration history and limits](NARRATION_RELEASE.md). The later [adaptive forest soundscape](SOUNDSCAPE_RELEASE.md) is implemented and deployed. See [current status](CURRENT_STATUS.md) for the active backlog.
 
 Fullscreen source: https://webkit.org/blog/13966/webkit-features-in-safari-16-4/ documents the Fullscreen API on iPadOS. https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen documents its user-activation requirement. Actual iPad voice/fullscreen behavior still requires a device check.

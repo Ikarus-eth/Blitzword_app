@@ -1,5 +1,7 @@
 # First-session feedback — 21 September 2026
 
+> Historical release note. This is a historical milestone. Later Core 200, XP, combat, story and soundscape releases supersede its content limits and earlier behavior. See [current status](CURRENT_STATUS.md).
+
 The subsequent campaign-map and growth update is described in `CAMPAIGN_MAP_AND_GROWTH.md`; it supersedes the progress-meter and growth limitations below.
 
 ## Implemented
