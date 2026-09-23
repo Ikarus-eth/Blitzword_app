@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="blitzword-build" content="choices-shield-20260923-r1" />
+<meta name="blitzword-build" content="success-xp-20260923-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -10,11 +10,12 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=choices-shield-20260923-r1" />
+<link rel="stylesheet" href="styles.css?v=success-xp-20260923-r1" />
 </head>
 <body><main class="app" id="app">
 <div id="chapterScenery" class="chapterScenery" aria-hidden="true" hidden></div>
 <div class="gameTools" aria-label="Game controls">
+<span id="xpBonusBadge" class="xpBonusBadge" hidden></span>
 <button id="fullscreenBtn" class="utilityButton fullscreenButton" aria-label="Enter fullscreen" title="Fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
 <button id="soundBtn" class="utilityButton soundButton" aria-label="Mute soundscape" aria-pressed="true" title="Soundscape"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10m-1-7q2 2 0 4"/></svg></button>
 
@@ -57,10 +58,10 @@
 </section>
 
 <section id="campaignMap" class="screen">
-  <header class="mapHeader"><div><h1 id="mapTitle">Pip</h1><div id="chapterSelect" class="chapterSelect" aria-label="Campaign chapters"></div></div><div class="mapHeaderProgress"><div id="mapStory" class="mapStory"></div><div id="mapGrowthSummary" class="mapGrowthSummary"></div></div><button id="mapParents" class="mapSettings">Parents</button><button id="mapSettings" class="mapSettings" aria-label="Change hero">Hero</button><button id="mapSpeed" class="mapSettings speedLauncher" aria-label="Choose reading speed">Speed</button></header>
+  <header class="mapHeader"><div><h1 id="mapTitle">Pip</h1><div id="chapterSelect" class="chapterSelect" aria-label="Campaigns"></div></div><div class="mapHeaderProgress"><div id="mapStory" class="mapStory"></div><div id="mapGrowthSummary" class="mapGrowthSummary"></div><div class="dailyGoal"><span id="mapDailyGoal"></span><span id="mapBonus" class="xpBonusBadge" hidden></span></div></div><button id="mapParents" class="mapSettings">Parents</button><button id="mapSettings" class="mapSettings" aria-label="Change hero">Hero</button><button id="mapSpeed" class="mapSettings speedLauncher" aria-label="Choose reading speed">Speed</button></header>
   <div id="chapterCelebration" class="chapterCelebration" role="status" hidden></div><div class="mapLayout">
     <div class="mapBoard">
-      <div class="mapTerrain" role="group" aria-label="Chapter 1 campaign map">
+      <div class="mapTerrain" role="group" aria-label="Campaign map">
         <svg class="mapPath" viewBox="0 0 1000 667" preserveAspectRatio="none" aria-hidden="true"><path d="M170 487 Q70 360 340 260 Q490 300 570 434 Q720 400 630 160 Q760 255 890 127"/></svg>
         <div id="mapNodes"></div><span id="mapTraveller" class="sceneSprite" role="img" aria-label="Your hero’s current location"></span>
       </div>
@@ -71,7 +72,7 @@
       <span id="mapPip" class="growthSprite" role="img" aria-label="Pip"></span><h2 id="dragonStage">Small Pip</h2>
       <span id="mapShield" class="mapShield" role="img" aria-label="One shield ready: protects the next hit" hidden></span><span id="dragonTapHint" class="dragonTapHint">Tap Pip</span><div id="dragonProgress" class="dragonProgress" role="progressbar" aria-label="Progress towards Pip’s next stage"><span></span></div><p id="dragonNext" class="dragonNext"></p>
       <ol id="dragonStages" class="dragonStages" aria-label="Pip’s growth stages"></ol>
-      <details class="growthHelp"><summary>How Pip grows</summary><p>Each unaided correct battle answer and correct multiplication answer earns 1 XP, including review. Reading speed earns no extra XP. Help is free. Earned XP and growth are never lost.</p><p>Big Pip needs 250 XP, 250 active practice minutes and at least 14 days since practice began. Reading and multiplication practice both count. Older forms need more practice. XP is a game reward, not a reading score.</p></details>
+      <details class="growthHelp"><summary>How your dragon grows</summary><p>Correct reading answers earn 3 XP. New words, remembered words, accurate chapters and reliable faster reading earn extra XP. Help is free; mistakes never take earned XP away.</p><p>Growth needs only XP: 3,000, 8,900 and 13,400. Choose your dragon’s name at the first evolution. After ten active minutes each day, earn 20 XP and extra XP on correct answers for the rest of that day.</p></details>
     </aside>
   </div>
 </section>
@@ -142,7 +143,8 @@
 
 <div id="defeatScene" class="defeatScene" role="status" aria-label="The enemy chuckles and escapes. Your earned XP is safe." hidden><span id="defeatEnemy" class="sceneSprite"></span><span class="enemyChuckle" aria-hidden="true">Hee hee!</span><span class="escapeCaption" aria-hidden="true">Escaped!</span></div>
 <div id="speedPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="speedTitle" hidden><div class="speedCard parchment"><h2 id="speedTitle">Speed</h2><div id="speedChoices" class="speedChoices"></div><p id="speedNote" hidden></p><button id="speedClose" class="dialogClose" aria-label="Close speed choices">×</button></div></div>
-<div id="growthPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="growthTitle" hidden><div class="growthCard parchment"><button id="growthClose" class="dialogClose" aria-label="Close Pip’s growth">×</button><h2 id="growthTitle">Pip is growing</h2><div class="growthCompare"><span id="growthPip" class="growthSprite"></span><span id="growthNextPip" class="growthSprite"></span></div><p id="growthNextName"></p><div id="growthMeters"></div><p id="growthChapterGate" hidden>Find the last path too.</p></div></div>
+<div id="growthPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="growthTitle" hidden><div class="growthCard parchment"><button id="growthClose" class="dialogClose" aria-label="Close Pip’s growth">×</button><h2 id="growthTitle">Pip is growing</h2><div class="growthCompare"><span id="growthPip" class="growthSprite"></span><span id="growthNextPip" class="growthSprite"></span></div><p id="growthNextName"></p><div id="growthMeters"></div><button id="renameDragon" class="secondaryButton" hidden>Choose a name</button><p id="growthChapterGate" hidden>Find the last path too.</p></div></div>
+<div id="dragonNamePanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="dragonNameTitle" hidden><div class="nameDragonCard parchment"><h2 id="dragonNameTitle">Your dragon grew!</h2><p>What shall we call your dragon?</p><label for="dragonNameInput">Name</label><input id="dragonNameInput" class="nameInput" maxlength="18" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"/><p id="dragonNameMessage" role="status"></p><button id="dragonNameSave" class="greenButton">Save name</button><button id="dragonNameLater" class="textButton">Later</button></div></div>
 <section id="parentDashboard" class="screen parentDashboard">
  <header class="parentHeader"><div><div class="mapEyebrow">Parents</div><h1>Practice and progress</h1></div><button id="parentHome" class="secondaryButton">Back to map</button></header>
  <div class="parentStats">
@@ -150,18 +152,18 @@
  </div>
  <article class="parentInfo"><h2>Pip’s next stage</h2><p id="parentGrowth"></p><p id="parentLearning"></p><p id="parentMath"></p></article>
  <article class="parentInfo"><h2>How time is counted</h2><p>Reading and teaching time is confirmed by the next answer, Ready, replay, continue, Home or pause action. After 30 seconds without a game action, the game pauses and discards the unconfirmed interval. Menus, results, background tabs and device sleep do not count. Idle excluded shows discarded reading intervals; paused and background duration is not measured. Assessment and demo time are shown separately and do not advance Pip’s growth.</p><p>This measures interaction-confirmed time, not attention. A reading interval longer than 30 seconds is conservatively excluded. Closing or reloading can lose the last unconfirmed interval.</p><p>Earlier time records could include waiting. They are kept separately and do not count towards growth: <strong id="parentLegacy"></strong>.</p></article>
- <article class="parentInfo"><h2>Word selection</h2><p>All 200 Core words are playable across seven chapters and 35 places. The original 30 words stay in Chapter 1. Continued review and multiplication duels remain available after the story. About 45 seven-minute sessions is a five-hour practice plan, not a measured guarantee of story duration. The pace, breaks and number of repeats depend on the child. Core 200 is a curriculum selection, not the 200 most frequent English words: it combines high-frequency words, phonics examples and forest vocabulary. In the supplied workbook, water has Fry rank 84; bird is selected for phonics and the story theme. Assessment and saved learning records are unchanged.</p></article>
- <article class="parentInfo"><h2>Multiplication time</h2><p>The bonus uses 60 unpaused, foreground seconds. Pause, Home, hidden tabs and device sleep stop the countdown; returning does not refill it. New rounds score +1 for a correct answer and −1 for a wrong answer, including below zero. Earned XP is permanent; correct answers still earn 1 XP. Older personal records and any round already in progress retain their original scoring. Answer selections confirm active multiplication time separately from reading, and both count towards growth. Unconfirmed time at the deadline is excluded from active play.</p></article>
- <article class="parentInfo"><h2>Recent days</h2><p id="parentEmpty">No confirmed play time yet.</p><div class="parentTableWrap"><table><thead><tr><th>Date on this device</th><th>Reading practice</th><th>Multiplication</th><th>Reading check + demo</th><th>Idle excluded</th></tr></thead><tbody id="parentDays"></tbody></table></div></article>
+ <article class="parentInfo"><h2>Word selection</h2><p>All 200 Core words remain playable across seven campaigns, each with five chapters. A battle is one enemy; a chapter is one map field. A new chapter needs at least ten interaction-confirmed active minutes, three reading wins, a completed number duel and its learning objectives. A duel loss does not erase reading progress. If the duel finishes before ten minutes, another battle continues the chapter. Cleared chapters stay cleared. After the story, ten-minute review chapters continue the daily goal. Aim for one chapter a day; there is no daily limit. Core 200 is a curriculum selection, not the 200 most frequent English words: it combines high-frequency words, phonics examples and forest vocabulary. In the supplied workbook, water has Fry rank 84; bird is selected for phonics and the story theme. Assessment and saved learning records are unchanged.</p></article>
+ <article class="parentInfo"><h2>Multiplication time</h2><p>The bonus uses 60 unpaused, foreground seconds. Pause, Home, hidden tabs and device sleep stop the countdown; returning does not refill it. New rounds score +1 for a correct answer and −1 for a wrong answer, including below zero. Earned XP is permanent; correct answers earn 1 XP before the daily multiplier. Older personal records and any round already in progress retain their original scoring. Answer selections confirm active multiplication time separately from reading, and both count towards the daily bonus; growth itself depends only on XP. Unconfirmed time at the deadline is excluded from active play.</p></article>
+ <article class="parentInfo"><h2>XP and daily bonus</h2><p>Reading: 3 XP per unaided correct answer. A word earns 8 extra XP once after three separated successes across two battles; its first successful review at least 24 hours later earns 4. Reliable Run-or-faster review earns 1 extra XP when at least 18 of the last 20 independent answers at that speed were correct. Chapter accuracy earns 10 XP at 90% or 5 at 80%, with at least ten independent answers. At ten active minutes, 20 daily XP is awarded once and correct-answer XP is multiplied by 1.75 for the rest of that local calendar day. Milestone bonuses are not multiplied. Fractions are retained; the child display shows whole XP. Menus, idle time, demo and assessment do not earn the daily reward.</p><p>Growth is XP-only. The 3,000 / 8,900 / 13,400 thresholds are calibrated against a deterministic practice model, not a guarantee: real progress depends on accuracy, speed and retention. Earned forms and old XP remain intact.</p></article><article class="parentInfo"><h2>Recent days</h2><p id="parentEmpty">No confirmed play time yet.</p><div class="parentTableWrap"><table><thead><tr><th>Date on this device</th><th>Reading practice</th><th>Multiplication</th><th>Reading check + demo</th><th>Idle excluded</th></tr></thead><tbody id="parentDays"></tbody></table></div></article>
  <p class="parentLocal">Saved on this browser and device. Times from other devices are not included.</p>
 </section>
 <div id="parentGate" class="parentGate" role="dialog" aria-modal="true" aria-labelledby="parentGateTitle" hidden><div class="parchment"><h2 id="parentGateTitle">For a grown-up</h2><label id="parentQuestion" for="parentAnswer"></label><input id="parentAnswer" type="text" inputmode="numeric" autocomplete="off"/><p id="parentGateMessage" aria-live="polite"></p><button id="parentUnlock" class="greenButton">Open dashboard</button><button id="parentCancel" class="textButton">Back</button></div></div>
 </main>
-<script src="content.js?v=choices-shield-20260923-r1"></script>
-<script src="game-core.js?v=choices-shield-20260923-r1"></script>
+<script src="content.js?v=success-xp-20260923-r1"></script>
+<script src="game-core.js?v=success-xp-20260923-r1"></script>
 <script src="storage.js?v=core200-20260922-r1"></script>
-<script src="soundscape.js?v=choices-shield-20260923-r1"></script>
+<script src="soundscape.js?v=success-xp-20260923-r1"></script>
 <script src="narration.js?v=core200-20260922-r1"></script>
-<script src="audio.js?v=choices-shield-20260923-r1"></script>
+<script src="audio.js?v=success-xp-20260923-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
-<script src="app.js?v=choices-shield-20260923-r1"></script></body></html>
+<script src="app.js?v=success-xp-20260923-r1"></script></body></html>

@@ -58,17 +58,28 @@ function paintPip(element,stage=state.dragon.stage){
   const design=Content.dragonStages[stage];element.style.setProperty('--pip-scale',design.scale);element.dataset.growth=String(stage);
   if(stage===0)paintSprite(element,6);
   else{element.style.backgroundImage='none';element.innerHTML=`<svg viewBox="${design.crop.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><image href="assets/pip-growth.png" width="1536" height="1024"/></svg>`;}
-  element.setAttribute('role','img');element.setAttribute('aria-label',design.name);
+  element.setAttribute('role','img');element.setAttribute('aria-label',dragonText(design.name));
 }
+const xpText=n=>String(Math.floor(n||0));
+const dragonText=text=>text.replace(/\bPip\b/g,()=>state.dragon.name||'Pip');
+function updateDailyXP(){
+  if(!state)return;const p=Core.bonusProgress(state,Date.now()),label='XP ×'+p.multiplier;
+  const badge=$('#xpBonusBadge');badge.textContent=label;badge.hidden=!p.active||!['battle','result','mathIntro','mathChallenge','mathResult','summary'].includes(state.screen);
+  badge.setAttribute('aria-label',label+' on correct answers for the rest of today');
+  $('#mapDailyGoal').textContent=p.chapters?'Today ✓':'Today · 0 / 1 chapters';
+  $('#mapBonus').hidden=!p.active;$('#mapBonus').textContent=label;
+}
+function openNaming(){if(state.dragon.stage<1)return;$('#growthPanel').hidden=true;$('#dragonNameInput').value=state.dragon.name||'Pip';$('#dragonNameMessage').textContent='';$('#dragonNamePanel').hidden=false;$('#dragonNameInput').focus();}
+function maybeOfferName(){if(state.dragon.stage>=1&&!state.dragon.named&&!state.dragon.namingPromptSeen){state.dragon.namingPromptSeen=true;if(save())openNaming();}}
 function growthCaption(p){
-  if(!p.next)return 'Pip is ready to ride';
-  return p.remaining+' XP · '+p.minutesRemaining+' active min · '+p.daysRemaining+' days to '+p.next.name+(p.next.requiresChapter&&!state.story.chapterComplete?' · final win needed':'');
+  if(!p.next)return dragonText('Pip is ready to ride');
+  return Math.ceil(p.remaining)+' XP to '+dragonText(p.next.name);
 }
 function renderChapter(element,compact=false){
   const p=Core.storyProgress(state);element.replaceChildren();
-  const title=document.createElement('span');title.className='chapterLabel';title.textContent='Chapter '+p.chapterNumber;
-  const count=document.createElement('span');count.className='chapterCount';count.textContent=p.cleared+' / '+p.total+(compact?'':' places explored');
-  const track=document.createElement('span');track.className='chapterTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label','Chapter 1 places explored');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.cleared));
+  const title=document.createElement('span');title.className='chapterLabel';title.textContent='Campaign '+p.chapterNumber;
+  const count=document.createElement('span');count.className='chapterCount';count.textContent=p.cleared+' / '+p.total+(compact?'':' chapters');
+  const track=document.createElement('span');track.className='chapterTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label','Campaign '+p.chapterNumber+' chapters completed');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.cleared));
   const fill=document.createElement('span');fill.style.width=(100*p.cleared/p.total)+'%';track.append(fill);element.append(title,count,track);
 }
 function renderMap(){
@@ -77,9 +88,9 @@ function renderMap(){
   const terrain=$('.mapTerrain'),mapScene=progress.chapter.scene;
   terrain.style.backgroundImage=mapScene===null?'url("assets/campaign-forest.png")':'url("assets/chapter-scenes.webp")';
   terrain.style.backgroundSize=mapScene===null?'100% 100%':'300% 200%';terrain.style.backgroundPosition=mapScene===null?'center':(mapScene%3*50)+'% '+(mapScene<3?0:100)+'%';
-  $('#mapTitle').textContent=progress.chapter.name;
+  $('#mapTitle').textContent=dragonText(progress.chapter.name);terrain.setAttribute('aria-label','Campaign '+progress.chapterNumber+' map');
   $('#chapterSelect').replaceChildren();Content.chapters.forEach((chapter,i)=>{
-    const chip=document.createElement('span');chip.className='chapterBead'+(chapter.id===progress.chapter.id?' current':'')+(state.story.completedChapters.includes(chapter.id)?' complete':'');chip.textContent=String(i+1);chip.setAttribute('aria-label','Chapter '+(i+1)+(state.story.completedChapters.includes(chapter.id)?' complete':chapter.id===progress.chapter.id?' current':' locked'));$('#chapterSelect').append(chip);
+    const chip=document.createElement('span');chip.className='chapterBead'+(chapter.id===progress.chapter.id?' current':'')+(state.story.completedChapters.includes(chapter.id)?' complete':'');chip.textContent=String(i+1);chip.setAttribute('aria-label','Campaign '+(i+1)+(state.story.completedChapters.includes(chapter.id)?' complete':chapter.id===progress.chapter.id?' current':' locked'));$('#chapterSelect').append(chip);
   });
   $('#chapterCelebration').hidden=!state.story.mapPending;$('#chapterCelebration').textContent=progress.complete?'All done!':'New path!';
   const current=progress.areas.find(area=>area.status==='current')||progress.areas.filter(area=>area.available).at(-1);
@@ -97,21 +108,21 @@ function renderMap(){
     button.append(marker,label,status);button.onclick=()=>{selectedMapArea=area.id;renderMap();};nodes.append(button);
   });
   const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.style.left=`clamp(54px,${Math.max(9,current.x-9)}%,calc(100% - 54px))`;hero.style.top=`clamp(82px,${current.y-3}%,calc(100% - 100px))`;
-  $('#mapStory').textContent=progress.cleared+' / '+progress.total+' places explored';
-  $('#mapStory').setAttribute('aria-label',progress.cleared+' of '+progress.total+' story areas explored');
+  $('#mapStory').textContent=progress.cleared+' / '+progress.total+' chapters';
+  $('#mapStory').setAttribute('aria-label',progress.cleared+' of '+progress.total+' chapters completed');
   $('#mapAreaTitle').textContent=selected.shortName||selected.name;
-  $('#mapAreaStatus').textContent=selected.status==='future'?'Coming soon':selected.status==='cleared'?'Trail explored':selected.status==='locked'?'Further along the trail':state.battle?.fromAssessment&&!state.battle.mapSeen?'Reading check complete · Chapter 1 begins':'Your next story step';
+  $('#mapAreaStatus').textContent=selected.status==='future'?'Coming soon':selected.status==='cleared'?'Trail explored':selected.status==='locked'?'Further along the trail':state.battle?.fromAssessment&&!state.battle.mapSeen?'Reading check complete · Your first chapter':'Your next story step';
   $('#mapAreaGoal').textContent=selected.status==='cleared'?selected.discovery:selected.goal;
   const markers=$('#mapAreaProgress');markers.replaceChildren();
   if(selected.available){
-    const wins=document.createElement('span');wins.className='mapGoal';wins.textContent=(selected.secured?'◆ ◆':selected.wins===1?'◆ ◇':'◇ ◇')+'  Checkpoint';wins.setAttribute('aria-label',selected.wins+' of 2 victories towards this checkpoint');
-    const words=document.createElement('span');words.className='mapGoal';words.textContent=selected.introduced+' / '+selected.total+' words found';
-    const practice=document.createElement('span');practice.className='mapGoal';practice.textContent=Math.min(selected.reliable,selected.required)+' / '+selected.required+' words practiced';
-    markers.append(wins,words,practice);
+    const wins=document.createElement('span');wins.className='mapGoal';wins.textContent='◆'.repeat(Math.min(3,selected.wins))+'◇'.repeat(Math.max(0,3-selected.wins));wins.setAttribute('aria-label',Math.min(3,selected.wins)+' of 3 reading victories');
+    const time=document.createElement('span');time.className='mapGoal';time.textContent=Math.min(10,Math.floor(selected.activeMs/60000))+' / 10 min';
+    const duel=document.createElement('span');duel.className='mapGoal';duel.textContent=selected.duels?'× ✓':'× ?';duel.setAttribute('aria-label',selected.duels?'Number duel completed':'Number duel still to play');
+    markers.append(wins,time,duel);
   }
   const start=$('#mapContinue');start.disabled=selected.status==='future'||selected.status==='locked';
   start.textContent=start.disabled?'Locked':'Play';start.setAttribute('aria-label',start.disabled?'Explore the earlier place first':state.math.round?'Continue multiplication':state.teaching?'Continue the example':state.battle?.question?'Continue battle':'Explore '+selected.name);
-  paintPip($('#mapPip'));$('#dragonStage').textContent=growth.current.name;$('#dragonXP').textContent=growth.xp+' XP';
+  paintPip($('#mapPip'));$('#dragonStage').textContent=dragonText(growth.current.name);$('#dragonXP').textContent=xpText(growth.xp)+' XP';
   $('#dragonNext').textContent=growth.next?'Growing together':'Ready to ride';$('#mapGrowthSummary').textContent='';
   const fraction=growth.fraction;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext','XP towards growth. '+growthCaption(growth));
   $('#dragonTapHint').textContent=growth.next?'XP · Tap Pip':'Tap Pip';
@@ -119,9 +130,9 @@ function renderMap(){
   const stages=$('#dragonStages');stages.replaceChildren();Content.dragonStages.forEach((stage,i)=>{
     const item=document.createElement('li');item.className=i===growth.stage?'current':i<growth.stage?'earned':'future';
     const art=document.createElement('span');art.className='stagePortrait';paintPip(art,i);
-    const label=document.createElement('span');label.textContent=stage.name.replace(' Pip','');const xp=document.createElement('small');xp.textContent=i<=growth.stage?'✓':stage.xp+' XP · '+stage.minMinutes+' min'+(stage.requiresChapter?' + final win':'');
+    const label=document.createElement('span');label.textContent=stage.name.replace(' Pip','');const xp=document.createElement('small');xp.textContent=i<=growth.stage?'✓':stage.xp+' XP';
     item.append(art,label,xp);stages.append(item);
-  });save();
+  });updateDailyXP();save();maybeOfferName();
 }
 function clearCombat(){
   $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
@@ -158,19 +169,19 @@ function account(){
 function confirmActivity(){
   account();if(paused||blocked||playClock.expired)return false;
   for(const part of playClock.confirm(performance.now()))Core.recordTime(state,part.ms,part.category,part.end);
-  drainExcluded();return true;
+  drainExcluded();updateDailyXP();return true;
 }
 function formatTime(ms){const seconds=Math.floor(ms/1000);return Math.floor(seconds/60)+' min '+String(seconds%60).padStart(2,'0')+' sec';}
 function openParentGate(){
   home();parentAnswer=17+Math.floor(Math.random()*9);$('#parentQuestion').textContent='What is 17 + '+(parentAnswer-17)+'?';$('#parentAnswer').value='';$('#parentGateMessage').textContent='';$('#parentGate').hidden=false;$('#parentAnswer').focus();
 }
 function renderParent(){
-  const p=Core.parentProgress(state),g=Core.dragonProgress(state);show('parentDashboard');
+  const p=Core.parentProgress(state,Date.now()),g=Core.dragonProgress(state);show('parentDashboard');
   $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo);
   $('#parentTotal').textContent=formatTime(p.activeMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math);
   $('#parentMath').textContent=formatTime(p.totals.math)+' multiplication · PR: '+(state.math.best===null?'not set':state.math.best+' points in 60 seconds')+'.';
   $('#parentIdle').textContent=formatTime(p.totals.idle);$('#parentLegacy').textContent=formatTime(p.legacyMs);
-  $('#parentGrowth').textContent=g.current.name+' · '+g.xp+' XP. '+growthCaption(g)+'.';
+  $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
   $('#parentLearning').textContent=p.introduced+' / '+Content.words.length+' words introduced · '+p.practiced+' practiced twice · '+p.correct+' / '+p.independent+' unaided answers correct.';
   const body=$('#parentDays');body.replaceChildren();
   for(const [date,d] of p.days.slice(0,30)){
@@ -192,7 +203,7 @@ function show(id) {
   $('#homeBtn').hidden=['setup','route','campaignMap','parentDashboard'].includes(id);
   $('#backBtn').hidden=id!=='hero';
   if(!['battle','assessment'].includes(id))$('#wordReady').hidden=true;
-  state.screen=id;syncSound();
+  state.screen=id;syncSound();updateDailyXP();
   const chapter=['battle','teaching','result'].includes(id)&&state.battle?.chapterId?Content.chapters.find(c=>c.id===state.battle.chapterId):Core.currentChapter(state);
   const scene=chapter?.scene;$('#chapterScenery').hidden=scene===null||scene===undefined||['setup','hero','route','assessment','parentDashboard'].includes(id);
   if(scene!==null&&scene!==undefined)$('#chapterScenery').style.backgroundPosition=(scene%3*50)+'% '+(scene<3?0:100)+'%';
@@ -200,7 +211,7 @@ function show(id) {
 }
 function speak(text,{onEnd=null,onBoundary=null}={}) {
   const token=epoch;syncSound();sound.configure({narrating:true});
-  narrator.speak(text,{preferred:state.settings.voiceURI||'',
+  narrator.speak(dragonText(text),{preferred:state.settings.voiceURI||'',
     onEnd:()=>{if(token===epoch)sound.configure({narrating:false});if(token===epoch&&!paused&&!blocked&&onEnd)onEnd();},
     onBoundary:event=>{if(token===epoch&&!paused&&!blocked&&onBoundary)onBoundary(event);}});
 }
@@ -228,7 +239,7 @@ function home() {
   if(state.assessment.done){renderMap();return;}
   paintHero($('#routeHeroImg'),heroIndex());
   $('#routeTitle').textContent='Hi, '+state.profile.name+'!';
-  $('#routeName').textContent='Pip is coming with you.';
+  $('#routeName').textContent=dragonText('Pip is coming with you.');
   $('#homeChapter').hidden=!state.assessment.done;if(state.assessment.done)renderChapter($('#homeChapter'));
   const resumable=state.assessment.done||state.battle||state.teaching||state.assessment.progress||state.demoComplete;
   $('#continueAdventure').hidden=!resumable;
@@ -269,7 +280,7 @@ function showPausePanel(){
   $('#selfPacedSetting').checked=state.settings.selfPaced;
   $('#paceSetting').hidden=state.activity==='assessment'||state.activity==='mathChallenge'||!state.assessment.done;
   $('#pauseSpeed').hidden=state.activity==='assessment'||state.activity==='mathChallenge'||!state.assessment.done;
-  $('#pauseTime').textContent=state.session?`${Math.floor(state.session.elapsedMs/60000)} min practiced · about 7 min per challenge`:'';
+  $('#pauseTime').textContent=state.session?`${Math.floor(state.session.elapsedMs/60000)} min practiced · chapters need at least 10 active minutes`:'';
   populateVoices();$('#grownupSettings').open=false;$('#pausePanel').hidden=false;
 }
 function finishForNow() {
@@ -284,8 +295,8 @@ function renderActivity() {
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge');
   $('#combatEffects').className='combatEffects';$('#battle').classList.remove('correcting');
   $('#encounterIntro').hidden=true;$('#assessmentIntro').hidden=true;
-  if(state.story.mapPending){selectedMapArea=null;home();return;}
   if(state.activity.startsWith('math')){renderMath();return;}
+  if(state.story.mapPending){selectedMapArea=null;home();return;}
   if(state.activity==='handoff'){renderHandoff();return;}
   if(state.activity==='battle') {
     if(!state.battle)Core.startBattle(state,Date.now());
@@ -341,7 +352,7 @@ function renderMath(){
     $('#mathResult').dataset.outcome=r.beaten?'won':'lost';
     $('#mathResultScore').textContent=String(Core.mathScore(r));
     $('#mathResultGoal').textContent=String(r.target);
-    $('#mathResultDetail').textContent='+'+r.correct+' XP';
+    $('#mathResultDetail').textContent='+'+xpText(r.xpEarned??r.correct)+' XP';
     $('#mathResultBest').textContent=r.newBest&&r.beaten?'New best!':'Best '+state.math.best;
     $('#mathShieldReward').hidden=!r.shieldEarned;$('#mathShieldReward').innerHTML=shieldIcon+'<span>+1 shield</span>';
     $('#mathResultMessage').textContent=Core.mathScore(r)+' points. Goal '+r.target+'. '+r.correct+' correct, '+(r.wrong||0)+' wrong. '+(r.beaten?'Number duel won.':'Number duel lost. Your reading victory and earned XP are safe.');
@@ -414,7 +425,7 @@ function correctFeedback() {
   const supported=q.supportReasons.length>0;
   $('#feedback').textContent=supported?'Practice':'';$('#feedback').classList.toggle('show',supported);
   $('#battleScroll').classList.add('wordSuccess');
-  if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?'Pip grew! '+Content.dragonStages[q.grewTo].name:'+'+q.xpEarned+' XP';paintPip($('#battle .battlePip'));}
+  if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip grew! '+Content.dragonStages[q.grewTo].name):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
   speak(q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
 function combatGeometry(effects){
@@ -497,7 +508,7 @@ function renderEncounter(){
 }
 function renderTeaching() {
   show('teaching');$('#wordReady').hidden=true;
-  const item=Core.byWord[state.teaching.target],sentence=$('#teachSentence');sentence.replaceChildren();
+  const item={...Core.byWord[state.teaching.target]};item.sentence=dragonText(item.sentence);const sentence=$('#teachSentence');sentence.replaceChildren();
   const pattern=new RegExp('\\b'+item.w+'\\b','i'),match=pattern.exec(item.sentence),start=match.index;
   sentence.append(document.createTextNode(item.sentence.slice(0,start)));
   const target=document.createElement('span');target.className='targetWord';target.textContent=match[0];sentence.append(target,document.createTextNode(item.sentence.slice(start+match[0].length)));
@@ -513,7 +524,7 @@ function renderTeaching() {
   if(illustration.complete&&illustration.naturalWidth)pictureReady();
 }
 function narrateTeaching() {
-  const item=Core.byWord[state.teaching.target],prefix=state.battle?.question?.freeMistake?'Practice turn. You keep your heart. ':'';
+  const item={...Core.byWord[state.teaching.target]};item.sentence=dragonText(item.sentence);const prefix=state.battle?.question?.freeMistake?'Practice turn. You keep your heart. ':'';
   const start=prefix.length+new RegExp('\\b'+item.w+'\\b','i').exec(item.sentence).index,end=start+item.w.length;
   const target=$('#teachSentence .targetWord');target.classList.remove('spoken');
   speak(prefix+item.sentence,{onBoundary:event=>target.classList.toggle('spoken',event.charIndex>=start&&event.charIndex<end),onEnd:()=>target.classList.remove('spoken')});
@@ -526,12 +537,13 @@ function renderResult() {
   show('result');const result=state.result;if(!result){home();return;}
   paintHero($('#resultHero'),heroIndex());
   $('#resultTitle').textContent=result.victory?'You did it!':'Let’s try again';
-  $('#resultMessage').textContent=result.chapterJustComplete?'A new path is ready!':Core.storyProgress(state).areas.find(a=>a.id===state.battle?.areaId&&a.status==='cleared')?.discovery||'';renderChapter($('#resultChapter'));
-  const growth=Core.dragonProgress(state),math=state.math.records.filter(r=>r.battleId===result.battleId).reduce((n,r)=>n+r.correct,0);
-  $('#resultXP').textContent='+'+((result.xpEarned??state.campaign.battleRecords.filter(r=>r.battleId===result.battleId).reduce((n,r)=>n+(r.xpEarned||0),0))+math)+' XP';
-  $('#resultXPDetail').textContent=growth.xp+' / '+(growth.next?.xp||growth.xp)+' XP';
+  const chapter=Core.activeChapterState(state);
+  $('#resultMessage').textContent=result.chapterJustComplete?'New campaign!':result.fieldJustComplete||result.reviewJustComplete?'Chapter complete!':result.victory&&chapter?.duels&&chapter.activeMs<Core.TARGET_MS?'One more battle!':'';renderChapter($('#resultChapter'));
+  const growth=Core.dragonProgress(state);
+  $('#resultXP').textContent='+'+xpText(result.xpEarned??state.battle?.xpEarned??0)+' XP';
+  $('#resultXPDetail').textContent=xpText(growth.xp)+' / '+xpText(growth.next?.xp||growth.xp)+' XP';
   $('#resultGrowthFill').style.width=(growth.fraction*100)+'%';$('#resultGrowthBar').setAttribute('aria-valuenow',String(Math.round(growth.fraction*100)));
-  $('#resultGrowthNote').textContent=growth.next?'Pip is growing · Tap to see':'Pip is ready to ride';
+  $('#resultGrowthNote').textContent=dragonText(growth.next?'Pip is growing · Tap to see':'Pip is ready to ride');
   $('#resultShield').hidden=!state.rewards.shield;$('#resultShield').innerHTML=shieldIcon+'<span>1 shield</span>';
   const progress=Core.chapterProgress(state);
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');
@@ -550,7 +562,7 @@ function renderResult() {
     button.onclick=()=>{playClock.reset(performance.now());account();if(Core.isSessionDue(state))Core.completeSession(state,Date.now());
       state.campaign.enemyStrength=choice.hp;Core.startBattle(state,Date.now(),{strength:choice.hp,enemyId:choice.enemy.id});if(save())renderActivity();};box.append(button);
   });box.classList.toggle('single',choices.length===1);
-  if(!result.victory)defeatReaction(result,result.enemyId,result.strength);
+  if(!result.victory)defeatReaction(result,result.enemyId,result.strength);else maybeOfferName();
 }
 function defeatReaction(result,enemyId,strength){
   if(result.defeatShown||paused||blocked)return;
@@ -600,17 +612,21 @@ function openSpeed(){
 }
 function openGrowth(){
   const g=Core.dragonProgress(state);paintPip($('#growthPip'));paintPip($('#growthNextPip'),Math.min(g.stage+1,3));
-  $('#growthTitle').textContent=g.next?'Pip is growing':'Pip can ride';
-  $('#growthNextName').textContent=g.next?.name||g.current.name;
+  $('#growthTitle').textContent=dragonText(g.next?'Pip is growing':'Pip can ride');
+  $('#growthNextName').textContent=dragonText(g.next?.name||g.current.name);
   const rows=$('#growthMeters');rows.replaceChildren();
-  const meters=g.next?[['XP',g.xp,g.next.xp],['Minutes',Math.floor(g.activeMs/60000),g.next.minMinutes],['Days',Math.floor(g.elapsedDays),g.next.minDays]]:[['XP',g.xp,g.xp||1]];
+  const meters=[['XP',Math.floor(g.xp),g.next?.xp||Math.max(1,Math.floor(g.xp))]];
   meters.forEach(([label,value,max])=>{const row=document.createElement('div');row.className='growthMeter';const heading=document.createElement('span');heading.textContent=label;const valueEl=document.createElement('strong');valueEl.textContent=Math.min(value,max)+' / '+max;const track=document.createElement('div');track.className='growthTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label',label);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(max));track.setAttribute('aria-valuenow',String(Math.min(value,max)));const fill=document.createElement('span');fill.style.width=(Math.min(1,value/max)*100)+'%';track.append(fill);row.append(heading,valueEl,track);rows.append(row);});
-  $('#growthChapterGate').hidden=!g.next?.requiresChapter||state.story.chapterComplete;
+  $('#growthChapterGate').hidden=true;$('#renameDragon').hidden=g.stage<1;$('#renameDragon').textContent=state.dragon.named?'Change name':'Choose a name';
   $('#growthPanel').hidden=false;
 }
 $('#dragonPanel').onclick=$('#resultGrowth').onclick=openGrowth;
 $('#dragonPanel').onkeydown=event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openGrowth();}};
 $('#growthClose').onclick=()=>{$('#growthPanel').hidden=true;};
+$('#renameDragon').onclick=openNaming;
+$('#dragonNameLater').onclick=()=>{$('#dragonNamePanel').hidden=true;save();};
+$('#dragonNameSave').onclick=()=>{if(!Core.nameDragon(state,$('#dragonNameInput').value)){$('#dragonNameMessage').textContent='Choose a name first.';return;}if(save()){$('#dragonNamePanel').hidden=true;if(state.screen==='campaignMap')renderMap();else if(state.screen==='result')renderResult();}};
+$('#dragonNameInput').addEventListener('keydown',event=>{if(event.key==='Enter')$('#dragonNameSave').click();});
 document.addEventListener('contextmenu',event=>{if(!event.target.closest('input,textarea,#parentDashboard'))event.preventDefault();});
 document.addEventListener('selectstart',event=>{if(!event.target.closest('input,textarea,#parentDashboard'))event.preventDefault();});
 $('#mapSpeed').onclick=$('#pauseSpeed').onclick=openSpeed;

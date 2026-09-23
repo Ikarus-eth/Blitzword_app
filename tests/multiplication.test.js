@@ -13,7 +13,7 @@ test('every third consecutive campaign victory revives exactly the defeated enem
 });
 test('loss resets streak and demo neither triggers nor counts towards it',()=>{
  const s=fresh();battle(s);battle(s);battle(s,false);assert.equal(s.math.winStreak,0);assert.equal(s.math.round,null);
- battle(s,true,true);assert.equal(s.math.winStreak,0);assert.equal(s.math.round,null);battle(s);battle(s);assert.equal(s.activity,'result');battle(s);assert.equal(s.activity,'mathIntro');
+ battle(s,true,true);assert.equal(s.math.winStreak,0);assert.equal(s.math.round,null);battle(s);assert.equal(s.math.winStreak,1);assert.equal(s.activity,'mathIntro');assert.equal(s.math.round.shieldEligible,false);C.leaveMath(s,NOW);battle(s);assert.equal(s.activity,'result');battle(s);assert.equal(s.activity,'mathIntro');
 });
 test('target is frozen at previous PR minus two, with a minimum of one',()=>{
  for(const [best,target] of [[null,1],[0,1],[2,1],[3,1],[19,17]]){const s=challenge(best);assert.equal(s.math.round.target,target);assert.equal(s.math.round.bestAtStart,best);s.math.best=99;assert.equal(s.math.round.target,target);}
