@@ -17,7 +17,7 @@ const COMBAT_MS=1200;
 // Separate the original staff and gripping hand; retain the approved artwork.
 const mageRig={
   0:{pivot:[112,234],tip:[107,102],path:'M24 25H175V193L139 209L132 263L159 538H129L110 273L87 253L78 218L93 195L25 190Z'},
-  3:{pivot:[1430,230],tip:[1453,100],path:'M1388 25H1520V179L1460 211L1454 254L1388 538H1357L1415 256L1409 218L1420 184L1371 170Z'}
+  3:{pivot:[1430,230],tip:[1453,100],path:'M1413 25H1520V179L1460 211L1450 248L1378 532H1361L1420 250L1410 239L1415 213L1433 183L1413 169Z',repair:'M1420 250L1450 248L1378 532H1361Z'}
 };
 function paintSprite(element,index) {
   const crop=spriteCrops[index],clip='sprite-crop-'+(++spriteSerial);
@@ -27,7 +27,8 @@ function paintSprite(element,index) {
   if(element.id==='battleHeroImg'&&mageRig[index]){
     const rig=mageRig[index],[px,py]=rig.pivot;
     const body=`M${crop.x} ${crop.y}h${crop.w}v${crop.h}h-${crop.w}Z ${rig.path}`;
-    element.innerHTML=`<svg viewBox="${crop.x} ${crop.y} ${crop.w} ${crop.h}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:visible"><defs><clipPath id="${clip}-body"><path d="${body}" clip-rule="evenodd"/></clipPath><clipPath id="${clip}-arm"><path d="${rig.path}"/></clipPath></defs><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip}-body)"/><g transform="translate(${px} ${py})"><g class="staffArm"><g transform="translate(${-px} ${-py})"><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip}-arm)"/></g></g></g></svg>`;
+    const repair=rig.repair?`<defs><clipPath id="${clip}-repair"><path d="${rig.repair}"/></clipPath></defs><image href="assets/forest-characters.webp" x="24" width="1536" height="1024" clip-path="url(#${clip}-repair)"/>`:'';
+    element.innerHTML=`<svg viewBox="${crop.x} ${crop.y} ${crop.w} ${crop.h}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:visible"><defs><clipPath id="${clip}-body"><path d="${body}" clip-rule="evenodd"/></clipPath><clipPath id="${clip}-arm"><path d="${rig.path}"/></clipPath></defs>${repair}<image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip}-body)"/><g transform="translate(${px} ${py})"><g class="staffArm"><g transform="translate(${-px} ${-py})"><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip}-arm)"/></g></g></g></svg>`;
   }
 }
 function paintHero(element,index) {
