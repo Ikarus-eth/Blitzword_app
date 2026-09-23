@@ -4,7 +4,7 @@ An iPad-first English reading game. Play the current web build at https://ikarus
 
 See [current implementation and outstanding work](docs/CURRENT_STATUS.md) first. Older release notes describe their own milestones, not the current backlog.
 
-For ChatGPT project setup and attachment cleanup, use the [project maintenance guide](docs/PROJECT_DESCRIPTION_UPDATE.md). Keep changing rules in GitHub rather than uploading repeated documentation snapshots.
+For ChatGPT project setup, use the [project maintenance guide](docs/PROJECT_DESCRIPTION_UPDATE.md). No standing project attachments are required: documentation, approved production assets and the [original curriculum workbook](curriculum/README.md) are maintained in GitHub. Old setup, battle-scroll and teaching-card mockups are retired.
 
 ## Current gameplay
 
