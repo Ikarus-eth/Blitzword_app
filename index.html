@@ -2,26 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta name="blitzword-build" content="core200-gameplay-20260923-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <link rel="manifest" href="manifest.webmanifest" />
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
-<title>BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=recorded-voice-20260922-r2" />
+<title>Pip · BlitzWord</title>
+<link rel="stylesheet" href="styles.css?v=core200-20260922-r1" />
 </head>
 <body><main class="app" id="app">
+<div id="chapterScenery" class="chapterScenery" aria-hidden="true" hidden></div>
+<div class="gameTools" aria-label="Game controls">
 <button id="fullscreenBtn" class="utilityButton fullscreenButton" aria-label="Enter fullscreen" title="Fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
 <button id="soundBtn" class="utilityButton soundButton" aria-label="Mute soundscape" aria-pressed="true" title="Soundscape"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10m-1-7q2 2 0 4"/></svg></button>
-<div id="fullscreenNotice" class="fullscreenNotice" role="status" hidden></div>
+
 <button id="backBtn" class="backButton" aria-label="Back to your name and hero look" hidden>← Back</button>
 <button id="pauseBtn" class="pauseButton" aria-label="Pause" hidden>Ⅱ</button>
 <button id="homeBtn" class="homeButton" aria-label="Home" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 3 21 11M5 10v11h5v-7h4v7h5V10"/></svg></button>
+</div><div id="fullscreenNotice" class="fullscreenNotice" role="status" hidden></div>
 <button id="wordReady" class="roundButton wordReady" aria-label="Ready to choose" hidden>→</button>
 
 <section id="setup" class="screen active forest">
-  <div class="setupBrand"><div class="logo">BlitzWord<span class="leaf">◆</span></div><div class="tag">Win the reading battle</div></div>
+  <div class="setupBrand"><div class="logo">Pip<span class="leaf">◆</span></div><div class="tag">Let’s play</div></div>
   <div class="setupCard parchment">
     
     <label class="fieldLabel" for="nameInput">Name</label>
@@ -32,13 +36,13 @@
       <button class="genderCard" data-gender="boy"><span class="heroPortrait" data-hero-index="0" role="img" aria-label="Boy hero"></span><span>Boy</span></button>
       <button class="genderCard" data-gender="girl"><span class="heroPortrait" data-hero-index="3" role="img" aria-label="Girl hero"></span><span>Girl</span></button>
     </div>
-    <button id="setupNext" class="greenButton setupGo" aria-label="Continue">→</button>
+    <button id="setupNext" class="greenButton setupGo" aria-label="Continue">Go</button>
   </div>
 </section>
 
 <section id="hero" class="screen forest">
   <div class="heroTitle">Pick your hero</div><div id="heroGrid" class="heroGrid"></div>
-  <button id="heroNext" class="greenButton heroGo" aria-label="Continue">→</button>
+  <button id="heroNext" class="greenButton heroGo" aria-label="Continue">Go</button>
 </section>
 
 <section id="route" class="screen forest">
@@ -47,39 +51,39 @@
     <div class="eyebrow">Home</div><h1 class="routeTitle" id="routeTitle">Ready to explore?</h1>
     <p class="routeSub" id="routeName"></p>
     <div id="homeChapter" class="chapterPanel" hidden></div>
-    <div class="routeButtons"><button id="continueAdventure" class="greenButton" hidden>Continue adventure →</button><button id="tryBattle" class="greenButton">Play with Pip →</button><button id="checkFirst" class="secondaryButton">Reading check first</button></div>
+    <div class="routeButtons"><button id="continueAdventure" class="greenButton" hidden>Play</button><button id="tryBattle" class="greenButton">Play</button><button id="checkFirst" class="secondaryButton">Word check</button></div>
     <p id="sessionNote" class="sessionNote"></p><button id="changeHero" class="textButton">Change hero</button><button id="routeParents" class="textButton">Parents</button>
   </div>
 </section>
 
 <section id="campaignMap" class="screen">
-  <header class="mapHeader"><div><h1>Pip’s lost siblings</h1></div><div class="mapHeaderProgress"><div id="mapStory" class="mapStory"></div><div id="mapGrowthSummary" class="mapGrowthSummary"></div></div><button id="mapParents" class="mapSettings">Parents</button><button id="mapSettings" class="mapSettings" aria-label="Change hero">Hero</button><button id="mapSpeed" class="mapSettings speedLauncher" aria-label="Choose reading speed">Speed</button></header>
-  <div class="mapLayout">
+  <header class="mapHeader"><div><h1 id="mapTitle">Pip</h1><div id="chapterSelect" class="chapterSelect" aria-label="Campaign chapters"></div></div><div class="mapHeaderProgress"><div id="mapStory" class="mapStory"></div><div id="mapGrowthSummary" class="mapGrowthSummary"></div></div><button id="mapParents" class="mapSettings">Parents</button><button id="mapSettings" class="mapSettings" aria-label="Change hero">Hero</button><button id="mapSpeed" class="mapSettings speedLauncher" aria-label="Choose reading speed">Speed</button></header>
+  <div id="chapterCelebration" class="chapterCelebration" role="status" hidden></div><div class="mapLayout">
     <div class="mapBoard">
       <div class="mapTerrain" role="group" aria-label="Chapter 1 campaign map">
         <svg class="mapPath" viewBox="0 0 1000 667" preserveAspectRatio="none" aria-hidden="true"><path d="M170 487 Q70 360 340 260 Q490 300 570 434 Q720 400 630 160 Q760 255 890 127"/></svg>
         <div id="mapNodes"></div><span id="mapTraveller" class="sceneSprite" role="img" aria-label="Your hero’s current location"></span>
       </div>
-      <div class="mapDestination"><div><span id="mapAreaStatus" class="mapAreaStatus"></span><h2 id="mapAreaTitle">Lantern Trail</h2><p id="mapAreaGoal"></p></div><div id="mapAreaProgress" class="mapAreaProgress"></div><button id="mapContinue" class="greenButton">Keep exploring →</button></div>
+      <div class="mapDestination"><div><span id="mapAreaStatus" class="mapAreaStatus"></span><h2 id="mapAreaTitle">Lantern Trail</h2><p id="mapAreaGoal"></p></div><div id="mapAreaProgress" class="mapAreaProgress"></div><button id="mapContinue" class="greenButton">Play</button></div>
     </div>
-    <aside class="dragonPanel parchment" aria-label="Pip’s growth">
+    <aside id="dragonPanel" class="dragonPanel parchment" role="button" tabindex="0" aria-label="See Pip’s growth">
       <div class="dragonHeading"><span>Pip</span><strong id="dragonXP">0 XP</strong></div>
-      <span id="mapPip" class="growthSprite" role="img" aria-label="Pip"></span><h2 id="dragonStage">Hatchling Pip</h2>
-      <div id="dragonProgress" class="dragonProgress" role="progressbar" aria-label="Progress towards Pip’s next stage"><span></span></div><p id="dragonNext" class="dragonNext"></p>
+      <span id="mapPip" class="growthSprite" role="img" aria-label="Pip"></span><h2 id="dragonStage">Small Pip</h2>
+      <span id="dragonTapHint" class="dragonTapHint">Tap Pip</span><div id="dragonProgress" class="dragonProgress" role="progressbar" aria-label="Progress towards Pip’s next stage"><span></span></div><p id="dragonNext" class="dragonNext"></p>
       <ol id="dragonStages" class="dragonStages" aria-label="Pip’s growth stages"></ol>
-      <details class="growthHelp"><summary>How Pip grows</summary><p>Each unaided correct battle answer and correct multiplication answer earns 1 XP, including review. Reading speed earns no extra XP. Help is free. Earned XP and growth are never lost.</p><p>Young Pip needs 250 XP, 250 active practice minutes and at least 14 days since practice began. Reading and multiplication practice both count. Older forms need more practice. XP is a game reward, not a reading score.</p></details>
+      <details class="growthHelp"><summary>How Pip grows</summary><p>Each unaided correct battle answer and correct multiplication answer earns 1 XP, including review. Reading speed earns no extra XP. Help is free. Earned XP and growth are never lost.</p><p>Big Pip needs 250 XP, 250 active practice minutes and at least 14 days since practice began. Reading and multiplication practice both count. Older forms need more practice. XP is a game reward, not a reading score.</p></details>
     </aside>
   </div>
 </section>
 
 <section id="teaching" class="screen">
-  <div class="teachCard parchment"><div id="teachSentence" class="teachSentence"></div><img id="teachIllustration" class="teachIllustration" alt=""/><svg id="teachAtlas" class="teachIllustration" role="img" hidden viewBox="0 0 768 512"><image href="assets/teaching/chapter-teaching.png" width="1536" height="1024"/></svg><p id="lessonStatus" class="lessonStatus" aria-live="polite"></p><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay">🔊</button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
+  <div class="teachCard parchment"><div id="teachSentence" class="teachSentence"></div><img id="teachIllustration" class="teachIllustration" alt=""/><svg id="teachAtlas" class="teachIllustration" role="img" hidden viewBox="0 0 768 512"><image href="assets/teaching/chapter-teaching.png" width="1536" height="1024"/></svg><p id="lessonStatus" class="lessonStatus" aria-live="polite"></p><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg></button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
 </section>
 
 <section id="assessment" class="screen playfield">
   <span class="sceneSprite assessmentPip" data-sprite="6" role="img" aria-label="Pip is here with you"></span>
   <div class="battleShell"><div class="topHud"><div class="modeLabel">Reading check</div><div id="assessmentProgress" class="assessmentProgress"></div></div><div class="battleCenter"><div id="assessmentScroll" class="scroll parchment"></div></div><div class="answerDock"><div id="assessmentAnswers" class="answers"></div><button id="assessmentUnsure" class="unsure" aria-label="I'm not sure" hidden>?</button></div></div>
-  <div id="assessmentIntro" class="encounterLayer" hidden><div class="instructionCard parchment"><h1>Reading check</h1><div class="instructionSteps" aria-hidden="true"><span>👀<small>Look</small></span><b>→</b><span>✦<small>Remember</small></span><b>→</b><span>☝<small>Choose</small></span></div><p>Tap <span class="helpKey">?</span> if you’re not sure.</p><button id="assessmentStart" class="greenButton">Let’s try →</button></div></div>
+  <div id="assessmentIntro" class="encounterLayer" hidden><div class="instructionCard parchment"><h1>Reading check</h1><div class="instructionSteps" aria-hidden="true"><span>👀<small>Look</small></span><b>→</b><span>✦<small>Hide</small></span><b>→</b><span>☝<small>Tap</small></span></div><p>Tap <span class="helpKey">?</span> if you’re not sure.</p><button id="assessmentStart" class="greenButton">Go</button></div></div>
 </section>
 
 <section id="battle" class="screen playfield">
@@ -92,23 +96,23 @@
   <div id="feedback" class="feedback" aria-live="polite"></div>
   <div id="xpReward" class="xpReward" aria-live="polite" hidden></div>
   <div id="combatEffects" class="combatEffects" aria-hidden="true"><i class="projectile"></i><i class="pipEmber"></i><i class="pipShield"></i><i class="impact"></i><span class="damageNumber">−1</span></div>
-  <div id="encounterIntro" class="encounterLayer" hidden><div class="encounterCard parchment"><p id="encounterLead" class="encounterLead"></p><h1 id="encounterTitle">Forest path</h1><div id="encounterChapter" class="chapterPanel"></div><div class="encounterOpponent"><span id="encounterEnemy" class="sceneSprite"></span><span id="encounterHearts" class="visualHearts"></span></div><button id="encounterStart" class="greenButton" aria-label="Start battle">▶</button></div></div>
+  <div id="encounterIntro" class="encounterLayer" hidden><div class="encounterCard parchment"><p id="encounterLead" class="encounterLead"></p><h1 id="encounterTitle">Forest path</h1><div id="encounterChapter" class="chapterPanel"></div><div class="encounterOpponent"><span id="encounterEnemy" class="sceneSprite"></span><span id="encounterHearts" class="visualHearts"></span></div><button id="encounterStart" class="greenButton" aria-label="Start battle">Play</button></div></div>
 </section>
 
 <section id="handoff" class="screen forest">
-  <div class="handoffCard parchment"><span class="sceneSprite handoffPip" data-sprite="6" role="img" aria-label="Pip"></span><h1 id="handoffTitle">The path is clear!</h1><p>Let’s try a few words.<br>Tap <span class="helpKey">?</span> whenever you’re not sure.</p><button id="handoffNext" class="greenButton">Reading check →</button></div>
+  <div class="handoffCard parchment"><span class="sceneSprite handoffPip" data-sprite="6" role="img" aria-label="Pip"></span><h1 id="handoffTitle">The path is clear!</h1><p>Let’s try a few words.<br>Tap <span class="helpKey">?</span> whenever you’re not sure.</p><button id="handoffNext" class="greenButton">Play</button></div>
 </section>
 <section id="result" class="screen forest">
-  <div class="resultCard parchment"><div class="resultCompanions"><span id="resultHero" class="sceneSprite" role="img" aria-label="Your hero"></span><span class="sceneSprite" data-sprite="6" role="img" aria-label="Pip"></span></div><h1 id="resultTitle" class="resultTitle"></h1><p id="resultMessage" class="resultMessage"></p><div id="checkpoint" class="checkpoint"></div><div id="resultChapter" class="chapterPanel"></div><div id="resultGrowth" class="resultGrowth"></div><div id="opponents" class="opponents"></div><button id="resultNext" class="secondaryButton resultNext">⌂ Campaign map</button></div>
+  <div class="resultCard parchment"><div class="resultCompanions"><span id="resultHero" class="sceneSprite" role="img" aria-label="Your hero"></span><span class="sceneSprite" data-sprite="6" role="img" aria-label="Pip"></span></div><h1 id="resultTitle" class="resultTitle"></h1><p id="resultMessage" class="resultMessage"></p><div id="checkpoint" class="checkpoint"></div><div id="resultChapter" class="chapterPanel"></div><button id="resultGrowth" class="resultGrowth" aria-label="See Pip’s growth"><strong id="resultXP" class="resultXP"></strong><span id="resultXPDetail"></span><span id="resultGrowthBar" class="growthTrack" role="progressbar" aria-label="Pip XP towards next growth" aria-valuemin="0" aria-valuemax="100"><span id="resultGrowthFill"></span></span><span id="resultGrowthNote"></span></button><div id="opponents" class="opponents"></div><button id="resultNext" class="secondaryButton resultNext">Map</button></div>
 </section>
 <section id="mathIntro" class="screen forest mathScreen">
- <div class="mathIntroCard parchment"><div class="eyebrow">Number duel</div><span id="mathRevivedEnemy" class="sceneSprite mathRevival" role="img"></span><h1 id="mathIntroTitle"></h1><p>60 seconds</p><div class="mathRules"><span>Correct <b>+1</b></span><span>Wrong <b>−1</b></span></div><p id="mathIntroPR"></p><strong id="mathIntroTarget" class="mathTargetBadge"></strong><button id="mathStart" class="greenButton" aria-label="Start 60-second challenge">▶</button><button id="mathSkip" class="textButton">Not now</button></div>
+ <div class="mathIntroCard parchment"><div class="eyebrow">1 × 1</div><span id="mathRevivedEnemy" class="sceneSprite mathRevival" role="img"></span><h1 id="mathIntroTitle"></h1><p>60 seconds</p><div class="mathRules"><span>Correct <b>+1</b></span><span>Wrong <b>−1</b></span></div><p id="mathIntroPR"></p><strong id="mathIntroTarget" class="mathTargetBadge"></strong><button id="mathStart" class="greenButton" aria-label="Start 60-second challenge">Play</button><button id="mathSkip" class="textButton">Not now</button></div>
 </section>
 <section id="mathChallenge" class="screen forest mathScreen">
- <div class="mathArena parchment"><div class="mathHud"><div><small>Score</small><strong id="mathScore">0</strong></div><div class="mathClock" id="mathClock"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="clockTrack" cx="50" cy="50" r="43"/><circle id="mathTimeRing" class="clockRemaining" cx="50" cy="50" r="43" pathLength="100"/></svg><strong id="mathTime" role="timer" aria-label="Time remaining">60s</strong></div><div><small>Your PR</small><strong id="mathPR">—</strong></div></div><div class="mathOpponent"><span id="mathEnemy" class="sceneSprite" role="img"></span><div><span>Enemy target <strong id="mathTarget">1</strong></span><div id="mathTargetBar" class="dragonProgress" role="progressbar" aria-label="Points towards enemy target" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><span></span></div></div></div><div class="mathProblem"><span id="mathEquation"></span><output id="mathInput" aria-label="Your answer">?</output></div><div id="mathFeedback" class="mathFeedback" role="status" aria-live="polite"></div><div id="mathKeys" class="mathKeys" role="group" aria-label="Answer keypad"><button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button><button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button data-key="back" aria-label="Delete last digit">⌫</button><button data-key="0">0</button><button data-key="enter" class="mathSubmit" aria-label="Submit answer">↵</button></div></div>
+ <div class="mathArena parchment"><div class="mathHud"><div><small>Score</small><strong id="mathScore">0</strong></div><div class="mathClock" id="mathClock"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="clockTrack" cx="50" cy="50" r="43"/><circle id="mathTimeRing" class="clockRemaining" cx="50" cy="50" r="43" pathLength="100"/></svg><strong id="mathTime" role="timer" aria-label="Time remaining">60s</strong></div><div><small>Best</small><strong id="mathPR">—</strong></div></div><div class="mathOpponent"><span id="mathEnemy" class="sceneSprite" role="img"></span><div><span>Goal <strong id="mathTarget">1</strong></span><div id="mathTargetBar" class="dragonProgress" role="progressbar" aria-label="Points towards enemy target" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><span></span></div></div></div><div class="mathProblem"><span id="mathEquation"></span><output id="mathInput" aria-label="Your answer">?</output></div><div id="mathFeedback" class="mathFeedback" role="status" aria-live="polite"></div><div id="mathKeys" class="mathKeys" role="group" aria-label="Answer keypad"><button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button><button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button data-key="back" aria-label="Delete last digit">⌫</button><button data-key="0">0</button><button data-key="enter" class="mathSubmit" aria-label="Submit answer">↵</button></div></div>
 </section>
 <section id="mathResult" class="screen forest mathScreen">
- <div class="mathIntroCard parchment"><div class="eyebrow">60-second challenge complete</div><span id="mathResultEnemy" class="sceneSprite" role="img"></span><h1 id="mathResultTitle"></h1><strong id="mathResultScore" class="mathExample"></strong><p id="mathResultDetail"></p><p id="mathResultMessage"></p><button id="mathContinue" class="greenButton">Keep exploring →</button></div>
+ <div class="mathIntroCard parchment"><div class="eyebrow">Time’s up</div><span id="mathResultEnemy" class="sceneSprite" role="img"></span><h1 id="mathResultTitle"></h1><strong id="mathResultScore" class="mathExample"></strong><p id="mathResultDetail"></p><p id="mathResultMessage"></p><button id="mathContinue" class="greenButton">Play</button></div>
 </section>
 <section id="summary" class="screen forest">
   <div class="summaryCard parchment">
@@ -116,13 +120,13 @@
     <h2 id="summaryTitle">Challenge complete</h2>
     <div id="summaryDetail" class="summaryStats"></div><div id="summaryWords" class="wordCollection" aria-label="Words practiced"></div>
     <p class="sessionNote">Your progress is saved.</p>
-    <div class="routeButtons"><button id="anotherChallenge" class="greenButton">Another challenge</button><button id="doneToday" class="secondaryButton">Done for today</button></div>
+    <div class="routeButtons"><button id="anotherChallenge" class="greenButton">Play</button><button id="doneToday" class="secondaryButton">Rest</button></div>
   </div>
 </section>
 <div id="pausePanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="pauseTitle" hidden>
   <div class="pauseCard parchment"><span class="sceneSprite pausePip" data-sprite="6" role="img" aria-label="Pip"></span><h2 id="pauseTitle">Take a breath</h2>
-    <div class="routeButtons"><button id="pauseResume" class="greenButton">▶ Keep playing</button><button id="pauseFinish" class="secondaryButton">⌂ Finish for now</button></div>
-    <button id="pauseSpeed" class="secondaryButton">Reading speed</button><p id="pauseReason"></p><details class="grownupSettings" id="grownupSettings"><summary>Grown-up settings</summary><p id="pauseTime"></p>
+    <div class="routeButtons"><button id="pauseResume" class="greenButton">Play</button><button id="pauseFinish" class="secondaryButton">Rest</button></div>
+    <button id="pauseSpeed" class="secondaryButton">Speed</button><p id="pauseReason"></p><details class="grownupSettings" id="grownupSettings"><summary>Grown-up settings</summary><p id="pauseTime"></p>
       <p>Recorded British male narration. Backup voice if a recording cannot play:</p>
       <label class="voiceSetting" for="voiceChoice">Backup voice</label><div class="voiceRow"><select id="voiceChoice" aria-label="Backup voice"></select><button id="previewVoice" class="voicePreview">Listen to narrator</button></div>
       <label id="paceSetting" class="paceSetting"><input id="selfPacedSetting" type="checkbox"/> Take my time with each word</label>
@@ -136,7 +140,8 @@
   </div>
 </div>
 
-<div id="speedPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="speedTitle" hidden><div class="speedCard parchment"><h2 id="speedTitle">Your pace</h2><div id="speedChoices" class="speedChoices"></div><p id="speedNote">Slower is always okay.</p><button id="speedClose" class="greenButton" aria-label="Close speed choices">→</button></div></div>
+<div id="speedPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="speedTitle" hidden><div class="speedCard parchment"><h2 id="speedTitle">Speed</h2><div id="speedChoices" class="speedChoices"></div><p id="speedNote" hidden></p><button id="speedClose" class="dialogClose" aria-label="Close speed choices">×</button></div></div>
+<div id="growthPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="growthTitle" hidden><div class="growthCard parchment"><button id="growthClose" class="dialogClose" aria-label="Close Pip’s growth">×</button><h2 id="growthTitle">Pip is growing</h2><div class="growthCompare"><span id="growthPip" class="growthSprite"></span><span id="growthNextPip" class="growthSprite"></span></div><p id="growthNextName"></p><div id="growthMeters"></div><p id="growthChapterGate" hidden>Find the last path too.</p></div></div>
 <section id="parentDashboard" class="screen parentDashboard">
  <header class="parentHeader"><div><div class="mapEyebrow">Parents</div><h1>Practice and progress</h1></div><button id="parentHome" class="secondaryButton">Back to map</button></header>
  <div class="parentStats">
@@ -144,18 +149,18 @@
  </div>
  <article class="parentInfo"><h2>Pip’s next stage</h2><p id="parentGrowth"></p><p id="parentLearning"></p><p id="parentMath"></p></article>
  <article class="parentInfo"><h2>How time is counted</h2><p>Reading and teaching time is confirmed by the next answer, Ready, replay, continue, Home or pause action. After 30 seconds without a game action, the game pauses and discards the unconfirmed interval. Menus, results, background tabs and device sleep do not count. Idle excluded shows discarded reading intervals; paused and background duration is not measured. Assessment and demo time are shown separately and do not advance Pip’s growth.</p><p>This measures interaction-confirmed time, not attention. A reading interval longer than 30 seconds is conservatively excluded. Closing or reloading can lose the last unconfirmed interval.</p><p>Earlier time records could include waiting. They are kept separately and do not count towards growth: <strong id="parentLegacy"></strong>.</p></article>
- <article class="parentInfo"><h2>Word selection</h2><p>Chapter 1 uses 30 story words from the mixed BlitzWord Core 200 pool. Core 200 is a curriculum selection, not the 200 most frequent English words: it combines high-frequency words, phonics examples and forest vocabulary. In the supplied workbook, water has Fry rank 84; bird is selected for phonics and the story theme. Assessment and saved learning records are unchanged.</p></article>
+ <article class="parentInfo"><h2>Word selection</h2><p>All 200 Core words are playable across seven chapters and 35 places. The original 30 words stay in Chapter 1. Continued review and multiplication duels remain available after the story. About 45 seven-minute sessions is a five-hour practice plan, not a measured guarantee of story duration. The pace, breaks and number of repeats depend on the child. Core 200 is a curriculum selection, not the 200 most frequent English words: it combines high-frequency words, phonics examples and forest vocabulary. In the supplied workbook, water has Fry rank 84; bird is selected for phonics and the story theme. Assessment and saved learning records are unchanged.</p></article>
  <article class="parentInfo"><h2>Multiplication time</h2><p>The bonus uses 60 unpaused, foreground seconds. Pause, Home, hidden tabs and device sleep stop the countdown; returning does not refill it. New rounds score +1 for a correct answer and −1 for a wrong answer, including below zero. Earned XP is permanent; correct answers still earn 1 XP. Older personal records and any round already in progress retain their original scoring. Keypad actions confirm active multiplication time separately from reading, and both count towards growth. Unconfirmed time at the deadline is excluded from active play.</p></article>
  <article class="parentInfo"><h2>Recent days</h2><p id="parentEmpty">No confirmed play time yet.</p><div class="parentTableWrap"><table><thead><tr><th>Date on this device</th><th>Reading practice</th><th>Multiplication</th><th>Reading check + demo</th><th>Idle excluded</th></tr></thead><tbody id="parentDays"></tbody></table></div></article>
  <p class="parentLocal">Saved on this browser and device. Times from other devices are not included.</p>
 </section>
 <div id="parentGate" class="parentGate" role="dialog" aria-modal="true" aria-labelledby="parentGateTitle" hidden><div class="parchment"><h2 id="parentGateTitle">For a grown-up</h2><label id="parentQuestion" for="parentAnswer"></label><input id="parentAnswer" type="text" inputmode="numeric" autocomplete="off"/><p id="parentGateMessage" aria-live="polite"></p><button id="parentUnlock" class="greenButton">Open dashboard</button><button id="parentCancel" class="textButton">Back</button></div></div>
 </main>
-<script src="content.js?v=child-ui-20260922-r1"></script>
-<script src="game-core.js?v=child-ui-20260922-r1"></script>
-<script src="storage.js?v=child-ui-20260922-r1"></script>
-<script src="soundscape.js?v=child-ui-20260922-r1"></script>
-<script src="narration.js?v=recorded-voice-20260922-r1"></script>
-<script src="audio.js?v=recorded-voice-20260922-r1"></script>
-<script src="engagement.js?v=child-ui-20260922-r1"></script>
-<script src="app.js?v=recorded-voice-20260922-r1"></script></body></html>
+<script src="content.js?v=core200-20260922-r1"></script>
+<script src="game-core.js?v=core200-20260922-r1"></script>
+<script src="storage.js?v=core200-20260922-r1"></script>
+<script src="soundscape.js?v=core200-20260922-r1"></script>
+<script src="narration.js?v=core200-20260922-r1"></script>
+<script src="audio.js?v=core200-20260922-r1"></script>
+<script src="engagement.js?v=core200-20260922-r1"></script>
+<script src="app.js?v=core200-20260922-r1"></script></body></html>

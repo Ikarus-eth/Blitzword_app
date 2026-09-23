@@ -736,3 +736,10 @@ Prerecorded deep male narration is still pending. `NARRATION_CORPUS.json` contai
 ### Recorded narration update — 22 September 2026
 
 The subsequent recorded-voice release replaces fixed browser narration with 165 local MP3 clips in a British adult male voice. Recordings cover all implemented spoken words, teaching sentences and fixed instruction/correction/encounter variants. Playback waits for audio completion before the existing attack, stops on pause/Home/background, and falls back to browser speech on failure. Target highlighting stays static because verified word-boundary timing is not available. Generation and integration are complete; listening review and physical iPad verification remain outstanding. See `NARRATION_RELEASE.md` and `NARRATION_GENERATION.json` for provenance and limits.
+
+
+## 26. Core 200 and combat-boundary update — 22 September 2026
+
+The latest requested release makes all 200 approved words playable in seven chapters and 35 places. See `CORE200_RELEASE.md` for exact curriculum, progression and verification. Battles, including the demo, now end only at zero hero or enemy health. The seven-minute target waits for the combat boundary. Pausing preserves the living encounter. Chapter completion opens the campaign map. Creature variants have fixed three-point HP intervals and recent appearance families are excluded from opponent choices.
+
+The child interface uses a short chapter title, a single control toolbar, a visible hero map marker, a static warm spiral, immediate speed selection, and a bundled reading font without ligatures. Tapping Pip shows separate XP, active-minute and elapsed-day meters. The after-battle screen shows total earned XP and XP progress towards growth. Existing growth gates and paid movement locks remain intact. No learner data is reset, assessment redesigned or purchase entitlement granted.

@@ -28,13 +28,13 @@ test('legacy foreground time remains separate across reload and session rollover
  Core.recordTime(s,10000,'practice',START);s=Core.migrate(JSON.parse(JSON.stringify(s)));assert.equal(Core.parentProgress(s).legacyMs,900000);assert.equal(Core.parentProgress(s).activeMs,10000);
  Core.completeSession(s,START);Core.beginSession(s,START+1000);assert.equal(Core.parentProgress(s).legacyMs,900000);assert.equal(Core.parentProgress(s).activeMs,10000);
 });
-test('one hour of mixed practice stays playable across challenges, all five places and varied enemies',()=>{
+test('five hours of mixed practice spans all 200 words, seven chapters, pauses and saved reloads',()=>{
  let s=Core.migrate(Core.fresh()),mono=0,turns=0;const clock=new Clock(),seen=new Set(),enemies=new Set();clock.reset(0);s.assessment.done=true;Core.startBattle(s,START);
  function practice(ms){for(let step=0;step<ms;step+=1000){mono+=1000;clock.sample({mono,wall:START+mono,category:'practice'});}for(const part of clock.confirm(mono))Core.recordTime(s,part.ms,part.category,part.end);}
- while(Core.parentProgress(s).totals.practice<60*60000&&turns<600){
+ while(Core.parentProgress(s).totals.practice<300*60000&&turns<2400){
   if(s.activity==='mathIntro')Core.leaveMath(s,START+mono);
   if(s.activity==='summary'){Core.beginSession(s,START+mono);s.activity=s.result?'result':'battle';}
-  if(s.activity==='result'){enemies.add(s.result.enemyId);Core.startBattle(s,START+mono,{strength:4,enemyId:Core.enemyChoices(s)[0].id});}
+  if(s.activity==='result'){enemies.add(s.result.enemyId);Core.startBattle(s,START+mono,{strength:4,enemyId:Core.enemyChoices(s,4)[0].id});}
   const q=Core.prepareBattle(s,START+mono);if(!q)continue;
   seen.add(q.target);q.phase='choices';practice(10000);turns++;
   const choice=turns%29===0?'?':turns%11===0?q.options.find(x=>x!==q.target):q.target;
@@ -49,8 +49,8 @@ test('one hour of mixed practice stays playable across challenges, all five plac
    s=Core.migrate(JSON.parse(JSON.stringify(s)));
   }
  }
- const p=Core.parentProgress(s);assert.equal(p.totals.practice,3600000);assert.equal(p.activeMs,3600000);assert.ok(mono>=85*60000);assert.equal(seen.size,30);assert.equal(enemies.size,5);assert.equal(Core.storyProgress(s).cleared,5);assert.equal(s.story.chapterComplete,true);assert.ok(s.dragon.xp>=300);assert.equal(s.dragon.stage,0);assert.ok(s.sessions.length>=8);assert.ok(s.sessions.every(x=>x.newWords.length<=6));
+ const p=Core.parentProgress(s);assert.equal(p.totals.practice,18000000);assert.equal(p.activeMs,18000000);assert.ok(mono>=325*60000);assert.equal(seen.size,200);assert.ok(enemies.size>=5);assert.equal(s.story.completedChapters.length,7);assert.equal(s.story.clearedAreas.length,35);assert.equal(s.story.chapterComplete,true);assert.ok(s.dragon.xp>=300);assert.equal(s.dragon.stage,0);assert.ok(s.sessions.length>=40);assert.ok(s.sessions.every(x=>x.newWords.length<=6));
  // Continue after a full hour and chapter completion; XP and play remain available.
  Core.beginSession(s,START+mono);Core.startBattle(s,START+mono);const q=Core.prepareBattle(s,START+mono);q.phase='choices';const before=s.dragon.xp;Core.answerBattle(s,q.target,START+mono);assert.equal(s.dragon.xp,before+1);
- console.log('Hour simulation:',JSON.stringify({turns,words:seen.size,enemies:enemies.size,areas:Core.storyProgress(s).cleared,activeMinutes:p.activeMs/60000,wallMinutes:mono/60000,xp:s.dragon.xp,challenges:s.sessions.length}));
+ console.log('Five-hour simulation:',JSON.stringify({turns,words:seen.size,enemies:enemies.size,areas:s.story.clearedAreas.length,activeMinutes:p.activeMs/60000,wallMinutes:mono/60000,xp:s.dragon.xp,challenges:s.sessions.length}));
 });

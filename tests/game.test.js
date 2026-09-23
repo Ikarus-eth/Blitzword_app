@@ -64,15 +64,16 @@ test('two victories secure a checkpoint; revisiting the result does not count an
   const s=campaign();for(let battle=0;battle<2;battle++){if(battle)Core.startBattle(s,START+20000);for(let turn=0;turn<3;turn++)answer(s,true,START+battle*20000+turn*4000);Core.prepareBattle(s,START+battle*20000+13000);}
   assert.equal(s.campaign.checkpointWins,2);Core.resolveBattle(s,START+40000);assert.equal(s.campaign.wins,2);
 });
-test('seven minutes stops after feedback without discarding an unfinished fight',()=>{
-  let s=campaign();const q=present(s);Core.addActiveTime(s,Core.TARGET_MS);assert.equal(s.activity,'battle');
-  Core.answerBattle(s,q.target,START+Core.TARGET_MS);Core.prepareBattle(s,START+Core.TARGET_MS+1000);assert.equal(s.activity,'summary');assert.equal(s.battle.enemyHealth,2);assert.equal(s.sessions.length,1);
-  s=roundtrip(s);Core.beginSession(s,START+Core.TARGET_MS+10000);s.activity='battle';Core.prepareBattle(s,START+Core.TARGET_MS+10000);
-  assert.equal(s.battle.enemyHealth,2);assert.equal(s.session.elapsedMs,0);assert.equal(s.campaign.battleRecords.length,1);assert.notEqual(s.battle.question.id,q.id);
+test('seven-minute target waits for defeat or victory and reload preserves the living fight',()=>{
+  let s=campaign();const q=present(s);Core.addActiveTime(s,Core.TARGET_MS);Core.answerBattle(s,q.target,START+Core.TARGET_MS);
+  Core.prepareBattle(s,START+Core.TARGET_MS+1000);assert.equal(s.activity,'battle');assert.equal(s.battle.enemyHealth,2);assert.equal(s.sessions.length,0);
+  s=roundtrip(s);assert.equal(s.battle.enemyHealth,2);assert.equal(s.session.elapsedMs,Core.TARGET_MS);
+  answer(s,true,START+Core.TARGET_MS+2000);Core.prepareBattle(s,START+Core.TARGET_MS+3000);assert.equal(s.activity,'battle');
+  answer(s,true,START+Core.TARGET_MS+4000);Core.prepareBattle(s,START+Core.TARGET_MS+5000);assert.equal(s.activity,'result');assert.equal(s.battle.enemyHealth,0);assert.equal(s.result.victory,true);assert.equal(s.sessions.length,1);
 });
 test('ending at a victory preserves the result and checkpoint before the summary',()=>{
   const s=campaign();answer(s,true);answer(s,true,START+4000);const q=present(s,START+8000);Core.addActiveTime(s,Core.TARGET_MS);Core.answerBattle(s,q.target,START+9000);Core.prepareBattle(s,START+10000);
-  assert.equal(s.activity,'summary');assert.equal(s.result.victory,true);assert.equal(s.campaign.wins,1);assert.equal(s.session.victories,1);
+  assert.equal(s.activity,'result');assert.ok(s.session.completedAt);assert.equal(s.result.victory,true);assert.equal(s.campaign.wins,1);assert.equal(s.session.victories,1);
 });
 test('only active campaign activities contribute to the challenge clock',()=>{
   const s=campaign();Core.addActiveTime(s,1000);s.activity='route';Core.addActiveTime(s,100000);s.activity='assessment';Core.addActiveTime(s,100000);assert.equal(s.session.elapsedMs,1000);
@@ -125,20 +126,20 @@ test('a stale tab cannot overwrite another tab’s saved answers',()=>{
 });
 test('every practice target has four distinct choices, a reviewed illustration and its sentence',()=>{
   const fs=require('node:fs'),path=require('node:path');
-  for(const item of Content.words){assert.equal(new Set(item.d).size,4);assert.ok(item.d.includes(item.w));assert.match(item.sentence,new RegExp('\\b'+item.w+'\\b','i'));assert.ok(fs.statSync(path.join(__dirname,'../assets/teaching',item.image+(item.crop?'.png':'.webp'))).size>1000);}
+  for(const item of Content.words){assert.equal(new Set(item.d).size,4);assert.ok(item.d.includes(item.w));assert.match(item.sentence,new RegExp('\\b'+item.w+'\\b','i'));assert.ok(fs.statSync(path.join(__dirname,'..',Content.teachingSource(item))).size>1000);}
 });
 
 
 test('demo win, defeat and repeated help each finish once and survive handoff reload',()=>{
   for(const route of ['win','lose','help']){
     let s=fresh();Core.startBattle(s,START,{demo:true});let count=0;
-    while(s.activity==='battle'&&count<10){
+    while(s.activity==='battle'&&count<20){
       const q=present(s,START+count*5000);if(!q)break;
-      Core.answerBattle(s,route==='win'?q.target:route==='help'?'?':q.options.find(x=>x!==q.target),START+count*5000);
+      Core.answerBattle(s,route==='win'||(route==='help'&&count>=8)?q.target:route==='help'?'?':q.options.find(x=>x!==q.target),START+count*5000);
       if(!s.battle.question.correct){Core.startTeaching(s,q.target,'battle',START+count*5000+500);Core.leaveTeaching(s,START+count*5000+1000);}
       Core.prepareBattle(s,START+count*5000+2000);count++;
     }
-    assert.equal(s.activity,'handoff',route);assert.ok(count<=7);assert.equal(s.demoComplete,true);
+    assert.equal(s.activity,'handoff',route);assert.ok(count<20);if(route==='help')assert.ok(count>8);assert.equal(s.demoComplete,true);
     assert.equal(s.campaign.wins,0);assert.equal(s.assessment.progress,null);
     const records=s.campaign.battleRecords.length;s=roundtrip(s);
     assert.equal(Core.leaveHandoff(s,START+60000),true);assert.equal(s.activity,'assessment');
@@ -159,13 +160,13 @@ test('campaign offers different enemy types after wins and preserves the selecte
   const encountered=new Set([previous]);
   for(let i=0;i<12;i++){
     s.battle.enemyHealth=0;Core.resolveBattle(s,START+i*10000);
-    const options=Core.enemyChoices(s);assert.ok(options.length>=2);assert.ok(options.every(enemy=>enemy.id!==previous));
+    const options=Core.enemyChoices(s,3+i);assert.ok(options.length>=2);assert.ok(options.every(enemy=>enemy.id!==previous));
     const chosen=options[i%2].id;
     Core.startBattle(s,START+i*10000+1000,{enemyId:chosen,strength:3+i});
     assert.equal(s.battle.enemyId,chosen);assert.notEqual(s.battle.enemyId,previous);
     s=roundtrip(s);assert.equal(s.battle.enemyId,chosen);assert.equal(s.battle.maxHealth,3+i);previous=chosen;encountered.add(chosen);
   }
-  assert.equal(encountered.size,5);
+  assert.equal(encountered.size,13);
 });
 test('stronger choices visibly grow while health and reading exposure remain separate',()=>{
   const s=campaign();const exposure=s.assessment.exposure;
