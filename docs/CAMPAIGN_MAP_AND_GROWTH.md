@@ -1,5 +1,7 @@
 # Campaign map and Pip growth — 22 September 2026
 
+> Historical release note. The later Core 200 and XP-only growth releases supersede this milestone’s word limit, growth thresholds, time/day gates and deployment status. See [current status](CURRENT_STATUS.md).
+
 The later `ACTIVE_PLAY_RELEASE.md` supersedes this milestone’s XP cap, growth thresholds, six-word limit and deployment status.
 
 ## Implemented behavior

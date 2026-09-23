@@ -40,7 +40,7 @@ Two of every three word selections prioritize the current chapter, while the thi
 
 Existing XP is not repriced. Previously earned forms and cleared fields stay earned. Old pending reading and multiplication questions, choices, scoring, time, PR, shields and records survive. Unknown historical per-field minutes are not fabricated; new chapter timing starts from attributable activity. Missing companion names default to Pip. Old result screens retain the combined reading and multiplication XP total.
 
-No new recordings, soundtrack, additional pet, new scene artwork or chapter-story interlude is included. Existing 165 recordings and immediate fallback remain. Distinct art for every field is still outstanding: this release retains approved scenery. The provisional Pip / BlitzWord branding is not a commercial rename.
+This XP milestone did not add recordings, a soundtrack, another pet, new scene artwork or story interludes. Subsequent releases implemented the [adaptive soundscape](SOUNDSCAPE_RELEASE.md) and [34 chapter-story transitions](CHAPTER_STORIES_RELEASE.md). Expanded recordings and distinct artwork for every field remain outstanding; the existing 165 recordings and immediate speech fallback remain. An additional pet is only a future option. The provisional Pip / BlitzWord branding is not a commercial rename. See [current status](CURRENT_STATUS.md) for the active backlog.
 
 ## Verification
 

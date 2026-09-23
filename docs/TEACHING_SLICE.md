@@ -1,5 +1,7 @@
 # Six-word practice slice — 21 September 2026
 
+> Historical release note. This is the historical six-word milestone, not the current curriculum. All 200 approved targets are now playable. See [current status](CURRENT_STATUS.md).
+
 This is a small implementation milestone for option A, not the complete free chapter. Preserve all historical assessment and practice observations, including targets outside this slice. This slice only selects practice targets with reviewed teaching support.
 
 | Target | Sentence | Production illustration |

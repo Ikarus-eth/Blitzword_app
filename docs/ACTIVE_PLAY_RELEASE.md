@@ -1,5 +1,7 @@
 # Active play release — 22 September 2026
 
+> Historical release note. The later Core 200, XP-only growth and chapter-story releases supersede the 30-word limit, seven-minute challenges and time/day growth gates below. See [current status](CURRENT_STATUS.md).
+
 This release supersedes the six-word limit, capped XP, early growth thresholds and pending-deployment notes in earlier implementation documents. It includes the previous first-session fixes and campaign map.
 
 ## Playable chapter

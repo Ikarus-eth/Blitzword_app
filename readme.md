@@ -1,7 +1,3 @@
-echo "# Blitzword_app" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Ikarus-eth/Blitzword_app.git
-git push -u origin main
+# BlitzWord
+
+See [README.md](README.md) for running the existing app and [current status](docs/CURRENT_STATUS.md) for implemented features and outstanding work.
