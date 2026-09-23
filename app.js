@@ -709,17 +709,6 @@ document.addEventListener('contextmenu',event=>{if(!event.target.closest('input,
 document.addEventListener('selectstart',event=>{if(!event.target.closest('input,textarea,#parentDashboard'))event.preventDefault();});
 $('#mapSpeed').onclick=$('#pauseSpeed').onclick=openSpeed;
 $('#speedClose').onclick=()=>{$('#speedPanel').hidden=true;};
-$('#fullscreenBtn').onclick=async()=>{
-  const app=document.documentElement,notice=$('#fullscreenNotice');notice.hidden=true;
-  try{
-    if(document.fullscreenElement||document.webkitFullscreenElement)await (document.exitFullscreen?.()||document.webkitExitFullscreen?.());
-    else if(app.requestFullscreen)await app.requestFullscreen({navigationUI:'hide'});
-    else if(app.webkitRequestFullscreen)await app.webkitRequestFullscreen();
-    else throw new Error('Unavailable');
-  }catch{notice.textContent='Full screen is unavailable in this browser.';notice.hidden=false;}
-};
-function fullscreenChanged(){const active=!!(document.fullscreenElement||document.webkitFullscreenElement);$('#fullscreenBtn').setAttribute('aria-label',active?'Exit fullscreen':'Enter fullscreen');$('#fullscreenBtn').setAttribute('aria-pressed',String(active));}
-document.addEventListener('fullscreenchange',fullscreenChanged);document.addEventListener('webkitfullscreenchange',fullscreenChanged);
 $('#soundBtn').onclick=()=>{state.settings.soundscape=state.settings.soundscape===false;syncSound();if(state.settings.soundscape)sound.unlock();$('#soundBtn').setAttribute('aria-pressed',String(state.settings.soundscape));$('#soundBtn').setAttribute('aria-label',state.settings.soundscape?'Mute soundscape':'Enable soundscape');save();};
 function unlockAudio(){sound.unlock();narrator.unlock();}
 document.addEventListener('click',event=>{if(event.target.closest('#mapContinue,#setupNext,#heroNext,#tryBattle,#checkFirst,#continueAdventure,#resultNext'))sound.cue('select');});
