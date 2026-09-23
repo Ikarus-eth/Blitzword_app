@@ -62,6 +62,10 @@ function paintPip(element,stage=state.dragon.stage){
 }
 const xpText=n=>String(Math.floor(n||0));
 const dragonText=text=>text.replace(/\bPip\b/g,()=>state.dragon.name||'Pip');
+function updateDragonLabels(){
+  $('.dragonHeading span').textContent=state.dragon.name||'Pip';
+  for(const [id,label] of [['dragonPanel','See Pip’s growth'],['resultGrowth','See Pip’s growth'],['dragonProgress','Progress towards Pip’s next stage'],['resultGrowthBar','Pip XP towards next growth'],['dragonStages','Pip’s growth stages'],['growthClose','Close Pip’s growth']])$('#'+id).setAttribute('aria-label',dragonText(label));
+}
 function updateDailyXP(){
   if(!state)return;const p=Core.bonusProgress(state,Date.now()),label='XP ×'+p.multiplier;
   const badge=$('#xpBonusBadge');badge.textContent=label;badge.hidden=!p.active||!['battle','result','mathIntro','mathChallenge','mathResult','summary'].includes(state.screen);
@@ -125,7 +129,7 @@ function renderMap(){
   paintPip($('#mapPip'));$('#dragonStage').textContent=dragonText(growth.current.name);$('#dragonXP').textContent=xpText(growth.xp)+' XP';
   $('#dragonNext').textContent=growth.next?'Growing together':'Ready to ride';$('#mapGrowthSummary').textContent='';
   const fraction=growth.fraction;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext','XP towards growth. '+growthCaption(growth));
-  $('#dragonTapHint').textContent=growth.next?'XP · Tap Pip':'Tap Pip';
+  $('#dragonTapHint').textContent=dragonText(growth.next?'XP · Tap Pip':'Tap Pip');
   $('#mapShield').hidden=!state.rewards.shield;$('#mapShield').innerHTML=shieldIcon;
   const stages=$('#dragonStages');stages.replaceChildren();Content.dragonStages.forEach((stage,i)=>{
     const item=document.createElement('li');item.className=i===growth.stage?'current':i<growth.stage?'earned':'future';
@@ -203,7 +207,7 @@ function show(id) {
   $('#homeBtn').hidden=['setup','route','campaignMap','parentDashboard'].includes(id);
   $('#backBtn').hidden=id!=='hero';
   if(!['battle','assessment'].includes(id))$('#wordReady').hidden=true;
-  state.screen=id;syncSound();updateDailyXP();
+  state.screen=id;syncSound();updateDailyXP();updateDragonLabels();
   const chapter=['battle','teaching','result'].includes(id)&&state.battle?.chapterId?Content.chapters.find(c=>c.id===state.battle.chapterId):Core.currentChapter(state);
   const scene=chapter?.scene;$('#chapterScenery').hidden=scene===null||scene===undefined||['setup','hero','route','assessment','parentDashboard'].includes(id);
   if(scene!==null&&scene!==undefined)$('#chapterScenery').style.backgroundPosition=(scene%3*50)+'% '+(scene<3?0:100)+'%';
@@ -604,7 +608,7 @@ function openSpeed(){
   for(const mode of Core.speedChoices(state)){
     const button=document.createElement('button');button.className='speedChoice';button.dataset.speed=mode.id;button.disabled=mode.locked;
     button.setAttribute('aria-pressed',String((state.settings.selfPaced?'crawl':state.settings.speed||'walk')===mode.id));
-    button.setAttribute('aria-label',mode.name+(mode.locked?', locked: rideable Pip and expansion required':''));
+    button.setAttribute('aria-label',mode.name+dragonText(mode.locked?', locked: rideable Pip and expansion required':''));
     button.innerHTML=paceIcon(mode.id)+'<span>'+mode.name+'</span>'+(mode.locked?'<svg class="paceLock" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>':'');
     button.onclick=()=>{if(Core.chooseSpeed(state,mode.id)&&save()){$('#speedPanel').hidden=true;$('#mapSpeed').textContent=mode.name;}};box.append(button);
   }
