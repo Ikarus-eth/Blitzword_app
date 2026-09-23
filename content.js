@@ -2151,7 +2151,45 @@
       areas.push({id:chapter.id+'-place-'+(i+1),chapterId:chapter.id,name:placeNames[c][i],shortName:placeNames[c][i].split(' ').at(-1),x:coords[i][0],y:coords[i][1],available:true,words:targets,checkpoint:(c*5+i+1)*2,goal:'Explore '+placeNames[c][i]+'.',discovery:'The path is open.'});
     }}
   });
-  // One short transition for each later map field. Reuse approved scenery and character art.
+  // Chapter IDs remain save identities; campaign scene indices remain map-only.
+  const chapterBackgrounds={
+    'lantern-trail': {src:'assets/forest-clearing.webp',width:1536,height:1024},
+    'fox-crossing': {src:'assets/scenery/fox-crossing.webp',width:1536,height:1024},
+    'old-grove': {src:'assets/scenery/old-grove.webp',width:1536,height:1024},
+    'lantern-ruins': {src:'assets/scenery/lantern-ruins.webp',width:1536,height:1024},
+    'hidden-nest': {src:'assets/scenery/hidden-nest.webp',width:1536,height:1024},
+    'chapter-2-place-1': {src:'assets/scenery/chapter-2-place-1.webp',width:1536,height:1024},
+    'chapter-2-place-2': {src:'assets/scenery/chapter-2-place-2.webp',width:512,height:512},
+    'chapter-2-place-3': {src:'assets/scenery/chapter-2-place-3.webp',width:1536,height:1024},
+    'chapter-2-place-4': {src:'assets/scenery/chapter-2-place-4.webp',width:1536,height:1024},
+    'chapter-2-place-5': {src:'assets/scenery/chapter-2-place-5.webp',width:1536,height:1024},
+    'chapter-3-place-1': {src:'assets/scenery/chapter-3-place-1.webp',width:512,height:512},
+    'chapter-3-place-2': {src:'assets/scenery/chapter-3-place-2.webp',width:1536,height:1024},
+    'chapter-3-place-3': {src:'assets/scenery/chapter-3-place-3.webp',width:1536,height:1024},
+    'chapter-3-place-4': {src:'assets/scenery/chapter-3-place-4.webp',width:1536,height:1024},
+    'chapter-3-place-5': {src:'assets/scenery/chapter-3-place-5.webp',width:1536,height:1024},
+    'chapter-4-place-1': {src:'assets/scenery/chapter-4-place-1.webp',width:512,height:512},
+    'chapter-4-place-2': {src:'assets/scenery/chapter-4-place-2.webp',width:1536,height:1024},
+    'chapter-4-place-3': {src:'assets/scenery/chapter-4-place-3.webp',width:1536,height:1024},
+    'chapter-4-place-4': {src:'assets/scenery/chapter-4-place-4.webp',width:1536,height:1024},
+    'chapter-4-place-5': {src:'assets/scenery/chapter-4-place-5.webp',width:1536,height:1024},
+    'chapter-5-place-1': {src:'assets/scenery/chapter-5-place-1.webp',width:1536,height:1024},
+    'chapter-5-place-2': {src:'assets/scenery/chapter-5-place-2.webp',width:1536,height:1024},
+    'chapter-5-place-3': {src:'assets/scenery/chapter-5-place-3.webp',width:512,height:512},
+    'chapter-5-place-4': {src:'assets/scenery/chapter-5-place-4.webp',width:1536,height:1024},
+    'chapter-5-place-5': {src:'assets/scenery/chapter-5-place-5.webp',width:1536,height:1024},
+    'chapter-6-place-1': {src:'assets/scenery/chapter-6-place-1.webp',width:1536,height:1024},
+    'chapter-6-place-2': {src:'assets/scenery/chapter-6-place-2.webp',width:1536,height:1024},
+    'chapter-6-place-3': {src:'assets/scenery/chapter-6-place-3.webp',width:1536,height:1024},
+    'chapter-6-place-4': {src:'assets/scenery/chapter-6-place-4.webp',width:512,height:512},
+    'chapter-6-place-5': {src:'assets/scenery/chapter-6-place-5.webp',width:1536,height:1024},
+    'chapter-7-place-1': {src:'assets/scenery/chapter-7-place-1.webp',width:1536,height:1024},
+    'chapter-7-place-2': {src:'assets/scenery/chapter-7-place-2.webp',width:1536,height:1024},
+    'chapter-7-place-3': {src:'assets/scenery/chapter-7-place-3.webp',width:1536,height:1024},
+    'chapter-7-place-4': {src:'assets/scenery/chapter-7-place-4.webp',width:1536,height:1024},
+    'chapter-7-place-5': {src:'assets/scenery/chapter-7-place-5.webp',width:512,height:512}
+  };
+  // One short transition for each later map field.
   const storyLines = [
     ['The forest path is open. Pip is ready to explore with you.', 'Pip is on the path.'],
     ['A fox waits beside the stream. Pip follows it to a safe place to cross.', 'Pip can jump over water.'],
@@ -2197,5 +2235,5 @@
     {name:'Ride on Pip',xp:13400,crop:[869,464,657,533],scale:1.45}
   ];
   const teachingSource=item=>'assets/teaching/'+item.image+(item.image==='core-teaching'?'.webp':item.crop?'.png':'.webp');
-  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, chapterStories, dragonStages, chapterWordGoal:30};
+  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, chapterStories, chapterBackgrounds, dragonStages, chapterWordGoal:30};
 });

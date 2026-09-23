@@ -41,7 +41,7 @@ jobs:
           mkdir -p _site/tests
           cp index.html styles.css app.js content.js game-core.js storage.js audio.js narration.js soundscape.js engagement.js manifest.webmanifest _site/
           cp -R assets _site/assets
-          cp tests/visual-review.html tests/review-app.html tests/review-scenarios.js _site/tests/
+          cp tests/visual-review.html tests/review-app.html tests/review-scenarios.js tests/scenery-review.html _site/tests/
       # Serialize releases and skip stale runs, including manual reruns of old commits.
       - name: Check that this release is still current main
         id: current

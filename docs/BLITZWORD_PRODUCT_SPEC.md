@@ -763,3 +763,7 @@ Chapter entry now includes a short illustrated narration followed by one simple 
 The adaptive forest soundscape is implemented and deployed, including scene music, result cues, speech priority, cancellation and independent saved controls. It is separate from the unfinished expansion of prerecorded narration. See [soundscape behavior](SOUNDSCAPE_RELEASE.md).
 
 Enemy artwork and creature-specific health ranges are assigned to the user's parallel thread. Distinct background art for every chapter remains unfinished. An additional dragon is an optional future idea. This documentation update adds no gameplay or audio changes; [current status](CURRENT_STATUS.md) tracks the remaining work and verification limits.
+
+## Chapter scenery — 23 September 2026
+
+All 35 chapter fields have distinct setting artwork selected by stable area ID. Existing campaign-map scene indices remain unchanged. Encounter, battle, story, result and duel presentations use the saved active chapter, including old encounters across campaign boundaries. Artwork loads on demand and falls back to the forest without delaying reading. This is presentation only: learner saves, curriculum, scoring, XP, shields, narration and enemy behavior remain unchanged. See [chapter scenery](CHAPTER_SCENERY_RELEASE.md) for the complete mapping and verification status. This supersedes earlier statements that distinct field scenery is outstanding.

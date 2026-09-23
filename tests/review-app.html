@@ -3,7 +3,7 @@
 const params=new URLSearchParams(location.search),scene=params.get('scene')||'setup',holdImpact=scene.startsWith('attack-')&&params.get('motion')!=='play',holdEscape=scene==='retry-escape'&&params.get('motion')!=='play';
 fetch('../index.html?review='+Date.now(),{cache:'no-store'}).then(r=>r.text()).then(html=>{
  const safeScene=JSON.stringify(scene).replace(/</g,'\\u003c');
- const override=`<script src="tests/review-scenarios.js?v=chapter-stories-r2"><\/script><script>
+ const override=`<script src="tests/review-scenarios.js?v=chapter-scenery-r1"><\/script><script>
  window.reviewScene=${safeScene};
  if(${holdImpact}||${holdEscape}){
    // Test-only held pose. Normal play and the Play animation button keep real timing.
