@@ -37,14 +37,14 @@ window.makeReviewSave=function(scenario){
     const index=scenario==='story-fox'?1:scenario==='story-sky'?34:7;
     s.story.clearedAreas=BlitzContent.areas.slice(0,index).map(a=>a.id);
     s.story.completedChapters=BlitzContent.chapters.slice(0,Math.floor(index/5)).map(c=>c.id);
-    s.dragon.xp=3000;s.dragon.name='Ember';s.dragon.named=true;s.dragon.namingPromptSeen=true;
+    s.dragon.xp=BlitzContent.dragonStages[1].xp;s.dragon.name='Ember';s.dragon.named=true;s.dragon.namingPromptSeen=true;
     C.startBattle(s,now,{strength:4});
     if(scenario!=='map-later-chapter'){C.beginChapterStory(s,now);if(scenario!=='story-intro'){s.story.scene.introHeard=true;C.advanceChapterStory(s,now);}}
     return s;
   }
   C.startBattle(s,now,{strength:4});C.prepareBattle(s,now);
   if(['battle-bonus','map-bonus','math-bonus'].includes(scenario)){C.recordTime(s,25*60000,'practice',now);s.dragon.namingPromptSeen=true;}
-  if(scenario==='name-dragon'){s.dragon.xp=3000;return C.migrate(s);}
+  if(scenario==='name-dragon'){s.dragon.xp=BlitzContent.dragonStages[1].xp;return C.migrate(s);}
 
   if(['battle-shield','map-shield'].includes(scenario))s.rewards.shield=true;
   if(scenario.startsWith('math-')){
@@ -57,7 +57,7 @@ window.makeReviewSave=function(scenario){
     if(scenario!=='map'&&scenario!=='map-chapter-2'){
       for(const item of BlitzContent.words.slice(0,6)){s.learning.words[item.w].introducedAt=new Date(now).toISOString();s.learning.words[item.w].practiceSuccesses=2;}
       s.campaign.wins=2;s.campaign.checkpointWins=2;
-      s.dragon.xp=scenario==='map-near-growth'?2999:3000;s.dragon.namingPromptSeen=true;
+      s.dragon.xp=BlitzContent.dragonStages[1].xp-(scenario==='map-near-growth'?1:0);s.dragon.namingPromptSeen=true;
     }
     return C.migrate(s);
   }

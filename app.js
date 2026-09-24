@@ -74,11 +74,12 @@ function updateDragonLabels(){
   for(const [id,label] of [['dragonPanel','See Pip’s growth'],['resultGrowth','See Pip’s growth'],['dragonProgress','Progress towards Pip’s next stage'],['resultGrowthBar','Pip XP towards next growth'],['dragonStages','Pip’s growth stages'],['growthClose','Close Pip’s growth']])$('#'+id).setAttribute('aria-label',dragonText(label));
 }
 function updateDailyXP(){
-  if(!state)return;const p=Core.bonusProgress(state,Date.now()),label='XP ×'+p.multiplier;
+  if(!state)return;const p=Core.bonusProgress(state,Date.now()),label='XP boost';
   const badge=$('#xpBonusBadge');badge.textContent=label;badge.hidden=!p.active||!['battle','result','mathIntro','mathChallenge','mathResult','summary'].includes(state.screen);
-  badge.setAttribute('aria-label',label+' on correct answers for the rest of today');
+  badge.setAttribute('aria-label','Extra XP on correct answers for the rest of today');
   $('#mapDailyGoal').textContent=p.chapters?'Today ✓':'Today · 0 / 1 chapters';
   $('#mapBonus').hidden=!p.active;$('#mapBonus').textContent=label;
+  const consistency=$('#mapConsistency');consistency.hidden=!p.consistencyEarned;consistency.textContent='Returning bonus +'+xpText(p.consistencyEarned)+' XP';
 }
 function openNaming(){if(state.dragon.stage<1)return;$('#growthPanel').hidden=true;$('#dragonNameInput').value=state.dragon.name||'Pip';$('#dragonNameMessage').textContent='';$('#dragonNamePanel').hidden=false;$('#dragonNameInput').focus();}
 function maybeOfferName(){if(!state.dragon.evolution&&state.dragon.evolutionSeen>=1&&state.dragon.stage>=1&&!state.dragon.named&&!state.dragon.namingPromptSeen){state.dragon.namingPromptSeen=true;if(save())openNaming();}}
@@ -86,6 +87,7 @@ function growthCaption(p){
   if(!p.next)return dragonText('Pip is ready to ride');
   return Math.ceil(p.remaining)+' XP to '+dragonText(p.next.name);
 }
+function growthStepCaption(p){return p.next?xpText(p.stepRemaining)+' XP to step '+(p.steps+1)+' of 10':dragonText('Pip is ready to ride');}
 function renderChapter(element,compact=false){
   const p=Core.chapterLocation(state,state.battle?.areaId);element.replaceChildren();
   const title=document.createElement('span');title.className='chapterLabel';title.textContent='Campaign '+p.campaignNumber+' · Chapter '+p.chapterNumber;
@@ -136,8 +138,9 @@ function renderMap(deferEvolution=false){
   const start=$('#mapContinue');start.disabled=selected.status==='future'||selected.status==='locked';
   start.textContent=start.disabled?'Locked':'Play';start.setAttribute('aria-label',start.disabled?'Explore the earlier place first':state.math.round?'Continue multiplication':state.teaching?'Continue the example':state.battle?.question?'Continue battle':'Explore '+selected.name);
   paintPip($('#mapPip'));$('#dragonStage').textContent=dragonText(growth.current.name);$('#dragonXP').textContent=xpText(growth.xp)+' XP';
-  $('#dragonNext').textContent=growth.next?'Growing together':'Ready to ride';$('#mapGrowthSummary').textContent='';
+  $('#dragonNext').textContent=growth.next?growth.steps+' / 10 growth steps':'Ready to ride';$('#mapGrowthSummary').textContent='';
   const fraction=growth.fraction;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext','XP towards growth. '+growthCaption(growth));
+  bar.classList.add('steppedGrowth');bar.setAttribute('aria-valuetext',growthStepCaption(growth)+'. '+growthCaption(growth));
   $('#dragonTapHint').textContent=dragonText(growth.next?'XP · Tap Pip':'Tap Pip');
   $('#mapShield').hidden=!state.rewards.shield;$('#mapShield').innerHTML=shieldIcon;
   const stages=$('#dragonStages');stages.replaceChildren();Content.dragonStages.forEach((stage,i)=>{
@@ -197,6 +200,7 @@ function renderParent(){
   $('#parentMath').textContent=formatTime(p.totals.math)+' multiplication · PR: '+(state.math.best===null?'not set':state.math.best+' points in 60 seconds')+'.';
   $('#parentIdle').textContent=formatTime(p.totals.idle);$('#parentLegacy').textContent=formatTime(p.legacyMs);
   $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
+  const bonus=Core.bonusProgress(state,Date.now());$('#parentConsistency').textContent=bonus.practiceDays+' practice days in the last 7 days (at least 10 active minutes each). '+(bonus.consistencyEarned?'Returning bonus today: +'+xpText(bonus.consistencyEarned)+' XP.':bonus.active?'Daily reward earned. Returning bonuses apply on future practice days.':bonus.consistencyXP?'Reach 10 active minutes today for +'+xpText(bonus.consistencyXP)+' returning XP, alongside the daily reward.':'Return on another day for a small consistency bonus.');
   $('#parentLearning').textContent=p.introduced+' / '+Content.words.length+' words introduced · '+p.practiced+' practiced twice · '+p.correct+' / '+p.independent+' unaided answers correct.';
   renderParentLearning();
   const checked=p.storyChecks.filter(r=>typeof r.correct==='boolean'),matched=checked.filter(r=>r.correct).length;
@@ -816,7 +820,7 @@ function renderResult() {
   $('#resultXP').textContent='+'+xpText(result.xpEarned??state.battle?.xpEarned??0)+' XP';
   $('#resultXPDetail').textContent=xpText(growth.xp)+' / '+xpText(growth.next?.xp||growth.xp)+' XP';
   $('#resultGrowthFill').style.width=(growth.fraction*100)+'%';$('#resultGrowthBar').setAttribute('aria-valuenow',String(Math.round(growth.fraction*100)));
-  $('#resultGrowthNote').textContent=dragonText(growth.next?'Pip is growing · Tap to see':'Pip is ready to ride');
+  $('#resultGrowthNote').textContent=growthStepCaption(growth)+' · Tap to see';$('#resultGrowthBar').classList.add('steppedGrowth');$('#resultGrowthBar').setAttribute('aria-valuetext',growthStepCaption(growth));
   $('#resultShield').hidden=!state.rewards.shield;$('#resultShield').innerHTML=shieldIcon+'<span>1 shield</span>';
   const progress=Core.chapterProgress(state);
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');
@@ -930,9 +934,11 @@ function openGrowth(){
   const g=Core.dragonProgress(state);paintPip($('#growthPip'));paintPip($('#growthNextPip'),Math.min(g.stage+1,3));
   $('#growthTitle').textContent=dragonText(g.next?'Pip is growing':'Pip can ride');
   $('#growthNextName').textContent=dragonText(g.next?.name||g.current.name);
+  $('#growthStepNote').textContent=growthStepCaption(g);
   const rows=$('#growthMeters');rows.replaceChildren();
   const meters=[['XP',Math.floor(g.xp),g.next?.xp||Math.max(1,Math.floor(g.xp))]];
   meters.forEach(([label,value,max])=>{const row=document.createElement('div');row.className='growthMeter';const heading=document.createElement('span');heading.textContent=label;const valueEl=document.createElement('strong');valueEl.textContent=Math.min(value,max)+' / '+max;const track=document.createElement('div');track.className='growthTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label',label);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(max));track.setAttribute('aria-valuenow',String(Math.min(value,max)));const fill=document.createElement('span');fill.style.width=(Math.min(1,value/max)*100)+'%';track.append(fill);row.append(heading,valueEl,track);rows.append(row);});
+  const track=rows.querySelector('.growthTrack');track.classList.add('steppedGrowth');track.querySelector('span').style.width=(g.fraction*100)+'%';track.setAttribute('aria-valuemin',String(g.startXP));track.setAttribute('aria-valuenow',String(Math.max(g.startXP,Math.min(g.xp,g.next?.xp||g.xp))));track.setAttribute('aria-valuetext',growthStepCaption(g)+'. '+xpText(g.xp)+' XP earned');
   $('#growthChapterGate').hidden=true;$('#renameDragon').hidden=g.stage<1;$('#renameDragon').textContent=state.dragon.named?'Change name':'Choose a name';
   $('#evolutionReplay').hidden=g.stage<1||!!(state.battle&&!state.battle.resolved)||!!(state.math.round&&state.math.round.status!=='result');
   $('#growthPanel').hidden=false;

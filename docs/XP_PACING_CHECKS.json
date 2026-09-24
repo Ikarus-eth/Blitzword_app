@@ -1,0 +1,115 @@
+{
+  "browser": "Chromium (installed Chrome)",
+  "scenarios": 16,
+  "results": [
+    {
+      "kind": "fresh",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "legacy",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "bonus",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "result",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "fresh",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "legacy",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "bonus",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "result",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "fresh",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "legacy",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "bonus",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "result",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "fresh",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "kind": "legacy",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "kind": "bonus",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "kind": "result",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "node": "22.23.3",
+  "coreTests": 232,
+  "uiFlowGroups": 81,
+  "syntaxChecks": 13,
+  "physicalIPadTested": false,
+  "safariWebKitTested": false,
+  "saveCapacityTest": "90 days at 45 min/day remains below 1,000,000 characters",
+  "visuallyReviewed": [
+    "390 px map and result",
+    "1180 px grandfathered growth panel"
+  ],
+  "knownUnchangedIssue": "The pre-existing neighbouring sprite-row strip is still visible in the growth panel."
+}

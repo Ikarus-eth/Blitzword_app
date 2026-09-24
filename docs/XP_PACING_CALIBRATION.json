@@ -1,0 +1,1445 @@
+{
+  "reference": "Parent reports about 1,000 XP in 30 minutes; keep whole XP and make growth take about five times as much XP.",
+  "baseline": "1acabb70eba2b9cf57054d6836545b4859916d14",
+  "assumptions": {
+    "readingAttemptSeconds": 8,
+    "readingAccuracy": 0.9,
+    "mathAnswerSeconds": 6,
+    "mathAccuracy": 0.9,
+    "speed": "Walk",
+    "enemyHealth": 6,
+    "wholeBoostedXP": {
+      "reading": 5,
+      "reliableFastReading": 7,
+      "math": 2
+    },
+    "noTeachingOrStoryTime": true
+  },
+  "thresholds": [
+    15000,
+    45000,
+    70000
+  ],
+  "results": [
+    {
+      "before": {
+        "minutes": 15,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [
+          {
+            "day": 7,
+            "stage": 1,
+            "xp": 3063
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 445.25,
+            "earned": 445.25,
+            "returning": 0,
+            "chapters": 1,
+            "words": 13
+          },
+          {
+            "day": 2,
+            "xp": 849,
+            "earned": 403.75,
+            "returning": 0,
+            "chapters": 2,
+            "words": 18
+          },
+          {
+            "day": 3,
+            "xp": 1299.75,
+            "earned": 450.75,
+            "returning": 0,
+            "chapters": 4,
+            "words": 28
+          },
+          {
+            "day": 4,
+            "xp": 1710.5,
+            "earned": 410.75,
+            "returning": 0,
+            "chapters": 5,
+            "words": 34
+          },
+          {
+            "day": 5,
+            "xp": 2153.25,
+            "earned": 442.75,
+            "returning": 0,
+            "chapters": 6,
+            "words": 40
+          },
+          {
+            "day": 6,
+            "xp": 2588.25,
+            "earned": 435,
+            "returning": 0,
+            "chapters": 8,
+            "words": 45
+          },
+          {
+            "day": 7,
+            "xp": 3063,
+            "earned": 474.75,
+            "returning": 0,
+            "chapters": 9,
+            "words": 58
+          }
+        ],
+        "totalXP": 3063,
+        "chapters": 9,
+        "campaigns": 1,
+        "readingAttempts": 577,
+        "mathAttempts": 252
+      },
+      "after": {
+        "minutes": 15,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 444,
+            "earned": 444,
+            "returning": 0,
+            "chapters": 1,
+            "words": 13
+          },
+          {
+            "day": 2,
+            "xp": 855,
+            "earned": 411,
+            "returning": 10,
+            "chapters": 2,
+            "words": 18
+          },
+          {
+            "day": 3,
+            "xp": 1322,
+            "earned": 467,
+            "returning": 20,
+            "chapters": 4,
+            "words": 28
+          },
+          {
+            "day": 4,
+            "xp": 1758,
+            "earned": 436,
+            "returning": 30,
+            "chapters": 5,
+            "words": 34
+          },
+          {
+            "day": 5,
+            "xp": 2236,
+            "earned": 478,
+            "returning": 40,
+            "chapters": 6,
+            "words": 40
+          },
+          {
+            "day": 6,
+            "xp": 2716,
+            "earned": 480,
+            "returning": 50,
+            "chapters": 8,
+            "words": 45
+          },
+          {
+            "day": 7,
+            "xp": 3236,
+            "earned": 520,
+            "returning": 50,
+            "chapters": 9,
+            "words": 58
+          }
+        ],
+        "totalXP": 3236,
+        "chapters": 9,
+        "campaigns": 1,
+        "readingAttempts": 577,
+        "mathAttempts": 252
+      }
+    },
+    {
+      "before": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [
+          {
+            "day": 4,
+            "stage": 1,
+            "xp": 3881.25
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 961,
+            "earned": 961,
+            "returning": 0,
+            "chapters": 2,
+            "words": 20
+          },
+          {
+            "day": 2,
+            "xp": 1946.25,
+            "earned": 985.25,
+            "returning": 0,
+            "chapters": 5,
+            "words": 38
+          },
+          {
+            "day": 3,
+            "xp": 2924.5,
+            "earned": 978.25,
+            "returning": 0,
+            "chapters": 8,
+            "words": 52
+          },
+          {
+            "day": 4,
+            "xp": 3881.25,
+            "earned": 956.75,
+            "returning": 0,
+            "chapters": 10,
+            "words": 66
+          },
+          {
+            "day": 5,
+            "xp": 4840.5,
+            "earned": 959.25,
+            "returning": 0,
+            "chapters": 13,
+            "words": 82
+          },
+          {
+            "day": 6,
+            "xp": 5781,
+            "earned": 940.5,
+            "returning": 0,
+            "chapters": 16,
+            "words": 93
+          },
+          {
+            "day": 7,
+            "xp": 6775,
+            "earned": 994,
+            "returning": 0,
+            "chapters": 19,
+            "words": 110
+          }
+        ],
+        "totalXP": 6775,
+        "chapters": 19,
+        "campaigns": 3,
+        "readingAttempts": 1147,
+        "mathAttempts": 513
+      },
+      "after": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 949,
+            "earned": 949,
+            "returning": 0,
+            "chapters": 2,
+            "words": 20
+          },
+          {
+            "day": 2,
+            "xp": 1930,
+            "earned": 981,
+            "returning": 10,
+            "chapters": 5,
+            "words": 38
+          },
+          {
+            "day": 3,
+            "xp": 2913,
+            "earned": 983,
+            "returning": 20,
+            "chapters": 8,
+            "words": 52
+          },
+          {
+            "day": 4,
+            "xp": 3885,
+            "earned": 972,
+            "returning": 30,
+            "chapters": 10,
+            "words": 66
+          },
+          {
+            "day": 5,
+            "xp": 4872,
+            "earned": 987,
+            "returning": 40,
+            "chapters": 13,
+            "words": 82
+          },
+          {
+            "day": 6,
+            "xp": 5851,
+            "earned": 979,
+            "returning": 50,
+            "chapters": 16,
+            "words": 93
+          },
+          {
+            "day": 7,
+            "xp": 6882,
+            "earned": 1031,
+            "returning": 50,
+            "chapters": 19,
+            "words": 110
+          }
+        ],
+        "totalXP": 6882,
+        "chapters": 19,
+        "campaigns": 3,
+        "readingAttempts": 1147,
+        "mathAttempts": 513
+      }
+    },
+    {
+      "before": {
+        "minutes": 45,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [
+          {
+            "day": 3,
+            "stage": 1,
+            "xp": 4472
+          },
+          {
+            "day": 6,
+            "stage": 2,
+            "xp": 9007
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 1483.25,
+            "earned": 1483.25,
+            "returning": 0,
+            "chapters": 4,
+            "words": 27
+          },
+          {
+            "day": 2,
+            "xp": 2988,
+            "earned": 1504.75,
+            "returning": 0,
+            "chapters": 8,
+            "words": 51
+          },
+          {
+            "day": 3,
+            "xp": 4472,
+            "earned": 1484,
+            "returning": 0,
+            "chapters": 12,
+            "words": 74
+          },
+          {
+            "day": 4,
+            "xp": 5948,
+            "earned": 1476,
+            "returning": 0,
+            "chapters": 16,
+            "words": 96
+          },
+          {
+            "day": 5,
+            "xp": 7486.25,
+            "earned": 1538.25,
+            "returning": 0,
+            "chapters": 20,
+            "words": 122
+          },
+          {
+            "day": 6,
+            "xp": 9007,
+            "earned": 1520.75,
+            "returning": 0,
+            "chapters": 24,
+            "words": 144
+          },
+          {
+            "day": 7,
+            "xp": 10549.75,
+            "earned": 1542.75,
+            "returning": 0,
+            "chapters": 28,
+            "words": 168
+          }
+        ],
+        "totalXP": 10549.75,
+        "chapters": 28,
+        "campaigns": 5,
+        "readingAttempts": 1719,
+        "mathAttempts": 773
+      },
+      "after": {
+        "minutes": 45,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 1461,
+            "earned": 1461,
+            "returning": 0,
+            "chapters": 4,
+            "words": 27
+          },
+          {
+            "day": 2,
+            "xp": 2950,
+            "earned": 1489,
+            "returning": 10,
+            "chapters": 8,
+            "words": 51
+          },
+          {
+            "day": 3,
+            "xp": 4430,
+            "earned": 1480,
+            "returning": 20,
+            "chapters": 12,
+            "words": 74
+          },
+          {
+            "day": 4,
+            "xp": 5914,
+            "earned": 1484,
+            "returning": 30,
+            "chapters": 16,
+            "words": 96
+          },
+          {
+            "day": 5,
+            "xp": 7469,
+            "earned": 1555,
+            "returning": 40,
+            "chapters": 20,
+            "words": 122
+          },
+          {
+            "day": 6,
+            "xp": 9014,
+            "earned": 1545,
+            "returning": 50,
+            "chapters": 24,
+            "words": 144
+          },
+          {
+            "day": 7,
+            "xp": 10584,
+            "earned": 1570,
+            "returning": 50,
+            "chapters": 28,
+            "words": 168
+          }
+        ],
+        "totalXP": 10584,
+        "chapters": 28,
+        "campaigns": 5,
+        "readingAttempts": 1719,
+        "mathAttempts": 773
+      }
+    },
+    {
+      "before": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 6,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [
+          {
+            "day": 3,
+            "stage": 1,
+            "xp": 3384.75
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 1126.25,
+            "earned": 1126.25,
+            "returning": 0,
+            "chapters": 2,
+            "words": 20
+          },
+          {
+            "day": 2,
+            "xp": 2261.5,
+            "earned": 1135.25,
+            "returning": 0,
+            "chapters": 5,
+            "words": 37
+          },
+          {
+            "day": 3,
+            "xp": 3384.75,
+            "earned": 1123.25,
+            "returning": 0,
+            "chapters": 8,
+            "words": 51
+          },
+          {
+            "day": 4,
+            "xp": 4524,
+            "earned": 1139.25,
+            "returning": 0,
+            "chapters": 11,
+            "words": 66
+          },
+          {
+            "day": 5,
+            "xp": 5681.25,
+            "earned": 1157.25,
+            "returning": 0,
+            "chapters": 13,
+            "words": 83
+          },
+          {
+            "day": 6,
+            "xp": 6790.5,
+            "earned": 1109.25,
+            "returning": 0,
+            "chapters": 15,
+            "words": 97
+          },
+          {
+            "day": 7,
+            "xp": 7912.75,
+            "earned": 1122.25,
+            "returning": 0,
+            "chapters": 18,
+            "words": 110
+          }
+        ],
+        "totalXP": 7912.75,
+        "chapters": 18,
+        "campaigns": 3,
+        "readingAttempts": 1400,
+        "mathAttempts": 630
+      },
+      "after": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 6,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 1111,
+            "earned": 1111,
+            "returning": 0,
+            "chapters": 2,
+            "words": 20
+          },
+          {
+            "day": 2,
+            "xp": 2241,
+            "earned": 1130,
+            "returning": 10,
+            "chapters": 5,
+            "words": 37
+          },
+          {
+            "day": 3,
+            "xp": 3369,
+            "earned": 1128,
+            "returning": 20,
+            "chapters": 8,
+            "words": 51
+          },
+          {
+            "day": 4,
+            "xp": 4523,
+            "earned": 1154,
+            "returning": 30,
+            "chapters": 11,
+            "words": 66
+          },
+          {
+            "day": 5,
+            "xp": 5705,
+            "earned": 1182,
+            "returning": 40,
+            "chapters": 13,
+            "words": 83
+          },
+          {
+            "day": 6,
+            "xp": 6849,
+            "earned": 1144,
+            "returning": 50,
+            "chapters": 15,
+            "words": 97
+          },
+          {
+            "day": 7,
+            "xp": 8006,
+            "earned": 1157,
+            "returning": 50,
+            "chapters": 18,
+            "words": 110
+          }
+        ],
+        "totalXP": 8006,
+        "chapters": 18,
+        "campaigns": 3,
+        "readingAttempts": 1400,
+        "mathAttempts": 630
+      }
+    },
+    {
+      "before": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 10,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [
+          {
+            "day": 4,
+            "stage": 1,
+            "xp": 3348.5
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 850,
+            "earned": 850,
+            "returning": 0,
+            "chapters": 2,
+            "words": 20
+          },
+          {
+            "day": 2,
+            "xp": 1693,
+            "earned": 843,
+            "returning": 0,
+            "chapters": 5,
+            "words": 36
+          },
+          {
+            "day": 3,
+            "xp": 2504.5,
+            "earned": 811.5,
+            "returning": 0,
+            "chapters": 8,
+            "words": 49
+          },
+          {
+            "day": 4,
+            "xp": 3348.5,
+            "earned": 844,
+            "returning": 0,
+            "chapters": 10,
+            "words": 66
+          },
+          {
+            "day": 5,
+            "xp": 4198,
+            "earned": 849.5,
+            "returning": 0,
+            "chapters": 13,
+            "words": 79
+          },
+          {
+            "day": 6,
+            "xp": 5043.75,
+            "earned": 845.75,
+            "returning": 0,
+            "chapters": 16,
+            "words": 92
+          },
+          {
+            "day": 7,
+            "xp": 5909.25,
+            "earned": 865.5,
+            "returning": 0,
+            "chapters": 18,
+            "words": 110
+          }
+        ],
+        "totalXP": 5909.25,
+        "chapters": 18,
+        "campaigns": 3,
+        "readingAttempts": 972,
+        "mathAttempts": 432
+      },
+      "after": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 10,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 839,
+            "earned": 839,
+            "returning": 0,
+            "chapters": 2,
+            "words": 20
+          },
+          {
+            "day": 2,
+            "xp": 1680,
+            "earned": 841,
+            "returning": 10,
+            "chapters": 5,
+            "words": 36
+          },
+          {
+            "day": 3,
+            "xp": 2498,
+            "earned": 818,
+            "returning": 20,
+            "chapters": 8,
+            "words": 49
+          },
+          {
+            "day": 4,
+            "xp": 3358,
+            "earned": 860,
+            "returning": 30,
+            "chapters": 10,
+            "words": 66
+          },
+          {
+            "day": 5,
+            "xp": 4234,
+            "earned": 876,
+            "returning": 40,
+            "chapters": 13,
+            "words": 79
+          },
+          {
+            "day": 6,
+            "xp": 5117,
+            "earned": 883,
+            "returning": 50,
+            "chapters": 16,
+            "words": 92
+          },
+          {
+            "day": 7,
+            "xp": 6021,
+            "earned": 904,
+            "returning": 50,
+            "chapters": 18,
+            "words": 110
+          }
+        ],
+        "totalXP": 6021,
+        "chapters": 18,
+        "campaigns": 3,
+        "readingAttempts": 972,
+        "mathAttempts": 432
+      }
+    },
+    {
+      "before": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 24,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [
+          {
+            "day": 7,
+            "stage": 1,
+            "xp": 3286.25
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 475.25,
+            "earned": 475.25,
+            "returning": 0,
+            "chapters": 2,
+            "words": 16
+          },
+          {
+            "day": 2,
+            "xp": 938.5,
+            "earned": 463.25,
+            "returning": 0,
+            "chapters": 5,
+            "words": 27
+          },
+          {
+            "day": 3,
+            "xp": 1374,
+            "earned": 435.5,
+            "returning": 0,
+            "chapters": 7,
+            "words": 38
+          },
+          {
+            "day": 4,
+            "xp": 1825.25,
+            "earned": 451.25,
+            "returning": 0,
+            "chapters": 9,
+            "words": 50
+          },
+          {
+            "day": 5,
+            "xp": 2307.5,
+            "earned": 482.25,
+            "returning": 0,
+            "chapters": 12,
+            "words": 63
+          },
+          {
+            "day": 6,
+            "xp": 2780,
+            "earned": 472.5,
+            "returning": 0,
+            "chapters": 14,
+            "words": 71
+          },
+          {
+            "day": 7,
+            "xp": 3286.25,
+            "earned": 506.25,
+            "returning": 0,
+            "chapters": 16,
+            "words": 84
+          }
+        ],
+        "totalXP": 3286.25,
+        "chapters": 16,
+        "campaigns": 3,
+        "readingAttempts": 467,
+        "mathAttempts": 207
+      },
+      "after": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 24,
+        "accuracy": 0.9,
+        "speed": "walk",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 469,
+            "earned": 469,
+            "returning": 0,
+            "chapters": 2,
+            "words": 16
+          },
+          {
+            "day": 2,
+            "xp": 936,
+            "earned": 467,
+            "returning": 10,
+            "chapters": 5,
+            "words": 27
+          },
+          {
+            "day": 3,
+            "xp": 1388,
+            "earned": 452,
+            "returning": 20,
+            "chapters": 7,
+            "words": 38
+          },
+          {
+            "day": 4,
+            "xp": 1863,
+            "earned": 475,
+            "returning": 30,
+            "chapters": 9,
+            "words": 50
+          },
+          {
+            "day": 5,
+            "xp": 2379,
+            "earned": 516,
+            "returning": 40,
+            "chapters": 12,
+            "words": 63
+          },
+          {
+            "day": 6,
+            "xp": 2898,
+            "earned": 519,
+            "returning": 50,
+            "chapters": 14,
+            "words": 71
+          },
+          {
+            "day": 7,
+            "xp": 3448,
+            "earned": 550,
+            "returning": 50,
+            "chapters": 16,
+            "words": 84
+          }
+        ],
+        "totalXP": 3448,
+        "chapters": 16,
+        "campaigns": 3,
+        "readingAttempts": 467,
+        "mathAttempts": 207
+      }
+    },
+    {
+      "before": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.8,
+        "speed": "walk",
+        "growth": [
+          {
+            "day": 4,
+            "stage": 1,
+            "xp": 3425.5
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 824.5,
+            "earned": 824.5,
+            "returning": 0,
+            "chapters": 1,
+            "words": 12
+          },
+          {
+            "day": 2,
+            "xp": 1712.75,
+            "earned": 888.25,
+            "returning": 0,
+            "chapters": 4,
+            "words": 30
+          },
+          {
+            "day": 3,
+            "xp": 2579,
+            "earned": 866.25,
+            "returning": 0,
+            "chapters": 7,
+            "words": 43
+          },
+          {
+            "day": 4,
+            "xp": 3425.5,
+            "earned": 846.5,
+            "returning": 0,
+            "chapters": 9,
+            "words": 55
+          },
+          {
+            "day": 5,
+            "xp": 4332,
+            "earned": 906.5,
+            "returning": 0,
+            "chapters": 12,
+            "words": 71
+          },
+          {
+            "day": 6,
+            "xp": 5180.25,
+            "earned": 848.25,
+            "returning": 0,
+            "chapters": 14,
+            "words": 82
+          },
+          {
+            "day": 7,
+            "xp": 6085.5,
+            "earned": 905.25,
+            "returning": 0,
+            "chapters": 16,
+            "words": 96
+          }
+        ],
+        "totalXP": 6085.5,
+        "chapters": 16,
+        "campaigns": 3,
+        "readingAttempts": 1185,
+        "mathAttempts": 468
+      },
+      "after": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.8,
+        "speed": "walk",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 812,
+            "earned": 812,
+            "returning": 0,
+            "chapters": 1,
+            "words": 12
+          },
+          {
+            "day": 2,
+            "xp": 1698,
+            "earned": 886,
+            "returning": 10,
+            "chapters": 4,
+            "words": 30
+          },
+          {
+            "day": 3,
+            "xp": 2572,
+            "earned": 874,
+            "returning": 20,
+            "chapters": 7,
+            "words": 43
+          },
+          {
+            "day": 4,
+            "xp": 3436,
+            "earned": 864,
+            "returning": 30,
+            "chapters": 9,
+            "words": 55
+          },
+          {
+            "day": 5,
+            "xp": 4370,
+            "earned": 934,
+            "returning": 40,
+            "chapters": 12,
+            "words": 71
+          },
+          {
+            "day": 6,
+            "xp": 5256,
+            "earned": 886,
+            "returning": 50,
+            "chapters": 14,
+            "words": 82
+          },
+          {
+            "day": 7,
+            "xp": 6199,
+            "earned": 943,
+            "returning": 50,
+            "chapters": 16,
+            "words": 96
+          }
+        ],
+        "totalXP": 6199,
+        "chapters": 16,
+        "campaigns": 3,
+        "readingAttempts": 1185,
+        "mathAttempts": 468
+      }
+    },
+    {
+      "before": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 1,
+        "speed": "walk",
+        "growth": [
+          {
+            "day": 3,
+            "stage": 1,
+            "xp": 3150.25
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 1040.5,
+            "earned": 1040.5,
+            "returning": 0,
+            "chapters": 2,
+            "words": 21
+          },
+          {
+            "day": 2,
+            "xp": 2114,
+            "earned": 1073.5,
+            "returning": 0,
+            "chapters": 5,
+            "words": 39
+          },
+          {
+            "day": 3,
+            "xp": 3150.25,
+            "earned": 1036.25,
+            "returning": 0,
+            "chapters": 8,
+            "words": 57
+          },
+          {
+            "day": 4,
+            "xp": 4169.25,
+            "earned": 1019,
+            "returning": 0,
+            "chapters": 11,
+            "words": 75
+          },
+          {
+            "day": 5,
+            "xp": 5213.5,
+            "earned": 1044.25,
+            "returning": 0,
+            "chapters": 14,
+            "words": 90
+          },
+          {
+            "day": 6,
+            "xp": 6253.25,
+            "earned": 1039.75,
+            "returning": 0,
+            "chapters": 17,
+            "words": 102
+          },
+          {
+            "day": 7,
+            "xp": 7349.75,
+            "earned": 1096.5,
+            "returning": 0,
+            "chapters": 20,
+            "words": 120
+          }
+        ],
+        "totalXP": 7349.75,
+        "chapters": 20,
+        "campaigns": 4,
+        "readingAttempts": 1116,
+        "mathAttempts": 551
+      },
+      "after": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 1,
+        "speed": "walk",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 1025,
+            "earned": 1025,
+            "returning": 0,
+            "chapters": 2,
+            "words": 21
+          },
+          {
+            "day": 2,
+            "xp": 2094,
+            "earned": 1069,
+            "returning": 10,
+            "chapters": 5,
+            "words": 39
+          },
+          {
+            "day": 3,
+            "xp": 3136,
+            "earned": 1042,
+            "returning": 20,
+            "chapters": 8,
+            "words": 57
+          },
+          {
+            "day": 4,
+            "xp": 4171,
+            "earned": 1035,
+            "returning": 30,
+            "chapters": 11,
+            "words": 75
+          },
+          {
+            "day": 5,
+            "xp": 5241,
+            "earned": 1070,
+            "returning": 40,
+            "chapters": 14,
+            "words": 90
+          },
+          {
+            "day": 6,
+            "xp": 6316,
+            "earned": 1075,
+            "returning": 50,
+            "chapters": 17,
+            "words": 102
+          },
+          {
+            "day": 7,
+            "xp": 7447,
+            "earned": 1131,
+            "returning": 50,
+            "chapters": 20,
+            "words": 120
+          }
+        ],
+        "totalXP": 7447,
+        "chapters": 20,
+        "campaigns": 4,
+        "readingAttempts": 1116,
+        "mathAttempts": 551
+      }
+    },
+    {
+      "before": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.9,
+        "speed": "run",
+        "growth": [
+          {
+            "day": 3,
+            "stage": 1,
+            "xp": 3321.5
+          }
+        ],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 1079.75,
+            "earned": 1079.75,
+            "returning": 0,
+            "chapters": 2,
+            "words": 20
+          },
+          {
+            "day": 2,
+            "xp": 2195.25,
+            "earned": 1115.5,
+            "returning": 0,
+            "chapters": 5,
+            "words": 38
+          },
+          {
+            "day": 3,
+            "xp": 3321.5,
+            "earned": 1126.25,
+            "returning": 0,
+            "chapters": 8,
+            "words": 52
+          },
+          {
+            "day": 4,
+            "xp": 4421,
+            "earned": 1099.5,
+            "returning": 0,
+            "chapters": 10,
+            "words": 66
+          },
+          {
+            "day": 5,
+            "xp": 5504.75,
+            "earned": 1083.75,
+            "returning": 0,
+            "chapters": 13,
+            "words": 82
+          },
+          {
+            "day": 6,
+            "xp": 6586.25,
+            "earned": 1081.5,
+            "returning": 0,
+            "chapters": 16,
+            "words": 93
+          },
+          {
+            "day": 7,
+            "xp": 7725,
+            "earned": 1138.75,
+            "returning": 0,
+            "chapters": 19,
+            "words": 110
+          }
+        ],
+        "totalXP": 7725,
+        "chapters": 19,
+        "campaigns": 3,
+        "readingAttempts": 1147,
+        "mathAttempts": 513
+      },
+      "after": {
+        "minutes": 30,
+        "days": 7,
+        "readingSeconds": 8,
+        "accuracy": 0.9,
+        "speed": "run",
+        "growth": [],
+        "daily": [
+          {
+            "day": 1,
+            "xp": 1081,
+            "earned": 1081,
+            "returning": 0,
+            "chapters": 2,
+            "words": 20
+          },
+          {
+            "day": 2,
+            "xp": 2206,
+            "earned": 1125,
+            "returning": 10,
+            "chapters": 5,
+            "words": 38
+          },
+          {
+            "day": 3,
+            "xp": 3353,
+            "earned": 1147,
+            "returning": 20,
+            "chapters": 8,
+            "words": 52
+          },
+          {
+            "day": 4,
+            "xp": 4483,
+            "earned": 1130,
+            "returning": 30,
+            "chapters": 10,
+            "words": 66
+          },
+          {
+            "day": 5,
+            "xp": 5607,
+            "earned": 1124,
+            "returning": 40,
+            "chapters": 13,
+            "words": 82
+          },
+          {
+            "day": 6,
+            "xp": 6742,
+            "earned": 1135,
+            "returning": 50,
+            "chapters": 16,
+            "words": 93
+          },
+          {
+            "day": 7,
+            "xp": 7934,
+            "earned": 1192,
+            "returning": 50,
+            "chapters": 19,
+            "words": 110
+          }
+        ],
+        "totalXP": 7934,
+        "chapters": 19,
+        "campaigns": 3,
+        "readingAttempts": 1147,
+        "mathAttempts": 513
+      }
+    }
+  ],
+  "growthForecasts": [
+    {
+      "minutes": 15,
+      "days": 240,
+      "growth": [
+        {
+          "day": 33,
+          "stage": 1,
+          "xp": 15373
+        },
+        {
+          "day": 108,
+          "stage": 2,
+          "xp": 45252
+        },
+        {
+          "day": 171,
+          "stage": 3,
+          "xp": 70340
+        }
+      ]
+    },
+    {
+      "minutes": 30,
+      "days": 240,
+      "growth": [
+        {
+          "day": 16,
+          "stage": 1,
+          "xp": 15685
+        },
+        {
+          "day": 51,
+          "stage": 2,
+          "xp": 45359
+        },
+        {
+          "day": 81,
+          "stage": 3,
+          "xp": 70764
+        }
+      ]
+    },
+    {
+      "minutes": 45,
+      "days": 240,
+      "growth": [
+        {
+          "day": 11,
+          "stage": 1,
+          "xp": 16360
+        },
+        {
+          "day": 34,
+          "stage": 2,
+          "xp": 46252
+        },
+        {
+          "day": 53,
+          "stage": 3,
+          "xp": 70841
+        }
+      ]
+    }
+  ]
+}

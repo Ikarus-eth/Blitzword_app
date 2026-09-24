@@ -259,23 +259,23 @@ for(const victory of [true,false]){
 // Map previews cannot start unavailable content; growth updates and resumes the saved battle.
 {
  let s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
- s.dragon.xp=2997;s.timing.firstPracticeAt='2000-01-01T00:00:00.000Z';s.timing.days={};s=Core.migrate(s);Core.startBattle(s,Date.now());
- let ui=boot(s);assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('dragonXP').textContent,'2997 XP');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('dragonStages').children.length,4);
+ s.dragon.xp=14997;s.timing.firstPracticeAt='2000-01-01T00:00:00.000Z';s.timing.days={};s=Core.migrate(s);Core.startBattle(s,Date.now());
+ let ui=boot(s);assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('dragonXP').textContent,'14997 XP');assert.equal(ui.get('dragonNext').textContent,'9 / 10 growth steps');assert.equal(ui.get('dragonStages').children.length,4);
  const id=ui.state().battle.id;ui.click(ui.get('mapNodes').querySelector('[data-area="hidden-nest"]'));
  assert.equal(ui.get('mapAreaTitle').textContent,'Home');assert.equal(ui.get('mapContinue').disabled,true);assert.equal(ui.state().battle.id,id);assert.equal(ui.get('mapAreaStatus').textContent,'Further along the trail');
  ui.click(ui.get('mapNodes').querySelector('[data-area="lantern-trail"]'));ui.resume();ui.ready();assert.equal(ui.state().battle.question.target,'on');
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip is glowing!');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'0');
- ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'3000 XP');assert.equal(ui.get('dragonStage').textContent,'Big Pip');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('mapPip').dataset.growth,'0');
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'15000 XP');assert.equal(ui.get('dragonStage').textContent,'Big Pip');assert.equal(ui.get('dragonNext').textContent,'0 / 10 growth steps');assert.equal(ui.get('mapPip').dataset.growth,'0');
  const answers=ui.state().campaign.battleRecords.length;ui.resume();ui.until(()=>ui.state().battle.question.target!=='on');assert.equal(ui.state().campaign.battleRecords.length,answers);
- ui.click(ui.get('homeBtn'));ui.click(ui.get('mapSettings'));ui.click(ui.get('heroGrid').children[1]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.get('dragonXP').textContent,'3000 XP');
+ ui.click(ui.get('homeBtn'));ui.click(ui.get('mapSettings'));ui.click(ui.get('heroGrid').children[1]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.get('dragonXP').textContent,'15000 XP');
  console.log('PASS map future previews, XP stage unlock, reload, exact resume and hero change');
 }
 
 // Idle, suspension and parent reporting use the actual controller and timer callbacks.
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=98;Core.startBattle(s,Date.now());
- const ui=boot(s);assert.ok(Math.abs(parseFloat(ui.get('dragonProgress').querySelector('span').style.width)-100*98/3000)<.001);
- ui.click(ui.get('dragonPanel'));assert.equal(ui.get('growthPanel').hidden,false);assert.match(ui.get('growthMeters').textContent,/98 \/ 3000/);assert.doesNotMatch(ui.get('growthMeters').textContent,/Days|Minutes/);ui.click(ui.get('growthClose'));
+ const ui=boot(s);assert.ok(Math.abs(parseFloat(ui.get('dragonProgress').querySelector('span').style.width)-100*98/15000)<.001);
+ ui.click(ui.get('dragonPanel'));assert.equal(ui.get('growthPanel').hidden,false);assert.match(ui.get('growthMeters').textContent,/98 \/ 15000/);assert.doesNotMatch(ui.get('growthMeters').textContent,/Days|Minutes/);ui.click(ui.get('growthClose'));
  assert.equal(ui.get('growthPanel').hidden,true);
  console.log('PASS Pip tap shows XP-only growth without day or minute gates');
 }
@@ -369,16 +369,16 @@ for(const victory of [true,false]){
  s.timing.days[Core.dayKey(now)]={practice:590000,math:0,assessment:0,demo:0,idle:0};Core.startBattle(s,now);s.battle.introPending=false;Core.prepareBattle(s,now);
  let ui=boot(s);assert.equal(ui.get('mapBonus').hidden,true);ui.resume();ui.ready();ui.advance(11000);
  const target=ui.state().battle.question.target;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===target));
- assert.equal(ui.get('xpBonusBadge').hidden,false);assert.equal(ui.get('xpBonusBadge').textContent,'XP ×1.75');assert.equal(ui.state().dragon.xp,25.25);
- ui.click(ui.get('homeBtn'));const xp=ui.state().dragon.xp;ui=boot(ui.state());assert.equal(ui.get('mapBonus').textContent,'XP ×1.75');assert.equal(ui.get('mapBonus').hidden,false);assert.equal(ui.state().dragon.xp,xp);
- console.log('PASS confirmed ten-minute bonus, subtle visible multiplier, fractional XP and reload idempotence');
+ assert.equal(ui.get('xpBonusBadge').hidden,false);assert.equal(ui.get('xpBonusBadge').textContent,'XP boost');assert.equal(ui.state().dragon.xp,25);
+ ui.click(ui.get('homeBtn'));const xp=ui.state().dragon.xp;ui=boot(ui.state());assert.equal(ui.get('mapBonus').textContent,'XP boost');assert.equal(ui.get('mapBonus').hidden,false);assert.equal(ui.state().dragon.xp,xp);
+ console.log('PASS confirmed ten-minute bonus, subtle visible multiplier, whole XP and reload idempotence');
 }
 {
  let s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
  let ui=boot(s);ui.click(ui.get('dragonPanel'));assert.equal(ui.get('renameDragon').hidden,true);
- s.dragon.xp=3000;ui=boot(s);assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.state().screen,'evolution');ui.click(ui.get('evolutionNext'));ui.until(()=>ui.state().dragon.evolution.phase==='read');ui.click(ui.get('evolutionNext'));assert.equal(ui.get('dragonNamePanel').hidden,false);ui.get('dragonNameInput').value=' ';ui.click(ui.get('dragonNameSave'));assert.match(ui.get('dragonNameMessage').textContent,/Choose/);
+ s.dragon.xp=15000;ui=boot(s);assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.state().screen,'evolution');ui.click(ui.get('evolutionNext'));ui.until(()=>ui.state().dragon.evolution.phase==='read');ui.click(ui.get('evolutionNext'));assert.equal(ui.get('dragonNamePanel').hidden,false);ui.get('dragonNameInput').value=' ';ui.click(ui.get('dragonNameSave'));assert.match(ui.get('dragonNameMessage').textContent,/Choose/);
  ui.get('dragonNameInput').value='Ember';ui.click(ui.get('dragonNameSave'));assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.state().dragon.name,'Ember');assert.equal(ui.get('dragonStage').textContent,'Big Ember');assert.equal(ui.get('dragonTapHint').textContent,'XP · Tap Ember');assert.equal(ui.get('dragonPanel').getAttribute('aria-label'),'See Ember’s growth');assert.equal(ui.get('growthClose').getAttribute('aria-label'),'Close Ember’s growth');
- ui=boot(ui.state());assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.state().dragon.xp,3000);ui.click(ui.get('dragonPanel'));assert.equal(ui.get('renameDragon').hidden,false);ui.click(ui.get('renameDragon'));ui.click(ui.get('dragonNameLater'));assert.equal(ui.state().dragon.name,'Ember');
+ ui=boot(ui.state());assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.state().dragon.xp,15000);ui.click(ui.get('dragonPanel'));assert.equal(ui.get('renameDragon').hidden,false);ui.click(ui.get('renameDragon'));ui.click(ui.get('dragonNameLater'));assert.equal(ui.state().dragon.name,'Ember');
  s=ui.state();Core.startBattle(s,Date.UTC(2026,8,22));Core.prepareBattle(s,Date.UTC(2026,8,22));Core.startTeaching(s,'on','battle',Date.UTC(2026,8,22));ui=boot(s);ui.resume();assert.match(ui.get('teachSentence').textContent,/Ember is on the rock/);assert.equal(ui.get('teachSentence').querySelector('.targetWord').textContent,'on');
  console.log('PASS naming locked until evolution, validation, save/reload, later edits and personalized teaching');
 }
@@ -429,7 +429,7 @@ function storySave(index=7){
  console.log('PASS story idle pause preserves each phase without time or daily XP credit');
 }
 {
- const s=storySave(9);s.dragon.xp=3000;s.dragon.named=true;s.dragon.name='Ember';s.dragon.namingPromptSeen=true;
+ const s=storySave(9);s.dragon.xp=15000;s.dragon.named=true;s.dragon.name='Ember';s.dragon.namingPromptSeen=true;
  const ui=boot(s,{heldNarration:true});assert.match(ui.document.querySelector('.mapTerrain').getAttribute('aria-label'),/Campaign 2, River Path map. Chapter 5, River Gate/);
  assert.match(ui.get('mapNodes').children[4].getAttribute('aria-label'),/Chapter 5, River Gate, current/);
  ui.resume();assert.equal(ui.get('storyLocation').textContent,'Campaign 2 · Chapter 5');assert.equal(ui.speechTexts[0],Content.chapterStories[s.battle.areaId].narration);ui.finishSpeech();ui.click(ui.get('storyNext'));assert.equal(ui.get('storySentence').textContent,'Ember is at the gate.');ui.click(ui.get('storyListen'));assert.equal(ui.speechTexts.at(-1),'Ember is at the gate.');ui.finishSpeech();
@@ -693,7 +693,7 @@ for(const stage of [1,2,3]){
  console.log('PASS evolution '+stage+': narration, pause/background, Home/reload, untimed reading, naming and replay without rewards');
 }
 {
- const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=3000;
+ const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=15000;
  Core.startBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);
  const ui=boot(s);assert.equal(ui.state().screen,'evolution');ui.click(ui.get('evolutionNext'));ui.click(ui.get('evolutionSkip'));
  const img=ui.get('evolutionAfter').querySelector('img');img.onerror();assert.equal(img.hidden,true);assert.equal(ui.get('evolutionAfter').querySelector('.evolutionFallback').hidden,false);
@@ -702,7 +702,7 @@ for(const stage of [1,2,3]){
  console.log('PASS evolution returns to saved battle result and missing image does not block reading');
 }
 {
- const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=3000;
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=15000;
  const ui=boot(s,{reducedMotion:true});ui.click(ui.get('evolutionNext'));ui.tick();
  assert.equal(ui.state().dragon.evolution.phase,'read');assert.ok(ui.get('evolution').classList.contains('still'));
  ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseFinish'));assert.equal(ui.state().screen,'campaignMap');
@@ -710,7 +710,7 @@ for(const stage of [1,2,3]){
  console.log('PASS reduced motion skips transformation movement; Rest preserves the reading scene');
 }
 {
- const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=2999;
+ const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=14999;
  for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
  Core.startBattle(s,now,{strength:4});s.battle.introPending=false;Core.prepareBattle(s,now);s.battle.enemyHealth=1;
  const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
@@ -855,4 +855,32 @@ console.log('PASS timed and self-paced battle audio stays open through every que
  const assessment=observeSound(),saved=Core.migrate(Core.fresh());saved.profile.name='Reader';Core.startAssessment(saved,Date.UTC(2026,8,22));
  const checkUI=boot(saved,{sound:assessment.module});checkUI.resume();assert.equal(assessment.config.quiet,true);
  console.log('PASS teaching, chapter story and reading check remain quiet; returning to battle restores continuous audio');
+}
+
+// Point 9: whole-number rewards, visible growth steps and a forgiving return bonus.
+{
+ const now=Date.UTC(2026,8,22),s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=1499.75;
+ let ui=boot(s);assert.equal(ui.get('dragonXP').textContent,'1499 XP');assert.equal(ui.get('dragonNext').textContent,'0 / 10 growth steps');
+ ui.click(ui.get('dragonPanel'));assert.equal(ui.get('growthStepNote').textContent,'1 XP to step 1 of 10');assert.match(ui.get('growthMeters').textContent,/1499 \/ 15000/);assert.doesNotMatch(ui.get('growthMeters').textContent,/\.75/);
+ ui.click(ui.get('growthClose'));assert.equal(ui.state().dragon.xp,1499.75);ui=boot(ui.state());assert.equal(ui.state().dragon.xp,1499.75);
+ console.log('PASS growth uses ten steps and whole display values while preserving old saved fractions');
+}
+{
+ const now=Date.UTC(2026,8,22),s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.settings.selfPaced=true;
+ for(const ago of [1,3,5])s.timing.days[Core.dayKey(now-ago*Core.DAY)]={practice:600000};
+ s.timing.days[Core.dayKey(now)]={practice:590000};Core.startBattle(s,now);s.battle.introPending=false;Core.prepareBattle(s,now);
+ let ui=boot(s);assert.equal(ui.get('mapConsistency').hidden,true);ui.resume();ui.ready();ui.advance(11000);
+ const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
+ assert.equal(ui.get('xpReward').textContent,'+5 XP');assert.equal(ui.state().dragon.xp,55);assert.equal(ui.get('xpBonusBadge').textContent,'XP boost');
+ ui.click(ui.get('homeBtn'));assert.equal(ui.get('mapConsistency').textContent,'Returning bonus +30 XP');assert.equal(ui.get('mapConsistency').hidden,false);
+ const xp=ui.state().dragon.xp;ui=boot(ui.state());assert.equal(ui.state().dragon.xp,xp);assert.equal(ui.get('mapConsistency').textContent,'Returning bonus +30 XP');
+ openParents(ui);assert.match(ui.get('parentConsistency').textContent,/4 practice days/);assert.match(ui.get('parentConsistency').textContent,/\+30 XP/);
+ console.log('PASS returning bonus tolerates skipped dates, is paid once, and remains visible after reopening');
+}
+{
+ const s=Core.migrate(Core.fresh());delete s.growthRulesVersion;delete s.dragon.growthOrigin;s.profile.name='Reader';s.assessment.done=true;
+ Object.assign(s.dragon,{stage:1,xp:4000.25,evolutionSeen:1,named:true,name:'Ember'});
+ const ui=boot(s);assert.equal(ui.state().dragon.stage,1);assert.equal(ui.get('dragonStage').textContent,'Big Ember');ui.click(ui.get('dragonPanel'));
+ assert.equal(ui.get('renameDragon').hidden,false);assert.equal(ui.get('growthStepNote').textContent,'3200 XP to step 1 of 10');assert.equal(ui.get('growthMeters').querySelector('[role=progressbar]').getAttribute('aria-valuemin'),'3000');
+ console.log('PASS old earned forms retain naming, their step origin and existing XP under higher thresholds');
 }

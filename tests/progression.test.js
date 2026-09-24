@@ -34,8 +34,8 @@ test('old saves recover XP only from qualifying campaign observations, once',()=
  const migrated=roundtrip(s);assert.equal(Core.dragonProgress(migrated).xp,10);assert.deepEqual(migrated.campaign.battleRecords,s.campaign.battleRecords);assert.deepEqual(roundtrip(migrated).dragon,migrated.dragon);
 });
 test('XP-only growth no longer waits for minutes, elapsed days or a chapter gate',()=>{
- let s=fresh();s.dragon.xp=3000;s=roundtrip(s);assert.equal(s.dragon.stage,1);assert.equal(Core.dragonProgress(s).activeMs,0);
- s.dragon.xp=13400;s=roundtrip(s);assert.equal(s.dragon.stage,3);assert.equal(s.story.chapterComplete,false);
+ let s=fresh();s.dragon.xp=15000;s=roundtrip(s);assert.equal(s.dragon.stage,1);assert.equal(Core.dragonProgress(s).activeMs,0);
+ s.dragon.xp=70000;s=roundtrip(s);assert.equal(s.dragon.stage,3);assert.equal(s.story.chapterComplete,false);
 });
 test('chapter progress requires its words, practice, three wins, duel and ten minutes; later areas unlock in story order',()=>{
  let s=fresh();practiced(s);s.campaign.wins=1;s=roundtrip(s);assert.equal(Core.storyProgress(s).cleared,0);

@@ -66,6 +66,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 | 6 | Story sentences a child can read (option c) | Deployed and verified live on 24 September 2026 (build `story-pictures-20260924-r1`). All 34 pairs approved. [Release record](STORY_PICTURES_RELEASE.md) |
 | 7 | Speed suggestions, two new steps, per-word quick status | Deployed and verified live on 24 September 2026 (build `speed-guidance-20260924-r1`). Names/icons proposed for review. [Release record](SPEED_GUIDANCE_RELEASE.md) |
 | 8 | Parent view: word map, tricky list, weekly retention | Deployed and verified live on 24 September 2026 (build `parent-learning-20260924-r1`). [Release record](PARENT_LEARNING_RELEASE.md) |
+| 9 | Whole XP, slower growth and consistency | Authorized by the latest user decision; implemented locally, deployment verification pending. Whole rewards, 15,000 / 45,000 / 70,000 thresholds, ten growth steps and a returning-day bonus. [Release record](XP_PACING_RELEASE.md) |
 
 **1. Durable saves.** Two releases with a stop in between.
 - Evidence: every answer is stored forever. The whole save is rewritten every second while playing and duplicated as `_backup`. At 15 min/day the save grows by about 60k characters per day; with the duplicate it passes Chromium's measured 5.2M-character localStorage limit around day 40 (around day 14 at 45 min/day). At the limit `save()` throws and play blocks.
@@ -107,7 +108,6 @@ The user approved these points on 23 September 2026. Build them one at a time in
 
 ### Parked — do not build
 
-- **9. Rewards and pacing:** discuss with the user first. Evidence: a won battle gives about +9 XP against a 3,000 XP first stage. `scripts/calibrate-xp.cjs` line 19 assumes one answer per 24 s, but the measured cycle is about 6–10 s. At 8–10 s, the same model gives first growth on day 7–8 instead of 14 and full growth on day 32–37 instead of 70, at 15 min/day. Ideas on the table: a spellbook of word cards that upgrade with retention; visible steps inside each growth stage; thresholds recalibrated from real answer logs.
 - **10. Number duel:** later. Evidence: age is collected but unused; all 100 facts from 1×1 to 10×10 come up at random with −1 per wrong answer; picking the middle number scores 41%. Ideas: levels by age and results, per-fact tracking, balanced distractors.
 - **Options not chosen:** offline cache (1c); same-position distractor sets (2a, rejected); font or case change on the flash (2c); rolling word pool (3b); test-out (3c); splitting the 8 look-alike pairs that share a chapter; sound-it-out cards (4c); say-it moments (6a); meaning duels (6b).
 
@@ -277,3 +277,10 @@ Build `continuous-battle-20260924-r1`. Local automated validation: 208 Node test
 Deployed and verified: the exact 200-word map with five evidence states and a separate quick marker; word search/filter/history; common mix-ups, letter-position counts and slow-word timings; twelve weekly first-check retention rows. Learning is above play totals and sound settings are at the bottom. Recent and archived totals are combined without editing learner evidence. Earlier missing gap/first-check detail is marked unavailable instead of invented.
 
 All 225 core tests and 78 UI-flow groups pass on Node 22.23.3, including the 90-day, 45-min/day save-size regression. Browser checks and data limits are recorded in [the release record](PARENT_LEARNING_RELEASE.md). Merged in [PR #72](https://github.com/Ikarus-eth/Blitzword_app/pull/72) as `e6351235ecdfeb19f3fbe43a4b33f1a2b410e34e`. [Pages run #84](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35984212573) succeeded, including deployment. At 09:56 UTC on 24 September 2026, the live marker was `parent-learning-20260924-r1`; cache-busted `index.html`, `game-core.js`, `app.js`, `styles.css` and the preserved `soundscape.js` matched the merge byte for byte. Main was still that commit. [Verification record](PARENT_LEARNING_DEPLOYMENT.json). The parallel golden spiral and continuous battle audio are preserved. Physical iPad and Safari/WebKit remain untested. Stop here: the approved sequence through point 8 is complete. Point 9 is discussion-only and point 10 remains parked.
+
+
+## Whole XP and slower growth (point 9) — 24 September 2026
+
+The user authorized point 9 using their son's reported 30-minute / roughly 1,000-XP session as the reference, then chose whole XP and round growth thresholds of 15,000 / 45,000 / 70,000. Implemented locally: whole boosted answer awards, the existing learning/accuracy incentives, up to 50 XP for recent qualifying practice days, and ten static growth steps. Existing XP, earned forms, names and queued evolution scenes remain; an existing form keeps its step origin. The number duel's scoring and learning rules remain unchanged.
+
+Local validation passed: 232 core tests, 81 UI-flow groups, 13 syntax checks and 16 isolated Chromium scenarios at four tablet/phone sizes. The 90-day save-size regression still passes. Deployment verification is pending; this is not yet a live-release claim. [Rules and calibration](XP_PACING_RELEASE.md). Physical iPad/Safari remain untested. Stop after verified deployment; point 10 remains parked.

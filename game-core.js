@@ -7,6 +7,7 @@
   const GAPS = [1,3,7,14,30];
   const TARGET_MS = 10 * 60 * 1000;
   const XP_MULTIPLIER = 1.75, DAILY_XP = 20;
+  const XP_REWARDS = Object.freeze({answer:3,speed:1,word:8,retention:4,accuracyHigh:10,accuracyGood:5,math:1,consistencyPerDay:10,consistencyMax:50});
   // Raw history kept in the save. Older entries roll into s.archive totals so the save stays small.
   const HISTORY_LIMITS = {answers:500,teaching:200,support:200,sessions:50,duels:30};
   const GAP_DAYS = [1,3,7,14,30];
@@ -14,7 +15,7 @@
   const iso = now => new Date(now).toISOString();
   const copy = value => JSON.parse(JSON.stringify(value));
   function fresh() {
-    return {schemaVersion:2, xpRulesVersion:1, chapterRulesVersion:1, revision:0, nextId:1,
+    return {schemaVersion:2, xpRulesVersion:1, growthRulesVersion:2, chapterRulesVersion:1, revision:0, nextId:1,
       profile:{name:'',age:7,gender:'boy',heroClass:'Mage',heroIndex:0},
       assessment:{done:false,records:[],level:0,exposure:1800,lastAxis:'exposure',progress:null},
       learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[],dailyPractice:{},speedPractice:null},
@@ -109,6 +110,13 @@
     }
     // Existing earned forms remain earned. They can be replayed from the growth panel.
     if(!Number.isInteger(old.dragon?.evolutionSeen))s.dragon.evolutionSeen=s.dragon.stage;
+    // Keep the origin of an already-earned form when its future XP threshold rises.
+    // Historical XP, forms and pending evolution scenes are never repriced.
+    if(!s.dragon.growthOrigin||s.dragon.growthOrigin.stage!==s.dragon.stage||!Number.isFinite(s.dragon.growthOrigin.xp)||s.dragon.growthOrigin.xp<0||s.dragon.growthOrigin.xp>Content.dragonStages[s.dragon.stage].xp){
+      const previous=[0,3000,8900,13400][s.dragon.stage],current=Content.dragonStages[s.dragon.stage].xp;
+      s.dragon.growthOrigin={stage:s.dragon.stage,xp:old.growthRulesVersion===2?current:Math.min(s.dragon.xp,previous)};
+    }
+    s.growthRulesVersion=2;
     archiveOf(s);compactHistory(s);
     syncProgress(s);
     return s;
@@ -235,10 +243,18 @@
   }
   function bonusProgress(s,now=Date.now()){
     const d=s.timing.days[dayKey(now)]||{},activeMs=(d.practice||0)+(d.math||0);
-    return {activeMs,active:activeMs>=TARGET_MS,multiplier:activeMs>=TARGET_MS?XP_MULTIPLIER:1,remainingMs:Math.max(0,TARGET_MS-activeMs),chapters:s.story.dailyChapters?.[dayKey(now)]||0};
+    // Count local calendar days, including across daylight-saving changes. A gap
+    // does not erase the other qualifying days in this seven-day window.
+    let previousDays=0;const date=new Date(now);
+    for(let ago=1;ago<=6;ago++){
+      const prior=s.timing.days[dayKey(new Date(date.getFullYear(),date.getMonth(),date.getDate()-ago,12).getTime())]||{};
+      if((prior.practice||0)+(prior.math||0)>=TARGET_MS)previousDays++;
+    }
+    return {activeMs,active:activeMs>=TARGET_MS,multiplier:activeMs>=TARGET_MS?XP_MULTIPLIER:1,remainingMs:Math.max(0,TARGET_MS-activeMs),chapters:s.story.dailyChapters?.[dayKey(now)]||0,
+      practiceDays:previousDays+(activeMs>=TARGET_MS?1:0),consistencyXP:Math.min(XP_REWARDS.consistencyMax,previousDays*XP_REWARDS.consistencyPerDay),consistencyEarned:s.rewards.xpDays[dayKey(now)]?.consistency||0};
   }
   function awardXP(s,base,kind,now,{boost=false}={}){
-    const extra=boost&&bonusProgress(s,now).active?base*(XP_MULTIPLIER-1):0,amount=base+extra;
+    const extra=boost&&bonusProgress(s,now).active?Math.round(base*XP_MULTIPLIER)-base:0,amount=base+extra;
     s.dragon.xp+=amount;
     const day=s.rewards.xpDays[dayKey(now)] ||= {total:0,boost:0};day.total+=amount;day.boost+=extra;day[kind]=(day[kind]||0)+base;
     if(s.battle&&!s.battle.demo)s.battle.xpEarned=(s.battle.xpEarned||0)+amount;
@@ -269,7 +285,7 @@
   function completeReviewChapter(s,now){
     const p=s.story.review;if(!s.battle?.reviewId||!p||p.completedAt||!s.battle.resolved||p.activeMs<TARGET_MS||p.wins<3||p.duels<1||s.math.round&&s.math.round.status!=='result')return;
     p.completedAt=iso(now);s.story.dailyChapters[dayKey(now)]=(s.story.dailyChapters[dayKey(now)]||0)+1;
-    const accuracy=p.attempts?p.correct/p.attempts:0;p.accuracyXP=p.attempts>=10?(accuracy>=.9?10:accuracy>=.8?5:0):0;
+    const accuracy=p.attempts?p.correct/p.attempts:0;p.accuracyXP=p.attempts>=10?(accuracy>=.9?XP_REWARDS.accuracyHigh:accuracy>=.8?XP_REWARDS.accuracyGood:0):0;
     if(p.accuracyXP)awardXP(s,p.accuracyXP,'accuracy',now);
     if(s.result){s.result.reviewJustComplete=true;s.result.xpEarned=s.battle.xpEarned||0;}
   }
@@ -278,14 +294,14 @@
     if(!rec.supported){history.push(rec.correct);if(history.length>20)history.shift();}
     if(!rec.correct||rec.supported)return 0;
     const fast=!!w.securedAt&&q.exposureMs!==null&&q.exposureMs<=950&&rec.timingValid&&history.length===20&&history.filter(Boolean).length>=18;
-    let xp=awardXP(s,3+(fast?1:0),'answers',now,{boost:true});rec.speedXP=fast?1:0;
+    let xp=awardXP(s,XP_REWARDS.answer+(fast?XP_REWARDS.speed:0),'answers',now,{boost:true});rec.speedXP=fast?XP_REWARDS.speed:0;
     if(!w.wordXPClaimed){
       const trail=w.xpEvidence ||= [];
       if(!trail.length||s.learning.sequence-trail.at(-1).sequence>=3)trail.push({sequence:s.learning.sequence,battleId:s.battle.id});
       if(trail.length>3)trail.shift();
-      if(trail.length===3&&new Set(trail.map(x=>x.battleId)).size>=2){w.wordXPClaimed=true;w.securedAt=iso(now);xp+=awardXP(s,8,'words',now);rec.newWordXP=8;}
+      if(trail.length===3&&new Set(trail.map(x=>x.battleId)).size>=2){w.wordXPClaimed=true;w.securedAt=iso(now);xp+=awardXP(s,XP_REWARDS.word,'words',now);rec.newWordXP=XP_REWARDS.word;}
     }else if(!w.retentionXPClaimed&&rec.retentionCheck&&now-Date.parse(w.securedAt)>=DAY&&(!w.lastHelpAt||now-Date.parse(w.lastHelpAt)>=DAY)){
-      w.retentionXPClaimed=true;xp+=awardXP(s,4,'retention',now);rec.retentionXP=4;
+      w.retentionXPClaimed=true;xp+=awardXP(s,XP_REWARDS.retention,'retention',now);rec.retentionXP=XP_REWARDS.retention;
     }
     return xp;
   }
@@ -296,7 +312,11 @@
       const d=new Date(cursor),next=new Date(d.getFullYear(),d.getMonth(),d.getDate()+1).getTime(),end=Math.min(now,next);
       const day=s.timing.days[dayKey(cursor)] ||= {practice:0,math:0,assessment:0,demo:0,idle:0};
       const before=(day.practice||0)+(day.math||0);day[category]=(day[category]||0)+end-cursor;
-      if(['practice','math'].includes(category)&&before<TARGET_MS&&(day.practice||0)+(day.math||0)>=TARGET_MS)awardXP(s,DAILY_XP,'daily',end-1);
+      if(['practice','math'].includes(category)&&before<TARGET_MS&&(day.practice||0)+(day.math||0)>=TARGET_MS&&!s.rewards.xpDays[dayKey(cursor)]?.daily){
+        awardXP(s,DAILY_XP,'daily',end-1);
+        const consistency=bonusProgress(s,end-1).consistencyXP;
+        if(consistency)awardXP(s,consistency,'consistency',end-1);
+      }
       cursor=end;
     }
     if(category==='practice'||category==='math'){
@@ -635,10 +655,12 @@
   }
   function dragonProgress(s,now=Date.now()){
     const xp=s.dragon.xp||0,stage=s.dragon.stage,next=Content.dragonStages[stage+1]||null;
+    const start=s.dragon.growthOrigin?.stage===stage?s.dragon.growthOrigin.xp:Content.dragonStages[stage].xp,fraction=next?Math.max(0,Math.min(1,(xp-start)/(next.xp-start))):1;
+    const steps=next?Math.min(9,Math.floor(Math.max(0,xp-start)/((next.xp-start)/10))):10,nextStepXP=next?start+(next.xp-start)*(steps+1)/10:null;
     const activeMs=Object.values(s.timing.days).reduce((sum,d)=>sum+(d.practice||0)+(d.math||0),0);
     return {xp,stage,current:Content.dragonStages[stage],next,remaining:next?Math.max(0,next.xp-xp):0,activeMs,
       minutesRemaining:0,daysRemaining:0,elapsedDays:0,
-      fraction:next?Math.max(0,Math.min(1,(xp-Content.dragonStages[stage].xp)/(next.xp-Content.dragonStages[stage].xp))):1};
+      fraction,startXP:start,steps,nextStepXP,stepRemaining:next?Math.ceil(Math.max(0,nextStepXP-xp)):0};
   }
   function syncProgress(s,now=Date.now()){
     for (let i=0;i<Content.areas.length;i++){
@@ -650,14 +672,14 @@
         s.story.clearedAreas.push(area.id);const progress=chapterState(s,area.id);progress.completedAt=iso(now);
         s.story.dailyChapters[dayKey(now)]=(s.story.dailyChapters[dayKey(now)]||0)+1;
         const accuracy=progress.attempts?progress.correct/progress.attempts:0;
-        progress.accuracyXP=progress.attempts>=10?(accuracy>=.9?10:accuracy>=.8?5:0):0;
+        progress.accuracyXP=progress.attempts>=10?(accuracy>=.9?XP_REWARDS.accuracyHigh:accuracy>=.8?XP_REWARDS.accuracyGood:0):0;
         if(progress.accuracyXP)awardXP(s,progress.accuracyXP,'accuracy',now);
         if(s.result&&s.battle?.areaId===area.id){s.result.fieldJustComplete=area.id;s.result.xpEarned=s.battle.xpEarned||0;}
       }
     }
     completeReviewChapter(s,now);
     for(let stage=s.dragon.stage+1;stage<Content.dragonStages.length;stage++){
-      if(s.dragon.xp>=Content.dragonStages[stage].xp)s.dragon.stage=stage;else break;
+      if(s.dragon.xp>=Content.dragonStages[stage].xp){s.dragon.stage=stage;s.dragon.growthOrigin={stage,xp:Content.dragonStages[stage].xp};}else break;
     }
   }
   function storyProgress(s){
@@ -857,7 +879,7 @@
     if(!r||r.status!=='playing'||r.elapsedMs>=60000||!q||q.phase!=='answer'||!/^\d{1,3}$/.test(String(value))||!q.options?.includes(Number(value)))return null;
     const rec={id:q.id,task:'multiplication',inputMode:'choice',alternatives:[...q.options],a:q.a,b:q.b,response:Number(value),correct:Number(value)===q.a*q.b,elapsedMs:r.elapsedMs,at:iso(now)};
     q.phase='feedback';q.correct=rec.correct;q.input=String(value);r.answers.push(rec);
-    if(rec.correct){r.correct++;rec.xpEarned=awardXP(s,1,'math',now,{boost:true});syncProgress(s,now);}
+    if(rec.correct){r.correct++;rec.xpEarned=awardXP(s,XP_REWARDS.math,'math',now,{boost:true});syncProgress(s,now);}
     if(r.scoringVersion===2){rec.points=rec.correct?1:-1;r.score+=rec.points;if(!rec.correct)r.wrong++;}
     return rec;
   }
@@ -952,7 +974,7 @@
       q.phase='ready';
     }
   }
-  return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
+  return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
