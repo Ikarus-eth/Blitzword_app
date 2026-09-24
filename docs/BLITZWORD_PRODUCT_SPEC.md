@@ -343,6 +343,8 @@ The selected direction is an ancient scroll inside the battle scene. The scroll 
 
 Battle reactions must never animate during fixation or word exposure. Teaching also pauses combat.
 
+Approved spiral refinement — 24 September 2026: after the word disappears, the shared battle/reading-check mask uses tilted golden light ribbons, a warm diffuse glow and small star sparks, following the [user's spiral reference](references/golden-spiral-20260924.png). The artwork stays motionless, identical for every target and fixed at 180 × 110 CSS pixels. Word exposure, masking and answer timing retain their existing rules. Only the spiral is a new reference; the pictured scenery and character do not replace existing art.
+
 ## 7. Teaching moments
 
 A teaching moment is supported meaning/pronunciation practice, not another test. Combat pauses completely.
