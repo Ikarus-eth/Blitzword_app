@@ -9,10 +9,11 @@
   function settings(value={}){return {...DEFAULTS,...Object.fromEntries(['music','ambience','effects','speech'].map(k=>[k,clamp(value[k],DEFAULTS[k])])),quiet:value.quiet===true,countdown:value.countdown===true};}
   function create({AudioContext,fetchAudio,schedule=setTimeout,unschedule=clearTimeout}={}){
     let context,music,ambience,effects,wind,unlocked=false,disposed=false,pending=false;
-    let enabled=true,quiet=true,suspended=false,narrating=false,scene='home',activeScene=null,revision=0,lastSecond=null;
+    let enabled=true,quiet=true,reading=false,suspended=false,narrating=false,scene='home',activeScene=null,revision=0,lastSecond=null;
     let volumes=settings(),variation=0,sceneNodes=[],retiring=[];
     const activeEffects=new Set(),cache=new Map(),failed=new Set(),controllers=new Set(),timers=new Set();
-    const allowed=()=>enabled&&!quiet&&!suspended&&!narrating&&!volumes.quiet;
+    const audible=()=>enabled&&!quiet&&!suspended&&!volumes.quiet;
+    const allowed=()=>audible()&&!reading&&!narrating;
     function ramp(param,value,seconds=.18){
       if(!context)return;
       param.cancelScheduledValues(context.currentTime);param.setTargetAtTime(value,context.currentTime,seconds);
@@ -20,8 +21,13 @@
     function cancelEffects(){for(const source of activeEffects){try{source.stop();}catch{}}activeEffects.clear();}
     function levels(){
       if(!context)return;
-      ramp(music.gain,allowed()?volumes.music:0,narrating||quiet||suspended?.025:.32);
-      ramp(ambience.gain,allowed()?volumes.ambience*.026:0,.12);
+      // Keep one restrained battle mix across the whole question cycle. Only
+      // speech ducks it; fixation, words, choices and attacks never pump it.
+      const battle=scene==='battle',open=audible();
+      const speechLevel=narrating?(battle?.4:0):1;
+      const fade=!open?.025:narrating?.055:.65;
+      ramp(music.gain,open?volumes.music*(battle?.6:1)*speechLevel:0,fade);
+      ramp(ambience.gain,open?volumes.ambience*.026*speechLevel:0,fade);
       ramp(effects.gain,allowed()?volumes.effects:0,.012);
     }
     function stopNodes(nodes,fade=.35){
@@ -104,7 +110,8 @@
           source.buffer=buffer;source.loop=true;source.loopStart=0;source.loopEnd=Math.min(TRACKS[key],buffer.duration);
           gain.gain.value=0;source.connect(gain);gain.connect(music);
           const item={source,gain};source.onended=()=>{source.disconnect();gain.disconnect();retiring=retiring.filter(x=>x!==item);};
-          source.start(start);ramp(gain.gain,i===1&&key==='victory'?.45:1,.45);
+          // Battle flute/percussion stays in the distance even after answers.
+          source.start(start);ramp(gain.gain,i===1?(key==='battle'?.12:key==='victory'?.45:1):1,.45);
           // The result screen keeps a subdued bed after one melodic phrase.
           if(i===1&&key==='victory')gain.gain.setTargetAtTime(0,start+TRACKS[key],.8);
           return item;
@@ -125,6 +132,7 @@
       const before=allowed(),oldScene=scene,oldSuspended=suspended,oldEnabled=enabled,oldPreset=volumes.quiet;
       if('enabled'in options)enabled=!!options.enabled;
       if('quiet'in options)quiet=!!options.quiet;
+      if('reading'in options)reading=!!options.reading;
       if('suspended'in options)suspended=!!options.suspended;
       if('narrating'in options)narrating=!!options.narrating;
       if('scene'in options)scene=options.scene;

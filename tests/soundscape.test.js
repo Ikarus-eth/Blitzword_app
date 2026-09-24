@@ -2,7 +2,7 @@ const test=require('node:test'),assert=require('node:assert/strict'),S=require('
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
 function harness(fetch){
  const gains=[],sources=[],requests=[],timers=new Map();let id=0,context;
- const param=()=>({value:0,cancelScheduledValues(){},setValueAtTime(v){this.value=v},setTargetAtTime(v,at){this.value=v;this.at=at;}});
+ const param=()=>({value:0,cancelScheduledValues(){},setValueAtTime(v){this.value=v},setTargetAtTime(v,at,seconds){this.value=v;this.at=at;this.seconds=seconds;}});
  const node=()=>({connect(){},disconnect(){this.disconnected=true;}});
  const buffer=(channels=2,length=8000,rate=1000)=>{const arrays=Array.from({length:channels},()=>new Float32Array(length));return {duration:length/rate,numberOfChannels:channels,sampleRate:rate,getChannelData:c=>arrays[c]};};
  class Context{
@@ -21,9 +21,42 @@ test('no downloads before gesture; both stems start together and phase changes n
  const h=harness();h.sound.configure({quiet:false,scene:'battle'});assert.equal(h.requests.length,0);
  h.sound.unlock();await flush();assert.equal(h.requests.length,2);
  const stems=h.sources.filter(x=>x.loopEnd);assert.equal(stems.length,2);assert.equal(stems[0].started,stems[1].started);assert.equal(stems[0].loopEnd,64);
- assert.ok(h.gains[0].gain.value>0);h.sound.configure({quiet:true});assert.equal(h.gains[0].gain.value,0);assert.equal(h.gains[1].gain.value,0);assert.equal(h.gains[2].gain.value,0);
+ const level=h.gains[0].gain.value,air=h.gains[1].gain.value;
+ assert.ok(level>0);assert.ok(level<S.DEFAULTS.music);assert.ok(h.gains[4].gain.value<h.gains[3].gain.value);
+ h.sound.configure({reading:true});assert.equal(h.gains[0].gain.value,level);assert.equal(h.gains[1].gain.value,air);assert.equal(h.gains[2].gain.value,0);
  const count=h.sources.length;h.sound.cue('mage');assert.equal(h.sources.length,count);
- h.sound.configure({quiet:false});await flush();assert.equal(h.requests.length,2);assert.equal(h.sources.length,count);h.sound.dispose();
+ h.sound.configure({reading:false});await flush();assert.equal(h.requests.length,2);assert.equal(h.sources.length,count);assert.equal(h.gains[0].gain.value,level);h.sound.dispose();
+});
+test('repeated reading, spoken feedback and combat keep a continuous subdued battle mix',async()=>{
+ const h=harness();h.sound.configure({quiet:false,scene:'battle',reading:true});h.sound.unlock();await flush();
+ const level=h.gains[0].gain.value,air=h.gains[1].gain.value,accents=h.gains[4].gain.value;
+ const stems=h.sources.filter(x=>x.loopEnd);
+ for(let turn=0;turn<12;turn++){
+  h.sound.configure({reading:true,narrating:false});assert.equal(h.gains[0].gain.value,level);assert.equal(h.gains[1].gain.value,air);
+  const count=h.sources.length;h.sound.cue('mage');assert.equal(h.sources.length,count);
+  h.sound.configure({reading:false,narrating:true});
+  assert.ok(h.gains[0].gain.value>0&&h.gains[0].gain.value<level);assert.ok(h.gains[1].gain.value>0&&h.gains[1].gain.value<air);
+  const duckTime=h.gains[0].gain.seconds;assert.equal(h.gains[2].gain.value,0);
+  h.sound.configure({narrating:false});assert.equal(h.gains[0].gain.value,level);assert.ok(h.gains[0].gain.seconds>duckTime);
+  h.sound.cue('mage',.2);const fx=h.sources.at(-1);assert.equal(h.sources.length,count+1);
+  h.sound.configure({reading:true});assert.equal(fx.stopped,0);assert.equal(h.gains[0].gain.value,level);assert.equal(h.gains[4].gain.value,accents);
+ }
+ assert.deepEqual(h.sources.filter(x=>x.loopEnd),stems);assert.ok(stems.every(x=>x.stopped===undefined));assert.equal(h.requests.length,2);h.sound.dispose();
+});
+test('teaching, pause, background suspension, mute and Quiet play override continuous battle audio',async()=>{
+ for(const off of [{quiet:true},{suspended:true},{enabled:false},{volumes:{quiet:true}}]){
+  const h=harness();h.sound.configure({quiet:false,scene:'battle',reading:false});h.sound.unlock();await flush();h.sound.cue('pip',.45);
+  const fx=h.sources.at(-1);h.sound.configure(off);assert.equal(fx.stopped,0);
+  for(const gain of h.gains.slice(0,3))assert.equal(gain.gain.value,0);
+  h.sound.configure({narrating:false});for(const gain of h.gains.slice(0,3))assert.equal(gain.gain.value,0);
+  const count=h.sources.length;h.sound.cue('correct');assert.equal(h.sources.length,count);h.sound.dispose();
+ }
+});
+test('home narration still suppresses music, and saved zero music leaves independent forest ambience',async()=>{
+ const h=harness();h.sound.configure({quiet:false,scene:'home'});h.sound.unlock();await flush();
+ h.sound.configure({narrating:true});assert.equal(h.gains[0].gain.value,0);assert.equal(h.gains[1].gain.value,0);
+ h.sound.configure({scene:'battle',reading:true,narrating:false,volumes:{music:0,ambience:.5}});await flush();
+ assert.equal(h.gains[0].gain.value,0);assert.ok(h.gains[1].gain.value>0);h.sound.dispose();
 });
 test('speech, pause and mute stop pending effects, and cues cannot leak into reading',async()=>{
  const h=harness();h.sound.configure({quiet:false});h.sound.unlock();await flush();h.sound.cue('mage',.2);const fx=h.sources.at(-1);
