@@ -37,7 +37,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 | # | Point | Status |
 |---|---|---|
 | 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file. 1a deployed and verified live on 24 September 2026 (build `compact-save-20260924-r1`) |
-| 2 | Rotating distractor pools (option b) | Implemented and tested locally on 24 September 2026 (build `rotating-choices-20260924-r1`); deployment pending. Reading-check items unchanged, waiting for the user's decision |
+| 2 | Rotating distractor pools (option b) | Deployed and verified live on 24 September 2026 (build `rotating-choices-20260924-r1`). Reading-check items unchanged, waiting for the user's decision |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
 | 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
@@ -116,7 +116,7 @@ In real Chromium at an iPad-sized viewport, new practice questions showed fair d
 
 Limits: not tested on an iPad. 18 candidates, used 27 times across the lists, are real but rare words a child will likely treat as made up (for example awn, awl, oaf, iff, hew); the rules allow them.
 
-Deployment: pending.
+Deployment: merged as `ce2d3cc690fbe4bd1a50878a34d6fde596774f8b` in [PR #58](https://github.com/Ikarus-eth/Blitzword_app/pull/58), which lists every candidate for review. [Pages run 35962288112](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35962288112) (#68) succeeded, including its test step and deployment. At 05:59 UTC on 24 September 2026 the live page reported build `rotating-choices-20260924-r1`, and the live `index.html`, `content.js` and `game-core.js` matched that commit byte for byte.
 
 ## Pip evolution scenes — 24 September 2026
 
