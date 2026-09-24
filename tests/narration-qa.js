@@ -4,7 +4,7 @@
   else { root.BlitzNarrationQA=api; api.mount(document); }
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
   'use strict';
-  const STORE_KEY='blitzword_narration_qa_v1';
+  const STORE_KEY='blitzword_narration_qa_v2';
   const SAMPLES=[
     {id:'en-male-001',group:'Existing Tom word',method:'Earlier standalone recording',text:'on',file:'assets/narration/en-male-001.mp3'},
     {id:'en-male-037',group:'Existing Tom word',method:'Earlier standalone recording',text:'ship',file:'assets/narration/en-male-037.mp3'},
@@ -39,11 +39,11 @@
     {id:'core-male-809',group:'Assembled phrase',method:'Concatenated recordings',text:'Practice turn. You keep your heart. The word was pan.',file:'assets/narration/core-male-809.mp3'},
     {id:'core-male-823',group:'Assembled phrase',method:'Concatenated recordings',text:'Practice turn. You keep your heart. The snake is thin.',file:'assets/narration/core-male-823.mp3'},
     {id:'core-male-825',group:'Assembled phrase',method:'Concatenated recordings',text:'Practice turn. You keep your heart. The word was thin.',file:'assets/narration/core-male-825.mp3'},
-    {id:'en-male-028',group:'Gate review',method:'Currently excluded from runtime',text:'gate',file:'assets/narration/en-male-028.mp3'},
-    {id:'en-male-087',group:'Gate review',method:'Currently excluded from runtime',text:'The gate is by the castle.',file:'assets/narration/en-male-087.mp3'},
-    {id:'en-male-088',group:'Gate review',method:'Currently excluded from runtime',text:'Practice turn. You keep your heart. The gate is by the castle.',file:'assets/narration/en-male-088.mp3'},
-    {id:'en-male-147',group:'Gate review',method:'Currently excluded from runtime',text:'The word was gate.',file:'assets/narration/en-male-147.mp3'},
-    {id:'en-male-148',group:'Gate review',method:'Currently excluded from runtime',text:'Practice turn. You keep your heart. The word was gate.',file:'assets/narration/en-male-148.mp3'},
+    {id:'en-male-028',group:'Gate review',method:'Approved production recording',text:'gate',file:'assets/narration/en-male-028.mp3'},
+    {id:'en-male-087',group:'Gate review',method:'Approved production recording',text:'The gate is by the castle.',file:'assets/narration/en-male-087.mp3'},
+    {id:'en-male-088',group:'Gate review',method:'Approved production recording',text:'Practice turn. You keep your heart. The gate is by the castle.',file:'assets/narration/en-male-088.mp3'},
+    {id:'en-male-147',group:'Gate review',method:'Approved production recording',text:'The word was gate.',file:'assets/narration/en-male-147.mp3'},
+    {id:'en-male-148',group:'Gate review',method:'Approved production recording',text:'Practice turn. You keep your heart. The word was gate.',file:'assets/narration/en-male-148.mp3'},
     {id:'evolution-0',group:'Pip evolution',method:'Parallel evolution narration',text:"Look! Your dragon is glowing. Let's see what happens.",file:'assets/narration/evolution-0.mp3'},
     {id:'evolution-1',group:'Pip evolution',method:'Parallel evolution narration',text:'I am big. I can help.',file:'assets/narration/evolution-1.mp3'},
     {id:'evolution-2',group:'Pip evolution',method:'Parallel evolution narration',text:'My wings are big. I can help you.',file:'assets/narration/evolution-2.mp3'},

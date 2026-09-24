@@ -1,5 +1,5 @@
 {
-  "status": "recovered prerecorded corpus integrated 24 September 2026; gate-family recordings retained for provenance but excluded from runtime pending pronunciation approval",
+  "status": "Recovered full prerecorded corpus integrated; all 990 exact-text clips are approved for runtime after targeted QA replacements.",
   "language": "en-GB",
   "direction": "A deep adult male British English voice. Warm, calm, clear natural articulation suitable for children learning to read. Moderate pace, no music, no dramatic character acting, no added words. Keep vowels and final consonants intelligible. Do not artificially pitch-shift recordings.",
   "wordCount": 211,
@@ -997,7 +997,8 @@
       "kind": "instructions",
       "file": "assets/narration/en-male-165.mp3"
     },
-    {      "text": "the",
+    {
+      "text": "the",
       "kind": "word",
       "id": "core-male-001",
       "file": "assets/narration/core-male-001.mp3"
@@ -1996,7 +1997,8 @@
       "text": "Practice turn. You keep your heart. The mom and dad hold hands.",
       "kind": "supported-teaching",
       "id": "core-male-167",
-      "file": "assets/narration/core-male-167.mp3"    },
+      "file": "assets/narration/core-male-167.mp3"
+    },
     {
       "text": "The word was and.",
       "kind": "correction",
@@ -2995,7 +2997,8 @@
     },
     {
       "text": "The word was day.",
-      "kind": "correction",      "id": "core-male-334",
+      "kind": "correction",
+      "id": "core-male-334",
       "file": "assets/narration/core-male-334.mp3"
     },
     {
@@ -3994,7 +3997,8 @@
       "id": "core-male-500",
       "file": "assets/narration/core-male-500.mp3"
     },
-    {      "text": "Practice turn. You keep your heart. Did you see the owl?",
+    {
+      "text": "Practice turn. You keep your heart. Did you see the owl?",
       "kind": "supported-teaching",
       "id": "core-male-501",
       "file": "assets/narration/core-male-501.mp3"
@@ -4993,7 +4997,8 @@
       "text": "Practice turn. You keep your heart. Start to draw a map.",
       "kind": "supported-teaching",
       "id": "core-male-667",
-      "file": "assets/narration/core-male-667.mp3"    },
+      "file": "assets/narration/core-male-667.mp3"
+    },
     {
       "text": "The word was start.",
       "kind": "correction",
@@ -5943,12 +5948,6 @@
       "file": "assets/narration/core-male-825.mp3"
     }
   ],
-  "runtimeClipCount": 985,
-  "runtimeFallbackOnly": [
-    "Practice turn. You keep your heart. The gate is by the castle.",
-    "Practice turn. You keep your heart. The word was gate.",
-    "The gate is by the castle.",
-    "The word was gate.",
-    "gate"
-  ]
+  "runtimeClipCount": 990,
+  "runtimeFallbackOnly": []
 }

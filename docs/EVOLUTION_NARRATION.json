@@ -45,16 +45,16 @@
     {
       "id": "evolution-3",
       "text": "Hop on my back. We can go far.",
-      "taskId": "44b7452e-2f28-4f04-924d-75f1421cf044",
+      "taskId": "57d26ba8-e563-4f04-8c60-02fc33f8cb02",
       "status": "downloaded",
       "file": "assets/narration/evolution-3.mp3",
-      "duration": 2.324898,
-      "bytes": 37660,
-      "sha256": "5d5b80b93a34e425ccda1e3905b7baeb4a744da36a49042f2c9ff7e0e1bb4f51",
+      "duration": 2.693515,
+      "bytes": 44347,
+      "sha256": "642911aaec8c058d5eeab09e3d0e794f336498bedba630ce6784aea8055bedfa",
       "voice": "Tom",
       "model": "eleven_multilingual_v2",
-      "speed": 0.88
+      "speed": 0.82
     }
   ],
-  "review": "All four MP3s fully decode. Listening and physical iPad playback remain unverified."
+  "review": "User listening QA completed 2026-09-24. Evolution 0–2 were approved as-is; evolution-3 was regenerated slower at 0.82× and the replacement was approved. Physical iPad gameplay playback remains unverified."
 }

@@ -1,13 +1,16 @@
 (function(root){
 const narration={
-  "version": "recorded-voice-20260924-r2",
+  "version": "recorded-voice-20260924-r3",
   "voice": "Tom",
   "language": "en-GB",
+  "recoveredClipCount": 990,
+  "runtimeClipCount": 990,
+  "fallbackOnly": [],
   "clips": {
     "on": {
       "file": "assets/narration/en-male-001.mp3",
-      "duration": 0.679184,
-      "sha256": "6cc471838ad26ca57bb91b2edf75246509e620e9ff035767365b7572392e54a5"
+      "duration": 0.650159,
+      "sha256": "28eaf356e5a32f120bd0ae6bfb8c1ecb817bfc03abb66bd75144750b548bbb5b"
     },
     "rock": {
       "file": "assets/narration/en-male-002.mp3",
@@ -139,6 +142,11 @@ const narration={
       "duration": 0.914286,
       "sha256": "a5e68ff08abbe9a1b57b7afef526c7711e88ffb532659cc2f8ff91fc4b0e5824"
     },
+    "gate": {
+      "file": "assets/narration/en-male-028.mp3",
+      "duration": 0.835918,
+      "sha256": "bc4369739714b9d27baf5d8e87b0a3539ae6f9b060ccb1af8fbc298a991eaae5"
+    },
     "castle": {
       "file": "assets/narration/en-male-029.mp3",
       "duration": 1.07102,
@@ -236,8 +244,8 @@ const narration={
     },
     "creature": {
       "file": "assets/narration/en-male-048.mp3",
-      "duration": 1.07102,
-      "sha256": "9bc3ff39020be86e6a75bcdaab66449934bef7ae3088b2b4788b197daeb3843b"
+      "duration": 0.882358,
+      "sha256": "4d77a3261e1865a57c60a25879b1e08a8be233dcb22c287254e6e9c8e2acba76"
     },
     "Pip is on the rock.": {
       "file": "assets/narration/en-male-049.mp3",
@@ -428,6 +436,16 @@ const narration={
       "file": "assets/narration/en-male-086.mp3",
       "duration": 7.000816,
       "sha256": "dc4311f9d8462114a0f644ce25abf9deb76a3298e8882cfaadeb1b0c85ee4a2d"
+    },
+    "The gate is by the castle.": {
+      "file": "assets/narration/en-male-087.mp3",
+      "duration": 1.802449,
+      "sha256": "9797bf8fa9a66cc74f3a50de1df2359bf06c555f33eaf15ce61010ddf13c2018"
+    },
+    "Practice turn. You keep your heart. The gate is by the castle.": {
+      "file": "assets/narration/en-male-088.mp3",
+      "duration": 5.511837,
+      "sha256": "a71851da5d99eb8350204990edb89788aa414e18b73ff2a5898d77a25bad642f"
     },
     "Pip uses magic to lift a coin.": {
       "file": "assets/narration/en-male-089.mp3",
@@ -719,6 +737,16 @@ const narration={
       "duration": 5.381224,
       "sha256": "90da537c02cc5bba918fc9079f4a800d3fcfae0e8d19559352918ecb40c9f158"
     },
+    "The word was gate.": {
+      "file": "assets/narration/en-male-147.mp3",
+      "duration": 1.48898,
+      "sha256": "3b08dd438dd7c1492c68853cfd7a4710391a44937cebe02fa18fe04464a29040"
+    },
+    "Practice turn. You keep your heart. The word was gate.": {
+      "file": "assets/narration/en-male-148.mp3",
+      "duration": 5.198367,
+      "sha256": "305c1c3d32fec041125968092a4433405699cc5728e0e877d3a8b8064dee94d2"
+    },
     "The word was castle.": {
       "file": "assets/narration/en-male-149.mp3",
       "duration": 1.697959,
@@ -826,8 +854,8 @@ const narration={
     },
     "i": {
       "file": "assets/narration/core-male-005.mp3",
-      "duration": 0.862041,
-      "sha256": "70c3e63b7dd93a4ba197f6fe112e69db04e30851480e8419c26072b4367d6a64"
+      "duration": 0.696599,
+      "sha256": "7f18c57629bf1e262df04f351a3606e65a5f0724f491bde25f00492f03e01018"
     },
     "in": {
       "file": "assets/narration/core-male-006.mp3",
@@ -841,8 +869,8 @@ const narration={
     },
     "it": {
       "file": "assets/narration/core-male-008.mp3",
-      "duration": 0.783673,
-      "sha256": "1b97d4ee39a187fd2594e2d42eabb460a8fc4e18a6d71f2864a32ca148c7e75d"
+      "duration": 0.928798,
+      "sha256": "560663ac7c7a2dbf6cffd87cbe56a6674b92381403b04ea56e1faf9221e8a4d9"
     },
     "he": {
       "file": "assets/narration/core-male-009.mp3",
@@ -997,7 +1025,8 @@ const narration={
     "then": {
       "file": "assets/narration/core-male-039.mp3",
       "duration": 0.600816,
-      "sha256": "ae1188655bc988499f2f1c9a0d1c51ce8ae440f2ce044a0a7aa7a5aa6d467aae"    },
+      "sha256": "ae1188655bc988499f2f1c9a0d1c51ce8ae440f2ce044a0a7aa7a5aa6d467aae"
+    },
     "your": {
       "file": "assets/narration/core-male-040.mp3",
       "duration": 0.705306,
@@ -1996,7 +2025,8 @@ const narration={
     "Practice turn. You keep your heart. The word was my.": {
       "file": "assets/narration/core-male-239.mp3",
       "duration": 4.963265,
-      "sha256": "11e9714ad058e3f433e3bc453bbd099cc200eb3e874a3b645bfeacd254eb361c"    },
+      "sha256": "11e9714ad058e3f433e3bc453bbd099cc200eb3e874a3b645bfeacd254eb361c"
+    },
     "The tree is so tall.": {
       "file": "assets/narration/core-male-240.mp3",
       "duration": 1.697959,
@@ -2995,7 +3025,8 @@ const narration={
     "Practice turn. You keep your heart. The word was more.": {
       "file": "assets/narration/core-male-439.mp3",
       "duration": 4.91102,
-      "sha256": "814e4cda3f6819e4f2976b3fe59cfbc65be16ecbf8addff4b6a5472e001e1462"    },
+      "sha256": "814e4cda3f6819e4f2976b3fe59cfbc65be16ecbf8addff4b6a5472e001e1462"
+    },
     "Mom and dad hold their child's hands.": {
       "file": "assets/narration/core-male-440.mp3",
       "duration": 2.638367,
@@ -3994,7 +4025,8 @@ const narration={
     "Practice turn. You keep your heart. Pull the pan away from the fire.": {
       "file": "assets/narration/core-male-639.mp3",
       "duration": 4.91102,
-      "sha256": "86c7c111d088afb38614e722ec144a042778fc05b0c798303ef2ecb5cf9fde82"    },
+      "sha256": "86c7c111d088afb38614e722ec144a042778fc05b0c798303ef2ecb5cf9fde82"
+    },
     "The word was pull.": {
       "file": "assets/narration/core-male-640.mp3",
       "duration": 1.985306,
@@ -4925,16 +4957,7 @@ const narration={
       "duration": 4.91102,
       "sha256": "ce5562880e76a86d0446d912a7f591297addf23cbd071faa0779423a30addf4e"
     }
-  },
-  "recoveredClipCount": 990,
-  "runtimeClipCount": 985,
-  "fallbackOnly": [
-    "gate",
-    "The gate is by the castle.",
-    "Practice turn. You keep your heart. The gate is by the castle.",
-    "The word was gate.",
-    "Practice turn. You keep your heart. The word was gate."
-  ]
+  }
 };
 if(typeof module==='object'&&module.exports)module.exports=narration;else root.BlitzNarration=narration;
 })(typeof globalThis!=='undefined'?globalThis:this);
