@@ -1,0 +1,92 @@
+{
+  "sha": "e6351235ecdfeb19f3fbe43a4b33f1a2b410e34e",
+  "run": {
+    "id": 35984212573,
+    "run_number": 84,
+    "head_sha": "e6351235ecdfeb19f3fbe43a4b33f1a2b410e34e",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35984212573"
+  },
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install test dependencies",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check scripts and practice regressions",
+      "conclusion": "success"
+    },
+    {
+      "name": "Configure Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Prepare static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check that this release is still current main",
+      "conclusion": "success"
+    },
+    {
+      "name": "Upload static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Deploy to GitHub Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 34752,
+      "identical": true,
+      "sha256": "3c37f99d25ea58c12e952ff2182289b04146c9c6468c09dbdb87e92d27b0669a",
+      "build": "parent-learning-20260924-r1"
+    },
+    {
+      "file": "game-core.js",
+      "bytes": 67740,
+      "identical": true,
+      "sha256": "ad242e8c68d14553fa09f3d893572960554aaad975c45f354336acd5f5dae80c"
+    },
+    {
+      "file": "app.js",
+      "bytes": 93955,
+      "identical": true,
+      "sha256": "f2a10d56cc8e1d9e0c66093c216c5319ba35a6c76ddd282831af0a0362e421d8"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 99864,
+      "identical": true,
+      "sha256": "256819dd09a95f18a8a8b5ba55f226aa46a37ce409ae3cd3e4a2b47a8505571e"
+    },
+    {
+      "file": "soundscape.js",
+      "bytes": 11365,
+      "identical": true,
+      "sha256": "af1ade31b8d3fd74255698fd5d5a137cb8f7bee3b7f1d0be216768c4c8cd7b4c"
+    }
+  ],
+  "mainAtVerification": "e6351235ecdfeb19f3fbe43a4b33f1a2b410e34e",
+  "verifiedAt": "2026-09-24T09:56:57.137989+00:00"
+}
