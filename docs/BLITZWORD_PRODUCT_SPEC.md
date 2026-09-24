@@ -933,3 +933,10 @@ The reload handler must compare the current primary save against the version loa
 ## Fair fixed reading-check choices — 24 September 2026
 
 The user's request to fix all three audit priorities authorizes the recommended fixed-set correction for all 26 reading-check items. Apply the same letter/length and one-letter-giveaway checks as practice and prevent a similarity shortcut from outperforming chance across the check. Keep fixed options with shuffled positions, existing targets/levels/calibration, and saved pending questions. [Reviewed table and validation](ASSESSMENT_CHOICES_RELEASE.md).
+
+
+## Narration completion batch — 24 September 2026
+
+The user's instruction to fix priorities 1–3 and deploy authorizes recording the current approved story sentences, the fifteen additional enemy names (normal and first-encounter versions), both words in comparison corrections, and accurate recorded teaching-word highlighting. Use the existing ElevenLabs repository secret only inside GitHub Actions. Keep George's approved voice/model/settings for the new recordings and preserve all 1,029 previously approved recordings. Custom dragon names remain local device speech.
+
+Comparison corrections may join complete recorded “You chose …” and “The word is …” clauses, with the practice prefix where needed. Download all parts before speaking; unknown older choices or unavailable files use the existing complete local-speech fallback. Timestamped segments may share one MP3; never let an adjacent clause play. Teaching timing must come from alignment of the exact approved audio and follow the playback clock, including cancellation/replay/backgrounding. New clips require a separate listening review; technical generation is not user listening approval.

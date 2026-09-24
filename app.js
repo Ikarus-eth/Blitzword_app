@@ -164,7 +164,7 @@ function clearCombat(){
   $('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
 }
-function cancelWork(){clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
+function cancelWork(){clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();document.querySelectorAll('.targetWord.spoken').forEach(word=>word.classList.remove('spoken'));clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
 function activityCategory(){
   if(!state||paused||blocked||!playing||state.screen==='evolution')return null;

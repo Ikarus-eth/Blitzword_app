@@ -13,8 +13,8 @@ function boot(saved,options={}){
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.removeAttribute('selected');[...this.querySelectorAll('option')].find(option=>option.value===value)?.setAttribute('selected','');}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>!options.pendingImages,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
- let speechEnd=null;const speechTexts=[];
- const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ let speechEnd=null,speechBoundary=null;const speechTexts=[];
+ const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;speechBoundary=callbacks.onBoundary;},cancel(){speechEnd=null;speechBoundary=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -25,7 +25,7 @@ function boot(saved,options={}){
  function resume(){const map=get('campaignMap').classList.contains('active');assert.ok(map||get('route').classList.contains('active'));click(get(map?'mapContinue':'continueAdventure'));}
  function advance(ms,suspended=false){if(suspended){now+=ms;heartbeat();}else for(let elapsed=0;elapsed<ms;elapsed+=1000){now+=Math.min(1000,ms-elapsed);heartbeat();}}
  function visibility(hidden){Object.defineProperty(document,'hidden',{value:hidden,configurable:true});document.dispatchEvent(new window.Event('visibilitychange'));}
- return {state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
+ return {state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,pendingBoundary:()=>speechBoundary,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
 }
 function impactSave(enemy='moss-golem'){
  const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile={name:'Reader',gender:'boy',heroClass:'Mage',age:7};s.assessment.done=true;
@@ -915,4 +915,16 @@ console.log('PASS timed and self-paced battle audio stays open through every que
   const ids=[...ui.document.querySelectorAll('clipPath')].map(el=>el.id);assert.equal(new Set(ids).size,ids.length);
  }
  console.log('PASS every grown Pip crop excludes neighbouring atlas cells with a unique clip in narrow and wide containers');
+}
+
+{
+ const s=impactSave();Core.startTeaching(s,'on','battle',Date.UTC(2026,8,22));
+ const ui=boot(s,{heldNarration:true});ui.resume();const target=ui.get('teachSentence').querySelector('.targetWord');
+ const boundary=ui.pendingBoundary(),end=ui.pendingSpeech(),index=ui.speechTexts.at(-1).indexOf('on the rock');
+ boundary({charIndex:index});assert.ok(target.classList.contains('spoken'));
+ boundary({charIndex:-1});assert.equal(target.classList.contains('spoken'),false);
+ boundary({charIndex:index});ui.visibility(true);assert.equal(target.classList.contains('spoken'),false);
+ boundary({charIndex:index});end();assert.equal(target.classList.contains('spoken'),false);
+ assert.equal(ui.state().learning.teaching.length,1);assert.equal(ui.state().activity,'teaching');
+ console.log('PASS teaching highlighting follows boundaries and clears on backgrounding; stale callbacks cannot restore it');
 }
