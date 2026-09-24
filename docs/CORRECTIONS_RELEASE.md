@@ -1,6 +1,6 @@
 # Contrast corrections and adaptive teaching — point 4
 
-Implementation and local checks complete; deployment pending. Intended build: `contrast-teaching-20260924-r1`.
+Deployed and verified on 24 September 2026. Build: `contrast-teaching-20260924-r1`.
 
 ## Behavior
 
@@ -28,4 +28,13 @@ Physical iPad, Safari/WebKit and listening checks remain open. On the iPad, chec
 
 ## Deployment
 
-Pending the implementation PR merge and its successful Pages run, live marker check and byte comparison of `index.html`, `game-core.js`, `app.js` and `styles.css`. Verified delivery will be recorded in a separate documentation-only PR.
+Merged in [PR #64](https://github.com/Ikarus-eth/Blitzword_app/pull/64) as `8e4c00220607f677a27a7601c6370659fbd068b0`. [Pages run #74](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35967455461) succeeded, including tests, artifact upload and deployment. At 07:03 UTC on 24 September 2026, `main` was still that merge and the live build marker was `contrast-teaching-20260924-r1`. Cache-busted downloads of all four changed runtime files matched `git show <merge>:<file>` byte for byte.
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `index.html` | 30,041 | `3c82e1d41aba2b28a0df72818f31ff64e85f19a7e7ef22fc65612abf45f47251` |
+| `game-core.js` | 54,741 | `3c31ddadaeed8f16623ce6bc6aaa20ca1d39410c73bd75a11ad8db48aea8e0b6` |
+| `app.js` | 78,478 | `1e116b108b8161acb036716de8cde0443bece11f5a84b9daf879a256b451fca9` |
+| `styles.css` | 93,417 | `dffc336e7883b2f04ce407276571b6e9dd2994964671cc707f93a153453f9324` |
+
+[Machine-readable verification](CORRECTIONS_DEPLOYMENT.json) records the exact source SHA, workflow steps, hashes and time. Current `main` was fetched and merged into the task branch immediately before the PR merge; there were no intervening changes. Verification proves delivery, not physical iPad or listening behavior.
