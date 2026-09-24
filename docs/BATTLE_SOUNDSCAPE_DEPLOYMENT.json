@@ -1,0 +1,35 @@
+{
+  "verifiedAt": "2026-09-24T09:51:56.823617+00:00",
+  "commit": "c8b352c4949de78d4a2c1713c23b7161bb41a77e",
+  "workflowRun": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35983656280",
+  "build": "continuous-battle-20260924-r1",
+  "files": [
+    {
+      "path": "index.html",
+      "url": "https://ikarus-eth.github.io/Blitzword_app/index.html?verify=c8b352c4949de78d4a2c1713c23b7161bb41a77e",
+      "httpStatus": 200,
+      "bytes": 31692,
+      "sha256": "d99d166f6db606efd44ae19bf598685bedfc5332d9d6945b93a22932e1322567",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "app.js",
+      "url": "https://ikarus-eth.github.io/Blitzword_app/app.js?verify=c8b352c4949de78d4a2c1713c23b7161bb41a77e",
+      "httpStatus": 200,
+      "bytes": 86735,
+      "sha256": "5e2e3543543213ad4173316cc5a9cfbb01c3d8778ba9405574b353c566339bc1",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "soundscape.js",
+      "url": "https://ikarus-eth.github.io/Blitzword_app/soundscape.js?verify=c8b352c4949de78d4a2c1713c23b7161bb41a77e",
+      "httpStatus": 200,
+      "bytes": 11365,
+      "sha256": "af1ade31b8d3fd74255698fd5d5a137cb8f7bee3b7f1d0be216768c4c8cd7b4c",
+      "matchesTestedSource": true
+    }
+  ],
+  "scope": "Successful HTTP responses and exact runtime-byte comparison against the tested combined build. Browser behavior was checked locally; physical iPad/Safari and subjective listening remain unverified.",
+  "pullRequest": "https://github.com/Ikarus-eth/Blitzword_app/pull/73",
+  "rollbackCommit": "42894b6fa1d72bae129f7e79fe6ca38502262178"
+}
