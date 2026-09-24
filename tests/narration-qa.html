@@ -23,12 +23,12 @@ label{display:block;font-size:14px;font-weight:700;margin:20px 0 6px}textarea{wi
 </head>
 <body>
 <main>
-  <header class="top"><div><h1>Narration QA</h1><p>Listen to the actual recovered MP3s. Ratings stay only on this device.</p></div><div class="count" id="qaSummary">0/42 reviewed</div></header>
+  <header class="top"><div><h1>Narration QA</h1><p>Listen to the current production MP3s. Ratings stay only on this device.</p></div><div class="count" id="qaSummary">0/42 reviewed</div></header>
   <div class="bar" aria-hidden="true"><span id="qaBarFill"></span></div>
   <section class="card">
     <div class="meta"><span class="pill" id="qaGroup"></span><span class="pill secondary" id="qaMethod"></span><span class="pill secondary" id="qaProgress"></span></div>
     <p class="sample" id="qaText"></p><div class="file" id="qaId"></div>
-    <p class="gate" id="qaGateNote" hidden>This gate recording is currently excluded from the child-facing runtime. Rate the recording itself here.</p>
+    <p class="gate" id="qaGateNote" hidden>This gate recording is now approved for the child-facing runtime.</p>
     <audio id="qaPlayer" preload="none"></audio><button class="play" id="qaPlay">Play</button>
     <div class="ratings"><button class="good" id="qaGood">Good</button><button class="bad" id="qaBad">Bad</button></div>
     <label for="qaNote">Optional note</label><textarea id="qaNote" placeholder="Wrong pronunciation, odd pause, voice change, bad join…"></textarea>
@@ -36,8 +36,8 @@ label{display:block;font-size:14px;font-weight:700;margin:20px 0 6px}textarea{wi
   </section>
   <div class="tools"><button class="copy" id="qaCopy">Copy results</button><button id="qaReset" class="reset">Reset ratings</button></div>
   <p class="status" id="qaCopyStatus"></p><textarea id="qaCopyFallback" class="fallback" hidden readonly></textarea>
-  <p class="foot"><strong>Scope:</strong> 42 clips. Your first 30 ratings stay saved; 12 extra earlier-Tom word clips were added because 2 of the first 3 in that category were rated bad. The rest still covers recovered standalone and batched words, teaching sentences, concatenated phrases, all five gate clips, and all four Pip-evolution clips. This page does not read or change learner progress.</p>
+  <p class="foot"><strong>Scope:</strong> 42 clips. The completed QA round found 6 bad clips; those six production files were replaced after you approved the new recordings. Ratings now start fresh because the audio changed. The rest still covers recovered standalone and batched words, teaching sentences, concatenated phrases, all five gate clips, and all four Pip-evolution clips. This page does not read or change learner progress.</p>
 </main>
-<script src="narration-qa.js?v=20260924-r3"></script>
+<script src="narration-qa.js?v=20260924-r4"></script>
 </body>
 </html>
