@@ -1,0 +1,86 @@
+{
+  "sha": "7f8dcd11b9b56d8873eb8f5df36e9ead34b5249d",
+  "run": {
+    "id": 35978654773,
+    "run_number": 78,
+    "head_sha": "7f8dcd11b9b56d8873eb8f5df36e9ead34b5249d",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35978654773"
+  },
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install test dependencies",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check scripts and practice regressions",
+      "conclusion": "success"
+    },
+    {
+      "name": "Configure Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Prepare static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check that this release is still current main",
+      "conclusion": "success"
+    },
+    {
+      "name": "Upload static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Deploy to GitHub Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 31669,
+      "identical": true,
+      "sha256": "9ced1488fad3e844ccd92ff062210e65faa2b803feab58531999a3ed9738f75f",
+      "build": "speed-guidance-20260924-r1"
+    },
+    {
+      "file": "game-core.js",
+      "bytes": 61350,
+      "identical": true,
+      "sha256": "f771096c1bd0b0c0a83992b7a15538318aadc042647e1b176e28b2e1bddf1e59"
+    },
+    {
+      "file": "app.js",
+      "bytes": 85753,
+      "identical": true,
+      "sha256": "2f4fe7bcacfa2f46c8acd19ba8f3260e97947b32f86774d3fa0ec34bdc1f896b"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 96480,
+      "identical": true,
+      "sha256": "90f09f5a46dc7845c1e4634aadb2549419146ed8ebfc44c92a816e2030908a1c"
+    }
+  ],
+  "mainAtVerification": "7f8dcd11b9b56d8873eb8f5df36e9ead34b5249d",
+  "verifiedAt": "2026-09-24T09:02:41.369510+00:00"
+}

@@ -1,6 +1,6 @@
 # Speed guidance and quick words — point 7
 
-Build: `speed-guidance-20260924-r1`. Implemented and locally tested; merge and Pages verification pending.
+Build: `speed-guidance-20260924-r1`. Deployed and verified on 24 September 2026.
 
 ## Change
 
@@ -34,3 +34,10 @@ Open Speed after a reading check; the actual pace should be highlighted. Try Str
 ## Next stop
 
 Point 8: a 200-word parent map with word histories, common mix-ups/slow words and weekly retention. Learning moves above sound settings. Do not start until the next user go.
+
+
+## Deployment verification
+
+[PR #68](https://github.com/Ikarus-eth/Blitzword_app/pull/68) merged as `7f8dcd11b9b56d8873eb8f5df36e9ead34b5249d`. [Pages run #78](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35978654773) succeeded, including the deployment step. At 09:02 UTC on 24 September 2026, the live marker was `speed-guidance-20260924-r1`. Fresh cache-busted downloads of all four changed runtime files (`index.html`, `game-core.js`, `app.js`, `styles.css`) matched `git show` of the merge byte for byte; main was still that commit. [Per-file hashes and workflow evidence](SPEED_GUIDANCE_DEPLOYMENT.json).
+
+The previous main commit `97ce0bab52c18f28880f2fa78171152bda1579c0` is the source rollback checkpoint. Any rollback must preserve learner saves and use the existing PR/Pages workflow. Physical iPad/Safari verification remains open.
