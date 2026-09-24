@@ -1,11 +1,11 @@
 {
-  "status": "Recovered full prerecorded corpus integrated; all 990 exact-text clips are approved for runtime after targeted QA replacements.",
+  "status": "Full prerecorded corpus integrated: 994 recovered/evolution clips plus 35 ElevenLabs stable remainder clips. Child-read chapter-story sentences intentionally remain outside the corpus pending approved rewrites.",
   "language": "en-GB",
   "direction": "A deep adult male British English voice. Warm, calm, clear natural articulation suitable for children learning to read. Moderate pace, no music, no dramatic character acting, no added words. Keep vowels and final consonants intelligible. Do not artificially pitch-shift recordings.",
   "wordCount": 211,
   "sentenceCount": 183,
-  "clipCount": 994,
-  "characters": 31426,
+  "clipCount": 1029,
+  "characters": 33940,
   "clips": [
     {
       "id": "en-male-001",
@@ -5970,8 +5970,253 @@
       "text": "Hop on my back. We can go far.",
       "kind": "evolution-reading",
       "file": "assets/narration/evolution-3.mp3"
+    },
+    {
+      "id": "story-intro-01",
+      "text": "A fox waits beside the stream. Pip follows it to a safe place to cross.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-fox-crossing.mp3",
+      "areaId": "fox-crossing"
+    },
+    {
+      "id": "story-intro-02",
+      "text": "Beyond the stream, old trees shelter a red book. Pip stops to look inside.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-old-grove.mp3",
+      "areaId": "old-grove"
+    },
+    {
+      "id": "story-intro-03",
+      "text": "The book shows a trail of lights. Pip follows them as the forest grows dark.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-lantern-ruins.mp3",
+      "areaId": "lantern-ruins"
+    },
+    {
+      "id": "story-intro-04",
+      "text": "An owl has shown you the hidden nest. A little spark shines beside its gate.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-hidden-nest.mp3",
+      "areaId": "hidden-nest"
+    },
+    {
+      "id": "story-intro-05",
+      "text": "A bright stream leads away from the nest. Pip wants to see where it goes.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-2-place-1.mp3",
+      "areaId": "chapter-2-place-1"
+    },
+    {
+      "id": "story-intro-06",
+      "text": "You reach a stone bridge. Pip waits for you before crossing to the other side.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-2-place-2.mp3",
+      "areaId": "chapter-2-place-2"
+    },
+    {
+      "id": "story-intro-07",
+      "text": "Tall reeds whisper beside the river. A narrow path leads you both onward.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-2-place-3.mp3",
+      "areaId": "chapter-2-place-3"
+    },
+    {
+      "id": "story-intro-08",
+      "text": "The river opens into a still blue pool. Pip stops beside the clear water.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-2-place-4.mp3",
+      "areaId": "chapter-2-place-4"
+    },
+    {
+      "id": "story-intro-09",
+      "text": "A gate stands at the end of the river path. Warm light shines through it.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-2-place-5.mp3",
+      "areaId": "chapter-2-place-5"
+    },
+    {
+      "id": "story-intro-10",
+      "text": "Beyond the gate, golden leaves cover a winding path. Pip finds the next trail.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-3-place-1.mp3",
+      "areaId": "chapter-3-place-1"
+    },
+    {
+      "id": "story-intro-11",
+      "text": "The trees grow close together. Pip finds a cosy space among the leaves.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-3-place-2.mp3",
+      "areaId": "chapter-3-place-2"
+    },
+    {
+      "id": "story-intro-12",
+      "text": "Moss covers a line of old steps. You and Pip climb them one at a time.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-3-place-3.mp3",
+      "areaId": "chapter-3-place-3"
+    },
+    {
+      "id": "story-intro-13",
+      "text": "The roots form an arch across the path. Pip waits beneath it for you.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-3-place-4.mp3",
+      "areaId": "chapter-3-place-4"
+    },
+    {
+      "id": "story-intro-14",
+      "text": "The oldest oak stands ahead. Its branches point towards a distant glow.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-3-place-5.mp3",
+      "areaId": "chapter-3-place-5"
+    },
+    {
+      "id": "story-intro-15",
+      "text": "A stone path winds towards the glow. Pip follows the warm light between the trees.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-4-place-1.mp3",
+      "areaId": "chapter-4-place-1"
+    },
+    {
+      "id": "story-intro-16",
+      "text": "Small lamps light the grove. Pip pauses to watch their gentle glow.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-4-place-2.mp3",
+      "areaId": "chapter-4-place-2"
+    },
+    {
+      "id": "story-intro-17",
+      "text": "An old wall rises beside the trail. There is a way through for you and Pip.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-4-place-3.mp3",
+      "areaId": "chapter-4-place-3"
+    },
+    {
+      "id": "story-intro-18",
+      "text": "A golden door glows in the stone. Pip waits while you find the way inside.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-4-place-4.mp3",
+      "areaId": "chapter-4-place-4"
+    },
+    {
+      "id": "story-intro-19",
+      "text": "The hall is full of soft light. A window shows the moon above the next wood.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-4-place-5.mp3",
+      "areaId": "chapter-4-place-5"
+    },
+    {
+      "id": "story-intro-20",
+      "text": "Moonlight leads you into a quiet wood. Pip stays close beside you.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-5-place-1.mp3",
+      "areaId": "chapter-5-place-1"
+    },
+    {
+      "id": "story-intro-21",
+      "text": "An owl watches from a high branch. Pip looks up to follow its gaze.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-5-place-2.mp3",
+      "areaId": "chapter-5-place-2"
+    },
+    {
+      "id": "story-intro-22",
+      "text": "Stars shine in a still pool. Pip stops beside the water to look.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-5-place-3.mp3",
+      "areaId": "chapter-5-place-3"
+    },
+    {
+      "id": "story-intro-23",
+      "text": "A dark arch opens between the trees. Moonlight shows a path through it.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-5-place-4.mp3",
+      "areaId": "chapter-5-place-4"
+    },
+    {
+      "id": "story-intro-24",
+      "text": "You reach a sheltered nest beneath the moon. A blue glow shines beyond the wood.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-5-place-5.mp3",
+      "areaId": "chapter-5-place-5"
+    },
+    {
+      "id": "story-intro-25",
+      "text": "The blue glow comes from a cave. Pip peeks inside, then waits for you.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-6-place-1.mp3",
+      "areaId": "chapter-6-place-1"
+    },
+    {
+      "id": "story-intro-26",
+      "text": "Blue stones shine along the cave wall. Pip follows their light into the mountain.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-6-place-2.mp3",
+      "areaId": "chapter-6-place-2"
+    },
+    {
+      "id": "story-intro-27",
+      "text": "A deep pool fills the quiet cave. You and Pip take the dry path beside it.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-6-place-3.mp3",
+      "areaId": "chapter-6-place-3"
+    },
+    {
+      "id": "story-intro-28",
+      "text": "The cave opens into a glowing hall. Pip looks at the lights all around you.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-6-place-4.mp3",
+      "areaId": "chapter-6-place-4"
+    },
+    {
+      "id": "story-intro-29",
+      "text": "A crystal gate opens towards the sky. Pip can feel the warm air beyond it.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-6-place-5.mp3",
+      "areaId": "chapter-6-place-5"
+    },
+    {
+      "id": "story-intro-30",
+      "text": "Sunlight warms the hill path. Pip looks up at a castle high above you.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-7-place-1.mp3",
+      "areaId": "chapter-7-place-1"
+    },
+    {
+      "id": "story-intro-31",
+      "text": "Stone steps climb towards the clouds. You and Pip take the next step together.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-7-place-2.mp3",
+      "areaId": "chapter-7-place-2"
+    },
+    {
+      "id": "story-intro-32",
+      "text": "A high bridge stretches towards the keep. Pip stays beside you as you cross.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-7-place-3.mp3",
+      "areaId": "chapter-7-place-3"
+    },
+    {
+      "id": "story-intro-33",
+      "text": "The tower is close now. Pip looks up at its bright flags in the sky.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-7-place-4.mp3",
+      "areaId": "chapter-7-place-4"
+    },
+    {
+      "id": "story-intro-34",
+      "text": "You have reached the sky keep together. Pip is ready for the final path.",
+      "kind": "chapter-story-intro",
+      "file": "assets/narration/story-intro-chapter-7-place-5.mp3",
+      "areaId": "chapter-7-place-5"
+    },
+    {
+      "id": "shield-stopped",
+      "text": "Your shield stopped the hit.",
+      "kind": "shield-prefix",
+      "file": "assets/narration/shield-stopped.mp3"
     }
   ],
-  "runtimeClipCount": 994,
-  "runtimeFallbackOnly": []
+  "runtimeClipCount": 1029,
+  "runtimeFallbackOnly": [],
+  "remainderClipCount": 35
 }
