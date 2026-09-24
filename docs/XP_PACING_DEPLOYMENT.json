@@ -1,0 +1,110 @@
+{
+  "sha": "e228b30c26ea03a81ee99f593f7fea3e709dce41",
+  "run": {
+    "id": 36001494122,
+    "run_number": 86,
+    "head_sha": "e228b30c26ea03a81ee99f593f7fea3e709dce41",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36001494122"
+  },
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install test dependencies",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check scripts and practice regressions",
+      "conclusion": "success"
+    },
+    {
+      "name": "Configure Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Prepare static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check that this release is still current main",
+      "conclusion": "success"
+    },
+    {
+      "name": "Upload static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Deploy to GitHub Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 35270,
+      "identical": true,
+      "sha256": "4a7d6c76bb1960fa85faa72b18246698f90677bf69dd9de384ac176127d466ef",
+      "build": "xp-pacing-20260924-r1"
+    },
+    {
+      "file": "content.js",
+      "bytes": 77580,
+      "identical": true,
+      "sha256": "4797c8dac1e6dc9bb883532deea527a515b76ee5f286244760232edda7a9c36a"
+    },
+    {
+      "file": "game-core.js",
+      "bytes": 70005,
+      "identical": true,
+      "sha256": "aeae082f8b5ce31dad5533f0b4728ff010090d7c9173a12fbfb1c4ae03e300d8"
+    },
+    {
+      "file": "app.js",
+      "bytes": 95472,
+      "identical": true,
+      "sha256": "3886b8a9f08f2d4305d2d9b7cb5a4e612cdb06c3bf5e5bd5fa627b8c9a4721a2"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 100323,
+      "identical": true,
+      "sha256": "e7bf0f73a27499afe32397918522d3fee79e147d069617fa5064153242f43893"
+    },
+    {
+      "file": "tests/review-app.html",
+      "bytes": 2672,
+      "identical": true,
+      "sha256": "a17419aae5e9de684bc1a31228d1c7087bebbb4da442329fbf32ae86964b4be6"
+    },
+    {
+      "file": "tests/review-scenarios.js",
+      "bytes": 5773,
+      "identical": true,
+      "sha256": "c5c13149da5da52f60034bc42b417b45c55b668f55d58ab9f2517ba672b2ee32"
+    },
+    {
+      "file": "soundscape.js",
+      "bytes": 11365,
+      "identical": true,
+      "sha256": "af1ade31b8d3fd74255698fd5d5a137cb8f7bee3b7f1d0be216768c4c8cd7b4c"
+    }
+  ],
+  "mainAtVerification": "e228b30c26ea03a81ee99f593f7fea3e709dce41",
+  "verifiedAt": "2026-09-24T12:50:50.915992+00:00"
+}

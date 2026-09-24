@@ -1,5 +1,7 @@
 # Success XP and chapter pacing — 23 September 2026
 
+Historical release: its XP display, growth thresholds and calibration dates are superseded by [whole XP and slower growth (24 September)](XP_PACING_RELEASE.md). Its chapter pacing and evidence requirements remain unless the newer release explicitly says otherwise.
+
 This release implements the user-approved XP-only progression and chapter minimums. It supersedes the earlier 14-day/active-minute evolution gates and 250/750/1,500 XP thresholds. There is no elapsed-day gate, daily play cap, or forced stop after a chapter.
 
 ## Rewards
