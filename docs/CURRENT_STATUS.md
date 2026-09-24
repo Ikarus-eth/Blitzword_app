@@ -14,7 +14,7 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 | Pip evolution scenes | Each earned growth (3,000 / 8,900 / 13,400 XP) opens a recorded intro, Watch, a 2.6 s glow and 1.8 s reveal with four new Pip illustrations, then two untimed sentences with optional Listen and I read it. It waits for combat and a pending number duel; Pause/Home/Rest/reload preserve the phase; no XP, learning evidence or active time; Watch again replays the current form. | [Evolution scenes](EVOLUTION_RELEASE.md) |
 | Chapter scenery | 35 distinct chapter backgrounds; 28 newly generated illustrations and seven retained scenes. Active story/encounter IDs determine scenery; campaign maps retain their established art. | [Scenery mapping and verification](CHAPTER_SCENERY_RELEASE.md) |
 | Chapter stories and labels | 34 illustrated transitions after the guided first encounter; narrated introduction, one child-read sentence, optional Listen and child confirmation. Pause/Home/Rest/reload preserve progress. Labels identify the actual campaign and chapter. | [Chapter stories](CHAPTER_STORIES_RELEASE.md) |
-| Choices and number duels | Close distractors, multiple-choice-only multiplication, 60 seconds, net +1/−1 scoring, PR-based target, compact results and defeat reactions. Three reading wins plus a won duel earn one non-stacking shield. | [Choices and shields](CHOICES_SHIELD_RELEASE.md) |
+| Choices and number duels | Rotating wrong answers: each practice word has 5–7 reviewed candidates and each question draws three that pass the letter, length and one-letter checks; the reading check keeps its fixed options. Multiple-choice-only multiplication, 60 seconds, net +1/−1 scoring, PR-based target, compact results and defeat reactions. Three reading wins plus a won duel earn one non-stacking shield. | [Rotating wrong answers](#rotating-wrong-answers-point-2--24-september-2026), [choices and shields](CHOICES_SHIELD_RELEASE.md) |
 | Combat and presentation | Mage staff/lightning, Pip assists/final blows, answer-locked reactions, cancellation and reduced motion; teaching-image framing, enemy names and Easier-left/Same-right defeat choices. | [Combat](COMBAT_REACTIONS.md), [child feedback](SEPT23_CHILD_FEEDBACK.md) |
 | Game controls | Fullscreen button, handlers and notice removed at the user’s request. The existing flexible toolbar closes the gap; sound, pause and Home remain. Home Screen presentation and learner saves are unchanged. | [Product specification](BLITZWORD_PRODUCT_SPEC.md) |
 | Soundscape | Approved adaptive forest music and effects are integrated and deployed, with scene changes, speech priority and independent saved controls. | [Soundscape](SOUNDSCAPE_RELEASE.md) |
@@ -24,7 +24,7 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 
 - Narration recovery, targeted QA replacement and the stable remainder are integrated: 1,029 exact-text clips are mapped. The new remainder is 34 chapter-story introductions plus one reusable shield prefix generated with ElevenLabs George at 0.90×; the shield prefix is sequenced before the existing `The word was X.` recording instead of generating about 200 duplicates. Child-read story sentences remain device speech because point 6 will rewrite them before final recording. Personalized dragon names remain local device speech. The 35 new George clips passed user listening QA with no rejected clips; static target highlighting remains, accurate recorded word-boundary highlighting and physical iPad gameplay playback remain unfinished. Pages run `35959070005` passed 132/132 Node tests, including the shield-prefix sequencing regression, and reported a successful deployment for commit `f9d9fb6d3a08e3dbb8c1ab008d3e3c2cc1c93849`. The deployed Pages artifact was inspected: build `narration-remainder-20260924-r1`, manifest `recorded-voice-20260924-r5`, 1,029 narration MP3s, 34 story-intro files and the shield prefix are present and mapped.
 - Pip evolution: deployed (build `pip-evolution-20260924-r1`); rendered in headless Chromium at tablet and phone sizes. The four evolution clips passed the user's narration QA (evolution-3 re-recorded slower). Physical iPad and Safari/WebKit checks remain open. The user should judge the faint square edge around the dragon art, most visible on phone landscape ([details](EVOLUTION_RELEASE.md)).
-- Found during the Pip evolution review; present on `main`, not fixed, needs a decision: (a) in Chromium, reloading the page during play can show “Another tab updated this adventure”, because the storage event from the unloading page's pause save reaches the new page; seen repeatedly on `main` in headless Chromium, not checked in Safari. (b) The established sprite painter shows a strip of the neighbouring sprite-sheet row above Pip in the growth panel.
+- Found during the Pip evolution review; present on `main`, not fixed, needs a decision: (a) in Chromium, reloading the page during play can show “Another tab updated this adventure”, because the storage event from the unloading page's pause save reaches the new page; seen repeatedly on `main` in headless Chromium, not checked in Safari. (b) The established sprite painter shows a strip of the neighbouring sprite-sheet row above Pip in the growth panel. In battle, the final (stage 3) Pip shows the lower half of a second dragon above it; seen in headless Chromium on `main` during the point 2 checks.
 - Enemy artwork expansion and creature-specific health ranges belong to the user's parallel thread. They are not changed by this documentation task. At this checkpoint, five base creature designs share tier-based health bands.
 - The 35 chapter backgrounds are deployed and verified against source bytes. Rendered tablet/phone scenery QA remains blocked because the browser could not verify its admin-enforced security policy; [chapter scenery](CHAPTER_SCENERY_RELEASE.md) records the exact limit and isolated review fixtures.
 - Physical iPad behavior and listening remain unverified. XP pacing is calibrated by deterministic simulations, not observed child play.
@@ -32,12 +32,12 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 
 ### Approved plan — 23 September 2026
 
-The user approved these points on 23 September 2026. Build them one at a time in this order: 1, 2, 3, 4, 6, 7, 8. After each point, stop, report and wait for the user's "go" ([working rules](../CLAUDE.md)). Status of every point: **approved, not started**. The evidence comes from a read-only handover review; re-check it against current `main` before acting on it.
+The user approved these points on 23 September 2026. Build them one at a time in this order: 1, 2, 3, 4, 6, 7, 8. After each point, stop, report and wait for the user's "go" ([working rules](../CLAUDE.md)). The table shows each point's status. The evidence comes from a read-only handover review; re-check it against current `main` before acting on it.
 
 | # | Point | Status |
 |---|---|---|
 | 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file. 1a deployed and verified live on 24 September 2026 (build `compact-save-20260924-r1`) |
-| 2 | Rotating distractor pools (option b) | Approved, not started |
+| 2 | Rotating distractor pools (option b) | Implemented and tested locally on 24 September 2026 (build `rotating-choices-20260924-r1`); deployment pending. Reading-check items unchanged, waiting for the user's decision |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
 | 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
@@ -88,6 +88,35 @@ The user approved these points on 23 September 2026. Build them one at a time in
 - **9. Rewards and pacing:** discuss with the user first. Evidence: a won battle gives about +9 XP against a 3,000 XP first stage. `scripts/calibrate-xp.cjs` line 19 assumes one answer per 24 s, but the measured cycle is about 6–10 s. At 8–10 s, the same model gives first growth on day 7–8 instead of 14 and full growth on day 32–37 instead of 70, at 15 min/day. Ideas on the table: a spellbook of word cards that upgrade with retention; visible steps inside each growth stage; thresholds recalibrated from real answer logs.
 - **10. Number duel:** later. Evidence: age is collected but unused; all 100 facts from 1×1 to 10×10 come up at random with −1 per wrong answer; picking the middle number scores 41%. Ideas: levels by age and results, per-fact tracking, balanced distractors.
 - **Options not chosen:** offline cache (1c); same-position distractor sets (2a, rejected); font or case change on the flash (2c); rolling word pool (3b); test-out (3c); splitting the 8 look-alike pairs that share a chapter; sound-it-out cards (4c); say-it moments (6a); meaning duels (6b).
+
+## Rotating wrong answers (point 2) — 24 September 2026
+
+Each of the 200 practice words has 5–7 reviewed wrong-answer candidates in `content.js`: 1,124 in total, 251 of them made up. Each new question draws three. Every drawn set passes all of these checks:
+- The target's first letter, last letter, first and last letters together, and length each match at least two of the four options.
+- Every letter of the target also appears, at the same position, in at least one wrong option, so one letter cannot give the answer away (night/light/right/might fails).
+- Picking the option most like the other three (lowest total edit distance, a swap of neighbouring letters counting as one edit) finds the answer in at most half of the cases for that set, ties split evenly.
+
+When a word has two or more sets where that guess works at most one time in three, only those sets are drawn. "a" and "i" are shown with three other single letters. Made-up candidates are never curriculum words.
+
+Across all 200 words, the middle-option guess now finds the answer 28.9% of the time, down from 89.7% with the old fixed options; chance is 25%. Per word: 134 words at 25% or less, 27 at 26–33%, 34 at 34–45% and 5 at 46–50% (in, all, again, ask, because). Each word has 2–20 fair sets. Questions already saved keep their options. The old three-option lists stay in `content.js` for saved history, the legacy word and the tests.
+
+The reading check (26 items) still uses its fixed options. On the same measure it scores 90.4% (levels 1–5: 91.7%, 100%, 90%, 90%, 75%). Five items fail the letter-and-length check (you, night, bright, shadow, journey) and five have a one-letter giveaway (bright, forest, shadow, journey, creature). Changing them waits for the user's decision.
+
+Build marker `rotating-choices-20260924-r1`; the `content.js` and `game-core.js` cache versions are updated.
+
+Tests: all 143 core tests and all 49 UI-flow groups pass locally. The new `tests/choices.test.js` checks:
+- 5–7 candidates per word, no repeats, and every candidate drawable;
+- 400 seeded questions per word: the letter, length and one-letter checks hold on every question; the middle-option guess works at most half the time on any question and at most 35% overall; wrong answers and the answer's position rotate;
+- made-up candidates against the curriculum workbook's 1,000 words, and every candidate against a list of blocked words;
+- a battle question and a reading-check question saved with old options keep them through a save and reload, and the reading check keeps its fixed options.
+
+The test file recomputes the checks independently of `game-core.js`. Nine deliberate faults each made it fail, for example random draws, no one-letter check, and no neighbour swap in the edit distance.
+
+In real Chromium at an iPad-sized viewport, new practice questions showed fair drawn sets. A question saved with the old options showed them unchanged, both at first load and after leaving and reopening the page. There were no page errors.
+
+Limits: not tested on an iPad. 27 candidates are real but rare words a child will likely treat as made up (for example awn, awl, oaf, iff, hew); the rules allow them.
+
+Deployment: pending.
 
 ## Pip evolution scenes — 24 September 2026
 
