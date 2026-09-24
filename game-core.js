@@ -17,7 +17,7 @@
     return {schemaVersion:2, xpRulesVersion:1, chapterRulesVersion:1, revision:0, nextId:1,
       profile:{name:'',age:7,gender:'boy',heroClass:'Mage',heroIndex:0},
       assessment:{done:false,records:[],level:0,exposure:1800,lastAxis:'exposure',progress:null},
-      learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[]},
+      learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[],dailyPractice:{}},
       campaign:{wins:0,checkpointWins:0,enemyStrength:3,battleRecords:[]},
       dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false,evolutionSeen:0,evolution:null},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{},scenes:{},scene:null},
       timing:{version:1,days:{},firstPracticeAt:null},
@@ -61,6 +61,12 @@
           independentCorrect:0, practiceSuccesses:0, consecutiveMisses:0,
           reviewStage:-1, dueAt:0, observations:0};
       }
+    }
+    // Seed the new daily cap from retained independent answers before compaction.
+    // Older per-word/per-day counts were not archived; never invent missing evidence.
+    if(!old.learning?.dailyPractice||typeof old.learning.dailyPractice!=='object'||Array.isArray(old.learning.dailyPractice)){
+      s.learning.dailyPractice={};
+      for(const r of s.campaign.battleRecords)if(r.task==='battle'&&!r.supported&&r.correct===true&&byWord[r.target]&&Number.isFinite(Date.parse(r.at)))recordDailyCorrect(s,r.target,Date.parse(r.at));
     }
     // Previous timing counted foreground waiting. Preserve it as legacy, never verified play.
     if(s.session&&!s.session.timingVersion){s.session.legacyElapsedMs=s.session.elapsedMs||0;s.session.elapsedMs=0;s.session.timingVersion=1;}
@@ -187,6 +193,11 @@
     s.activity = 'summary';
   }
   function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function dailyCorrect(s,target,now){const d=s.learning.dailyPractice[target];return d?.day===dayKey(now)?d.correct:0;}
+  function recordDailyCorrect(s,target,now){
+    // One latest local date per word, capped at three: bounded independently of raw history.
+    s.learning.dailyPractice[target]={day:dayKey(now),correct:Math.min(3,dailyCorrect(s,target,now)+1)};
+  }
   function bonusProgress(s,now=Date.now()){
     const d=s.timing.days[dayKey(now)]||{},activeMs=(d.practice||0)+(d.math||0);
     return {activeMs,active:activeMs>=TARGET_MS,multiplier:activeMs>=TARGET_MS?XP_MULTIPLIER:1,remainingMs:Math.max(0,TARGET_MS-activeMs),chapters:s.story.dailyChapters?.[dayKey(now)]||0};
@@ -350,32 +361,55 @@
   }
   function selectPracticeWord(s,now) {
     const L=s.learning, recent=L.recent.slice(-2);
-    const accessible=Content.areas.filter(a=>s.story.clearedAreas.includes(a.id)||storyProgress(s).areas.some(p=>p.id===a.id&&p.status==='current'));
-    const allowed=new Set(accessible.flatMap(a=>a.words));
     const current=storyProgress(s).areas.find(a=>a.status==='current');
-    const oldDue=Content.words.filter(item=>allowed.has(item.w)&&!current?.words.includes(item.w)&&L.words[item.w].introducedAt&&L.words[item.w].dueAt<=now&&!recent.includes(item.w)&&L.sequence>=L.words[item.w].eligibleAfter).sort((a,b)=>L.words[a.w].lastSequence-L.words[b.w].lastSequence);
-    // Reserve two of three turns for the current field so old reviews cannot block a new chapter indefinitely.
-    if(current&&L.sequence%3===2&&oldDue.length)return oldDue[0];
-    const pool=Content.words.filter(item=>current?current.words.includes(item.w):allowed.has(item.w));
+    const accessible=Content.areas.filter(a=>s.story.clearedAreas.includes(a.id)||a.id===current?.id);
+    const allowed=new Set(accessible.flatMap(a=>a.words));
     const eligible=item => !recent.includes(item.w) && L.sequence >= L.words[item.w].eligibleAfter;
+    const leastRecent=(a,b)=>L.words[a.w].lastSequence-L.words[b.w].lastSequence;
+    const pick=(item,practiceKind=current?'current':'review')=>({item,practiceKind});
+    const older=Content.words.filter(item=>allowed.has(item.w)&&!current?.words.includes(item.w)&&L.words[item.w].introducedAt&&eligible(item)).sort(leastRecent);
+    const oldDue=older.filter(item=>L.words[item.w].dueAt<=now);
+    // Reserve two of three turns for the current field so old reviews cannot block a new chapter indefinitely.
+    if(current&&L.sequence%3===2&&oldDue.length)return pick(oldDue[0],'review');
+    const currentPool=Content.words.filter(item=>current?current.words.includes(item.w):allowed.has(item.w));
+    const pool=currentPool.filter(item=>!current||dailyCorrect(s,item.w,now)<3);
     const introduced=pool.filter(item => L.words[item.w].introducedAt);
-    const existing=introduced.filter(eligible).sort((a,b)=>L.words[a.w].lastSequence-L.words[b.w].lastSequence);
+    const existing=introduced.filter(eligible).sort(leastRecent);
     const due=existing.filter(item => L.words[item.w].dueAt <= now);
     const urgent=due.find(item => L.words[item.w].reviewStage>=0 || L.words[item.w].consecutiveMisses>0);
-    if (urgent) return urgent;
+    if (urgent) return pick(urgent);
     const unfinished=introduced.filter(item => L.words[item.w].practiceSuccesses < 2).length;
     const canIntroduce=(s.session?.newWords.length||0)<6 && (introduced.length<3 || (unfinished<4 && recentAccuracy(s)>=.8));
     if (canIntroduce) {
       const unseen=pool.filter(item => !L.words[item.w].introducedAt && eligible(item));
       unseen.sort((a,b)=>Number(L.words[b.w].assessmentMiss)-Number(L.words[a.w].assessmentMiss));
-      if (unseen.length) return unseen[0];
+      if (unseen.length) return pick(unseen[0]);
     }
-    if (due.length) return due[0];
-    if (existing.length) return existing[0];
+    if (due.length) return pick(due[0]);
+    if (existing.length) return pick(existing[0]);
     // A tiny starting pool needs distinct intervening material after help.
     const filler=pool.find(item=>eligible(item) && (L.words[item.w].introducedAt || (s.session?.newWords.length||0)<6));
-    if (!filler) throw new Error('No eligible reviewed word');
-    return filler;
+    if(filler)return pick(filler);
+    // Freed current-chapter turns: due review, unseen-today older words, then a small preview.
+    if(oldDue.length)return pick(oldDue[0],'review');
+    const notSeenToday=older.filter(item=>!L.words[item.w].lastSeenAt||dayKey(Date.parse(L.words[item.w].lastSeenAt))!==dayKey(now))
+      .sort((a,b)=>(Date.parse(L.words[a.w].lastSeenAt)||0)-(Date.parse(L.words[b.w].lastSeenAt)||0));
+    if(notSeenToday.length)return pick(notSeenToday[0],'older');
+    const next=current&&Content.areas[Content.areas.findIndex(a=>a.id===current.id)+1];
+    if(next&&recentAccuracy(s)>=.8){
+      const nextPool=next.words.map(word=>byWord[word]),previewed=nextPool.filter(item=>L.words[item.w].introducedAt);
+      // At most three distinct previews per next chapter, including across sessions and days.
+      if(previewed.length<3){
+        const unseen=nextPool.find(item=>!L.words[item.w].introducedAt&&eligible(item));
+        if(unseen)return pick(unseen,'preview');
+      }
+      const practice=previewed.slice(0,3).filter(item=>eligible(item)&&dailyCorrect(s,item.w,now)<3).sort(leastRecent);
+      if(practice.length)return pick(practice[0],'preview');
+    }
+    // Only the final refill may revisit capped words. Its exposure is per-question, not a setting.
+    const faster=currentPool.filter(item=>L.words[item.w].introducedAt&&eligible(item)).sort(leastRecent)[0];
+    if(faster)return pick(faster,'speed-refill');
+    throw new Error('No eligible reviewed word');
   }
   function enemyChoices(s,health=s.campaign.enemyStrength||3) {
     const recent=(s.campaign.enemyHistory||[]).slice(-2).map(entry=>entry.enemyId);
@@ -482,7 +516,8 @@
     if (b.question && !b.question.answeredAt) return b.question;
     if (b.question) b.question.phase='done';
     if (b.heroHealth<=0 || b.enemyHealth<=0) { resolveBattle(s,now); return; }
-    const item=b.demo ? byWord[Content.demoWords[b.turn % Content.demoWords.length]] : selectPracticeWord(s,now);
+    const selection=b.demo ? {item:byWord[Content.demoWords[b.turn % Content.demoWords.length]]} : selectPracticeWord(s,now);
+    const {item,practiceKind}=selection;
     const word=s.learning.words[item.w];
     const isNew=!word.introducedAt;
     if (!b.demo && isNew) {
@@ -490,7 +525,9 @@
       if (!word.familiar && !s.session.newWords.includes(item.w)) s.session.newWords.push(item.w);
     }
     const guided=b.demo && b.turn===0;
-    b.question=makeQuestion(s,item,now,random,{exposureMs:b.demo?null:practiceExposure(s),
+    let exposureMs=b.demo?null:practiceExposure(s);
+    if(practiceKind==='speed-refill'&&exposureMs!==null)exposureMs=[2200,1800,1500,1200,950].find(ms=>ms<exposureMs)??exposureMs;
+    b.question=makeQuestion(s,item,now,random,{exposureMs,...(practiceKind?{practiceKind}:{}),
       isNew,guided,supportReasons:guided?['guided-example']:[],retentionDue:word.reviewStage>=0 && word.dueAt<=now});
     b.turn++;
     return b.question;
@@ -513,6 +550,7 @@
     if (!q || q.answeredAt || q.phase!=='choices' || (opt!=='?'&&!q.options.includes(opt))) return null;
     if(opt==='?'&&!q.supportReasons.includes('help-request'))q.supportReasons.push('help-request');
     const rec=observation(s,q,opt,now,b.demo?'demoBattle':'battle');
+    if(!b.demo&&!rec.supported&&rec.correct)recordDailyCorrect(s,q.target,now);
     rec.battleId=b.id; rec.sessionId=b.demo?null:s.session.id;
     rec.heroHealthBefore=b.heroHealth; rec.enemyHealthBefore=b.enemyHealth;
     q.correct=rec.correct; q.firstResponse=opt; q.answeredAt=rec.at; q.phase=rec.correct?'feedback':'correction';
@@ -535,6 +573,7 @@
         else if (w.reviewStage>=0 && now>=w.dueAt && (!w.lastHelpAt || now-Date.parse(w.lastHelpAt)>=DAY)) {
           w.reviewStage=Math.min(GAPS.length-1,w.reviewStage+1); w.dueAt=now+GAPS[w.reviewStage]*DAY;
         } else if (w.reviewStage<0) w.dueAt=now+15000;
+        else if (now>=w.dueAt) w.dueAt=Date.parse(w.lastHelpAt)+DAY;
       } else {
         w.consecutiveMisses++; w.practiceSuccesses=0;w.xpEvidence=[];
         w.reviewStage=Math.max(-1,w.reviewStage-1); w.dueAt=now+60000;

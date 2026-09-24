@@ -1,0 +1,1903 @@
+{
+  "assumptions": {
+    "readingAnswerMs": 8000,
+    "mathAnswerMs": 6000,
+    "independentAccuracy": 0.9,
+    "days": 30,
+    "seed": 42,
+    "speed": "Walk",
+    "enemyHealth": 6,
+    "alreadySecured": "Before the answer: at least two practice successes and not due; includes faster fallback turns.",
+    "currentChapterSecured": "The same measure restricted to the current map field.",
+    "reviewStart": "All 200 words introduced, review stage 2, due at start; story complete."
+  },
+  "baseline": "9767f0c",
+  "before": [
+    {
+      "minutes": 15,
+      "days": 30,
+      "review": false,
+      "readingTurns": 2459,
+      "alreadySecuredPct": 32.5,
+      "currentChapterSecuredPct": 32.2,
+      "speedRefillPct": 0,
+      "meanDistinctPerDay": 33.6,
+      "maxRepeats": 11,
+      "chapters": 35,
+      "daily": [
+        {
+          "day": 1,
+          "turns": 82,
+          "alreadySecured": 45,
+          "currentChapterSecured": 45,
+          "speedRefill": 0,
+          "distinct": 12,
+          "maxRepeats": 10,
+          "chapters": 1
+        },
+        {
+          "day": 2,
+          "turns": 83,
+          "alreadySecured": 46,
+          "currentChapterSecured": 46,
+          "speedRefill": 0,
+          "distinct": 18,
+          "maxRepeats": 8,
+          "chapters": 2
+        },
+        {
+          "day": 3,
+          "turns": 82,
+          "alreadySecured": 39,
+          "currentChapterSecured": 39,
+          "speedRefill": 0,
+          "distinct": 20,
+          "maxRepeats": 9,
+          "chapters": 4
+        },
+        {
+          "day": 4,
+          "turns": 83,
+          "alreadySecured": 41,
+          "currentChapterSecured": 35,
+          "speedRefill": 0,
+          "distinct": 27,
+          "maxRepeats": 11,
+          "chapters": 5
+        },
+        {
+          "day": 5,
+          "turns": 82,
+          "alreadySecured": 36,
+          "currentChapterSecured": 36,
+          "speedRefill": 0,
+          "distinct": 27,
+          "maxRepeats": 7,
+          "chapters": 6
+        },
+        {
+          "day": 6,
+          "turns": 83,
+          "alreadySecured": 24,
+          "currentChapterSecured": 24,
+          "speedRefill": 0,
+          "distinct": 30,
+          "maxRepeats": 9,
+          "chapters": 8
+        },
+        {
+          "day": 7,
+          "turns": 82,
+          "alreadySecured": 31,
+          "currentChapterSecured": 31,
+          "speedRefill": 0,
+          "distinct": 31,
+          "maxRepeats": 8,
+          "chapters": 9
+        },
+        {
+          "day": 8,
+          "turns": 82,
+          "alreadySecured": 31,
+          "currentChapterSecured": 30,
+          "speedRefill": 0,
+          "distinct": 31,
+          "maxRepeats": 7,
+          "chapters": 10
+        },
+        {
+          "day": 9,
+          "turns": 80,
+          "alreadySecured": 21,
+          "currentChapterSecured": 21,
+          "speedRefill": 0,
+          "distinct": 31,
+          "maxRepeats": 9,
+          "chapters": 12
+        },
+        {
+          "day": 10,
+          "turns": 80,
+          "alreadySecured": 31,
+          "currentChapterSecured": 31,
+          "speedRefill": 0,
+          "distinct": 31,
+          "maxRepeats": 7,
+          "chapters": 13
+        },
+        {
+          "day": 11,
+          "turns": 81,
+          "alreadySecured": 32,
+          "currentChapterSecured": 32,
+          "speedRefill": 0,
+          "distinct": 30,
+          "maxRepeats": 8,
+          "chapters": 15
+        },
+        {
+          "day": 12,
+          "turns": 82,
+          "alreadySecured": 19,
+          "currentChapterSecured": 19,
+          "speedRefill": 0,
+          "distinct": 35,
+          "maxRepeats": 8,
+          "chapters": 16
+        },
+        {
+          "day": 13,
+          "turns": 83,
+          "alreadySecured": 34,
+          "currentChapterSecured": 34,
+          "speedRefill": 0,
+          "distinct": 40,
+          "maxRepeats": 6,
+          "chapters": 17
+        },
+        {
+          "day": 14,
+          "turns": 82,
+          "alreadySecured": 28,
+          "currentChapterSecured": 28,
+          "speedRefill": 0,
+          "distinct": 43,
+          "maxRepeats": 8,
+          "chapters": 19
+        },
+        {
+          "day": 15,
+          "turns": 83,
+          "alreadySecured": 23,
+          "currentChapterSecured": 23,
+          "speedRefill": 0,
+          "distinct": 44,
+          "maxRepeats": 7,
+          "chapters": 20
+        },
+        {
+          "day": 16,
+          "turns": 82,
+          "alreadySecured": 33,
+          "currentChapterSecured": 33,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 8,
+          "chapters": 21
+        },
+        {
+          "day": 17,
+          "turns": 83,
+          "alreadySecured": 24,
+          "currentChapterSecured": 24,
+          "speedRefill": 0,
+          "distinct": 42,
+          "maxRepeats": 8,
+          "chapters": 23
+        },
+        {
+          "day": 18,
+          "turns": 82,
+          "alreadySecured": 30,
+          "currentChapterSecured": 30,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 7,
+          "chapters": 24
+        },
+        {
+          "day": 19,
+          "turns": 82,
+          "alreadySecured": 30,
+          "currentChapterSecured": 30,
+          "speedRefill": 0,
+          "distinct": 43,
+          "maxRepeats": 7,
+          "chapters": 25
+        },
+        {
+          "day": 20,
+          "turns": 80,
+          "alreadySecured": 21,
+          "currentChapterSecured": 21,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 8,
+          "chapters": 27
+        },
+        {
+          "day": 21,
+          "turns": 80,
+          "alreadySecured": 31,
+          "currentChapterSecured": 31,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 6,
+          "chapters": 28
+        },
+        {
+          "day": 22,
+          "turns": 81,
+          "alreadySecured": 32,
+          "currentChapterSecured": 32,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 8,
+          "chapters": 30
+        },
+        {
+          "day": 23,
+          "turns": 82,
+          "alreadySecured": 26,
+          "currentChapterSecured": 26,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 9,
+          "chapters": 31
+        },
+        {
+          "day": 24,
+          "turns": 83,
+          "alreadySecured": 37,
+          "currentChapterSecured": 37,
+          "speedRefill": 0,
+          "distinct": 36,
+          "maxRepeats": 8,
+          "chapters": 32
+        },
+        {
+          "day": 25,
+          "turns": 82,
+          "alreadySecured": 30,
+          "currentChapterSecured": 30,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 10,
+          "chapters": 34
+        },
+        {
+          "day": 26,
+          "turns": 83,
+          "alreadySecured": 24,
+          "currentChapterSecured": 24,
+          "speedRefill": 0,
+          "distinct": 48,
+          "maxRepeats": 9,
+          "chapters": 35
+        },
+        {
+          "day": 27,
+          "turns": 82,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 32,
+          "maxRepeats": 10,
+          "chapters": 35
+        },
+        {
+          "day": 28,
+          "turns": 83,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 25,
+          "maxRepeats": 9,
+          "chapters": 35
+        },
+        {
+          "day": 29,
+          "turns": 82,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 34,
+          "maxRepeats": 10,
+          "chapters": 35
+        },
+        {
+          "day": 30,
+          "turns": 82,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 24,
+          "maxRepeats": 9,
+          "chapters": 35
+        }
+      ]
+    },
+    {
+      "minutes": 45,
+      "days": 30,
+      "review": false,
+      "readingTurns": 7365,
+      "alreadySecuredPct": 25.6,
+      "currentChapterSecuredPct": 12.3,
+      "speedRefillPct": 0,
+      "meanDistinctPerDay": 75.2,
+      "maxRepeats": 59,
+      "chapters": 35,
+      "daily": [
+        {
+          "day": 1,
+          "turns": 247,
+          "alreadySecured": 148,
+          "currentChapterSecured": 148,
+          "speedRefill": 0,
+          "distinct": 30,
+          "maxRepeats": 11,
+          "chapters": 4
+        },
+        {
+          "day": 2,
+          "turns": 248,
+          "alreadySecured": 126,
+          "currentChapterSecured": 121,
+          "speedRefill": 0,
+          "distinct": 54,
+          "maxRepeats": 11,
+          "chapters": 8
+        },
+        {
+          "day": 3,
+          "turns": 244,
+          "alreadySecured": 120,
+          "currentChapterSecured": 114,
+          "speedRefill": 0,
+          "distinct": 62,
+          "maxRepeats": 9,
+          "chapters": 12
+        },
+        {
+          "day": 4,
+          "turns": 243,
+          "alreadySecured": 119,
+          "currentChapterSecured": 114,
+          "speedRefill": 0,
+          "distinct": 65,
+          "maxRepeats": 10,
+          "chapters": 16
+        },
+        {
+          "day": 5,
+          "turns": 248,
+          "alreadySecured": 92,
+          "currentChapterSecured": 92,
+          "speedRefill": 0,
+          "distinct": 77,
+          "maxRepeats": 9,
+          "chapters": 20
+        },
+        {
+          "day": 6,
+          "turns": 247,
+          "alreadySecured": 88,
+          "currentChapterSecured": 88,
+          "speedRefill": 0,
+          "distinct": 81,
+          "maxRepeats": 9,
+          "chapters": 24
+        },
+        {
+          "day": 7,
+          "turns": 242,
+          "alreadySecured": 85,
+          "currentChapterSecured": 82,
+          "speedRefill": 0,
+          "distinct": 85,
+          "maxRepeats": 11,
+          "chapters": 28
+        },
+        {
+          "day": 8,
+          "turns": 246,
+          "alreadySecured": 95,
+          "currentChapterSecured": 95,
+          "speedRefill": 0,
+          "distinct": 83,
+          "maxRepeats": 10,
+          "chapters": 32
+        },
+        {
+          "day": 9,
+          "turns": 247,
+          "alreadySecured": 85,
+          "currentChapterSecured": 54,
+          "speedRefill": 0,
+          "distinct": 94,
+          "maxRepeats": 17,
+          "chapters": 35
+        },
+        {
+          "day": 10,
+          "turns": 247,
+          "alreadySecured": 56,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 95,
+          "maxRepeats": 37,
+          "chapters": 35
+        },
+        {
+          "day": 11,
+          "turns": 241,
+          "alreadySecured": 104,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 126,
+          "maxRepeats": 17,
+          "chapters": 35
+        },
+        {
+          "day": 12,
+          "turns": 247,
+          "alreadySecured": 84,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 131,
+          "maxRepeats": 24,
+          "chapters": 35
+        },
+        {
+          "day": 13,
+          "turns": 248,
+          "alreadySecured": 20,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 56,
+          "chapters": 35
+        },
+        {
+          "day": 14,
+          "turns": 244,
+          "alreadySecured": 44,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 80,
+          "maxRepeats": 34,
+          "chapters": 35
+        },
+        {
+          "day": 15,
+          "turns": 243,
+          "alreadySecured": 12,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 57,
+          "maxRepeats": 49,
+          "chapters": 35
+        },
+        {
+          "day": 16,
+          "turns": 248,
+          "alreadySecured": 51,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 98,
+          "maxRepeats": 41,
+          "chapters": 35
+        },
+        {
+          "day": 17,
+          "turns": 247,
+          "alreadySecured": 21,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 56,
+          "maxRepeats": 39,
+          "chapters": 35
+        },
+        {
+          "day": 18,
+          "turns": 242,
+          "alreadySecured": 44,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 41,
+          "chapters": 35
+        },
+        {
+          "day": 19,
+          "turns": 246,
+          "alreadySecured": 40,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 68,
+          "maxRepeats": 44,
+          "chapters": 35
+        },
+        {
+          "day": 20,
+          "turns": 247,
+          "alreadySecured": 32,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 65,
+          "maxRepeats": 48,
+          "chapters": 35
+        },
+        {
+          "day": 21,
+          "turns": 247,
+          "alreadySecured": 70,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 99,
+          "maxRepeats": 39,
+          "chapters": 35
+        },
+        {
+          "day": 22,
+          "turns": 241,
+          "alreadySecured": 66,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 83,
+          "maxRepeats": 46,
+          "chapters": 35
+        },
+        {
+          "day": 23,
+          "turns": 247,
+          "alreadySecured": 82,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 101,
+          "maxRepeats": 42,
+          "chapters": 35
+        },
+        {
+          "day": 24,
+          "turns": 248,
+          "alreadySecured": 64,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 91,
+          "maxRepeats": 59,
+          "chapters": 35
+        },
+        {
+          "day": 25,
+          "turns": 244,
+          "alreadySecured": 80,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 97,
+          "maxRepeats": 32,
+          "chapters": 35
+        },
+        {
+          "day": 26,
+          "turns": 243,
+          "alreadySecured": 26,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 57,
+          "maxRepeats": 44,
+          "chapters": 35
+        },
+        {
+          "day": 27,
+          "turns": 248,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 38,
+          "chapters": 35
+        },
+        {
+          "day": 28,
+          "turns": 247,
+          "alreadySecured": 25,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 60,
+          "maxRepeats": 36,
+          "chapters": 35
+        },
+        {
+          "day": 29,
+          "turns": 242,
+          "alreadySecured": 3,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 47,
+          "maxRepeats": 44,
+          "chapters": 35
+        },
+        {
+          "day": 30,
+          "turns": 246,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 30,
+          "maxRepeats": 32,
+          "chapters": 35
+        }
+      ]
+    },
+    {
+      "minutes": 15,
+      "days": 30,
+      "review": true,
+      "readingTurns": 2459,
+      "alreadySecuredPct": 17.1,
+      "currentChapterSecuredPct": 0,
+      "speedRefillPct": 0,
+      "meanDistinctPerDay": 35.8,
+      "maxRepeats": 23,
+      "chapters": 35,
+      "daily": [
+        {
+          "day": 1,
+          "turns": 82,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 82,
+          "maxRepeats": 1,
+          "chapters": 35
+        },
+        {
+          "day": 2,
+          "turns": 83,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 83,
+          "maxRepeats": 1,
+          "chapters": 35
+        },
+        {
+          "day": 3,
+          "turns": 82,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 51,
+          "maxRepeats": 6,
+          "chapters": 35
+        },
+        {
+          "day": 4,
+          "turns": 83,
+          "alreadySecured": 26,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 33,
+          "maxRepeats": 16,
+          "chapters": 35
+        },
+        {
+          "day": 5,
+          "turns": 82,
+          "alreadySecured": 9,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 17,
+          "maxRepeats": 22,
+          "chapters": 35
+        },
+        {
+          "day": 6,
+          "turns": 83,
+          "alreadySecured": 28,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 32,
+          "maxRepeats": 20,
+          "chapters": 35
+        },
+        {
+          "day": 7,
+          "turns": 82,
+          "alreadySecured": 23,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 29,
+          "maxRepeats": 22,
+          "chapters": 35
+        },
+        {
+          "day": 8,
+          "turns": 82,
+          "alreadySecured": 16,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 25,
+          "maxRepeats": 22,
+          "chapters": 35
+        },
+        {
+          "day": 9,
+          "turns": 80,
+          "alreadySecured": 31,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 37,
+          "maxRepeats": 13,
+          "chapters": 35
+        },
+        {
+          "day": 10,
+          "turns": 80,
+          "alreadySecured": 5,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 27,
+          "maxRepeats": 16,
+          "chapters": 35
+        },
+        {
+          "day": 11,
+          "turns": 81,
+          "alreadySecured": 16,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 26,
+          "maxRepeats": 18,
+          "chapters": 35
+        },
+        {
+          "day": 12,
+          "turns": 82,
+          "alreadySecured": 21,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 28,
+          "maxRepeats": 23,
+          "chapters": 35
+        },
+        {
+          "day": 13,
+          "turns": 83,
+          "alreadySecured": 24,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 32,
+          "maxRepeats": 20,
+          "chapters": 35
+        },
+        {
+          "day": 14,
+          "turns": 82,
+          "alreadySecured": 26,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 33,
+          "maxRepeats": 20,
+          "chapters": 35
+        },
+        {
+          "day": 15,
+          "turns": 83,
+          "alreadySecured": 1,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 4,
+          "chapters": 35
+        },
+        {
+          "day": 16,
+          "turns": 82,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 82,
+          "maxRepeats": 1,
+          "chapters": 35
+        },
+        {
+          "day": 17,
+          "turns": 83,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 50,
+          "maxRepeats": 6,
+          "chapters": 35
+        },
+        {
+          "day": 18,
+          "turns": 82,
+          "alreadySecured": 3,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 13,
+          "maxRepeats": 17,
+          "chapters": 35
+        },
+        {
+          "day": 19,
+          "turns": 82,
+          "alreadySecured": 28,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 35,
+          "maxRepeats": 16,
+          "chapters": 35
+        },
+        {
+          "day": 20,
+          "turns": 80,
+          "alreadySecured": 13,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 22,
+          "maxRepeats": 19,
+          "chapters": 35
+        },
+        {
+          "day": 21,
+          "turns": 80,
+          "alreadySecured": 20,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 25,
+          "maxRepeats": 22,
+          "chapters": 35
+        },
+        {
+          "day": 22,
+          "turns": 81,
+          "alreadySecured": 6,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 16,
+          "maxRepeats": 21,
+          "chapters": 35
+        },
+        {
+          "day": 23,
+          "turns": 82,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 11,
+          "maxRepeats": 13,
+          "chapters": 35
+        },
+        {
+          "day": 24,
+          "turns": 83,
+          "alreadySecured": 14,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 36,
+          "maxRepeats": 13,
+          "chapters": 35
+        },
+        {
+          "day": 25,
+          "turns": 82,
+          "alreadySecured": 24,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 38,
+          "maxRepeats": 22,
+          "chapters": 35
+        },
+        {
+          "day": 26,
+          "turns": 83,
+          "alreadySecured": 30,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 35,
+          "maxRepeats": 18,
+          "chapters": 35
+        },
+        {
+          "day": 27,
+          "turns": 82,
+          "alreadySecured": 23,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 31,
+          "maxRepeats": 23,
+          "chapters": 35
+        },
+        {
+          "day": 28,
+          "turns": 83,
+          "alreadySecured": 1,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 12,
+          "maxRepeats": 20,
+          "chapters": 35
+        },
+        {
+          "day": 29,
+          "turns": 82,
+          "alreadySecured": 28,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 39,
+          "maxRepeats": 17,
+          "chapters": 35
+        },
+        {
+          "day": 30,
+          "turns": 82,
+          "alreadySecured": 4,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 23,
+          "maxRepeats": 17,
+          "chapters": 35
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "minutes": 15,
+      "days": 30,
+      "review": false,
+      "readingTurns": 2459,
+      "alreadySecuredPct": 39.7,
+      "currentChapterSecuredPct": 17.7,
+      "speedRefillPct": 2.5,
+      "meanDistinctPerDay": 48.6,
+      "maxRepeats": 11,
+      "chapters": 35,
+      "daily": [
+        {
+          "day": 1,
+          "turns": 82,
+          "alreadySecured": 40,
+          "currentChapterSecured": 34,
+          "speedRefill": 31,
+          "distinct": 15,
+          "maxRepeats": 11,
+          "chapters": 1
+        },
+        {
+          "day": 2,
+          "turns": 83,
+          "alreadySecured": 43,
+          "currentChapterSecured": 32,
+          "speedRefill": 18,
+          "distinct": 21,
+          "maxRepeats": 7,
+          "chapters": 2
+        },
+        {
+          "day": 3,
+          "turns": 82,
+          "alreadySecured": 44,
+          "currentChapterSecured": 31,
+          "speedRefill": 13,
+          "distinct": 30,
+          "maxRepeats": 7,
+          "chapters": 4
+        },
+        {
+          "day": 4,
+          "turns": 83,
+          "alreadySecured": 44,
+          "currentChapterSecured": 20,
+          "speedRefill": 0,
+          "distinct": 36,
+          "maxRepeats": 5,
+          "chapters": 5
+        },
+        {
+          "day": 5,
+          "turns": 82,
+          "alreadySecured": 39,
+          "currentChapterSecured": 22,
+          "speedRefill": 0,
+          "distinct": 42,
+          "maxRepeats": 6,
+          "chapters": 6
+        },
+        {
+          "day": 6,
+          "turns": 83,
+          "alreadySecured": 28,
+          "currentChapterSecured": 9,
+          "speedRefill": 0,
+          "distinct": 49,
+          "maxRepeats": 7,
+          "chapters": 8
+        },
+        {
+          "day": 7,
+          "turns": 82,
+          "alreadySecured": 37,
+          "currentChapterSecured": 20,
+          "speedRefill": 0,
+          "distinct": 45,
+          "maxRepeats": 5,
+          "chapters": 9
+        },
+        {
+          "day": 8,
+          "turns": 82,
+          "alreadySecured": 38,
+          "currentChapterSecured": 18,
+          "speedRefill": 0,
+          "distinct": 47,
+          "maxRepeats": 4,
+          "chapters": 10
+        },
+        {
+          "day": 9,
+          "turns": 80,
+          "alreadySecured": 24,
+          "currentChapterSecured": 7,
+          "speedRefill": 0,
+          "distinct": 49,
+          "maxRepeats": 5,
+          "chapters": 12
+        },
+        {
+          "day": 10,
+          "turns": 80,
+          "alreadySecured": 30,
+          "currentChapterSecured": 21,
+          "speedRefill": 0,
+          "distinct": 42,
+          "maxRepeats": 7,
+          "chapters": 13
+        },
+        {
+          "day": 11,
+          "turns": 81,
+          "alreadySecured": 33,
+          "currentChapterSecured": 15,
+          "speedRefill": 0,
+          "distinct": 42,
+          "maxRepeats": 5,
+          "chapters": 15
+        },
+        {
+          "day": 12,
+          "turns": 82,
+          "alreadySecured": 35,
+          "currentChapterSecured": 6,
+          "speedRefill": 0,
+          "distinct": 56,
+          "maxRepeats": 5,
+          "chapters": 15
+        },
+        {
+          "day": 13,
+          "turns": 83,
+          "alreadySecured": 26,
+          "currentChapterSecured": 9,
+          "speedRefill": 0,
+          "distinct": 48,
+          "maxRepeats": 5,
+          "chapters": 17
+        },
+        {
+          "day": 14,
+          "turns": 82,
+          "alreadySecured": 29,
+          "currentChapterSecured": 20,
+          "speedRefill": 0,
+          "distinct": 45,
+          "maxRepeats": 5,
+          "chapters": 18
+        },
+        {
+          "day": 15,
+          "turns": 83,
+          "alreadySecured": 31,
+          "currentChapterSecured": 13,
+          "speedRefill": 0,
+          "distinct": 51,
+          "maxRepeats": 5,
+          "chapters": 20
+        },
+        {
+          "day": 16,
+          "turns": 82,
+          "alreadySecured": 23,
+          "currentChapterSecured": 14,
+          "speedRefill": 0,
+          "distinct": 47,
+          "maxRepeats": 5,
+          "chapters": 21
+        },
+        {
+          "day": 17,
+          "turns": 83,
+          "alreadySecured": 22,
+          "currentChapterSecured": 21,
+          "speedRefill": 0,
+          "distinct": 49,
+          "maxRepeats": 4,
+          "chapters": 22
+        },
+        {
+          "day": 18,
+          "turns": 82,
+          "alreadySecured": 19,
+          "currentChapterSecured": 7,
+          "speedRefill": 0,
+          "distinct": 57,
+          "maxRepeats": 4,
+          "chapters": 24
+        },
+        {
+          "day": 19,
+          "turns": 82,
+          "alreadySecured": 21,
+          "currentChapterSecured": 20,
+          "speedRefill": 0,
+          "distinct": 46,
+          "maxRepeats": 4,
+          "chapters": 25
+        },
+        {
+          "day": 20,
+          "turns": 80,
+          "alreadySecured": 28,
+          "currentChapterSecured": 17,
+          "speedRefill": 0,
+          "distinct": 50,
+          "maxRepeats": 4,
+          "chapters": 26
+        },
+        {
+          "day": 21,
+          "turns": 80,
+          "alreadySecured": 16,
+          "currentChapterSecured": 6,
+          "speedRefill": 0,
+          "distinct": 52,
+          "maxRepeats": 5,
+          "chapters": 28
+        },
+        {
+          "day": 22,
+          "turns": 81,
+          "alreadySecured": 28,
+          "currentChapterSecured": 22,
+          "speedRefill": 0,
+          "distinct": 46,
+          "maxRepeats": 4,
+          "chapters": 29
+        },
+        {
+          "day": 23,
+          "turns": 82,
+          "alreadySecured": 27,
+          "currentChapterSecured": 14,
+          "speedRefill": 0,
+          "distinct": 53,
+          "maxRepeats": 4,
+          "chapters": 30
+        },
+        {
+          "day": 24,
+          "turns": 83,
+          "alreadySecured": 31,
+          "currentChapterSecured": 5,
+          "speedRefill": 0,
+          "distinct": 55,
+          "maxRepeats": 4,
+          "chapters": 31
+        },
+        {
+          "day": 25,
+          "turns": 82,
+          "alreadySecured": 32,
+          "currentChapterSecured": 10,
+          "speedRefill": 0,
+          "distinct": 52,
+          "maxRepeats": 4,
+          "chapters": 33
+        },
+        {
+          "day": 26,
+          "turns": 83,
+          "alreadySecured": 24,
+          "currentChapterSecured": 10,
+          "speedRefill": 0,
+          "distinct": 53,
+          "maxRepeats": 4,
+          "chapters": 34
+        },
+        {
+          "day": 27,
+          "turns": 82,
+          "alreadySecured": 45,
+          "currentChapterSecured": 11,
+          "speedRefill": 0,
+          "distinct": 60,
+          "maxRepeats": 4,
+          "chapters": 34
+        },
+        {
+          "day": 28,
+          "turns": 83,
+          "alreadySecured": 49,
+          "currentChapterSecured": 1,
+          "speedRefill": 0,
+          "distinct": 74,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 29,
+          "turns": 82,
+          "alreadySecured": 41,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 4,
+          "chapters": 35
+        },
+        {
+          "day": 30,
+          "turns": 82,
+          "alreadySecured": 48,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 2,
+          "chapters": 35
+        }
+      ]
+    },
+    {
+      "minutes": 45,
+      "days": 30,
+      "review": false,
+      "readingTurns": 7365,
+      "alreadySecuredPct": 65.8,
+      "currentChapterSecuredPct": 6.6,
+      "speedRefillPct": 3.7,
+      "meanDistinctPerDay": 173.2,
+      "maxRepeats": 12,
+      "chapters": 35,
+      "daily": [
+        {
+          "day": 1,
+          "turns": 247,
+          "alreadySecured": 143,
+          "currentChapterSecured": 131,
+          "speedRefill": 141,
+          "distinct": 30,
+          "maxRepeats": 12,
+          "chapters": 4
+        },
+        {
+          "day": 2,
+          "turns": 248,
+          "alreadySecured": 124,
+          "currentChapterSecured": 93,
+          "speedRefill": 80,
+          "distinct": 54,
+          "maxRepeats": 9,
+          "chapters": 8
+        },
+        {
+          "day": 3,
+          "turns": 244,
+          "alreadySecured": 117,
+          "currentChapterSecured": 65,
+          "speedRefill": 40,
+          "distinct": 81,
+          "maxRepeats": 9,
+          "chapters": 12
+        },
+        {
+          "day": 4,
+          "turns": 243,
+          "alreadySecured": 113,
+          "currentChapterSecured": 47,
+          "speedRefill": 14,
+          "distinct": 105,
+          "maxRepeats": 7,
+          "chapters": 16
+        },
+        {
+          "day": 5,
+          "turns": 248,
+          "alreadySecured": 112,
+          "currentChapterSecured": 42,
+          "speedRefill": 0,
+          "distinct": 128,
+          "maxRepeats": 9,
+          "chapters": 20
+        },
+        {
+          "day": 6,
+          "turns": 247,
+          "alreadySecured": 110,
+          "currentChapterSecured": 37,
+          "speedRefill": 0,
+          "distinct": 140,
+          "maxRepeats": 8,
+          "chapters": 24
+        },
+        {
+          "day": 7,
+          "turns": 242,
+          "alreadySecured": 95,
+          "currentChapterSecured": 32,
+          "speedRefill": 0,
+          "distinct": 147,
+          "maxRepeats": 5,
+          "chapters": 28
+        },
+        {
+          "day": 8,
+          "turns": 246,
+          "alreadySecured": 120,
+          "currentChapterSecured": 27,
+          "speedRefill": 0,
+          "distinct": 159,
+          "maxRepeats": 7,
+          "chapters": 31
+        },
+        {
+          "day": 9,
+          "turns": 247,
+          "alreadySecured": 130,
+          "currentChapterSecured": 15,
+          "speedRefill": 0,
+          "distinct": 166,
+          "maxRepeats": 5,
+          "chapters": 35
+        },
+        {
+          "day": 10,
+          "turns": 247,
+          "alreadySecured": 155,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 196,
+          "maxRepeats": 5,
+          "chapters": 35
+        },
+        {
+          "day": 11,
+          "turns": 241,
+          "alreadySecured": 167,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 5,
+          "chapters": 35
+        },
+        {
+          "day": 12,
+          "turns": 247,
+          "alreadySecured": 171,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 6,
+          "chapters": 35
+        },
+        {
+          "day": 13,
+          "turns": 248,
+          "alreadySecured": 173,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 199,
+          "maxRepeats": 6,
+          "chapters": 35
+        },
+        {
+          "day": 14,
+          "turns": 244,
+          "alreadySecured": 173,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 199,
+          "maxRepeats": 5,
+          "chapters": 35
+        },
+        {
+          "day": 15,
+          "turns": 243,
+          "alreadySecured": 175,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 6,
+          "chapters": 35
+        },
+        {
+          "day": 16,
+          "turns": 248,
+          "alreadySecured": 172,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 4,
+          "chapters": 35
+        },
+        {
+          "day": 17,
+          "turns": 247,
+          "alreadySecured": 171,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 199,
+          "maxRepeats": 9,
+          "chapters": 35
+        },
+        {
+          "day": 18,
+          "turns": 242,
+          "alreadySecured": 191,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 198,
+          "maxRepeats": 3,
+          "chapters": 35
+        },
+        {
+          "day": 19,
+          "turns": 246,
+          "alreadySecured": 180,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 11,
+          "chapters": 35
+        },
+        {
+          "day": 20,
+          "turns": 247,
+          "alreadySecured": 187,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 6,
+          "chapters": 35
+        },
+        {
+          "day": 21,
+          "turns": 247,
+          "alreadySecured": 181,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 7,
+          "chapters": 35
+        },
+        {
+          "day": 22,
+          "turns": 241,
+          "alreadySecured": 183,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 199,
+          "maxRepeats": 9,
+          "chapters": 35
+        },
+        {
+          "day": 23,
+          "turns": 247,
+          "alreadySecured": 193,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 6,
+          "chapters": 35
+        },
+        {
+          "day": 24,
+          "turns": 248,
+          "alreadySecured": 187,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 10,
+          "chapters": 35
+        },
+        {
+          "day": 25,
+          "turns": 244,
+          "alreadySecured": 199,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 6,
+          "chapters": 35
+        },
+        {
+          "day": 26,
+          "turns": 243,
+          "alreadySecured": 176,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 197,
+          "maxRepeats": 11,
+          "chapters": 35
+        },
+        {
+          "day": 27,
+          "turns": 248,
+          "alreadySecured": 189,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 7,
+          "chapters": 35
+        },
+        {
+          "day": 28,
+          "turns": 247,
+          "alreadySecured": 193,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 8,
+          "chapters": 35
+        },
+        {
+          "day": 29,
+          "turns": 242,
+          "alreadySecured": 189,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 200,
+          "maxRepeats": 4,
+          "chapters": 35
+        },
+        {
+          "day": 30,
+          "turns": 246,
+          "alreadySecured": 179,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 198,
+          "maxRepeats": 9,
+          "chapters": 35
+        }
+      ]
+    },
+    {
+      "minutes": 15,
+      "days": 30,
+      "review": true,
+      "readingTurns": 2459,
+      "alreadySecuredPct": 63.8,
+      "currentChapterSecuredPct": 0,
+      "speedRefillPct": 0,
+      "meanDistinctPerDay": 74,
+      "maxRepeats": 3,
+      "chapters": 35,
+      "daily": [
+        {
+          "day": 1,
+          "turns": 82,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 82,
+          "maxRepeats": 1,
+          "chapters": 35
+        },
+        {
+          "day": 2,
+          "turns": 83,
+          "alreadySecured": 0,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 83,
+          "maxRepeats": 1,
+          "chapters": 35
+        },
+        {
+          "day": 3,
+          "turns": 82,
+          "alreadySecured": 21,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 3,
+          "chapters": 35
+        },
+        {
+          "day": 4,
+          "turns": 83,
+          "alreadySecured": 67,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 74,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 5,
+          "turns": 82,
+          "alreadySecured": 66,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 75,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 6,
+          "turns": 83,
+          "alreadySecured": 54,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 75,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 7,
+          "turns": 82,
+          "alreadySecured": 64,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 3,
+          "chapters": 35
+        },
+        {
+          "day": 8,
+          "turns": 82,
+          "alreadySecured": 65,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 9,
+          "turns": 80,
+          "alreadySecured": 64,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 10,
+          "turns": 80,
+          "alreadySecured": 54,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 11,
+          "turns": 81,
+          "alreadySecured": 60,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 12,
+          "turns": 82,
+          "alreadySecured": 66,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 75,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 13,
+          "turns": 83,
+          "alreadySecured": 66,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 75,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 14,
+          "turns": 82,
+          "alreadySecured": 63,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 74,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 15,
+          "turns": 83,
+          "alreadySecured": 25,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 74,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 16,
+          "turns": 82,
+          "alreadySecured": 24,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 75,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 17,
+          "turns": 83,
+          "alreadySecured": 45,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 3,
+          "chapters": 35
+        },
+        {
+          "day": 18,
+          "turns": 82,
+          "alreadySecured": 63,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 19,
+          "turns": 82,
+          "alreadySecured": 57,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 20,
+          "turns": 80,
+          "alreadySecured": 58,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 21,
+          "turns": 80,
+          "alreadySecured": 58,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 22,
+          "turns": 81,
+          "alreadySecured": 59,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 23,
+          "turns": 82,
+          "alreadySecured": 60,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 74,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 24,
+          "turns": 83,
+          "alreadySecured": 55,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 75,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 25,
+          "turns": 82,
+          "alreadySecured": 59,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 26,
+          "turns": 83,
+          "alreadySecured": 60,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 71,
+          "maxRepeats": 3,
+          "chapters": 35
+        },
+        {
+          "day": 27,
+          "turns": 82,
+          "alreadySecured": 59,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 72,
+          "maxRepeats": 3,
+          "chapters": 35
+        },
+        {
+          "day": 28,
+          "turns": 83,
+          "alreadySecured": 57,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 75,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 29,
+          "turns": 82,
+          "alreadySecured": 60,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 74,
+          "maxRepeats": 2,
+          "chapters": 35
+        },
+        {
+          "day": 30,
+          "turns": 82,
+          "alreadySecured": 61,
+          "currentChapterSecured": 0,
+          "speedRefill": 0,
+          "distinct": 73,
+          "maxRepeats": 2,
+          "chapters": 35
+        }
+      ]
+    }
+  ]
+}
