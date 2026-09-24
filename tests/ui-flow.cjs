@@ -4,15 +4,15 @@ const root=require('node:path').join(__dirname,'../'),Core=require(root+'game-co
 function boot(saved,options={}){
  const {window,document}=parseHTML(fs.readFileSync(root+'index.html','utf8'));
  let now=Date.UTC(2026,8,22),uid=0;const jobs=new Map(),memory=new Map(saved?[[Storage.KEY,JSON.stringify(saved)]]:[]);
- let failWrites=!!options.failWrites,heartbeat=()=>{};
- const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failWrites)throw new Error('Storage full');memory.set(k,v)},removeItem:k=>memory.delete(k)};
+ let failWrites=options.failWrites||false,heartbeat=()=>{},reloads=0;
+ const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failWrites===true||typeof failWrites==='function'&&failWrites(k,v))throw new Error('Storage full');memory.set(k,v)},removeItem:k=>memory.delete(k)};
  const schedule=(fn,ms)=>(jobs.set(++uid,{fn,time:now+ms}),uid);
  window.localStorage=storage;
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.selected=option.value===value;}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>true,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
  let speechEnd=null;const speechTexts=[];
- const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){}},confirm:()=>false,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -22,7 +22,7 @@ function boot(saved,options={}){
  function resume(){const map=get('campaignMap').classList.contains('active');assert.ok(map||get('route').classList.contains('active'));click(get(map?'mapContinue':'continueAdventure'));}
  function advance(ms,suspended=false){if(suspended){now+=ms;heartbeat();}else for(let elapsed=0;elapsed<ms;elapsed+=1000){now+=Math.min(1000,ms-elapsed);heartbeat();}}
  function visibility(hidden){Object.defineProperty(document,'hidden',{value:hidden,configurable:true});document.dispatchEvent(new window.Event('visibilitychange'));}
- return {state,get,click,tick,until,ready,resume,advance,visibility,document,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
+ return {state,get,click,tick,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
 }
 // A scored hit waits for narration, adds no extra damage, and cancels on Home/pause.
 for(const gender of ['boy','girl'])for(const heroClass of ['Mage','Knight','Archer']){
@@ -349,4 +349,94 @@ console.log('PASS all 35 chapter backgrounds at story, encounter, battle, Pause/
   assert.ok(ui.get('chapterScenery').style.backgroundImage.includes('assets/forest-clearing.webp'));
  }finally{Content.chapterBackgrounds[area]=original;}
  console.log('PASS missing artwork and missing mapping fall back without blocking story or battle');
+}
+// Parents can save the whole adventure as a dated file and restore it after checking and confirming.
+function openParents(ui){
+ ui.click(ui.get(ui.get('campaignMap').classList.contains('active')?'mapParents':'routeParents'));
+ ui.get('parentAnswer').value=String(ui.get('parentQuestion').textContent.match(/\d+/g).map(Number).reduce((a,b)=>a+b,0));ui.click(ui.get('parentUnlock'));
+ assert.ok(ui.get('parentDashboard').classList.contains('active'));
+}
+function backupProgress(name,xp,words){
+ const s=Core.migrate(Core.fresh());s.profile.name=name;s.assessment.done=true;s.dragon.xp=xp;
+ for(const item of Content.words.slice(0,words))s.learning.words[item.w].introducedAt=new Date(Date.UTC(2026,8,21)).toISOString();
+ return s;
+}
+function fakeFiles(ui){
+ const made={blobs:[],downloads:[],revoked:[]};
+ ui.window.Blob=class{constructor(parts,options){this.text=parts.join('');this.type=options.type;made.blobs.push(this);}};
+ ui.window.File=class{constructor(parts,name,options){this.text=parts.join('');this.name=name;this.type=options.type;}};
+ ui.window.URL={createObjectURL:blob=>'blob:'+made.blobs.indexOf(blob),revokeObjectURL:url=>made.revoked.push(url)};
+ ui.document.addEventListener('click',event=>{if(event.target.tagName==='A')made.downloads.push({name:event.target.getAttribute('download'),href:event.target.getAttribute('href')});});
+ return made;
+}
+{
+ const ui=boot(backupProgress('Éva',1234.5,12),{navigator:{maxTouchPoints:0,canShare:()=>true,share(){throw new Error('desktop must download');}}}),made=fakeFiles(ui);
+ openParents(ui);assert.equal(ui.get('backupStatus').textContent,'');ui.click(ui.get('backupSave'));
+ assert.equal(made.downloads.length,1);const {name,href}=made.downloads[0];
+ assert.match(name,/^blitzword-backup-Eva-\d{4}-\d{2}-\d{2}-\d{4}\.json$/);assert.equal(href,'blob:0');assert.equal(made.blobs[0].type,'application/json');
+ const data=JSON.parse(made.blobs[0].text);
+ assert.equal(data.format,'blitzword-backup');assert.equal(data.version,1);assert.equal(data.build,ui.document.querySelector('meta[name="blitzword-build"]').getAttribute('content'));
+ assert.deepEqual(data.state,ui.state());assert.equal(data.state.dragon.xp,1234.5);
+ assert.equal(ui.get('backupStatus').textContent,'Backup file downloaded: '+name+'. On iPad, find it in the Files app under Downloads.');
+ assert.equal(ui.document.querySelectorAll('a[download]').length,0);ui.until(()=>made.revoked.length===1);assert.deepEqual(made.revoked,['blob:0']);
+ console.log('PASS parent backup file downloads the whole save with a dated name when sharing is not used');
+}
+{
+ const shared=[];let outcome='ok';
+ const ui=boot(backupProgress('Reader',300,4),{navigator:{maxTouchPoints:5,canShare:data=>data.files?.[0]?.type==='application/json',share(data){if(outcome==='throw')throw new TypeError('unsupported');shared.push(data.files[0]);assert.deepEqual(Object.keys(data),['files']);return {then(ok,fail){if(outcome==='ok')ok();else fail({name:outcome});}};}}}),made=fakeFiles(ui);
+ openParents(ui);ui.click(ui.get('backupSave'));
+ assert.equal(shared.length,1);assert.equal(made.downloads.length,0);assert.match(shared[0].name,/^blitzword-backup-Reader-\d{4}-\d{2}-\d{2}-\d{4}\.json$/);
+ assert.deepEqual(JSON.parse(shared[0].text).state,ui.state());
+ assert.equal(ui.get('backupStatus').textContent,'Backup file ready: '+shared[0].name+'. Keep it somewhere safe, such as Files or iCloud Drive.');
+ outcome='AbortError';ui.click(ui.get('backupSave'));assert.equal(ui.get('backupStatus').textContent,'No backup file was saved.');assert.equal(made.downloads.length,0);
+ outcome='NotAllowedError';ui.click(ui.get('backupSave'));assert.equal(made.downloads.length,1);assert.match(ui.get('backupStatus').textContent,/^Backup file downloaded: blitzword-backup-Reader-/);
+ outcome='throw';ui.click(ui.get('backupSave'));assert.equal(made.downloads.length,2);assert.match(ui.get('backupStatus').textContent,/^Backup file downloaded: blitzword-backup-Reader-/);
+ console.log('PASS touch devices use the share sheet; cancel saves nothing and a share error falls back to download');
+}
+{
+ const madeAt=Date.UTC(2026,8,23,18,5),backup=backupProgress('Éva',2400,40),file=Storage.backupFile(backup,{now:madeAt}).text;
+ const asked=[];let answer=false;
+ const ui=boot(backupProgress('Reader',300,4),{confirm:message=>{asked.push(message);return answer;}});
+ ui.window.FileReader=class{readAsText(file){this.result=file.text;this.onload();}};
+ openParents(ui);const before=new Map(ui.memory);
+ const choose=(text,size=text.length)=>{ui.click(ui.get('backupRestore'));Object.defineProperty(ui.get('backupFile'),'files',{configurable:true,value:[{name:'backup.json',size,text}]});ui.get('backupFile').onchange();};
+ for(const [text,message] of [['not json','This file is not a BlitzWord backup.'],['{}','This file is not a BlitzWord backup.'],[JSON.stringify({format:'blitzword-backup',version:2,state:backup}),'This backup was made by a newer version of BlitzWord.']]){
+  choose(text);assert.equal(ui.get('backupStatus').textContent,message+' Nothing was changed.');
+ }
+ choose(file,Storage.BACKUP_LIMIT+1);assert.equal(ui.get('backupStatus').textContent,'This file is too large to be a BlitzWord backup. Nothing was changed.');
+ assert.equal(asked.length,0);assert.deepEqual(ui.memory,before);
+ const at=new Date(madeAt),pad=n=>String(n).padStart(2,'0'),stamp=at.getDate()+' '+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][at.getMonth()]+' '+at.getFullYear()+', '+pad(at.getHours())+':'+pad(at.getMinutes());
+ choose(file);assert.equal(ui.get('backupStatus').textContent,'Restore cancelled. Nothing was changed.');
+ assert.equal(asked[0],'Replace the progress on this device with this backup?\n\nBackup from '+stamp+': Éva · 2400 XP · 40 words introduced · 0 chapters cleared\nThis device now: Reader · 300 XP · 4 words introduced · 0 chapters cleared\n\nA copy of the current progress stays on this device.');
+ choose(JSON.stringify(backupProgress('Older',100,2)));assert.equal(asked.length,2);
+ assert.match(asked[1],/^Replace the progress on this device with this backup\?\n\nBackup: Older · 100 XP · 2 words introduced · 0 chapters cleared\n.*\n\nThis backup has less progress than this device\.\n\n/);
+ assert.deepEqual(ui.memory,before);assert.equal(ui.reloads(),0);
+ answer=true;ui.setFailWrites((key,value)=>key===Storage.KEY&&JSON.parse(value).profile.name==='Éva');
+ choose(file);assert.equal(ui.get('backupStatus').textContent,'There is not enough space on this device to restore this backup. Nothing was changed.');
+ assert.equal(ui.state().profile.name,'Reader');assert.equal(ui.memory.has(Storage.KEY+'_before_restore'),false);assert.equal(ui.get('saveNotice').hidden,true);assert.equal(ui.reloads(),0);
+ ui.setFailWrites(false);choose(file);
+ const restored=ui.state(),kept=JSON.parse(ui.memory.get(Storage.KEY+'_before_restore'));
+ assert.equal(restored.profile.name,'Éva');assert.equal(restored.dragon.xp,2400);assert.equal(Core.parentProgress(restored).introduced,40);assert.deepEqual(restored.learning.words,Core.migrate(backup).learning.words);
+ assert.equal(kept.profile.name,'Reader');assert.equal(kept.dragon.xp,300);assert.equal(restored.revision,kept.revision+1);
+ assert.equal(ui.reloads(),1);assert.equal(ui.get('backupStatus').textContent,'Backup restored. Reloading…');
+ // Nothing can write the replaced progress back before the reload finishes.
+ ui.click(ui.get('parentHome'));assert.equal(ui.state().profile.name,'Éva');assert.equal(JSON.parse(ui.memory.get(Storage.KEY+'_before_restore')).profile.name,'Reader');
+ const again=boot(ui.state());openParents(again);assert.match(again.get('parentLearning').textContent,/^40 \/ 200 words introduced/);assert.match(again.get('parentGrowth').textContent,/2400 XP/);
+ console.log('PASS restore checks the file, asks the parent, keeps the current save, survives a full device and reloads into the backup');
+}
+{
+ const ui=boot(backupProgress('Reader',300,4),{confirm:()=>true});ui.window.FileReader=class{readAsText(file){this.result=file.text;this.onload();}};openParents(ui);
+ const other=ui.state();other.profile.name='Other tab';ui.memory.set(Storage.KEY,JSON.stringify(other));
+ ui.click(ui.get('backupRestore'));Object.defineProperty(ui.get('backupFile'),'files',{configurable:true,value:[{name:'backup.json',size:1,text:Storage.backupFile(backupProgress('Éva',2400,40)).text}]});ui.get('backupFile').onchange();
+ assert.equal(ui.get('saveNotice').hidden,false);assert.match(ui.get('saveMessage').textContent,/Another tab updated this adventure/);
+ assert.equal(ui.state().profile.name,'Other tab');assert.equal(ui.memory.has(Storage.KEY+'_before_restore'),false);assert.equal(ui.reloads(),0);
+ console.log('PASS restore never overwrites progress another tab saved');
+}
+{
+ const ui=boot(backupProgress('Reader',10,1),{confirm:()=>true});
+ for(const suffix of ['_backup','_legacy_backup','_unreadable_backup','_before_restore'])ui.memory.set(Storage.KEY+suffix,'{}');
+ ui.click(ui.get('resetBtn'));
+ for(const suffix of ['','_backup','_legacy_backup','_unreadable_backup','_before_restore'])assert.equal(ui.memory.has(Storage.KEY+suffix),false,suffix);
+ assert.equal(ui.reloads(),1);
+ console.log('PASS Reset this device also erases the copy kept by a restore');
 }
