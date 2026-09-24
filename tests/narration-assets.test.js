@@ -15,7 +15,7 @@ test('every recovered narration clip has a verified local MP3 and runtime lookup
   else {assert.ok(entry,clip.text);assert.equal(entry.file,clip.file);assert.equal(entry.sha256,receipt.sha256);assert.ok(entry.duration>.2);}
  }
 });
-test('recovered runtime covers current words, teaching and corrections except explicit fallback-only phrases',()=>{
+test('recovered runtime covers all current approved words, teaching and corrections',()=>{
  const presentOrFallback=text=>{
   if(fallbackOnly.has(text))assert.equal(manifest.clips[text],undefined,text);
   else assert.ok(manifest.clips[text],text);
@@ -27,7 +27,7 @@ test('recovered runtime covers current words, teaching and corrections except ex
  }
  for(const enemy of C.enemies){presentOrFallback('A '+enemy.name+' is on the path. Ready to battle?');presentOrFallback('Reading check complete. Now your first chapter begins. A '+enemy.name+' is on the path. Ready to battle?');}
  presentOrFallback('Pip is on the rock.');presentOrFallback('Let’s try a few words. Look at the word. When it hides, tap the same word. Tap the question mark if you are not sure.');
- assert.ok(fallbackOnly.has('gate'));assert.ok(fallbackOnly.has('The gate is by the castle.'));
+ assert.equal(fallbackOnly.size,0);for(const text of ['gate','The gate is by the castle.','Practice turn. You keep your heart. The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The word was gate.'])assert.ok(manifest.clips[text],text);
 });
 test('remaining story and shield narration gaps use immediate device speech without absent-file requests',()=>{
  const {narrator}=require('../audio');let downloads=0,spoken=[];
