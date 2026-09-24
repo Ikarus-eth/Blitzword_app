@@ -59,8 +59,8 @@
   }
   function mount(doc){
     if(!doc||!doc.getElementById)return;
-    const $=function(id){return doc.getElementById(id);},storage=root.localStorage;
-    let state=load(storage),index=0;
+    const $=function(id){return doc.getElementById(id);},view=doc.defaultView||(typeof globalThis!=='undefined'?globalThis:null),storage=view&&view.localStorage?view.localStorage:null;
+    let state=storage?load(storage):{},index=0;
     const player=$('qaPlayer'),play=$('qaPlay'),good=$('qaGood'),bad=$('qaBad'),note=$('qaNote');
     function stop(){try{player.pause();player.currentTime=0;}catch{}play.textContent='Play';}
     function current(){return SAMPLES[index];}
