@@ -814,7 +814,18 @@ function renderSummary() {
 }
 
 function galaxyMask(){
-  return '<svg class="mask forestSpiral" viewBox="0 0 180 110" aria-hidden="true"><path class="spiralGlow" d="M92 53c-12-8-25 0-21 9 6 15 39 10 49-5 15-24-20-41-50-25-30 15-34 43-3 52 36 10 84-13 89-39 6-30-49-39-84-24-36 15-62 40-57 64"/><path class="spiralLine" d="M92 53c-12-8-25 0-21 9 6 15 39 10 49-5 15-24-20-41-50-25-30 15-34 43-3 52 36 10 84-13 89-39 6-30-49-39-84-24-36 15-62 40-57 64"/></svg>';
+  // Fixed artwork for every target: the ribbons and sparks never encode word length.
+  const ribbon='M90 55c13-7 20 4 8 11-15 9-35 0-27-12 11-19 47-22 58-6 14 20-23 39-55 34-42-6-36-36-6-53 24-14 62-13 72-3 8 9-7 17-20 18';
+  const trails='M38 43C19 64 34 88 68 92c40 6 91-19 87-41-2-8-9-10-16-8M54 32c15-13 34-20 52-21M80 96c22-1 47-10 60-23';
+  const sparks=[[30,33,3],[47,18,2],[70,13,3.5],[100,8,2],[131,15,3],[151,32,3.5],[159,57,2],[145,85,3],[119,97,2.5],[87,103,2],[52,93,3],[28,77,2.5],[21,55,2],[115,27,1.6]];
+  return `<svg class="mask forestSpiral" viewBox="0 0 180 110" aria-hidden="true" focusable="false">
+    <g transform="rotate(-22 90 55)">
+      <ellipse class="spiralHaze" cx="91" cy="56" rx="55" ry="30"/>
+      ${['spiralGlow','spiralBloom','spiralLine','spiralCore'].map(cls=>`<path class="${cls}" d="${ribbon}"/><path class="${cls} spiralTrail" d="${trails}"/>`).join('')}
+    </g>
+    <g class="spiralSparks">${sparks.map(([x,y,r])=>`<path d="M${x} ${y-r*1.8}Q${x+r*.2} ${y-r*.2} ${x+r} ${y}Q${x+r*.2} ${y+r*.2} ${x} ${y+r*1.8}Q${x-r*.2} ${y+r*.2} ${x-r} ${y}Q${x-r*.2} ${y-r*.2} ${x} ${y-r*1.8}Z"/>`).join('')}</g>
+    <g class="spiralDust"><circle cx="39" cy="48" r="1"/><circle cx="58" cy="29" r=".8"/><circle cx="139" cy="58" r="1.2"/><circle cx="108" cy="88" r=".9"/><circle cx="63" cy="101" r=".7"/><circle cx="152" cy="71" r=".8"/></g>
+  </svg>`;
 }
 function syncSound(){
   if(!state)return;

@@ -19,6 +19,7 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 | Corrections and teaching (point 4) | Chosen word above target, aligned letter differences and narration of both; full picture teaching for new words, repeated misses and missed reviews. Help shows only the target and keeps the same teaching rule. | [Correction release and verification](CORRECTIONS_RELEASE.md) |
 | Speed guidance and quick words (point 7) | Voluntary suggestions after 20 eligible familiar-word answers; Stride (1500 ms), Jog (1200 ms), effective-pace highlighting and per-word historical quick evidence in Parents. Review schedules and Ride/Fly locks remain. | [Speed release and verification](SPEED_GUIDANCE_RELEASE.md) |
 | Combat and presentation | Mage staff/lightning, Pip assists/final blows, answer-locked reactions, cancellation and reduced motion; teaching-image framing, enemy names and Easier-left/Same-right defeat choices. | [Combat](COMBAT_REACTIONS.md), [child feedback](SEPT23_CHILD_FEEDBACK.md) |
+| Word-mask spiral | Static golden ribbons with a warm glow and star sparks match the user's new reference. The shared battle/reading-check mask remains 180 × 110 px and identical for every target. | [Reference](BLITZWORD_REFERENCE_IMAGES.md#golden-word-mask-spiral--24-september-2026), [verification](#golden-spiral--24-september-2026) |
 | Layered enemies and health timing | Twenty selected enemy families use transparent painted parts and articulated 2D reactions. Visible health and shield consumption wait for impact; damage and observations remain saved immediately. | [Enemy release and source assets](enemies/LAYERED_ENEMIES_RELEASE.md) |
 | Game controls | Fullscreen button, handlers and notice removed at the user’s request. The existing flexible toolbar closes the gap; sound, pause and Home remain. Home Screen presentation and learner saves are unchanged. | [Product specification](BLITZWORD_PRODUCT_SPEC.md) |
 | Soundscape | Continuous low battle music through words and choices, restrained flute/percussion, gentle speech ducking and independent saved controls. Implementation and local regression checks complete; deployment verification follows below. | [Soundscape](SOUNDSCAPE_RELEASE.md) |
@@ -33,6 +34,12 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 - The 35 chapter backgrounds are deployed and verified against source bytes. Rendered tablet/phone scenery QA remains blocked because the browser could not verify its admin-enforced security policy; [chapter scenery](CHAPTER_SCENERY_RELEASE.md) records the exact limit and isolated review fixtures.
 - Physical iPad behavior and listening remain unverified. XP pacing is calibrated by deterministic simulations, not observed child play.
 - An additional dragon after full growth is an optional future idea, not an approved unfinished feature. Pip remains a provisional child-facing label; no commercial rename is established. Native App Store packaging remains a later phase after web iteration.
+
+## Golden spiral — 24 September 2026
+
+Build `golden-spiral-20260924-r1` replaces the two-line word mask with tilted golden ribbons, cream light cores, amber glow and static star sparks, following the user's supplied reference. The inline SVG stays 180 × 110 px in the existing shared battle/reading-check renderer. Exposure and choice timing, learning rules, save keys and other artwork are unchanged.
+
+Local verification: `npm ci --ignore-scripts --offline` succeeded; all 205 core tests and 71 UI-flow groups passed. Isolated Chromium previews at 1180 × 820, 820 × 1180, 390 × 844 and 844 × 390 verified four answer choices, fixed mask dimensions, no mask animation (including reduced motion), no horizontal overflow, no page errors and no learner-storage writes. The four layouts were visually reviewed. Physical iPad/Safari remains untested. Deployment verification is pending.
 
 ## Layered enemy release — 24 September 2026
 

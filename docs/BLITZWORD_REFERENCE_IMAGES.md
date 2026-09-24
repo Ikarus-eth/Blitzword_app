@@ -18,6 +18,10 @@ The original `00a_heroes_character_bible.png` records the approval of the three 
 
 ## Active references
 
+### Golden word-mask spiral — 24 September 2026
+
+The [user-supplied spiral crop](references/golden-spiral-20260924.png) is the approved direction for the mask after word exposure: tilted golden ribbons, bright cream centres, soft amber light and small star sparks. Source: the user's attached image on 24 September 2026, preserved unchanged. It guides only the spiral, not the background or Pip. The runtime artwork is an inline SVG in `galaxyMask()` with styles in `styles.css`; it remains static and fixed-size for every word.
+
 ### Selected enemies — 23 September 2026
 
 `assets/enemies/selected-lineup.png` records the user's selections: 01–05 A,
