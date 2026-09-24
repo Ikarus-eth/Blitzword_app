@@ -15,9 +15,10 @@ test('unavailable speech never blocks the child',()=>{
  let done=0;narrator({}).speak('sat',{onEnd:()=>done++});assert.equal(done,1);
 });
 
-test('gate uses the English homophone without downloading the reported clip or changing boundaries',()=>{
+test('gate uses the pronunciation helper only when no approved exact recording exists',()=>{
  let utterance,downloads=0,done=0,boundary;
  const clips=require('../narration').clips;
+ assert.equal(clips.gate,undefined);
  const n=narrator({clips,AudioContext:function(){throw Error('Unexpected audio context');},fetchAudio(){downloads++;},synth:{cancel(){},resume(){},getVoices(){return[];},speak(u){utterance=u;}},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule(){}});
  for(const text of ['gate','The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The gate is by the castle.']){
   n.speak(text,{onEnd:()=>done++,onBoundary:e=>boundary=e.charIndex});assert.equal(utterance.text,text.replace(/gate/g,'gait'));assert.equal(utterance.text.length,text.length);assert.equal(utterance.lang,'en-GB');utterance.onboundary({charIndex:text.indexOf('gate')});assert.equal(boundary,text.indexOf('gate'));utterance.onend();
@@ -26,6 +27,22 @@ test('gate uses the English homophone without downloading the reported clip or c
  n.speak('gate',{onEnd:()=>done++});n.cancel();utterance.onend();assert.equal(done,4);
 });
 
+test('an approved exact recording wins over fallback and personalized dragon text stays local',async()=>{
+ let fetched='',started=0,synthCalls=0,done=0;
+ class Context{
+  constructor(){this.state='running';this.destination={};}
+  resume(){return Promise.resolve();}
+  createGain(){return {gain:{value:1},connect(){}};}
+  decodeAudioData(){return Promise.resolve({duration:.5});}
+  createBufferSource(){return {buffer:null,onended:null,connect(){},disconnect(){},stop(){},start(){started++;queueMicrotask(()=>this.onended&&this.onended());}};}
+ }
+ const n=narrator({clips:{gate:{file:'gate.mp3'}},AudioContext:Context,fetchAudio:async file=>{fetched=file;return {ok:true,arrayBuffer:async()=>new ArrayBuffer(8)};},synth:{cancel(){},resume(){},getVoices(){return[];},speak(){synthCalls++;}},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule(){}});
+ n.unlock();n.speak('gate',{onEnd:()=>done++});await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(fetched,'gate.mp3');assert.equal(started,1);assert.equal(synthCalls,0);assert.equal(done,1);
+ let utterance,downloads=0;
+ const custom=narrator({clips:require('../narration').clips,fetchAudio(){downloads++;},synth:{cancel(){},resume(){},getVoices(){return[];},speak(u){utterance=u;}},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule(){}});
+ custom.speak('Ember is on the rock.');assert.equal(utterance.text,'Ember is on the rock.');assert.equal(downloads,0);
+});
 
 test('speech volume applies to fallback and a muted narrator still completes exactly once',()=>{
  let utterance,done=0;
