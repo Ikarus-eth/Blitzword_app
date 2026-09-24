@@ -870,3 +870,28 @@ Initial, tuneable suggestion details:
 - Save the offer with the battle result. Try, No thanks, or choosing another opponent can continue. After an offer, require 20 new qualifying answers before another. A pace change starts a fresh sample, while selecting the same pace preserves its sample. Pending offers and responses survive reopening; they never interrupt a reading question or a number duel. The sample stays bounded at 20 entries.
 
 Quick means an independent correct campaign answer in under 1500 ms after the choices appear, at a positive exposure of 950 ms or faster, with a finite positive response time and no timing interruption. Parents shows a historical **Quick recorded** marker and the count, separately from **In review**. This is evidence of one or more past quick answers, not a claim of mastery or retained reading. Accurate slow words remain in the existing spaced-review schedule, and quick words also continue to receive reviews. Retained raw answers and the existing per-word archived quick totals provide the evidence without a new unbounded log; earlier archived totals are preserved as recorded. New compaction rejects zero, negative and invalid timings for quick evidence. XP, chapter requirements and saves keep their established rules. Point 8 requires the next go.
+
+
+## Point 8: parent learning view — 24 September 2026
+
+The user authorized point 8 after the verified speed-guidance release. Parents keeps the existing arithmetic gate and now puts learning first, with sound settings at the bottom. This is a reporting change: no learning schedule, reward, chapter requirement, assessment choice or learner save is reset.
+
+The map contains the exact 200 playable curriculum words, grouped by the seven campaigns, with search and state/quick filters. Colour is also expressed in text. The states show the highest recorded evidence:
+
+- **New:** no saved introduction, observation, teaching, help or reading-check record, and no higher milestone.
+- **Learning:** encountered without a higher recorded milestone.
+- **Secured:** the existing saved word milestone (`securedAt` / `wordXPClaimed`), normally three separated independent successes across two battles. Earlier grandfathered milestones remain.
+- **Kept after 7 days / 30 days:** an independent correct campaign answer whose saved pre-question gap is at least 7 / 30 full 24-hour days since the most recent known answer or help. A later miss remains visible and returns through the existing review rules; it does not erase historical evidence.
+- **Quick** remains the separate point 7 marker and count. Neither quick nor a retained milestone removes a word from review or asserts mastery.
+
+Tapping a word opens its history: practice totals, independent correct/helped answers, teaching/help counts, quick counts, available dates, mix-ups, differing letter positions and all retained individual practice/demo/reading-check/teaching/help events. Archived events remain in totals; individual events that were already compacted are not reconstructed. The first retained practice date is not labelled as a known introduction date. Recent response times and saved gaps are shown when available. Closing history returns focus to its word.
+
+Tricky words shows the ten most common target → chosen pairs and the ten slowest words by mean valid independent response time, with sample counts. Correct and incorrect independent timings are included; helped, interrupted and non-positive timings are excluded. Letter-position counts preserve the existing direct positional comparison: start/middle/end, and vowels a/e/i/o/u versus consonants. One wrong choice can contribute several differing positions; these are descriptive counts, not diagnoses. The selected word's history also shows its own mix-ups and position counts.
+
+Weekly retention shows the current and preceding eleven local Monday–Sunday weeks. Each word contributes its **first qualifying campaign check of that week**, after at least 24 hours without a known answer or help. Correct and unaided succeeds; wrong or helped does not. Interrupted displays are excluded. Later retries or more successful days cannot improve the same word's result for that week. The table shows successful words / checked words and their percentage. A week with no qualifying checks shows no score, not 0%.
+
+New questions snapshot their gap when prepared, using the latest recorded word answer, help and assessment exposure. Leaving an already prepared/shown question and returning days later does not lengthen that snapshot. The answer also saves its local week. The snapshot and week are reporting evidence only. Existing pending questions keep their original choices and timing; without a gap snapshot they do not fabricate a delayed-retention result.
+
+Earlier saves keep their raw records, archive totals and milestones. Earlier answer timestamps or aggregate gap buckets cannot reliably establish whether a question was already shown, whether another exposure intervened, or which word had the first qualifying check of a week. Such records do not generate new 7/30-day claims. Weeks with potentially qualifying older evidence that cannot be resolved are explicitly unavailable. New compacted evidence stores one first outcome per word/week plus the first qualifying 7/30-day dates, preserving the same report after raw-history compaction. It does not recreate missing old events.
+
+The approved sequence through point 8 is complete when this release is deployed and verified. Point 9 remains discussion-only and point 10 remains parked; neither is authorized by this implementation.

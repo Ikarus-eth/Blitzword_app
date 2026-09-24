@@ -55,7 +55,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 | 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
 | 6 | Story sentences a child can read (option c) | Deployed and verified live on 24 September 2026 (build `story-pictures-20260924-r1`). All 34 pairs approved. [Release record](STORY_PICTURES_RELEASE.md) |
 | 7 | Speed suggestions, two new steps, per-word quick status | Deployed and verified live on 24 September 2026 (build `speed-guidance-20260924-r1`). Names/icons proposed for review. [Release record](SPEED_GUIDANCE_RELEASE.md) |
-| 8 | Parent view: word map, tricky list, weekly retention | Approved, not started |
+| 8 | Parent view: word map, tricky list, weekly retention | Implemented and locally tested; deployment verification pending. Build `parent-learning-20260924-r1`. [Release record](PARENT_LEARNING_RELEASE.md) |
 
 **1. Durable saves.** Two releases with a stop in between.
 - Evidence: every answer is stored forever. The whole save is rewritten every second while playing and duplicated as `_backup`. At 15 min/day the save grows by about 60k characters per day; with the duplicate it passes Chromium's measured 5.2M-character localStorage limit around day 40 (around day 14 at 45 min/day). At the limit `save()` throws and play blocks.
@@ -253,3 +253,10 @@ Merged in [PR #66](https://github.com/Ikarus-eth/Blitzword_app/pull/66) as `e0a7
 Build `speed-guidance-20260924-r1` implements optional one-step speed offers after 20 eligible familiar-word answers, Stride (1500 ms), Jog (1200 ms), effective-speed highlighting and per-word quick evidence in Parents. Concentrated misses keep word help first. Suggestions, settings, pending questions and archived quick counts survive reopening; Ride/Fly gates and existing review schedules remain. The proposed names and line icons are ready for user review. The older self-paced checkbox now also preserves a saved ready question, and the map label follows accepted pace changes.
 
 All 205 core tests and 71 UI-flow groups pass on Node 22.23.3; 33 isolated Chromium scenarios pass without page errors. Exact rules and limitations are in [the release record](SPEED_GUIDANCE_RELEASE.md). Merged in [PR #68](https://github.com/Ikarus-eth/Blitzword_app/pull/68) as `7f8dcd11b9b56d8873eb8f5df36e9ead34b5249d`. [Pages run #78](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35978654773) succeeded, including deployment. At 09:02 UTC on 24 September 2026, the live marker was `speed-guidance-20260924-r1`; cache-busted `index.html`, `game-core.js`, `app.js` and `styles.css` matched the merge byte for byte, and main was still that commit. [Verification record](SPEED_GUIDANCE_DEPLOYMENT.json). Physical iPad and Safari/WebKit have not been tested. Stop here; point 8 awaits the next go.
+
+
+## Parent learning view (point 8) — 24 September 2026
+
+Implemented locally: the exact 200-word map with five evidence states and a separate quick marker; word search/filter/history; common mix-ups, letter-position counts and slow-word timings; twelve weekly first-check retention rows. Learning is above play totals and sound settings are at the bottom. Recent and archived totals are combined without editing learner evidence. Earlier missing gap/first-check detail is marked unavailable instead of invented.
+
+All 222 core tests and 76 UI-flow groups pass on Node 22.23.3, including the 90-day, 45-min/day save-size regression. Browser checks and data limits are recorded in [the release record](PARENT_LEARNING_RELEASE.md). Deployment is pending; this is not yet a live-release claim. Physical iPad and Safari/WebKit remain untested. After verification, stop: the approved sequence through point 8 is complete, and points 9 and 10 remain parked.

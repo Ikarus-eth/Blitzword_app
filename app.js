@@ -14,6 +14,7 @@ const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:37
 let spriteSerial=0;
 let selectedMapArea=null;
 let storyControls=null;
+let parentReport=null,parentWordReturn=null;
 const COMBAT_MS=1200;
 // Learning and damage are committed on answer; only the health presentation waits.
 const IMPACT_MS=Math.round(COMBAT_MS*.55);
@@ -197,13 +198,7 @@ function renderParent(){
   $('#parentIdle').textContent=formatTime(p.totals.idle);$('#parentLegacy').textContent=formatTime(p.legacyMs);
   $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
   $('#parentLearning').textContent=p.introduced+' / '+Content.words.length+' words introduced · '+p.practiced+' practiced twice · '+p.correct+' / '+p.independent+' unaided answers correct.';
-  $('#parentQuickSummary').textContent=p.wordSpeeds.filter(w=>w.quick).length+' / '+p.wordSpeeds.length+' encountered words have a quick answer recorded.';
-  const speeds=$('#parentWordSpeeds');speeds.replaceChildren();
-  for(const word of p.wordSpeeds){
-    const row=document.createElement('tr');
-    for(const value of [word.word,word.quick?'Quick recorded':'In review',String(word.quickAnswers)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}
-    speeds.append(row);
-  }
+  renderParentLearning();
   const checked=p.storyChecks.filter(r=>typeof r.correct==='boolean'),matched=checked.filter(r=>r.correct).length;
   $('#parentStorySummary').textContent=checked.length?matched+' / '+checked.length+' first choices matched · '+checked.filter(r=>r.helped).length+' used listening.':'No picture choices recorded yet.';
   const stories=$('#parentStories');stories.replaceChildren();
@@ -220,6 +215,66 @@ function renderParent(){
   }
   $('#parentEmpty').hidden=p.days.length>0;populateSoundSettings();$('#backupStatus').textContent='';save();
 }
+function parentRow(body,values){
+  const row=document.createElement('tr');for(const value of values){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);return row;
+}
+function parentSeconds(ms){return Number.isFinite(ms)?(ms/1000).toFixed(1)+' s':'—';}
+function parentDate(at){const d=new Date(at);return at&&Number.isFinite(d.getTime())?d.toLocaleString():'Not recorded';}
+function renderParentLearning(){
+  parentReport=Core.parentLearning(state,Date.now());$('#parentWordDetail').hidden=true;
+  $('#parentQuickSummary').textContent=parentReport.words.filter(w=>w.quick).length+' / '+parentReport.words.filter(w=>w.status!=='new').length+' encountered words have a quick answer recorded.';
+  const legend=$('#parentWordLegend');legend.replaceChildren();
+  for(const [key,label] of Object.entries(Core.WORD_STATUS)){const item=document.createElement('span');item.className='wordStatus '+key;item.textContent=label+' · '+parentReport.counts[key];legend.append(item);}
+  renderParentWordMap();
+  const weeks=$('#parentWeeks');weeks.replaceChildren();
+  for(const week of parentReport.weeks)parentRow(weeks,[week.week,week.unknown?'Unavailable':week.words?week.correct+' / '+week.words:'No checks',week.rate===null?'—':Math.round(week.rate*100)+'%']);
+  $('#parentRetentionNote').textContent=parentReport.weeks.some(w=>w.unknown)?'Some older weeks lack the detail needed to identify the first check of each word. They are marked unavailable; their saved totals are preserved.':'No checks means there is no qualifying evidence for that week, not a score of zero. Earlier archived detail may be unavailable.';
+  const mixups=$('#parentMixups');mixups.replaceChildren();
+  for(const mixup of parentReport.mixups.slice(0,10))parentRow(mixups,[mixup.word+' → '+mixup.chosen,mixup.count]);
+  $('#parentMixupsEmpty').textContent=parentReport.mixups.length?'Top '+Math.min(10,parentReport.mixups.length)+(parentReport.mixups.length===1?' pair':' pairs')+', including archived answers.':'No unaided wrong choices recorded.';
+  const slow=$('#parentSlow');slow.replaceChildren();
+  for(const word of parentReport.slowest.slice(0,10))parentRow(slow,[word.word,parentSeconds(word.averageMs),word.timed]);
+  $('#parentSlowEmpty').textContent=parentReport.slowest.length?'Top '+Math.min(10,parentReport.slowest.length)+' words, including archived timings.':'No valid unaided response times recorded.';
+  const positions=$('#parentErrorPositions');positions.replaceChildren();
+  for(const [key,label] of [['start','Start'],['middle','Middle'],['end','End'],['vowel','Vowels'],['consonant','Consonants']]){
+    const item=document.createElement('div'),number=document.createElement('strong'),name=document.createElement('span');number.textContent=parentReport.positions[key];name.textContent=label;item.append(number,name);positions.append(item);
+  }
+}
+function renderParentWordMap(){
+  if(!parentReport)return;
+  const search=$('#parentWordSearch').value.trim().toLowerCase(),filter=$('#parentWordFilter').value;
+  const words=parentReport.words.filter(w=>w.word.includes(search)&&(filter==='all'||filter==='quick'&&w.quick||w.status===filter));
+  $('#parentWordCount').textContent=words.length+' / '+Content.words.length+' words shown. Tap a word for its history.';
+  const map=$('#parentWordMap');map.replaceChildren();
+  for(const [index,chapter] of Content.chapters.entries()){
+    const groupWords=words.filter(w=>chapter.words.includes(w.word));if(!groupWords.length)continue;
+    const group=document.createElement('section'),heading=document.createElement('h3'),grid=document.createElement('div');group.className='wordMapGroup';grid.className='wordMapGrid';heading.textContent='Campaign '+(index+1)+' · '+dragonText(chapter.name);
+    for(const word of groupWords){
+      const button=document.createElement('button'),name=document.createElement('span'),status=document.createElement('small');
+      button.className='parentWord wordStatus '+word.status;button.dataset.word=word.word;button.dataset.status=word.status;button.dataset.quick=String(word.quick);
+      button.setAttribute('aria-label',word.word+', '+word.label+(word.quick?', quick answer recorded':'')+', show history');
+      name.textContent=word.word;status.textContent=word.status==='kept7'?'7 days':word.status==='kept30'?'30 days':word.label;button.append(name,status);
+      if(word.quick){const quick=document.createElement('span');quick.className='wordQuick';quick.textContent='⚡';quick.setAttribute('aria-hidden','true');button.append(quick);}
+      button.onclick=()=>openParentWord(word,button);grid.append(button);
+    }
+    group.append(heading,grid);map.append(group);
+  }
+}
+function openParentWord(word,button){
+  parentWordReturn=button;$('#parentWordTitle').textContent=word.word+' · '+word.label;
+  $('#parentWordSummary').textContent=word.correct+' / '+word.independent+' unaided practice answers correct · '+word.helped+' helped · '+word.teaching+' teaching visits · '+word.support+' help events · '+word.quickAnswers+' quick '+(word.quickAnswers===1?'answer. ':'answers. ')+(word.timed?'Average response '+parentSeconds(word.averageMs)+' from '+word.timed+' timed '+(word.timed===1?'answer.':'answers.'):'No valid response timing yet.');
+  const mixups=Object.entries(word.wrong).sort((a,b)=>b[1]-a[1]);$('#parentWordDifficulties').hidden=!mixups.length;
+  $('#parentWordDifficulties').textContent=mixups.length?'Mix-ups: '+mixups.map(([chosen,count])=>chosen+' ('+count+')').join(', ')+'. Letter differences: start '+word.positions.start+' · middle '+word.positions.middle+' · end '+word.positions.end+' · vowels '+word.positions.vowel+' · consonants '+word.positions.consonant+'.':'';
+  const dates=[];for(const [key,label] of [[word.introducedAt?'introducedAt':'firstAt',word.introducedAt?'Introduced':'First saved practice'],['securedAt','Secured'],['kept7At','Kept after 7 days'],['kept30At','Kept after 30 days'],['lastAt','Last seen'],['dueAt','Next review']])if(word[key])dates.push(label+': '+parentDate(word[key]));
+  $('#parentWordDates').textContent=dates.join(' · ')||'No practice dates recorded.';
+  $('#parentWordArchive').textContent=(word.archivedAnswers||word.archivedTeaching||word.archivedSupport?word.archivedAnswers+' older practice answers, '+word.archivedTeaching+' teaching visits and '+word.archivedSupport+' help events are included in the totals above; their individual events are no longer stored. ':'All retained events for this word are listed below. Reading-check and demo answers are separate from practice totals. ')+'Older records may not show how long the word was unseen. Those records are not used for retention.';
+  const body=$('#parentWordEvents'),events=Core.parentWordHistory(state,word.word);body.replaceChildren();
+  for(const event of events)parentRow(body,[parentDate(event.at),event.kind,(event.chosen?event.chosen+' · ':'')+event.outcome.replace(/-/g,' '),parentSeconds(event.responseMs),Number.isFinite(event.gapMs)?(event.gapMs/Core.DAY).toFixed(1)+' days':'—']);
+  $('#parentWordHistoryEmpty').textContent=events.length?'Recent saved events, newest first.':'No individual events remain for this word.';
+  $('#parentWordDetail').hidden=false;$('#parentWordDetail').scrollIntoView?.({block:'start'});$('#parentWordTitle').focus();
+}
+$('#parentWordSearch').oninput=$('#parentWordFilter').onchange=()=>{if(parentReport){$('#parentWordDetail').hidden=true;renderParentWordMap();}};
+$('#parentWordClose').onclick=()=>{$('#parentWordDetail').hidden=true;if(parentWordReturn?.isConnected){parentWordReturn.focus();parentWordReturn.scrollIntoView?.({block:'center'});}};
 function backupStatus(text,target='#backupStatus'){$(target).textContent=text;}
 function backupDate(at){const d=new Date(at),pad=n=>String(n).padStart(2,'0');return d.getDate()+' '+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]+' '+d.getFullYear()+', '+pad(d.getHours())+':'+pad(d.getMinutes());}
 function backupLine(label,p){return label+': '+p.name+' · '+p.xp+' XP · '+p.words+' words introduced · '+p.chapters+' chapters cleared';}
