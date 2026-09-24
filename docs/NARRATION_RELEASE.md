@@ -35,3 +35,11 @@ Four recovered Pip-evolution recordings are preserved as `assets/narration/evolu
 The package's hashes and decode checks establish file integrity, not pronunciation or subjective voice consistency. The recovered set mixes standalone Tom recordings, silence-separated source batches and concatenated recordings assembled from earlier components. Audible listening review and physical iPad playback remain outstanding. The five gate-family clips are explicitly excluded from runtime until their pronunciation is reviewed.
 
 No learner storage, curriculum progression, assessment scoring, XP, multiplication rules or save migration changes are introduced by this narration release.
+
+## Integration and deployment — 24 September 2026
+
+The recovered corpus was merged in [PR #39](https://github.com/Ikarus-eth/Blitzword_app/pull/39) as `c87372eab40e37996460722f93d96d0ef5b0f50f`. Its first Pages run stopped before deployment because three pre-recovery narration tests still encoded the old 165-clip assumptions. No Pages deployment occurred from that failed run.
+
+The tests were updated in [PR #40](https://github.com/Ikarus-eth/Blitzword_app/pull/40), merged as `6d38f0ea9c4a015e6241347a7ec8487c1d229a94`. Pages run [35941054214](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35941054214) passed all 118 tests and reported a successful Pages deployment for that exact commit. The uploaded Pages artifact was inspected after the run: it contains build marker `narration-recovery-20260924-r1`, narration manifest `recorded-voice-20260924-r2`, 994 narration MP3s, `recoveredClipCount: 990`, `runtimeClipCount: 985`, no runtime `gate` entry, and representative `en-male-001.mp3`, `core-male-001.mp3`, `core-male-825.mp3` and `evolution-0.mp3` files.
+
+A separate HTTP fetch from the public `github.io` origin could not be completed in this execution environment: the web tool rejected that host and the container had no DNS resolution for it. The GitHub Pages action itself reported `success` after `syncing_files` and returned the expected Pages URL. Treat this as verified GitHub Pages deployment plus deployed-artifact verification, not an independent live-origin HTTP check. Audible corpus review and physical iPad playback remain outstanding.
