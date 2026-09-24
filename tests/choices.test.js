@@ -175,3 +175,28 @@ test('new practice questions draw fair sets; saved questions keep their options;
   for(const x of Content.assessmentPools.flat())assert.deepEqual([...Core.chooseOptions(x,seeded(9))].sort(),[...x.d].sort(),x.w);
   for(const x of Content.legacyWords)assert.deepEqual([...Core.chooseOptions(x,seeded(9))].sort(),[...x.d].sort(),x.w);
 });
+
+test('all 26 fixed reading-check sets pass independent clue and guessing checks',t=>{
+ const items=Content.assessmentPools.flat(),curriculum=curriculumWords();assert.equal(items.length,26);let total=0;
+ for(const item of items){
+  assert.equal(item.d.length,4);assert.equal(new Set(item.d).size,4);assert.ok(item.d.includes(item.w));assert.equal(item.pool,undefined,'the check stays fixed');
+  for(const [name,count] of Object.entries(clues(item.d,item.w)))assert.ok(count>=2,item.w+' '+name);
+  assert.deepEqual(giveaways(item.d,item.w),[],item.w);const guess=middleChance(item.d,item.w);assert.ok(guess<=.25,item.w);total+=guess;
+  for(const word of item.d.filter(x=>x!==item.w))assert.ok(!BLOCKED.has(word),item.w+' '+word);
+  for(const word of item.madeUp||[]){assert.ok(item.d.includes(word));assert.ok(!curriculum.has(word),word);assert.match(word,/^[a-z]+$/);assert.match(word,/[aeiouy]/);}
+  const random=seeded(62),draws=Array.from({length:100},()=>Core.chooseOptions(item,random));
+  for(const drawn of draws)assert.deepEqual([...drawn].sort(),[...item.d].sort());
+  assert.equal(new Set(draws.map(d=>d.indexOf(item.w))).size,4,item.w+' position');
+ }
+ t.diagnostic('Reading-check similarity guess: '+(100*total/items.length).toFixed(1)+'%');
+});
+
+test('a pending reading check retains its old answers through save migration and completion',()=>{
+ let s=Core.migrate(Core.fresh());Core.startAssessment(s,START);const q=Core.prepareAssessment(s,START,()=>0);
+ assert.equal(q.target,'you');q.options=['yue','you','your','yuo'];q.phase='choices';
+ const before=JSON.parse(JSON.stringify(q));s=Core.migrate(JSON.parse(JSON.stringify(s)));
+ assert.deepEqual(Core.prepareAssessment(s,START+1000,seeded(2)),before);
+ Core.answerAssessment(s,'you',START+1500);assert.equal(s.assessment.progress.records.at(-1).correct,true);
+ const next=Core.prepareAssessment(s,START+2000,seeded(3)),item=Content.assessmentPools.flat().find(x=>x.w===next.target);
+ assert.deepEqual([...next.options].sort(),[...item.d].sort());
+});
