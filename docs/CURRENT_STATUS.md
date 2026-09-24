@@ -114,7 +114,7 @@ The test file recomputes the checks independently of `game-core.js`. Nine delibe
 
 In real Chromium at an iPad-sized viewport, new practice questions showed fair drawn sets. A question saved with the old options showed them unchanged, both at first load and after leaving and reopening the page. There were no page errors.
 
-Limits: not tested on an iPad. 27 candidates are real but rare words a child will likely treat as made up (for example awn, awl, oaf, iff, hew); the rules allow them.
+Limits: not tested on an iPad. 18 candidates, used 27 times across the lists, are real but rare words a child will likely treat as made up (for example awn, awl, oaf, iff, hew); the rules allow them.
 
 Deployment: pending.
 
