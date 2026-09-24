@@ -7,6 +7,9 @@
   const GAPS = [1,3,7,14,30];
   const TARGET_MS = 10 * 60 * 1000;
   const XP_MULTIPLIER = 1.75, DAILY_XP = 20;
+  // Raw history kept in the save. Older entries roll into s.archive totals so the save stays small.
+  const HISTORY_LIMITS = {answers:500,teaching:200,support:200,sessions:50,duels:30};
+  const GAP_DAYS = [1,3,7,14,30];
   const byWord = Object.fromEntries([...Content.words,...Content.legacyWords].map(item => [item.w,item]));
   const iso = now => new Date(now).toISOString();
   const copy = value => JSON.parse(JSON.stringify(value));
@@ -21,7 +24,7 @@
       math:{best:null,winStreak:0,round:null,records:[]},
       rewards:{shield:false,readingWins:0,shieldEarnedAt:null,xpDays:{},speedHistory:{}},
       settings:{selfPaced:false,speed:null,soundscape:true}, activity:'route', screen:'setup', battle:null,
-      teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false};
+      teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false, archive:archiveBase()};
   }
   function migrate(old) {
     if (!old || typeof old !== 'object' || Array.isArray(old)) throw new Error('Invalid saved adventure');
@@ -91,9 +94,78 @@
       s.chapterRulesVersion=1;
       for(const a of Content.areas){const wins=Math.max(0,Math.min(2,s.campaign.wins-(a.checkpoint-2)));if(wins&&!s.story.clearedAreas.includes(a.id))chapterState(s,a.id).wins=wins;}
     }
+    archiveOf(s);compactHistory(s);
     syncProgress(s);
     return s;
   }
+  // Totals for history rolled out of the raw lists: everything point 8 needs, per day and per word.
+  function archiveBase(){
+    return {version:1,answers:{records:0,battle:0,independent:0,correct:0,helped:0},days:{},words:{},teaching:{events:0},support:{events:0,kinds:{}},
+      sessions:{count:0,answers:0,independent:0,correct:0,teaching:0,victories:0,elapsedMs:0,legacyMs:0},
+      duels:{count:0,correct:0,wrong:0,xpEarned:0,columns:['at','score','correct','wrong','target','beaten'],list:[],facts:{}}};
+  }
+  function archiveOf(s){
+    const base=archiveBase(),record=value=>value&&typeof value==='object'&&!Array.isArray(value),old=record(s.archive)?s.archive:{};
+    const a={...base,...old};
+    for(const key of ['answers','teaching','support','sessions','duels'])a[key]={...base[key],...(record(old[key])?old[key]:{})};
+    for(const key of ['days','words'])if(!record(a[key]))a[key]={};
+    if(!record(a.support.kinds))a.support.kinds={};if(!Array.isArray(a.duels.list))a.duels.list=[];if(!record(a.duels.facts))a.duels.facts={};
+    return s.archive=a;
+  }
+  function archiveDay(a,at){
+    const time=Date.parse(at),key=Number.isFinite(time)?dayKey(time):'unknown';
+    return a.days[key] ||= {answers:0,independent:0,correct:0,helped:0,reviews:0,reviewsCorrect:0,gapChecks:0,gapCorrect:0,timed:0,responseMs:0,fast:0,teaching:0};
+  }
+  function archiveWord(a,word){
+    return a.words[word] ||= {answers:0,independent:0,correct:0,helped:0,firstAt:null,lastAt:null,wrong:{},positions:{start:0,middle:0,end:0,vowel:0,consonant:0},
+      timed:0,responseMs:0,minMs:null,maxMs:null,fast:0,reviews:[0,0],gaps:{},teaching:0,support:0};
+  }
+  function rollAnswer(a,r){
+    a.answers.records++;
+    if(r.task!=='battle'||typeof r.target!=='string')return;
+    const independent=!r.supported,correct=independent&&r.correct===true,d=archiveDay(a,r.at),w=archiveWord(a,r.target),time=Date.parse(r.at),last=Date.parse(w.lastAt);
+    a.answers.battle++;if(independent)a.answers.independent++;else a.answers.helped++;if(correct)a.answers.correct++;
+    for(const t of [d,w]){t.answers++;if(independent)t.independent++;else t.helped++;if(correct)t.correct++;}
+    if(r.retentionCheck){d.reviews++;w.reviews[0]++;if(correct){d.reviewsCorrect++;w.reviews[1]++;}}
+    // First answer after at least a day away: retention by gap length (1, 3, 7, 14, 30+ days).
+    if(Number.isFinite(time)&&Number.isFinite(last)&&time-last>=DAY){
+      const bucket=w.gaps[GAP_DAYS.filter(n=>time-last>=n*DAY).at(-1)] ||= [0,0];bucket[0]++;d.gapChecks++;if(correct){bucket[1]++;d.gapCorrect++;}
+    }
+    w.firstAt ||= r.at;w.lastAt=r.at;
+    if(independent&&r.timingValid!==false&&Number.isFinite(r.responseMs)&&r.responseMs>0){
+      for(const t of [d,w]){t.timed++;t.responseMs+=r.responseMs;}
+      w.minMs=w.minMs===null?r.responseMs:Math.min(w.minMs,r.responseMs);w.maxMs=Math.max(w.maxMs??0,r.responseMs);
+    }
+    if(correct&&r.timingValid!==false&&Number.isFinite(r.exposureMs)&&r.exposureMs<=950&&r.responseMs<1500){d.fast++;w.fast++;}
+    if(independent&&r.correct===false&&typeof r.firstResponse==='string'&&r.firstResponse!=='?'){
+      const target=r.target,chosen=r.firstResponse;w.wrong[chosen]=(w.wrong[chosen]||0)+1;
+      for(let i=0;i<Math.max(target.length,chosen.length);i++)if(target[i]!==chosen[i]){
+        w.positions[i===0?'start':i>=target.length-1?'end':'middle']++;w.positions[/[aeiou]/.test(target[i]??chosen[i])?'vowel':'consonant']++;
+      }
+    }
+  }
+  function rollTeaching(a,e){a.teaching.events++;archiveDay(a,e.at).teaching++;if(typeof e.target==='string')archiveWord(a,e.target).teaching++;}
+  function rollSupport(a,x){a.support.events++;a.support.kinds[x.kind]=(a.support.kinds[x.kind]||0)+1;if(typeof x.target==='string')archiveWord(a,x.target).support++;}
+  function rollSession(a,x){
+    const t=a.sessions;t.count++;for(const key of ['answers','independent','correct','teaching','victories','elapsedMs'])t[key]+=Number(x[key])||0;
+    t.legacyMs+=x.timingVersion?Number(x.legacyElapsedMs)||0:Number(x.elapsedMs)||0;
+  }
+  function rollDuel(a,m){
+    const t=a.duels;t.count++;t.correct+=Number(m.correct)||0;t.wrong+=Number(m.wrong)||0;t.xpEarned+=Number(m.xpEarned??m.correct)||0;
+    t.list.push([m.finishedAt||m.startedAt||null,m.score??null,Number(m.correct)||0,Number(m.wrong)||0,m.target??null,m.beaten?1:0]);
+    for(const x of Array.isArray(m.answers)?m.answers:[])if(Number.isFinite(x.a)&&Number.isFinite(x.b)){
+      const fact=t.facts[Math.min(x.a,x.b)+'x'+Math.max(x.a,x.b)] ||= [0,0];fact[0]++;if(x.correct)fact[1]++;
+    }
+  }
+  // Keep the newest raw entries; roll the oldest into the archive in order. Lists keep their identity.
+  function compactHistory(s){
+    const roll=(list,limit,into)=>{if(!Array.isArray(list)||list.length<=limit)return;const a=archiveOf(s);for(const item of list.splice(0,list.length-limit))into(a,item);};
+    roll(s.campaign.battleRecords,HISTORY_LIMITS.answers,rollAnswer);roll(s.learning.teaching,HISTORY_LIMITS.teaching,rollTeaching);
+    roll(s.learning.supportExposures,HISTORY_LIMITS.support,rollSupport);roll(s.sessions,HISTORY_LIMITS.sessions,rollSession);roll(s.math.records,HISTORY_LIMITS.duels,rollDuel);
+    return s;
+  }
+  // Every answer ever given, including those rolled into the archive.
+  function answerCount(s){return (s.archive?.answers?.records||0)+s.campaign.battleRecords.length;}
   function id(s, prefix) { return prefix + '-' + s.nextId++; }
   function shuffle(options, random=Math.random) {
     const a = [...options];
@@ -109,7 +181,7 @@
   function completeSession(s, now) {
     if (!s.session || s.session.completedAt) return;
     s.session.completedAt = iso(now);
-    s.sessions.push(copy(s.session));
+    s.sessions.push(copy(s.session));compactHistory(s);
     s.activity = 'summary';
   }
   function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
@@ -175,10 +247,10 @@
     const totals={practice:0,math:0,assessment:0,demo:0,idle:0};
     for(const day of Object.values(s.timing.days))for(const key of Object.keys(totals))totals[key]+=day[key]||0;
     const sessions=new Map(s.sessions.map(x=>[x.id,x]));if(s.session)sessions.set(s.session.id,s.session);
-    const legacyMs=[...sessions.values()].reduce((sum,x)=>sum+(x.timingVersion?x.legacyElapsedMs||0:x.elapsedMs||0),0);
+    const past=s.archive?.answers||{},legacyMs=(s.archive?.sessions?.legacyMs||0)+[...sessions.values()].reduce((sum,x)=>sum+(x.timingVersion?x.legacyElapsedMs||0:x.elapsedMs||0),0);
     const records=s.campaign.battleRecords.filter(r=>r.task==='battle'),independent=records.filter(r=>!r.supported);
     return {totals,activeMs:totals.practice+totals.math+totals.assessment+totals.demo,today:s.timing.days[dayKey(now)]||{practice:0,math:0,assessment:0,demo:0,idle:0},legacyMs,
-      days:Object.entries(s.timing.days).sort((a,b)=>b[0].localeCompare(a[0])),answers:records.length,independent:independent.length,correct:independent.filter(r=>r.correct).length,
+      days:Object.entries(s.timing.days).sort((a,b)=>b[0].localeCompare(a[0])),answers:(past.battle||0)+records.length,independent:(past.independent||0)+independent.length,correct:(past.correct||0)+independent.filter(r=>r.correct).length,
       introduced:Content.words.filter(x=>s.learning.words[x.w]?.introducedAt).length,practiced:Content.words.filter(x=>s.learning.words[x.w]?.practiceSuccesses>=2).length};
   }
   function isSessionDue(s) { return !!s.session && !s.session.completedAt && s.session.elapsedMs >= s.session.targetMs; }
@@ -361,7 +433,7 @@
       correct:opt===q.target,exposureMs:q.exposureMs,observedExposureMs:Math.round(q.wordViewedMs),
       responseMs:Math.round(q.responseMs),supported:q.supportReasons.length>0,
       supportReasons:[...q.supportReasons],timingValid:!q.supportReasons.includes('interrupted-exposure'),
-      previouslyEncountered:!!word?.lastSeenAt || s.assessment.records.some(r=>r.target===q.target) || s.campaign.battleRecords.some(r=>r.target===q.target),
+      previouslyEncountered:!!word?.lastSeenAt || s.assessment.records.some(r=>r.target===q.target) || s.campaign.battleRecords.some(r=>r.target===q.target) || !!s.archive?.words?.[q.target],
       lastHelpAt:word?.lastHelpAt || null,
       sinceHelpMs:word?.lastHelpAt ? Math.max(0,now-Date.parse(word.lastHelpAt)) : null,
       lastTeachingAt:word?.lastTeachingAt || null,
@@ -384,7 +456,7 @@
       else b.heroHealth--;
     }
     rec.healthChanged=!rec.supported && !q.freeMistake && !q.shieldUsed;
-    s.campaign.battleRecords.push(rec);
+    s.campaign.battleRecords.push(rec);compactHistory(s);
     const L=s.learning,w=L.words[q.target];
     L.sequence++; L.recent.push(q.target); L.recent=L.recent.slice(-6);
     w.observations++; w.lastSeenAt=rec.at; w.lastSequence=L.sequence;
@@ -417,14 +489,14 @@
     return rec;
   }
   function noteSupport(s,target,kind,now) {
-    s.learning.supportExposures.push({id:id(s,'support'),target,kind,at:iso(now)});
+    s.learning.supportExposures.push({id:id(s,'support'),target,kind,at:iso(now)});compactHistory(s);
     const w=s.learning.words[target];
     if(w){w.lastHelpAt=iso(now);w.eligibleAfter=s.learning.sequence+2;}
   }
   function startTeaching(s,target,returnTo,now,{replay=false}={}) {
     if (!byWord[target]) throw new Error('No reviewed teaching card');
     const event={id:id(s,'teaching'),target,at:iso(now),guided:returnTo==='demo',replay,task:'teaching',language:'en'};
-    s.learning.teaching.push(event);
+    s.learning.teaching.push(event);compactHistory(s);
     if (!s.learning.supportedWords.includes(target)) s.learning.supportedWords.push(target);
     const w=s.learning.words[target];
     w.lastHelpAt=event.at; w.lastTeachingAt=event.at; w.eligibleAfter=s.learning.sequence+2;
@@ -512,7 +584,7 @@
     if(r.areaId)activeChapterState(s).duels++;
     syncProgress(s,now);r.xpEarned=s.dragon.xp-(r.xpStart??s.dragon.xp-r.correct);
     if(s.result&&s.battle)s.result.xpEarned=s.battle.xpEarned??s.result.xpEarned;
-    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score,correct:r.correct,wrong:r.wrong||0,inputMode:r.inputMode,scoringVersion:r.scoringVersion||1,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,shieldEarned:r.shieldEarned,xpEarned:r.xpEarned,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});
+    s.math.records.push({id:r.id,battleId:r.battleId,enemyId:r.enemyId,target:r.target,score,correct:r.correct,wrong:r.wrong||0,inputMode:r.inputMode,scoringVersion:r.scoringVersion||1,bestBefore:r.bestAtStart,bestAfter:s.math.best,beaten:r.beaten,shieldEarned:r.shieldEarned,xpEarned:r.xpEarned,startedAt:r.startedAt,finishedAt:r.finishedAt,elapsedMs:r.elapsedMs,answers:copy(r.answers)});compactHistory(s);
     s.activity='mathResult';return true;
   }
   function leaveMath(s,now){
@@ -590,5 +662,6 @@
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,recordTime,parentProgress,dayKey,
-    startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed};
+    startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,
+    HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount};
 });

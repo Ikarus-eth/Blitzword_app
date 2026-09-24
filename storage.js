@@ -21,15 +21,15 @@
     save(state){
       try{
         if(this.storage.getItem(KEY)!==this.expected)throw problem('Another tab updated this adventure. Reload to use its saved progress.','conflict');
-        const next={...state,revision:state.revision+1},payload=JSON.stringify(next);
-        if(this.expected){
-          if(this.recovered)this.storage.setItem(KEY+'_unreadable_backup',this.expected);
-          else{
-            if(JSON.parse(this.expected).schemaVersion!==2&&!this.storage.getItem(KEY+'_legacy_backup'))this.storage.setItem(KEY+'_legacy_backup',this.expected);
-            this.storage.setItem(KEY+'_backup',this.expected);
-          }
+        const next={...state,revision:state.revision+1},payload=JSON.stringify(next),previous=this.expected,recovered=this.recovered;
+        if(previous){
+          if(recovered)this.storage.setItem(KEY+'_unreadable_backup',previous);
+          else if(JSON.parse(previous).schemaVersion!==2&&!this.storage.getItem(KEY+'_legacy_backup'))this.storage.setItem(KEY+'_legacy_backup',previous);
         }
         this.storage.setItem(KEY,payload);this.expected=payload;this.recovered=false;state.revision=next.revision;
+        // Write the new save before the backup copy, so a smaller (compacted) save frees space first.
+        // If the copy does not fit, the older backup stays: it is still a valid fallback.
+        if(previous&&!recovered){try{this.storage.setItem(KEY+'_backup',previous);}catch(e){}}
       }catch(e){
         // Rethrow only this store's own problems. Browser quota errors are DOMExceptions with a numeric code.
         if(typeof e.code==='string')throw e;throw problem('Progress could not be saved. Keep this tab open and try saving again.','storage');

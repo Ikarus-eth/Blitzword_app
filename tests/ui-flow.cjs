@@ -466,3 +466,26 @@ function fakeFiles(ui){
  assert.equal(menu(ui.get('backupSave')),false);assert.equal(menu(ui.get('mapParents')),true);
  console.log('PASS text selection stays possible in Parents and inputs, is blocked on child screens, and text-node targets raise no error');
 }
+{
+ // Point 1a: while playing, the tick saves the time ledger every ten seconds; answers and pauses save at once.
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.UTC(2026,8,22));s.battle.introPending=false;
+ const ui=boot(s);ui.resume();ui.ready();
+ const saves=[];let revision=ui.state().revision;
+ for(let second=1;second<=21;second++){ui.advance(1000);const now=ui.state().revision;if(now!==revision)saves.push(second);revision=now;}
+ assert.ok(saves.length>=2,'saves: '+saves);for(let i=1;i<saves.length;i++)assert.equal(saves[i]-saves[i-1],10,'saves: '+saves);
+ assert.equal(ui.get('pausePanel').hidden,true);
+ const q=ui.state().battle.question,before=ui.state().revision;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
+ assert.ok(ui.state().revision>before);assert.equal(ui.state().campaign.battleRecords.at(-1).id,q.id);
+ const paused=ui.state().revision;ui.click(ui.get('pauseBtn'));assert.equal(ui.get('pausePanel').hidden,false);assert.ok(ui.state().revision>paused);
+ console.log('PASS play ticks save at most every ten seconds; answers and pause save at once');
+}
+for(const archived of [0,1]){
+ // Pip's alternating assist counts every answer, including those rolled into the archive.
+ const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile={name:'Reader',gender:'girl',heroClass:'Mage',age:7};s.assessment.done=true;
+ for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
+ s.archive.answers.records=archived;Core.startBattle(s,now,{strength:4});s.battle.introPending=false;Core.prepareBattle(s,now);s.battle.enemyHealth=4;
+ const ui=boot(s,{geometry:true,heldNarration:true});ui.resume();ui.ready();
+ const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));ui.finishSpeech();
+ assert.equal(Core.answerCount(ui.state()),archived+1);assert.equal(ui.get('combatEffects').classList.contains('pipStrike'),archived===1);
+ console.log('PASS Pip assist parity uses all answers with',archived,'archived');
+}
