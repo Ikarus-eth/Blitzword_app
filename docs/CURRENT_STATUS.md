@@ -39,7 +39,9 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 
 Build `golden-spiral-20260924-r1` replaces the two-line word mask with tilted golden ribbons, cream light cores, amber glow and static star sparks, following the user's supplied reference. The inline SVG stays 180 × 110 px in the existing shared battle/reading-check renderer. Exposure and choice timing, learning rules, save keys and other artwork are unchanged.
 
-Local verification: `npm ci --ignore-scripts --offline` succeeded; all 205 core tests and 71 UI-flow groups passed. Isolated Chromium previews at 1180 × 820, 820 × 1180, 390 × 844 and 844 × 390 verified four answer choices, fixed mask dimensions, no mask animation (including reduced motion), no horizontal overflow, no page errors and no learner-storage writes. The four layouts were visually reviewed. Physical iPad/Safari remains untested. Deployment verification is pending.
+Local verification: `npm ci --ignore-scripts --offline` succeeded; all 205 core tests and 71 UI-flow groups passed. Isolated Chromium previews at 1180 × 820, 820 × 1180, 390 × 844 and 844 × 390 verified four answer choices, fixed mask dimensions, no mask animation (including reduced motion), no horizontal overflow, no page errors and no learner-storage writes. The four layouts were visually reviewed. Physical iPad/Safari remains untested.
+
+Deployed through [PR #70](https://github.com/Ikarus-eth/Blitzword_app/pull/70), merge `1aa99d2e5029add1e8cdc151f0071912c4935a36`. [Pages run 35983064752](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35983064752) passed all checks and its deployment step. At 09:46 UTC on 24 September 2026, live `index.html`, `app.js` and `styles.css` returned HTTP 200 and matched the tested source byte for byte, including build `golden-spiral-20260924-r1`. [Verification record](GOLDEN_SPIRAL_DEPLOYMENT.json). Reload on iPad to load the updated assets. Previous main `2701e0a2712a3f3ae3507afa45dbe95ffc7307c9` is the rollback checkpoint; no save reset is needed.
 
 ## Layered enemy release — 24 September 2026
 
