@@ -1,6 +1,6 @@
 (() => {
 'use strict';
-const Core=BlitzCore, Content=BlitzContent, {AdventureStore,KEY}=BlitzStorage;
+const Core=BlitzCore, Content=BlitzContent, {AdventureStore,KEY,BACKUP_LIMIT,backupFile,readBackup,backupSummary}=BlitzStorage;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const classes=['Mage','Knight','Archer'];
 const playClock=new BlitzEngagement.Clock();let windowFocused=true,parentAnswer=0;
@@ -192,7 +192,50 @@ function renderParent(){
   for(const [date,d] of p.days.slice(0,30)){
     const row=document.createElement('tr');for(const value of [date,formatTime(d.practice),formatTime(d.math||0),formatTime(d.assessment+d.demo),formatTime(d.idle)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);
   }
-  $('#parentEmpty').hidden=p.days.length>0;populateSoundSettings();save();
+  $('#parentEmpty').hidden=p.days.length>0;populateSoundSettings();$('#backupStatus').textContent='';save();
+}
+function backupStatus(text){$('#backupStatus').textContent=text;}
+function backupDate(at){const d=new Date(at),pad=n=>String(n).padStart(2,'0');return d.getDate()+' '+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]+' '+d.getFullYear()+', '+pad(d.getHours())+':'+pad(d.getMinutes());}
+function backupLine(label,p){return label+': '+p.name+' · '+p.xp+' XP · '+p.words+' words introduced · '+p.chapters+' chapters cleared';}
+// iPad: the share sheet offers Save to Files, also in a Home Screen app. Elsewhere, download the file.
+function saveBackupFile(){
+  const file=backupFile(state,{now:Date.now(),build:$('meta[name="blitzword-build"]')?.content||''}),nav=navigator;
+  let shared=null;try{shared=window.File?new window.File([file.text],file.name,{type:'application/json'}):null;}catch(e){shared=null;}
+  if(shared&&nav.maxTouchPoints>0&&typeof nav.share==='function'&&nav.canShare?.({files:[shared]})){
+    try{nav.share({files:[shared]}).then(()=>backupStatus('Backup file ready: '+file.name+'. Keep it somewhere safe, such as Files or iCloud Drive.'),
+      error=>{if(error?.name==='AbortError')backupStatus('No backup file was saved.');else downloadBackup(file);});}
+    catch(e){downloadBackup(file);}
+    return;
+  }
+  downloadBackup(file);
+}
+function downloadBackup(file){
+  const url=window.URL.createObjectURL(new window.Blob([file.text],{type:'application/json'})),link=document.createElement('a');
+  link.href=url;link.download=file.name;link.hidden=true;document.body.append(link);link.click();link.remove();
+  setTimeout(()=>window.URL.revokeObjectURL(url),60000);
+  backupStatus('Backup file downloaded: '+file.name+'. On iPad, find it in the Files app under Downloads.');
+}
+function chooseBackupFile(){const input=$('#backupFile');input.value='';input.click();}
+function readBackupFile(){
+  const file=$('#backupFile').files?.[0];if(!file)return;
+  if(file.size>BACKUP_LIMIT){backupStatus('This file is too large to be a BlitzWord backup. Nothing was changed.');return;}
+  const reader=new window.FileReader();
+  reader.onload=()=>restoreBackup(String(reader.result));
+  reader.onerror=()=>backupStatus('This file could not be opened. Nothing was changed.');
+  backupStatus('Reading the backup file…');reader.readAsText(file);
+}
+function restoreBackup(text){
+  let backup;try{backup=readBackup(text);}catch(e){backupStatus(e.message);return;}
+  const now=Date.now(),from=backupSummary(backup.state,now),current=backupSummary(state,now);
+  const behind=from.xp<current.xp||from.words<current.words;
+  const message='Replace the progress on this device with this backup?\n\n'+backupLine('Backup'+(backup.exportedAt?' from '+backupDate(backup.exportedAt):''),from)+'\n'+backupLine('This device now',current)+
+    (behind?'\n\nThis backup has less progress than this device.':'')+'\n\nA copy of the current progress stays on this device.';
+  if(!confirm(message)){backupStatus('Restore cancelled. Nothing was changed.');return;}
+  // Save first so the kept copy holds the latest current progress.
+  if(blocked||!save()){backupStatus('Progress could not be saved, so the backup was not restored.');return;}
+  let payload;try{payload=store.restore(backup.state,state.revision);}catch(e){if(e.code==='space')backupStatus(e.message);else storageProblem(e);return;}
+  // Never save the replaced progress again; reload from the restored save.
+  state=JSON.parse(payload);blocked=true;backupStatus('Backup restored. Reloading…');location.reload();
 }
 function storageProblem(error) {
   blocked=true;paused=true;cancelWork();
@@ -748,6 +791,7 @@ $('#parentCancel').onclick=()=>{$('#parentGate').hidden=true;};
 $('#parentUnlock').onclick=()=>{if(Number($('#parentAnswer').value)!==parentAnswer){$('#parentGateMessage').textContent='Please try again.';return;}$('#parentGate').hidden=true;renderParent();};
 $('#parentAnswer').addEventListener('keydown',e=>{if(e.key==='Enter')$('#parentUnlock').click();});
 $('#parentHome').onclick=home;
+$('#backupSave').onclick=saveBackupFile;$('#backupRestore').onclick=chooseBackupFile;$('#backupFile').onchange=readBackupFile;
 $('#mathStart').onclick=()=>{if(Core.startMath(state,Date.now())){sound.resetCountdown();playClock.reset(performance.now());if(save())renderActivity();}};
 $('#mathSkip').onclick=$('#mathContinue').onclick=()=>{if(Core.leaveMath(state,Date.now())&&save())renderActivity();};
 $('#assessmentStart').onclick=()=>{playClock.reset(performance.now());state.assessment.instructionsSeen=true;if(save())renderActivity();};
@@ -771,7 +815,7 @@ $('#anotherChallenge').onclick=continueAdventure;$('#doneToday').onclick=home;
 $('#retrySave').onclick=()=>{try{store.save(state);blocked=false;$('#saveNotice').hidden=true;if(playing)showPausePanel();else if(state.screen==='route')home();else show(state.screen);}catch(e){storageProblem(e);}};
 $('#resetBtn').onclick=()=>{if(confirm('Erase the profile and all saved reading progress on this device? This cannot be undone.')){
   // Explicit existing reset action only. Never reset during deployment or migration.
-  for(const suffix of ['','_backup','_legacy_backup','_unreadable_backup'])localStorage.removeItem(KEY+suffix);location.reload();
+  for(const suffix of ['','_backup','_legacy_backup','_unreadable_backup','_before_restore'])localStorage.removeItem(KEY+suffix);location.reload();
 }};
 document.addEventListener('visibilitychange',()=>{if(document.hidden){account();pause('away');narrator.cancel();}});
 window.addEventListener('pagehide',()=>{narrator.cancel();if(!blocked){account();pause('away');if(!playing)save();}});

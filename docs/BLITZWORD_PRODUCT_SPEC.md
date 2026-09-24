@@ -767,3 +767,12 @@ Enemy artwork and creature-specific health ranges are assigned to the user's par
 ## Chapter scenery — 23 September 2026
 
 All 35 chapter fields have distinct setting artwork selected by stable area ID. Existing campaign-map scene indices remain unchanged. Encounter, battle, story, result and duel presentations use the saved active chapter, including old encounters across campaign boundaries. Artwork loads on demand and falls back to the forest without delaying reading. This is presentation only: learner saves, curriculum, scoring, XP, shields, narration and enemy behavior remain unchanged. See [chapter scenery](CHAPTER_SCENERY_RELEASE.md) for the complete mapping and verification status. This supersedes earlier statements that distinct field scenery is outstanding.
+
+## Durable saves: backup file — approved 23 September 2026
+
+Point 1 of the approved plan makes learner saves durable in two releases: first a backup file (1b), then a smaller save (1a). The backup file works as follows.
+
+- Parents → Backup → **Save backup file** writes the whole save to one dated JSON file, `blitzword-backup-<child name>-<date>-<time>.json`, with the export time and build marker. On a touch device that can share files, such as an iPad, it opens the share sheet, which offers Save to Files. Otherwise the browser downloads the file. Cancelling the share sheet saves nothing.
+- **Restore from file** accepts only a BlitzWord backup file or a raw BlitzWord save. It refuses other files, backups from a newer version and unreadable saves, and then changes nothing. Before anything is replaced, the parent sees the name, XP, introduced words and cleared chapters of both the backup and this device, plus a warning when the backup has less progress, and must confirm.
+- A confirmed restore first keeps the current save in `blitzword_state_v1_before_restore`. Only the latest kept copy is retained. If storage is too full for the copy or the restored save, nothing changes. The app then reloads from the restored save.
+- Reset this device also erases the kept copy.

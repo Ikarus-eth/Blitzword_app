@@ -1,4 +1,4 @@
-# BlitzWord current status — 23 September 2026
+# BlitzWord current status — 24 September 2026
 
 This page tracks current implementation and remaining work. Dated release notes preserve historical behavior and test results; their old limitations are not automatically current tasks. Latest approved user decisions take precedence over earlier plans. A difference between approved behavior and code remains a discrepancy, not a new product decision.
 
@@ -32,7 +32,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 
 | # | Point | Status |
 |---|---|---|
-| 1 | Durable saves: 1b backup file first, then 1a smaller save | Approved, not started |
+| 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b implemented and tested locally; deployment is recorded separately. 1a not started |
 | 2 | Rotating distractor pools (option b) | Approved, not started |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
@@ -84,6 +84,14 @@ The user approved these points on 23 September 2026. Build them one at a time in
 - **9. Rewards and pacing:** discuss with the user first. Evidence: a won battle gives about +9 XP against a 3,000 XP first stage. `scripts/calibrate-xp.cjs` line 19 assumes one answer per 24 s, but the measured cycle is about 6–10 s. At 8–10 s, the same model gives first growth on day 7–8 instead of 14 and full growth on day 32–37 instead of 70, at 15 min/day. Ideas on the table: a spellbook of word cards that upgrade with retention; visible steps inside each growth stage; thresholds recalibrated from real answer logs.
 - **10. Number duel:** later. Evidence: age is collected but unused; all 100 facts from 1×1 to 10×10 come up at random with −1 per wrong answer; picking the middle number scores 41%. Ideas: levels by age and results, per-fact tracking, balanced distractors.
 - **Options not chosen:** offline cache (1c); same-position distractor sets (2a, rejected); font or case change on the flash (2c); rolling word pool (3b); test-out (3c); splitting the 8 look-alike pairs that share a chapter; sound-it-out cards (4c); say-it moments (6a); meaning duels (6b).
+
+## Backup file (point 1b) — 24 September 2026
+
+Parents → Backup now has **Save backup file** and **Restore from file**; see the [product specification](BLITZWORD_PRODUCT_SPEC.md) for the rules. Build marker `backup-file-20260924-r1`; the `app.js`, `storage.js` and `styles.css` cache versions are updated.
+
+Tests: JavaScript syntax checks, all 117 core tests and all 38 UI-flow groups pass locally. New coverage: file name and contents, refused files, the confirmation text, the kept copy, full storage, another tab's newer save, share, cancel and download paths, and reset erasing the kept copy. A real Chromium run at iPad-sized landscape and portrait touch viewports downloaded a backup, restored a different backup after the confirmation dialog, restored the downloaded file back, and refused a non-backup file without changes.
+
+Limits: not tested on an iPad or in WebKit. The share-sheet path is covered only by test doubles, because headless Chromium has no Web Share. When a save fails, for example because storage is full, the save-problem dialog covers the Parents screen, so the backup buttons cannot be reached; 1a reduces save size. Clicking text inside the Parents screen raises a console error from the existing `selectstart` handler (the target can be a text node); this predates 1b and does not block the backup. The Pages workflow records deployment separately.
 
 ## Fullscreen removal — 23 September 2026
 
