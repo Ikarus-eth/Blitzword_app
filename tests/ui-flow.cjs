@@ -884,3 +884,35 @@ console.log('PASS timed and self-paced battle audio stays open through every que
  assert.equal(ui.get('renameDragon').hidden,false);assert.equal(ui.get('growthStepNote').textContent,'3200 XP to step 1 of 10');assert.equal(ui.get('growthMeters').querySelector('[role=progressbar]').getAttribute('aria-valuemin'),'3000');
  console.log('PASS old earned forms retain naming, their step origin and existing XP under higher thresholds');
 }
+
+{
+ const saved=impactSave(),ui=boot(saved);ui.resume();
+ const notify=(key,newValue,area)=>{const event=new ui.window.Event('storage');Object.assign(event,{key,newValue,storageArea:area||ui.window.localStorage});ui.window.dispatchEvent(event);};
+ const current=ui.memory.get(Storage.KEY);
+ // Unload/pagehide notifications can arrive after the new page loaded and saved newer progress.
+ notify(Storage.KEY,JSON.stringify(saved));assert.equal(ui.get('saveNotice').hidden,true);assert.equal(ui.memory.get(Storage.KEY),current);
+ notify(Storage.KEY,null);assert.equal(ui.get('saveNotice').hidden,true);
+ notify(Storage.KEY+'_backup','old backup');assert.equal(ui.get('saveNotice').hidden,true);
+ const other={...ui.state(),revision:ui.state().revision+1};other.profile={...other.profile,name:'Other tab'};
+ ui.memory.set(Storage.KEY,JSON.stringify(other));notify(Storage.KEY,JSON.stringify(other),{});
+ assert.equal(ui.get('saveNotice').hidden,true,'another storage area is ignored');
+ notify(Storage.KEY,JSON.stringify(other));assert.equal(ui.get('saveNotice').hidden,false);assert.match(ui.get('saveMessage').textContent,/Another tab/);
+ assert.equal(ui.memory.get(Storage.KEY),JSON.stringify(other),'the external adventure is never overwritten');
+ const cleared=boot(impactSave());cleared.memory.delete(Storage.KEY);const event=new cleared.window.Event('storage');Object.assign(event,{key:null,newValue:null,storageArea:cleared.window.localStorage});cleared.window.dispatchEvent(event);
+ assert.equal(cleared.get('saveNotice').hidden,false);assert.equal(cleared.memory.has(Storage.KEY),false);
+ console.log('PASS stale reload storage events are ignored; real external writes and clears still block without overwriting saves');
+}
+{
+ for(const stage of [1,2,3]){
+  const s=impactSave();Object.assign(s.dragon,{stage,xp:Content.dragonStages[stage].xp,evolutionSeen:stage,named:true,namingPromptSeen:true});
+  const ui=boot(s);ui.click(ui.get('dragonPanel'));
+  for(const id of ['growthPip','growthNextPip']){
+   const svg=ui.get(id).querySelector('svg'),image=svg.querySelector('image'),rect=svg.querySelector('clipPath rect');
+   assert.ok(rect,id+' needs an explicit atlas crop even when the viewport is letterboxed');
+   assert.deepEqual(['x','y','width','height'].map(k=>Number(rect.getAttribute(k))),svg.getAttribute('viewBox').split(' ').map(Number));
+   assert.equal(image.getAttribute('clip-path'),'url(#'+rect.parentElement.id+')');
+  }
+  const ids=[...ui.document.querySelectorAll('clipPath')].map(el=>el.id);assert.equal(new Set(ids).size,ids.length);
+ }
+ console.log('PASS every grown Pip crop excludes neighbouring atlas cells with a unique clip in narrow and wide containers');
+}

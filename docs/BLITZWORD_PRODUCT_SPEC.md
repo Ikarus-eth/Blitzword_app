@@ -921,3 +921,10 @@ Implementation details within that direction:
 - Existing total XP, historical awards (including old fractional residues), forms, names, queued evolution scenes, saves and entitlement locks remain. New awards and visible XP are whole numbers. An already-earned form retains its old starting XP for its step display until the next evolution; it is not demoted or repriced. Newly earned forms use the new thresholds as their starting points. Chapters retain the ten-minute minimum and learning objectives.
 
 The 30-minute reference guides growth pace; it is not a fixed session payout, a cap or a guarantee for another child. The updated reproducible model varies answer cycle, accuracy and session length, and distinguishes model forecasts from observed play. See [the release record](XP_PACING_RELEASE.md). A spellbook, extra pets, number-duel redesign and other unchosen options are not part of this change.
+
+
+## Reload, Pip crops, reading check and narration — 24 September 2026
+
+The user authorized all three audit priorities in one batch, with deployment followed by a single completion report: (1) false reload conflict and Pip atlas bleed, (2) fair fixed answer sets for the 26 reading-check items, (3) remaining story/enemy/comparison recordings and synchronized teaching-word highlighting using the ElevenLabs key already stored in GitHub. This supersedes the earlier stop-for-go between these three points. Existing learner saves and parallel work remain protected.
+
+The reload handler must compare the current primary save against the version loaded/written by this page, rather than trusting the value in a delayed storage event. True competing writes and removal/clear still block; notifications for another storage area or backup keys do not. Each grown Pip image clips the atlas to its selected cell, including when the SVG is letterboxed. Artwork, growth thresholds and save formats stay unchanged.
