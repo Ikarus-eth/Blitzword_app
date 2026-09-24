@@ -11,7 +11,7 @@ function boot(saved,options={}){
  window.BlitzEnemyArt=require(root+'enemy-art');
  window.matchMedia=()=>({matches:!!options.reducedMotion,addEventListener(){},removeEventListener(){}});
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
- Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.selected=option.value===value;}});
+ Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.removeAttribute('selected');[...this.querySelectorAll('option')].find(option=>option.value===value)?.setAttribute('selected','');}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>!options.pendingImages,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
  let speechEnd=null;const speechTexts=[];
  const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
@@ -761,9 +761,9 @@ console.log('PASS ignoring an offer preserves the chosen pace and stale offer ta
 console.log('PASS accepting a suggestion uses the existing save-failure protection');
 {
  const s=impactSave(),q=s.battle.question;q.exposureMs=950;q.phase='choices';q.responseMs=1200;Core.answerBattle(s,q.target,Date.UTC(2026,8,22));
- const ui=boot(s);openParents(ui);const rows=[...ui.get('parentWordSpeeds').children];
- const quick=rows.find(row=>row.firstElementChild.textContent===q.target);assert.equal(quick.children[1].textContent,'Quick recorded');assert.equal(quick.children[2].textContent,'1');
- assert.match(ui.get('parentQuickSummary').textContent,/^1 \/ 200/);assert.ok(rows.some(row=>row.children[1].textContent==='In review'));
+ const ui=boot(s);openParents(ui);const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];
+ const quick=words.find(button=>button.dataset.word===q.target);assert.equal(quick.dataset.quick,'true');assert.match(quick.getAttribute('aria-label'),/quick answer recorded/);ui.click(quick);assert.match(ui.get('parentWordSummary').textContent,/1 quick answer\b/);
+ assert.match(ui.get('parentQuickSummary').textContent,/^1 \/ 200/);assert.ok(words.some(button=>button.dataset.quick==='false'));
  const reopened=boot(ui.state());openParents(reopened);assert.equal(reopened.get('parentQuickSummary').textContent,ui.get('parentQuickSummary').textContent);
 }
 console.log('PASS Parents shows per-word quick evidence separately from words still in review and preserves it on reopen');
@@ -777,6 +777,50 @@ console.log('PASS the older self-paced checkbox preserves a pending ready word a
  const ui=boot(speedResultSave());assert.equal(ui.get('mapSpeed').textContent,'Stride');ui.resume();ui.click(ui.get('speedSuggestionYes'));ui.click(ui.get('resultNext'));assert.equal(ui.get('mapSpeed').textContent,'Jog');
 }
 console.log('PASS the map speed label follows the reading-check default and accepted suggestions');
+function parentLearningSave(){
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;const now=Date.UTC(2026,8,22);
+ s.learning.words.rock.securedAt=new Date(now-Core.DAY).toISOString();s.learning.words.tree.introducedAt=new Date(now-Core.DAY).toISOString();
+ const record=(target,correct,extra={})=>({task:'battle',target,correct,supported:false,timingValid:true,firstResponse:correct?target:Core.byWord[target].d.find(x=>x!==target),at:new Date(now).toISOString(),lastHelpAt:null,responseMs:1200,exposureMs:950,retentionGapMs:Core.DAY,...extra});
+ s.campaign.battleRecords.push(record('on',false,{firstResponse:'own',responseMs:3000}),record('on',true),record('fox',true,{retentionGapMs:7*Core.DAY}),record('cave',true,{retentionGapMs:30*Core.DAY}));return s;
+}
+{
+ const ui=boot(parentLearningSave());assert.equal(ui.get('parentGate').hidden,true);ui.click(ui.get('mapParents'));assert.equal(ui.get('parentGate').hidden,false);
+ ui.get('parentAnswer').value='0';ui.click(ui.get('parentUnlock'));assert.equal(ui.get('parentDashboard').classList.contains('active'),false);
+ ui.get('parentAnswer').value=String(ui.get('parentQuestion').textContent.match(/\d+/g).map(Number).reduce((a,b)=>a+b,0));ui.click(ui.get('parentUnlock'));
+ const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];assert.equal(words.length,200);assert.equal(new Set(words.map(w=>w.dataset.word)).size,200);
+ for(const [word,status] of [['on','learning'],['rock','secured'],['fox','kept7'],['cave','kept30'],['water','new']])assert.equal(words.find(b=>b.dataset.word===word).dataset.status,status);
+ const articles=[...ui.get('parentDashboard').children];assert.equal(articles[1].id,'parentLearningOverview');assert.ok(articles.indexOf(ui.get('parentRetention'))<articles.findIndex(el=>el.querySelector('.soundSettings')));assert.equal(articles.at(-2).querySelector('.soundSettings')!==null,true);
+ assert.equal(ui.get('parentWeeks').children[0].children[1].textContent,'2 / 3');assert.equal(ui.get('parentWeeks').children[0].children[2].textContent,'67%');assert.match(ui.get('parentMixups').textContent,/on → own/);assert.match(ui.get('parentSlow').textContent,/1.2 s|2.1 s/);
+}
+console.log('PASS gated Parents shows the 200-word map, five evidence states, retention and tricky words before sound settings');
+{
+ const ui=boot(parentLearningSave());openParents(ui);ui.get('parentWordSearch').value='  FOX ';ui.get('parentWordSearch').oninput();assert.equal(ui.get('parentWordMap').querySelectorAll('.parentWord').length,1);assert.match(ui.get('parentWordCount').textContent,/^1 \/ 200/);
+ ui.get('parentWordSearch').value='';ui.get('parentWordFilter').value='kept30';ui.get('parentWordFilter').onchange();assert.equal(ui.get('parentWordMap').querySelector('.parentWord').dataset.word,'cave');
+ ui.get('parentWordFilter').value='quick';ui.get('parentWordFilter').onchange();assert.equal(ui.get('parentWordMap').querySelectorAll('.parentWord').length,3);
+ ui.get('parentWordSearch').value='<script>';ui.get('parentWordSearch').oninput();assert.match(ui.get('parentWordCount').textContent,/^0 \/ 200/);assert.equal(ui.get('parentWordMap').children.length,0);
+}
+console.log('PASS word search and status/quick filters show exact matches, with a clear empty state');
+{
+ let ui=boot(parentLearningSave());openParents(ui);const before=ui.state();ui.click(ui.get('parentWordMap').querySelector('[data-word="on"]'));
+ assert.equal(ui.get('parentWordDetail').hidden,false);assert.match(ui.get('parentWordTitle').textContent,/on · Learning/);assert.match(ui.get('parentWordSummary').textContent,/1 \/ 2 unaided/);assert.equal(ui.get('parentWordEvents').children.length,2);assert.match(ui.get('parentWordEvents').textContent,/own · Incorrect/);assert.match(ui.get('parentWordDifficulties').textContent,/own \(1\)/);assert.deepEqual(ui.state(),before);
+ ui.click(ui.get('parentWordClose'));assert.equal(ui.get('parentWordDetail').hidden,true);ui.click(ui.get('parentHome'));ui=boot(ui.state());openParents(ui);assert.equal(ui.get('parentWordMap').querySelector('[data-word="cave"]').dataset.status,'kept30');assert.equal(ui.get('parentWeeks').children[0].children[2].textContent,'67%');
+}
+console.log('PASS tapping a word opens saved first-response history without changing learner data; reopen preserves the evidence');
+{
+ const s=parentLearningSave();const limit=Core.HISTORY_LIMITS.answers;Core.HISTORY_LIMITS.answers=0;Core.compactHistory(s);Core.HISTORY_LIMITS.answers=limit;
+ delete s.archive.parentEvidence;delete s.archive.words.cave.kept30At;delete s.archive.words.cave.kept7At;s.archive.days[Core.dayKey(Date.UTC(2026,8,22))].gapChecks=1;
+ const ui=boot(s);openParents(ui);assert.equal(ui.get('parentWeeks').children[0].children[1].textContent,'Unavailable');assert.equal(ui.get('parentWeeks').children[0].children[2].textContent,'—');
+ ui.click(ui.get('parentWordMap').querySelector('[data-word="on"]'));assert.match(ui.get('parentWordArchive').textContent,/2 older practice answers/);assert.equal(ui.get('parentWordEvents').children.length,0);assert.match(ui.get('parentWordSummary').textContent,/1 \/ 2 unaided/);
+}
+console.log('PASS older compacted saves retain totals while unavailable weekly detail and missing individual events are explicit');
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;const ui=boot(s);openParents(ui);
+ assert.equal(ui.get('parentWordMap').querySelectorAll('[data-status="new"]').length,200);assert.match(ui.get('parentMixupsEmpty').textContent,/No unaided/);assert.match(ui.get('parentSlowEmpty').textContent,/No valid/);
+ assert.ok([...ui.get('parentWeeks').children].every(row=>row.children[1].textContent==='No checks'&&row.children[2].textContent==='—'));
+ ui.click(ui.get('parentWordMap').querySelector('[data-word="on"]'));assert.match(ui.get('parentWordHistoryEmpty').textContent,/No individual/);
+}
+console.log('PASS a new learner sees New words and no-data explanations instead of fabricated scores');
+
 
 // Reading suppresses one-shot effects, while battle music keeps its steady mix.
 function observeSound(){

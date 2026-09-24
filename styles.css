@@ -403,3 +403,36 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 @media(max-width:380px){.speedChoices{gap:7px}.speedChoice{font-size:17px}}
 
 .parentQuick th,.parentQuick td{white-space:normal}
+
+/* Parents: recorded learning evidence above play totals and sound settings. */
+.wordLegend{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.wordLegend>span{padding:7px 11px;border:1px solid;border-radius:9px;font:15px/1.4 Arial,sans-serif}
+.wordStatus.new{background:#eee9df;color:#55534b;border-color:#bbb5a9}
+.wordStatus.learning{background:#fae5ad;color:#574218;border-color:#b79548}
+.wordStatus.secured{background:#dce7bb;color:#34451f;border-color:#819754}
+.wordStatus.kept7{background:#c6e0d5;color:#224d41;border-color:#608b7a}
+.wordStatus.kept30{background:#285247;color:#fff9e9;border-color:#285247}
+.parentWordFilters{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0}
+.parentWordFilters label{display:flex;flex-direction:column;gap:7px;font:16px/1.4 Arial,sans-serif;flex:1;min-width:170px}
+.parentWordFilters input,.parentWordFilters select{width:100%;min-height:48px;padding:10px 12px;border:1px solid #98ab8a;border-radius:10px;background:#fffdf4;color:#283e30;font:17px Arial,sans-serif}
+.wordMapGroup h3{font-size:19px;margin:22px 0 12px}
+.wordMapGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:9px}
+.parentWord{position:relative;min-height:73px;padding:12px 7px 9px;border:1px solid;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:none}
+.parentWord>span:first-child{font:20px/1.2 var(--reading-font)}
+.parentWord>small{font:12px/1.3 Arial,sans-serif}
+.parentWord .wordQuick{position:absolute;right:5px;top:3px;font-size:13px}
+.parentWord:focus-visible{outline:3px solid #9a6426;outline-offset:3px}
+.parentWordDetail{padding:18px;margin:18px 0;border:2px solid #789269;border-radius:14px;background:#f5f0df;scroll-margin-top:15px}
+.parentWordHeading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.parentWordHeading h3{margin:0;font-size:23px}
+.parentWordHeading button{min-height:44px;font-size:16px;flex-shrink:0}
+.parentWordDetail h4{font-size:17px;margin:18px 0 6px}
+.wordHistoryScroll{max-height:340px}
+.wordHistoryScroll th{position:sticky;top:0;background:#f5f0df}
+.parentTrickyColumns{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.parentTricky h3{font-size:20px;margin:18px 0 10px}
+.parentTricky td,.parentTricky th,.parentRetention th{white-space:normal}
+.parentErrorPositions{display:flex;flex-wrap:wrap;gap:12px}
+.parentErrorPositions>div{display:flex;flex-direction:column;gap:5px;min-width:100px;background:#f1ecd9;border:1px solid #c9c6ab;border-radius:10px;padding:12px;text-align:center;font:16px Arial,sans-serif}
+.parentErrorPositions strong{font-size:24px}
+@media(max-width:700px){.parentTrickyColumns{grid-template-columns:1fr;gap:8px}.wordMapGrid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:7px}.parentWordHeading{align-items:start;flex-wrap:wrap}.parentWordDetail{padding:12px}.parentErrorPositions>div{min-width:80px;flex:1}.parentRetention td,.parentRetention th{padding:10px 6px}}

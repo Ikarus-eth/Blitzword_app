@@ -113,9 +113,9 @@
     syncProgress(s);
     return s;
   }
-  // Totals for history rolled out of the raw lists: everything point 8 needs, per day and per word.
+  // Totals for history rolled out of the raw lists; recent events retain individual detail.
   function archiveBase(){
-    return {version:1,answers:{records:0,battle:0,independent:0,correct:0,helped:0},days:{},words:{},teaching:{events:0},support:{events:0,kinds:{}},
+    return {version:1,answers:{records:0,battle:0,independent:0,correct:0,helped:0},days:{},words:{},parentEvidence:{version:1,weeks:{},unknownWeeks:{}},teaching:{events:0},support:{events:0,kinds:{}},
       sessions:{count:0,answers:0,independent:0,correct:0,teaching:0,victories:0,elapsedMs:0,legacyMs:0},
       duels:{count:0,correct:0,wrong:0,xpEarned:0,columns:['at','score','correct','wrong','target','beaten'],list:[],facts:{}}};
   }
@@ -124,6 +124,14 @@
     const a={...base,...old};
     for(const key of ['answers','teaching','support','sessions','duels'])a[key]={...base[key],...(record(old[key])?old[key]:{})};
     for(const key of ['days','words'])if(!record(a[key]))a[key]={};
+    if(!record(old.parentEvidence)){
+      a.parentEvidence={version:1,weeks:{},unknownWeeks:{}};
+      // Old daily totals cannot identify each word's first qualifying check of a week.
+      for(const [day,d] of Object.entries(a.days))if((d.gapChecks||0)>0||(d.answers>0&&!Number.isFinite(d.gapChecks))){
+        const time=Date.parse(day+'T12:00:00');if(Number.isFinite(time))a.parentEvidence.unknownWeeks[weekKey(time)]=true;
+      }
+    }
+    if(!record(a.parentEvidence.weeks))a.parentEvidence.weeks={};if(!record(a.parentEvidence.unknownWeeks))a.parentEvidence.unknownWeeks={};
     if(!record(a.support.kinds))a.support.kinds={};if(!Array.isArray(a.duels.list))a.duels.list=[];if(!record(a.duels.facts))a.duels.facts={};
     return s.archive=a;
   }
@@ -146,6 +154,7 @@
     if(Number.isFinite(time)&&Number.isFinite(last)&&time-last>=DAY){
       const bucket=w.gaps[GAP_DAYS.filter(n=>time-last>=n*DAY).at(-1)] ||= [0,0];bucket[0]++;d.gapChecks++;if(correct){bucket[1]++;d.gapCorrect++;}
     }
+    rollParentEvidence(a,r,w,last);
     w.firstAt ||= r.at;w.lastAt=r.at;
     if(independent&&r.timingValid!==false&&Number.isFinite(r.responseMs)&&r.responseMs>0){
       for(const t of [d,w]){t.timed++;t.responseMs+=r.responseMs;}
@@ -200,6 +209,25 @@
     s.activity = 'summary';
   }
   function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function weekKey(now){const d=new Date(now);d.setDate(d.getDate()-(d.getDay()+6)%7);return dayKey(d.getTime());}
+  function rollParentEvidence(a,r,w,last){
+    if(!Content.words.some(item=>item.w===r.target)||r.timingValid===false||r.supportReasons?.includes('interrupted-exposure'))return;
+    const time=Date.parse(r.at);if(!Number.isFinite(time))return;
+    const week=r.retentionWeek||weekKey(time),e=a.parentEvidence;
+    const gap=r.retentionGapMs;
+    if(!Object.hasOwn(r,'retentionGapMs')){
+      // Answer timestamps alone cannot rule out intervening demo/assessment exposure
+      // or time spent away with an already shown question. Do not invent a gap snapshot.
+      if((Number.isFinite(last)&&time-last>=DAY)||r.previouslyEncountered)e.unknownWeeks[week]=true;
+      return;
+    }
+    if(!Number.isFinite(gap)||gap<DAY)return;
+    const correct=r.correct===true&&!r.supported,words=e.weeks[week] ||= {};
+    // First check per word per local Monday–Sunday week: retries cannot repair the score.
+    if(!Object.hasOwn(words,r.target))words[r.target]=correct?1:0;
+    if(correct&&gap>=7*DAY)w.kept7At ||= r.at;
+    if(correct&&gap>=30*DAY)w.kept30At ||= r.at;
+  }
   function dailyCorrect(s,target,now){const d=s.learning.dailyPractice[target];return d?.day===dayKey(now)?d.correct:0;}
   function recordDailyCorrect(s,target,now){
     // One latest local date per word, capped at three: bounded independently of raw history.
@@ -305,6 +333,44 @@
     for(const r of s.campaign.battleRecords)if(r.task==='battle'&&counts.has(r.target)){seen.add(r.target);if(quickAnswer(r))counts.get(r.target).quickAnswers++;}
     return [...counts.values()].filter(r=>seen.has(r.word)||r.quickAnswers||s.learning.words[r.word]?.introducedAt||s.learning.words[r.word]?.observations||s.archive?.words?.[r.word]?.answers)
       .map(r=>({...r,quick:r.quickAnswers>0}));
+  }
+  const WORD_STATUS={new:'New',learning:'Learning',secured:'Secured',kept7:'Kept after 7 days',kept30:'Kept after 30 days'};
+  function parentLearning(s,now=Date.now()){
+    // Project the raw tail through the same reducers as compaction, without touching the save.
+    const a=archiveOf({archive:copy(s.archive||archiveBase())});
+    for(const r of s.campaign.battleRecords)rollAnswer(a,r);
+    for(const r of s.learning.teaching)rollTeaching(a,r);
+    for(const r of s.learning.supportExposures)rollSupport(a,r);
+    const words=Content.words.map(item=>{
+      const word=item.w,w=s.learning.words[word]||{},t=archiveWord(a,word),assessment=s.assessment.records.filter(r=>r.target===word);
+      const seen=!!(w.introducedAt||w.observations||t.answers||t.teaching||t.support||assessment.length);
+      const status=t.kept30At?'kept30':t.kept7At?'kept7':w.securedAt||w.wordXPClaimed?'secured':seen?'learning':'new';
+      return {word,status,label:WORD_STATUS[status],quick:t.fast>0,quickAnswers:t.fast,answers:t.answers,independent:t.independent,correct:t.correct,helped:t.helped,
+        teaching:t.teaching,support:t.support,wrong:copy(t.wrong),positions:copy(t.positions),timed:t.timed,averageMs:t.timed?t.responseMs/t.timed:null,minMs:t.minMs,maxMs:t.maxMs,
+        introducedAt:w.introducedAt||null,firstAt:t.firstAt,securedAt:w.securedAt||null,kept7At:t.kept7At||null,kept30At:t.kept30At||null,lastAt:t.lastAt||w.lastSeenAt,
+        dueAt:w.reviewStage>=0&&Number.isFinite(w.dueAt)?w.dueAt:null,reviewStage:w.reviewStage,archivedAnswers:s.archive?.words?.[word]?.answers||0,
+        archivedTeaching:s.archive?.words?.[word]?.teaching||0,archivedSupport:s.archive?.words?.[word]?.support||0,assessmentAnswers:assessment.length};
+    });
+    const counts=Object.fromEntries(Object.keys(WORD_STATUS).map(key=>[key,words.filter(w=>w.status===key).length]));
+    const mixups=words.flatMap(w=>Object.entries(w.wrong).map(([chosen,count])=>({word:w.word,chosen,count}))).sort((a,b)=>b.count-a.count||a.word.localeCompare(b.word)||a.chosen.localeCompare(b.chosen));
+    const positions={start:0,middle:0,end:0,vowel:0,consonant:0};for(const w of words)for(const key of Object.keys(positions))positions[key]+=w.positions[key]||0;
+    const slowest=words.filter(w=>w.timed>0).map(w=>({word:w.word,averageMs:w.averageMs,timed:w.timed})).sort((a,b)=>b.averageMs-a.averageMs||a.word.localeCompare(b.word));
+    const weeks=[];const start=new Date(weekKey(now)+'T12:00:00');
+    for(let i=0;i<12;i++){
+      const date=new Date(start);date.setDate(start.getDate()-i*7);const key=dayKey(date.getTime()),checks=Object.values(a.parentEvidence.weeks[key]||{});
+      const correct=checks.filter(v=>v===1).length,unknown=!!a.parentEvidence.unknownWeeks[key];
+      weeks.push({week:key,words:checks.length,correct,unknown,rate:checks.length&&!unknown?correct/checks.length:null});
+    }
+    return {words,counts,mixups,positions,slowest,weeks,archivedAnswers:s.archive?.answers?.battle||0};
+  }
+  function parentWordHistory(s,word){
+    if(!Content.words.some(item=>item.w===word))return [];
+    const events=[];
+    for(const r of [...s.campaign.battleRecords,...s.assessment.records])if(r.target===word)events.push({at:r.at,kind:r.task==='battle'?'Practice':r.task==='demoBattle'?'Demo':'Reading check',
+      outcome:r.supported?'Helped / practice':r.correct===true?'Correct':'Incorrect',chosen:r.firstResponse||null,responseMs:!r.supported&&r.timingValid!==false&&Number.isFinite(r.responseMs)&&r.responseMs>0?r.responseMs:null,gapMs:r.retentionGapMs??null});
+    for(const r of s.learning.teaching)if(r.target===word)events.push({at:r.at,kind:'Teaching',outcome:r.replay?'Replayed example':'Example',responseMs:null});
+    for(const r of s.learning.supportExposures)if(r.target===word)events.push({at:r.at,kind:'Help',outcome:r.kind||'Help',responseMs:null});
+    return events.sort((a,b)=>(Date.parse(b.at)||0)-(Date.parse(a.at)||0));
   }
   function isSessionDue(s) { return !!s.session && !s.session.completedAt && s.session.elapsedMs >= s.session.targetMs; }
   function getQuestion(s) { return s.activity === 'assessment' ? s.assessment.progress?.question : s.battle?.question; }
@@ -639,6 +705,10 @@
     if(practiceKind==='speed-refill'&&exposureMs!==null)exposureMs=[2200,1800,1500,1200,950].find(ms=>ms<exposureMs)??exposureMs;
     b.question=makeQuestion(s,item,now,random,{exposureMs,...(practiceKind?{practiceKind}:{}),
       isNew,guided,supportReasons:guided?['guided-example']:[],retentionDue:word.reviewStage>=0 && word.dueAt<=now});
+    // Snapshot the gap before showing the word. Time away with a pending question is not retention.
+    const previous=word.lastSeenAt||s.campaign.battleRecords.filter(r=>r.target===item.w).at(-1)?.at||s.archive?.words?.[item.w]?.lastAt;
+    const last=Math.max(...[previous,word.lastHelpAt,...s.assessment.records.filter(r=>r.target===item.w).map(r=>r.at)].map(Date.parse).filter(Number.isFinite));
+    b.question.retentionGapMs=Number.isFinite(last)&&now>=last?now-last:null;
     b.turn++;
     return b.question;
   }
@@ -648,6 +718,7 @@
       correct:opt===q.target,exposureMs:q.exposureMs,observedExposureMs:Math.round(q.wordViewedMs),
       responseMs:Math.round(q.responseMs),supported:q.supportReasons.length>0,
       familiarBefore:!!word?.familiar||(word?.independentCorrect||0)>=2,
+      retentionGapMs:q.retentionGapMs??null,retentionWeek:weekKey(now),
       supportReasons:[...q.supportReasons],timingValid:!q.supportReasons.includes('interrupted-exposure'),
       previouslyEncountered:!!word?.lastSeenAt || s.assessment.records.some(r=>r.target===q.target) || s.campaign.battleRecords.some(r=>r.target===q.target) || !!s.archive?.words?.[q.target],
       lastHelpAt:word?.lastHelpAt || null,
@@ -886,5 +957,6 @@
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,speedSuggestion,respondSpeedSuggestion,wordSpeeds,quickAnswer,
-    HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions};
+    HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions,
+    WORD_STATUS,parentLearning,parentWordHistory,weekKey};
 });

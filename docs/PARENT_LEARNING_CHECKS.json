@@ -1,0 +1,168 @@
+{
+  "browser": "Chromium (installed Google Chrome)",
+  "scenarios": 22,
+  "results": [
+    {
+      "kind": "empty",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "legacy",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "large",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "empty",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "legacy",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "large",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "empty",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "legacy",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "large",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "empty",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "kind": "legacy",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "kind": "large",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "kind": "mixed",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "node": "22.23.3",
+  "coreTests": 225,
+  "uiFlowGroups": 78,
+  "syntaxChecks": "All ten scripts checked by the Pages workflow passed",
+  "physicalIPadTested": false,
+  "safariWebKitTested": false,
+  "saveCapacityTest": "90 days at 45 min/day; maximum serialized save below 1,000,000 characters",
+  "integrationChecks": [
+    {
+      "sha": "42894b6fa1d72bae129f7e79fe6ca38502262178",
+      "preserved": "Golden-spiral artwork and documentation",
+      "cleanInstall": true,
+      "coreTests": 222,
+      "uiFlowGroups": 76,
+      "syntaxChecks": 10,
+      "repeatedBrowserScenarios": 4,
+      "pageErrors": []
+    },
+    {
+      "sha": "c8b352c4949de78d4a2c1713c23b7161bb41a77e",
+      "preserved": "Continuous battle audio, golden spiral, their cache versions and tests",
+      "cleanInstall": true,
+      "coreTests": 225,
+      "uiFlowGroups": 78,
+      "syntaxChecks": 10,
+      "repeatedBrowserScenarios": 4,
+      "pageErrors": []
+    }
+  ]
+}
