@@ -832,9 +832,9 @@ function syncSound(){
   const q=Core.getQuestion(state),reading=['battle','assessment'].includes(state.screen)&&q&&!q.answeredAt;
   const screen=state.screen,volumes=BlitzSound.settings(state.settings.audio);
   const scene=screen==='battle'?'battle':screen==='mathChallenge'?'duel':screen==='result'?(state.result?.victory?'victory':'defeat'):screen==='mathResult'?(state.math.round?.beaten?'victory':'defeat'):['teaching','handoff','mathIntro','chapterStory','evolution'].includes(screen)?'transition':'home';
-  sound.configure({enabled:state.settings.soundscape!==false,scene,volumes,
+  sound.configure({enabled:state.settings.soundscape!==false,scene,volumes,reading:!!reading,
     suspended:blocked||document.hidden||!windowFocused||(playing&&paused),
-    quiet:!!reading||screen==='assessment'||screen==='parentDashboard'||screen==='teaching'||screen==='chapterStory'||screen==='evolution'&&state.dragon.evolution?.phase==='read'});
+    quiet:screen==='assessment'||screen==='parentDashboard'||screen==='teaching'||screen==='chapterStory'||screen==='evolution'&&state.dragon.evolution?.phase==='read'});
   narrator.configure?.({volume:volumes.speech});
 }
 function populateSoundSettings(){

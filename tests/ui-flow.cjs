@@ -14,7 +14,7 @@ function boot(saved,options={}){
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.selected=option.value===value;}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>!options.pendingImages,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
  let speechEnd=null;const speechTexts=[];
- const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -777,3 +777,38 @@ console.log('PASS the older self-paced checkbox preserves a pending ready word a
  const ui=boot(speedResultSave());assert.equal(ui.get('mapSpeed').textContent,'Stride');ui.resume();ui.click(ui.get('speedSuggestionYes'));ui.click(ui.get('resultNext'));assert.equal(ui.get('mapSpeed').textContent,'Jog');
 }
 console.log('PASS the map speed label follows the reading-check default and accepted suggestions');
+
+// Reading suppresses one-shot effects, while battle music keeps its steady mix.
+function observeSound(){
+ const module=require(root+'soundscape'),config={},calls=[];
+ return {config,calls,module:{...module,create(options){const sound=module.create(options);return {...sound,configure(value){Object.assign(config,value);calls.push({...config});sound.configure(value);}};}}};
+}
+for(const selfPaced of [false,true]){
+ const audio=observeSound(),s=impactSave();s.settings.selfPaced=selfPaced;s.battle.question.exposureMs=selfPaced?null:1800;
+ const ui=boot(s,{sound:audio.module,heldNarration:true});ui.resume();
+ const check=phase=>{assert.equal(ui.state().battle.question.phase,phase);assert.equal(audio.config.scene,'battle');assert.equal(audio.config.quiet,false);assert.equal(audio.config.reading,true);assert.equal(audio.config.suspended,false);};
+ check('fix');ui.tick();check('word');
+ if(selfPaced){ui.elapse(5000,true);check('word');ui.click(ui.get('wordReady'));}else ui.tick();
+ check('mask');ui.tick();check('choices');
+ const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
+ assert.equal(audio.config.quiet,false);assert.equal(audio.config.reading,false);assert.equal(audio.config.narrating,true);
+ ui.finishSpeech();assert.equal(audio.config.narrating,false);assert.equal(audio.config.quiet,false);
+ ui.until(()=>ui.state().battle.question.id!==q.id);check('fix');
+ ui.click(ui.get('pauseBtn'));assert.equal(audio.config.suspended,true);
+ ui.click(ui.get('pauseResume'));assert.equal(audio.config.suspended,false);ui.click(ui.get('homeBtn'));assert.equal(audio.config.scene,'home');
+ ui.resume();ui.ready();ui.visibility(true);assert.equal(audio.config.suspended,true);
+ assert.ok(audio.calls.filter(c=>c.scene==='battle').every(c=>!c.quiet));
+}
+console.log('PASS timed and self-paced battle audio stays open through every question phase, speech and combat; pause/background stop it');
+{
+ const audio=observeSound(),s=impactSave(),q=s.battle.question;q.isNew=true;
+ const ui=boot(s,{sound:audio.module,heldNarration:true});ui.resume();ui.ready();ui.click(ui.get('battleUnsure'));
+ assert.equal(audio.config.scene,'battle');assert.equal(audio.config.quiet,false);
+ ui.finishSpeech();ui.click(ui.get('battleAnswers').querySelector('.correctionNext'));
+ assert.equal(audio.config.scene,'transition');assert.equal(audio.config.quiet,true);
+ ui.click(ui.get('teachContinue'));assert.equal(audio.config.scene,'battle');assert.equal(audio.config.quiet,false);
+ const story=observeSound(),storyUI=boot(storySave(7),{sound:story.module,heldNarration:true});storyUI.resume();assert.equal(story.config.quiet,true);
+ const assessment=observeSound(),saved=Core.migrate(Core.fresh());saved.profile.name='Reader';Core.startAssessment(saved,Date.UTC(2026,8,22));
+ const checkUI=boot(saved,{sound:assessment.module});checkUI.resume();assert.equal(assessment.config.quiet,true);
+ console.log('PASS teaching, chapter story and reading check remain quiet; returning to battle restores continuous audio');
+}
