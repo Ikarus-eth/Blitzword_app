@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="blitzword-soundscape" content="forest-v2-20260923" />
 <meta name="blitzword-scenery" content="35-chapters-20260923-r1" />
-<meta name="blitzword-build" content="narration-approved-20260924-r1" />
+<meta name="blitzword-build" content="pip-evolution-20260924-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=backup-dialog-20260924-r1" />
+<link rel="stylesheet" href="styles.css?v=pip-evolution-20260924-r1" />
 </head>
 <body><main class="app" id="app">
 <div id="chapterScenery" class="chapterScenery" aria-hidden="true" hidden></div>
@@ -164,9 +164,20 @@
   </div>
 </div>
 
+<section id="evolution" class="screen evolutionScreen" aria-labelledby="evolutionTitle" data-phase="intro">
+  <h1 id="evolutionTitle">Pip is growing!</h1>
+  <div class="evolutionStage" role="img" aria-label="Your dragon grows into its next form">
+    <div id="evolutionBefore" class="evolutionFrame"><span class="evolutionFallback"></span><img alt=""/></div>
+    <div id="evolutionAfter" class="evolutionFrame"><span class="evolutionFallback"></span><img alt=""/></div>
+    <div class="evolutionGlow" aria-hidden="true"></div><div class="evolutionRing" aria-hidden="true"></div>
+  </div>
+  <div class="evolutionReading"><p id="evolutionHint"></p><div id="evolutionLines" aria-live="polite" hidden></div>
+    <div class="evolutionActions"><button id="evolutionListen" class="secondaryButton"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg> Listen</button><button id="evolutionNext" class="greenButton">Watch</button><button id="evolutionSkip" class="textButton" hidden>Skip</button></div>
+  </div>
+</section>
 <div id="defeatScene" class="defeatScene" role="status" aria-label="The enemy chuckles and escapes. Your earned XP is safe." hidden><span id="defeatEnemy" class="sceneSprite"></span><span class="enemyChuckle" aria-hidden="true">Hee hee!</span><span class="escapeCaption" aria-hidden="true">Escaped!</span></div>
 <div id="speedPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="speedTitle" hidden><div class="speedCard parchment"><h2 id="speedTitle">Speed</h2><div id="speedChoices" class="speedChoices"></div><p id="speedNote" hidden></p><button id="speedClose" class="dialogClose" aria-label="Close speed choices">×</button></div></div>
-<div id="growthPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="growthTitle" hidden><div class="growthCard parchment"><button id="growthClose" class="dialogClose" aria-label="Close Pip’s growth">×</button><h2 id="growthTitle">Pip is growing</h2><div class="growthCompare"><span id="growthPip" class="growthSprite"></span><span id="growthNextPip" class="growthSprite"></span></div><p id="growthNextName"></p><div id="growthMeters"></div><button id="renameDragon" class="secondaryButton" hidden>Choose a name</button><p id="growthChapterGate" hidden>Find the last path too.</p></div></div>
+<div id="growthPanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="growthTitle" hidden><div class="growthCard parchment"><button id="growthClose" class="dialogClose" aria-label="Close Pip’s growth">×</button><h2 id="growthTitle">Pip is growing</h2><div class="growthCompare"><span id="growthPip" class="growthSprite"></span><span id="growthNextPip" class="growthSprite"></span></div><p id="growthNextName"></p><div id="growthMeters"></div><button id="evolutionReplay" class="secondaryButton" hidden>Watch again</button><button id="renameDragon" class="secondaryButton" hidden>Choose a name</button><p id="growthChapterGate" hidden>Find the last path too.</p></div></div>
 <div id="dragonNamePanel" class="modalLayer" role="dialog" aria-modal="true" aria-labelledby="dragonNameTitle" hidden><div class="nameDragonCard parchment"><h2 id="dragonNameTitle">Your dragon grew!</h2><p>What shall we call your dragon?</p><label for="dragonNameInput">Name</label><input id="dragonNameInput" class="nameInput" maxlength="18" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"/><p id="dragonNameMessage" role="status"></p><button id="dragonNameSave" class="greenButton">Save name</button><button id="dragonNameLater" class="textButton">Later</button></div></div>
 <section id="parentDashboard" class="screen parentDashboard">
  <header class="parentHeader"><div><div class="mapEyebrow">Parents</div><h1>Practice and progress</h1></div><button id="parentHome" class="secondaryButton">Back to map</button></header>
@@ -191,11 +202,11 @@
 </section>
 <div id="parentGate" class="parentGate" role="dialog" aria-modal="true" aria-labelledby="parentGateTitle" hidden><div class="parchment"><h2 id="parentGateTitle">For a grown-up</h2><label id="parentQuestion" for="parentAnswer"></label><input id="parentAnswer" type="text" inputmode="numeric" autocomplete="off"/><p id="parentGateMessage" aria-live="polite"></p><button id="parentUnlock" class="greenButton">Open dashboard</button><button id="parentCancel" class="textButton">Back</button></div></div>
 </main>
-<script src="content.js?v=chapter-scenery-20260923-r1"></script>
-<script src="game-core.js?v=compact-save-20260924-r1"></script>
+<script src="content.js?v=pip-evolution-20260924-r1"></script>
+<script src="game-core.js?v=pip-evolution-20260924-r1"></script>
 <script src="storage.js?v=compact-save-20260924-r1"></script>
 <script src="soundscape.js?v=soundscape-20260923-r1"></script>
-<script src="narration.js?v=narration-approved-20260924-r1"></script>
+<script src="narration.js?v=pip-evolution-20260924-r1"></script>
 <script src="audio.js?v=narration-approved-20260924-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
-<script src="app.js?v=compact-save-20260924-r1"></script></body></html>
+<script src="app.js?v=pip-evolution-20260924-r1"></script></body></html>

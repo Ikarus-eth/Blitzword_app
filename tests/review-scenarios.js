@@ -10,6 +10,12 @@ window.makeReviewSave=function(scenario){
   if(scenario==='handoff'){s.demoComplete=true;s.handoff={victory:true};s.activity='handoff';return s;}
   if(scenario==='assessment'){C.startAssessment(s,now);return s;}
   s.assessment.done=true;s.demoComplete=true;s.settings.selfPaced=true;
+  if(scenario.startsWith('evolution-')){
+    const [,number,phase='intro']=scenario.split('-'),stage=Math.max(1,Math.min(3,Number(number)));
+    s.dragon.xp=BlitzContent.dragonStages[stage].xp;s.dragon.stage=stage;s.dragon.evolutionSeen=stage-1;
+    s.dragon.evolution={stage,phase,replay:false,returnTo:'map'};s.dragon.named=stage>1;
+    return s;
+  }
   if(scenario.startsWith('scenery-')){
     const [,mode,number]=scenario.split('-'),index=Number(number),area=BlitzContent.areas[index];
     s.story.clearedAreas=BlitzContent.areas.slice(0,index).map(a=>a.id);

@@ -95,3 +95,7 @@ The portrait-replacement details above describe that earlier art milestone. The 
 ## Chapter scenery — 23 September 2026
 
 The 35 chapter settings are mapped in `content.js` (`chapterBackgrounds`) and documented in [CHAPTER_SCENERY_RELEASE.md](CHAPTER_SCENERY_RELEASE.md). Twenty-eight new backgrounds were created with the built-in image-generation tool from the chapter names and existing story lines; [the exact prompt set](CHAPTER_SCENERY_PROMPTS.json) records the constraints and generation source. Seven approved settings are retained (the original clearing and six individual atlas panels). New backgrounds contain no characters or controls. The campaign-map atlas remains unchanged.
+
+## Evolution frames — 23 September 2026
+
+`assets/evolution/pip-stage-0.webp` through `pip-stage-3.webp` are the four new evolution-screen illustrations, generated from the approved `assets/pip-growth.png` and `assets/pip.webp`. They preserve the orange scales, cream chest, amber eyes, cream horns, ember spines, dark flame-marked wings and tail. The final form retains its saddle and chest gem. Existing battle/map sprites remain in place. [Exact built-in image-generation prompts](EVOLUTION_PROMPTS.json) and [flow details](EVOLUTION_RELEASE.md) are maintained here.

@@ -22,6 +22,8 @@ Recorded teaching keeps the existing static target highlight. The recovered bulk
 
 Four recovered Pip-evolution recordings are preserved as `assets/narration/evolution-0.mp3` through `evolution-3.mp3`, with provenance in `EVOLUTION_NARRATION.json`. They are kept for the parallel Pip-evolution workstream and are not treated as evidence that the current main UI invokes those clips.
 
+Update, 24 September 2026: the Pip evolution release adds these four clips, including the approved slower evolution-3, to `NARRATION_CORPUS.json`, `NARRATION_GENERATION.json` and the runtime manifest (`recorded-voice-20260924-r4`): 994 clips, all mapped at runtime. The evolution screens now play them; see [evolution scenes](EVOLUTION_RELEASE.md).
+
 ## Quality and verification limits
 
 The package's hashes and decode checks establish file integrity, not pronunciation or subjective voice consistency. The recovered set mixes standalone Tom recordings, silence-separated source batches and concatenated recordings assembled from earlier components. Representative listening QA is complete. The user reviewed 42 clips: 36 were good and six were rejected (`on`, `creature`, `i`, `it`, standalone `gate`, and evolution-3). The 12 additional earlier-Tom word samples were all good, so there is no evidence for a broad replacement of that older set. All six targeted replacement recordings were then listened to and approved. Physical iPad gameplay playback and exhaustive listening of all 990 clips remain outstanding.

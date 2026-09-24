@@ -2235,5 +2235,8 @@
     {name:'Ride on Pip',xp:13400,crop:[869,464,657,533],scale:1.45}
   ];
   const teachingSource=item=>'assets/teaching/'+item.image+(item.image==='core-teaching'?'.webp':item.crop?'.png':'.webp');
-  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, chapterStories, chapterBackgrounds, dragonStages, chapterWordGoal:30};
+  const evolution={intro:"Look! Your dragon is glowing. Let's see what happens.",
+    frames:[0,1,2,3].map(stage=>'assets/evolution/pip-stage-'+stage+'.webp'),
+    lines:[null,['I am big.','I can help.'],['My wings are big.','I can help you.'],['Hop on my back.','We can go far.']]};
+  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, chapterStories, chapterBackgrounds, dragonStages, evolution, chapterWordGoal:30};
 });

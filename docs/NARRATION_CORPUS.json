@@ -4,8 +4,8 @@
   "direction": "A deep adult male British English voice. Warm, calm, clear natural articulation suitable for children learning to read. Moderate pace, no music, no dramatic character acting, no added words. Keep vowels and final consonants intelligible. Do not artificially pitch-shift recordings.",
   "wordCount": 211,
   "sentenceCount": 183,
-  "clipCount": 990,
-  "characters": 31289,
+  "clipCount": 994,
+  "characters": 31426,
   "clips": [
     {
       "id": "en-male-001",
@@ -5946,8 +5946,32 @@
       "kind": "practice-correction",
       "id": "core-male-825",
       "file": "assets/narration/core-male-825.mp3"
+    },
+    {
+      "id": "evolution-0",
+      "text": "Look! Your dragon is glowing. Let's see what happens.",
+      "kind": "evolution-intro",
+      "file": "assets/narration/evolution-0.mp3"
+    },
+    {
+      "id": "evolution-1",
+      "text": "I am big. I can help.",
+      "kind": "evolution-reading",
+      "file": "assets/narration/evolution-1.mp3"
+    },
+    {
+      "id": "evolution-2",
+      "text": "My wings are big. I can help you.",
+      "kind": "evolution-reading",
+      "file": "assets/narration/evolution-2.mp3"
+    },
+    {
+      "id": "evolution-3",
+      "text": "Hop on my back. We can go far.",
+      "kind": "evolution-reading",
+      "file": "assets/narration/evolution-3.mp3"
     }
   ],
-  "runtimeClipCount": 990,
+  "runtimeClipCount": 994,
   "runtimeFallbackOnly": []
 }
