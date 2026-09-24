@@ -194,26 +194,26 @@ function renderParent(){
   }
   $('#parentEmpty').hidden=p.days.length>0;populateSoundSettings();$('#backupStatus').textContent='';save();
 }
-function backupStatus(text){$('#backupStatus').textContent=text;}
+function backupStatus(text,target='#backupStatus'){$(target).textContent=text;}
 function backupDate(at){const d=new Date(at),pad=n=>String(n).padStart(2,'0');return d.getDate()+' '+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]+' '+d.getFullYear()+', '+pad(d.getHours())+':'+pad(d.getMinutes());}
 function backupLine(label,p){return label+': '+p.name+' · '+p.xp+' XP · '+p.words+' words introduced · '+p.chapters+' chapters cleared';}
 // iPad: the share sheet offers Save to Files, also in a Home Screen app. Elsewhere, download the file.
-function saveBackupFile(){
+function saveBackupFile(target='#backupStatus'){
   const file=backupFile(state,{now:Date.now(),build:$('meta[name="blitzword-build"]')?.content||''}),nav=navigator;
   let shared=null;try{shared=window.File?new window.File([file.text],file.name,{type:'application/json'}):null;}catch(e){shared=null;}
   if(shared&&nav.maxTouchPoints>0&&typeof nav.share==='function'&&nav.canShare?.({files:[shared]})){
-    try{nav.share({files:[shared]}).then(()=>backupStatus('Backup file ready: '+file.name+'. Keep it somewhere safe, such as Files or iCloud Drive.'),
-      error=>{if(error?.name==='AbortError')backupStatus('No backup file was saved.');else downloadBackup(file);});}
-    catch(e){downloadBackup(file);}
+    try{nav.share({files:[shared]}).then(()=>backupStatus('Backup file ready: '+file.name+'. Keep it somewhere safe, such as Files or iCloud Drive.',target),
+      error=>{if(error?.name==='AbortError')backupStatus('No backup file was saved.',target);else downloadBackup(file,target);});}
+    catch(e){downloadBackup(file,target);}
     return;
   }
-  downloadBackup(file);
+  downloadBackup(file,target);
 }
-function downloadBackup(file){
+function downloadBackup(file,target){
   const url=window.URL.createObjectURL(new window.Blob([file.text],{type:'application/json'})),link=document.createElement('a');
   link.href=url;link.download=file.name;link.hidden=true;document.body.append(link);link.click();link.remove();
   setTimeout(()=>window.URL.revokeObjectURL(url),60000);
-  backupStatus('Backup file downloaded: '+file.name+'. On iPad, find it in the Files app under Downloads.');
+  backupStatus('Backup file downloaded: '+file.name+'. On iPad, find it in the Files app under Downloads.',target);
 }
 function chooseBackupFile(){const input=$('#backupFile');input.value='';input.click();}
 function readBackupFile(){
@@ -242,6 +242,8 @@ function storageProblem(error) {
   $('#saveMessage').textContent=error.message;
   $('#retrySave').hidden=error.code==='corrupt'||error.code==='conflict'||!state;
   $('#reloadSaved').hidden=!!state&&error.code==='storage';
+  // A failed save leaves the newest progress only in memory; let a grown-up keep it as a file.
+  $('#saveNoticeBackup').hidden=!(state&&error.code==='storage');$('#saveNoticeStatus').textContent='';
   $('#saveNotice').hidden=false;
 }
 function save(){account();try{store.save(state);return true;}catch(e){storageProblem(e);return false;}}
@@ -791,7 +793,7 @@ $('#parentCancel').onclick=()=>{$('#parentGate').hidden=true;};
 $('#parentUnlock').onclick=()=>{if(Number($('#parentAnswer').value)!==parentAnswer){$('#parentGateMessage').textContent='Please try again.';return;}$('#parentGate').hidden=true;renderParent();};
 $('#parentAnswer').addEventListener('keydown',e=>{if(e.key==='Enter')$('#parentUnlock').click();});
 $('#parentHome').onclick=home;
-$('#backupSave').onclick=saveBackupFile;$('#backupRestore').onclick=chooseBackupFile;$('#backupFile').onchange=readBackupFile;
+$('#backupSave').onclick=()=>saveBackupFile();$('#saveNoticeBackup').onclick=()=>saveBackupFile('#saveNoticeStatus');$('#backupRestore').onclick=chooseBackupFile;$('#backupFile').onchange=readBackupFile;
 $('#mathStart').onclick=()=>{if(Core.startMath(state,Date.now())){sound.resetCountdown();playClock.reset(performance.now());if(save())renderActivity();}};
 $('#mathSkip').onclick=$('#mathContinue').onclick=()=>{if(Core.leaveMath(state,Date.now())&&save())renderActivity();};
 $('#assessmentStart').onclick=()=>{playClock.reset(performance.now());state.assessment.instructionsSeen=true;if(save())renderActivity();};

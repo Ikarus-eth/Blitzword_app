@@ -440,3 +440,18 @@ function fakeFiles(ui){
  assert.equal(ui.reloads(),1);
  console.log('PASS Reset this device also erases the copy kept by a restore');
 }
+{
+ // A failed save keeps the newest progress in memory only; the grown-up dialog can still export it.
+ const ui=boot(backupProgress('Reader',300,4),{navigator:{maxTouchPoints:0}}),made=fakeFiles(ui);
+ assert.equal(ui.get('saveNoticeBackup').hidden,true);assert.equal(ui.state().settings.soundscape,true);
+ ui.setFailWrites(true);ui.click(ui.get('soundBtn'));
+ assert.equal(ui.get('saveNotice').hidden,false);assert.equal(ui.get('saveNoticeBackup').hidden,false);assert.equal(ui.get('saveNoticeStatus').textContent,'');
+ ui.click(ui.get('saveNoticeBackup'));assert.equal(made.downloads.length,1);
+ const data=JSON.parse(made.blobs[0].text);assert.equal(data.state.settings.soundscape,false);assert.equal(ui.state().settings.soundscape,true);assert.equal(data.state.profile.name,'Reader');
+ assert.equal(ui.get('saveNoticeStatus').textContent,'Backup file downloaded: '+made.downloads[0].name+'. On iPad, find it in the Files app under Downloads.');
+ ui.setFailWrites(false);ui.click(ui.get('retrySave'));assert.equal(ui.get('saveNotice').hidden,true);assert.equal(ui.state().settings.soundscape,false);
+ // Another tab's newer save is a conflict, not a storage failure: this tab's older progress is not offered as a file.
+ const other=boot(backupProgress('Reader',300,4)),changed=other.state();changed.profile.name='Other tab';other.memory.set(Storage.KEY,JSON.stringify(changed));
+ other.click(other.get('soundBtn'));assert.equal(other.get('saveNotice').hidden,false);assert.match(other.get('saveMessage').textContent,/Another tab/);assert.equal(other.get('saveNoticeBackup').hidden,true);
+ console.log('PASS save-problem dialog offers a backup file of unsaved progress, but not for another tab\'s conflict');
+}

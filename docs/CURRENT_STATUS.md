@@ -33,7 +33,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 
 | # | Point | Status |
 |---|---|---|
-| 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026 (build `backup-file-20260924-r1`); waiting for the user's iPad backup. 1a not started |
+| 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file (implemented and tested locally; deployment recorded separately). 1a not started |
 | 2 | Rotating distractor pools (option b) | Approved, not started |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
@@ -86,13 +86,21 @@ The user approved these points on 23 September 2026. Build them one at a time in
 - **10. Number duel:** later. Evidence: age is collected but unused; all 100 facts from 1×1 to 10×10 come up at random with −1 per wrong answer; picking the middle number scores 41%. Ideas: levels by age and results, per-fact tracking, balanced distractors.
 - **Options not chosen:** offline cache (1c); same-position distractor sets (2a, rejected); font or case change on the flash (2c); rolling word pool (3b); test-out (3c); splitting the 8 look-alike pairs that share a chapter; sound-it-out cards (4c); say-it moments (6a); meaning duels (6b).
 
+## Backup file on the save-problem dialog — 24 September 2026
+
+When a save fails because storage refuses it, for example when it is full, the grown-up dialog now offers **Save backup file**. It exports the progress still held in memory, including the change that could not be saved. It is not offered when another tab saved newer progress or when the save cannot be read.
+
+Fixed with it: real browser quota errors are `DOMException`s with a numeric `code`. `AdventureStore.save()` passed any error with a `code` through unchanged, so a full device never became the app's storage problem: the dialog showed the raw browser message and offered Reload saved progress, which would discard the unsaved progress. Quota errors now become the storage problem: plain message, Try saving again, Save backup file, no Reload. Build marker `backup-dialog-20260924-r1`; the `app.js`, `storage.js` and `styles.css` cache versions are updated.
+
+Tests: all 119 core tests and all 39 UI-flow groups pass locally, including a real `DOMException` quota error and the dialog exporting unsaved progress. In real Chromium at iPad-sized landscape and portrait viewports, with `localStorage.setItem` forced to throw the quota error, the dialog showed the button and downloaded the in-memory progress. Deployment is recorded separately.
+
 ## Backup file (point 1b) — 24 September 2026
 
 Parents → Backup now has **Save backup file** and **Restore from file**; see the [product specification](BLITZWORD_PRODUCT_SPEC.md) for the rules. Build marker `backup-file-20260924-r1`; the `app.js`, `storage.js` and `styles.css` cache versions are updated.
 
 Tests: JavaScript syntax checks, all 117 core tests and all 38 UI-flow groups pass locally. New coverage: file name and contents, refused files, the confirmation text, the kept copy, full storage, another tab's newer save, share, cancel and download paths, and reset erasing the kept copy. A real Chromium run at iPad-sized landscape and portrait touch viewports downloaded a backup, restored a different backup after the confirmation dialog, restored the downloaded file back, and refused a non-backup file without changes.
 
-Limits: not tested on an iPad or in WebKit. The share-sheet path is covered only by test doubles, because headless Chromium has no Web Share. When a save fails, for example because storage is full, the save-problem dialog covers the Parents screen, so the backup buttons cannot be reached; 1a reduces save size. Clicking text inside the Parents screen raises a console error from the existing `selectstart` handler (the target can be a text node); this predates 1b and does not block the backup.
+Limits: not tested on an iPad or in WebKit. The share-sheet path is covered only by test doubles, because headless Chromium has no Web Share. When a save fails, the save-problem dialog covers the Parents screen; the dialog now offers its own Save backup file (next section). Clicking text inside the Parents screen raises a console error from the existing `selectstart` handler (the target can be a text node); this predates 1b and does not block the backup.
 
 Deployment: merged as `378e6899e0206f2d70d0e6cce04bc46d0ba873a4` in [PR #36](https://github.com/Ikarus-eth/Blitzword_app/pull/36). [Pages run 35938536020](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35938536020) succeeded for that commit, including the deployment step. At 00:29 UTC on 24 September 2026 the live [web app](https://ikarus-eth.github.io/Blitzword_app/) reported build `backup-file-20260924-r1`, and the live `index.html`, `app.js`, `storage.js` and `styles.css` matched that commit byte for byte. The functional browser run used the same files from a local server; Chromium in this environment does not trust the network proxy's certificate for the live site.
 
