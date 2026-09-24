@@ -14,7 +14,7 @@ for(const clip of corpus.clips){
 }
 const manifest={version:'recorded-voice-20260924-r2',voice:generation.voice,language:'en-GB',recoveredClipCount:corpus.clips.length,runtimeClipCount:Object.keys(clips).length,fallbackOnly:[...fallbackOnly],clips};
 fs.writeFileSync(path.join(root,'narration.js'),'(function(root){\nconst narration='+JSON.stringify(manifest,null,2)+';\nif(typeof module===\'object\'&&module.exports)module.exports=narration;else root.BlitzNarration=narration;\n})(typeof globalThis!==\'undefined\'?globalThis:this);\n');
-generation.listeningReview='Not performed in this environment; user listening and physical iPad playback review remain outstanding.';
+generation.listeningReview=generation.listeningReview||'Audible listening and physical iPad playback review remain outstanding.';
 generation.clipCount=corpus.clips.length;generation.runtimeClipCount=Object.keys(clips).length;generation.runtimeFallbackOnly=[...fallbackOnly];generation.bytes=bytes;generation.durationSeconds=Number(seconds.toFixed(3));
 fs.writeFileSync(path.join(root,'docs/NARRATION_GENERATION.json'),JSON.stringify(generation,null,2)+'\n');
-console.log(JSON.stringify({clips:corpus.clips.length,bytes,seconds:Math.round(seconds)}));
+console.log(JSON.stringify({recoveredClips:corpus.clips.length,runtimeClips:Object.keys(clips).length,bytes,seconds:Math.round(seconds)}));
