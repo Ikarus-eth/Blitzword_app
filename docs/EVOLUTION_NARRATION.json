@@ -1,0 +1,60 @@
+{
+  "voice": "Tom",
+  "model": "eleven_multilingual_v2",
+  "speed": 0.88,
+  "clips": [
+    {
+      "id": "evolution-0",
+      "text": "Look! Your dragon is glowing. Let's see what happens.",
+      "taskId": "dfad0a3e-f669-45cc-a546-f2caaef881c7",
+      "status": "downloaded",
+      "file": "assets/narration/evolution-0.mp3",
+      "duration": 4.440816,
+      "bytes": 71515,
+      "sha256": "5cbaa9d14c52d4ca8d5af0117ebd16fca64798b9b09e3a5bbe0d65cbaa103b19",
+      "voice": "Tom",
+      "model": "eleven_multilingual_v2",
+      "speed": 0.88
+    },
+    {
+      "id": "evolution-1",
+      "text": "I am big. I can help.",
+      "taskId": "6f4e9ff6-c981-425d-8bb8-75877ac9427a",
+      "status": "downloaded",
+      "file": "assets/narration/evolution-1.mp3",
+      "duration": 1.985306,
+      "bytes": 32226,
+      "sha256": "3f409043324cb9b1a572a9c05b06934f016c54c93cdbe7d438c408c3aacfefb8",
+      "voice": "Tom",
+      "model": "eleven_multilingual_v2",
+      "speed": 0.88
+    },
+    {
+      "id": "evolution-2",
+      "text": "My wings are big. I can help you.",
+      "taskId": "b11f9b5a-2e61-40fa-a787-53979c8ecd67",
+      "status": "downloaded",
+      "file": "assets/narration/evolution-2.mp3",
+      "duration": 2.403265,
+      "bytes": 38914,
+      "sha256": "639261d00c28315547cdccd89b028019ed0b5b729b9337741ee8f6a0b67dff02",
+      "voice": "Tom",
+      "model": "eleven_multilingual_v2",
+      "speed": 0.88
+    },
+    {
+      "id": "evolution-3",
+      "text": "Hop on my back. We can go far.",
+      "taskId": "44b7452e-2f28-4f04-924d-75f1421cf044",
+      "status": "downloaded",
+      "file": "assets/narration/evolution-3.mp3",
+      "duration": 2.324898,
+      "bytes": 37660,
+      "sha256": "5d5b80b93a34e425ccda1e3905b7baeb4a744da36a49042f2c9ff7e0e1bb4f51",
+      "voice": "Tom",
+      "model": "eleven_multilingual_v2",
+      "speed": 0.88
+    }
+  ],
+  "review": "All four MP3s fully decode. Listening and physical iPad playback remain unverified."
+}
