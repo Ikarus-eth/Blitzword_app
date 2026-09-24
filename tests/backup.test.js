@@ -94,3 +94,10 @@ test('the restore summary shows name, whole XP, introduced words and cleared cha
   assert.deepEqual(backupSummary(s,START),{name:'Reader',xp:1234,words:17,chapters:2});
   assert.equal(backupSummary(progress('',0,0),START).name,'No name yet');
 });
+
+test('a browser quota error becomes the storage problem, so the grown-up dialog can offer a backup file',()=>{
+  const mem=new MemoryStorage(),s=progress('Device',50,5),store=saved(mem,s),before=mem.getItem(KEY);
+  mem.setItem=()=>{throw new DOMException('The quota has been exceeded.','QuotaExceededError');};
+  assert.throws(()=>store.save(s),e=>e.code==='storage'&&e.message==='Progress could not be saved. Keep this tab open and try saving again.');
+  assert.equal(mem.getItem(KEY),before);
+});

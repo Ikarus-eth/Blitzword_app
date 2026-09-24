@@ -30,7 +30,10 @@
           }
         }
         this.storage.setItem(KEY,payload);this.expected=payload;this.recovered=false;state.revision=next.revision;
-      }catch(e){if(e.code)throw e;throw problem('Progress could not be saved. Keep this tab open and try saving again.','storage');}
+      }catch(e){
+        // Rethrow only this store's own problems. Browser quota errors are DOMExceptions with a numeric code.
+        if(typeof e.code==='string')throw e;throw problem('Progress could not be saved. Keep this tab open and try saving again.','storage');
+      }
     }
     // Replace the save with a checked backup. The current save is kept first; a failed write changes nothing.
     restore(state,currentRevision=0){

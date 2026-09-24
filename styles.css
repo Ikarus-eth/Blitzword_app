@@ -328,3 +328,4 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 @media(orientation:portrait){.storyPicture{width:min(100%,calc(36dvh * var(--scene-ratio,1.5)));height:auto}}
 @media(max-height:580px) and (orientation:landscape){.storyPicture{height:100%;max-height:none;min-height:170px;aspect-ratio:auto}#storyLandscape{object-fit:cover;object-position:center}}
 .backupActions{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0 6px}.backupStatus{min-height:1.6em}
+#saveNoticeBackup{margin-top:15px}#saveNoticeStatus:empty{display:none}

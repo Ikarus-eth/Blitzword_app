@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="blitzword-soundscape" content="forest-v2-20260923" />
 <meta name="blitzword-scenery" content="35-chapters-20260923-r1" />
-<meta name="blitzword-build" content="narration-recovery-20260924-r1" />
+<meta name="blitzword-build" content="backup-dialog-20260924-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=backup-file-20260924-r1" />
+<link rel="stylesheet" href="styles.css?v=backup-dialog-20260924-r1" />
 </head>
 <body><main class="app" id="app">
 <div id="chapterScenery" class="chapterScenery" aria-hidden="true" hidden></div>
@@ -160,6 +160,7 @@
 <div id="saveNotice" class="modalLayer saveNotice" role="alertdialog" aria-modal="true" aria-labelledby="saveTitle" hidden>
   <div class="pauseCard parchment"><span class="sceneSprite pausePip" data-sprite="6" role="img" aria-label="Pip"></span><h2 id="saveTitle">Let’s get a grown-up</h2><p>We need help saving your adventure.<br>Keep this page open.</p><p id="saveMessage" class="saveDetail"></p>
     <div class="routeButtons"><button id="retrySave" class="greenButton">Try saving again</button><button id="reloadSaved" class="secondaryButton">Reload saved progress</button></div>
+    <button id="saveNoticeBackup" class="secondaryButton" hidden>Save backup file</button><p id="saveNoticeStatus" class="saveDetail" role="status" aria-live="polite"></p>
   </div>
 </div>
 
@@ -192,9 +193,9 @@
 </main>
 <script src="content.js?v=chapter-scenery-20260923-r1"></script>
 <script src="game-core.js?v=chapter-scenery-20260923-r1"></script>
-<script src="storage.js?v=backup-file-20260924-r1"></script>
+<script src="storage.js?v=backup-dialog-20260924-r1"></script>
 <script src="soundscape.js?v=soundscape-20260923-r1"></script>
 <script src="narration.js?v=narration-recovery-20260924-r1"></script>
 <script src="audio.js?v=narration-recovery-20260924-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
-<script src="app.js?v=backup-file-20260924-r1"></script></body></html>
+<script src="app.js?v=backup-dialog-20260924-r1"></script></body></html>
