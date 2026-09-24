@@ -24,13 +24,14 @@ There is no new telemetry, storage-key change, data reset, curriculum edit, sche
 
 ## Validation
 
-- Clean install and full Node 22.23.3 suite: **222 core tests and 76 UI-flow groups passed**.
+- Clean install and full Node 22.23.3 suite: **225 core tests and 78 UI-flow groups passed**.
 - Tests cover all 200 words, evidence states, quick markers, thresholds, weekly first outcomes, retries, helped/interrupted answers, local week/DST boundaries, archived totals, invalid timings, old-save limits, exact pending-question gaps and read-only reporting.
 - The existing 90-day model at 45 min/day still passes the one-million-character save limit. Raw history limits remain unchanged.
 - Chromium: 16 isolated scenarios cover empty, mixed, legacy-compacted and 3,000-answer saves at 1180×820, 820×1180, 390×844 and 844×390. Four focused follow-ups check final history wording, date labels and the quick summary; two more check selected-word mix-ups and focus return (22 scenarios total). No page errors. Saves are seeded before load; reopening leaves the page first.
 - Screenshots of the map, selected-word history, weekly retention and tricky list were reviewed at tablet and phone sizes. Touch targets are at least 44 px. History tables can scroll; the history region is keyboard-focusable. Search/filter, parent gate, sound settings and reopening were exercised.
 - Existing test change: the point 7 quick-table expectation now checks the same marker/count in the word map and selected history because point 8 replaces that table. The linkedom select-value mock was corrected after a minimal reproduction showed that selecting a middle option incorrectly cleared all selection; Chromium confirms the actual filters work. No existing gameplay expectation is relaxed.
 - Integrated parallel golden-spiral main `42894b6fa1d72bae129f7e79fe6ca38502262178` before merging. Repeated the clean install, full 222/76 suite, all ten syntax checks and four mixed-save Chromium sizes; all passed with no page errors. Golden artwork and its documentation are preserved.
+- Also integrated continuous battle audio from main `c8b352c4949de78d4a2c1713c23b7161bb41a77e`, preserving its soundscape code, cache version and added tests. The repeated clean install/full suite now passes 225 core tests and 78 UI-flow groups; all ten syntax checks and four mixed-save Chromium sizes pass again with no page errors.
 - Physical iPad and Safari/WebKit remain untested.
 
 Machine-readable browser/check results: [PARENT_LEARNING_CHECKS.json](PARENT_LEARNING_CHECKS.json).

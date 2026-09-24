@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-24T09:48:13.955Z",
+  "browser": "154.0.8037.57",
+  "cases": [
+    {
+      "selfPaced": false,
+      "turns": [
+        {
+          "phase": "choices",
+          "musicTarget": 0.39,
+          "readingRms": 0.02142688964053277,
+          "speechTarget": 0.15600000000000003,
+          "recoveryTarget": 0.39,
+          "loopStart": 0.193
+        },
+        {
+          "phase": "choices",
+          "musicTarget": 0.39,
+          "readingRms": 0.02972569440264481,
+          "speechTarget": 0.15600000000000003,
+          "recoveryTarget": 0.39,
+          "loopStart": 0.193
+        },
+        {
+          "phase": "choices",
+          "musicTarget": 0.39,
+          "readingRms": 0.025399232500190116,
+          "speechTarget": 0.15600000000000003,
+          "recoveryTarget": 0.39,
+          "loopStart": 0.193
+        }
+      ],
+      "pauseSilent": true,
+      "muteSilent": true,
+      "pageErrors": []
+    },
+    {
+      "selfPaced": true,
+      "turns": [
+        {
+          "phase": "choices",
+          "musicTarget": 0.39,
+          "readingRms": 0.026828511993691937,
+          "speechTarget": 0.15600000000000003,
+          "recoveryTarget": 0.39,
+          "loopStart": 0.205
+        },
+        {
+          "phase": "choices",
+          "musicTarget": 0.39,
+          "readingRms": 0.027619453877832302,
+          "speechTarget": 0.15600000000000003,
+          "recoveryTarget": 0.39,
+          "loopStart": 0.205
+        },
+        {
+          "phase": "choices",
+          "musicTarget": 0.39,
+          "readingRms": 0.02091045707959832,
+          "speechTarget": 0.15600000000000003,
+          "recoveryTarget": 0.39,
+          "loopStart": 0.205
+        }
+      ],
+      "pauseSilent": true,
+      "muteSilent": true,
+      "pageErrors": []
+    }
+  ],
+  "scope": "Isolated local Chrome profiles with real AudioContext and decoded delivery assets. Three consecutive timed and three self-paced battle turns, narration duck/recovery, pause/resume, Home and mute/unmute. Technical signal checks; no physical iPad/Safari or subjective listening test.",
+  "build": "continuous-battle-20260924-r1",
+  "automated": {
+    "node": "24.19.0",
+    "nodeTests": 208,
+    "uiFlowGroups": 73
+  },
+  "sourceCommit": "efe8e04e74ce9f9d079e9761ec0ca418bf665c46",
+  "runtimeSha256": {
+    "index.html": "d99d166f6db606efd44ae19bf598685bedfc5332d9d6945b93a22932e1322567",
+    "app.js": "5e2e3543543213ad4173316cc5a9cfbb01c3d8778ba9405574b353c566339bc1",
+    "soundscape.js": "af1ade31b8d3fd74255698fd5d5a137cb8f7bee3b7f1d0be216768c4c8cd7b4c"
+  }
+}
