@@ -194,7 +194,7 @@ The child must not be able to solve the task by noticing only:
 - word length;
 - rough word shape.
 
-Each target gets three close distractors.
+Each target gets three close distractors. For practice questions this is superseded by point 2: each word has 5–7 candidates and each question draws three; see [Rotating wrong answers](#rotating-wrong-answers-point-2--approved-23-september-2026). The reading check keeps its fixed sets.
 
 Prefer real words where possible. Ideally, two or three of the four options are real words. When suitable close real-word neighbours do not exist, use one or two plausible made-up forms.
 
@@ -796,3 +796,18 @@ The save keeps recent raw history and rolls older history into totals, so it sta
 Each earned growth milestone gets a warm glow-and-reveal scene inspired by creature evolution games, preserving Pip’s Ember Guardian identity. Four original generated character images cover the existing four forms. The scene waits until combat and any pending number duel are resolved. A recorded introduction leads to Watch; one continuous glow and reveal lead to two short untimed sentences. The child reads first, may tap Listen, and confirms with I read it. First growth offers naming afterwards. Later scenes use the chosen name in their heading; first-person reading lines keep their recordings valid after renaming.
 
 Pause, Home, Rest, backgrounding and reload preserve the current phase. Reduced motion omits transformation movement; Skip advances the animation to reading. Existing earned forms, XP, learning records and movement/entitlement locks are preserved. Evolution, reading confirmation and replay award no XP, mastery or active-play time. Watch again in the growth panel replays an earned form at a safe boundary. See [evolution scenes](EVOLUTION_RELEASE.md) for assets, recordings and verification.
+
+## Rotating wrong answers (point 2) — approved 23 September 2026
+
+Practice questions no longer show the same three wrong answers every time.
+
+- Each practice word has 5–7 reviewed wrong-answer candidates. Each question draws three.
+- Every drawn set passes all of these:
+  - the target's first letter alone, last letter alone, first and last letters together, and word length each match at least two of the four options;
+  - every letter of the target appears, at the same position, in at least one wrong option, so one letter cannot solve the question (same-position sets such as night/light/right/might are rejected);
+  - picking the option most like the other three (lowest total edit distance, a swap of neighbouring letters counting as one edit, ties split evenly) finds the answer at most half the time.
+- Across all words, that "middle option" guess finds the answer no more than about 35% of the time. To keep it low, a word with two or more sets where the guess works at most one time in three draws only from those sets.
+- Real words and pronounceable made-up words are preferred. A made-up word is never a curriculum word (the workbook's 1,000 words), and rude, violent or unkind words are never used.
+- "a" and "i" are shown with three other single letters.
+- A question already saved keeps its options.
+- The reading-check items keep their fixed options until the user decides on them.
