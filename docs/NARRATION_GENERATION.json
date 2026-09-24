@@ -17,11 +17,15 @@
       "id": "en-male-001",
       "text": "on",
       "file": "assets/narration/en-male-001.mp3",
-      "taskId": "6eb20d78-eba5-4851-abdc-9e36cfdf9443",
+      "taskId": "56427276-8b34-45f3-b1d1-473923184a48",
       "status": "downloaded",
-      "duration": 0.679184,
+      "duration": 0.650159,
       "bytes": 11328,
-      "sha256": "6cc471838ad26ca57bb91b2edf75246509e620e9ff035767365b7572392e54a5"
+      "sha256": "28eaf356e5a32f120bd0ae6bfb8c1ecb817bfc03abb66bd75144750b548bbb5b",
+      "speed": 0.88,
+      "model": "eleven_multilingual_v2",
+      "method": "standalone replacement after user QA",
+      "review": "approved by user 2026-09-24"
     },
     {
       "id": "en-male-002",
@@ -287,11 +291,15 @@
       "id": "en-male-028",
       "text": "gate",
       "file": "assets/narration/en-male-028.mp3",
-      "taskId": "ebbf5868-9975-4897-92ee-a957965364b2",
+      "taskId": "94836c94-c936-4331-96f8-21bb4cb85580",
       "status": "downloaded",
-      "duration": 0.914286,
-      "bytes": 15090,
-      "sha256": "14a91eb7f23c382cf5b9864033f9edf5ed8b8de291e24fc206f4115ca958f496"
+      "duration": 0.835918,
+      "bytes": 14254,
+      "sha256": "bc4369739714b9d27baf5d8e87b0a3539ae6f9b060ccb1af8fbc298a991eaae5",
+      "speed": 0.88,
+      "model": "eleven_multilingual_v2",
+      "method": "standalone replacement after user QA",
+      "review": "approved by user 2026-09-24"
     },
     {
       "id": "en-male-029",
@@ -487,11 +495,15 @@
       "id": "en-male-048",
       "text": "creature",
       "file": "assets/narration/en-male-048.mp3",
-      "taskId": "0005aba4-a3c1-4e98-8855-3c4327119ff0",
+      "taskId": "f21ac2e7-3f7b-4b1e-862c-a1232f900b22",
       "status": "downloaded",
-      "duration": 1.07102,
-      "bytes": 17598,
-      "sha256": "9bc3ff39020be86e6a75bcdaab66449934bef7ae3088b2b4788b197daeb3843b"
+      "duration": 0.882358,
+      "bytes": 15090,
+      "sha256": "4d77a3261e1865a57c60a25879b1e08a8be233dcb22c287254e6e9c8e2acba76",
+      "speed": 0.88,
+      "model": "eleven_multilingual_v2",
+      "method": "standalone replacement after user QA",
+      "review": "approved by user 2026-09-24"
     },
     {
       "id": "en-male-049",
@@ -997,7 +1009,8 @@
       "id": "en-male-100",
       "text": "Practice turn. You keep your heart. The word was green.",
       "file": "assets/narration/en-male-100.mp3",
-      "taskId": "e1120b2d-a631-4cb7-924a-4d01759b03c8",      "status": "downloaded",
+      "taskId": "e1120b2d-a631-4cb7-924a-4d01759b03c8",
+      "status": "downloaded",
       "duration": 5.01551,
       "bytes": 80710,
       "sha256": "59cbe5a5f13527ab8b05c83dc0528661033c0bed4355b0ec56cff121f1a7043b"
@@ -1996,7 +2009,8 @@
       "id": "core-male-270",
       "file": "assets/narration/core-male-270.mp3",
       "taskId": "b811edef-5e6b-487f-a869-ef4caec3f806",
-      "model": "eleven_multilingual_v2",      "method": "standalone recording",
+      "model": "eleven_multilingual_v2",
+      "method": "standalone recording",
       "status": "downloaded",
       "duration": 1.619592,
       "bytes": 26375,
@@ -2995,7 +3009,8 @@
       "kind": "teaching",
       "id": "core-male-584",
       "file": "assets/narration/core-male-584.mp3",
-      "taskId": "a41e90df-8faf-4b7c-bd6d-a0c2ae553280",      "model": "eleven_multilingual_v2",
+      "taskId": "a41e90df-8faf-4b7c-bd6d-a0c2ae553280",
+      "model": "eleven_multilingual_v2",
       "method": "standalone recording",
       "status": "downloaded",
       "duration": 1.802449,
@@ -3800,13 +3815,15 @@
       "kind": "word",
       "id": "core-male-005",
       "file": "assets/narration/core-male-005.mp3",
-      "taskId": "c73375bc-f493-4834-9534-1774e0c2eb17",
+      "taskId": "c4590197-66be-4816-8f46-20959d6aaa8d",
       "model": "eleven_multilingual_v2",
-      "method": "standalone recording",
+      "method": "standalone replacement after user QA",
       "status": "downloaded",
-      "duration": 0.862041,
-      "bytes": 14254,
-      "sha256": "70c3e63b7dd93a4ba197f6fe112e69db04e30851480e8419c26072b4367d6a64"
+      "duration": 0.696599,
+      "bytes": 12164,
+      "sha256": "7f18c57629bf1e262df04f351a3606e65a5f0724f491bde25f00492f03e01018",
+      "speed": 0.88,
+      "review": "approved by user 2026-09-24"
     },
     {
       "text": "in",
@@ -3839,13 +3856,15 @@
       "kind": "word",
       "id": "core-male-008",
       "file": "assets/narration/core-male-008.mp3",
-      "taskId": "90fad705-d4a3-41d7-95b9-c5e9949f38d6",
+      "taskId": "c1e5993f-2996-4b60-b32a-022782cc622c",
       "model": "eleven_multilingual_v2",
-      "method": "standalone recording",
+      "method": "standalone replacement after user QA",
       "status": "downloaded",
-      "duration": 0.783673,
-      "bytes": 13000,
-      "sha256": "1b97d4ee39a187fd2594e2d42eabb460a8fc4e18a6d71f2864a32ca148c7e75d"
+      "duration": 0.928798,
+      "bytes": 15926,
+      "sha256": "560663ac7c7a2dbf6cffd87cbe56a6674b92381403b04ea56e1faf9221e8a4d9",
+      "speed": 0.82,
+      "review": "approved by user 2026-09-24"
     },
     {
       "text": "he",
@@ -3994,7 +4013,8 @@
     {
       "text": "all",
       "kind": "word",
-      "id": "core-male-017",      "file": "assets/narration/core-male-017.mp3",
+      "id": "core-male-017",
+      "file": "assets/narration/core-male-017.mp3",
       "taskId": "8733eb35-42f0-443e-8ece-441b04792d70",
       "model": "eleven_v3",
       "method": "silence-separated word",
@@ -4993,7 +5013,8 @@
         "start": 16.5128,
         "end": 17.084082
       },
-      "status": "downloaded",      "duration": 0.653061,
+      "status": "downloaded",
+      "duration": 0.653061,
       "bytes": 10911,
       "sha256": "ff488c9083f3628959471391abcba9c5a8e5f90a7483d1fdf753ef7814582b28"
     },
@@ -5992,7 +6013,8 @@
       "kind": "word",
       "id": "core-male-128",
       "file": "assets/narration/core-male-128.mp3",
-      "taskId": "6deb9bf8-5c05-49fe-8095-409c9667dcbe",      "model": "eleven_v3",
+      "taskId": "6deb9bf8-5c05-49fe-8095-409c9667dcbe",
+      "model": "eleven_v3",
       "method": "silence-separated word",
       "sourceText": "pull. [pause] read. [pause] run. [pause] saw. [pause] show. [pause] sit. [pause] sleep. [pause] start.",
       "segment": {
@@ -6991,7 +7013,8 @@
         }
       ],
       "status": "downloaded",
-      "duration": 5.041633,      "bytes": 81128,
+      "duration": 5.041633,
+      "bytes": 81128,
       "sha256": "a421a25e09859d237d21003f33c6f61da24143bba15dae3b6825a12f994f5384"
     },
     {
@@ -7990,7 +8013,8 @@
       ],
       "status": "downloaded",
       "duration": 2.037551,
-      "bytes": 33062,      "sha256": "6de7f48c1b96d2af9f83bba27f6cee0aa2683b6d481e3730719b5237b1515df3"
+      "bytes": 33062,
+      "sha256": "6de7f48c1b96d2af9f83bba27f6cee0aa2683b6d481e3730719b5237b1515df3"
     },
     {
       "text": "Practice turn. You keep your heart. The word was all.",
@@ -8989,7 +9013,8 @@
             "start": 10.1001,
             "end": 10.75
           }
-        }      ],
+        }
+      ],
       "status": "downloaded",
       "duration": 4.937143,
       "bytes": 79456,
@@ -9988,7 +10013,8 @@
     {
       "text": "The word was no.",
       "kind": "correction",
-      "id": "core-male-326",      "file": "assets/narration/core-male-326.mp3",
+      "id": "core-male-326",
+      "file": "assets/narration/core-male-326.mp3",
       "taskId": "f1ac0f12-d6bf-4d45-a903-30957152f9cb",
       "method": "concatenated recordings",
       "sources": [
@@ -10987,7 +11013,8 @@
       "file": "assets/narration/core-male-374.mp3",
       "taskId": "f1ac0f12-d6bf-4d45-a903-30957152f9cb",
       "method": "concatenated recordings",
-      "sources": [        {
+      "sources": [
+        {
           "text": "The word was.",
           "taskId": "f1ac0f12-d6bf-4d45-a903-30957152f9cb",
           "segment": null
@@ -11986,7 +12013,8 @@
       "taskId": "8b9925c4-1c68-478e-8d65-df093cb5f4aa",
       "method": "concatenated recordings",
       "sources": [
-        {          "text": "Practice turn. You keep your heart.",
+        {
+          "text": "Practice turn. You keep your heart.",
           "taskId": "8b9925c4-1c68-478e-8d65-df093cb5f4aa",
           "segment": null
         },
@@ -12985,7 +13013,8 @@
       "text": "Practice turn. You keep your heart. Pip looks into the cave.",
       "kind": "supported-teaching",
       "id": "core-male-469",
-      "file": "assets/narration/core-male-469.mp3",      "taskId": "8b9925c4-1c68-478e-8d65-df093cb5f4aa",
+      "file": "assets/narration/core-male-469.mp3",
+      "taskId": "8b9925c4-1c68-478e-8d65-df093cb5f4aa",
       "method": "concatenated recordings",
       "sources": [
         {
@@ -13984,7 +14013,8 @@
       "taskId": "8b9925c4-1c68-478e-8d65-df093cb5f4aa",
       "method": "concatenated recordings",
       "sources": [
-        {          "text": "Practice turn. You keep your heart.",
+        {
+          "text": "Practice turn. You keep your heart.",
           "taskId": "8b9925c4-1c68-478e-8d65-df093cb5f4aa",
           "segment": null
         },
@@ -14983,7 +15013,8 @@
           "text": "Practice turn. You keep your heart.",
           "taskId": "8b9925c4-1c68-478e-8d65-df093cb5f4aa",
           "segment": null
-        },        {
+        },
+        {
           "text": "Both books are red.",
           "taskId": "ae03b25b-c2d6-4b7b-9eff-5f36ebcb8091",
           "segment": null
@@ -15982,7 +16013,8 @@
         {
           "text": "Keep the book open.",
           "taskId": "3ad68770-d8c9-4ab5-b7bd-1c0113793efe",
-          "segment": null        }
+          "segment": null
+        }
       ],
       "status": "downloaded",
       "duration": 4.362449,
@@ -16981,7 +17013,8 @@
             "start": 10.5283,
             "end": 11.192599999999999
           }
-        }      ],
+        }
+      ],
       "status": "downloaded",
       "duration": 2.037551,
       "bytes": 33062,
@@ -17980,7 +18013,8 @@
       ],
       "status": "downloaded",
       "duration": 1.933061,
-      "bytes": 31391,      "sha256": "6c3d643b57f4fae628662b97dbf264afd2c0ca488ff0451d9c796779fc145e7b"
+      "bytes": 31391,
+      "sha256": "6c3d643b57f4fae628662b97dbf264afd2c0ca488ff0451d9c796779fc145e7b"
     },
     {
       "text": "Practice turn. You keep your heart. The word was write.",
@@ -18979,7 +19013,8 @@
         }
       ],
       "status": "downloaded",
-      "duration": 2.063673,      "bytes": 33480,
+      "duration": 2.063673,
+      "bytes": 33480,
       "sha256": "d065753051c79c89144e32f3987999c9588bd067310975d67e6af24bfb45c5ea"
     },
     {
@@ -19978,7 +20013,8 @@
       "bytes": 34734,
       "sha256": "bd1dcc4724102ffa0f8fbdb2924305d42edeb9f65805b4b330b14b5e8c38bfbd"
     },
-    {      "text": "Practice turn. You keep your heart. The word was yes.",
+    {
+      "text": "Practice turn. You keep your heart. The word was yes.",
       "kind": "practice-correction",
       "id": "core-male-805",
       "file": "assets/narration/core-male-805.mp3",
@@ -20425,17 +20461,11 @@
       "sha256": "ce5562880e76a86d0446d912a7f591297addf23cbd071faa0779423a30addf4e"
     }
   ],
-  "listeningReview": "Bulk recovered clips passed decode verification in the recovery package; audible listening review and physical iPad playback remain outstanding. Gate-family recordings are retained for provenance but excluded from the runtime manifest pending pronunciation approval.",
+  "listeningReview": "User reviewed 42 representative clips on 2026-09-24: 36 original clips were good and 6 were rejected. All six targeted replacements were then listened to and approved; all 12 additional earlier-Tom word samples were good. Physical iPad gameplay playback remains unverified.",
   "clipCount": 990,
-  "bytes": 45788743,
-  "durationSeconds": 2833.241,
+  "bytes": 45786235,
+  "durationSeconds": 2832.924,
   "assembly": "Standalone words and sentences use Tom. Paused word batches use eleven_v3 with exact silence-count validation. Supported teaching and corrections concatenate recorded prefixes and words/sentences without pitch shifting. Raw source task IDs and word segment times are retained.",
-  "runtimeClipCount": 985,
-  "runtimeFallbackOnly": [
-    "Practice turn. You keep your heart. The gate is by the castle.",
-    "Practice turn. You keep your heart. The word was gate.",
-    "The gate is by the castle.",
-    "The word was gate.",
-    "gate"
-  ]
+  "runtimeClipCount": 990,
+  "runtimeFallbackOnly": []
 }
