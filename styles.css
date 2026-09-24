@@ -329,3 +329,41 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 @media(max-height:580px) and (orientation:landscape){.storyPicture{height:100%;max-height:none;min-height:170px;aspect-ratio:auto}#storyLandscape{object-fit:cover;object-position:center}}
 .backupActions{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0 6px}.backupStatus{min-height:1.6em}
 #saveNoticeBackup{margin-top:15px}#saveNoticeStatus:empty{display:none}
+
+/* Pip's earned evolution: one warm glow, a new form, then untimed reading. */
+.evolutionScreen{z-index:12;flex-direction:column;align-items:center;padding:76px 24px 22px;background:radial-gradient(ellipse at 50% 44%,#25423a 0,#0b2720 48%,#061b17 100%);color:#fff3d5;overflow:auto;isolation:isolate}
+.evolutionScreen h1{font-family:var(--reading-font);font-size:clamp(24px,3.5vw,38px);line-height:1.2;text-align:center;margin:0;flex-shrink:0;text-shadow:0 3px 12px #0008}
+.evolutionStage{position:relative;width:min(60vh,560px,88vw);min-height:140px;aspect-ratio:1;flex:1 1 auto;max-height:58vh;margin:0 auto;isolation:isolate}
+.evolutionFrame{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:1}
+.evolutionFrame img,.evolutionFallback{position:absolute;width:100%;height:100%;object-fit:contain}
+.evolutionFrame img{mask-image:radial-gradient(ellipse 60% 57% at 50% 51%,#000 55%,transparent 96%);-webkit-mask-image:radial-gradient(ellipse 60% 57% at 50% 51%,#000 55%,transparent 96%)}
+#evolutionAfter{opacity:0}
+.evolutionGlow{position:absolute;inset:9%;border-radius:50%;background:radial-gradient(ellipse,#fff7cfdd 0,#ffcc6577 25%,#ecad3222 53%,transparent 70%);opacity:0;pointer-events:none}
+.evolutionRing{position:absolute;inset:18%;border:2px solid #f2d08c;box-shadow:0 0 28px #fac36988,inset 0 0 24px #fac36955;border-radius:50%;opacity:0;pointer-events:none}
+.evolutionReading{width:min(620px,100%);flex-shrink:0;text-align:center;min-height:164px}
+#evolutionHint{font:17px/1.4 var(--reading-font);color:#d7d8bd;margin:4px 0 10px;min-height:24px}
+#evolutionLines{font:clamp(26px,3.4vw,36px)/1.5 var(--reading-font);letter-spacing:.02em;margin:8px 0 19px}
+#evolutionLines p{margin:0}
+.evolutionActions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px}
+.evolutionActions button{min-height:52px;min-width:120px;margin:0;font:20px var(--reading-font)}
+.evolutionActions .greenButton{border-color:#b3be88;box-shadow:0 4px 18px #0004}
+.evolutionActions .textButton{color:#efdab5}
+#evolutionListen{display:flex;align-items:center;justify-content:center;gap:9px;background:#244137;color:#fff0d0;border:1px solid #768672}
+#evolutionListen svg{width:23px;height:23px;fill:currentColor}
+.evolutionScreen[data-phase="charge"] #evolutionBefore{animation:evolutionGather 2.6s ease-in forwards}
+.evolutionScreen[data-phase="charge"] .evolutionGlow{animation:evolutionLight 2.6s ease-in forwards}
+.evolutionScreen[data-phase="charge"] .evolutionRing{animation:evolutionCircle 2.6s ease-in forwards}
+.evolutionScreen[data-phase="reveal"] #evolutionBefore,.evolutionScreen[data-phase="read"] #evolutionBefore{opacity:0}
+.evolutionScreen[data-phase="reveal"] #evolutionAfter{animation:evolutionReveal 1.8s ease-out forwards}
+.evolutionScreen[data-phase="reveal"] .evolutionGlow{animation:evolutionFade 1.8s ease-out both}
+.evolutionScreen[data-phase="read"] #evolutionAfter{opacity:1}
+.evolutionScreen.motionPaused *{animation-play-state:paused!important}
+@keyframes evolutionGather{0%{transform:scale(1);filter:brightness(1)}45%{transform:scale(.96);filter:brightness(1.5)}100%{transform:scale(1.06);filter:brightness(2.2);opacity:.2}}
+@keyframes evolutionLight{0%{opacity:0;transform:scale(.5)}100%{opacity:1;transform:scale(1.4)}}
+@keyframes evolutionCircle{0%{opacity:0;transform:scale(1.25) rotate(0)}35%{opacity:.5}100%{opacity:0;transform:scale(.65) rotate(100deg)}}
+@keyframes evolutionReveal{0%{opacity:0;transform:scale(.86);filter:brightness(1.7)}50%{opacity:1}100%{opacity:1;transform:scale(1);filter:brightness(1)}}
+@keyframes evolutionFade{from{opacity:1;transform:scale(1.4)}to{opacity:0;transform:scale(1.65)}}
+#evolutionReplay{margin:8px 8px 8px 0}
+@media(max-width:480px){.evolutionScreen{padding:80px 16px 22px}.evolutionStage{max-height:45vh;width:100%;flex-basis:280px}.evolutionReading{min-height:170px}#evolutionLines{font-size:27px}.evolutionActions button{font-size:18px;min-width:112px}}
+@media(max-height:580px) and (orientation:landscape){.evolutionScreen{display:none;grid-template-columns:minmax(210px,1fr) minmax(270px,1fr);grid-template-rows:auto 1fr;padding:66px 30px 16px;gap:0 20px}.evolutionScreen.active{display:grid}.evolutionScreen h1{grid-column:1/-1;font-size:25px}.evolutionStage{width:100%;height:100%;max-height:none;grid-row:2;grid-column:1;min-height:180px}.evolutionReading{grid-row:2;grid-column:2;align-self:center;min-height:0}#evolutionLines{font-size:27px;margin:8px 0 14px}.evolutionActions button{min-width:108px;min-height:48px;font-size:18px}}
+@media(prefers-reduced-motion:reduce){.evolutionScreen *{animation:none!important;transition:none!important}.evolutionScreen[data-phase="reveal"] #evolutionAfter{opacity:1}.evolutionGlow,.evolutionRing{display:none}}

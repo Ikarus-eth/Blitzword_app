@@ -790,3 +790,9 @@ The save keeps recent raw history and rolls older history into totals, so it sta
   - for number duels, every duel's time, score, correct, wrong, target and result, plus per-fact totals.
 - Parents totals and answer counts include the archive. Existing saves migrate in place on load; nothing earned or set is lost.
 - The play tick saves at most every 10 seconds. Answers and other meaningful events, pause and leaving the page save at once. The new save is written before the previous one is copied to `_backup`, so a smaller save frees space first; if the copy does not fit, the older backup stays.
+
+## Dragon evolution scenes — approved 23 September 2026
+
+Each earned growth milestone gets a warm glow-and-reveal scene inspired by creature evolution games, preserving Pip’s Ember Guardian identity. Four original generated character images cover the existing four forms. The scene waits until combat and any pending number duel are resolved. A recorded introduction leads to Watch; one continuous glow and reveal lead to two short untimed sentences. The child reads first, may tap Listen, and confirms with I read it. First growth offers naming afterwards. Later scenes use the chosen name in their heading; first-person reading lines keep their recordings valid after renaming.
+
+Pause, Home, Rest, backgrounding and reload preserve the current phase. Reduced motion omits transformation movement; Skip advances the animation to reading. Existing earned forms, XP, learning records and movement/entitlement locks are preserved. Evolution, reading confirmation and replay award no XP, mastery or active-play time. Watch again in the growth panel replays an earned form at a safe boundary. See [evolution scenes](EVOLUTION_RELEASE.md) for assets, recordings and verification.

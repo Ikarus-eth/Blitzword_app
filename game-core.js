@@ -19,7 +19,7 @@
       assessment:{done:false,records:[],level:0,exposure:1800,lastAxis:'exposure',progress:null},
       learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[]},
       campaign:{wins:0,checkpointWins:0,enemyStrength:3,battleRecords:[]},
-      dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{},scenes:{},scene:null},
+      dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false,evolutionSeen:0,evolution:null},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{},scenes:{},scene:null},
       timing:{version:1,days:{},firstPracticeAt:null},
       math:{best:null,winStreak:0,round:null,records:[]},
       rewards:{shield:false,readingWins:0,shieldEarnedAt:null,xpDays:{},speedHistory:{}},
@@ -94,6 +94,8 @@
       s.chapterRulesVersion=1;
       for(const a of Content.areas){const wins=Math.max(0,Math.min(2,s.campaign.wins-(a.checkpoint-2)));if(wins&&!s.story.clearedAreas.includes(a.id))chapterState(s,a.id).wins=wins;}
     }
+    // Existing earned forms remain earned. They can be replayed from the growth panel.
+    if(!Number.isInteger(old.dragon?.evolutionSeen))s.dragon.evolutionSeen=s.dragon.stage;
     archiveOf(s);compactHistory(s);
     syncProgress(s);
     return s;
@@ -198,6 +200,24 @@
   }
   function cleanDragonName(name){return typeof name==='string'?Array.from(name.replace(/[\u0000-\u001f\u007f<>]/g,'').replace(/\s+/g,' ').trim()).slice(0,18).join(''):'';}
   function nameDragon(s,name){if(s.dragon.stage<1)return false;const clean=cleanDragonName(name);if(!clean)return false;s.dragon.name=clean;s.dragon.named=true;return true;}
+  function beginEvolution(s,{replay=false}={}){
+    if(s.dragon.evolution)return s.dragon.evolution;
+    if(s.battle&&!s.battle.resolved||s.math.round&&s.math.round.status!=='result')return null;
+    const stage=replay?s.dragon.stage:s.dragon.evolutionSeen+1;
+    if(stage<1||stage>s.dragon.stage)return null;
+    return s.dragon.evolution={stage,phase:'intro',replay,returnTo:s.screen==='campaignMap'?'map':'activity'};
+  }
+  function advanceEvolution(s){
+    const scene=s.dragon.evolution;if(!scene)return false;
+    const phases=['intro','charge','reveal','read'],i=phases.indexOf(scene.phase);
+    if(i<0||i===phases.length-1)return false;
+    scene.phase=phases[i+1];return true;
+  }
+  function finishEvolution(s){
+    const scene=s.dragon.evolution;if(!scene||scene.phase!=='read')return null;
+    if(!scene.replay)s.dragon.evolutionSeen=Math.max(s.dragon.evolutionSeen,scene.stage);
+    s.dragon.evolution=null;return scene;
+  }
   function chapterState(s,areaId){return s.story.chapters[areaId] ||= {activeMs:0,wins:0,duels:0,attempts:0,correct:0};}
   function activeChapterState(s){return s.battle?.reviewId?s.story.review: s.battle?.areaId?chapterState(s,s.battle.areaId):null;}
   function completeReviewChapter(s,now){
@@ -658,7 +678,7 @@
       q.phase='ready';
     }
   }
-  return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,bonusProgress,nameDragon,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
+  return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,recordTime,parentProgress,dayKey,

@@ -8,6 +8,7 @@ function boot(saved,options={}){
  const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failWrites===true||typeof failWrites==='function'&&failWrites(k,v))throw new Error('Storage full');memory.set(k,v)},removeItem:k=>memory.delete(k)};
  const schedule=(fn,ms)=>(jobs.set(++uid,{fn,time:now+ms}),uid);
  window.localStorage=storage;
+ window.matchMedia=()=>({matches:!!options.reducedMotion});
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.selected=option.value===value;}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>true,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
@@ -143,8 +144,8 @@ for(const victory of [true,false]){
  const id=ui.state().battle.id;ui.click(ui.get('mapNodes').querySelector('[data-area="hidden-nest"]'));
  assert.equal(ui.get('mapAreaTitle').textContent,'Home');assert.equal(ui.get('mapContinue').disabled,true);assert.equal(ui.state().battle.id,id);assert.equal(ui.get('mapAreaStatus').textContent,'Further along the trail');
  ui.click(ui.get('mapNodes').querySelector('[data-area="lantern-trail"]'));ui.resume();ui.ready();assert.equal(ui.state().battle.question.target,'on');
- ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip grew! Big Pip');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'1');
- ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'3000 XP');assert.equal(ui.get('dragonStage').textContent,'Big Pip');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('mapPip').dataset.growth,'1');
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip is glowing!');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'0');
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'3000 XP');assert.equal(ui.get('dragonStage').textContent,'Big Pip');assert.equal(ui.get('dragonNext').textContent,'Growing together');assert.equal(ui.get('mapPip').dataset.growth,'0');
  const answers=ui.state().campaign.battleRecords.length;ui.resume();ui.until(()=>ui.state().battle.question.target!=='on');assert.equal(ui.state().campaign.battleRecords.length,answers);
  ui.click(ui.get('homeBtn'));ui.click(ui.get('mapSettings'));ui.click(ui.get('heroGrid').children[1]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.get('dragonXP').textContent,'3000 XP');
  console.log('PASS map future previews, XP stage unlock, reload, exact resume and hero change');
@@ -253,7 +254,7 @@ for(const victory of [true,false]){
 {
  let s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
  let ui=boot(s);ui.click(ui.get('dragonPanel'));assert.equal(ui.get('renameDragon').hidden,true);
- s.dragon.xp=3000;ui=boot(s);assert.equal(ui.get('dragonNamePanel').hidden,false);ui.get('dragonNameInput').value=' ';ui.click(ui.get('dragonNameSave'));assert.match(ui.get('dragonNameMessage').textContent,/Choose/);
+ s.dragon.xp=3000;ui=boot(s);assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.state().screen,'evolution');ui.click(ui.get('evolutionNext'));ui.until(()=>ui.state().dragon.evolution.phase==='read');ui.click(ui.get('evolutionNext'));assert.equal(ui.get('dragonNamePanel').hidden,false);ui.get('dragonNameInput').value=' ';ui.click(ui.get('dragonNameSave'));assert.match(ui.get('dragonNameMessage').textContent,/Choose/);
  ui.get('dragonNameInput').value='Ember';ui.click(ui.get('dragonNameSave'));assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.state().dragon.name,'Ember');assert.equal(ui.get('dragonStage').textContent,'Big Ember');assert.equal(ui.get('dragonTapHint').textContent,'XP · Tap Ember');assert.equal(ui.get('dragonPanel').getAttribute('aria-label'),'See Ember’s growth');assert.equal(ui.get('growthClose').getAttribute('aria-label'),'Close Ember’s growth');
  ui=boot(ui.state());assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.state().dragon.xp,3000);ui.click(ui.get('dragonPanel'));assert.equal(ui.get('renameDragon').hidden,false);ui.click(ui.get('renameDragon'));ui.click(ui.get('dragonNameLater'));assert.equal(ui.state().dragon.name,'Ember');
  s=ui.state();Core.startBattle(s,Date.UTC(2026,8,22));Core.prepareBattle(s,Date.UTC(2026,8,22));Core.startTeaching(s,'on','battle',Date.UTC(2026,8,22));ui=boot(s);ui.resume();assert.match(ui.get('teachSentence').textContent,/Ember is on the rock/);assert.equal(ui.get('teachSentence').querySelector('.targetWord').textContent,'on');
@@ -488,4 +489,57 @@ for(const archived of [0,1]){
  const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));ui.finishSpeech();
  assert.equal(Core.answerCount(ui.state()),archived+1);assert.equal(ui.get('combatEffects').classList.contains('pipStrike'),archived===1);
  console.log('PASS Pip assist parity uses all answers with',archived,'archived');
+}
+
+for(const stage of [1,2,3]){
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
+ s.dragon.xp=Content.dragonStages[stage].xp;s.dragon.stage=stage;s.dragon.evolutionSeen=stage-1;
+ s.dragon.name='Ember';s.dragon.named=stage>1;
+ let ui=boot(s,{heldNarration:true});assert.equal(ui.state().screen,'evolution');assert.match(ui.get('evolutionTitle').textContent,/Ember/);
+ assert.equal(ui.get('dragonNamePanel').hidden,true);assert.equal(ui.speechTexts.at(-1),Content.evolution.intro);
+ const xp=ui.state().dragon.xp,learning=JSON.stringify(ui.state().learning);
+ ui.click(ui.get('evolutionNext'));assert.equal(ui.state().dragon.evolution.phase,'charge');assert.equal(ui.pendingSpeech(),null);
+ ui.visibility(true);assert.equal(ui.get('pausePanel').hidden,false);ui.advance(90000,true);assert.equal(ui.state().dragon.evolution.phase,'charge');
+ ui.visibility(false);ui.click(ui.get('pauseResume'));ui.tick();assert.equal(ui.state().dragon.evolution.phase,'reveal');
+ ui.click(ui.get('homeBtn'));assert.equal(ui.state().screen,'campaignMap');assert.equal(ui.state().dragon.evolution.phase,'reveal');
+ ui=boot(ui.state(),{heldNarration:true});if(ui.state().screen!=='evolution')ui.resume();assert.equal(ui.state().screen,'evolution');ui.tick();assert.equal(ui.state().dragon.evolution.phase,'read');
+ assert.equal(ui.get('evolutionLines').textContent,Content.evolution.lines[stage].join(''));assert.equal(ui.pendingSpeech(),null);
+ ui.advance(120000);assert.equal(ui.state().screen,'evolution');assert.equal(ui.state().dragon.evolution.phase,'read');
+ ui.click(ui.get('evolutionListen'));assert.equal(ui.speechTexts.at(-1),Content.evolution.lines[stage].join(' '));
+ ui.click(ui.get('evolutionNext'));assert.equal(ui.pendingSpeech(),null);assert.equal(ui.state().dragon.evolution,null);assert.equal(ui.state().dragon.evolutionSeen,stage);
+ assert.equal(ui.state().dragon.xp,xp);assert.equal(JSON.stringify(ui.state().learning),learning);assert.equal(Core.parentProgress(ui.state()).activeMs,0);
+ if(stage===1){assert.equal(ui.get('dragonNamePanel').hidden,false);ui.click(ui.get('dragonNameLater'));}
+ ui.click(ui.get('dragonPanel'));ui.click(ui.get('evolutionReplay'));assert.equal(ui.state().screen,'evolution');
+ ui.click(ui.get('evolutionNext'));ui.click(ui.get('evolutionSkip'));assert.equal(ui.state().dragon.evolution.phase,'read');ui.click(ui.get('evolutionNext'));
+ assert.equal(ui.state().dragon.xp,xp);assert.equal(ui.state().dragon.evolutionSeen,stage);
+ console.log('PASS evolution '+stage+': narration, pause/background, Home/reload, untimed reading, naming and replay without rewards');
+}
+{
+ const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=3000;
+ Core.startBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);
+ const ui=boot(s);assert.equal(ui.state().screen,'evolution');ui.click(ui.get('evolutionNext'));ui.click(ui.get('evolutionSkip'));
+ const img=ui.get('evolutionAfter').querySelector('img');img.onerror();assert.equal(img.hidden,true);assert.equal(ui.get('evolutionAfter').querySelector('.evolutionFallback').hidden,false);
+ ui.click(ui.get('evolutionNext'));ui.click(ui.get('dragonNameLater'));assert.equal(ui.state().dragon.evolution,null);
+ ui.resume();assert.equal(ui.state().screen,'result');assert.equal(ui.state().campaign.wins,1);
+ console.log('PASS evolution returns to saved battle result and missing image does not block reading');
+}
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=3000;
+ const ui=boot(s,{reducedMotion:true});ui.click(ui.get('evolutionNext'));ui.tick();
+ assert.equal(ui.state().dragon.evolution.phase,'read');assert.ok(ui.get('evolution').classList.contains('still'));
+ ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseFinish'));assert.equal(ui.state().screen,'campaignMap');
+ assert.equal(ui.state().dragon.evolution.phase,'read');ui.resume();assert.equal(ui.state().dragon.evolution.phase,'read');
+ console.log('PASS reduced motion skips transformation movement; Rest preserves the reading scene');
+}
+{
+ const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;s.dragon.xp=2999;
+ for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
+ Core.startBattle(s,now,{strength:4});s.battle.introPending=false;Core.prepareBattle(s,now);s.battle.enemyHealth=1;
+ const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));assert.equal(ui.state().dragon.stage,1);
+ assert.equal(ui.state().screen,'battle');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'0');
+ ui.finishSpeech();ui.until(()=>ui.state().screen==='evolution');assert.equal(ui.state().battle.resolved,true);
+ ui.click(ui.get('evolutionNext'));ui.click(ui.get('evolutionSkip'));ui.click(ui.get('evolutionNext'));
+ assert.equal(ui.state().screen,'result');assert.equal(ui.state().campaign.wins,1);
+ console.log('PASS XP-crossing final answer finishes narration and combat before evolution, then returns to its result');
 }

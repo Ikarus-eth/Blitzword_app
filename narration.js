@@ -1,10 +1,10 @@
 (function(root){
 const narration={
-  "version": "recorded-voice-20260924-r3",
+  "version": "recorded-voice-20260924-r4",
   "voice": "Tom",
   "language": "en-GB",
-  "recoveredClipCount": 990,
-  "runtimeClipCount": 990,
+  "recoveredClipCount": 994,
+  "runtimeClipCount": 994,
   "fallbackOnly": [],
   "clips": {
     "on": {
@@ -4956,6 +4956,26 @@ const narration={
       "file": "assets/narration/core-male-825.mp3",
       "duration": 4.91102,
       "sha256": "ce5562880e76a86d0446d912a7f591297addf23cbd071faa0779423a30addf4e"
+    },
+    "Look! Your dragon is glowing. Let's see what happens.": {
+      "file": "assets/narration/evolution-0.mp3",
+      "duration": 4.440816,
+      "sha256": "5cbaa9d14c52d4ca8d5af0117ebd16fca64798b9b09e3a5bbe0d65cbaa103b19"
+    },
+    "I am big. I can help.": {
+      "file": "assets/narration/evolution-1.mp3",
+      "duration": 1.985306,
+      "sha256": "3f409043324cb9b1a572a9c05b06934f016c54c93cdbe7d438c408c3aacfefb8"
+    },
+    "My wings are big. I can help you.": {
+      "file": "assets/narration/evolution-2.mp3",
+      "duration": 2.403265,
+      "sha256": "639261d00c28315547cdccd89b028019ed0b5b729b9337741ee8f6a0b67dff02"
+    },
+    "Hop on my back. We can go far.": {
+      "file": "assets/narration/evolution-3.mp3",
+      "duration": 2.693515,
+      "sha256": "642911aaec8c058d5eeab09e3d0e794f336498bedba630ce6784aea8055bedfa"
     }
   }
 };

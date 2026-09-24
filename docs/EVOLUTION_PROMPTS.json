@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "references": [
+    "assets/pip-growth.png",
+    "assets/pip.webp"
+  ],
+  "prompts": [
+    {
+      "stage": 0,
+      "file": "assets/evolution/pip-stage-0.webp",
+      "prompt": "Use case: stylized-concept. Asset type: individual game evolution character frame, square 1024x1024. Input images are authoritative character identity references, NOT edit targets. Create ONE full-body dragon only, facing three-quarter right, centred with every wing tip, tail and paw comfortably inside the frame. The same Ember Guardian Pip character: orange ember scales, cream featherlike neck/chest underside, amber eyes, rust red leaflike cheek and dorsal spines, cream swept horns, charcoal wing membranes carrying warm golden flame markings, orange leaf flame tail tip. Match the reference's detailed hand-painted storybook fantasy game illustration. Preserve identity, no redesign, no additional characters, no writing, no labels, no border. Background: perfectly plain deep near-black pine green (#071f1b), with very subtle warm ground contact shadow only; NO landscape, no glowing effects or particles (added by the app). Keep subject occupying 75% width and 78% height, baseline paws at 86% image height. Warm light from upper left, crisp character detail. Stage 0: The small youthful hatchling, matching the upper-left dragon of the reference sheet and portrait. Sitting on all four paws, little wings half open, short cream horns, big warm amber eyes, round short muzzle. Curious and approachable."
+    },
+    {
+      "stage": 1,
+      "file": "assets/evolution/pip-stage-1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: individual game evolution character frame, square 1024x1024. Input images are authoritative character identity references, NOT edit targets. Create ONE full-body dragon only, facing three-quarter right, centred with every wing tip, tail and paw comfortably inside the frame. The same Ember Guardian Pip character: orange ember scales, cream featherlike neck/chest underside, amber eyes, rust red leaflike cheek and dorsal spines, cream swept horns, charcoal wing membranes carrying warm golden flame markings, orange leaf flame tail tip. Match the reference's detailed hand-painted storybook fantasy game illustration. Preserve identity, no redesign, no additional characters, no writing, no labels, no border. Background: perfectly plain deep near-black pine green (#071f1b), with very subtle warm ground contact shadow only; NO landscape, no glowing effects or particles (added by the app). Keep subject occupying 75% width and 78% height, baseline paws at 86% image height. Warm light from upper left, crisp character detail. Stage 1: The juvenile dragon, matching the upper-right dragon of the reference sheet. Taller neck and shoulders, larger wings and horns than the hatchling, still youthful amber eyes. A confident standing pose with raised head, paws firmly planted."
+    },
+    {
+      "stage": 2,
+      "file": "assets/evolution/pip-stage-2.webp",
+      "prompt": "Use case: stylized-concept. Asset type: individual game evolution character frame, square 1024x1024. Input images are authoritative character identity references, NOT edit targets. Create ONE full-body dragon only, facing three-quarter right, centred with every wing tip, tail and paw comfortably inside the frame. The same Ember Guardian Pip character: orange ember scales, cream featherlike neck/chest underside, amber eyes, rust red leaflike cheek and dorsal spines, cream swept horns, charcoal wing membranes carrying warm golden flame markings, orange leaf flame tail tip. Match the reference's detailed hand-painted storybook fantasy game illustration. Preserve identity, no redesign, no additional characters, no writing, no labels, no border. Background: perfectly plain deep near-black pine green (#071f1b), with very subtle warm ground contact shadow only; NO landscape, no glowing effects or particles (added by the app). Keep subject occupying 75% width and 78% height, baseline paws at 86% image height. Warm light from upper left, crisp character detail. Stage 2: The strong guardian dragon, matching the lower-left dragon of the reference sheet. Clearly longer muzzle, strong chest and neck, larger swept-back cream horns, more defined ember spines and big wings opening proudly. Noble protective expression, grounded four-paw stance. No saddle."
+    },
+    {
+      "stage": 3,
+      "file": "assets/evolution/pip-stage-3.webp",
+      "prompt": "Use case: stylized-concept. Asset type: individual game evolution character frame, square 1024x1024. Input images are authoritative character identity references, NOT edit targets. Create ONE full-body dragon only, facing three-quarter right, centred with every wing tip, tail and paw comfortably inside the frame. The same Ember Guardian Pip character: orange ember scales, cream featherlike neck/chest underside, amber eyes, rust red leaflike cheek and dorsal spines, cream swept horns, charcoal wing membranes carrying warm golden flame markings, orange leaf flame tail tip. Match the reference's detailed hand-painted storybook fantasy game illustration. Preserve identity, no redesign, no additional characters, no writing, no labels, no border. Background: perfectly plain deep near-black pine green (#071f1b), with very subtle warm ground contact shadow only; NO landscape, no glowing effects or particles (added by the app). Keep subject occupying 75% width and 78% height, baseline paws at 86% image height. Warm light from upper left, crisp character detail. Stage 3: The fully grown rideable guardian dragon, matching the lower-right dragon of the reference sheet. Powerful neck, long muzzle, confident guardian stance, very large dark wings with golden flame markings, swept-back cream horns. Preserve the dark brown leather saddle with gold trim and cream chest harness diamond ember gem. No rider."
+    }
+  ]
+}

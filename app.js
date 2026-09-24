@@ -54,7 +54,7 @@ function healthSymbols(element,health){
   element.textContent=health<=8?'♥'.repeat(health):'♥ × '+health;
   element.setAttribute('aria-label',health+' hearts');
 }
-function paintPip(element,stage=state.dragon.stage){
+function paintPip(element,stage=Math.min(state.dragon.stage,state.dragon.evolutionSeen??state.dragon.stage)){
   const design=Content.dragonStages[stage];element.style.setProperty('--pip-scale',design.scale);element.dataset.growth=String(stage);
   if(stage===0)paintSprite(element,6);
   else{element.style.backgroundImage='none';element.innerHTML=`<svg viewBox="${design.crop.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><image href="assets/pip-growth.png" width="1536" height="1024"/></svg>`;}
@@ -74,7 +74,7 @@ function updateDailyXP(){
   $('#mapBonus').hidden=!p.active;$('#mapBonus').textContent=label;
 }
 function openNaming(){if(state.dragon.stage<1)return;$('#growthPanel').hidden=true;$('#dragonNameInput').value=state.dragon.name||'Pip';$('#dragonNameMessage').textContent='';$('#dragonNamePanel').hidden=false;$('#dragonNameInput').focus();}
-function maybeOfferName(){if(state.dragon.stage>=1&&!state.dragon.named&&!state.dragon.namingPromptSeen){state.dragon.namingPromptSeen=true;if(save())openNaming();}}
+function maybeOfferName(){if(!state.dragon.evolution&&state.dragon.evolutionSeen>=1&&state.dragon.stage>=1&&!state.dragon.named&&!state.dragon.namingPromptSeen){state.dragon.namingPromptSeen=true;if(save())openNaming();}}
 function growthCaption(p){
   if(!p.next)return dragonText('Pip is ready to ride');
   return Math.ceil(p.remaining)+' XP to '+dragonText(p.next.name);
@@ -86,7 +86,7 @@ function renderChapter(element,compact=false){
   const track=document.createElement('span');track.className='chapterTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label','Campaign '+p.campaignNumber+', '+p.campaign.name+': '+p.cleared+' of '+p.total+' chapters completed. Chapter '+p.chapterNumber+', '+p.area.name);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.cleared));
   const fill=document.createElement('span');fill.style.width=(100*p.cleared/p.total)+'%';track.append(fill);element.append(title,count,track);
 }
-function renderMap(){
+function renderMap(deferEvolution=false){
   show('campaignMap');$('#pausePanel').hidden=true;
   const progress=Core.storyProgress(state),growth=Core.dragonProgress(state);
   const terrain=$('.mapTerrain'),mapScene=progress.chapter.scene;
@@ -137,7 +137,7 @@ function renderMap(){
     const art=document.createElement('span');art.className='stagePortrait';paintPip(art,i);
     const label=document.createElement('span');label.textContent=stage.name.replace(' Pip','');const xp=document.createElement('small');xp.textContent=i<=growth.stage?'✓':stage.xp+' XP';
     item.append(art,label,xp);stages.append(item);
-  });updateDailyXP();save();maybeOfferName();
+  });updateDailyXP();save();if(!deferEvolution&&!maybeEvolution())maybeOfferName();
 }
 function clearCombat(){
   $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
@@ -147,10 +147,10 @@ function clearCombat(){
   $('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
 }
-function cancelWork(){clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();sound.configure({narrating:false});}
+function cancelWork(){clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
 function activityCategory(){
-  if(!state||paused||blocked||!playing)return null;
+  if(!state||paused||blocked||!playing||state.screen==='evolution')return null;
   if(state.activity==='mathChallenge'&&state.screen==='mathChallenge'&&state.math.round?.status==='playing')return 'math';
   if(state.activity==='battle'&&state.screen==='battle'&&!state.battle.introPending&&state.battle.question)return state.battle.demo?'demo':'practice';
   if(state.activity==='teaching'&&state.screen==='teaching')return state.teaching?.returnTo==='demo'||state.battle?.demo?'demo':'practice';
@@ -251,7 +251,7 @@ const SAVE_EVERY_MS=10000;let lastSaveAt=-Infinity;
 function save(){account();try{store.save(state);lastSaveAt=performance.now();return true;}catch(e){storageProblem(e);return false;}}
 function show(id) {
   $$('.screen').forEach(el=>el.classList.toggle('active',el.id===id));
-  $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge','chapterStory'].includes(id);
+  $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge','chapterStory','evolution'].includes(id);
   $('#homeBtn').hidden=['setup','route','campaignMap','parentDashboard'].includes(id);
   $('#backBtn').hidden=id!=='hero';
   if(!['battle','assessment'].includes(id))$('#wordReady').hidden=true;
@@ -304,10 +304,11 @@ function renderHeroes(){
   });
 }
 function home() {
+  const deferEvolution=state.screen==='evolution'&&!!state.dragon.evolution;
   if(playing&&!paused)confirmActivity();account();Core.interruptQuestion(state);cancelWork();paused=true;playing=false;playClock.discard();drainExcluded();
   $('#pausePanel').hidden=true;
   selectedMapArea=null;
-  if(state.assessment.done){renderMap();return;}
+  if(state.assessment.done){renderMap(deferEvolution);return;}
   paintHero($('#routeHeroImg'),heroIndex());
   $('#routeTitle').textContent='Hi, '+state.profile.name+'!';
   $('#routeName').textContent=dragonText('Pip is coming with you.');
@@ -324,6 +325,7 @@ function enter() {
   paused=false;playing=true;windowFocused=true;playClock.reset(performance.now());drainExcluded();lastTick=performance.now();$('#pausePanel').hidden=true;renderActivity();
 }
 function continueAdventure() {
+  if(state.dragon.evolution){enter();return;}
   if(state.session?.completedAt) {
     Core.beginSession(state,Date.now());
     state.activity=state.story.scene?'chapterStory':state.math.round?mathActivity():state.teaching?'teaching':state.result?'result':state.battle&&!state.battle.resolved?'battle':'route';
@@ -357,11 +359,14 @@ function showPausePanel(){
 }
 function finishForNow() {
   if(blocked)return;
+  if(state.screen==='evolution'){home();return;}
   if(state.session&&!state.session.completedAt&&!state.battle?.demo){Core.completeSession(state,Date.now());if(save())enter();}
   else home();
 }
 function renderActivity() {
   cancelWork();$('#feedback').classList.remove('show');
+  if(state.dragon.evolution){renderEvolution();return;}
+  if(['result','summary'].includes(state.activity)&&maybeEvolution())return;
   $('#xpReward').hidden=true;
   $('#battleHeroImg').classList.remove('attack','heroHit','heroDefeated');$('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge');
@@ -499,7 +504,7 @@ function correctFeedback() {
   const supported=q.supportReasons.length>0;
   $('#feedback').textContent=supported?'Practice':'';$('#feedback').classList.toggle('show',supported);
   $('#battleScroll').classList.add('wordSuccess');
-  if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip grew! '+Content.dragonStages[q.grewTo].name):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
+  if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
   speak(q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
 function combatGeometry(effects){
@@ -699,10 +704,10 @@ function syncSound(){
   if(!state)return;
   const q=Core.getQuestion(state),reading=['battle','assessment'].includes(state.screen)&&q&&!q.answeredAt;
   const screen=state.screen,volumes=BlitzSound.settings(state.settings.audio);
-  const scene=screen==='battle'?'battle':screen==='mathChallenge'?'duel':screen==='result'?(state.result?.victory?'victory':'defeat'):screen==='mathResult'?(state.math.round?.beaten?'victory':'defeat'):['teaching','handoff','mathIntro','chapterStory'].includes(screen)?'transition':'home';
+  const scene=screen==='battle'?'battle':screen==='mathChallenge'?'duel':screen==='result'?(state.result?.victory?'victory':'defeat'):screen==='mathResult'?(state.math.round?.beaten?'victory':'defeat'):['teaching','handoff','mathIntro','chapterStory','evolution'].includes(screen)?'transition':'home';
   sound.configure({enabled:state.settings.soundscape!==false,scene,volumes,
     suspended:blocked||document.hidden||!windowFocused||(playing&&paused),
-    quiet:!!reading||screen==='assessment'||screen==='parentDashboard'||screen==='teaching'||screen==='chapterStory'});
+    quiet:!!reading||screen==='assessment'||screen==='parentDashboard'||screen==='teaching'||screen==='chapterStory'||screen==='evolution'&&state.dragon.evolution?.phase==='read'});
   narrator.configure?.({volume:volumes.speech});
 }
 function populateSoundSettings(){
@@ -743,8 +748,57 @@ function openGrowth(){
   const meters=[['XP',Math.floor(g.xp),g.next?.xp||Math.max(1,Math.floor(g.xp))]];
   meters.forEach(([label,value,max])=>{const row=document.createElement('div');row.className='growthMeter';const heading=document.createElement('span');heading.textContent=label;const valueEl=document.createElement('strong');valueEl.textContent=Math.min(value,max)+' / '+max;const track=document.createElement('div');track.className='growthTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label',label);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(max));track.setAttribute('aria-valuenow',String(Math.min(value,max)));const fill=document.createElement('span');fill.style.width=(Math.min(1,value/max)*100)+'%';track.append(fill);row.append(heading,valueEl,track);rows.append(row);});
   $('#growthChapterGate').hidden=true;$('#renameDragon').hidden=g.stage<1;$('#renameDragon').textContent=state.dragon.named?'Change name':'Choose a name';
+  $('#evolutionReplay').hidden=g.stage<1||!!(state.battle&&!state.battle.resolved)||!!(state.math.round&&state.math.round.status!=='result');
   $('#growthPanel').hidden=false;
 }
+function maybeEvolution(){
+  if(!state.dragon.evolution&&state.dragon.evolutionSeen>=1&&!state.dragon.named&&!state.dragon.namingPromptSeen)return false;
+  if(!Core.beginEvolution(state))return false;
+  if(save())renderEvolution();return true;
+}
+function renderEvolution(){
+  const scene=state.dragon.evolution;if(!scene)return;
+  cancelWork();paused=false;playing=true;playClock.discard();drainExcluded();
+  $('#pausePanel').hidden=true;$('#growthPanel').hidden=true;
+  show('evolution');const panel=$('#evolution');panel.classList.remove('motionPaused');panel.dataset.phase=scene.phase;
+  const read=scene.phase==='read',animating=['charge','reveal'].includes(scene.phase);
+  $('#evolutionTitle').textContent=dragonText(read?'Pip grew!':'Pip is growing!');
+  $('#evolutionHint').textContent=read?'Read with your dragon':animating?'':'Look!';
+  $('#evolutionLines').replaceChildren();
+  if(read)for(const line of Content.evolution.lines[scene.stage]){const p=document.createElement('p');p.textContent=line;$('#evolutionLines').append(p);}
+  $('#evolutionLines').hidden=!read;
+  $('#evolutionNext').hidden=animating;$('#evolutionNext').textContent=read?'I read it':'Watch';
+  $('#evolutionListen').hidden=animating;$('#evolutionListen').setAttribute('aria-label',read?'Listen to the two sentences':'Listen to the introduction');
+  $('#evolutionSkip').hidden=!animating;
+  // Keep the established form underneath as an immediate, nonblocking image fallback.
+  for(const [id,stage] of [['evolutionBefore',scene.stage-1],['evolutionAfter',scene.stage]]){
+    const frame=$('#'+id),fallback=frame.querySelector('.evolutionFallback'),img=frame.querySelector('img');
+    paintPip(fallback,stage);fallback.hidden=false;img.hidden=false;
+    img.onload=()=>{fallback.hidden=true;};img.onerror=()=>{img.hidden=true;fallback.hidden=false;};
+    const src=Content.evolution.frames[stage];if(img.getAttribute('src')!==src)img.src=src;
+    if(img.complete&&img.naturalWidth)fallback.hidden=true;
+  }
+  const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  panel.classList.toggle('still',!!reduced);
+  if(!save())return;
+  if(scene.phase==='intro')speak(Content.evolution.intro);
+  else if(animating){
+    later(()=>{if(reduced)scene.phase='read';else Core.advanceEvolution(state);if(save())renderEvolution();},reduced?0:scene.phase==='charge'?2600:1800);
+  }
+  if(!animating)$('#evolutionNext').focus();
+}
+$('#evolutionNext').onclick=()=>{
+  const scene=state.dragon.evolution;if(!scene||paused||blocked)return;
+  cancelWork();
+  if(scene.phase==='read'){
+    const finished=Core.finishEvolution(state);if(!save())return;
+    if(finished.returnTo==='map')home();else renderActivity();
+    if(!state.dragon.evolution)maybeOfferName();
+  }else if(scene.phase==='intro'&&Core.advanceEvolution(state)&&save())renderEvolution();
+};
+$('#evolutionListen').onclick=()=>{if(!paused&&!blocked&&state.dragon.evolution)speak(state.dragon.evolution.phase==='read'?Content.evolution.lines[state.dragon.evolution.stage].join(' '):Content.evolution.intro);};
+$('#evolutionSkip').onclick=()=>{if(!paused&&!blocked&&state.dragon.evolution){cancelWork();state.dragon.evolution.phase='read';if(save())renderEvolution();}};
+$('#evolutionReplay').onclick=()=>{if(Core.beginEvolution(state,{replay:true})&&save())renderEvolution();};
 $('#dragonPanel').onclick=$('#resultGrowth').onclick=openGrowth;
 $('#dragonPanel').onkeydown=event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openGrowth();}};
 $('#growthClose').onclick=()=>{$('#growthPanel').hidden=true;};
@@ -830,7 +884,7 @@ window.addEventListener('focus',()=>{windowFocused=true;});
 window.addEventListener('storage',event=>{if(event.key===KEY&&event.newValue!==store.expected)storageProblem(Object.assign(new Error('Another tab updated this adventure. Reload to use its saved progress.'),{code:'conflict'}));});
 setInterval(()=>{
   account();if(paused||blocked||!playing)return;
-  if(state.activity==='result'&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());state.activity='result';if(save())renderActivity();}
+  if(state.screen!=='evolution'&&state.activity==='result'&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());state.activity='result';if(save())renderActivity();}
   else if(performance.now()-lastSaveAt>=SAVE_EVERY_MS)save();
 },1000);
 Core.interruptQuestion(state);

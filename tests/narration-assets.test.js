@@ -2,7 +2,8 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const root=path.join(__dirname,'..'),manifest=require('../narration'),corpus=require('../docs/NARRATION_CORPUS.json'),generation=require('../docs/NARRATION_GENERATION.json'),C=require('../content');
 const fallbackOnly=new Set(corpus.runtimeFallbackOnly||[]);
 test('every recovered narration clip has a verified local MP3 and runtime lookup matches approval state',()=>{
- assert.equal(corpus.clips.length,990);assert.equal(manifest.recoveredClipCount,990);
+ // 990 recovered clips plus the four Pip evolution recordings.
+ assert.equal(corpus.clips.length,994);assert.equal(manifest.recoveredClipCount,994);
  assert.equal(Object.keys(manifest.clips).length,corpus.runtimeClipCount);assert.equal(manifest.runtimeClipCount,corpus.runtimeClipCount);
  assert.deepEqual(new Set(manifest.fallbackOnly||[]),fallbackOnly);
  const receipts=new Map(generation.clips.map(x=>[x.id,x]));
@@ -26,6 +27,7 @@ test('recovered runtime covers all current approved words, teaching and correcti
   presentOrFallback('The word was '+item.w+'.');presentOrFallback('Practice turn. You keep your heart. The word was '+item.w+'.');
  }
  for(const enemy of C.enemies){presentOrFallback('A '+enemy.name+' is on the path. Ready to battle?');presentOrFallback('Reading check complete. Now your first chapter begins. A '+enemy.name+' is on the path. Ready to battle?');}
+ for(const [i,text] of [C.evolution.intro,...C.evolution.lines.slice(1).map(lines=>lines.join(' '))].entries())assert.equal(manifest.clips[text]?.file,'assets/narration/evolution-'+i+'.mp3',text);
  presentOrFallback('Pip is on the rock.');presentOrFallback('Let’s try a few words. Look at the word. When it hides, tap the same word. Tap the question mark if you are not sure.');
  assert.equal(fallbackOnly.size,0);for(const text of ['gate','The gate is by the castle.','Practice turn. You keep your heart. The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The word was gate.'])assert.ok(manifest.clips[text],text);
 });
