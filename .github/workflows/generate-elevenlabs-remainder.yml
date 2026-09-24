@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v6
         with:
           ref: narration/elevenlabs-remainder-20260924
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Generate stable remaining narration
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
