@@ -75,5 +75,18 @@ poses were visually inspected. Storm Griffin's viewBox was widened to keep its
 spread wings inside the display footprint. Physical iPad/Safari rendering,
 sustained frame-rate and child-play evidence remain unverified.
 
-The repository commit, deployment result and live verification are reported with
-the release. A local passing test is not a deployment claim.
+## Verified deployment
+
+Merged in [PR #60](https://github.com/Ikarus-eth/Blitzword_app/pull/60) as
+`9767f0cd0765af7cec8bbcf3b7e60c26a03f81c5`.
+[Pages run 35963694304](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35963694304)
+passed all 146 Node tests, the 52 UI-flow groups and the deployment step.
+At 06:17 UTC on 24 September 2026, all 33 checked live files returned HTTP 200
+and matched the tested source byte for byte: twenty enemy atlases and thirteen
+runtime/review files. The live build is `layered-enemies-20260924-r1`.
+The [verification record](LAYERED_ENEMIES_DEPLOYMENT.json) contains each SHA-256.
+
+[Play BlitzWord](https://ikarus-eth.github.io/Blitzword_app/) or inspect the
+[enemy studio](https://ikarus-eth.github.io/Blitzword_app/tests/enemy-review.html).
+The previous main commit `e9d64e2` is the rollback checkpoint. Reverting this
+release's runtime and artwork does not require resetting learner saves.

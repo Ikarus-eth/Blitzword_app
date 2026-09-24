@@ -1,0 +1,235 @@
+{
+  "verifiedAt": "2026-09-24T06:17:51.303Z",
+  "implementationMerge": "9767f0cd0765af7cec8bbcf3b7e60c26a03f81c5",
+  "pullRequest": 60,
+  "pagesRun": 35963694304,
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 30032,
+      "sha256": "3a92d97ce8969924db3972038599a0bc1b93f55004eabb3bf881cc4624693504",
+      "build": "layered-enemies-20260924-r1"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 77872,
+      "sha256": "d73a3f234ae6ff556d7c23093230c6020f9b494f636d2d92fa44135f1071a0e0"
+    },
+    {
+      "path": "content.js",
+      "status": 200,
+      "bytes": 68912,
+      "sha256": "e828c700227f32639c5a38c1865c44bbf156490b2d32d22494e59fd475ed5219"
+    },
+    {
+      "path": "game-core.js",
+      "status": 200,
+      "bytes": 50731,
+      "sha256": "0f1dcec4359452d3728f8741c3cd8ceca103a0413f96ef555dbdbc3dc930ae4d"
+    },
+    {
+      "path": "storage.js",
+      "status": 200,
+      "bytes": 6300,
+      "sha256": "89ced9010182c9ead9f041495851c5bbc2ed52416f0003ae31a14c317808fe73"
+    },
+    {
+      "path": "narration.js",
+      "status": 200,
+      "bytes": 219999,
+      "sha256": "abb2c8333d28c35ab921f3a66fb5a8401c58cb8ebdb88fb93b95eb5ef1fd8f7a"
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "bytes": 93007,
+      "sha256": "1d8c76bdd3c5b0f13bc00117f5a4f2cd57c07935a61fa5490f1a4d94d9edaf2b"
+    },
+    {
+      "path": "enemy-art.js",
+      "status": 200,
+      "bytes": 6279,
+      "sha256": "9e6bc1e66f824a2fd7d851d67a95d1189fa40957d0d44c6b7db92f5e4cf72e3b"
+    },
+    {
+      "path": "enemy-art-data.js",
+      "status": 200,
+      "bytes": 9001,
+      "sha256": "d485e91e28a3067c17525bfcf120cc13b6f3f5f3a389051ad9ac764d12d28e25"
+    },
+    {
+      "path": "enemy-art.css",
+      "status": 200,
+      "bytes": 3015,
+      "sha256": "e4f5fdf3b7efae1f1c48e7149c4d5e2209bd2be7bede90cc3b089e6ba94b9d69"
+    },
+    {
+      "path": "tests/enemy-review.html",
+      "status": 200,
+      "bytes": 4847,
+      "sha256": "4af260544b5893650906de8ee450fb70ec023dc0c324ec12e83e66b7317b3754"
+    },
+    {
+      "path": "tests/narration-remainder-qa.html",
+      "status": 200,
+      "bytes": 4070,
+      "sha256": "154838c6799e6377d4024e9cbe0515beb260b170fb41218dddb6b81ae8b1991b"
+    },
+    {
+      "path": "tests/narration-remainder-qa.js",
+      "status": 200,
+      "bytes": 15170,
+      "sha256": "4b132d4433ca7809dca6c3499017ae5fe559a69fd60e321b8c8468339ccfbc95"
+    },
+    {
+      "path": "assets/enemies/layered/moss-golem.png",
+      "status": 200,
+      "bytes": 1797741,
+      "sha256": "83614ad38c5d61907ab849acc160ac8a32267284641b07e4dfc434833917ae73"
+    },
+    {
+      "path": "assets/enemies/layered/thornling.png",
+      "status": 200,
+      "bytes": 1756801,
+      "sha256": "8fc077a36b15ab578b95b8be71a2f5536c9554937bbfc1691901b8a6459c014a"
+    },
+    {
+      "path": "assets/enemies/layered/moon-moth.png",
+      "status": 200,
+      "bytes": 1666394,
+      "sha256": "7aba735402d8470598bea51824e2203df2852cbe04c15e234365b7cf51f97df9"
+    },
+    {
+      "path": "assets/enemies/layered/root-sprite.png",
+      "status": 200,
+      "bytes": 1230168,
+      "sha256": "fe870da84b67e548ba6657bd921f03b4c44b78f38f51b1910b4dc3100fea42be"
+    },
+    {
+      "path": "assets/enemies/layered/cave-troll.png",
+      "status": 200,
+      "bytes": 1908939,
+      "sha256": "aaf8db0070aee9d320ce8fef95bad04f36587a71edd4b0804273c7b52a412730"
+    },
+    {
+      "path": "assets/enemies/layered/acorn-imp.png",
+      "status": 200,
+      "bytes": 1424761,
+      "sha256": "da173327ced9cc56d490c2adfe4fd2b31e1804015e76b872a535bba2de609f80"
+    },
+    {
+      "path": "assets/enemies/layered/mushroom-guard.png",
+      "status": 200,
+      "bytes": 1553591,
+      "sha256": "25eb01fb4ac0bed0fc16017182ee549829d1aee960b14d663288ff93581e578e"
+    },
+    {
+      "path": "assets/enemies/layered/bark-beetle.png",
+      "status": 200,
+      "bytes": 1437859,
+      "sha256": "7ef0c8233714d1979a3c5118646311bed0e0fb2154da0d078e3acab93905858d"
+    },
+    {
+      "path": "assets/enemies/layered/bramble-boar.png",
+      "status": 200,
+      "bytes": 1574950,
+      "sha256": "b154037ad71e9a8bed11fd269bcfcb839e928dbbab8cab8238a3a931a62132d4"
+    },
+    {
+      "path": "assets/enemies/layered/reed-serpent.png",
+      "status": 200,
+      "bytes": 1545127,
+      "sha256": "d2eb6688d2ffacc05d6675f4c3fea7c19d761f974bbb683f55d3438726cd5d41"
+    },
+    {
+      "path": "assets/enemies/layered/bog-toad.png",
+      "status": 200,
+      "bytes": 1372459,
+      "sha256": "d16a2809506a2872dccb5e3127d62cb5edc93ec2d10efedc2a853a2e267575a1"
+    },
+    {
+      "path": "assets/enemies/layered/lantern-wisp.png",
+      "status": 200,
+      "bytes": 1337407,
+      "sha256": "e42a7f1c15886fc8310a9ee5eb1b6ed1b6c5d61cefaa049228f2a8973855af56"
+    },
+    {
+      "path": "assets/enemies/layered/crystal-crab.png",
+      "status": 200,
+      "bytes": 1872681,
+      "sha256": "17b5ac11ef773b11f848ef8b98e9890007a861056abfb8719ad87d70293a91c4"
+    },
+    {
+      "path": "assets/enemies/layered/hollow-owl.png",
+      "status": 200,
+      "bytes": 1602129,
+      "sha256": "64eb839874bce1c4fbf0b12c5789172d3ee7b66962a459b83f86db9d102c4b64"
+    },
+    {
+      "path": "assets/enemies/layered/fern-wolf.png",
+      "status": 200,
+      "bytes": 2042665,
+      "sha256": "8cf9ef655efdc0887ef290642123fec55a1f65c18a6c291c7ccc7272f5e0c9ef"
+    },
+    {
+      "path": "assets/enemies/layered/stone-ram.png",
+      "status": 200,
+      "bytes": 1733910,
+      "sha256": "76e4932a93eeab6ad10f00e7387e8b2275bf2dc198f13fd93c931d872c330d1c"
+    },
+    {
+      "path": "assets/enemies/layered/briar-bat.png",
+      "status": 200,
+      "bytes": 1322249,
+      "sha256": "33020e75c6dbcb18aa9330a339d892f971589f9c1c7a09d4f303306b5064a26d"
+    },
+    {
+      "path": "assets/enemies/layered/snail-knight.png",
+      "status": 200,
+      "bytes": 1232758,
+      "sha256": "0efbca4de97e679aa56f78b8b4b2d2582e4392d778117c4a914d9c041f68b933"
+    },
+    {
+      "path": "assets/enemies/layered/chest-mimic.png",
+      "status": 200,
+      "bytes": 1139556,
+      "sha256": "e1f4541a52a81f55844003fec65fa5ca3fe4f227d004b6ccbb24f84a823c4aec"
+    },
+    {
+      "path": "assets/enemies/layered/storm-griffin.png",
+      "status": 200,
+      "bytes": 1679395,
+      "sha256": "b4c7d7a4cdeae183e9f9737f896f16db71d1835fa7001cef0383202137c20d33"
+    }
+  ],
+  "automated": {
+    "nodeTests": 146,
+    "uiFlowGroups": 52
+  },
+  "browserReview": {
+    "engine": "isolated headless Chromium",
+    "viewports": [
+      "1180x820",
+      "390x844"
+    ],
+    "all20Atlases": true,
+    "reactions": [
+      "neutral",
+      "attack",
+      "hit",
+      "defeated",
+      "celebrate"
+    ],
+    "reducedMotion": true,
+    "battleLayouts": true,
+    "pageErrors": 0
+  },
+  "limitations": [
+    "Physical iPad and Safari not tested",
+    "Sustained frame-rate and child-play evidence unverified",
+    "Fifteen new enemy names use device speech"
+  ]
+}
