@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const root=path.join(__dirname,'..'),corpus=require('../docs/NARRATION_CORPUS.json'),generation=require('../docs/NARRATION_GENERATION.json');
 const clips={},fallbackOnly=new Set(corpus.runtimeFallbackOnly||[]);let bytes=0,seconds=0;
 for(const clip of corpus.clips){
- const receipt=generation.clips.find(x=>x.id===clip.id);if(!receipt?.taskId||receipt.text!==clip.text)throw new Error('Missing generation receipt: '+clip.id);
+ const receipt=generation.clips.find(x=>x.id===clip.id);if(!receipt||receipt.text!==clip.text||(!receipt.taskId&&!(receipt.provider==='ElevenLabs'&&receipt.voiceId)))throw new Error('Missing generation receipt: '+clip.id);
  const file=path.join(root,clip.file),data=fs.readFileSync(file);
  const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-show_entries','format=duration:stream=codec_name,sample_rate,channels','-of','json',file],{encoding:'utf8'}));
  const duration=Number(probe.format.duration);
@@ -12,7 +12,7 @@ for(const clip of corpus.clips){
  Object.assign(receipt,{status:'downloaded',duration,bytes:data.length,sha256});
  if(!fallbackOnly.has(clip.text))clips[clip.text]={file:clip.file,duration,sha256};bytes+=data.length;seconds+=duration;
 }
-const manifest={version:'recorded-voice-20260924-r4',voice:generation.voice,language:'en-GB',recoveredClipCount:corpus.clips.length,runtimeClipCount:Object.keys(clips).length,fallbackOnly:[...fallbackOnly],clips};
+const manifest={version:'recorded-voice-20260924-r5',voice:generation.voice,voices:generation.voices||undefined,language:'en-GB',recoveredClipCount:994,recordedClipCount:corpus.clips.length,runtimeClipCount:Object.keys(clips).length,fallbackOnly:[...fallbackOnly],clips};
 fs.writeFileSync(path.join(root,'narration.js'),'(function(root){\nconst narration='+JSON.stringify(manifest,null,2)+';\nif(typeof module===\'object\'&&module.exports)module.exports=narration;else root.BlitzNarration=narration;\n})(typeof globalThis!==\'undefined\'?globalThis:this);\n');
 generation.listeningReview=generation.listeningReview||'Audible listening and physical iPad playback review remain outstanding.';
 generation.clipCount=corpus.clips.length;generation.runtimeClipCount=Object.keys(clips).length;generation.runtimeFallbackOnly=[...fallbackOnly];generation.bytes=bytes;generation.durationSeconds=Number(seconds.toFixed(3));

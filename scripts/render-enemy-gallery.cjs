@@ -11,4 +11,4 @@ ids.forEach((id,i)=>{
  puppet=puppet.replaceAll(`<image href="${art.source}" width="${art.width}" height="${art.height}"/>`,`<use xlink:href="#texture-${id}"/>`);
  svg+=`<g transform="translate(${x} ${y})"><rect x="7" y="5" width="286" height="323" rx="16" fill="#34523e" stroke="#758565"/><g transform="translate(10 9)">${puppet}</g><text x="150" y="310" text-anchor="middle" fill="#f6e6be" font-family="Georgia" font-size="17">${art.selection} ${art.name}</text></g>`;
 });
-fs.writeFileSync(process.argv[2]||'/workspace/scratch/89f94963e0ef/assembled-enemies.svg',svg+'</svg>');
+fs.writeFileSync(process.argv[2]||path.join(process.cwd(),'assembled-enemies.svg'),svg+'</svg>');

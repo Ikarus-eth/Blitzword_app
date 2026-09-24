@@ -577,7 +577,9 @@ function correction(animate=false) {
   replay.onclick=()=>{clearCombat();Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak('The word was '+q.target+'.');};
   $('#battleAnswers').append(replay,next);
   if(q.shieldUsed){$('#feedback').textContent='Shield saved a heart';$('#feedback').classList.add('show');}
-  speak((q.freeMistake?'Practice turn. You keep your heart. ':q.shieldUsed?'Your shield stopped the hit. ':'')+'The word was '+q.target+'.',{onEnd:()=>{if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);}});
+  const correction='The word was '+q.target+'.',finishCorrection=()=>{if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);};
+  if(q.shieldUsed)speak('Your shield stopped the hit.',{onEnd:()=>speak(correction,{onEnd:finishCorrection})});
+  else speak((q.freeMistake?'Practice turn. You keep your heart. ':'')+correction,{onEnd:finishCorrection});
 }
 
 function advanceBattle(){account();cancelWork();Core.prepareBattle(state,Date.now());if(save())renderActivity();}

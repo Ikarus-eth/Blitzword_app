@@ -71,3 +71,30 @@ PR #52 set the release marker to `narration-approved-20260924-r1` and merged as 
 - the retained four longer gate-family recordings mapped at runtime.
 
 The GitHub Pages action reported successful file synchronization and the expected Pages URL. A separate HTTP read of the public `github.io` origin is unavailable from this execution environment, so live-origin byte comparison remains unverified here. Physical iPad gameplay playback also remains outstanding.
+
+## Stable remainder with ElevenLabs — 24 September 2026
+
+After the recovered/core corpus and Pip-evolution narration were integrated, the remaining stable narration was separated from text that is still scheduled to change. The stable generation set is exactly **35 clips**:
+
+- 34 chapter-story introductions: every implemented transition after the initial guided encounter;
+- one reusable `Your shield stopped the hit.` prefix.
+
+The child-read chapter-story sentences were deliberately excluded because approved point 6 will rewrite them before they receive final recordings. Personalized dragon-name sentences also remain device speech so arbitrary child-chosen names are never sent to a cloud speech service.
+
+Generation used the repository secret `ELEVENLABS_API_KEY` without exposing it. Voice: **George - Warm, Captivating Storyteller**, British male, `eleven_multilingual_v2`, speed **0.90×**, stability 0.65, similarity 0.80, style 0, speaker boost enabled. The generation required 2,514 characters. The first attempt stopped after one API response because the generation runner lacked `ffprobe`; no files were committed. The runner dependency was fixed and the complete second run generated, decoded, hashed and committed all 35 files. Full receipts are in `NARRATION_REMAINDER_GENERATION.json`.
+
+The runtime corpus is now **1,029 exact-text clips**: 994 previous core/evolution recordings plus 35 stable-remainder recordings. The manifest version is `recorded-voice-20260924-r5`. For a shielded mistake, the app now plays the reusable shield prefix and then the existing exact `The word was X.` recording; Pause/Home/newer narration still cancels the sequence through the normal narration epoch.
+
+The new 35 George clips passed user listening QA on 24 September 2026: all 34 chapter-story introductions and the reusable shield prefix were rated Good, with no rejected clips. Physical iPad gameplay playback is still outstanding.
+
+## Stable remainder deployment — 24 September 2026
+
+PR #54 merged the stable ElevenLabs remainder as `f9d9fb6d3a08e3dbb8c1ab008d3e3c2cc1c93849`. Pages run `35959070005` passed **132/132** Node tests and the UI-flow suite, including the regression that verifies the reusable shield prefix plays before the existing exact word-correction recording and that the blocked-hit animation waits for both clips.
+
+GitHub Pages reported successful deployment. The uploaded Pages artifact was inspected after the run: build marker `narration-remainder-20260924-r1`, manifest `recorded-voice-20260924-r5`, **1,029 narration MP3s**, **34 story-intro MP3s**, and `shield-stopped.mp3` are present. The manifest reports `recordedClipCount: 1029`, `runtimeClipCount: 1029`, `recoveredClipCount: 994`, and no fallback-only entries. The shield prefix and a representative Fox Crossing story intro match their generation receipts by SHA-256.
+
+Direct public-origin HTTP byte comparison remains unavailable in this execution environment. This is verified Pages deployment plus deployed-artifact verification, not an independent `github.io` byte comparison.
+
+## Stable remainder listening approval — 24 September 2026
+
+The user completed the dedicated 35-clip ElevenLabs remainder QA and approved every clip: all 34 chapter-story introductions and the reusable `Your shield stopped the hit.` prefix were rated Good. No regeneration is required for this set. This closes listening QA for the stable remainder; child-read chapter-story sentences are still intentionally deferred until their approved rewrite, and physical iPad gameplay playback remains open.

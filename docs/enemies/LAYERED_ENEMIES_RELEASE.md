@@ -60,11 +60,20 @@ feedback starts without waiting for a travelling animation.
 
 ## Verification
 
-Automated coverage verifies existing learning flows, all twenty articulated
-renderers, source PNG dimensions/alpha format, tier compatibility, narration and
-wind-up timing, health and shield impact, free/supported answers, cancellation,
-reload and reduced-motion timing. Static assembly was visually inspected and
-wing joints adjusted. Physical iPad rendering and frame-rate remain unverified.
+All 146 Node tests and 52 UI-flow groups pass after integrating current main
+(`e9d64e2`), including rotating choices and the two-part recorded shield correction.
+Coverage verifies existing learning flows, all twenty articulated renderers,
+source PNG dimensions/alpha format, tier compatibility, narration and wind-up
+timing, health and shield impact, free/supported answers, cancellation, reload
+and reduced-motion timing.
+
+An isolated headless Chromium review checked all twenty loaded atlases and the
+neutral, attack, hit, defeat and celebration states at 1180×820 and 390×844.
+Five-creature previews, reduced motion and actual battle layouts also passed,
+with no page errors or horizontal page overflow. Captured neutral and impact
+poses were visually inspected. Storm Griffin's viewBox was widened to keep its
+spread wings inside the display footprint. Physical iPad/Safari rendering,
+sustained frame-rate and child-play evidence remain unverified.
 
 The repository commit, deployment result and live verification are reported with
 the release. A local passing test is not a deployment claim.

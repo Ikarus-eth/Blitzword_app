@@ -78,7 +78,10 @@ function render(id,{stage='adult',prefix=''}={}){
       +limb(6,7,139,268,44,55)+part(13,92,159,102,128)+head(77,98,131,113);
   }
   const transform=stage==='young'?'translate(20 46) scale(.9 .88)':stage==='baby'?'translate(36 91) scale(.82 .75)':'';
-  return `<svg class="enemyRig rig-${art.rig}" data-family="${key}" data-stage="${stage}" viewBox="0 0 400 400" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><g transform="${transform}"><g class="rigBody">${body}</g></g></svg>`;
+  // The griffin's spread wings extend beyond its body layout; keep them inside
+  // the same square display footprint, with the feet anchored at the bottom.
+  const viewBox=art.rig==='griffin'?'-90 -180 580 580':'0 0 400 400';
+  return `<svg class="enemyRig rig-${art.rig}" data-family="${key}" data-stage="${stage}" viewBox="${viewBox}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><g transform="${transform}"><g class="rigBody">${body}</g></g></svg>`;
 }
 const api={render,ids:Object.keys(data),data};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;root.BlitzEnemyArt=api;

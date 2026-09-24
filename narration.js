@@ -1,10 +1,22 @@
 (function(root){
 const narration={
-  "version": "recorded-voice-20260924-r4",
-  "voice": "Tom",
+  "version": "recorded-voice-20260924-r5",
+  "voice": "Mixed approved British male recordings",
+  "voices": [
+    {
+      "name": "Tom",
+      "role": "core words, teaching, corrections and Pip evolution"
+    },
+    {
+      "name": "George - Warm, Captivating Storyteller",
+      "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+      "role": "chapter-story introductions and reusable shield prefix"
+    }
+  ],
   "language": "en-GB",
   "recoveredClipCount": 994,
-  "runtimeClipCount": 994,
+  "recordedClipCount": 1029,
+  "runtimeClipCount": 1029,
   "fallbackOnly": [],
   "clips": {
     "on": {
@@ -4976,6 +4988,181 @@ const narration={
       "file": "assets/narration/evolution-3.mp3",
       "duration": 2.693515,
       "sha256": "642911aaec8c058d5eeab09e3d0e794f336498bedba630ce6784aea8055bedfa"
+    },
+    "A fox waits beside the stream. Pip follows it to a safe place to cross.": {
+      "file": "assets/narration/story-intro-fox-crossing.mp3",
+      "duration": 4.832653,
+      "sha256": "a18f77bae8e26c32cab01f12b0ad9baabc196e9008e079f588a33fcadbb51ae1"
+    },
+    "Beyond the stream, old trees shelter a red book. Pip stops to look inside.": {
+      "file": "assets/narration/story-intro-old-grove.mp3",
+      "duration": 5.668571,
+      "sha256": "5e509957f0318b87e16f539f30aae6b6a2a9b1e67a9552765f96cd3fb7acae8e"
+    },
+    "The book shows a trail of lights. Pip follows them as the forest grows dark.": {
+      "file": "assets/narration/story-intro-lantern-ruins.mp3",
+      "duration": 4.963265,
+      "sha256": "b51cd7ddc4f12ec15adf9b667e61b52dd7b3002a6d7599153f66fc99d16493e5"
+    },
+    "An owl has shown you the hidden nest. A little spark shines beside its gate.": {
+      "file": "assets/narration/story-intro-hidden-nest.mp3",
+      "duration": 5.459592,
+      "sha256": "5d931d4afa9b6aac3e211b883456ba3ee8ba44dfdccc6b7c9e7bb33d5af6f448"
+    },
+    "A bright stream leads away from the nest. Pip wants to see where it goes.": {
+      "file": "assets/narration/story-intro-chapter-2-place-1.mp3",
+      "duration": 5.276735,
+      "sha256": "44b70641cde73948344f1cb5afa7aad2866553e6061fa876bcd519518945818d"
+    },
+    "You reach a stone bridge. Pip waits for you before crossing to the other side.": {
+      "file": "assets/narration/story-intro-chapter-2-place-2.mp3",
+      "duration": 4.858776,
+      "sha256": "484b3cefe4973a25bc23e15930d8959c89a9e1cb101143f16b88158bcbee201d"
+    },
+    "Tall reeds whisper beside the river. A narrow path leads you both onward.": {
+      "file": "assets/narration/story-intro-chapter-2-place-3.mp3",
+      "duration": 5.198367,
+      "sha256": "d92f87880ba12ae24f4dbe13861fc099acc1d393f2d0e4ac151d96b92b75e15e"
+    },
+    "The river opens into a still blue pool. Pip stops beside the clear water.": {
+      "file": "assets/narration/story-intro-chapter-2-place-4.mp3",
+      "duration": 5.511837,
+      "sha256": "89e5a09342a3a2ba27e9a8647b31c7aa25f049d1e1972c57a2a29e59ffb1f7c1"
+    },
+    "A gate stands at the end of the river path. Warm light shines through it.": {
+      "file": "assets/narration/story-intro-chapter-2-place-5.mp3",
+      "duration": 4.545306,
+      "sha256": "bb3a20bc091556250fb1d606397b48afecf704a2d31843bc4449e59b4b253164"
+    },
+    "Beyond the gate, golden leaves cover a winding path. Pip finds the next trail.": {
+      "file": "assets/narration/story-intro-chapter-3-place-1.mp3",
+      "duration": 5.877551,
+      "sha256": "05951f95592d647726e9e3e08e0cdd1ff5b90b7a6554c201bbf2f5909c273a7d"
+    },
+    "The trees grow close together. Pip finds a cosy space among the leaves.": {
+      "file": "assets/narration/story-intro-chapter-3-place-2.mp3",
+      "duration": 5.250612,
+      "sha256": "ee48a082f53b4f68f60ea9f40682a5f864b0d8c50dd9d5a482a26c3106ba7ef5"
+    },
+    "Moss covers a line of old steps. You and Pip climb them one at a time.": {
+      "file": "assets/narration/story-intro-chapter-3-place-3.mp3",
+      "duration": 5.01551,
+      "sha256": "f0f5364d22857915b3ee5cb598eb6f859b79f829c2fd3067dfabeda0dea09d7b"
+    },
+    "The roots form an arch across the path. Pip waits beneath it for you.": {
+      "file": "assets/narration/story-intro-chapter-3-place-4.mp3",
+      "duration": 4.91102,
+      "sha256": "0a87d0e83eb2b160db5440e0960e878abb6f1e1ba72b4a067de98c6b17a9f1ba"
+    },
+    "The oldest oak stands ahead. Its branches point towards a distant glow.": {
+      "file": "assets/narration/story-intro-chapter-3-place-5.mp3",
+      "duration": 5.250612,
+      "sha256": "bdfd1fc878d9037a1d78fdfa4518c1c8ea8d0e64286521c42df3379d065e350d"
+    },
+    "A stone path winds towards the glow. Pip follows the warm light between the trees.": {
+      "file": "assets/narration/story-intro-chapter-4-place-1.mp3",
+      "duration": 5.799184,
+      "sha256": "8853d358dbc8d8a7785c5e3dca8520bb6fd70a7facab8569af8ee46ef0adf48e"
+    },
+    "Small lamps light the grove. Pip pauses to watch their gentle glow.": {
+      "file": "assets/narration/story-intro-chapter-4-place-2.mp3",
+      "duration": 5.01551,
+      "sha256": "1366b084a92c3e049c59637e9c7f28baf2d9f966f01e279272ad8a9deea19e16"
+    },
+    "An old wall rises beside the trail. There is a way through for you and Pip.": {
+      "file": "assets/narration/story-intro-chapter-4-place-3.mp3",
+      "duration": 4.963265,
+      "sha256": "e474200ef78bb3c76bc13e991089b5dd08e0c690067da10f0b1e398355cedda3"
+    },
+    "A golden door glows in the stone. Pip waits while you find the way inside.": {
+      "file": "assets/narration/story-intro-chapter-4-place-4.mp3",
+      "duration": 5.32898,
+      "sha256": "7c08d38e444acabac906cde7b04d4025c92e24b0d14d397367882a5c41c561c2"
+    },
+    "The hall is full of soft light. A window shows the moon above the next wood.": {
+      "file": "assets/narration/story-intro-chapter-4-place-5.mp3",
+      "duration": 5.093878,
+      "sha256": "9da1d8b6923864c2f0281826808b7dac8071f5bedbf4969867900a6311522edf"
+    },
+    "Moonlight leads you into a quiet wood. Pip stays close beside you.": {
+      "file": "assets/narration/story-intro-chapter-5-place-1.mp3",
+      "duration": 4.832653,
+      "sha256": "ca75af30bd5cb32f6bc6255b25be9cadff60a4be0fa5ca021d76386c4760286c"
+    },
+    "An owl watches from a high branch. Pip looks up to follow its gaze.": {
+      "file": "assets/narration/story-intro-chapter-5-place-2.mp3",
+      "duration": 5.041633,
+      "sha256": "ac18499dee2fe03eb79c7cbab5016927aa31f7eb4780bd25819f7f0077f6a616"
+    },
+    "Stars shine in a still pool. Pip stops beside the water to look.": {
+      "file": "assets/narration/story-intro-chapter-5-place-3.mp3",
+      "duration": 5.093878,
+      "sha256": "1582639bf86243d8e076335a385671b089a74edc432b9e62c1184f3a221fc46c"
+    },
+    "A dark arch opens between the trees. Moonlight shows a path through it.": {
+      "file": "assets/narration/story-intro-chapter-5-place-4.mp3",
+      "duration": 5.041633,
+      "sha256": "e40b0d798b116adb49d3a135c16bb273b7b3465c35ef54c9365bcdcd72519040"
+    },
+    "You reach a sheltered nest beneath the moon. A blue glow shines beyond the wood.": {
+      "file": "assets/narration/story-intro-chapter-5-place-5.mp3",
+      "duration": 5.276735,
+      "sha256": "c14d8aff20b8e513d4b687693a219df41f437ea0d96d626545f6c47c894636fe"
+    },
+    "The blue glow comes from a cave. Pip peeks inside, then waits for you.": {
+      "file": "assets/narration/story-intro-chapter-6-place-1.mp3",
+      "duration": 5.041633,
+      "sha256": "4f7a0706a68128aeff55ecf1af944fc44f49317d56abfd4cc7b6d27a3f1d28e7"
+    },
+    "Blue stones shine along the cave wall. Pip follows their light into the mountain.": {
+      "file": "assets/narration/story-intro-chapter-6-place-2.mp3",
+      "duration": 5.276735,
+      "sha256": "da374d140061f5cbe234cdcdb44ab1422d710015b57f21f338cc23014829e5de"
+    },
+    "A deep pool fills the quiet cave. You and Pip take the dry path beside it.": {
+      "file": "assets/narration/story-intro-chapter-6-place-3.mp3",
+      "duration": 5.511837,
+      "sha256": "7700554077464e8a7764ec50e43921953fe3993b45dbc49b46572cbe7371eb3d"
+    },
+    "The cave opens into a glowing hall. Pip looks at the lights all around you.": {
+      "file": "assets/narration/story-intro-chapter-6-place-4.mp3",
+      "duration": 4.963265,
+      "sha256": "4d3e7d7da0f40766397f8868bb1a3d1c0b64834ab1ad5f4d7b74d27b0c77317a"
+    },
+    "A crystal gate opens towards the sky. Pip can feel the warm air beyond it.": {
+      "file": "assets/narration/story-intro-chapter-6-place-5.mp3",
+      "duration": 5.694694,
+      "sha256": "99d58375a1a5b5a1157ef16a411fc5b85ebdcc642e64332f011f2fb8f4f7f076"
+    },
+    "Sunlight warms the hill path. Pip looks up at a castle high above you.": {
+      "file": "assets/narration/story-intro-chapter-7-place-1.mp3",
+      "duration": 4.858776,
+      "sha256": "99d68578c7a331590fc315326d0a63fdb008729eeadfc2eaa624c7c50af47396"
+    },
+    "Stone steps climb towards the clouds. You and Pip take the next step together.": {
+      "file": "assets/narration/story-intro-chapter-7-place-2.mp3",
+      "duration": 5.511837,
+      "sha256": "f25d9204153f7d36a602173d977d95f0eab326121f71023784edfa242dacbe05"
+    },
+    "A high bridge stretches towards the keep. Pip stays beside you as you cross.": {
+      "file": "assets/narration/story-intro-chapter-7-place-3.mp3",
+      "duration": 4.91102,
+      "sha256": "d17b015acb7a84815c71bb86e0bb7fc6597ea0609089b5d49fb9642039beeb44"
+    },
+    "The tower is close now. Pip looks up at its bright flags in the sky.": {
+      "file": "assets/narration/story-intro-chapter-7-place-4.mp3",
+      "duration": 4.675918,
+      "sha256": "3adc76f2baeb20699ab9321bfc895e056f2cfd9f484c0b68fb391d8a021a162f"
+    },
+    "You have reached the sky keep together. Pip is ready for the final path.": {
+      "file": "assets/narration/story-intro-chapter-7-place-5.mp3",
+      "duration": 4.675918,
+      "sha256": "df382274a6b3b4538f5296012288825d3b2193f44f9e3676a5b96e0fce37fa7a"
+    },
+    "Your shield stopped the hit.": {
+      "file": "assets/narration/shield-stopped.mp3",
+      "duration": 1.619592,
+      "sha256": "12117a8a2b75ec585d8e6caf6ba5c89cab8e707359895a94d5ea992b4422943a"
     }
   }
 };

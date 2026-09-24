@@ -275,8 +275,56 @@
   }
   function isSessionDue(s) { return !!s.session && !s.session.completedAt && s.session.elapsedMs >= s.session.targetMs; }
   function getQuestion(s) { return s.activity === 'assessment' ? s.assessment.progress?.question : s.battle?.question; }
+  // Rotating wrong answers (point 2). A drawn set must stop first-letter, last-letter and length guessing,
+  // give no one-letter giveaway, and never leave the target as the plain "middle" option.
+  function editDistance(a,b){ // insert, delete, substitute, or swap two neighbouring letters: one edit each
+    const d=Array.from({length:a.length+1},(_,i)=>Array.from({length:b.length+1},(_,j)=>i===0?j:j===0?i:0));
+    for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++){
+      d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+      if(i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1])d[i][j]=Math.min(d[i][j],d[i-2][j-2]+1);
+    }
+    return d[a.length][b.length];
+  }
+  // Chance that picking the option most like the other three finds the target (ties split evenly).
+  function middleGuess(options,target){
+    const totals=options.map(o=>options.reduce((n,p)=>n+editDistance(o,p),0)),low=Math.min(...totals),tied=options.filter((o,i)=>totals[i]===low);
+    return tied.includes(target)?1/tied.length:0;
+  }
+  // The target's first letter, last letter, both together and length each match at least two of the four options.
+  function shapeClues(options,target){
+    const count=fn=>options.filter(fn).length,first=target[0],last=target.at(-1);
+    return count(o=>o[0]===first)>=2&&count(o=>o.at(-1)===last)>=2&&count(o=>o[0]===first&&o.at(-1)===last)>=2&&count(o=>o.length===target.length)>=2;
+  }
+  function oneLetterGiveaway(options,target){
+    const others=options.filter(o=>o!==target);
+    return [...target].some((letter,i)=>!others.some(o=>o[i]===letter));
+  }
+  function fairChoice(options,target){
+    if(target.length===1)return options.every(o=>o.length===1)&&middleGuess(options,target)<=.5;
+    return shapeClues(options,target)&&!oneLetterGiveaway(options,target)&&middleGuess(options,target)<=.5;
+  }
+  const choiceCache=new Map();
+  // Draw from the fairest sets (middle guess at most one in three) when a word has two or more, otherwise from every fair set.
+  function choiceSets(item){
+    if(!Array.isArray(item.pool))return null;
+    const key=item.w+'|'+item.pool.join(' ');
+    if(choiceCache.has(key))return choiceCache.get(key);
+    const all=[],p=item.pool;
+    for(let i=0;i<p.length;i++)for(let j=i+1;j<p.length;j++)for(let k=j+1;k<p.length;k++){
+      const set=[p[i],p[j],p[k]],options=[item.w,...set];
+      if(fairChoice(options,item.w))all.push({set,guess:middleGuess(options,item.w)});
+    }
+    const best=all.filter(x=>x.guess<=1/3+1e-9),sets=best.length>=2?best:all;
+    choiceCache.set(key,sets);return sets;
+  }
+  function chooseOptions(item,random=Math.random){
+    const sets=choiceSets(item);
+    if(!sets||!sets.length)return shuffle(item.d,random);
+    const pick=sets[Math.min(sets.length-1,Math.floor(random()*sets.length))];
+    return shuffle([item.w,...pick.set],random);
+  }
   function makeQuestion(s,item,now,random,extra={}) {
-    return {id:id(s,'answer'),target:item.w,options:shuffle(item.d,random),phase:'ready',
+    return {id:id(s,'answer'),target:item.w,options:chooseOptions(item,random),phase:'ready',
       exposureMs:practiceExposure(s),wordViewedMs:0,responseMs:0,
       supportReasons:[],answeredAt:null,correct:null,needsTeaching:false,...extra};
   }
@@ -683,5 +731,5 @@
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,
-    HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount};
+    HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions};
 });

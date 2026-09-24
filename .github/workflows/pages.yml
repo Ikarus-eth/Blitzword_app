@@ -36,6 +36,7 @@ jobs:
           node --check tests/narration-qa.js
           node --check enemy-art.js
           node --check enemy-art-data.js
+          node --check tests/narration-remainder-qa.js
           npm test
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -44,7 +45,7 @@ jobs:
           mkdir -p _site/tests
           cp index.html styles.css app.js content.js game-core.js storage.js audio.js narration.js soundscape.js engagement.js manifest.webmanifest enemy-art.js enemy-art-data.js enemy-art.css _site/
           cp -R assets _site/assets
-          cp tests/visual-review.html tests/review-app.html tests/review-scenarios.js tests/scenery-review.html tests/narration-qa.html tests/narration-qa.js tests/enemy-review.html _site/tests/
+          cp tests/visual-review.html tests/review-app.html tests/review-scenarios.js tests/scenery-review.html tests/narration-qa.html tests/narration-qa.js tests/narration-remainder-qa.html tests/narration-remainder-qa.js tests/enemy-review.html _site/tests/
       # Serialize releases and skip stale runs, including manual reruns of old commits.
       - name: Check that this release is still current main
         id: current
