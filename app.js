@@ -246,7 +246,9 @@ function storageProblem(error) {
   $('#saveNoticeBackup').hidden=!(state&&error.code==='storage');$('#saveNoticeStatus').textContent='';
   $('#saveNotice').hidden=false;
 }
-function save(){account();try{store.save(state);return true;}catch(e){storageProblem(e);return false;}}
+// Meaningful events save at once; the play tick only saves the time ledger every SAVE_EVERY_MS.
+const SAVE_EVERY_MS=10000;let lastSaveAt=-Infinity;
+function save(){account();try{store.save(state);lastSaveAt=performance.now();return true;}catch(e){storageProblem(e);return false;}}
 function show(id) {
   $$('.screen').forEach(el=>el.classList.toggle('active',el.id===id));
   $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge','chapterStory'].includes(id);
@@ -534,7 +536,7 @@ function combatReaction(correct){
   if(correct){$('#battleHeroImg').classList.add(state.profile.heroClass==='Mage'?'mageCast':'attack');$('#enemyFace').classList.add(state.battle.enemyHealth<=0?'enemyDefeated':'enemyHit');}
   else{$('#enemyFace').classList.add('enemyAttack');if(state.battle.question.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}else $('#battleHeroImg').classList.add(state.battle.heroHealth<=0?'heroDefeated':'heroHit');}
   const pip=$('#battle .battlePip');
-  if(correct&&(state.campaign.battleRecords.length%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip',.45);}
+  if(correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip',.45);}
   else if(!correct)pip.classList.add('pipDodge');
 }
 function correction(animate=false) {
@@ -828,7 +830,8 @@ window.addEventListener('focus',()=>{windowFocused=true;});
 window.addEventListener('storage',event=>{if(event.key===KEY&&event.newValue!==store.expected)storageProblem(Object.assign(new Error('Another tab updated this adventure. Reload to use its saved progress.'),{code:'conflict'}));});
 setInterval(()=>{
   account();if(paused||blocked||!playing)return;
-  if(state.activity==='result'&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());state.activity='result';if(save())renderActivity();}else save();
+  if(state.activity==='result'&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());state.activity='result';if(save())renderActivity();}
+  else if(performance.now()-lastSaveAt>=SAVE_EVERY_MS)save();
 },1000);
 Core.interruptQuestion(state);
 renderHeroes();paintHero($('#battleHeroImg'),heroIndex());

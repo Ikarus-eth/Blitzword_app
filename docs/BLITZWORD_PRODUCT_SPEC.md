@@ -777,3 +777,16 @@ Point 1 of the approved plan makes learner saves durable in two releases: first 
 - A confirmed restore first keeps the current save in `blitzword_state_v1_before_restore`. Only the latest kept copy is retained. If storage is too full for the copy or the restored save, nothing changes. The app then reloads from the restored save.
 - Reset this device also erases the kept copy.
 - When a save fails because storage refuses it, the grown-up save-problem dialog also offers **Save backup file** for the progress still in memory. It is not offered when another tab saved newer progress or when the save cannot be read.
+
+## Durable saves: smaller save (point 1a) — approved 23 September 2026
+
+The save keeps recent raw history and rolls older history into totals, so it stays small however long the child plays.
+
+- Raw lists keep the newest 500 reading answers, 200 teaching events, 200 help events, 50 completed sessions and 30 number duels. Per-word summaries (`learning.words`), the assessment, current activity, XP, forms, chapters, shields, settings and the daily time and XP ledgers are kept in full.
+- Older entries roll, oldest first, into `archive`:
+  - daily and per-word answer totals: attempts, unaided, correct, helped, due reviews and their results, retention by gap since the word was last seen (1, 3, 7, 14 and 30+ days), response-time count, sum, minimum and maximum, and quick answers (correct in under 1.5 s at 950 ms or faster);
+  - per word: counts of each wrong choice, which letter positions differed (start, middle or end; vowel or consonant) and teaching and help counts;
+  - session totals, including the older time kept for Parents;
+  - for number duels, every duel's time, score, correct, wrong, target and result, plus per-fact totals.
+- Parents totals and answer counts include the archive. Existing saves migrate in place on load; nothing earned or set is lost.
+- The play tick saves at most every 10 seconds. Answers and other meaningful events, pause and leaving the page save at once. The new save is written before the previous one is copied to `_backup`, so a smaller save frees space first; if the copy does not fit, the older backup stays.

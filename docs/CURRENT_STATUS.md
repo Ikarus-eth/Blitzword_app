@@ -33,7 +33,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 
 | # | Point | Status |
 |---|---|---|
-| 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file (implemented and tested locally; deployment recorded separately). 1a not started |
+| 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file. 1a implemented and tested locally; deployment recorded separately |
 | 2 | Rotating distractor pools (option b) | Approved, not started |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
@@ -85,6 +85,35 @@ The user approved these points on 23 September 2026. Build them one at a time in
 - **9. Rewards and pacing:** discuss with the user first. Evidence: a won battle gives about +9 XP against a 3,000 XP first stage. `scripts/calibrate-xp.cjs` line 19 assumes one answer per 24 s, but the measured cycle is about 6–10 s. At 8–10 s, the same model gives first growth on day 7–8 instead of 14 and full growth on day 32–37 instead of 70, at 15 min/day. Ideas on the table: a spellbook of word cards that upgrade with retention; visible steps inside each growth stage; thresholds recalibrated from real answer logs.
 - **10. Number duel:** later. Evidence: age is collected but unused; all 100 facts from 1×1 to 10×10 come up at random with −1 per wrong answer; picking the middle number scores 41%. Ideas: levels by age and results, per-fact tracking, balanced distractors.
 - **Options not chosen:** offline cache (1c); same-position distractor sets (2a, rejected); font or case change on the flash (2c); rolling word pool (3b); test-out (3c); splitting the 8 look-alike pairs that share a chapter; sound-it-out cards (4c); say-it moments (6a); meaning duels (6b).
+
+## Smaller save (point 1a) — 24 September 2026
+
+The save now keeps the newest 500 reading answers, 200 teaching and 200 help events, 50 sessions and 30 duels in full. Older entries roll into an `archive` of daily and per-word totals; see the [product specification](BLITZWORD_PRODUCT_SPEC.md) for exactly what is kept. Parents totals include the archive. Existing saves compact in place on their first load. The play tick saves at most every 10 seconds instead of every second; answers, pause and leaving the page still save at once. Pip's alternating assist now counts archived answers, so its rhythm is unchanged.
+
+Fixed with it: `AdventureStore.save()` copied the previous save to `_backup` before writing the new one. Near the storage limit, that copy could not fit, so the first compacted save would fail. The new save is now written first; if the copy then does not fit, the older backup stays.
+
+Measured with the calibration play loop at 6 seconds per answer (worst case) and 45 minutes a day:
+
+| Day | Before | After |
+|---|---:|---:|
+| 7 | 1,659,214 characters | 591,485 |
+| 30 | 6,926,992 | 657,775 |
+| 90 | 20,810,308 | 718,773 |
+
+Before, the save plus `_backup` passed Chromium's 5.2M-character localStorage limit around day 14 at 45 minutes a day (around day 40 at 15 minutes). After day 14 the save grows about 1,100 characters a day.
+
+Build marker `compact-save-20260924-r1`; the `game-core.js`, `storage.js` and `app.js` cache versions are updated.
+
+Tests: all 125 core tests and all 43 UI-flow groups pass locally. New coverage:
+- a 90-day, 45-minutes-a-day simulation that fails above 1,000,000 characters;
+- migration of a full-history save with an unchanged profile, dragon, story, rewards, settings, time, word states, duel best and Parents totals, where archive plus raw equals the original per word, per day and per wrong choice, and loading again changes nothing;
+- hand-built cases for review results, retention gaps, letter positions, response times, duel facts and session time;
+- first-load compaction through the store, and a storage mock with a quota where the first compacted save must still fit;
+- the 10-second save rhythm and Pip's assist parity in the UI.
+
+In real Chromium at an iPad-sized viewport, a 3,254,320-character full-history save loaded in about 0.3 s. It compacted to about 639,000 characters for each of the save and `_backup`, kept 23,685 XP and the final dragon form, and Parents still showed 3780 / 4200 unaided answers correct. The next answer played normally with no page errors.
+
+Limits: not tested on an iPad. A `_before_restore` copy made before this release is not compacted; the next restore replaces it. Parents does not show the archive yet; that is point 8. Deployment is recorded separately.
 
 ## Text-selection error fix — 24 September 2026
 
