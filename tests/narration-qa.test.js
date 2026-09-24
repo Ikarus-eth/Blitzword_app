@@ -15,3 +15,17 @@ test('narration QA summary and copied report keep bad notes and unrated clips ex
  assert.deepEqual(qa.summarize(state),{rated:2,bad:1,good:1,total:30,complete:false});
  const report=qa.reportText(state);assert.match(report,/Reviewed 2\/30/);assert.match(report,/odd pause/);assert.match(report,/UNRATED \(28\)/);
 });
+
+test('narration QA mounts in a browser document and wires the Play button',()=>{
+ const {parseHTML}=require('linkedom'),html=fs.readFileSync(path.join(__dirname,'narration-qa.html'),'utf8');
+ const {document,window}=parseHTML(html),data={};
+ Object.defineProperty(window,'localStorage',{value:{getItem:key=>data[key]||null,setItem:(key,value)=>{data[key]=String(value);}}});
+ const player=document.getElementById('qaPlayer');player.pause=()=>{};player.play=()=>Promise.resolve();
+ qa.mount(document);
+ assert.equal(document.getElementById('qaText').textContent,'on');
+ assert.equal(document.getElementById('qaGroup').textContent,'Existing Tom word');
+ assert.equal(document.getElementById('qaProgress').textContent,'1 / 30');
+ assert.equal(typeof document.getElementById('qaPlay').onclick,'function');
+ assert.equal(typeof document.getElementById('qaGood').onclick,'function');
+});
+
