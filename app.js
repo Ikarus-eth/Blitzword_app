@@ -14,6 +14,9 @@ const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:37
 let spriteSerial=0;
 let selectedMapArea=null;
 const COMBAT_MS=1200;
+// Learning and damage are committed on answer; only the health presentation waits.
+const IMPACT_MS=Math.round(COMBAT_MS*.55);
+let impactTimer=null,pendingHealth=null;
 const shieldIcon='<svg viewBox="0 0 40 44" aria-hidden="true"><path d="M20 3L35 9V23Q34 33 20 41Q6 33 5 23V9Z"/><path d="M20 10V32M12 20H28"/></svg>';
 // Separate the original staff and gripping hand; retain the approved artwork.
 const mageRig={
@@ -44,10 +47,12 @@ function paintHero(element,index) {
 function heroIndex(){return (state.profile.gender==='boy'?0:3)+classes.indexOf(state.profile.heroClass);}
 function paintEnemy(element,enemyId,health=3){
   const enemy=Content.enemyAt(enemyId);
+  const rig=window.BlitzEnemyArt?.render(enemy.family||enemy.id);
   element.dataset.enemy=enemy.id;element.style.setProperty('--enemy-scale',Core.enemyScale(health));
-  element.style.setProperty('--enemy-aspect',enemy.crop?enemy.crop[2]/enemy.crop[3]:spriteCrops[enemy.sprite].w/spriteCrops[enemy.sprite].h);
+  element.style.setProperty('--enemy-aspect',rig?1:enemy.crop?enemy.crop[2]/enemy.crop[3]:spriteCrops[enemy.sprite??7].w/spriteCrops[enemy.sprite??7].h);
   element.setAttribute('role','img');element.setAttribute('aria-label',enemy.name);
-  if(enemy.sprite!==undefined)paintSprite(element,enemy.sprite);
+  if(rig){element.style.backgroundImage='none';element.innerHTML=rig;}
+  else if(enemy.sprite!==undefined)paintSprite(element,enemy.sprite);
   else {element.style.backgroundImage='none';element.innerHTML=`<svg viewBox="${enemy.crop.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><image href="assets/forest-opponents.png" width="1536" height="1024"/></svg>`;}
 }
 function healthSymbols(element,health){
@@ -140,6 +145,8 @@ function renderMap(deferEvolution=false){
   });updateDailyXP();save();if(!deferEvolution&&!maybeEvolution())maybeOfferName();
 }
 function clearCombat(){
+  clearTimeout(impactTimer);impactTimer=null;
+  if(pendingHealth){pendingHealth=null;if(state?.battle)renderHealth();}
   $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
   $('#heroHearts').classList.remove('shieldBlocked');
   $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();
@@ -487,11 +494,15 @@ function drawChoices() {
 function answer(option) {
   if(paused||blocked)return;
   if(!confirmActivity())return;const assessment=state.activity==='assessment';
+  const shieldBefore=!!state.rewards.shield;
   const rec=assessment?Core.answerAssessment(state,option,Date.now()):Core.answerBattle(state,option,Date.now());
   if(!rec)return;
   cancelWork();stageElements()[1].replaceChildren();$('#assessmentUnsure').hidden=true;$('#battleUnsure').hidden=true;
   if(!save())return;
-  if(assessment)assessmentFeedback();else{renderHud();if(rec.correct)correctFeedback();else correction(true);}
+  if(assessment)assessmentFeedback();else{
+    if(rec.healthChanged||rec.shieldUsed)pendingHealth={questionId:state.battle.question.id,heroHealth:rec.heroHealthBefore,enemyHealth:rec.enemyHealthBefore,shield:shieldBefore};
+    renderHud();if(rec.correct)correctFeedback();else correction(true);
+  }
 }
 function assessmentFeedback() {
   const q=Core.getQuestion(state);$('#assessmentAnswers').replaceChildren();$('#assessmentUnsure').hidden=true;$('#battleUnsure').hidden=true;
@@ -529,6 +540,11 @@ function combatGeometry(effects){
 function combatReaction(correct){
   const q=state.battle?.question;
   if(paused||blocked||state.activity!=='battle'||!q?.answeredAt||q.correct!==correct||q.supportReasons.length)return;
+  const token=epoch,questionId=q.id;
+  clearTimeout(impactTimer);
+  const revealHealth=()=>{if(paused||blocked||epoch!==token||state.activity!=='battle'||state.battle?.question?.id!==questionId)return;pendingHealth=null;impactTimer=null;renderHealth();};
+  if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)revealHealth();
+  else impactTimer=setTimeout(revealHealth,IMPACT_MS);
   sound.cue(correct?state.profile.heroClass.toLowerCase():q.shieldUsed?'shield':'hit',correct?.20:.12);
   const effects=$('#combatEffects');effects.className='combatEffects '+(correct?'heroStrike ':'enemyStrike ')+state.profile.heroClass.toLowerCase();
   effects.removeAttribute('style');
@@ -558,21 +574,27 @@ function correction(animate=false) {
   const next=document.createElement('button');next.className='greenButton correctionNext';next.textContent='→';next.setAttribute('aria-label','See the example');
   next.onclick=()=>{if(!confirmActivity())return;Core.startTeaching(state,q.target,'battle',Date.now());if(save())renderActivity();};
   const replay=document.createElement('button');replay.className='replay';replay.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg>';replay.setAttribute('aria-label','Replay the correct word');
-  replay.onclick=()=>{Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak('The word was '+q.target+'.');};
+  replay.onclick=()=>{clearCombat();Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak('The word was '+q.target+'.');};
   $('#battleAnswers').append(replay,next);
   if(q.shieldUsed){$('#feedback').textContent='Shield saved a heart';$('#feedback').classList.add('show');}
   speak((q.freeMistake?'Practice turn. You keep your heart. ':q.shieldUsed?'Your shield stopped the hit. ':'')+'The word was '+q.target+'.',{onEnd:()=>{if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);}});
 }
 
 function advanceBattle(){account();cancelWork();Core.prepareBattle(state,Date.now());if(save())renderActivity();}
+function renderHealth() {
+  const b=state.battle;if(!b)return;
+  const shown=pendingHealth&&pendingHealth.questionId===b.question?.id?pendingHealth:b;
+  const shieldHeld=shown===pendingHealth?shown.shield:state.rewards.shield;
+  $('#heroHearts').replaceChildren();
+  for(let i=0;i<3;i++){const heart=document.createElement('span');heart.className='heart'+(i<shown.heroHealth?'':' off');heart.textContent='♥';$('#heroHearts').append(heart);}
+  $('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of 3 hearts`);
+  if(shieldHeld&&!b.demo){const shield=document.createElement('span');shield.className='heldShield';shield.innerHTML=shieldIcon;$('#heroHearts').append(shield);$('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of 3 hearts, one shield protects the next hit`);}
+  $('#enemyFill').style.width=(100*shown.enemyHealth/b.maxHealth)+'%';
+  $('#enemyHealth').setAttribute('aria-label',`Enemy health: ${shown.enemyHealth} of ${b.maxHealth}`);
+  $('#enemyCount').textContent=shown.enemyHealth+' / '+b.maxHealth;
+}
 function renderHud() {
-  const b=state.battle;$('#heroHearts').replaceChildren();
-  for(let i=0;i<3;i++){const heart=document.createElement('span');heart.className='heart'+(i<b.heroHealth?'':' off');heart.textContent='♥';$('#heroHearts').append(heart);}
-  $('#heroHearts').setAttribute('aria-label',`${b.heroHealth} of 3 hearts`);
-  if(state.rewards.shield&&!b.demo){const shield=document.createElement('span');shield.className='heldShield';shield.innerHTML=shieldIcon;$('#heroHearts').append(shield);$('#heroHearts').setAttribute('aria-label',`${b.heroHealth} of 3 hearts, one shield protects the next hit`);}
-  $('#enemyFill').style.width=(100*b.enemyHealth/b.maxHealth)+'%';
-  $('#enemyHealth').setAttribute('aria-label',`Enemy health: ${b.enemyHealth} of ${b.maxHealth}`);
-  $('#enemyCount').textContent=b.enemyHealth+' / '+b.maxHealth;
+  const b=state.battle;renderHealth();
   paintEnemy($('#enemyFace'),b.enemyId,b.maxHealth);
   $('#battleChapter').hidden=b.demo;if(!b.demo)renderChapter($('#battleChapter'),true);
 }
@@ -584,7 +606,8 @@ function renderEncounter(){
   $('#encounterLead').textContent=b.finalEncounter?'Last fight':b.fromAssessment?'Let’s play':'Ready?';
   $('#encounterTitle').textContent=Content.areas.find(area=>area.id===b.areaId)?.name||'Lantern Trail';renderChapter($('#encounterChapter'));
   paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
-  speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+'A '+Content.enemyAt(enemy.family).name+' is on the path. Ready to battle?');save();
+  const name=Content.enemyAt(enemy.family).name;
+  speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+(/^Acorn/.test(name)?'An ':'A ')+name+' is on the path. Ready to battle?');save();
 }
 function renderChapterStory(){
   const scene=state.story.scene;if(!scene){state.activity='battle';renderActivity();return;}

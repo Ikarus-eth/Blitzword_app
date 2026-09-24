@@ -26,10 +26,21 @@ test('recovered runtime covers all current approved words, teaching and correcti
   presentOrFallback(item.sentence);presentOrFallback('Practice turn. You keep your heart. '+item.sentence);
   presentOrFallback('The word was '+item.w+'.');presentOrFallback('Practice turn. You keep your heart. The word was '+item.w+'.');
  }
- for(const enemy of C.enemies){presentOrFallback('A '+enemy.name+' is on the path. Ready to battle?');presentOrFallback('Reading check complete. Now your first chapter begins. A '+enemy.name+' is on the path. Ready to battle?');}
+ const recordedEnemies=['Thornling', 'Moss Golem', 'Moon Moth', 'Root Sprite', 'Cave Troll'];
+ for(const name of recordedEnemies){assert.ok(C.enemies.some(enemy=>enemy.name===name));presentOrFallback('A '+name+' is on the path. Ready to battle?');presentOrFallback('Reading check complete. Now your first chapter begins. A '+name+' is on the path. Ready to battle?');}
  for(const [i,text] of [C.evolution.intro,...C.evolution.lines.slice(1).map(lines=>lines.join(' '))].entries())assert.equal(manifest.clips[text]?.file,'assets/narration/evolution-'+i+'.mp3',text);
  presentOrFallback('Pip is on the rock.');presentOrFallback('Let’s try a few words. Look at the word. When it hides, tap the same word. Tap the question mark if you are not sure.');
  assert.equal(fallbackOnly.size,0);for(const text of ['gate','The gate is by the castle.','Practice turn. You keep your heart. The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The word was gate.'])assert.ok(manifest.clips[text],text);
+});
+test('all fifteen new creature introductions speak their exact names through the existing fallback',()=>{
+ const {narrator}=require('../audio');let downloads=0,spoken=[];
+ const n=narrator({clips:manifest.clips,fetchAudio:()=>{downloads++;throw Error('Absent creature recording requested');},synth:{cancel(){},resume(){},getVoices(){return[];},speak:u=>spoken.push(u.text)},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule:()=>{}});
+ const added=C.enemies.filter(enemy=>!['thornling', 'moss-golem', 'moon-moth', 'root-sprite', 'cave-troll'].includes(enemy.id));assert.equal(added.length,15);
+ for(const enemy of added)for(const prefix of ['', 'Reading check complete. Now your first chapter begins. ']){
+  const text=prefix+(/^Acorn/.test(enemy.name)?'An ':'A ')+enemy.name+' is on the path. Ready to battle?';
+  assert.equal(manifest.clips[text],undefined);n.speak(text);assert.equal(spoken.at(-1),text);
+ }
+ assert.equal(downloads,0);assert.equal(spoken.length,30);
 });
 test('remaining story and shield narration gaps use immediate device speech without absent-file requests',()=>{
  const {narrator}=require('../audio');let downloads=0,spoken=[];

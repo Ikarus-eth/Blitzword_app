@@ -18,6 +18,15 @@ The original `00a_heroes_character_bible.png` records the approval of the three 
 
 ## Active references
 
+### Selected enemies — 23 September 2026
+
+`assets/enemies/selected-lineup.png` records the user's selections: 01–05 A,
+06–08 C, 09 B, 10–11 C, 12–13 A, 14–20 C. The twenty transparent parts atlases
+in `assets/enemies/layered/` preserve these identities for articulated 2D combat.
+See [the enemy release](enemies/LAYERED_ENEMIES_RELEASE.md) for source prompts,
+runtime rigs, review controls and the distinction between base forms and proposed
+growth/group variants. Health remains governed by the existing game rules.
+
 Character coherence is mandatory across all references. Attractive one-off variations are not acceptable substitutes for the approved hero/Pip identities.
 
 ### 00a_heroes_character_bible.png — female heroes only

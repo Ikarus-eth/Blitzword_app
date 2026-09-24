@@ -2110,7 +2110,22 @@
     {id:'moss-golem',name:'Moss Golem',crop:[28,10,716,492]},
     {id:'moon-moth',name:'Moon Moth',crop:[812,0,682,503]},
     {id:'root-sprite',name:'Root Sprite',crop:[143,513,487,500]},
-    {id:'cave-troll',name:'Cave Troll',crop:[812,510,654,514]}
+    {id:'cave-troll',name:'Cave Troll',crop:[812,510,654,514]},
+    {id:'acorn-imp',name:'Acorn Imp',sprite:7},
+    {id:'mushroom-guard',name:'Mushroom Guard',sprite:7},
+    {id:'bark-beetle',name:'Bark Beetle',sprite:7},
+    {id:'bramble-boar',name:'Bramble Boar',sprite:7},
+    {id:'reed-serpent',name:'Reed Serpent',sprite:7},
+    {id:'bog-toad',name:'Bog Toad',sprite:7},
+    {id:'lantern-wisp',name:'Lantern Wisp',sprite:7},
+    {id:'crystal-crab',name:'Crystal Crab',sprite:7},
+    {id:'hollow-owl',name:'Hollow Owl',sprite:7},
+    {id:'fern-wolf',name:'Fern Wolf',sprite:7},
+    {id:'stone-ram',name:'Stone Ram',sprite:7},
+    {id:'briar-bat',name:'Briar Bat',sprite:7},
+    {id:'snail-knight',name:'Snail Knight',sprite:7},
+    {id:'chest-mimic',name:'Chest Mimic',sprite:7},
+    {id:'storm-griffin',name:'Storm Griffin',sprite:7}
   ];
   enemies.forEach(enemy=>{enemy.minHealth=3;enemy.maxHealth=5;enemy.tier=0;enemy.family=enemy.id;});
   function enemyAt(id){
