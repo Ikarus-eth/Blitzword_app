@@ -1,6 +1,6 @@
 # Pip evolution scenes — 23–24 September 2026
 
-Integrated build: `pip-evolution-20260924-r1`, on top of the narration recovery, backup file, text-selection fix, smaller-save, narration QA and approved-narration releases. The user approved publication. Implemented, locally tested and reviewed in real Chromium; deployment is recorded separately in [current status](CURRENT_STATUS.md).
+Integrated build: `pip-evolution-20260924-r1`, on top of the narration recovery, backup file, text-selection fix, smaller-save, narration QA and approved-narration releases. The user approved publication. Implemented, locally tested, reviewed in headless Chromium and deployed on 24 September 2026 (merge `589c821`, [Pages run 35957905729](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35957905729)); see [current status](CURRENT_STATUS.md) for the verification limits.
 
 The previous app changed Pip's form and offered an XP comparison panel and naming. It did not have a separate evolution animation. This update adds three earned evolution scenes using four new illustrations.
 
