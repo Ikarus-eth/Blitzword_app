@@ -85,7 +85,7 @@ Generation used the repository secret `ELEVENLABS_API_KEY` without exposing it. 
 
 The runtime corpus is now **1,029 exact-text clips**: 994 previous core/evolution recordings plus 35 stable-remainder recordings. The manifest version is `recorded-voice-20260924-r5`. For a shielded mistake, the app now plays the reusable shield prefix and then the existing exact `The word was X.` recording; Pause/Home/newer narration still cancels the sequence through the normal narration epoch.
 
-The new 35 George clips have MP3 decode and SHA-256 verification but have not yet received user listening QA. Physical iPad gameplay playback is also still outstanding.
+The new 35 George clips passed user listening QA on 24 September 2026: all 34 chapter-story introductions and the reusable shield prefix were rated Good, with no rejected clips. Physical iPad gameplay playback is still outstanding.
 
 ## Stable remainder deployment — 24 September 2026
 
@@ -95,3 +95,6 @@ GitHub Pages reported successful deployment. The uploaded Pages artifact was ins
 
 Direct public-origin HTTP byte comparison remains unavailable in this execution environment. This is verified Pages deployment plus deployed-artifact verification, not an independent `github.io` byte comparison.
 
+## Stable remainder listening approval — 24 September 2026
+
+The user completed the dedicated 35-clip ElevenLabs remainder QA and approved every clip: all 34 chapter-story introductions and the reusable `Your shield stopped the hit.` prefix were rated Good. No regeneration is required for this set. This closes listening QA for the stable remainder; child-read chapter-story sentences are still intentionally deferred until their approved rewrite, and physical iPad gameplay playback remains open.
