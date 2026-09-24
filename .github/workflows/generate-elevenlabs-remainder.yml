@@ -1,0 +1,33 @@
+name: Generate ElevenLabs narration remainder
+
+on:
+  push:
+    branches:
+      - narration/elevenlabs-remainder-20260924
+    paths:
+      - scripts/generate-elevenlabs-remainder.cjs
+      - .github/workflows/generate-elevenlabs-remainder.yml
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: narration/elevenlabs-remainder-20260924
+      - name: Generate stable remaining narration
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node scripts/generate-elevenlabs-remainder.cjs
+      - name: Commit generated audio and receipts
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/narration/story-intro-*.mp3 assets/narration/shield-stopped.mp3 docs/NARRATION_REMAINDER_GENERATION.json
+          git diff --cached --quiet && { echo "No generated changes"; exit 1; }
+          git commit -m "Generate stable narration remainder with ElevenLabs"
+          git push origin HEAD:narration/elevenlabs-remainder-20260924
