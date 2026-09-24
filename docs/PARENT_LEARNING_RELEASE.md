@@ -1,6 +1,6 @@
 # Parent learning view — point 8
 
-Build: `parent-learning-20260924-r1`. Implemented and locally tested; merge and Pages verification pending.
+Build: `parent-learning-20260924-r1`. Deployed and verified on 24 September 2026.
 
 ## What changed
 
@@ -36,10 +36,16 @@ There is no new telemetry, storage-key change, data reset, curriculum edit, sche
 
 Machine-readable browser/check results: [PARENT_LEARNING_CHECKS.json](PARENT_LEARNING_CHECKS.json).
 
+## Deployment verification
+
+[PR #72](https://github.com/Ikarus-eth/Blitzword_app/pull/72) merged as `e6351235ecdfeb19f3fbe43a4b33f1a2b410e34e`. [Pages run #84](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35984212573) passed all checks and its deployment step. At 09:56 UTC on 24 September 2026, the live build was `parent-learning-20260924-r1`. All five cache-busted files returned successfully and matched the merge byte for byte: `index.html`, `game-core.js`, `app.js`, `styles.css`, and preserved `soundscape.js`. Main still matched the release commit. [Per-file verification](PARENT_LEARNING_DEPLOYMENT.json).
+
+Current main was merged into the task branch immediately before the PR merge, including the golden spiral, continuous battle audio and their verified deployment records. Previous main `69b33ad` is the rollback checkpoint; learner saves must not be reset. This docs-only follow-up records verification without changing runtime files.
+
 ## iPad check
 
 Open Parents through the gate. Check map colours/labels, search a word, use a status or Quick filter, tap a word and close its history. Review mix-ups, response-time sample counts and weekly denominators. Older history may correctly be unavailable. Scroll to Sound, change a setting, then leave and reopen to confirm it is retained. Keep the existing learner save and backup.
 
 ## Stop
 
-This completes the approved sequence through point 8 after deployment verification. Collect iPad feedback and the remaining reading-check/content decisions. Point 9 requires discussion and a separate decision; point 10 remains parked.
+This completes the deployed and verified approved sequence through point 8. Collect iPad feedback and the remaining reading-check/content decisions. Point 9 requires discussion and a separate decision; point 10 remains parked.
