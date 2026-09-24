@@ -52,7 +52,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Deployed and verified live on 24 September 2026 (build `scheduling-refill-20260924-r1`). [Release record](SCHEDULING_RELEASE.md) |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Deployed and verified live on 24 September 2026 (build `contrast-teaching-20260924-r1`). [Release record](CORRECTIONS_RELEASE.md) |
 | 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
-| 6 | Story sentences a child can read (option c) | Approved, not started; sentence list needs approval before building |
+| 6 | Story sentences a child can read (option c) | All 34 sentence/picture pairs drafted for approval; gameplay not started. [Review proposal](STORY_SENTENCE_REVIEW.md) |
 | 7 | Speed suggestions, two new steps, per-word quick status | Approved, not started |
 | 8 | Parent view: word map, tricky list, weekly retention | Approved, not started |
 
@@ -223,3 +223,14 @@ Node 22.23.3: 176 core tests and 57 UI-flow groups pass. Eleven isolated Chromiu
 
 
 Merged in [PR #64](https://github.com/Ikarus-eth/Blitzword_app/pull/64) as `8e4c00220607f677a27a7601c6370659fbd068b0`. [Pages run #74](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35967455461) succeeded, including tests, artifact upload and deployment. At 07:03 UTC on 24 September 2026, `main` was still that merge and the live build marker was `contrast-teaching-20260924-r1`. Cache-busted downloads of all four changed runtime files matched `git show <merge>:<file>` byte for byte. [Verification record](CORRECTIONS_DEPLOYMENT.json).
+
+
+## Point 6 proposal for approval — 24 September 2026
+
+The user authorized preparation of the complete 34-entry sentence and picture review. [The proposal](STORY_SENTENCE_REVIEW.md), [picture gallery](story-review/index.html) and [exact wording, sources and vocabulary audit](story-review/proposal.json) are review documents, not implemented gameplay. The user has not yet approved their wording or picture selections.
+
+The current workbook and runtime have the same 200 targets. An exact prior-field audit finds 26 current sentences with untaught words; the proposed set reduces this to three early single-word listening exceptions (entries 01 jump, 03 the, 04 look). The other 31 use only previously introduced targets plus the dragon name. Existing approved pictures supply every proposed pair, including exact crops for the open/closed book. No new art is proposed. Several early lines deliberately recap known scenes because function words and location names are not yet taught.
+
+Implementation waits for approval of all 34 sentences and pairs. Then replace I read it with the approved two-picture prompt, add optional word listening and first-choice/help records, preserve saved story phases and battle handoff, and verify that either choice continues without XP, mastery or health consequences. Point 7 remains unstarted. Live build remains contrast-teaching-20260924-r1; this proposal changes no app files or learner saves.
+
+Proposal validation: exact prior-word and asset checks pass; all 68 pictures load in Chromium at tablet landscape, tablet portrait and phone widths, without horizontal overflow or page errors. All 18 PDF pages were inspected. The existing 176 core tests and 57 UI-flow groups pass on Node 22.23.3. Physical iPad/Safari review remains open. [Verification record](story-review/verification.json).

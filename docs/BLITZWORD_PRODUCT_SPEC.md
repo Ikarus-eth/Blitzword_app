@@ -838,3 +838,8 @@ The saved `q.needsTeaching` decision controls Continue: show the full picture ca
 Correction/help still records support and requires two intervening items before a recheck. Health, shields, XP evidence, chapter objectives and saves keep their existing rules. Narration finishes before an attack; replay, Continue, Pause and Home cancel pending reactions safely. A last-heart miss still resolves the battle after its correction/teaching route.
 
 New combined contrast phrases use the existing device-speech fallback. The approved shield prefix still plays first; target-only help can reuse the existing “The word was X.” recordings. No narration recordings or approved artwork are replaced. The separate narration workstream can record the stable new wording later.
+
+
+## Point 6 review gate — 24 September 2026
+
+The user authorized preparation of all 34 child-read story sentences and their two-picture pairs. [The complete draft](STORY_SENTENCE_REVIEW.md) is proposed content awaiting explicit approval; its candidate wording and image choices are not yet accepted product rules. The existing approved point 6 behavior remains: use earlier chapter targets, permit at most one tap-to-hear untaught word where necessary in early chapters, show a two-picture meaning question, reveal the correct picture after a wrong choice and continue, award no XP, and record the result for Parents. All 34 sentences and picture pairs must be approved before gameplay implementation.
