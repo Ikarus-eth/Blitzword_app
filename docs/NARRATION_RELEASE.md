@@ -56,3 +56,16 @@ The completed QA round found six clips that required replacement:
 - `Hop on my back. We can go far.`: replaced with the same Tom voice at 0.82× for a slower evolution line.
 
 The user approved all six replacement candidates before integration. The narration manifest is now `recorded-voice-20260924-r3` with `runtimeClipCount: 990` and no fallback-only corpus entries. The QA page starts a fresh local rating set after these production-file replacements; its local state remains separate from learner progress.
+
+## Approved replacement deployment — 24 September 2026
+
+PR #50 merged the six user-approved replacement MP3s and full 990-clip runtime mapping as `87fd6d0689ee73c74fbb9d2207e9e7a27bb15155`. Its first Pages run (#58 / `35954994381`) stopped before deployment because one test incorrectly expected mapped `gate` to bypass the existing device-speech fallback pronunciation helper even when Web Audio was unavailable. The runtime behavior was unchanged; PR #51 corrected only that test expectation and merged as `d203ca767ed18b0011dc1023fed7eb826a3a8a1b`.
+
+PR #52 set the release marker to `narration-approved-20260924-r1` and merged as `9b7cbbc265131fc47eba7f81c7714e3d09eaff8a`. Pages run `35955320563` passed 128/128 tests and reported a successful deployment. Its deployed artifact was inspected after the run and contains:
+
+- build marker `narration-approved-20260924-r1` and narration cache version `narration-approved-20260924-r1`;
+- narration manifest `recorded-voice-20260924-r3` with 990 runtime clips and no fallback-only entries;
+- the approved replacement hashes for `on`, `creature`, `i`, `it`, standalone `gate`, and `evolution-3` exactly matching the uploaded files;
+- the retained four longer gate-family recordings mapped at runtime.
+
+The GitHub Pages action reported successful file synchronization and the expected Pages URL. A separate HTTP read of the public `github.io` origin is unavailable from this execution environment, so live-origin byte comparison remains unverified here. Physical iPad gameplay playback also remains outstanding.
