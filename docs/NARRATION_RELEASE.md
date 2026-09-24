@@ -87,3 +87,11 @@ The runtime corpus is now **1,029 exact-text clips**: 994 previous core/evolutio
 
 The new 35 George clips have MP3 decode and SHA-256 verification but have not yet received user listening QA. Physical iPad gameplay playback is also still outstanding.
 
+## Stable remainder deployment — 24 September 2026
+
+PR #54 merged the stable ElevenLabs remainder as `f9d9fb6d3a08e3dbb8c1ab008d3e3c2cc1c93849`. Pages run `35959070005` passed **132/132** Node tests and the UI-flow suite, including the regression that verifies the reusable shield prefix plays before the existing exact word-correction recording and that the blocked-hit animation waits for both clips.
+
+GitHub Pages reported successful deployment. The uploaded Pages artifact was inspected after the run: build marker `narration-remainder-20260924-r1`, manifest `recorded-voice-20260924-r5`, **1,029 narration MP3s**, **34 story-intro MP3s**, and `shield-stopped.mp3` are present. The manifest reports `recordedClipCount: 1029`, `runtimeClipCount: 1029`, `recoveredClipCount: 994`, and no fallback-only entries. The shield prefix and a representative Fox Crossing story intro match their generation receipts by SHA-256.
+
+Direct public-origin HTTP byte comparison remains unavailable in this execution environment. This is verified Pages deployment plus deployed-artifact verification, not an independent `github.io` byte comparison.
+
