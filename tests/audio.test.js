@@ -20,7 +20,7 @@ test('approved gate recordings are mapped and the pronunciation helper is only f
  const clips=require('../narration').clips;
  for(const text of ['gate','The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The gate is by the castle.','Practice turn. You keep your heart. The word was gate.'])assert.ok(clips[text],text);
  const n=narrator({clips,fetchAudio(){downloads++;},synth:{cancel(){},resume(){},getVoices(){return[];},speak(u){utterance=u;}},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule(){}});
- n.speak('gate',{onEnd:()=>done++});assert.equal(utterance.text,'gate');utterance.onend();
+ n.speak('gate',{onEnd:()=>done++});assert.equal(utterance.text,'gait');utterance.onend();
  n.speak('Open the gate now.',{onEnd:()=>done++});assert.equal(utterance.text,'Open the gait now.');utterance.onend();
  assert.equal(downloads,0);assert.equal(done,2);
 });
