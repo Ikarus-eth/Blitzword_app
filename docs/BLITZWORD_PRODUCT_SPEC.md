@@ -838,3 +838,19 @@ The saved `q.needsTeaching` decision controls Continue: show the full picture ca
 Correction/help still records support and requires two intervening items before a recheck. Health, shields, XP evidence, chapter objectives and saves keep their existing rules. Narration finishes before an attack; replay, Continue, Pause and Home cancel pending reactions safely. A last-heart miss still resolves the battle after its correction/teaching route.
 
 New combined contrast phrases use the existing device-speech fallback. The approved shield prefix still plays first; target-only help can reuse the existing “The word was X.” recordings. No narration recordings or approved artwork are replaced. The separate narration workstream can record the stable new wording later.
+
+
+## Point 6 review gate — 24 September 2026
+
+The user authorized preparation of all 34 child-read story sentences and their two-picture pairs. [The complete draft](STORY_SENTENCE_REVIEW.md) is proposed content awaiting explicit approval; its candidate wording and image choices are not yet accepted product rules. The existing approved point 6 behavior remains: use earlier chapter targets, permit at most one tap-to-hear untaught word where necessary in early chapters, show a two-picture meaning question, reveal the correct picture after a wrong choice and continue, award no XP, and record the result for Parents. All 34 sentences and picture pairs must be approved before gameplay implementation.
+
+
+## Point 6: approved sentences and picture checks — 24 September 2026
+
+The user approved all 34 sentences and their exact picture pairs in [PR #66](https://github.com/Ikarus-eth/Blitzword_app/pull/66) and authorized implementation. This supersedes the pending content-approval status above. [The complete set](STORY_SENTENCE_REVIEW.md) is unchanged from the reviewed PDF: 31 sentences use only targets from strictly earlier map fields, plus the dragon name; entries 01, 03 and 04 each allow one tap-to-hear word: jump, the and look. Some early lines recap familiar scenes because new location and grammar words have not yet been taught.
+
+The existing spoken introduction remains, followed by the untimed sentence and “Which picture shows what you read?” Two approved pictures appear without reviewer labels. Their positions are shuffled once and saved with the sentence, so returning to the same scene preserves the question. The sentence never plays automatically. Listen speaks the whole sentence; an underlined exception word speaks only that word. Each kind of listening is saved separately.
+
+The first picture choice is recorded immediately and cannot be replaced by a second tap. Either choice reveals the matching picture and offers Continue; a wrong choice never requires a retry. The scene awards no XP, health change, word mastery or chapter time. Parents shows first-choice outcomes and listening, explicitly noting the 50% chance level and that these checks do not establish independent reading. Earlier completed confirmations remain completed and are labelled as having no picture check; unfinished old intros/read phases migrate in place, retaining their pending battle and any earlier Listen help.
+
+An unavailable picture or a request that has not loaded after eight seconds offers Continue without fabricating an answer. Save failures retain the existing save-problem flow. Pause, Home, Rest, backgrounding and reopening retain the current scene, choice order, feedback and help. No approved art or narration recordings are replaced. Point 7 still requires the next go.

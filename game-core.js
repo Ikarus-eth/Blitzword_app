@@ -84,6 +84,8 @@
     }
     if(s.story.chapterComplete&&!s.story.completedChapters.includes('chapter-1'))s.story.completedChapters.push('chapter-1');
     s.story.chapters ||= {};s.story.dailyChapters ||= {};s.story.scenes ||= {};s.rewards.xpDays ||= {};s.rewards.speedHistory ||= {};
+    // Upgrade only unfinished stories. Completed confirmations remain historical, without invented answers.
+    if(s.story.scene)ensureStoryReading(s.story.scene);
     if(s.battle&&s.battle.xpEarned===undefined){
       const reading=s.campaign.battleRecords.filter(r=>r.battleId===s.battle.id).reduce((n,r)=>n+(r.xpEarned||0),0);
       const math=s.math.round?.battleId===s.battle.id?s.math.round.correct:s.math.records.filter(r=>r.battleId===s.battle.id).reduce((n,r)=>n+(r.xpEarned??r.correct),0);
@@ -282,6 +284,7 @@
     const records=s.campaign.battleRecords.filter(r=>r.task==='battle'),independent=records.filter(r=>!r.supported);
     return {totals,activeMs:totals.practice+totals.math+totals.assessment+totals.demo,today:s.timing.days[dayKey(now)]||{practice:0,math:0,assessment:0,demo:0,idle:0},legacyMs,
       days:Object.entries(s.timing.days).sort((a,b)=>b[0].localeCompare(a[0])),answers:(past.battle||0)+records.length,independent:(past.independent||0)+independent.length,correct:(past.correct||0)+independent.filter(r=>r.correct).length,
+      storyChecks:Content.areas.filter(a=>s.story.scenes[a.id]).map(a=>({areaId:a.id,...s.story.scenes[a.id]})),
       introduced:Content.words.filter(x=>s.learning.words[x.w]?.introducedAt).length,practiced:Content.words.filter(x=>s.learning.words[x.w]?.practiceSuccesses>=2).length};
   }
   function isSessionDue(s) { return !!s.session && !s.session.completedAt && s.session.elapsedMs >= s.session.targetMs; }
@@ -448,20 +451,55 @@
     const area=areas.find(a=>a.id===areaId)||areas.find(a=>!s.story.clearedAreas.includes(a.id))||areas.at(-1);
     return {campaign,area,campaignNumber:Content.chapters.indexOf(campaign)+1,chapterNumber:areas.indexOf(area)+1,total:areas.length,cleared:areas.filter(a=>s.story.clearedAreas.includes(a.id)).length};
   }
+  function ensureStoryReading(scene,random=Math.random){
+    if(scene.reading)return scene.reading;
+    const content=Content.chapterStories[scene.areaId],check=content?.check;
+    if(!check)return null;
+    // Snapshot the sentence and order once; reopening a save must never redraw the pair.
+    return scene.reading={version:1,sentence:content.sentence,untaughtWord:check.untaughtWord,
+      options:shuffle([check.match,check.other],random),match:check.match,
+      firstChoice:null,correct:null,answeredAt:null,listenedSentence:!!scene.helped,listenedWords:[],pictureUnavailable:false};
+  }
   function beginChapterStory(s,now){
-    if(s.story.scene){s.activity='chapterStory';return true;}
+    if(s.story.scene){ensureStoryReading(s.story.scene);s.activity='chapterStory';return true;}
     const b=s.battle,area=Content.areas.find(a=>a.id===b?.areaId),index=Content.areas.indexOf(area);
     // The initial guided battle keeps its approved short introduction. Never interrupt a saved question.
     if(!b||b.demo||b.finalEncounter||b.reviewId||b.resolved||b.question||b.turn||index<=0||!s.story.clearedAreas.includes(Content.areas[index-1].id)||s.story.scenes[area.id]||s.story.clearedAreas.includes(area.id))return false;
     s.story.scene={areaId:area.id,battleId:b.id,phase:'intro',introHeard:false,helped:false,startedAt:iso(now)};
-    s.activity='chapterStory';return true;
+    ensureStoryReading(s.story.scene);s.activity='chapterStory';return true;
+  }
+  function noteStoryHelp(s,kind){
+    const scene=s.story.scene,q=scene?.reading;
+    if(s.activity!=='chapterStory'||scene?.phase!=='read'||!q)return false;
+    if(kind==='sentence')q.listenedSentence=true;
+    else if(kind===q.untaughtWord){if(!q.listenedWords.includes(kind))q.listenedWords.push(kind);}
+    else return false;
+    scene.helped=true;return true;
+  }
+  function saveStoryResult(s,scene,now,completed=false){
+    const q=scene.reading;
+    return s.story.scenes[scene.areaId]={readingVersion:q.version,sentence:q.sentence,options:[...q.options],
+      match:q.match,firstChoice:q.firstChoice,correct:q.correct,answeredAt:q.answeredAt,
+      helped:!!scene.helped,listenedSentence:q.listenedSentence,listenedWords:[...q.listenedWords],
+      pictureUnavailable:q.pictureUnavailable,completedAt:completed?iso(now):null};
+  }
+  function answerChapterStory(s,picture,now){
+    const scene=s.story.scene,q=scene?.reading;
+    if(s.activity!=='chapterStory'||scene?.phase!=='read'||!q||q.answeredAt||!q.options.includes(picture))return null;
+    q.firstChoice=picture;q.correct=picture===q.match;q.answeredAt=iso(now);scene.phase='feedback';
+    return saveStoryResult(s,scene,now);
+  }
+  function storyPictureFailed(s,now){
+    const scene=s.story.scene,q=scene?.reading;
+    if(s.activity!=='chapterStory'||scene?.phase!=='read'||!q)return false;
+    // An unavailable pair is not a wrong answer. Continue without inventing a result.
+    q.pictureUnavailable=true;scene.phase='feedback';saveStoryResult(s,scene,now);return true;
   }
   function advanceChapterStory(s,now){
     const scene=s.story.scene;if(!scene||s.activity!=='chapterStory')return false;
-    if(scene.phase==='intro'){if(!scene.introHeard)return false;scene.phase='read';return true;}
-    if(scene.phase!=='read')return false;
-    s.story.scenes[scene.areaId]={completedAt:iso(now),helped:scene.helped};
-    s.story.scene=null;s.activity='battle';return true;
+    if(scene.phase==='intro'){if(!scene.introHeard)return false;ensureStoryReading(scene);scene.phase='read';return true;}
+    if(scene.phase!=='feedback'||!scene.reading||!scene.reading.answeredAt&&!scene.reading.pictureUnavailable)return false;
+    saveStoryResult(s,scene,now,true);s.story.scene=null;s.activity='battle';return true;
   }
   function chapterProgress(s) {
     const chapter=currentChapter(s);
@@ -789,7 +827,7 @@
   return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
-    enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,recordTime,parentProgress,dayKey,
+    enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,
     HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions};
 });

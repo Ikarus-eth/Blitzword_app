@@ -1,0 +1,95 @@
+{
+  "status": "Review proposal verified; gameplay not implemented or deployed",
+  "verifiedAt": "2026-09-24T07:41:24.460591+00:00",
+  "sourceMain": "4ed8a7bd0ea45762ef551a354bee943f46829023",
+  "vocabulary": {
+    "oldKnown": 100,
+    "oldTokens": 158,
+    "oldBad": 26,
+    "newKnown": 158,
+    "newTokens": 161,
+    "exceptions": [
+      [
+        1,
+        "jump"
+      ],
+      [
+        3,
+        "the"
+      ],
+      [
+        4,
+        "look"
+      ]
+    ]
+  },
+  "gallery": [
+    {
+      "width": 1180,
+      "height": 820,
+      "cards": 34,
+      "imagesLoaded": 68,
+      "horizontalOverflow": false,
+      "anchor34": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "cards": 34,
+      "imagesLoaded": 68,
+      "horizontalOverflow": false,
+      "anchor34": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "cards": 34,
+      "imagesLoaded": 68,
+      "horizontalOverflow": false,
+      "anchor34": true
+    }
+  ],
+  "galleryErrors": [],
+  "assets": {
+    "sourcePathsDimensionsHashesAndCropBoundsVerified": 24,
+    "explicitUniqueSvgClipPaths": 68,
+    "newImagesCreated": 0
+  },
+  "pdf": {
+    "path": "output/pdf/blitzword-story-sentence-review.pdf",
+    "pages": 18,
+    "sentencesTextChecked": 34,
+    "pagesVisuallyInspected": 18,
+    "bytes": 9129070,
+    "sha256": "9180469e1eda4905d858e128333cdea05f431493bb568694312e67cf4beb80f1"
+  },
+  "regression": {
+    "node": "22.23.3",
+    "command": "npm ci --ignore-scripts && npm test",
+    "coreTests": 176,
+    "uiFlowGroups": 57,
+    "result": "passed",
+    "existingTestsChanged": false
+  },
+  "physicalIPadSafariTested": false,
+  "approvalStillRequired": true,
+  "liveBaseline": {
+    "mergeCommit": "4ed8a7bd0ea45762ef551a354bee943f46829023",
+    "pagesRun": {
+      "id": 35967723335,
+      "run_number": 75,
+      "head_sha": "4ed8a7bd0ea45762ef551a354bee943f46829023",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35967723335"
+    },
+    "buildMarker": "contrast-teaching-20260924-r1",
+    "verifiedAt": "2026-09-24T07:18:09.908364+00:00",
+    "byteIdenticalFiles": [
+      "index.html",
+      "game-core.js",
+      "app.js",
+      "styles.css"
+    ]
+  }
+}

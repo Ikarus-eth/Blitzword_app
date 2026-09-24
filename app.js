@@ -13,6 +13,7 @@ let store,state,paused=true,playing=false,blocked=false,lastTick=performance.now
 const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:374,h:538},{x:1154,y:0,w:382,h:538},{x:0,y:538,w:384,h:486},{x:384,y:538,w:384,h:486},{x:768,y:630,w:384,h:370},{x:1152,y:650,w:384,h:350}];
 let spriteSerial=0;
 let selectedMapArea=null;
+let storyControls=null;
 const COMBAT_MS=1200;
 // Learning and damage are committed on answer; only the health presentation waits.
 const IMPACT_MS=Math.round(COMBAT_MS*.55);
@@ -154,7 +155,7 @@ function clearCombat(){
   $('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
 }
-function cancelWork(){clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
+function cancelWork(){clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
 function activityCategory(){
   if(!state||paused||blocked||!playing||state.screen==='evolution')return null;
@@ -195,6 +196,16 @@ function renderParent(){
   $('#parentIdle').textContent=formatTime(p.totals.idle);$('#parentLegacy').textContent=formatTime(p.legacyMs);
   $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
   $('#parentLearning').textContent=p.introduced+' / '+Content.words.length+' words introduced · '+p.practiced+' practiced twice · '+p.correct+' / '+p.independent+' unaided answers correct.';
+  const checked=p.storyChecks.filter(r=>typeof r.correct==='boolean'),matched=checked.filter(r=>r.correct).length;
+  $('#parentStorySummary').textContent=checked.length?matched+' / '+checked.length+' first choices matched · '+checked.filter(r=>r.helped).length+' used listening.':'No picture choices recorded yet.';
+  const stories=$('#parentStories');stories.replaceChildren();
+  for(const record of p.storyChecks){
+    const place=Core.chapterLocation(state,record.areaId),row=document.createElement('tr');
+    const result=record.pictureUnavailable?'Pictures unavailable':record.correct===true?'Matched':record.correct===false?'Other picture':'Earlier confirmation; no picture check';
+    const help=record.readingVersion?[record.listenedSentence?'Sentence':null,...(record.listenedWords||[]).map(word=>'Word: '+word)].filter(Boolean).join('; ')||'None':record.helped?'Listen used (earlier version)':'None recorded';
+    for(const value of [place.campaignNumber+'.'+place.chapterNumber+' '+place.area.name,record.sentence?dragonText(record.sentence):'Earlier sentence',result,help]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}
+    stories.append(row);
+  }
   const body=$('#parentDays');body.replaceChildren();
   for(const [date,d] of p.days.slice(0,30)){
     const row=document.createElement('tr');for(const value of [date,formatTime(d.practice),formatTime(d.math||0),formatTime(d.assessment+d.demo),formatTime(d.idle)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);
@@ -624,7 +635,7 @@ function renderEncounter(){
 function renderChapterStory(){
   const scene=state.story.scene;if(!scene){state.activity='battle';renderActivity();return;}
   show('chapterStory');
-  const place=Core.chapterLocation(state,scene.areaId),content=Content.chapterStories[scene.areaId];
+  const place=Core.chapterLocation(state,scene.areaId),content=Content.chapterStories[scene.areaId],q=scene.reading;
   $('#storyLocation').textContent='Campaign '+place.campaignNumber+' · Chapter '+place.chapterNumber;
   $('#storyTitle').textContent=place.area.name;
   $('#storyPicture').setAttribute('aria-label',dragonText('Pip and your hero at ')+place.area.name);
@@ -634,23 +645,75 @@ function renderChapterStory(){
   landscape.onerror=()=>{landscape.onerror=null;landscape.src='assets/forest-clearing.webp';};
   landscape.src=art.src;
   paintHero($('#storyHero'),heroIndex());paintPip($('#storyPip'));
-  const reading=scene.phase==='read';$('#chapterStory').dataset.phase=scene.phase;
-  $('#storyNarration').hidden=reading;$('#storyNarration').textContent=dragonText(content.narration);
-  $('#storySentence').hidden=!reading;$('#storySentence').textContent=dragonText(content.sentence);
-  $('#storyPrompt').textContent=reading?'Your turn to read':'A new chapter';
-  $('#storyNext').textContent=reading?'I read it':'Read';$('#storyNext').disabled=!reading&&!scene.introHeard;
-  $('#storyListen').setAttribute('aria-label',reading?'Listen to the sentence':'Listen to the story');
-  if(!reading&&!scene.introHeard)narrateChapterStory();
+  const intro=scene.phase==='intro',feedback=scene.phase==='feedback',token=epoch;
+  $('#chapterStory').dataset.phase=scene.phase;$('#storyPicture').hidden=!intro;
+  $('#storyNarration').hidden=!intro;$('#storyNarration').textContent=dragonText(content.narration);
+  const sentence=$('#storySentence');sentence.hidden=intro;sentence.replaceChildren();
+  const text=dragonText(q.sentence),match=q.untaughtWord&&new RegExp('\\b'+q.untaughtWord+'\\b','i').exec(text);
+  if(match){
+    const word=document.createElement('button');word.className='storyHearWord';word.textContent=match[0];
+    word.setAttribute('aria-label','Hear '+match[0]);word.disabled=feedback;
+    sentence.append(document.createTextNode(text.slice(0,match.index)),word,document.createTextNode(text.slice(match.index+match[0].length)));
+    word.onclick=()=>{if(controls.current()&&!feedback&&confirmActivity())narrateChapterStory(q.untaughtWord);};
+  }else sentence.textContent=text;
+  $('#storyWordHint').hidden=intro||feedback||!match;
+  $('#storyPrompt').textContent=intro?'A new chapter':'Which picture shows what you read?';
+  $('#storyNext').textContent=intro?'Read':'Continue';$('#storyNext').hidden=!intro&&!feedback;
+  $('#storyListen').hidden=feedback;$('#storyListen').setAttribute('aria-label',intro?'Listen to the story':'Listen to the sentence');
+  const message=$('#storyChoiceFeedback');message.hidden=!feedback;
+  message.textContent=q.pictureUnavailable?'A picture could not load. You can continue.':q.correct?'Yes, this picture.':'This picture shows what you read.';
+  const choices=$('#storyChoices');choices.hidden=intro;choices.replaceChildren();
+  const controls=storyControls={scene,token,speaking:false,ready:0,
+    current:()=>token===epoch&&state.story.scene===scene&&state.screen==='chapterStory'&&!paused&&!blocked,
+    update:()=>{
+      $('#storyNext').disabled=intro&&!scene.introHeard||controls.speaking;
+      for(const button of choices.querySelectorAll('.storyChoice'))button.disabled=feedback||controls.speaking||controls.ready<2;
+    }};
+  if(!intro)for(const [i,key] of q.options.entries()){
+    const picture=Content.storyPictures[key],button=document.createElement('button');button.className='storyChoice';button.dataset.picture=key;
+    const correct=feedback&&!q.pictureUnavailable&&key===q.match;
+    button.classList.toggle('storyChoiceMatch',correct);button.classList.toggle('storyChoicePicked',feedback&&key===q.firstChoice);
+    button.setAttribute('aria-label',(correct?'Matching picture. ':'Picture '+(i+1)+'. ')+dragonText(picture?.alt||'Picture unavailable'));
+    const marker=document.createElement('span');marker.className='storyChoiceMarker';marker.setAttribute('aria-hidden','true');marker.textContent=correct?'✓':'';
+    if(picture){
+      const crop=picture.crop||[0,0,picture.width,picture.height],clip='story-picture-'+(++spriteSerial);
+      button.innerHTML=`<svg viewBox="${crop.join(' ')}" aria-hidden="true"><defs><clipPath id="${clip}" clipPathUnits="userSpaceOnUse"><rect x="${crop[0]}" y="${crop[1]}" width="${crop[2]}" height="${crop[3]}"/></clipPath></defs><image href="${picture.src}" width="${picture.width}" height="${picture.height}" clip-path="url(#${clip})"/></svg>`;
+      // HTML image load/error handling also covers browsers with inconsistent SVG load events.
+      const loader=document.createElement('img');loader.hidden=true;loader.alt='';let settled=false;
+      loader.onload=()=>{if(settled||!controls.current())return;settled=true;controls.ready++;if(controls.ready===2)clearTimeout(controls.loadTimer);controls.update();};
+      loader.onerror=()=>{if(settled||!controls.current())return;settled=true;if(Core.storyPictureFailed(state,Date.now())&&save())renderActivity();};
+      button.append(loader);loader.src=picture.src;if(loader.complete&&loader.naturalWidth)loader.onload();
+    }
+    button.append(marker);choices.append(button);
+    button.onclick=()=>{
+      if(!controls.current()||button.disabled||scene.phase!=='read'||!confirmActivity())return;
+      if(Core.answerChapterStory(state,key,Date.now())&&save()){renderActivity();$('#storyNext').focus();}
+    };
+  }
+  controls.update();
+  if(!intro&&!feedback&&controls.ready<2)controls.loadTimer=setTimeout(()=>{
+    if(controls.current()&&Core.storyPictureFailed(state,Date.now())&&save())renderActivity();
+  },8000);
+  if(!intro&&q.options.some(key=>!Content.storyPictures[key])&&Core.storyPictureFailed(state,Date.now())&&save()){renderActivity();return;}
+  // Bind to this exact scene/phase so queued taps cannot skip a choice or a later scene.
+  const phase=scene.phase;
+  $('#storyNext').onclick=()=>{
+    if(!controls.current()||scene.phase!==phase||$('#storyNext').hidden||$('#storyNext').disabled||!confirmActivity())return;
+    if(Core.advanceChapterStory(state,Date.now())&&save())renderActivity();
+  };
+  $('#storyListen').onclick=()=>{if(controls.current()&&!feedback&&confirmActivity())narrateChapterStory();};
+  if(intro&&!scene.introHeard)narrateChapterStory();
 }
-function narrateChapterStory(){
-  const scene=state.story.scene;if(!scene||paused||blocked)return;
-  const content=Content.chapterStories[scene.areaId],reading=scene.phase==='read';
-  if(reading){scene.helped=true;if(!save())return;}
-  $('#storyNext').disabled=true;
-  speak(reading?content.sentence:content.narration,{onEnd:()=>{
-    if(state.story.scene!==scene)return;
+function narrateChapterStory(word=null){
+  const controls=storyControls,scene=state.story.scene;
+  if(!controls?.current()||controls.scene!==scene||scene.phase==='feedback')return;
+  const reading=scene.phase==='read',content=Content.chapterStories[scene.areaId];
+  if(reading&&(!Core.noteStoryHelp(state,word||'sentence')||!save()))return;
+  controls.speaking=true;controls.update();
+  speak(reading?(word||scene.reading.sentence):content.narration,{onEnd:()=>{
+    if(storyControls!==controls||!controls.current())return;
     if(!reading){scene.introHeard=true;if(!save())return;}
-    $('#storyNext').disabled=false;
+    controls.speaking=false;controls.update();
   }});
 }
 function renderTeaching() {
@@ -903,8 +966,6 @@ $('#previewVoice').onclick=()=>speak('Pip is on the rock.');
 window.speechSynthesis?.addEventListener('voiceschanged',()=>{if(!$('#pausePanel').hidden)populateVoices();});
 $('#teachReplay').onclick=()=>{if(!confirmActivity())return;const teaching=state.teaching;Core.startTeaching(state,teaching.target,teaching.returnTo,Date.now(),{replay:true});if(save())narrateTeaching();};
 $('#teachContinue').onclick=()=>{if(!confirmActivity())return;Core.leaveTeaching(state,Date.now());if(save())advanceBattle();};
-$('#storyListen').onclick=()=>{if(confirmActivity())narrateChapterStory();};
-$('#storyNext').onclick=()=>{if(!confirmActivity()||$('#storyNext').disabled)return;cancelWork();if(Core.advanceChapterStory(state,Date.now())&&save())renderActivity();};
 $('#resultNext').onclick=home;
 $('#anotherChallenge').onclick=continueAdventure;$('#doneToday').onclick=home;
 $('#retrySave').onclick=()=>{try{store.save(state);blocked=false;$('#saveNotice').hidden=true;if(playing)showPausePanel();else if(state.screen==='route')home();else show(state.screen);}catch(e){storageProblem(e);}};
