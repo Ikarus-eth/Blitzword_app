@@ -2834,9 +2834,9 @@
   const chapterStories=Object.fromEntries(areas.map((area,i)=>[area.id,{narration:storyLines[i][0],sentence:storyLines[i][1],scene:chapters.find(c=>c.id===area.chapterId).scene,check:storyChecks[area.id]||null}]));
   const dragonStages = [
     {name:'Small Pip',xp:0,crop:[150,160,409,307],scale:1},
-    {name:'Big Pip',xp:3000,crop:[838,11,542,460],scale:1.14},
-    {name:'Bigger Pip',xp:8900,crop:[88,494,615,491],scale:1.3},
-    {name:'Ride on Pip',xp:13400,crop:[869,464,657,533],scale:1.45}
+    {name:'Big Pip',xp:15000,crop:[838,11,542,460],scale:1.14},
+    {name:'Bigger Pip',xp:45000,crop:[88,494,615,491],scale:1.3},
+    {name:'Ride on Pip',xp:70000,crop:[869,464,657,533],scale:1.45}
   ];
   const teachingSource=item=>'assets/teaching/'+item.image+(item.image==='core-teaching'?'.webp':item.crop?'.png':'.webp');
   const evolution={intro:"Look! Your dragon is glowing. Let's see what happens.",

@@ -30,9 +30,9 @@ test('initial battle, saved questions, completed places and campaign finales are
  for(const key of ['demo','finalEncounter','resolved']){const t=at(1);t.battle[key]=true;assert.equal(C.beginChapterStory(t,NOW),false);}
 });
 test('first evolution naming personalizes stories without changing their saved phase or scored learning',()=>{
- let s=at(7);assert.equal(C.nameDragon(s,'Ember'),false);s.dragon.xp=3000;s=reload(s);assert.equal(C.nameDragon(s,'Ember'),true);
+ let s=at(7);assert.equal(C.nameDragon(s,'Ember'),false);s.dragon.xp=15000;s=reload(s);assert.equal(C.nameDragon(s,'Ember'),true);
  C.beginChapterStory(s,NOW);s.story.scene.introHeard=true;C.advanceChapterStory(s,NOW);s=reload(s);
- assert.equal(s.dragon.name,'Ember');assert.equal(s.story.scene.phase,'read');assert.equal(s.dragon.xp,3000);
+ assert.equal(s.dragon.name,'Ember');assert.equal(s.story.scene.phase,'read');assert.equal(s.dragon.xp,15000);
 });
 test('new story speech uses the existing immediate fallback and cancellation blocks stale completion',()=>{
  const utterances=[];let downloads=0,finished=0;
