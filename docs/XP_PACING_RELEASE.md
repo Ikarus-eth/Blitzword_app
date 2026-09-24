@@ -1,6 +1,6 @@
 # Whole XP and slower growth — point 9
 
-Build: `xp-pacing-20260924-r1`. Implemented and locally tested; deployment verification pending.
+Build: `xp-pacing-20260924-r1`. Deployed and verified on 24 September 2026.
 
 ## Approved direction
 
@@ -58,8 +58,14 @@ These are not calendar gates. Changing accuracy, response time, help, chapter mi
 
 Existing tests changed deliberately: threshold-crossing/evolution/naming fixtures now use 15k/45k/70k; boosted answers expect whole rewards and the new badge; map text expects growth steps. The extended all-chapter test now expects the first earned form, not full growth, because growth was deliberately slowed. The old exact calendar target test is replaced by reward and incentive checks around the parent's reference. Review fixtures follow current content thresholds. Existing save, learning and chapter requirements were not relaxed.
 
+## Deployment verification
+
+[PR #76](https://github.com/Ikarus-eth/Blitzword_app/pull/76) merged as `e228b30c26ea03a81ee99f593f7fea3e709dce41`. [Pages run #86](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36001494122) succeeded, including the deployment step. At 12:50 UTC on 24 September 2026, the live build was `xp-pacing-20260924-r1` and main still matched that merge. Cache-busted `index.html`, `content.js`, `game-core.js`, `app.js`, `styles.css`, `tests/review-app.html`, `tests/review-scenarios.js` and preserved `soundscape.js` all matched the merge byte for byte. [Per-file hashes and workflow steps](XP_PACING_DEPLOYMENT.json).
+
+Main was fetched and checked immediately before merging. Previous main `1acabb70eba2b9cf57054d6836545b4859916d14` is the rollback checkpoint; learner saves must never be reset. This docs-only follow-up records the completed verification and changes no runtime files.
+
 ## iPad check and stop
 
 Leave and reopen the app. Check whole XP after answers and battles; after ten active minutes, confirm the XP boost. Tap Pip to see the next small step and the new growth threshold. Previously earned forms and names should remain. After practice on another date, check the returning bonus and its explanation in Parents. Keep the existing save and backup.
 
-Stop after deployment verification. Collect the next real 30-minute session's XP and the child's response to growth pacing. Point 10 and other parked work need a separate decision.
+Deployment is verified; stop here. Collect the next real 30-minute session's XP and the child's response to growth pacing. Point 10 and other parked work need a separate decision.
