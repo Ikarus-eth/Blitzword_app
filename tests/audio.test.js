@@ -15,16 +15,14 @@ test('unavailable speech never blocks the child',()=>{
  let done=0;narrator({}).speak('sat',{onEnd:()=>done++});assert.equal(done,1);
 });
 
-test('gate uses the pronunciation helper only when no approved exact recording exists',()=>{
- let utterance,downloads=0,done=0,boundary;
+test('approved gate recordings are mapped and the pronunciation helper is only for unmapped fallback text',()=>{
+ let utterance,downloads=0,done=0;
  const clips=require('../narration').clips;
- assert.equal(clips.gate,undefined);
- const n=narrator({clips,AudioContext:function(){throw Error('Unexpected audio context');},fetchAudio(){downloads++;},synth:{cancel(){},resume(){},getVoices(){return[];},speak(u){utterance=u;}},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule(){}});
- for(const text of ['gate','The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The gate is by the castle.']){
-  n.speak(text,{onEnd:()=>done++,onBoundary:e=>boundary=e.charIndex});assert.equal(utterance.text,text.replace(/gate/g,'gait'));assert.equal(utterance.text.length,text.length);assert.equal(utterance.lang,'en-GB');utterance.onboundary({charIndex:text.indexOf('gate')});assert.equal(boundary,text.indexOf('gate'));utterance.onend();
- }
- assert.equal(downloads,0);assert.equal(done,4);
- n.speak('gate',{onEnd:()=>done++});n.cancel();utterance.onend();assert.equal(done,4);
+ for(const text of ['gate','The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The gate is by the castle.','Practice turn. You keep your heart. The word was gate.'])assert.ok(clips[text],text);
+ const n=narrator({clips,fetchAudio(){downloads++;},synth:{cancel(){},resume(){},getVoices(){return[];},speak(u){utterance=u;}},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule(){}});
+ n.speak('gate',{onEnd:()=>done++});assert.equal(utterance.text,'gate');utterance.onend();
+ n.speak('Open the gate now.',{onEnd:()=>done++});assert.equal(utterance.text,'Open the gait now.');utterance.onend();
+ assert.equal(downloads,0);assert.equal(done,2);
 });
 
 test('an approved exact recording wins over fallback and personalized dragon text stays local',async()=>{
