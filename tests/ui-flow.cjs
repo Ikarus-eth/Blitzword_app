@@ -12,13 +12,13 @@ function boot(saved,options={}){
  window.matchMedia=()=>({matches:!!options.reducedMotion,addEventListener(){},removeEventListener(){}});
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.selected=option.value===value;}});
- Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>true,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
+ Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>!options.pendingImages,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
  let speechEnd=null;const speechTexts=[];
  const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
- function elapse(ms){const target=now+ms;while([...jobs.values()].some(job=>job.time<=target))tick();now=target;}
+ function elapse(ms,awake=false){if(awake){for(let elapsed=0;elapsed<ms;elapsed+=1000){elapse(Math.min(1000,ms-elapsed));heartbeat();}return;}const target=now+ms;while([...jobs.values()].some(job=>job.time<=target))tick();now=target;}
  function tick(){const next=[...jobs.entries()].sort((a,b)=>a[1].time-b[1].time)[0];assert.ok(next,'no scheduled progress');jobs.delete(next[0]);now=next[1].time;next[1].fn();}
  function until(predicate){for(let i=0;i<25&&!predicate();i++)tick();assert.ok(predicate(),'progress stalled');}
  function ready(){if(state().battle?.introPending)click(get('encounterStart'));until(()=>state().battle?.question?.phase==='choices'||state().assessment.progress?.question?.phase==='choices'||!get('wordReady').hidden);if(!get('wordReady').hidden){click(get('wordReady'));until(()=>state().battle?.question?.phase==='choices');}}
@@ -399,6 +399,7 @@ for(const victory of [true,false]){
  console.log('PASS separate audio controls and quiet preset persist without changing earned XP');
 }
 
+function storyChoose(ui,correct=true){const q=ui.state().story.scene.reading;ui.click([...ui.get('storyChoices').children].find(b=>correct?b.dataset.picture===q.match:b.dataset.picture!==q.match));}
 function storySave(index=7){
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
  s.story.clearedAreas=Content.areas.slice(0,index).map(a=>a.id);s.story.completedChapters=Content.chapters.slice(0,Math.floor(index/5)).map(c=>c.id);
@@ -416,7 +417,7 @@ function storySave(index=7){
  ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{heldNarration:true});ui.resume();assert.equal(ui.state().story.scene.phase,'read');assert.equal(ui.speechTexts.length,0);
  assert.deepEqual(ui.state().battle,battle);assert.equal(ui.state().dragon.xp,xp);assert.equal(ui.state().campaign.battleRecords.length,0);
  ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseFinish'));assert.equal(ui.state().activity,'summary');ui.click(ui.get('anotherChallenge'));assert.equal(ui.state().story.scene.phase,'read');
- ui.click(ui.get('storyNext'));assert.equal(ui.state().activity,'battle');assert.equal(ui.state().story.scene,null);assert.equal(ui.state().story.scenes[battle.areaId].helped,true);
+ storyChoose(ui);ui.click(ui.get('storyNext'));assert.equal(ui.state().activity,'battle');assert.equal(ui.state().story.scene,null);assert.equal(ui.state().story.scenes[battle.areaId].helped,true);
  assert.equal(ui.state().battle.id,battle.id);ui=boot(ui.state());ui.resume();assert.equal(ui.get('chapterStory').classList.contains('active'),false);
  console.log('PASS chapter story narration lock, separate reading, Listen help, Pause, Home, reload and Rest resume without extra scoring');
 }
@@ -428,11 +429,11 @@ function storySave(index=7){
  console.log('PASS story idle pause preserves each phase without time or daily XP credit');
 }
 {
- const s=storySave(7);s.dragon.xp=3000;s.dragon.named=true;s.dragon.name='Ember';s.dragon.namingPromptSeen=true;
- const ui=boot(s,{heldNarration:true});assert.match(ui.document.querySelector('.mapTerrain').getAttribute('aria-label'),/Campaign 2, River Path map. Chapter 3, Reed Path/);
- assert.match(ui.get('mapNodes').children[2].getAttribute('aria-label'),/Chapter 3, Reed Path, current/);
- ui.resume();assert.equal(ui.get('storyLocation').textContent,'Campaign 2 · Chapter 3');assert.equal(ui.speechTexts[0],Content.chapterStories[s.battle.areaId].narration);ui.finishSpeech();ui.click(ui.get('storyNext'));assert.equal(ui.get('storySentence').textContent,'Ember is by the river.');ui.click(ui.get('storyListen'));assert.equal(ui.speechTexts.at(-1),'Ember is by the river.');ui.finishSpeech();
- ui.click(ui.get('storyNext'));assert.match(ui.get('encounterChapter').querySelector('[role="progressbar"]').getAttribute('aria-label'),/Campaign 2, River Path: 2 of 5 chapters completed. Chapter 3, Reed Path/);
+ const s=storySave(9);s.dragon.xp=3000;s.dragon.named=true;s.dragon.name='Ember';s.dragon.namingPromptSeen=true;
+ const ui=boot(s,{heldNarration:true});assert.match(ui.document.querySelector('.mapTerrain').getAttribute('aria-label'),/Campaign 2, River Path map. Chapter 5, River Gate/);
+ assert.match(ui.get('mapNodes').children[4].getAttribute('aria-label'),/Chapter 5, River Gate, current/);
+ ui.resume();assert.equal(ui.get('storyLocation').textContent,'Campaign 2 · Chapter 5');assert.equal(ui.speechTexts[0],Content.chapterStories[s.battle.areaId].narration);ui.finishSpeech();ui.click(ui.get('storyNext'));assert.equal(ui.get('storySentence').textContent,'Ember is at the gate.');ui.click(ui.get('storyListen'));assert.equal(ui.speechTexts.at(-1),'Ember is at the gate.');ui.finishSpeech();
+ storyChoose(ui);ui.click(ui.get('storyNext'));assert.match(ui.get('encounterChapter').querySelector('[role="progressbar"]').getAttribute('aria-label'),/Campaign 2, River Path: 4 of 5 chapters completed. Chapter 5, River Gate/);
  console.log('PASS chosen dragon name in story speech and sentence, and actual campaign/chapter accessibility labels');
 }
 
@@ -443,7 +444,7 @@ for(let i=0;i<Content.areas.length;i++){
  check();if(i){assert.equal(ui.get('storyLandscape').getAttribute('src'),src);ui.finishSpeech();ui.click(ui.get('storyNext'));}
  ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseResume'));check();ui.click(ui.get('homeBtn'));
  ui=boot(ui.state(),{heldNarration:true});ui.resume();check();
- if(i)ui.click(ui.get('storyNext'));check();assert.equal(ui.get('encounterIntro').hidden,false);
+ if(i){storyChoose(ui);ui.click(ui.get('storyNext'));}check();assert.equal(ui.get('encounterIntro').hidden,false);
  ui.click(ui.get('encounterStart'));check();ui.click(ui.get('homeBtn'));ui=boot(ui.state());ui.resume();check();
 }
 console.log('PASS all 35 chapter backgrounds at story, encounter, battle, Pause/Home/reload');
@@ -467,11 +468,66 @@ console.log('PASS all 35 chapter backgrounds at story, encounter, battle, Pause/
   const ui=boot(storySave(7),{heldNarration:true});ui.resume();
   const img=ui.get('storyLandscape');img.onerror();assert.equal(img.src,'assets/forest-clearing.webp');assert.equal(img.onerror,null);
   assert.ok(ui.get('chapterScenery').style.backgroundImage.includes('assets/forest-clearing.webp'));
-  ui.finishSpeech();ui.click(ui.get('storyNext'));ui.click(ui.get('storyNext'));assert.equal(ui.get('encounterIntro').hidden,false);
+  ui.finishSpeech();ui.click(ui.get('storyNext'));storyChoose(ui);ui.click(ui.get('storyNext'));assert.equal(ui.get('encounterIntro').hidden,false);
   delete Content.chapterBackgrounds[area];ui.click(ui.get('encounterStart'));
   assert.ok(ui.get('chapterScenery').style.backgroundImage.includes('assets/forest-clearing.webp'));
  }finally{Content.chapterBackgrounds[area]=original;}
  console.log('PASS missing artwork and missing mapping fall back without blocking story or battle');
+}
+// Point 6 deliberately replaces story confirmation with a saved first picture choice.
+for(const correct of [true,false]){
+ let ui=boot(storySave(3),{heldNarration:true});ui.resume();const oldRead=ui.get('storyNext').onclick;ui.finishSpeech();ui.click(ui.get('storyNext'));
+ const initial=ui.state(),order=initial.story.scene.reading.options,choices=[...ui.get('storyChoices').children];
+ assert.equal(ui.get('storyNext').hidden,true);oldRead();assert.equal(ui.state().story.scene.phase,'read');
+ assert.equal(ui.get('storyPicture').hidden,true);assert.equal(ui.get('storyPrompt').textContent,'Which picture shows what you read?');
+ assert.equal(choices.length,2);assert.deepEqual(choices.map(b=>b.dataset.picture),order);assert.ok(choices.every(b=>!b.getAttribute('aria-label').includes('Matching')));
+ assert.equal(ui.speechTexts.length,1,'sentence does not play automatically');
+ for(const button of choices){const svg=button.querySelector('svg'),rect=svg.querySelector('clipPath rect');assert.equal(svg.getAttribute('viewBox'),['x','y','width','height'].map(k=>rect.getAttribute(k)).join(' '));}
+ ui.click(ui.get('storyListen'));assert.equal(ui.state().story.scene.reading.listenedSentence,true);
+ const oldChoice=choices.find(b=>correct?b.dataset.picture===initial.story.scene.reading.match:b.dataset.picture!==initial.story.scene.reading.match);
+ oldChoice.onclick();assert.equal(ui.state().story.scene.phase,'read','choices stay locked during speech');ui.finishSpeech();ui.click(oldChoice);oldChoice.onclick();
+ const result=ui.state().story.scenes[initial.battle.areaId];assert.equal(result.correct,correct);assert.equal(ui.state().story.scene.phase,'feedback');
+ assert.equal(ui.get('storyChoices').querySelectorAll('.storyChoiceMatch').length,1);assert.equal(ui.get('storyChoices').querySelector('.storyChoiceMatch').dataset.picture,initial.story.scene.reading.match);
+ assert.equal(ui.get('storyListen').hidden,true);assert.ok([...ui.get('storyChoices').children].every(b=>b.disabled));assert.equal(ui.state().campaign.battleRecords.length,0);
+ assert.equal(ui.state().dragon.xp,initial.dragon.xp);assert.deepEqual(ui.state().battle,initial.battle);
+ ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseResume'));assert.deepEqual(ui.state().story.scenes[initial.battle.areaId],result);
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{heldNarration:true});ui.resume();assert.equal(ui.state().story.scene.phase,'feedback');assert.deepEqual(ui.state().story.scene.reading.options,order);
+ const next=ui.get('storyNext').onclick;ui.click(ui.get('storyNext'));next();assert.equal(ui.state().story.scene,null);assert.equal(ui.state().battle.id,initial.battle.id);assert.equal(ui.get('encounterIntro').hidden,false);
+ ui.click(ui.get('homeBtn'));openParents(ui);assert.match(ui.get('parentStorySummary').textContent,new RegExp((correct?'1':'0')+' / 1 first choices matched'));
+ assert.equal(ui.get('parentStories').children.length,1);assert.match(ui.get('parentStories').textContent,/Sentence/);assert.match(ui.get('parentStories').textContent,correct?/Matched/:/Other picture/);
+ assert.equal(Core.parentProgress(ui.state()).activeMs,0);
+ console.log('PASS story picture '+(correct?'match':'miss')+': saved first choice, reveal, stale taps, Pause/Home/reopen and parent record without credit');
+}
+for(const [index,word] of [[1,'jump'],[3,'the'],[4,'look']]){
+ let ui=boot(storySave(index),{heldNarration:true});ui.resume();ui.finishSpeech();ui.click(ui.get('storyNext'));
+ const hear=ui.get('storySentence').querySelector('.storyHearWord');assert.ok(hear);assert.equal(hear.textContent.toLowerCase(),word);
+ ui.click(hear);assert.equal(ui.speechTexts.at(-1),word);assert.deepEqual(ui.state().story.scene.reading.listenedWords,[word]);assert.equal(ui.state().story.scene.reading.listenedSentence,false);
+ ui.finishSpeech();ui.click(hear);const stale=ui.pendingSpeech();ui.click(ui.get('homeBtn'));stale();hear.onclick();
+ ui=boot(ui.state(),{heldNarration:true});ui.resume();assert.equal(ui.speechTexts.length,0);assert.deepEqual(ui.state().story.scene.reading.listenedWords,[word]);
+ storyChoose(ui);ui.click(ui.get('storyNext'));assert.deepEqual(ui.state().story.scenes[Content.areas[index].id].listenedWords,[word]);
+ assert.equal(ui.state().learning.teaching.length,0);assert.equal(ui.state().campaign.battleRecords.length,0);
+}
+console.log('PASS all three untaught words speak only on tap, record bounded help, cancel safely and survive reopening');
+{
+ const ui=boot(storySave(1),{heldNarration:true,pendingImages:true});ui.resume();ui.finishSpeech();ui.click(ui.get('storyNext'));
+ assert.ok([...ui.get('storyChoices').children].every(b=>b.disabled));const loaders=[...ui.get('storyChoices').querySelectorAll('img')];
+ loaders[0].onerror();loaders[1].onload();assert.equal(ui.state().story.scene.phase,'feedback');assert.equal(ui.state().story.scene.reading.firstChoice,null);
+ assert.match(ui.get('storyChoiceFeedback').textContent,/could not load/);assert.equal(ui.get('storyNext').disabled,false);ui.click(ui.get('storyNext'));
+ assert.equal(ui.state().activity,'battle');assert.equal(ui.state().story.scenes['fox-crossing'].pictureUnavailable,true);assert.equal(ui.state().story.scenes['fox-crossing'].correct,null);
+ console.log('PASS an unavailable picture skips the check without a fabricated wrong answer or blocked battle');
+}
+{
+ const ui=boot(storySave(1),{heldNarration:true,pendingImages:true});ui.resume();ui.finishSpeech();ui.click(ui.get('storyNext'));ui.elapse(8000,true);
+ assert.equal(ui.state().story.scene.phase,'feedback');assert.equal(ui.get('storyNext').disabled,false);ui.click(ui.get('storyNext'));
+ assert.equal(ui.state().story.scene,null);assert.equal(ui.state().story.scenes['fox-crossing'].firstChoice,null);
+ console.log('PASS a stalled picture request times out to Continue without recording an answer');
+}
+
+{
+ const s=storySave(7);s.story.scenes[s.battle.areaId]={completedAt:new Date(Date.UTC(2026,8,21)).toISOString(),helped:true};
+ const ui=boot(s);openParents(ui);assert.match(ui.get('parentStorySummary').textContent,/No picture choices/);assert.match(ui.get('parentStories').textContent,/Earlier confirmation; no picture check/);
+ assert.equal(ui.state().story.scenes[s.battle.areaId].correct,undefined);
+ console.log('PASS Parents distinguishes historical confirmations from measured picture choices');
 }
 // Parents can save the whole adventure as a dated file and restore it after checking and confirming.
 function openParents(ui){

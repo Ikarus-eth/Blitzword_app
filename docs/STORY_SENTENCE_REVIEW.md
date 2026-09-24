@@ -1,20 +1,20 @@
-# Point 6: proposed story sentences and picture pairs
+# Point 6: approved story sentences and picture pairs
 
-**Proposal for approval. No gameplay changes are implemented or deployed.**
+**All 34 entries approved by the user on 24 September 2026.** See [implementation and release status](STORY_PICTURES_RELEASE.md). The PDF preserves the pre-approval review copy; its exact wording and pairs are unchanged.
 
 Open [the full picture gallery](story-review/index.html) locally to view every actual pair. Download [the portable PDF](../output/pdf/blitzword-story-sentence-review.pdf); the table below and [machine-readable proposal](story-review/proposal.json) preserve the exact wording and approved asset references in GitHub.
 
-## Decision requested
+## Approval
 
-Approve all 34 entries, or identify entry numbers and requested changes. This is the explicit point 6 gate in [current status](CURRENT_STATUS.md): "show the user all 34 sentences with their picture pairs for approval before building."
+The user reviewed the complete set in PR #66 and said “ok go ahead.” This satisfies the point 6 gate in [current status](CURRENT_STATUS.md): “show the user all 34 sentences with their picture pairs for approval before building.”
 
-31 entries use only prior chapter targets (plus the dragon name). Entries 01, 03 and 04 each use one listening exception: **jump**, **the**, **look**. Tapping that word would speak it and record help. No assumed sight words, inflection credit or next-chapter previews are used. The early curriculum lacks function words, so some lines intentionally recap an earlier moment. This preserves the already-approved spoken story introductions.
+31 entries use only prior chapter targets (plus the dragon name). Entries 01, 03 and 04 each use one listening exception: **jump**, **the**, **look**. Tapping that word speaks it and records help. No assumed sight words, inflection credit or next-chapter previews are used. The early curriculum lacks function words, so some lines intentionally recap an earlier moment. This preserves the already-approved spoken story introductions.
 
-All pairs use existing approved art, whole or clipped from an atlas. No new artwork is proposed; none of these rewritten lines is currently marked as lacking a fitting picture. Picture fit is an editorial proposal for user approval, not a test result. Matching/other captions are reviewer-only; the eventual child UI would show unlabelled, shuffled choices with saved order.
+All pairs use existing approved art, whole or clipped from an atlas. No new artwork is proposed; none of these rewritten lines is currently marked as lacking a fitting picture. Picture fit was approved by the user; it is not a test of child comprehension. Matching/other captions are reviewer-only; the child UI shows unlabelled, shuffled choices with saved order.
 
 ## All 34 entries
 
-| # | Campaign.chapter | Place | Proposed sentence | Tap-to-hear exception | Matching / other picture |
+| # | Campaign.chapter | Place | Approved sentence | Tap-to-hear exception | Matching / other picture |
 |---|---|---|---|---|---|
 | 01 | 1.2 | Fox Crossing | Jump, Pip! | jump | jump / rock |
 | 02 | 1.3 | Old Grove | Pip, jump over water. | None | jump / fox |
@@ -59,7 +59,7 @@ A fresh exact-token audit finds 26/34 existing sentences contain untaught words.
 
 Availability means the word was a target in an earlier completed field, not proof of mastery or a guarantee that a full picture lesson was shown. Every source path, image dimension, crop bound and SHA-256 is recorded in the JSON. Artwork selections have been visually inspected; no child-play or physical iPad test is claimed.
 
-After approval, implement the two-picture prompt in place of I read it, optional word listening, first-choice/help recording, correct-picture feedback on a wrong choice, and non-blocking continuation. No health, XP, mastery or active-time credit. A two-picture response has 50% chance accuracy and should not be presented to Parents as proof of independent reading. Preserve current saved story phases, pending battles and chapter gates.
+The approved implementation uses the two-picture prompt in place of I read it, optional word listening, first-choice/help recording, correct-picture feedback on a wrong choice, and non-blocking continuation. No health, XP, mastery or active-time credit. A two-picture response has 50% chance accuracy and should not be presented to Parents as proof of independent reading. Preserve current saved story phases, pending battles and chapter gates.
 
 The review gallery passes checks at 1180×820, 820×1180 and 390×844: 34 cards, 68 loaded pictures, working numbered links, explicit crop clipping and no horizontal overflow or page errors. All 18 PDF pages were visually inspected. The existing app suite still passes on Node 22.23.3: 176 core tests and 57 UI-flow groups. No behavior tests were changed. See the [proposal verification record](story-review/verification.json).
 

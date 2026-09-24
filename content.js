@@ -2418,42 +2418,420 @@
   // One short transition for each later map field.
   const storyLines = [
     ['The forest path is open. Pip is ready to explore with you.', 'Pip is on the path.'],
-    ['A fox waits beside the stream. Pip follows it to a safe place to cross.', 'Pip can jump over water.'],
-    ['Beyond the stream, old trees shelter a red book. Pip stops to look inside.', 'The big book is open.'],
-    ['The book shows a trail of lights. Pip follows them as the forest grows dark.', 'The fire gives light.'],
-    ['An owl has shown you the hidden nest. A little spark shines beside its gate.', 'Pip is a dragon.'],
-    ['A bright stream leads away from the nest. Pip wants to see where it goes.', 'We go to the river.'],
-    ['You reach a stone bridge. Pip waits for you before crossing to the other side.', 'We can cross the bridge.'],
-    ['Tall reeds whisper beside the river. A narrow path leads you both onward.', 'Pip is by the river.'],
-    ['The river opens into a still blue pool. Pip stops beside the clear water.', 'The water is blue.'],
-    ['A gate stands at the end of the river path. Warm light shines through it.', 'We can see the gate.'],
-    ['Beyond the gate, golden leaves cover a winding path. Pip finds the next trail.', 'The tree is big.'],
-    ['The trees grow close together. Pip finds a cosy space among the leaves.', 'Pip is in the den.'],
-    ['Moss covers a line of old steps. You and Pip climb them one at a time.', 'We go up the steps.'],
-    ['The roots form an arch across the path. Pip waits beneath it for you.', 'We go under the tree.'],
-    ['The oldest oak stands ahead. Its branches point towards a distant glow.', 'The old tree is tall.'],
-    ['A stone path winds towards the glow. Pip follows the warm light between the trees.', 'We walk on the path.'],
-    ['Small lamps light the grove. Pip pauses to watch their gentle glow.', 'The light is warm.'],
-    ['An old wall rises beside the trail. There is a way through for you and Pip.', 'We can see the wall.'],
-    ['A golden door glows in the stone. Pip waits while you find the way inside.', 'The door is gold.'],
-    ['The hall is full of soft light. A window shows the moon above the next wood.', 'We are in the hall.'],
-    ['Moonlight leads you into a quiet wood. Pip stays close beside you.', 'The moon is up.'],
-    ['An owl watches from a high branch. Pip looks up to follow its gaze.', 'The owl is in the tree.'],
-    ['Stars shine in a still pool. Pip stops beside the water to look.', 'The stars shine at night.'],
-    ['A dark arch opens between the trees. Moonlight shows a path through it.', 'We can see the moon.'],
-    ['You reach a sheltered nest beneath the moon. A blue glow shines beyond the wood.', 'Pip can rest here.'],
-    ['The blue glow comes from a cave. Pip peeks inside, then waits for you.', 'We go into the cave.'],
-    ['Blue stones shine along the cave wall. Pip follows their light into the mountain.', 'The stone is blue.'],
-    ['A deep pool fills the quiet cave. You and Pip take the dry path beside it.', 'The water is still.'],
-    ['The cave opens into a glowing hall. Pip looks at the lights all around you.', 'We can see the light.'],
-    ['A crystal gate opens towards the sky. Pip can feel the warm air beyond it.', 'The gate is open.'],
-    ['Sunlight warms the hill path. Pip looks up at a castle high above you.', 'We go up the hill.'],
-    ['Stone steps climb towards the clouds. You and Pip take the next step together.', 'The clouds are white.'],
-    ['A high bridge stretches towards the keep. Pip stays beside you as you cross.', 'We cross the high bridge.'],
-    ['The tower is close now. Pip looks up at its bright flags in the sky.', 'The tower is tall.'],
-    ['You have reached the sky keep together. Pip is ready for the final path.', 'We are at the castle.']
+    ['A fox waits beside the stream. Pip follows it to a safe place to cross.', "Jump, Pip!"],
+    ['Beyond the stream, old trees shelter a red book. Pip stops to look inside.', "Pip, jump over water."],
+    ['The book shows a trail of lights. Pip follows them as the forest grows dark.', "Open the book, Pip."],
+    ['An owl has shown you the hidden nest. A little spark shines beside its gate.', "Look up, Pip."],
+    ['A bright stream leads away from the nest. Pip wants to see where it goes.', "Pip, jump up!"],
+    ['You reach a stone bridge. Pip waits for you before crossing to the other side.', "Open the gate."],
+    ['Tall reeds whisper beside the river. A narrow path leads you both onward.', "The bird is over the water."],
+    ['The river opens into a still blue pool. Pip stops beside the clear water.', "The water is in the forest."],
+    ['A gate stands at the end of the river path. Warm light shines through it.', "Pip is at the gate."],
+    ['Beyond the gate, golden leaves cover a winding path. Pip finds the next trail.', "The tree is big."],
+    ['The trees grow close together. Pip finds a cosy space among the leaves.', "Pip is in the forest."],
+    ['Moss covers a line of old steps. You and Pip climb them one at a time.', "Pip can jump over the water."],
+    ['The roots form an arch across the path. Pip waits beneath it for you.', "There is a big tree."],
+    ['The oldest oak stands ahead. Its branches point towards a distant glow.', "The tree is green."],
+    ['A stone path winds towards the glow. Pip follows the warm light between the trees.', "Pip is on the rock."],
+    ['Small lamps light the grove. Pip pauses to watch their gentle glow.', "The fire is in the forest."],
+    ['An old wall rises beside the trail. There is a way through for you and Pip.', "The gate is not open."],
+    ['A golden door glows in the stone. Pip waits while you find the way inside.', "Pip is by the treasure."],
+    ['The hall is full of soft light. A window shows the moon above the next wood.', "Look at the moon."],
+    ['Moonlight leads you into a quiet wood. Pip stays close beside you.', "It is not day."],
+    ['An owl watches from a high branch. Pip looks up to follow its gaze.', "The owl is in the tree."],
+    ['Stars shine in a still pool. Pip stops beside the water to look.', "The light is on the water."],
+    ['A dark arch opens between the trees. Moonlight shows a path through it.', "We can see the moon."],
+    ['You reach a sheltered nest beneath the moon. A blue glow shines beyond the wood.', "Pip is by the fire."],
+    ['The blue glow comes from a cave. Pip peeks inside, then waits for you.', "Look into the cave."],
+    ['Blue stones shine along the cave wall. Pip follows their light into the mountain.', "There is light in the cave."],
+    ['A deep pool fills the quiet cave. You and Pip take the dry path beside it.', "The water is in the cave."],
+    ['The cave opens into a glowing hall. Pip looks at the lights all around you.', "We are in the cave."],
+    ['A crystal gate opens towards the sky. Pip can feel the warm air beyond it.', "The gate is open."],
+    ['Sunlight warms the hill path. Pip looks up at a castle high above you.', "Look up at the castle."],
+    ['Stone steps climb towards the clouds. You and Pip take the next step together.', "We go up."],
+    ['A high bridge stretches towards the keep. Pip stays beside you as you cross.', "We can see the castle."],
+    ['The tower is close now. Pip looks up at its bright flags in the sky.', "The castle is by the tree."],
+    ['You have reached the sky keep together. Pip is ready for the final path.', "The queen is by the gate."]
   ];
-  const chapterStories=Object.fromEntries(areas.map((area,i)=>[area.id,{narration:storyLines[i][0],sentence:storyLines[i][1],scene:chapters.find(c=>c.id===area.chapterId).scene}]));
+  // Point 6: all 34 sentence/picture pairs approved on 24 September 2026 (PR #66).
+  const storyPictures = {
+  "jump": {
+    "src": "assets/teaching/chapter-teaching.png",
+    "width": 1536,
+    "height": 1024,
+    "crop": [
+      0,
+      0,
+      768,
+      512
+    ],
+    "alt": "Pip jumps over a stream; a bird flies above the water."
+  },
+  "rock": {
+    "src": "assets/teaching/sat-rock.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "Pip sits on top of one broad rock."
+  },
+  "fox": {
+    "src": "assets/teaching/fox.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "Pip follows a fox along a dry woodland path."
+  },
+  "tree": {
+    "src": "assets/teaching/green-tree.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "Pip looks up at a large tree with green leaves."
+  },
+  "cave": {
+    "src": "assets/teaching/cave.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "Pip stands outside a dark cave and looks inside."
+  },
+  "owl-fire": {
+    "src": "assets/teaching/chapter-teaching.png",
+    "width": 1536,
+    "height": 1024,
+    "crop": [
+      0,
+      512,
+      768,
+      512
+    ],
+    "alt": "Pip looks up towards an owl; a campfire burns in the night forest."
+  },
+  "treasure-gate": {
+    "src": "assets/teaching/chapter-teaching.png",
+    "width": 1536,
+    "height": 1024,
+    "crop": [
+      768,
+      512,
+      768,
+      512
+    ],
+    "alt": "Pip and an open treasure chest stand beside a closed castle gate."
+  },
+  "open-book": {
+    "src": "assets/teaching/chapter-teaching.png",
+    "width": 1536,
+    "height": 1024,
+    "crop": [
+      880,
+      225,
+      425,
+      200
+    ],
+    "alt": "An open book with its pages visible."
+  },
+  "closed-book": {
+    "src": "assets/teaching/chapter-teaching.png",
+    "width": 1536,
+    "height": 1024,
+    "crop": [
+      1320,
+      280,
+      170,
+      140
+    ],
+    "alt": "A small red book with its cover shut."
+  },
+  "pan-fire": {
+    "src": "assets/teaching/core-teaching.webp",
+    "width": 1086,
+    "height": 1448,
+    "crop": [
+      362,
+      1086,
+      362,
+      362
+    ],
+    "alt": "A pan stands in a room beside a cooking fire."
+  },
+  "queen": {
+    "src": "assets/teaching/core-teaching.webp",
+    "width": 1086,
+    "height": 1448,
+    "crop": [
+      362,
+      362,
+      362,
+      362
+    ],
+    "alt": "A queen stands beside a closed castle gate, holding a sword."
+  },
+  "open-gate": {
+    "src": "assets/scenery/chapter-2-place-5.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "Two gate doors stand open, leaving a clear passage."
+  },
+  "forest-pool": {
+    "src": "assets/scenery/chapter-2-place-4.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "Water fills an open-air pool among rocks and trees."
+  },
+  "cave-pool": {
+    "src": "assets/scenery/chapter-6-place-3.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "Water fills a pool inside a cave beneath a rock ceiling."
+  },
+  "glow-cave": {
+    "src": "assets/scenery/chapter-6-place-4.webp",
+    "width": 512,
+    "height": 512,
+    "crop": null,
+    "alt": "A glowing cavern surrounds a pool, entirely beneath a rocky roof."
+  },
+  "autumn-tree": {
+    "src": "assets/scenery/chapter-3-place-5.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "A large oak has golden autumn leaves."
+  },
+  "cave-light": {
+    "src": "assets/scenery/chapter-6-place-2.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "Glowing stones light the inside of a cave."
+  },
+  "moon-path": {
+    "src": "assets/scenery/chapter-5-place-1.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "A bright moon is high above a forest path at night."
+  },
+  "day-path": {
+    "src": "assets/scenery/chapter-2-place-3.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "A dry path beside reeds in daylight; no moon is visible."
+  },
+  "star-pool": {
+    "src": "assets/scenery/chapter-5-place-3.webp",
+    "width": 512,
+    "height": 512,
+    "crop": null,
+    "alt": "Moonlight is reflected in a forest pool at night."
+  },
+  "hill-castle": {
+    "src": "assets/scenery/chapter-7-place-1.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "A castle stands high on a distant hill."
+  },
+  "cloud-steps": {
+    "src": "assets/scenery/chapter-7-place-2.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "A long flight of stone steps rises towards a castle."
+  },
+  "sky-bridge": {
+    "src": "assets/scenery/chapter-7-place-3.webp",
+    "width": 1536,
+    "height": 1024,
+    "crop": null,
+    "alt": "A broad bridge leads straight towards a large castle."
+  },
+  "sky-keep": {
+    "src": "assets/scenery/chapter-7-place-5.webp",
+    "width": 512,
+    "height": 512,
+    "crop": null,
+    "alt": "A castle gate and stone steps stand on the mountainside."
+  }
+};
+  const storyChecks = {
+  "fox-crossing": {
+    "match": "jump",
+    "other": "rock",
+    "untaughtWord": "jump"
+  },
+  "old-grove": {
+    "match": "jump",
+    "other": "fox",
+    "untaughtWord": null
+  },
+  "lantern-ruins": {
+    "match": "open-book",
+    "other": "closed-book",
+    "untaughtWord": "the"
+  },
+  "hidden-nest": {
+    "match": "owl-fire",
+    "other": "fox",
+    "untaughtWord": "look"
+  },
+  "chapter-2-place-1": {
+    "match": "jump",
+    "other": "rock",
+    "untaughtWord": null
+  },
+  "chapter-2-place-2": {
+    "match": "open-gate",
+    "other": "treasure-gate",
+    "untaughtWord": null
+  },
+  "chapter-2-place-3": {
+    "match": "jump",
+    "other": "owl-fire",
+    "untaughtWord": null
+  },
+  "chapter-2-place-4": {
+    "match": "forest-pool",
+    "other": "cave-pool",
+    "untaughtWord": null
+  },
+  "chapter-2-place-5": {
+    "match": "treasure-gate",
+    "other": "cave",
+    "untaughtWord": null
+  },
+  "chapter-3-place-1": {
+    "match": "tree",
+    "other": "closed-book",
+    "untaughtWord": null
+  },
+  "chapter-3-place-2": {
+    "match": "owl-fire",
+    "other": "treasure-gate",
+    "untaughtWord": null
+  },
+  "chapter-3-place-3": {
+    "match": "jump",
+    "other": "rock",
+    "untaughtWord": null
+  },
+  "chapter-3-place-4": {
+    "match": "tree",
+    "other": "open-book",
+    "untaughtWord": null
+  },
+  "chapter-3-place-5": {
+    "match": "tree",
+    "other": "autumn-tree",
+    "untaughtWord": null
+  },
+  "chapter-4-place-1": {
+    "match": "rock",
+    "other": "jump",
+    "untaughtWord": null
+  },
+  "chapter-4-place-2": {
+    "match": "owl-fire",
+    "other": "pan-fire",
+    "untaughtWord": null
+  },
+  "chapter-4-place-3": {
+    "match": "treasure-gate",
+    "other": "open-gate",
+    "untaughtWord": null
+  },
+  "chapter-4-place-4": {
+    "match": "treasure-gate",
+    "other": "open-book",
+    "untaughtWord": null
+  },
+  "chapter-4-place-5": {
+    "match": "moon-path",
+    "other": "day-path",
+    "untaughtWord": null
+  },
+  "chapter-5-place-1": {
+    "match": "moon-path",
+    "other": "day-path",
+    "untaughtWord": null
+  },
+  "chapter-5-place-2": {
+    "match": "owl-fire",
+    "other": "jump",
+    "untaughtWord": null
+  },
+  "chapter-5-place-3": {
+    "match": "star-pool",
+    "other": "owl-fire",
+    "untaughtWord": null
+  },
+  "chapter-5-place-4": {
+    "match": "moon-path",
+    "other": "day-path",
+    "untaughtWord": null
+  },
+  "chapter-5-place-5": {
+    "match": "owl-fire",
+    "other": "rock",
+    "untaughtWord": null
+  },
+  "chapter-6-place-1": {
+    "match": "cave",
+    "other": "fox",
+    "untaughtWord": null
+  },
+  "chapter-6-place-2": {
+    "match": "cave-light",
+    "other": "owl-fire",
+    "untaughtWord": null
+  },
+  "chapter-6-place-3": {
+    "match": "cave-pool",
+    "other": "forest-pool",
+    "untaughtWord": null
+  },
+  "chapter-6-place-4": {
+    "match": "glow-cave",
+    "other": "forest-pool",
+    "untaughtWord": null
+  },
+  "chapter-6-place-5": {
+    "match": "open-gate",
+    "other": "treasure-gate",
+    "untaughtWord": null
+  },
+  "chapter-7-place-1": {
+    "match": "hill-castle",
+    "other": "day-path",
+    "untaughtWord": null
+  },
+  "chapter-7-place-2": {
+    "match": "cloud-steps",
+    "other": "day-path",
+    "untaughtWord": null
+  },
+  "chapter-7-place-3": {
+    "match": "sky-bridge",
+    "other": "forest-pool",
+    "untaughtWord": null
+  },
+  "chapter-7-place-4": {
+    "match": "sky-keep",
+    "other": "forest-pool",
+    "untaughtWord": null
+  },
+  "chapter-7-place-5": {
+    "match": "queen",
+    "other": "treasure-gate",
+    "untaughtWord": null
+  }
+};
+  const chapterStories=Object.fromEntries(areas.map((area,i)=>[area.id,{narration:storyLines[i][0],sentence:storyLines[i][1],scene:chapters.find(c=>c.id===area.chapterId).scene,check:storyChecks[area.id]||null}]));
   const dragonStages = [
     {name:'Small Pip',xp:0,crop:[150,160,409,307],scale:1},
     {name:'Big Pip',xp:3000,crop:[838,11,542,460],scale:1.14},
@@ -2464,5 +2842,5 @@
   const evolution={intro:"Look! Your dragon is glowing. Let's see what happens.",
     frames:[0,1,2,3].map(stage=>'assets/evolution/pip-stage-'+stage+'.webp'),
     lines:[null,['I am big.','I can help.'],['My wings are big.','I can help you.'],['Hop on my back.','We can go far.']]};
-  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, chapterStories, chapterBackgrounds, dragonStages, evolution, chapterWordGoal:30};
+  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, dragonStages, evolution, chapterWordGoal:30};
 });

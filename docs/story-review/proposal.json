@@ -1,5 +1,5 @@
 {
-  "status": "PROPOSAL - requires approval before implementation",
+  "status": "APPROVED - all 34 sentences and picture pairs accepted on 24 September 2026",
   "sourceMain": "4ed8a7bd0ea45762ef551a354bee943f46829023",
   "sourceCurriculumSha256": "fdb7d803f03f28b895b4b82ee7e224b52e51579c77d41a47c49b7a2a9cc735f0",
   "coverageMethod": "Exact lower-case tokens; contractions kept intact; only targets from strictly earlier map fields count; Pip/name exempt; no assumed sight words or preview credit. Counts include the exempt name.",
@@ -1081,5 +1081,6 @@
       "originalUntaughtWords": [],
       "needsNewArt": false
     }
-  ]
+  ],
+  "approvedOn": "2026-09-24"
 }

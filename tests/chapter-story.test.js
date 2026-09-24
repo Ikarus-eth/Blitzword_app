@@ -16,7 +16,7 @@ test('intro and reading phases persist; completion is idempotent and gives no sc
  assert.equal(C.advanceChapterStory(s,NOW),false);s=reload(s);assert.equal(s.story.scene.phase,'intro');
  s.story.scene.introHeard=true;assert.equal(C.advanceChapterStory(s,NOW),true);s.story.scene.helped=true;s=reload(s);
  assert.equal(s.story.scene.phase,'read');assert.equal(C.beginChapterStory(s,NOW),true);
- assert.equal(C.advanceChapterStory(s,NOW+100),true);assert.equal(C.advanceChapterStory(s,NOW+100),false);
+ C.answerChapterStory(s,s.story.scene.reading.match,NOW+99);assert.equal(C.advanceChapterStory(s,NOW+100),true);assert.equal(C.advanceChapterStory(s,NOW+100),false);
  assert.equal(C.beginChapterStory(s,NOW+100),false);assert.equal(s.activity,'battle');assert.deepEqual(s.battle,battle);
  assert.equal(s.dragon.xp,xp);assert.deepEqual(s.learning.words,words);assert.equal(s.campaign.battleRecords.length,0);
  assert.equal(s.story.scenes['fox-crossing'].helped,true);assert.equal(C.parentProgress(s).activeMs,0);
