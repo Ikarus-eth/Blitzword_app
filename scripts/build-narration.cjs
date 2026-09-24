@@ -12,7 +12,7 @@ for(const clip of corpus.clips){
  Object.assign(receipt,{status:'downloaded',duration,bytes:data.length,sha256});
  if(!fallbackOnly.has(clip.text))clips[clip.text]={file:clip.file,duration,sha256};bytes+=data.length;seconds+=duration;
 }
-const manifest={version:'recorded-voice-20260924-r2',voice:generation.voice,language:'en-GB',recoveredClipCount:corpus.clips.length,runtimeClipCount:Object.keys(clips).length,fallbackOnly:[...fallbackOnly],clips};
+const manifest={version:'recorded-voice-20260924-r3',voice:generation.voice,language:'en-GB',recoveredClipCount:corpus.clips.length,runtimeClipCount:Object.keys(clips).length,fallbackOnly:[...fallbackOnly],clips};
 fs.writeFileSync(path.join(root,'narration.js'),'(function(root){\nconst narration='+JSON.stringify(manifest,null,2)+';\nif(typeof module===\'object\'&&module.exports)module.exports=narration;else root.BlitzNarration=narration;\n})(typeof globalThis!==\'undefined\'?globalThis:this);\n');
 generation.listeningReview=generation.listeningReview||'Audible listening and physical iPad playback review remain outstanding.';
 generation.clipCount=corpus.clips.length;generation.runtimeClipCount=Object.keys(clips).length;generation.runtimeFallbackOnly=[...fallbackOnly];generation.bytes=bytes;generation.durationSeconds=Number(seconds.toFixed(3));
