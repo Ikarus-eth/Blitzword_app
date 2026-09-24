@@ -2306,12 +2306,301 @@
     item.madeUp = entries.filter(entry => entry.endsWith('*')).map(entry => entry.slice(0, -1));
   }
   // Existing assessment items, axes, and stopping thresholds are preserved.
+  // One reviewed fixed set per reading-check item; only answer positions are shuffled.
   const assessmentPools = [
-    [{w:'you',d:['you','your','yuo','yue']},{w:'cat',d:['cat','can','cap','cet']},{w:'car',d:['car','cat','can','cor']},{w:'can',d:['can','cat','cap','cen']},{w:'fox',d:['fox','box','fix','fax']},{w:'map',d:['map','man','mat','mop']}],
-    [{w:'rock',d:['rock','lock','rack','ruck']},{w:'tree',d:['tree','free','three','trie']},{w:'green',d:['green','seen','greet','grain']},{w:'ship',d:['ship','shop','shin','chip']},{w:'cave',d:['cave','save','came','cove']},{w:'star',d:['star','scar','stay','stir']}],
-    [{w:'night',d:['night','light','right','nigth']},{w:'shark',d:['shark','sharp','share','shork']},{w:'bright',d:['bright','right','bring','brigt']},{w:'stone',d:['stone','store','stove','ston']},{w:'storm',d:['storm','store','story','starm']}],
-    [{w:'dragon',d:['dragon','drigon','wagon','drayon']},{w:'forest',d:['forest','fortest','forst','forset']},{w:'castle',d:['castle','cattle','candle','castel']},{w:'shadow',d:['shadow','shallow','shade','shado']},{w:'silver',d:['silver','sliver','river','silvar']}],
-    [{w:'whisper',d:['whisper','whisker','whimper','wisper']},{w:'journey',d:['journey','jersey','joyous','jorney']},{w:'lantern',d:['lantern','pattern','later','lantren']},{w:'creature',d:['creature','feature','create','creatuer']}]
+    [
+      {
+        "w": "you",
+        "d": [
+          "you",
+          "your",
+          "yau",
+          "yaur"
+        ],
+        "madeUp": [
+          "yau",
+          "yaur"
+        ]
+      },
+      {
+        "w": "cat",
+        "d": [
+          "cat",
+          "cut",
+          "bat",
+          "but"
+        ]
+      },
+      {
+        "w": "car",
+        "d": [
+          "car",
+          "far",
+          "cur",
+          "fur"
+        ]
+      },
+      {
+        "w": "can",
+        "d": [
+          "can",
+          "con",
+          "cap",
+          "cop"
+        ]
+      },
+      {
+        "w": "fox",
+        "d": [
+          "fox",
+          "fix",
+          "fog",
+          "fig"
+        ]
+      },
+      {
+        "w": "map",
+        "d": [
+          "map",
+          "mop",
+          "tap",
+          "top"
+        ]
+      }
+    ],
+    [
+      {
+        "w": "rock",
+        "d": [
+          "rock",
+          "rack",
+          "lock",
+          "lack"
+        ]
+      },
+      {
+        "w": "tree",
+        "d": [
+          "tree",
+          "free",
+          "tee",
+          "fee"
+        ]
+      },
+      {
+        "w": "green",
+        "d": [
+          "green",
+          "greet",
+          "grean",
+          "great"
+        ],
+        "madeUp": [
+          "grean"
+        ]
+      },
+      {
+        "w": "ship",
+        "d": [
+          "ship",
+          "shop",
+          "chip",
+          "chop"
+        ]
+      },
+      {
+        "w": "cave",
+        "d": [
+          "cave",
+          "cove",
+          "came",
+          "come"
+        ]
+      },
+      {
+        "w": "star",
+        "d": [
+          "star",
+          "scar",
+          "stay",
+          "scay"
+        ],
+        "madeUp": [
+          "scay"
+        ]
+      }
+    ],
+    [
+      {
+        "w": "night",
+        "d": [
+          "night",
+          "light",
+          "nought",
+          "lought"
+        ],
+        "madeUp": [
+          "lought"
+        ]
+      },
+      {
+        "w": "shark",
+        "d": [
+          "shark",
+          "spark",
+          "share",
+          "spare"
+        ]
+      },
+      {
+        "w": "bright",
+        "d": [
+          "bright",
+          "blight",
+          "fright",
+          "flight"
+        ]
+      },
+      {
+        "w": "stone",
+        "d": [
+          "stone",
+          "store",
+          "shone",
+          "shore"
+        ]
+      },
+      {
+        "w": "storm",
+        "d": [
+          "storm",
+          "stork",
+          "swarm",
+          "swark"
+        ],
+        "madeUp": [
+          "swark"
+        ]
+      }
+    ],
+    [
+      {
+        "w": "dragon",
+        "d": [
+          "dragon",
+          "dragoon",
+          "wagon",
+          "wagoon"
+        ],
+        "madeUp": [
+          "wagoon"
+        ]
+      },
+      {
+        "w": "forest",
+        "d": [
+          "forest",
+          "forget",
+          "foreset",
+          "forset"
+        ],
+        "madeUp": [
+          "foreset",
+          "forset"
+        ]
+      },
+      {
+        "w": "castle",
+        "d": [
+          "castle",
+          "cattle",
+          "battle",
+          "bastle"
+        ],
+        "madeUp": [
+          "bastle"
+        ]
+      },
+      {
+        "w": "shadow",
+        "d": [
+          "shadow",
+          "shadew",
+          "meadow",
+          "meadew"
+        ],
+        "madeUp": [
+          "shadew",
+          "meadew"
+        ]
+      },
+      {
+        "w": "silver",
+        "d": [
+          "silver",
+          "solver",
+          "silber",
+          "solber"
+        ],
+        "madeUp": [
+          "silber",
+          "solber"
+        ]
+      }
+    ],
+    [
+      {
+        "w": "whisper",
+        "d": [
+          "whisper",
+          "whisker",
+          "whimper",
+          "whimker"
+        ],
+        "madeUp": [
+          "whimker"
+        ]
+      },
+      {
+        "w": "journey",
+        "d": [
+          "journey",
+          "journal",
+          "jourmey",
+          "jourmal"
+        ],
+        "madeUp": [
+          "jourmey",
+          "jourmal"
+        ]
+      },
+      {
+        "w": "lantern",
+        "d": [
+          "lantern",
+          "pattern",
+          "lantren",
+          "pattren"
+        ],
+        "madeUp": [
+          "lantren",
+          "pattren"
+        ]
+      },
+      {
+        "w": "creature",
+        "d": [
+          "creature",
+          "treasure",
+          "creasure",
+          "treature"
+        ],
+        "madeUp": [
+          "creasure",
+          "treature"
+        ]
+      }
+    ]
   ];
   // Old saved questions and teaching cards remain readable, but are never newly selected.
   const legacyWords = [{w:'sat', d:['sat','set','sap','sad'], sentence:'Pip sat on the rock.', image:'sat-rock', alt:'Pip sits on a broad gray rock.'}];
