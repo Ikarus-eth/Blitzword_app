@@ -563,21 +563,31 @@ function combatReaction(correct){
 function correction(animate=false) {
   const q=state.battle.question;
   const chosen=q.firstResponse??state.campaign.battleRecords.find(r=>r.id===q.id)?.firstResponse;
+  const contrast=!!chosen&&chosen!=='?',cells=contrast?Core.correctionLetters(chosen,q.target):null;
+  const correction=contrast?'You chose '+chosen+'. The word is '+q.target+'.':'The word was '+q.target+'.';
+  const current=()=>state.activity==='battle'&&state.battle?.question===q&&q.phase==='correction';
   $('#battle').classList.add('correcting');$('#battleAnswers').replaceChildren();$('#battleUnsure').hidden=true;
   const scroll=$('#battleScroll');scroll.className='scroll parchment correctionScroll';scroll.replaceChildren();
-  if(chosen&&chosen!=='?'){
-    const selected=document.createElement('div');selected.className='selectedWord';
-    const label=document.createElement('small');label.textContent='You chose';const word=document.createElement('span');word.textContent=chosen;selected.append(label,word);scroll.append(selected);
-    const arrow=document.createElement('span');arrow.className='correctionArrow';arrow.textContent='→';scroll.append(arrow);
-  }
-  const correct=document.createElement('div');correct.className='correctWord';const label=document.createElement('small');label.textContent='Word shown';const target=document.createElement('span');target.textContent=q.target;correct.append(label,target);scroll.append(correct);
-  const next=document.createElement('button');next.className='greenButton correctionNext';next.textContent='→';next.setAttribute('aria-label','See the example');
-  next.onclick=()=>{if(!confirmActivity())return;Core.startTeaching(state,q.target,'battle',Date.now());if(save())renderActivity();};
-  const replay=document.createElement('button');replay.className='replay';replay.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg>';replay.setAttribute('aria-label','Replay the correct word');
-  replay.onclick=()=>{clearCombat();Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak('The word was '+q.target+'.');};
+  const row=(className,labelText,value,key)=>{
+    const line=document.createElement('div');line.className=className;
+    const label=document.createElement('small');label.textContent=labelText;
+    const spoken=document.createElement('span');spoken.className='srOnly';spoken.textContent=value;
+    const word=document.createElement('span');word.className='correctionLetters';word.setAttribute('aria-hidden','true');
+    if(cells)for(const cell of cells){
+      const letter=document.createElement('span');letter.className='correctionLetter'+(cell.different?' differentLetter':'')+(!cell[key]?' missingLetter':'');
+      letter.textContent=cell[key];letter.setAttribute('aria-hidden','true');word.append(letter);
+    }else word.textContent=value;
+    line.append(label,spoken,word);scroll.append(line);
+  };
+  if(contrast)row('selectedWord','You chose',chosen,'chosen');
+  row('correctWord','Word shown',q.target,'target');
+  const next=document.createElement('button');next.className='greenButton correctionNext';next.textContent='→';next.setAttribute('aria-label',q.needsTeaching?'See the example':'Continue');
+  next.onclick=()=>{if(!current()||!confirmActivity())return;if(q.needsTeaching){Core.startTeaching(state,q.target,'battle',Date.now());if(save())renderActivity();}else advanceBattle();};
+  const replay=document.createElement('button');replay.className='replay';replay.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg>';replay.setAttribute('aria-label',contrast?'Replay both words':'Replay the correct word');
+  replay.onclick=()=>{if(!current()||!confirmActivity())return;cancelWork();Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak(correction);};
   $('#battleAnswers').append(replay,next);
   if(q.shieldUsed){$('#feedback').textContent='Shield saved a heart';$('#feedback').classList.add('show');}
-  const correction='The word was '+q.target+'.',finishCorrection=()=>{if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);};
+  const finishCorrection=()=>{if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);};
   if(q.shieldUsed)speak('Your shield stopped the hit.',{onEnd:()=>speak(correction,{onEnd:finishCorrection})});
   else speak((q.freeMistake?'Practice turn. You keep your heart. ':'')+correction,{onEnd:finishCorrection});
 }

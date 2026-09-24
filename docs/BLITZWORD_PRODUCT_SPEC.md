@@ -827,3 +827,14 @@ After three independent correct practice answers on the local date, a current-ch
 The exposure ladder is 2200 / 1800 / 1500 / 1200 / 950 ms. Faster refill is per question, one step from the current selected/calibrated speed; it does not change the saved speed setting. Crawl stays self-paced, Run does not exceed 950 ms through refill, and Ride/Fly keep their existing entitlement locks. An already saved question keeps its exact exposure and options. The next date permits ordinary practice again.
 
 The existing last-eight-independent-answer accuracy measure, two-intervening-answer help spacing, ten-minute chapter minimum and all chapter objectives remain. Previews do not unlock the next chapter. Daily counts persist independently of raw-answer compaction; legacy counts are recovered from retained evidence without changing existing progress or inventing missing archived evidence. See [implementation, tests and reproducible simulation](SCHEDULING_RELEASE.md).
+
+
+## Contrast corrections and adaptive teaching (point 4) — authorized 24 September 2026
+
+After a wrong choice, show the chosen word above the target on the existing correction parchment. Align their letters and highlight only differences in both rows; an inserted or omitted letter has an empty aligned slot. Speak both words: “You chose rack. The word is rock.” Replay repeats the comparison without another hit. The correction waits for Continue.
+
+The saved `q.needsTeaching` decision controls Continue: show the full picture card only for a newly introduced question, at least two consecutive independent misses, or a due review answered incorrectly. A first miss on an already introduced word stays brief, including when the word has no independent correct answer yet. Help (“?”) and interrupted/supported wrong answers apply the same conditions but do not increment the independent miss count. A help request shows only the target, with no invented chosen word or difference highlights. Supported correct answers never open a correction or count as mastery.
+
+Correction/help still records support and requires two intervening items before a recheck. Health, shields, XP evidence, chapter objectives and saves keep their existing rules. Narration finishes before an attack; replay, Continue, Pause and Home cancel pending reactions safely. A last-heart miss still resolves the battle after its correction/teaching route.
+
+New combined contrast phrases use the existing device-speech fallback. The approved shield prefix still plays first; target-only help can reuse the existing “The word was X.” recordings. No narration recordings or approved artwork are replaced. The separate narration workstream can record the stable new wording later.
