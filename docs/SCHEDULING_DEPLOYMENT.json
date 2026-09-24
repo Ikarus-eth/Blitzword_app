@@ -1,0 +1,74 @@
+{
+  "sha": "49c4fcb986f0114d2f215ae16e73d97abd34428e",
+  "run": {
+    "id": 35965441688,
+    "run_number": 72,
+    "head_sha": "49c4fcb986f0114d2f215ae16e73d97abd34428e",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35965441688"
+  },
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install test dependencies",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check scripts and practice regressions",
+      "conclusion": "success"
+    },
+    {
+      "name": "Configure Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Prepare static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check that this release is still current main",
+      "conclusion": "success"
+    },
+    {
+      "name": "Upload static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Deploy to GitHub Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 30035,
+      "identical": true,
+      "sha256": "bccf9a88b780a97f62325dc082e78033ce153a5b6442e61c05b2e0535d92473a",
+      "build": "scheduling-refill-20260924-r1"
+    },
+    {
+      "file": "game-core.js",
+      "bytes": 53597,
+      "identical": true,
+      "sha256": "691fea9f9e2263b8d280f64f548b9074c4fe144948dbe411f31c430c5fee3cea"
+    }
+  ],
+  "mainAtVerification": "49c4fcb986f0114d2f215ae16e73d97abd34428e",
+  "verifiedAt": "2026-09-24T06:41:00.141484+00:00"
+}

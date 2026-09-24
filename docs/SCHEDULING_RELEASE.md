@@ -54,4 +54,13 @@ Physical iPad and Safari/WebKit checks have not been performed for this release.
 
 ## Deployment
 
-Pending merge, Pages workflow and live-byte verification. No live deployment is claimed by this implementation record.
+Implemented in [PR #62](https://github.com/Ikarus-eth/Blitzword_app/pull/62), merged as `49c4fcb986f0114d2f215ae16e73d97abd34428e`. Current `main` was fetched and merged into the task branch before the PR merge, preserving the parallel enemy deployment record from `0fb23d3`.
+
+[Pages run #72](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35965441688) succeeded for that exact merge, including the regression checks, artifact upload and deployment. At 06:41 UTC on 24 September 2026, `main` was still that merge and the live build marker was `scheduling-refill-20260924-r1`. Cache-busted downloads of both changed runtime files matched `git show 49c4fcb:<file>` byte for byte:
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `index.html` | 30,035 | `bccf9a88b780a97f62325dc082e78033ce153a5b6442e61c05b2e0535d92473a` |
+| `game-core.js` | 53,597 | `691fea9f9e2263b8d280f64f548b9074c4fe144948dbe411f31c430c5fee3cea` |
+
+[Machine-readable verification](SCHEDULING_DEPLOYMENT.json) records the workflow steps, source commit, live hashes and verification time. This proves delivery, not physical iPad behavior.
