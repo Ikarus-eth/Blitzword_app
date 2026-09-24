@@ -1,0 +1,28 @@
+name: Generate approved narration completion
+on:
+  push:
+    branches: [codex/narration-completion-20260924]
+    paths: [docs/NARRATION_COMPLETION_REQUEST.json, .github/workflows/narration-completion.yml]
+permissions:
+  contents: read
+concurrency:
+  group: narration-completion
+  cancel-in-progress: false
+jobs:
+  generate:
+    if: github.repository == 'Ikarus-eth/Blitzword_app'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v6
+      - name: Generate missing clips and align approved public teaching audio
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/generate-narration-completion.py
+      - name: Keep completed work even if a provider request fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: narration-completion
+          path: narration-output
+          retention-days: 7
