@@ -52,7 +52,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Deployed and verified live on 24 September 2026 (build `scheduling-refill-20260924-r1`). [Release record](SCHEDULING_RELEASE.md) |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Deployed and verified live on 24 September 2026 (build `contrast-teaching-20260924-r1`). [Release record](CORRECTIONS_RELEASE.md) |
 | 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
-| 6 | Story sentences a child can read (option c) | All 34 pairs approved; implemented and tested, awaiting Pages deployment verification. [Release record](STORY_PICTURES_RELEASE.md) |
+| 6 | Story sentences a child can read (option c) | Deployed and verified live on 24 September 2026 (build `story-pictures-20260924-r1`). All 34 pairs approved. [Release record](STORY_PICTURES_RELEASE.md) |
 | 7 | Speed suggestions, two new steps, per-word quick status | Approved, not started |
 | 8 | Parent view: word map, tricky list, weekly retention | Approved, not started |
 
@@ -242,4 +242,6 @@ The user approved all 34 sentences and picture pairs from PR #66 (“ok go ahead
 
 The three underlined listening exceptions are jump, the and look. Either outcome adds no XP, health change, mastery, active time or chapter progress. Unavailable/stalled art can be skipped with no fabricated answer. Old pending stories migrate in place; completed stories remain completed. The pending battle and all learner-save keys remain intact. Existing narration recordings and artwork are unchanged.
 
-Implementation and local checks are complete: 184 core tests, 63 UI-flow groups and 40 Chromium scenarios pass. Physical iPad/Safari and listening remain untested. Deployment is not yet claimed. Build: `story-pictures-20260924-r1`. [Release and verification details](STORY_PICTURES_RELEASE.md). The earlier proposal verification remains a dated review record. Point 7 is unstarted and requires a separate go.
+Implementation and local checks are complete: 184 core tests, 63 UI-flow groups and 40 Chromium scenarios pass. Physical iPad/Safari and listening remain untested. Deployment is verified. Build: `story-pictures-20260924-r1`. [Release and verification details](STORY_PICTURES_RELEASE.md). The earlier proposal verification remains a dated review record. Point 7 is unstarted and requires a separate go.
+
+Merged in [PR #66](https://github.com/Ikarus-eth/Blitzword_app/pull/66) as `e0a7cf7bf66ee93960b56f73291e350683ab7f8f`. [Pages run #76](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35974775288) passed the checks and deployed. At 08:23 UTC on 24 September 2026, the live marker was `story-pictures-20260924-r1` and all five changed runtime files matched that merge byte for byte. [Verification record](STORY_PICTURES_DEPLOYMENT.json).

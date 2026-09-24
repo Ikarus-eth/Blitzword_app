@@ -1,0 +1,92 @@
+{
+  "sha": "e0a7cf7bf66ee93960b56f73291e350683ab7f8f",
+  "run": {
+    "id": 35974775288,
+    "run_number": 76,
+    "head_sha": "e0a7cf7bf66ee93960b56f73291e350683ab7f8f",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35974775288"
+  },
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install test dependencies",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check scripts and practice regressions",
+      "conclusion": "success"
+    },
+    {
+      "name": "Configure Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Prepare static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check that this release is still current main",
+      "conclusion": "success"
+    },
+    {
+      "name": "Upload static site",
+      "conclusion": "success"
+    },
+    {
+      "name": "Deploy to GitHub Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 30876,
+      "identical": true,
+      "sha256": "e3eed2a58b741f8ef3e7d940f0e248b4e790d734e07b1257fba35d3dc828196d",
+      "build": "story-pictures-20260924-r1"
+    },
+    {
+      "file": "content.js",
+      "bytes": 77578,
+      "identical": true,
+      "sha256": "1f27c88ecdcecbb8830199f301c4a10ff2d8870a212814eaadb8c7797350bf65"
+    },
+    {
+      "file": "game-core.js",
+      "bytes": 57346,
+      "identical": true,
+      "sha256": "08adb81a6439c44881ff8a13001ddc8a37f60fb9337e27e74095bdbb40c0861f"
+    },
+    {
+      "file": "app.js",
+      "bytes": 84037,
+      "identical": true,
+      "sha256": "20abadba0344326579a05726224df6944a792c1fddae1072f38b442501733d06"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 95316,
+      "identical": true,
+      "sha256": "73d6fb8e5c5051d4292d11e99d1a5f8aba3b57d6435f949fea60db0afb8f79b3"
+    }
+  ],
+  "mainAtVerification": "e0a7cf7bf66ee93960b56f73291e350683ab7f8f",
+  "verifiedAt": "2026-09-24T08:23:49.488179+00:00"
+}

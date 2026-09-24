@@ -1,6 +1,6 @@
 # Story picture checks — point 6
 
-Implemented and locally tested; awaiting merge and Pages deployment verification. Build: `story-pictures-20260924-r1`. The user approved all 34 entries from [PR #66](https://github.com/Ikarus-eth/Blitzword_app/pull/66) on 24 September 2026 before implementation.
+Deployed and verified live on 24 September 2026. Build: `story-pictures-20260924-r1`. The user approved all 34 entries from [PR #66](https://github.com/Ikarus-eth/Blitzword_app/pull/66) on 24 September 2026 before implementation.
 
 ## Child flow
 
@@ -36,4 +36,4 @@ Previously completed stories are deliberately not replayed. No save reset is nee
 
 ## Deployment
 
-Pending. The implementation PR must merge current main, pass the Pages workflow, then verify the live build marker and changed runtime files byte for byte. A separate docs-only PR will record that verification.
+Merged in [PR #66](https://github.com/Ikarus-eth/Blitzword_app/pull/66) as `e0a7cf7bf66ee93960b56f73291e350683ab7f8f`. [Pages run #76](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35974775288) succeeded, including checks, upload and deployment. At 08:23 UTC on 24 September 2026, main was still that merge and the live build marker was `story-pictures-20260924-r1`. Cache-busted downloads of `index.html`, `content.js`, `game-core.js`, `app.js` and `styles.css` matched `git show <merge>:<file>` byte for byte. See the [deployment verification record](STORY_PICTURES_DEPLOYMENT.json). This verification does not replace physical iPad/Safari or listening checks.
