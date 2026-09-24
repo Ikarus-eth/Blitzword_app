@@ -33,7 +33,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 
 | # | Point | Status |
 |---|---|---|
-| 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file. 1a implemented and tested locally; deployment recorded separately |
+| 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file. 1a deployed and verified live on 24 September 2026 (build `compact-save-20260924-r1`) |
 | 2 | Rotating distractor pools (option b) | Approved, not started |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
@@ -113,13 +113,17 @@ Tests: all 125 core tests and all 43 UI-flow groups pass locally. New coverage:
 
 In real Chromium at an iPad-sized viewport, a 3,254,320-character full-history save loaded in about 0.3 s. It compacted to about 639,000 characters for each of the save and `_backup`, kept 23,685 XP and the final dragon form, and Parents still showed 3780 / 4200 unaided answers correct. The next answer played normally with no page errors.
 
-Limits: not tested on an iPad. A `_before_restore` copy made before this release is not compacted; the next restore replaces it. Parents does not show the archive yet; that is point 8. Deployment is recorded separately.
+Limits: not tested on an iPad. A `_before_restore` copy made before this release is not compacted; the next restore replaces it. Parents does not show the archive yet; that is point 8.
+
+Deployment: merged as `cff24b1a485da5cb3db0746d97e70176726ccca4` in [PR #44](https://github.com/Ikarus-eth/Blitzword_app/pull/44). [Pages run 35943643825](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35943643825) succeeded, including deployment. At 01:36 UTC on 24 September 2026 the live page reported build `compact-save-20260924-r1`, and the live `index.html`, `app.js`, `game-core.js` and `storage.js` matched that commit byte for byte.
 
 ## Text-selection error fix — 24 September 2026
 
 A selection that starts on a text node made the document `selectstart` and `contextmenu` handlers throw `event.target.closest is not a function`, so they skipped their check. They now use the text node's parent element. Text in Parents and in inputs stays selectable; child screens still block selection. Build marker `selection-fix-20260924-r1`; the `app.js` cache version is updated.
 
-Tests: all 119 core tests and all 40 UI-flow groups pass locally. A new UI flow dispatches selection and context-menu events from text nodes and elements; it failed with the same error before the fix. In real Chromium, clicks, double-clicks and a triple-click on map and Parents text produced no page errors, and Parents text could still be selected. Deployment is recorded separately.
+Tests: all 119 core tests and all 40 UI-flow groups pass locally. A new UI flow dispatches selection and context-menu events from text nodes and elements; it failed with the same error before the fix. In real Chromium, clicks, double-clicks and a triple-click on map and Parents text produced no page errors, and Parents text could still be selected.
+
+Deployment: merged as `387058cda06a081b5a462e82142445371f5f3286` in [PR #43](https://github.com/Ikarus-eth/Blitzword_app/pull/43). [Pages run 35942430146](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35942430146) succeeded, including deployment. At 01:20 UTC on 24 September 2026 the live page reported build `selection-fix-20260924-r1`, and the live `index.html` and `app.js` matched that commit byte for byte.
 
 ## Backup file on the save-problem dialog — 24 September 2026
 
@@ -127,7 +131,9 @@ When a save fails because storage refuses it, for example when it is full, the g
 
 Fixed with it: real browser quota errors are `DOMException`s with a numeric `code`. `AdventureStore.save()` passed any error with a `code` through unchanged, so a full device never became the app's storage problem: the dialog showed the raw browser message and offered Reload saved progress, which would discard the unsaved progress. Quota errors now become the storage problem: plain message, Try saving again, Save backup file, no Reload. Build marker `backup-dialog-20260924-r1`; the `app.js`, `storage.js` and `styles.css` cache versions are updated.
 
-Tests: all 119 core tests and all 39 UI-flow groups pass locally, including a real `DOMException` quota error and the dialog exporting unsaved progress. In real Chromium at iPad-sized landscape and portrait viewports, with `localStorage.setItem` forced to throw the quota error, the dialog showed the button and downloaded the in-memory progress. Deployment is recorded separately.
+Tests: all 119 core tests and all 39 UI-flow groups pass locally, including a real `DOMException` quota error and the dialog exporting unsaved progress. In real Chromium at iPad-sized landscape and portrait viewports, with `localStorage.setItem` forced to throw the quota error, the dialog showed the button and downloaded the in-memory progress.
+
+Deployment: merged as `444e182e463ad174e10256ee42928293fc091c23` in [PR #42](https://github.com/Ikarus-eth/Blitzword_app/pull/42). [Pages run 35942185132](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35942185132) succeeded, including deployment. At 01:17 UTC on 24 September 2026 the live page reported build `backup-dialog-20260924-r1`, and the live `index.html`, `app.js`, `storage.js` and `styles.css` matched that commit byte for byte.
 
 ## Backup file (point 1b) — 24 September 2026
 
