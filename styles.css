@@ -206,10 +206,16 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 .mapSettings{font-family:var(--reading-font);border-color:#b49a68;background:#204632;color:#fff1d2}.mapDestination .greenButton{font-size:24px;min-width:100px;max-width:none;width:auto;background:linear-gradient(#f1d296,#ddba78);color:#314532;border:2px solid #9c7c42;border-radius:20px;box-shadow:0 4px 0 #917440,0 7px 14px #102a2533}
 #mapTraveller{width:91px;height:108px;background:#f6e6bee8!important;border:2px solid #bc9557;border-radius:45% 45% 36% 36%;padding:9px 9px 5px;filter:drop-shadow(0 6px 7px #08282080);z-index:5;transform:translate(-50%,-100%)}
 #mapTraveller svg{width:100%;height:100%}.dragonPanel{cursor:pointer;grid-template-rows:auto auto auto;min-height:95px;width:205px;border:1px solid #c8ab77}.dragonPanel .growthSprite{grid-row:1/4;align-self:end}.dragonPanel .dragonProgress{grid-row:2}.dragonTapHint{grid-column:2;grid-row:3;font:13px var(--reading-font);color:#536448}.dragonPanel:focus-visible{outline:3px solid #f1c772;outline-offset:3px}
-.mask.forestSpiral{width:180px;height:110px;max-width:none;flex-shrink:0;border-radius:0;background:none;overflow:visible;transform:rotate(-10deg)}
-.forestSpiral path{fill:none;stroke-linecap:round}.spiralGlow{stroke:#e5b354;stroke-width:8;opacity:.36;filter:blur(5px)}.spiralLine{stroke:#bb8730;stroke-width:2.8;filter:drop-shadow(0 0 3px #ffe3a0)}
+.mask.forestSpiral{width:180px;height:110px;max-width:none;flex-shrink:0;border-radius:0;background:none;overflow:visible}
+.forestSpiral path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.spiralHaze{fill:#ffbd45;opacity:.25;filter:blur(12px)}
+.spiralGlow{stroke:#ffb52e;stroke-width:14;opacity:.55;filter:blur(7px)}
+.spiralBloom{stroke:#ffc74f;stroke-width:5;opacity:.85;filter:blur(2px)}
+.spiralLine{stroke:#ffe5a0;stroke-width:2.2}.spiralCore{stroke:#fffbe2;stroke-width:.9}
+.spiralTrail{stroke-width:1.2;opacity:.75}.spiralGlow.spiralTrail{stroke-width:9;opacity:.35}.spiralBloom.spiralTrail{stroke-width:3.5;opacity:.6}.spiralCore.spiralTrail{stroke-width:.55}
+.forestSpiral .spiralSparks path{fill:#fff2bd;filter:drop-shadow(0 0 3px #ffbf42) drop-shadow(0 0 6px #ffb52e)}
+.spiralDust{fill:#ffe8aa;filter:drop-shadow(0 0 3px #ffc04c)}
 .scroll:has(.forestSpiral){background:transparent;border-color:transparent;box-shadow:none}.scroll:has(.forestSpiral)::before,.scroll:has(.forestSpiral)::after{display:none}
-.scroll:has(.forestSpiral) .spiralLine{stroke:#ffdd89;filter:drop-shadow(0 0 4px #ffb950)}
 .resultCard{width:min(840px,94vw);max-height:90dvh;overflow:auto;padding:24px 30px;display:grid;grid-template-columns:160px 1fr;gap:12px 22px;text-align:center;align-items:center}
 .resultCompanions{grid-column:1;grid-row:1/5;height:270px!important;position:relative;margin:0}.resultCompanions .sceneSprite:first-child{position:absolute;left:0;bottom:50px;width:130px;height:220px}.resultCompanions .sceneSprite:last-child{position:absolute;right:0;bottom:0;width:120px;height:125px!important}
 .resultTitle,.resultMessage,.checkpoint,.resultGrowth,.opponents,.resultNext{grid-column:2}.resultTitle{margin:0;font-size:32px}.resultMessage{font-size:16px;line-height:1.4;margin:0}.checkpoint{margin:0}.resultGrowth{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;padding:15px 20px;background:#f6e8c7;border:1px solid #cdb27c;border-radius:16px;width:100%;color:#354936;box-shadow:none;cursor:pointer;font-size:15px;margin:0}

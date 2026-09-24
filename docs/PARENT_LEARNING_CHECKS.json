@@ -142,5 +142,15 @@
   "syntaxChecks": "All ten scripts checked by the Pages workflow passed",
   "physicalIPadTested": false,
   "safariWebKitTested": false,
-  "saveCapacityTest": "90 days at 45 min/day; maximum serialized save below 1,000,000 characters"
+  "saveCapacityTest": "90 days at 45 min/day; maximum serialized save below 1,000,000 characters",
+  "integratedMain": {
+    "sha": "42894b6fa1d72bae129f7e79fe6ca38502262178",
+    "preserved": "Golden-spiral artwork and documentation",
+    "cleanInstall": true,
+    "coreTests": 222,
+    "uiFlowGroups": 76,
+    "syntaxChecks": 10,
+    "repeatedBrowserScenarios": 4,
+    "pageErrors": []
+  }
 }
