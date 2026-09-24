@@ -296,6 +296,25 @@
     }
     return d[a.length][b.length];
   }
+  // Align whole words for correction. Prefer substitutions on ties so a swapped
+  // pair stays in two adjacent columns; a missing/extra letter gets an empty slot.
+  function correctionLetters(chosen,target){
+    const d=Array.from({length:chosen.length+1},()=>Array(target.length+1).fill(0));
+    for(let i=chosen.length;i>=0;i--)for(let j=target.length;j>=0;j--){
+      if(i===chosen.length)d[i][j]=target.length-j;
+      else if(j===target.length)d[i][j]=chosen.length-i;
+      else d[i][j]=Math.min(d[i+1][j+1]+(chosen[i]===target[j]?0:1),d[i+1][j]+1,d[i][j+1]+1);
+    }
+    const cells=[];let i=0,j=0;
+    while(i<chosen.length||j<target.length){
+      let a='',b='';
+      if(i<chosen.length&&j<target.length&&d[i][j]===d[i+1][j+1]+(chosen[i]===target[j]?0:1)){a=chosen[i++];b=target[j++];}
+      else if(i<chosen.length&&d[i][j]===d[i+1][j]+1)a=chosen[i++];
+      else b=target[j++];
+      cells.push({chosen:a,target:b,different:a!==b});
+    }
+    return cells;
+  }
   // Chance that picking the option most like the other three finds the target (ties split evenly).
   function middleGuess(options,target){
     const totals=options.map(o=>options.reduce((n,p)=>n+editDistance(o,p),0)),low=Math.min(...totals),tied=options.filter((o,i)=>totals[i]===low);
@@ -578,9 +597,11 @@
         w.consecutiveMisses++; w.practiceSuccesses=0;w.xpEvidence=[];
         w.reviewStage=Math.max(-1,w.reviewStage-1); w.dueAt=now+60000;
         w.eligibleAfter=L.sequence+2;
-        q.needsTeaching=q.isNew || w.independentCorrect===0 || w.consecutiveMisses>=2 || q.retentionDue;
       }
     }
+    // Help and interrupted answers use the same teaching rule without becoming
+    // independent misses. A first miss on an already introduced word stays brief.
+    q.needsTeaching=!rec.correct && !!(q.isNew || w.consecutiveMisses>=2 || q.retentionDue);
     if (!b.demo) {
       s.session.answers++;
       if (!rec.supported) { s.session.independent++; if (rec.correct) s.session.correct++; }
@@ -770,5 +791,5 @@
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,
-    HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions};
+    HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions};
 });

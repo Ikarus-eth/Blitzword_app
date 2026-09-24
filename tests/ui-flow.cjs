@@ -48,6 +48,62 @@ function impactSave(enemy='moss-golem'){
  assert.equal(Core.practiceExposure(ui.state()),1800);assert.ok(ui.state().campaign.battleRecords.at(-1).correct);
  console.log('PASS daily cap and one-step faster refill survive UI save/reopen without changing Walk or saved choices');
 }
+for(const help of [false,true])for(const kind of ['known','new','repeated','review']){
+ const s=impactSave(),q=s.battle.question,w=s.learning.words[q.target];
+ w.independentCorrect=2;q.isNew=kind==='new';q.retentionDue=kind==='review';w.consecutiveMisses=kind==='repeated'?(help?2:1):0;
+ let ui=boot(s,{heldNarration:true});ui.resume();ui.ready();
+ if(help)ui.click(ui.get('battleUnsure'));else ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));
+ assert.equal(ui.state().battle.question.needsTeaching,kind!=='known');
+ assert.equal(ui.get('battleScroll').querySelector('.selectedWord')!==null,!help);
+ assert.equal(ui.get('battleScroll').querySelector('.correctWord .correctionLetters').textContent,q.target);
+ if(help){assert.equal(ui.state().battle.heroHealth,3);assert.equal(ui.get('battleScroll').querySelector('.differentLetter'),null);}
+ const saved=ui.state();ui.click(ui.get('homeBtn'));ui.finishSpeech();assert.equal(ui.get('combatEffects').className,'combatEffects');
+ ui=boot(saved,{heldNarration:true});ui.resume();
+ assert.equal(ui.state().campaign.battleRecords.length,1);assert.equal(ui.get('combatEffects').className,'combatEffects');
+ const next=ui.get('battleAnswers').querySelector('.correctionNext');assert.equal(next.getAttribute('aria-label'),kind==='known'?'Continue':'See the example');
+ ui.click(next);next.onclick(); // A second queued tap cannot teach or advance again.
+ if(kind==='known'){
+  assert.equal(ui.state().activity,'battle');assert.equal(ui.state().learning.teaching.length,0);
+  assert.notEqual(ui.state().battle.question.id,q.id);assert.notEqual(ui.state().battle.question.target,q.target);
+ }else{
+  assert.equal(ui.state().activity,'teaching');assert.equal(ui.state().learning.teaching.length,1);
+  ui.click(ui.get('teachContinue'));assert.notEqual(ui.state().battle.question.target,q.target);
+ }
+ assert.equal(ui.state().battle.heroHealth,help?3:2);assert.equal(ui.state().campaign.battleRecords.length,1);
+}
+console.log('PASS adaptive correction and help: known/new/repeated/review, saved resume, safe Continue and two-item recheck');
+{
+ const s=impactSave(),q=s.battle.question;q.target='rock';q.options=['rock','rack','lock','ruck'];
+ const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='rack'));
+ const scroll=ui.get('battleScroll'),rows=scroll.children;
+ assert.equal(rows[0].className,'selectedWord');assert.equal(rows[1].className,'correctWord');
+ assert.deepEqual([...scroll.querySelectorAll('.differentLetter')].map(e=>e.textContent),['a','o']);
+ assert.equal(rows[0].querySelector('.srOnly').textContent,'rack');assert.equal(rows[0].querySelector('.correctionLetters').getAttribute('aria-hidden'),'true');
+ assert.equal(ui.speechTexts.at(-1),'You chose rack. The word is rock.');assert.equal(ui.get('combatEffects').className,'combatEffects');
+ ui.finishSpeech();assert.ok(ui.get('combatEffects').classList.contains('enemyStrike'));
+ const replay=ui.get('battleAnswers').querySelector('.replay');ui.click(replay);ui.finishSpeech();
+ assert.equal(ui.speechTexts.at(-1),'You chose rack. The word is rock.');assert.equal(ui.get('combatEffects').className,'combatEffects');
+ assert.equal(ui.state().battle.heroHealth,2);assert.equal(ui.state().campaign.battleRecords.length,1);
+ ui.click(ui.get('battleAnswers').querySelector('.correctionNext'));const target=ui.state().battle.question.target;
+ replay.onclick();assert.equal(ui.state().battle.question.target,target);assert.equal(ui.state().learning.supportExposures.filter(e=>e.kind==='correction-replay').length,1);
+ console.log('PASS contrast highlights only differing letters, speaks both words before impact, and replays without another hit');
+}
+for(const action of ['continue','pause','home']){
+ const s=impactSave();s.learning.words[s.battle.question.target].independentCorrect=2;
+ const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==s.battle.question.target));
+ const pending=ui.pendingSpeech(),button=ui.get('battleAnswers').querySelector('.correctionNext');
+ ui.click(action==='continue'?button:ui.get(action==='pause'?'pauseBtn':'homeBtn'));pending();
+ if(action!=='continue')button.onclick();assert.equal(ui.get('combatEffects').className,'combatEffects');
+ assert.equal(ui.state().campaign.battleRecords.length,1);assert.equal(ui.state().learning.teaching.length,0);
+}
+console.log('PASS Continue/Pause/Home cancel pending correction narration and stale controls without a delayed attack');
+{
+ const s=impactSave();s.battle.heroHealth=1;s.learning.words[s.battle.question.target].independentCorrect=2;
+ const ui=boot(s);ui.resume();ui.ready();ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==s.battle.question.target));
+ assert.equal(ui.state().battle.heroHealth,0);ui.click(ui.get('battleAnswers').querySelector('.correctionNext'));
+ assert.equal(ui.state().activity,'result');assert.equal(ui.state().result.victory,false);assert.equal(ui.state().learning.teaching.length,0);
+ console.log('PASS brief correction still resolves a final-heart defeat before another question');
+}
 for(const mode of ['correct','wrong','shield','free','supported']){
  const s=impactSave();if(mode==='shield')s.rewards.shield=true;if(mode==='free')s.battle.firstMistakeFree=true;
  const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
@@ -297,7 +353,7 @@ for(const victory of [true,false]){
  Core.startBattle(s,Date.now());s.battle.introPending=false;Core.prepareBattle(s,Date.now());
  const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();assert.equal(ui.get('heroHearts').querySelectorAll('.heldShield').length,1);
  const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));assert.equal(ui.state().battle.heroHealth,3);assert.equal(ui.state().rewards.shield,false);assert.equal(ui.get('combatEffects').className,'combatEffects');
- assert.equal(ui.speechTexts.at(-1),'Your shield stopped the hit.');ui.finishSpeech();assert.equal(ui.speechTexts.at(-1),'The word was '+q.target+'.');assert.equal(ui.get('combatEffects').className,'combatEffects');
+ assert.equal(ui.speechTexts.at(-1),'Your shield stopped the hit.');ui.finishSpeech();assert.equal(ui.speechTexts.at(-1),'You chose '+ui.state().battle.question.firstResponse+'. The word is '+q.target+'.');assert.equal(ui.get('combatEffects').className,'combatEffects');
  ui.finishSpeech();assert.ok(ui.get('combatEffects').classList.contains('shieldBlock'));assert.equal(ui.get('battleHeroImg').classList.contains('heroHit'),false);ui.click(ui.get('pauseBtn'));assert.equal(ui.get('combatEffects').className,'combatEffects');
  console.log('PASS shield prefix and correction play in sequence before one blocked hit, then cancel on pause');
 }

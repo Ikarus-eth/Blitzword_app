@@ -49,7 +49,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 | 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file. 1a deployed and verified live on 24 September 2026 (build `compact-save-20260924-r1`) |
 | 2 | Rotating distractor pools (option b) | Deployed and verified live on 24 September 2026 (build `rotating-choices-20260924-r1`). Reading-check items unchanged, waiting for the user's decision |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Deployed and verified live on 24 September 2026 (build `scheduling-refill-20260924-r1`). [Release record](SCHEDULING_RELEASE.md) |
-| 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
+| 4 | Contrast correction and adaptive teaching depth (a + b) | Implemented and locally tested; deployment pending |
 | 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
 | 6 | Story sentences a child can read (option c) | Approved, not started; sentence list needs approval before building |
 | 7 | Speed suggestions, two new steps, per-word quick status | Approved, not started |
@@ -103,7 +103,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 
 Build `scheduling-refill-20260924-r1` implements the approved scheduling fix, daily cap and ordered refill. It preserves the layered-enemy work from `9767f0c`, learner saves, selected speed, movement locks and chapter objectives. All 162 core tests and 53 UI-flow groups pass on Node 22.23.3. The reproducible 30-day, 15-min/day model reduces turns on already-secured current-field words from 32.2% to 17.7% and increases mean distinct words/day from 33.6 to 48.6. Review-only coverage rises from 35.8 to 74.0 distinct words/day. Full definitions, the broader not-yet-due measure and limits are in [the release record](SCHEDULING_RELEASE.md).
 
-Merged in [PR #62](https://github.com/Ikarus-eth/Blitzword_app/pull/62) as `49c4fcb986f0114d2f215ae16e73d97abd34428e`. [Pages run #72](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35965441688) succeeded, including deployment. At 06:41 UTC on 24 September 2026, the live marker was `scheduling-refill-20260924-r1`; cache-busted `index.html` and `game-core.js` matched that merge byte for byte, and `main` was still that commit. [Verification record](SCHEDULING_DEPLOYMENT.json). Physical iPad and Safari/WebKit checks remain open. Point 4 has not started and still requires the user's next "go".
+Merged in [PR #62](https://github.com/Ikarus-eth/Blitzword_app/pull/62) as `49c4fcb986f0114d2f215ae16e73d97abd34428e`. [Pages run #72](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35965441688) succeeded, including deployment. At 06:41 UTC on 24 September 2026, the live marker was `scheduling-refill-20260924-r1`; cache-busted `index.html` and `game-core.js` matched that merge byte for byte, and `main` was still that commit. [Verification record](SCHEDULING_DEPLOYMENT.json). Physical iPad and Safari/WebKit checks remain open. Point 4 was subsequently authorized; its implementation and release state are recorded below.
 
 ## Rotating wrong answers (point 2) — 24 September 2026
 
@@ -212,3 +212,10 @@ The chapter-scenery implementation merged as `a9d39efef14200dd9494b8c779182cc64e
 All 110 core tests and 33 UI-flow groups passed. All 35 background files decode, have distinct hashes and map to the existing stable chapter IDs. Live HTTP 200 responses and source-byte equality were verified for all 35 backgrounds plus seven app/review files on 23 September 2026; see [the deployment record](CHAPTER_SCENERY_DEPLOYMENT.json). These checks establish integration and delivery, not rendered layout quality. Actual browser viewport checks were blocked by the browser security-policy service; no physical iPad test occurred.
 
 That documentation checkpoint added no runtime or asset changes. The fullscreen-removal update uses build marker `remove-fullscreen-20260923-r1` and updates the stylesheet/script cache versions. The previous checkpoint remains available in Git history and the dated chapter-story and soundscape release notes.
+
+
+## Contrast corrections and adaptive teaching (point 4) — 24 September 2026
+
+Implemented and locally verified; **not yet deployed**. Wrong answers now stack chosen/target words with aligned, highlighted differences and narrate both. Continue uses the saved teaching decision: full picture cards for new words, two or more consecutive independent misses and missed due reviews; other corrections continue directly. “?” shows just the target, applies the same depth rule, costs no heart and adds no mastery evidence. Two intervening items, saved-answer identity, shield/impact timing and chapter rules are preserved.
+
+Node 22.23.3: 176 core tests and 57 UI-flow groups pass. Eleven isolated Chromium cases cover tablet/phone layouts, substitutions/additions/deletions/swaps, accessible whole-word labels, shield placement, saved correction reopening, replay and both Continue routes, with zero page errors. New comparison phrases use device speech; existing recordings are retained. Physical iPad/Safari and listening checks remain open. See [release details](CORRECTIONS_RELEASE.md). Point 6 remains unstarted and requires the next “go”, followed by approval of all 34 sentences and picture pairs before building.
