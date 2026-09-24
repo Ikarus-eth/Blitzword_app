@@ -1,1 +1,1 @@
-BlitzWord deployment check: 20260924-claude-r1
+BlitzWord deployment check: 20260924-chatgpt-sol-r1
