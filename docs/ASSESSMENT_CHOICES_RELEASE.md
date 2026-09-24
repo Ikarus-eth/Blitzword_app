@@ -41,4 +41,4 @@ An asterisk marks a constructed distractor. These are labelled only in review me
 
 A clean Node 22 install and npm test pass: 234 core tests and 83 UI-flow groups. New independent checks cover all fixed sets, candidate metadata, target positions across seeded draws, and migration/completion of a saved old question. No existing test expectations were changed. Browser checks cover reading-check choices and saved-question continuation on tablet and phone. Physical iPad/Safari remains untested.
 
-Build: assessment-fair-20260924-r1. Deployment verification follows in the docs-only batch record.
+Build: assessment-fair-20260924-r1. Deployed in PR #79, merge `16001a278665ea5f262117b06a3177f9ae683097`. Pages run #89 / 36007428791 succeeded. At 13:47 UTC, the live marker and cache-busted `index.html` / `content.js` matched the merge byte for byte. [Verification record](BUGS_ASSESSMENT_DEPLOYMENT.json).

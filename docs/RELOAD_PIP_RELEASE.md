@@ -8,4 +8,4 @@ The new stale-event regression fails on the original source. A clean Node 22 ins
 
 Twelve isolated Chromium scenarios exercise all three grown forms at 1180×820, 820×1180, 390×844 and 844×390. Immediate reload retains the question identity, choices and XP; a real second tab still triggers the conflict. No page errors or horizontal overflow. Growth/battle screenshots were inspected. Physical iPad/Safari remains untested.
 
-Build: reload-pip-fixes-20260924-r1. Deployment verification follows in the docs-only batch record.
+Build: reload-pip-fixes-20260924-r1. Deployed in PR #78, merge `5df0943f7cc8b1d00eff3af46bcda72b5b17e655`. Pages run #88 / 36006071413 succeeded. At 13:33 UTC, the live marker and cache-busted `index.html` / `app.js` matched the merge byte for byte. [Verification record](BUGS_ASSESSMENT_DEPLOYMENT.json).

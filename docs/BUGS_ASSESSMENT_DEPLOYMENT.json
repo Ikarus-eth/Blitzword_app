@@ -1,0 +1,158 @@
+{
+  "bugFixes": {
+    "sha": "5df0943f7cc8b1d00eff3af46bcda72b5b17e655",
+    "run": {
+      "id": 36006071413,
+      "run_number": 88,
+      "head_sha": "5df0943f7cc8b1d00eff3af46bcda72b5b17e655",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36006071413"
+    },
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success"
+      },
+      {
+        "name": "Checkout",
+        "conclusion": "success"
+      },
+      {
+        "name": "Install test dependencies",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check scripts and practice regressions",
+        "conclusion": "success"
+      },
+      {
+        "name": "Configure Pages",
+        "conclusion": "success"
+      },
+      {
+        "name": "Prepare static site",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check that this release is still current main",
+        "conclusion": "success"
+      },
+      {
+        "name": "Upload static site",
+        "conclusion": "success"
+      },
+      {
+        "name": "Deploy to GitHub Pages",
+        "conclusion": "success"
+      },
+      {
+        "name": "Post Checkout",
+        "conclusion": "success"
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success"
+      }
+    ],
+    "files": [
+      {
+        "file": "index.html",
+        "bytes": 35284,
+        "identical": true,
+        "sha256": "3e1a950ea502707ad13984b1f05551fb586645ae4602bf9511256cc246ec877f",
+        "build": "reload-pip-fixes-20260924-r1"
+      },
+      {
+        "file": "app.js",
+        "bytes": 96239,
+        "identical": true,
+        "sha256": "d643455a1b1fd89068e5c4bcab2265a348826d56a67232b4b2ff159a562b3679"
+      }
+    ],
+    "mainAtVerification": "5df0943f7cc8b1d00eff3af46bcda72b5b17e655",
+    "verifiedAt": "2026-09-24T13:33:13.124710+00:00"
+  },
+  "readingCheck": {
+    "sha": "16001a278665ea5f262117b06a3177f9ae683097",
+    "run": {
+      "id": 36007428791,
+      "run_number": 89,
+      "head_sha": "16001a278665ea5f262117b06a3177f9ae683097",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36007428791"
+    },
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success"
+      },
+      {
+        "name": "Checkout",
+        "conclusion": "success"
+      },
+      {
+        "name": "Install test dependencies",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check scripts and practice regressions",
+        "conclusion": "success"
+      },
+      {
+        "name": "Configure Pages",
+        "conclusion": "success"
+      },
+      {
+        "name": "Prepare static site",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check that this release is still current main",
+        "conclusion": "success"
+      },
+      {
+        "name": "Upload static site",
+        "conclusion": "success"
+      },
+      {
+        "name": "Deploy to GitHub Pages",
+        "conclusion": "success"
+      },
+      {
+        "name": "Post Checkout",
+        "conclusion": "success"
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success"
+      }
+    ],
+    "files": [
+      {
+        "file": "index.html",
+        "bytes": 35289,
+        "identical": true,
+        "sha256": "12dc8b0cce10dd549f04e296fd3070aff45941d03b62d385032d2ec65fd21eef",
+        "build": "assessment-fair-20260924-r1"
+      },
+      {
+        "file": "content.js",
+        "bytes": 80918,
+        "identical": true,
+        "sha256": "29d21e7329c36bbc308b6d0a11b6cce1a6811367511d5f0debdf609dd7022357"
+      }
+    ],
+    "mainAtVerification": "16001a278665ea5f262117b06a3177f9ae683097",
+    "verifiedAt": "2026-09-24T13:47:34.662510+00:00"
+  },
+  "narration": {
+    "state": "blocked-not-deployed",
+    "draftPullRequest": "https://github.com/Ikarus-eth/Blitzword_app/pull/80",
+    "generationRun": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36008375224",
+    "error": "ElevenLabs quota_exceeded: 10000-credit limit, 26 remaining",
+    "remainingTextCharacters": 18534,
+    "remainingAlignments": 365
+  }
+}
