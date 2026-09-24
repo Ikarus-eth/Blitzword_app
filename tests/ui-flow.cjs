@@ -314,7 +314,7 @@ for(const victory of [true,false]){
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());
  let ui=boot(s);ui.click(ui.get('mapSpeed'));assert.equal(ui.get('speedPanel').hidden,false);
- assert.equal(ui.get('speedChoices').querySelector('[data-speed="ride"]').disabled,true);const icons=[...ui.get('speedChoices').querySelectorAll('.pacePicture')];assert.equal(icons.length,5);assert.equal(new Set(icons.map(icon=>icon.innerHTML)).size,5);
+ assert.equal(ui.get('speedChoices').querySelector('[data-speed="ride"]').disabled,true);const icons=[...ui.get('speedChoices').querySelectorAll('.pacePicture')];assert.equal(icons.length,7);assert.equal(new Set(icons.map(icon=>icon.innerHTML)).size,7);
  ui.click(ui.get('speedChoices').querySelector('[data-speed="run"]'));assert.equal(ui.get('speedPanel').hidden,true);ui=boot(ui.state());ui.resume();ui.ready();
  assert.equal(ui.state().battle.question.exposureMs,950);const question=Core.copy(ui.state().battle.question);
  ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseSpeed'));ui.click(ui.get('speedChoices').querySelector('[data-speed="crawl"]'));assert.equal(ui.get('speedPanel').hidden,true);
@@ -721,3 +721,59 @@ for(const stage of [1,2,3]){
  assert.equal(ui.state().screen,'result');assert.equal(ui.state().campaign.wins,1);
  console.log('PASS XP-crossing final answer finishes narration and combat before evolution, then returns to its result');
 }
+
+// Point 7: the calibrated pace, optional battle-boundary suggestions and parent quick evidence.
+for(const [ms,id] of [[1800,'walk'],[1500,'stride'],[1200,'jog'],[950,'run'],[2200,null]]){
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;s.assessment.exposure=ms;
+ const ui=boot(s);ui.click(ui.get('mapSpeed'));
+ const chosen=[...ui.get('speedChoices').querySelectorAll('[aria-pressed="true"]')];
+ assert.equal(chosen.length,id?1:0);if(id)assert.equal(chosen[0].dataset.speed,id);else {assert.equal(ui.get('speedNote').hidden,false);assert.match(ui.get('speedNote').textContent,/2.2 seconds/);}
+ assert.equal(ui.state().assessment.exposure,ms);assert.equal(ui.state().settings.speed,null);
+}
+console.log('PASS speed panel highlights calibrated Walk/Stride/Jog/Run and explicitly displays the 2200 ms reading-check pace');
+for(const id of ['stride','jog']){
+ const ui=boot(impactSave());ui.click(ui.get('mapSpeed'));ui.click(ui.get('speedChoices').querySelector('[data-speed="'+id+'"]'));
+ const again=boot(ui.state());again.click(again.get('mapSpeed'));assert.equal(again.get('speedChoices').querySelector('[aria-pressed="true"]').dataset.speed,id);
+ assert.equal(again.state().battle.question.exposureMs,1800); // a pending word keeps its saved exposure
+}
+console.log('PASS both new steps persist while an already saved word keeps its exposure');
+function speedResultSave(misses=0){
+ const s=impactSave();Core.chooseSpeed(s,'stride');s.learning.speedPractice={exposureMs:1500,sinceOffer:20,recent:Content.words.slice(0,20).map((word,i)=>({target:word.w,correct:i>=misses}))};
+ s.battle.enemyHealth=0;Core.resolveBattle(s,Date.UTC(2026,8,22));return s;
+}
+for(const accept of [true,false])for(const misses of [0,5]){
+ let ui=boot(speedResultSave(misses));ui.resume();assert.equal(ui.get('speedSuggestion').hidden,false);const offer=ui.state().result.speedSuggestion;
+ assert.match(ui.get('speedSuggestionText').textContent,new RegExp(offer.name));assert.equal(ui.state().settings.speed,'stride');
+ ui=boot(ui.state());ui.resume();assert.equal(ui.get('speedSuggestion').hidden,false);
+ const button=ui.get(accept?'speedSuggestionYes':'speedSuggestionNo');ui.click(button);button.onclick();
+ assert.equal(ui.get('speedSuggestion').hidden,true);assert.equal(ui.state().settings.speed,accept?offer.to:'stride');assert.equal(ui.state().result.speedSuggestion.status,accept?'accepted':'declined');
+ const saved=ui.state();ui=boot(saved);ui.resume();assert.equal(ui.get('speedSuggestion').hidden,true);
+ ui.click(ui.get('opponents').firstElementChild);assert.equal(ui.state().activity,'battle');assert.equal(ui.state().settings.speed,accept?offer.to:'stride');
+}
+console.log('PASS faster/slower offers can be accepted or declined, survive reopening and never block the next battle');
+{
+ const ui=boot(speedResultSave());ui.resume();const stale=ui.get('speedSuggestionYes');ui.click(ui.get('opponents').firstElementChild);stale.onclick();assert.equal(ui.state().settings.speed,'stride');assert.equal(ui.state().result,null);
+}
+console.log('PASS ignoring an offer preserves the chosen pace and stale offer taps cannot change a new battle');
+{
+ const ui=boot(speedResultSave());ui.resume();ui.setFailWrites(true);ui.click(ui.get('speedSuggestionYes'));assert.equal(ui.get('saveNotice').hidden,false);assert.equal(ui.state().settings.speed,'stride');
+}
+console.log('PASS accepting a suggestion uses the existing save-failure protection');
+{
+ const s=impactSave(),q=s.battle.question;q.exposureMs=950;q.phase='choices';q.responseMs=1200;Core.answerBattle(s,q.target,Date.UTC(2026,8,22));
+ const ui=boot(s);openParents(ui);const rows=[...ui.get('parentWordSpeeds').children];
+ const quick=rows.find(row=>row.firstElementChild.textContent===q.target);assert.equal(quick.children[1].textContent,'Quick recorded');assert.equal(quick.children[2].textContent,'1');
+ assert.match(ui.get('parentQuickSummary').textContent,/^1 \/ 200/);assert.ok(rows.some(row=>row.children[1].textContent==='In review'));
+ const reopened=boot(ui.state());openParents(reopened);assert.equal(reopened.get('parentQuickSummary').textContent,ui.get('parentQuickSummary').textContent);
+}
+console.log('PASS Parents shows per-word quick evidence separately from words still in review and preserves it on reopen');
+{
+ const s=impactSave(),pending=Core.copy(s.battle.question),ui=boot(s);ui.get('selfPacedSetting').checked=true;ui.get('selfPacedSetting').onchange();
+ assert.equal(ui.state().settings.selfPaced,true);assert.deepEqual(ui.state().battle.question,pending);
+ ui.get('selfPacedSetting').checked=false;ui.get('selfPacedSetting').onchange();assert.equal(Core.practiceExposure(ui.state()),1800);assert.deepEqual(ui.state().battle.question,pending);
+}
+console.log('PASS the older self-paced checkbox preserves a pending ready word and uses the shared speed-setting path');
+{
+ const ui=boot(speedResultSave());assert.equal(ui.get('mapSpeed').textContent,'Stride');ui.resume();ui.click(ui.get('speedSuggestionYes'));ui.click(ui.get('resultNext'));assert.equal(ui.get('mapSpeed').textContent,'Jog');
+}
+console.log('PASS the map speed label follows the reading-check default and accepted suggestions');

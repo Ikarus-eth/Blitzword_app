@@ -17,7 +17,7 @@
     return {schemaVersion:2, xpRulesVersion:1, chapterRulesVersion:1, revision:0, nextId:1,
       profile:{name:'',age:7,gender:'boy',heroClass:'Mage',heroIndex:0},
       assessment:{done:false,records:[],level:0,exposure:1800,lastAxis:'exposure',progress:null},
-      learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[],dailyPractice:{}},
+      learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[],dailyPractice:{},speedPractice:null},
       campaign:{wins:0,checkpointWins:0,enemyStrength:3,battleRecords:[]},
       dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false,evolutionSeen:0,evolution:null},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{},scenes:{},scene:null},
       timing:{version:1,days:{},firstPracticeAt:null},
@@ -51,6 +51,11 @@
       s.schemaVersion = 2;
     }
     s.learning.words = s.learning.words || {};
+    if(s.learning.speedPractice){
+      const p=s.learning.speedPractice;
+      if(!Array.isArray(p.recent))s.learning.speedPractice=null;
+      else {p.recent=p.recent.filter(r=>r&&byWord[r.target]&&typeof r.correct==='boolean').slice(-20);p.sinceOffer=Math.max(0,Math.min(20,Number(p.sinceOffer)||0));}
+    }
     for (const item of Object.values(byWord)) {
       if (!s.learning.words[item.w]) {
         const evidence = s.assessment.records.filter(r => r.target === item.w);
@@ -146,7 +151,7 @@
       for(const t of [d,w]){t.timed++;t.responseMs+=r.responseMs;}
       w.minMs=w.minMs===null?r.responseMs:Math.min(w.minMs,r.responseMs);w.maxMs=Math.max(w.maxMs??0,r.responseMs);
     }
-    if(correct&&r.timingValid!==false&&Number.isFinite(r.exposureMs)&&r.exposureMs<=950&&r.responseMs<1500){d.fast++;w.fast++;}
+    if(quickAnswer(r)){d.fast++;w.fast++;}
     if(independent&&r.correct===false&&typeof r.firstResponse==='string'&&r.firstResponse!=='?'){
       const target=r.target,chosen=r.firstResponse;w.wrong[chosen]=(w.wrong[chosen]||0)+1;
       for(let i=0;i<Math.max(target.length,chosen.length);i++)if(target[i]!==chosen[i]){
@@ -284,8 +289,22 @@
     const records=s.campaign.battleRecords.filter(r=>r.task==='battle'),independent=records.filter(r=>!r.supported);
     return {totals,activeMs:totals.practice+totals.math+totals.assessment+totals.demo,today:s.timing.days[dayKey(now)]||{practice:0,math:0,assessment:0,demo:0,idle:0},legacyMs,
       days:Object.entries(s.timing.days).sort((a,b)=>b[0].localeCompare(a[0])),answers:(past.battle||0)+records.length,independent:(past.independent||0)+independent.length,correct:(past.correct||0)+independent.filter(r=>r.correct).length,
+      wordSpeeds:wordSpeeds(s),
       storyChecks:Content.areas.filter(a=>s.story.scenes[a.id]).map(a=>({areaId:a.id,...s.story.scenes[a.id]})),
       introduced:Content.words.filter(x=>s.learning.words[x.w]?.introducedAt).length,practiced:Content.words.filter(x=>s.learning.words[x.w]?.practiceSuccesses>=2).length};
+  }
+  function quickAnswer(r){
+    return r.task==='battle'&&r.correct===true&&!r.supported&&r.timingValid!==false&&
+      Number.isFinite(r.exposureMs)&&r.exposureMs>0&&r.exposureMs<=950&&
+      Number.isFinite(r.responseMs)&&r.responseMs>0&&r.responseMs<1500;
+  }
+  // Use the existing raw + archived evidence: the marker survives compaction and old saves.
+  // It records a past quick answer, not mastery, and never exempts a word from review.
+  function wordSpeeds(s){
+    const seen=new Set(),counts=new Map(Content.words.map(({w})=>[w,{word:w,quickAnswers:s.archive?.words?.[w]?.fast||0}]));
+    for(const r of s.campaign.battleRecords)if(r.task==='battle'&&counts.has(r.target)){seen.add(r.target);if(quickAnswer(r))counts.get(r.target).quickAnswers++;}
+    return [...counts.values()].filter(r=>seen.has(r.word)||r.quickAnswers||s.learning.words[r.word]?.introducedAt||s.learning.words[r.word]?.observations||s.archive?.words?.[r.word]?.answers)
+      .map(r=>({...r,quick:r.quickAnswers>0}));
   }
   function isSessionDue(s) { return !!s.session && !s.session.completedAt && s.session.elapsedMs >= s.session.targetMs; }
   function getQuestion(s) { return s.activity === 'assessment' ? s.assessment.progress?.question : s.battle?.question; }
@@ -361,9 +380,9 @@
       exposureMs:practiceExposure(s),wordViewedMs:0,responseMs:0,
       supportReasons:[],answeredAt:null,correct:null,needsTeaching:false,...extra};
   }
-  const SPEEDS=[{id:'crawl',name:'Crawl',ms:null},{id:'walk',name:'Walk',ms:1800},{id:'run',name:'Run',ms:950},{id:'ride',name:'Ride',ms:600},{id:'fly',name:'Fly',ms:350}];
+  const SPEEDS=[{id:'crawl',name:'Crawl',ms:null},{id:'walk',name:'Walk',ms:1800},{id:'stride',name:'Stride',ms:1500},{id:'jog',name:'Jog',ms:1200},{id:'run',name:'Run',ms:950},{id:'ride',name:'Ride',ms:600},{id:'fly',name:'Fly',ms:350}];
   function speedChoices(s){
-    return SPEEDS.map((mode,i)=>({...mode,locked:i>=3&&(s.dragon.stage<3||!s.story.chapterComplete||s.entitlements?.expansion!==true)}));
+    return SPEEDS.map(mode=>({...mode,locked:['ride','fly'].includes(mode.id)&&(s.dragon.stage<3||!s.story.chapterComplete||s.entitlements?.expansion!==true)}));
   }
   function practiceExposure(s){
     if(s.settings.selfPaced)return null;
@@ -371,11 +390,45 @@
     return selected?selected.ms:s.assessment.exposure;
   }
   function chooseSpeed(s,speed){
-    const choice=speedChoices(s).find(mode=>mode.id===speed&&!mode.locked);
+    // null returns to the reading-check calibration (the older self-paced checkbox).
+    const choice=speed===null?{id:null}:speedChoices(s).find(mode=>mode.id===speed&&!mode.locked);
     if(!choice)return false;
+    const before=practiceExposure(s);
     s.settings.speed=speed;s.settings.selfPaced=speed==='crawl';
+    if(before!==practiceExposure(s))s.learning.speedPractice={exposureMs:practiceExposure(s),recent:[],sinceOffer:0};
+    if(s.result?.speedSuggestion?.status==='pending')s.result.speedSuggestion.status='dismissed';
     // The saved question keeps its original exposure. A choice applies to new questions only.
     return true;
+  }
+  function recordSpeedPractice(s,r){
+    const exposureMs=practiceExposure(s);
+    // New evidence only: old answers do not reliably say whether the word was familiar then.
+    if(!s.learning.speedPractice||s.learning.speedPractice.exposureMs!==exposureMs)s.learning.speedPractice={exposureMs,recent:[],sinceOffer:0};
+    if(r.task!=='battle'||r.supported||!r.timingValid||!r.familiarBefore||r.exposureMs!==exposureMs)return;
+    const p=s.learning.speedPractice;
+    p.recent.push({target:r.target,correct:r.correct});p.recent=p.recent.slice(-20);p.sinceOffer=Math.min(20,p.sinceOffer+1);
+  }
+  function speedSuggestion(s){
+    const p=s.learning.speedPractice,ms=practiceExposure(s);
+    if(!p||p.exposureMs!==ms||p.recent.length<20||p.sinceOffer<20)return null;
+    const correct=p.recent.filter(r=>r.correct).length;
+    const direction=correct<16?'slower':correct>18?'faster':null;
+    if(!direction)return null;
+    if(direction==='slower'){
+      const misses={};for(const r of p.recent)if(!r.correct)misses[r.target]=(misses[r.target]||0)+1;
+      // When one or two words explain most errors, keep correction/teaching first.
+      if(Object.values(misses).sort((a,b)=>b-a).slice(0,2).reduce((a,b)=>a+b,0)>=(20-correct)*.6)return null;
+    }
+    const modes=speedChoices(s).filter(mode=>!mode.locked),duration=mode=>mode.ms??Infinity;
+    const current=ms??Infinity;
+    const choice=direction==='faster'?modes.find(mode=>duration(mode)<current):modes.filter(mode=>duration(mode)>current).at(-1);
+    return choice?{fromMs:ms,to:choice.id,name:choice.name,direction,correct,total:20,status:'pending'}:null;
+  }
+  function respondSpeedSuggestion(s,accept){
+    const offer=s.result?.speedSuggestion;
+    if(s.activity!=='result'||!s.battle?.resolved||!offer||offer.status!=='pending'||offer.fromMs!==practiceExposure(s))return false;
+    if(accept&&!chooseSpeed(s,offer.to))return false;
+    offer.status=accept?'accepted':'declined';return true;
   }
   function recentAccuracy(s) {
     const records = s.campaign.battleRecords.filter(r => r.task === 'battle' && !r.supported).slice(-8);
@@ -594,6 +647,7 @@
     return {id:q.id,task,language:'en',target:q.target,alternatives:[...q.options],firstResponse:opt,
       correct:opt===q.target,exposureMs:q.exposureMs,observedExposureMs:Math.round(q.wordViewedMs),
       responseMs:Math.round(q.responseMs),supported:q.supportReasons.length>0,
+      familiarBefore:!!word?.familiar||(word?.independentCorrect||0)>=2,
       supportReasons:[...q.supportReasons],timingValid:!q.supportReasons.includes('interrupted-exposure'),
       previouslyEncountered:!!word?.lastSeenAt || s.assessment.records.some(r=>r.target===q.target) || s.campaign.battleRecords.some(r=>r.target===q.target) || !!s.archive?.words?.[q.target],
       lastHelpAt:word?.lastHelpAt || null,
@@ -607,6 +661,7 @@
     if (!q || q.answeredAt || q.phase!=='choices' || (opt!=='?'&&!q.options.includes(opt))) return null;
     if(opt==='?'&&!q.supportReasons.includes('help-request'))q.supportReasons.push('help-request');
     const rec=observation(s,q,opt,now,b.demo?'demoBattle':'battle');
+    if(!b.demo)recordSpeedPractice(s,rec);
     if(!b.demo&&!rec.supported&&rec.correct)recordDailyCorrect(s,q.target,now);
     rec.battleId=b.id; rec.sessionId=b.demo?null:s.session.id;
     rec.heroHealthBefore=b.heroHealth; rec.enemyHealthBefore=b.enemyHealth;
@@ -698,6 +753,8 @@
     if(chapterJustComplete){s.story.completedChapters.push(chapter.id);if(chapter.id==='chapter-1')s.story.chapterComplete=true;s.story.mapPending=true;syncProgress(s);}
     const xpEarned=b.xpEarned??s.campaign.battleRecords.filter(r=>r.battleId===b.id).reduce((sum,r)=>sum+(r.xpEarned||0),0);
     s.result={victory,strength:b.maxHealth,battleId:b.id,enemyId:b.enemyId||'thornling',chapterComplete:s.story.chapterComplete,chapterJustComplete,xpEarned}; s.activity='result';
+    const suggestion=speedSuggestion(s);
+    if(suggestion){s.result.speedSuggestion=suggestion;s.learning.speedPractice.sinceOffer=0;}
     const field=activeChapterState(s);
     if(victory&&(s.math.winStreak%3===0||(!b.finalEncounter&&field.wins>=3&&field.wins%3===0&&field.duels===0))){
       s.math.round={id:id(s,'math'),battleId:b.id,areaId:b.areaId,enemyId:b.enemyId||'thornling',status:'intro',inputMode:'choice',shieldEligible:s.rewards.readingWins>=3,bestAtStart:s.math.best,target:Math.max(1,(s.math.best||0)-2),elapsedMs:0,correct:0,score:0,wrong:0,scoringVersion:2,answers:[],question:null,bag:[],recent:[]};
@@ -828,6 +885,6 @@
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
-    startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,
+    startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,speedSuggestion,respondSpeedSuggestion,wordSpeeds,quickAnswer,
     HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions};
 });

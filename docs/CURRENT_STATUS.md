@@ -53,7 +53,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Deployed and verified live on 24 September 2026 (build `contrast-teaching-20260924-r1`). [Release record](CORRECTIONS_RELEASE.md) |
 | 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
 | 6 | Story sentences a child can read (option c) | Deployed and verified live on 24 September 2026 (build `story-pictures-20260924-r1`). All 34 pairs approved. [Release record](STORY_PICTURES_RELEASE.md) |
-| 7 | Speed suggestions, two new steps, per-word quick status | Approved, not started |
+| 7 | Speed suggestions, two new steps, per-word quick status | Implemented and locally tested; deployment verification pending. Build `speed-guidance-20260924-r1`. [Release record](SPEED_GUIDANCE_RELEASE.md) |
 | 8 | Parent view: word map, tricky list, weekly retention | Approved, not started |
 
 **1. Durable saves.** Two releases with a stop in between.
@@ -245,3 +245,10 @@ The three underlined listening exceptions are jump, the and look. Either outcome
 Implementation and local checks are complete: 184 core tests, 63 UI-flow groups and 40 Chromium scenarios pass. Physical iPad/Safari and listening remain untested. Deployment is verified. Build: `story-pictures-20260924-r1`. [Release and verification details](STORY_PICTURES_RELEASE.md). The earlier proposal verification remains a dated review record. Point 7 is unstarted and requires a separate go.
 
 Merged in [PR #66](https://github.com/Ikarus-eth/Blitzword_app/pull/66) as `e0a7cf7bf66ee93960b56f73291e350683ab7f8f`. [Pages run #76](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35974775288) passed the checks and deployed. At 08:23 UTC on 24 September 2026, the live marker was `story-pictures-20260924-r1` and all five changed runtime files matched that merge byte for byte. [Verification record](STORY_PICTURES_DEPLOYMENT.json).
+
+
+## Speed guidance (point 7) — 24 September 2026
+
+Implemented locally: optional one-step speed offers after 20 eligible familiar-word answers, Stride (1500 ms), Jog (1200 ms), effective-speed highlighting and per-word quick evidence in Parents. Concentrated misses keep word help first. Suggestions, settings, pending questions and archived quick counts survive reopening; Ride/Fly gates and existing review schedules remain. The proposed names and line icons are ready for user review. The older self-paced checkbox now also preserves a saved ready question, and the map label follows accepted pace changes.
+
+All 205 core tests and 71 UI-flow groups pass on Node 22.23.3. Chromium checks and exact rules are recorded in [the release record](SPEED_GUIDANCE_RELEASE.md). Deployment is pending; this section does not yet claim the build is live. Physical iPad and Safari/WebKit have not been tested. Stop after this release; point 8 still awaits the next go.

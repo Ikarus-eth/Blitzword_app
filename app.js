@@ -94,6 +94,7 @@ function renderChapter(element,compact=false){
 }
 function renderMap(deferEvolution=false){
   show('campaignMap');$('#pausePanel').hidden=true;
+  $('#mapSpeed').textContent=Core.speedChoices(state).find(mode=>!mode.locked&&mode.ms===Core.practiceExposure(state))?.name||'Speed';
   const progress=Core.storyProgress(state),growth=Core.dragonProgress(state);
   const terrain=$('.mapTerrain'),mapScene=progress.chapter.scene;
   terrain.style.backgroundImage=mapScene===null?'url("assets/campaign-forest.png")':'url("assets/chapter-scenes.webp")';
@@ -196,6 +197,13 @@ function renderParent(){
   $('#parentIdle').textContent=formatTime(p.totals.idle);$('#parentLegacy').textContent=formatTime(p.legacyMs);
   $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
   $('#parentLearning').textContent=p.introduced+' / '+Content.words.length+' words introduced · '+p.practiced+' practiced twice · '+p.correct+' / '+p.independent+' unaided answers correct.';
+  $('#parentQuickSummary').textContent=p.wordSpeeds.filter(w=>w.quick).length+' / '+p.wordSpeeds.length+' encountered words have a quick answer recorded.';
+  const speeds=$('#parentWordSpeeds');speeds.replaceChildren();
+  for(const word of p.wordSpeeds){
+    const row=document.createElement('tr');
+    for(const value of [word.word,word.quick?'Quick recorded':'In review',String(word.quickAnswers)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}
+    speeds.append(row);
+  }
   const checked=p.storyChecks.filter(r=>typeof r.correct==='boolean'),matched=checked.filter(r=>r.correct).length;
   $('#parentStorySummary').textContent=checked.length?matched+' / '+checked.length+' first choices matched · '+checked.filter(r=>r.helped).length+' used listening.':'No picture choices recorded yet.';
   const stories=$('#parentStories');stories.replaceChildren();
@@ -772,7 +780,17 @@ function renderResult() {
     button.onclick=()=>{playClock.reset(performance.now());account();if(Core.isSessionDue(state))Core.completeSession(state,Date.now());
       state.campaign.enemyStrength=choice.hp;Core.startBattle(state,Date.now(),{strength:choice.hp,enemyId:choice.enemy.id});if(save())renderActivity();};box.append(button);
   });box.classList.toggle('single',choices.length===1);
+  renderSpeedSuggestion(result);
   resultSound(result,result.victory);if(!result.victory)defeatReaction(result,result.enemyId,result.strength);else maybeOfferName();
+}
+function renderSpeedSuggestion(result){
+  const offer=result.speedSuggestion,box=$('#speedSuggestion');
+  box.hidden=!offer||offer.status!=='pending'||offer.fromMs!==Core.practiceExposure(state)||!Core.speedChoices(state).some(mode=>mode.id===offer.to&&!mode.locked);
+  if(box.hidden)return;
+  $('#speedSuggestionText').textContent='Try '+offer.name+'? A little '+offer.direction+'.';
+  $('#speedSuggestionYes').innerHTML=paceIcon(offer.to)+'<span>Try '+offer.name+'</span>';
+  const respond=accept=>{if(blocked||paused||state.result!==result)return;if(Core.respondSpeedSuggestion(state,accept)&&save())box.hidden=true;};
+  $('#speedSuggestionYes').onclick=()=>respond(true);$('#speedSuggestionNo').onclick=()=>respond(false);
 }
 function resultSound(result,victory){
   if(result.audioCuePlayed||paused||blocked)return;
@@ -821,6 +839,8 @@ function paceIcon(id){
   const drawings={
     crawl:'<circle cx="43" cy="19" r="5"/><path d="M37 29L22 31L17 43H8M24 32L31 42H22M37 29L43 42H52M36 31L34 43H41"/>',
     walk:'<circle cx="34" cy="11" r="5"/><path d="M32 21L28 36L18 53M28 36L40 43L44 53M31 23L41 31L49 31M30 24L21 31L15 39"/>',
+    stride:'<circle cx="37" cy="10" r="5"/><path d="M35 20L29 35L12 53M29 35L43 43L51 53M34 22L44 32L52 30M33 23L23 28L16 36"/>',
+    jog:'<circle cx="38" cy="10" r="5"/><path d="M35 20L28 34L20 44L11 40M28 34L40 40L37 53M34 22L43 29L50 24M33 22L24 22L19 30"/>',
     run:'<circle cx="41" cy="10" r="5"/><path d="M37 20L27 34L16 30L9 37M27 34L39 40L32 52M35 21L44 28L53 21M34 23L24 19L17 25M7 48H19M5 17H16"/>',
     ride:'<path d="M7 41Q17 47 23 35L42 35L45 22L51 18L54 27L60 31L58 37L49 38L46 48H40L40 41H27L22 49H16L19 40M46 23L44 16M51 19L55 14"/><circle cx="32" cy="12" r="4"/><path d="M31 20L28 29L36 34L33 41M31 22L41 25L47 24"/><circle cx="52" cy="29" r="1"/>',
     fly:'<path d="M5 42L23 35L41 35L47 24L52 23L56 30L62 32L59 37L48 38L42 45L35 45M24 35L13 12L29 20L37 35M26 35L13 48L29 43M47 24L47 18"/><circle cx="39" cy="13" r="4"/><path d="M38 21L34 29L42 34L39 40M39 22L47 26"/><circle cx="54" cy="30" r="1"/>'
@@ -828,15 +848,17 @@ function paceIcon(id){
   return '<svg class="pacePicture" viewBox="0 0 64 64" aria-hidden="true">'+drawings[id]+'</svg>';
 }
 function openSpeed(){
-  const box=$('#speedChoices');box.replaceChildren();
+  const box=$('#speedChoices'),exposure=Core.practiceExposure(state);box.replaceChildren();
   for(const mode of Core.speedChoices(state)){
     const button=document.createElement('button');button.className='speedChoice';button.dataset.speed=mode.id;button.disabled=mode.locked;
-    button.setAttribute('aria-pressed',String((state.settings.selfPaced?'crawl':state.settings.speed||'walk')===mode.id));
+    button.setAttribute('aria-pressed',String(mode.ms===exposure&&!mode.locked));
     button.setAttribute('aria-label',mode.name+dragonText(mode.locked?', locked: rideable Pip and expansion required':''));
     button.innerHTML=paceIcon(mode.id)+'<span>'+mode.name+'</span>'+(mode.locked?'<svg class="paceLock" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>':'');
     button.onclick=()=>{if(Core.chooseSpeed(state,mode.id)&&save()){$('#speedPanel').hidden=true;$('#mapSpeed').textContent=mode.name;}};box.append(button);
   }
-  $('#speedNote').textContent='';$('#speedPanel').hidden=false;
+  const calibrated=!Core.speedChoices(state).some(mode=>mode.ms===exposure&&!mode.locked);
+  $('#speedNote').textContent=calibrated?'Current pace: '+(exposure/1000)+' seconds, from your reading check.':'';
+  $('#speedNote').hidden=!calibrated;$('#speedPanel').hidden=false;
 }
 function openGrowth(){
   const g=Core.dragonProgress(state);paintPip($('#growthPip'));paintPip($('#growthNextPip'),Math.min(g.stage+1,3));
@@ -955,8 +977,7 @@ $('#mathSkip').onclick=$('#mathContinue').onclick=()=>{if(Core.leaveMath(state,D
 $('#assessmentStart').onclick=()=>{playClock.reset(performance.now());state.assessment.instructionsSeen=true;if(save())renderActivity();};
 $('#encounterStart').onclick=()=>{playClock.reset(performance.now());state.battle.introPending=false;if(save())renderActivity();};
 $('#pauseBtn').onclick=()=>pause();$('#pauseResume').onclick=enter;$('#pauseFinish').onclick=finishForNow;
-$('#selfPacedSetting').onchange=()=>{state.settings.selfPaced=$('#selfPacedSetting').checked;state.settings.speed=state.settings.selfPaced?'crawl':null;const q=state.battle?.question;
-  if(q&&!q.answeredAt&&q.phase==='ready')q.exposureMs=Core.practiceExposure(state);save();};
+$('#selfPacedSetting').onchange=()=>{Core.chooseSpeed(state,$('#selfPacedSetting').checked?'crawl':null);save();};
 $('#wordReady').onclick=()=>{if(confirmActivity())hideWord();};
 $('#assessmentUnsure').onclick=()=>answer('?');
 $('#battleUnsure').onclick=()=>answer('?');

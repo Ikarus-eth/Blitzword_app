@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="blitzword-soundscape" content="forest-v2-20260923" />
 <meta name="blitzword-scenery" content="35-chapters-20260923-r1" />
-<meta name="blitzword-build" content="story-pictures-20260924-r1" />
+<meta name="blitzword-build" content="speed-guidance-20260924-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=story-pictures-20260924-r1" />
+<link rel="stylesheet" href="styles.css?v=speed-guidance-20260924-r1" />
 <link rel="stylesheet" href="enemy-art.css?v=layered-enemies-20260924-r1" />
 </head>
 <body><main class="app" id="app">
@@ -122,7 +122,7 @@
   <div class="handoffCard parchment"><span class="sceneSprite handoffPip" data-sprite="6" role="img" aria-label="Pip"></span><h1 id="handoffTitle">The path is clear!</h1><p>Let’s try a few words.<br>Tap <span class="helpKey">?</span> whenever you’re not sure.</p><button id="handoffNext" class="greenButton">Play</button></div>
 </section>
 <section id="result" class="screen forest">
-  <div class="resultCard parchment"><div class="resultCompanions"><span id="resultHero" class="sceneSprite" role="img" aria-label="Your hero"></span><span class="sceneSprite" data-sprite="6" role="img" aria-label="Pip"></span></div><h1 id="resultTitle" class="resultTitle"></h1><p id="resultMessage" class="resultMessage"></p><div id="checkpoint" class="checkpoint"></div><div id="resultChapter" class="chapterPanel"></div><button id="resultGrowth" class="resultGrowth" aria-label="See Pip’s growth"><strong id="resultXP" class="resultXP"></strong><span id="resultXPDetail"></span><span id="resultGrowthBar" class="growthTrack" role="progressbar" aria-label="Pip XP towards next growth" aria-valuemin="0" aria-valuemax="100"><span id="resultGrowthFill"></span></span><span id="resultGrowthNote"></span></button><div id="resultShield" class="shieldReward resultShield" role="img" aria-label="One shield ready: protects the next hit" hidden></div><div id="opponents" class="opponents"></div><button id="resultNext" class="secondaryButton resultNext">Map</button></div>
+  <div class="resultCard parchment"><div class="resultCompanions"><span id="resultHero" class="sceneSprite" role="img" aria-label="Your hero"></span><span class="sceneSprite" data-sprite="6" role="img" aria-label="Pip"></span></div><h1 id="resultTitle" class="resultTitle"></h1><p id="resultMessage" class="resultMessage"></p><div id="checkpoint" class="checkpoint"></div><div id="resultChapter" class="chapterPanel"></div><button id="resultGrowth" class="resultGrowth" aria-label="See Pip’s growth"><strong id="resultXP" class="resultXP"></strong><span id="resultXPDetail"></span><span id="resultGrowthBar" class="growthTrack" role="progressbar" aria-label="Pip XP towards next growth" aria-valuemin="0" aria-valuemax="100"><span id="resultGrowthFill"></span></span><span id="resultGrowthNote"></span></button><div id="resultShield" class="shieldReward resultShield" role="img" aria-label="One shield ready: protects the next hit" hidden></div><div id="speedSuggestion" class="speedSuggestion" hidden><p id="speedSuggestionText"></p><div><button id="speedSuggestionYes" class="secondaryButton"></button><button id="speedSuggestionNo" class="textButton">No thanks</button></div></div><div id="opponents" class="opponents"></div><button id="resultNext" class="secondaryButton resultNext">Map</button></div>
 </section>
 <section id="mathIntro" class="screen forest mathScreen">
  <div class="mathIntroCard duelCard parchment"><div class="duelHeading">1 × 1</div><span id="mathRevivedEnemy" class="sceneSprite duelCreature" role="img"></span><h1 id="mathIntroTitle" class="duelEnemyName"></h1><div class="duelBadges"><div class="duelBadge" aria-label="60 seconds"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="17" r="11"/><path d="M16 10V17L21 20M12 2H20M16 2V6"/></svg><strong>60s</strong></div><div id="mathIntroGoal" class="duelBadge"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5"/><path d="M16 1V7M16 25V31M1 16H7M25 16H31"/></svg><span><small>Goal</small><strong id="mathIntroTarget"></strong></span></div></div><div class="mathRules" aria-label="Correct answer plus one point; wrong answer minus one point"><span>+1</span><span>−1</span></div><p id="mathIntroPR" class="duelBest"></p><div class="duelActions"><button id="mathStart" class="greenButton" aria-label="Start 60-second challenge">Play</button><button id="mathSkip" class="textButton">Later</button></div></div>
@@ -197,6 +197,7 @@
   <article><span>Active play today</span><strong id="parentToday"></strong></article><article><span>Total active play</span><strong id="parentTotal"></strong></article><article><span>Practice towards Pip’s growth</span><strong id="parentPractice"></strong></article><article><span>Observed idle time excluded</span><strong id="parentIdle"></strong></article>
  </div>
  <article class="parentInfo"><h2>Pip’s next stage</h2><p id="parentGrowth"></p><p id="parentLearning"></p><p id="parentMath"></p></article>
+ <article class="parentInfo parentQuick"><h2>Quick words</h2><p id="parentQuickSummary"></p><p>Quick means an unaided correct answer in under 1.5 seconds after the choices appear, with the word shown at Run (950 ms) or faster. It records a past quick answer, not long-term retention. Words without this evidence stay in review; quick words still receive scheduled reviews.</p><div class="parentTableWrap"><table><thead><tr><th>Word</th><th>Quick status</th><th>Quick answers</th></tr></thead><tbody id="parentWordSpeeds"></tbody></table></div></article>
  <article class="parentInfo"><h2>Story picture checks</h2><p id="parentStorySummary"></p><p>Each sentence has two pictures, so a guess has a 50% chance of matching. These gentle meaning checks do not establish independent reading or word mastery, and award no XP or chapter time. Listening is shown separately.</p><div class="parentTableWrap"><table><thead><tr><th>Chapter</th><th>Sentence</th><th>First choice</th><th>Listening before choice</th></tr></thead><tbody id="parentStories"></tbody></table></div></article>
  <article class="parentInfo"><h2>How time is counted</h2><p>Reading and teaching time is confirmed by the next answer, Ready, replay, continue, Home or pause action. After 30 seconds without a game action, the game pauses and discards the unconfirmed interval. Menus, results, background tabs and device sleep do not count. Idle excluded shows discarded reading intervals; paused and background duration is not measured. Assessment and demo time are shown separately and do not advance Pip’s growth.</p><p>This measures interaction-confirmed time, not attention. A reading interval longer than 30 seconds is conservatively excluded. Closing or reloading can lose the last unconfirmed interval.</p><p>Earlier time records could include waiting. They are kept separately and do not count towards growth: <strong id="parentLegacy"></strong>.</p></article>
  <article class="parentInfo"><h2>Word selection</h2><p>All 200 Core words remain playable across seven campaigns, each with five chapters. A battle is one enemy; a chapter is one map field. A new chapter needs at least ten interaction-confirmed active minutes, three reading wins, a completed number duel and its learning objectives. A duel loss does not erase reading progress. If the duel finishes before ten minutes, another battle continues the chapter. Cleared chapters stay cleared. After the story, ten-minute review chapters continue the daily goal. Aim for one chapter a day; there is no daily limit. Core 200 is a curriculum selection, not the 200 most frequent English words: it combines high-frequency words, phonics examples and forest vocabulary. In the supplied workbook, water has Fry rank 84; bird is selected for phonics and the story theme. Assessment and saved learning records are unchanged.</p></article>
@@ -210,10 +211,10 @@
 <script src="content.js?v=story-pictures-20260924-r1"></script>
 <script src="enemy-art-data.js?v=layered-enemies-20260924-r1"></script>
 <script src="enemy-art.js?v=layered-enemies-20260924-r1"></script>
-<script src="game-core.js?v=story-pictures-20260924-r1"></script>
+<script src="game-core.js?v=speed-guidance-20260924-r1"></script>
 <script src="storage.js?v=compact-save-20260924-r1"></script>
 <script src="soundscape.js?v=soundscape-20260923-r1"></script>
 <script src="narration.js?v=narration-remainder-20260924-r1"></script>
 <script src="audio.js?v=narration-approved-20260924-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
-<script src="app.js?v=story-pictures-20260924-r1"></script></body></html>
+<script src="app.js?v=speed-guidance-20260924-r1"></script></body></html>
