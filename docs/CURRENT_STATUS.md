@@ -17,10 +17,11 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 | Combat and presentation | Mage staff/lightning, Pip assists/final blows, answer-locked reactions, cancellation and reduced motion; teaching-image framing, enemy names and Easier-left/Same-right defeat choices. | [Combat](COMBAT_REACTIONS.md), [child feedback](SEPT23_CHILD_FEEDBACK.md) |
 | Game controls | Fullscreen button, handlers and notice removed at the user’s request. The existing flexible toolbar closes the gap; sound, pause and Home remain. Home Screen presentation and learner saves are unchanged. | [Product specification](BLITZWORD_PRODUCT_SPEC.md) |
 | Soundscape | Approved adaptive forest music and effects are integrated and deployed, with scene changes, speech priority and independent saved controls. | [Soundscape](SOUNDSCAPE_RELEASE.md) |
+| Narration | Recovered prerecorded corpus integrated: 990 recovered clips are preserved and 985 approved exact-text phrases are mapped at runtime. Five gate-family clips remain fallback-only pending pronunciation approval; personalized dragon names stay on local device speech. | [Narration release](NARRATION_RELEASE.md) |
 
 ## Outstanding work and ownership
 
-- Expanded prerecorded narration is the next audio task. The app retains 165 recordings and immediately uses browser speech for unrecorded text. This documentation change does not generate audio or resume bulk uploads. Existing recordings use static target highlighting; accurate recorded word-boundary highlighting remains unfinished. The reported “gate” pronunciation uses the existing “gait” speech workaround pending a reviewed replacement recording.
+- Narration recovery is integrated in the narration release: 990 recovered MP3s are preserved and 985 exact-text phrases are mapped at runtime. The five gate-family recordings remain intentionally excluded pending pronunciation approval, so those phrases use the existing `gait` device-speech helper. Chapter-story and some composite shield-correction phrases still fall back to device speech. Static target highlighting remains; accurate recorded word-boundary highlighting, audible corpus review and physical iPad playback remain unfinished.
 - Enemy artwork expansion and creature-specific health ranges belong to the user's parallel thread. They are not changed by this documentation task. At this checkpoint, five base creature designs share tier-based health bands.
 - The 35 chapter backgrounds are deployed and verified against source bytes. Rendered tablet/phone scenery QA remains blocked because the browser could not verify its admin-enforced security policy; [chapter scenery](CHAPTER_SCENERY_RELEASE.md) records the exact limit and isolated review fixtures.
 - Physical iPad behavior and listening remain unverified. XP pacing is calibrated by deterministic simulations, not observed child play.
@@ -36,7 +37,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 | 2 | Rotating distractor pools (option b) | Approved, not started |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
-| 5 | Narration | No change; audio is handled separately |
+| 5 | Narration | Separate audio workstream: recovered corpus integration implemented; listening/iPad review and remaining gaps stay open |
 | 6 | Story sentences a child can read (option c) | Approved, not started; sentence list needs approval before building |
 | 7 | Speed suggestions, two new steps, per-word quick status | Approved, not started |
 | 8 | Parent view: word map, tricky list, weekly retention | Approved, not started |
@@ -61,7 +62,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 - 4b adaptive depth using `needsTeaching`: the full picture card appears only for new words, two or more misses in a row, and missed reviews. Otherwise show the contrast and continue. "?" answers show the word without a contrast and follow the same rule.
 - Keep: help costs no heart, supported answers are not mastery evidence, and the recheck after two intervening items stays.
 
-**5. Narration.** No change now. Recordings play where they exist and the iPad's voice covers the rest, as narration already works. Audio is being handled separately.
+**5. Narration.** The separate narration workstream recovered and integrated the existing local corpus. Exact prerecorded phrases play where approved; device speech covers remaining phrases, personalized dragon names and the five gate-family phrases pending pronunciation review. See [the narration release](NARRATION_RELEASE.md).
 
 **6. Story sentences a child can read (option c).**
 - Evidence: only 62% of the words in the 34 child-read story sentences have been taught when the sentence appears; 26 of 34 contain untaught words; "I read it" is unchecked.
