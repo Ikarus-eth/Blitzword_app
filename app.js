@@ -64,7 +64,11 @@ function healthSymbols(element,health){
 function paintPip(element,stage=Math.min(state.dragon.stage,state.dragon.evolutionSeen??state.dragon.stage)){
   const design=Content.dragonStages[stage];element.style.setProperty('--pip-scale',design.scale);element.dataset.growth=String(stage);
   if(stage===0)paintSprite(element,6);
-  else{element.style.backgroundImage='none';element.innerHTML=`<svg viewBox="${design.crop.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><image href="assets/pip-growth.png" width="1536" height="1024"/></svg>`;}
+  else{
+    const [x,y,width,height]=design.crop,clip='pip-crop-'+(++spriteSerial);
+    // The SVG viewport can be taller than its viewBox; clip the atlas itself too.
+    element.style.backgroundImage='none';element.innerHTML=`<svg viewBox="${design.crop.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><defs><clipPath id="${clip}" clipPathUnits="userSpaceOnUse"><rect x="${x}" y="${y}" width="${width}" height="${height}"/></clipPath></defs><image href="assets/pip-growth.png" width="1536" height="1024" clip-path="url(#${clip})"/></svg>`;
+  }
   element.setAttribute('role','img');element.setAttribute('aria-label',dragonText(design.name));
 }
 const xpText=n=>String(Math.floor(n||0));
@@ -1070,7 +1074,14 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden){account();
 window.addEventListener('pagehide',()=>{narrator.cancel();if(!blocked){account();pause('away');if(!playing)save();}});
 window.addEventListener('blur',()=>{windowFocused=false;account();pause('away');narrator.cancel();});
 window.addEventListener('focus',()=>{windowFocused=true;});
-window.addEventListener('storage',event=>{if(event.key===KEY&&event.newValue!==store.expected)storageProblem(Object.assign(new Error('Another tab updated this adventure. Reload to use its saved progress.'),{code:'conflict'}));});
+window.addEventListener('storage',event=>{
+  if((event.key!==KEY&&event.key!==null)||(event.storageArea&&event.storageArea!==window.localStorage))return;
+  // A reload can deliver an unloading page's notification after this page saved.
+  // Compare current storage, not the queued event; genuine competing writes still block.
+  try{if(window.localStorage.getItem(KEY)===store.expected)return;}
+  catch(e){storageProblem(Object.assign(new Error('This browser is not allowing progress to be saved.'),{code:'storage'}));return;}
+  storageProblem(Object.assign(new Error('Another tab updated this adventure. Reload to use its saved progress.'),{code:'conflict'}));
+});
 setInterval(()=>{
   account();if(paused||blocked||!playing)return;
   if(state.screen!=='evolution'&&state.activity==='result'&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());state.activity='result';if(save())renderActivity();}
