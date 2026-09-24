@@ -381,3 +381,19 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 .storyWordHint{font-size:15px;margin:0;color:#54654e}.storyChoiceFeedback{font-size:20px;margin:8px 0 16px;color:#295740}
 @media(max-width:480px){.storyChoices{gap:10px}.storyChoice{padding:3px}.storyChoice svg{height:clamp(140px,23dvh,220px)}.storyChoiceFeedback{font-size:18px}}
 @media(max-height:580px) and (orientation:landscape){.chapterStory:not([data-phase="intro"]) .storyCard{display:flex}.storyChoices{margin:8px 0}.storyChoice svg{height:150px}.storyChoiceFeedback{margin:6px 0;font-size:17px}}
+
+/* Seven movement choices and optional between-battle suggestions (point 7). */
+.speedCard{width:min(790px,94vw);max-height:94dvh;overflow:auto}
+.speedChoices{grid-template-columns:repeat(7,minmax(0,1fr))}
+.speedChoice{min-width:0}
+#speedNote{padding:12px;border:2px solid #8a7c46;border-radius:12px;background:#ead39c}
+.speedSuggestion{grid-column:2;width:100%;padding:12px;border:1px solid #bfa46d;border-radius:16px;background:#f6e4bb}
+.speedSuggestion p{margin:0 0 8px;font-size:19px}
+.speedSuggestion>div{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
+.speedSuggestion button{min-height:48px;font-size:18px}
+#speedSuggestionYes{display:flex;align-items:center;gap:9px;padding:7px 14px}
+.speedSuggestion .pacePicture{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:700px){.speedChoices{grid-template-columns:repeat(4,minmax(0,1fr))}.speedChoice,.speedChoice:nth-child(4),.speedChoice:nth-child(5){grid-column:auto}}
+@media(max-width:380px){.speedChoices{gap:7px}.speedChoice{font-size:17px}}
+
+.parentQuick th,.parentQuick td{white-space:normal}

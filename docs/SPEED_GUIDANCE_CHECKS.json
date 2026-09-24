@@ -1,0 +1,223 @@
+{
+  "browser": "Chromium (installed Google Chrome)",
+  "speech": "Stubbed completion for flow; physical listening not tested",
+  "scenarios": 33,
+  "results": [
+    {
+      "name": "panel-1800",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "panel-1500",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "panel-1200",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "panel-950",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "panel-2200",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "panel-1800",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "name": "panel-1500",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "name": "panel-1200",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "name": "panel-950",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "name": "panel-2200",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "name": "panel-1800",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "panel-1500",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "panel-1200",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "panel-950",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "panel-2200",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "panel-1800",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "name": "panel-1500",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "name": "panel-1200",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "name": "panel-950",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "name": "panel-2200",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "name": "offer-0-true",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "offer-0-false",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "offer-5-true",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "offer-5-false",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "offer-0-true",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "offer-0-false",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "offer-5-true",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "offer-5-false",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "parent-quick",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "parent-quick",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "map-label-after-nudge",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "parent-quick",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "parent-quick",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "coreTests": 205,
+  "uiFlowGroups": 71,
+  "node": "22.23.3",
+  "syntaxChecks": [
+    "app.js",
+    "game-core.js",
+    "storage.js",
+    "engagement.js",
+    "soundscape.js",
+    "audio.js",
+    "tests/narration-qa.js",
+    "enemy-art.js",
+    "enemy-art-data.js",
+    "tests/narration-remainder-qa.js"
+  ],
+  "physicalIPadTested": false,
+  "safariWebKitTested": false
+}
