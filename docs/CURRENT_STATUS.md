@@ -36,6 +36,12 @@ Deployed and verified. Delayed unload storage events no longer falsely report an
 
 Deployed and verified: all 26 fixed sets pass the letter/length and one-letter checks; the similarity heuristic falls from 90.4% to 24.0%. Saved pending options and all calibration rules are preserved. 234 core tests and 83 UI groups pass. Merged in [PR #79](https://github.com/Ikarus-eth/Blitzword_app/pull/79) as `16001a278665ea5f262117b06a3177f9ae683097`. [Pages #89](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36007428791) succeeded. At 13:47 UTC, build `assessment-fair-20260924-r1` and both changed live files matched that merge byte for byte. [Verification record](BUGS_ASSESSMENT_DEPLOYMENT.json). [Details](ASSESSMENT_CHOICES_RELEASE.md).
 
+## Narration completion in progress — 24 September 2026
+
+The user authorized priorities 1–3 together. Narration generation is blocked by ElevenLabs `quota_exceeded`: the repository key reported a 10,000-credit limit and 26 credits remaining. Generation run [36008375224](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36008375224) preserved 40 completed batches: 320 recorded clauses, including all 31 missing approved story sentences and all 30 enemy introduction variants. One of 366 teaching recordings has timing alignment. The remaining request is 18,534 text characters plus 365 alignments. Completed outputs and provider receipts are committed for resumption without repeat charges.
+
+The playback engine and cancellation tests are implemented locally; the new manifest is deliberately not enabled while the corpus is incomplete. Existing production narration remains unchanged. The branch is not ready to merge or deploy. [Preparation, tests and exact resume steps](NARRATION_COMPLETION_RELEASE.md).
+
 ## Outstanding work and ownership
 
 - Narration completion is authorized but blocked by ElevenLabs quota. Production retains all 1,029 approved clips. [Draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) preserves 320 new segments and one teaching alignment, with tested playback/cancellation changes. The service reported `quota_exceeded`: 10,000-credit limit, 26 remaining. The user was asked to increase allowance; 18,534 text characters and 365 alignments remain. Current story sentences are already approved: they need recordings, not another rewrite. The incomplete batch is not deployed. New listening approval and physical iPad playback remain open.

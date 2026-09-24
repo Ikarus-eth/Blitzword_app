@@ -17,22 +17,27 @@
     const english=voices.filter(v=>rankVoice(v)>-1000);
     return english.find(v=>v.voiceURI===preferred)||english.sort((a,b)=>rankVoice(b)-rankVoice(a))[0]||null;
   }
-  // Completion fallback must be independent of the question/animation timer.
+  // Only compose complete recorded clauses; an unknown saved choice uses local speech.
+  function recordedParts(text,clips) {
+    if(clips[text])return [text];
+    const match=/^(Practice turn\. You keep your heart\. )?You chose ([a-z]+)\. The word is ([a-z]+)\.$/.exec(text);
+    if(!match)return null;
+    const parts=[...(match[1]?['Practice turn. You keep your heart.']:[]),'You chose '+match[2]+'.','The word is '+match[3]+'.'];
+    return parts.every(part=>clips[part])?parts:null;
+  }
+  // Completion and word timing stay independent of the question/animation timer.
   function narrator({synth,Utterance,AudioContext,fetchAudio,clips={},schedule=setTimeout,unschedule=clearTimeout}) {
-    let generation=0,watchdog=null,context=null,source=null,output=null,volume=1;
+    let generation=0,watchdog=null,boundaryTimer=null,context=null,source=null,output=null,volume=1;
     const buffers=new Map();
-    // Unlock within a real tap/key event. Reuse the context after async downloads.
     function unlock(){
       if(!AudioContext||!fetchAudio)return;
       try{context=context||new AudioContext();if(!output&&context.createGain){output=context.createGain();output.gain.value=volume;output.connect(context.destination);}context.resume()?.catch(()=>{});}catch{}
     }
-    function stopRecording(){if(source){source.onended=null;try{source.stop();}catch{}source.disconnect();source=null;}}
+    function stopRecording(){unschedule(boundaryTimer);boundaryTimer=null;if(source){source.onended=null;try{source.stop();}catch{}source.disconnect();source=null;}}
     function cancel(){generation++;unschedule(watchdog);watchdog=null;stopRecording();if(synth)synth.cancel();}
     function speak(text,{preferred='',onEnd=()=>{},onBoundary=()=>{}}={}) {
       cancel();const token=generation;let finished=false;
-      // Exact-text recordings always win. If no approved recording exists,
-      // the speech-synthesis fallback may use a pronunciation helper. `gait` is
-      // the same length as `gate`, so fallback boundary indices still align.
+      // The pronunciation helper preserves character positions for local speech.
       const fallbackText=text.replace(/\bgate\b/gi,word=>word[0]==='G'?'Gait':'gait');
       const current=()=>!finished&&token===generation;
       const finish=()=>{if(!current())return;finished=true;unschedule(watchdog);watchdog=null;stopRecording();onEnd();};
@@ -49,27 +54,63 @@
         watchdog=schedule(()=>{if(current())synth.cancel();finish();},Math.max(2200,text.split(/\s+/).length*800+1400));
         try{synth.resume();synth.speak(utterance);}catch{finish();}
       }
-      const clip=clips[text]||null;
-      if(!clip||!AudioContext||!fetchAudio){fallback();return;}
+      const parts=recordedParts(text,clips);
+      if(!parts||!AudioContext||!fetchAudio){fallback();return;}
       unlock();if(!context){fallback();return;}
-      // A stalled download must not block the lesson. A late response cannot interrupt fallback speech.
+      // Download every clause before starting, so failure speaks the whole correction once.
       watchdog=schedule(fallback,4500);
-      if(!buffers.has(clip.file)){
-        const loading=Promise.resolve().then(()=>fetchAudio(clip.file)).then(response=>{
-          if(!response.ok)throw new Error('Narration unavailable');return response.arrayBuffer();
-        }).then(bytes=>context.decodeAudioData(bytes)).catch(error=>{buffers.delete(clip.file);throw error;});
-        buffers.set(clip.file,loading);
+      function load(clip){
+        if(!buffers.has(clip.file)){
+          const loading=Promise.resolve().then(()=>fetchAudio(clip.file)).then(response=>{
+            if(!response.ok)throw new Error('Narration unavailable');return response.arrayBuffer();
+          }).then(bytes=>context.decodeAudioData(bytes)).catch(error=>{if(buffers.get(clip.file)===loading)buffers.delete(clip.file);throw error;});
+          buffers.set(clip.file,loading);
+          // Batch MP3s decode to larger buffers; bound memory during long iPad sessions.
+          while(buffers.size>16)buffers.delete(buffers.keys().next().value);
+        }
+        const loading=buffers.get(clip.file);buffers.delete(clip.file);buffers.set(clip.file,loading);
+        return loading;
       }
-      buffers.get(clip.file).then(buffer=>{
+      Promise.all(parts.map(part=>load(clips[part]))).then(decoded=>{
         if(!current()||fallbackStarted)return;
         if(context.state!=='running'){fallback();return;}
         unschedule(watchdog);
-        source=context.createBufferSource();source.buffer=buffer;source.connect(output||context.destination);source.onended=finish;
-        watchdog=schedule(finish,Math.ceil(buffer.duration*1000)+1500);
-        source.start();
+        let partIndex=0,charOffset=0;
+        function playPart(){
+          if(!current())return;
+          if(partIndex===parts.length){finish();return;}
+          const part=parts[partIndex],clip=clips[part],buffer=decoded[partIndex];
+          const offset=clip.offset||0,duration=clip.offset===undefined?buffer.duration:clip.duration;
+          if(!Number.isFinite(offset)||offset<0||!Number.isFinite(duration)||duration<=0||offset+duration>buffer.duration+.05){finish();return;}
+          const startedAt=context.currentTime;let lastIndex=-1,ended=false;
+          const elapsed=()=>Math.max(0,context.currentTime-startedAt);
+          function boundary(){
+            if(!current()||ended)return;
+            const time=elapsed(),word=context.state==='running'?(clip.words||[]).find(w=>time>=w.start&&time<w.end):null;
+            const index=word?word.charIndex+charOffset:-1;
+            if(index!==lastIndex){lastIndex=index;onBoundary({name:'word',charIndex:index,charLength:word?.charLength||0,elapsedTime:time});}
+            if(current()&&!ended)boundaryTimer=schedule(boundary,25);
+          }
+          function next(){
+            if(!current()||ended)return;ended=true;unschedule(watchdog);stopRecording();
+            if(lastIndex!==-1)onBoundary({name:'word',charIndex:-1,charLength:0});
+            charOffset+=part.length+1;partIndex++;playPart();
+          }
+          function completionWatch(){
+            if(!current()||ended)return;
+            // A suspended audio clock must not advance the lesson or the highlight.
+            if(context.state!=='running'||elapsed()<duration){watchdog=schedule(completionWatch,500);return;}
+            next();
+          }
+          source=context.createBufferSource();source.buffer=buffer;source.connect(output||context.destination);source.onended=next;
+          watchdog=schedule(completionWatch,Math.ceil(duration*1000)+1500);
+          source.start(0,offset,duration);
+          if(clip.words?.length)boundary();
+        }
+        playPart();
       }).catch(fallback);
     }
     return {speak,cancel,unlock,configure(options={}){if(typeof options.volume==='number'&&Number.isFinite(options.volume))volume=Math.max(0,Math.min(1,options.volume));if(output)output.gain.value=volume;}};
   }
-  return {chooseVoice,rankVoice,narrator};
+  return {chooseVoice,rankVoice,narrator,recordedParts};
 });
