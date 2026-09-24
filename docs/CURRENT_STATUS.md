@@ -86,6 +86,12 @@ The user approved these points on 23 September 2026. Build them one at a time in
 - **10. Number duel:** later. Evidence: age is collected but unused; all 100 facts from 1×1 to 10×10 come up at random with −1 per wrong answer; picking the middle number scores 41%. Ideas: levels by age and results, per-fact tracking, balanced distractors.
 - **Options not chosen:** offline cache (1c); same-position distractor sets (2a, rejected); font or case change on the flash (2c); rolling word pool (3b); test-out (3c); splitting the 8 look-alike pairs that share a chapter; sound-it-out cards (4c); say-it moments (6a); meaning duels (6b).
 
+## Text-selection error fix — 24 September 2026
+
+A selection that starts on a text node made the document `selectstart` and `contextmenu` handlers throw `event.target.closest is not a function`, so they skipped their check. They now use the text node's parent element. Text in Parents and in inputs stays selectable; child screens still block selection. Build marker `selection-fix-20260924-r1`; the `app.js` cache version is updated.
+
+Tests: all 119 core tests and all 40 UI-flow groups pass locally. A new UI flow dispatches selection and context-menu events from text nodes and elements; it failed with the same error before the fix. In real Chromium, clicks, double-clicks and a triple-click on map and Parents text produced no page errors, and Parents text could still be selected. Deployment is recorded separately.
+
 ## Backup file on the save-problem dialog — 24 September 2026
 
 When a save fails because storage refuses it, for example when it is full, the grown-up dialog now offers **Save backup file**. It exports the progress still held in memory, including the change that could not be saved. It is not offered when another tab saved newer progress or when the save cannot be read.
@@ -100,7 +106,7 @@ Parents → Backup now has **Save backup file** and **Restore from file**; see t
 
 Tests: JavaScript syntax checks, all 117 core tests and all 38 UI-flow groups pass locally. New coverage: file name and contents, refused files, the confirmation text, the kept copy, full storage, another tab's newer save, share, cancel and download paths, and reset erasing the kept copy. A real Chromium run at iPad-sized landscape and portrait touch viewports downloaded a backup, restored a different backup after the confirmation dialog, restored the downloaded file back, and refused a non-backup file without changes.
 
-Limits: not tested on an iPad or in WebKit. The share-sheet path is covered only by test doubles, because headless Chromium has no Web Share. When a save fails, the save-problem dialog covers the Parents screen; the dialog now offers its own Save backup file (next section). Clicking text inside the Parents screen raises a console error from the existing `selectstart` handler (the target can be a text node); this predates 1b and does not block the backup.
+Limits: not tested on an iPad or in WebKit. The share-sheet path is covered only by test doubles, because headless Chromium has no Web Share. When a save fails, the save-problem dialog covers the Parents screen; the dialog now offers its own Save backup file (next section). Clicking text inside the Parents screen raised a console error from the existing `selectstart` handler (the target can be a text node); fixed on 24 September 2026, see below.
 
 Deployment: merged as `378e6899e0206f2d70d0e6cce04bc46d0ba873a4` in [PR #36](https://github.com/Ikarus-eth/Blitzword_app/pull/36). [Pages run 35938536020](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35938536020) succeeded for that commit, including the deployment step. At 00:29 UTC on 24 September 2026 the live [web app](https://ikarus-eth.github.io/Blitzword_app/) reported build `backup-file-20260924-r1`, and the live `index.html`, `app.js`, `storage.js` and `styles.css` matched that commit byte for byte. The functional browser run used the same files from a local server; Chromium in this environment does not trust the network proxy's certificate for the live site.
 

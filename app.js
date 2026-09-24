@@ -750,8 +750,10 @@ $('#renameDragon').onclick=openNaming;
 $('#dragonNameLater').onclick=()=>{$('#dragonNamePanel').hidden=true;save();};
 $('#dragonNameSave').onclick=()=>{if(!Core.nameDragon(state,$('#dragonNameInput').value)){$('#dragonNameMessage').textContent='Choose a name first.';return;}if(save()){$('#dragonNamePanel').hidden=true;if(state.screen==='campaignMap')renderMap();else if(state.screen==='result')renderResult();}};
 $('#dragonNameInput').addEventListener('keydown',event=>{if(event.key==='Enter')$('#dragonNameSave').click();});
-document.addEventListener('contextmenu',event=>{if(!event.target.closest('input,textarea,#parentDashboard'))event.preventDefault();});
-document.addEventListener('selectstart',event=>{if(!event.target.closest('input,textarea,#parentDashboard'))event.preventDefault();});
+// Selection can start on a text node, which has no closest(); check its parent element instead.
+const allowsSelection=event=>{const node=event.target,element=node?.nodeType===1?node:node?.parentElement;return !!element?.closest('input,textarea,#parentDashboard');};
+document.addEventListener('contextmenu',event=>{if(!allowsSelection(event))event.preventDefault();});
+document.addEventListener('selectstart',event=>{if(!allowsSelection(event))event.preventDefault();});
 $('#mapSpeed').onclick=$('#pauseSpeed').onclick=openSpeed;
 $('#speedClose').onclick=()=>{$('#speedPanel').hidden=true;};
 $('#soundBtn').onclick=()=>{state.settings.soundscape=state.settings.soundscape===false;syncSound();if(state.settings.soundscape)sound.unlock();$('#soundBtn').setAttribute('aria-pressed',String(state.settings.soundscape));$('#soundBtn').setAttribute('aria-label',state.settings.soundscape?'Mute soundscape':'Enable soundscape');save();};

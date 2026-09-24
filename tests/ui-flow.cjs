@@ -455,3 +455,14 @@ function fakeFiles(ui){
  other.click(other.get('soundBtn'));assert.equal(other.get('saveNotice').hidden,false);assert.match(other.get('saveMessage').textContent,/Another tab/);assert.equal(other.get('saveNoticeBackup').hidden,true);
  console.log('PASS save-problem dialog offers a backup file of unsaved progress, but not for another tab\'s conflict');
 }
+{
+ // Selection may start on a text node. Parents text and inputs stay selectable; child screens do not; no handler throws.
+ const ui=boot(backupProgress('Reader',300,4));openParents(ui);
+ const select=node=>{const event=new ui.window.Event('selectstart',{bubbles:true,cancelable:true});node.dispatchEvent(event);return event.defaultPrevented;};
+ const menu=node=>{const event=new ui.window.Event('contextmenu',{bubbles:true,cancelable:true});node.dispatchEvent(event);return event.defaultPrevented;};
+ const parentText=ui.get('parentDashboard').querySelector('.parentInfo p').firstChild,childText=ui.get('saveTitle').firstChild;
+ assert.equal(parentText.nodeType,3);assert.equal(childText.nodeType,3);
+ assert.equal(select(parentText),false);assert.equal(select(childText),true);assert.equal(select(ui.get('parentAnswer')),false);assert.equal(select(ui.document),true);
+ assert.equal(menu(ui.get('backupSave')),false);assert.equal(menu(ui.get('mapParents')),true);
+ console.log('PASS text selection stays possible in Parents and inputs, is blocked on child screens, and text-node targets raise no error');
+}
