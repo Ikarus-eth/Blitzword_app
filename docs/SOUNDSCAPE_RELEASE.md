@@ -36,4 +36,6 @@ The previous reading gate muted all background audio for most of each turn, maki
 
 Build and soundscape markers: `continuous-battle-20260924-r1`. Runtime changes are limited to `app.js`, `soundscape.js` and their `index.html` versions; learner saves need no migration.
 
-Validation and deployment are recorded in [current status](CURRENT_STATUS.md).
+All 208 Node tests and 73 UI-flow groups pass. Real Chrome playback verified six battle turns across timed and self-paced reading, positive audio output during choices, smooth nonzero speech ducking, unchanged loop starts and working pause/mute with no page errors. [Browser measurements](BATTLE_SOUNDSCAPE_VERIFICATION.json).
+
+Merged in [PR #73](https://github.com/Ikarus-eth/Blitzword_app/pull/73) as `c8b352c4949de78d4a2c1713c23b7161bb41a77e`. [Pages run 35983656280](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35983656280) passed checks and deployment. Live markers and all three changed runtime files matched the tested source at 09:51 UTC. [Deployment record](BATTLE_SOUNDSCAPE_DEPLOYMENT.json). Rollback checkpoint: `42894b6`; no learner-data reset is needed. Physical iPad/Safari and subjective listening remain unverified.
