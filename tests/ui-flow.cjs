@@ -32,6 +32,22 @@ function impactSave(enemy='moss-golem'){
  for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
  Core.startBattle(s,now,{strength:4,enemyId:enemy});s.battle.introPending=false;Core.prepareBattle(s,now);return s;
 }
+{
+ const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;Core.chooseSpeed(s,'walk');
+ for(const word of [...Content.areas[0].words,...Content.areas[1].words.slice(0,3)]){
+  Object.assign(s.learning.words[word],{introducedAt:new Date(now-Core.DAY).toISOString(),practiceSuccesses:3,reviewStage:0,dueAt:now+Core.DAY});
+  s.learning.dailyPractice[word]={day:Core.dayKey(now),correct:3};
+ }
+ Core.startBattle(s,now,{strength:6});s.battle.introPending=false;const pending=Core.copy(Core.prepareBattle(s,now));
+ assert.equal(pending.practiceKind,'speed-refill');assert.equal(pending.exposureMs,1500);
+ let ui=boot(s);ui.resume();ui.ready();assert.equal(ui.state().battle.question.exposureMs,1500);
+ ui=boot(ui.state());ui.resume();ui.ready();const q=ui.state().battle.question;
+ assert.equal(q.id,pending.id);assert.deepEqual(q.options,pending.options);assert.equal(q.exposureMs,1500);
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
+ assert.equal(ui.state().battle.enemyHealth,5);assert.equal(ui.state().learning.dailyPractice[q.target].correct,3);
+ assert.equal(Core.practiceExposure(ui.state()),1800);assert.ok(ui.state().campaign.battleRecords.at(-1).correct);
+ console.log('PASS daily cap and one-step faster refill survive UI save/reopen without changing Walk or saved choices');
+}
 for(const mode of ['correct','wrong','shield','free','supported']){
  const s=impactSave();if(mode==='shield')s.rewards.shield=true;if(mode==='free')s.battle.firstMistakeFree=true;
  const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;

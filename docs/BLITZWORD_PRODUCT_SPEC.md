@@ -817,3 +817,13 @@ Practice questions no longer show the same three wrong answers every time.
 - "a" and "i" are shown with three other single letters.
 - A question already saved keeps its options.
 - The reading-check items keep their fixed options until the user decides on them.
+
+## Scheduling, daily cap and refill (point 3) — approved 23 September 2026
+
+The user authorized point 3 on 24 September 2026. A correct recheck of an overdue established review within 24 hours of help schedules the word for 24 hours after that help, without advancing its retention stage.
+
+After three independent correct practice answers on the local date, a current-chapter word is skipped in ordinary selection for the rest of that date. Freed turns go in this order: due reviews; introduced older words not seen today, least recently seen first; up to three distinct words from the next chapter while recent independent accuracy is at least 80%; then current-chapter words at one faster exposure step. Next-chapter words count as introduced, keep the three-word preview limit across sessions and use the same three-correct daily limit during preview practice. Here a chapter is one map field, including when that field crosses a campaign boundary.
+
+The exposure ladder is 2200 / 1800 / 1500 / 1200 / 950 ms. Faster refill is per question, one step from the current selected/calibrated speed; it does not change the saved speed setting. Crawl stays self-paced, Run does not exceed 950 ms through refill, and Ride/Fly keep their existing entitlement locks. An already saved question keeps its exact exposure and options. The next date permits ordinary practice again.
+
+The existing last-eight-independent-answer accuracy measure, two-intervening-answer help spacing, ten-minute chapter minimum and all chapter objectives remain. Previews do not unlock the next chapter. Daily counts persist independently of raw-answer compaction; legacy counts are recovered from retained evidence without changing existing progress or inventing missing archived evidence. See [implementation, tests and reproducible simulation](SCHEDULING_RELEASE.md).

@@ -15,6 +15,7 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 | Chapter scenery | 35 distinct chapter backgrounds; 28 newly generated illustrations and seven retained scenes. Active story/encounter IDs determine scenery; campaign maps retain their established art. | [Scenery mapping and verification](CHAPTER_SCENERY_RELEASE.md) |
 | Chapter stories and labels | 34 illustrated transitions after the guided first encounter; narrated introduction, one child-read sentence, optional Listen and child confirmation. Pause/Home/Rest/reload preserve progress. Labels identify the actual campaign and chapter. | [Chapter stories](CHAPTER_STORIES_RELEASE.md) |
 | Choices and number duels | Rotating wrong answers: each practice word has 5–7 reviewed candidates and each question draws three that pass the letter, length and one-letter checks; the reading check keeps its fixed options. Multiple-choice-only multiplication, 60 seconds, net +1/−1 scoring, PR-based target, compact results and defeat reactions. Three reading wins plus a won duel earn one non-stacking shield. | [Rotating wrong answers](#rotating-wrong-answers-point-2--24-september-2026), [choices and shields](CHOICES_SHIELD_RELEASE.md) |
+| Scheduling (point 3) | Implemented and locally tested: correct rechecks reschedule after recent help; three independent correct answers cap ordinary current-field practice for the day; freed turns use due reviews, older unseen words, up to three next-field previews at ≥80% recent accuracy, then one faster exposure step. Deployment pending. | [Scheduling rules, simulation and verification](SCHEDULING_RELEASE.md) |
 | Combat and presentation | Mage staff/lightning, Pip assists/final blows, answer-locked reactions, cancellation and reduced motion; teaching-image framing, enemy names and Easier-left/Same-right defeat choices. | [Combat](COMBAT_REACTIONS.md), [child feedback](SEPT23_CHILD_FEEDBACK.md) |
 | Layered enemies and health timing | Twenty selected enemy families use transparent painted parts and articulated 2D reactions. Visible health and shield consumption wait for impact; damage and observations remain saved immediately. | [Enemy release and source assets](enemies/LAYERED_ENEMIES_RELEASE.md) |
 | Game controls | Fullscreen button, handlers and notice removed at the user’s request. The existing flexible toolbar closes the gap; sound, pause and Home remain. Home Screen presentation and learner saves are unchanged. | [Product specification](BLITZWORD_PRODUCT_SPEC.md) |
@@ -47,7 +48,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 |---|---|---|
 | 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file. 1a deployed and verified live on 24 September 2026 (build `compact-save-20260924-r1`) |
 | 2 | Rotating distractor pools (option b) | Deployed and verified live on 24 September 2026 (build `rotating-choices-20260924-r1`). Reading-check items unchanged, waiting for the user's decision |
-| 3 | Scheduling bug fix plus daily cap and refill (option a) | Approved, not started |
+| 3 | Scheduling bug fix plus daily cap and refill (option a) | Implemented and locally tested on 24 September 2026; deployment pending. [Release record](SCHEDULING_RELEASE.md) |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Approved, not started |
 | 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
 | 6 | Story sentences a child can read (option c) | Approved, not started; sentence list needs approval before building |
@@ -97,6 +98,12 @@ The user approved these points on 23 September 2026. Build them one at a time in
 - **9. Rewards and pacing:** discuss with the user first. Evidence: a won battle gives about +9 XP against a 3,000 XP first stage. `scripts/calibrate-xp.cjs` line 19 assumes one answer per 24 s, but the measured cycle is about 6–10 s. At 8–10 s, the same model gives first growth on day 7–8 instead of 14 and full growth on day 32–37 instead of 70, at 15 min/day. Ideas on the table: a spellbook of word cards that upgrade with retention; visible steps inside each growth stage; thresholds recalibrated from real answer logs.
 - **10. Number duel:** later. Evidence: age is collected but unused; all 100 facts from 1×1 to 10×10 come up at random with −1 per wrong answer; picking the middle number scores 41%. Ideas: levels by age and results, per-fact tracking, balanced distractors.
 - **Options not chosen:** offline cache (1c); same-position distractor sets (2a, rejected); font or case change on the flash (2c); rolling word pool (3b); test-out (3c); splitting the 8 look-alike pairs that share a chapter; sound-it-out cards (4c); say-it moments (6a); meaning duels (6b).
+
+## Scheduling (point 3) — 24 September 2026
+
+Build `scheduling-refill-20260924-r1` implements the approved scheduling fix, daily cap and ordered refill. It preserves the layered-enemy work from `9767f0c`, learner saves, selected speed, movement locks and chapter objectives. All 162 core tests and 53 UI-flow groups pass on Node 22.23.3. The reproducible 30-day, 15-min/day model reduces turns on already-secured current-field words from 32.2% to 17.7% and increases mean distinct words/day from 33.6 to 48.6. Review-only coverage rises from 35.8 to 74.0 distinct words/day. Full definitions, the broader not-yet-due measure and limits are in [the release record](SCHEDULING_RELEASE.md).
+
+Merge, Pages deployment and live-byte verification are pending. Physical iPad and Safari/WebKit checks remain open. Point 4 has not started and still requires the user's next "go".
 
 ## Rotating wrong answers (point 2) — 24 September 2026
 
