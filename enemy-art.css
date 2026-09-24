@@ -1,0 +1,25 @@
+/* All bones are still until the surrounding enemy receives a feedback class. */
+.enemyRig{display:block;overflow:visible}.enemyRig .bone{transform-origin:0 0;transform-box:view-box}
+.enemyRig .faceHit,.enemyRig .faceProud{display:none}
+.enemyAttack .enemyRig .arm,.enemyAttack .enemyRig .horn,.enemyAttack .enemyRig .hood,.enemyAttack .enemyRig .lid{animation:enemyWindup 1.2s ease-in-out both}
+.enemyAttack .enemyRig .forearm,.enemyAttack .enemyRig .knee{animation:enemyBend 1.2s ease-in-out both}
+.enemyAttack .enemyRig .limb,.enemyAttack .enemyRig .tail,.enemyAttack .enemyRig .antenna{animation:enemyStep 1.2s ease-in-out both}
+.enemyAttack .enemyRig .head,.enemyAttack .enemyRig .shell,.enemyAttack .enemyRig .coil{animation:enemyNod 1.2s ease-in-out both}
+.enemyAttack .enemyRig .wing,.enemyAttack .enemyRig .wingTip{animation:enemyWingbeat 1.2s ease-in-out both}
+.enemyHit .enemyRig .head,.enemyDefeated .enemyRig .head{animation:enemyHeadRecoil 1.2s ease-out both}
+.enemyHit .enemyRig .arm,.enemyDefeated .enemyRig .arm,.enemyHit .enemyRig .wing,.enemyDefeated .enemyRig .wing{animation:enemyLimbRecoil 1.2s ease-out both}
+.enemyHit .enemyRig .faceNeutral,.enemyDefeated .enemyRig .faceNeutral{animation:enemyHideFace 1.2s steps(1) both}
+.enemyHit .enemyRig .faceHit,.enemyDefeated .enemyRig .faceHit{display:block;animation:enemyShowHit 1.2s steps(1) both}
+.escaping .enemyRig .faceNeutral{display:none}.escaping .enemyRig .faceProud{display:block}
+.escaping .enemyRig .limb{animation:enemyRun .32s ease-in-out 6 alternate}.escaping .enemyRig .wing{animation:enemyWingbeat .6s ease-in-out 3}
+@keyframes enemyWindup{0%,100%{transform:rotate(0deg)}22%{transform:rotate(calc(var(--swing)*-1))}44%,55%{transform:rotate(var(--swing))}78%{transform:rotate(calc(var(--swing)*.2))}}
+@keyframes enemyBend{0%,100%{transform:rotate(0deg)}24%{transform:rotate(var(--bend))}48%,58%{transform:rotate(calc(var(--bend)*-1))}}
+@keyframes enemyStep{0%,100%{transform:rotate(0deg)}24%,68%{transform:rotate(calc(var(--bend)*-1))}44%{transform:rotate(var(--bend))}}
+@keyframes enemyNod{0%,100%{transform:rotate(0deg)}22%{transform:rotate(7deg)}47%,56%{transform:rotate(-9deg)}}
+@keyframes enemyWingbeat{0%,100%{transform:rotate(0deg)}25%{transform:rotate(calc(var(--swing)*-1))}48%{transform:rotate(var(--swing))}72%{transform:rotate(calc(var(--swing)*-.5))}}
+@keyframes enemyHeadRecoil{0%,54%,100%{transform:rotate(0deg)}65%,78%{transform:translate(8px,-6px) rotate(13deg)}}
+@keyframes enemyLimbRecoil{0%,54%,100%{transform:rotate(0deg)}65%,78%{transform:rotate(var(--swing))}}
+@keyframes enemyHideFace{0%,100%{opacity:1}55%,90%{opacity:0}}
+@keyframes enemyShowHit{0%,100%{opacity:0}55%,90%{opacity:1}}
+@keyframes enemyRun{from{transform:rotate(calc(var(--bend)*-1))}to{transform:rotate(var(--bend))}}
+@media(prefers-reduced-motion:reduce){.enemyRig .bone{animation:none!important;transform:none!important}.enemyRig .face{animation:none!important}.enemyHit .enemyRig .faceHit,.enemyDefeated .enemyRig .faceHit{display:none}}

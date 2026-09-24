@@ -8,7 +8,8 @@ function boot(saved,options={}){
  const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failWrites===true||typeof failWrites==='function'&&failWrites(k,v))throw new Error('Storage full');memory.set(k,v)},removeItem:k=>memory.delete(k)};
  const schedule=(fn,ms)=>(jobs.set(++uid,{fn,time:now+ms}),uid);
  window.localStorage=storage;
- window.matchMedia=()=>({matches:!!options.reducedMotion});
+ window.BlitzEnemyArt=require(root+'enemy-art');
+ window.matchMedia=()=>({matches:!!options.reducedMotion,addEventListener(){},removeEventListener(){}});
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.selected=option.value===value;}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>true,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
@@ -17,14 +18,61 @@ function boot(saved,options={}){
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
+ function elapse(ms){const target=now+ms;while([...jobs.values()].some(job=>job.time<=target))tick();now=target;}
  function tick(){const next=[...jobs.entries()].sort((a,b)=>a[1].time-b[1].time)[0];assert.ok(next,'no scheduled progress');jobs.delete(next[0]);now=next[1].time;next[1].fn();}
  function until(predicate){for(let i=0;i<25&&!predicate();i++)tick();assert.ok(predicate(),'progress stalled');}
  function ready(){if(state().battle?.introPending)click(get('encounterStart'));until(()=>state().battle?.question?.phase==='choices'||state().assessment.progress?.question?.phase==='choices'||!get('wordReady').hidden);if(!get('wordReady').hidden){click(get('wordReady'));until(()=>state().battle?.question?.phase==='choices');}}
  function resume(){const map=get('campaignMap').classList.contains('active');assert.ok(map||get('route').classList.contains('active'));click(get(map?'mapContinue':'continueAdventure'));}
  function advance(ms,suspended=false){if(suspended){now+=ms;heartbeat();}else for(let elapsed=0;elapsed<ms;elapsed+=1000){now+=Math.min(1000,ms-elapsed);heartbeat();}}
  function visibility(hidden){Object.defineProperty(document,'hidden',{value:hidden,configurable:true});document.dispatchEvent(new window.Event('visibilitychange'));}
- return {state,get,click,tick,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
+ return {state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
 }
+function impactSave(enemy='moss-golem'){
+ const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile={name:'Reader',gender:'boy',heroClass:'Mage',age:7};s.assessment.done=true;
+ for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
+ Core.startBattle(s,now,{strength:4,enemyId:enemy});s.battle.introPending=false;Core.prepareBattle(s,now);return s;
+}
+for(const mode of ['correct','wrong','shield','free','supported']){
+ const s=impactSave();if(mode==='shield')s.rewards.shield=true;if(mode==='free')s.battle.firstMistakeFree=true;
+ const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
+ if(mode==='supported')ui.click(ui.get('battleUnsure'));else ui.click([...ui.get('battleAnswers').children].find(b=>mode==='correct'?b.textContent===q.target:b.textContent!==q.target));
+ assert.equal(ui.get('enemyCount').textContent,'4 / 4','enemy display before narration');
+ assert.equal(ui.get('heroHearts').querySelectorAll('.heart:not(.off)').length,3,'hero display before narration');
+ assert.equal(ui.state().battle.enemyHealth,mode==='correct'?3:4,'saved damage is immediate');
+ assert.equal(ui.state().battle.heroHealth,mode==='wrong'?2:3);
+ if(mode==='shield')assert.ok(ui.get('heroHearts').querySelector('.heldShield'),'shield remains until impact');
+ ui.finishSpeech();
+ if(mode==='shield'){
+  assert.equal(ui.get('combatEffects').className,'combatEffects','shield prefix must finish before correction and impact');
+  assert.ok(ui.get('heroHearts').querySelector('.heldShield'),'shield remains during correction narration');
+  ui.finishSpeech();
+ }
+ ui.elapse(500);
+ assert.equal(ui.get('enemyCount').textContent,'4 / 4');assert.equal(ui.get('heroHearts').querySelectorAll('.heart:not(.off)').length,3);
+ ui.elapse(200);
+ assert.equal(ui.get('enemyCount').textContent,(mode==='correct'?3:4)+' / 4');
+ assert.equal(ui.get('heroHearts').querySelectorAll('.heart:not(.off)').length,mode==='wrong'?2:3);
+ if(mode==='shield')assert.equal(ui.get('heroHearts').querySelector('.heldShield'),null);
+ if(['free','supported'].includes(mode))assert.equal(ui.get('combatEffects').className,'combatEffects');
+ assert.equal(ui.state().campaign.battleRecords.length,1);
+}
+console.log('PASS health and shield displays wait through narration and wind-up, then reveal one committed impact; supported/free answers stay safe');
+for(const action of ['pauseBtn','homeBtn','reload','reduced']){
+ const ui=boot(impactSave(),{heldNarration:true,reducedMotion:action==='reduced'});ui.resume();ui.ready();
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===ui.state().battle.question.target));
+ if(action==='reload'){const reloaded=boot(ui.state(),{heldNarration:true});reloaded.resume();assert.equal(reloaded.get('enemyCount').textContent,'3 / 4');assert.equal(reloaded.state().campaign.battleRecords.length,1);continue;}
+ ui.finishSpeech();
+ if(action==='reduced'){assert.equal(ui.get('enemyCount').textContent,'3 / 4');continue;}
+ ui.elapse(200);ui.click(ui.get(action));assert.equal(ui.get('enemyCount').textContent,'3 / 4');ui.elapse(1000);assert.equal(ui.get('combatEffects').className,'combatEffects');assert.equal(ui.state().battle.enemyHealth,3);
+}
+console.log('PASS cancelled impacts settle committed health on Pause/Home/reload; reduced motion reveals health without waiting for travel');
+for(const enemy of Content.enemies){
+ const ui=boot(impactSave(enemy.id),{heldNarration:true});ui.resume();ui.ready();
+ assert.equal(ui.get('enemyFace').querySelector('.enemyRig').getAttribute('data-family'),enemy.id);
+ assert.ok(ui.get('enemyFace').querySelectorAll('.bone').length>=3);
+ assert.equal(ui.get('combatEffects').className,'combatEffects');
+}
+console.log('PASS all 20 painted enemies render as articulated, still characters during word selection');
 // A scored hit waits for narration, adds no extra damage, and cancels on Home/pause.
 for(const gender of ['boy','girl'])for(const heroClass of ['Mage','Knight','Archer']){
  const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile={name:'Reader',gender,heroClass,age:7};s.assessment.done=true;

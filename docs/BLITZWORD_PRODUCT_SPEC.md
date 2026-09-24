@@ -797,6 +797,12 @@ Each earned growth milestone gets a warm glow-and-reveal scene inspired by creat
 
 Pause, Home, Rest, backgrounding and reload preserve the current phase. Reduced motion omits transformation movement; Skip advances the animation to reading. Existing earned forms, XP, learning records and movement/entitlement locks are preserved. Evolution, reading confirmation and replay award no XP, mastery or active-play time. Watch again in the growth panel replays an earned form at a safe boundary. See [evolution scenes](EVOLUTION_RELEASE.md) for assets, recordings and verification.
 
+## Layered enemies and health timing — 24 September 2026
+
+Twenty user-selected base enemy families now use painted parts with articulated 2D attack, hit, defeat and celebration reactions. Enemies stay still during reading and answer selection. Damage remains committed immediately; visible health and shield consumption wait until the shared attack impact timing. Existing strength tiers, learner saves, narration fallback and scoring remain compatible. See [the layered enemy release](enemies/LAYERED_ENEMIES_RELEASE.md) for the selected identities, assets and limits.
+
+The suggested creature-specific HP ranges, shared-health group encounters and distinct baby/young/adult forms remain proposals; this release keeps the existing tier-based health rules and three player hearts.
+
 ## Rotating wrong answers (point 2) — approved 23 September 2026
 
 Practice questions no longer show the same three wrong answers every time.
