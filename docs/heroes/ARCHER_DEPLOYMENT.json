@@ -1,0 +1,89 @@
+{
+  "verified_at": "2026-09-25T01:47:55.221382+00:00",
+  "source_merge": "c6cc32f4a5e9da943408ae80b4ab1cd298609925",
+  "pull_request": "https://github.com/Ikarus-eth/Blitzword_app/pull/86",
+  "preview_url": "https://ikarus-eth.github.io/Blitzword_app/assets/heroes/prototype/archer-review.html",
+  "files": [
+    {
+      "path": "assets/heroes/prototype/archer-review.html",
+      "http_status": 200,
+      "bytes": 2970,
+      "sha256": "00fa9f5c12873cbd2a3a88bf5ed839c858ad35c33b99919f47e5b545d186f1d4",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/heroes/prototype/archer-review.css",
+      "http_status": 200,
+      "bytes": 4379,
+      "sha256": "4f94e2c641b79ca829e2763b0b5f088df654dbd059a33e5232bf96bf1b86606a",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/heroes/prototype/archer-review.js",
+      "http_status": 200,
+      "bytes": 2954,
+      "sha256": "1aa50179e4c262a470a1e9d85ad53cc30f344e7ae225e3452254d22818e705ab",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/heroes/prototype/archer-rig.js",
+      "http_status": 200,
+      "bytes": 9498,
+      "sha256": "f4ff2448c40b50cc0dc23e25bfef5440380d1eb4ffdc2b4961b009f1b465d24a",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/heroes/prototype/archer-boy-parts.png",
+      "http_status": 200,
+      "bytes": 1363877,
+      "sha256": "8239b1c24bf68bc50892ae3aa688cafa428607fba0f6db92b7431ac5332e25c7",
+      "matches_tested_source": true
+    },
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "bytes": 35289,
+      "sha256": "0191dfdd9b4516b3de44a633aa9e72dcfa3b3021b6d46f89de25e6a4873d0e25",
+      "matches_tested_source": true
+    },
+    {
+      "path": "app.js",
+      "http_status": 200,
+      "bytes": 96445,
+      "sha256": "d9a273481606c8f5f5c657b415ac34810dae49a26336a9eb558734b1d17665a1",
+      "matches_tested_source": true
+    },
+    {
+      "path": "styles.css",
+      "http_status": 200,
+      "bytes": 109888,
+      "sha256": "99ca62f3b52c360cfd3d6181836cdeec7866dd6304ea8be84a66dbd14ff65e29",
+      "matches_tested_source": true
+    },
+    {
+      "path": "enemy-art.js",
+      "http_status": 200,
+      "bytes": 6715,
+      "sha256": "d4a11bc668c940f9e756200dbb620712329f89abe61e0b287474d5ea89b32fba",
+      "matches_tested_source": true
+    },
+    {
+      "path": "enemy-art-data.js",
+      "http_status": 200,
+      "bytes": 9034,
+      "sha256": "6603e82866c01affbe83bd4b09a90d5d8780a9c856c879b79edb42dc7c26e711",
+      "matches_tested_source": true
+    },
+    {
+      "path": "enemy-art.css",
+      "http_status": 200,
+      "bytes": 3015,
+      "sha256": "e4f5fdf3b7efae1f1c48e7149c4d5e2209bd2be7bede90cc3b089e6ba94b9d69",
+      "matches_tested_source": true
+    }
+  ],
+  "prototype_marker": "archer-study-20260925-r1",
+  "game_build_marker": "fullscreen-map-20260925-r1",
+  "pages_workflow_run": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36083446519",
+  "pages_workflow_result": "success"
+}
