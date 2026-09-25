@@ -4,7 +4,7 @@ This page tracks current implementation and remaining work. Dated release notes 
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).
 
-Documentation reconciled against main `6e7bf84adfa169f0f858c023b5225490acba1967` and the recorded releases. Latest verified runtime build: `fullscreen-map-20260925-r1` ([live verification](FULLSCREEN_MAP_RELEASE.md)); the narration completion draft is not merged or deployed. The earlier cleanup changed documentation only. It closes stale assessment/story/gate approval notices, reconciles current growth/speed rules and removes the obsolete lowercase README that conflicted on case-insensitive filesystems. Historical release evidence is retained.
+Documentation reconciled against main `6e7bf84adfa169f0f858c023b5225490acba1967` and the recorded releases. Latest verified runtime build: `map-declutter-20260925-r1` ([live verification](MAP_CONTROLS_RELEASE.md#deployment)); the narration completion draft is not merged or deployed. The earlier cleanup changed documentation only. It closes stale assessment/story/gate approval notices, reconciles current growth/speed rules and removes the obsolete lowercase README that conflicted on case-insensitive filesystems. Historical release evidence is retained.
 
 ## Implemented
 
@@ -12,7 +12,7 @@ Archer movement study — 25 September: a standalone prototype demonstrates a la
 
 | Area | Current behavior | Details |
 |---|---|---|
-| Campaign Home layout | Edge-to-edge campaign art remains. Follow-up implemented and locally verified: tap the current chapter's gold number/full name to continue; no separate Home/Play panel or empty daily quota. Lower-left parent gear with worded subtraction, speed-icon dropdown and tappable hero portrait reduce clutter. Pending deployment verification. | [Map controls](MAP_CONTROLS_RELEASE.md), [initial fullscreen release](FULLSCREEN_MAP_RELEASE.md) |
+| Campaign Home layout | Edge-to-edge campaign art remains. Deployed and verified: tap the current chapter's gold number/full name to continue; no separate Home/Play panel or empty daily quota. Lower-left parent gear with worded subtraction, speed-icon dropdown and tappable hero portrait reduce clutter. | [Map controls](MAP_CONTROLS_RELEASE.md), [initial fullscreen release](FULLSCREEN_MAP_RELEASE.md) |
 | Curriculum | 200 distinct workbook targets; seven campaigns with five chapters each; continued review after completion. | [Core 200](CORE200_RELEASE.md) |
 | Chapter pacing | A battle is one enemy; a chapter is one map field; a campaign is one five-chapter map. New chapters require at least ten active minutes, three reading victories, a completed number duel and learning objectives. Extra battles fill the remaining time; a living battle cannot auto-complete. | [XP and pacing](SUCCESS_XP_RELEASE.md) |
 | Growth and naming | XP-only evolution at 15,000 / 45,000 / 70,000 XP, with ten visible steps per stage. First growth unlocks naming. Whole XP rewards retain accuracy, speed and word/retention bonuses. Ten active minutes earns 20 XP, boosts correct answers and adds up to 50 returning XP from recent practice days. Existing XP and forms stay earned. | [Whole XP, pacing and verification](XP_PACING_RELEASE.md) |

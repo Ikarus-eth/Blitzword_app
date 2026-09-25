@@ -24,4 +24,6 @@ Only `index.html`, `app.js` and the campaign-scoped portion of `styles.css` chan
 
 ## Deployment
 
-Implemented and locally tested; deployment verification is pending. The previous verified playable build is `fullscreen-map-20260925-r1`. After release, reload the app and check the gold chapter label, speed dropdown, hero portrait and lower-left gear on the iPad. No save reset is needed.
+Deployed and verified. [PR #88](https://github.com/Ikarus-eth/Blitzword_app/pull/88) merged as `604500f6c73642deefe6c442e4aac515d95960c6`. [Pages run 36084350877](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36084350877) succeeded. At 02:01 UTC on 25 September, main was still that merge and the live build marker was `map-declutter-20260925-r1`. All three changed runtime files, both preserved enemy scripts and the separate archer review page returned HTTP 200 and matched the merged source byte for byte. [Deployment record](MAP_CONTROLS_DEPLOYMENT.json).
+
+Reload the app and check the gold chapter label, speed dropdown, hero portrait and lower-left gear on the iPad. Physical iPad/Safari remains untested. Previous main `1980f97d656e551f231a6d5141bc1d3f5b40de3b` is the rollback checkpoint; no save reset is needed.

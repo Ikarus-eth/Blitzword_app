@@ -1,0 +1,54 @@
+{
+  "verified_at_utc": "2026-09-25T02:01:02.075825+00:00",
+  "build": "map-declutter-20260925-r1",
+  "merge_sha": "604500f6c73642deefe6c442e4aac515d95960c6",
+  "pull_request": "https://github.com/Ikarus-eth/Blitzword_app/pull/88",
+  "pages_run": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36084350877",
+  "pages_conclusion": "success",
+  "main_at_verification": "604500f6c73642deefe6c442e4aac515d95960c6",
+  "live_url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 35315,
+      "sha256": "a181c0a7b4fc7d35047b409ec08a67561bc8e12fb63a3629aa382785f5c5ed89",
+      "source_matches": true
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "bytes": 97885,
+      "sha256": "ebd9e161ae2d66f5799bb3781d4212f490148dab52e3b24122ab45ce97fb9a20",
+      "source_matches": true
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "bytes": 112779,
+      "sha256": "ca160de47c58cead2a962150711590df6a7463bde67275ff88ca93c2ecf31560",
+      "source_matches": true
+    },
+    {
+      "file": "enemy-art.js",
+      "status": 200,
+      "bytes": 6715,
+      "sha256": "d4a11bc668c940f9e756200dbb620712329f89abe61e0b287474d5ea89b32fba",
+      "source_matches": true
+    },
+    {
+      "file": "enemy-art-data.js",
+      "status": 200,
+      "bytes": 9034,
+      "sha256": "6603e82866c01affbe83bd4b09a90d5d8780a9c856c879b79edb42dc7c26e711",
+      "source_matches": true
+    },
+    {
+      "file": "assets/heroes/prototype/archer-review.html",
+      "status": 200,
+      "bytes": 2970,
+      "sha256": "00fa9f5c12873cbd2a3a88bf5ed839c858ad35c33b99919f47e5b545d186f1d4",
+      "source_matches": true
+    }
+  ]
+}
