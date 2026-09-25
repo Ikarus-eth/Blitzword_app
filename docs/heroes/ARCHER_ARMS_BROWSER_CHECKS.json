@@ -1,0 +1,42 @@
+{
+  "browser": "154.0.8037.57",
+  "layouts": [
+    {
+      "width": 1180,
+      "height": 820,
+      "overflow": false,
+      "svg": true,
+      "storageCalls": []
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "overflow": false,
+      "svg": true,
+      "storageCalls": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "svg": true,
+      "storageCalls": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false,
+      "svg": true,
+      "storageCalls": []
+    }
+  ],
+  "errors": [],
+  "requestsFailed": [],
+  "checks": [
+    "Play, pause, speed change, resume and exact ready-pose recovery",
+    "All seven pose controls, manual scrubbing, joint overlay and close-up",
+    "Reduced motion keeps the archer and enemy still and suppresses impact",
+    "Backgrounding cancels playback",
+    "No page errors, failed requests, or browser-storage access"
+  ]
+}

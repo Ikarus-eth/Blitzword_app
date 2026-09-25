@@ -1,6 +1,6 @@
 # Archer movement study — 25 September 2026
 
-Status: implemented, locally tested, deployed as a standalone review page and verified live. This is not a replacement for the playable game's heroes. Source baseline: main `d516e28aa15115551eca600bb0a1a90b1605811f`.
+Historical r1 record: implemented, locally tested, deployed and verified live. The user subsequently rejected the arm movement; see the [r2 correction](ARCHER_ARM_CORRECTION.md) for the current implementation and verification. This is not a replacement for the playable game's heroes. Source baseline: main `d516e28aa15115551eca600bb0a1a90b1605811f`.
 
 ## Scope
 
