@@ -1,0 +1,43 @@
+{
+  "verifiedAt": "2026-09-25T00:31:26.547298+00:00",
+  "runtimeMerge": "addfc3745182eac0900a5c12cdf7a20ded201b18",
+  "pullRequest": "https://github.com/Ikarus-eth/Blitzword_app/pull/84",
+  "workflow": {
+    "id": 36077841263,
+    "url": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36077841263",
+    "conclusion": "success"
+  },
+  "liveBuild": "fullscreen-map-20260925-r1",
+  "files": [
+    {
+      "file": "index.html",
+      "http": 200,
+      "sha256": "0191dfdd9b4516b3de44a633aa9e72dcfa3b3021b6d46f89de25e6a4873d0e25",
+      "matchesSource": true
+    },
+    {
+      "file": "app.js",
+      "http": 200,
+      "sha256": "d9a273481606c8f5f5c657b415ac34810dae49a26336a9eb558734b1d17665a1",
+      "matchesSource": true
+    },
+    {
+      "file": "styles.css",
+      "http": 200,
+      "sha256": "99ca62f3b52c360cfd3d6181836cdeec7866dd6304ea8be84a66dbd14ff65e29",
+      "matchesSource": true
+    },
+    {
+      "file": "enemy-art.js",
+      "http": 200,
+      "sha256": "d4a11bc668c940f9e756200dbb620712329f89abe61e0b287474d5ea89b32fba",
+      "matchesSource": true
+    },
+    {
+      "file": "enemy-art-data.js",
+      "http": 200,
+      "sha256": "6603e82866c01affbe83bd4b09a90d5d8780a9c856c879b79edb42dc7c26e711",
+      "matchesSource": true
+    }
+  ]
+}

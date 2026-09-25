@@ -17,4 +17,8 @@ Implementation is scoped to the campaign map at the end of `styles.css`. `show()
 - Tablet and phone renders were visually inspected, including all seven campaign artworks at landscape tablet size.
 - Physical iPad/Safari playback and device safe-area behavior remain unverified on hardware.
 
-Deployment is through the existing `main` → GitHub Pages workflow after merge. Live verification must compare the build marker and changed runtime files against the merged source before calling the change deployed.
+## Deployment
+
+Deployed and verified. [PR #84](https://github.com/Ikarus-eth/Blitzword_app/pull/84) merged as `addfc3745182eac0900a5c12cdf7a20ded201b18`. [Pages run 36077841263](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36077841263) completed successfully. At 00:31 UTC on 25 September 2026, the live build marker was `fullscreen-map-20260925-r1`; `index.html`, `app.js`, `styles.css`, `enemy-art.js` and `enemy-art-data.js` returned HTTP 200 and matched the merged source byte for byte. [Verification record](FULLSCREEN_MAP_DEPLOYMENT.json).
+
+Reload the iPad app to load the changed asset versions. Check the edge-to-edge artwork, readable floating controls and Play/Pip panels in landscape and portrait. Physical iPad/Safari remains untested. Previous main `f2bd9115cc2fb0264e635696304190e51daf7668` is the rollback checkpoint; no learner save reset is required.
