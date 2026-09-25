@@ -2,7 +2,7 @@
 
 An iPad-first English reading game. Play the current web build at https://ikarus-eth.github.io/Blitzword_app/.
 
-See [current implementation and outstanding work](docs/CURRENT_STATUS.md) first. Older release notes describe their own milestones, not the current backlog. The latest verified runtime build is `assessment-fair-20260924-r1`; [the release record](docs/BUGS_ASSESSMENT_DEPLOYMENT.json) covers the reload/Pip fixes and fair reading-check choices.
+See [current implementation and outstanding work](docs/CURRENT_STATUS.md) first. Older release notes describe their own milestones, not the current backlog. The latest verified runtime build is `thornling-tail-20260925-r1`; see [the Thornling release checkpoint](docs/CURRENT_STATUS.md#thornling-tail-crop--25-september-2026). The earlier [verification record](docs/BUGS_ASSESSMENT_DEPLOYMENT.json) covers the reload/Pip fixes and fair reading-check choices.
 
 For ChatGPT project setup, use the [project maintenance guide](docs/PROJECT_DESCRIPTION_UPDATE.md). No standing project attachments are required: documentation, approved production assets and the [original curriculum workbook](curriculum/README.md) are maintained in GitHub. Old setup, battle-scroll and teaching-card mockups are retired.
 

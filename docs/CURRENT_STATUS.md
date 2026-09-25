@@ -4,7 +4,7 @@ This page tracks current implementation and remaining work. Dated release notes 
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).
 
-Documentation reconciled against main `7aff554c50d885a835b9efd1b9d93b0061193790` and the recorded releases. Latest verified runtime build: `assessment-fair-20260924-r1`; the narration completion draft is not merged or deployed. This cleanup changes documentation only. It closes stale assessment/story/gate approval notices, reconciles current growth/speed rules and removes the obsolete lowercase README that conflicted on case-insensitive filesystems. Historical release evidence is retained.
+Documentation reconciled against main `6e7bf84adfa169f0f858c023b5225490acba1967` and the recorded releases. Latest verified runtime build: `thornling-tail-20260925-r1`; the narration completion draft is not merged or deployed. This cleanup changes documentation only. It closes stale assessment/story/gate approval notices, reconciles current growth/speed rules and removes the obsolete lowercase README that conflicted on case-insensitive filesystems. Historical release evidence is retained.
 
 ## Implemented
 
@@ -33,6 +33,8 @@ Documentation reconciled against main `7aff554c50d885a835b9efd1b9d93b0061193790`
 Build `thornling-tail-20260925-r1` removes the detached green strip behind the Thornling's tail. The tail's atlas viewport included part of the neighbouring mane; a source-coordinate clip now excludes that piece without changing the original PNG, viewport, scale, joints or learner saves. The metadata inspection script preserves this correction when rerun. Runtime and enemy-studio script URLs refresh the crop on reload.
 
 Local verification: all 234 core tests and 83 UI-flow groups passed. Isolated Chromium checks passed neutral, attack, hit, defeat and celebration at tablet and phone sizes, five simultaneous copies with unique clips, and reduced motion, with no page errors. Before/after screenshots show the detached strip removed; the substantial pixel differences are confined to it. Physical iPad/Safari is untested.
+
+Deployed in [PR #82](https://github.com/Ikarus-eth/Blitzword_app/pull/82), merge `6e7bf84adfa169f0f858c023b5225490acba1967`. [Pages #91](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36076816957) succeeded. At 00:26 UTC on 25 September, the live build marker and cache-busted `index.html`, `enemy-art-data.js`, `enemy-art.js` and `tests/enemy-review.html` matched that merge byte for byte. Main was still that commit.
 
 ## Reload and Pip crop fixes — 24 September 2026
 
