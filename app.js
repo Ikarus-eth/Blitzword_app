@@ -47,13 +47,16 @@ function paintHero(element,index) {
   else {element.style.backgroundSize='cover';element.style.backgroundPosition='center';}
 }
 function heroIndex(){return (state.profile.gender==='boy'?0:3)+classes.indexOf(state.profile.heroClass);}
-function paintEnemy(element,enemyId,health=3){
+function paintEnemy(element,enemyId,health=3,remaining=health){
   const enemy=Content.enemyAt(enemyId);
-  const rig=window.BlitzEnemyArt?.render(enemy.family||enemy.id);
+  const count=enemy.count||1,stage=enemy.stage||'adult';
+  const rig=window.BlitzEnemyArt?.render(enemy.family||enemy.id,{stage});
+  element.classList.toggle('enemyGroup',count>1);element.dataset.count=String(count);
   element.dataset.enemy=enemy.id;element.style.setProperty('--enemy-scale',Core.enemyScale(health));
   element.style.setProperty('--enemy-aspect',rig?1:enemy.crop?enemy.crop[2]/enemy.crop[3]:spriteCrops[enemy.sprite??7].w/spriteCrops[enemy.sprite??7].h);
   element.setAttribute('role','img');element.setAttribute('aria-label',enemy.name);
-  if(rig){element.style.backgroundImage='none';element.innerHTML=rig;}
+  if(rig){element.style.backgroundImage='none';element.innerHTML=count===1?rig:
+    Content.enemyMembers(enemyId,health,remaining).map((member,i)=>`<span class="enemyMember${member.health?'':' retired'}" data-member="${i}" data-health="${member.health}"><span class="memberMotion">${i?window.BlitzEnemyArt.render(enemy.family,{stage}):rig}</span></span>`).join('');}
   else if(enemy.sprite!==undefined)paintSprite(element,enemy.sprite);
   else {element.style.backgroundImage='none';element.innerHTML=`<svg viewBox="${enemy.crop.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><image href="assets/forest-opponents.png" width="1536" height="1024"/></svg>`;}
 }
@@ -156,6 +159,8 @@ function clearCombat(){
   $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();
   $('#battleHeroImg').classList.remove('attack','mageCast','heroHit','heroDefeated');
   $('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
+  for(const el of $$('#enemyFace .memberMotion'))el.classList.remove('enemyHit','enemyAttack','enemyDefeated');
+  for(const el of $$('#enemyFace .retiring'))el.classList.remove('retiring');
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
 }
 function cancelWork(){clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
@@ -610,7 +615,8 @@ function combatGeometry(effects){
   if(!box?.width||!box?.height)return null;
   const point=(element,x,y)=>{const r=element.getBoundingClientRect();return {x:r.left-box.left+r.width*x,y:r.top-box.top+r.height*y};};
   const hero=$('#battleHeroImg'),enemy=$('#enemyFace'),pip=$('#battle .battlePip');
-  const end=point(enemy,.5,.45),start=point(hero,.65,.45),flame=point(pip,.86,.35);
+  const target=enemy.querySelector('.enemyMember:not(.retired) .memberMotion')||enemy;
+  const end=point(target,.5,.45),start=point(hero,.65,.45),flame=point(pip,.86,.35);
   const rig=mageRig[heroIndex()];
   if(rig){
     const r=hero.getBoundingClientRect(),crop=spriteCrops[heroIndex()],scale=Math.min(r.width/crop.w,r.height/crop.h),angle=32*Math.PI/180;
@@ -629,7 +635,7 @@ function combatReaction(correct){
   if(paused||blocked||state.activity!=='battle'||!q?.answeredAt||q.correct!==correct||q.supportReasons.length)return;
   const token=epoch,questionId=q.id;
   clearTimeout(impactTimer);
-  const revealHealth=()=>{if(paused||blocked||epoch!==token||state.activity!=='battle'||state.battle?.question?.id!==questionId)return;pendingHealth=null;impactTimer=null;renderHealth();};
+  const revealHealth=()=>{if(paused||blocked||epoch!==token||state.activity!=='battle'||state.battle?.question?.id!==questionId)return;pendingHealth=null;impactTimer=null;renderHealth(true);};
   if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)revealHealth();
   else impactTimer=setTimeout(revealHealth,IMPACT_MS);
   sound.cue(correct?state.profile.heroClass.toLowerCase():q.shieldUsed?'shield':'hit',correct?.20:.12);
@@ -641,8 +647,9 @@ function combatReaction(correct){
     const points=[0,.18,.31,.43,.58,.72,.87,1].map((t,i)=>`${start.x+dx*t},${start.y+dy*t+(i===0||i===7?0:(i%2?12:-12))}`).join(' ');
     effects.insertAdjacentHTML('beforeend',`<svg class="castBeam" viewBox="0 0 ${box.width} ${box.height}" preserveAspectRatio="none"><polyline class="lightningGlow" points="${points}"/><polyline class="lightningCore" points="${points}"/><circle class="staffSpark" cx="${start.x}" cy="${start.y}" r="10"/></svg>`);
   }
-  if(correct){$('#battleHeroImg').classList.add(state.profile.heroClass==='Mage'?'mageCast':'attack');$('#enemyFace').classList.add(state.battle.enemyHealth<=0?'enemyDefeated':'enemyHit');}
-  else{$('#enemyFace').classList.add('enemyAttack');if(state.battle.question.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}else $('#battleHeroImg').classList.add(state.battle.heroHealth<=0?'heroDefeated':'heroHit');}
+  const enemyTarget=$('#enemyFace').querySelector('.enemyMember:not(.retired) .memberMotion')||$('#enemyFace');
+  if(correct){$('#battleHeroImg').classList.add(state.profile.heroClass==='Mage'?'mageCast':'attack');enemyTarget.classList.add(state.battle.enemyHealth<=0?'enemyDefeated':'enemyHit');}
+  else{enemyTarget.classList.add('enemyAttack');if(state.battle.question.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}else $('#battleHeroImg').classList.add(state.battle.heroHealth<=0?'heroDefeated':'heroHit');}
   const pip=$('#battle .battlePip');
   if(correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip',.45);}
   else if(!correct)pip.classList.add('pipDodge');
@@ -680,7 +687,7 @@ function correction(animate=false) {
 }
 
 function advanceBattle(){account();cancelWork();Core.prepareBattle(state,Date.now());if(save())renderActivity();}
-function renderHealth() {
+function renderHealth(animate=false) {
   const b=state.battle;if(!b)return;
   const shown=pendingHealth&&pendingHealth.questionId===b.question?.id?pendingHealth:b;
   const shieldHeld=shown===pendingHealth?shown.shield:state.rewards.shield;
@@ -691,10 +698,18 @@ function renderHealth() {
   $('#enemyFill').style.width=(100*shown.enemyHealth/b.maxHealth)+'%';
   $('#enemyHealth').setAttribute('aria-label',`Enemy health: ${shown.enemyHealth} of ${b.maxHealth}`);
   $('#enemyCount').textContent=shown.enemyHealth+' / '+b.maxHealth;
+  const members=Content.enemyMembers(b.enemyId,b.maxHealth,shown.enemyHealth);
+  for(const member of members){
+    const el=$('#enemyFace').querySelector(`[data-member="${member.index}"]`);if(!el)continue;
+    const retreat=animate&&Number(el.dataset.health)>0&&member.health===0;
+    el.dataset.health=String(member.health);el.classList.toggle('retired',member.health===0);
+    if(retreat&&!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)el.classList.add('retiring');
+  }
+  $('#enemyFace').setAttribute('aria-label',Content.enemyAt(b.enemyId).name+(members.length>1?`, ${members.filter(m=>m.health>0).length} remaining`:''));
 }
 function renderHud() {
-  const b=state.battle;renderHealth();
-  paintEnemy($('#enemyFace'),b.enemyId,b.maxHealth);
+  const b=state.battle;
+  paintEnemy($('#enemyFace'),b.enemyId,b.maxHealth,pendingHealth?.enemyHealth??b.enemyHealth);renderHealth();
   $('#battleChapter').hidden=b.demo;if(!b.demo)renderChapter($('#battleChapter'),true);
 }
 function renderEncounter(){
@@ -706,7 +721,8 @@ function renderEncounter(){
   $('#encounterTitle').textContent=Content.areas.find(area=>area.id===b.areaId)?.name||'Lantern Trail';renderChapter($('#encounterChapter'));
   paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
   const name=Content.enemyAt(enemy.family).name;
-  speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+(/^Acorn/.test(name)?'An ':'A ')+name+' is on the path. Ready to battle?');save();
+  const intro=(enemy.count||1)>1?enemy.name+' are on the path. Ready to battle?':(/^Acorn/.test(name)?'An ':'A ')+name+' is on the path. Ready to battle?';
+  speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+intro);save();
 }
 function renderChapterStory(){
   const scene=state.story.scene;if(!scene){state.activity='battle';renderActivity();return;}
@@ -835,9 +851,9 @@ function renderResult() {
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');
   const enemies=Core.enemyChoices(state,result.strength);
   const choices=[{hp:result.strength,label:'Same',symbol:'=',enemy:enemies[0]}];
-  if(result.victory)choices.push({hp:result.strength+1,label:'Stronger',symbol:'↑',enemy:Core.enemyChoices(state,result.strength+1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength+1)[0]});
+  if(result.victory&&result.strength<32)choices.push({hp:result.strength+1,label:'Stronger',symbol:'↑',enemy:Core.enemyChoices(state,result.strength+1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength+1)[0]});
   else if(result.strength>3)choices.unshift({hp:result.strength-1,label:'Easier',symbol:'↓',enemy:Core.enemyChoices(state,result.strength-1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength-1)[0]});
-  else choices.push({hp:3,label:'Same',symbol:'=',enemy:enemies[1]});
+  else if(!result.victory)choices.push({hp:3,label:'Same',symbol:'=',enemy:enemies[1]||enemies[0]});
   const box=$('#opponents');box.replaceChildren();
   choices.forEach(choice=>{
     const button=document.createElement('button');button.className='opponentCard';button.setAttribute('aria-label',`${choice.label}, ${choice.hp} hearts`);

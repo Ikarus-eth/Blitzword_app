@@ -41,7 +41,7 @@ The [user-supplied spiral crop](references/golden-spiral-20260924.png) is the ap
 in `assets/enemies/layered/` preserve these identities for articulated 2D combat.
 See [the enemy release](enemies/LAYERED_ENEMIES_RELEASE.md) for source prompts,
 runtime rigs, review controls and the distinction between base forms and proposed
-growth/group variants. Health remains governed by the existing game rules.
+growth/group variants. The 25 September group release applies the approved HP ranges and renders repeated rigs for groups. Age forms derive from these same painted parts with different anatomical proportions and staged foliage; see `enemies/GROUP_ENCOUNTERS_RELEASE.md`.
 
 On 25 September 2026, the user requested removal of a detached green fragment
 behind the Thornling's tail. It came from a neighbouring atlas piece. A runtime

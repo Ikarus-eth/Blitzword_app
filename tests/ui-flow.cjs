@@ -963,3 +963,29 @@ for(const [random,question,answer] of [
  ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=' '+answer+' ';ui.click(ui.get('parentUnlock'));assert.equal(ui.state().screen,'parentDashboard');assert.equal(ui.get('parentGate').hidden,true);
 }
 console.log('PASS written three-digit subtraction gate: boundaries, example, invalid input, cancel and correct answer');
+for(const [enemyId,total] of [['acorn-imp--2',14],['moon-moth--3',15],['bark-beetle--3',25]]){
+ const s=impactSave(),count=Content.enemyAt(enemyId).count;
+ Object.assign(s.battle,{enemyId,maxHealth:total,enemyHealth:total-Content.enemyMembers(enemyId,total)[0].maxHealth+1});
+ const ui=boot(s,{heldNarration:true,geometry:true});ui.resume();ui.ready();const q=ui.state().battle.question;
+ const alive=()=>ui.get('enemyFace').querySelectorAll('.enemyMember:not(.retired)').length;
+ assert.equal(alive(),count);assert.equal(ui.get('enemyFace').querySelectorAll('.enemyRig').length,count);
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
+ assert.equal(alive(),count,'hold all members through narration');ui.finishSpeech();
+ assert.equal(ui.get('enemyFace').querySelectorAll('.memberMotion.enemyHit').length,1);
+ ui.elapse(659);assert.equal(alive(),count);ui.elapse(1);assert.equal(alive(),count-1);
+ assert.equal(ui.get('enemyFace').querySelectorAll('.retiring').length,1);
+ const saved=ui.state();ui.click(ui.get('pauseBtn'));assert.equal(alive(),count-1);assert.equal(ui.get('enemyFace').querySelectorAll('.retiring').length,0);
+ const reopened=boot(saved,{heldNarration:true});reopened.resume();assert.equal(reopened.get('enemyFace').querySelectorAll('.enemyMember:not(.retired)').length,count-1);
+}
+console.log('PASS groups of 2/3/5: one target, impact retirement, pause and reload retain defeated members');
+for(const reducedMotion of [false,true]){
+ const s=impactSave();Object.assign(s.battle,{enemyId:'bark-beetle--3',maxHealth:25,enemyHealth:1});
+ const ui=boot(s,{heldNarration:true,reducedMotion});ui.resume();ui.ready();const q=ui.state().battle.question;
+ assert.equal(ui.get('enemyFace').querySelectorAll('.enemyMember:not(.retired)').length,1);
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));ui.finishSpeech();
+ if(!reducedMotion)ui.elapse(660);
+ assert.equal(ui.get('enemyFace').querySelectorAll('.enemyMember:not(.retired)').length,0);
+ assert.equal(ui.get('enemyCount').textContent,'0 / 25');assert.equal(ui.state().battle.enemyHealth,0);
+ ui.elapse(reducedMotion?1310:650);assert.ok(ui.state().result?.victory||ui.state().activity==='mathIntro');
+}
+console.log('PASS last group member resolves exactly once, including reduced motion');

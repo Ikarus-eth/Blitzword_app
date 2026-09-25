@@ -18,11 +18,11 @@ test('the full approved Core 200 is allocated exactly once across seven playable
  assert.ok(C.areas.every(a=>a.available));assert.ok(C.words.every(w=>new Set(w.d).size===4&&w.d.filter(d=>d===w.w).length===1));
  for(const item of C.words)assert.ok(new RegExp('\\b'+item.w+'\\b','i').test(item.sentence),'Whole target in sentence: '+item.w);
 });
-test('every creature variant has a fixed three-point health range; crossing a range changes type and appearance family',()=>{
+test('curated variants match selected HP; legacy encounters above 32 HP remain readable',()=>{
  const s=fresh();let last=null;
  for(let hp=3;hp<=55;hp++){
-  const candidates=Core.enemyChoices(s,hp);assert.ok(candidates.length>=2);
-  for(const e of candidates){assert.equal(e.maxHealth-e.minHealth,2);assert.ok(hp>=e.minHealth&&hp<=e.maxHealth);if(last)assert.notEqual(e.family,last.family);}
+  const candidates=Core.enemyChoices(s,hp);assert.ok(candidates.length>=1);
+  for(const e of candidates){assert.ok(hp>=e.minHealth&&hp<=e.maxHealth);if(hp>32)assert.equal(e.maxHealth-e.minHealth,2);}
   Core.startBattle(s,now,{strength:hp,enemyId:candidates[0].id});const chosen=C.enemyAt(s.battle.enemyId);assert.equal(s.battle.maxHealth,hp);assert.ok(hp>=chosen.minHealth&&hp<=chosen.maxHealth);last=chosen;
  }
 });

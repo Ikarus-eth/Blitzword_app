@@ -54,7 +54,8 @@ test('extended mixed practice covers five-hour capacity then all 35 ten-minute c
   }
  }
  // Point 3 permits up to three next-field previews beyond the existing six new chapter words.
- const p=Core.parentProgress(s);assert.equal(p.totals.practice,25200000);assert.equal(p.activeMs,p.totals.practice+p.totals.math);assert.ok(mono>=445*60000);assert.equal(seen.size,200);assert.ok(enemies.size>=5);assert.equal(s.story.completedChapters.length,7);assert.equal(s.story.clearedAreas.length,35);assert.equal(s.story.chapterComplete,true);assert.ok(s.dragon.xp>=300);assert.equal(s.dragon.stage,1);assert.ok(s.sessions.length>=35);assert.ok(s.sessions.every(x=>x.newWords.length<=9));
+ const p=Core.parentProgress(s);assert.equal(p.totals.practice,25200000);assert.equal(p.activeMs,p.totals.practice+p.totals.math);assert.ok(mono>=445*60000);assert.equal(seen.size,200);assert.ok(enemies.size>=2); // At 4 HP the curated roster contains beetles and bats only.
+ assert.equal(s.story.completedChapters.length,7);assert.equal(s.story.clearedAreas.length,35);assert.equal(s.story.chapterComplete,true);assert.ok(s.dragon.xp>=300);assert.equal(s.dragon.stage,1);assert.ok(s.sessions.length>=35);assert.ok(s.sessions.every(x=>x.newWords.length<=9));
  // Continue after a full hour and chapter completion; XP and play remain available.
  Core.beginSession(s,START+mono);Core.startBattle(s,START+mono);const q=Core.prepareBattle(s,START+mono);q.phase='choices';const before=s.dragon.xp;Core.answerBattle(s,q.target,START+mono);assert.equal(s.dragon.xp,before+5);
  console.log('Extended progression simulation:',JSON.stringify({turns,words:seen.size,enemies:enemies.size,areas:s.story.clearedAreas.length,activeMinutes:p.activeMs/60000,wallMinutes:mono/60000,xp:s.dragon.xp,challenges:s.sessions.length}));

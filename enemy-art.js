@@ -4,7 +4,12 @@
 const data=typeof module!=='undefined'&&module.exports?require('./enemy-art-data'):root.BlitzEnemyArtData;
 let clipSequence=0;
 function render(id,{stage='adult',prefix=''}={}){
-  const key=String(id||'').replace(/-tier-\d+$/,''),art=data[key];if(!art)return null;
+  const key=String(id||'').replace(/--(?:\d+|training)$/,'').replace(/-tier-\d+$/,''),art=data[key];if(!art)return null;
+  const juvenile=stage==='baby'?0:stage==='young'?1:2;
+  // Scale at each anatomical pivot, inside the animated bone. Young forms have
+  // larger heads, shorter limbs and smaller wings; they are not uniform miniatures.
+  const proportions=[{head:1.23,limb:.78,arm:.84,wing:.66,tail:.68,shell:.78,shield:.76},
+    {head:1.10,limb:.92,arm:.94,wing:.84,tail:.86,shell:.90,shield:.9},{}][juvenile];
   const src=prefix+art.source;
   function part(index,x,y,w,h,extra=''){
     const box=art.cells[index];if(!box)return '';
@@ -17,7 +22,7 @@ function render(id,{stage='adult',prefix=''}={}){
     }
     return `<svg class="rigPart ${extra}" x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${box.join(' ')}" preserveAspectRatio="none" overflow="hidden">${image}</svg>`;
   }
-  const joint=(name,x,y,body,direction=1)=>`<g transform="translate(${x} ${y})"><g class="bone ${name}" style="--direction:${direction};--swing:${direction*24}deg;--bend:${direction*15}deg">${body}</g></g>`;
+  const joint=(name,x,y,body,direction=1)=>`<g transform="translate(${x} ${y})"><g class="bone ${name}" style="--direction:${direction};--swing:${direction*24}deg;--bend:${direction*15}deg"><g class="anatomy" transform="scale(${proportions[name.split(' ')[0]]||1})">${body}</g></g></g>`;
   const head=(x,y,w,h)=>joint('head',x+w*.5,y+h*.78,
     [1,2,3].map((n,i)=>`<g class="face face${['Neutral','Hit','Proud'][i]}">${part(n,-w*.5,-h*.78,w,h)}</g>`).join(''));
   const limb=(upper,lower,x,y,w,h,direction=1)=>joint('limb',x,y,part(upper,-w*.5,-8,w,h)+joint('knee',0,h*.76,part(lower,-w*.58,-8,w*1.16,h*.88),direction),direction);
@@ -29,7 +34,7 @@ function render(id,{stage='adult',prefix=''}={}){
     body=limb(10,11,235,264,slender?42:68,64,-1)+arm(6,7,bx+bw-(slender?26:5),167,aw,ah,-1)
       +limb(8,9,165,264,slender?42:68,64)+part(0,bx,137,bw,173)
       +arm(4,5,bx+(slender?26:7),169,aw,ah)+head(slender?126:112,wide?51:36,slender?150:176,wide?143:160);
-    if(key==='moss-golem')body+=part(12,84,136,91,73)+part(13,230,137,92,71);
+    if(key==='moss-golem'&&juvenile>0)body+=part(12,84,136,91,73)+(juvenile===2?part(13,230,137,92,71):'');
     if(key==='acorn-imp'||key==='mushroom-guard')body+=joint('shield',272,244,part(13,-34,-45,90,120),-1);
   }else if(art.rig==='quadruped'){
     const low=key==='thornling'||key==='bog-toad';
