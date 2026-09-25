@@ -1,0 +1,59 @@
+{
+  "build": "family-review-imports-20260925-r3",
+  "commit": "52c458e4c923e7e62848877cf0569dae82fb21fa",
+  "pullRequest": "https://github.com/Ikarus-eth/Blitzword_app/pull/100",
+  "workflow": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36144821211",
+  "verifiedAt": "2026-09-25T14:21:11.101855+00:00",
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "6637a2aea64a8b670013d1a6aedf16622d506753c5580c5edb0d120a649d584d",
+      "matches": true
+    },
+    {
+      "file": "review.css",
+      "status": 200,
+      "sha256": "1c872438f7cf21146a4c0ac6ae6a9f5e100731bf4fd8952d08dc8dc1e12b7de2",
+      "matches": true
+    },
+    {
+      "file": "review.js",
+      "status": 200,
+      "sha256": "89111d95fe9822ab71a59c669b86f9ec6bd33b74f2fece625ca65323a15a7289",
+      "matches": true
+    },
+    {
+      "file": "image-library.js",
+      "status": 200,
+      "sha256": "b93f44bf9c05434afac43107db0b822f60a85855f307d2485d3ff48b0f28fffa",
+      "matches": true
+    }
+  ],
+  "localVerification": {
+    "browserScenarios": 13,
+    "coreTests": 246,
+    "uiFlowGroups": 89,
+    "independentZipCRCAndSHA256": true,
+    "physicalIPadSafariTested": false
+  },
+  "actualRecoveredBatch": {
+    "build": "family-review-imports-20260925-r3",
+    "images": 121,
+    "autoAssigned": 95,
+    "awaitingAssignment": 26,
+    "importSeconds": 3.106,
+    "reloadPreserved": true,
+    "pageErrors": []
+  },
+  "recovery": {
+    "uniqueOriginalPNGs": 163,
+    "pngChunkCRCVerified": true,
+    "exactOriginalBytes": true,
+    "preparedEnemyImages": 95,
+    "preparedHeroCandidates": 26,
+    "historicalOptionOrderRecovered": false,
+    "allOriginalImagesConfirmedRecovered": false,
+    "recoveredArtworkPublished": false
+  }
+}
