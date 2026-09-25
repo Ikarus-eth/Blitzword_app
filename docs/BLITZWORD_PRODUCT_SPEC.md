@@ -1,6 +1,6 @@
 # BlitzWord — Current Product Spec
 
-Status: approved direction with implementation updates through 23 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
+Status: approved direction with implementation updates through 25 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
 
 ## Source-of-truth order
 
@@ -10,6 +10,12 @@ Status: approved direction with implementation updates through 23 September 2026
 4. Earlier chats and superseded mockups only when they do not conflict with the above.
 
 When implementation differs from this spec unintentionally, treat it as a discrepancy to review rather than silently redefining the product.
+
+## Full-screen campaign map — 25 September 2026
+
+The user requested that the campaign Home illustration fill the screen, with readable controls over the artwork, and explicitly rejected the dark green frame shown in their iPad photograph. This supersedes the earlier inset map board and separate green header/footer.
+
+Use the existing approved campaign art edge to edge within the app viewport, maintaining the artwork's proportions with cropping where necessary. Float compact warm parchment controls with dark forest ink, restrained gold borders, and a gold Play button above it. Keep the campaign/daily progress, Parents, Hero, reading speed, sound, chapter markers and Pip XP available. On narrow portrait screens, arrange the chapter trail in the clear central region and omit the decorative traveller to keep the five chapter buttons reachable. Controls respect device safe areas. This is a layout change, not a browser fullscreen request; the previously removed fullscreen button stays removed. Preserve saves, chapters, XP, curriculum, characters and existing control behavior.
 
 ## 1. Product thesis
 

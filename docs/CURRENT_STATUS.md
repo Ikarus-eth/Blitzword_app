@@ -8,6 +8,7 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 
 | Area | Current behavior | Details |
 |---|---|---|
+| Campaign Home layout | Edge-to-edge campaign art with floating parchment progress/actions, gold Play button and Pip XP; the dark green outer frame and footer are removed. Proportional artwork cropping and responsive marker spacing keep the map usable on small screens. | [Fullscreen map verification](FULLSCREEN_MAP_RELEASE.md) |
 | Curriculum | 200 distinct workbook targets; seven campaigns with five chapters each; continued review after completion. | [Core 200](CORE200_RELEASE.md) |
 | Chapter pacing | A battle is one enemy; a chapter is one map field; a campaign is one five-chapter map. New chapters require at least ten active minutes, three reading victories, a completed number duel and learning objectives. Extra battles fill the remaining time; a living battle cannot auto-complete. | [XP and pacing](SUCCESS_XP_RELEASE.md) |
 | Growth and naming | XP-only evolution at 15,000 / 45,000 / 70,000 XP, with ten visible steps per stage. First growth unlocks naming. Whole XP rewards retain accuracy, speed and word/retention bonuses. Ten active minutes earns 20 XP, boosts correct answers and adds up to 50 returning XP from recent practice days. Existing XP and forms stay earned. | [Whole XP, pacing and verification](XP_PACING_RELEASE.md) |

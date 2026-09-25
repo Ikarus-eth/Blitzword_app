@@ -1,0 +1,706 @@
+{
+  "build": "fullscreen-map-20260925-r1",
+  "browser": "isolated Chromium",
+  "sourceBase": "7aff554c50d885a835b9efd1b9d93b0061193790",
+  "coreTests": 234,
+  "uiFlowGroups": 83,
+  "layoutChecks": {
+    "results": [
+      {
+        "index": 0,
+        "width": 1180,
+        "height": 820,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 1180,
+          "bottom": 820,
+          "width": 1180,
+          "height": 820
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 4,
+        "width": 1180,
+        "height": 820,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 1180,
+          "bottom": 820,
+          "width": 1180,
+          "height": 820
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 9,
+        "width": 1180,
+        "height": 820,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 1180,
+          "bottom": 820,
+          "width": 1180,
+          "height": 820
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 14,
+        "width": 1180,
+        "height": 820,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 1180,
+          "bottom": 820,
+          "width": 1180,
+          "height": 820
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 19,
+        "width": 1180,
+        "height": 820,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 1180,
+          "bottom": 820,
+          "width": 1180,
+          "height": 820
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 24,
+        "width": 1180,
+        "height": 820,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 1180,
+          "bottom": 820,
+          "width": 1180,
+          "height": 820
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 29,
+        "width": 1180,
+        "height": 820,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 1180,
+          "bottom": 820,
+          "width": 1180,
+          "height": 820
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 34,
+        "width": 1180,
+        "height": 820,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 1180,
+          "bottom": 820,
+          "width": 1180,
+          "height": 820
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 0,
+        "width": 820,
+        "height": 1180,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 820,
+          "bottom": 1180,
+          "width": 820,
+          "height": 1180
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 4,
+        "width": 820,
+        "height": 1180,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 820,
+          "bottom": 1180,
+          "width": 820,
+          "height": 1180
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 9,
+        "width": 820,
+        "height": 1180,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 820,
+          "bottom": 1180,
+          "width": 820,
+          "height": 1180
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 14,
+        "width": 820,
+        "height": 1180,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 820,
+          "bottom": 1180,
+          "width": 820,
+          "height": 1180
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 19,
+        "width": 820,
+        "height": 1180,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 820,
+          "bottom": 1180,
+          "width": 820,
+          "height": 1180
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 24,
+        "width": 820,
+        "height": 1180,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 820,
+          "bottom": 1180,
+          "width": 820,
+          "height": 1180
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 29,
+        "width": 820,
+        "height": 1180,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 820,
+          "bottom": 1180,
+          "width": 820,
+          "height": 1180
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 34,
+        "width": 820,
+        "height": 1180,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 820,
+          "bottom": 1180,
+          "width": 820,
+          "height": 1180
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 0,
+        "width": 390,
+        "height": 844,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 4,
+        "width": 390,
+        "height": 844,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 9,
+        "width": 390,
+        "height": 844,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 14,
+        "width": 390,
+        "height": 844,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 19,
+        "width": 390,
+        "height": 844,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 24,
+        "width": 390,
+        "height": 844,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 29,
+        "width": 390,
+        "height": 844,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 34,
+        "width": 390,
+        "height": 844,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 0,
+        "width": 844,
+        "height": 390,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 844,
+          "bottom": 390,
+          "width": 844,
+          "height": 390
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 4,
+        "width": 844,
+        "height": 390,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 844,
+          "bottom": 390,
+          "width": 844,
+          "height": 390
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 9,
+        "width": 844,
+        "height": 390,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 844,
+          "bottom": 390,
+          "width": 844,
+          "height": 390
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 14,
+        "width": 844,
+        "height": 390,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 844,
+          "bottom": 390,
+          "width": 844,
+          "height": 390
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 19,
+        "width": 844,
+        "height": 390,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 844,
+          "bottom": 390,
+          "width": 844,
+          "height": 390
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 24,
+        "width": 844,
+        "height": 390,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 844,
+          "bottom": 390,
+          "width": 844,
+          "height": 390
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 29,
+        "width": 844,
+        "height": 390,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 844,
+          "bottom": 390,
+          "width": 844,
+          "height": 390
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 34,
+        "width": 844,
+        "height": 390,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 844,
+          "bottom": 390,
+          "width": 844,
+          "height": 390
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 0,
+        "width": 320,
+        "height": 568,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 568
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 4,
+        "width": 320,
+        "height": 568,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 568
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 9,
+        "width": 320,
+        "height": 568,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 568
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 14,
+        "width": 320,
+        "height": 568,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 568
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 19,
+        "width": 320,
+        "height": 568,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 568
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 24,
+        "width": 320,
+        "height": 568,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 568
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 29,
+        "width": 320,
+        "height": 568,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 568
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      },
+      {
+        "index": 34,
+        "width": 320,
+        "height": 568,
+        "terrain": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "width": 320,
+          "height": 568
+        },
+        "overflow": false,
+        "issues": [],
+        "learnerWrites": 0
+      }
+    ],
+    "errors": []
+  },
+  "interactionChecks": {
+    "checks": [
+      {
+        "width": 1180,
+        "height": 820,
+        "allChaptersClickable": true,
+        "controlsPassed": true,
+        "learnerWrites": 0
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "allChaptersClickable": true,
+        "controlsPassed": true,
+        "learnerWrites": 0
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "allChaptersClickable": true,
+        "controlsPassed": true,
+        "learnerWrites": 0
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "allChaptersClickable": true,
+        "controlsPassed": true,
+        "learnerWrites": 0
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "allChaptersClickable": true,
+        "controlsPassed": true,
+        "learnerWrites": 0
+      },
+      {
+        "width": 667,
+        "height": 375,
+        "allChaptersClickable": true,
+        "controlsPassed": true,
+        "learnerWrites": 0
+      }
+    ],
+    "errors": []
+  },
+  "runtimeSha256": {
+    "index.html": "0191dfdd9b4516b3de44a633aa9e72dcfa3b3021b6d46f89de25e6a4873d0e25",
+    "app.js": "d9a273481606c8f5f5c657b415ac34810dae49a26336a9eb558734b1d17665a1",
+    "styles.css": "99ca62f3b52c360cfd3d6181836cdeec7866dd6304ea8be84a66dbd14ff65e29"
+  },
+  "hardwareLimit": "Physical iPad/Safari and hardware safe-area behavior not verified.",
+  "preservedMain": "6e7bf84adfa169f0f858c023b5225490acba1967"
+}
