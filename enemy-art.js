@@ -2,12 +2,20 @@
 (function(root){
 'use strict';
 const data=typeof module!=='undefined'&&module.exports?require('./enemy-art-data'):root.BlitzEnemyArtData;
+let clipSequence=0;
 function render(id,{stage='adult',prefix=''}={}){
   const key=String(id||'').replace(/-tier-\d+$/,''),art=data[key];if(!art)return null;
   const src=prefix+art.source;
   function part(index,x,y,w,h,extra=''){
     const box=art.cells[index];if(!box)return '';
-    return `<svg class="rigPart ${extra}" x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${box.join(' ')}" preserveAspectRatio="none" overflow="hidden"><image href="${src}" width="${art.width}" height="${art.height}"/></svg>`;
+    let image=`<image href="${src}" width="${art.width}" height="${art.height}"/>`;
+    const crop=art.clips?.[index];
+    if(crop){
+      // Exclude neighbouring artwork without rescaling or moving the part.
+      const clip=`enemy-part-${++clipSequence}`,[cx,cy,cw,ch]=crop;
+      image=`<defs><clipPath id="${clip}" clipPathUnits="userSpaceOnUse"><rect x="${cx}" y="${cy}" width="${cw}" height="${ch}"/></clipPath></defs><g clip-path="url(#${clip})">${image}</g>`;
+    }
+    return `<svg class="rigPart ${extra}" x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${box.join(' ')}" preserveAspectRatio="none" overflow="hidden">${image}</svg>`;
   }
   const joint=(name,x,y,body,direction=1)=>`<g transform="translate(${x} ${y})"><g class="bone ${name}" style="--direction:${direction};--swing:${direction*24}deg;--bend:${direction*15}deg">${body}</g></g>`;
   const head=(x,y,w,h)=>joint('head',x+w*.5,y+h*.78,

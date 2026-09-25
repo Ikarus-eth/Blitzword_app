@@ -31,6 +31,11 @@ See [the enemy release](enemies/LAYERED_ENEMIES_RELEASE.md) for source prompts,
 runtime rigs, review controls and the distinction between base forms and proposed
 growth/group variants. Health remains governed by the existing game rules.
 
+On 25 September 2026, the user requested removal of a detached green fragment
+behind the Thornling's tail. It came from a neighbouring atlas piece. A runtime
+source-coordinate clip excludes it while preserving the approved PNG and the
+tail's original size, position and animation; no replacement artwork was generated.
+
 Character coherence is mandatory across all references. Attractive one-off variations are not acceptable substitutes for the approved hero/Pip identities.
 
 ### 00a_heroes_character_bible.png — female heroes only
