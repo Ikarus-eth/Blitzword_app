@@ -39,5 +39,20 @@
       "direction": "A broad strong hedgehog creature with a wide expressive russet face, golden eyes, heavy curved dark wooden thorns and overlapping deep green oak leaves. Deep chest and thick sturdy legs; one small berry cluster among leaves. Proud protective expression; slightly taller and heavier than reference, friendly enough for a children’s game.",
       "prompt": "Use case: stylized-concept. Create ONE complete whole-body Thornling enemy concept for the BlitzWord family art review. Use the attached image only as a visual-language reference: richly painted storybook forest creature, hedgehog anatomy, foliage and wooden thorns. Create this distinct variant: A broad strong hedgehog creature with a wide expressive russet face, golden eyes, heavy curved dark wooden thorns and overlapping deep green oak leaves. Deep chest and thick sturdy legs; one small berry cluster among leaves. Proud protective expression; slightly taller and heavier than reference, friendly enough for a children’s game. Show exactly one complete connected animal with all paws, head, ears, quills and complete silhouette safely inside frame. Three-quarter side view facing left, neutral standing pose. Centered on a plain warm ivory background with a soft ground shadow, even light. Full body with a clear margin all around, no body parts, no sprite sheet, no close-up, no words, no labels, no border. Landscape 3:2 composition; creature fills most of the frame while fitting entirely."
     }
+  ],
+  "recoveredUploads": [
+    {
+      "entity": "archer-boy",
+      "option": "a",
+      "title": "Dark-haired archer",
+      "source": "Original artwork reattached by the user on 2026-09-25 after downloading it from this conversation.",
+      "file": "images/archer-boy-a.png",
+      "sha256": "3dfd65c3a5e36a2474a92bc33f938dc013b307d71b0c89db1673b288f1b931c0",
+      "bytes": 3264814,
+      "width": 1024,
+      "height": 1536,
+      "processing": "Original PNG copied without altering any bytes.",
+      "slotAssignment": "Assigned the first empty archer-boy option; the earlier batch slot identifier is unavailable."
+    }
   ]
 }

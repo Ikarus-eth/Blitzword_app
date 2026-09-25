@@ -1,8 +1,8 @@
 {
-  "build": "family-review-recovered-20260925-r2",
+  "build": "family-review-archer-recovery-20260925-r3",
   "availableCurrentDesigns": 26,
-  "availableAlternatives": 5,
-  "missingAlternatives": 125,
+  "availableAlternatives": 6,
+  "missingAlternatives": 124,
   "newImagesGeneratedForThisUpdate": 0,
   "entities": [
     {
@@ -235,7 +235,7 @@
     },
     {
       "id": "mage-boy",
-      "name": "Mage \u00b7 boy",
+      "name": "Mage · boy",
       "kind": "hero",
       "missing": [
         "a",
@@ -247,7 +247,7 @@
     },
     {
       "id": "knight-boy",
-      "name": "Knight \u00b7 boy",
+      "name": "Knight · boy",
       "kind": "hero",
       "missing": [
         "a",
@@ -259,10 +259,9 @@
     },
     {
       "id": "archer-boy",
-      "name": "Archer \u00b7 boy",
+      "name": "Archer · boy",
       "kind": "hero",
       "missing": [
-        "a",
         "b",
         "c",
         "d",
@@ -271,7 +270,7 @@
     },
     {
       "id": "mage-girl",
-      "name": "Mage \u00b7 girl",
+      "name": "Mage · girl",
       "kind": "hero",
       "missing": [
         "a",
@@ -283,7 +282,7 @@
     },
     {
       "id": "knight-girl",
-      "name": "Knight \u00b7 girl",
+      "name": "Knight · girl",
       "kind": "hero",
       "missing": [
         "a",
@@ -295,7 +294,7 @@
     },
     {
       "id": "archer-girl",
-      "name": "Archer \u00b7 girl",
+      "name": "Archer · girl",
       "kind": "hero",
       "missing": [
         "a",

@@ -40,10 +40,10 @@ function renderRound(){
 }
 function go(to){index=Math.max(0,Math.min(catalog.entities.length-1,to));save(s=>{s.lastEntity=entity().id;});renderRound();$('.round-heading').scrollIntoView({block:'start'});}
 try{
- const response=await fetch('catalog.json?v=2');if(!response.ok)throw Error('Catalog unavailable');catalog=await response.json();state=empty();
+ const response=await fetch('catalog.json?v=3');if(!response.ok)throw Error('Catalog unavailable');catalog=await response.json();state=empty();
  try{const saved=localStorage.getItem(KEY),old=localStorage.getItem(OLD);if(saved)state=validate(JSON.parse(saved));else if(old)state=migrate(JSON.parse(old));}catch{memoryOnly=true;}
  active=state.active;const initial=location.hash.slice(1)||state.lastEntity;index=Math.max(0,catalog.entities.findIndex(e=>e.id===initial));
- for(const kind of['enemy','hero']){const group=document.createElement('optgroup');group.label=kind==='enemy'?'20 enemies':'6 heroes';catalog.entities.filter(e=>e.kind===kind).forEach(e=>{const o=document.createElement('option');o.value=e.id;o.textContent=e.name+(e.options.every(o=>o.src)?' · complete':' · 5 missing');group.append(o);});$('#jump').append(group);}
+ for(const kind of['enemy','hero']){const group=document.createElement('optgroup');group.label=kind==='enemy'?'20 enemies':'6 heroes';catalog.entities.filter(e=>e.kind===kind).forEach(e=>{const o=document.createElement('option');o.value=e.id;o.textContent=e.name+(e.options.every(o=>o.src)?' · complete':' · '+e.options.filter(o=>!o.src).length+' missing');group.append(o);});$('#jump').append(group);}
  $('#jump').onchange=()=>go(catalog.entities.findIndex(e=>e.id===$('#jump').value));$('#previous').onclick=()=>go(index-1);$('#next-top').onclick=()=>go(index+1);$('#next').onclick=()=>go(index===catalog.entities.length-1?0:index+1);
  $('#comment').oninput=()=>{const id=entity().id,value=$('#comment').value;save(s=>{ensure(s,id).comment=value;});};
  $('#edit-names').onclick=()=>{$('#name-fields').replaceChildren();state.names.forEach((n,i)=>{const label=document.createElement('label');label.textContent='Person '+(i+1);const input=document.createElement('input');input.name='person'+i;input.value=n;input.maxLength=30;input.required=true;label.append(input);$('#name-fields').append(label);});$('#names-dialog').showModal();};
