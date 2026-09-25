@@ -1,10 +1,10 @@
 # Archer movement study — 25 September 2026
 
-Status: implemented as a standalone review page; local checks passed; publication pending verification. This is not a replacement for the playable game's heroes. Source baseline: main `d516e28aa15115551eca600bb0a1a90b1605811f`.
+Status: implemented, locally tested, deployed as a standalone review page and verified live. This is not a replacement for the playable game's heroes. Source baseline: main `d516e28aa15115551eca600bb0a1a90b1605811f`.
 
 ## Scope
 
-The approved first step is one articulated male archer, reviewed before expanding to the knight, mage or other appearances. Open `assets/heroes/prototype/archer-review.html` through a static server. The existing Pages workflow recursively copies assets, including this self-contained review page and its dependencies, so it can be checked on iPad once deployed. No workflow change or additional deployment permission is needed. The separate marker is `archer-study-20260925-r1`; `index.html` and its game marker are unchanged.
+The approved first step is one articulated male archer, reviewed before expanding to the knight, mage or other appearances. Open `assets/heroes/prototype/archer-review.html` through a static server. The existing Pages workflow recursively copies assets, including this self-contained review page and its dependencies, so it can be checked on iPad at the published review URL. No workflow change or additional deployment permission is needed. The separate marker is `archer-study-20260925-r1`; `index.html` and its game marker are unchanged.
 
 The prototype provides Play/Pause, Reset, normal speed, slow motion, a timeline, seven named pose buttons, close-up and an optional joint overlay. Nothing starts automatically. Backgrounding stops playback; reduced motion displays a still pose and suppresses arrow flight, impact and enemy recoil. It does not import the game controller, core or save modules, and never accesses browser storage.
 
@@ -36,3 +36,7 @@ Chromium review covered 1180 × 820, 820 × 1180, 390 × 844 and 844 × 390 layo
 Judge the draw/release at normal speed and in close-up. Check the bow arm, hand contact, cheek anchor, string behavior, feet and costume overlaps. The current face is a study derived from the approved archer, not a newly approved identity. The user's separate question about more distinct male faces/hair remains a design discussion. A replacement approved head can be swapped independently of the limb animation.
 
 After movement and identity review, decide the final faces, then extend the method to the other heroes and connect it to answer-locked production combat. Keep the original art and learner saves as-is throughout.
+
+## Verified publication
+
+[Open the archer study](https://ikarus-eth.github.io/Blitzword_app/assets/heroes/prototype/archer-review.html). [PR #86](https://github.com/Ikarus-eth/Blitzword_app/pull/86) merged as `c6cc32f4a5e9da943408ae80b4ab1cd298609925`. [Pages run 36083446519](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36083446519) completed successfully. Eleven live HTTP 200 files, including the entire prototype and existing game entry/runtime files, matched local tested bytes. Prototype marker: `archer-study-20260925-r1`; unchanged game marker: `fullscreen-map-20260925-r1`. [Per-file hashes and timestamp](ARCHER_DEPLOYMENT.json). The previous main commit `d516e28aa15115551eca600bb0a1a90b1605811f` is the rollback checkpoint; no learner-save reset is needed.
