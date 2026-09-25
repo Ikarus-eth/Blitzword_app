@@ -39,6 +39,8 @@ The user approved a first archer prototype after discussing 2D skeletal animatio
 
 This approval covers the archer study, not automatic adoption of all six new hero appearances. Review movement and identity before extending it to knight, mage or female appearances and before replacing the playable game's renderer. The study may be served through the existing GitHub Pages workflow. It must not read or write learner saves. Keep all original approved art.
 
+The user rejected the initial study's arm movement. Correct the prototype before expanding its scope: raise the undrawn bow, draw the hand toward the cheek while the elbow moves outward/back, keep the bow arm extended through release, let the drawing hand follow backward, then lower the arms. Review the transitions as well as the named poses. Mechanical continuity alone is not visual approval. See [the correction record](heroes/ARCHER_ARM_CORRECTION.md).
+
 The user also asked about making the boys' faces and hair more distinct. This is a pending visual direction discussion, not approval of a replacement lineup. Keep the head independently replaceable so a later approved face can be carried into the animation without rebuilding the limbs. See [the prototype record](heroes/ARCHER_PROTOTYPE.md).
 
 ## 1. Product thesis

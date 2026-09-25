@@ -11,13 +11,49 @@ test('archer joints retain limb lengths and feet remain planted throughout the a
   for (let ms = 0; ms <= rig.DURATION; ms++) {
     const p = rig.sample(ms);
     for (const [a, b, length] of [
-      [p.shoulderBow,p.elbowBow,58], [p.elbowBow,p.wristBow,64],
-      [p.shoulderDraw,p.elbowDraw,60], [p.elbowDraw,p.wristDraw,62],
+      [p.shoulderBow,p.elbowBow,rig.BOW_UPPER], [p.elbowBow,p.wristBow,rig.ARM_LOWER],
       [p.hipFar,p.kneeFar,59], [p.kneeFar,p.ankleFar,56],
       [p.hipNear,p.kneeNear,59], [p.kneeNear,p.ankleNear,56]
     ]) close(distance(a,b), length);
+    close(Math.hypot(distance(p.shoulderDraw,p.elbowDraw),p.elbowDepth),rig.DRAW_UPPER);
+    close(Math.hypot(distance(p.elbowDraw,p.wristDraw),p.wristDepth-p.elbowDepth),rig.ARM_LOWER);
     assert.deepEqual(p.ankleFar, rest.ankleFar);
     assert.deepEqual(p.ankleNear, rest.ankleNear);
+  }
+});
+
+test('the bow rises before the draw, with a stable shooting line and a nearly straight bow arm at aim', () => {
+  const rest=rig.sample(0),raised=rig.sample(180),aim=rig.sample(470);
+  assert.ok(raised.grip[1]<rest.grip[1]-45);
+  close(distance(raised.grip,raised.nock),distance(rest.grip,rest.nock));
+  close(rest.aim,aim.aim);
+  assert.ok(distance(aim.shoulderBow,aim.wristBow)> .98*(rig.BOW_UPPER+rig.ARM_LOWER));
+  assert.ok(aim.elbowDraw[0]<aim.shoulderDraw[0]-35);
+  assert.ok(aim.wristDraw[0]>aim.elbowDraw[0]+55);
+  const forearmAngle=Math.atan2(aim.wristDraw[1]-aim.elbowDraw[1],aim.wristDraw[0]-aim.elbowDraw[0]);
+  assert.ok(Math.abs(forearmAngle-aim.aim)<.12,'draw forearm follows the shooting line');
+  for(let ms=180;ms<=300;ms++){
+    const p=rig.sample(ms);
+    assert.ok(p.elbowDraw[1]>205,'elbow stays below the jaw during early draw');
+  }
+});
+
+test('release moves the hand backward, holds the bow through impact and lowers the elbow under the shoulder', () => {
+  const release=rig.sample(rig.RELEASE),follow=rig.sample(660);
+  const axis=[Math.cos(release.aim),Math.sin(release.aim)];
+  const moved=[follow.wristDraw[0]-release.wristDraw[0],follow.wristDraw[1]-release.wristDraw[1]];
+  close(moved[0]*axis[0]+moved[1]*axis[1],-12);
+  close(moved[0]*axis[1]-moved[1]*axis[0],0);
+  for(let ms=rig.RELEASE;ms<=820;ms++) assert.deepEqual(rig.sample(ms).grip,release.grip);
+  assert.ok(distance(follow.wristDraw,follow.nock)>100,'release hand must not chase the returning string');
+  const lower=rig.sample(1050);
+  assert.ok(lower.elbowDraw[1]>lower.shoulderDraw[1]+15,'recovery goes down, not over the head');
+  let previous=rig.sample(0);
+  for(let ms=1;ms<=rig.DURATION;ms++){
+    const current=rig.sample(ms);
+    assert.ok(distance(current.elbowDraw,previous.elbowDraw)<2,'elbow path must remain continuous');
+    assert.ok(distance(current.wristDraw,previous.wristDraw)<2,'hand path must remain continuous');
+    previous=current;
   }
 });
 
@@ -42,7 +78,7 @@ test('arrow stays nocked, leaves continuously, and reaches the target at the exi
 test('draw increases string tension and recovers to the identical ready pose', () => {
   const ready=rig.sample(0),aim=rig.sample(470),end=rig.sample(rig.DURATION);
   assert.ok(distance(aim.grip,aim.nock)>2.5*distance(ready.grip,ready.nock));
-  assert.ok(aim.grip[1]<ready.grip[1]-80);
+  assert.ok(aim.grip[1]<ready.grip[1]-55,'bow rises while keeping the cheek-to-target shooting line');
   assert.ok(aim.bend>.95);
   for(const key of ['grip','nock','top','bottom','wristBow','wristDraw','head','lean'])assert.deepEqual(end[key],ready[key]);
   const element={innerHTML:'',dataset:{}},actor=rig.create(element);
