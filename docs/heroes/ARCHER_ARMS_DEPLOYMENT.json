@@ -1,0 +1,87 @@
+{
+  "verified_at": "2026-09-25T03:47:41.410189+00:00",
+  "source_merge": "d4470ce961dc620cb4965b7ec8265c578cc67f2c",
+  "pull_request": "https://github.com/Ikarus-eth/Blitzword_app/pull/91",
+  "preview_url": "https://ikarus-eth.github.io/Blitzword_app/assets/heroes/prototype/archer-review.html",
+  "files": [
+    {
+      "path": "assets/heroes/prototype/archer-review.html",
+      "http_status": 200,
+      "bytes": 2965,
+      "sha256": "8d05d9da5c4fb64f5265fc1be89360d4485cb68746e2296ab15e8ec13635edbd",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/heroes/prototype/archer-review.css",
+      "http_status": 200,
+      "bytes": 4379,
+      "sha256": "4f94e2c641b79ca829e2763b0b5f088df654dbd059a33e5232bf96bf1b86606a",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/heroes/prototype/archer-review.js",
+      "http_status": 200,
+      "bytes": 2954,
+      "sha256": "1aa50179e4c262a470a1e9d85ad53cc30f344e7ae225e3452254d22818e705ab",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/heroes/prototype/archer-rig.js",
+      "http_status": 200,
+      "bytes": 12422,
+      "sha256": "e9a264cfda03301345f757da2c023191d566864f71759dfb7a5db84344a01c4f",
+      "matches_tested_source": true
+    },
+    {
+      "path": "assets/heroes/prototype/archer-boy-parts.png",
+      "http_status": 200,
+      "bytes": 1363877,
+      "sha256": "8239b1c24bf68bc50892ae3aa688cafa428607fba0f6db92b7431ac5332e25c7",
+      "matches_tested_source": true
+    },
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "bytes": 35308,
+      "sha256": "1221680391ed586a7930a3fec065492d276f40bc10f54d1280f80c40ee0d496c",
+      "matches_tested_source": true
+    },
+    {
+      "path": "app.js",
+      "http_status": 200,
+      "bytes": 99671,
+      "sha256": "244d90c2805a140a32dda0819be5c3e36b763564765fd3be141b9e74830f9be8",
+      "matches_tested_source": true
+    },
+    {
+      "path": "styles.css",
+      "http_status": 200,
+      "bytes": 112779,
+      "sha256": "ca160de47c58cead2a962150711590df6a7463bde67275ff88ca93c2ecf31560",
+      "matches_tested_source": true
+    },
+    {
+      "path": "enemy-art.js",
+      "http_status": 200,
+      "bytes": 7255,
+      "sha256": "f1fb1020ba750adb91f93076798db27679363655a26f50d726d075d287342b79",
+      "matches_tested_source": true
+    },
+    {
+      "path": "enemy-art-data.js",
+      "http_status": 200,
+      "bytes": 9034,
+      "sha256": "6603e82866c01affbe83bd4b09a90d5d8780a9c856c879b79edb42dc7c26e711",
+      "matches_tested_source": true
+    },
+    {
+      "path": "enemy-art.css",
+      "http_status": 200,
+      "bytes": 4437,
+      "sha256": "28c6d25403cece3385cf9d191c2937a04a482c826b69702b109529a622f4e52e",
+      "matches_tested_source": true
+    }
+  ],
+  "prototype_marker": "archer-study-20260925-r2",
+  "game_build_marker": "enemy-groups-20260925-r2"
+}
