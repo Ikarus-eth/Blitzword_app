@@ -8,6 +8,8 @@ Documentation reconciled against main `6e7bf84adfa169f0f858c023b5225490acba1967`
 
 ## Implemented
 
+Archer movement study — 25 September: a standalone prototype demonstrates a layered male archer raising, drawing, aiming, releasing and recovering, with slow motion, pose scrubbing and a joint overlay. It uses the approved male lineup as its reference; the generated head remains replaceable. Local implementation and verification are recorded in [the prototype record](heroes/ARCHER_PROTOTYPE.md). Publication is pending verification. The playable hero renderer, game build marker and learner saves are unchanged; final appearance and movement review, physical iPad checks and production integration remain open.
+
 | Area | Current behavior | Details |
 |---|---|---|
 | Campaign Home layout | Deployed and verified: edge-to-edge campaign art with floating parchment progress/actions, gold Play button and Pip XP; the dark green outer frame and footer are removed. Proportional artwork cropping and responsive marker spacing keep the map usable on small screens. | [Fullscreen map verification](FULLSCREEN_MAP_RELEASE.md) |
