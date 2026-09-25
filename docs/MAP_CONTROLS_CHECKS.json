@@ -1,0 +1,75 @@
+{
+  "build": "map-declutter-20260925-r1",
+  "base_main": "1980f97d656e551f231a6d5141bc1d3f5b40de3b",
+  "runtime_sha256": {
+    "index.html": "a181c0a7b4fc7d35047b409ec08a67561bc8e12fb63a3629aa382785f5c5ed89",
+    "app.js": "ebd9e161ae2d66f5799bb3781d4212f490148dab52e3b24122ab45ce97fb9a20",
+    "styles.css": "ca160de47c58cead2a962150711590df6a7463bde67275ff88ca93c2ecf31560"
+  },
+  "automated": {
+    "node": "22.23.3",
+    "tests": 239,
+    "ui_flow_groups": 86,
+    "passed": true
+  },
+  "browser": {
+    "engine": "Chromium via isolated Google Chrome",
+    "viewports": [
+      [
+        1180,
+        820
+      ],
+      [
+        820,
+        1180
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        320,
+        568
+      ],
+      [
+        667,
+        375
+      ]
+    ],
+    "baseline_cases": 210,
+    "baseline_destinations": "All 35 at every viewport",
+    "earned_reward_cases": 30,
+    "earned_reward_destinations": [
+      0,
+      2,
+      4,
+      24,
+      34
+    ],
+    "interaction_viewports": 6,
+    "checks": [
+      "Map fills viewport",
+      "No marker or active label overlaps floating controls",
+      "Targets and controls stay inside viewport",
+      "Chapter label hit test",
+      "No horizontal overflow",
+      "No blurred number text shadow",
+      "No learner localStorage writes",
+      "Speed dropdown toggle, Escape, outside click, saved Run choice",
+      "Hero selection and return",
+      "Parent worded gate and cancel",
+      "Direct chapter label entry and Home return"
+    ],
+    "issues": [],
+    "page_errors": []
+  },
+  "limitations": [
+    "Physical iPad/Safari not tested",
+    "Hardware safe-area behavior not verified",
+    "Review fixtures use memory-only synthetic learner saves"
+  ]
+}

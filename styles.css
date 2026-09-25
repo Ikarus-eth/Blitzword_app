@@ -445,8 +445,7 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 
 .dailyGoal{flex-wrap:wrap}
 
-/* Campaign Home: edge-to-edge artwork, with quiet parchment controls above it.
-   Keep these rules scoped so battle, teaching and parent screens retain their layout. */
+/* Campaign Home: full-screen art with a single chapter entry and quiet tools. */
 #campaignMap {
   --map-top: max(18px, env(safe-area-inset-top));
   --map-right: max(20px, env(safe-area-inset-right));
@@ -455,218 +454,145 @@ img,svg{-webkit-user-drag:none;user-drag:none}
   --map-paper: linear-gradient(115deg, #fff6e2, #f3e2bb);
   --map-shadow: 0 4px 16px #182a2340, inset 0 1px 0 #fff9ec;
   --map-hero-top: 184px;
-  padding: 0;
-  gap: 0;
-  overflow: hidden;
-  background: transparent;
-  color: #304632;
+  padding: 0; gap: 0; overflow: hidden; background: transparent; color: #304632;
 }
-#campaignMap .mapLayout,
-#campaignMap .mapBoard,
-#campaignMap .mapTerrain {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
+#campaignMap .mapLayout, #campaignMap .mapBoard, #campaignMap .mapTerrain {
+  position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0;
+  margin: 0; border: 0; border-radius: 0; box-shadow: none;
 }
-#campaignMap .mapLayout,
-#campaignMap .mapBoard { display: block; background: transparent; }
+#campaignMap .mapLayout, #campaignMap .mapBoard { display: block; background: transparent; }
 #campaignMap .mapTerrain::after { display: none; }
 #campaignMap #mapNodes { position: absolute; inset: 0; }
 #campaignMap .mapHeader {
-  position: absolute;
-  z-index: 10;
-  top: var(--map-top);
-  left: var(--map-left);
-  right: calc(var(--map-right) + 60px);
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  min-height: 0;
-  padding: 0;
-  gap: 10px;
-  pointer-events: none;
+  position: absolute; z-index: 10; top: var(--map-top); left: var(--map-left);
+  right: calc(var(--map-right) + 120px); display: flex; align-items: flex-start;
+  min-height: 0; width: auto; padding: 0; gap: 0; pointer-events: none;
 }
 #campaignMap .mapHeader > div:first-child {
-  flex: 0 1 auto;
-  max-width: 340px;
-  min-width: 0;
-  margin-right: auto;
-  padding: 12px 18px 14px;
-  border: 1px solid #bda16c;
-  border-radius: 20px;
-  background: var(--map-paper);
-  box-shadow: var(--map-shadow);
-  pointer-events: auto;
+  flex: 0 1 auto; max-width: 330px; min-width: 0; margin: 0; padding: 12px 16px;
+  border: 1px solid #bda16c; border-radius: 20px; background: var(--map-paper); box-shadow: var(--map-shadow);
 }
-#campaignMap .mapHeader h1 { margin: 0; font-size: 27px; line-height: 1.15; }
-#campaignMap .chapterSelect { position: static; margin-top: 10px; gap: 7px; }
-#campaignMap .chapterBead {
-  width: 24px;
-  height: 24px;
-  background: #eadfc7;
-  border-color: #a99d7d;
-  color: #4c5746;
-  font-size: 13px;
-}
+#campaignMap .mapHeader h1 { margin: 0; font-size: 25px; line-height: 1.2; }
+#campaignMap .chapterSelect { position: static; margin-top: 9px; gap: 6px; }
+#campaignMap .chapterBead { width: 22px; height: 22px; background: #eadfc7; border-color: #a99d7d; color: #4c5746; font-size: 12px; }
 #campaignMap .chapterBead.current { background: #426647; border-color: #426647; color: #fff7df; }
 #campaignMap .chapterBead.complete { background: #d1dec1; border-color: #8d9e73; color: #304632; }
-#campaignMap .dailyGoal { margin-top: 9px; gap: 5px 8px; color: #4d5e43; font-size: 13px; }
-#campaignMap .consistencyBonus { color: #4d5e43; }
+#campaignMap .dailyGoal { margin-top: 9px; gap: 5px 8px; color: #4d5e43; font-size: 12px; }
+#campaignMap .consistencyBonus { color: #4d5e43; font-size: 12px; }
 #campaignMap .mapSettings {
-  pointer-events: auto;
-  min-height: 46px;
-  padding: 8px 17px;
-  margin: 0;
-  border: 1px solid #bda16c;
-  border-radius: 17px;
-  background: var(--map-paper);
-  color: #304632;
-  box-shadow: var(--map-shadow);
-  font-size: 16px;
-  line-height: 1.4;
+  position: absolute; z-index: 12; display: flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; min-height: 46px; padding: 6px; margin: 0;
+  border: 1px solid #bda16c; border-radius: 50%; background: var(--map-paper);
+  color: #304632; box-shadow: var(--map-shadow);
 }
+#campaignMap #mapSpeed { top: var(--map-top); right: calc(var(--map-right) + 56px); width: 52px; border-radius: 17px; gap: 1px; }
+#campaignMap #mapSpeed .pacePicture { width: 32px; height: 32px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+#campaignMap .speedChevron { width: 10px; height: 10px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.8; }
+#campaignMap #mapSpeed[aria-expanded=true] { background: #f5d999; }
+#campaignMap #mapSpeed[aria-expanded=true] .speedChevron { transform: rotate(180deg); }
+#campaignMap #mapParents { left: var(--map-left); bottom: var(--map-bottom); width: 44px; height: 44px; min-height: 44px; box-shadow: 0 2px 8px #182a2333; }
+#campaignMap #mapParents svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; }
 .mapHome .gameTools { top: max(18px, env(safe-area-inset-top)); right: max(20px, env(safe-area-inset-right)); }
 .mapHome .gameTools > .soundButton {
-  width: 46px;
-  height: 46px;
-  flex-basis: 46px;
-  border-radius: 50%;
-  background: linear-gradient(115deg, #fff6e2, #f3e2bb);
-  border-color: #bda16c;
-  color: #304632;
+  width: 46px; height: 46px; flex-basis: 46px; border-radius: 50%;
+  background: linear-gradient(115deg, #fff6e2, #f3e2bb); border-color: #bda16c; color: #304632;
   box-shadow: 0 4px 16px #182a2340, inset 0 1px 0 #fff9ec;
 }
 .mapHome .soundButton[aria-pressed=false] { opacity: 1; background: #e8e1cf; }
 .mapHome .soundButton[aria-pressed=false] svg { background: linear-gradient(45deg, transparent 46%, #304632 48% 52%, transparent 54%); }
-/* The map already shows these rewards beside the daily goal. */
 .mapHome .gameTools .xpBonusBadge { display: none; }
-#campaignMap .mapDestination {
-  position: absolute;
-  z-index: 8;
-  left: var(--map-left);
-  bottom: var(--map-bottom);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: min(380px, calc(100% - var(--map-left) - var(--map-right) - 230px));
-  min-height: 84px;
-  padding: 12px 14px 12px 20px;
-  gap: 24px;
-  background: var(--map-paper);
-  border: 1px solid #bda16c;
-  border-radius: 22px;
-  box-shadow: var(--map-shadow);
-}
-#campaignMap .mapDestination h2 { font-size: 23px; line-height: 1.2; margin: 0; overflow-wrap: anywhere; }
-#campaignMap .mapDestination .greenButton {
-  min-width: 102px;
-  min-height: 52px;
-  padding: 8px 20px;
-  font-size: 23px;
-  color: #30432e;
-  background: linear-gradient(#f6d591, #e8ba66);
-  border: 1px solid #a5803f;
-  border-radius: 16px;
-  box-shadow: 0 3px 0 #94703e, inset 0 1px 0 #fff0c7;
-}
-#campaignMap .mapDestination .greenButton:disabled {
-  color: #5e604e;
-  background: #e0d7bf;
-  border-color: #b4a886;
-  box-shadow: none;
-  opacity: 1;
-}
 #campaignMap .dragonPanel {
-  z-index: 8;
-  right: var(--map-right);
-  bottom: var(--map-bottom);
-  width: 210px;
-  min-height: 96px;
-  padding: 12px;
-  grid-template-columns: 60px minmax(0, 1fr);
-  gap: 5px 10px;
-  border: 1px solid #bda16c;
-  border-radius: 22px;
-  background: var(--map-paper);
-  box-shadow: var(--map-shadow);
+  z-index: 8; right: var(--map-right); bottom: var(--map-bottom); width: 210px; min-height: 96px;
+  padding: 12px; grid-template-columns: 60px minmax(0, 1fr); gap: 5px 10px;
+  border: 1px solid #bda16c; border-radius: 22px; background: var(--map-paper); box-shadow: var(--map-shadow);
 }
 #campaignMap .dragonPanel .growthSprite { width: 60px; height: 66px; }
 #campaignMap .dragonHeading { font-size: 18px; }
 #campaignMap .dragonHeading strong { white-space: nowrap; font-size: 12px; padding: 5px 7px; }
 #campaignMap .dragonTapHint { color: #4d5e43; font-size: 12px; }
-#campaignMap .mapNode { min-height: 48px; width: 72px; transform: translate(-50%, -8px); }
-#campaignMap .mapMarker { width: 46px; height: 46px; border-color: #fff0c7; }
-#campaignMap .mapNode.selected .mapNodeName {
-  color: #304632;
-  background: #fff1d4;
-  text-shadow: none;
-  border: 1px solid #bda16c;
-  box-shadow: 0 2px 7px #182a2333;
+#campaignMap .mapNode { min-height: 48px; width: 72px; transform: translate(-50%, -8px); text-shadow: none; }
+#campaignMap .mapMarker { width: 46px; height: 46px; border-color: #fff0c7; font: 700 23px/1 var(--reading-font); text-shadow: none; }
+#campaignMap .mapNode .mapNodeName { max-width: 164px; width: max-content; white-space: normal; line-height: 1.3; font-size: 16px; padding: 7px 10px; }
+#campaignMap .mapNode.selected .mapNodeName, #campaignMap .mapEntry .mapNodeName {
+  display: flex; align-items: center; justify-content: center; gap: 8px; color: #304632;
+  background: #fff1d4; text-shadow: none; border: 1px solid #bda16c; box-shadow: 0 2px 7px #182a2333;
 }
-#campaignMap #mapTraveller { width: 78px; height: 94px; }
-#campaignMap .chapterCelebration { top: 154px; }
-#campaignMap button:focus-visible,
-#campaignMap .dragonPanel:focus-visible,
-.mapHome #soundBtn:focus-visible { outline: 3px solid #fff7df; outline-offset: 3px; box-shadow: 0 0 0 6px #345639; }
+#campaignMap .mapNode.selected:not(.mapEntry) small { display: block; background: #fff1d4; color: #536047; border-radius: 0 0 8px 8px; padding: 2px 8px 5px; font-size: 12px; }
+#campaignMap .mapEntry { z-index: 6; }
+#campaignMap .mapEntry .mapMarker { width: 52px; height: 52px; background: #f8d88d; color: #304632; border: 2px solid #fff3cc; box-shadow: 0 0 0 4px #d6ad5680, 0 4px 10px #16281e55; }
+#campaignMap .mapEntry .mapNodeName { background: linear-gradient(#ffe7af, #f3d28e); border-color: #b08b4a; box-shadow: 0 3px 0 #876631, 0 5px 10px #182a2333; }
+#campaignMap .mapEntryArrow { font-size: 24px; line-height: 1; font-weight: 400; }
+#campaignMap #mapTraveller { width: 78px; height: 94px; pointer-events: auto; cursor: pointer; }
+#campaignMap #mapTraveller::after { content: '↻'; position: absolute; right: -5px; bottom: -3px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #fff1d4; border: 1px solid #bda16c; color: #304632; font: 20px/1 var(--reading-font); }
+#campaignMap .chapterCelebration { top: 130px; }
+#campaignMap button:focus-visible, #campaignMap .dragonPanel:focus-visible, .mapHome #soundBtn:focus-visible { outline: 3px solid #fff7df; outline-offset: 3px; box-shadow: 0 0 0 6px #345639; }
 @media (hover: hover) {
   #campaignMap .mapSettings:hover, #campaignMap .dragonPanel:hover { background: #fff6e2; }
-  #campaignMap .mapDestination .greenButton:not(:disabled):hover { background: #ffdd99; }
+  #campaignMap .mapEntry:hover .mapNodeName { background: #ffe7b2; }
 }
+/* Map speed is a non-modal dropdown; Pause retains the larger speed dialog. */
+#speedPanel.mapSpeedMenu {
+  position: absolute; inset: auto; top: calc(max(18px, env(safe-area-inset-top)) + 56px);
+  right: calc(max(20px, env(safe-area-inset-right)) + 56px); z-index: 55;
+  display: block; width: 230px; max-width: calc(100% - 28px); padding: 0; background: none;
+}
+#speedPanel.mapSpeedMenu .speedCard { width: 100%; max-height: calc(100dvh - max(18px, env(safe-area-inset-top)) - max(18px, env(safe-area-inset-bottom)) - 68px); overflow-y: auto; padding: 14px 10px 10px; border-radius: 18px; box-shadow: 0 8px 28px #10281f66; animation: mapMenuOpen .16s ease-out; }
+#speedPanel.mapSpeedMenu h2 { margin: 0 38px 10px 8px; text-align: left; font-size: 18px; }
+#speedPanel.mapSpeedMenu .speedChoices { display: flex; flex-direction: column; gap: 4px; }
+#speedPanel.mapSpeedMenu .speedChoice { display: flex; flex-direction: row; justify-content: flex-start; gap: 13px; min-height: 44px; padding: 5px 12px; border-radius: 10px; font-size: 16px; box-shadow: none; }
+#speedPanel.mapSpeedMenu .speedChoice .pacePicture { width: 31px; height: 31px; flex-shrink: 0; }
+#speedPanel.mapSpeedMenu .speedChoice[aria-pressed=true] { background: #d9e4c8; border-color: #7b9262; color: #304632; }
+#speedPanel.mapSpeedMenu .paceLock { width: 15px; height: 15px; right: 11px; top: 14px; }
+#speedPanel.mapSpeedMenu .dialogClose { width: 32px; height: 32px; min-height: 32px; right: 8px; top: 8px; font-size: 22px; }
+#speedPanel.mapSpeedMenu p { margin: 9px 5px 0; font-size: 13px; }
+@keyframes mapMenuOpen { from { opacity: 0; transform: translateY(-7px); } to { opacity: 1; transform: translateY(0); } }
+.parentGate > div { max-height: 100%; overflow-y: auto; }
+.parentGate label { font-size: 22px; line-height: 1.5; }
 @media (max-width: 700px) {
-  #campaignMap {
-    --map-top: max(12px, env(safe-area-inset-top));
-    --map-left: max(12px, env(safe-area-inset-left));
-    --map-right: max(12px, env(safe-area-inset-right));
-    --map-bottom: max(12px, env(safe-area-inset-bottom));
-    --map-hero-top: 250px;
-    --map-hero-offset: 16%;
-  }
-  #campaignMap .mapHeader { flex-wrap: wrap; right: var(--map-right); width: min(300px, calc(100% - var(--map-left) - var(--map-right) - 54px)); gap: 8px; }
-  #campaignMap .mapHeader > div:first-child { flex: 0 0 100%; max-width: none; padding: 12px 14px; border-radius: 18px; }
-  #campaignMap .mapHeader h1 { font-size: 23px; }
-  #campaignMap .mapSettings { flex: 1; min-height: 44px; padding: 8px 10px; font-size: 14px; border-radius: 14px; }
-  #campaignMap .dailyGoal { font-size: 12px; }
+  #campaignMap { --map-top: max(12px, env(safe-area-inset-top)); --map-left: max(12px, env(safe-area-inset-left)); --map-right: max(12px, env(safe-area-inset-right)); --map-bottom: max(12px, env(safe-area-inset-bottom)); }
+  #campaignMap .mapHeader { right: calc(var(--map-right) + 112px); }
+  #campaignMap .mapHeader > div:first-child { padding: 10px 12px; border-radius: 17px; }
+  #campaignMap .mapHeader h1 { font-size: 22px; }
+  #campaignMap .chapterSelect { gap: 4px; margin-top: 7px; }
+  #campaignMap .chapterBead { width: 19px; height: 19px; font-size: 11px; }
+  #campaignMap #mapDailyGoal, #campaignMap .consistencyBonus, #campaignMap .dailyGoal[data-boost=false] { display: none; }
+  #campaignMap .mapSettings { min-height: 44px; height: 44px; }
+  #campaignMap #mapSpeed { right: calc(var(--map-right) + 52px); width: 50px; }
   .mapHome .gameTools { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); }
   .mapHome .gameTools > .soundButton { width: 44px; height: 44px; flex-basis: 44px; }
-  #campaignMap .mapDestination { width: auto; right: var(--map-right); min-height: 74px; padding: 10px 12px 10px 18px; gap: 14px; border-radius: 20px; }
-  #campaignMap .mapDestination h2 { font-size: 22px; }
-  #campaignMap .mapDestination .greenButton { min-height: 50px; }
-  #campaignMap .dragonPanel { bottom: calc(var(--map-bottom) + 88px); width: 182px; min-height: 82px; grid-template-columns: 48px minmax(0, 1fr); padding: 9px 10px; gap: 3px 8px; border-radius: 18px; }
+  #campaignMap .dragonPanel { width: 182px; min-height: 82px; grid-template-columns: 48px minmax(0, 1fr); padding: 9px 10px; gap: 3px 8px; border-radius: 18px; }
   #campaignMap .dragonPanel .growthSprite { width: 48px; height: 58px; }
   #campaignMap .dragonHeading { font-size: 16px; }
-  #campaignMap #mapTraveller { width: 58px; height: 74px; padding: 6px; }
-  #campaignMap .chapterCelebration { top: 195px; font-size: 20px; }
+  #campaignMap .mapNode .mapNodeName { max-width: 132px; font-size: 15px; }
+  #speedPanel.mapSpeedMenu { top: calc(max(12px, env(safe-area-inset-top)) + 52px); right: calc(max(12px, env(safe-area-inset-right)) + 52px); }
 }
 @media (max-width: 700px) and (orientation: portrait) {
-  /* Keep every chapter reachable when the artwork is cropped to a narrow screen. */
-  #campaignMap #mapNodes, #campaignMap .mapPath { inset: 210px 0 190px; height: auto; }
-  #campaignMap .mapPath { height: calc(100% - 400px); }
-  #campaignMap #mapTraveller { display: none; }
+  #campaignMap #mapNodes { inset: 122px 0 154px; }
+  #campaignMap .mapPath { display: none; }
+  /* A clear alternating trail keeps long chapter labels apart on a narrow map. */
+  #campaignMap .mapNode:nth-child(1) { left: 28%!important; top: 78%!important; }
+  #campaignMap .mapNode:nth-child(2) { left: 72%!important; top: 60%!important; }
+  #campaignMap .mapNode:nth-child(3) { left: 28%!important; top: 42%!important; }
+  #campaignMap .mapNode:nth-child(4) { left: 72%!important; top: 24%!important; }
+  #campaignMap .mapNode:nth-child(5) { left: 28%!important; top: 6%!important; }
+  #campaignMap #mapTraveller { display: block; top: calc(var(--map-top) + 88px)!important; left: calc(100% - var(--map-right) - 60px)!important; bottom: auto; transform: none; width: 60px; height: 76px; padding: 6px; }
+  #campaignMap .chapterCelebration { top: auto; bottom: calc(var(--map-bottom) + 112px); font-size: 18px; }
 }
 @media (max-height: 580px) and (orientation: landscape) {
-  #campaignMap { --map-top: max(12px, env(safe-area-inset-top)); --map-bottom: max(12px, env(safe-area-inset-bottom)); --map-hero-top: 157px; }
-  #campaignMap .mapHeader { gap: 8px; width: auto; right: calc(var(--map-right) + 60px); flex-wrap: nowrap; }
-  #campaignMap .mapHeader > div:first-child { flex: 0 1 auto; padding: 9px 13px; max-width: 290px; border-radius: 17px; }
+  #campaignMap { --map-top: max(12px, env(safe-area-inset-top)); --map-bottom: max(12px, env(safe-area-inset-bottom)); --map-hero-top: 157px; --map-hero-offset: 18%; --map-hero-shift: 12px; }
+  #campaignMap .mapHeader > div:first-child { padding: 9px 13px; max-width: 250px; border-radius: 17px; }
   #campaignMap .mapHeader h1 { font-size: 22px; }
-  #campaignMap .chapterSelect { margin-top: 7px; }
-  #campaignMap .dailyGoal { margin-top: 6px; font-size: 12px; }
-  #campaignMap .mapSettings { flex: 0 0 auto; min-height: 44px; padding: 8px 13px; font-size: 15px; }
+  #campaignMap #mapDailyGoal, #campaignMap .consistencyBonus, #campaignMap .dailyGoal[data-boost=false] { display: none; }
   .mapHome .gameTools { top: max(12px, env(safe-area-inset-top)); }
-  #campaignMap .mapDestination { left: 50%; right: auto; transform: translateX(-50%); min-height: 70px; width: 280px; padding: 9px 12px 9px 17px; gap: 16px; }
-  #campaignMap .mapDestination h2 { font-size: 21px; }
-  #campaignMap .mapDestination .greenButton { min-height: 46px; font-size: 21px; }
-  #campaignMap .dragonPanel { bottom: var(--map-bottom); width: 188px; min-height: 78px; grid-template-columns: 48px minmax(0, 1fr); padding: 9px 10px; gap: 3px 8px; }
+  #campaignMap .dragonPanel { width: 188px; min-height: 78px; grid-template-columns: 48px minmax(0, 1fr); padding: 9px 10px; gap: 3px 8px; }
   #campaignMap .dragonPanel .growthSprite { width: 48px; height: 56px; }
   #campaignMap .dragonHeading { font-size: 16px; }
   #campaignMap #mapTraveller { width: 55px; height: 68px; padding: 5px; }
-  #campaignMap #mapNodes, #campaignMap .mapPath { bottom: 32px; height: auto; }
-  #campaignMap .mapPath { height: calc(100% - 32px); }
+  #campaignMap #mapNodes { top: 20px; bottom: 60px; }
+  #campaignMap .mapPath { top: 20px; bottom: 60px; height: calc(100% - 80px); }
   #campaignMap .mapMarker { width: 40px; height: 40px; font-size: 20px; }
-  #campaignMap .chapterCelebration { top: 132px; font-size: 20px; }
+  #campaignMap .mapEntry .mapMarker { width: 44px; height: 44px; }
+  #campaignMap .mapNode .mapNodeName { font-size: 14px; max-width: 148px; padding: 5px 8px; }
+  #campaignMap .chapterCelebration { top: 115px; font-size: 18px; }
+  #speedPanel.mapSpeedMenu { top: calc(max(12px, env(safe-area-inset-top)) + 54px); }
 }

@@ -3,7 +3,7 @@
 const Core=BlitzCore, Content=BlitzContent, {AdventureStore,KEY,BACKUP_LIMIT,backupFile,readBackup,backupSummary}=BlitzStorage;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const classes=['Mage','Knight','Archer'];
-const playClock=new BlitzEngagement.Clock();let windowFocused=true,parentAnswer=0;
+const playClock=new BlitzEngagement.Clock();let windowFocused=true,parentAnswer=null;
 const sound=BlitzSound.create({AudioContext:window.AudioContext||window.webkitAudioContext,fetchAudio:window.fetch?.bind(window)});
 const maleHeroSheet='assets/rowanfire-boys-2026-09-21.png';
 const heroAssets=[maleHeroSheet,maleHeroSheet,maleHeroSheet,'assets/hero4.webp','assets/hero5.webp','assets/hero6.webp'];
@@ -81,7 +81,9 @@ function updateDailyXP(){
   if(!state)return;const p=Core.bonusProgress(state,Date.now()),label='XP boost';
   const badge=$('#xpBonusBadge');badge.textContent=label;badge.hidden=!p.active||!['battle','result','mathIntro','mathChallenge','mathResult','summary'].includes(state.screen);
   badge.setAttribute('aria-label','Extra XP on correct answers for the rest of today');
-  $('#mapDailyGoal').textContent=p.chapters?'Today ✓':'Today · 0 / 1 chapters';
+  $('#mapDailyGoal').textContent='Chapter finished today ✓';$('#mapDailyGoal').hidden=!p.chapters;
+  $('#mapDailySummary').hidden=!(p.chapters||p.active||p.consistencyEarned);
+  $('#mapDailySummary').dataset.boost=String(p.active);
   $('#mapBonus').hidden=!p.active;$('#mapBonus').textContent=label;
   const consistency=$('#mapConsistency');consistency.hidden=!p.consistencyEarned;consistency.textContent='Returning bonus +'+xpText(p.consistencyEarned)+' XP';
 }
@@ -101,7 +103,7 @@ function renderChapter(element,compact=false){
 }
 function renderMap(deferEvolution=false){
   show('campaignMap');$('#pausePanel').hidden=true;
-  $('#mapSpeed').textContent=Core.speedChoices(state).find(mode=>!mode.locked&&mode.ms===Core.practiceExposure(state))?.name||'Speed';
+  renderSpeedLauncher();
   const progress=Core.storyProgress(state),growth=Core.dragonProgress(state);
   const terrain=$('.mapTerrain'),mapScene=progress.chapter.scene;
   terrain.style.backgroundImage=mapScene===null?'url("assets/campaign-forest.png")':'url("assets/chapter-scenes.webp")';
@@ -119,29 +121,20 @@ function renderMap(deferEvolution=false){
   const nodes=$('#mapNodes');nodes.replaceChildren();
   progress.areas.forEach((area,i)=>{
     const button=document.createElement('button');button.className='mapNode '+area.status+(area.id===selected.id?' selected':'');
-    button.style.left=`clamp(52px,${area.x}%,calc(100% - 52px))`;button.style.top=area.y+'%';button.dataset.area=area.id;
+    const destination=area.id===current.id;
+    button.style.left=`clamp(90px,${area.x}%,calc(100% - 90px))`;button.style.top=area.y+'%';button.dataset.area=area.id;
     button.setAttribute('aria-label','Chapter '+(i+1)+', '+area.name+', '+(area.status==='future'?'coming soon':area.status==='cleared'?'explored':area.status==='current'?'current destination':'locked'));
-    button.setAttribute('aria-pressed',String(area.id===selected.id));
+    if(destination){button.id='mapContinue';button.classList.add('mapEntry');button.setAttribute('aria-label','Continue to chapter '+(i+1)+', '+area.name);}
+    else button.setAttribute('aria-pressed',String(area.id===selected.id));
     const marker=document.createElement('span');marker.className='mapMarker';marker.textContent=area.status==='cleared'?'✓':String(i+1);
-    const label=document.createElement('span');label.className='mapNodeName';label.textContent=area.shortName||area.name;
-    const status=document.createElement('small');status.textContent=area.status==='future'?'Soon':area.status==='cleared'?'Done':area.status==='current'?'Here':'Later';
-    button.append(marker,label,status);button.onclick=()=>{selectedMapArea=area.id;renderMap();};nodes.append(button);
+    const label=document.createElement('span');label.className='mapNodeName';label.textContent=area.name;
+    if(destination){const arrow=document.createElement('span');arrow.className='mapEntryArrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='›';label.append(arrow);}
+    const status=document.createElement('small');status.textContent=area.status==='cleared'?'Explored':'Locked';
+    button.append(marker,label,status);button.onclick=destination?continueMap:()=>{selectedMapArea=area.id;renderMap();$('#mapNodes [data-area="'+area.id+'"]').focus?.();};nodes.append(button);
   });
-  const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.style.left=`clamp(40px,calc(${current.x}% - var(--map-hero-offset,9%)),calc(100% - 54px))`;hero.style.top=`clamp(var(--map-hero-top,82px),${current.y-3}%,calc(100% - 100px))`;
+  const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.setAttribute('aria-label','Change hero: '+classes[heroIndex()%3]);hero.style.left=`clamp(40px,calc(${current.x}% - var(--map-hero-offset,9%)),calc(100% - 54px))`;hero.style.top=`clamp(var(--map-hero-top,82px),calc(${current.y-3}% + var(--map-hero-shift,0px)),calc(100% - 100px))`;
   $('#mapStory').textContent=progress.cleared+' / '+progress.total+' chapters';
   $('#mapStory').setAttribute('aria-label','Campaign '+location.campaignNumber+': '+progress.cleared+' of '+progress.total+' chapters completed');
-  $('#mapAreaTitle').textContent=selected.shortName||selected.name;
-  $('#mapAreaStatus').textContent=selected.status==='future'?'Coming soon':selected.status==='cleared'?'Trail explored':selected.status==='locked'?'Further along the trail':state.battle?.fromAssessment&&!state.battle.mapSeen?'Reading check complete · Your first chapter':'Your next story step';
-  $('#mapAreaGoal').textContent=selected.status==='cleared'?selected.discovery:selected.goal;
-  const markers=$('#mapAreaProgress');markers.replaceChildren();
-  if(selected.available){
-    const wins=document.createElement('span');wins.className='mapGoal';wins.textContent='◆'.repeat(Math.min(3,selected.wins))+'◇'.repeat(Math.max(0,3-selected.wins));wins.setAttribute('aria-label',Math.min(3,selected.wins)+' of 3 reading victories');
-    const time=document.createElement('span');time.className='mapGoal';time.textContent=Math.min(10,Math.floor(selected.activeMs/60000))+' / 10 min';
-    const duel=document.createElement('span');duel.className='mapGoal';duel.textContent=selected.duels?'× ✓':'× ?';duel.setAttribute('aria-label',selected.duels?'Number duel completed':'Number duel still to play');
-    markers.append(wins,time,duel);
-  }
-  const start=$('#mapContinue');start.disabled=selected.status==='future'||selected.status==='locked';
-  start.textContent=start.disabled?'Locked':'Play';start.setAttribute('aria-label',start.disabled?'Explore the earlier place first':state.math.round?'Continue multiplication':state.teaching?'Continue the example':state.battle?.question?'Continue battle':'Explore '+selected.name);
   paintPip($('#mapPip'));$('#dragonStage').textContent=dragonText(growth.current.name);$('#dragonXP').textContent=xpText(growth.xp)+' XP';
   $('#dragonNext').textContent=growth.next?growth.steps+' / 10 growth steps':'Ready to ride';$('#mapGrowthSummary').textContent='';
   const fraction=growth.fraction;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext','XP towards growth. '+growthCaption(growth));
@@ -195,8 +188,17 @@ function confirmActivity(){
   drainExcluded();updateDailyXP();return true;
 }
 function formatTime(ms){const seconds=Math.floor(ms/1000);return Math.floor(seconds/60)+' min '+String(seconds%60).padStart(2,'0')+' sec';}
+function numberInWords(value){
+  const small=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+  const tens=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+  if(value<20)return small[value];
+  if(value<100)return tens[Math.floor(value/10)]+(value%10?'-'+small[value%10]:'');
+  return small[Math.floor(value/100)]+' hundred'+(value%100?' and '+numberInWords(value%100):'');
+}
 function openParentGate(){
-  home();parentAnswer=17+Math.floor(Math.random()*9);$('#parentQuestion').textContent='What is 17 + '+(parentAnswer-17)+'?';$('#parentAnswer').value='';$('#parentGateMessage').textContent='';$('#parentGate').hidden=false;$('#parentAnswer').focus();
+  home();const first=300+Math.floor(Math.random()*700),second=40+Math.floor(Math.random()*210);parentAnswer=first-second;
+  $('#parentQuestion').textContent='What is '+numberInWords(first)+' minus '+numberInWords(second)+'?';
+  $('#parentAnswer').value='';$('#parentGateMessage').textContent='';$('#parentGate').hidden=false;$('#parentAnswer').focus();
 }
 function renderParent(){
   const p=Core.parentProgress(state,Date.now()),g=Core.dragonProgress(state);show('parentDashboard');
@@ -340,6 +342,7 @@ function storageProblem(error) {
 const SAVE_EVERY_MS=10000;let lastSaveAt=-Infinity;
 function save(){account();try{store.save(state);lastSaveAt=performance.now();return true;}catch(e){storageProblem(e);return false;}}
 function show(id) {
+  closeSpeed(false);
   $$('.screen').forEach(el=>el.classList.toggle('active',el.id===id));
   $('#app').classList.toggle('mapHome',id==='campaignMap');
   $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge','chapterStory','evolution'].includes(id);
@@ -923,18 +926,37 @@ function paceIcon(id){
   };
   return '<svg class="pacePicture" viewBox="0 0 64 64" aria-hidden="true">'+drawings[id]+'</svg>';
 }
+function renderSpeedLauncher(){
+  const modes=Core.speedChoices(state),exposure=Core.practiceExposure(state);
+  const exact=modes.find(mode=>!mode.locked&&mode.ms===exposure);
+  // A calibrated pace can sit between the named speeds. Keep its timing untouched.
+  const mode=exact||modes.filter(mode=>!mode.locked&&mode.ms!==null).reduce((best,item)=>Math.abs(item.ms-exposure)<Math.abs(best.ms-exposure)?item:best);
+  const label=exact?exact.name:'Reading-check pace';
+  const button=$('#mapSpeed');button.innerHTML=paceIcon(mode.id)+'<svg class="speedChevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4 3 3 3-3"/></svg>';
+  button.dataset.speed=exact?.id||'calibrated';button.title=label+' · Change speed';button.setAttribute('aria-label','Reading speed: '+label+'. Change speed');
+}
+function closeSpeed(restoreFocus=true){
+  const panel=$('#speedPanel'),wasOpen=!panel.hidden,fromMap=panel.classList.contains('mapSpeedMenu');
+  panel.hidden=true;$('#mapSpeed').setAttribute('aria-expanded','false');
+  if(wasOpen&&restoreFocus)$(fromMap?'#mapSpeed':'#pauseSpeed').focus?.();
+}
 function openSpeed(){
+  const fromMap=state.screen==='campaignMap',panel=$('#speedPanel');
+  if(fromMap&&!panel.hidden){closeSpeed();return;}
+  panel.classList.toggle('mapSpeedMenu',fromMap);
+  if(fromMap)panel.removeAttribute('aria-modal');else panel.setAttribute('aria-modal','true');
   const box=$('#speedChoices'),exposure=Core.practiceExposure(state);box.replaceChildren();
   for(const mode of Core.speedChoices(state)){
     const button=document.createElement('button');button.className='speedChoice';button.dataset.speed=mode.id;button.disabled=mode.locked;
     button.setAttribute('aria-pressed',String(mode.ms===exposure&&!mode.locked));
     button.setAttribute('aria-label',mode.name+dragonText(mode.locked?', locked: rideable Pip and expansion required':''));
     button.innerHTML=paceIcon(mode.id)+'<span>'+mode.name+'</span>'+(mode.locked?'<svg class="paceLock" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>':'');
-    button.onclick=()=>{if(Core.chooseSpeed(state,mode.id)&&save()){$('#speedPanel').hidden=true;$('#mapSpeed').textContent=mode.name;}};box.append(button);
+    button.onclick=()=>{if(Core.chooseSpeed(state,mode.id)&&save()){closeSpeed();renderSpeedLauncher();}};box.append(button);
   }
   const calibrated=!Core.speedChoices(state).some(mode=>mode.ms===exposure&&!mode.locked);
   $('#speedNote').textContent=calibrated?'Current pace: '+(exposure/1000)+' seconds, from your reading check.':'';
-  $('#speedNote').hidden=!calibrated;$('#speedPanel').hidden=false;
+  $('#speedNote').hidden=!calibrated;panel.hidden=false;$('#mapSpeed').setAttribute('aria-expanded',String(fromMap));
+  box.querySelector('[aria-pressed="true"]:not(:disabled)')?.focus?.();
 }
 function openGrowth(){
   const g=Core.dragonProgress(state);paintPip($('#growthPip'));paintPip($('#growthNextPip'),Math.min(g.stage+1,3));
@@ -1009,7 +1031,9 @@ const allowsSelection=event=>{const node=event.target,element=node?.nodeType===1
 document.addEventListener('contextmenu',event=>{if(!allowsSelection(event))event.preventDefault();});
 document.addEventListener('selectstart',event=>{if(!allowsSelection(event))event.preventDefault();});
 $('#mapSpeed').onclick=$('#pauseSpeed').onclick=openSpeed;
-$('#speedClose').onclick=()=>{$('#speedPanel').hidden=true;};
+$('#speedClose').onclick=()=>closeSpeed();
+document.addEventListener('click',event=>{if(!$('#speedPanel').hidden&&$('#speedPanel').classList.contains('mapSpeedMenu')&&!event.target.closest?.('#speedPanel,#mapSpeed'))closeSpeed(false);});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!$('#speedPanel').hidden){event.preventDefault();closeSpeed();}});
 $('#soundBtn').onclick=()=>{state.settings.soundscape=state.settings.soundscape===false;syncSound();if(state.settings.soundscape)sound.unlock();$('#soundBtn').setAttribute('aria-pressed',String(state.settings.soundscape));$('#soundBtn').setAttribute('aria-label',state.settings.soundscape?'Mute soundscape':'Enable soundscape');save();};
 function unlockAudio(){sound.unlock();narrator.unlock();}
 document.addEventListener('click',event=>{if(event.target.closest('#mapContinue,#setupNext,#heroNext,#tryBattle,#checkFirst,#continueAdventure,#resultNext'))sound.cue('select');});
@@ -1035,18 +1059,16 @@ $('#tryBattle').onclick=()=>{Core.startTeaching(state,Content.demoWords[0],'demo
 $('#checkFirst').onclick=()=>{Core.startAssessment(state,Date.now());if(save())enter();};
 $('#continueAdventure').onclick=continueAdventure;
 $('#homeBtn').onclick=()=>{if(!blocked)home();};
-$('#mapContinue').onclick=()=>{
-  if(blocked)return;
-  const area=Core.storyProgress(state).areas.find(item=>item.id===selectedMapArea);
-  if(!area||!['current','cleared'].includes(area.status))return;
+function continueMap(){
+  if(blocked||state.screen!=='campaignMap')return;
   state.story.mapPending=false;
   if(state.battle?.fromAssessment&&!state.battle.mapSeen){state.battle.mapSeen=true;state.battle.introPending=false;}
   continueAdventure();
-};
-$('#mapSettings').onclick=()=>{renderHeroes();show('hero');save();};
+}
+$('#mapTraveller').onclick=()=>{renderHeroes();show('hero');save();};
 $('#mapParents').onclick=openParentGate;$('#routeParents').onclick=openParentGate;
-$('#parentCancel').onclick=()=>{$('#parentGate').hidden=true;};
-$('#parentUnlock').onclick=()=>{if(Number($('#parentAnswer').value)!==parentAnswer){$('#parentGateMessage').textContent='Please try again.';return;}$('#parentGate').hidden=true;renderParent();};
+$('#parentCancel').onclick=()=>{$('#parentGate').hidden=true;parentAnswer=null;$(state.screen==='campaignMap'?'#mapParents':'#routeParents').focus?.();};
+$('#parentUnlock').onclick=()=>{if($('#parentGate').hidden||parentAnswer===null)return;const answer=$('#parentAnswer').value.trim();if(!/^\d+$/.test(answer)||Number(answer)!==parentAnswer){$('#parentGateMessage').textContent='Please try again.';return;}$('#parentGate').hidden=true;parentAnswer=null;renderParent();};
 $('#parentAnswer').addEventListener('keydown',e=>{if(e.key==='Enter')$('#parentUnlock').click();});
 $('#parentHome').onclick=home;
 $('#backupSave').onclick=()=>saveBackupFile();$('#saveNoticeBackup').onclick=()=>saveBackupFile('#saveNoticeStatus');$('#backupRestore').onclick=chooseBackupFile;$('#backupFile').onchange=readBackupFile;

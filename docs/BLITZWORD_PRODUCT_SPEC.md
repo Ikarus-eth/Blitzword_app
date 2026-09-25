@@ -23,7 +23,15 @@ When implementation differs from this spec unintentionally, treat it as a discre
 
 The user requested that the campaign Home illustration fill the screen, with readable controls over the artwork, and explicitly rejected the dark green frame shown in their iPad photograph. This supersedes the earlier inset map board and separate green header/footer.
 
-Use the existing approved campaign art edge to edge within the app viewport, maintaining the artwork's proportions with cropping where necessary. Float compact warm parchment controls with dark forest ink, restrained gold borders, and a gold Play button above it. Keep the campaign/daily progress, Parents, Hero, reading speed, sound, chapter markers and Pip XP available. On narrow portrait screens, arrange the chapter trail in the clear central region and omit the decorative traveller to keep the five chapter buttons reachable. Controls respect device safe areas. This is a layout change, not a browser fullscreen request; the previously removed fullscreen button stays removed. Preserve saves, chapters, XP, curriculum, characters and existing control behavior.
+Use the existing approved campaign art edge to edge within the app viewport, maintaining the artwork's proportions with cropping where necessary. Float compact warm parchment controls with dark forest ink and restrained gold borders above it. Controls respect device safe areas. This is a layout change, not a browser fullscreen request; the previously removed fullscreen button stays removed. Preserve saves, chapters, XP, curriculum and approved characters. The initial Play-panel composition is superseded by the following refinement.
+
+### Decluttered map controls — 25 September 2026
+
+The user's follow-up removes the confusing “Today · 0 / 1 chapters”, duplicate “Home” label and separate Play panel. The current chapter's gold marker and full name are one direct continuation button, with a small forward arrow. Use **Hidden Nest**, the existing fifth chapter name, instead of its abbreviated “Home”. Other chapter markers may reveal their names and locked/explored state; only the current chapter resumes play. Chapter numbers use crisp text without a blurred shadow.
+
+Keep parent access in a small gear at the lower-left. Each opening asks a new subtraction question with a three-digit first number, both operands written in words, and a digit answer. The implemented range is 300–999 minus 40–249, always positive; an example is “five hundred and twenty-six minus one hundred and forty-eight”. Blank or non-integer answers do not unlock it.
+
+Use the current movement icon as the speed launcher; tapping it opens a compact dropdown of the existing seven choices. Preserve timing, calibration and locked speeds. Tapping the hero portrait opens the existing hero selection; remove the separate Hero text button. Keep that portrait reachable on narrow screens, placing it below the upper-right tools where necessary. Campaign beads and Pip XP remain. Earned completion/returning rewards can appear after earning them, while compact layouts show only the active XP boost. These are presentation and entry changes; daily rewards and learner progress keep their existing rules. See [implementation and verification](MAP_CONTROLS_RELEASE.md).
 
 ## Hero articulation study — 25 September 2026
 

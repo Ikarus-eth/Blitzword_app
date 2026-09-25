@@ -14,7 +14,7 @@ function boot(saved,options={}){
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.removeAttribute('selected');[...this.querySelectorAll('option')].find(option=>option.value===value)?.setAttribute('selected','');}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>!options.pendingImages,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
  let speechEnd=null;const speechTexts=[];
- const ctx={window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ const ctx={Math:Object.assign(Object.create(Math),{random:options.random||Math.random}),window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -26,6 +26,14 @@ function boot(saved,options={}){
  function advance(ms,suspended=false){if(suspended){now+=ms;heartbeat();}else for(let elapsed=0;elapsed<ms;elapsed+=1000){now+=Math.min(1000,ms-elapsed);heartbeat();}}
  function visibility(hidden){Object.defineProperty(document,'hidden',{value:hidden,configurable:true});document.dispatchEvent(new window.Event('visibilitychange'));}
  return {state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
+}
+// Independent reading of the written-number parent gate for dashboard flow tests.
+function parentGateAnswer(ui){
+ const units='zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split(' ');
+ const tens={twenty:20,thirty:30,forty:40,fifty:50,sixty:60,seventy:70,eighty:80,ninety:90};
+ const value=text=>text.trim().split(/[ -]+/).reduce((sum,word)=>word==='hundred'?sum*100:word==='and'?sum:sum+(tens[word]??units.indexOf(word)),0);
+ const [first,second]=ui.get('parentQuestion').textContent.replace(/^What is /,'').replace(/\?$/,'').split(' minus ');
+ return value(first)-value(second);
 }
 function impactSave(enemy='moss-golem'){
  const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile={name:'Reader',gender:'boy',heroClass:'Mage',age:7};s.assessment.done=true;
@@ -211,7 +219,7 @@ for(const mode of ['win','lose','help']){
  assert.equal(ui.get('assessmentIntro').hidden,false);ui.click(ui.get('assessmentStart'));
  for(let i=0;i<8;i++){ui.until(()=>ui.state().assessment.progress?.question?.phase==='choices');ui.click(ui.get('assessmentUnsure'));ui.tick();}
  assert.equal(ui.state().assessment.done,true);assert.equal(ui.state().activity,'battle');assert.equal(ui.state().battle.demo,false);
- assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('mapAreaStatus').textContent,'Reading check complete · Your first chapter');assert.equal(ui.get('mapNodes').children.length,5);ui.resume();assert.equal(ui.state().battle.mapSeen,true);assert.ok(ui.get('battle').classList.contains('active'));
+ assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('mapContinue').dataset.area,'lantern-trail');assert.equal(ui.get('mapNodes').children.length,5);ui.resume();assert.equal(ui.state().battle.mapSeen,true);assert.ok(ui.get('battle').classList.contains('active'));
  ui.click(ui.get('pauseBtn'));assert.equal(ui.get('pausePanel').hidden,false);ui.click(ui.get('pauseResume'));assert.equal(ui.get('pausePanel').hidden,true);
  console.log('PASS complete DOM flow:',mode,'→ saved handoff → assessment → campaign → pause/resume');
 }
@@ -263,13 +271,13 @@ for(const victory of [true,false]){
  let ui=boot(s);assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('dragonXP').textContent,'14997 XP');assert.equal(ui.get('dragonNext').textContent,'9 / 10 growth steps');assert.equal(ui.get('dragonStages').children.length,4);
  assert.ok(ui.get('app').classList.contains('mapHome'));assert.equal(ui.document.querySelector('.mapTerrain').style.backgroundSize,'cover');
  const id=ui.state().battle.id;ui.click(ui.get('mapNodes').querySelector('[data-area="hidden-nest"]'));
- assert.equal(ui.get('mapAreaTitle').textContent,'Home');assert.equal(ui.get('mapContinue').disabled,true);assert.equal(ui.state().battle.id,id);assert.equal(ui.get('mapAreaStatus').textContent,'Further along the trail');
- ui.click(ui.get('mapNodes').querySelector('[data-area="lantern-trail"]'));ui.resume();ui.ready();assert.equal(ui.state().battle.question.target,'on');
+ assert.equal(ui.get('mapNodes').querySelector('[data-area="hidden-nest"] .mapNodeName').textContent,'Hidden Nest');assert.equal(ui.get('mapContinue').dataset.area,'lantern-trail');assert.equal(ui.state().battle.id,id);assert.equal(ui.get('mapNodes').querySelector('[data-area="hidden-nest"] small').textContent,'Locked');
+ ui.resume();ui.ready();assert.equal(ui.state().battle.question.target,'on');
  assert.equal(ui.get('app').classList.contains('mapHome'),false);
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip is glowing!');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'0');
  ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'15000 XP');assert.equal(ui.get('dragonStage').textContent,'Big Pip');assert.equal(ui.get('dragonNext').textContent,'0 / 10 growth steps');assert.equal(ui.get('mapPip').dataset.growth,'0');
  const answers=ui.state().campaign.battleRecords.length;ui.resume();ui.until(()=>ui.state().battle.question.target!=='on');assert.equal(ui.state().campaign.battleRecords.length,answers);
- ui.click(ui.get('homeBtn'));ui.click(ui.get('mapSettings'));ui.click(ui.get('heroGrid').children[1]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.get('dragonXP').textContent,'15000 XP');
+ ui.click(ui.get('homeBtn'));ui.click(ui.get('mapTraveller'));ui.click(ui.get('heroGrid').children[1]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.get('dragonXP').textContent,'15000 XP');
  console.log('PASS map future previews, XP stage unlock, reload, exact resume and hero change');
 }
 
@@ -298,7 +306,7 @@ for(const victory of [true,false]){
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));assert.equal(Core.parentProgress(ui.state()).activeMs,2000);
  ui.click(ui.get('homeBtn'));ui.advance(60000);assert.equal(Core.parentProgress(ui.state()).activeMs,2000);
  ui.click(ui.get('mapParents'));assert.equal(ui.get('parentGate').hidden,false);ui.get('parentAnswer').value='0';ui.click(ui.get('parentUnlock'));assert.equal(ui.get('parentGate').hidden,false);
- ui.get('parentAnswer').value=String(ui.get('parentQuestion').textContent.match(/\d+/g).map(Number).reduce((a,b)=>a+b,0));ui.click(ui.get('parentUnlock'));
+ ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
  assert.ok(ui.get('parentDashboard').classList.contains('active'));assert.equal(ui.get('parentTotal').textContent,'0 min 02 sec');assert.equal(ui.get('parentPractice').textContent,'0 min 02 sec');assert.equal(ui.get('parentDays').children.length,1);
  ui.click(ui.get('parentHome'));ui.resume();ui.until(()=>ui.state().battle.question.id!==qid);ui.ready();const before=Core.parentProgress(ui.state()).activeMs;
  ui.advance(3000);ui.visibility(true);assert.equal(ui.get('pausePanel').hidden,false);assert.equal(Core.parentProgress(ui.state()).activeMs,before);
@@ -433,7 +441,7 @@ function storySave(index=7){
 {
  const s=storySave(9);s.dragon.xp=15000;s.dragon.named=true;s.dragon.name='Ember';s.dragon.namingPromptSeen=true;
  const ui=boot(s,{heldNarration:true});assert.match(ui.document.querySelector('.mapTerrain').getAttribute('aria-label'),/Campaign 2, River Path map. Chapter 5, River Gate/);
- assert.match(ui.get('mapNodes').children[4].getAttribute('aria-label'),/Chapter 5, River Gate, current/);
+ assert.match(ui.get('mapNodes').children[4].getAttribute('aria-label'),/Continue to chapter 5, River Gate/);
  ui.resume();assert.equal(ui.get('storyLocation').textContent,'Campaign 2 · Chapter 5');assert.equal(ui.speechTexts[0],Content.chapterStories[s.battle.areaId].narration);ui.finishSpeech();ui.click(ui.get('storyNext'));assert.equal(ui.get('storySentence').textContent,'Ember is at the gate.');ui.click(ui.get('storyListen'));assert.equal(ui.speechTexts.at(-1),'Ember is at the gate.');ui.finishSpeech();
  storyChoose(ui);ui.click(ui.get('storyNext'));assert.match(ui.get('encounterChapter').querySelector('[role="progressbar"]').getAttribute('aria-label'),/Campaign 2, River Path: 4 of 5 chapters completed. Chapter 5, River Gate/);
  console.log('PASS chosen dragon name in story speech and sentence, and actual campaign/chapter accessibility labels');
@@ -534,7 +542,7 @@ console.log('PASS all three untaught words speak only on tap, record bounded hel
 // Parents can save the whole adventure as a dated file and restore it after checking and confirming.
 function openParents(ui){
  ui.click(ui.get(ui.get('campaignMap').classList.contains('active')?'mapParents':'routeParents'));
- ui.get('parentAnswer').value=String(ui.get('parentQuestion').textContent.match(/\d+/g).map(Number).reduce((a,b)=>a+b,0));ui.click(ui.get('parentUnlock'));
+ ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
  assert.ok(ui.get('parentDashboard').classList.contains('active'));
 }
 function backupProgress(name,xp,words){
@@ -776,7 +784,7 @@ console.log('PASS Parents shows per-word quick evidence separately from words st
 }
 console.log('PASS the older self-paced checkbox preserves a pending ready word and uses the shared speed-setting path');
 {
- const ui=boot(speedResultSave());assert.equal(ui.get('mapSpeed').textContent,'Stride');ui.resume();ui.click(ui.get('speedSuggestionYes'));ui.click(ui.get('resultNext'));assert.equal(ui.get('mapSpeed').textContent,'Jog');
+ const ui=boot(speedResultSave());assert.equal(ui.get('mapSpeed').dataset.speed,'stride');ui.resume();ui.click(ui.get('speedSuggestionYes'));ui.click(ui.get('resultNext'));assert.equal(ui.get('mapSpeed').dataset.speed,'jog');
 }
 console.log('PASS the map speed label follows the reading-check default and accepted suggestions');
 function parentLearningSave(){
@@ -788,7 +796,7 @@ function parentLearningSave(){
 {
  const ui=boot(parentLearningSave());assert.equal(ui.get('parentGate').hidden,true);ui.click(ui.get('mapParents'));assert.equal(ui.get('parentGate').hidden,false);
  ui.get('parentAnswer').value='0';ui.click(ui.get('parentUnlock'));assert.equal(ui.get('parentDashboard').classList.contains('active'),false);
- ui.get('parentAnswer').value=String(ui.get('parentQuestion').textContent.match(/\d+/g).map(Number).reduce((a,b)=>a+b,0));ui.click(ui.get('parentUnlock'));
+ ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
  const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];assert.equal(words.length,200);assert.equal(new Set(words.map(w=>w.dataset.word)).size,200);
  for(const [word,status] of [['on','learning'],['rock','secured'],['fox','kept7'],['cave','kept30'],['water','new']])assert.equal(words.find(b=>b.dataset.word===word).dataset.status,status);
  const articles=[...ui.get('parentDashboard').children];assert.equal(articles[1].id,'parentLearningOverview');assert.ok(articles.indexOf(ui.get('parentRetention'))<articles.findIndex(el=>el.querySelector('.soundSettings')));assert.equal(articles.at(-2).querySelector('.soundSettings')!==null,true);
@@ -918,3 +926,40 @@ console.log('PASS timed and self-paced battle audio stays open through every que
  }
  console.log('PASS every grown Pip crop excludes neighbouring atlas cells with a unique clip in narrow and wide containers');
 }
+
+// The chapter itself is the entry point; inspecting other places cannot change it.
+{
+ const ui=boot(impactSave()),before=ui.state(),current=ui.get('mapContinue');
+ assert.equal(ui.document.querySelector('.mapDestination'),null);assert.equal(ui.get('mapSettings'),null);
+ assert.equal(current.dataset.area,'lantern-trail');assert.equal(current.querySelector('.mapNodeName').textContent,'Lantern Trail›');
+ assert.equal(ui.get('mapDailyGoal').hidden,true);assert.equal(ui.get('mapDailySummary').hidden,true);
+ assert.equal(ui.get('mapTraveller').tagName,'BUTTON');assert.match(ui.get('mapTraveller').getAttribute('aria-label'),/^Change hero:/);
+ ui.click(ui.get('mapNodes').querySelector('[data-area="hidden-nest"]'));
+ assert.equal(ui.state().screen,'campaignMap');assert.equal(ui.state().battle.id,before.battle.id);assert.equal(ui.get('mapContinue').dataset.area,'lantern-trail');
+ const start=ui.get('mapContinue').onclick;start();const active=ui.state();start();
+ assert.equal(ui.state().battle.id,active.battle.id);assert.deepEqual(ui.state().battle.question,active.battle.question);
+ assert.equal(ui.state().screen,'battle');assert.equal(ui.get('speedPanel').hidden,true);
+ console.log('PASS direct chapter entry replaces the footer; locked previews and repeated taps preserve the pending battle');
+}
+{
+ const ui=boot(impactSave());assert.ok(ui.get('mapSpeed').querySelector('.pacePicture'));assert.equal(ui.get('mapSpeed').textContent,'');
+ ui.click(ui.get('mapSpeed'));assert.ok(ui.get('speedPanel').classList.contains('mapSpeedMenu'));assert.equal(ui.get('speedPanel').hasAttribute('aria-modal'),false);assert.equal(ui.get('mapSpeed').getAttribute('aria-expanded'),'true');
+ ui.click(ui.get('mapSpeed'));assert.equal(ui.get('speedPanel').hidden,true);assert.equal(ui.get('mapSpeed').getAttribute('aria-expanded'),'false');
+ ui.click(ui.get('mapSpeed'));const escape=new ui.window.Event('keydown');escape.key='Escape';ui.document.dispatchEvent(escape);assert.equal(ui.get('speedPanel').hidden,true);
+ ui.click(ui.get('mapSpeed'));ui.get('mapTitle').dispatchEvent(new ui.window.Event('click',{bubbles:true}));assert.equal(ui.get('speedPanel').hidden,true);
+ ui.click(ui.get('mapSpeed'));ui.click(ui.get('speedChoices').querySelector('[data-speed="jog"]'));assert.equal(ui.get('mapSpeed').dataset.speed,'jog');assert.match(ui.get('mapSpeed').getAttribute('aria-label'),/Jog/);
+ const saved=ui.state();ui.click(ui.get('mapTraveller'));assert.equal(ui.state().screen,'hero');assert.equal(ui.get('speedPanel').hidden,true);ui.click(ui.get('heroNext'));assert.equal(ui.get('mapSpeed').dataset.speed,'jog');assert.equal(ui.state().battle.id,saved.battle.id);
+ ui.resume();ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseSpeed'));assert.equal(ui.get('speedPanel').classList.contains('mapSpeedMenu'),false);assert.equal(ui.get('speedPanel').getAttribute('aria-modal'),'true');
+ console.log('PASS icon speed dropdown toggles, closes on Escape/outside click, persists choices and leaves Pause as a dialog');
+}
+for(const [random,question,answer] of [
+ [()=>0,'What is three hundred minus forty?',260],
+ [()=>.999999,'What is nine hundred and ninety-nine minus two hundred and forty-nine?',750],
+ [(()=>{const values=[226.01/700,108.01/210];let i=0;return ()=>values[i++%2];})(),'What is five hundred and twenty-six minus one hundred and forty-eight?',378]
+]){
+ const ui=boot(impactSave(),{random});ui.click(ui.get('mapParents'));assert.equal(ui.get('parentQuestion').textContent,question);assert.doesNotMatch(question,/\d/);assert.equal(parentGateAnswer(ui),answer);
+ for(const invalid of ['', '0', '0x'+answer.toString(16), String(answer)+'.0',String(answer)+'e0','not a number']){ui.get('parentAnswer').value=invalid;ui.click(ui.get('parentUnlock'));assert.equal(ui.get('parentGate').hidden,false);assert.equal(ui.state().screen,'campaignMap');}
+ ui.click(ui.get('parentCancel'));ui.get('parentAnswer').value=String(answer);ui.click(ui.get('parentUnlock'));assert.equal(ui.state().screen,'campaignMap');
+ ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=' '+answer+' ';ui.click(ui.get('parentUnlock'));assert.equal(ui.state().screen,'parentDashboard');assert.equal(ui.get('parentGate').hidden,true);
+}
+console.log('PASS written three-digit subtraction gate: boundaries, example, invalid input, cancel and correct answer');
