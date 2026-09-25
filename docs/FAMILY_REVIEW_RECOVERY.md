@@ -22,3 +22,7 @@ No image files were generated, recreated, replaced or added in this update. Thor
 - No game code or learner save is loaded or modified.
 
 Validation is recorded in `assets/family-review/verification.json`. The earlier preview image and provenance remain historical records of PR #97.
+
+## Bulk import follow-up
+
+The [image import workflow](FAMILY_REVIEW_IMPORTS.md) adds device-local originals, resumable batches and full backups. The 31/125 counts above describe the published source roster; the dashboard updates its available/missing counts as local images are assigned.
