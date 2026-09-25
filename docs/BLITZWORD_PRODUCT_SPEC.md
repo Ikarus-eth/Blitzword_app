@@ -25,6 +25,14 @@ The user requested that the campaign Home illustration fill the screen, with rea
 
 Use the existing approved campaign art edge to edge within the app viewport, maintaining the artwork's proportions with cropping where necessary. Float compact warm parchment controls with dark forest ink, restrained gold borders, and a gold Play button above it. Keep the campaign/daily progress, Parents, Hero, reading speed, sound, chapter markers and Pip XP available. On narrow portrait screens, arrange the chapter trail in the clear central region and omit the decorative traveller to keep the five chapter buttons reachable. Controls respect device safe areas. This is a layout change, not a browser fullscreen request; the previously removed fullscreen button stays removed. Preserve saves, chapters, XP, curriculum, characters and existing control behavior.
 
+## Hero articulation study — 25 September 2026
+
+The user approved a first archer prototype after discussing 2D skeletal animation versus 3D models. Prepare one male archer from the approved Rowanfire lineup with separate shoulders, elbows, wrists, legs, head and equipment. Demonstrate raising the bow, drawing to the cheek, aiming at an enemy, releasing the arrow with bow/string movement, and recovering. Provide normal speed, slow motion and individual pose inspection in a separate review page. Preserve the current 1,200 ms feedback window and 660 ms impact timing as the integration target; production characters still remain still during reading and answer selection.
+
+This approval covers the archer study, not automatic adoption of all six new hero appearances. Review movement and identity before extending it to knight, mage or female appearances and before replacing the playable game's renderer. The study may be served through the existing GitHub Pages workflow. It must not read or write learner saves. Keep all original approved art.
+
+The user also asked about making the boys' faces and hair more distinct. This is a pending visual direction discussion, not approval of a replacement lineup. Keep the head independently replaceable so a later approved face can be carried into the animation without rebuilding the limbs. See [the prototype record](heroes/ARCHER_PROTOTYPE.md).
+
 ## 1. Product thesis
 
 BlitzWord is for children who can already handle basic letters/sounds and simple words but still expend too much effort reading. Their comprehension and interests can be well ahead of what they can comfortably read alone. The product trains accurate, confident word recognition and retention through competitive battles and visible progress without using babyish material.

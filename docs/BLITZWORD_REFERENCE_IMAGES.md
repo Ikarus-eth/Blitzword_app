@@ -18,6 +18,12 @@ The original `00a_heroes_character_bible.png` records the approval of the three 
 
 ## Active references
 
+### Archer animation study — 25 September 2026
+
+`assets/heroes/prototype/archer-boy-parts.png` is a generated transparent parts atlas for a separate movement prototype, derived from the approved boy archer in `assets/rowanfire-boys-2026-09-21.png`. It does not supersede the approved lineup or replace production art. The head, sleeves, bracers, hands, torso, cloak, quiver, legs, boots and bow are assembled by `assets/heroes/prototype/archer-rig.js`. [Exact built-in image-generation prompt](heroes/ARCHER_ART_PROMPT.json); [implementation and review limits](heroes/ARCHER_PROTOTYPE.md).
+
+The user raised the boys' similar faces and hair as a potential revision. No replacement face lineup has been approved; retain the existing reference and keep the study head replaceable.
+
 ### Full-screen campaign Home — 25 September 2026
 
 The user's iPad photograph identifies the campaign Home screen and the dark green frame to remove; it is not a new artwork source. Keep `assets/campaign-forest.png` and the six campaign panels in `assets/chapter-scenes.webp`. The approved composition is edge-to-edge artwork with floating parchment controls and legible dark text. Preserve the art's proportions and crop to the viewport. See the [product decision](BLITZWORD_PRODUCT_SPEC.md#full-screen-campaign-map--25-september-2026) and [implementation and verification](FULLSCREEN_MAP_RELEASE.md).
