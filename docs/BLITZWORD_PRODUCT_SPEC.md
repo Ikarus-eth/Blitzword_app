@@ -41,6 +41,8 @@ This approval covers the archer study, not automatic adoption of all six new her
 
 The user rejected the initial study's arm movement. Correct the prototype before expanding its scope: raise the undrawn bow, draw the hand toward the cheek while the elbow moves outward/back, keep the bow arm extended through release, let the drawing hand follow backward, then lower the arms. Review the transitions as well as the named poses. Mechanical continuity alone is not visual approval. See [the correction record](heroes/ARCHER_ARM_CORRECTION.md).
 
+The user also rejected r2 with close-up evidence of disconnected hands, split arms and apparent duplicate-hand anatomy. Treat both prototypes as visually failed; passing geometry tests or deployment verification does not override that rejection. Reassess the artwork/animation method before extending it. An authored 2D animation exported as complete character frames is the current recommendation, not an approved replacement implementation. See [the failure assessment](heroes/ARCHER_ARM_CORRECTION.md#visual-rejection-and-reassessment).
+
 The user also asked about making the boys' faces and hair more distinct. This is a pending visual direction discussion, not approval of a replacement lineup. Keep the head independently replaceable so a later approved face can be carried into the animation without rebuilding the limbs. See [the prototype record](heroes/ARCHER_PROTOTYPE.md).
 
 ## 1. Product thesis

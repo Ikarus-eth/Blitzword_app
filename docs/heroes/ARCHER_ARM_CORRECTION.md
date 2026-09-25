@@ -1,8 +1,18 @@
 # Archer arm correction — 25 September 2026
 
-Status: implemented, locally tested, deployed and verified live. Prototype marker `archer-study-20260925-r2`, visible badge “Movement study · 02”. Source baseline: main `e67625c88dc0f132fe45662d95554857f8667502`; merged and reverified the intervening enemy release `e7d038556af2de8f541b6c5754333f0593a34553`. The final merged tree also preserves enemy follow-up `8fcc99d`; its additional UI-flow test passes.
+Status: deployed but **visually rejected by the user**. The prior tests and live-byte verification did not establish visual correctness. Prototype marker `archer-study-20260925-r2`, visible badge “Movement study · 02”. Source baseline: main `e67625c88dc0f132fe45662d95554857f8667502`; merged and reverified the intervening enemy release `e7d038556af2de8f541b6c5754333f0593a34553`. The final merged tree also preserves enemy follow-up `8fcc99d`; its additional UI-flow test passes.
 
 The user rejected the r1 arm movement. Its limb-length checks passed, but the drawing elbow folded across the chest, the transition could sweep across the face, and the hand returned toward the rebounding string. Those checks did not establish believable movement.
+
+## Visual rejection and reassessment
+
+The user's two close-up screenshots of r2 show exposed hollow sleeve ends, forearms that do not join their upper arms, hands disconnected from cuffs, and an apparent two-hands-on-one-arm arrangement. The previous description of these defects as painted seams understated their severity. No new animation has been accepted or implemented following this rejection.
+
+Source inspection confirms that the generated atlas contains separate sleeve/bracer pieces with dark elliptical end caps. The renderer scales and rotates their rectangular viewports around generic centerline endpoints; those endpoints do not consistently coincide with the painted connections. Hands use the shooting angle independently of the forearm artwork. The torso also occludes upper-arm segments, obscuring which shoulder each hand belongs to. Changing elbow trajectories cannot by itself correct those visible attachment problems. The tests asserted mathematical bone lengths/contact points, not continuity of the rendered artwork.
+
+Recommendation (pending direction): retire this cutout assembly as the basis for production. Keep the approved 2D character style, have one archer attack authored with deliberate joint artwork/deformation and hand/weapon contact, then export complete transparent character frames for in-game playback. A specialist 2D character animator is the dependable route for that asset work; integration and feedback timing can remain in the existing app. [Spine supports weighted mesh deformation](https://esotericsoftware.com/spine-weights) and [transparent PNG sequences packed into an atlas](https://esotericsoftware.com/spine-export#PNG). The software alone does not repair bad artwork or guarantee good animation. A 3D character pipeline is another option, but has not been selected or started.
+
+Review the connected ready, raised, full-draw, release and recovery poses at close range, then every transition at slow and normal speed. Require two visibly traceable shoulder-to-hand chains, closed joints, continuous bow grip and a believable string draw/release. Complete frames avoid independent runtime limb assembly, but the source animation still needs this visual check. Character identity, the earlier face/hair discussion, 1,200 ms feedback/660 ms impact target and learner-save protection retain their existing status.
 
 ## Changed movement
 
