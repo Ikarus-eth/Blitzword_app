@@ -578,9 +578,14 @@
     if(s.battle)recent.push(s.battle.enemyId||'thornling');
     const roster=Content.enemiesForHealth(Math.max(3,health));
     const recentFamilies=recent.map(id=>Content.enemyAt(id).family);
-    const choices=roster.filter(enemy=>!recent.includes(enemy.id)&&!recentFamilies.includes(enemy.family));
+    const fresh=roster.filter(enemy=>!recent.includes(enemy.id)&&!recentFamilies.includes(enemy.family));
+    const different=roster.filter(enemy=>enemy.family!==Content.enemyAt(s.battle?.enemyId).family);
+    const choices=fresh.length?fresh:different.length?different:roster;
     const history=(s.campaign.enemyHistory||[]).map(entry=>entry.enemyId);
-    return choices.sort((a,b)=>history.lastIndexOf(a.id)-history.lastIndexOf(b.id));
+    const families=history.map(id=>Content.enemyAt(id).family);
+    const visits=s.campaign.enemyVisits||{},familyVisits=family=>Object.entries(visits).reduce((sum,[id,n])=>sum+(Content.enemyAt(id).family===family?n:0),0);
+    return choices.sort((a,b)=>familyVisits(a.family)-familyVisits(b.family)||families.lastIndexOf(a.family)-families.lastIndexOf(b.family)||
+      (visits[a.id]||0)-(visits[b.id]||0)||history.lastIndexOf(a.id)-history.lastIndexOf(b.id));
   }
   function enemyScale(health) { return .78 + .65*(1-Math.exp(-(Math.max(3,health)-3)/5)); }
   function currentChapter(s){return Content.chapters.find(chapter=>!s.story.completedChapters.includes(chapter.id))||Content.chapters.at(-1);}
@@ -695,7 +700,10 @@
     const finalEncounter=!demo&&!s.story.completedChapters.includes(chapter.id)&&story.areas.every(area=>area.status==='cleared');
     const health=demo?5:Math.max(finalEncounter?6:3,strength || s.campaign.enemyStrength || 3);
     const available=enemyChoices(s,health);
-    const chosen=demo?'thornling':available.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
+    // Explicit legacy base IDs remain valid for old integrations; normal choices use variants.
+    const chosen=demo?'thornling':available.find(enemy=>enemy.id===enemyId)?.id||
+      Content.enemiesForHealth(health).find(enemy=>enemy.id===enemyId)?.id||
+      Content.enemies.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
     s.battle={id:id(s,'battle'),demo,heroHealth:3,enemyHealth:health,maxHealth:health,
       enemyId:chosen,introPending:!demo,fromAssessment,finalEncounter,chapterId:chapter.id,areaId:story.areas.find(a=>a.status==='current')?.id||story.areas.at(-1).id,xpStart:s.dragon.xp,
       firstMistakeFree:demo,turn:0,question:null,resolved:false,xpEarned:0};
@@ -706,6 +714,11 @@
     if(!s.campaign.enemyHistory)s.campaign.enemyHistory=[];
     s.campaign.enemyHistory.push({battleId:s.battle.id,enemyId:chosen});
     s.campaign.enemyHistory=s.campaign.enemyHistory.slice(-12);
+    // Bounded by the curated catalog; prevents families past the 12-entry history
+    // window from being starved by the deterministic least-recent selection.
+    if(!demo&&Content.enemyVariants.some(e=>e.id===chosen)){
+      s.campaign.enemyVisits||={};s.campaign.enemyVisits[chosen]=(s.campaign.enemyVisits[chosen]||0)+1;
+    }
     s.result=null; s.activity='battle';
   }
   function prepareBattle(s,now,random=Math.random) {

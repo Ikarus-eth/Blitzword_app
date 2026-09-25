@@ -2628,7 +2628,41 @@
     {id:'storm-griffin',name:'Storm Griffin',sprite:7}
   ];
   enemies.forEach(enemy=>{enemy.minHealth=3;enemy.maxHealth=5;enemy.tier=0;enemy.family=enemy.id;});
+  // Total encounter HP, including every member of a group. Stable IDs are saved.
+  const enemyPlans=[
+    ['thornling',['Baby',6,9,'baby'],['Young',12,17,'young'],['Adult',18,23,'adult']],
+    ['moss-golem',['Small',10,14,'baby'],['Grown',16,22,'young'],['Ancient',23,28,'adult']],
+    ['moon-moth',['One',5,8,'adult',1],['Two',10,16,'adult',2],['Three',15,24,'adult',3]],
+    ['root-sprite',['Sapling',8,12,'baby'],['Grown',15,20,'young'],['Elder',20,25,'adult']],
+    ['cave-troll',['Baby',10,14,'baby'],['Young',17,22,'young'],['Adult',23,30,'adult']],
+    ['acorn-imp',['One',7,9,'adult',1],['Two',14,18,'adult',2],['Three',21,27,'adult',3]],
+    ['mushroom-guard',['Sprout',9,13,'baby'],['Grown',15,20,'young'],['Elder',20,25,'adult']],
+    ['bark-beetle',['One',4,5,'adult',1],['Three',12,15,'adult',3],['Five',20,25,'adult',5]],
+    ['bramble-boar',['Piglet',8,12,'baby'],['Young',15,20,'young'],['Adult',20,26,'adult']],
+    ['reed-serpent',['Hatchling',7,11,'baby'],['Young',14,19,'young'],['Adult',19,25,'adult']],
+    ['bog-toad',['Toadlet',7,11,'baby'],['Young',14,19,'young'],['Adult',19,24,'adult']],
+    ['lantern-wisp',['One',6,8,'adult',1],['Two',12,16,'adult',2],['Three',18,24,'adult',3]],
+    ['crystal-crab',['Small',8,12,'baby'],['Grown',15,20,'young'],['Large',20,25,'adult']],
+    ['hollow-owl',['Fledgling',8,12,'baby'],['Young',14,18,'young'],['Adult',18,23,'adult']],
+    ['fern-wolf',['Young',8,12,'young'],['Adult',17,23,'adult'],['Two young',16,24,'young',2]],
+    ['stone-ram',['Lamb',10,14,'baby'],['Young',16,21,'young'],['Adult',22,28,'adult']],
+    ['briar-bat',['One',4,5,'adult',1],['Three',12,15,'adult',3],['Five',20,25,'adult',5]],
+    ['snail-knight',['Small',9,13,'baby'],['Grown',16,21,'young'],['Elder',21,26,'adult']],
+    ['chest-mimic',['Small box',10,14,'baby'],['Chest',17,23,'young'],['Large coffer',24,30,'adult']],
+    ['storm-griffin',['Hatchling',11,15,'baby'],['Young',18,24,'young'],['Adult',25,32,'adult']]
+  ];
+  const enemyVariants=enemyPlans.flatMap(([family,...forms])=>forms.map(([label,minHealth,maxHealth,stage,count=1],i)=>{
+    const base=enemies.find(e=>e.id===family);
+    return {...base,id:family+'--'+(i+1),family,stage,count,minHealth,maxHealth,
+      name:count>1?count+' '+(label==='Two young'?'young ':'')+(family==='fern-wolf'?'Fern Wolves':base.name+'s'):label==='One'||label==='Chest'?base.name:label+' '+base.name};
+  }));
+  // Keep the existing 3-HP entry point; these training encounters are the only range exception.
+  const trainingEnemies=['thornling','moon-moth','bark-beetle','briar-bat'].map(family=>{
+    const base=enemies.find(e=>e.id===family);
+    return {...base,id:family+'--training',stage:'baby',count:1,minHealth:3,maxHealth:3,name:'Tiny '+base.name};
+  });
   function enemyAt(id){
+    const variant=enemyVariants.find(e=>e.id===id)||trainingEnemies.find(e=>e.id===id);if(variant)return variant;
     const direct=enemies.find(enemy=>enemy.id===id);if(direct)return direct;
     const match=/^(.*)-tier-(\d+)$/.exec(id||'');if(!match)return enemies[0];
     const base=enemies.find(enemy=>enemy.id===match[1]),tier=Number(match[2]);if(!base||tier<1||!Number.isSafeInteger(tier))return enemies[0];
@@ -2636,8 +2670,18 @@
     return {...base,id,name:title+' '+base.name,tier,minHealth:3+tier*3,maxHealth:5+tier*3};
   }
   function enemiesForHealth(health){
+    if(health<=32)return [...enemyVariants,...trainingEnemies].filter(e=>health>=e.minHealth&&health<=e.maxHealth);
+    // Readable legacy encounters above the new roster ceiling retain their saved strength.
     const tier=Math.max(0,Math.floor((health-3)/3));
     return enemies.map(enemy=>tier?enemyAt(enemy.id+'-tier-'+tier):enemy);
+  }
+  function enemyMembers(enemyId,maxHealth,remaining=maxHealth){
+    const count=enemyAt(enemyId).count||1,total=Math.max(count,Math.round(maxHealth));
+    let damage=total-Math.max(0,Math.min(total,remaining));
+    return Array.from({length:count},(_,index)=>{
+      const max=Math.floor(total/count)+(index<total%count?1:0),health=Math.max(0,max-damage);
+      damage=Math.max(0,damage-max);return {index,maxHealth:max,health};
+    });
   }
   // Each place has six fixed targets. Earlier places remain available for review.
   const areas = [
@@ -3131,5 +3175,5 @@
   const evolution={intro:"Look! Your dragon is glowing. Let's see what happens.",
     frames:[0,1,2,3].map(stage=>'assets/evolution/pip-stage-'+stage+'.webp'),
     lines:[null,['I am big.','I can help.'],['My wings are big.','I can help you.'],['Hop on my back.','We can go far.']]};
-  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyAt, enemiesForHealth, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, dragonStages, evolution, chapterWordGoal:30};
+  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyVariants, enemyAt, enemiesForHealth, enemyMembers, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, dragonStages, evolution, chapterWordGoal:30};
 });

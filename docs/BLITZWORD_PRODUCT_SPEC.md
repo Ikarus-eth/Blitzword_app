@@ -17,7 +17,7 @@ When implementation differs from this spec unintentionally, treat it as a discre
 - Growth is XP-only at **15,000 / 45,000 / 70,000**, with whole XP awards, ten visible steps and the returning-day bonus. Earned forms and learner saves remain preserved. See [point 9](#point-9-whole-xp-and-slower-growth--24-september-2026).
 - Practice uses rotating reviewed distractors; the 26 reading-check items use fair fixed sets. All 34 story sentences/picture pairs are approved and deployed. Their earlier review gates are closed.
 - Narration recovery and gate pronunciation review are complete. The remaining recordings and synchronized highlighting are authorized but not deployed; [draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) was last blocked by ElevenLabs quota.
-- Points 1, 2, 3, 4, 6, 7 and 8 and the later point 9 are complete; point 5’s final narration batch remains open. Number-duel changes and enemy extensions remain discussion items; native/commercial packaging is later work. See [current status](CURRENT_STATUS.md#outstanding-work-and-ownership).
+- Points 1, 2, 3, 4, 6, 7 and 8 and the later point 9 are complete; point 5’s final narration batch remains open. Number-duel changes remain discussion items; the enemy extensions were authorized on 25 September; native/commercial packaging is later work. See [current status](CURRENT_STATUS.md#outstanding-work-and-ownership).
 
 ## Full-screen campaign map — 25 September 2026
 
@@ -748,7 +748,7 @@ The child interface uses a short chapter title, a single control toolbar, a visi
 
 ## 27. Success XP and chapter pacing — approved 23 September 2026
 
-This section records the 23 September chapter rules and original XP calibration. Point 9 later supersedes its growth thresholds, fractional reward calculation and calendar projections; the chapter minimum/objectives remain. See `SUCCESS_XP_RELEASE.md` for that milestone’s rules and `XP_CALIBRATION.json` for reproducible model outputs. A battle is one enemy; a chapter is one map field; a campaign is one map of five chapters. New chapters require at least ten interaction-confirmed active minutes and finish only at a resolved battle/duel boundary. Three reading victories, a completed number duel and the existing word-practice objectives are required; extra battles fill a chapter that is still under ten minutes. One chapter per day is the visible goal. Seven campaigns retain all 200 words, and review chapters continue afterwards.
+This section records the 23 September chapter rules and original XP calibration. Point 9 later supersedes its growth thresholds, fractional reward calculation and calendar projections; the chapter minimum/objectives remain. See `SUCCESS_XP_RELEASE.md` for that milestone’s rules and `XP_CALIBRATION.json` for reproducible model outputs. A battle is one encounter (one creature or a shared-health group); a chapter is one map field; a campaign is one map of five chapters. New chapters require at least ten interaction-confirmed active minutes and finish only at a resolved battle/duel boundary. Three reading victories, a completed number duel and the existing word-practice objectives are required; extra battles fill a chapter that is still under ten minutes. One chapter per day is the visible goal. Seven campaigns retain all 200 words, and review chapters continue afterwards.
 
 Evolution depends only on cumulative XP: 3,000 / 8,900 / 13,400. Remove minimum minutes, elapsed days and campaign completion from evolution, while preserving earned forms and separate movement/purchase locks. The first evolution unlocks the child's choice of companion name. Correct unaided reading earns 3 XP, with once-only new-word and delayed-retention bonuses, reliable faster-review bonuses and chapter accuracy rewards. At ten active minutes each local date, award 20 XP once and apply a visible but small ×1.75 multiplier to correct-answer XP for the rest of the date. No penalty is imposed for stopping early or missing a day. No new pet is added yet.
 
@@ -762,7 +762,7 @@ This historical milestone introduced a short illustrated narration followed by o
 
 The adaptive forest soundscape is implemented and deployed, including scene music, result cues, speech priority, cancellation and independent saved controls. It is separate from the unfinished expansion of prerecorded narration. See [soundscape behavior](SOUNDSCAPE_RELEASE.md).
 
-The twenty selected enemy families and all 35 chapter backgrounds were subsequently deployed. Creature-specific health ranges and group/age variants remain proposals; they were not approved for implementation by the art workstream. An additional dragon is an optional future idea. This documentation update adds no gameplay or audio changes; [current status](CURRENT_STATUS.md) tracks the remaining work and verification limits.
+The twenty selected enemy families and all 35 chapter backgrounds were subsequently deployed. Creature-specific health ranges and group/age variants were originally proposals; the user approved implementation and deployment on 25 September. See `enemies/GROUP_ENCOUNTERS_RELEASE.md`. An additional dragon is an optional future idea. This documentation update adds no gameplay or audio changes; [current status](CURRENT_STATUS.md) tracks the remaining work and verification limits.
 
 ## Chapter scenery — 23 September 2026
 
@@ -801,7 +801,7 @@ Pause, Home, Rest, backgrounding and reload preserve the current phase. Reduced 
 
 Twenty user-selected base enemy families now use painted parts with articulated 2D attack, hit, defeat and celebration reactions. Enemies stay still during reading and answer selection. Damage remains committed immediately; visible health and shield consumption wait until the shared attack impact timing. Existing strength tiers, learner saves, narration fallback and scoring remain compatible. See [the layered enemy release](enemies/LAYERED_ENEMIES_RELEASE.md) for the selected identities, assets and limits.
 
-The suggested creature-specific HP ranges, shared-health group encounters and distinct baby/young/adult forms remain proposals; this release keeps the existing tier-based health rules and three player hearts.
+That art-only release retained tier-based health. The 25 September group-encounter approval supersedes it with the curated HP ranges and proportional age forms in `enemies/GROUP_ENCOUNTERS_RELEASE.md`; three player hearts and one damage per independent mistake remain.
 
 ## Rotating wrong answers (point 2) — approved 23 September 2026
 
@@ -931,3 +931,9 @@ The reload handler must compare the current primary save against the version loa
 ## Fair fixed reading-check choices — 24 September 2026
 
 The user's request to fix all three audit priorities authorizes the recommended fixed-set correction for all 26 reading-check items. Apply the same letter/length and one-letter-giveaway checks as practice and prevent a similarity shortcut from outperforming chance across the check. Keep fixed options with shuffled positions, existing targets/levels/calibration, and saved pending questions. [Reviewed table and validation](ASSESSMENT_CHOICES_RELEASE.md).
+
+## Group encounters — approved 25 September 2026
+
+Implement the previously discussed 20-family HP table, shared-health groups and growth stages. See [the exact ranges](enemies/GROUP_ENCOUNTERS_RELEASE.md). Two, three or five members share total encounter HP, distributed as evenly as possible; damage consumes one member at a time. One wrong independent answer triggers one collective enemy attack and costs at most one player heart (or one shield). Member retirement and the visible health reduction occur at the existing 660 ms impact. Reading phases stay still; pause/reload never restores spent enemy HP.
+
+Keep Same/Stronger/Easier selection and the saved difficulty. At 3 HP retain tiny training encounters; do not jump a beginning reader to 15 HP to meet a population percentage. At 15–25 HP select only variants whose approved range contains the chosen total. The UI stops offering increases above the catalog maximum of 32; older stronger battles and saved strength remain valid. Balanced visits rotate all eligible families and forms. Age forms reuse the approved painted parts with larger relative heads, shorter limbs/wings/tails and staged golem foliage; this is a 2D rig change, not replacement character artwork.
