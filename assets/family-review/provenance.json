@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "Recovered earlier Thornling alternative A",
+  "jobs": [
+    {
+      "id": "b",
+      "title": "Autumn ember",
+      "direction": "A compact round, friendly hedgehog creature with large warm amber eyes, a short rounded muzzle, small ears, layered copper-orange maple leaves and short reddish wooden thorn quills. Low broad stance. Clearly autumn, cheerful face, no glowing fire."
+    },
+    {
+      "id": "c",
+      "title": "Moss garden",
+      "direction": "A stocky, gentle hedgehog creature with a rounded tan face, big deep brown eyes, softer rounded green fern fronds, moss cushion between short woody quills, a few tiny white woodland flowers. Green spring palette. Strong readable rounded silhouette and four sturdy connected paws."
+    },
+    {
+      "id": "d",
+      "title": "Moon bramble",
+      "direction": "A sleek, alert hedgehog creature with a narrower tapered silver-beige muzzle, bright teal eyes, dark blue-green pointed holly leaves and elegant curved silver-grey thorn quills. Longer silhouette and slightly taller legs, small upright ears. Subtle blue-green moonlit palette, still painted forest animal, no armor or clothing."
+    },
+    {
+      "id": "e",
+      "title": "Briar guardian",
+      "direction": "A broad strong hedgehog creature with a wide expressive russet face, golden eyes, heavy curved dark wooden thorns and overlapping deep green oak leaves. Deep chest and thick sturdy legs; one small berry cluster among leaves. Proud protective expression; slightly taller and heavier than reference, friendly enough for a children’s game."
+    }
+  ]
+}
