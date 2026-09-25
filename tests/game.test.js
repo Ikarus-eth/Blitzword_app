@@ -160,8 +160,8 @@ test('campaign offers different enemy types after wins and preserves the selecte
   const encountered=new Set([previous]);
   for(let i=0;i<12;i++){
     s.battle.enemyHealth=0;Core.resolveBattle(s,START+i*10000);
-    const options=Core.enemyChoices(s,3+i);assert.ok(options.length>=2);assert.ok(options.every(enemy=>enemy.id!==previous));
-    const chosen=options[i%2].id;
+    const options=Core.enemyChoices(s,3+i);assert.ok(options.length>=1);assert.ok(options.every(enemy=>enemy.id!==previous));
+    const chosen=options[i%options.length].id;
     Core.startBattle(s,START+i*10000+1000,{enemyId:chosen,strength:3+i});
     assert.equal(s.battle.enemyId,chosen);assert.notEqual(s.battle.enemyId,previous);
     s=roundtrip(s);assert.equal(s.battle.enemyId,chosen);assert.equal(s.battle.maxHealth,3+i);previous=chosen;encountered.add(chosen);

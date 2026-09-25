@@ -10,6 +10,14 @@ window.makeReviewSave=function(scenario){
   if(scenario==='handoff'){s.demoComplete=true;s.handoff={victory:true};s.activity='handoff';return s;}
   if(scenario==='assessment'){C.startAssessment(s,now);return s;}
   s.assessment.done=true;s.demoComplete=true;s.settings.selfPaced=true;
+  if(scenario.startsWith('enemy-group-')){
+    const count=Number(scenario.split('-')[2]),enemyId=count===2?'acorn-imp--2':count===3?'moon-moth--3':'bark-beetle--3',hp=count===2?14:count===3?15:25;
+    for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
+    s.settings.soundscape=false;C.startBattle(s,now,{strength:hp,enemyId});
+    s.battle.introPending=false;C.prepareBattle(s,now);s.battle.question.phase='choices';
+    if(scenario.endsWith('-partial'))s.battle.enemyHealth=hp-BlitzContent.enemyMembers(enemyId,hp)[0].maxHealth;
+    return s;
+  }
   if(scenario.startsWith('evolution-')){
     const [,number,phase='intro']=scenario.split('-'),stage=Math.max(1,Math.min(3,Number(number)));
     s.dragon.xp=BlitzContent.dragonStages[stage].xp;s.dragon.stage=stage;s.dragon.evolutionSeen=stage-1;
