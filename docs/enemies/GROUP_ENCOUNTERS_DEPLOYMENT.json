@@ -1,0 +1,66 @@
+{
+  "build": "enemy-groups-20260925-r1",
+  "merge": "e7d038556af2de8f541b6c5754333f0593a34553",
+  "pull_request": 90,
+  "workflow_run": 36091409051,
+  "checked_utc": "2026-09-25T03:43:42.986524+00:00",
+  "files": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "bytes": 35308,
+      "sha256": "8e70ee6e123259f958ae145b9372bd9f478fe7108c743c47f4a2b0b4e0e1a882",
+      "matches_tested_source": true
+    },
+    {
+      "path": "content.js",
+      "http_status": 200,
+      "bytes": 84466,
+      "sha256": "79d89b3136cc1e485b119198b2ce1c64763fbdf079f6d8c3df1b6fd67f9a0d19",
+      "matches_tested_source": true
+    },
+    {
+      "path": "game-core.js",
+      "http_status": 200,
+      "bytes": 71117,
+      "sha256": "8c243204219584139301ee50e7e012741019b0ba21d0fcbe5e3dc180e6876db8",
+      "matches_tested_source": true
+    },
+    {
+      "path": "app.js",
+      "http_status": 200,
+      "bytes": 99573,
+      "sha256": "09c3d14316cc431f39d07bd4f7df8f28dfb94984e550b7d311b52253c75cceeb",
+      "matches_tested_source": true
+    },
+    {
+      "path": "enemy-art.js",
+      "http_status": 200,
+      "bytes": 7255,
+      "sha256": "f1fb1020ba750adb91f93076798db27679363655a26f50d726d075d287342b79",
+      "matches_tested_source": true
+    },
+    {
+      "path": "enemy-art.css",
+      "http_status": 200,
+      "bytes": 4437,
+      "sha256": "28c6d25403cece3385cf9d191c2937a04a482c826b69702b109529a622f4e52e",
+      "matches_tested_source": true
+    },
+    {
+      "path": "tests/enemy-review.html",
+      "http_status": 200,
+      "bytes": 5127,
+      "sha256": "3838451f7011945b414099c4419e8d81fa36dd21ca8787c74168f4e9483a1a96",
+      "matches_tested_source": true
+    },
+    {
+      "path": "tests/review-scenarios.js",
+      "http_status": 200,
+      "bytes": 6390,
+      "sha256": "45cdb77e32fa3182c6d27697655ce5dc2dafcb3e64e0d4dd74161586d7cf734d",
+      "matches_tested_source": true
+    }
+  ],
+  "all_match": true
+}

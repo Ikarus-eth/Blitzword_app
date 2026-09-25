@@ -883,7 +883,8 @@ function resultSound(result,victory){
 function defeatReaction(result,enemyId,strength){
   if(result.defeatShown||paused||blocked)return;
   result.defeatShown=true;if(!save())return;
-  const scene=$('#defeatScene');paintEnemy($('#defeatEnemy'),enemyId,strength);
+  const remaining=state.battle?.id===result.battleId?state.battle.enemyHealth:strength;
+  const scene=$('#defeatScene');paintEnemy($('#defeatEnemy'),enemyId,strength,remaining);
   scene.hidden=false;scene.classList.add('escaping');
   later(()=>{scene.hidden=true;scene.classList.remove('escaping');},2200);
 }

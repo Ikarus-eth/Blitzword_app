@@ -989,3 +989,11 @@ for(const reducedMotion of [false,true]){
  ui.elapse(reducedMotion?1310:650);assert.ok(ui.state().result?.victory||ui.state().activity==='mathIntro');
 }
 console.log('PASS last group member resolves exactly once, including reduced motion');
+{
+ const s=impactSave();Object.assign(s.battle,{enemyId:'bark-beetle--3',maxHealth:25,enemyHealth:5,heroHealth:0});
+ Core.resolveBattle(s,Date.UTC(2026,8,25));const ui=boot(s);ui.resume();
+ assert.equal(ui.get('defeatScene').hidden,false);
+ assert.equal(ui.get('defeatEnemy').querySelectorAll('.enemyMember:not(.retired)').length,1);
+ assert.equal(ui.get('defeatEnemy').querySelectorAll('.enemyMember.retired').length,4);
+ console.log('PASS defeat escape shows surviving group members without reviving retired creatures');
+}
