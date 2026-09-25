@@ -1,0 +1,43 @@
+{
+  "tool": "built-in image_gen",
+  "current": {
+    "source": "assets/enemies/selected-lineup.png",
+    "crop": [
+      12,
+      54,
+      279,
+      275
+    ]
+  },
+  "recovered": {
+    "option": "a",
+    "gitBlob": "adf4bf81f624bde06a29b5a26cd0b9fd51be5f75"
+  },
+  "reference": "thornling-a.webp",
+  "jobs": [
+    {
+      "id": "b",
+      "title": "Autumn ember",
+      "direction": "A compact round, friendly hedgehog creature with large warm amber eyes, a short rounded muzzle, small ears, layered copper-orange maple leaves and short reddish wooden thorn quills. Low broad stance. Clearly autumn, cheerful face, no glowing fire.",
+      "prompt": "Use case: stylized-concept. Create ONE complete whole-body Thornling enemy concept for the BlitzWord family art review. Use the attached image only as a visual-language reference: richly painted storybook forest creature, hedgehog anatomy, foliage and wooden thorns. Create this distinct variant: A compact round, friendly hedgehog creature with large warm amber eyes, a short rounded muzzle, small ears, layered copper-orange maple leaves and short reddish wooden thorn quills. Low broad stance. Clearly autumn, cheerful face, no glowing fire. Show exactly one complete connected animal with all paws, head, ears, quills and complete silhouette safely inside frame. Three-quarter side view facing left, neutral standing pose. Centered on a plain warm ivory background with a soft ground shadow, even light. Full body with a clear margin all around, no body parts, no sprite sheet, no close-up, no words, no labels, no border. Landscape 3:2 composition; creature fills most of the frame while fitting entirely."
+    },
+    {
+      "id": "c",
+      "title": "Moss garden",
+      "direction": "A stocky, gentle hedgehog creature with a rounded tan face, big deep brown eyes, softer rounded green fern fronds, moss cushion between short woody quills, a few tiny white woodland flowers. Green spring palette. Strong readable rounded silhouette and four sturdy connected paws.",
+      "prompt": "Use case: stylized-concept. Create ONE complete whole-body Thornling enemy concept for the BlitzWord family art review. Use the attached image only as a visual-language reference: richly painted storybook forest creature, hedgehog anatomy, foliage and wooden thorns. Create this distinct variant: A stocky, gentle hedgehog creature with a rounded tan face, big deep brown eyes, softer rounded green fern fronds, moss cushion between short woody quills, a few tiny white woodland flowers. Green spring palette. Strong readable rounded silhouette and four sturdy connected paws. Show exactly one complete connected animal with all paws, head, ears, quills and complete silhouette safely inside frame. Three-quarter side view facing left, neutral standing pose. Centered on a plain warm ivory background with a soft ground shadow, even light. Full body with a clear margin all around, no body parts, no sprite sheet, no close-up, no words, no labels, no border. Landscape 3:2 composition; creature fills most of the frame while fitting entirely."
+    },
+    {
+      "id": "d",
+      "title": "Moon bramble",
+      "direction": "A sleek, alert hedgehog creature with a narrower tapered silver-beige muzzle, bright teal eyes, dark blue-green pointed holly leaves and elegant curved silver-grey thorn quills. Longer silhouette and slightly taller legs, small upright ears. Subtle blue-green moonlit palette, still painted forest animal, no armor or clothing.",
+      "prompt": "Use case: stylized-concept. Create ONE complete whole-body Thornling enemy concept for the BlitzWord family art review. Use the attached image only as a visual-language reference: richly painted storybook forest creature, hedgehog anatomy, foliage and wooden thorns. Create this distinct variant: A sleek, alert hedgehog creature with a narrower tapered silver-beige muzzle, bright teal eyes, dark blue-green pointed holly leaves and elegant curved silver-grey thorn quills. Longer silhouette and slightly taller legs, small upright ears. Subtle blue-green moonlit palette, still painted forest animal, no armor or clothing. Show exactly one complete connected animal with all paws, head, ears, quills and complete silhouette safely inside frame. Three-quarter side view facing left, neutral standing pose. Centered on a plain warm ivory background with a soft ground shadow, even light. Full body with a clear margin all around, no body parts, no sprite sheet, no close-up, no words, no labels, no border. Landscape 3:2 composition; creature fills most of the frame while fitting entirely."
+    },
+    {
+      "id": "e",
+      "title": "Briar guardian",
+      "direction": "A broad strong hedgehog creature with a wide expressive russet face, golden eyes, heavy curved dark wooden thorns and overlapping deep green oak leaves. Deep chest and thick sturdy legs; one small berry cluster among leaves. Proud protective expression; slightly taller and heavier than reference, friendly enough for a children’s game.",
+      "prompt": "Use case: stylized-concept. Create ONE complete whole-body Thornling enemy concept for the BlitzWord family art review. Use the attached image only as a visual-language reference: richly painted storybook forest creature, hedgehog anatomy, foliage and wooden thorns. Create this distinct variant: A broad strong hedgehog creature with a wide expressive russet face, golden eyes, heavy curved dark wooden thorns and overlapping deep green oak leaves. Deep chest and thick sturdy legs; one small berry cluster among leaves. Proud protective expression; slightly taller and heavier than reference, friendly enough for a children’s game. Show exactly one complete connected animal with all paws, head, ears, quills and complete silhouette safely inside frame. Three-quarter side view facing left, neutral standing pose. Centered on a plain warm ivory background with a soft ground shadow, even light. Full body with a clear margin all around, no body parts, no sprite sheet, no close-up, no words, no labels, no border. Landscape 3:2 composition; creature fills most of the frame while fitting entirely."
+    }
+  ]
+}
