@@ -1,15 +1,16 @@
 {
-  "build": "enemy-groups-20260925-r1",
-  "merge": "e7d038556af2de8f541b6c5754333f0593a34553",
-  "pull_request": 90,
-  "workflow_run": 36091409051,
-  "checked_utc": "2026-09-25T03:43:42.986524+00:00",
+  "build": "enemy-groups-20260925-r2",
+  "merge": "8fcc99dbc182ca12363ef58315c616e8b8daac17",
+  "deployed_commit": "d4470ce961dc620cb4965b7ec8265c578cc67f2c",
+  "pull_request": 92,
+  "workflow_run": 36091677491,
+  "checked_utc": "2026-09-25T03:48:10.737785+00:00",
   "files": [
     {
       "path": "index.html",
       "http_status": 200,
       "bytes": 35308,
-      "sha256": "8e70ee6e123259f958ae145b9372bd9f478fe7108c743c47f4a2b0b4e0e1a882",
+      "sha256": "1221680391ed586a7930a3fec065492d276f40bc10f54d1280f80c40ee0d496c",
       "matches_tested_source": true
     },
     {
@@ -29,8 +30,8 @@
     {
       "path": "app.js",
       "http_status": 200,
-      "bytes": 99573,
-      "sha256": "09c3d14316cc431f39d07bd4f7df8f28dfb94984e550b7d311b52253c75cceeb",
+      "bytes": 99671,
+      "sha256": "244d90c2805a140a32dda0819be5c3e36b763564765fd3be141b9e74830f9be8",
       "matches_tested_source": true
     },
     {
