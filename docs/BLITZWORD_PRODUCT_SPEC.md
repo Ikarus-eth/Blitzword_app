@@ -1,6 +1,6 @@
 # BlitzWord — Current Product Spec
 
-Status: approved decisions through 24 September 2026; documentation reconciled on 25 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
+Status: approved decisions through 25 September 2026; documentation reconciled on 25 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
 
 ## Source-of-truth order
 
@@ -18,6 +18,12 @@ When implementation differs from this spec unintentionally, treat it as a discre
 - Practice uses rotating reviewed distractors; the 26 reading-check items use fair fixed sets. All 34 story sentences/picture pairs are approved and deployed. Their earlier review gates are closed.
 - Narration recovery and gate pronunciation review are complete. The remaining recordings and synchronized highlighting are authorized but not deployed; [draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) was last blocked by ElevenLabs quota.
 - Points 1, 2, 3, 4, 6, 7 and 8 and the later point 9 are complete; point 5’s final narration batch remains open. Number-duel changes and enemy extensions remain discussion items; native/commercial packaging is later work. See [current status](CURRENT_STATUS.md#outstanding-work-and-ownership).
+
+## Full-screen campaign map — 25 September 2026
+
+The user requested that the campaign Home illustration fill the screen, with readable controls over the artwork, and explicitly rejected the dark green frame shown in their iPad photograph. This supersedes the earlier inset map board and separate green header/footer.
+
+Use the existing approved campaign art edge to edge within the app viewport, maintaining the artwork's proportions with cropping where necessary. Float compact warm parchment controls with dark forest ink, restrained gold borders, and a gold Play button above it. Keep the campaign/daily progress, Parents, Hero, reading speed, sound, chapter markers and Pip XP available. On narrow portrait screens, arrange the chapter trail in the clear central region and omit the decorative traveller to keep the five chapter buttons reachable. Controls respect device safe areas. This is a layout change, not a browser fullscreen request; the previously removed fullscreen button stays removed. Preserve saves, chapters, XP, curriculum, characters and existing control behavior.
 
 ## 1. Product thesis
 

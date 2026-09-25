@@ -18,6 +18,10 @@ The original `00a_heroes_character_bible.png` records the approval of the three 
 
 ## Active references
 
+### Full-screen campaign Home — 25 September 2026
+
+The user's iPad photograph identifies the campaign Home screen and the dark green frame to remove; it is not a new artwork source. Keep `assets/campaign-forest.png` and the six campaign panels in `assets/chapter-scenes.webp`. The approved composition is edge-to-edge artwork with floating parchment controls and legible dark text. Preserve the art's proportions and crop to the viewport. See the [product decision](BLITZWORD_PRODUCT_SPEC.md#full-screen-campaign-map--25-september-2026) and [implementation and verification](FULLSCREEN_MAP_RELEASE.md).
+
 ### Golden word-mask spiral — 24 September 2026
 
 The [user-supplied spiral crop](references/golden-spiral-20260924.png) is the approved direction for the mask after word exposure: tilted golden ribbons, bright cream centres, soft amber light and small star sparks. Source: the user's attached image on 24 September 2026, preserved unchanged. It guides only the spiral, not the background or Pip. The runtime artwork is an inline SVG in `galaxyMask()` with styles in `styles.css`; it remains static and fixed-size for every word.
