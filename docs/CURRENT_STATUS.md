@@ -1,4 +1,4 @@
-# BlitzWord current status — 24 September 2026
+# BlitzWord current status — 25 September 2026
 
 This page tracks current implementation and remaining work. Dated release notes preserve historical behavior and test results; their old limitations are not automatically current tasks. Latest approved user decisions take precedence over earlier plans. A difference between approved behavior and code remains a discrepancy, not a new product decision.
 
@@ -25,6 +25,12 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 | Game controls | Fullscreen button, handlers and notice removed at the user’s request. The existing flexible toolbar closes the gap; sound, pause and Home remain. Home Screen presentation and learner saves are unchanged. | [Product specification](BLITZWORD_PRODUCT_SPEC.md) |
 | Soundscape | Continuous low battle music through words and choices, restrained flute/percussion, gentle speech ducking and independent saved controls. Deployed and verified; release checks follow below. | [Soundscape](SOUNDSCAPE_RELEASE.md) |
 | Narration | 1,029 exact-text clips are mapped and Pages-deployed: 990 recovered/core, four Pip-evolution, 34 chapter-story introductions and one reusable shield prefix. The user listened to all 35 new George clips and approved all of them. Current child-read story sentences, new enemy introductions and comparison corrections still need the completion batch; personalized names remain local. Build `narration-remainder-approved-20260924-r1`. | [Narration release](NARRATION_RELEASE.md) |
+
+## Thornling tail crop — 25 September 2026
+
+Build `thornling-tail-20260925-r1` removes the detached green strip behind the Thornling's tail. The tail's atlas viewport included part of the neighbouring mane; a source-coordinate clip now excludes that piece without changing the original PNG, viewport, scale, joints or learner saves. The metadata inspection script preserves this correction when rerun. Runtime and enemy-studio script URLs refresh the crop on reload.
+
+Local verification: all 234 core tests and 83 UI-flow groups passed. Isolated Chromium checks passed neutral, attack, hit, defeat and celebration at tablet and phone sizes, five simultaneous copies with unique clips, and reduced motion, with no page errors. Before/after screenshots show the detached strip removed; the substantial pixel differences are confined to it. Physical iPad/Safari is untested.
 
 ## Reload and Pip crop fixes — 24 September 2026
 

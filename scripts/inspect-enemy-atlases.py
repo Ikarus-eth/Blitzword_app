@@ -66,5 +66,9 @@ for job in jobs:
             cells.append([box[0]+x1,box[1]+y1,x2-x1,y2-y1])
     result[job['id']] = {'name':job['name'],'selection':job['selection'],'rig':job['rig'],
         'source':'assets/enemies/layered/'+path.name,'width':width,'height':height,'cells':cells}
+    if job['id'] == 'thornling':
+        # Tail ends at x=276; the next piece starts at x=292 inside its viewport.
+        # Keep the original viewport/scale and clip in the transparent gap.
+        result[job['id']]['clips'] = {'12': [40, 1011, 244, 187]}
 (ROOT / 'enemy-art-data.js').write_text('/* Generated crop metadata; original RGBA art is preserved. */\n(function(root){const data='+json.dumps(result,separators=(',',':'))+';if(typeof module!=="undefined"&&module.exports)module.exports=data;root.BlitzEnemyArtData=data;})(typeof window!=="undefined"?window:globalThis);\n')
 print(f'Inspected {len(result)} alpha atlases / {len(result)*16} image regions')
