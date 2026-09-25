@@ -105,7 +105,8 @@ function renderMap(deferEvolution=false){
   const progress=Core.storyProgress(state),growth=Core.dragonProgress(state);
   const terrain=$('.mapTerrain'),mapScene=progress.chapter.scene;
   terrain.style.backgroundImage=mapScene===null?'url("assets/campaign-forest.png")':'url("assets/chapter-scenes.webp")';
-  terrain.style.backgroundSize=mapScene===null?'100% 100%':'300% 200%';terrain.style.backgroundPosition=mapScene===null?'center':(mapScene%3*50)+'% '+(mapScene<3?0:100)+'%';
+  // Fill the viewport without stretching either the map or a square atlas panel.
+  terrain.style.backgroundSize=mapScene===null?'cover':'max(300vw, 300dvh) max(200vw, 200dvh)';terrain.style.backgroundPosition=mapScene===null?'center':(mapScene%3*50)+'% '+(mapScene<3?0:100)+'%';
   $('#mapTitle').textContent=dragonText(progress.chapter.name);terrain.setAttribute('aria-label','Campaign '+progress.chapterNumber+' map');
   $('#chapterSelect').replaceChildren();Content.chapters.forEach((chapter,i)=>{
     const chip=document.createElement('span');chip.className='chapterBead'+(chapter.id===progress.chapter.id?' current':'')+(state.story.completedChapters.includes(chapter.id)?' complete':'');chip.textContent=String(i+1);chip.setAttribute('aria-label','Campaign '+(i+1)+(state.story.completedChapters.includes(chapter.id)?' complete':chapter.id===progress.chapter.id?' current':' locked'));$('#chapterSelect').append(chip);
@@ -126,7 +127,7 @@ function renderMap(deferEvolution=false){
     const status=document.createElement('small');status.textContent=area.status==='future'?'Soon':area.status==='cleared'?'Done':area.status==='current'?'Here':'Later';
     button.append(marker,label,status);button.onclick=()=>{selectedMapArea=area.id;renderMap();};nodes.append(button);
   });
-  const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.style.left=`clamp(54px,${Math.max(9,current.x-9)}%,calc(100% - 54px))`;hero.style.top=`clamp(82px,${current.y-3}%,calc(100% - 100px))`;
+  const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.style.left=`clamp(40px,calc(${current.x}% - var(--map-hero-offset,9%)),calc(100% - 54px))`;hero.style.top=`clamp(var(--map-hero-top,82px),${current.y-3}%,calc(100% - 100px))`;
   $('#mapStory').textContent=progress.cleared+' / '+progress.total+' chapters';
   $('#mapStory').setAttribute('aria-label','Campaign '+location.campaignNumber+': '+progress.cleared+' of '+progress.total+' chapters completed');
   $('#mapAreaTitle').textContent=selected.shortName||selected.name;
@@ -340,6 +341,7 @@ const SAVE_EVERY_MS=10000;let lastSaveAt=-Infinity;
 function save(){account();try{store.save(state);lastSaveAt=performance.now();return true;}catch(e){storageProblem(e);return false;}}
 function show(id) {
   $$('.screen').forEach(el=>el.classList.toggle('active',el.id===id));
+  $('#app').classList.toggle('mapHome',id==='campaignMap');
   $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge','chapterStory','evolution'].includes(id);
   $('#homeBtn').hidden=['setup','route','campaignMap','parentDashboard'].includes(id);
   $('#backBtn').hidden=id!=='hero';

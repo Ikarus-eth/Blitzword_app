@@ -261,9 +261,11 @@ for(const victory of [true,false]){
  let s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
  s.dragon.xp=14997;s.timing.firstPracticeAt='2000-01-01T00:00:00.000Z';s.timing.days={};s=Core.migrate(s);Core.startBattle(s,Date.now());
  let ui=boot(s);assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.get('dragonXP').textContent,'14997 XP');assert.equal(ui.get('dragonNext').textContent,'9 / 10 growth steps');assert.equal(ui.get('dragonStages').children.length,4);
+ assert.ok(ui.get('app').classList.contains('mapHome'));assert.equal(ui.document.querySelector('.mapTerrain').style.backgroundSize,'cover');
  const id=ui.state().battle.id;ui.click(ui.get('mapNodes').querySelector('[data-area="hidden-nest"]'));
  assert.equal(ui.get('mapAreaTitle').textContent,'Home');assert.equal(ui.get('mapContinue').disabled,true);assert.equal(ui.state().battle.id,id);assert.equal(ui.get('mapAreaStatus').textContent,'Further along the trail');
  ui.click(ui.get('mapNodes').querySelector('[data-area="lantern-trail"]'));ui.resume();ui.ready();assert.equal(ui.state().battle.question.target,'on');
+ assert.equal(ui.get('app').classList.contains('mapHome'),false);
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip is glowing!');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'0');
  ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'15000 XP');assert.equal(ui.get('dragonStage').textContent,'Big Pip');assert.equal(ui.get('dragonNext').textContent,'0 / 10 growth steps');assert.equal(ui.get('mapPip').dataset.growth,'0');
  const answers=ui.state().campaign.battleRecords.length;ui.resume();ui.until(()=>ui.state().battle.question.target!=='on');assert.equal(ui.state().campaign.battleRecords.length,answers);
