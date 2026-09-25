@@ -1,24 +1,41 @@
 {
-  "build": "family-review-recovered-20260925-r2",
-  "checkedAt": "2026-09-25T09:04:21.192Z",
+  "build": "family-review-archer-recovery-20260925-r3",
+  "checkedAt": "2026-09-25T13:00:03.463490+00:00",
   "rounds": 26,
-  "availableImages": 31,
-  "missingImages": 125,
-  "newImageFiles": 0,
+  "availableImages": 32,
+  "missingImages": 124,
+  "newImagesGenerated": 0,
+  "recoveredOriginalsAdded": 1,
   "checks": [
-    "all 26 rounds have six slots",
-    "missing cards cannot be rated",
-    "existing source images load",
-    "four requested names",
-    "Thornling migration preserves scores and comment",
-    "named reviewers map to requested order",
-    "old storage remains untouched",
-    "per-round score and comment isolation",
-    "reload persistence",
-    "image enlargement",
-    "export includes missing list",
-    "tablet and phone layout",
-    "44px rating targets",
-    "no page or resource errors"
-  ]
+    "Original uploaded PNG preserved byte for byte",
+    "Recovered image visually inspected as complete full-body boy archer",
+    "All 26 rounds retain six stable option IDs",
+    "All referenced artwork exists",
+    "Catalog and missing-image list totals agree",
+    "Storage key and rating persistence logic unchanged"
+  ],
+  "previousFullDashboardVerification": {
+    "build": "family-review-recovered-20260925-r2",
+    "checkedAt": "2026-09-25T09:04:21.192Z",
+    "rounds": 26,
+    "availableImages": 31,
+    "missingImages": 125,
+    "newImageFiles": 0,
+    "checks": [
+      "all 26 rounds have six slots",
+      "missing cards cannot be rated",
+      "existing source images load",
+      "four requested names",
+      "Thornling migration preserves scores and comment",
+      "named reviewers map to requested order",
+      "old storage remains untouched",
+      "per-round score and comment isolation",
+      "reload persistence",
+      "image enlargement",
+      "export includes missing list",
+      "tablet and phone layout",
+      "44px rating targets",
+      "no page or resource errors"
+    ]
+  }
 }
