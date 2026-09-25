@@ -26,3 +26,7 @@ Validation is recorded in `assets/family-review/verification.json`. The earlier 
 ## Bulk import follow-up
 
 The [image import workflow](FAMILY_REVIEW_IMPORTS.md) adds device-local originals, resumable batches and full backups. The 31/125 counts above describe the published source roster; the dashboard updates its available/missing counts as local images are assigned.
+
+## Local-cache recovery verified later on 25 September
+
+A subsequent Mac disk-cache scan recovered 163 unique intact originals, including a prepared batch of 95 enemy and 26 hero comparison candidates. These files are preserved locally and can be imported in one folder selection through the now-deployed dashboard. The earlier 125-missing count remains the published source roster before local imports, not the current local recovery result. [Recovery details, mapping caveats and verification](FAMILY_REVIEW_IMPORTS.md).
