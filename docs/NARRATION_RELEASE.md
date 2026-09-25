@@ -1,6 +1,18 @@
 # Recorded narration release — recovered corpus
 
-This release integrates the recovered prerecorded narration package into the current BlitzWord runtime. The package contains 990 verified MP3 clips: the 165 files from the earlier release plus 825 recovered `core-male-*` files. The recovered inventory is 45,788,743 bytes and about 47.2 minutes of audio. All 990 files passed the package's complete MP3 decode check before integration. The detailed corpus and generation provenance are preserved in `NARRATION_CORPUS.json` and `NARRATION_GENERATION.json`.
+## Current narration status — checked 25 September 2026
+
+Production maps **1,029 exact-text clips** in manifest `recorded-voice-20260924-r5`: 990 recovered/core, four evolution, 34 chapter-story introductions and one reusable shield prefix. The six targeted replacements and the 35 George remainder clips passed user listening review. All five gate-family recordings are enabled; their approval is not pending.
+
+The 34 child-read story sentences and picture pairs are already approved and deployed. Three default-Pip sentences reuse recordings; the other 31, the added enemy introductions and comparison corrections still use device speech in production. [Draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) preserves generated but unmerged clips and playback/highlighting work. Its last generation run stopped on ElevenLabs quota. Completion, full integration tests, new listening review and deployment remain open; [current status](CURRENT_STATUS.md#outstanding-work-and-ownership) tracks the blocker. Personalized names intentionally remain local speech.
+
+A shielded correction plays the recorded shield prefix, followed by either a recorded help-only correction or the still-unrecorded comparison phrase. Recorded teaching currently has a static target highlight; synchronized recorded boundaries are prepared in the draft, not live. Physical iPad/Safari playback remains unverified.
+
+## Historical recovery and release records
+
+The following sections describe their own checkpoints. Earlier clip counts, gate exclusions, rewrite gates and origin-access failures are retained as history, not current backlog or new reasons to regenerate approved audio.
+
+The recovery milestone integrated the prerecorded narration package into the BlitzWord runtime at that checkpoint. The package contains 990 verified MP3 clips: the 165 files from the earlier release plus 825 recovered `core-male-*` files. The recovered inventory is 45,788,743 bytes and about 47.2 minutes of audio. All 990 files passed the package's complete MP3 decode check before integration. The detailed corpus and generation provenance are preserved in `NARRATION_CORPUS.json` and `NARRATION_GENERATION.json`.
 
 ## Runtime coverage
 
@@ -40,11 +52,11 @@ A separate HTTP fetch from the public `github.io` origin could not be completed 
 
 ## Narration QA review page — 24 September 2026
 
-A non-child-facing review page is deployed at \`/tests/narration-qa.html\`. It contains 30 representative clips: three earlier Tom words, seven recovered standalone/batched words, five teaching sentences, six concatenated phrases, all five gate-family clips, and all four Pip-evolution clips. The page plays the actual MP3 files directly, so the five gate recordings can be judged even though they remain excluded from the child-facing runtime.
+A non-child-facing review page is deployed at `/tests/narration-qa.html`. It contains 30 representative clips: three earlier Tom words, seven recovered standalone/batched words, five teaching sentences, six concatenated phrases, all five gate-family clips, and all four Pip-evolution clips. At the initial QA-page checkpoint, the five gate recordings could be reviewed directly while still excluded from gameplay. The subsequent approved replacements enabled all five; they are not currently excluded.
 
-Each clip can be marked Good or Bad with an optional note. Ratings use the separate local key \`blitzword_narration_qa_v1\` and do not read or modify learner progress. “Copy results” produces a compact list of bad and unrated clips for follow-up.
+Each clip can be marked Good or Bad with an optional note. Ratings use the separate local key `blitzword_narration_qa_v1` and do not read or modify learner progress. “Copy results” produces a compact list of bad and unrated clips for follow-up.
 
-PR #46 merged as \`df21fbd837a6fdabd233d9b38ab5f5be67e4bb27\`. Pages run \`35945783702\` passed 127/127 Node tests, uploaded the QA page and script, and reported a successful deployment. The resulting Pages artifact was inspected and contains \`tests/narration-qa.html\`, \`tests/narration-qa.js\`, and the referenced narration files including \`core-male-825.mp3\` and \`evolution-3.mp3\`. Direct HTTP inspection of the public \`github.io\` page remains unavailable from this execution environment.
+PR #46 merged as `df21fbd837a6fdabd233d9b38ab5f5be67e4bb27`. Pages run `35945783702` passed 127/127 Node tests, uploaded the QA page and script, and reported a successful deployment. The resulting Pages artifact was inspected and contains `tests/narration-qa.html`, `tests/narration-qa.js`, and the referenced narration files including `core-male-825.mp3` and `evolution-3.mp3`. Direct HTTP inspection of the public `github.io` page remains unavailable from this execution environment.
 
 ## QA replacements — 24 September 2026
 
@@ -74,12 +86,12 @@ The GitHub Pages action reported successful file synchronization and the expecte
 
 ## Stable remainder with ElevenLabs — 24 September 2026
 
-After the recovered/core corpus and Pip-evolution narration were integrated, the remaining stable narration was separated from text that is still scheduled to change. The stable generation set is exactly **35 clips**:
+At the stable-remainder checkpoint, the recovered/core corpus and Pip-evolution narration were integrated, and stable narration was separated from text then scheduled to change. The stable generation set is exactly **35 clips**:
 
 - 34 chapter-story introductions: every implemented transition after the initial guided encounter;
 - one reusable `Your shield stopped the hit.` prefix.
 
-The child-read chapter-story sentences were deliberately excluded because approved point 6 will rewrite them before they receive final recordings. Personalized dragon-name sentences also remain device speech so arbitrary child-chosen names are never sent to a cloud speech service.
+The child-read chapter-story sentences were excluded from that generation because point 6 had not yet supplied the final wording. Point 6 has since been approved and deployed; the rewrite is complete, and the final audio belongs to draft PR #80. Personalized dragon-name sentences also remain device speech so arbitrary child-chosen names are never sent to a cloud speech service.
 
 Generation used the repository secret `ELEVENLABS_API_KEY` without exposing it. Voice: **George - Warm, Captivating Storyteller**, British male, `eleven_multilingual_v2`, speed **0.90×**, stability 0.65, similarity 0.80, style 0, speaker boost enabled. The generation required 2,514 characters. The first attempt stopped after one API response because the generation runner lacked `ffprobe`; no files were committed. The runner dependency was fixed and the complete second run generated, decoded, hashed and committed all 35 files. Full receipts are in `NARRATION_REMAINDER_GENERATION.json`.
 
@@ -97,4 +109,4 @@ Direct public-origin HTTP byte comparison remains unavailable in this execution 
 
 ## Stable remainder listening approval — 24 September 2026
 
-The user completed the dedicated 35-clip ElevenLabs remainder QA and approved every clip: all 34 chapter-story introductions and the reusable `Your shield stopped the hit.` prefix were rated Good. No regeneration is required for this set. This closes listening QA for the stable remainder; child-read chapter-story sentences are still intentionally deferred until their approved rewrite, and physical iPad gameplay playback remains open.
+The user completed the dedicated 35-clip ElevenLabs remainder QA and approved every clip: all 34 chapter-story introductions and the reusable `Your shield stopped the hit.` prefix were rated Good. No regeneration is required for this set. This closes listening QA for the stable remainder. The approved story rewrite is now complete; its final audio integration and physical iPad gameplay playback remain open, as described in the current summary above.

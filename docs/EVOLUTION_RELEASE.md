@@ -1,5 +1,7 @@
 # Pip evolution scenes — 23–24 September 2026
 
+Historical release record. The original XP thresholds and test fixtures below belong to this milestone. Current growth is **15,000 / 45,000 / 70,000 XP**, with earned forms preserved ([point 9](XP_PACING_RELEASE.md)). The neighbouring atlas-row defect noted below was fixed and deployed in [PR #78](RELOAD_PIP_RELEASE.md); the faint square edge of the separate evolution illustrations remains a user-review item. See [current status](CURRENT_STATUS.md) for outstanding work.
+
 Integrated build: `pip-evolution-20260924-r1`, on top of the narration recovery, backup file, text-selection fix, smaller-save, narration QA and approved-narration releases. The user approved publication. Implemented, locally tested, reviewed in headless Chromium and deployed on 24 September 2026 (merge `589c821`, [Pages run 35957905729](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/35957905729)); see [current status](CURRENT_STATUS.md) for the verification limits.
 
 The previous app changed Pip's form and offered an XP comparison panel and naming. It did not have a separate evolution animation. This update adds three earned evolution scenes using four new illustrations.
@@ -12,7 +14,7 @@ The previous app changed Pip's form and offered an XP comparison panel and namin
 4. Read two lines with no countdown or automatic reading aloud. Listen plays the exact two sentences; I read it completes the scene.
 5. After first growth, choose a name. Later headings use the chosen name. The short first-person lines do not need new audio for each custom name.
 
-| Earned stage | Child reading |
+| Threshold at this release (since superseded) | Child reading |
 |---|---|
 | 3,000 XP | I am big. I can help. |
 | 8,900 XP | My wings are big. I can help you. |
@@ -43,7 +45,7 @@ Rendered review in headless Chromium (Playwright) from a local server, 24 Septem
 
 Visual observations for the user's review (not changed):
 - Stages 1–3 have an opaque dark background. A faint square edge is visible around the dragon, most clearly on phone landscape, where the stage is wider than the square image, and during the bright reveal. Fitting the edge mask to the square image removed the edge but faded the tail and claws, so that change was not kept.
-- The missing-image fallback uses the established sprite painter, which also shows a strip of the neighbouring sprite-sheet row above the dragon. The same strip appears in the existing growth panel on `main`.
+- At the initial review, the sprite fallback and growth panel showed a neighbouring atlas row. PR #78 subsequently fixed the shared sprite painter; this is no longer an open defect.
 
 Not verified: physical iPad, Safari/WebKit, and listening to the clips inside the evolution scene.
 

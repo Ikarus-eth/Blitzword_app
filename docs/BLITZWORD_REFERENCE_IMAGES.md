@@ -108,7 +108,7 @@ Before approving any image containing a recurring character, check it against th
 
 The shared portrait renderer covers setup, hero selection, route, teaching and battle, including saved profiles on reload. Earlier male files `assets/hero1.webp`, `assets/hero2.webp` and `assets/hero3.webp` are removed from the active repository and deployment. Historical commits are rollback records, not active references or fallback assets. Versioned script/style URLs and the new source filename refresh cached assets when the page reloads. A tab already running an earlier release needs a reload; this artwork change does not reset local learning or campaign data.
 
-The portrait-replacement details above describe that earlier art milestone. The current game also renders full-body battle/story sprites from `assets/forest-characters.webp`, growth forms from `assets/pip-growth.png`, and answer-locked combat reactions. See [combat reactions](COMBAT_REACTIONS.md), [chapter stories](CHAPTER_STORIES_RELEASE.md) and [current status](CURRENT_STATUS.md); this paragraph does not introduce new artwork or animations.
+The portrait-replacement details above describe that earlier art milestone. The current game also renders full-body battle/story sprites from `assets/forest-characters.webp`, growth forms from `assets/pip-growth.png`, and answer-locked combat reactions. See [combat reactions](COMBAT_REACTIONS.md), [current story picture checks](STORY_PICTURES_RELEASE.md) and [current status](CURRENT_STATUS.md); this paragraph does not introduce new artwork or animations.
 
 ## Chapter scenery — 23 September 2026
 

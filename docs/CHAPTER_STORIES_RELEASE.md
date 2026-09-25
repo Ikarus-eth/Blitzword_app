@@ -1,5 +1,7 @@
 # Chapter stories — 23 September 2026
 
+Historical first-story release. The later [approved picture checks](STORY_PICTURES_RELEASE.md) replace the child-confirmation flow below, all 35 chapter backgrounds are deployed ([scenery](CHAPTER_SCENERY_RELEASE.md)), and first growth/naming now starts at 15,000 XP ([growth rules](XP_PACING_RELEASE.md)). The original 3,000-XP threshold and “I read it” wording below describe this earlier checkpoint only.
+
 The first evolution already unlocks dragon naming at 3,000 XP. The child can keep Pip, choose another name or return to naming through the growth card. This release preserves that behavior and uses the saved name in story speech, reading sentences and image descriptions.
 
 There are 34 new chapter-entry interactions across the existing 35 map fields and seven campaigns. The first guided encounter retains its approved short introduction. Each later chapter opens with a brief authored story over existing approved scenery and the selected hero/dragon art. After the narration finishes, Read reveals one untimed sentence. Listen provides optional spoken help; I read it continues to the waiting encounter. This is child-confirmed reading, not speech recognition or a scored assessment.
