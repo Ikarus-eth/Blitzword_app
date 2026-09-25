@@ -1,8 +1,10 @@
-# BlitzWord current status — 24 September 2026
+# BlitzWord current status — 25 September 2026
 
 This page tracks current implementation and remaining work. Dated release notes preserve historical behavior and test results; their old limitations are not automatically current tasks. Latest approved user decisions take precedence over earlier plans. A difference between approved behavior and code remains a discrepancy, not a new product decision.
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).
+
+Documentation reconciled against main `7aff554c50d885a835b9efd1b9d93b0061193790` and the recorded releases. Latest verified runtime build: `assessment-fair-20260924-r1`; the narration completion draft is not merged or deployed. This cleanup changes documentation only. It closes stale assessment/story/gate approval notices, reconciles current growth/speed rules and removes the obsolete lowercase README that conflicted on case-insensitive filesystems. Historical release evidence is retained.
 
 ## Implemented
 
@@ -24,7 +26,7 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 | Layered enemies and health timing | Twenty selected enemy families use transparent painted parts and articulated 2D reactions. Visible health and shield consumption wait for impact; damage and observations remain saved immediately. | [Enemy release and source assets](enemies/LAYERED_ENEMIES_RELEASE.md) |
 | Game controls | Fullscreen button, handlers and notice removed at the user’s request. The existing flexible toolbar closes the gap; sound, pause and Home remain. Home Screen presentation and learner saves are unchanged. | [Product specification](BLITZWORD_PRODUCT_SPEC.md) |
 | Soundscape | Continuous low battle music through words and choices, restrained flute/percussion, gentle speech ducking and independent saved controls. Deployed and verified; release checks follow below. | [Soundscape](SOUNDSCAPE_RELEASE.md) |
-| Narration | 1,029 exact-text clips are mapped and Pages-deployed: 990 recovered/core, four Pip-evolution, 34 chapter-story introductions and one reusable shield prefix. The user listened to all 35 new George clips and approved all of them. Current child-read story sentences, new enemy introductions and comparison corrections still need the completion batch; personalized names remain local. Build `narration-remainder-approved-20260924-r1`. | [Narration release](NARRATION_RELEASE.md) |
+| Narration | 1,029 exact-text clips are mapped and Pages-deployed: 990 recovered/core, four Pip-evolution, 34 chapter-story introductions and one reusable shield prefix. The user listened to all 35 new George clips and approved all of them. Current child-read story sentences, new enemy introductions and comparison corrections still need the completion batch; personalized names remain local. Production manifest `recorded-voice-20260924-r5`; completion remains in draft PR #80. | [Narration release](NARRATION_RELEASE.md) |
 
 ## Reload and Pip crop fixes — 24 September 2026
 
@@ -38,12 +40,16 @@ Deployed and verified: all 26 fixed sets pass the letter/length and one-letter c
 
 ## Outstanding work and ownership
 
-- Narration completion is authorized but blocked by ElevenLabs quota. Production retains all 1,029 approved clips. [Draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) preserves 320 new segments and one teaching alignment, with tested playback/cancellation changes. The service reported `quota_exceeded`: 10,000-credit limit, 26 remaining. The user was asked to increase allowance; 18,534 text characters and 365 alignments remain. Current story sentences are already approved: they need recordings, not another rewrite. The incomplete batch is not deployed. New listening approval and physical iPad playback remain open.
-- Pip evolution: deployed (build `pip-evolution-20260924-r1`); rendered in headless Chromium at tablet and phone sizes. The four evolution clips passed the user's narration QA (evolution-3 re-recorded slower). Physical iPad and Safari/WebKit checks remain open. The user should judge the faint square edge around the dragon art, most visible on phone landscape ([details](EVOLUTION_RELEASE.md)).
-- Twenty selected enemy families and their articulated reactions are deployed and verified live (build `layered-enemies-20260924-r1`; [PR #60](https://github.com/Ikarus-eth/Blitzword_app/pull/60)). Creature-specific HP ranges, shared-health group encounters and distinct baby/young/adult forms remain proposals; the existing tier-based health rules continue. The fifteen added names use device speech until their recordings are produced.
-- The 35 chapter backgrounds are deployed and verified against source bytes. Rendered tablet/phone scenery QA remains blocked because the browser could not verify its admin-enforced security policy; [chapter scenery](CHAPTER_SCENERY_RELEASE.md) records the exact limit and isolated review fixtures.
-- Physical iPad behavior and listening remain unverified. XP pacing is calibrated by deterministic simulations, not observed child play.
-- An additional dragon after full growth is an optional future idea, not an approved unfinished feature. Pip remains a provisional child-facing label; no commercial rename is established. Native App Store packaging remains a later phase after web iteration.
+- Narration completion is authorized but blocked by ElevenLabs quota. Production retains all 1,029 approved clips. [Draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) preserves 320 new segments and one teaching alignment, with tested playback/cancellation changes. The last generation run on 24 September reported `quota_exceeded`: 10,000-credit limit, 26 remaining. This is the last observed allowance, not a fresh account-balance check. The user was asked to increase allowance; 18,534 text characters and 365 alignments remain. Current story sentences are already approved: they need recordings, not another rewrite. The incomplete batch is not deployed. New listening approval and physical iPad playback remain open.
+- Device review remains open: physical iPad/Safari audio, interruptions/resume, touch layouts, backup/restore and sustained combat have not been verified. Evolution scenes and selected combat layouts were rendered in Chromium. All 35 scenery files were verified live, but the complete tablet/phone scenery review was not completed; the earlier browser-policy blocker and review fixtures are recorded in [chapter scenery](CHAPTER_SCENERY_RELEASE.md).
+- Child-session pacing needs observation under the 15,000 / 45,000 / 70,000 growth thresholds. Current XP pacing evidence comes from deterministic simulations, not a new observed child session.
+- Optional user review remains for 18 rare practice distractors ([candidate table in PR #58](https://github.com/Ikarus-eth/Blitzword_app/pull/58)), the implemented Stride/Jog names and icons, and the faint square edge around the evolution illustrations ([details](EVOLUTION_RELEASE.md)). The separate neighbouring-row sprite defect is fixed.
+- Number-duel point 10 remains parked: difficulty/adaptation and less guessable choices require discussion. Twenty enemy families are shipped; creature-specific health, group encounters and distinct age forms remain proposals. The fifteen added enemy names still use device speech pending the narration batch.
+- Native iPad/App Store packaging, offline support/progress transfer, purchase/restore, pricing and commercial validation remain later-phase work. The 1,000-word workbook is a future pool; only the Core 200 is playable. Optional phonics, spellbook and an additional dragon after full growth are not approved current tasks. Pip remains a provisional child-facing label; no commercial rename is established.
+
+## Reading the historical records below
+
+The dated release entries preserve the behavior, tests and access limits at each checkpoint. Their old build markers, growth thresholds, approval gates and “next point” instructions are historical, not current work. The outstanding-work list above and the updated plan-status table below determine what remains.
 
 ## Golden spiral — 24 September 2026
 
@@ -63,19 +69,21 @@ Deployment: merged as `9767f0cd0765af7cec8bbcf3b7e60c26a03f81c5` in [PR #60](htt
 
 ### Approved plan — 23 September 2026
 
-The user approved these points on 23 September 2026. Build them one at a time in this order: 1, 2, 3, 4, 6, 7, 8. After each point, stop, report and wait for the user's "go" ([working rules](../CLAUDE.md)). The table shows each point's status. The evidence comes from a read-only handover review; re-check it against current `main` before acting on it.
+The original sequence (1, 2, 3, 4, 6, 7, 8) and subsequently authorized point 9 are deployed and verified. The table gives current status; the detailed evidence/build notes below it record the original 23 September plan. Do not restart completed points or treat their earlier approval gates as pending. The later three-priority audit batch separately authorized both bug fixes, fair reading-check choices and narration completion; only narration remains unfinished. Latest explicit user instructions continue to govern the [working rules](../CLAUDE.md).
 
 | # | Point | Status |
 |---|---|---|
 | 1 | Durable saves: 1b backup file first, then 1a smaller save | 1b deployed and verified live on 24 September 2026; the user saved an iPad backup. The save-problem dialog also offers the backup file. 1a deployed and verified live on 24 September 2026 (build `compact-save-20260924-r1`) |
-| 2 | Rotating distractor pools (option b) | Deployed and verified live on 24 September 2026 (build `rotating-choices-20260924-r1`). Reading-check items unchanged, waiting for the user's decision |
+| 2 | Rotating distractor pools (option b) | Deployed and verified live on 24 September 2026 (build `rotating-choices-20260924-r1`). The follow-up fair fixed reading-check sets are also deployed and verified in PR #79 |
 | 3 | Scheduling bug fix plus daily cap and refill (option a) | Deployed and verified live on 24 September 2026 (build `scheduling-refill-20260924-r1`). [Release record](SCHEDULING_RELEASE.md) |
 | 4 | Contrast correction and adaptive teaching depth (a + b) | Deployed and verified live on 24 September 2026 (build `contrast-teaching-20260924-r1`). [Release record](CORRECTIONS_RELEASE.md) |
-| 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Rewrite-pending child story sentences, word-boundary timing and physical iPad review stay open |
+| 5 | Narration | Stable remainder implemented and listening-approved: 34 story introductions + reusable shield prefix. Final recordings for the already-approved child story sentences, new enemy/comparison phrases, word-boundary timing and device review remain open in draft PR #80; last blocked by quota |
 | 6 | Story sentences a child can read (option c) | Deployed and verified live on 24 September 2026 (build `story-pictures-20260924-r1`). All 34 pairs approved. [Release record](STORY_PICTURES_RELEASE.md) |
 | 7 | Speed suggestions, two new steps, per-word quick status | Deployed and verified live on 24 September 2026 (build `speed-guidance-20260924-r1`). Names/icons proposed for review. [Release record](SPEED_GUIDANCE_RELEASE.md) |
 | 8 | Parent view: word map, tricky list, weekly retention | Deployed and verified live on 24 September 2026 (build `parent-learning-20260924-r1`). [Release record](PARENT_LEARNING_RELEASE.md) |
 | 9 | Whole XP, slower growth and consistency | Deployed and verified on 24 September 2026. Whole rewards, 15,000 / 45,000 / 70,000 thresholds, ten growth steps and a returning-day bonus. Build `xp-pacing-20260924-r1`. [Release record](XP_PACING_RELEASE.md) |
+
+The following numbered requirements and evidence are historical planning notes. Use the table above for completion status and linked release records for tested behavior.
 
 **1. Durable saves.** Two releases with a stop in between.
 - Evidence: every answer is stored forever. The whole save is rewritten every second while playing and duplicated as `_backup`. At 15 min/day the save grows by about 60k characters per day; with the duplicate it passes Chromium's measured 5.2M-character localStorage limit around day 40 (around day 14 at 45 min/day). At the limit `save()` throws and play blocks.
@@ -97,7 +105,7 @@ The user approved these points on 23 September 2026. Build them one at a time in
 - 4b adaptive depth using `needsTeaching`: the full picture card appears only for new words, two or more misses in a row, and missed reviews. Otherwise show the contrast and continue. "?" answers show the word without a contrast and follow the same rule.
 - Keep: help costs no heart, supported answers are not mastery evidence, and the recheck after two intervening items stays.
 
-**5. Narration.** The separate narration workstream recovered and integrated the existing local corpus. Exact prerecorded phrases play where approved; device speech covers remaining phrases, personalized dragon names and the five gate-family phrases pending pronunciation review. See [the narration release](NARRATION_RELEASE.md).
+**5. Narration.** Recovery and targeted pronunciation review are complete, including all five gate-family phrases. Production maps 1,029 recordings. Device speech covers unfinished story/enemy/comparison phrases and intentionally personalized names. See [the narration release](NARRATION_RELEASE.md) and the current quota blocker above.
 
 **6. Story sentences a child can read (option c).**
 - Evidence: only 62% of the words in the 34 child-read story sentences have been taught when the sentence appears; 26 of 34 contain untaught words; "I read it" is unchecked.
@@ -137,7 +145,7 @@ When a word has two or more sets where that guess works at most one time in thre
 
 Across all 200 words, the middle-option guess now finds the answer 28.9% of the time, down from 89.7% with the old fixed options; chance is 25%. Per word: 134 words at 25% or less, 27 at 26–33%, 34 at 34–45% and 5 at 46–50% (in, all, again, ask, because). Each word has 2–20 fair sets. Questions already saved keep their options. The old three-option lists stay in `content.js` for saved history, the legacy word and the tests.
 
-The reading check (26 items) still uses its fixed options. On the same measure it scores 90.4% (levels 1–5: 91.7%, 100%, 90%, 90%, 75%). Five items fail the letter-and-length check (you, night, bright, shadow, journey) and five have a one-letter giveaway (bright, forest, shadow, journey, creature). Changing them waits for the user's decision.
+At this practice-pool release, the unchanged reading check scored 90.4% on the same heuristic (levels 1–5: 91.7%, 100%, 90%, 90%, 75%). That finding was subsequently resolved in PR #79: all 26 fixed sets pass the checks and the heuristic is 24.0%. [Current reading-check release](ASSESSMENT_CHOICES_RELEASE.md).
 
 Build marker `rotating-choices-20260924-r1`; the `content.js` and `game-core.js` cache versions are updated.
 
@@ -145,7 +153,7 @@ Tests: all 143 core tests and all 49 UI-flow groups pass locally. The new `tests
 - 5–7 candidates per word, no repeats, and every candidate drawable;
 - 400 seeded questions per word: the letter, length and one-letter checks hold on every question; the middle-option guess works at most half the time on any question and at most 35% overall; wrong answers and the answer's position rotate;
 - made-up candidates against the curriculum workbook's 1,000 words, and every candidate against a list of blocked words;
-- a battle question and a reading-check question saved with old options keep them through a save and reload, and the reading check uses 26 fair fixed sets with shuffled positions ([reviewed table](ASSESSMENT_CHOICES_RELEASE.md)).
+- a battle question and a reading-check question saved with old options keep them through a save and reload, and the reading check at this release retained its then-current fixed options. The later fair-set regression coverage is recorded in [PR #79’s release](ASSESSMENT_CHOICES_RELEASE.md).
 
 The test file recomputes the checks independently of `game-core.js`. Nine deliberate faults each made it fail, for example random draws, no one-letter check, and no neighbour swap in the edit distance.
 

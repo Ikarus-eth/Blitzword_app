@@ -1,6 +1,6 @@
 # BlitzWord — Current Product Spec
 
-Status: approved direction with implementation updates through 23 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
+Status: approved decisions through 24 September 2026; documentation reconciled on 25 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
 
 ## Source-of-truth order
 
@@ -10,6 +10,14 @@ Status: approved direction with implementation updates through 23 September 2026
 4. Earlier chats and superseded mockups only when they do not conflict with the above.
 
 When implementation differs from this spec unintentionally, treat it as a discrepancy to review rather than silently redefining the product.
+
+## Current rule map
+
+- A chapter is one map field: at least ten active minutes, three reading wins, a completed number duel and its learning objectives. A campaign contains five chapters; seven campaigns contain the fixed Core 200.
+- Growth is XP-only at **15,000 / 45,000 / 70,000**, with whole XP awards, ten visible steps and the returning-day bonus. Earned forms and learner saves remain preserved. See [point 9](#point-9-whole-xp-and-slower-growth--24-september-2026).
+- Practice uses rotating reviewed distractors; the 26 reading-check items use fair fixed sets. All 34 story sentences/picture pairs are approved and deployed. Their earlier review gates are closed.
+- Narration recovery and gate pronunciation review are complete. The remaining recordings and synchronized highlighting are authorized but not deployed; [draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) was last blocked by ElevenLabs quota.
+- Points 1, 2, 3, 4, 6, 7 and 8 and the later point 9 are complete; point 5’s final narration batch remains open. Number-duel changes and enemy extensions remain discussion items; native/commercial packaging is later work. See [current status](CURRENT_STATUS.md#outstanding-work-and-ownership).
 
 ## 1. Product thesis
 
@@ -23,9 +31,9 @@ The provisional world is a mysterious forest. A child-selected hero protects cre
 
 The dragon companion starts with the name **Pip**. Once Pip appears, Pip must remain the same recognizable character across battles, teaching scenes, story moments, rewards, and later growth stages. The child can rename Pip later in the game; renaming changes the displayed name only, never Pip's visual identity or progression.
 
-Under the current terminology, the first campaign contains about 30 target words across five chapters. Growth depends on cumulative XP, not campaign completion: thresholds are 3,000 / 8,900 / 13,400, with naming unlocked at the first evolution. Existing movement and purchase locks remain separate. Growth must feel like the same dragon maturing, not a replacement character. Story progress does not require 30-day retention; retention continues in later practice.
+Under the current terminology, the first campaign contains about 30 target words across five chapters. Growth depends on cumulative XP, not campaign completion: thresholds are 15,000 / 45,000 / 70,000, with naming unlocked at the first evolution. Existing movement and purchase locks remain separate. Growth must feel like the same dragon maturing, not a replacement character. Story progress does not require 30-day retention; retention continues in later practice.
 
-The campaign map is the campaign Home screen. Show visible story milestones and permanent Pip XP with the next growth stage and its threshold. See section 27 and [XP and chapter pacing](SUCCESS_XP_RELEASE.md) for current rules. Section 23 and `CAMPAIGN_MAP_AND_GROWTH.md` describe the earlier map milestone.
+The campaign map is the campaign Home screen. Show visible story milestones and permanent Pip XP with the next growth stage and its threshold. See [whole XP and growth](XP_PACING_RELEASE.md) and section 27’s chapter rules. Point 9 supersedes section 27’s original XP thresholds and calendar projections. Section 23 and `CAMPAIGN_MAP_AND_GROWTH.md` describe the earlier map milestone.
 
 ## 3. Onboarding and starting screens
 
@@ -47,7 +55,7 @@ The selected starting-screen direction is the previously approved option A. Requ
 - minimize explanatory text;
 - green primary button should not contain a written word.
 
-A clean final reference image should be appended as `01_starting_and_hero_flow.png`. Do not use older contact-sheet wording as final UI copy where it conflicts with this spec.
+The earlier setup mockups were retired on 23 September. Use the current app and [active artwork references](BLITZWORD_REFERENCE_IMAGES.md); no replacement attachment or reconstructed mockup is required.
 
 ### Hero selection
 
@@ -75,7 +83,7 @@ The approved complete male lineup is `assets/rowanfire-boys-2026-09-21.png` in `
 
 Preserve the final lineup's exact face, skin tone, child proportions, clothing, equipment and hair identity in every later screen or illustration. Female Mage, Knight and Archer retain their approved Option 17 identities. Pip retains the Ember Guardian identity.
 
-The original `00a_heroes_character_bible.png` remains authoritative only for the three female heroes. Earlier onboarding, battle and teaching images remain composition/flow references only; their male characters must never override this revision. If an attachment conflicts with this section, follow this section and the final male lineup. Do not generate new boys from an old six-character sheet.
+The original `00a_heroes_character_bible.png` remains authoritative only for the three female heroes. Earlier onboarding, battle and teaching mockups were retired on 23 September; they are not active composition/flow references and their male characters must never override this revision. If an attachment conflicts with this section, follow this section and the final male lineup. Do not generate new boys from an old six-character sheet.
 
 ### Character coherence rule
 
@@ -89,7 +97,7 @@ Class differences should read immediately through silhouette and equipment while
 
 Do not casually change hairstyle, face shape, costume construction, weapon design, or signature colours between generated assets. Pose, expression, camera angle, lighting, weather, and minor dirt/damage may change.
 
-Pip follows the same rule. The approved visual direction is **Ember Guardian** and the selected reference image should be stored as `00b_pip_character_bible.png`. Preserve its orange/ember scale palette, cream underside, darker wing membranes with warm flame-like markings, horn structure, facial identity, dorsal spines, tail form, and overall silhouette across every scene.
+Pip follows the same rule. The approved visual direction is **Ember Guardian**, preserved in the production assets listed in [active references](BLITZWORD_REFERENCE_IMAGES.md#ember-guardian-pip--approved-identity). Historical character-bible filenames record provenance; they are not missing attachments to recreate. Preserve its orange/ember scale palette, cream underside, darker wing membranes with warm flame-like markings, horn structure, facial identity, dorsal spines, tail form, and overall silhouette across every scene.
 
 Pip's growth should visibly shift from a young companion toward a protector. The hatchling can remain approachable and youthful, but each later stage should become less baby-like through a longer muzzle, stronger neck and shoulders, larger wings, more confident stance, and more pronounced horns/spines. The rideable stage should read as a strong, capable guardian rather than an oversized cute hatchling, while remaining unmistakably the same Pip.
 
@@ -117,7 +125,7 @@ Current direction:
 
 ## 5. Assessment
 
-Do not implement the revised assessment yet until its flow and item logic are fully reviewed. The following replaces the older assessment direction as the current approved guidance.
+The adaptive reading check is implemented. Its 26 reviewed fixed answer sets were deployed in PR #79; the earlier design-review gate is closed. Preserve the existing item routing, calibration, stopping rules and saved questions. This section records the design purpose; [the fixed-set release](ASSESSMENT_CHOICES_RELEASE.md) and `game-core.js` define the verified implementation.
 
 ### Assessment purpose
 
@@ -194,48 +202,21 @@ The child must not be able to solve the task by noticing only:
 - word length;
 - rough word shape.
 
-Each target gets three close distractors. For practice questions this is superseded by point 2: each word has 5–7 candidates and each question draws three; see [Rotating wrong answers](#rotating-wrong-answers-point-2--approved-23-september-2026). The reading check keeps its fixed sets.
+Each target gets three close distractors. For practice questions this is superseded by point 2: each word has 5–7 candidates and each question draws three; see [Rotating wrong answers](#rotating-wrong-answers-point-2--approved-23-september-2026). The reading check uses the [26 fair fixed sets](ASSESSMENT_CHOICES_RELEASE.md), with shuffled answer positions.
 
 Prefer real words where possible. Ideally, two or three of the four options are real words. When suitable close real-word neighbours do not exist, use one or two plausible made-up forms.
 
-Examples of intended logic:
+Examples from the deployed fixed reading-check sets (asterisks mark constructed distractors in this review only):
 
-Target: `can`
+| Target | Wrong answers |
+|---|---|
+| can | con, cap, cop |
+| cat | cut, bat, but |
+| rock | rack, lock, lack |
+| night | light, nought, lought* |
+| you | your, yau*, yaur* |
 
-- `can`
-- `cat`
-- `cap`
-- `cen`
-
-Target: `cat`
-
-- `cat`
-- `can`
-- `cap`
-- `cet`
-
-Target: `rock`
-
-- `rock`
-- `lock`
-- `rack`
-- `ruck`
-
-Target: `night`
-
-- `night`
-- `light`
-- `right`
-- `nigth`
-
-For `you`, the options should also be visually close enough that the child must inspect the full spelling. Examples can include:
-
-- `you`
-- `your`
-- `yuo`
-- another reviewed close form
-
-Do not mechanically copy example distractors without checking them. The principle matters more than the sample list.
+The [complete reviewed table](ASSESSMENT_CHOICES_RELEASE.md) and `content.js` are authoritative. The earlier illustrative choices were superseded by the fairness review.
 
 Made-up words are acceptable in this recognition task because they are distractors, not teaching targets. They must never accidentally duplicate a real curriculum word.
 
@@ -252,7 +233,7 @@ Working direction:
 - typical child: perhaps 12–18;
 - strong child: more and harder probes, never more than 25.
 
-Do not freeze these as rigid counts yet. The assessment should stop when there is enough evidence for a useful starting point, not when a fixed checklist is exhausted. Do not visibly label difficulty or tell the child they are moving up or down.
+These ranges explain the design intent. The implemented `shouldStopAssessment` and `adaptAssessment` rules govern actual counts and adaptation; they are not pending design work. The assessment stops using its saved evidence, not a fixed checklist. Do not visibly label difficulty or tell the child they are moving up or down.
 
 ### Difficulty varies on two separate axes
 
@@ -304,15 +285,15 @@ Do not turn one mistake into a phonics diagnosis.
 
 For v1, use the full reviewed curriculum/library as the source pool rather than restricting personalization to only a tiny fixed 20-word subset.
 
-The free chapter can still contain roughly 20–30 target words in practice, but the assessment may select those from a wider reviewed library. Personalization is one of the core advantages of BlitzWord.
+The current release uses fixed chapter assignments within the reviewed Core 200, with the first campaign containing about 30 targets. Reading-check observations personalize familiarity, repetition and initial exposure rather than constructing a new chapter vocabulary. Selection of a personalized chapter from a wider library was earlier design direction, not an implemented feature.
 
 ### Teaching moments after assessment
 
 Assessment itself does not become a teaching screen. When the child later needs support during practice, use the teaching-moment flow in Section 7: reviewed sentence + illustration, synchronized narration/highlight, combat paused, no health cost, and delayed recheck after intervening material.
 
-### Pending assessment design work
+### Historical assessment design checklist — resolved
 
-The following still need explicit design review before implementation:
+The following review items were resolved by the existing reading-check implementation and the later fair fixed-set release:
 
 - exact first 8–12 candidate target words;
 - final distractor sets;
@@ -322,11 +303,11 @@ The following still need explicit design review before implementation:
 - continuation logic for stronger readers;
 - exact learner-model fields written afterward.
 
-When reviewing the next assessment design pass, compare options screen by screen and prefer the version that preserves mechanic consistency, reading validity, and calm child-facing presentation.
+This list does not authorize another assessment redesign. Any future change must preserve mechanic consistency, reading validity, calm presentation and saved questions.
 
 ## 6. Selected battle screen: scroll flow
 
-Visual reference: `02_battle_scroll_flow_SELECTED.png`.
+The earlier `02_battle_scroll_flow_SELECTED.png` mockup is retired. Preserve the current scroll implementation and [active spiral/character references](BLITZWORD_REFERENCE_IMAGES.md).
 
 The selected direction is an ancient scroll inside the battle scene. The scroll holds the target word during exposure and becomes a neutral mask before the answer tiles appear.
 
@@ -397,9 +378,9 @@ Use these as teaching-pattern references, not mandatory sentence templates:
 
 ### Asset development
 
-Pre-generate and review all teaching illustrations, sentences, narration, and highlight timing. No live image generation during play.
+Pre-generate and review teaching assets; no live image generation occurs during play. Recorded timing alignment is approved but incomplete in draft PR #80, so the synchronized-highlighting requirement above is not yet a production claim.
 
-Use the approved teaching-card reference for composition and tone, and the character bible for the exact selected hero/Pip identity. Keep recurring characters visually coherent across all assets.
+Use the existing teaching-card implementation and approved teaching assets for composition and tone, and the [active character references](BLITZWORD_REFERENCE_IMAGES.md) for the exact hero/Pip identity. The old teaching-card mockup is retired. Keep recurring characters visually coherent across all assets.
 
 For visually obvious words, create the strongest concept directly. For abstract, relational, or ambiguous words, first compare three meaningfully different A/B/C concepts that test different teaching mechanisms rather than camera angles. Choose based primarily on whether a young child can infer the target meaning, whether sentence and image say exactly the same thing, and whether any misleading cue remains.
 
@@ -409,7 +390,7 @@ If teaching interruptions become frequent, reduce new-word introductions rather 
 
 ## 8. Daily practice and challenge structure
 
-A challenge should aim for roughly seven minutes, within a practical 5–10 minute range. One completed challenge is a meaningful daily session; motivated children can do two or three.
+The earlier seven-minute challenge target is superseded. A chapter is one map field with a minimum of ten interaction-confirmed active minutes, three reading wins, a completed number duel and learning objectives. One chapter per day is the visible goal; further play and later review remain available. See [chapter pacing](SUCCESS_XP_RELEASE.md).
 
 The stopping point should occur at a natural boundary. Do not force the child to continue until an enemy is defeated. Save unfinished fights exactly.
 
@@ -422,21 +403,13 @@ Each challenge mixes:
 - difficult words receiving extra practice;
 - new targets when capacity permits.
 
-Allow up to six new words in a challenge, but treat six as a ceiling, not a quota. Introduce fewer or none when unfinished material, errors, or teaching moments already consume capacity.
+The current chapter pool and due reviews follow [the approved scheduling/refill rules](SCHEDULING_RELEASE.md). Three independent correct answers cap ordinary current-field practice for the day; freed turns can preview up to three next-field words at sufficient recent accuracy. The final fallback is one faster exposure step. This replaces the earlier generic six-new-words-per-challenge planning rule.
 
 Aim for a productive level of difficulty rather than a fixed error quota. Working hypothesis: familiar-word unassisted accuracy around 85–90% is a reasonable starting calibration range. The often-cited 85% rule does not directly validate an exact failure rate for young children's four-choice reading practice, so measure retention, frustration, and return behavior rather than optimizing blindly to one percentage.
 
 ## 9. Speed / movement system
 
-Theme exposure speed as movement:
-
-1. Crouch
-2. Walk
-3. Run
-4. Ride
-5. Fly
-
-Crouch, Walk, and Run are available in the free chapter. Ride and Fly are locked until the free chapter has been completed and are part of the larger paid expansion. Pip reaches a rideable stage at the end of the free chapter whether or not the parent purchases. Ride and Fly remain locked content until the expansion is purchased.
+The implemented movement ladder is Crawl (self-paced), Walk (1800 ms), Stride (1500 ms), Jog (1200 ms), Run (950 ms), Ride (600 ms) and Fly (350 ms). Crawl through Run are free choices. Ride/Fly require the existing final-form, free-campaign-completion and expansion-entitlement gates. Growth itself is XP-only; completing the free campaign does not automatically grant the rideable form. See [point 7](#point-7-optional-speed-guidance-and-quick-words--24-september-2026).
 
 Movement level changes exposure speed, not curriculum difficulty or enemy strength. The story remains completable at the free movement levels.
 
@@ -449,7 +422,7 @@ Offer a slower/faster suggestion between battles, not while the child is reading
 - the child can decline either nudge;
 - concentrated errors on specific words should trigger word-level support before assuming global speed is the problem.
 
-Thresholds and minimum sample size are provisional and should be tuned from real usage and retention data.
+The implemented rule uses 20 eligible recent answers, strictly below 80% for slower and strictly above 90% for faster, with word-concentrated misses handled first. Point 7 defines the full eligibility and offer-spacing rules. These are calibration choices to evaluate through real play, not measured learning outcomes.
 
 ## 10. Battle difficulty, routes, checkpoints, and defeat
 
@@ -497,15 +470,13 @@ Do not build 100 pieces of final art before the core loop works. Start the imple
 
 ## 12. Chapter progression, reliability, and retention
 
-First free chapter: approximately 30 target words.
-
-Working chapter-completion rule:
+The first free campaign contains five chapters and approximately 30 fixed targets. Each chapter is one map field with the ten-minute, three-win and number-duel requirements in section 8. The campaign learning/finale objectives are:
 
 - all chapter targets have been introduced;
 - at least about 80% meet the current reliability criterion under independent checks;
 - the final chapter encounter is won.
 
-Do not require a 30-day wait before story completion. Time is not a campaign gate.
+Do not require a 30-day wait before story completion. There is no elapsed-day retention gate for story completion; the ten-active-minute minimum per chapter still applies.
 
 Retention is continuous. Continue checking previously successful words over at least 30 days using expanding gaps such as roughly 1, 3, 7, 14, and 30 days. A miss shortens the next interval and may trigger more support. A chapter remains completed even if a later retention check fails; the word returns to practice.
 
@@ -528,13 +499,13 @@ Mentava is a source of candidate examples, not a validated BlitzWord curriculum 
 
 | Tier | Working size | Role |
 |---|---:|---|
-| Free chapter | ~20–30 active target words | Personalized starting set selected from the broader reviewed library |
+| First free campaign | About 30 fixed targets across five chapters | Practice/review order adapts within the maintained chapter structure |
 | Core curriculum | 200 words | First major pool combining high-frequency words, theme vocabulary, and broad sound-spelling coverage |
 | Broader curriculum | 1,000 words | Future expansion pool; its first 200 are exactly the Core 200 |
 
 These sizes are content pools, not developmental milestones. The assessment may sample from the wider reviewed curriculum rather than only the child's free-chapter words.
 
-Current Core 200 coverage in `blitzword_curriculum_200_1000.xlsx`:
+Current Core 200 coverage in [`curriculum/BLITZWORD_CURRICULUM_200_1000.xlsx`](../curriculum/BLITZWORD_CURRICULUM_200_1000.xlsx):
 
 - all 100 inspected CPB top-100 words;
 - 144 of the Dolch 220;
@@ -573,7 +544,7 @@ For each independent four-choice check, distractors should reduce guessing by su
 
 Optional phonics side quests can come later if repeated pattern difficulties justify them between encounters. Do not build a comprehensive phonics engine into v1.
 
-Curriculum artifact: `blitzword_curriculum_200_1000.xlsx`.
+Curriculum artifact: [the maintained workbook](../curriculum/BLITZWORD_CURRICULUM_200_1000.xlsx).
 
 ## 14. Character and asset consistency
 
@@ -581,10 +552,11 @@ Character coherence is a product requirement, not optional art polish.
 
 The authoritative character-bible references are now:
 
-- `00a_heroes_character_bible.png` — **Option 17: Rowanfire Companions**, containing all six fixed selectable hero appearances;
-- `00b_pip_character_bible.png` — **Ember Guardian**, containing Pip's approved hatchling-to-rideable growth direction.
+- Boys: the approved `assets/rowanfire-boys-2026-09-21.png` lineup; it supersedes the male figures in the original Option 17 sheet.
+- Girls: the approved Option 17 female identities preserved in `assets/hero4.webp` through `hero6.webp` and `assets/forest-characters.webp`.
+- Pip: the Ember Guardian production references, including `assets/pip.webp`, `assets/pip-growth.png` and the four approved evolution frames.
 
-Treat these two images as equally authoritative and use them together for any scene containing both hero and Pip. The shared production palette is forest green / natural wood / leather / cream with ember-red and warm orange accents. Red should connect the heroes to Ember Guardian without overwhelming the forest setting.
+Use the applicable sources together for any scene containing hero and Pip. [The reference guide](BLITZWORD_REFERENCE_IMAGES.md) records paths and provenance; historical bible/mockup filenames are not required attachments. The shared production palette is forest green / natural wood / leather / cream with ember-red and warm orange accents. Red should connect the heroes to Ember Guardian without overwhelming the forest setting.
 
 Extend the bible over time with expression/pose references and scale references where needed, but do not redesign the core identities.
 
@@ -595,6 +567,8 @@ Enemy variety can be broad, but recurring enemy families should also be internal
 Do not bake child-facing text into illustrations. UI text, target words, teaching sentences, highlights, health, and controls are separate interface layers so they remain readable, localizable, and testable.
 
 ## 15. Commercial structure
+
+This is later-phase product direction, not implemented purchasing or an entitlement granted by the web preview. Current web play includes the Core 200, with no native package or purchase/restore flow. The older free-chapter/personalized-target outline below is not the current chapter allocation, and its rideable-growth promise is superseded by XP-only point 9. Pricing and launch settings remain undecided.
 
 Meaningful free chapter:
 
@@ -621,7 +595,7 @@ The commercial validation plan is to reach actual App Store users quickly, run m
 
 Child UI: minimal text, large visual choices, voice where useful, no purchase decisions.
 
-Parent area: assessment summary, progress, current difficulties, recent practice, retention, and purchase/restore controls behind a parental gate.
+The implemented Parents area includes learning evidence, progress, difficult words, recent practice, retention, sound settings and save-file backup/restore behind its arithmetic gate. Purchase/restore controls belong to the later commercial phase; save backup/restore is already implemented.
 
 Do not market BlitzWord as diagnosing or treating dyslexia or other conditions.
 
@@ -649,6 +623,8 @@ Measure whether teaching transfers to later ordinary reading items. Do not treat
 For commercial validation, distinguish installs, assessment completion, first-battle completion, active sessions, return, learning/retention, friction, and payment. Avoid unnecessary child identifiers in analytics.
 
 ## 18. Current implementation sequence
+
+The original web sequence below is historical and completed through its gameplay stages, with chapter timing and terminology superseded by later updates. Current work is narration completion and device/listening verification. Native packaging and commercial launch remain later work and require their own authorization; see [current status](CURRENT_STATUS.md#outstanding-work-and-ownership).
 
 1. Build the approved onboarding/start screens and local child profile.
 2. Build one complete selected scroll battle encounter with save/resume, correct/wrong feedback, victory/defeat, enemy health, and one reviewed teaching moment.
@@ -750,21 +726,21 @@ The child interface uses a short chapter title, a single control toolbar, a visi
 
 ## 27. Success XP and chapter pacing — approved 23 September 2026
 
-This section supersedes earlier growth/time and chapter terminology. See `SUCCESS_XP_RELEASE.md` for the implemented rules and `XP_CALIBRATION.json` for reproducible model outputs. A battle is one enemy; a chapter is one map field; a campaign is one map of five chapters. New chapters require at least ten interaction-confirmed active minutes and finish only at a resolved battle/duel boundary. Three reading victories, a completed number duel and the existing word-practice objectives are required; extra battles fill a chapter that is still under ten minutes. One chapter per day is the visible goal. Seven campaigns retain all 200 words, and review chapters continue afterwards.
+This section records the 23 September chapter rules and original XP calibration. Point 9 later supersedes its growth thresholds, fractional reward calculation and calendar projections; the chapter minimum/objectives remain. See `SUCCESS_XP_RELEASE.md` for that milestone’s rules and `XP_CALIBRATION.json` for reproducible model outputs. A battle is one enemy; a chapter is one map field; a campaign is one map of five chapters. New chapters require at least ten interaction-confirmed active minutes and finish only at a resolved battle/duel boundary. Three reading victories, a completed number duel and the existing word-practice objectives are required; extra battles fill a chapter that is still under ten minutes. One chapter per day is the visible goal. Seven campaigns retain all 200 words, and review chapters continue afterwards.
 
 Evolution depends only on cumulative XP: 3,000 / 8,900 / 13,400. Remove minimum minutes, elapsed days and campaign completion from evolution, while preserving earned forms and separate movement/purchase locks. The first evolution unlocks the child's choice of companion name. Correct unaided reading earns 3 XP, with once-only new-word and delayed-retention bonuses, reliable faster-review bonuses and chapter accuracy rewards. At ten active minutes each local date, award 20 XP once and apply a visible but small ×1.75 multiplier to correct-answer XP for the rest of the date. No penalty is imposed for stopping early or missing a day. No new pet is added yet.
 
-The model aims for evolution at two, six and ten weeks at fifteen active minutes daily, and full growth in three weeks at forty-five minutes daily. These are calibration targets, not time gates or guarantees for individual children. Distinct artwork per field remains outstanding. Chapter-story interludes were implemented in the subsequent update below. Expanded prerecorded narration remains outstanding.
+The model aims for evolution at two, six and ten weeks at fifteen active minutes daily, and full growth in three weeks at forty-five minutes daily. These are calibration targets, not time gates or guarantees for individual children. At that checkpoint distinct field artwork and expanded narration were still pending. All 35 backgrounds and the 34 story picture checks have since shipped; only narration completion/device review remains open. See [current status](CURRENT_STATUS.md).
 
 ## Chapter-story implementation — 23 September 2026
 
-Chapter entry now includes a short illustrated narration followed by one simple untimed sentence and child confirmation. The initial guided encounter keeps its existing introduction; the other 34 map fields have saved story transitions. Pause, Home, Rest and reload preserve the phase and pending battle. Optional Listen records help without creating mastery, XP or chapter-time evidence. The chosen dragon name is used in the story. Map/progress labels distinguish the campaign from the chapter within it. Existing approved scene and character art and the current speech fallback are reused. See `CHAPTER_STORIES_RELEASE.md` for migration and verification details.
+This historical milestone introduced a short illustrated narration followed by one simple untimed sentence and child confirmation. The confirmation was subsequently replaced by the approved two-picture check in point 6; see [current story rules](#point-6-approved-sentences-and-picture-checks--24-september-2026). The initial guided encounter keeps its existing introduction; the other 34 map fields have saved story transitions. Pause, Home, Rest and reload preserve the phase and pending battle. Optional Listen records help without creating mastery, XP or chapter-time evidence. The chosen dragon name is used in the story. Map/progress labels distinguish the campaign from the chapter within it. Existing approved scene and character art and the current speech fallback are reused. See `CHAPTER_STORIES_RELEASE.md` for migration and verification details.
 
 ## Soundscape and remaining work — 23 September 2026
 
 The adaptive forest soundscape is implemented and deployed, including scene music, result cues, speech priority, cancellation and independent saved controls. It is separate from the unfinished expansion of prerecorded narration. See [soundscape behavior](SOUNDSCAPE_RELEASE.md).
 
-Enemy artwork and creature-specific health ranges are assigned to the user's parallel thread. Distinct background art for every chapter remains unfinished. An additional dragon is an optional future idea. This documentation update adds no gameplay or audio changes; [current status](CURRENT_STATUS.md) tracks the remaining work and verification limits.
+The twenty selected enemy families and all 35 chapter backgrounds were subsequently deployed. Creature-specific health ranges and group/age variants remain proposals; they were not approved for implementation by the art workstream. An additional dragon is an optional future idea. This documentation update adds no gameplay or audio changes; [current status](CURRENT_STATUS.md) tracks the remaining work and verification limits.
 
 ## Chapter scenery — 23 September 2026
 
@@ -818,7 +794,7 @@ Practice questions no longer show the same three wrong answers every time.
 - Real words and pronounceable made-up words are preferred. A made-up word is never a curriculum word (the workbook's 1,000 words), and rude, violent or unkind words are never used.
 - "a" and "i" are shown with three other single letters.
 - A question already saved keeps its options.
-- The reading-check items keep their fixed options until the user decides on them.
+- The later fair fixed-set decision closes the reading-check choice: all 26 reviewed sets are deployed, with shuffled positions. See [the accepted follow-up](#fair-fixed-reading-check-choices--24-september-2026).
 
 ## Scheduling, daily cap and refill (point 3) — approved 23 September 2026
 
@@ -844,7 +820,7 @@ New combined contrast phrases use the existing device-speech fallback. The appro
 
 ## Point 6 review gate — 24 September 2026
 
-The user authorized preparation of all 34 child-read story sentences and their two-picture pairs. [The complete draft](STORY_SENTENCE_REVIEW.md) is proposed content awaiting explicit approval; its candidate wording and image choices are not yet accepted product rules. The existing approved point 6 behavior remains: use earlier chapter targets, permit at most one tap-to-hear untaught word where necessary in early chapters, show a two-picture meaning question, reveal the correct picture after a wrong choice and continue, award no XP, and record the result for Parents. All 34 sentences and picture pairs must be approved before gameplay implementation.
+This historical preparation gate is closed. The user subsequently approved all 34 child-read story sentences and picture pairs and authorized their implementation in PR #66. [The approved set](STORY_SENTENCE_REVIEW.md) and the following section record the accepted content. The existing approved point 6 behavior remains: use earlier chapter targets, permit at most one tap-to-hear untaught word where necessary in early chapters, show a two-picture meaning question, reveal the correct picture after a wrong choice and continue, award no XP, and record the result for Parents. All 34 sentences and picture pairs must be approved before gameplay implementation.
 
 
 ## Point 6: approved sentences and picture checks — 24 September 2026
@@ -905,7 +881,7 @@ New questions snapshot their gap when prepared, using the latest recorded word a
 
 Earlier saves keep their raw records, archive totals and milestones. Earlier answer timestamps or aggregate gap buckets cannot reliably establish whether a question was already shown, whether another exposure intervened, or which word had the first qualifying check of a week. Such records do not generate new 7/30-day claims. Weeks with potentially qualifying older evidence that cannot be resolved are explicitly unavailable. New compacted evidence stores one first outcome per word/week plus the first qualifying 7/30-day dates, preserving the same report after raw-history compaction. It does not recreate missing old events.
 
-The approved sequence through point 8 is complete when this release is deployed and verified. Point 9 remains discussion-only and point 10 remains parked; neither is authorized by this implementation.
+The sequence through point 8 was subsequently deployed and verified. Point 9 was separately authorized and deployed as recorded below; point 10 remains parked. This parent-view milestone did not itself authorize either later point.
 
 
 ## Point 9: whole XP and slower growth — 24 September 2026
