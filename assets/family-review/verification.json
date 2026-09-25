@@ -1,0 +1,48 @@
+{
+  "build": "thornling-review-20260925-r1",
+  "checkedAt": "2026-09-25T08:51:21.488Z",
+  "checks": [
+    "six images decode",
+    "four independent ratings",
+    "name editing",
+    "reload preserves review",
+    "clear only active score",
+    "enlarge dialog",
+    "JSON download",
+    "tablet and phone layout",
+    "44px touch targets",
+    "no page errors"
+  ],
+  "images": [
+    {
+      "name": "thornling-a.webp",
+      "bytes": 262680,
+      "sha256": "d9a35ea4aa0508c0fb38a5b9941a3e4840d623123980d8c4a0d657885c8ec7da"
+    },
+    {
+      "name": "thornling-b.webp",
+      "bytes": 280944,
+      "sha256": "89743d929c4b088bd6f0da09383dc75266bef1ad639bbb18337d66a2e2406b30"
+    },
+    {
+      "name": "thornling-c.webp",
+      "bytes": 300028,
+      "sha256": "09c21c80ff28e40e81238fca735ab3c5c1fd4ff75f4af3a612665755033cb69c"
+    },
+    {
+      "name": "thornling-current.webp",
+      "bytes": 22874,
+      "sha256": "db2b3ff6a4d530f1c34a68c8a64522b07d0a37b8a138d5bf2e141efe4b296ce2"
+    },
+    {
+      "name": "thornling-d.webp",
+      "bytes": 269616,
+      "sha256": "db02b68c919bdaf422211c3e13f0e3a46f3604ded43fea0d224ff59414b76c5d"
+    },
+    {
+      "name": "thornling-e.webp",
+      "bytes": 295662,
+      "sha256": "226034c02c08745e763b07a243b0890a4906a0bf75a2589c9ec7ce35a8eb5d2f"
+    }
+  ]
+}
