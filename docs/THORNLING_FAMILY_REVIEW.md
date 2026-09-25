@@ -1,5 +1,7 @@
 # Thornling family review — 25 September 2026
 
+This is the historical one-enemy release. The [full roster recovery update](FAMILY_REVIEW_RECOVERY.md) adds 26 rounds using existing artwork only and documents the missing alternatives.
+
 The user reduced the large art review to one enemy and five alternatives. The standalone preview is at `assets/family-review/`, published by the existing GitHub Pages workflow.
 
 - Six complete illustrations: the current approved Thornling and five alternatives A–E.

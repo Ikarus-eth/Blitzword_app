@@ -1,0 +1,1175 @@
+{
+  "build": "family-review-recovered-20260925-r2",
+  "reviewers": [
+    "Artus",
+    "Juna",
+    "Johanna",
+    "Ikarus"
+  ],
+  "entities": [
+    {
+      "id": "thornling",
+      "name": "Thornling",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "images/thornling-current.webp"
+        },
+        {
+          "id": "a",
+          "title": "Leaf scout",
+          "src": "images/thornling-a.webp"
+        },
+        {
+          "id": "b",
+          "title": "Autumn ember",
+          "src": "images/thornling-b.webp"
+        },
+        {
+          "id": "c",
+          "title": "Moss garden",
+          "src": "images/thornling-c.webp"
+        },
+        {
+          "id": "d",
+          "title": "Moon bramble",
+          "src": "images/thornling-d.webp"
+        },
+        {
+          "id": "e",
+          "title": "Briar guardian",
+          "src": "images/thornling-e.webp"
+        }
+      ]
+    },
+    {
+      "id": "moss-golem",
+      "name": "Moss Golem",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            290,
+            54,
+            270,
+            220
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "moon-moth",
+      "name": "Moon Moth",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            564,
+            54,
+            274,
+            220
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "root-sprite",
+      "name": "Root Sprite",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            843,
+            54,
+            272,
+            220
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "cave-troll",
+      "name": "Cave Troll",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            9,
+            305,
+            276,
+            222
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "acorn-imp",
+      "name": "Acorn Imp",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            290,
+            305,
+            270,
+            222
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "mushroom-guard",
+      "name": "Mushroom Guard",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            564,
+            305,
+            274,
+            222
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "bark-beetle",
+      "name": "Bark Beetle",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            843,
+            305,
+            272,
+            222
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "bramble-boar",
+      "name": "Bramble Boar",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            9,
+            560,
+            276,
+            225
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "reed-serpent",
+      "name": "Reed Serpent",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            290,
+            549,
+            270,
+            236
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "bog-toad",
+      "name": "Bog Toad",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            564,
+            560,
+            274,
+            225
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "lantern-wisp",
+      "name": "Lantern Wisp",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            843,
+            560,
+            272,
+            225
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "crystal-crab",
+      "name": "Crystal Crab",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            9,
+            816,
+            276,
+            225
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "hollow-owl",
+      "name": "Hollow Owl",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            290,
+            816,
+            270,
+            225
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "fern-wolf",
+      "name": "Fern Wolf",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            564,
+            816,
+            274,
+            225
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "stone-ram",
+      "name": "Stone Ram",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            843,
+            811,
+            272,
+            230
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "briar-bat",
+      "name": "Briar Bat",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            9,
+            1070,
+            276,
+            237
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "snail-knight",
+      "name": "Snail Knight",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            290,
+            1070,
+            270,
+            237
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "chest-mimic",
+      "name": "Chest Mimic",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            564,
+            1070,
+            274,
+            237
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "storm-griffin",
+      "name": "Storm Griffin",
+      "kind": "enemy",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../enemies/selected-lineup.png",
+          "width": 1122,
+          "height": 1402,
+          "crop": [
+            843,
+            1070,
+            272,
+            237
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "mage-boy",
+      "name": "Mage \u00b7 boy",
+      "kind": "hero",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../forest-characters.webp",
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0,
+            0,
+            384,
+            538
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "knight-boy",
+      "name": "Knight \u00b7 boy",
+      "kind": "hero",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../forest-characters.webp",
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            384,
+            0,
+            426,
+            538
+          ],
+          "points": "384,0 780,0 780,350 765,394 810,525 384,538"
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "archer-boy",
+      "name": "Archer \u00b7 boy",
+      "kind": "hero",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../forest-characters.webp",
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            780,
+            0,
+            374,
+            538
+          ],
+          "points": "820,0 1154,0 1154,538 820,538 810,486 790,440 780,360"
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "mage-girl",
+      "name": "Mage \u00b7 girl",
+      "kind": "hero",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../forest-characters.webp",
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1154,
+            0,
+            382,
+            538
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "knight-girl",
+      "name": "Knight \u00b7 girl",
+      "kind": "hero",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../forest-characters.webp",
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0,
+            538,
+            384,
+            486
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    },
+    {
+      "id": "archer-girl",
+      "name": "Archer \u00b7 girl",
+      "kind": "hero",
+      "options": [
+        {
+          "id": "current",
+          "title": "Current design",
+          "src": "../forest-characters.webp",
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            384,
+            538,
+            384,
+            486
+          ]
+        },
+        {
+          "id": "a",
+          "title": "Option A",
+          "src": null
+        },
+        {
+          "id": "b",
+          "title": "Option B",
+          "src": null
+        },
+        {
+          "id": "c",
+          "title": "Option C",
+          "src": null
+        },
+        {
+          "id": "d",
+          "title": "Option D",
+          "src": null
+        },
+        {
+          "id": "e",
+          "title": "Option E",
+          "src": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # BlitzWord
 
+[Family art review](https://ikarus-eth.github.io/Blitzword_app/assets/family-review/): 20 enemies and six heroes, four separate reviewers, shared comments and a visible list of missing alternatives. See the [recovery status](docs/FAMILY_REVIEW_RECOVERY.md).
+
 An iPad-first English reading game. Play the current web build at https://ikarus-eth.github.io/Blitzword_app/.
 
 See [current implementation, latest verified build and outstanding work](docs/CURRENT_STATUS.md) first. Older release notes describe their own milestones, not the current backlog. The earlier [verification record](docs/BUGS_ASSESSMENT_DEPLOYMENT.json) covers the reload/Pip fixes and fair reading-check choices.
