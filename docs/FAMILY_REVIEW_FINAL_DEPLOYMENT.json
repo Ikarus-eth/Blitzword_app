@@ -1,0 +1,30 @@
+{
+  "build": "family-review-complete-20260926-r4",
+  "commit": "ada9ff7eacad2341632e9e09df3d0bd828608409",
+  "pullRequest": "https://github.com/Ikarus-eth/Blitzword_app/pull/102",
+  "workflowRun": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36207855907",
+  "workflowJob": 108308075606,
+  "checkedAt": "2026-09-26T01:19:24.150874+00:00",
+  "deploymentStatus": "success",
+  "ciTests": "success",
+  "staticSiteUpload": "success",
+  "pagesDeploymentStep": "success",
+  "dashboardUrl": "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/?v=4",
+  "sourceValidation": {
+    "rounds": 26,
+    "availableImages": 156,
+    "missingImages": 0,
+    "uniqueImageFilesDecoded": 133,
+    "coreAndPublicationTests": 252,
+    "appFlowGroups": 89
+  },
+  "liveBrowserVerification": {
+    "status": "blocked",
+    "reason": "Browser Use could not verify the admin-enforced policy before accessing ikarus-eth.github.io; browser security check unavailable.",
+    "bypassAttempted": false,
+    "liveImageRenderingVerified": false,
+    "liveByteVerificationPerformed": false
+  },
+  "ratingContinuity": "Verified by automated publication/restore tests. Six pre-existing scores were verified before publication; post-deployment UI verification is blocked.",
+  "physicalIPadSafariTested": false
+}

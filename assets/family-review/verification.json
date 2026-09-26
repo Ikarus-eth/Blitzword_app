@@ -16,5 +16,17 @@
   },
   "localBrowserPreview": "Blocked: browser could not verify admin-enforced policy. No bypass attempted.",
   "physicalIPadSafariTested": false,
-  "deployment": "pending"
+  "deployment": {
+    "status": "success",
+    "commit": "ada9ff7eacad2341632e9e09df3d0bd828608409",
+    "workflowRun": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36207855907",
+    "actualDeploymentStep": "success"
+  },
+  "publicBrowserVerification": {
+    "status": "blocked",
+    "reason": "Browser Use could not verify the admin-enforced policy before accessing ikarus-eth.github.io; browser security check unavailable.",
+    "bypassAttempted": false,
+    "liveImageRenderingVerified": false,
+    "liveByteVerificationPerformed": false
+  }
 }
