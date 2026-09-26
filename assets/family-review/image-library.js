@@ -111,7 +111,7 @@ async function readZip(blob) {
 }
 async function start({catalog,changed,getReview,validateReview,restoreReview,clearRatings}) {
   let db, records = [], busy = false, stop = false, selectedSlot = null;
-  const urls = new Map(), original = new Map(catalog.entities.flatMap(e => e.options.map(o => [keyFor(e.id,o.id),o.src])));
+  const urls = new Map(), original = new Map(catalog.entities.flatMap(e => e.options.map(o => [keyFor(e.id,o.id),{src:o.src,hash:o.originalSha256}])));
   const channel = typeof BroadcastChannel === 'function' ? new BroadcastChannel(DB) : null;
   const optionAt = slot => { const [eid,oid] = slot.split('/'); return catalog.entities.find(e => e.id === eid)?.options.find(o => o.id === oid); };
   const emptySlots = () => catalog.entities.flatMap(e => e.options.filter(o => !o.src && o.id !== 'current').map(o => ({slot:keyFor(e.id,o.id),label:e.name+' · '+o.id.toUpperCase()})));
@@ -126,21 +126,27 @@ async function start({catalog,changed,getReview,validateReview,restoreReview,cle
   function urlFor(r) { if(!urls.has(r.id)) urls.set(r.id,URL.createObjectURL(r.blob)); return urls.get(r.id); }
   async function refresh() {
     records=await readAll(db);
-    for(const e of catalog.entities) for(const o of e.options) { o.src=original.get(keyFor(e.id,o.id)); delete o.localImage; }
-    for(const r of records) if(r.slot && !original.get(r.slot)) { const o=optionAt(r.slot); if(o) { o.src=urlFor(r); o.localImage=true; } }
+    for(const e of catalog.entities) for(const o of e.options) { const published=original.get(keyFor(e.id,o.id)); o.src=published.src; o.imageHash=published.hash; delete o.localImage; delete o.localOverride; }
+    // Publishing a recovered original must not change the identity of an already rated slot.
+    // A different local assignment remains visible with its existing feedback.
+    for(const r of records) if(r.slot) { const o=optionAt(r.slot), published=original.get(r.slot); if(o && o.id!=='current' && (!published.src || published.hash!==r.id)) { o.src=urlFor(r); o.imageHash=r.id; o.localImage=true; o.localOverride=Boolean(published.src); } }
     changed(); renderLibrary();
   }
   function renderLibrary() {
     const waiting=records.filter(r => !r.slot).length;
-    $('#library-summary').textContent=`Your imported images · ${records.length} saved · ${waiting} to assign`;
+    const slots=emptySlots();
+    $('#library-summary').textContent=`Your imported images · ${records.length} saved · ${waiting} ${slots.length?'to assign':'extra'}`;
+    const publishedCopies=records.filter(r=>r.slot && original.get(r.slot)?.hash===r.id).length;
+    $('#library-guidance').textContent=slots.length?'Choose an empty review slot for each extra image. Exact enemy/hero and letter filenames are placed automatically.':`${publishedCopies} saved originals are now included in the published gallery. Extra candidates remain below and in your full backup.`;
     $('#library-items').replaceChildren();
     if(!$('#library').open) return;
-    for(const record of records.slice().sort((a,b)=>Number(Boolean(a.slot))-Number(Boolean(b.slot)))) {
+    for(const record of records.filter(r=>!r.slot || original.get(r.slot)?.hash!==r.id).sort((a,b)=>Number(Boolean(a.slot))-Number(Boolean(b.slot)))) {
       const row=document.createElement('article'); row.className='library-item'; row.dataset.imageId=record.id;
       const img=document.createElement('img'); img.src=urlFor(record); img.alt=record.name; img.loading='lazy';
       const name=document.createElement('p'); name.textContent=record.name;
       const current=document.createElement('p'); const [eid,oid]=(record.slot||'').split('/');
-      current.textContent=record.slot ? (catalog.entities.find(e=>e.id===eid)?.name || eid)+' · '+oid.toUpperCase() : 'Saved · choose where it belongs';
+      const published=original.get(record.slot);
+      current.textContent=record.slot ? (catalog.entities.find(e=>e.id===eid)?.name || eid)+' · '+oid.toUpperCase()+(published?.hash===record.id?' · now in the published gallery':'') : 'Saved extra · not assigned to a review slot';
       const select=document.createElement('select'); select.setAttribute('aria-label','Place '+record.name);
       select.add(new Option(record.slot?'Move to another empty slot…':'Choose enemy or hero and letter…',''));
       for(const item of emptySlots()) select.add(new Option(item.label,item.slot));
@@ -153,7 +159,7 @@ async function start({catalog,changed,getReview,validateReview,restoreReview,cle
         catch(error) { message(error.message,true); }
         finally { setBusy(false); }
       };
-      row.append(img,name,current,select,assign); $('#library-items').append(row);
+      row.append(img,name,current); if(slots.length)row.append(select,assign); $('#library-items').append(row);
     }
   }
   function autoSlot(name) {
@@ -220,7 +226,7 @@ async function start({catalog,changed,getReview,validateReview,restoreReview,cle
       const review=validateReview(manifest.review), ids=new Set(), slots=new Set();
       for(const r of manifest.images) {
         if(!/^[a-f0-9]{64}$/.test(r.id)||ids.has(r.id)||typeof r.name!=='string'||!TYPES.has(r.type)||!entries.has(r.path)||entries.get(r.path).blob.size!==r.size) throw Error('Invalid image entry in backup.');
-        if(r.slot && (!optionAt(r.slot)||original.get(r.slot)||slots.has(r.slot))) throw Error('Invalid or repeated image slot in backup.');
+        if(r.slot && (!optionAt(r.slot)||optionAt(r.slot).id==='current'||slots.has(r.slot))) throw Error('Invalid or repeated image slot in backup.');
         ids.add(r.id); if(r.slot) slots.add(r.slot);
       }
       const useFeedback=confirm(`Restore ${manifest.images.length} images and replace ratings, names and comments with this backup? Cancel keeps everything unchanged.`);

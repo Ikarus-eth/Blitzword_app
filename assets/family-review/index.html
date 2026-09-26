@@ -2,34 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#183e32"><meta name="blitzword-art-review" content="family-review-imports-20260925-r3">
+<meta name="theme-color" content="#183e32"><meta name="blitzword-art-review" content="family-review-complete-20260926-r4">
 <title>BlitzWord · Family art review</title>
-<link rel="stylesheet" href="review.css?v=3"><script src="image-library.js?v=3" defer></script><script src="review.js?v=3" defer></script>
+<link rel="stylesheet" href="review.css?v=4"><script src="image-library.js?v=4" defer></script><script src="review.js?v=4" defer></script>
 </head>
 <body>
 <header><a href="../../" class="brand">BlitzWord<span>FAMILY ART STUDIO</span></a><button id="download">↓ Download review</button></header>
 <main>
-<div class="intro"><div><p class="eyebrow">20 ENEMIES · 6 HEROES · FOUR OPINIONS</p><h1>Help shape our forest.</h1><p class="lead">Choose your name, rate the available designs, then share what you like.<br>Each round has the current design and five alternative slots.</p></div><div class="progress"><strong id="count">0 <span>/ 124</span></strong><span>available-image ratings</span><progress id="progress" max="124" value="0"></progress></div></div>
+<div class="intro"><div><p class="eyebrow">20 ENEMIES · 6 HEROES · FOUR OPINIONS</p><h1>Help shape our forest.</h1><p class="lead">Choose your name, rate the available designs, then share what you like.<br>Compare the current design with five whole-body alternatives in every round.</p></div><div class="progress"><strong id="count">0 <span>/ 624</span></strong><span>available-image ratings</span><progress id="progress" max="624" value="0"></progress></div></div>
 <section class="people-bar" aria-label="Choose who is rating"><div><span class="eyebrow">WHO’S RATING?</span><div id="people"></div></div><button id="edit-names">Edit names</button><span id="save-status" role="status">Saved on this device</span></section>
 <section class="import-panel" aria-labelledby="import-title">
-<div><p class="eyebrow">BRING BACK YOUR ARTWORK</p><h2 id="import-title">Add images in one go.</h2><p>Choose several images or a whole folder. Each original saves in this browser as it imports — no active chat needed. Re-select the same files to resume; duplicates are skipped.</p></div>
+<details id="import-tools"><summary>Import, backup &amp; move your review</summary>
+<div><p class="eyebrow">YOUR REVIEW FILES</p><h2 id="import-title">Keep your feedback safe.</h2><p>All gallery images are included. You can also keep extra originals here or restore a full backup from another device. Re-selecting files skips duplicates.</p></div>
 <div class="import-actions"><button id="add-images" class="primary">Add images</button><button id="add-folder">Choose folder</button><button id="backup-images">Download full backup</button><button id="restore-images">Restore backup</button><button id="stop-import" hidden>Stop after this file</button></div>
 <input id="image-files" type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple hidden>
 <input id="folder-files" type="file" webkitdirectory multiple hidden>
 <input id="backup-file" type="file" accept=".zip,.json" hidden>
 <div id="image-drop" tabindex="0" role="button" aria-label="Drop image files here or press Enter to choose files">Drop images here, or use Add images</div>
 <p id="import-status" role="status" aria-live="polite">Opening your saved image library…</p><progress id="import-progress" hidden></progress>
-<details id="library"><summary id="library-summary">Your imported images</summary><p>Pick an enemy or hero and an empty letter for each image. Files named like <b>moss-golem-a.png</b> are placed automatically. Other filenames stay here until you assign them.</p><div id="library-items"></div></details>
-<p class="local-note">Images and feedback stay in this browser on this device. Download a full backup before clearing browser data or switching devices. Imports do not publish images to the game.</p>
-</section>
-<p class="availability">31 images available: all 26 current designs and Thornling’s five alternatives. <a href="#missing">125 alternatives are missing ↓</a></p>
+<details id="library"><summary id="library-summary">Your imported images</summary><p id="library-guidance">Saved originals and extra candidates are kept here for backup.</p><div id="library-items"></div></details>
+<p class="local-note">Extra imported images and feedback stay in this browser on this device. Download a full backup before clearing browser data or switching devices. Imports do not publish images to the game.</p>
+</details></section>
+<p class="availability">156 images available. All 26 rounds are ready to review.</p>
 <section class="round-heading" aria-label="Choose a review round"><div><p id="round-number" class="eyebrow">ROUND 1 OF 26</p><h2 id="round-title">Thornling</h2><p id="round-availability">6 of 6 images available</p></div><div class="round-navigation"><label class="sr-only" for="jump">Choose enemy or hero</label><select id="jump"></select><button id="previous" aria-label="Previous round">←</button><button id="next-top" aria-label="Next round">→</button></div></section>
 <div class="guide"><span><b>1</b> Not for me &nbsp;·&nbsp; <b>3</b> It’s okay &nbsp;·&nbsp; <b>5</b> Love it</span><span>Tap any image to enlarge ↗</span></div>
 <section id="cards" class="cards" aria-label="Current design and five alternatives"></section>
 <section class="notes"><div><p class="eyebrow">THE FAMILY CONVERSATION</p><h2>What should we keep or change?</h2><p>One shared note for these six designs. Mention the letter and your name if you like.</p></div><label for="comment">Likes, dislikes & ideas</label><textarea id="comment" rows="4" maxlength="10000" placeholder="We love B’s eyes and D’s leaves. Could A have smaller spikes?…"></textarea></section>
 <div class="round-footer"><span id="round-progress"></span><button id="next" class="primary">Next round →</button></div>
-<details id="missing"><summary id="missing-summary">What’s missing? · 125 alternative images</summary><p id="missing-description">Missing slots become available to rate as you assign imported images.</p><div id="missing-list"></div><button id="download-missing">Download the missing-image list</button></details>
-<p class="footnote">Ratings and comments stay in this browser. Download your review to keep a copy or share your feedback. Your earlier Thornling scores are retained.</p>
+<details id="missing" hidden><summary id="missing-summary">All alternative slots are filled</summary><p id="missing-description">Missing slots become available to rate as you assign imported images.</p><div id="missing-list"></div><button id="download-missing">Download the missing-image list</button></details>
+<p class="footnote">Artwork is available on every device. Ratings and comments stay in this browser; download your review to keep or share your feedback. Restoring feedback replaces the scores on the receiving device.</p>
 </main>
 <dialog id="image-dialog"><button class="close" aria-label="Close image">×</button><p class="eyebrow" id="large-label"></p><h2 id="large-title"></h2><div id="large-art"></div></dialog>
 <dialog id="names-dialog"><form id="names-form"><p class="eyebrow">YOUR REVIEW TEAM</p><h2>Four points of view.</h2><div id="name-fields"></div><div class="actions"><button type="button" id="cancel-names">Cancel</button><button type="submit" class="primary">Save names</button></div></form></dialog>

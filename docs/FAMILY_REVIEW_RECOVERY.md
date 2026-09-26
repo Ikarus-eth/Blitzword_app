@@ -1,5 +1,7 @@
 # Family art review recovery — 25 September 2026
 
+**26 September update:** the complete gallery now includes all 156 images. The counts and local-only recovery steps below describe the earlier recovery milestone. See [the current release](FAMILY_REVIEW_FINAL_RELEASE.md).
+
 The user approved the Thornling preview, supplied the names Artus, Juna, Johanna and Ikarus, and requested the rest of the dashboard using recovered files only, without recreating artwork.
 
 Review: https://ikarus-eth.github.io/Blitzword_app/assets/family-review/

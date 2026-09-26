@@ -1,5 +1,5 @@
 {
-  "build": "family-review-recovered-20260925-r2",
+  "build": "family-review-complete-20260926-r4",
   "reviewers": [
     "Artus",
     "Juna",
@@ -15,32 +15,38 @@
         {
           "id": "current",
           "title": "Current design",
-          "src": "images/thornling-current.webp"
+          "src": "images/thornling-current.webp",
+          "originalSha256": "db2b3ff6a4d530f1c34a68c8a64522b07d0a37b8a138d5bf2e141efe4b296ce2"
         },
         {
           "id": "a",
           "title": "Leaf scout",
-          "src": "images/thornling-a.webp"
+          "src": "images/thornling-a.webp",
+          "originalSha256": "d9a35ea4aa0508c0fb38a5b9941a3e4840d623123980d8c4a0d657885c8ec7da"
         },
         {
           "id": "b",
           "title": "Autumn ember",
-          "src": "images/thornling-b.webp"
+          "src": "images/thornling-b.webp",
+          "originalSha256": "89743d929c4b088bd6f0da09383dc75266bef1ad639bbb18337d66a2e2406b30"
         },
         {
           "id": "c",
           "title": "Moss garden",
-          "src": "images/thornling-c.webp"
+          "src": "images/thornling-c.webp",
+          "originalSha256": "09c21c80ff28e40e81238fca735ab3c5c1fd4ff75f4af3a612665755033cb69c"
         },
         {
           "id": "d",
           "title": "Moon bramble",
-          "src": "images/thornling-d.webp"
+          "src": "images/thornling-d.webp",
+          "originalSha256": "db02b68c919bdaf422211c3e13f0e3a46f3604ded43fea0d224ff59414b76c5d"
         },
         {
           "id": "e",
           "title": "Briar guardian",
-          "src": "images/thornling-e.webp"
+          "src": "images/thornling-e.webp",
+          "originalSha256": "226034c02c08745e763b07a243b0890a4906a0bf75a2589c9ec7ce35a8eb5d2f"
         }
       ]
     },
@@ -60,32 +66,38 @@
             54,
             270,
             220
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/moss-golem-a.webp",
+          "originalSha256": "47fb46dd227e53e3234446f3769fde72d202904a0868883a6b5c2d5bbb4925c7"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/moss-golem-b.webp",
+          "originalSha256": "efd45dce111696aec2a03c21287d454e9cdcb66a33d6cf98710ec46d37882795"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/moss-golem-c.webp",
+          "originalSha256": "3dfb16f26d500cffcd3d34645ed79dc7ba2ddc79849b4b1192ca2002077dae6c"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/moss-golem-d.webp",
+          "originalSha256": "036e257a2a9f0c23068ccd42d3c3b651c461c8bed4d7bf57fac7655e9da5adfc"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/moss-golem-e.webp",
+          "originalSha256": "7ae65d8b6917ead9fccef567953e556f2317e7d04d63a964327d1ff75f5b52c5"
         }
       ]
     },
@@ -105,32 +117,38 @@
             54,
             274,
             220
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/moon-moth-a.webp",
+          "originalSha256": "75bc221b054abfc4a2d24362cae1f76e078f08d0d51888e9605c1fb408a0aecc"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/moon-moth-b.webp",
+          "originalSha256": "7fb10f501c2a589739af83551584caa439eb77ee7404048e95763bfa01f42879"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/moon-moth-c.webp",
+          "originalSha256": "36e94c52a7fd5db183e76823c775b54420c7694b6d6d18ab812f02c2be81e926"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/moon-moth-d.webp",
+          "originalSha256": "88c855b5b369a7fdfdb0437ead7107d50e8e1b0f6784a92b2846842814fc2ed7"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/moon-moth-e.webp",
+          "originalSha256": "76402569e74eaacdfa93098311d48e4b843c3de097a228ad47383bb9514dd2b0"
         }
       ]
     },
@@ -150,32 +168,38 @@
             54,
             272,
             220
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/root-sprite-a.webp",
+          "originalSha256": "f59e583990de45e8841affe1d257476497eb4255b6e1913e806728a35e5c3e3e"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/root-sprite-b.webp",
+          "originalSha256": "a88168cada81e2a8134237ea7abb5a3d7e43a367feb03f929e6485e8f910eb0a"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/root-sprite-c.webp",
+          "originalSha256": "238fa7ca1df2b7ca818b979790b09ec55caf2b190538dae23a162719f1ef43aa"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/root-sprite-d.webp",
+          "originalSha256": "553aa3bdd8687fbd4f289f31ed07231965a457b0e14b91b0a82d65dfa81df39d"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/root-sprite-e.webp",
+          "originalSha256": "202cab7f1031255c916c20e35992f578816da6b0d6194999814ae51854bb6dec"
         }
       ]
     },
@@ -195,32 +219,38 @@
             305,
             276,
             222
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/cave-troll-a.webp",
+          "originalSha256": "4c964156ef025d7945bad49ad1e2ccd9c44934db649c2641a35a59495816cf72"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/cave-troll-b.webp",
+          "originalSha256": "1307b2ee1d8fd4ea0914a2976f9a3c1d858cf591df3b93ac92aad4324518df97"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/cave-troll-c.webp",
+          "originalSha256": "c1f23b96cbdd3d0a250a3a94bda4b023ccaf1ffd9b38ad8d06330bc25be1d63d"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/cave-troll-d.webp",
+          "originalSha256": "6b562bb0a87463980b115117479f441315281c67804eb9c039c924e39a3b253d"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/cave-troll-e.webp",
+          "originalSha256": "60a87651417b48c8fe9bace432d6adc617b967f1e6ecf1f539d6301bbce1d93a"
         }
       ]
     },
@@ -240,32 +270,38 @@
             305,
             270,
             222
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/acorn-imp-a.webp",
+          "originalSha256": "fd044980da1f6df1f678950517e00eb58215709c1d957a2756d804b7623406c0"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/acorn-imp-b.webp",
+          "originalSha256": "5c37410ba5d12ebbfc4412f901eade9e7b96866fc3a6df79400a0b579fc17f05"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/acorn-imp-c.webp",
+          "originalSha256": "25603a42bf7af95e9a50a7f6b4bb3a345052f125254c645d5f7258e4276aefea"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/acorn-imp-d.webp",
+          "originalSha256": "f6a6cde7060fa3f505cad2c49b2b7e86965f0803991cb80b2209c86da511c9f4"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/acorn-imp-e.webp",
+          "originalSha256": "bcb34c26be9acb45da852d8bc0d943eb9ade8ad7c5d2619a30684b5cc2c8fc76"
         }
       ]
     },
@@ -285,32 +321,38 @@
             305,
             274,
             222
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/mushroom-guard-a.webp",
+          "originalSha256": "13c7164076dcba3523a788910c1cfdbb7961567fee5e946ec5c4135ac9d1f58f"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/mushroom-guard-b.webp",
+          "originalSha256": "f8008ee174c81fba5e29734ecbda92e4d21eea50fd81b8db3ff9f768086eae3a"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/mushroom-guard-c.webp",
+          "originalSha256": "26b67b2fc20e89806605660115db7709298668b5652fdbd395dd74b297d62e9b"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/mushroom-guard-d.webp",
+          "originalSha256": "7fec416303c6299916a19f406611d1206761b16f10f2e8a63fb4898dd72499f3"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/mushroom-guard-e.webp",
+          "originalSha256": "812214fe7e2806592e4af598cbdc7d52868b264d77138927b677cf2b5ad51ea5"
         }
       ]
     },
@@ -330,32 +372,38 @@
             305,
             272,
             222
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/bark-beetle-a.webp",
+          "originalSha256": "6f61efdd7fe0a8b359ba16dc00bb9820ccedab351a00f13347166dc2789dd814"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/bark-beetle-b.webp",
+          "originalSha256": "7cede04944b0cf01e82786fc19ae2deff1a6311b593f3b26cf01274b551994c6"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/bark-beetle-c.webp",
+          "originalSha256": "97ebfe0d80611d3ee78dbda7d503a7a1d01243a491de85ee202f6f10ef7ef749"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/bark-beetle-d.webp",
+          "originalSha256": "5fb518173f0f95126833210f6a4478aac46efbf777b04ddea887737429e2ac31"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/bark-beetle-e.webp",
+          "originalSha256": "55b652ee684a3688881210923beae5c9d0dbf0d1c51a997ea247665755e05767"
         }
       ]
     },
@@ -375,32 +423,38 @@
             560,
             276,
             225
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/bramble-boar-a.webp",
+          "originalSha256": "9f5ea06bd2b4f41e0013cf126c8af9f896415b471c32ca61d2ec200391710d09"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/bramble-boar-b.webp",
+          "originalSha256": "2e01e68b36ba25fecfd51d1a65c2cd8cc3e1a734455ba40c87e29caff870bd64"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/bramble-boar-c.webp",
+          "originalSha256": "440db1aaa28eb05487243be8f10a1f2a3e63482a6036746ef4237df334c093c2"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/bramble-boar-d.webp",
+          "originalSha256": "955293d73997e328a4456c01585bc92476e41b84550322aa27478e07c13ff711"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/bramble-boar-e.webp",
+          "originalSha256": "f18322dbe200a98aa06ac92884c40cf6280ea91141254a2bc028e18de29790f9"
         }
       ]
     },
@@ -420,32 +474,38 @@
             549,
             270,
             236
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/reed-serpent-a.webp",
+          "originalSha256": "e63f30c5b1606954a6df8892978a7ef19d5e9fe1cfee9d2f11d61d7541589c6e"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/reed-serpent-b.webp",
+          "originalSha256": "b84d75f5776bafc7a461dac9bffa54ad3c2d0478448ecf769fb2a2c91af8c34e"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/reed-serpent-c.webp",
+          "originalSha256": "bb8e4b12a16f402d10aa970bdc229fae5a1c6aae7677e3cde5ad0d3c4efdac48"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/reed-serpent-d.webp",
+          "originalSha256": "f974e5686909889eeac08890ac8373931f2572efa2c06891a90ce8aac73a3ad1"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/reed-serpent-e.webp",
+          "originalSha256": "f9b46523a2071e4688084c3ea3204dcff0d2d9b7c254197795d60b56ee1bcc4d"
         }
       ]
     },
@@ -465,32 +525,38 @@
             560,
             274,
             225
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/bog-toad-a.webp",
+          "originalSha256": "ebe15614784558e0e8186025986f4c4c0152cc8d6d721b6d3cf9c61d1bae7d7a"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/bog-toad-b.webp",
+          "originalSha256": "385a20621cdd20856a99c80e3abc482c08300408db25d03fb321096b8eb20f1e"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/bog-toad-c.webp",
+          "originalSha256": "5cf7c952cd5228b8e53b7d5498ac2bb2fb5f02adcf1b8b5492383caa91aeceaa"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/bog-toad-d.webp",
+          "originalSha256": "32e9f216ddf88c69f63d352fea6a6c8b8df456102f798e55c1c416c7e7582b44"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/bog-toad-e.webp",
+          "originalSha256": "b541a96451db610f269e3dbb40c1accb27778c4b4f4066ee063360de268d04ca"
         }
       ]
     },
@@ -510,32 +576,38 @@
             560,
             272,
             225
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/lantern-wisp-a.webp",
+          "originalSha256": "e971b6b2a889032e217bf25238c5ccb9eb35af5e139c2a5fe8bd86bd61eb0c5b"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/lantern-wisp-b.webp",
+          "originalSha256": "730d90f67abefc324b0db4a24bc4841e8bb5c62daf1b544f7710fd402b93409e"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/lantern-wisp-c.webp",
+          "originalSha256": "bc532f44a73ea27ea50a4588e1710bb9a1f5b96bb1f4a2fb6e05ab730a1e2feb"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/lantern-wisp-d.webp",
+          "originalSha256": "89fec6e839072531b35637f8a45f73dc9107c4f829fc55fd66241325efb820a9"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/lantern-wisp-e.webp",
+          "originalSha256": "4f7f04daaa6ec4df8817a06e25e98971cc406a40ef128131865e3e88207f6c58"
         }
       ]
     },
@@ -555,32 +627,38 @@
             816,
             276,
             225
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/crystal-crab-a.webp",
+          "originalSha256": "c2139493f0c238af64b5d4f6b7d605f650d1608fa46f0b40c242aa7ac1c097cd"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/crystal-crab-b.webp",
+          "originalSha256": "5de5e2ea1ecef11fbf69c575b835c4e543059783861372c88e5ae9aab69806c0"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/crystal-crab-c.webp",
+          "originalSha256": "32096b33732355f74343f6407e7783deb6a35cedec4f4bd725f9fe4234778be9"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/crystal-crab-d.webp",
+          "originalSha256": "49db92d9224b73b79a49cdd6e0c77ec3dd5f69ec3e397603dcb2e313ae40c8aa"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/crystal-crab-e.webp",
+          "originalSha256": "5b7726190aedf2b141e56791925de1ea60033b10ba5e267374d8a43d7a278415"
         }
       ]
     },
@@ -600,32 +678,38 @@
             816,
             270,
             225
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/hollow-owl-a.webp",
+          "originalSha256": "13c4bfcc0681fdd931aa2f85392f236c87114a08e2ac4e624e58f53b62754c7d"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/hollow-owl-b.webp",
+          "originalSha256": "d2977befccc16277df0a4fe0d26cc26795f01e36dd200e5e8e64d613b1a0a053"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/hollow-owl-c.webp",
+          "originalSha256": "52c8627673e292b7244ee53a271656677f8f97cd28b67fd8ff4e8010e1d10183"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/hollow-owl-d.webp",
+          "originalSha256": "62adb97d343d885e02523c30cbf00d265a679c46e2944657725cbf924ae1d75f"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/hollow-owl-e.webp",
+          "originalSha256": "9181f6fa454bc644af69e6c91ba187ea640dd55af0116e96fb583c6db310988a"
         }
       ]
     },
@@ -645,32 +729,38 @@
             816,
             274,
             225
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/fern-wolf-a.webp",
+          "originalSha256": "1f5850c2da73c550ce728dca4064439f4b80b4f4793a002b7ad9a0e850354e97"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/fern-wolf-b.webp",
+          "originalSha256": "8991fd48b7a22080796993ab38970c49bd1de9c1e4fe35ea67293878b502c08e"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/fern-wolf-c.webp",
+          "originalSha256": "926e71a9d830a38fee0e91d6ab9814a8f88ab4a77502fb11d862ec56c53b4422"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/fern-wolf-d.webp",
+          "originalSha256": "c4643bc1dda68ce98c29c0df1c009ef817f96a7d9964a92d406027cba767689b"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/fern-wolf-e.webp",
+          "originalSha256": "c0ac7ae93ccce83405251955639b68062161686c72a28b9637ac80fc8a751282"
         }
       ]
     },
@@ -690,32 +780,38 @@
             811,
             272,
             230
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/stone-ram-a.webp",
+          "originalSha256": "fe72ae647edf9af1c36608c51c5485fa53f352b14aa57624b3a04ea6aa1cb887"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/stone-ram-b.webp",
+          "originalSha256": "dc821c2962dac6a9584532f1d788070f093f70a01eede91ef3346052a1e0f916"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/stone-ram-c.webp",
+          "originalSha256": "647f433bb4f93999d38e81bb7a3b4b2f21afc4645b3ce8a130673a283ed45b23"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/stone-ram-d.webp",
+          "originalSha256": "72de2b697e2a9d922183f566b1ed9e2143763cd70adcf95ed483b93e88dbdf0b"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/stone-ram-e.webp",
+          "originalSha256": "2f8d677e2376f9436b2f45357e49a77eda322c64c208a9ff4a7c7a1bd6655d20"
         }
       ]
     },
@@ -735,32 +831,38 @@
             1070,
             276,
             237
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/briar-bat-a.webp",
+          "originalSha256": "e5149e8ec49b6fb15d9eea9e091f68b96b919062a1ef995007ae509b387554e4"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/briar-bat-b.webp",
+          "originalSha256": "2d02b6537e76e564eb05335572e7290d56b7b2295488abe557874e096d151e74"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/briar-bat-c.webp",
+          "originalSha256": "42d4f3fb64dc1e0c380d9b9aa4210baa20e1bc58fa944ae2cc59be326c820d25"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/briar-bat-d.webp",
+          "originalSha256": "70f7da7acf08b75fda8f68a672d1d8d64be0655d139f2186342d92cfe0d87456"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/briar-bat-e.webp",
+          "originalSha256": "70f06ad5d44a6922a86a6385d9d37960f70777d9c9c24e31fb17f16b10b50453"
         }
       ]
     },
@@ -780,32 +882,38 @@
             1070,
             270,
             237
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/snail-knight-a.webp",
+          "originalSha256": "ea6b815d2fe5ddc4bc46ee3849f4d0f51c3617f75e5827e2c3e1df3b36d0d60c"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/snail-knight-b.webp",
+          "originalSha256": "8867305b56fcd362fd886feef65efdaa9607ac57e761e47a5f75eff4ac7571f9"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/snail-knight-c.webp",
+          "originalSha256": "1605bac1eb193f37fc0f8dfa0ab2d8a4bbf8276c5715fa2507cb004c498e2a93"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/snail-knight-d.webp",
+          "originalSha256": "06a958613cba621b20035ca0518350d31b4b8f2c3c17016c57c36077a2582f53"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/snail-knight-e.webp",
+          "originalSha256": "947b6165ac71a3b1aa0b3410c8aec99515cb65dee4fe32b820b99aa90ce1035f"
         }
       ]
     },
@@ -825,32 +933,38 @@
             1070,
             274,
             237
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/chest-mimic-a.webp",
+          "originalSha256": "7b6848ed344e66998b409202d95a64832217219c6617a3d4c6827bdbe3c7cb62"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/chest-mimic-b.webp",
+          "originalSha256": "d13870173966b992f7462b271603d66009e4571de5a3689b0f2cf7d64e1ec92f"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/chest-mimic-c.webp",
+          "originalSha256": "f04fbb214f0724aa286c6d34b1ba33ee778ddd2f71f7b8d205d609b99d18c708"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/chest-mimic-d.webp",
+          "originalSha256": "dfcaeda26f5fc482d6094d99ec3bed8a0643dcd7a5fb5f0d808fee70dd499191"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/chest-mimic-e.webp",
+          "originalSha256": "6c44e9c6ac81aee53ff885d7834fb01a3d964829f5b801b7ad5f8cc4d039829f"
         }
       ]
     },
@@ -870,38 +984,44 @@
             1070,
             272,
             237
-          ]
+          ],
+          "originalSha256": "bd799bb1d28f9e5be6624ad61183d9dcf21dc2165ba1cc5e3aa8dceebc9c79bf"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/storm-griffin-a.webp",
+          "originalSha256": "0914d8171958c65316a4eae7363235bab1fcffaba89ac785ad8144f585f58b23"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/storm-griffin-b.webp",
+          "originalSha256": "86c013faa674b336cd916f4e2657de68990fb87841a1665bbcba428d0cf4a121"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/storm-griffin-c.webp",
+          "originalSha256": "25a27c9cb5abbeec7d48cd3f6f5d553aa8355a80ccb3a06838ebd2ccbe5485fa"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/storm-griffin-d.webp",
+          "originalSha256": "1e0c8309d325be58a13629c49e4163d8173bfa1908a759625dc093479dfa042b"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/storm-griffin-e.webp",
+          "originalSha256": "2ad8dfeed1789858b5cbfa2986720913dadfce982064e883064ff00825ed78a6"
         }
       ]
     },
     {
       "id": "mage-boy",
-      "name": "Mage \u00b7 boy",
+      "name": "Mage · boy",
       "kind": "hero",
       "options": [
         {
@@ -915,38 +1035,44 @@
             0,
             384,
             538
-          ]
+          ],
+          "originalSha256": "996b79dea2e939ff724424f925b37adec7d6c665cac32fd056384b1a2f73e994"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/mage-boy-a.webp",
+          "originalSha256": "649d068691d0987d795315b685aa321188ecbf48a65e4ba016cb6fed1858c4fa"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/mage-boy-b.webp",
+          "originalSha256": "400d6d78efbce6f661619a7ceef795b0f73828add35870e84503f0a3ba04639e"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/mage-boy-c.webp",
+          "originalSha256": "83b97ca4d3936a40162460f5f5fb83258a4f30a1f5fec0e957e3c0206de92328"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/mage-boy-d.webp",
+          "originalSha256": "9d504945f65e4dd6cd8efd5ccceb09583ea7ee6058fb122346c7fabafcd7d3f5"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/mage-boy-e.webp",
+          "originalSha256": "2bc36476db54df78e50f20df0e2adf07f09a6dd35be27c01741dc1940e09b880"
         }
       ]
     },
     {
       "id": "knight-boy",
-      "name": "Knight \u00b7 boy",
+      "name": "Knight · boy",
       "kind": "hero",
       "options": [
         {
@@ -961,38 +1087,44 @@
             426,
             538
           ],
-          "points": "384,0 780,0 780,350 765,394 810,525 384,538"
+          "points": "384,0 780,0 780,350 765,394 810,525 384,538",
+          "originalSha256": "996b79dea2e939ff724424f925b37adec7d6c665cac32fd056384b1a2f73e994"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/knight-boy-a.webp",
+          "originalSha256": "e589456b460375fc82ba36a5f763366331c8bfd39ebcf11c45325d488a4a6f2e"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/knight-boy-b.webp",
+          "originalSha256": "228300fa2a7db4018f8fae8f67ce5e03a7c0b538cfa9cb7ff6c9be5aa3ca3ad9"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/knight-boy-c.webp",
+          "originalSha256": "834f9f010fa1eafe7f8a875984304f12a8936168c5ffa545aa2e12c5fcf08267"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/knight-boy-d.webp",
+          "originalSha256": "12018879c77eba2da2b420a4456a6c7404aaf04ebe3b2c7f599a5124aced8c5d"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/knight-boy-e.webp",
+          "originalSha256": "9e6975d3f90e9cc4785944e88fe5e05a5e3b5ee6f2e50eceb96a8c449523741c"
         }
       ]
     },
     {
       "id": "archer-boy",
-      "name": "Archer \u00b7 boy",
+      "name": "Archer · boy",
       "kind": "hero",
       "options": [
         {
@@ -1007,38 +1139,44 @@
             374,
             538
           ],
-          "points": "820,0 1154,0 1154,538 820,538 810,486 790,440 780,360"
+          "points": "820,0 1154,0 1154,538 820,538 810,486 790,440 780,360",
+          "originalSha256": "996b79dea2e939ff724424f925b37adec7d6c665cac32fd056384b1a2f73e994"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/archer-boy-a.webp",
+          "originalSha256": "3dfd65c3a5e36a2474a92bc33f938dc013b307d71b0c89db1673b288f1b931c0"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/archer-boy-b.webp",
+          "originalSha256": "483807833284718f76781351e60e31193dc4e0ee4712787937b42c0548e72380"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/archer-boy-c.webp",
+          "originalSha256": "7dd08b07e920aa2a3d44772d4346ab37bc4345fb2f858f6046f126d58253dd4d"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/archer-boy-d.webp",
+          "originalSha256": "fd843033178da9f57de319ede9548158908125ede613d526d66b25aee144cfa1"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/archer-boy-e.webp",
+          "originalSha256": "ed0d5e3704e9f0631827fdef9f6e53cf9dd4cf09e6e3cc5fa6aa43788d938b10"
         }
       ]
     },
     {
       "id": "mage-girl",
-      "name": "Mage \u00b7 girl",
+      "name": "Mage · girl",
       "kind": "hero",
       "options": [
         {
@@ -1052,38 +1190,44 @@
             0,
             382,
             538
-          ]
+          ],
+          "originalSha256": "996b79dea2e939ff724424f925b37adec7d6c665cac32fd056384b1a2f73e994"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/mage-girl-a.webp",
+          "originalSha256": "1bfe7673739f40e072386ea2ef9bc42008583618e43b12b83f46877511cc5284"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/mage-girl-b.webp",
+          "originalSha256": "81f518df6ed265267b3bbba0e5af96fbba2b73fcc8149f1f2fbea1c9ec19c2c6"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/mage-girl-c.webp",
+          "originalSha256": "954122f245545479eabcc05a316f94138e52089cfc5787f2228b5d83f0f9b7b1"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/mage-girl-d.webp",
+          "originalSha256": "e1a91cbd82667a8f894cea01194e42de735235946133879ccc837007d7ce2826"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/mage-girl-e.webp",
+          "originalSha256": "7dfd5ba8a7100bc4db60b8ece2e66225691f2fe466cbb5be288f22d554ab2c11"
         }
       ]
     },
     {
       "id": "knight-girl",
-      "name": "Knight \u00b7 girl",
+      "name": "Knight · girl",
       "kind": "hero",
       "options": [
         {
@@ -1097,38 +1241,44 @@
             538,
             384,
             486
-          ]
+          ],
+          "originalSha256": "996b79dea2e939ff724424f925b37adec7d6c665cac32fd056384b1a2f73e994"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/knight-girl-a.webp",
+          "originalSha256": "0b5d6cfa6104d88de2e2e0ee1d36f6c9165ec68306d6c50868c6dbcad2e54182"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/knight-girl-b.webp",
+          "originalSha256": "33701e5595789dffc7958ce852ae703444fbf5815aafd0b2e09804f1db8ff140"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/knight-girl-c.webp",
+          "originalSha256": "fad8a02be4ee82e5ac3469c22ddce755c992bc721cb94e2b899784fed2d67a47"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/knight-girl-d.webp",
+          "originalSha256": "96e47e5eafdb6553e4cfd1c28baa8d41f41741a41daf667f675da29a915eb8d4"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/knight-girl-e.webp",
+          "originalSha256": "d544ecec665bbf4505497b0176600fd99ef36f5b2e7778f890d3a832e5e885b5"
         }
       ]
     },
     {
       "id": "archer-girl",
-      "name": "Archer \u00b7 girl",
+      "name": "Archer · girl",
       "kind": "hero",
       "options": [
         {
@@ -1142,32 +1292,38 @@
             538,
             384,
             486
-          ]
+          ],
+          "originalSha256": "996b79dea2e939ff724424f925b37adec7d6c665cac32fd056384b1a2f73e994"
         },
         {
           "id": "a",
           "title": "Option A",
-          "src": null
+          "src": "images/archer-girl-a.webp",
+          "originalSha256": "1f884d5f1fa881d9107010ebd0c89d3dbc0750b02693069e5687cb5e860033e6"
         },
         {
           "id": "b",
           "title": "Option B",
-          "src": null
+          "src": "images/archer-girl-b.webp",
+          "originalSha256": "41718508ebcacab7494ad130583a9ebef2d4ea55d7c91df22158c675e45b4113"
         },
         {
           "id": "c",
           "title": "Option C",
-          "src": null
+          "src": "images/archer-girl-c.webp",
+          "originalSha256": "003860dc8244a2c9156b0f675de95e738379a676a7fbbbb5390097c78eb718ec"
         },
         {
           "id": "d",
           "title": "Option D",
-          "src": null
+          "src": "images/archer-girl-d.webp",
+          "originalSha256": "90cc7bf77ca3caf13ae92a4c79ba8c446f64f0fab872d38c04a0f37fcd4723f8"
         },
         {
           "id": "e",
           "title": "Option E",
-          "src": null
+          "src": "images/archer-girl-e.webp",
+          "originalSha256": "c3a50d6bcba929524b5d2f3d4000a02ee0605a6fd356987e33f2d896844e8e42"
         }
       ]
     }
