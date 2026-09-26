@@ -1,5 +1,7 @@
 # Family art review: local image imports
 
+**26 September update:** the complete gallery now includes all 156 images. The counts and local-only recovery steps below describe the earlier recovery milestone. See [the current release](FAMILY_REVIEW_FINAL_RELEASE.md).
+
 Build `family-review-imports-20260925-r3` extends the existing [family review](https://ikarus-eth.github.io/Blitzword_app/assets/family-review/). The user requested bulk recovery/import of generated artwork without relying on a long-running chat. No artwork is generated or recreated in this release.
 
 ## Using it

@@ -9,7 +9,9 @@ const crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),output=process.env.REVIEW_TEST_OUTPUT||fs.mkdtempSync(path.join(os.tmpdir(),'blitzword-review-'));
 fs.mkdirSync(output,{recursive:true});
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.png':'image/png'};
-const server=http.createServer((req,res)=>{const relative=decodeURIComponent(new URL(req.url,'http://localhost').pathname);let file=path.join(root,relative);if(relative.endsWith('/'))file=path.join(file,'index.html');if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}fs.readFile(file,(error,bytes)=>{if(error)res.writeHead(404).end();else res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream'}).end(bytes);});});
+// An incomplete gallery fixture keeps importer scenarios meaningful after the public gallery is complete.
+const importCatalog=JSON.parse(fs.readFileSync(path.join(root,'assets/family-review/catalog.json')));for(const e of importCatalog.entities)if(e.id!=='thornling')for(const o of e.options)if(o.id!=='current'){o.src=null;delete o.originalSha256;}
+const server=http.createServer((req,res)=>{const relative=decodeURIComponent(new URL(req.url,'http://localhost').pathname);if(relative==='/assets/family-review/catalog.json'){res.writeHead(200,{'Content-Type':'application/json'}).end(JSON.stringify(importCatalog));return;}let file=path.join(root,relative);if(relative.endsWith('/'))file=path.join(file,'index.html');if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}fs.readFile(file,(error,bytes)=>{if(error)res.writeHead(404).end();else res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream'}).end(bytes);});});
 const tests=[],errors=[];let browser;
 async function check(name,fn){await fn();tests.push(name);console.log('PASS '+name);}
 (async()=>{
@@ -20,10 +22,11 @@ async function check(name,fn){await fn();tests.push(name);console.log('PASS '+na
  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
  await page.addInitScript(()=>{if(!localStorage.getItem('test-seeded')){localStorage.setItem('test-seeded','1');localStorage.setItem('blitzword-save-v1','learner-sentinel');localStorage.setItem('blitzword-thornling-family-review-v1',JSON.stringify({version:1,names:['Artus','Juna','Johanna','Ikarus'],active:0,ratings:{current:[5,4,3,2],a:[1,2,3,4],b:[null,null,null,null],c:[null,null,null,null],d:[null,null,null,null],e:[null,null,null,null]},comment:'Keep these existing notes.'}));}});
  await page.goto(url);await page.waitForFunction(()=>document.querySelector('#import-status').textContent.startsWith('Ready.'));
+ await page.locator('#import-tools > summary').click();
  const art=name=>fs.readFileSync(path.join(root,'assets/family-review/images',name));
  const a=art('thornling-a.webp'),b=art('thornling-b.webp'),c=art('thornling-c.webp');
  const payload=(name,buffer)=>({name,mimeType:'image/webp',buffer});
- const done=()=>page.waitForFunction(()=>!document.querySelector('#add-images').disabled);
+ const done=async()=>{await page.waitForFunction(()=>!document.querySelector('#add-images').disabled);if(!await page.locator('#add-images').isVisible())await page.locator('#import-tools > summary').click();};
  await check('Legacy ratings and notes survive initialization',async()=>{assert.match(await page.locator('#comment').inputValue(),/existing notes/);assert.equal(await page.locator('[data-design=current] .others b').allTextContents().then(x=>x.join(',')),'5,4,3,2');});
  await check('Batch import auto-matches exact filenames and skips duplicate content',async()=>{
   await page.locator('#image-files').setInputFiles([payload('moss-golem-a.webp',a),payload('ChatGPT downloaded image.webp',b),payload('duplicate.webp',a)]);await done();

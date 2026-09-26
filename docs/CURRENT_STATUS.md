@@ -1,10 +1,16 @@
-# BlitzWord current status — 25 September 2026
+# BlitzWord current status — 26 September 2026
 
 This page tracks current implementation and remaining work. Dated release notes preserve historical behavior and test results; their old limitations are not automatically current tasks. Latest approved user decisions take precedence over earlier plans. A difference between approved behavior and code remains a discrepancy, not a new product decision.
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).
 
 Documentation reconciled against main `6e7bf84adfa169f0f858c023b5225490acba1967` and the recorded releases. Latest verified runtime build: `enemy-groups-20260925-r2` ([enemy deployment verification](enemies/GROUP_ENCOUNTERS_DEPLOYMENT.json), [latest live byte verification](heroes/ARCHER_ARMS_DEPLOYMENT.json)); the narration completion draft is not merged or deployed. The earlier cleanup changed documentation only. It closes stale assessment/story/gate approval notices, reconciles current growth/speed rules and removes the obsolete lowercase README that conflicted on case-insensitive filesystems. Historical release evidence is retained.
+
+## Complete family art review — 26 September 2026
+
+Build `family-review-complete-20260926-r4` is implemented and tested; deployment verification is pending. All 26 rounds now contain six images (156 total): 31 existing published designs, 119 recovered alternatives and six new concepts completing girl-archer A–E and girl-mage E. Review artwork is included on the website for every device. These are review concepts, not changes to the game's approved production art.
+
+Existing local image assignments and ratings retain their image identity through publication, including a differing local version. Older full backups remain restorable. Import/backup controls are collapsed by default, hero pictures have more room, and there is no missing-image list when every slot is filled. Feedback remains browser-local with explicit export/restore; no cloud rating synchronization is claimed. All 252 automated tests, 89 existing app-flow groups and decoding of all 133 referenced image files pass. Local browser preview was blocked by its admin-policy check; public verification follows deployment. See [release and provenance](FAMILY_REVIEW_FINAL_RELEASE.md).
 
 ## Family art review image imports — 25 September 2026
 

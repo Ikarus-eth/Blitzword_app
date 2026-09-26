@@ -1,24 +1,20 @@
 {
-  "build": "family-review-recovered-20260925-r2",
-  "checkedAt": "2026-09-25T09:04:21.192Z",
+  "build": "family-review-complete-20260926-r4",
   "rounds": 26,
-  "availableImages": 31,
-  "missingImages": 125,
-  "newImageFiles": 0,
-  "checks": [
-    "all 26 rounds have six slots",
-    "missing cards cannot be rated",
-    "existing source images load",
-    "four requested names",
-    "Thornling migration preserves scores and comment",
-    "named reviewers map to requested order",
-    "old storage remains untouched",
-    "per-round score and comment isolation",
-    "reload persistence",
-    "image enlargement",
-    "export includes missing list",
-    "tablet and phone layout",
-    "44px rating targets",
-    "no page or resource errors"
-  ]
+  "availableImages": 156,
+  "missingImages": 0,
+  "recoveredAdded": 119,
+  "generatedAdded": 6,
+  "preservedPublished": 31,
+  "originalsConvertedAtNativeDimensions": 125,
+  "newGalleryMegabytes": 33.66,
+  "tests": {
+    "coreAndPublication": 252,
+    "existingUIFlowGroups": 89,
+    "storagePublicationScenarios": 5,
+    "allReferencedImageFilesDecoded": 133
+  },
+  "localBrowserPreview": "Blocked: browser could not verify admin-enforced policy. No bypass attempted.",
+  "physicalIPadSafariTested": false,
+  "deployment": "pending"
 }
