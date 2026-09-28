@@ -11,9 +11,9 @@
     <itunes:type>serial</itunes:type>
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Fiction"/>
-    <itunes:image href="https://ikarus-eth.github.io/Blitzword_app/snowmoon/cover.png"/>
+    <itunes:image href="https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/main/snowmoon/cover.png"/>
     <image>
-      <url>https://ikarus-eth.github.io/Blitzword_app/snowmoon/cover.png</url>
+      <url>https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/main/snowmoon/cover.png</url>
       <title>Snowmoon — Audiobook</title>
       <link>https://ikarus-eth.github.io/Blitzword_app/snowmoon/</link>
     </image>
