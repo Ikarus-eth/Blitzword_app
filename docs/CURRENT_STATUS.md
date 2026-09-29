@@ -1,10 +1,16 @@
-# BlitzWord current status — 26 September 2026
+# BlitzWord current status — 29 September 2026
 
 This page tracks current implementation and remaining work. Dated release notes preserve historical behavior and test results; their old limitations are not automatically current tasks. Latest approved user decisions take precedence over earlier plans. A difference between approved behavior and code remains a discrepancy, not a new product decision.
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).
 
 Documentation reconciled against main `6e7bf84adfa169f0f858c023b5225490acba1967` and the recorded releases. Latest verified runtime build: `enemy-groups-20260925-r2` ([enemy deployment verification](enemies/GROUP_ENCOUNTERS_DEPLOYMENT.json), [latest live byte verification](heroes/ARCHER_ARMS_DEPLOYMENT.json)); the narration completion draft is not merged or deployed. The earlier cleanup changed documentation only. It closes stale assessment/story/gate approval notices, reconciles current growth/speed rules and removes the obsolete lowercase README that conflicted on case-insensitive filesystems. Historical release evidence is retained.
+
+## Final character artwork reference - 29 September 2026
+
+The user finalized all 20 enemies, six heroes and four Pip stages in the [33-page character artwork document](artwork/README.md). The PDF and repository-relative asset/hash manifest are recorded in this documentation update. The three hero tie-breaks are Mage girl Current, Knight girl C and Archer girl A. Earlier still-art choices are superseded for the future replacement; current game artwork remains in place.
+
+**Animation investigation is active; integration is deferred.** The user wants smooth flight and connected joints using ChatGPT internal tools before the full image update. Local Pip experiments are review studies, not deployed or approved game animation. This update changes documentation only, with no runtime, asset, learning or save changes. See the reference document for the review gate and exact selections.
 
 ## Complete family art review — 26 September 2026
 
