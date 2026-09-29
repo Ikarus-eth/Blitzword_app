@@ -2,6 +2,12 @@
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
+### Final character still-art selection - 29 September 2026
+
+The [complete character artwork document](artwork/README.md) and [exact asset manifest](artwork/character-selections.json) record the accepted future lineup: 20 enemies, six heroes and four retained Pip stages. These choices supersede earlier lineup choices for the future image replacement. Mage boy E, Knight boy D, Archer boy Current, Mage girl Current, Knight girl C and Archer girl A are final. Enemy tie-breaks are Reed Serpent D, Lantern Wisp C and Briar Bat C; all other enemy choices follow the recorded family rule.
+
+The user explicitly deferred replacing game images until a smooth, connected animation approach is established and reviewed. The historical references below still explain current production assets. Neither the rejected archer rigs nor the new Pip motion experiments are approved production replacements. The four existing Pip stages remain the dragon identity reference.
+
 ### Approved male hero revision — 21 September 2026
 
 The approved complete male lineup is `assets/rowanfire-boys-2026-09-21.png` in `Ikarus-eth/Blitzword_app`. It replaces all earlier male hero depictions, including the boys in the original Option 17 character bible and the five comparison sheets. The final combined lineup is authoritative; the comparisons only record how it was selected.
