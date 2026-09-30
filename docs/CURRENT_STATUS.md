@@ -6,6 +6,10 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 
 Latest verified runtime build: `story-rescue-20260930-r2`, deployed from main `88096adb1028998dcd862b6f0e56efa168ed257f`. [Live release verification](story-pilot/RESCUE_DEPLOYMENT.json) covers the pilot, main build marker and six integrated illustrations. Earlier releases remain below as historical evidence. The narration completion draft is not merged or deployed.
 
+## Tower-door riddle correction — 30 September 2026
+
+**Implemented and tested; publication pending.** Build `story-rescue-20260930-r3` labels the illustrated doors Sun, Moon and Star, replaces the separate sign table with matching cards beside the picture, and keeps answer doors in the same physical order. The wording and hint distinguish the truthful sign from the door leading to the cub. The unique solution and all v2 progress remain valid. 267 tests and 90 UI-flow groups pass; Chromium checks covered the final rescue, hints, reload and phone/tablet layout. [Correction details](story-pilot/DOOR_RELEASE.md), [checks](story-pilot/DOOR_CHECKS.json).
+
 ## Illustrated fox-cub rescue — 30 September 2026 revision
 
 **Deployed and verified.** Build `story-rescue-20260930-r2` replaces the pilot's generic scenes and portrait cards with six coherent illustrations, with Artus and Pip present in all of them. It is now one rescue journey through five stops. Reading and maths choices use the same tools or supplies at each stop; the separate final gem-sharing problem is removed. The overall difficulty and simple wording remain. Earlier pilot results are retained under their original key, while the revised content starts separate v2 progress. Main learner saves, battles and narration remain unchanged.

@@ -8,6 +8,8 @@ The user rejected the pilot's generic scenes, missing full Artus and pasted enem
 
 Artus uses approved Knight boy D; Pip uses Small Pip; the guests use Imp C, Troll C, Owl C and Ram B. This authorization applies to story illustrations. Main battle rigs and the broader smooth-animation approval gate remain unchanged. The earlier pilot's still-card arrangement is superseded.
 
+The later tower correction replaces the blank door plaques with clearly engraved Sun, Moon and Star medallions, left to right, in `assets/story-pilot/scenes/gate-labelled.webp`. It is one targeted edit preserving the cast and scene. [Exact edit prompt](story-pilot/DOOR_ARTWORK.json), [riddle presentation](story-pilot/DOOR_RELEASE.md).
+
 ### Final character still-art selection - 29 September 2026
 
 The [complete character artwork document](artwork/README.md) and [exact asset manifest](artwork/character-selections.json) record the accepted future lineup: 20 enemies, six heroes and four retained Pip stages. These choices supersede earlier lineup choices for the future image replacement. Mage boy E, Knight boy D, Archer boy Current, Mage girl Current, Knight girl C and Archer girl A are final. Enemy tie-breaks are Reed Serpent D, Lantern Wisp C and Briar Bat C; all other enemy choices follow the recorded family rule.

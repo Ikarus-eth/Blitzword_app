@@ -1,0 +1,49 @@
+{
+  "build": "story-rescue-20260930-r3",
+  "checkedAt": "2026-09-30T06:05:58.394987+00:00",
+  "baseMain": "97b8a3a2bb1949d72e4b9c98b7b2131cd62cf7c4",
+  "automated": {
+    "tests": 267,
+    "passed": 267,
+    "uiFlowGroups": 90,
+    "pilotTests": 15
+  },
+  "browser": {
+    "engine": "Chromium in Codex browser",
+    "flows": [
+      "wrong door then hint then correction",
+      "selection survives reload",
+      "correct door and number reach reunion",
+      "signs paired with ordered labels beneath picture",
+      "door order stays fixed on replay"
+    ],
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "horizontalOverflow": false,
+    "warningsOrErrors": 0,
+    "physicalIPadSafari": "not tested"
+  },
+  "saveCompatibility": "v2 retained; only restored last-door answer order normalized",
+  "deployment": "pending",
+  "sha256": {
+    "index.html": "c5809bc1e12cee3752a61d5f2bbb7dc42a2e91571f99a5a607ea0fe9e501613e",
+    "assets/story-pilot/index.html": "714e31f8cf843f67bd399f3b47e7de2dfdf388cdc4e3b61f6823e3214e708b02",
+    "assets/story-pilot/app.js": "96051bd45d5872a77124dcca84a9a036f7a75d1a6f60125754a1b225ab4217c2",
+    "assets/story-pilot/core.js": "5be23d4f8f0549f2b89378b41066a59d5f69a0cc25a32cbbc749b3c49d60ac8e",
+    "assets/story-pilot/stories.js": "72e40cd2055033f5324849df738a8bec69a53fa911f6007a550525950d4af35c",
+    "assets/story-pilot/styles.css": "d48d39f838c022a0711725345954d07e5e496a18b902fa871c4ea2f466de2cf7",
+    "assets/story-pilot/scenes/gate-labelled.webp": "19c327fbb40eb2346a68d3aa769fcb32140d3c90386701f73b06624486c86188"
+  }
+}

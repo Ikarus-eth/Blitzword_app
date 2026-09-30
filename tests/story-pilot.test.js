@@ -43,6 +43,26 @@ test('each story retains its choices and shuffled order when changing stories an
  const restored=Core.restore(JSON.stringify(state),()=>0.9);assert.deepEqual(restored,state);
  for(const s of stories){Core.selectStory(restored,s.id);assert.equal(Core.check(restored).complete,true);}
 });
+test('tower doors keep physical order through old-save restore and replay without losing progress',()=>{
+ const state=Core.fresh(()=>0);Core.selectStory(state,'last-door');fill(state);Core.check(state);
+ const entry=state.stories['last-door'];entry.run.orders.door=['star','sun','moon'];
+ const original=structuredClone(state),restored=Core.restore(JSON.stringify(state),()=>0);
+ assert.deepEqual(restored.stories['last-door'].run.orders.door,['sun','moon','star']);
+ original.stories['last-door'].run.orders.door=['sun','moon','star'];assert.deepEqual(restored,original);
+ Core.replay(restored,()=>0);assert.deepEqual(restored.stories['last-door'].run.orders.door,['sun','moon','star']);
+ assert.deepEqual(restored.stories['last-door'].first,entry.first);assert.equal(restored.stories['last-door'].everComplete,true);
+});
+test('tower signs and answer doors share left-to-right labels beside the illustration',()=>{
+ const ui=boot();ui.click(ui.get('story-nav').children[4]);
+ const cards=[...ui.get('story-arrangement').children];
+ assert.equal(ui.get('story-arrangement').parentElement.id,'scene-clues');assert.equal(ui.get('scene-clues').hidden,false);
+ assert.deepEqual(cards.map(c=>c.querySelector('strong').textContent),['Sun door','Moon door','Star door']);
+ assert.deepEqual(cards.map(c=>c.querySelector('p').textContent),['“The moon door leads to the cub.”','“This door does not lead to the cub.”','“The sun door does not lead to the cub.”']);
+ assert.deepEqual([...ui.document.querySelectorAll('[data-question="door"]')].map(b=>b.dataset.value),['sun','moon','star']);
+ assert.match(ui.get('scene-image').getAttribute('src'),/gate-labelled/);
+ ui.click(ui.get('hint'));assert.ok(ui.get('story-arrangement').classList.contains('clue'));assert.match(ui.get('feedback').textContent,/true sign need not/);
+ ui.click(ui.get('story-nav').children[3]);assert.equal(ui.get('scene-clues').hidden,true);assert.equal(ui.get('scene-clues').children.length,0);assert.equal(ui.get('story-arrangement').parentElement.id,'story-text');
+});
 test('checks require every choice and reveal requires a first try',()=>{
  const state=Core.fresh();assert.throws(()=>Core.check(state));assert.throws(()=>Core.reveal(state));assert.throws(()=>Core.choose(state,'held','unknown'));
  fill(state,false);Core.check(state);Core.reveal(state);assert.equal(Core.active(state).entry.run.revealed,true);assert.equal(Core.active(state).entry.first.matches.held,false);assert.throws(()=>Core.choose(state,'held','torch'));

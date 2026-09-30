@@ -3,7 +3,7 @@
   const KEY='blitzword_story_pilot_v2',copy=v=>JSON.parse(JSON.stringify(v));
   const getStory=id=>Content.stories.find(s=>s.id===id);
   const shuffled=(a,random=Math.random)=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.min(i,Math.max(0,Math.floor(random()*(i+1))));[b[i],b[j]]=[b[j],b[i]];}return b;};
-  function newRun(story,random){return {choices:{},orders:Object.fromEntries(story.questions.map(q=>[q.id,shuffled(q.choices.map(c=>c.id),random)])),checks:0,hints:[],revealed:false,complete:false};}
+  function newRun(story,random){return {choices:{},orders:Object.fromEntries(story.questions.map(q=>[q.id,q.fixedOrder?q.choices.map(c=>c.id):shuffled(q.choices.map(c=>c.id),random)])),checks:0,hints:[],revealed:false,complete:false};}
   function fresh(random){return {version:2,revision:0,activeId:Content.stories[0].id,stories:Object.fromEntries(Content.stories.map(s=>[s.id,{first:null,everComplete:false,replays:0,run:newRun(s,random)}]))};}
   const count=v=>Number.isSafeInteger(v)&&v>=0?v:0;
   function cleanChoices(story,v){const out={};for(const q of story.questions)if(q.choices.some(c=>c.id===v?.[q.id]))out[q.id]=v[q.id];return out;}
@@ -21,7 +21,7 @@
       entry.run.choices=cleanChoices(story,run.choices);entry.run.checks=count(run.checks);entry.run.hints=Array.isArray(run.hints)?[...new Set(run.hints.filter(id=>story.questions.some(q=>q.id===id)))]:[];
       entry.run.revealed=run.revealed===true;entry.run.complete=run.complete===true&&Object.values(matches(story,entry.run.choices)).every(Boolean);
       entry.everComplete=entry.everComplete||entry.run.complete;
-      for(const q of story.questions){const ids=q.choices.map(c=>c.id),order=run.orders?.[q.id];if(Array.isArray(order)&&order.length===ids.length&&new Set(order).size===ids.length&&order.every(id=>ids.includes(id)))entry.run.orders[q.id]=order;}
+      for(const q of story.questions){const ids=q.choices.map(c=>c.id),order=run.orders?.[q.id];if(!q.fixedOrder&&Array.isArray(order)&&order.length===ids.length&&new Set(order).size===ids.length&&order.every(id=>ids.includes(id)))entry.run.orders[q.id]=order;}
     }
     return state;
   }
