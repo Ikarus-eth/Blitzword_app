@@ -1,5 +1,7 @@
 # Artus & Pip: five story adventures
 
+**Historical r1 release.** The user rejected the generic scenery and separate portrait overlays, and requested linked puzzles and one rescue journey. See the [current rescue revision](story-pilot/RESCUE_RELEASE.md). The evidence below records r1 as it was deployed.
+
 User decision, 30 September 2026: expand the approved standalone story to five; put an extra button on chapter-selection Home; remove the pilot’s Listen control and voice; keep words fairly simple while increasing riddle and maths difficulty. Reuse current approved artwork where useful. Deeper integration can come later.
 
 Build `story-pilot-20260930-r1`. The **Story adventures** button opens `assets/story-pilot/` after saving the main adventure. Back to map returns to the existing game. The pilot is optional and all five stories are available immediately; Next story suggests the intended progression.

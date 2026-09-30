@@ -1,17 +1,17 @@
 (function(root,factory){const api=factory(typeof module==='object'&&module.exports?require('./stories'):root.BlitzStoryPilotContent);if(typeof module==='object'&&module.exports)module.exports=api;else root.BlitzStoryPilot=api;})(typeof globalThis!=='undefined'?globalThis:this,function(Content){
   'use strict';
-  const KEY='blitzword_story_pilot_v1',copy=v=>JSON.parse(JSON.stringify(v));
+  const KEY='blitzword_story_pilot_v2',copy=v=>JSON.parse(JSON.stringify(v));
   const getStory=id=>Content.stories.find(s=>s.id===id);
   const shuffled=(a,random=Math.random)=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.min(i,Math.max(0,Math.floor(random()*(i+1))));[b[i],b[j]]=[b[j],b[i]];}return b;};
   function newRun(story,random){return {choices:{},orders:Object.fromEntries(story.questions.map(q=>[q.id,shuffled(q.choices.map(c=>c.id),random)])),checks:0,hints:[],revealed:false,complete:false};}
-  function fresh(random){return {version:1,revision:0,activeId:Content.stories[0].id,stories:Object.fromEntries(Content.stories.map(s=>[s.id,{first:null,everComplete:false,replays:0,run:newRun(s,random)}]))};}
+  function fresh(random){return {version:2,revision:0,activeId:Content.stories[0].id,stories:Object.fromEntries(Content.stories.map(s=>[s.id,{first:null,everComplete:false,replays:0,run:newRun(s,random)}]))};}
   const count=v=>Number.isSafeInteger(v)&&v>=0?v:0;
   function cleanChoices(story,v){const out={};for(const q of story.questions)if(q.choices.some(c=>c.id===v?.[q.id]))out[q.id]=v[q.id];return out;}
   function matches(story,choices){return Object.fromEntries(story.questions.map(q=>[q.id,choices[q.id]===q.answer]));}
   function restore(text,random){
     if(text===null||text===undefined)return fresh(random);
     let saved;try{saved=JSON.parse(text);}catch{throw new Error('The story save could not be read. It has been kept unchanged.');}
-    if(!saved||saved.version!==1||typeof saved.stories!=='object'||!saved.stories)throw new Error('This story save is not supported. It has been kept unchanged.');
+    if(!saved||saved.version!==2||typeof saved.stories!=='object'||!saved.stories)throw new Error('This story save is not supported. It has been kept unchanged.');
     const state=fresh(random);state.revision=count(saved.revision);if(getStory(saved.activeId))state.activeId=saved.activeId;
     for(const story of Content.stories){
       const old=saved.stories[story.id],entry=state.stories[story.id];if(!old||typeof old!=='object')continue;

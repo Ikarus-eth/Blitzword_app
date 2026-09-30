@@ -4,7 +4,7 @@ const {parseHTML}=require('linkedom');
 const Core=require('../assets/story-pilot/core'),{stories}=require('../assets/story-pilot/stories');
 const root=path.join(__dirname,'../assets/story-pilot');
 function fill(state,correct=true){for(const q of Core.active(state).story.questions)Core.choose(state,q.id,correct?q.answer:q.choices.find(c=>c.id!==q.answer).id);}
-function memory(initial=null){const values=new Map([['blitzword_v1','main learner data']]);if(initial!==null)values.set(Core.KEY,initial);const calls=[];let fail=false;return {values,calls,getItem(k){calls.push(['get',k]);return values.get(k)??null;},setItem(k,v){calls.push(['set',k]);if(fail)throw Error('Storage full');values.set(k,v);},fail(){fail=true;}};}
+function memory(initial=null){const values=new Map([['blitzword_v1','main learner data'],['blitzword_story_pilot_v1','old pilot results']]);if(initial!==null)values.set(Core.KEY,initial);const calls=[];let fail=false;return {values,calls,getItem(k){calls.push(['get',k]);return values.get(k)??null;},setItem(k,v){calls.push(['set',k]);if(fail)throw Error('Storage full');values.set(k,v);},fail(){fail=true;}};}
 function boot(storage=memory()){
  const {window,document}=parseHTML(fs.readFileSync(path.join(root,'index.html'),'utf8'));
  window.localStorage=storage;window.innerWidth=1024;window.location={reload(){}};
@@ -25,8 +25,8 @@ test('five complete puzzles have unique choices, valid clues and local assets',(
  assert.match(fs.readFileSync(path.join(root,'../../.github/workflows/pages.yml'),'utf8'),/cp -R assets _site\/assets/);
 });
 test('arithmetic answers and final logic have independently calculated unique solutions',()=>{
- const answers=[3-1,8-3+2,3*5-4,(24-6)/3,(3*9-6)/3];
- [stories[0].questions[1],stories[1].questions[1],stories[2].questions[1],stories[3].questions[1],stories[4].questions[2]].forEach((q,i)=>assert.equal(Number(q.answer),answers[i]));
+ const answers=[3-1,8-3+2,3*5-4,(24-6)/3];
+ [stories[0].questions[1],stories[1].questions[1],stories[2].questions[1],stories[3].questions[1]].forEach((q,i)=>assert.equal(Number(q.answer),answers[i]));
  assert.deepEqual(Array.from({length:9},(_,i)=>51+i).filter(n=>n%7===0),[Number(stories[4].questions[1].answer)]);
  const safe=['sun','moon','star'].filter(door=>[door==='moon',door!=='moon',door!=='sun'].filter(Boolean).length===1);assert.deepEqual(safe,[stories[4].questions[0].answer]);
  assert.deepEqual(['sun','moon','star','leaf'].filter((name,i)=>i>0&&i<3&&name!=='star'),[stories[3].questions[0].answer]);
@@ -48,14 +48,14 @@ test('checks require every choice and reveal requires a first try',()=>{
  fill(state,false);Core.check(state);Core.reveal(state);assert.equal(Core.active(state).entry.run.revealed,true);assert.equal(Core.active(state).entry.first.matches.held,false);assert.throws(()=>Core.choose(state,'held','torch'));
 });
 test('invalid orders, choices and completion are sanitized on restore',()=>{
- const state=Core.fresh();state.stories['fox-cave'].run={choices:{held:'fake'},orders:{held:['torch','torch','torch']},complete:true,checks:-1,hints:['bad']};
+ const state=Core.fresh();state.stories['fox-call'].run={choices:{held:'fake'},orders:{held:['torch','torch','torch']},complete:true,checks:-1,hints:['bad']};
  const run=Core.active(Core.restore(JSON.stringify(state))).entry.run;assert.equal(run.complete,false);assert.deepEqual(run.choices,{});assert.equal(new Set(run.orders.held).size,3);assert.equal(run.checks,0);assert.deepEqual(run.hints,[]);
 });
 test('pilot store only accesses its own key and refuses concurrent writes',()=>{
- const storage=memory(),a=Core.createStore(storage),b=Core.createStore(storage),one=a.load(),two=b.load();fill(one);a.save(one);assert.throws(()=>b.save(two),e=>e.code==='conflict');assert.equal(b.changed(),true);assert.equal(storage.values.get('blitzword_v1'),'main learner data');assert.ok(storage.calls.every(([,key])=>key===Core.KEY));
+ const storage=memory(),a=Core.createStore(storage),b=Core.createStore(storage),one=a.load(),two=b.load();fill(one);a.save(one);assert.throws(()=>b.save(two),e=>e.code==='conflict');assert.equal(b.changed(),true);assert.equal(storage.values.get('blitzword_v1'),'main learner data');assert.equal(storage.values.get('blitzword_story_pilot_v1'),'old pilot results');assert.ok(storage.calls.every(([,key])=>key===Core.KEY));
 });
 test('unreadable or future save is preserved and failed write leaves revision unchanged',()=>{
- for(const text of ['broken','{"version":2,"stories":{}}']){const storage=memory(text),store=Core.createStore(storage);assert.throws(()=>store.load());assert.equal(storage.values.get(Core.KEY),text);}
+ for(const text of ['broken','{"version":3,"stories":{}}']){const storage=memory(text),store=Core.createStore(storage);assert.throws(()=>store.load());assert.equal(storage.values.get(Core.KEY),text);}
  const storage=memory(),store=Core.createStore(storage),state=store.load();storage.fail();assert.throws(()=>store.save(state));assert.equal(state.revision,0);assert.equal(storage.values.has(Core.KEY),false);
 });
 test('all five UI puzzles can be completed; no speech controls or speech calls',()=>{
@@ -66,15 +66,15 @@ test('all five UI puzzles can be completed; no speech controls or speech calls',
   ui.click(ui.get('submit'));assert.equal(ui.get('ending').hidden,false);assert.equal(ui.get('puzzle').hidden,true);assert.equal(ui.get('ending-title').textContent,story.endingTitle);
   if(i<4)ui.click(ui.get('next'));else{assert.equal(ui.get('next').hidden,true);assert.equal(ui.get('all-done').hidden,false);}
  }
- assert.equal(ui.get('progress').textContent,'5 of 5 endings');assert.ok(ui.storage.calls.every(([,key])=>key===Core.KEY));
+ assert.equal(ui.get('progress').textContent,'5 of 5 stops');assert.ok(ui.storage.calls.every(([,key])=>key===Core.KEY));
  for(const f of ['index.html','app.js','core.js'])assert.doesNotMatch(fs.readFileSync(path.join(root,f),'utf8'),/speechSynthesis|SpeechSynthesisUtterance|<audio|\bListen\b|new Audio/i);
 });
 test('wrong choices show no answer ticks; help points to text and assisted ending is recorded',()=>{
- const ui=boot();ui.choose('held','shield');ui.choose('apples','3');ui.click(ui.get('submit'));
+ const ui=boot();ui.choose('held','shield');ui.choose('torches','3');ui.click(ui.get('submit'));
  assert.equal(ui.get('ending').hidden,true);assert.match(ui.get('feedback').textContent,/another look/);assert.equal(ui.document.querySelector('[data-value="shield"]').getAttribute('aria-pressed'),'true');
  ui.click(ui.get('hint'));assert.equal(ui.get('clue-2').classList.contains('clue'),true);
- ui.click(ui.get('show'));assert.equal(ui.document.querySelector('.answer-explanations').open,true);assert.equal(ui.state().stories['fox-cave'].run.revealed,true);
- ui.click(ui.get('replay'));assert.equal(ui.state().stories['fox-cave'].first.matches.held,false);assert.ok(ui.get('submit').disabled);
+ ui.click(ui.get('show'));assert.equal(ui.document.querySelector('.answer-explanations').open,true);assert.equal(ui.state().stories['fox-call'].run.revealed,true);
+ ui.click(ui.get('replay'));assert.equal(ui.state().stories['fox-call'].first.matches.held,false);assert.ok(ui.get('submit').disabled);
 });
 test('UI reload restores saved choice and read-only rendering does not rewrite storage',()=>{
  const storage=memory(),ui=boot(storage);ui.choose('held','torch');const text=storage.values.get(Core.KEY),again=boot(storage);
@@ -84,4 +84,14 @@ test('storage failure and another-tab change stop UI with visible recovery',()=>
  const storage=memory('broken'),bad=boot(storage);assert.equal(bad.get('save-warning').hidden,false);assert.ok(bad.get('hint').disabled);assert.equal(storage.values.get(Core.KEY),'broken');
  const ui=boot();ui.storage.fail();ui.choose('held','torch');assert.equal(ui.get('save-warning').hidden,false);assert.ok(ui.get('hint').disabled);
  const conflict=boot();conflict.storage.values.set(Core.KEY,JSON.stringify(Core.fresh()));const event=new conflict.window.Event('storage');event.key=Core.KEY;conflict.window.dispatchEvent(event);assert.equal(conflict.get('save-warning').hidden,false);assert.match(conflict.get('save-message').textContent,/Another tab/);
+});
+
+test('revised content has one rescue goal and six integrated scenes without portrait overlays',()=>{
+ assert.equal(require('../assets/story-pilot/stories').version,2);assert.equal(Core.fresh().version,2);
+ assert.equal(Core.KEY,'blitzword_story_pilot_v2');
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,'../../docs/story-pilot/RESCUE_ARTWORK.json'),'utf8'));
+ assert.equal(manifest.images.length,6);
+ for(const story of stories){assert.match(story.scene,/^scenes\//);assert.equal(story.questions.length,2);assert.ok(!story.guest);}
+ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.doesNotMatch(html,/hero-tag|artus-portrait|class="pip"|id="guest"/);
+ const ui=boot();assert.equal(ui.document.querySelectorAll('.scene img').length,1);assert.equal(ui.get('scene-image').getAttribute('src'),'scenes/fox-call.webp');
 });

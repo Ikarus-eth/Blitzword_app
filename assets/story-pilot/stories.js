@@ -1,89 +1,85 @@
 (function(root,factory){const data=factory();if(typeof module==='object'&&module.exports)module.exports=data;else root.BlitzStoryPilotContent=data;})(typeof globalThis!=='undefined'?globalThis:this,function(){
   'use strict';
   const item=(id,label,icon,extra={})=>({id,label,icon,...extra});
-  const amount=(n,unit,icon)=>item(String(n),`${n} ${unit}`,icon,{number:n});
+  const amount=(n,unit,icon=null)=>item(String(n),`${n} ${unit}`,icon,{number:n});
   const mark=name=>item(name,name[0].toUpperCase()+name.slice(1),name,{marked:true});
   const stories=[
     {
-      id:'fox-cave',title:'The Fox in the Cave',shortTitle:'The fox',level:'A small change',scene:'../scenery/chapter-6-place-1.webp',sceneLabel:'At the cave',
+      id:'fox-call',title:'The Fox’s Call',shortTitle:'The tunnel',level:'Pack for the dark',scene:'scenes/fox-call.webp',sceneLabel:'Artus and Pip listen to a mother fox by a dark tunnel. The old tower stands on a distant hill.',
       paragraphs:[
-        'Artus and his pet dragon, Pip, find a cave.',
-        'They hear a small fox inside. It needs help!',
-        'Artus picks up his shield. But the cave is dark. He puts the shield down and takes a torch instead.',
-        'Artus has three apples in his bag. Pip eats one.',
-        '“Pip! The rest are for the fox,” says Artus.'
+        '“My cub is stuck high in the old tower!” cries a mother fox. “Please help!”',
+        '“We will,” says Artus. His pet dragon, Pip, runs to his side.',
+        'A dark tunnel leads towards the tower. Artus picks up his shield. Then he puts it down and takes a torch instead.',
+        'There are three torches in his pack. One is wet and will not burn. Artus leaves that one behind.',
+        'Help Artus choose what to hold. Then count the dry torches he can take.'
       ],
       questions:[
-        {id:'held',prompt:'What does Artus hold now?',answer:'torch',choices:[item('shield','Shield','shield'),item('torch','Torch','torch'),item('sword','Sword','sword')],clues:[2],hint:'Read what Artus does with his shield. What does he take instead?',explanation:'Artus puts down the shield and takes the torch.'},
-        {id:'apples',prompt:'How many apples are left in his bag?',answer:'2',choices:[1,2,3].map(n=>item(String(n),`${n} ${n===1?'apple':'apples'}`,'apple',{repeat:n})),clues:[3],hint:'Pip eats one of the three apples. Count what is left.',explanation:'Three apples, with one eaten, leaves two. 3 − 1 = 2.'}
+        {id:'held',prompt:'What does Artus hold now?',answer:'torch',choices:[item('shield','Shield','shield'),item('torch','Torch','torch'),item('sword','Sword','sword')],clues:[2],hint:'Artus changes his mind. Read what he puts down and what he takes instead.',explanation:'He puts down the shield and takes a torch to light the dark tunnel.'},
+        {id:'torches',prompt:'How many dry torches can he take?',answer:'2',choices:[1,2,3].map(n=>amount(n,n===1?'torch':'torches','torch')),clues:[3],hint:'Start with three torches. Leave the wet one behind.',explanation:'One of the three torches is wet. Artus can take two dry torches. 3 − 1 = 2.'}
       ],
-      endingTitle:'The fox is safe!',ending:'The torch lights the cave. Artus finds the fox and gives it the two apples. Together, they head home.',endingImage:'../teaching/fox.webp',endingAlt:'Pip and the fox on a forest path.'
+      endingTitle:'Into the tunnel!',ending:'Artus holds up a torch. He has two dry torches for the trip. He and Pip follow the path through the dark. On the far side, they hear a fast stream.',nextLabel:'Go to the bridge',endingImage:'scenes/fox-call.webp',endingAlt:'Artus and Pip at the start of their journey to help the mother fox.'
     },
     {
-      id:'river-bag',title:'The River Bag',shortTitle:'The river',level:'Take away, then add',scene:'../scenery/chapter-2-place-1.webp',sceneLabel:'By the stream',guest:'../family-review/images/acorn-imp-c.webp',guestAlt:'The small Acorn Imp in his leaf coat.',
+      id:'broken-bridge',title:'The Broken Bridge',shortTitle:'The bridge',level:'Take away, then add',scene:'scenes/bridge.webp',sceneLabel:'Artus, Pip and the Acorn Imp inspect a broken wooden bridge over a woodland stream.',
       paragraphs:[
-        'Artus and Pip reach a wide stream. A rope can help Artus get across.',
-        'Artus puts the rope in his red bag. Then he finds a hole in that bag. He moves the rope to his blue bag and leaves the red bag by a tree.',
-        'Artus has eight nuts. He gives three to a small imp.',
-        'Pip finds two more nuts and gives them to Artus.',
-        '“Let’s cross,” says Artus. “Pip, bring the bag with the rope!”'
+        'The path to the tower crosses a stream. But the wood bridge is broken!',
+        '“I can fix it with wood pegs,” says a small imp. “They will hold the boards in place.”',
+        'Artus puts eight pegs in his red bag. The bag has a hole, so he moves all the pegs to his blue bag.',
+        'Three pegs are bent. Artus takes them out. Pip finds two good pegs and drops them into the blue bag.',
+        'The imp is ready to work. Which bag should Pip bring, and how many good pegs are in it?'
       ],
       questions:[
-        {id:'bag',prompt:'Which bag must Pip bring?',answer:'blue',choices:['red','blue','green'].map(c=>item(c,`${c[0].toUpperCase()+c.slice(1)} bag`,'bag',{colour:c})),clues:[1],hint:'The rope starts in one bag. Read where Artus moves it.',explanation:'Artus moves the rope from the red bag to the blue bag.'},
-        {id:'nuts',prompt:'How many nuts does Artus have now?',answer:'7',choices:[5,7,10].map(n=>amount(n,'nuts','nut')),clues:[2,3],hint:'Start with eight. Take away the nuts for the imp, then add the nuts from Pip.',explanation:'Eight minus three is five. Two more makes seven. 8 − 3 + 2 = 7.'}
+        {id:'bag',prompt:'Which bag holds the pegs for the bridge?',answer:'blue',choices:['red','blue','green'].map(c=>item(c,`${c[0].toUpperCase()+c.slice(1)} bag`,'bag',{colour:c})),clues:[2,3],hint:'Follow the pegs. Artus moves them out of the bag with a hole.',explanation:'Artus moves all the pegs to the blue bag. That is the bag the imp needs.'},
+        {id:'pegs',prompt:'How many good pegs are in that bag?',answer:'7',choices:[5,7,10].map(n=>amount(n,'pegs')),clues:[2,3],hint:'Start with eight pegs. Take out three bent ones, then add the two Pip finds.',explanation:'Eight pegs minus three bent ones leaves five. Pip adds two good pegs, making seven. 8 − 3 + 2 = 7.'}
       ],
-      endingTitle:'Across the stream!',ending:'Pip brings the blue bag. Artus uses the rope to cross. He still has seven nuts for the long walk ahead.',endingImage:'../scenery/chapter-2-place-2.webp',endingAlt:'A stone bridge over the stream.'
+      endingTitle:'The bridge is fixed!',ending:'Pip brings the blue bag. The imp uses its seven good pegs to fix the bridge. Artus and Pip cross the stream. A tall stone gate blocks the next part of the path.',nextLabel:'Go to the stone gate',endingImage:'scenes/bridge.webp',endingAlt:'Artus, Pip and the Imp working together at the woodland bridge.'
     },
     {
-      id:'troll-gate',title:'The Troll’s Gate',shortTitle:'The troll',level:'A riddle and groups',scene:'../scenery/chapter-4-place-4.webp',sceneLabel:'At the stone gate',guest:'../family-review/images/cave-troll-c.webp',guestAlt:'The Cave Troll, covered in moss and small flowers.',
+      id:'troll-lock',title:'The Troll’s Lock',shortTitle:'The gate',level:'A riddle and groups',scene:'scenes/troll.webp',sceneLabel:'Artus and Pip talk with the mossy Cave Troll at a locked wooden gate in an old stone arch.',
       paragraphs:[
-        'A troll stops Artus and Pip at a stone gate.',
-        '“Bring me a thing with teeth that cannot bite,” he says. “It can open a lock.”',
-        'Artus has a key, a comb and a saw.',
-        'Artus also has three bags. Each bag holds five coins.',
-        'The troll asks for four coins to let them through. Artus pays him from the bags.',
-        '“We must keep the rest,” says Artus. Pip nods.'
+        'A troll stands by the gate. “I want to help the cub too,” he says. “But this gate is locked.”',
+        '“Find a thing with teeth that cannot bite. It can open a lock.”',
+        'Artus has a key, a comb and a saw. Which thing fits both clues?',
+        'The troll has more of that thing in his pouch: three rings with five on each ring.',
+        'Four are bent and will not turn in the lock. How many good ones can Artus try?'
       ],
       questions:[
-        {id:'riddle',prompt:'Which thing fits both clues?',answer:'key',choices:[item('key','Key','key'),item('comb','Comb','comb'),item('saw','Saw','saw')],clues:[1,2],hint:'All three have teeth. Which one can also open a lock?',explanation:'A key has teeth and opens a lock. A comb and a saw do not fit both clues.'},
-        {id:'coins',prompt:'How many coins are left in all the bags?',answer:'11',choices:[11,12,15].map(n=>amount(n,'coins','coin')),clues:[3,4],hint:'Count all three bags of five first. Then take away the four coins for the troll.',explanation:'Three bags of five hold fifteen coins. Four are paid, so eleven remain. 3 × 5 − 4 = 11.'}
+        {id:'riddle',prompt:'Which thing should Artus try in the lock?',answer:'key',choices:[item('key','Key','key'),item('comb','Comb','comb'),item('saw','Saw','saw')],clues:[1,2],hint:'All three things have teeth. Which one can open a lock too?',explanation:'A key has teeth and can open a lock. It fits both clues, so the things on the rings are keys.'},
+        {id:'keys',prompt:'How many good ones can Artus try?',answer:'11',choices:[11,12,15].map(n=>item(String(n),String(n),null,{number:n})),clues:[3,4],hint:'Count three groups of five. Then leave out the four bent ones.',explanation:'Three rings of five hold fifteen keys. Four are bent, so eleven good keys remain. 3 × 5 − 4 = 11.'}
       ],
-      endingTitle:'The gate swings open.',ending:'Artus hands over the key and pays four coins. The troll steps aside. Artus and Pip walk on with eleven coins left.',endingImage:'../scenery/chapter-4-place-5.webp',endingAlt:'A quiet, glowing hall beyond the old gate.'
+      endingTitle:'One key fits!',ending:'One of the eleven good keys turns in the lock. The troll opens the gate. “Ask the owl for a basket,” he says. “It will help you bring the cub down.”',nextLabel:'Find the owl',endingImage:'scenes/troll.webp',endingAlt:'Artus and Pip with the helpful troll at the stone gate.'
     },
     {
-      id:'owl-chests',title:'The Owl’s Chests',shortTitle:'The owl',level:'Find, then share',scene:'../scenery/chapter-3-place-5.webp',sceneLabel:'Under the old oak',guest:'../family-review/images/hollow-owl-c.webp',guestAlt:'The Hollow Owl with bright green eyes and leaf-like feathers.',
+      id:'owl-rope',title:'The Owl’s Chest',shortTitle:'The old oak',level:'Find, then share',scene:'scenes/owl.webp',sceneLabel:'Beneath an old oak, Artus and Pip ask the Hollow Owl about four closed chests and an empty rescue basket.',
       paragraphs:[
-        'An owl shows Artus and Pip four chests. From left to right, their marks are sun, moon, star and leaf.',
-        '“The key is in a chest between the sun chest and the leaf chest,” says the owl. “It is not in the star chest.”',
-        'Pip finds twenty-four gems. Artus puts six aside for the owl.',
-        'He shares the rest into three bags, with the same number of gems in each bag.',
-        'Choose the chest with the key. Then pack one bag for Artus.'
+        'The owl has a basket to lift the cub down. It needs three ropes of the same length to hang level.',
+        'Four chests stand in a row. From left to right, their marks are sun, moon, star and leaf.',
+        '“The rope is in a chest between sun and leaf,” says the owl. “It is not in the star chest.”',
+        'That rope is twenty-four feet long. Six feet at one end are worn, so Artus cuts that bit off.',
+        'He cuts the good rope into three equal pieces for the basket. Find the chest, then work out how long each piece is.'
       ],
-      arrangement:{after:0,kind:'chests',marks:['sun','moon','star','leaf'],label:'The four chests, from left to right'},
+      arrangement:{after:1,kind:'chests',marks:['sun','moon','star','leaf'],label:'The four chests, from left to right'},
       questions:[
-        {id:'chest',prompt:'Which chest holds the key?',answer:'moon',choices:['sun','moon','star','leaf'].map(mark),clues:[0,1],hint:'Two chests are between the sun and leaf. The owl rules out one of them.',explanation:'Moon and star lie between sun and leaf. The owl rules out star, so the key is in the moon chest.'},
-        {id:'gems',prompt:'How many gems go in each bag?',answer:'6',choices:[3,6,8,18].map(n=>amount(n,'gems','gem')),clues:[2,3],hint:'Put aside the owl’s six gems first. Share what is left into three equal groups.',explanation:'Twenty-four minus six leaves eighteen. Eighteen shared into three bags is six in each. (24 − 6) ÷ 3 = 6.'}
+        {id:'chest',prompt:'Which chest holds the rope?',answer:'moon',choices:['sun','moon','star','leaf'].map(mark),clues:[1,2],hint:'Two chests are between sun and leaf. The owl rules out one of them.',explanation:'Moon and star are between sun and leaf. It is not star, so the rope is in the moon chest.'},
+        {id:'rope',prompt:'How long is each good piece of rope?',answer:'6',choices:[3,6,8,18].map(n=>amount(n,'feet')),clues:[3,4],hint:'Cut off the six worn feet first. Split the good part into three equal lengths.',explanation:'Twenty-four minus six leaves eighteen feet. Split into three equal pieces, that is six feet each. (24 − 6) ÷ 3 = 6.'}
       ],
-      endingTitle:'A key in the moon chest!',ending:'Artus finds the key. The owl gets six gems, and each bag holds six more. Pip spots one last gate on the hill.',endingImage:'../scenery/chapter-7-place-1.webp',endingAlt:'The forest path rises towards the hills.'
+      endingTitle:'The basket is ready!',ending:'Artus finds the rope in the moon chest. He ties three six-foot pieces to the basket. It hangs level. Pip helps him carry it up the hill to the old tower.',nextLabel:'Go to the tower',endingImage:'scenes/owl.webp',endingAlt:'Artus, Pip and the Owl prepare to make the rescue basket beneath the oak.'
     },
     {
-      id:'last-gate',title:'The Last Gate',shortTitle:'The last gate',level:'Put all the clues together',scene:'../scenery/chapter-7-place-5.webp',sceneLabel:'At the last gate',guest:'../family-review/images/stone-ram-b.webp',guestAlt:'The Stone Ram, with curled stone horns and bright autumn leaves.',
+      id:'last-door',title:'The Last Door',shortTitle:'The tower',level:'Put the clues together',scene:'scenes/gate.webp',sceneLabel:'At the old tower, Artus and Pip stand with the Stone Ram before three closed doors, ready with their rescue basket.',
       paragraphs:[
-        'Artus, Pip and the fox reach three doors. One is safe. A stone ram guards them.',
-        '“Only one sign is true,” says the ram. “The other two are wrong.”',
-        'The safe door needs a number. It is more than fifty and less than sixty. It is in the seven times table.',
-        'Artus has three bags with nine gems in each bag. He gives six gems to the ram.',
-        'He shares the rest equally between himself, Pip and the fox.',
-        'Find the safe door and its number. Work out how many gems Pip gets.'
+        'At last, Artus and Pip reach the tower. The cub is on a high ledge inside. Three doors have sun, moon and star marks. Only one door leads to the cub.',
+        '“Only one sign is true,” says the stone ram. “The other two are wrong.”',
+        'The right door has a number lock. Its number is more than fifty and less than sixty. It is in the seven times table.',
+        'Pick the right door and set its number. Then Artus and Pip can take the basket inside and help the cub!'
       ],
-      arrangement:{after:1,kind:'signs',marks:['sun','moon','star'],label:'Read all three door signs',signs:['Go through the moon door.','Do not use the moon door.','Do not use the sun door.']},
+      arrangement:{after:1,kind:'signs',marks:['sun','moon','star'],label:'Read all three door signs',signs:['The moon door leads to the cub.','The moon door does not lead to the cub.','The sun door does not lead to the cub.']},
       questions:[
-        {id:'door',prompt:'Which door is safe?',answer:'sun',choices:['sun','moon','star'].map(name=>item(name,name[0].toUpperCase()+name.slice(1),name)),clues:[0,1],hint:'Try one door at a time. If it is safe, exactly one sign must be true. Check all three signs.',explanation:'If sun is safe: the sun sign is wrong, the moon sign is true, and the star sign is wrong. That is one true sign. Moon or star would make two signs true.'},
-        {id:'number',prompt:'Which number opens the door?',answer:'56',choices:[49,54,56,63].map(n=>item(String(n),String(n),null,{number:n})),clues:[2],hint:'Find numbers in the seven times table. Which one is more than fifty but less than sixty?',explanation:'Seven times eight is fifty-six. It lies between fifty and sixty. 7 × 8 = 56.'},
-        {id:'share',prompt:'How many gems does Pip get?',answer:'7',choices:[3,7,9,21].map(n=>amount(n,'gems','gem')),clues:[3,4],hint:'Count the three bags of nine. Pay the ram six. Then share what is left between three friends.',explanation:'Three bags hold twenty-seven gems. Six are paid, leaving twenty-one. Each of the three friends gets seven. (3 × 9 − 6) ÷ 3 = 7.'}
+        {id:'door',prompt:'Which door leads to the cub?',answer:'sun',choices:['sun','moon','star'].map(name=>item(name,name[0].toUpperCase()+name.slice(1),name)),clues:[0,1],hint:'Try one door at a time. If it leads to the cub, exactly one sign must be true. Check all three signs.',explanation:'If sun leads to the cub, only the moon sign is true. Moon or star would make two signs true. So Artus must use the sun door.'},
+        {id:'number',prompt:'Which number opens that door?',answer:'56',choices:[49,54,56,63].map(n=>item(String(n),String(n),null,{number:n})),clues:[2],hint:'Which number in the seven times table is more than fifty but less than sixty?',explanation:'Seven times eight is fifty-six. It is between fifty and sixty. Artus sets the sun door’s lock to 56.'}
       ],
-      endingTitle:'Home, at last!',ending:'Artus picks the sun door and sets the number to 56. Pip gets seven gems. The gate opens, and the three friends head home together.',endingImage:'../scenery/hidden-nest.webp',endingAlt:'A warm, peaceful clearing in the forest.'
+      endingTitle:'The fox cub is safe!',ending:'The sun door opens at 56. Pip flies the basket to the ledge. The cub hops in, and Artus lowers it gently. Outside, the mother fox runs to her cub. “You brought my little one home!” Artus and Pip grin.',endingImage:'scenes/reunion.webp',endingAlt:'Artus and Pip smile as the rescued fox cub nuzzles its mother beside the empty basket at the tower.'
     }
   ];
-  return {version:1,stories};
+  return {version:2,title:'The fox cub rescue',stories};
 });

@@ -2,9 +2,11 @@
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
-### Story pilot still-art use — 30 September 2026
+### Story rescue illustrations — 30 September 2026
 
-The user authorized selected updated enemy pictures in the five-story pilot. Acorn Imp C, Cave Troll C, Hollow Owl C and Stone Ram B appear as static story guests alongside existing scenes, Artus and Pip. No new bitmap images were generated. This pilot use leaves production battle rigs and the broader animation approval gate unchanged. See [story pilot artwork and icon attribution](STORY_PILOT_RELEASE.md#artwork).
+The user rejected the pilot's generic scenes, missing full Artus and pasted enemy cards. Six new integrated paintings now depict the fox-cub rescue: tunnel, broken bridge, troll's locked gate, owl's chest store, tower doors, and reunion. Artus and Pip appear in every image; the supporting characters share the scene's perspective and lighting. The full 3:2 images are uncropped, with no character overlays. The owl's four chests were edited into a single row to match the reading clue. [Exact prompts, references and hashes](story-pilot/RESCUE_ARTWORK.json), [release](story-pilot/RESCUE_RELEASE.md).
+
+Artus uses approved Knight boy D; Pip uses Small Pip; the guests use Imp C, Troll C, Owl C and Ram B. This authorization applies to story illustrations. Main battle rigs and the broader smooth-animation approval gate remain unchanged. The earlier pilot's still-card arrangement is superseded.
 
 ### Final character still-art selection - 29 September 2026
 
