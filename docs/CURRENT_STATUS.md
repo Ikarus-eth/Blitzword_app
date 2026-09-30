@@ -1,5 +1,11 @@
 # BlitzWord current status — 30 September 2026
 
+## All enemies and male mage — release preparation, 30 September 2026
+
+Build `enemy-motion-20260930-r1` is implemented and tested on the release branch; deployment is pending. All 20 selected enemy families have attack, recoil, defeat and victory frames across 60 encounters, including all groups. Only the male mage is active; old hero preferences and learner progress are preserved. The aimed solo and braced Pip-assisted casts are retained. Current main’s adaptive reading update is included.
+
+[Release, costs and verification limits](enemies/ALL_ENEMY_MOTION_RELEASE.md). Total conservative generation reserve is $5.12, including prior experiments and failed requests. Browser visual checks for this animation change remain unavailable because the browser tool denied its admin-policy verification; offline rendered frames and automated game flows are checked separately.
+
 This page tracks current implementation and remaining work. Dated release notes preserve historical behavior and test results; their old limitations are not automatically current tasks. Latest approved user decisions take precedence over earlier plans. A difference between approved behavior and code remains a discrepancy, not a new product decision.
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).

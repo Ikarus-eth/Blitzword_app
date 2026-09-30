@@ -1,0 +1,116 @@
+{
+  "moon-moth": {
+    "attack": 32,
+    "hit": 28,
+    "defeat": 32,
+    "victory": 32
+  },
+  "root-sprite": {
+    "attack": {
+      "source": "root-sprite-attack-v2",
+      "peak": 32
+    },
+    "hit": 24,
+    "defeat": 24,
+    "victory": 32
+  },
+  "cave-troll": {
+    "attack": {
+      "source": "cave-troll-attack-v2",
+      "peak": 32
+    },
+    "hit": 48,
+    "defeat": 48,
+    "victory": 32
+  },
+  "acorn-imp": {
+    "attack": 32,
+    "hit": 24,
+    "defeat": 16,
+    "victory": 32
+  },
+  "mushroom-guard": {
+    "attack": 48,
+    "hit": 16,
+    "defeat": 32,
+    "victory": 48
+  },
+  "bramble-boar": {
+    "attack": {
+      "source": "bramble-boar-attack-v2",
+      "peak": 32
+    },
+    "hit": 24,
+    "defeat": 48,
+    "victory": 32
+  },
+  "reed-serpent": {
+    "attack": {
+      "source": "reed-serpent-attack-v2",
+      "peak": 32
+    },
+    "hit": 24,
+    "defeat": 32,
+    "victory": 32
+  },
+  "bog-toad": {
+    "attack": 32,
+    "hit": 24,
+    "defeat": 32,
+    "victory": 12
+  },
+  "lantern-wisp": {
+    "attack": 32,
+    "hit": 32,
+    "defeat": 64,
+    "victory": 32
+  },
+  "crystal-crab": {
+    "attack": 16,
+    "hit": 16,
+    "defeat": 32,
+    "victory": 48
+  },
+  "hollow-owl": {
+    "attack": 8,
+    "hit": 48,
+    "defeat": 48,
+    "victory": 16
+  },
+  "fern-wolf": {
+    "attack": 48,
+    "hit": 24,
+    "defeat": 48,
+    "victory": 32
+  },
+  "stone-ram": {
+    "attack": 64,
+    "hit": 12,
+    "defeat": 48,
+    "victory": 32
+  },
+  "briar-bat": {
+    "attack": 16,
+    "hit": 32,
+    "defeat": 48,
+    "victory": 16
+  },
+  "snail-knight": {
+    "attack": 32,
+    "hit": 24,
+    "defeat": 32,
+    "victory": 16
+  },
+  "chest-mimic": {
+    "attack": 32,
+    "hit": 16,
+    "defeat": 32,
+    "victory": 32
+  },
+  "storm-griffin": {
+    "attack": 12,
+    "hit": 12,
+    "defeat": 48,
+    "victory": 12
+  }
+}

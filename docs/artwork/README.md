@@ -4,7 +4,7 @@ Approved 29 September 2026. [Open the complete 33-page artwork document](BlitzWo
 
 This is the authoritative **future character artwork selection**: 20 enemy designs, six hero appearances and four retained Pip growth stages. The family rule is Artus first, then Juna among tied choices, then Johanna. Remaining ties were resolved explicitly by the user. Missing ratings were not treated as zero.
 
-**Implementation is deferred.** The user wants to establish smooth, connected animation first, using ChatGPT internal tools. Do not replace game images, promote the rejected archer rigs, or treat the current frame-based Pip studies as approved production animation. The gameplay, live production artwork and learner saves are unchanged by this document.
+**Implementation update — 30 September:** the user accepted the staff-pointed male-mage motion and authorized all enemies and groups plus deployment. Those selected designs are integrated; five other heroes are temporarily disabled, with their saved preferences preserved. The PDF remains the still-selection reference. See [the current animation release](../enemies/ALL_ENEMY_MOTION_RELEASE.md).
 
 The PDF preserves the selected stills, including recovered higher-resolution originals where available. The manifest maps every selection to the repository assets; `originalSha256` identifies the gallery original and `assetSha256` identifies the actual published file, which may be a converted WebP. Current-design crops and masks are retained explicitly. Local filesystem paths are not required.
 
@@ -45,10 +45,10 @@ The PDF preserves the selected stills, including recovered higher-resolution ori
 
 The dragon pages include both the evolution illustration and current battle/map art. Growth thresholds remain 0 / 15,000 / 45,000 / 70,000 XP. These are four stages, not thirty new character identities.
 
-## Next implementation gate
+## Animation implementation
 
-Review one smooth flight loop in normal speed, slow motion and at the wing extremes. The rendered shoulder attachments, membrane deformation, near/far ordering, stable face and loop seam must look correct; mathematical joint tests alone are insufficient. Only after the movement approach is accepted should this selected lineup be adapted and integrated across the game.
+The accepted whole-frame motion approach now covers all 20 enemy families. Smaller ages and groups reuse each family’s frames. Physical iPad/Safari performance remains unverified; current tests and deployment evidence are recorded in the release document.
 
 ## Verification
 
-The PDF has 33 pages. All 26 enemy/hero choices are resolved, and all four dragon stages are included. Selected hero pages, cover and lineup were rendered and visually checked after the final tie-breaks; the complete expanded document was rendered and inspected during assembly. Asset paths, source hashes, PDF hash and counts are checked against the manifest. No game runtime or asset files change in this update.
+The PDF has 33 pages. All 26 enemy/hero choices are resolved, and all four dragon stages are included. Selected hero pages, cover and lineup were rendered and visually checked after the final tie-breaks; the complete expanded document was rendered and inspected during assembly. Asset paths, source hashes, PDF hash and counts are checked against the manifest. The original document-only update did not change game assets; the later animation release now integrates the selected mage and enemy designs.

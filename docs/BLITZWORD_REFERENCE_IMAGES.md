@@ -143,3 +143,14 @@ The 35 chapter settings are mapped in `content.js` (`chapterBackgrounds`) and do
 ## Evolution frames — 23 September 2026
 
 `assets/evolution/pip-stage-0.webp` through `pip-stage-3.webp` are the four new evolution-screen illustrations, generated from the approved `assets/pip-growth.png` and `assets/pip.webp`. They preserve the orange scales, cream chest, amber eyes, cream horns, ember spines, dark flame-marked wings and tail. The final form retains its saddle and chest gem. Existing battle/map sprites remain in place. [Exact built-in image-generation prompts](EVOLUTION_PROMPTS.json) and [flow details](EVOLUTION_RELEASE.md) are maintained here.
+
+
+## Male mage and three-enemy motion candidate — 30 September 2026
+
+The user requested deployment preparation and previews for only the male mage and three enemies, including a group. The review branch derives battle poses from Mage E, Thornling D, Moss Golem B and Bark Beetle C. Small Pip retains his established battle identity. These are whole-frame motion derivatives of the selected character artwork; other heroes and juvenile enemy forms are outside this pilot. The previously accepted Thornling interaction set is reused. No deployment or final visual approval is claimed. See [the motion candidate](MAGE_MOTION_PILOT.md) and its source provenance.
+
+The user's latest explicit direction is that the mage points his staff at the enemy and casts from its head. The corrected candidate contains separate solo and Pip-assisted staff motions; the latter has a lower, two-handed brace. The previous palm cast is superseded.
+
+## All-enemy motion selection — 30 September 2026
+
+The user accepted the corrected mage direction and authorized expanding and deploying it. The earlier three-enemy/deferred-replacement gate is superseded for Male Mage E and all 20 selected enemies. Every enemy uses derivatives of its recorded selection in `artwork/character-selections.json`; groups share those frames, and younger forms use uniform scale. Five other heroes are temporarily unavailable, with saved preferences preserved. Pip's existing stage artwork is retained; Small Pip's fire joins the assisted cast. [Current scope, costs and visual-check limits](enemies/ALL_ENEMY_MOTION_RELEASE.md).

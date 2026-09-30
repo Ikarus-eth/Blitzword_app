@@ -10,6 +10,23 @@ window.makeReviewSave=function(scenario){
   if(scenario==='handoff'){s.demoComplete=true;s.handoff={victory:true};s.activity='handoff';return s;}
   if(scenario==='assessment'){C.startAssessment(s,now);return s;}
   s.assessment.done=true;s.demoComplete=true;s.settings.selfPaced=true;
+  if(scenario.startsWith('motion-all:')){
+    const [,enemyId,action]=scenario.split(':'),enemy=BlitzContent.enemyAt(enemyId),hp=enemy.minHealth;
+    s.profile.heroClass='Mage';s.profile.gender='boy';
+    for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();word.independentCorrect=2;}
+    s.settings.soundscape=false;C.startBattle(s,now,{strength:hp,enemyId});s.battle.introPending=false;C.prepareBattle(s,now);s.battle.question.phase='choices';
+    if(action==='defeat')s.battle.enemyHealth=hp-BlitzContent.enemyMembers(enemyId,hp)[0].maxHealth+1;
+    if(action==='loss')s.battle.heroHealth=1;
+    return s;
+  }
+  if(scenario.startsWith('motion-mage-')){
+    const [, ,enemy,action]=scenario.split('-'),enemyId={thornling:'thornling--3',golem:'moss-golem--3',beetle:'bark-beetle--2'}[enemy],hp={thornling:18,golem:24,beetle:12}[enemy];
+    for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();word.independentCorrect=2;}
+    s.settings.soundscape=false;C.startBattle(s,now,{strength:hp,enemyId});s.battle.introPending=false;C.prepareBattle(s,now);s.battle.question.phase='choices';
+    if(action==='defeat')s.battle.enemyHealth=enemy==='beetle'?9:1;
+    if(action==='loss')s.battle.heroHealth=1;
+    return s;
+  }
   if(scenario.startsWith('enemy-group-')){
     const count=Number(scenario.split('-')[2]),enemyId=count===2?'acorn-imp--2':count===3?'moon-moth--3':'bark-beetle--3',hp=count===2?14:count===3?15:25;
     for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
