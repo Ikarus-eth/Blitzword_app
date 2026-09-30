@@ -84,28 +84,28 @@
   },
   "pip": {
     "view": [
-      170,
-      290,
-      172,
-      160
+      60,
+      122,
+      384,
+      326
     ],
     "still": "assets/battle-motion/pip-still.webp",
     "mouth": [
-      398,
-      305
+      413,
+      267
     ],
     "clips": {
       "fire": {
         "frames": 36,
         "cols": 6,
         "perSheet": 36,
-        "tileW": 202,
-        "tileH": 162,
+        "tileW": 312,
+        "tileH": 267,
         "crop": [
-          114,
-          250,
-          252,
-          202
+          58,
+          118,
+          390,
+          334
         ],
         "sheets": [
           "assets/battle-motion/pip-fire.webp"

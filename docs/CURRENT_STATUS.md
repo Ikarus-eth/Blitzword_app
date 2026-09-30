@@ -1,5 +1,12 @@
 # BlitzWord current status — 30 September 2026
 
+## Male-mage motion candidate — 30 September 2026
+
+Prepared on `codex/mage-three-enemy-motion`, not merged or deployed. The review uses Male Mage E against adult Thornling D, Ancient Moss Golem B and three Bark Beetles C, with Small Pip's fire assist. Whole-frame sprites retain the existing 1,200 ms reaction and 660 ms health-impact timing. Group retirement, saves and reading rules are preserved. The latest Story rescue changes from main `97b8a3a` are included.
+
+[Scope, costs, preview and verification limits](MAGE_MOTION_PILOT.md). Browser visual verification is outstanding because the browser tool's admin-policy check denied local access; exported videos are shared-renderer previews, not browser recordings. This candidate does not change the verified deployment described below.
+
+
 This page tracks current implementation and remaining work. Dated release notes preserve historical behavior and test results; their old limitations are not automatically current tasks. Latest approved user decisions take precedence over earlier plans. A difference between approved behavior and code remains a discrepancy, not a new product decision.
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).

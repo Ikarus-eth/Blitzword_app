@@ -1,0 +1,1172 @@
+{
+  "approvedReferences": {
+    "mage": {
+      "file": "assets/family-review/images/mage-boy-e.webp",
+      "sha256": "4ff01a15c578fd2cad2c5dce7be4918e67d7abf539510ca1a67a27146277b29a"
+    },
+    "thornling": {
+      "file": "assets/family-review/images/thornling-d.webp",
+      "sha256": "db02b68c919bdaf422211c3e13f0e3a46f3604ded43fea0d224ff59414b76c5d"
+    },
+    "golem": {
+      "file": "assets/family-review/images/moss-golem-b.webp",
+      "sha256": "570fdacd12b9f1c5defad182448527ff5de1d83d5a9e27236d379ec4cbd26bd1"
+    },
+    "beetle": {
+      "file": "assets/family-review/images/bark-beetle-c.webp",
+      "sha256": "78687aaa5a228da9d64f78af01705c6146c5bdc7cdcaaec8fb5bf1e03afda900"
+    }
+  },
+  "pipReference": {
+    "file": "assets/forest-characters.webp",
+    "crop": [
+      768,
+      630,
+      384,
+      370
+    ]
+  },
+  "posePreparationPrompts": {
+    "mage": "Extract and prepare this EXACT approved male mage character as a full-body 2D game character on transparent background. Preserve his specific face, brown wavy hair, costume, age, proportions, detailed storybook painting and the exact wooden branch staff. Face and torso in a readable three-quarter battle stance facing RIGHT, looking toward an opponent to the right. His staff is upright in his near hand on the LEFT side of the image, the amber flame ornament clearly visible. His other hand is relaxed at waist level, ready to cast toward the right. Feet firmly planted with natural knees. Preserve the full head, full staff, robe, boots and hands with enough clear margins for movement. No extra props, no scenery, no ground shadow, no text. Pose must be natural with a coherent grip and connected joints. This is still the same child mage from the reference, not redesigned.",
+    "golem": "Extract this EXACT moss golem as a transparent full body game character. Preserve every stone limb, chunky short legs, amber seams, moss and orange green foliage. Same painterly storybook design and proportions. Turn naturally into a readable three-quarter stance facing LEFT toward an opponent. Two solid arms and two legs, no extra limbs. Feet planted. Friendly determined amber eyes. Keep full body and foliage visible with clear margin. No background, no scenery, no ground shadow, no text, no visual effects.",
+    "beetle": "Extract this EXACT bark beetle as a transparent full-body game character. Keep its LEFT facing three-quarter side view, jewel green and bronze leaf armour, branching horns and all SIX anatomically connected legs with the same beautiful detailed painted storybook style. Same shape and proportions. A naturally planted ready stance. Entire beetle visible with generous margin around antennae horns and feet. No background, scenery, ground shadow, text or visual effects. Do not redesign or add eyes/limbs."
+  },
+  "pipOpenPosePrompt": "Edit this EXACT little orange dragon Pip into the end pose of breathing a short burst toward the RIGHT. Transparent full-body game character, same exact painterly style, face, golden horns, scales, four feet, wings, tail and proportions. His head remains upright at the SAME HEIGHT and looking directly RIGHT, parallel to the floor, NOT upward. His jaw is now clearly OPEN with a visible little tongue and small teeth, snout thrust slightly forward to the RIGHT. The upper head silhouette, eyes and horns stay in the original right-facing three-quarter view. Four feet firmly planted; wings stay attached and mostly folded. No fire, smoke, particles or scene. Do not redesign, stretch his face or add limbs. Clear transparent background, entire character visible.",
+  "sourceClips": {
+    "mage-cast": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c2-9545-7ef3-b222-9be5b52c7567",
+      "seed": 48130,
+      "resolution": "480p",
+      "prompt": "This young storybook mage faces RIGHT. He plants his boots, draws his free RIGHT-facing hand toward his chest, then thrusts his open palm firmly toward the RIGHT, casting a spell. The wooden staff stays gripped in the other hand on the left, upright and stable. Natural elbow, shoulder and wrist motion; cloak follows his shoulder. Confident focused expression. Hold the extended palm briefly then relax to the original stance. Do not render the spell itself. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "9275c11af18cbd92872e089268b047289e5a6b89eb518fe6b05a369e1fa3e135",
+      "reuseFromEarlierPilot": false
+    },
+    "mage-hit": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c2-a105-7e43-853d-ed62bc35196b",
+      "seed": 48131,
+      "resolution": "480p",
+      "prompt": "The storybook mage braces from a surprising gust from the RIGHT: he bends his knees, leans his whole torso slightly LEFT, raises his free forearm protectively and briefly closes his eyes, then stands straight again. His boots remain planted and his other hand keeps a firm grip on the upright staff. A harmless cartoon game reaction, healthy and unharmed. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "b18c1b883fdb124546a3dd5f4891f3192b0c5b1710698b812744f5d213db0da9",
+      "reuseFromEarlierPilot": false
+    },
+    "mage-defeat": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c2-abd6-7272-9be2-f177e9992e75",
+      "seed": 48132,
+      "resolution": "480p",
+      "prompt": "The storybook mage gently gives up a friendly game round. He lowers his shoulders, looks disappointed, kneels onto one knee while using the wooden staff for balance, and bows his head. He stays awake and unharmed. The action is graceful and anatomically natural. Hold the kneeling pose. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "eb21546056929c3a7b4337b351012a826bdddea53241e53b9af8445a791bce26",
+      "reuseFromEarlierPilot": false
+    },
+    "mage-victory": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c2-b60d-7103-824d-eeda9843ae47",
+      "seed": 48133,
+      "resolution": "480p",
+      "prompt": "The storybook mage smiles brightly and celebrates a game win with one small confident fist pump of his free hand. His other hand holds the same staff upright throughout. Natural shoulder, elbow and wrist bends. Boots stay planted, cloak softly follows the movement. Return to his original stance. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "0431a6824fba139d1823771847919e9ca7468602f46e259a4f14ff7c72800145",
+      "reuseFromEarlierPilot": false
+    },
+    "thornling-attack-v2": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f05a-f4bf-7802-999f-575124c9b04e",
+      "seed": 315000,
+      "resolution": "480p",
+      "prompt": "The thorn-backed hedgehog faces LEFT. It performs ONE short combat shoulder lunge to the LEFT: crouches to gather force, pushes off with its hind paws, bounds forward a short distance with its head low and thorn-covered shoulders leading, lands on its front paws, then steps backward to its original guard. A quick, weighty forward body check. Keep facing LEFT throughout. Feet move to support each phase.  Fixed camera, full body always in view, flat uniform blue screen. Preserve this exact painted woodland creature, its blue eye, muzzle, layered green leaves, ivory spikes and four anatomically connected paws. Clear coherent movement with solid weight and no deformation, no extra limbs or objects.",
+      "sourceVideoSHA256": "20efb2e9ab09ba6d3dc1582ab05d7083fccaf5dea0e88fc18c6766d0958b5f9b",
+      "reuseFromEarlierPilot": true
+    },
+    "thornling-hit-v2": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f05b-483d-7b62-b6dc-0f38e390d216",
+      "seed": 315001,
+      "resolution": "480p",
+      "prompt": "The thorn-backed hedgehog faces LEFT. It reacts ONCE to a small impact arriving from the LEFT. Keeping its paws on the floor, it pulls its head back and bends its front knees into a brief low crouch, bracing its hind paws. The thorn leaves shiver slightly after the impact. It then straightens and regains its original alert stance. Restrained grounded flinch, not a jump.  Fixed camera, full body always in view, flat uniform blue screen. Preserve this exact painted woodland creature, its blue eye, muzzle, layered green leaves, ivory spikes and four anatomically connected paws. Clear coherent movement with solid weight and no deformation, no extra limbs or objects.",
+      "sourceVideoSHA256": "ef3534e6be7e4a07d06dc33c3d6dfaa14d193816461f8720c6357fdb90f01670",
+      "reuseFromEarlierPilot": true
+    },
+    "thornling-defeat-v2": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f05b-6572-79e1-9355-25962fbef07b",
+      "seed": 315002,
+      "resolution": "480p",
+      "prompt": "The thorn-backed hedgehog faces LEFT. It gently admits defeat: its front knees slowly buckle, it lowers its chest and chin onto its front paws, then folds its hind legs and settles its body into a low resting pose with eyes closed and thorn leaves relaxed. It stays lying peacefully on the ground at the end. One continuous standing-to-rest movement, no getting back up, no disappearing, no rolling or flipping. Friendly storybook defeat with no injury.  Fixed camera, full body always in view, flat uniform blue screen. Preserve this exact painted woodland creature, its blue eye, muzzle, layered green leaves, ivory spikes and four anatomically connected paws. Clear coherent movement with solid weight and no deformation, no extra limbs or objects.",
+      "sourceVideoSHA256": "ec2cf7be119abe4792c7b3f3dbd0473d48d692bb5ec44af5897d4a365e2d0f54",
+      "reuseFromEarlierPilot": true
+    },
+    "thornling-victory-v2": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f05b-7b21-7891-a207-6d5847655942",
+      "seed": 315003,
+      "resolution": "480p",
+      "prompt": "The thorn-backed hedgehog faces LEFT. It celebrates a won game: lifts its head proudly, makes ONE small delighted hop while raising its forepaws, lands gently on all four paws, and settles into a proud alert pose with its chin raised. A cheerful expressive little victory, clearly connected legs and natural landing. Remain facing LEFT.  Fixed camera, full body always in view, flat uniform blue screen. Preserve this exact painted woodland creature, its blue eye, muzzle, layered green leaves, ivory spikes and four anatomically connected paws. Clear coherent movement with solid weight and no deformation, no extra limbs or objects.",
+      "sourceVideoSHA256": "18a6be58bf23945c9ba8e19caaaadc7c1f592536e466616cbf72c4a894ca86a8",
+      "reuseFromEarlierPilot": true
+    },
+    "golem-attack": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c2-d7c6-7221-8f91-011f729bc580",
+      "seed": 48134,
+      "resolution": "480p",
+      "prompt": "The moss stone golem faces LEFT and stays in place. It crouches with knees bent, raises both heavy stone fists, then firmly slams both fists downward into the invisible floor in front of itself, sending an imagined shock wave LEFT. Show the real joint articulation, compression and weight. No drawn wave or debris. Recover to the original upright stance. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "cc23256bfcee222760574c8f81280716480e8e2b6a047ef2ccdddeb1396767e6",
+      "reuseFromEarlierPilot": false
+    },
+    "golem-defeat": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c2-ef88-7bc1-bc70-a87957c3f2e7",
+      "seed": 48136,
+      "resolution": "480p",
+      "prompt": "The moss stone golem loses a friendly game round. Its amber eyes soften, its knees bend and it settles down into a seated resting crouch with both hands on the ground, head bowed. Remain intact with all limbs attached. Hold that compact resting pose. No disappearance or disintegration. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "6e68f7418bc3dbc19f5b9c24dff9b876cd24f885b233fd74c48245b2b341fd59",
+      "reuseFromEarlierPilot": false
+    },
+    "golem-victory": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c2-fa09-7f03-a446-c991511db316",
+      "seed": 48137,
+      "resolution": "480p",
+      "prompt": "The moss stone golem wins a friendly game round. It straightens proudly, raises both fists into a brief cheerful celebration, then lowers them and returns to the original standing pose. The moss and leaves move naturally with its arms. No steps or camera movement. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "83436bd952ed9bfe5ff286494545072eccb034ad3b6b2eac2c90a4131b4b5655",
+      "reuseFromEarlierPilot": false
+    },
+    "beetle-attack": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c3-07f6-77d0-84bb-01f39c7a9a4d",
+      "seed": 48138,
+      "resolution": "480p",
+      "prompt": "This leaf-armoured beetle faces LEFT. It lowers its head and horns, briefly crouches on its SIX connected legs, then scuttles briskly in place as if charging LEFT, with a natural alternating insect gait. Keep its body centred, no travel; game code will move it. Finally stop and recover the original stance. Do not fly or open its shell. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "322711f6218aa229df2438580b7b37b77cf878875b7746ec99536cbaacf35c1e",
+      "reuseFromEarlierPilot": false
+    },
+    "beetle-defeat": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c3-2094-7653-8fa4-160145c83da6",
+      "seed": 48140,
+      "resolution": "480p",
+      "prompt": "This leaf-armoured beetle loses a friendly game round. It gradually folds its six legs beneath its body, lowers its shell to the ground and dips its horns in a tired resting crouch. The beetle stays intact, eyes visible. Hold the lowered resting pose; do not vanish or roll over. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "07db9fe0f692489030e311a585247d6bebf9dd8e6fc4d13b219a80a8c3ac28d7",
+      "reuseFromEarlierPilot": false
+    },
+    "beetle-victory": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0c3-2ac8-7931-a31c-a80a6c2da931",
+      "seed": 48141,
+      "resolution": "480p",
+      "prompt": "The leaf-armoured beetle celebrates a game win: it lifts its two front legs and raises its horns triumphantly while balancing on the other four legs, then plants all six legs again in the original stance. One clear cheerful gesture, coherent insect anatomy, no shell opening or wings. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
+      "sourceVideoSHA256": "3db7d71ce481d98f9901508b2024aeb9c08015e1a066e2f8143d96c34863c5d3",
+      "reuseFromEarlierPilot": false
+    },
+    "pip-fire-v4": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0dd-03db-78f0-941c-21583a981bf3",
+      "seed": 48455,
+      "resolution": "480p",
+      "prompt": "The dragon keeps looking RIGHT with its head at exactly the same height. It slowly CLOSES its open mouth fully, then opens its mouth wide again toward the RIGHT. Clear natural lower-jaw motion, like taking one breath. Head and snout stay horizontal, no upward tilting. The whole dragon remains in place with all four feet planted. Wings make one very small natural twitch, then settle. Same exact face, horns, shape and proportions throughout, no morphing. Static full-body camera, unchanged flat saturated blue background. No flames, particles, effects, text, scenery or objects.",
+      "sourceVideoSHA256": "4efbff8e883d020b762bef69bf8270da08c9d842e612baf1dff52e56e93a943a",
+      "reuseFromEarlierPilot": false
+    },
+    "golem-hit-v2": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0cc-184d-7ba1-b726-1644ddee7af4",
+      "seed": 48335,
+      "resolution": "480p",
+      "prompt": "The solid moss golem stays facing LEFT in the EXACT three-quarter direction from the reference. One brief restrained defensive flinch: its two knees bend a little, its head dips slightly, and its two forearms rise only a little to protect the chest. Both fists stay in front of the same sides of the body, below the shoulders. Keep the torso rigid, feet planted and all stone parts firmly connected. Then straighten to exactly the original stance. No turn, no spin, no punch, no large arm swing, no disintegration or debris. Full body in frame throughout. Static camera. Flat saturated blue background stays completely unchanged. No scenery, particles, effects or text. Preserve the exact detailed storybook artwork.",
+      "sourceVideoSHA256": "ffa243f544c123b708ac6fb435dfc331f5f8287c0226f3ef5d47f4da5f09763c",
+      "reuseFromEarlierPilot": false
+    },
+    "beetle-hit-v2": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f0cc-01b9-78c3-a71c-dbc1ef8c0c0e",
+      "seed": 48339,
+      "resolution": "480p",
+      "prompt": "A small rigid leaf-armoured beetle, fixed three-quarter side view facing LEFT, reacts to one tiny bump. Keep its entire hard shell ABSOLUTELY RIGID with exactly the same contours, size, green bronze plates and proportions as the reference. Its connected six legs bend down a little together, lowering the body only a few centimetres, then extend again. Its head and horns dip slightly with the body. A single restrained flinch and recovery. No turn, no roll, no growth, no inflation, no opening shell, no wings. Keep its feet in the same places on the invisible floor. Full body in frame throughout. Static camera. Flat saturated blue background stays completely unchanged. No scenery, particles, effects or text. Preserve the exact detailed storybook artwork.",
+      "sourceVideoSHA256": "2ea3d8b3c58d0eef86c75c3d229156e0d2d7920f426552bb484611c5b258fb94",
+      "reuseFromEarlierPilot": false
+    }
+  },
+  "trimmedClips": {
+    "mage-cast": {
+      "source": "mage-cast",
+      "sourceIndices": [
+        0,
+        7,
+        13,
+        20,
+        27,
+        37,
+        49,
+        60,
+        71,
+        79,
+        86,
+        93,
+        94,
+        94,
+        94,
+        94,
+        94,
+        94,
+        94,
+        94,
+        94,
+        94,
+        93,
+        89,
+        85,
+        81,
+        72,
+        62,
+        53,
+        43,
+        33,
+        26,
+        20,
+        13,
+        7,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.12,
+          28
+        ],
+        [
+          0.23,
+          72
+        ],
+        [
+          0.32,
+          94
+        ],
+        [
+          0.62,
+          94
+        ],
+        [
+          0.72,
+          80
+        ],
+        [
+          0.86,
+          32
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "mage-hit": {
+      "source": "mage-hit",
+      "sourceIndices": [
+        0,
+        5,
+        9,
+        14,
+        19,
+        23,
+        28,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        29,
+        26,
+        23,
+        20,
+        17,
+        14,
+        12,
+        9,
+        6,
+        3,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.3,
+          32
+        ],
+        [
+          0.52,
+          32
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "mage-defeat": {
+      "source": "mage-defeat",
+      "sourceIndices": [
+        0,
+        3,
+        6,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        25,
+        28,
+        31,
+        34,
+        37,
+        40,
+        42,
+        45,
+        48,
+        51,
+        52,
+        52,
+        52,
+        52,
+        52
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.8,
+          52
+        ],
+        [
+          1,
+          52
+        ]
+      ]
+    },
+    "mage-victory": {
+      "source": "mage-victory",
+      "sourceIndices": [
+        0,
+        2,
+        4,
+        6,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        26,
+        28,
+        30,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        30,
+        28,
+        26,
+        23,
+        21,
+        19,
+        17,
+        15,
+        13,
+        11,
+        9,
+        6,
+        4,
+        2,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.32,
+          32
+        ],
+        [
+          0.68,
+          32
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "thornling-attack": {
+      "source": "thornling-attack-v2",
+      "sourceIndices": [
+        0,
+        2,
+        5,
+        7,
+        10,
+        12,
+        14,
+        17,
+        19,
+        21,
+        24,
+        26,
+        29,
+        31,
+        34,
+        36,
+        39,
+        41,
+        44,
+        46,
+        48,
+        50,
+        51,
+        52,
+        50,
+        45,
+        41,
+        36,
+        32,
+        27,
+        23,
+        18,
+        14,
+        9,
+        5,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.24,
+          20
+        ],
+        [
+          0.59,
+          50
+        ],
+        [
+          0.67,
+          52
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "thornling-hit": {
+      "source": "thornling-hit-v2",
+      "sourceIndices": [
+        0,
+        4,
+        8,
+        11,
+        15,
+        19,
+        23,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        24,
+        21,
+        19,
+        16,
+        14,
+        12,
+        9,
+        7,
+        5,
+        2,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.3,
+          26
+        ],
+        [
+          0.52,
+          26
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "thornling-defeat": {
+      "source": "thornling-defeat-v2",
+      "sourceIndices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31,
+        35,
+        38,
+        42,
+        45,
+        49,
+        52,
+        56,
+        59,
+        63,
+        66,
+        68,
+        68,
+        68,
+        68
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.85,
+          68
+        ],
+        [
+          1,
+          68
+        ]
+      ]
+    },
+    "thornling-victory": {
+      "source": "thornling-victory-v2",
+      "sourceIndices": [
+        0,
+        4,
+        9,
+        13,
+        17,
+        21,
+        26,
+        30,
+        34,
+        38,
+        43,
+        47,
+        51,
+        55,
+        60,
+        64,
+        68,
+        72,
+        77,
+        80,
+        83,
+        85,
+        87,
+        89,
+        92,
+        94,
+        96,
+        98,
+        100,
+        103,
+        102,
+        96,
+        90,
+        84,
+        78,
+        72,
+        66,
+        60,
+        54,
+        48,
+        42,
+        36,
+        30,
+        24,
+        18,
+        12,
+        6,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.4,
+          80
+        ],
+        [
+          0.63,
+          104
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "golem-attack": {
+      "source": "golem-attack",
+      "sourceIndices": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        17,
+        20,
+        24,
+        27,
+        30,
+        33,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        33,
+        31,
+        28,
+        26,
+        24,
+        21,
+        19,
+        17,
+        14,
+        12,
+        9,
+        7,
+        5,
+        2,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.2,
+          14
+        ],
+        [
+          0.38,
+          34
+        ],
+        [
+          0.59,
+          34
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "golem-defeat": {
+      "source": "golem-defeat",
+      "sourceIndices": [
+        0,
+        2,
+        4,
+        6,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.75,
+          32
+        ],
+        [
+          1,
+          32
+        ]
+      ]
+    },
+    "golem-victory": {
+      "source": "golem-victory",
+      "sourceIndices": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        9,
+        10,
+        12,
+        14,
+        15,
+        17,
+        19,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        19,
+        18,
+        17,
+        16,
+        15,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.25,
+          20
+        ],
+        [
+          0.62,
+          20
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "beetle-attack": {
+      "source": "beetle-attack",
+      "sourceIndices": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        13,
+        16,
+        19,
+        22,
+        25,
+        28,
+        31,
+        34,
+        37,
+        41,
+        44,
+        47,
+        50,
+        53,
+        56,
+        57,
+        52,
+        47,
+        43,
+        38,
+        33,
+        28,
+        24,
+        19,
+        14,
+        9,
+        5,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.18,
+          8
+        ],
+        [
+          0.65,
+          58
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "beetle-defeat": {
+      "source": "beetle-defeat",
+      "sourceIndices": [
+        0,
+        3,
+        5,
+        8,
+        10,
+        13,
+        16,
+        18,
+        21,
+        23,
+        26,
+        29,
+        31,
+        34,
+        37,
+        39,
+        42,
+        44,
+        47,
+        48,
+        48,
+        48,
+        48,
+        48
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.8,
+          48
+        ],
+        [
+          1,
+          48
+        ]
+      ]
+    },
+    "beetle-victory": {
+      "source": "beetle-victory",
+      "sourceIndices": [
+        0,
+        2,
+        5,
+        7,
+        10,
+        12,
+        15,
+        17,
+        19,
+        22,
+        24,
+        27,
+        29,
+        32,
+        34,
+        36,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        39,
+        36,
+        34,
+        32,
+        29,
+        27,
+        24,
+        22,
+        19,
+        17,
+        15,
+        12,
+        10,
+        7,
+        5,
+        2,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.35,
+          40
+        ],
+        [
+          0.65,
+          40
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "pip-fire": {
+      "source": "pip-fire-v4",
+      "sourceIndices": [
+        24,
+        26,
+        28,
+        30,
+        32,
+        31,
+        29,
+        27,
+        26,
+        24,
+        20,
+        15,
+        11,
+        6,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ],
+      "curve": [
+        [
+          0,
+          24
+        ],
+        [
+          0.12,
+          32
+        ],
+        [
+          0.26,
+          24
+        ],
+        [
+          0.36,
+          8
+        ],
+        [
+          0.42,
+          0
+        ],
+        [
+          0.62,
+          0
+        ],
+        [
+          0.83,
+          12
+        ],
+        [
+          1,
+          24
+        ]
+      ]
+    },
+    "golem-hit": {
+      "source": "golem-hit-v2",
+      "sourceIndices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        22,
+        20,
+        17,
+        15,
+        13,
+        11,
+        9,
+        7,
+        4,
+        2,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.3,
+          24
+        ],
+        [
+          0.52,
+          24
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "beetle-hit": {
+      "source": "beetle-hit-v2",
+      "sourceIndices": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.3,
+          10
+        ],
+        [
+          0.52,
+          10
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  },
+  "processing": "Flat-blue chroma matte; whole-frame source selection; fixed character coordinates; alpha WebP atlases; shared Canvas renderer. No anatomical mesh warping."
+}

@@ -1,0 +1,169 @@
+{
+  "checkedAtUTC": "2026-09-30T06:02:48.779375+00:00",
+  "baseMain": "97b8a3a",
+  "deployed": false,
+  "coreAndUnitTests": {
+    "passed": 271,
+    "failed": 0
+  },
+  "uiFlowGroups": {
+    "passed": 94,
+    "failed": 0
+  },
+  "browserVisualCheck": {
+    "status": "blocked",
+    "reason": "Browser tool denied local access because its admin-enforced security policy could not be verified. No bypass attempted.",
+    "url": "http://127.0.0.1:8767/tests/review-app.html?scene=attack-mage&motion=play"
+  },
+  "physicalIPadSafari": "not tested",
+  "previewMethod": "Offline Canvas export using production drawBattle, timeline and sprite atlases; UI recreated from current CSS. Not a browser recording.",
+  "assetBytes": 15306135,
+  "assets": {
+    "assets/battle-motion/beetle-still.webp": {
+      "bytes": 31680,
+      "sha256": "dbc7be256d8a9a4884b282a42650c9aa5149f376a6390baeaa95bc5bf37e356d"
+    },
+    "assets/battle-motion/thornling-attack.webp": {
+      "bytes": 1028252,
+      "sha256": "ccea5795c5610b5f25bdcfcadd1059b6c62037f38572fbabe9454e9ee23929ac"
+    },
+    "assets/battle-motion/beetle-attack.webp": {
+      "bytes": 850950,
+      "sha256": "fa99d556d8a80227cb21b7804b26f4aa4827889add906db8fc4ebf789bd9aa84"
+    },
+    "assets/battle-motion/golem-victory.webp": {
+      "bytes": 1710104,
+      "sha256": "47446843c5d8468af35057a713837a46add8ba4e2f661d60d51cf344883fbf32"
+    },
+    "assets/battle-motion/mage-cast.webp": {
+      "bytes": 938894,
+      "sha256": "f7567a7b2929d626aa043f9739d5373fab0127caf352ef3a9babccc6dd14a4aa"
+    },
+    "assets/battle-motion/mage-defeat.webp": {
+      "bytes": 461690,
+      "sha256": "0df7edaa5a590111bc993fa425567e89521409ec4d3fba5e4f3f7758b7d22df0"
+    },
+    "assets/battle-motion/thornling-hit.webp": {
+      "bytes": 609260,
+      "sha256": "8eb8c7fcd326832899416d37ede9e14acbdfad657bc7ec92b00c8e1fb619cfce"
+    },
+    "assets/battle-motion/manifest.js": {
+      "bytes": 3250,
+      "sha256": "c6e12d9b3e2a32b523130e68ef33c42fb5243eb9718e8ea6a3573f14db75a05f"
+    },
+    "assets/battle-motion/thornling-victory.webp": {
+      "bytes": 1373558,
+      "sha256": "ea98b66b19dd59b585e27e437d4908eb29685447e548fc6572b7d0cff51a4082"
+    },
+    "assets/battle-motion/golem-defeat.webp": {
+      "bytes": 696918,
+      "sha256": "c5cf774db0a27dc820eaa82a38c922b8bcceec5764fe6f89aa9b98dff9f10e2c"
+    },
+    "assets/battle-motion/golem-still.webp": {
+      "bytes": 51832,
+      "sha256": "c30a2852e2dbd2bf87dce90d7bc74d6459bc8228e1f705b55e8af0d393caa7d7"
+    },
+    "assets/battle-motion/mage-still.webp": {
+      "bytes": 35702,
+      "sha256": "b97dad63e14226f2903fe9706fc134fb792dc925beaf99aa5c4e16b05ca47ce3"
+    },
+    "assets/battle-motion/manifest.json": {
+      "bytes": 6313,
+      "sha256": "7111c62904764e10ada903764ba010784b052887858b138889e6e6fdc47056a8"
+    },
+    "assets/battle-motion/thornling-defeat.webp": {
+      "bytes": 587522,
+      "sha256": "0d4ebc91352219deefd59d52b6c69dd92b87f993fd7eb962c1ca6f32b3dd24da"
+    },
+    "assets/battle-motion/pip-fire.webp": {
+      "bytes": 937896,
+      "sha256": "7a38f35563a968aa8f2a0b84a35ffe23c87147d16dd01f1e29d5acce183e49e1"
+    },
+    "assets/battle-motion/mage-victory.webp": {
+      "bytes": 1176836,
+      "sha256": "0cdd411a64c155aa1939fa81b1005bc5a4de674c0742d11bb6fdac7d30c30a46"
+    },
+    "assets/battle-motion/golem-attack.webp": {
+      "bytes": 1147690,
+      "sha256": "ded3bbdfd527b6d21689a2ede502702ba3529f1fb413c0613928825231dfab55"
+    },
+    "assets/battle-motion/pip-still.webp": {
+      "bytes": 37616,
+      "sha256": "0f04a4ece60963c3627d6fbe63a1c54be660fbeb70ca0bbdd44d8b3b863af188"
+    },
+    "assets/battle-motion/beetle-victory.webp": {
+      "bytes": 1166806,
+      "sha256": "04e4900bc725aa5efaaadf805ec2a675eb5a09bb904ad62eb7c8b612eac91bdb"
+    },
+    "assets/battle-motion/mage-hit.webp": {
+      "bytes": 596040,
+      "sha256": "5c4b1d8ac046c25ea0e53a69eb112557a2d0f5dd05003447a06713cf3aa310c8"
+    },
+    "assets/battle-motion/thornling-still.webp": {
+      "bytes": 42212,
+      "sha256": "f6d1e1ca146c227fc47c02e95860124878b908bbb65be4a124b55a6fb318a965"
+    },
+    "assets/battle-motion/beetle-hit.webp": {
+      "bytes": 497688,
+      "sha256": "eb77d9c22bc1356d305cd5ce569628af56b366bfd60b582208f49fa0405cd99a"
+    },
+    "assets/battle-motion/golem-hit.webp": {
+      "bytes": 828066,
+      "sha256": "448dc3ad42573e62bae54f13f17a43500a8387dca5d1e41cb6b9c43565794480"
+    },
+    "assets/battle-motion/beetle-defeat.webp": {
+      "bytes": 489360,
+      "sha256": "5a12ddb149abf4d7daa51bcd48a4cbef6eb6f8adf69ceea2bdc9213b8ac64da0"
+    }
+  },
+  "videoExports": [
+    {
+      "enemy": "thornling",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1024,
+          "height": 768,
+          "r_frame_rate": "60/1"
+        }
+      ],
+      "format": {
+        "duration": "14.000000",
+        "size": "4437342"
+      }
+    },
+    {
+      "enemy": "golem",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1024,
+          "height": 768,
+          "r_frame_rate": "60/1"
+        }
+      ],
+      "format": {
+        "duration": "14.000000",
+        "size": "4542985"
+      }
+    },
+    {
+      "enemy": "beetle",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1024,
+          "height": 768,
+          "r_frame_rate": "60/1"
+        }
+      ],
+      "format": {
+        "duration": "18.000000",
+        "size": "4805981"
+      }
+    }
+  ]
+}

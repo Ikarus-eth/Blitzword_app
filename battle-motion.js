@@ -54,7 +54,16 @@ function timeline(ms,{correct=true,enemy='thornling',defeated=false,heroDefeated
 function drawEffects(ctx,s,{start,end,ground,assistStart,heroTarget,correct=true,shield=false}){
   ctx.save();ctx.lineCap='round';
   function bolt(a,b,p,color){if(p<=0)return;const x=a.x+(b.x-a.x)*p,y=a.y+(b.y-a.y)*p,tail=Math.max(0,p-.23);ctx.shadowColor=color;ctx.shadowBlur=15;ctx.strokeStyle=color;ctx.lineWidth=8;ctx.beginPath();ctx.moveTo(a.x+(b.x-a.x)*tail,a.y+(b.y-a.y)*tail);ctx.lineTo(x,y);ctx.stroke();ctx.fillStyle='#fff8d7';ctx.beginPath();ctx.arc(x,y,5,0,Math.PI*2);ctx.fill();}
-  if(correct){bolt(start,end,s.spell,'#ffca59');if(s.flame>0&&assistStart){ctx.globalAlpha=.8;bolt(assistStart,end,s.flame,'#ff842a');ctx.globalAlpha=1;}}
+  if(correct){
+    bolt(start,end,s.spell,'#ffca59');
+    if(s.flame>0&&assistStart){
+      const dx=end.x-assistStart.x,dy=end.y-assistStart.y,length=Math.hypot(dx,dy)*s.flame,width=9+13*s.flame;
+      ctx.save();ctx.translate(assistStart.x,assistStart.y);ctx.rotate(Math.atan2(dy,dx));ctx.shadowColor='#ff8326';ctx.shadowBlur=12;
+      const fire=ctx.createLinearGradient(0,0,length,0);fire.addColorStop(0,'#fff3aa');fire.addColorStop(.35,'#ffd44a');fire.addColorStop(1,'#fa6020');ctx.fillStyle=fire;
+      ctx.beginPath();ctx.moveTo(0,-3);ctx.bezierCurveTo(length*.25,-width,length*.55,-width*.6,length*.78,-width);ctx.quadraticCurveTo(length*.91,-width*.7,length,0);ctx.quadraticCurveTo(length*.8,width,length*.66,width*.6);ctx.quadraticCurveTo(length*.2,width,0,3);ctx.fill();
+      ctx.fillStyle='#fff8c9';ctx.beginPath();ctx.moveTo(0,-2);ctx.quadraticCurveTo(length*.45,-width*.4,length*.87,0);ctx.quadraticCurveTo(length*.35,width*.35,0,2);ctx.fill();ctx.restore();
+    }
+  }
   else if(s.shock>0){const x=end.x+(heroTarget.x-end.x)*s.shock,y=ground;ctx.strokeStyle='#ffc366';ctx.shadowColor='#ffb636';ctx.shadowBlur=10;ctx.lineWidth=5;ctx.beginPath();ctx.ellipse(x,y,22,13,0,Math.PI,Math.PI*2);ctx.stroke();}
   if(s.impact>0){const p=correct?end:heroTarget;ctx.globalAlpha=s.impact;ctx.strokeStyle=shield?'#bcf5ed':'#fff0a0';ctx.lineWidth=3;ctx.shadowBlur=10;ctx.shadowColor='#ffe583';ctx.beginPath();ctx.arc(p.x,p.y,10+30*(1-s.impact),0,Math.PI*2);ctx.stroke();for(let i=0;i<8;i++){const angle=i*Math.PI/4,r=14+32*(1-s.impact);ctx.beginPath();ctx.moveTo(p.x+Math.cos(angle)*r,p.y+Math.sin(angle)*r);ctx.lineTo(p.x+Math.cos(angle)*(r+9),p.y+Math.sin(angle)*(r+9));ctx.stroke();}}
   ctx.restore();
@@ -70,10 +79,10 @@ function run(container,actors,duration,draw,hold=false){
   const images={};for(const a of actors){if(!ready(a.key,a.clip))return false;for(const url of asset(a.key).clips[a.clip].sheets)images[url]=cache.get(url).image;a.rect=rect(a.element,box);}
   container.append(canvas);ctx.scale(dpr,dpr);
   const old=actors.map(a=>[a.element,a.element.style.visibility]);for(const [el]of old)el.style.visibility='hidden';
-  let id,start,stopped=false;
+  let id,start=root.performance?.now?.(),stopped=false;
   const stop=()=>{if(stopped)return;stopped=true;root.cancelAnimationFrame(id);canvas.remove();for(const [el,value]of old)el.style.visibility=value;active.delete(stop);};active.add(stop);
   function tick(now){if(stopped)return;if(!container.isConnected||root.document.hidden){stop();return;}start??=now;const ms=now-start;ctx.clearRect(0,0,box.width,box.height);draw(ctx,images,Math.min(ms,duration),actors,box);if(ms<duration)id=root.requestAnimationFrame(tick);else if(!hold)stop();}
-  id=root.requestAnimationFrame(tick);return true;
+  draw(ctx,images,0,actors,box);id=root.requestAnimationFrame(tick);return true;
 }
 function reaction({container,hero,enemy,pip,correct,defeated,heroDefeated,assist,shield}){
   const hk=hero?.dataset.motionActor,ek=enemy?.dataset.motionActor,pk=pip?.dataset.motionActor;

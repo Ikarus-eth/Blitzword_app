@@ -19,8 +19,8 @@ function boot(saved,options={}){
  if(options.motion){
    window.requestAnimationFrame=fn=>schedule(()=>fn(now),16);window.cancelAnimationFrame=id=>jobs.delete(id);
    const FakeImage=class{set src(url){this.url=url;if(options.failedMotion)this.onerror?.();else this.onload?.();}};
-   const motionContext={...ctx,window:new Proxy(window,{get:(target,key)=>key==='Image'?FakeImage:Reflect.get(target,key)})};
-   const create=document.createElement.bind(document);document.createElement=(tag,...args)=>{const el=create(tag,...args);if(tag==='canvas')el.getContext=()=>new Proxy({drawImage(image){motionDraws.push(image.url);}}, {get:(obj,key)=>obj[key]||(()=>{})});return el;};
+   const motionContext={...ctx,window:new Proxy(window,{get:(target,key)=>key==='Image'?FakeImage:key==='performance'?ctx.performance:Reflect.get(target,key)})};
+   const create=document.createElement.bind(document);document.createElement=(tag,...args)=>{const el=create(tag,...args);if(tag==='canvas')el.getContext=()=>new Proxy({drawImage(image){motionDraws.push(image.url);},createLinearGradient(){return {addColorStop(){}};}}, {get:(obj,key)=>obj[key]||(()=>{})});return el;};
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/manifest.js','utf8'),motionContext);
    vm.runInNewContext(fs.readFileSync(root+'battle-motion.js','utf8'),motionContext);
  }
@@ -1051,3 +1051,11 @@ console.log('PASS unavailable frame images and reduced motion preserve feedback,
  assert.ok(ui.motionDraws.some(url=>url.includes('mage-defeat')));ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);
 }
 console.log('PASS a single beetle retires at impact and a final-heart mage defeat holds until navigation');
+
+{
+ const s=motionSave('thornling--3');s.battle.enemyHealth=1;const ui=boot(s,{motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));ui.finishSpeech();ui.elapse(550);
+ assert.ok(ui.motionDraws.some(url=>url.includes('pip-fire')),'Pip uses aimed whole-frame fire pose');assert.equal(ui.get('enemyCount').textContent,'1 / 18');
+ ui.elapse(150);assert.equal(ui.get('enemyCount').textContent,'0 / 18');assert.equal(ui.state().campaign.battleRecords.length,1);ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);
+}
+console.log('PASS Pip finisher joins one saved hit and stops with the rest of the reaction');
