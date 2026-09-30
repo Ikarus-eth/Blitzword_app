@@ -15,6 +15,15 @@ function boot(saved,options={}){
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>!options.pendingImages,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
  let speechEnd=null;const speechTexts=[];
  const ctx={Math:Object.assign(Object.create(Math),{random:options.random||Math.random}),window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;},assign(url){destinations.push(url);}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ const motionDraws=[];
+ if(options.motion){
+   window.requestAnimationFrame=fn=>schedule(()=>fn(now),16);window.cancelAnimationFrame=id=>jobs.delete(id);
+   const FakeImage=class{set src(url){this.url=url;if(options.failedMotion)this.onerror?.();else this.onload?.();}};
+   const motionContext={...ctx,window:new Proxy(window,{get:(target,key)=>key==='Image'?FakeImage:Reflect.get(target,key)})};
+   const create=document.createElement.bind(document);document.createElement=(tag,...args)=>{const el=create(tag,...args);if(tag==='canvas')el.getContext=()=>new Proxy({drawImage(image){motionDraws.push(image.url);}}, {get:(obj,key)=>obj[key]||(()=>{})});return el;};
+   vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/manifest.js','utf8'),motionContext);
+   vm.runInNewContext(fs.readFileSync(root+'battle-motion.js','utf8'),motionContext);
+ }
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -25,7 +34,7 @@ function boot(saved,options={}){
  function resume(){const map=get('campaignMap').classList.contains('active');assert.ok(map||get('route').classList.contains('active'));click(get(map?'mapContinue':'continueAdventure'));}
  function advance(ms,suspended=false){if(suspended){now+=ms;heartbeat();}else for(let elapsed=0;elapsed<ms;elapsed+=1000){now+=Math.min(1000,ms-elapsed);heartbeat();}}
  function visibility(hidden){Object.defineProperty(document,'hidden',{value:hidden,configurable:true});document.dispatchEvent(new window.Event('visibilitychange'));}
- return {destinations,state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
+ return {motionDraws,destinations,state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
 }
 // Independent reading of the written-number parent gate for dashboard flow tests.
 function parentGateAnswer(ui){
@@ -1007,3 +1016,38 @@ console.log('PASS last group member resolves exactly once, including reduced mot
  const blocked=boot(impactSave());blocked.setFailWrites(true);blocked.click(blocked.get('mapStoryPilot'));assert.deepEqual(blocked.destinations,[]);
  console.log('PASS story pilot map entry saves existing adventure and blocks on save failure');
 }
+
+// New whole-frame rendering still runs through the real answer and cancellation handlers.
+function motionSave(enemy){const s=impactSave(enemy),hp={'thornling--3':18,'moss-golem--3':24,'bark-beetle--2':12}[enemy],now=Date.UTC(2026,8,22);Core.startBattle(s,now,{strength:hp,enemyId:enemy});s.battle.introPending=false;Core.prepareBattle(s,now);return s;}
+for(const enemy of ['thornling--3','moss-golem--3','bark-beetle--2'])for(const correct of [true,false]){
+ const s=motionSave(enemy),hp=s.battle.maxHealth,ui=boot(s,{motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();
+ assert.equal(ui.get('battleHeroImg').dataset.motionActor,'mage');
+ assert.equal(ui.document.querySelector('.motionOverlay'),null,'reading must be still');
+ const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>correct?b.textContent===q.target:b.textContent!==q.target));ui.finishSpeech();
+ assert.ok(ui.document.querySelector('.motionOverlay'),'whole-frame animation should start after narration');ui.elapse(500);
+ assert.equal(ui.get('enemyCount').textContent,hp+' / '+hp);assert.ok(ui.motionDraws.length>0);
+ ui.elapse(200);assert.equal(ui.get('enemyCount').textContent,(correct?hp-1:hp)+' / '+hp);
+ if(enemy==='bark-beetle--2')assert.equal(ui.get('enemyFace').querySelectorAll('.memberMotion[style*="hidden"]').length,1,'only the active member is replaced by animated frames');
+ ui.click(ui.get('pauseBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);ui.elapse(1500);assert.equal(ui.document.querySelector('.motionOverlay'),null);
+ assert.equal(ui.state().campaign.battleRecords.length,1);
+}
+console.log('PASS whole-frame mage and three enemies use the real one-hit timeline and stop on Pause');
+for(const options of [{failedMotion:true},{reducedMotion:true}]){
+ const ui=boot(motionSave('bark-beetle--2'),{...options,motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));ui.finishSpeech();assert.equal(ui.document.querySelector('.motionOverlay'),null);ui.elapse(700);assert.equal(ui.state().battle.enemyHealth,11);
+}
+console.log('PASS unavailable frame images and reduced motion preserve feedback, saved damage and progression');
+
+{
+ const s=motionSave('bark-beetle--2');s.battle.enemyHealth=9;const ui=boot(s,{motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));ui.finishSpeech();ui.elapse(500);assert.equal(ui.get('enemyFace').querySelectorAll('.retired').length,0);
+ ui.elapse(200);assert.equal(ui.get('enemyFace').querySelectorAll('.retired').length,1);assert.equal(ui.get('enemyCount').textContent,'8 / 12');
+ ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);assert.equal(ui.state().battle.enemyHealth,8);
+}
+{
+ const s=motionSave('moss-golem--3');s.battle.heroHealth=1;const ui=boot(s,{motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));ui.finishSpeech();ui.elapse(1450);
+ assert.equal(ui.state().battle.heroHealth,0);assert.ok(ui.document.querySelector('.motionOverlay'),'kneeling defeat holds until the learner continues');
+ assert.ok(ui.motionDraws.some(url=>url.includes('mage-defeat')));ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);
+}
+console.log('PASS a single beetle retires at impact and a final-heart mage defeat holds until navigation');

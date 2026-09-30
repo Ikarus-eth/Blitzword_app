@@ -1,0 +1,365 @@
+{
+  "beetle": {
+    "view": [
+      72,
+      186,
+      368,
+      262
+    ],
+    "still": "assets/battle-motion/beetle-still.webp",
+    "target": [
+      268,
+      315
+    ],
+    "front": [
+      48,
+      345
+    ],
+    "clips": {
+      "attack": {
+        "frames": 36,
+        "cols": 6,
+        "perSheet": 36,
+        "tileW": 406,
+        "tileH": 221,
+        "crop": [
+          4,
+          184,
+          508,
+          276
+        ],
+        "sheets": [
+          "assets/battle-motion/beetle-attack.webp"
+        ]
+      },
+      "hit": {
+        "frames": 24,
+        "cols": 6,
+        "perSheet": 24,
+        "tileW": 314,
+        "tileH": 213,
+        "crop": [
+          70,
+          186,
+          392,
+          266
+        ],
+        "sheets": [
+          "assets/battle-motion/beetle-hit.webp"
+        ]
+      },
+      "defeat": {
+        "frames": 24,
+        "cols": 6,
+        "perSheet": 24,
+        "tileW": 318,
+        "tileH": 221,
+        "crop": [
+          66,
+          186,
+          398,
+          276
+        ],
+        "sheets": [
+          "assets/battle-motion/beetle-defeat.webp"
+        ]
+      },
+      "victory": {
+        "frames": 48,
+        "cols": 6,
+        "perSheet": 48,
+        "tileW": 333,
+        "tileH": 339,
+        "crop": [
+          46,
+          28,
+          416,
+          424
+        ],
+        "sheets": [
+          "assets/battle-motion/beetle-victory.webp"
+        ]
+      }
+    }
+  },
+  "pip": {
+    "view": [
+      170,
+      290,
+      172,
+      160
+    ],
+    "still": "assets/battle-motion/pip-still.webp",
+    "mouth": [
+      398,
+      305
+    ],
+    "clips": {
+      "fire": {
+        "frames": 36,
+        "cols": 6,
+        "perSheet": 36,
+        "tileW": 202,
+        "tileH": 162,
+        "crop": [
+          114,
+          250,
+          252,
+          202
+        ],
+        "sheets": [
+          "assets/battle-motion/pip-fire.webp"
+        ]
+      }
+    }
+  },
+  "mage": {
+    "view": [
+      116,
+      40,
+      280,
+      410
+    ],
+    "still": "assets/battle-motion/mage-still.webp",
+    "spell": [
+      409,
+      211
+    ],
+    "target": [
+      260,
+      276
+    ],
+    "clips": {
+      "cast": {
+        "frames": 36,
+        "cols": 6,
+        "perSheet": 36,
+        "tileW": 283,
+        "tileH": 336,
+        "crop": [
+          70,
+          32,
+          354,
+          420
+        ],
+        "sheets": [
+          "assets/battle-motion/mage-cast.webp"
+        ]
+      },
+      "hit": {
+        "frames": 24,
+        "cols": 6,
+        "perSheet": 24,
+        "tileW": 261,
+        "tileH": 336,
+        "crop": [
+          114,
+          32,
+          326,
+          420
+        ],
+        "sheets": [
+          "assets/battle-motion/mage-hit.webp"
+        ]
+      },
+      "defeat": {
+        "frames": 24,
+        "cols": 6,
+        "perSheet": 24,
+        "tileW": 366,
+        "tileH": 360,
+        "crop": [
+          4,
+          8,
+          458,
+          450
+        ],
+        "sheets": [
+          "assets/battle-motion/mage-defeat.webp"
+        ]
+      },
+      "victory": {
+        "frames": 48,
+        "cols": 6,
+        "perSheet": 48,
+        "tileW": 238,
+        "tileH": 331,
+        "crop": [
+          108,
+          38,
+          298,
+          414
+        ],
+        "sheets": [
+          "assets/battle-motion/mage-victory.webp"
+        ]
+      }
+    }
+  },
+  "golem": {
+    "view": [
+      68,
+      42,
+      368,
+      406
+    ],
+    "still": "assets/battle-motion/golem-still.webp",
+    "target": [
+      240,
+      245
+    ],
+    "front": [
+      94,
+      335
+    ],
+    "clips": {
+      "attack": {
+        "frames": 36,
+        "cols": 6,
+        "perSheet": 36,
+        "tileW": 331,
+        "tileH": 341,
+        "crop": [
+          30,
+          40,
+          414,
+          426
+        ],
+        "sheets": [
+          "assets/battle-motion/golem-attack.webp"
+        ]
+      },
+      "hit": {
+        "frames": 24,
+        "cols": 6,
+        "perSheet": 24,
+        "tileW": 322,
+        "tileH": 330,
+        "crop": [
+          42,
+          40,
+          402,
+          412
+        ],
+        "sheets": [
+          "assets/battle-motion/golem-hit.webp"
+        ]
+      },
+      "defeat": {
+        "frames": 24,
+        "cols": 6,
+        "perSheet": 24,
+        "tileW": 362,
+        "tileH": 328,
+        "crop": [
+          20,
+          40,
+          452,
+          410
+        ],
+        "sheets": [
+          "assets/battle-motion/golem-defeat.webp"
+        ]
+      },
+      "victory": {
+        "frames": 48,
+        "cols": 6,
+        "perSheet": 48,
+        "tileW": 384,
+        "tileH": 344,
+        "crop": [
+          18,
+          20,
+          480,
+          430
+        ],
+        "sheets": [
+          "assets/battle-motion/golem-victory.webp"
+        ]
+      }
+    }
+  },
+  "thornling": {
+    "view": [
+      46,
+      120,
+      422,
+      284
+    ],
+    "still": "assets/battle-motion/thornling-still.webp",
+    "target": [
+      218,
+      255
+    ],
+    "front": [
+      58,
+      305
+    ],
+    "clips": {
+      "attack": {
+        "frames": 36,
+        "cols": 6,
+        "perSheet": 36,
+        "tileW": 380,
+        "tileH": 233,
+        "crop": [
+          0,
+          118,
+          475,
+          291
+        ],
+        "sheets": [
+          "assets/battle-motion/thornling-attack.webp"
+        ]
+      },
+      "hit": {
+        "frames": 24,
+        "cols": 6,
+        "perSheet": 24,
+        "tileW": 379,
+        "tileH": 232,
+        "crop": [
+          0,
+          116,
+          474,
+          290
+        ],
+        "sheets": [
+          "assets/battle-motion/thornling-hit.webp"
+        ]
+      },
+      "defeat": {
+        "frames": 24,
+        "cols": 6,
+        "perSheet": 24,
+        "tileW": 371,
+        "tileH": 230,
+        "crop": [
+          8,
+          118,
+          464,
+          288
+        ],
+        "sheets": [
+          "assets/battle-motion/thornling-defeat.webp"
+        ]
+      },
+      "victory": {
+        "frames": 48,
+        "cols": 6,
+        "perSheet": 48,
+        "tileW": 355,
+        "tileH": 290,
+        "crop": [
+          42,
+          44,
+          444,
+          362
+        ],
+        "sheets": [
+          "assets/battle-motion/thornling-victory.webp"
+        ]
+      }
+    }
+  }
+}

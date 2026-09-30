@@ -26,6 +26,7 @@ const mageRig={
   3:{pivot:[1430,230],tip:[1453,100],path:'M1413 25H1520V179L1460 211L1450 248L1378 532H1361L1420 250L1410 239L1415 213L1433 183L1413 169Z',repair:'M1420 250L1450 248L1378 532H1361Z'}
 };
 function paintSprite(element,index) {
+  delete element.dataset.motionActor;
   const crop=spriteCrops[index],clip='sprite-crop-'+(++spriteSerial);
   const shape=index===1?'<polygon points="384,0 780,0 780,350 765,394 810,525 384,538"/>':index===2?'<polygon points="820,0 1154,0 1154,538 820,538 810,486 790,440 780,360"/>':`<rect x="${crop.x}" y="${crop.y}" width="${crop.w}" height="${crop.h}"/>`;
   element.dataset.sprite=String(index);element.style.backgroundImage='none';
@@ -38,6 +39,11 @@ function paintSprite(element,index) {
   }
 }
 function paintHero(element,index) {
+  delete element.dataset.motionActor;
+  if(index===0&&element.classList.contains('sceneSprite')&&window.BlitzMotion?.render('mage')){
+    element.dataset.motionActor='mage';element.style.backgroundImage='none';element.innerHTML=window.BlitzMotion.render('mage');element.setAttribute('aria-label','Mage hero');
+    if(element.id==='battleHeroImg')window.BlitzMotion.warm('mage');return;
+  }
   if(element.classList.contains('sceneSprite')){paintSprite(element,index);element.setAttribute('aria-label',classes[index%3]+' hero');return;}
 
   element.classList.add('heroPortrait');element.setAttribute('role','img');
@@ -50,13 +56,17 @@ function heroIndex(){return (state.profile.gender==='boy'?0:3)+classes.indexOf(s
 function paintEnemy(element,enemyId,health=3,remaining=health){
   const enemy=Content.enemyAt(enemyId);
   const count=enemy.count||1,stage=enemy.stage||'adult';
-  const rig=window.BlitzEnemyArt?.render(enemy.family||enemy.id,{stage});
+  const motionKey=window.BlitzMotion?.enemyKey(enemy),motionArt=motionKey&&window.BlitzMotion.render(motionKey);
+  const rig=motionArt||window.BlitzEnemyArt?.render(enemy.family||enemy.id,{stage});
+  delete element.dataset.motionActor;
+  if(motionArt&&count===1)element.dataset.motionActor=motionKey;
+  if(motionArt&&element.id==='enemyFace')window.BlitzMotion.warm(motionKey);
   element.classList.toggle('enemyGroup',count>1);element.dataset.count=String(count);
   element.dataset.enemy=enemy.id;element.style.setProperty('--enemy-scale',Core.enemyScale(health));
   element.style.setProperty('--enemy-aspect',rig?1:enemy.crop?enemy.crop[2]/enemy.crop[3]:spriteCrops[enemy.sprite??7].w/spriteCrops[enemy.sprite??7].h);
   element.setAttribute('role','img');element.setAttribute('aria-label',enemy.name);
   if(rig){element.style.backgroundImage='none';element.innerHTML=count===1?rig:
-    Content.enemyMembers(enemyId,health,remaining).map((member,i)=>`<span class="enemyMember${member.health?'':' retired'}" data-member="${i}" data-health="${member.health}"><span class="memberMotion">${i?window.BlitzEnemyArt.render(enemy.family,{stage}):rig}</span></span>`).join('');}
+    Content.enemyMembers(enemyId,health,remaining).map((member,i)=>`<span class="enemyMember${member.health?'':' retired'}" data-member="${i}" data-health="${member.health}"><span class="memberMotion"${motionArt?` data-motion-actor="${motionKey}"`:""}>${motionArt|| (i?window.BlitzEnemyArt.render(enemy.family,{stage}):rig)}</span></span>`).join('');}
   else if(enemy.sprite!==undefined)paintSprite(element,enemy.sprite);
   else {element.style.backgroundImage='none';element.innerHTML=`<svg viewBox="${enemy.crop.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:hidden"><image href="assets/forest-opponents.png" width="1536" height="1024"/></svg>`;}
 }
@@ -66,7 +76,9 @@ function healthSymbols(element,health){
 }
 function paintPip(element,stage=Math.min(state.dragon.stage,state.dragon.evolutionSeen??state.dragon.stage)){
   const design=Content.dragonStages[stage];element.style.setProperty('--pip-scale',design.scale);element.dataset.growth=String(stage);
-  if(stage===0)paintSprite(element,6);
+  delete element.dataset.motionActor;
+  if(stage===0&&element.classList.contains('battlePip')&&window.BlitzMotion?.render('pip')){element.style.backgroundImage='none';element.innerHTML=window.BlitzMotion.render('pip');element.dataset.motionActor='pip';window.BlitzMotion.warm('pip');}
+  else if(stage===0)paintSprite(element,6);
   else{
     const [x,y,width,height]=design.crop,clip='pip-crop-'+(++spriteSerial);
     // The SVG viewport can be taller than its viewBox; clip the atlas itself too.
@@ -152,6 +164,7 @@ function renderMap(deferEvolution=false){
   });updateDailyXP();save();if(!deferEvolution&&!maybeEvolution())maybeOfferName();
 }
 function clearCombat(){
+  window.BlitzMotion?.cancelAll();
   clearTimeout(impactTimer);impactTimer=null;
   if(pendingHealth){pendingHealth=null;if(state?.battle)renderHealth();}
   $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
@@ -618,7 +631,8 @@ function combatGeometry(effects){
   const target=enemy.querySelector('.enemyMember:not(.retired) .memberMotion')||enemy;
   const end=point(target,.5,.45),start=point(hero,.65,.45),flame=point(pip,.86,.35);
   const rig=mageRig[heroIndex()];
-  if(rig){
+  if(hero.dataset.motionActor==='mage'&&window.BlitzMotion){const r=hero.getBoundingClientRect(),p=window.BlitzMotion.point('mage',{x:r.left-box.left,y:r.top-box.top,w:r.width,h:r.height},window.BlitzMotion.asset('mage').spell);start.x=p.x;start.y=p.y;}
+  else if(rig){
     const r=hero.getBoundingClientRect(),crop=spriteCrops[heroIndex()],scale=Math.min(r.width/crop.w,r.height/crop.h),angle=32*Math.PI/180;
     const [px,py]=rig.pivot,dx=rig.tip[0]-px,dy=rig.tip[1]-py;
     start.x=r.left-box.left+(r.width-crop.w*scale)/2+(px+dx*Math.cos(angle)-dy*Math.sin(angle)-crop.x)*scale;
@@ -641,6 +655,11 @@ function combatReaction(correct){
   sound.cue(correct?state.profile.heroClass.toLowerCase():q.shieldUsed?'shield':'hit',correct?.20:.12);
   const effects=$('#combatEffects');effects.className='combatEffects '+(correct?'heroStrike ':'enemyStrike ')+state.profile.heroClass.toLowerCase();
   effects.removeAttribute('style');
+  const frameEnemy=$('#enemyFace').querySelector('.enemyMember:not(.retired) .memberMotion')||$('#enemyFace');
+  const member=frameEnemy.closest('.enemyMember'),memberAfter=member&&Content.enemyMembers(state.battle.enemyId,state.battle.maxHealth,state.battle.enemyHealth).find(m=>m.index===Number(member.dataset.member));
+  const assist=correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0);
+  const framed=window.BlitzMotion?.reaction({container:$('#battle'),hero:$('#battleHeroImg'),enemy:frameEnemy,pip:$('#battle .battlePip'),correct,defeated:memberAfter?memberAfter.health===0:state.battle.enemyHealth<=0,heroDefeated:state.battle.heroHealth<=0,assist,shield:q.shieldUsed});
+  if(framed){effects.classList.add('frameCombat');if(!correct)$('#battle .battlePip').classList.add('pipDodge');if(assist)sound.cue('pip',.45);if(q.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}return;}
   const geometry=correct?combatGeometry(effects):null;
   if(correct&&state.profile.heroClass==='Mage'&&geometry){
     const {box,start,end}=geometry,dx=end.x-start.x,dy=end.y-start.y;
@@ -865,7 +884,7 @@ function renderResult() {
       state.campaign.enemyStrength=choice.hp;Core.startBattle(state,Date.now(),{strength:choice.hp,enemyId:choice.enemy.id});if(save())renderActivity();};box.append(button);
   });box.classList.toggle('single',choices.length===1);
   renderSpeedSuggestion(result);
-  resultSound(result,result.victory);if(!result.victory)defeatReaction(result,result.enemyId,result.strength);else maybeOfferName();
+  resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));if(!result.victory)defeatReaction(result,result.enemyId,result.strength);else maybeOfferName();
 }
 function renderSpeedSuggestion(result){
   const offer=result.speedSuggestion,box=$('#speedSuggestion');
@@ -886,6 +905,7 @@ function defeatReaction(result,enemyId,strength){
   const remaining=state.battle?.id===result.battleId?state.battle.enemyHealth:strength;
   const scene=$('#defeatScene');paintEnemy($('#defeatEnemy'),enemyId,strength,remaining);
   scene.hidden=false;scene.classList.add('escaping');
+  window.BlitzMotion?.celebrate(scene,$('#defeatEnemy'));
   later(()=>{scene.hidden=true;scene.classList.remove('escaping');},2200);
 }
 function renderSummary() {
