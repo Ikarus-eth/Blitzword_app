@@ -30,9 +30,9 @@ test('a five-member encounter spends one heart or one shield on a wrong answer',
   for(const shield of [false,true]){
     const s=learner();s.rewards.shield=shield;Core.startBattle(s,now,{enemyId:'bark-beetle--3',strength:25});
     const q=Core.prepareBattle(s,now);q.phase='choices';const answer=q.options.find(x=>x!==q.target);
-    Core.answerBattle(s,answer,now+1000);assert.equal(s.battle.heroHealth,shield?3:2);
+    Core.answerBattle(s,answer,now+1000);assert.equal(s.battle.heroHealth,s.battle.heroMaxHealth-(shield?0:1));
     assert.equal(s.battle.enemyHealth,25);assert.equal(s.rewards.shield,false);
-    assert.equal(Core.answerBattle(s,answer,now+1001),null);assert.equal(s.battle.heroHealth,shield?3:2);
+    assert.equal(Core.answerBattle(s,answer,now+1001),null);assert.equal(s.battle.heroHealth,s.battle.heroMaxHealth-(shield?0:1));
   }
 });
 test('new and legacy encounters retain identity and stage-specific anatomy',()=>{

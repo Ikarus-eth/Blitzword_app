@@ -80,11 +80,11 @@ test('old saved result retains its combined reading and multiplication reward di
  const s=fresh();delete s.xpRulesVersion;C.startBattle(s,NOW);const b=s.battle;delete b.xpEarned;s.result={battleId:b.id,xpEarned:3};s.campaign.battleRecords=[{battleId:b.id,xpEarned:3}];s.math.records=[{battleId:b.id,correct:12}];s.dragon.xp=15;
  const migrated=reload(s);assert.equal(migrated.result.xpEarned,15);assert.equal(migrated.dragon.xp,15);assert.equal(reload(migrated).result.xpEarned,15);
 });
-test('reference play keeps whole XP while higher growth thresholds slow progress and incentives remain',()=>{
- const {simulate}=require('../scripts/calibrate-xp.cjs'),normal=simulate(30,7),short=simulate(15,1),long=simulate(45,1),slow=simulate(30,1,{readingSeconds:10}),quick=simulate(30,1,{readingSeconds:6}),inaccurate=simulate(30,1,{accuracy:.8}),accurate=simulate(30,1,{accuracy:1}),run=simulate(30,1,{speed:'run'});
- assert.ok(normal.daily.every(day=>Number.isInteger(day.earned)&&day.earned>=900&&day.earned<=1100),JSON.stringify(normal.daily));
+test('adaptive reference play keeps whole XP and rewards while delayed word milestones shift daily payouts',()=>{
+ const {simulate}=require('../scripts/calibrate-xp.cjs'),normal=simulate(30,7),short=simulate(15,1),long=simulate(45,1),slow=simulate(30,1,{readingSeconds:10}),quick=simulate(30,1,{readingSeconds:6}),inaccurate=simulate(30,1,{accuracy:.8}),accurate=simulate(30,1,{accuracy:1}),run=simulate(30,7,{speed:'run'});
+ assert.ok(normal.daily.every(day=>Number.isInteger(day.earned)&&day.earned>=700&&day.earned<=1400),JSON.stringify(normal.daily));
  assert.ok(short.totalXP<normal.daily[0].earned&&long.totalXP>normal.daily[0].earned);
- assert.ok(quick.totalXP>slow.totalXP);assert.ok(accurate.totalXP>inaccurate.totalXP);assert.ok(run.totalXP>normal.daily[0].earned);
+ assert.ok(quick.totalXP>slow.totalXP);assert.ok(accurate.totalXP>inaccurate.totalXP);assert.ok(run.totalXP>normal.totalXP);
  assert.equal(normal.daily[0].returning,0);assert.equal(normal.daily[5].returning,50);assert.equal(normal.daily[6].returning,50);
  assert.equal(normal.growth.length,0);assert.deepEqual(Content.dragonStages.map(d=>d.xp),[0,15000,45000,70000]);
 });

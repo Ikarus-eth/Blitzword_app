@@ -214,6 +214,8 @@ function renderParent(){
   $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
   const bonus=Core.bonusProgress(state,Date.now());$('#parentConsistency').textContent=bonus.practiceDays+' practice days in the last 7 days (at least 10 active minutes each). '+(bonus.consistencyEarned?'Returning bonus today: +'+xpText(bonus.consistencyEarned)+' XP.':bonus.active?'Daily reward earned. Returning bonuses apply on future practice days.':bonus.consistencyXP?'Reach 10 active minutes today for +'+xpText(bonus.consistencyXP)+' returning XP, alongside the daily reward.':'Return on another day for a small consistency bonus.');
   $('#parentLearning').textContent=p.introduced+' / '+Content.words.length+' words introduced · '+p.practiced+' practiced twice · '+p.correct+' / '+p.independent+' unaided answers correct.';
+  const challenge=Core.adaptiveChallenge(state);
+  $('#parentChallenge').textContent='Automatic word challenge · aiming for 80–90% unaided success. '+(challenge.total?challenge.correct+' / '+challenge.total+' recent checks ('+Math.round(challenge.accuracy*100)+'%). ':'Collecting first checks. ')+({support:'Fewer new words; more support and practice.',steady:'Balancing new words and practice.',stretch:'Moving into new words sooner.'}[challenge.mode])+' Help requests count as not yet known; interrupted displays are excluded. Delayed recall is tracked separately.';
   renderParentLearning();
   const checked=p.storyChecks.filter(r=>typeof r.correct==='boolean'),matched=checked.filter(r=>r.correct).length;
   $('#parentStorySummary').textContent=checked.length?matched+' / '+checked.length+' first choices matched · '+checked.filter(r=>r.helped).length+' used listening.':'No picture choices recorded yet.';
@@ -692,9 +694,11 @@ function renderHealth(animate=false) {
   const shown=pendingHealth&&pendingHealth.questionId===b.question?.id?pendingHealth:b;
   const shieldHeld=shown===pendingHealth?shown.shield:state.rewards.shield;
   $('#heroHearts').replaceChildren();
-  for(let i=0;i<3;i++){const heart=document.createElement('span');heart.className='heart'+(i<shown.heroHealth?'':' off');heart.textContent='♥';$('#heroHearts').append(heart);}
-  $('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of 3 hearts`);
-  if(shieldHeld&&!b.demo){const shield=document.createElement('span');shield.className='heldShield';shield.innerHTML=shieldIcon;$('#heroHearts').append(shield);$('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of 3 hearts, one shield protects the next hit`);}
+  const maximum=b.heroMaxHealth||3;
+  for(let i=0;i<(maximum>3?1:3);i++){const heart=document.createElement('span');heart.className='heart'+(i<shown.heroHealth?'':' off');heart.textContent='♥';$('#heroHearts').append(heart);}
+  if(maximum>3){const count=document.createElement('span');count.className='heartCount';count.textContent=shown.heroHealth+' / '+maximum;$('#heroHearts').append(count);}
+  $('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of ${maximum} hearts`);
+  if(shieldHeld&&!b.demo){const shield=document.createElement('span');shield.className='heldShield';shield.innerHTML=shieldIcon;$('#heroHearts').append(shield);$('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of ${maximum} hearts, one shield protects the next hit`);}
   $('#enemyFill').style.width=(100*shown.enemyHealth/b.maxHealth)+'%';
   $('#enemyHealth').setAttribute('aria-label',`Enemy health: ${shown.enemyHealth} of ${b.maxHealth}`);
   $('#enemyCount').textContent=shown.enemyHealth+' / '+b.maxHealth;
@@ -720,6 +724,7 @@ function renderEncounter(){
   $('#encounterLead').textContent=b.finalEncounter?'Last fight':b.fromAssessment?'Let’s play':'Ready?';
   $('#encounterTitle').textContent=Content.areas.find(area=>area.id===b.areaId)?.name||'Lantern Trail';renderChapter($('#encounterChapter'));
   paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
+  $('#encounterLearning').textContent=(b.heroMaxHealth||3)>3?'A longer battle: you have '+b.heroMaxHealth+' hearts.':'New words and practice adjust as you play.';
   const name=Content.enemyAt(enemy.family).name;
   const intro=(enemy.count||1)>1?enemy.name+' are on the path. Ready to battle?':(/^Acorn/.test(name)?'An ':'A ')+name+' is on the path. Ready to battle?';
   speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+intro);save();

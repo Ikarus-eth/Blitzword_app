@@ -516,60 +516,52 @@
     if(accept&&!chooseSpeed(s,offer.to))return false;
     offer.status=accept?'accepted':'declined';return true;
   }
-  function recentAccuracy(s) {
-    const records = s.campaign.battleRecords.filter(r => r.task === 'battle' && !r.supported).slice(-8);
-    return records.length ? records.filter(r => r.correct).length/records.length : 1;
+  // This is a tuning band, not a claim that an exact error rate proves learning.
+  const ADAPTIVE_RULES=Object.freeze({low:.8,high:.9,window:20,minSample:10});
+  function adaptiveChallenge(s) {
+    const records=s.campaign.battleRecords.filter(r=>r.task==='battle'&&r.timingValid!==false&&
+      typeof r.correct==='boolean'&&(!r.supported||r.supportReasons?.includes('help-request'))).slice(-ADAPTIVE_RULES.window);
+    const success=r=>r.correct&&!r.supported;
+    const correct=records.filter(success).length,total=records.length,accuracy=total?correct/total:null;
+    // A short run of struggle slows introductions promptly; a single miss never does.
+    const recent=records.slice(-5),struggling=recent.length===5&&recent.filter(success).length<=2;
+    const mode=struggling||total>=ADAPTIVE_RULES.minSample&&accuracy<ADAPTIVE_RULES.low?'support':
+      total>=ADAPTIVE_RULES.minSample&&accuracy>ADAPTIVE_RULES.high?'stretch':'steady';
+    return {mode,correct,total,accuracy,activeLimit:mode==='support'?2:mode==='stretch'?6:4,
+      low:ADAPTIVE_RULES.low,high:ADAPTIVE_RULES.high};
   }
   function selectPracticeWord(s,now) {
-    const L=s.learning, recent=L.recent.slice(-2);
-    const current=storyProgress(s).areas.find(a=>a.status==='current');
-    const accessible=Content.areas.filter(a=>s.story.clearedAreas.includes(a.id)||a.id===current?.id);
-    const allowed=new Set(accessible.flatMap(a=>a.words));
-    const eligible=item => !recent.includes(item.w) && L.sequence >= L.words[item.w].eligibleAfter;
+    const L=s.learning,recent=L.recent.slice(-2),challenge=adaptiveChallenge(s);
+    const eligible=item=>!recent.includes(item.w)&&L.sequence>=L.words[item.w].eligibleAfter;
     const leastRecent=(a,b)=>L.words[a.w].lastSequence-L.words[b.w].lastSequence;
-    const pick=(item,practiceKind=current?'current':'review')=>({item,practiceKind});
-    const older=Content.words.filter(item=>allowed.has(item.w)&&!current?.words.includes(item.w)&&L.words[item.w].introducedAt&&eligible(item)).sort(leastRecent);
-    const oldDue=older.filter(item=>L.words[item.w].dueAt<=now);
-    // Reserve two of three turns for the current field so old reviews cannot block a new chapter indefinitely.
-    if(current&&L.sequence%3===2&&oldDue.length)return pick(oldDue[0],'review');
-    const currentPool=Content.words.filter(item=>current?current.words.includes(item.w):allowed.has(item.w));
-    const pool=currentPool.filter(item=>!current||dailyCorrect(s,item.w,now)<3);
-    const introduced=pool.filter(item => L.words[item.w].introducedAt);
-    const existing=introduced.filter(eligible).sort(leastRecent);
-    const due=existing.filter(item => L.words[item.w].dueAt <= now);
-    const urgent=due.find(item => L.words[item.w].reviewStage>=0 || L.words[item.w].consecutiveMisses>0);
-    if (urgent) return pick(urgent);
-    const unfinished=introduced.filter(item => L.words[item.w].practiceSuccesses < 2).length;
-    const canIntroduce=(s.session?.newWords.length||0)<6 && (introduced.length<3 || (unfinished<4 && recentAccuracy(s)>=.8));
-    if (canIntroduce) {
-      const unseen=pool.filter(item => !L.words[item.w].introducedAt && eligible(item));
-      unseen.sort((a,b)=>Number(L.words[b.w].assessmentMiss)-Number(L.words[a.w].assessmentMiss));
-      if (unseen.length) return pick(unseen[0]);
-    }
-    if (due.length) return pick(due[0]);
-    if (existing.length) return pick(existing[0]);
-    // A tiny starting pool needs distinct intervening material after help.
-    const filler=pool.find(item=>eligible(item) && (L.words[item.w].introducedAt || (s.session?.newWords.length||0)<6));
-    if(filler)return pick(filler);
-    // Freed current-chapter turns: due review, unseen-today older words, then a small preview.
-    if(oldDue.length)return pick(oldDue[0],'review');
-    const notSeenToday=older.filter(item=>!L.words[item.w].lastSeenAt||dayKey(Date.parse(L.words[item.w].lastSeenAt))!==dayKey(now))
-      .sort((a,b)=>(Date.parse(L.words[a.w].lastSeenAt)||0)-(Date.parse(L.words[b.w].lastSeenAt)||0));
-    if(notSeenToday.length)return pick(notSeenToday[0],'older');
-    const next=current&&Content.areas[Content.areas.findIndex(a=>a.id===current.id)+1];
-    if(next&&recentAccuracy(s)>=.8){
-      const nextPool=next.words.map(word=>byWord[word]),previewed=nextPool.filter(item=>L.words[item.w].introducedAt);
-      // At most three distinct previews per next chapter, including across sessions and days.
-      if(previewed.length<3){
-        const unseen=nextPool.find(item=>!L.words[item.w].introducedAt&&eligible(item));
-        if(unseen)return pick(unseen,'preview');
-      }
-      const practice=previewed.slice(0,3).filter(item=>eligible(item)&&dailyCorrect(s,item.w,now)<3).sort(leastRecent);
-      if(practice.length)return pick(practice[0],'preview');
-    }
-    // Only the final refill may revisit capped words. Its exposure is per-question, not a setting.
-    const faster=currentPool.filter(item=>L.words[item.w].introducedAt&&eligible(item)).sort(leastRecent)[0];
-    if(faster)return pick(faster,'speed-refill');
+    const pick=(item,practiceKind)=>({item,practiceKind,challengeMode:challenge.mode});
+    // Learning can move ahead of the story. All candidates retain reviewed choices and teaching.
+    const introduced=Content.words.filter(item=>L.words[item.w].introducedAt);
+    const unfinished=introduced.filter(item=>L.words[item.w].practiceSuccesses<2);
+    const available=introduced.filter(eligible).sort(leastRecent);
+    const due=available.filter(item=>L.words[item.w].reviewStage>=0&&L.words[item.w].dueAt<=now);
+    const repair=available.find(item=>L.words[item.w].practiceSuccesses<2&&
+      L.words[item.w].lastHelpAt&&L.words[item.w].dueAt<=now);
+    if(repair)return pick(repair,'repair');
+    // Reserve at least one in three turns for actual due reviews, including words learned ahead.
+    if(due.length&&L.sequence%3===2)return pick(due[0],'review');
+    const practice=available.filter(item=>L.words[item.w].practiceSuccesses<2);
+    const unseen=Content.words.find(item=>!L.words[item.w].introducedAt&&eligible(item));
+    const introduce=()=>unseen&&unfinished.length<challenge.activeLimit;
+    // Above the band, open new words more often; below it, finish the small active set first.
+    const newTurn=challenge.mode==='stretch'?L.sequence%3!==2:challenge.mode==='support'?L.sequence%6===0:L.sequence%2===0;
+    if(introduce()&&newTurn)return pick(unseen,'new');
+    if(practice.length)return pick(practice[0],'practice');
+    if(introduce()&&(challenge.mode!=='support'||!unfinished.length))return pick(unseen,'new');
+    if(due.length)return pick(due[0],'review');
+    // Recovery and finite-curriculum fallback only: never select easy not-due words ahead of new work.
+    // Prefer those not yet checked today and never shorten exposure to manufacture errors.
+    const comfort=available.filter(item=>L.words[item.w].practiceSuccesses>=2)
+      .sort((a,b)=>dailyCorrect(s,a.w,now)-dailyCorrect(s,b.w,now)||leastRecent(a,b));
+    if(comfort.length)return pick(comfort[0],'comfort');
+    // At the start, two words cannot supply two DISTINCT intervening answers after help.
+    if(unseen)return pick(unseen,'spacing');
+    if(available.length)return pick(available[0],'practice');
     throw new Error('No eligible reviewed word');
   }
   function enemyChoices(s,health=s.campaign.enemyStrength||3) {
@@ -704,7 +696,8 @@
     const chosen=demo?'thornling':available.find(enemy=>enemy.id===enemyId)?.id||
       Content.enemiesForHealth(health).find(enemy=>enemy.id===enemyId)?.id||
       Content.enemies.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
-    s.battle={id:id(s,'battle'),demo,heroHealth:3,enemyHealth:health,maxHealth:health,
+    const heroMaxHealth=demo?3:Math.max(3,Math.ceil(health/4)+2);
+    s.battle={id:id(s,'battle'),demo,heroHealth:heroMaxHealth,heroMaxHealth,enemyHealth:health,maxHealth:health,
       enemyId:chosen,introPending:!demo,fromAssessment,finalEncounter,chapterId:chapter.id,areaId:story.areas.find(a=>a.status==='current')?.id||story.areas.at(-1).id,xpStart:s.dragon.xp,
       firstMistakeFree:demo,turn:0,question:null,resolved:false,xpEarned:0};
     if(!demo&&story.complete){
@@ -728,7 +721,7 @@
     if (b.question) b.question.phase='done';
     if (b.heroHealth<=0 || b.enemyHealth<=0) { resolveBattle(s,now); return; }
     const selection=b.demo ? {item:byWord[Content.demoWords[b.turn % Content.demoWords.length]]} : selectPracticeWord(s,now);
-    const {item,practiceKind}=selection;
+    const {item,practiceKind,challengeMode}=selection;
     const word=s.learning.words[item.w];
     const isNew=!word.introducedAt;
     if (!b.demo && isNew) {
@@ -737,8 +730,7 @@
     }
     const guided=b.demo && b.turn===0;
     let exposureMs=b.demo?null:practiceExposure(s);
-    if(practiceKind==='speed-refill'&&exposureMs!==null)exposureMs=[2200,1800,1500,1200,950].find(ms=>ms<exposureMs)??exposureMs;
-    b.question=makeQuestion(s,item,now,random,{exposureMs,...(practiceKind?{practiceKind}:{}),
+    b.question=makeQuestion(s,item,now,random,{exposureMs,...(practiceKind?{practiceKind,challengeMode}:{}),
       isNew,guided,supportReasons:guided?['guided-example']:[],retentionDue:word.reviewStage>=0 && word.dueAt<=now});
     // Snapshot the gap before showing the word. Time away with a pending question is not retention.
     const previous=word.lastSeenAt||s.campaign.battleRecords.filter(r=>r.target===item.w).at(-1)?.at||s.archive?.words?.[item.w]?.lastAt;
@@ -749,7 +741,7 @@
   }
   function observation(s,q,opt,now,task) {
     const word=s.learning.words[q.target];
-    return {id:q.id,task,language:'en',target:q.target,alternatives:[...q.options],firstResponse:opt,
+    return {id:q.id,task,language:'en',...(q.practiceKind?{practiceKind:q.practiceKind,challengeMode:q.challengeMode}:{}),target:q.target,alternatives:[...q.options],firstResponse:opt,
       correct:opt===q.target,exposureMs:q.exposureMs,observedExposureMs:Math.round(q.wordViewedMs),
       responseMs:Math.round(q.responseMs),supported:q.supportReasons.length>0,
       familiarBefore:!!word?.familiar||(word?.independentCorrect||0)>=2,
@@ -797,6 +789,10 @@
         w.reviewStage=Math.max(-1,w.reviewStage-1); w.dueAt=now+60000;
         w.eligibleAfter=L.sequence+2;
       }
+    }
+    if(!b.demo&&q.supportReasons.includes('help-request')&&rec.timingValid){
+      // Asking for help is evidence to revisit this word, never an independent miss.
+      w.practiceSuccesses=0;w.dueAt=now+60000;w.xpEvidence=[];
     }
     // Help and interrupted answers use the same teaching rule without becoming
     // independent misses. A first miss on an already introduced word stays brief.
@@ -993,5 +989,5 @@
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,speedSuggestion,respondSpeedSuggestion,wordSpeeds,quickAnswer,
     HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions,
-    WORD_STATUS,parentLearning,parentWordHistory,weekKey};
+    WORD_STATUS,parentLearning,parentWordHistory,weekKey,ADAPTIVE_RULES,adaptiveChallenge};
 });
