@@ -429,7 +429,7 @@ Each challenge mixes:
 - difficult words receiving extra practice;
 - new targets when capacity permits.
 
-The current chapter pool and due reviews follow [the approved scheduling/refill rules](SCHEDULING_RELEASE.md). Three independent correct answers cap ordinary current-field practice for the day; freed turns can preview up to three next-field words at sufficient recent accuracy. The final fallback is one faster exposure step. This replaces the earlier generic six-new-words-per-challenge planning rule.
+The 30 September automatic challenge rules supersede the earlier fixed field, daily cap/refill and three-preview limits. Target a tuneable 80–90% unaided-success band using the latest 20 usable checks; help requests are unsuccessful checks, interrupted displays are excluded. Above the band open more new words; below it reduce the unresolved set and prioritise support. Two separated successes move a word into delayed review without granting mastery. Learning may move ahead through the reviewed Core 200 independently of story gates. See [the complete rules and evidence](ADAPTIVE_READING_RELEASE.md).
 
 Aim for a productive level of difficulty rather than a fixed error quota. Working hypothesis: familiar-word unassisted accuracy around 85–90% is a reasonable starting calibration range. The often-cited 85% rule does not directly validate an exact failure rate for young children's four-choice reading practice, so measure retention, frustration, and return behavior rather than optimizing blindly to one percentage.
 
@@ -962,3 +962,10 @@ Use integrated story-specific paintings with Artus and Pip fully present, rather
 ### Tower riddle coherence — 30 September 2026 correction
 
 The final story must show the same Sun–Moon–Star order in the tower illustration, sign cards and answer doors. A truthful sign can refer to a different door; make this distinction clear in the story and hint. The answer remains Sun with code 56. Keep v2 progress and other question orders, normalizing only the final door row to physical order. See [the correction](story-pilot/DOOR_RELEASE.md).
+
+
+## Automatic reading challenge — approved 30 September 2026
+
+The user requested implementation of adaptive progression after reviewing the save export and asked for automatic adjustment toward an optimal accuracy (suggesting 70–80% as a question). The implementation uses an initial 80–90% tuning band centred near 85%, not an empirically established optimum for this task. This supersedes historical fixed-field selection and three-preview rules. See [exact thresholds, spacing, mastery safeguards, migration and verification](ADAPTIVE_READING_RELEASE.md).
+
+New reading battles use hero hearts proportional to encounter length (`max(3, ceil(enemyHP / 4) + 2)`), so adding unfamiliar words does not require near-perfect accuracy to survive a long opponent. The demo remains at three hearts; existing pending battles keep their exact saved health and question. Enemy catalog/ranges, individual heart damage, earned shields, story requirements, XP and learner history remain. Parents reports the adaptive sample separately from delayed-retention evidence. No automatic speed increase, new vocabulary, artwork or replacement comprehension activity is included.

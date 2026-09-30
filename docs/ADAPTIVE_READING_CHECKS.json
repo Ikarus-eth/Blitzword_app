@@ -1,0 +1,290 @@
+{
+  "baseline": "72583c76adc90026605c81f7f9e1c858151eb762",
+  "assumptions": {
+    "answers": 100,
+    "answerMs": 8000,
+    "enemyHealth": 32,
+    "automaticCorrectness": "fixed hypothetical outcomes, independent of selected word",
+    "limitations": "Not a model of human learning, retention or enjoyment."
+  },
+  "preservation": {
+    "profile": true,
+    "dragon": true,
+    "assessment": true,
+    "settings": true,
+    "battle": true,
+    "learning": true
+  },
+  "cases": [
+    {
+      "start": "fresh",
+      "assumedAccuracy": 1,
+      "before": {
+        "checked": 100,
+        "distinct": 9,
+        "newDistinct": 9,
+        "alreadySuccessfulNotDue": 82,
+        "maxRepetitions": 16,
+        "defeats": 0,
+        "maxUnfinished": 4,
+        "kinds": {
+          "current": 18,
+          "preview": 9,
+          "speed-refill": 73
+        },
+        "modes": {}
+      },
+      "after": {
+        "checked": 100,
+        "distinct": 53,
+        "newDistinct": 53,
+        "alreadySuccessfulNotDue": 0,
+        "maxRepetitions": 2,
+        "defeats": 0,
+        "maxUnfinished": 6,
+        "kinds": {
+          "new": 53,
+          "practice": 47
+        },
+        "modes": {
+          "steady": 10,
+          "stretch": 90
+        }
+      }
+    },
+    {
+      "start": "fresh",
+      "assumedAccuracy": 0.85,
+      "before": {
+        "checked": 100,
+        "distinct": 9,
+        "newDistinct": 9,
+        "alreadySuccessfulNotDue": 60,
+        "maxRepetitions": 16,
+        "defeats": 5,
+        "maxUnfinished": 4,
+        "kinds": {
+          "current": 20,
+          "preview": 12,
+          "speed-refill": 68
+        },
+        "modes": {}
+      },
+      "after": {
+        "checked": 100,
+        "distinct": 39,
+        "newDistinct": 39,
+        "alreadySuccessfulNotDue": 0,
+        "maxRepetitions": 6,
+        "defeats": 0,
+        "maxUnfinished": 5,
+        "kinds": {
+          "new": 39,
+          "practice": 47,
+          "repair": 14
+        },
+        "modes": {
+          "steady": 97,
+          "stretch": 3
+        }
+      }
+    },
+    {
+      "start": "fresh",
+      "assumedAccuracy": 0.7,
+      "before": {
+        "checked": 100,
+        "distinct": 6,
+        "newDistinct": 6,
+        "alreadySuccessfulNotDue": 44,
+        "maxRepetitions": 18,
+        "defeats": 10,
+        "maxUnfinished": 4,
+        "kinds": {
+          "current": 24,
+          "speed-refill": 76
+        },
+        "modes": {}
+      },
+      "after": {
+        "checked": 100,
+        "distinct": 17,
+        "newDistinct": 17,
+        "alreadySuccessfulNotDue": 32,
+        "maxRepetitions": 10,
+        "defeats": 3,
+        "maxUnfinished": 4,
+        "kinds": {
+          "new": 17,
+          "practice": 42,
+          "repair": 9,
+          "comfort": 32
+        },
+        "modes": {
+          "steady": 10,
+          "support": 90
+        }
+      }
+    },
+    {
+      "start": "existing export",
+      "assumedAccuracy": 1,
+      "before": {
+        "checked": 100,
+        "distinct": 10,
+        "newDistinct": 0,
+        "alreadySuccessfulNotDue": 98,
+        "maxRepetitions": 16,
+        "defeats": 0,
+        "maxUnfinished": 4,
+        "kinds": {
+          "review": 1,
+          "preview": 4,
+          "speed-refill": 95
+        },
+        "modes": {}
+      },
+      "after": {
+        "checked": 100,
+        "distinct": 54,
+        "newDistinct": 50,
+        "alreadySuccessfulNotDue": 0,
+        "maxRepetitions": 2,
+        "defeats": 0,
+        "maxUnfinished": 6,
+        "kinds": {
+          "repair": 1,
+          "new": 50,
+          "practice": 49
+        },
+        "modes": {
+          "stretch": 100
+        }
+      }
+    },
+    {
+      "start": "existing export",
+      "assumedAccuracy": 0.85,
+      "before": {
+        "checked": 100,
+        "distinct": 10,
+        "newDistinct": 0,
+        "alreadySuccessfulNotDue": 75,
+        "maxRepetitions": 16,
+        "defeats": 5,
+        "maxUnfinished": 5,
+        "kinds": {
+          "review": 1,
+          "preview": 4,
+          "speed-refill": 95
+        },
+        "modes": {}
+      },
+      "after": {
+        "checked": 100,
+        "distinct": 40,
+        "newDistinct": 36,
+        "alreadySuccessfulNotDue": 0,
+        "maxRepetitions": 6,
+        "defeats": 0,
+        "maxUnfinished": 6,
+        "kinds": {
+          "repair": 16,
+          "new": 36,
+          "practice": 48
+        },
+        "modes": {
+          "stretch": 8,
+          "steady": 92
+        }
+      }
+    },
+    {
+      "start": "existing export",
+      "assumedAccuracy": 0.7,
+      "before": {
+        "checked": 100,
+        "distinct": 10,
+        "newDistinct": 0,
+        "alreadySuccessfulNotDue": 55,
+        "maxRepetitions": 16,
+        "defeats": 10,
+        "maxUnfinished": 8,
+        "kinds": {
+          "review": 1,
+          "preview": 5,
+          "speed-refill": 94
+        },
+        "modes": {}
+      },
+      "after": {
+        "checked": 100,
+        "distinct": 48,
+        "newDistinct": 14,
+        "alreadySuccessfulNotDue": 30,
+        "maxRepetitions": 7,
+        "defeats": 3,
+        "maxUnfinished": 6,
+        "kinds": {
+          "repair": 12,
+          "new": 14,
+          "practice": 44,
+          "comfort": 30
+        },
+        "modes": {
+          "stretch": 4,
+          "steady": 13,
+          "support": 83
+        }
+      }
+    }
+  ],
+  "build": "adaptive-reading-20260930-r1",
+  "browser": {
+    "checks": [
+      {
+        "viewport": {
+          "width": 1180,
+          "height": 820
+        },
+        "hearts": true,
+        "adaptiveMode": true,
+        "pendingResume": true,
+        "parentSummary": true,
+        "noOverflow": true
+      },
+      {
+        "viewport": {
+          "width": 820,
+          "height": 1180
+        },
+        "hearts": true,
+        "adaptiveMode": true,
+        "pendingResume": true,
+        "parentSummary": true,
+        "noOverflow": true
+      },
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "hearts": true,
+        "adaptiveMode": true,
+        "pendingResume": true,
+        "parentSummary": true,
+        "noOverflow": true
+      }
+    ],
+    "errors": []
+  },
+  "coreTests": {
+    "passed": 265,
+    "failed": 0
+  },
+  "physicalIPadSafariVerified": false,
+  "uiGroups": {
+    "passed": 91,
+    "failed": 0
+  }
+}

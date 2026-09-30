@@ -17,7 +17,7 @@ for(const [name,setup,expected] of [
 ])test('picture teaching after '+name,()=>{
   const {s,q}=question(setup),wrong=q.options.find(w=>w!==q.target);
   Core.answerBattle(s,wrong,NOW);
-  assert.equal(q.needsTeaching,expected);assert.equal(s.battle.heroHealth,2);
+  assert.equal(q.needsTeaching,expected);assert.equal(s.battle.heroHealth,s.battle.heroMaxHealth-1);
   const resumed=Core.migrate(JSON.parse(JSON.stringify(s)));
   assert.equal(resumed.battle.question.needsTeaching,expected);
   assert.equal(resumed.battle.question.firstResponse,wrong);
@@ -30,7 +30,7 @@ for(const [name,setup,expected] of [
   const {s,q}=question(setup),w=s.learning.words[q.target],before=Core.copy(w);
   s.rewards.shield=true;const rec=Core.answerBattle(s,'?',NOW);
   assert.equal(q.needsTeaching,expected);assert.equal(rec.supported,true);
-  assert.equal(s.battle.heroHealth,3);assert.equal(s.battle.enemyHealth,6);assert.equal(s.rewards.shield,true);
+  assert.equal(s.battle.heroHealth,s.battle.heroMaxHealth);assert.equal(s.battle.enemyHealth,6);assert.equal(s.rewards.shield,true);
   assert.equal(w.consecutiveMisses,before.consecutiveMisses);assert.equal(w.independentCorrect,before.independentCorrect);
   assert.equal(w.reviewStage,before.reviewStage);assert.equal(q.xpEarned,0);
   assert.equal(w.eligibleAfter,s.learning.sequence+2);assert.equal(w.lastHelpAt,new Date(NOW).toISOString());
@@ -41,7 +41,7 @@ test('supported wrong answers can teach, while supported successes cannot become
     Core.answerBattle(s,correct?q.target:q.options.find(w=>w!==q.target),NOW);
     assert.equal(q.needsTeaching,!correct);assert.equal(w.independentCorrect,2);
     assert.equal(w.consecutiveMisses,0);assert.equal(q.xpEarned,0);
-    assert.equal(s.battle.heroHealth,3);assert.equal(s.battle.enemyHealth,6);
+    assert.equal(s.battle.heroHealth,s.battle.heroMaxHealth);assert.equal(s.battle.enemyHealth,6);
   }
 });
 test('brief correction still inserts two other words before the recheck',()=>{

@@ -602,3 +602,6 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 #campaignMap #mapStoryPilot span{font-size:23px;line-height:1}
 @media(max-width:700px) and (orientation:portrait){#campaignMap #mapStoryPilot{left:var(--map-left);bottom:calc(var(--map-bottom) + 58px);font-size:14px;padding:8px 12px}}
 @media(max-width:380px) and (orientation:portrait){#campaignMap #mapStoryPilot{bottom:calc(var(--map-bottom) + 94px)}}
+
+/* Compact health count keeps longer adaptive battles readable on phones. */
+.heartCount{align-self:center;font:700 22px Georgia,serif;color:#fff2d3;white-space:nowrap}

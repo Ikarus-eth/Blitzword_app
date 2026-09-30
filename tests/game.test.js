@@ -52,7 +52,7 @@ test('word order continues across battles instead of restarting the same three t
     for(let turn=0;turn<3;turn++){const r=answer(s,true,START+battle*30000+turn*5000);seen.push(r.target);}
     Core.prepareBattle(s,START+battle*30000+16000);
   }
-  assert.ok(new Set(seen).size>=5,seen.join(','));assert.ok(s.session.newWords.length<=6);assert.notDeepEqual(seen.slice(0,3),seen.slice(3,6));
+  assert.ok(new Set(seen).size>=5,seen.join(','));assert.ok(Object.values(s.learning.words).filter(w=>w.introducedAt&&w.practiceSuccesses<2).length<=6);assert.notDeepEqual(seen.slice(0,3),seen.slice(3,6));
 });
 test('defeat rolls back only unsecured wins; resolving twice cannot award twice',()=>{
   const s=campaign();s.campaign.wins=3;s.campaign.checkpointWins=2;const times=[0,5000,10000];

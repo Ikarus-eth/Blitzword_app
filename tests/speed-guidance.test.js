@@ -85,7 +85,7 @@ test('accurate slow words remain scheduled for review and a quick answer never r
  const s=learner('run'),word=WORDS[0];answer(s,{word,responseMs:2000});answer(s,{word,responseMs:2000});
  const w=s.learning.words[word];assert.equal(w.reviewStage,0);assert.ok(w.dueAt>NOW);assert.equal(C.wordSpeeds(s).find(r=>r.word===word).quick,false);
  const due=w.dueAt;answer(s,{word,responseMs:1000});assert.equal(C.wordSpeeds(s).find(r=>r.word===word).quick,true);assert.equal(w.dueAt,due);
- for(const other of Object.values(s.learning.words))other.eligibleAfter=0;s.learning.recent=[];
+ for(const other of Object.values(s.learning.words))other.eligibleAfter=0;s.learning.recent=[];s.learning.sequence=5; // Reserved due-review turn.
  const q=C.prepareBattle(s,due);assert.equal(q.target,word);assert.equal(q.retentionDue,true);
 });
 test('old raw slow answers appear in Parents even without per-word counters',()=>{
