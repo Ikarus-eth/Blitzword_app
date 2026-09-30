@@ -47,7 +47,7 @@
     "oldKeyPreserved": "blitzword_story_pilot_v1",
     "mainLearnerSaveAccess": "none from pilot"
   },
-  "deployment": "pending",
+  "deployment": "verified; see RESCUE_DEPLOYMENT.json",
   "sha256": {
     "index.html": "c01987b17c8e1de6ec58dfc88d87304a46c553118a88eada82ee5a7e00b450d0",
     "assets/story-pilot/index.html": "dc382f515799c65452379b8ddf3b9589d7bdeb02a7521da08b0483c09d54cc8d",
