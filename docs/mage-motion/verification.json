@@ -130,8 +130,9 @@
       ],
       "format": {
         "duration": "14.000000",
-        "size": "4437342"
-      }
+        "size": "4438286"
+      },
+      "sha256": "ef1e1aa0b5a537e2ca66825376dd79fddb321e9a3b1bb90cb534be610badaf64"
     },
     {
       "enemy": "golem",
@@ -146,8 +147,9 @@
       ],
       "format": {
         "duration": "14.000000",
-        "size": "4542985"
-      }
+        "size": "4543985"
+      },
+      "sha256": "f037054312216d6f3952dbfc647f997441d5bf602f54c52bca5b77bc57c84f31"
     },
     {
       "enemy": "beetle",
@@ -162,8 +164,9 @@
       ],
       "format": {
         "duration": "18.000000",
-        "size": "4805981"
-      }
+        "size": "4805286"
+      },
+      "sha256": "a77b1919f351e294b047c65f95623024730433f060f95558d0af3a9eb7c96849"
     }
   ]
 }
