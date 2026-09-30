@@ -12,4 +12,4 @@ One targeted built-in image-generation edit replaces the blank plaques. The orig
 
 Validation: 267 automated tests and 90 main-app UI-flow groups pass. New regression coverage checks old-save preservation, fixed door order through replay, card labels and placement, and hint highlighting. Chromium checks covered wrong choice → hint → correction, saved selections on reload, successful rescue, and desktop / 768 px tablet / 320 px phone layouts. No browser warnings or errors. Physical iPad/Safari remains untested. [Checks and source hashes](DOOR_CHECKS.json).
 
-Deployment: pending publication and live verification.
+Deployed and verified: [PR #109](https://github.com/Ikarus-eth/Blitzword_app/pull/109), merge `2629c4ff38c1354aadb0956ed1a97bdbacefd3ae`, [successful Pages run 36676683204](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36676683204). All seven changed public files, including the new illustration, match tested source byte for byte. The live browser shows the r3 build, labelled image and correctly paired sign cards, with prior completed progress retained and no warnings or errors. [Live evidence](DOOR_DEPLOYMENT.json).

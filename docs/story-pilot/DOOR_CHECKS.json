@@ -36,7 +36,7 @@
     "physicalIPadSafari": "not tested"
   },
   "saveCompatibility": "v2 retained; only restored last-door answer order normalized",
-  "deployment": "pending",
+  "deployment": "verified; see DOOR_DEPLOYMENT.json",
   "sha256": {
     "index.html": "c5809bc1e12cee3752a61d5f2bbb7dc42a2e91571f99a5a607ea0fe9e501613e",
     "assets/story-pilot/index.html": "714e31f8cf843f67bd399f3b47e7de2dfdf388cdc4e3b61f6823e3214e708b02",

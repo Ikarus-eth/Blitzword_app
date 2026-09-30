@@ -1,0 +1,64 @@
+{
+  "build": "story-rescue-20260930-r3",
+  "verifiedAt": "2026-09-30T06:09:16.204440+00:00",
+  "mergeCommit": "2629c4ff38c1354aadb0956ed1a97bdbacefd3ae",
+  "pullRequest": "https://github.com/Ikarus-eth/Blitzword_app/pull/109",
+  "workflowRun": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36676683204",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 35470,
+      "sha256": "c5809bc1e12cee3752a61d5f2bbb7dc42a2e91571f99a5a607ea0fe9e501613e",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/story-pilot/index.html",
+      "bytes": 4839,
+      "sha256": "714e31f8cf843f67bd399f3b47e7de2dfdf388cdc4e3b61f6823e3214e708b02",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/story-pilot/app.js",
+      "bytes": 9010,
+      "sha256": "96051bd45d5872a77124dcca84a9a036f7a75d1a6f60125754a1b225ab4217c2",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/story-pilot/core.js",
+      "bytes": 5804,
+      "sha256": "5be23d4f8f0549f2b89378b41066a59d5f69a0cc25a32cbbc749b3c49d60ac8e",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/story-pilot/stories.js",
+      "bytes": 10538,
+      "sha256": "72e40cd2055033f5324849df738a8bec69a53fa911f6007a550525950d4af35c",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/story-pilot/styles.css",
+      "bytes": 9785,
+      "sha256": "d48d39f838c022a0711725345954d07e5e496a18b902fa871c4ea2f466de2cf7",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/story-pilot/scenes/gate-labelled.webp",
+      "bytes": 460288,
+      "sha256": "19c327fbb40eb2346a68d3aa769fcb32140d3c90386701f73b06624486c86188",
+      "matchesTestedSource": true
+    }
+  ],
+  "allMatch": true,
+  "workflowConclusion": "success",
+  "browser": {
+    "build": "story-rescue-20260930-r3",
+    "labelledImageLoadedAtWidth": 1536,
+    "signOrder": [
+      "Sun door",
+      "Moon door",
+      "Star door"
+    ],
+    "warningsOrErrors": 0,
+    "existingCompletedProgressRetained": true
+  }
+}
