@@ -4,7 +4,7 @@ const root=require('node:path').join(__dirname,'../'),Core=require(root+'game-co
 function boot(saved,options={}){
  const {window,document}=parseHTML(fs.readFileSync(root+'index.html','utf8'));
  let now=Date.UTC(2026,8,22),uid=0;const jobs=new Map(),memory=new Map(saved?[[Storage.KEY,JSON.stringify(saved)]]:[]);
- let failWrites=options.failWrites||false,heartbeat=()=>{},reloads=0;
+ let failWrites=options.failWrites||false,heartbeat=()=>{},reloads=0;const destinations=[];
  const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failWrites===true||typeof failWrites==='function'&&failWrites(k,v))throw new Error('Storage full');memory.set(k,v)},removeItem:k=>memory.delete(k)};
  const schedule=(fn,ms)=>(jobs.set(++uid,{fn,time:now+ms}),uid);
  window.localStorage=storage;
@@ -14,7 +14,7 @@ function boot(saved,options={}){
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.removeAttribute('selected');[...this.querySelectorAll('option')].find(option=>option.value===value)?.setAttribute('selected','');}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>!options.pendingImages,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
  let speechEnd=null;const speechTexts=[];
- const ctx={Math:Object.assign(Object.create(Math),{random:options.random||Math.random}),window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ const ctx={Math:Object.assign(Object.create(Math),{random:options.random||Math.random}),window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;},assign(url){destinations.push(url);}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -25,7 +25,7 @@ function boot(saved,options={}){
  function resume(){const map=get('campaignMap').classList.contains('active');assert.ok(map||get('route').classList.contains('active'));click(get(map?'mapContinue':'continueAdventure'));}
  function advance(ms,suspended=false){if(suspended){now+=ms;heartbeat();}else for(let elapsed=0;elapsed<ms;elapsed+=1000){now+=Math.min(1000,ms-elapsed);heartbeat();}}
  function visibility(hidden){Object.defineProperty(document,'hidden',{value:hidden,configurable:true});document.dispatchEvent(new window.Event('visibilitychange'));}
- return {state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
+ return {destinations,state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
 }
 // Independent reading of the written-number parent gate for dashboard flow tests.
 function parentGateAnswer(ui){
@@ -996,4 +996,14 @@ console.log('PASS last group member resolves exactly once, including reduced mot
  assert.equal(ui.get('defeatEnemy').querySelectorAll('.enemyMember:not(.retired)').length,1);
  assert.equal(ui.get('defeatEnemy').querySelectorAll('.enemyMember.retired').length,4);
  console.log('PASS defeat escape shows surviving group members without reviving retired creatures');
+}
+
+{
+ const ui=boot(impactSave()),before=ui.state();
+ ui.click(ui.get('mapStoryPilot'));
+ assert.deepEqual(ui.destinations,['assets/story-pilot/']);
+ const after=ui.state();
+ for(const key of ['battle','profile','dragon','chapters','learning','assessment'])assert.deepEqual(after[key],before[key],key+' preserved when opening stories');
+ const blocked=boot(impactSave());blocked.setFailWrites(true);blocked.click(blocked.get('mapStoryPilot'));assert.deepEqual(blocked.destinations,[]);
+ console.log('PASS story pilot map entry saves existing adventure and blocks on save failure');
 }

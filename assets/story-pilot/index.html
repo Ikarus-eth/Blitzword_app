@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="blitzword-story-pilot" content="story-pilot-20260930-r1">
+  <meta name="theme-color" content="#163e32">
+  <meta name="description" content="Five reading adventures with Artus and Pip. Read the clues, choose pictures and solve the puzzles.">
+  <title>Artus &amp; Pip · Story adventures</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23163e32'/%3E%3Cpath d='M7 9h7l2 2 2-2h7v15h-7l-2 2-2-2H7Z' fill='%23edcb84'/%3E%3Cpath d='M16 11v15' stroke='%23163e32' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=story-pilot-20260930-r1">
+  <script src="stories.js?v=story-pilot-20260930-r1" defer></script>
+  <script src="core.js?v=story-pilot-20260930-r1" defer></script>
+  <script src="app.js?v=story-pilot-20260930-r1" defer></script>
+</head>
+<body>
+<div class="app">
+  <header class="masthead"><a class="map-link" href="../../">Back to map</a><span class="brand">Artus &amp; Pip <span>story adventures</span></span><span class="story-label" id="progress">Five stories</span></header>
+  <nav class="story-nav" id="story-nav" aria-label="Choose a story"></nav>
+  <div class="save-warning" id="save-warning" role="alert" hidden><p id="save-message"></p><button type="button" id="reload" class="quiet-button">Reload saved stories</button><a href="../../">Back to map</a></div>
+  <main class="storybook" id="storybook">
+    <section class="reading-page" aria-labelledby="story-title" id="reading">
+      <div class="eyebrow" id="story-level">Read at your own pace</div>
+      <h1 id="story-title">Story adventures</h1>
+      <article class="story-text" id="story-text" aria-label="The story"></article>
+      <div class="read-footer"><span class="page-number" id="page-number">01</span><p>You can read the story again at any time.</p></div>
+    </section>
+    <section class="play-page" aria-label="Your story puzzle">
+      <div class="scene">
+        <img class="cave" id="scene-image" alt="" width="1536" height="1024">
+        <div class="hero-tag"><span class="artus-portrait" role="img" aria-label="Artus, the young knight"></span><span>Artus <small>&amp; Pip</small></span></div>
+        <img class="pip" src="../pip.webp" alt="Pip, Artus’s pet dragon." width="187" height="187">
+        <img id="guest" class="guest" alt="" hidden>
+        <span class="scene-caption" id="scene-caption"></span>
+      </div>
+      <div class="puzzle" id="puzzle">
+        <h2>Read the clues. Make your choices.</h2>
+        <div id="questions"></div>
+        <div class="feedback" id="feedback" role="status" aria-live="polite">Choose one picture in each row.</div>
+        <button class="primary-button" id="submit" type="button" disabled>Ready!</button>
+        <div class="help-row"><button class="text-button" id="hint" type="button">Give me a hint</button><button class="text-button" id="show" type="button" hidden>Show me together</button></div>
+      </div>
+      <section class="ending" id="ending" aria-labelledby="ending-title" hidden>
+        <div class="eyebrow">The adventure continues</div>
+        <h2 id="ending-title" tabindex="-1"></h2>
+        <p id="ending-text"></p>
+        <img class="ending-picture" id="ending-picture" alt="" width="1536" height="1024">
+        <details class="answer-explanations"><summary>See the clues</summary><ol id="explanations"></ol></details>
+        <button class="primary-button" id="next" type="button">Next story</button>
+        <button class="text-button" id="replay" type="button">Read this story again</button>
+        <a class="all-done" id="all-done" href="../../" hidden>Back to the map</a>
+      </section>
+    </section>
+  </main>
+  <noscript>Please turn on JavaScript to make picture choices. <a href="../../">Back to BlitzWord</a>.</noscript>
+  <footer class="footer"><span>No clock. Take your time.</span><details id="grownups"><summary>For grown-ups</summary><div class="adult-panel"><p>Five optional puzzles, with harder thinking and maths as you go. A correct choice is evidence for this puzzle, not proof of independent reading.</p><div id="report"></div><p>Story choices stay on this device, separately from reading progress. They earn no XP and are not included in the main game’s backup file.</p><p class="credits">Artwork: BlitzWord, including the selected Imp, Troll, Owl and Ram designs. Symbols by Lorc, Delapouite and Willdabeast at <a href="https://game-icons.net/" target="_blank" rel="noopener">Game-icons.net</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>; colours adapted. Star and leaf: Lucide, ISC licence.</p></div></details></footer>
+</div>
+</body>
+</html>

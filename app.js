@@ -1083,6 +1083,7 @@ function continueMap(){
   continueAdventure();
 }
 $('#mapTraveller').onclick=()=>{renderHeroes();show('hero');save();};
+$('#mapStoryPilot').onclick=()=>{if(blocked||state.screen!=='campaignMap'||!save())return;cancelWork();location.assign('assets/story-pilot/');};
 $('#mapParents').onclick=openParentGate;$('#routeParents').onclick=openParentGate;
 $('#parentCancel').onclick=()=>{$('#parentGate').hidden=true;parentAnswer=null;$(state.screen==='campaignMap'?'#mapParents':'#routeParents').focus?.();};
 $('#parentUnlock').onclick=()=>{if($('#parentGate').hidden||parentAnswer===null)return;const answer=$('#parentAnswer').value.trim();if(!/^\d+$/.test(answer)||Number(answer)!==parentAnswer){$('#parentGateMessage').textContent='Please try again.';return;}$('#parentGate').hidden=true;parentAnswer=null;renderParent();};

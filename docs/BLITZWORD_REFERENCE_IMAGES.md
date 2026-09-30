@@ -2,6 +2,10 @@
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
+### Story pilot still-art use — 30 September 2026
+
+The user authorized selected updated enemy pictures in the five-story pilot. Acorn Imp C, Cave Troll C, Hollow Owl C and Stone Ram B appear as static story guests alongside existing scenes, Artus and Pip. No new bitmap images were generated. This pilot use leaves production battle rigs and the broader animation approval gate unchanged. See [story pilot artwork and icon attribution](STORY_PILOT_RELEASE.md#artwork).
+
 ### Final character still-art selection - 29 September 2026
 
 The [complete character artwork document](artwork/README.md) and [exact asset manifest](artwork/character-selections.json) record the accepted future lineup: 20 enemies, six heroes and four retained Pip stages. These choices supersede earlier lineup choices for the future image replacement. Mage boy E, Knight boy D, Archer boy Current, Mage girl Current, Knight girl C and Archer girl A are final. Enemy tie-breaks are Reed Serpent D, Lantern Wisp C and Briar Bat C; all other enemy choices follow the recorded family rule.
