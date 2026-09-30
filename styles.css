@@ -596,3 +596,9 @@ img,svg{-webkit-user-drag:none;user-drag:none}
   #campaignMap .chapterCelebration { top: 115px; font-size: 18px; }
   #speedPanel.mapSpeedMenu { top: calc(max(12px, env(safe-area-inset-top)) + 54px); }
 }
+
+/* Optional story pilot entry on the chapter-selection map. */
+#campaignMap #mapStoryPilot{left:calc(var(--map-left) + 56px);bottom:var(--map-bottom);width:auto;min-height:44px;height:44px;padding:8px 15px;gap:9px;border-radius:14px;font-size:16px;white-space:nowrap;box-shadow:0 2px 8px #182a2333}
+#campaignMap #mapStoryPilot span{font-size:23px;line-height:1}
+@media(max-width:700px) and (orientation:portrait){#campaignMap #mapStoryPilot{left:var(--map-left);bottom:calc(var(--map-bottom) + 58px);font-size:14px;padding:8px 12px}}
+@media(max-width:380px) and (orientation:portrait){#campaignMap #mapStoryPilot{bottom:calc(var(--map-bottom) + 94px)}}

@@ -946,3 +946,9 @@ Keep Same/Stronger/Easier selection and the saved difficulty. At 3 HP retain tin
 ## Final character artwork and animation gate - 29 September 2026
 
 Use the [final character artwork document](artwork/README.md) for the later complete character-image update. It records 20 enemies, six heroes and four Pip stages, including the user's final hero choices (Mage girl Current, Knight girl C, Archer girl A). Establish and visually review smooth character motion using ChatGPT internal tools first. The user has deferred game image replacement until that movement approach is worked out. Existing gameplay, production images, growth stages and learner saves remain unchanged in this documentation update.
+
+## Optional five-story pilot — 30 September 2026
+
+The chapter-selection Home screen has an extra Story adventures button. The optional pilot uses fixed Artus and Pip characters, relatively simple words, and increasingly difficult reading clues, riddles and maths across five stories. The text remains available while making picture choices. All stories are unlocked; a Next story button suggests the progression. There is no Listen, speech or audio in the pilot. Main-game narration remains unchanged.
+
+Track first checked choices and hints separately from retries, show gentle rereading help, and offer an assisted explanation after a first try. Keep pilot saves separate, award no XP, health, mastery or chapter-time credit, and preserve the main adventure on entry/return. The pilot is not part of main-game backup yet. Existing approved scenes and selected enemy stills may be reused in this pilot; no new bitmap generation was needed. See [the release and content ladder](STORY_PILOT_RELEASE.md).

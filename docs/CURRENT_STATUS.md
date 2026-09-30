@@ -6,6 +6,12 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 
 Documentation reconciled against main `6e7bf84adfa169f0f858c023b5225490acba1967` and the recorded releases. Latest verified runtime build: `enemy-groups-20260925-r2` ([enemy deployment verification](enemies/GROUP_ENCOUNTERS_DEPLOYMENT.json), [latest live byte verification](heroes/ARCHER_ARMS_DEPLOYMENT.json)); the narration completion draft is not merged or deployed. The earlier cleanup changed documentation only. It closes stale assessment/story/gate approval notices, reconciles current growth/speed rules and removes the obsolete lowercase README that conflicted on case-insensitive filesystems. Historical release evidence is retained.
 
+## Five story adventures — 30 September 2026
+
+**Implemented and locally tested; deployment pending.** Build `story-pilot-20260930-r1` adds Story adventures to chapter-selection Home and five optional Artus/Pip stories. Simple wording accompanies harder clues and maths, ending with a three-sign door riddle, a times-table code and a multi-step share. No Listen or speech in the pilot. Existing scenes and four selected updated enemy stills are reused; no new bitmap generation. Main-game saves, curriculum, battle artwork and narration remain unchanged. Pilot choices, first checks, hints and replays use a separate local save and are not in main-game backup yet.
+
+264 automated tests and 90 UI-flow groups pass. Chromium completed all five stories, saved/reloaded a choice and retained an initially wrong first check after correction. Responsive checks include tablet portrait and 320 px phone layouts. Physical iPad/Safari is untested. [Release, content and limits](STORY_PILOT_RELEASE.md), [checks](STORY_PILOT_CHECKS.json).
+
 ## Final character artwork reference - 29 September 2026
 
 The user finalized all 20 enemies, six heroes and four Pip stages in the [33-page character artwork document](artwork/README.md). The PDF and repository-relative asset/hash manifest are recorded in this documentation update. The three hero tie-breaks are Mage girl Current, Knight girl C and Archer girl A. Earlier still-art choices are superseded for the future replacement; current game artwork remains in place.
