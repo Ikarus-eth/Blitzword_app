@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),{spawn}=require('node:child_process');
 const {createCanvas,loadImage,GlobalFonts}=require('@napi-rs/canvas');
 const ROOT=process.env.BLITZ_MOTION_OUTPUT||path.join(__dirname,'renders'),REPO=path.join(__dirname,'../..');fs.mkdirSync(ROOT,{recursive:true});
-require(path.join(REPO,'assets/battle-motion/manifest.js'));const M=require(path.join(REPO,'battle-motion.js'));
+require(path.join(REPO,'assets/battle-motion/manifest.js'));const M=require(path.join(REPO,'assets/battle-motion/runtime.js'));
 GlobalFonts.registerFromPath(path.join(REPO,'assets/fonts/andika-latin.woff'),'Andika');
 const W=1024,H=768,FPS=60;
 function round(ctx,x,y,w,h,r,fill,stroke){ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.stroke();}}

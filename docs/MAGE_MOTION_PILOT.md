@@ -20,7 +20,7 @@ The latest user correction replaces palm casting with a two-handed staff aim. So
 
 ## Integration
 
-`battle-motion.js` draws complete transparent sprite frames over the actual battle elements. It measures the current layout, aims the spell from the held staff crystal and moves melee attackers into contact. A rear group member moves toward the foreground as it approaches the mage. Mage feedback stays inside the existing 1,200 ms window; health presentation changes at 660 ms. Celebrations run once for 1,600 ms. Reading and choices have no running idle animation.
+`assets/battle-motion/runtime.js` draws complete transparent sprite frames over the actual battle elements. It measures the current layout, aims the spell from the held staff crystal and moves melee attackers into contact. A rear group member moves toward the foreground as it approaches the mage. Mage feedback stays inside the existing 1,200 ms window; health presentation changes at 660 ms. Celebrations run once for 1,600 ms. Reading and choices have no running idle animation.
 
 Pause, Home, navigation and hidden-page handling cancel playback. Final defeat poses hold without a running animation loop until navigation. Reduced motion and unavailable animation sheets retain the existing feedback path. The game makes no generation-service calls and stores no API credentials. Animation changes do not alter damage, XP, curriculum or learner-save schemas.
 

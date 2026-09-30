@@ -22,7 +22,7 @@ function boot(saved,options={}){
    const motionContext={...ctx,window:new Proxy(window,{get:(target,key)=>key==='Image'?FakeImage:key==='performance'?ctx.performance:Reflect.get(target,key)})};
    const create=document.createElement.bind(document);document.createElement=(tag,...args)=>{const el=create(tag,...args);if(tag==='canvas')el.getContext=()=>new Proxy({drawImage(image){motionDraws.push(image.url);},createLinearGradient(){return {addColorStop(){}};}}, {get:(obj,key)=>obj[key]||(()=>{})});return el;};
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/manifest.js','utf8'),motionContext);
-   vm.runInNewContext(fs.readFileSync(root+'battle-motion.js','utf8'),motionContext);
+   vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/runtime.js','utf8'),motionContext);
  }
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);

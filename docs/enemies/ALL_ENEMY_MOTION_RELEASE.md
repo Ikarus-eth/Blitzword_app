@@ -18,10 +18,10 @@ The 480p source clips are trimmed, keyed and packed into local WebP sprite atlas
 
 ## Review and checks
 
-[All 60 encounter/action combinations in the real isolated game](../../tests/all-motion-review.html). This page uses a temporary in-memory save and never changes a learner adventure. Staff cast, counterattack, Pip assist, member defeat and both celebrations are selectable.
+[All 60 encounter/action combinations in the real isolated game](../../assets/battle-motion/review.html). This page uses a temporary in-memory save and never changes a learner adventure. Staff cast, counterattack, Pip assist, member defeat and both celebrations are selectable.
 
 274 automated tests and 96 UI-flow groups pass after integrating main’s adaptive-reading changes. Checks include all 60 variants’ real counterattack handlers, saved girl/knight preferences displaying Mage without being overwritten, group retirement, impact timing, Pip assistance, shields, cancellation, reduced motion, failed media and learner-save continuity. Local atlas decode/bounds checks and selected-frame contacts complement the controller tests.
 
 Source contacts and offline game-layout previews were visually inspected. They use the production drawing code but are not browser recordings. The browser tool’s admin-policy verification denied access, so no alternate browser route was used. Physical iPad/Safari playback and memory performance remain unverified.
 
-The adaptive-reading and illustrated-story changes from main `0592169` are preserved. Deployment uses the existing Pages workflow, which now includes the motion JavaScript/CSS and review pages. Rollback uses the prior main revision without clearing learner storage.
+The adaptive-reading and illustrated-story changes from main `0592169` are preserved. Deployment uses the unchanged Pages workflow; the motion runtime and review page live in the asset folder it already publishes. Rollback uses the prior main revision without clearing learner storage.

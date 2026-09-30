@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const root=path.join(__dirname,'..');require('../assets/battle-motion/manifest.js');const M=require('../battle-motion'),C=require('../content');
+const root=path.join(__dirname,'..');require('../assets/battle-motion/manifest.js');const M=require('../assets/battle-motion/runtime'),C=require('../content');
 test('all 60 approved enemy variants and groups have four complete motions',()=>{
   assert.equal(C.enemyVariants.length,60);
   for(const enemy of C.enemyVariants){const key=M.enemyKey(enemy);assert.ok(key,enemy.id);assert.ok(M.render(key,{stage:enemy.stage}).includes('motionStill'));assert.deepEqual(Object.keys(M.asset(key).clips).sort(),['attack','defeat','hit','victory']);}
