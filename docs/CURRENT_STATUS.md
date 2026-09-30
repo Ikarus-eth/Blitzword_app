@@ -1,16 +1,18 @@
-# BlitzWord current status — 29 September 2026
+# BlitzWord current status — 30 September 2026
 
 This page tracks current implementation and remaining work. Dated release notes preserve historical behavior and test results; their old limitations are not automatically current tasks. Latest approved user decisions take precedence over earlier plans. A difference between approved behavior and code remains a discrepancy, not a new product decision.
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).
 
-Latest verified runtime build: `story-pilot-20260930-r1`, deployed from main `bd30a889ba4cfef86e653113fbcf3687477251b0`. [Live release verification](STORY_PILOT_DEPLOYMENT.json) covers the Home button, pilot files and reused artwork. Earlier documentation was reconciled against `6e7bf84adfa169f0f858c023b5225490acba1967`; historical release evidence remains below. The narration completion draft is not merged or deployed.
+Latest verified runtime build: `story-rescue-20260930-r2`, deployed from main `88096adb1028998dcd862b6f0e56efa168ed257f`. [Live release verification](story-pilot/RESCUE_DEPLOYMENT.json) covers the pilot, main build marker and six integrated illustrations. Earlier releases remain below as historical evidence. The narration completion draft is not merged or deployed.
 
 ## Illustrated fox-cub rescue — 30 September 2026 revision
 
-**Implemented and locally tested; deployment pending.** Build `story-rescue-20260930-r2` replaces the pilot's generic scenes and portrait cards with six coherent illustrations, with Artus and Pip present in all of them. It is now one rescue journey through five stops. Reading and maths choices use the same tools or supplies at each stop; the separate final gem-sharing problem is removed. The overall difficulty and simple wording remain. Earlier pilot results are retained under their original key, while the revised content starts separate v2 progress. Main learner saves, battles and narration remain unchanged.
+**Deployed and verified.** Build `story-rescue-20260930-r2` replaces the pilot's generic scenes and portrait cards with six coherent illustrations, with Artus and Pip present in all of them. It is now one rescue journey through five stops. Reading and maths choices use the same tools or supplies at each stop; the separate final gem-sharing problem is removed. The overall difficulty and simple wording remain. Earlier pilot results are retained under their original key, while the revised content starts separate v2 progress. Main learner saves, battles and narration remain unchanged.
 
-[Current rescue release](story-pilot/RESCUE_RELEASE.md), [artwork and prompts](story-pilot/RESCUE_ARTWORK.json), [checks](story-pilot/RESCUE_CHECKS.json). Physical iPad/Safari remains untested.
+All 265 automated tests and 90 UI-flow groups passed. Chromium completed the full rescue, checked hint/correction/replay and reload persistence, and reviewed desktop, tablet portrait and 320 px phone layouts. [PR #107](https://github.com/Ikarus-eth/Blitzword_app/pull/107) merged as `88096adb1028998dcd862b6f0e56efa168ed257f`; [Pages run 36673904297](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36673904297) succeeded. At 05:34 UTC, all 29 checked live files matched tested source, including all six illustrations. Live browser checks showed the new route and integrated scene with no old overlays or console errors.
+
+[Current rescue release](story-pilot/RESCUE_RELEASE.md), [artwork and prompts](story-pilot/RESCUE_ARTWORK.json), [checks](story-pilot/RESCUE_CHECKS.json). Physical iPad/Safari remains untested. [Live evidence](story-pilot/RESCUE_DEPLOYMENT.json).
 
 ## Original five-story pilot — 30 September 2026 (superseded visuals/content)
 
