@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="blitzword-soundscape" content="continuous-battle-20260924-r1" />
 <meta name="blitzword-scenery" content="35-chapters-20260923-r1" />
-<meta name="blitzword-build" content="mage-motion-20260930-r2" />
+<meta name="blitzword-build" content="enemy-motion-20260930-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -12,9 +12,9 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=mage-motion-20260930-r2" />
+<link rel="stylesheet" href="styles.css?v=enemy-motion-20260930-r1" />
 <link rel="stylesheet" href="enemy-art.css?v=enemy-groups-20260925-r2" />
-<link rel="stylesheet" href="battle-motion.css?v=mage-motion-20260930-r2" />
+<link rel="stylesheet" href="battle-motion.css?v=enemy-motion-20260930-r1" />
 </head>
 <body><main class="app" id="app">
 <div id="chapterScenery" class="chapterScenery" aria-hidden="true" hidden></div>
@@ -35,17 +35,18 @@
     <label class="fieldLabel" for="nameInput">Name</label>
     <input id="nameInput" class="nameInput" maxlength="18" autocomplete="off" autocorrect="off" autocapitalize="words" spellcheck="false" enterkeyhint="next" placeholder="Name" />
     <div class="fieldLabel">Age</div><div class="choiceRow" id="ageChoices"></div>
-    <div class="fieldLabel">Hero look</div>
+    <div id="heroLookControls" hidden><div class="fieldLabel">Hero look</div>
     <div class="choiceRow">
       <button class="genderCard" data-gender="boy"><span class="heroPortrait" data-hero-index="0" role="img" aria-label="Boy hero"></span><span>Boy</span></button>
       <button class="genderCard" data-gender="girl"><span class="heroPortrait" data-hero-index="3" role="img" aria-label="Girl hero"></span><span>Girl</span></button>
+    </div>
     </div>
     <button id="setupNext" class="greenButton setupGo" aria-label="Continue">Go</button>
   </div>
 </section>
 
 <section id="hero" class="screen forest">
-  <div class="heroTitle">Pick your hero</div><div id="heroGrid" class="heroGrid"></div>
+  <div class="heroTitle">Your hero</div><div id="heroGrid" class="heroGrid"></div>
   <button id="heroNext" class="greenButton heroGo" aria-label="Continue">Go</button>
 </section>
 
@@ -56,7 +57,7 @@
     <p class="routeSub" id="routeName"></p>
     <div id="homeChapter" class="chapterPanel" hidden></div>
     <div class="routeButtons"><button id="continueAdventure" class="greenButton" hidden>Play</button><button id="tryBattle" class="greenButton">Play</button><button id="checkFirst" class="secondaryButton">Word check</button></div>
-    <p id="sessionNote" class="sessionNote"></p><button id="changeHero" class="textButton">Change hero</button><button id="routeParents" class="textButton">Parents</button>
+    <p id="sessionNote" class="sessionNote"></p><button id="changeHero" class="textButton">Your hero</button><button id="routeParents" class="textButton">Parents</button>
   </div>
 </section>
 
@@ -232,6 +233,6 @@
 <script src="narration.js?v=narration-remainder-20260924-r1"></script>
 <script src="audio.js?v=narration-approved-20260924-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
-<script src="assets/battle-motion/manifest.js?v=mage-motion-20260930-r2"></script>
-<script src="battle-motion.js?v=mage-motion-20260930-r2"></script>
-<script src="app.js?v=mage-motion-20260930-r2"></script></body></html>
+<script src="assets/battle-motion/manifest.js?v=enemy-motion-20260930-r1"></script>
+<script src="battle-motion.js?v=enemy-motion-20260930-r1"></script>
+<script src="app.js?v=enemy-motion-20260930-r1"></script></body></html>

@@ -7,3 +7,5 @@
 .battleHero[data-motion-actor="mage"]{left:10%}
 @media(orientation:portrait){.battleHero[data-motion-actor="mage"]{left:10%}}
 .battleHero[data-motion-actor="mage"]~.battlePip[data-motion-actor="pip"]{left:34%}
+.heroGrid{grid-template-columns:minmax(0,340px);justify-content:center}
+#heroLookControls[hidden]{display:none!important}

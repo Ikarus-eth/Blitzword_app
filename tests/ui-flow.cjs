@@ -173,13 +173,13 @@ for(const gender of ['boy','girl'])for(const heroClass of ['Mage','Knight','Arch
  ui.click(choice);assert.equal(ui.state().battle.enemyHealth,0);assert.equal(ui.get('combatEffects').className,'combatEffects');
  ui.click(choice);assert.equal(ui.state().campaign.battleRecords.length,1);ui.finishSpeech();
  assert.ok(ui.get('combatEffects').classList.contains('heroStrike'));assert.ok(ui.get('combatEffects').classList.contains('pipStrike'));assert.ok(ui.document.querySelector('.battlePip').classList.contains('pipFinisher'));
- assert.equal(!!ui.get('battleHeroImg').querySelector('.staffArm'),heroClass==='Mage');assert.equal(!!ui.get('combatEffects').querySelector('.castBeam'),heroClass==='Mage');
+ assert.equal(!!ui.get('battleHeroImg').querySelector('.staffArm'),true);assert.equal(!!ui.get('combatEffects').querySelector('.castBeam'),true);
  assert.equal(ui.get('combatEffects').querySelectorAll('.damageNumber').length,1);assert.equal(ui.state().battle.enemyHealth,0);
  ui.click(ui.get('pauseBtn'));assert.equal(ui.get('combatEffects').className,'combatEffects');assert.equal(ui.get('combatEffects').querySelector('.castBeam'),null);assert.ok(!ui.get('battleHeroImg').classList.contains('mageCast'));
  ui.finishSpeech();assert.equal(ui.get('combatEffects').className,'combatEffects');ui.click(ui.get('pauseResume'));ui.finishSpeech();ui.click(ui.get('homeBtn'));assert.equal(ui.get('combatEffects').className,'combatEffects');
  assert.equal(ui.state().campaign.battleRecords.length,1);
 }
-console.log('PASS all six heroes: answer/narration lock, staff beam, Pip final blow, one damage, pause and Home cancellation');
+console.log('PASS all six saved hero preferences use mage: answer/narration lock, staff beam, Pip final blow, one damage, pause and Home cancellation');
 {
  const context={window:{},BlitzCore:Core,BlitzContent:Content};vm.runInNewContext(fs.readFileSync(root+'tests/review-scenarios.js','utf8'),context);
  const html=fs.readFileSync(root+'tests/visual-review.html','utf8'),scenarios=[...html.matchAll(/<option value="([^"]+)"/g)].map(x=>x[1]);
@@ -238,7 +238,7 @@ for(const victory of [true,false]){
  const s=Core.migrate(Core.fresh()),now=Date.now();s.profile.name='Éva';s.profile.gender='girl';s.profile.heroClass='Knight';s.assessment.done=true;
  Core.startBattle(s,now,{strength:4});s.battle.enemyHealth=victory?0:4;s.battle.heroHealth=victory?3:0;Core.prepareBattle(s,now);
  const ui=boot(s);ui.resume();assert.ok(ui.get('result').classList.contains('active'));assert.equal(ui.get('opponents').children.length,2);
- assert.equal(ui.get('resultHero').dataset.sprite,'4');const wins=ui.state().campaign.wins;
+ assert.equal(ui.get('resultHero').dataset.sprite,'0');assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.state().profile.gender,'girl');const wins=ui.state().campaign.wins;
  ui.click(ui.get('resultNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));ui.resume();assert.equal(ui.state().campaign.wins,wins);
  const cards=[...ui.get('opponents').children];assert.ok(cards.every(card=>card.querySelector('.creatureName').textContent===Content.enemyAt(card.dataset.enemy).name));assert.deepEqual(cards.map(card=>card.querySelector('.opponentName').textContent.trim()),victory?['= Same','↑ Stronger']:['↓ Easier','= Same']);const chosenCard=cards[victory?1:0];const chosen=chosenCard.dataset.enemy;ui.click(chosenCard);assert.equal(ui.state().battle.maxHealth,victory?5:3);assert.equal(ui.state().campaign.wins,wins);assert.equal(ui.state().battle.enemyId,chosen);ui.click(ui.get('encounterStart'));
  ui.click(ui.get('pauseBtn'));ui.click(ui.get('pauseFinish'));assert.ok(ui.get('summary').classList.contains('active'));assert.ok(ui.state().session.completedAt);
@@ -286,7 +286,7 @@ for(const victory of [true,false]){
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent==='on'));assert.equal(ui.get('xpReward').textContent,'Pip is glowing!');assert.equal(ui.document.querySelector('.battlePip').dataset.growth,'0');
  ui.click(ui.get('homeBtn'));ui=boot(ui.state());assert.equal(ui.get('dragonXP').textContent,'15000 XP');assert.equal(ui.get('dragonStage').textContent,'Big Pip');assert.equal(ui.get('dragonNext').textContent,'0 / 10 growth steps');assert.equal(ui.get('mapPip').dataset.growth,'0');
  const answers=ui.state().campaign.battleRecords.length;ui.resume();ui.until(()=>ui.state().battle.question.target!=='on');assert.equal(ui.state().campaign.battleRecords.length,answers);
- ui.click(ui.get('homeBtn'));ui.click(ui.get('mapTraveller'));ui.click(ui.get('heroGrid').children[1]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.get('dragonXP').textContent,'15000 XP');
+ ui.click(ui.get('homeBtn'));ui.click(ui.get('mapTraveller'));assert.equal(ui.get('heroGrid').children.length,1);ui.click(ui.get('heroGrid').children[0]);ui.click(ui.get('heroNext'));assert.ok(ui.get('campaignMap').classList.contains('active'));assert.equal(ui.state().profile.heroClass,'Mage');assert.equal(ui.get('dragonXP').textContent,'15000 XP');
  console.log('PASS map future previews, XP stage unlock, reload, exact resume and hero change');
 }
 
@@ -1059,3 +1059,14 @@ console.log('PASS a single beetle retires at impact and a final-heart mage defea
  ui.elapse(150);assert.equal(ui.get('enemyCount').textContent,'0 / 18');assert.equal(ui.state().campaign.battleRecords.length,1);ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);
 }
 console.log('PASS Pip finisher joins one saved hit and stops with the rest of the reaction');
+
+for(const enemy of Content.enemyVariants){
+ const s=impactSave(enemy.id),hp=enemy.minHealth;Core.startBattle(s,Date.UTC(2026,8,22),{strength:hp,enemyId:enemy.id});s.battle.introPending=false;Core.prepareBattle(s,Date.UTC(2026,8,22));s.profile.heroClass='Knight';s.profile.gender='girl';
+ const ui=boot(s,{motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();
+ assert.equal(ui.get('battleHeroImg').dataset.motionActor,'mage',enemy.id);assert.equal(ui.state().profile.heroClass,'Knight');assert.equal(ui.state().profile.gender,'girl');
+ assert.ok(ui.document.querySelector('[data-motion-actor="'+({'moss-golem':'golem','bark-beetle':'beetle'}[enemy.family]||enemy.family)+'"]'),enemy.id);
+ const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));ui.finishSpeech();assert.ok(ui.document.querySelector('.motionOverlay'),enemy.id);ui.elapse(680);
+ assert.ok(ui.motionDraws.some(url=>url.includes('-attack')),enemy.id);assert.equal(ui.state().battle.heroHealth,s.battle.heroHealth-1);
+ ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);
+}
+console.log('PASS all 60 variants animate counterattacks as the male mage while preserving saved hero preferences');

@@ -13,10 +13,11 @@ fetch('../index.html?review='+Date.now(),{cache:'no-store'}).then(r=>r.text()).t
  }
  const learnerStorageKey=BlitzStorage.KEY;window.BlitzStorage={...BlitzStorage,KEY:'blitzword_visual_review',AdventureStore:class extends BlitzStorage.AdventureStore{constructor(){const data=new Map([[learnerStorageKey,window.reviewScene==='error'?'broken save':JSON.stringify(window.reviewInitialSave=makeReviewSave(window.reviewScene))]]);super({getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v),removeItem:k=>data.delete(k)});}}};<\/script>`;
  const activate=`<script>if(window.reviewScene==='parents'){document.getElementById('mapParents').click();}else if(!['setup','heroes','route','error','name-dragon'].includes(window.reviewScene)&&!window.reviewScene.startsWith('map')&&!window.reviewScene.startsWith('evolution-')){document.getElementById(document.getElementById('campaignMap').classList.contains('active')?'mapContinue':'continueAdventure').click();if(['pause','summary'].includes(window.reviewScene))document.getElementById('pauseBtn').click();if(window.reviewScene==='summary')document.getElementById('pauseFinish').click();}<\/script>`;
- const motionActivate=scene.startsWith('motion-mage-')?`<script>
+ const motionActivate=(scene.startsWith('motion-mage-')||scene.startsWith('motion-all:'))?`<script>
  (async()=>{
-  const [,,,action]=window.reviewScene.split('-');
-  await Promise.all(['mage',window.reviewScene.split('-')[2],'pip'].map(k=>BlitzMotion.warm(k)));
+  const action=window.reviewScene.startsWith('motion-all:')?window.reviewScene.split(':')[2]:window.reviewScene.split('-')[3];
+  const enemy=BlitzContent.enemyAt(window.reviewInitialSave.battle.enemyId);
+  await Promise.all(['mage',BlitzMotion.enemyKey(enemy),'pip'].map(k=>BlitzMotion.warm(k)));
   if(!document.getElementById('battle').classList.contains('active'))return;
   if(['victory','enemyvictory'].includes(action)){BlitzMotion.celebrate(document.getElementById('battle'),document.getElementById(action==='victory'?'battleHeroImg':'enemyFace'));return;}
   // Use real answer handlers; presentation-only overrides stay in this test entry.
