@@ -6,7 +6,13 @@ The [original curriculum workbook](../curriculum/README.md), maintained document
 
 Latest verified runtime build: `story-pilot-20260930-r1`, deployed from main `bd30a889ba4cfef86e653113fbcf3687477251b0`. [Live release verification](STORY_PILOT_DEPLOYMENT.json) covers the Home button, pilot files and reused artwork. Earlier documentation was reconciled against `6e7bf84adfa169f0f858c023b5225490acba1967`; historical release evidence remains below. The narration completion draft is not merged or deployed.
 
-## Five story adventures — 30 September 2026
+## Illustrated fox-cub rescue — 30 September 2026 revision
+
+**Implemented and locally tested; deployment pending.** Build `story-rescue-20260930-r2` replaces the pilot's generic scenes and portrait cards with six coherent illustrations, with Artus and Pip present in all of them. It is now one rescue journey through five stops. Reading and maths choices use the same tools or supplies at each stop; the separate final gem-sharing problem is removed. The overall difficulty and simple wording remain. Earlier pilot results are retained under their original key, while the revised content starts separate v2 progress. Main learner saves, battles and narration remain unchanged.
+
+[Current rescue release](story-pilot/RESCUE_RELEASE.md), [artwork and prompts](story-pilot/RESCUE_ARTWORK.json), [checks](story-pilot/RESCUE_CHECKS.json). Physical iPad/Safari remains untested.
+
+## Original five-story pilot — 30 September 2026 (superseded visuals/content)
 
 **Deployed and verified.** Build `story-pilot-20260930-r1` adds Story adventures to chapter-selection Home and five optional Artus/Pip stories. Simple wording accompanies harder clues and maths, ending with a three-sign door riddle, a times-table code and a multi-step share. No Listen or speech in the pilot. Existing scenes and four selected updated enemy stills are reused; no new bitmap generation. Main-game saves, curriculum, battle artwork and narration remain unchanged. Pilot choices, first checks, hints and replays use a separate local save and are not in main-game backup yet.
 

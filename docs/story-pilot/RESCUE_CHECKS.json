@@ -1,0 +1,82 @@
+{
+  "build": "story-rescue-20260930-r2",
+  "verifiedAt": "2026-09-30T05:30:25.057631+00:00",
+  "baseMain": "fc1e68932df0b48d7f84e52956d1143863d4dcc2",
+  "automated": {
+    "tests": 265,
+    "passed": 265,
+    "uiFlowGroups": 90,
+    "pilotTests": 13
+  },
+  "browser": {
+    "engine": "Chromium in Codex browser",
+    "flows": [
+      "completed all five linked rescue stops",
+      "wrong first check then clue hint then correction",
+      "selected blue bag retained on reload",
+      "first wrong check retained after replay",
+      "final reunion loaded",
+      "one integrated scene image with no sprite/portrait overlays",
+      "uncropped 3:2 image and illustration-first layout at 320 px"
+    ],
+    "viewportChecks": [
+      [
+        1280,
+        720
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "warningsOrErrors": 0,
+    "physicalIPadSafari": "not tested"
+  },
+  "artwork": {
+    "finalImages": 6,
+    "generationCalls": 7,
+    "targetedEdits": 1,
+    "deliveryBytes": 2908656
+  },
+  "progress": {
+    "newKey": "blitzword_story_pilot_v2",
+    "oldKeyPreserved": "blitzword_story_pilot_v1",
+    "mainLearnerSaveAccess": "none from pilot"
+  },
+  "deployment": "pending",
+  "sha256": {
+    "index.html": "c01987b17c8e1de6ec58dfc88d87304a46c553118a88eada82ee5a7e00b450d0",
+    "assets/story-pilot/index.html": "dc382f515799c65452379b8ddf3b9589d7bdeb02a7521da08b0483c09d54cc8d",
+    "assets/story-pilot/styles.css": "d67757bac3a650ef2cb6e95fc0cdb1ae0bb5d27edfce775c2c4c1e9a28d9b339",
+    "assets/story-pilot/core.js": "d9820d512a8ee7d5d9a833274ac5d933a2cfa2a23d9aef1c2ed849db9c057373",
+    "assets/story-pilot/stories.js": "32df4b487bd462a091012683ad0e6690efcb1627d57c46a8c96ea215710d5805",
+    "assets/story-pilot/app.js": "7d1cb4f329d8836ccb6fd9ceae0868eb108aed2aed731cad2629ad81283671ea",
+    "assets/story-pilot/scenes/reunion.webp": "0e7e5349fd28d9bf4256abed4b8ab81be35333f84ec3865953d2528119a3a261",
+    "assets/story-pilot/scenes/owl.webp": "4959b2bb3391c1ca51e27da96854de13bb29bea26c1c01b618933dd91b2c5f8d",
+    "assets/story-pilot/scenes/gate.webp": "f29bd0b629a6189e1b829ec4abc186a78a2f20ca99ff007f24d751f20eb08479",
+    "assets/story-pilot/scenes/troll.webp": "3c5d01e5d8f7954a85222e6afcddbdad86dc419906e618350f4d7c59325ebfe4",
+    "assets/story-pilot/scenes/fox-call.webp": "055df7cdbfc54461498001f0b36315d0e860d343760fbb4e9f36b851a080cded",
+    "assets/story-pilot/scenes/bridge.webp": "acb124ce76390c87eddbd365e708fc7891eba49f157dd209e6c783f04a12e2c9",
+    "assets/story-pilot/assets/chest.svg": "f39115fb6e6179a1812bdf55572acd6acc5cb5cda0b6933937c1fe0095cd8578",
+    "assets/story-pilot/assets/torch.svg": "cdef2530a632ba5507ffc99ff61338d62c492f78534726dc055c7ff71b7c371a",
+    "assets/story-pilot/assets/key.svg": "d98708963ce1e90e10614a22fbc3715ddc4a131c0e6fe8bb95e57b8b9527aa51",
+    "assets/story-pilot/assets/shield.svg": "b483f5f9effeefb83c3cac32392bd1d9cc2b8cd524e1573e4558123d2954e4a2",
+    "assets/story-pilot/assets/saw.svg": "0c58c588f67245816c5071b2e15b987dbb3a5eaf7915f05c977ebd0ed3e1e468",
+    "assets/story-pilot/assets/nut.svg": "ba92068fe0e47b7d1c9571f8f9c99a4dd4a79b4b4dbde18b4d460200b4a28de9",
+    "assets/story-pilot/assets/LUCIDE-LICENSE.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/story-pilot/assets/bag.svg": "15c4a961b00f8d19dfe64885a7b1d8973af9e2f4c0a2faa13987c69da8b76e88",
+    "assets/story-pilot/assets/coin.svg": "425809c9f7cda9496963fa6816c6f26e040a94139114dcef7de262e5886391b2",
+    "assets/story-pilot/assets/gem.svg": "d30d24b95b727695c9eb5f71fc0269bab385c371da98016a55808b785d4841fb",
+    "assets/story-pilot/assets/leaf.svg": "8fcd44b4e3ff7ef3ffc74af8a5aa4b64764f65ed90be091514556dce02d0b81b",
+    "assets/story-pilot/assets/star.svg": "f64168464a2b1d3d93ff070fa0a594ddf24ff4f78f1cf85ab51d46f72bb830b5",
+    "assets/story-pilot/assets/sun.svg": "b3fca394c2d2f6d5f5fd19c90abadc737a9776416be18fed9573e3dbe8337b76",
+    "assets/story-pilot/assets/sword.svg": "fafc17551e0de47c7d76890686c1e90649115ed3a378235fdd690a4b92f75517",
+    "assets/story-pilot/assets/apple.svg": "e2c6955885dbf4edc40bc8b06dc7922b130c49989a9b5bb6d7ccef64786a4d89",
+    "assets/story-pilot/assets/comb.svg": "07f7f49c101e3a3378f197b850cbb7442247c53ddca6775ecb5e03e1d8e35c6a",
+    "assets/story-pilot/assets/moon.svg": "ceb9eab02460cac89a35cc0936f24f7ccddf0dfe86b539be41b7d902345ea806"
+  }
+}
