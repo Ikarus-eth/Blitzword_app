@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "status": "Final still-art selection; future game replacement deferred until smooth animation is reviewed",
+  "status": "Selected male mage and all 20 enemies integrated as whole-frame motion; other hero choices temporarily disabled",
   "selectionRule": "Highest Artus score, then highest Juna score among tied candidates, then highest Johanna score; unresolved ties require user choice.",
   "userTieBreaks": {
     "reed-serpent": "D",
@@ -11,7 +11,7 @@
     "archer-girl": "A"
   },
   "sourceMain": "876f437b394adc50865c92eefab448a893cbed9e",
-  "gameUpdated": false,
+  "gameUpdated": true,
   "pdf": "docs/artwork/BlitzWord-character-artwork.pdf",
   "pdfSha256": "b6014b697bffb851d637b4c0762fb11f5cde9d611f6796935f8464238fb1b825",
   "characters": [
@@ -486,5 +486,15 @@
       ],
       "selectionBasis": "Retained approved evolution and battle artwork"
     }
-  ]
+  ],
+  "implementation": {
+    "build": "enemy-motion-20260930-r1",
+    "enemyFamilies": 20,
+    "encounterVariants": 60,
+    "activeHero": "mage-boy",
+    "otherHeroes": "temporarily disabled; saved preferences preserved",
+    "juveniles": "same family motion, uniform smaller scale",
+    "pip": "existing growth art retained; Small Pip fire motion integrated",
+    "release": "docs/enemies/ALL_ENEMY_MOTION_RELEASE.md"
+  }
 }

@@ -942,7 +942,7 @@ console.log('PASS timed and self-paced battle audio stays open through every que
  assert.equal(ui.document.querySelector('.mapDestination'),null);assert.equal(ui.get('mapSettings'),null);
  assert.equal(current.dataset.area,'lantern-trail');assert.equal(current.querySelector('.mapNodeName').textContent,'Lantern Trail›');
  assert.equal(ui.get('mapDailyGoal').hidden,true);assert.equal(ui.get('mapDailySummary').hidden,true);
- assert.equal(ui.get('mapTraveller').tagName,'BUTTON');assert.match(ui.get('mapTraveller').getAttribute('aria-label'),/^Change hero:/);
+ assert.equal(ui.get('mapTraveller').tagName,'BUTTON');assert.match(ui.get('mapTraveller').getAttribute('aria-label'),/^Your hero:/);
  ui.click(ui.get('mapNodes').querySelector('[data-area="hidden-nest"]'));
  assert.equal(ui.state().screen,'campaignMap');assert.equal(ui.state().battle.id,before.battle.id);assert.equal(ui.get('mapContinue').dataset.area,'lantern-trail');
  const start=ui.get('mapContinue').onclick;start();const active=ui.state();start();

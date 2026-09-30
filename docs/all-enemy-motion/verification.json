@@ -1,0 +1,144 @@
+{
+  "build": "enemy-motion-20260930-r1",
+  "unitTests": 274,
+  "uiFlowGroups": 96,
+  "variants": 60,
+  "enemyFamilies": 20,
+  "totalBytes": 49241326,
+  "actors": [
+    {
+      "actor": "beetle",
+      "bytes": 3036484,
+      "decodedBytes": 48810784,
+      "files": 5
+    },
+    {
+      "actor": "pip",
+      "bytes": 975512,
+      "decodedBytes": 13044352,
+      "files": 2
+    },
+    {
+      "actor": "mage",
+      "bytes": 4470256,
+      "decodedBytes": 99689344,
+      "files": 6
+    },
+    {
+      "actor": "golem",
+      "bytes": 4434610,
+      "decodedBytes": 64264048,
+      "files": 5
+    },
+    {
+      "actor": "thornling",
+      "bytes": 3640804,
+      "decodedBytes": 50197504,
+      "files": 5
+    },
+    {
+      "actor": "moon-moth",
+      "bytes": 1797466,
+      "decodedBytes": 27450976,
+      "files": 5
+    },
+    {
+      "actor": "root-sprite",
+      "bytes": 2405626,
+      "decodedBytes": 31490176,
+      "files": 5
+    },
+    {
+      "actor": "cave-troll",
+      "bytes": 2417026,
+      "decodedBytes": 30302176,
+      "files": 5
+    },
+    {
+      "actor": "acorn-imp",
+      "bytes": 1490588,
+      "decodedBytes": 28458976,
+      "files": 5
+    },
+    {
+      "actor": "mushroom-guard",
+      "bytes": 2322594,
+      "decodedBytes": 34888576,
+      "files": 5
+    },
+    {
+      "actor": "bramble-boar",
+      "bytes": 2263752,
+      "decodedBytes": 31029376,
+      "files": 5
+    },
+    {
+      "actor": "reed-serpent",
+      "bytes": 2372368,
+      "decodedBytes": 33066976,
+      "files": 5
+    },
+    {
+      "actor": "bog-toad",
+      "bytes": 1392576,
+      "decodedBytes": 21748576,
+      "files": 5
+    },
+    {
+      "actor": "lantern-wisp",
+      "bytes": 2026056,
+      "decodedBytes": 30014176,
+      "files": 5
+    },
+    {
+      "actor": "crystal-crab",
+      "bytes": 1703704,
+      "decodedBytes": 23476576,
+      "files": 5
+    },
+    {
+      "actor": "hollow-owl",
+      "bytes": 1514386,
+      "decodedBytes": 22698976,
+      "files": 5
+    },
+    {
+      "actor": "fern-wolf",
+      "bytes": 1792442,
+      "decodedBytes": 26284576,
+      "files": 5
+    },
+    {
+      "actor": "stone-ram",
+      "bytes": 2162012,
+      "decodedBytes": 32519776,
+      "files": 5
+    },
+    {
+      "actor": "briar-bat",
+      "bytes": 1409826,
+      "decodedBytes": 21136576,
+      "files": 5
+    },
+    {
+      "actor": "snail-knight",
+      "bytes": 2022308,
+      "decodedBytes": 24765376,
+      "files": 5
+    },
+    {
+      "actor": "chest-mimic",
+      "bytes": 2059974,
+      "decodedBytes": 31576576,
+      "files": 5
+    },
+    {
+      "actor": "storm-griffin",
+      "bytes": 1530956,
+      "decodedBytes": 20898976,
+      "files": 5
+    }
+  ],
+  "browserVisualVerified": false,
+  "ipadVerified": false
+}

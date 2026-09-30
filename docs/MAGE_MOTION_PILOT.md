@@ -1,6 +1,6 @@
 # Male mage and three-enemy motion candidate
 
-Status: implemented on the review branch, **not merged or deployed**. The user requested a male-mage pilot with three enemies, including a group, shown in the existing game before deployment.
+Historical pilot record, superseded by [the all-enemy release](enemies/ALL_ENEMY_MOTION_RELEASE.md). At the pilot checkpoint this was implemented on a review branch, not deployed. The user requested a male-mage pilot with three enemies, including a group, shown in the existing game before deployment.
 
 ## Artwork and actions
 
@@ -32,7 +32,7 @@ Open `tests/motion-review.html` from a local server. It loads the actual game in
 
 Automated checks cover impact timing, one-target group behavior, retirement, held final-heart defeat, cancellation, missing sheets, reduced motion and existing learner flows. **274 core/unit tests and 94 UI-flow groups pass.** Final counts and asset checks are recorded in `docs/mage-motion/verification.json`.
 
-Browser visual verification is outstanding: the browser tool denied the local review URL because its admin-enforced security policy could not be verified. No alternate browser or automation route was used to bypass that denial. Physical iPad/Safari performance and final visual approval remain required before calling this a verified release.
+Browser visual verification is outstanding: the browser tool denied the local review URL because its admin-enforced security policy could not be verified. No alternate browser or automation route was used to bypass that denial. Physical iPad/Safari performance remained unverified at the pilot checkpoint. The user subsequently accepted the direction and explicitly authorized the all-enemy deployment; see the current release record.
 
 ## Cost
 

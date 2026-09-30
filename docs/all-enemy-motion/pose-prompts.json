@@ -1,0 +1,104 @@
+[
+  {
+    "id": "moon-moth",
+    "prompt": "Use case: background-extraction. Edit target: this approved storybook game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the navy cream moth-owl hybrid, four patterned moon wings and four small legs. Natural three-quarter view facing LEFT; wings partly spread, all tips visible. Preserve the same face, detailed painted style, anatomy, colours, markings, clothing and proportions; do not redesign. All parts stay naturally connected. Full body and every appendage inside the canvas, generous clear margin. No scenery, no floor, no ground shadow, no text, no extra objects. One character only.",
+    "poseSha256": "2866452b2b766befc60aa79e24fffad3a2884a8f2442b6db813ebfae7f52e509",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "root-sprite",
+    "prompt": "Use case: background-extraction. Edit target: this approved storybook game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the exact wooden child creature with oak leaves and acorns, amber eyes, twig hands and two root feet. Natural three-quarter battle-ready stance facing LEFT. Preserve the same face, detailed painted style, anatomy, colours, markings, clothing and proportions; do not redesign. All parts stay naturally connected. Full body and every appendage inside the canvas, generous clear margin. No scenery, no floor, no ground shadow, no text, no extra objects. One character only.",
+    "poseSha256": "103d90b5fce2895efdcf526cd5645a84f1d46e5efae14ab3087792c40aeea337",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "cave-troll",
+    "prompt": "Use case: background-extraction. Edit target: this approved storybook game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the exact bulky grey stone troll, two wooden horns, moss, flowers, leather belt and two huge fists. Natural three-quarter battle-ready stance facing LEFT. Preserve the same face, detailed painted style, anatomy, colours, markings, clothing and proportions; do not redesign. All parts stay naturally connected. Full body and every appendage inside the canvas, generous clear margin. No scenery, no floor, no ground shadow, no text, no extra objects. One character only.",
+    "poseSha256": "b25ce7b8911dfd31458a3497e01f8c9ccc870f61c50088ab7759fdde44994d73",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "acorn-imp",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve green goblin face, amber eyes, acorn cap, leaf clothing, pouch and two hands/two feet. Natural three-quarter battle-ready stance facing LEFT toward an opponent. Preserve the exact face, detailed painted storybook style, anatomy, colours, markings and proportions; do not redesign. All joints stay naturally connected. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, effects or extra objects. One character only.",
+    "poseSha256": "bd28a6efc162c45f8efc36ecdda9e9f4e3969fdd3359d18314216798c961a3cb",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "mushroom-guard",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the stout cream mushroom knight, amber caps, leafy armour, and attached round shield held naturally. Natural three-quarter battle-ready stance facing LEFT toward an opponent. Preserve the exact face, detailed painted storybook style, anatomy, colours, markings and proportions; do not redesign. All joints stay naturally connected. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, effects or extra objects. One character only.",
+    "poseSha256": "82f75ee0917c6c20336d590cfb368a0ef5839cbd9069386bf91a606e7eac62b4",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "bramble-boar",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the brown four-legged boar, two ivory tusks, thorny brambles, berries, leafy back and curled tail. Natural three-quarter battle-ready stance facing LEFT toward an opponent. Preserve the exact face, detailed painted storybook style, anatomy, colours, markings and proportions; do not redesign. All joints stay naturally connected. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, effects or extra objects. One character only.",
+    "poseSha256": "e2daa2f1a1323965e73531e370fe2db52ffcc76d470f77eb4a8b6f4ee5d55747",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "reed-serpent",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Keep the exact golden green coiled cobra, cream belly, amber eye, broad reed hood and leafy tail. No arms or legs. Natural three-quarter battle-ready pose facing LEFT toward an opponent. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, extra objects or detached effects. One character only, no redesign.",
+    "poseSha256": "a26447ad129d24608559997939c6c8473e4bb87ed5c4a8c35ff502bc0b230c11",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "bog-toad",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Keep the exact crouching grey rocky toad, green eyes, moss on back, cream spotted belly and four connected legs. Natural three-quarter battle-ready pose facing LEFT toward an opponent. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, extra objects or detached effects. One character only, no redesign.",
+    "poseSha256": "19686a3d32ac24cc123f65b19ba1eb6617a5421f5583283ad8c5165dfb655c3e",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "lantern-wisp",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Keep the exact floating amber owl-faced wooden lantern spirit, leaf arms, fiery chest crystal and dangling roots. Do not add legs. Natural three-quarter battle-ready pose facing LEFT toward an opponent. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, extra objects or detached effects. One character only, no redesign.",
+    "poseSha256": "0dba667ac4a11d04779478daa3b1be50b2ede4525cfd38cbea1e34863920df50",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "crystal-crab",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Keep grey stone shell, PURPLE crystals, two large crystal pincers, green eyes and the exact connected legs. Face LEFT in three-quarter view. Natural battle-ready pose. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, detached effects or extra objects. One character only, no redesign.",
+    "poseSha256": "8db12284b2c89a7c489111b859e2de09f9811ff71ecdb161c78a7ce12fa84928",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "hollow-owl",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Keep the exact brown-orange leafy owl, green eyes, cream chest, talons, head tufts and necklace. Face LEFT in three-quarter view with wings naturally folded. Natural battle-ready pose. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, detached effects or extra objects. One character only, no redesign.",
+    "poseSha256": "2ee792afea805b02390aea2223d21cd324a4c5dafeb0f612155419fe93c3f8d4",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "fern-wolf",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Keep the exact slender brown cream wolf, four legs, leafy mane and bushy leafy tail, amber eyes and necklace. Face LEFT in three-quarter view. Natural battle-ready pose. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. Full body and all appendages visible with generous clear margins. No scenery, floor, shadow, text, detached effects or extra objects. One character only, no redesign.",
+    "poseSha256": "4b6282dd10f744477ac9ede0d456f54ba3815b6f7f9ebc611bed00b0d1519543",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "stone-ram",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the exact grey stone ram, four hooves, two large curled horns, autumn leaves and amber eyes. Natural three-quarter battle-ready stance facing LEFT toward an opponent. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. All joints connected naturally. Full body and every appendage inside the frame, generous clear margins. No scenery, floor, ground shadow, text, extra objects or detached effects. One character only; do not redesign.",
+    "poseSha256": "e988077e1613a6463db23aaae24ffa446cdb9c12f21c32c096228d473d47462d",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "briar-bat",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the exact brown leafy bat, two large membranous wings, amber eyes, two small feet and long tail. Natural three-quarter battle-ready stance facing LEFT toward an opponent. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. All joints connected naturally. Full body and every appendage inside the frame, generous clear margins. No scenery, floor, ground shadow, text, extra objects or detached effects. One character only; do not redesign.",
+    "poseSha256": "2f98ec1d2c6fd0079a6bc8c25d9af949b98b1319da72818e9e7c1ad9e54ec134",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "snail-knight",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the exact green snail, two eyestalks, bronze spiral shell, side pouch and scroll. No legs. Natural three-quarter battle-ready stance facing LEFT toward an opponent. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. All joints connected naturally. Full body and every appendage inside the frame, generous clear margins. No scenery, floor, ground shadow, text, extra objects or detached effects. One character only; do not redesign.",
+    "poseSha256": "43d051cb266f041f9bcc479bdc78fca545654aedf5995da1ee29508bb13d7418",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "chest-mimic",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the exact dark wooden chest creature, four stone feet, green eyes, ivory teeth, metal trim and hinged lid. Natural three-quarter battle-ready stance facing LEFT toward an opponent. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. All joints connected naturally. Full body and every appendage inside the frame, generous clear margins. No scenery, floor, ground shadow, text, extra objects or detached effects. One character only; do not redesign.",
+    "poseSha256": "29043cb346557b24b71722aaa7b13853dc47811b0b6b00cd3bfb28dde0b2318a",
+    "generator": "ChatGPT built-in image generation"
+  },
+  {
+    "id": "storm-griffin",
+    "prompt": "Use case: background-extraction. Edit target: approved game enemy. Extract this EXACT full-body character onto a genuinely transparent background. Preserve the exact white-grey eagle-lion griffin, four legs, two white feathered wings, pointed ears, hooked dark beak, leafy armour and tail. Wings partly folded with enough room to open. Natural three-quarter battle-ready stance facing LEFT toward an opponent. Preserve exact face, painted storybook style, anatomy, colours, markings and proportions. All joints connected naturally. Full body and every appendage inside the frame, generous clear margins. No scenery, floor, ground shadow, text, extra objects or detached effects. One character only; do not redesign.",
+    "poseSha256": "4caaee272e841da5d83d522daaab43e75e447bc9faa0ce81b3a1137b4f75c101",
+    "generator": "ChatGPT built-in image generation"
+  }
+]

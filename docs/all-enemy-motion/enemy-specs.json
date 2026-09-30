@@ -1,0 +1,70 @@
+{
+  "moon-moth": {
+    "identity": "A navy and cream moon moth-owl with four patterned wings and four small feet",
+    "mode": "gust"
+  },
+  "root-sprite": {
+    "identity": "A wooden sapling sprite with leafy head, two arms and two root feet",
+    "mode": "melee"
+  },
+  "cave-troll": {
+    "identity": "A bulky mossy stone troll with two horns and two huge fists",
+    "mode": "shock"
+  },
+  "acorn-imp": {
+    "identity": "A little green acorn-capped imp with two arms and two legs",
+    "mode": "melee"
+  },
+  "mushroom-guard": {
+    "identity": "A stout mushroom knight with a round shield and two legs",
+    "mode": "melee"
+  },
+  "bramble-boar": {
+    "identity": "A four-legged brown boar with brambles and two ivory tusks",
+    "mode": "melee"
+  },
+  "reed-serpent": {
+    "identity": "A golden green coiled cobra with a broad reed hood, no limbs",
+    "mode": "melee"
+  },
+  "bog-toad": {
+    "identity": "A mossy grey rocky toad with green eyes and four legs",
+    "mode": "melee"
+  },
+  "lantern-wisp": {
+    "identity": "A floating wooden amber lantern spirit with leaf arms and dangling roots, no legs",
+    "mode": "ember"
+  },
+  "crystal-crab": {
+    "identity": "A stone crab with purple crystals, two large pincers and jointed walking legs",
+    "mode": "melee"
+  },
+  "hollow-owl": {
+    "identity": "A brown orange leafy owl with two wings and two taloned feet",
+    "mode": "gust"
+  },
+  "fern-wolf": {
+    "identity": "A four-legged brown cream wolf with leafy mane and tail",
+    "mode": "melee"
+  },
+  "stone-ram": {
+    "identity": "A four-legged stone ram with two large curled horns and autumn leaves",
+    "mode": "melee"
+  },
+  "briar-bat": {
+    "identity": "A brown leafy bat with two membranous wings, two small feet and a long tail",
+    "mode": "gust"
+  },
+  "snail-knight": {
+    "identity": "A green snail knight with two eyestalks and a large bronze spiral shell, no legs",
+    "mode": "melee"
+  },
+  "chest-mimic": {
+    "identity": "A wooden treasure chest creature with four short stone feet, green eyes and a hinged toothy lid",
+    "mode": "melee"
+  },
+  "storm-griffin": {
+    "identity": "A white grey eagle-lion griffin with four legs, two feathered wings and a tail",
+    "mode": "gust"
+  }
+}

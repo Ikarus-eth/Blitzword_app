@@ -388,10 +388,10 @@
   },
   "moon-moth": {
     "view": [
-      66,
-      108,
-      380,
-      342
+      0,
+      88,
+      512,
+      382
     ],
     "still": "assets/battle-motion/moon-moth-still.webp",
     "attackMode": "gust",
@@ -605,10 +605,10 @@
   },
   "root-sprite": {
     "view": [
-      122,
-      56,
-      268,
-      392
+      0,
+      48,
+      440,
+      406
     ],
     "still": "assets/battle-motion/root-sprite-still.webp",
     "attackMode": "melee",
@@ -822,10 +822,10 @@
   },
   "cave-troll": {
     "view": [
-      66,
-      104,
-      380,
-      346
+      2,
+      62,
+      494,
+      392
     ],
     "still": "assets/battle-motion/cave-troll-still.webp",
     "attackMode": "shock",
@@ -1039,10 +1039,10 @@
   },
   "acorn-imp": {
     "view": [
-      116,
-      56,
-      280,
-      394
+      0,
+      0,
+      466,
+      450
     ],
     "still": "assets/battle-motion/acorn-imp-still.webp",
     "attackMode": "melee",
@@ -1256,10 +1256,10 @@
   },
   "mushroom-guard": {
     "view": [
-      68,
-      86,
-      376,
-      364
+      0,
+      36,
+      508,
+      456
     ],
     "still": "assets/battle-motion/mushroom-guard-still.webp",
     "attackMode": "melee",
@@ -1473,10 +1473,10 @@
   },
   "bramble-boar": {
     "view": [
-      66,
-      110,
-      378,
-      340
+      10,
+      88,
+      464,
+      372
     ],
     "still": "assets/battle-motion/bramble-boar-still.webp",
     "attackMode": "melee",
@@ -1690,10 +1690,10 @@
   },
   "reed-serpent": {
     "view": [
-      66,
-      68,
-      380,
-      382
+      0,
+      51,
+      504,
+      399
     ],
     "still": "assets/battle-motion/reed-serpent-still.webp",
     "attackMode": "melee",
@@ -1907,10 +1907,10 @@
   },
   "bog-toad": {
     "view": [
-      66,
-      176,
-      380,
-      274
+      18,
+      44,
+      494,
+      408
     ],
     "still": "assets/battle-motion/bog-toad-still.webp",
     "attackMode": "melee",
@@ -2124,10 +2124,10 @@
   },
   "lantern-wisp": {
     "view": [
-      100,
-      56,
-      308,
-      392
+      22,
+      54,
+      482,
+      458
     ],
     "still": "assets/battle-motion/lantern-wisp-still.webp",
     "attackMode": "ember",
@@ -2341,10 +2341,10 @@
   },
   "crystal-crab": {
     "view": [
-      64,
-      224,
-      382,
-      226
+      0,
+      82,
+      448,
+      370
     ],
     "still": "assets/battle-motion/crystal-crab-still.webp",
     "attackMode": "melee",
@@ -2558,10 +2558,10 @@
   },
   "hollow-owl": {
     "view": [
-      66,
-      84,
-      378,
-      364
+      10,
+      78,
+      498,
+      384
     ],
     "still": "assets/battle-motion/hollow-owl-still.webp",
     "attackMode": "gust",
@@ -2775,10 +2775,10 @@
   },
   "fern-wolf": {
     "view": [
-      66,
-      182,
-      378,
-      266
+      34,
+      118,
+      448,
+      342
     ],
     "still": "assets/battle-motion/fern-wolf-still.webp",
     "attackMode": "melee",
@@ -2992,10 +2992,10 @@
   },
   "stone-ram": {
     "view": [
-      66,
-      100,
-      380,
-      350
+      6,
+      72,
+      474,
+      390
     ],
     "still": "assets/battle-motion/stone-ram-still.webp",
     "attackMode": "melee",
@@ -3209,10 +3209,10 @@
   },
   "briar-bat": {
     "view": [
-      66,
-      198,
-      380,
-      250
+      54,
+      124,
+      458,
+      326
     ],
     "still": "assets/battle-motion/briar-bat-still.webp",
     "attackMode": "gust",
@@ -3426,10 +3426,10 @@
   },
   "snail-knight": {
     "view": [
-      66,
-      142,
-      380,
-      308
+      24,
+      132,
+      422,
+      320
     ],
     "still": "assets/battle-motion/snail-knight-still.webp",
     "attackMode": "melee",
@@ -3643,10 +3643,10 @@
   },
   "chest-mimic": {
     "view": [
-      66,
-      168,
-      380,
-      282
+      52,
+      60,
+      414,
+      394
     ],
     "still": "assets/battle-motion/chest-mimic-still.webp",
     "attackMode": "melee",
@@ -3860,10 +3860,10 @@
   },
   "storm-griffin": {
     "view": [
-      66,
-      144,
-      382,
-      304
+      4,
+      88,
+      508,
+      362
     ],
     "still": "assets/battle-motion/storm-griffin-still.webp",
     "attackMode": "gust",

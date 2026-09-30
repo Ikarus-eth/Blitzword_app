@@ -151,7 +151,7 @@ function renderMap(deferEvolution=false){
     const status=document.createElement('small');status.textContent=area.status==='cleared'?'Explored':'Locked';
     button.append(marker,label,status);button.onclick=destination?continueMap:()=>{selectedMapArea=area.id;renderMap();$('#mapNodes [data-area="'+area.id+'"]').focus?.();};nodes.append(button);
   });
-  const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.setAttribute('aria-label','Change hero: '+classes[heroIndex()%3]);hero.style.left=`clamp(40px,calc(${current.x}% - var(--map-hero-offset,9%)),calc(100% - 54px))`;hero.style.top=`clamp(var(--map-hero-top,82px),calc(${current.y-3}% + var(--map-hero-shift,0px)),calc(100% - 100px))`;
+  const hero=$('#mapTraveller');paintHero(hero,heroIndex());hero.setAttribute('aria-label','Your hero: '+classes[heroIndex()%3]);hero.style.left=`clamp(40px,calc(${current.x}% - var(--map-hero-offset,9%)),calc(100% - 54px))`;hero.style.top=`clamp(var(--map-hero-top,82px),calc(${current.y-3}% + var(--map-hero-shift,0px)),calc(100% - 100px))`;
   $('#mapStory').textContent=progress.cleared+' / '+progress.total+' chapters';
   $('#mapStory').setAttribute('aria-label','Campaign '+location.campaignNumber+': '+progress.cleared+' of '+progress.total+' chapters completed');
   paintPip($('#mapPip'));$('#dragonStage').textContent=dragonText(growth.current.name);$('#dragonXP').textContent=xpText(growth.xp)+' XP';

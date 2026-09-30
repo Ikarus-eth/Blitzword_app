@@ -1,6 +1,6 @@
 # BlitzWord
 
-[Final character artwork](docs/artwork/README.md): all 20 enemies, six heroes and four Pip stages in one document. Game replacement is deferred until smooth animation is reviewed.
+[Final character artwork](docs/artwork/README.md): all 20 enemies, six heroes and four Pip stages in one document. The selected male mage and all 20 enemies now have whole-frame battle animation; other hero choices are temporarily disabled. See [the animation release](docs/enemies/ALL_ENEMY_MOTION_RELEASE.md).
 
 [Family art review](https://ikarus-eth.github.io/Blitzword_app/assets/family-review/): 156 images across 20 enemies and six heroes, four separate reviewers, shared comments and export/restore. Every round has the current design and five alternatives. See the [complete gallery release](docs/FAMILY_REVIEW_FINAL_RELEASE.md).
 
@@ -26,7 +26,7 @@ Reading challenge now adjusts automatically toward an initial 80–90% success b
 
 Practice draws three reviewed wrong answers from each word’s rotating pool. The reading check uses 26 reviewed fixed sets with shuffled positions; both pass the letter/length and one-letter-giveaway checks. Saved questions keep their original choices. See [reading-check choices](docs/ASSESSMENT_CHOICES_RELEASE.md).
 
-The campaign map fills the screen. Tap the gold chapter number or full chapter name to continue; tap the hero portrait to change hero. The speed icon opens a dropdown. The empty daily quota and separate Home/Play panel are removed. Earned rewards remain visible, with compact screens showing only the XP boost. See [map controls](docs/MAP_CONTROLS_RELEASE.md).
+The campaign map fills the screen. Tap the gold chapter number or full chapter name to continue; tap the hero portrait to view the active mage. The speed icon opens a dropdown. The empty daily quota and separate Home/Play panel are removed. Earned rewards remain visible, with compact screens showing only the XP boost. See [map controls](docs/MAP_CONTROLS_RELEASE.md).
 
 Movement choices now include Stride (1500 ms) and Jog (1200 ms), with the effective reading-check pace highlighted. After enough familiar-word practice, optional faster/slower suggestions appear between battles. Parents shows each encountered word’s historical quick-answer status; both slow and quick words continue in review. See [speed guidance and quick words](docs/SPEED_GUIDANCE_RELEASE.md).
 
@@ -58,4 +58,4 @@ Prerecorded narration now contains 1,029 exact-text clips: the 990 recovered/cor
 
 All 34 child-read sentences and picture pairs are approved and implemented. Three default-Pip sentences reuse existing recordings; the other 31 still use device speech in production. Their generated replacements, new enemy intros, comparison corrections and synchronized teaching-word timing are being completed in [draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80), last blocked by ElevenLabs quota. Generated but unmerged audio is not live. Personalized dragon-name text intentionally stays on local device speech. All 35 new George clips passed user listening QA with no rejected clips. Recorded word-boundary highlighting and physical iPad gameplay playback remain outstanding. See [the narration release](docs/NARRATION_RELEASE.md).
 
-Twenty selected enemies now use articulated 2D artwork, and visible health changes wait for the attack's impact. See [enemy assets and animation](docs/enemies/LAYERED_ENEMIES_RELEASE.md). Sixty creature variants now use the approved HP ranges, groups of two/three/five and different growth proportions. See [group encounters](docs/enemies/GROUP_ENCOUNTERS_RELEASE.md).
+Twenty selected enemies use whole-frame attack, recoil, defeat and celebration artwork. Sixty variants retain their approved HP ranges and groups of two/three/five; younger creatures reuse the motion at smaller uniform sizes. See [animation scope and cost](docs/enemies/ALL_ENEMY_MOTION_RELEASE.md) and [group rules](docs/enemies/GROUP_ENCOUNTERS_RELEASE.md).
