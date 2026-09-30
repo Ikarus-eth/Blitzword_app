@@ -1,0 +1,232 @@
+{
+  "build": "story-pilot-20260930-r1",
+  "verifiedAt": "2026-09-30T03:31:12.175907+00:00",
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "pilotUrl": "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/",
+  "featurePullRequest": "https://github.com/Ikarus-eth/Blitzword_app/pull/105",
+  "mergeCommit": "bd30a889ba4cfef86e653113fbcf3687477251b0",
+  "pagesRun": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36664650101",
+  "files": {
+    "app.js": {
+      "sha256": "bfc753aec12a9a3c44ad051a1ced7ba6de402e9c9b97dde40878d6a8f08b265d",
+      "matchesTestedSource": true,
+      "bytes": 99816
+    },
+    "assets/family-review/images/acorn-imp-c.webp": {
+      "sha256": "e627f81aaa5b201d4d9b67b7ea964d9fc3f4605e5217c933f28c06861ceb9eea",
+      "matchesTestedSource": true,
+      "bytes": 209500
+    },
+    "assets/family-review/images/cave-troll-c.webp": {
+      "sha256": "1a202b5783e5b003caab273773e3faef38248962f547d26e7a3cea531ff600a3",
+      "matchesTestedSource": true,
+      "bytes": 363570
+    },
+    "assets/family-review/images/hollow-owl-c.webp": {
+      "sha256": "288ae92369821e1a6eee0cb910086d0ae318a71f361b06d482d263f32bd45ec0",
+      "matchesTestedSource": true,
+      "bytes": 285280
+    },
+    "assets/family-review/images/stone-ram-b.webp": {
+      "sha256": "1103eaab605a7bebd70444da8ff753fc65e0e553216d9688901626d4b41b15fa",
+      "matchesTestedSource": true,
+      "bytes": 345930
+    },
+    "assets/fonts/andika-latin.woff": {
+      "sha256": "8c220f38733a203a9d7214b001e22840c7f4f8684b025ba7eca1207f0102cf56",
+      "matchesTestedSource": true,
+      "bytes": 76572
+    },
+    "assets/pip.webp": {
+      "sha256": "1c650fc8c8d18da1a3480d681bd82b7e8c6936ba0c5e437b7978ada9e520e8f4",
+      "matchesTestedSource": true,
+      "bytes": 7932
+    },
+    "assets/rowanfire-boys-2026-09-21.png": {
+      "sha256": "40a1f8fc3f14625cc43e55120c9e7e355da5cde3008e2149a5ce14dd95fe927b",
+      "matchesTestedSource": true,
+      "bytes": 2787633
+    },
+    "assets/scenery/chapter-2-place-1.webp": {
+      "sha256": "04aba31b18cca5da843f03451f33c9ef071ad53ed615817ca4bd144742726b98",
+      "matchesTestedSource": true,
+      "bytes": 542710
+    },
+    "assets/scenery/chapter-2-place-2.webp": {
+      "sha256": "8c2e7d23b5b08d52ba48b7dae1e9ad89a756e4122cc63753f62ebfcc34c4768d",
+      "matchesTestedSource": true,
+      "bytes": 406784
+    },
+    "assets/scenery/chapter-3-place-5.webp": {
+      "sha256": "314e8fe5d4e20971361b2e8bcc58846f0ca28d2c7c689bb226cf445e25e14ca7",
+      "matchesTestedSource": true,
+      "bytes": 512856
+    },
+    "assets/scenery/chapter-4-place-4.webp": {
+      "sha256": "d193f91ae495152cf842d48a585ae1d413020cf6d8288d5d6d1d5a899c9196d7",
+      "matchesTestedSource": true,
+      "bytes": 421000
+    },
+    "assets/scenery/chapter-4-place-5.webp": {
+      "sha256": "fd6bd0083af797e8f1624618302eca7b94ec440c71e632ce6b8b06d93fbb7ffc",
+      "matchesTestedSource": true,
+      "bytes": 204006
+    },
+    "assets/scenery/chapter-6-place-1.webp": {
+      "sha256": "86d710965eb05ab7f120f9d9915c118c881754e903c3f6c7c8c886186ef26202",
+      "matchesTestedSource": true,
+      "bytes": 390526
+    },
+    "assets/scenery/chapter-7-place-1.webp": {
+      "sha256": "24a070ad238798a6366f0935ce3103e081d59893bf9b85f457b17ec6ef80f26a",
+      "matchesTestedSource": true,
+      "bytes": 367288
+    },
+    "assets/scenery/chapter-7-place-5.webp": {
+      "sha256": "39a8fc1616c4d4d3a36cb7faea7d5ea3fce56432ebb8a7aecddea7ac7e221662",
+      "matchesTestedSource": true,
+      "bytes": 385624
+    },
+    "assets/scenery/hidden-nest.webp": {
+      "sha256": "6a5fa516e57b7a3688203926aa210609a1d16941944ed49e667dfef6b9a28502",
+      "matchesTestedSource": true,
+      "bytes": 416676
+    },
+    "assets/story-pilot/app.js": {
+      "sha256": "c9e447b08285f6bc40f119749ed9c24141e8f3b6155ae1b6f36bfc4a21ada9de",
+      "matchesTestedSource": true,
+      "bytes": 8751
+    },
+    "assets/story-pilot/assets/LUCIDE-LICENSE.txt": {
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "matchesTestedSource": true,
+      "bytes": 3208
+    },
+    "assets/story-pilot/assets/apple.svg": {
+      "sha256": "e2c6955885dbf4edc40bc8b06dc7922b130c49989a9b5bb6d7ccef64786a4d89",
+      "matchesTestedSource": true,
+      "bytes": 1310
+    },
+    "assets/story-pilot/assets/bag.svg": {
+      "sha256": "15c4a961b00f8d19dfe64885a7b1d8973af9e2f4c0a2faa13987c69da8b76e88",
+      "matchesTestedSource": true,
+      "bytes": 970
+    },
+    "assets/story-pilot/assets/chest.svg": {
+      "sha256": "f39115fb6e6179a1812bdf55572acd6acc5cb5cda0b6933937c1fe0095cd8578",
+      "matchesTestedSource": true,
+      "bytes": 709
+    },
+    "assets/story-pilot/assets/coin.svg": {
+      "sha256": "425809c9f7cda9496963fa6816c6f26e040a94139114dcef7de262e5886391b2",
+      "matchesTestedSource": true,
+      "bytes": 6786
+    },
+    "assets/story-pilot/assets/comb.svg": {
+      "sha256": "07f7f49c101e3a3378f197b850cbb7442247c53ddca6775ecb5e03e1d8e35c6a",
+      "matchesTestedSource": true,
+      "bytes": 979
+    },
+    "assets/story-pilot/assets/gem.svg": {
+      "sha256": "d30d24b95b727695c9eb5f71fc0269bab385c371da98016a55808b785d4841fb",
+      "matchesTestedSource": true,
+      "bytes": 3331
+    },
+    "assets/story-pilot/assets/key.svg": {
+      "sha256": "d98708963ce1e90e10614a22fbc3715ddc4a131c0e6fe8bb95e57b8b9527aa51",
+      "matchesTestedSource": true,
+      "bytes": 1451
+    },
+    "assets/story-pilot/assets/leaf.svg": {
+      "sha256": "8fcd44b4e3ff7ef3ffc74af8a5aa4b64764f65ed90be091514556dce02d0b81b",
+      "matchesTestedSource": true,
+      "bytes": 311
+    },
+    "assets/story-pilot/assets/moon.svg": {
+      "sha256": "ceb9eab02460cac89a35cc0936f24f7ccddf0dfe86b539be41b7d902345ea806",
+      "matchesTestedSource": true,
+      "bytes": 589
+    },
+    "assets/story-pilot/assets/nut.svg": {
+      "sha256": "ba92068fe0e47b7d1c9571f8f9c99a4dd4a79b4b4dbde18b4d460200b4a28de9",
+      "matchesTestedSource": true,
+      "bytes": 1404
+    },
+    "assets/story-pilot/assets/saw.svg": {
+      "sha256": "0c58c588f67245816c5071b2e15b987dbb3a5eaf7915f05c977ebd0ed3e1e468",
+      "matchesTestedSource": true,
+      "bytes": 786
+    },
+    "assets/story-pilot/assets/shield.svg": {
+      "sha256": "b483f5f9effeefb83c3cac32392bd1d9cc2b8cd524e1573e4558123d2954e4a2",
+      "matchesTestedSource": true,
+      "bytes": 1155
+    },
+    "assets/story-pilot/assets/star.svg": {
+      "sha256": "f64168464a2b1d3d93ff070fa0a594ddf24ff4f78f1cf85ab51d46f72bb830b5",
+      "matchesTestedSource": true,
+      "bytes": 535
+    },
+    "assets/story-pilot/assets/sun.svg": {
+      "sha256": "b3fca394c2d2f6d5f5fd19c90abadc737a9776416be18fed9573e3dbe8337b76",
+      "matchesTestedSource": true,
+      "bytes": 2029
+    },
+    "assets/story-pilot/assets/sword.svg": {
+      "sha256": "fafc17551e0de47c7d76890686c1e90649115ed3a378235fdd690a4b92f75517",
+      "matchesTestedSource": true,
+      "bytes": 1290
+    },
+    "assets/story-pilot/assets/torch.svg": {
+      "sha256": "cdef2530a632ba5507ffc99ff61338d62c492f78534726dc055c7ff71b7c371a",
+      "matchesTestedSource": true,
+      "bytes": 892
+    },
+    "assets/story-pilot/core.js": {
+      "sha256": "838c48b0826ab72dde61cb1226530666e7e1340f2e7dac81228a724395ab0ab1",
+      "matchesTestedSource": true,
+      "bytes": 5753
+    },
+    "assets/story-pilot/index.html": {
+      "sha256": "fbd49f4139b438affdece86a7b0ead87c53b5f60728ea9122de81abdb6cabf03",
+      "matchesTestedSource": true,
+      "bytes": 4919
+    },
+    "assets/story-pilot/stories.js": {
+      "sha256": "910475209dba35e37c363d0a9f2663486410327ac9b00f616f0661410171f334",
+      "matchesTestedSource": true,
+      "bytes": 9674
+    },
+    "assets/story-pilot/styles.css": {
+      "sha256": "ffdddb78e74b9a12a7e7cda17078cc1d907e3b533d3d58a1e6a764025d2800b5",
+      "matchesTestedSource": true,
+      "bytes": 12187
+    },
+    "assets/teaching/fox.webp": {
+      "sha256": "def86214ecfc9fe2de798b54452f94ec418287a88c46c88ef6a44e0fbe7bba13",
+      "matchesTestedSource": true,
+      "bytes": 206744
+    },
+    "index.html": {
+      "sha256": "8b41cce344ee122aa0df55a3aa36cf8986f3e15fed0a937d946422fe8c7d9b6b",
+      "matchesTestedSource": true,
+      "bytes": 35469
+    },
+    "styles.css": {
+      "sha256": "c204b2a667d7525ab6e07e768d4ae87b11345a5f52855fc84f210ae788611931",
+      "matchesTestedSource": true,
+      "bytes": 113433
+    }
+  },
+  "pagesConclusion": "success",
+  "liveBrowser": {
+    "map": "isolated review entry; main learner save not read or written",
+    "mapButtonOpensPilot": true,
+    "stories": 5,
+    "listenButtons": 0,
+    "missingImages": 0,
+    "consoleWarningsOrErrors": 0,
+    "backLink": "https://ikarus-eth.github.io/Blitzword_app/",
+    "physicalIPadSafari": "not tested"
+  }
+}
