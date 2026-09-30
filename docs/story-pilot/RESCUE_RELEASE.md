@@ -1,6 +1,6 @@
 # The fox cub rescue
 
-30 September 2026 revision, build `story-rescue-20260930-r2`.
+30 September 2026 revision, build `story-rescue-20260930-r2`. The subsequent [tower-door correction](DOOR_RELEASE.md) supersedes the final picture, sign layout and shuffled final door row; the rescue content and v2 progress remain.
 
 The user rejected the pilot's generic scenery, small Artus portrait and pasted-on enemy cards, and asked for reading and number puzzles that belong together. They then requested an overarching journey through stations to rescue or help someone. This revision replaces the five separate adventures with **one fox-cub rescue in five stops**.
 

@@ -66,16 +66,16 @@
       endingTitle:'The basket is ready!',ending:'Artus finds the rope in the moon chest. He ties three six-foot pieces to the basket. It hangs level. Pip helps him carry it up the hill to the old tower.',nextLabel:'Go to the tower',endingImage:'scenes/owl.webp',endingAlt:'Artus, Pip and the Owl prepare to make the rescue basket beneath the oak.'
     },
     {
-      id:'last-door',title:'The Last Door',shortTitle:'The tower',level:'Put the clues together',scene:'scenes/gate.webp',sceneLabel:'At the old tower, Artus and Pip stand with the Stone Ram before three closed doors, ready with their rescue basket.',
+      id:'last-door',title:'The Last Door',shortTitle:'The tower',level:'Put the clues together',scene:'scenes/gate-labelled.webp',sceneLabel:'Artus and Pip stand with the Stone Ram at the tower. The three closed doors are marked sun, moon and star, from left to right.',
       paragraphs:[
-        'At last, Artus and Pip reach the tower. The cub is on a high ledge inside. Three doors have sun, moon and star marks. Only one door leads to the cub.',
-        '“Only one sign is true,” says the stone ram. “The other two are wrong.”',
+        'At last, Artus and Pip reach the tower. The cub is on a high ledge inside. From left to right, the doors are sun, moon and star. Only one door leads to the cub.',
+        'Each door has a sign. “Only one sign tells the truth,” says the stone ram. “The other two tell lies. A sign can name a different door. Use all three signs to find the way to the cub.”',
         'The right door has a number lock. Its number is more than fifty and less than sixty. It is in the seven times table.',
         'Pick the right door and set its number. Then Artus and Pip can take the basket inside and help the cub!'
       ],
-      arrangement:{after:1,kind:'signs',marks:['sun','moon','star'],label:'Read all three door signs',signs:['The moon door leads to the cub.','The moon door does not lead to the cub.','The sun door does not lead to the cub.']},
+      arrangement:{after:1,placement:'scene',kind:'signs',marks:['sun','moon','star'],label:'The signs on the doors, from left to right',signs:['The moon door leads to the cub.','This door does not lead to the cub.','The sun door does not lead to the cub.']},
       questions:[
-        {id:'door',prompt:'Which door leads to the cub?',answer:'sun',choices:['sun','moon','star'].map(name=>item(name,name[0].toUpperCase()+name.slice(1),name)),clues:[0,1],hint:'Try one door at a time. If it leads to the cub, exactly one sign must be true. Check all three signs.',explanation:'If sun leads to the cub, only the moon sign is true. Moon or star would make two signs true. So Artus must use the sun door.'},
+        {id:'door',prompt:'Which door leads to the cub?',answer:'sun',fixedOrder:true,choices:['sun','moon','star'].map(name=>item(name,name[0].toUpperCase()+name.slice(1)+' door',name)),clues:[0,1],hint:'On the moon sign, “this door” means the moon door. Try each door as the way to the cub, then count the true signs. You need exactly one. The true sign need not be on the right door.',explanation:'Try sun: the sun sign is false, the moon sign is true and the star sign is false. That is just one true sign. Try moon or star: two signs would be true. So the sun door leads to the cub, even though its own sign tells a lie.'},
         {id:'number',prompt:'Which number opens that door?',answer:'56',choices:[49,54,56,63].map(n=>item(String(n),String(n),null,{number:n})),clues:[2],hint:'Which number in the seven times table is more than fifty but less than sixty?',explanation:'Seven times eight is fifty-six. It is between fifty and sixty. Artus sets the sun door’s lock to 56.'}
       ],
       endingTitle:'The fox cub is safe!',ending:'The sun door opens at 56. Pip flies the basket to the ledge. The cub hops in, and Artus lowers it gently. Outside, the mother fox runs to her cub. “You brought my little one home!” Artus and Pip grin.',endingImage:'scenes/reunion.webp',endingAlt:'Artus and Pip smile as the rescued fox cub nuzzles its mother beside the empty basket at the tower.'

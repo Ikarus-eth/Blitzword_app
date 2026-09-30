@@ -2,7 +2,7 @@
 
 ## Male-mage motion candidate — 30 September 2026
 
-Prepared on `codex/mage-three-enemy-motion`, not merged or deployed. The review uses Male Mage E against adult Thornling D, Ancient Moss Golem B and three Bark Beetles C, with Small Pip's fire assist. Whole-frame sprites retain the existing 1,200 ms reaction and 660 ms health-impact timing. Group retirement, saves and reading rules are preserved. The latest Story rescue changes from main `97b8a3a` are included.
+Prepared on `codex/mage-three-enemy-motion`, not merged or deployed. The review uses Male Mage E against adult Thornling D, Ancient Moss Golem B and three Bark Beetles C, with Small Pip's fire assist. Whole-frame sprites retain the existing 1,200 ms reaction and 660 ms health-impact timing. Group retirement, saves and reading rules are preserved. The latest Story rescue and tower-door corrections from main `72583c7` are included.
 
 [Scope, costs, preview and verification limits](MAGE_MOTION_PILOT.md). Browser visual verification is outstanding because the browser tool's admin-policy check denied local access; exported videos are shared-renderer previews, not browser recordings. This candidate does not change the verified deployment described below.
 
@@ -11,7 +11,11 @@ This page tracks current implementation and remaining work. Dated release notes 
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).
 
-Latest verified runtime build: `story-rescue-20260930-r2`, deployed from main `88096adb1028998dcd862b6f0e56efa168ed257f`. [Live release verification](story-pilot/RESCUE_DEPLOYMENT.json) covers the pilot, main build marker and six integrated illustrations. Earlier releases remain below as historical evidence. The narration completion draft is not merged or deployed.
+Latest verified runtime build: `story-rescue-20260930-r3`, deployed from main `2629c4ff38c1354aadb0956ed1a97bdbacefd3ae`. [Live release verification](story-pilot/DOOR_DEPLOYMENT.json) covers the corrected tower riddle, labelled artwork and main build marker. Earlier releases remain below as historical evidence. The narration completion draft is not merged or deployed.
+
+## Tower-door riddle correction — 30 September 2026
+
+**Deployed and verified.** Build `story-rescue-20260930-r3` labels the illustrated doors Sun, Moon and Star, replaces the separate sign table with matching cards beside the picture, and keeps answer doors in the same physical order. The wording and hint distinguish the truthful sign from the door leading to the cub. The unique solution and all v2 progress remain valid. 267 tests and 90 UI-flow groups pass; Chromium checks covered the final rescue, hints, reload and phone/tablet layout. [PR #109](https://github.com/Ikarus-eth/Blitzword_app/pull/109) merged as `2629c4ff38c1354aadb0956ed1a97bdbacefd3ae`; [Pages run 36676683204](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36676683204) succeeded. All seven checked public files match source; the live browser confirmed the labelled doors and cards with no errors. [Correction details](story-pilot/DOOR_RELEASE.md), [checks](story-pilot/DOOR_CHECKS.json), [deployment evidence](story-pilot/DOOR_DEPLOYMENT.json).
 
 ## Illustrated fox-cub rescue — 30 September 2026 revision
 

@@ -958,3 +958,7 @@ Track first checked choices and hints separately from retries, show gentle rerea
 The five-story pilot is now one fox-cub rescue through five stations. Each pair of reading and maths choices must contribute to the same immediate task: torch supplies, bridge pegs, gate keys, basket ropes, then the correct tower door and its code. Keep the overall reasoning difficulty and simple wording. The unrelated final gem-sharing task is removed.
 
 Use integrated story-specific paintings with Artus and Pip fully present, rather than generic backdrops, portrait badges or pasted enemy cards. Six final images cover the five stops and reunion. Show them uncropped; on phones the scene precedes the story text. Main-game audio and characters remain unchanged; the pilot stays silent. Preserve old pilot results under their original key; the revised journey uses separate v2 progress so old choices cannot count as new evidence. See [rescue content and artwork](story-pilot/RESCUE_RELEASE.md).
+
+### Tower riddle coherence — 30 September 2026 correction
+
+The final story must show the same Sun–Moon–Star order in the tower illustration, sign cards and answer doors. A truthful sign can refer to a different door; make this distinction clear in the story and hint. The answer remains Sun with code 56. Keep v2 progress and other question orders, normalizing only the final door row to physical order. See [the correction](story-pilot/DOOR_RELEASE.md).
