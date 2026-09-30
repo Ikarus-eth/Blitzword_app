@@ -1,17 +1,17 @@
 // Offline export of the production frame renderer. UI layout follows current game CSS.
 const fs=require('node:fs'),path=require('node:path'),{spawn}=require('node:child_process');
 const {createCanvas,loadImage,GlobalFonts}=require('@napi-rs/canvas');
-const ROOT=path.resolve(process.env.BLITZ_MOTION_OUTPUT||path.join(__dirname,'renders')),REPO=path.resolve(__dirname,'../..');fs.mkdirSync(ROOT,{recursive:true});
+const ROOT=process.env.BLITZ_MOTION_OUTPUT||path.join(__dirname,'renders'),REPO=path.join(__dirname,'../..');fs.mkdirSync(ROOT,{recursive:true});
 require(path.join(REPO,'assets/battle-motion/manifest.js'));const M=require(path.join(REPO,'battle-motion.js'));
 GlobalFonts.registerFromPath(path.join(REPO,'assets/fonts/andika-latin.woff'),'Andika');
 const W=1024,H=768,FPS=60;
 function round(ctx,x,y,w,h,r,fill,stroke){ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.stroke();}}
 function text(ctx,value,x,y,size=24,color='#fff4d9',font='Andika',align='left'){ctx.font=`${size}px ${font}`;ctx.fillStyle=color;ctx.textAlign=align;ctx.fillText(value,x,y);}
-function layout(key,w=W,h=H){const portrait=h>w,foot=h-(portrait?220:124),hp={thornling:18,golem:24,beetle:12}[key],scale=.78+.65*(1-Math.exp(-(hp-3)/5)),eh=h*(portrait?.22:.31)*scale,ew=Math.min(eh,w*(portrait?.43:.42));const hero={x:w*(portrait?.04:.05),y:h-(portrait?221:126)-h*(portrait?.39:.58),w:w*(portrait?.37:.28),h:h*(portrait?.39:.58)},pip={x:w*(portrait?.29:.27),y:foot-h*(portrait?.22:.26),w:w*(portrait?.23:.17),h:h*(portrait?.22:.26)},enemy={x:w-w*.03-ew,y:foot-eh,w:ew,h:eh};const members=key==='beetle'?[{x:enemy.x+.25*ew,y:foot-.29*eh-.72*eh,w:.51*ew,h:.72*eh},{x:enemy.x,y:foot-.72*eh,w:.51*ew,h:.72*eh},{x:enemy.x+.49*ew,y:foot-.72*eh,w:.51*ew,h:.72*eh}]:[enemy];return {hero,pip,enemy,members,hp};}
+function layout(key,w=W,h=H){const portrait=h>w,foot=h-(portrait?220:124),hp={thornling:18,golem:24,beetle:12}[key],scale=.78+.65*(1-Math.exp(-(hp-3)/5)),eh=h*(portrait?.22:.31)*scale,ew=Math.min(eh,w*(portrait?.43:.42));const hero={x:w*.10,y:h-(portrait?221:126)-h*(portrait?.39:.58),w:w*(portrait?.37:.28),h:h*(portrait?.39:.58)},pip={x:w*.34,y:foot-h*(portrait?.22:.26),w:w*(portrait?.23:.17),h:h*(portrait?.22:.26)},enemy={x:w-w*.03-ew,y:foot-eh,w:ew,h:eh};const members=key==='beetle'?[{x:enemy.x+.25*ew,y:foot-.29*eh-.72*eh,w:.51*ew,h:.72*eh},{x:enemy.x,y:foot-.72*eh,w:.51*ew,h:.72*eh},{x:enemy.x+.49*ew,y:foot-.72*eh,w:.51*ew,h:.72*eh}]:[enemy];return {hero,pip,enemy,members,hp};}
 const phaseList=key=>[
- {label:'Cast → impact → enemy recoil',type:'cast',hp:{thornling:18,golem:24,beetle:12}[key]},
+ {label:'Staff cast → impact → enemy recoil',type:'cast',hp:{thornling:18,golem:24,beetle:12}[key]},
  {label:'Enemy counterattack → mage recoil',type:'counter',hp:{thornling:17,golem:23,beetle:11}[key]},
- {label:'Pip joins the attack',type:'assist',hp:{thornling:16,golem:22,beetle:10}[key]},
+ {label:'Braced staff cast + Pip’s fire',type:'assist',hp:{thornling:16,golem:22,beetle:10}[key]},
  {label:key==='beetle'?'One beetle is defeated · two remain':'Enemy defeat',type:'defeat',hp:key==='beetle'?9:1},
  ...(key==='beetle'?[{label:'A surviving beetle takes the next turn',type:'counter',hp:8,target:1},{label:'Final beetle · finishing spell',type:'defeat',hp:1,target:2}]:[]),
  {label:'Mage victory',type:'victory',hp:0},

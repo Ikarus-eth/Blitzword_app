@@ -3,12 +3,12 @@
   "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
   "pricingURL": "https://fal.ai/models/fal-ai/wan/v2.2-a14b/image-to-video/turbo",
   "currency": "USD",
-  "newRequests": 18,
-  "newRequestsComplete": 18,
+  "newRequests": 20,
+  "newRequestsComplete": 20,
   "estimatedPerClip": 0.05,
-  "estimatedNewCost": 0.9,
+  "estimatedNewCost": 1.0,
   "priorConservativeReserve": 0.52,
-  "combinedConservativeReserve": 1.42,
+  "combinedConservativeReserve": 1.52,
   "authorizedTotalCeiling": 10,
   "notInvoiceReconciled": true,
   "excludedTakes": [
@@ -16,6 +16,9 @@
     "pip-fire",
     "beetle-hit",
     "pip-fire-v3",
-    "pip-fire-v2"
-  ]
+    "pip-fire-v2",
+    "mage-cast (superseded palm cast)"
+  ],
+  "staffRevisionRequests": 2,
+  "staffRevisionEstimatedCost": 0.1
 }

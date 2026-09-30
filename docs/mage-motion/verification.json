@@ -1,9 +1,9 @@
 {
-  "checkedAtUTC": "2026-09-30T06:17:01.734138+00:00",
+  "checkedAtUTC": "2026-09-30T06:41:26.843683+00:00",
   "baseMain": "72583c76adc90026605c81f7f9e1c858151eb762",
   "deployed": false,
   "coreAndUnitTests": {
-    "passed": 273,
+    "passed": 274,
     "failed": 0
   },
   "uiFlowGroups": {
@@ -17,7 +17,7 @@
   },
   "physicalIPadSafari": "not tested",
   "previewMethod": "Offline Canvas export using production drawBattle, timeline and sprite atlases; UI recreated from current CSS. Not a browser recording.",
-  "assetBytes": 15306135,
+  "assetBytes": 16557666,
   "assets": {
     "assets/battle-motion/beetle-still.webp": {
       "bytes": 31680,
@@ -26,6 +26,10 @@
     "assets/battle-motion/thornling-attack.webp": {
       "bytes": 1028252,
       "sha256": "ccea5795c5610b5f25bdcfcadd1059b6c62037f38572fbabe9454e9ee23929ac"
+    },
+    "assets/battle-motion/mage-assistCast.webp": {
+      "bytes": 1105588,
+      "sha256": "ed857ef897747dbffdd0ad020a58e369ed41172dfc370ea134fb7fd0a8e26798"
     },
     "assets/battle-motion/beetle-attack.webp": {
       "bytes": 850950,
@@ -36,8 +40,8 @@
       "sha256": "47446843c5d8468af35057a713837a46add8ba4e2f661d60d51cf344883fbf32"
     },
     "assets/battle-motion/mage-cast.webp": {
-      "bytes": 938894,
-      "sha256": "f7567a7b2929d626aa043f9739d5373fab0127caf352ef3a9babccc6dd14a4aa"
+      "bytes": 1094400,
+      "sha256": "c8f318d2915596db41b5222b5a378fccfe61c0c227ef4615b6075a2dccb15f82"
     },
     "assets/battle-motion/mage-defeat.webp": {
       "bytes": 461690,
@@ -48,8 +52,8 @@
       "sha256": "8eb8c7fcd326832899416d37ede9e14acbdfad657bc7ec92b00c8e1fb619cfce"
     },
     "assets/battle-motion/manifest.js": {
-      "bytes": 3250,
-      "sha256": "c6e12d9b3e2a32b523130e68ef33c42fb5243eb9718e8ea6a3573f14db75a05f"
+      "bytes": 3434,
+      "sha256": "123090c8f4160ad0fffafce97de5953386b235ce310e3446c27105267f65d219"
     },
     "assets/battle-motion/thornling-victory.webp": {
       "bytes": 1373558,
@@ -68,8 +72,8 @@
       "sha256": "b97dad63e14226f2903fe9706fc134fb792dc925beaf99aa5c4e16b05ca47ce3"
     },
     "assets/battle-motion/manifest.json": {
-      "bytes": 6313,
-      "sha256": "7111c62904764e10ada903764ba010784b052887858b138889e6e6fdc47056a8"
+      "bytes": 6737,
+      "sha256": "fd7eb0ad8eea2050c89901c87180251fd5e70833afa9178e3bf4389146838f90"
     },
     "assets/battle-motion/thornling-defeat.webp": {
       "bytes": 587522,
@@ -130,9 +134,9 @@
       ],
       "format": {
         "duration": "14.000000",
-        "size": "4432173"
+        "size": "4553288"
       },
-      "sha256": "220e93c0a5a8fb13ce929a9b52bd7e6f0d4eabe5c8bba32aa95282b18b938b64"
+      "sha256": "9ab9865ec0e90fa3b0db6017910a006e8eea54f4d879d7e3ab0cbc73c7c6bfd4"
     },
     {
       "enemy": "golem",
@@ -147,9 +151,9 @@
       ],
       "format": {
         "duration": "14.000000",
-        "size": "4539465"
+        "size": "4679915"
       },
-      "sha256": "ea4684cd39b3aac569bdc05f5aab414a7c173ae0fd6cbab6fba8ea920a797e8b"
+      "sha256": "cf39d84860434525e8b15bce8db5035cb4652f5e11b3dadf6cd9ebcdeb477199"
     },
     {
       "enemy": "beetle",
@@ -164,10 +168,24 @@
       ],
       "format": {
         "duration": "18.000000",
-        "size": "4810810"
+        "size": "4945794"
       },
-      "sha256": "b8f72514967149ee0c163e8605501892a09811091bd005170d6cc22a3f26c784"
+      "sha256": "0fa809b4b93e1036eff11d5fbd079729cd0349d0def4ba9abd004914ad027556"
     }
   ],
-  "timingCheck": "Spell waits until 400 ms, after the palm settles at 384 ms; impact remains 660 ms. Runtime and offline previews share the same timeline."
+  "timingCheck": "Two distinct staff casts hold their aimed poses before 400 ms; each spell emits from its measured crystal position. Spell and Pip flame reach the active enemy at 660 ms. Both remain within the existing 1200 ms reaction.",
+  "staffRevision": {
+    "soloSourceFrame": 64,
+    "assistSourceFrame": 48,
+    "soloCrystal": [
+      475,
+      189
+    ],
+    "assistCrystal": [
+      534,
+      232
+    ],
+    "feedbackDamageChanged": false,
+    "visualInspection": "Source contacts, staff grips and held poses, exported cast/assist frames for all three encounters; browser check still outstanding."
+  }
 }

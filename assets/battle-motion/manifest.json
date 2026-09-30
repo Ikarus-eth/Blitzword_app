@@ -122,8 +122,8 @@
     ],
     "still": "assets/battle-motion/mage-still.webp",
     "spell": [
-      409,
-      211
+      172,
+      89
     ],
     "target": [
       260,
@@ -131,19 +131,43 @@
     ],
     "clips": {
       "cast": {
-        "frames": 36,
+        "frames": 48,
         "cols": 6,
-        "perSheet": 36,
-        "tileW": 283,
-        "tileH": 336,
+        "perSheet": 48,
+        "tileW": 418,
+        "tileH": 363,
         "crop": [
-          70,
-          32,
-          354,
-          420
+          20,
+          0,
+          522,
+          454
         ],
         "sheets": [
           "assets/battle-motion/mage-cast.webp"
+        ],
+        "spell": [
+          475,
+          189
+        ]
+      },
+      "assistCast": {
+        "frames": 48,
+        "cols": 6,
+        "perSheet": 48,
+        "tileW": 478,
+        "tileH": 363,
+        "crop": [
+          0,
+          0,
+          597,
+          454
+        ],
+        "sheets": [
+          "assets/battle-motion/mage-assistCast.webp"
+        ],
+        "spell": [
+          534,
+          232
         ]
       },
       "hit": {

@@ -7,7 +7,7 @@ test('only the three approved adult enemy designs receive the new frame artwork'
 });
 test('an enemy cannot recoil before the spell arrives at the existing 660 ms impact',()=>{
   const before=M.timeline(659),contact=M.timeline(660),after=M.timeline(780);
-  assert.equal(M.timeline(380).spell,0,'spell waits for the extended palm');
+  assert.equal(M.timeline(380).spell,0,'spell waits for the aimed staff');
   assert.equal(before.enemy.p,0);assert.ok(before.spell>.99);assert.equal(contact.impact,1);assert.ok(after.enemy.p>0);assert.equal(after.spell,0);
   assert.equal(M.DURATION,1200);assert.equal(M.IMPACT,660);
 });
@@ -33,7 +33,7 @@ test('every shipped clip has complete, bounded atlas coordinates and local media
       assert.equal(M.frameIndex(c,2),c.frames-1);assert.equal(M.frameIndex(c,-1),0);
       for(const url of c.sheets)assert.ok(fs.existsSync(path.join(root,url)),url);
     }
-    const expected=key==='mage'?['cast','hit','defeat','victory']:key==='pip'?['fire']:['attack','hit','defeat','victory'];
+    const expected=key==='mage'?['cast','assistCast','hit','defeat','victory']:key==='pip'?['fire']:['attack','hit','defeat','victory'];
     assert.deepEqual(Object.keys(a.clips).sort(),expected.sort());
   }
 });
@@ -43,4 +43,19 @@ test('the viewport fit preserves aspect ratio and foot placement at tablet and p
     assert.equal(Math.round(f.y+(a.view[1]+a.view[3])*f.scale),rect.y+rect.h);
     assert.ok(f.scale>0);assert.ok(a.view[2]*f.scale<=rect.w+.01);
   }
+});
+
+test('solo and Pip-assisted spells leave their own held staff crystals',()=>{
+  const rect={x:100,y:200,w:280,h:410},mage=M.asset('mage');
+  for(const assist of [false,true]){
+    const clip=assist?'assistCast':'cast';
+    assert.equal(M.timeline(550,{assist}).hero.clip,clip);
+    const origin=M.spellPoint(rect,assist);
+    assert.deepEqual(origin,M.point('mage',rect,mage.clips[clip].spell));
+    assert.ok(origin.x>rect.x+rect.w,'staff reaches beyond his torso toward the enemy');
+    assert.equal(M.timeline(380,{assist}).spell,0);
+    assert.equal(M.timeline(660,{assist}).spell,1);
+  }
+  assert.notDeepEqual(M.spellPoint(rect,false),M.spellPoint(rect,true));
+  assert.notDeepEqual(mage.clips.cast.sheets,mage.clips.assistCast.sheets);
 });

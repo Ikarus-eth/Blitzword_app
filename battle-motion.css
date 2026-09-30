@@ -4,5 +4,6 @@
 .frameCombat .projectile,.frameCombat .impact,.frameCombat .damageNumber,.frameCombat .pipFlame,.frameCombat .castBeam{display:none!important}
 .escaping #defeatEnemy:has(.motionStill){animation:none}
 @media(prefers-reduced-motion:reduce){.motionOverlay{display:none}}
-.battleHero[data-motion-actor="mage"]{left:5%}
-@media(orientation:portrait){.battleHero[data-motion-actor="mage"]{left:4%}}
+.battleHero[data-motion-actor="mage"]{left:10%}
+@media(orientation:portrait){.battleHero[data-motion-actor="mage"]{left:10%}}
+.battleHero[data-motion-actor="mage"]~.battlePip[data-motion-actor="pip"]{left:34%}

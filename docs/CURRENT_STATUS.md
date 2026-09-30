@@ -2,7 +2,7 @@
 
 ## Male-mage motion candidate — 30 September 2026
 
-Prepared on `codex/mage-three-enemy-motion`, not merged or deployed. The review uses Male Mage E against adult Thornling D, Ancient Moss Golem B and three Bark Beetles C, with Small Pip's fire assist. Whole-frame sprites retain the existing 1,200 ms reaction and 660 ms health-impact timing. Group retirement, saves and reading rules are preserved. The latest Story rescue and tower-door corrections from main `72583c7` are included.
+Prepared on `codex/mage-three-enemy-motion`, not merged or deployed. The review uses Male Mage E against adult Thornling D, Ancient Moss Golem B and three Bark Beetles C, with Small Pip's fire assist. The latest correction adds a staff-pointed solo cast and a separate braced cast when Pip joins, with each spell emitted from its own staff-crystal position. Whole-frame sprites retain the existing 1,200 ms reaction and 660 ms health-impact timing. Group retirement, saves and reading rules are preserved. The latest Story rescue and tower-door corrections from main `72583c7` are included.
 
 [Scope, costs, preview and verification limits](MAGE_MOTION_PILOT.md). Browser visual verification is outstanding because the browser tool's admin-policy check denied local access; exported videos are shared-renderer previews, not browser recordings. This candidate does not change the verified deployment described below.
 

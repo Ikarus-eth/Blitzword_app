@@ -1055,7 +1055,7 @@ console.log('PASS a single beetle retires at impact and a final-heart mage defea
 {
  const s=motionSave('thornling--3');s.battle.enemyHealth=1;const ui=boot(s,{motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));ui.finishSpeech();ui.elapse(550);
- assert.ok(ui.motionDraws.some(url=>url.includes('pip-fire')),'Pip uses aimed whole-frame fire pose');assert.equal(ui.get('enemyCount').textContent,'1 / 18');
+ assert.ok(ui.motionDraws.some(url=>url.includes('pip-fire')),'Pip uses aimed whole-frame fire pose');assert.ok(ui.motionDraws.some(url=>url.includes('mage-assistCast')),'mage uses his distinct braced staff cast when Pip joins');assert.equal(ui.get('enemyCount').textContent,'1 / 18');
  ui.elapse(150);assert.equal(ui.get('enemyCount').textContent,'0 / 18');assert.equal(ui.state().campaign.battleRecords.length,1);ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);
 }
 console.log('PASS Pip finisher joins one saved hit and stops with the rest of the reaction');

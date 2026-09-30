@@ -40,7 +40,8 @@
       "resolution": "480p",
       "prompt": "This young storybook mage faces RIGHT. He plants his boots, draws his free RIGHT-facing hand toward his chest, then thrusts his open palm firmly toward the RIGHT, casting a spell. The wooden staff stays gripped in the other hand on the left, upright and stable. Natural elbow, shoulder and wrist motion; cloak follows his shoulder. Confident focused expression. Hold the extended palm briefly then relax to the original stance. Do not render the spell itself. Single continuous full-body 2D game character motion. The background stays completely flat saturated blue, no scenery, no camera movement, no zoom. Preserve the exact design, face, hair, limbs, joints, colours and proportions from the image. All body parts remain naturally connected. Keep the entire character inside the frame. No captions, no new objects, no sparks or particles. Make the action clear and quick within the first two seconds, then settle.",
       "sourceVideoSHA256": "9275c11af18cbd92872e089268b047289e5a6b89eb518fe6b05a369e1fa3e135",
-      "reuseFromEarlierPilot": false
+      "reuseFromEarlierPilot": false,
+      "superseded": "Replaced by staff-led solo and Pip-assisted casts at explicit user request."
     },
     "mage-hit": {
       "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
@@ -185,47 +186,79 @@
       "prompt": "A small rigid leaf-armoured beetle, fixed three-quarter side view facing LEFT, reacts to one tiny bump. Keep its entire hard shell ABSOLUTELY RIGID with exactly the same contours, size, green bronze plates and proportions as the reference. Its connected six legs bend down a little together, lowering the body only a few centimetres, then extend again. Its head and horns dip slightly with the body. A single restrained flinch and recovery. No turn, no roll, no growth, no inflation, no opening shell, no wings. Keep its feet in the same places on the invisible floor. Full body in frame throughout. Static camera. Flat saturated blue background stays completely unchanged. No scenery, particles, effects or text. Preserve the exact detailed storybook artwork.",
       "sourceVideoSHA256": "2ea3d8b3c58d0eef86c75c3d229156e0d2d7920f426552bb484611c5b258fb94",
       "reuseFromEarlierPilot": false
+    },
+    "mage-staff-solo-v1": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f101-dade-7dc3-be0f-bd2af38a8cc4",
+      "seed": 61284,
+      "resolution": "480p",
+      "prompt": "The boy mage aims his wooden STAFF toward an enemy OFF SCREEN RIGHT. He rotates the single long rigid staff clockwise from vertical to a nearly HORIZONTAL position, glowing ornate head pointing RIGHT at chest height, lower end behind him LEFT. His hands keep a firm natural grip on the same shaft. The amber crystal at the far RIGHT end is the firing tip. No open-palm casting. Keep the wood rigid, straight and connected, one staff only. He lifts the staff across his body with BOTH hands, takes a precise balanced aiming stance and extends it confidently toward the RIGHT. His gaze follows the staff tip.  Quick clear action during first two seconds, hold the aimed staff for one second, then return to upright ready stance. Preserve this exact child character, face, hair, clothes and proportions. Smooth full-body 2D game animation, natural connected shoulders, elbows, wrists and fingers. Entire staff and both boots visible inside the frame. Feet stay planted. Flat saturated blue background remains completely still. Locked camera, no zoom, no text, no scene, no generated projectile or flame.",
+      "sourceVideoSHA256": "619760b923eb9c01052b7614c98418d976be34f263afb9393c92e3c24a770b07",
+      "reuseFromEarlierPilot": false,
+      "inputPreparation": "Original ready frame uniformly resized from 512 to 820 pixels, composited at (0,145) on 1024-square flat blue; normalized back with a fixed whole-frame transform. No body-part warping."
+    },
+    "mage-staff-assist-v1": {
+      "model": "fal-ai/wan/v2.2-a14b/image-to-video/turbo",
+      "requestId": "01a0f102-0afd-7163-a963-03acdc07c34a",
+      "seed": 61285,
+      "resolution": "480p",
+      "prompt": "The boy mage aims his wooden STAFF toward an enemy OFF SCREEN RIGHT. He rotates the single long rigid staff clockwise from vertical to a nearly HORIZONTAL position, glowing ornate head pointing RIGHT at chest height, lower end behind him LEFT. His hands keep a firm natural grip on the same shaft. The amber crystal at the far RIGHT end is the firing tip. No open-palm casting. Keep the wood rigid, straight and connected, one staff only. He bends his knees into a low powerful brace, pulls the staff back with BOTH hands then pushes it forward toward the RIGHT, leaning into a strong coordinated blast with his small dragon companion OFF SCREEN. The staff stays close to horizontal aimed directly RIGHT. His cape swings with his shoulders. No dragon visible.  Quick clear action during first two seconds, hold the aimed staff for one second, then return to upright ready stance. Preserve this exact child character, face, hair, clothes and proportions. Smooth full-body 2D game animation, natural connected shoulders, elbows, wrists and fingers. Entire staff and both boots visible inside the frame. Feet stay planted. Flat saturated blue background remains completely still. Locked camera, no zoom, no text, no scene, no generated projectile or flame.",
+      "sourceVideoSHA256": "2c70a7a7ac618a0cb96420e4f35f36a1df6046a20bf6559b4bdb9ed48b6b4ee2",
+      "reuseFromEarlierPilot": false,
+      "inputPreparation": "Original ready frame uniformly resized from 512 to 820 pixels, composited at (0,145) on 1024-square flat blue; normalized back with a fixed whole-frame transform. No body-part warping."
     }
   },
   "trimmedClips": {
     "mage-cast": {
-      "source": "mage-cast",
+      "source": "mage-staff-solo-v1",
       "sourceIndices": [
         0,
+        3,
         7,
-        13,
-        20,
-        27,
-        37,
-        49,
-        60,
-        71,
-        79,
-        86,
-        93,
-        94,
-        94,
-        94,
-        94,
-        94,
-        94,
-        94,
-        94,
-        94,
-        94,
-        93,
-        89,
-        85,
-        81,
-        72,
-        62,
+        10,
+        14,
+        18,
+        23,
+        29,
+        35,
+        40,
+        46,
+        51,
+        55,
+        59,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        61,
+        57,
         53,
-        43,
-        33,
-        26,
-        20,
-        13,
-        7,
+        50,
+        46,
+        42,
+        39,
+        35,
+        31,
+        27,
+        23,
+        19,
+        15,
+        12,
+        8,
+        4,
         0
       ],
       "curve": [
@@ -234,28 +267,24 @@
           0
         ],
         [
-          0.12,
-          28
+          0.1,
+          16
         ],
         [
-          0.23,
-          72
+          0.22,
+          48
         ],
         [
-          0.32,
-          94
+          0.3,
+          64
         ],
         [
-          0.62,
-          94
+          0.64,
+          64
         ],
         [
-          0.72,
-          80
-        ],
-        [
-          0.86,
-          32
+          0.78,
+          40
         ],
         [
           1,
@@ -1160,6 +1189,89 @@
         [
           0.52,
           10
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "mage-assistCast": {
+      "source": "mage-staff-assist-v1",
+      "sourceIndices": [
+        0,
+        3,
+        5,
+        8,
+        10,
+        13,
+        17,
+        20,
+        24,
+        27,
+        31,
+        35,
+        39,
+        43,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        45,
+        42,
+        38,
+        35,
+        32,
+        28,
+        25,
+        23,
+        20,
+        18,
+        15,
+        13,
+        10,
+        8,
+        5,
+        3,
+        0
+      ],
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.1,
+          12
+        ],
+        [
+          0.22,
+          32
+        ],
+        [
+          0.3,
+          48
+        ],
+        [
+          0.64,
+          48
+        ],
+        [
+          0.78,
+          26
         ],
         [
           1,

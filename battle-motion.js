@@ -26,6 +26,8 @@ function warm(key){
 function ready(key,clip){return !!asset(key)?.clips[clip]?.sheets.every(url=>cache.get(url)?.image);}
 function fit(view,rect){const scale=Math.min(rect.w/view[2],rect.h/view[3]);return {x:rect.x+(rect.w-view[2]*scale)/2-view[0]*scale,y:rect.y+rect.h-view[3]*scale-view[1]*scale,scale};}
 function point(key,rect,xy){const a=asset(key);if(!a)return {x:rect.x+rect.w*.65,y:rect.y+rect.h*.45};const f=fit(a.view,rect);return{x:f.x+xy[0]*f.scale,y:f.y+xy[1]*f.scale};}
+function castClip(assist=false){return assist?'assistCast':'cast';}
+function spellPoint(rect,assist=false){const a=asset('mage');return point('mage',rect,a.clips[castClip(assist)].spell||a.spell);}
 function frameIndex(clip,progress){return Math.min(clip.frames-1,Math.floor(clamp(progress)*clip.frames));}
 function drawActor(ctx,images,key,clipName,progress,rect,dx=0,opacity=1,dy=0){
   const a=asset(key),c=a?.clips[clipName];if(!c)return;
@@ -38,9 +40,9 @@ function timeline(ms,{correct=true,enemy='thornling',defeated=false,heroDefeated
   const t=clamp(ms,0,DURATION),after=clamp((t-IMPACT)/(DURATION-IMPACT)),before=clamp(t/IMPACT);
   const out={hero:{clip:'cast',p:0,x:0},enemy:{clip:'hit',p:0,x:0},pip:{clip:'fire',p:0,x:0},spell:0,flame:0,impact:0,shock:0};
   if(correct){
-    out.hero.p=clamp(t/DURATION);
+    out.hero.clip=castClip(assist);out.hero.p=clamp(t/DURATION);
     out.enemy={clip:defeated?'defeat':'hit',p:after,x:0};
-    // The palm reaches its held forward pose at 384 ms; emit after it arrives.
+    // Both casts hold the aimed staff before 400 ms; the spell leaves its crystal.
     out.spell=t>=400&&t<=IMPACT?(t-400)/(IMPACT-400):0;
     if(assist){out.pip.p=clamp(t/1050);out.flame=t>=460&&t<=730?clamp((t-460)/200):0;}
   }else{
@@ -88,19 +90,20 @@ function run(container,actors,duration,draw,hold=false){
 function reaction({container,hero,enemy,pip,correct,defeated,heroDefeated,assist,shield}){
   const hk=hero?.dataset.motionActor,ek=enemy?.dataset.motionActor,pk=pip?.dataset.motionActor;
   if(hk!=='mage'||!ek)return false;
-  const hc=correct?'cast':shield?'cast':heroDefeated?'defeat':'hit',ec=correct?(defeated?'defeat':'hit'):'attack';
+  const usePip=correct&&assist&&pk==='pip'&&ready('pip','fire');
+  const hc=correct?castClip(usePip):shield?'cast':heroDefeated?'defeat':'hit',ec=correct?(defeated?'defeat':'hit'):'attack';
   const actors=[{element:hero,key:hk,clip:hc},{element:enemy,key:ek,clip:ec}];
-  const usePip=correct&&assist&&pk==='pip'&&ready('pip','fire');if(usePip)actors.push({element:pip,key:pk,clip:'fire'});
+  if(usePip)actors.push({element:pip,key:pk,clip:'fire'});
   return run(container,actors,DURATION,(ctx,images,ms,a)=>drawBattle(ctx,images,{hero:a[0].rect,enemy:a[1].rect,pip:usePip?a[2].rect:null},{correct,enemy:ek,defeated,heroDefeated,assist:usePip,shield},ms),defeated||heroDefeated);
 }
 function drawBattle(ctx,images,layout,options,ms){
   const {correct=true,enemy:ek='thornling',defeated=false,heroDefeated=false,assist=false,shield=false}=options;
-  const hr=layout.hero,er=layout.enemy,start=point('mage',hr,asset('mage').spell),end=point(ek,er,asset(ek).target),heroTarget=point('mage',hr,asset('mage').target);
+  const hr=layout.hero,er=layout.enemy,start=spellPoint(hr,assist),end=point(ek,er,asset(ek).target),heroTarget=point('mage',hr,asset('mage').target);
   const enemyFront=point(ek,er,asset(ek).front),travel=Math.max(0,enemyFront.x-heroTarget.x-8);
   const landingShift=ek==='golem'?0:Math.max(0,hr.y+hr.h-er.y-er.h);
   if(!correct)heroTarget.y=ek==='golem'?hr.y+hr.h-10:clamp(enemyFront.y+landingShift,heroTarget.y,hr.y+hr.h-10);
   const s=timeline(ms,{...options,travel});
-  const hc=correct?'cast':shield?'cast':heroDefeated?'defeat':'hit',ec=correct?(defeated?'defeat':'hit'):'attack';
+  const hc=correct?castClip(assist):shield?'cast':heroDefeated?'defeat':'hit',ec=correct?(defeated?'defeat':'hit'):'attack';
   drawActor(ctx,images,'mage',hc,s.hero.p,hr,!correct&&!shield?-10*Math.sin(Math.PI*s.hero.p):0);
   drawActor(ctx,images,ek,ec,s.enemy.p,er,s.enemy.x+(correct&&!defeated?8*Math.sin(Math.PI*s.enemy.p):0),defeated&&ms>1100?Math.max(0,1-(ms-1100)/100):1,!correct&&travel?landingShift*(-s.enemy.x/travel):0);
   if(assist&&layout.pip)drawActor(ctx,images,'pip','fire',s.pip.p,layout.pip);
@@ -112,5 +115,5 @@ function celebrate(container,element,clip='victory'){
   const actors=targets.map(element=>({element,key:element.dataset.motionActor,clip}));if(!actors.length)return false;
   return run(container,actors,1600,(ctx,images,ms,a)=>{for(const item of a)drawActor(ctx,images,item.key,clip,ms/1600,item.rect);});
 }
-return {DURATION,IMPACT,asset,enemyKey,render,warm,ready,fit,point,frameIndex,drawActor,timeline,drawEffects,drawBattle,reaction,celebrate,cancelAll};
+return {DURATION,IMPACT,asset,enemyKey,render,warm,ready,fit,point,castClip,spellPoint,frameIndex,drawActor,timeline,drawEffects,drawBattle,reaction,celebrate,cancelAll};
 });
