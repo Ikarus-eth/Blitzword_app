@@ -7,6 +7,7 @@ test('only the three approved adult enemy designs receive the new frame artwork'
 });
 test('an enemy cannot recoil before the spell arrives at the existing 660 ms impact',()=>{
   const before=M.timeline(659),contact=M.timeline(660),after=M.timeline(780);
+  assert.equal(M.timeline(380).spell,0,'spell waits for the extended palm');
   assert.equal(before.enemy.p,0);assert.ok(before.spell>.99);assert.equal(contact.impact,1);assert.ok(after.enemy.p>0);assert.equal(after.spell,0);
   assert.equal(M.DURATION,1200);assert.equal(M.IMPACT,660);
 });

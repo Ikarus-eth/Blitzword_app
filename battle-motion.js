@@ -40,7 +40,8 @@ function timeline(ms,{correct=true,enemy='thornling',defeated=false,heroDefeated
   if(correct){
     out.hero.p=clamp(t/DURATION);
     out.enemy={clip:defeated?'defeat':'hit',p:after,x:0};
-    out.spell=t>=350&&t<=IMPACT?(t-350)/(IMPACT-350):0;
+    // The palm reaches its held forward pose at 384 ms; emit after it arrives.
+    out.spell=t>=400&&t<=IMPACT?(t-400)/(IMPACT-400):0;
     if(assist){out.pip.p=clamp(t/1050);out.flame=t>=460&&t<=730?clamp((t-460)/200):0;}
   }else{
     out.hero={clip:shield?'cast':heroDefeated?'defeat':'hit',p:shield?0:after,x:0};

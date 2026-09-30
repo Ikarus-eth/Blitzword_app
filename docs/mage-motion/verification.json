@@ -130,9 +130,9 @@
       ],
       "format": {
         "duration": "14.000000",
-        "size": "4438286"
+        "size": "4432173"
       },
-      "sha256": "ef1e1aa0b5a537e2ca66825376dd79fddb321e9a3b1bb90cb534be610badaf64"
+      "sha256": "220e93c0a5a8fb13ce929a9b52bd7e6f0d4eabe5c8bba32aa95282b18b938b64"
     },
     {
       "enemy": "golem",
@@ -147,9 +147,9 @@
       ],
       "format": {
         "duration": "14.000000",
-        "size": "4543985"
+        "size": "4539465"
       },
-      "sha256": "f037054312216d6f3952dbfc647f997441d5bf602f54c52bca5b77bc57c84f31"
+      "sha256": "ea4684cd39b3aac569bdc05f5aab414a7c173ae0fd6cbab6fba8ea920a797e8b"
     },
     {
       "enemy": "beetle",
@@ -164,9 +164,10 @@
       ],
       "format": {
         "duration": "18.000000",
-        "size": "4805286"
+        "size": "4810810"
       },
-      "sha256": "a77b1919f351e294b047c65f95623024730433f060f95558d0af3a9eb7c96849"
+      "sha256": "b8f72514967149ee0c163e8605501892a09811091bd005170d6cc22a3f26c784"
     }
-  ]
+  ],
+  "timingCheck": "Spell waits until 400 ms, after the palm settles at 384 ms; impact remains 660 ms. Runtime and offline previews share the same timeline."
 }
