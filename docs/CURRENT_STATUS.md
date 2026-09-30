@@ -1,8 +1,8 @@
 # BlitzWord current status — 30 September 2026
 
-## All enemies and male mage — release preparation, 30 September 2026
+## All enemies and male mage — deployed, 30 September 2026
 
-Build `enemy-motion-20260930-r1` is implemented and tested on the release branch; deployment is pending. All 20 selected enemy families have attack, recoil, defeat and victory frames across 60 encounters, including all groups. Only the male mage is active; old hero preferences and learner progress are preserved. The aimed solo and braced Pip-assisted casts are retained. Current main’s adaptive reading update is included.
+**Deployed and verified by live file hashes.** Build `enemy-motion-20260930-r1` is live from main `1f8dbe00b285dce17aa4809a96d9007d752e02bf`. [PR #111](https://github.com/Ikarus-eth/Blitzword_app/pull/111) merged and [Pages run 36689743020](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36689743020) succeeded. All 118 checked live files match the tested source. [Deployment evidence](all-enemy-motion/deployment.json). All 20 selected enemy families have attack, recoil, defeat and victory frames across 60 encounters, including all groups. Only the male mage is active; old hero preferences and learner progress are preserved. The aimed solo and braced Pip-assisted casts are retained. Current main’s adaptive reading update is included.
 
 [Release, costs and verification limits](enemies/ALL_ENEMY_MOTION_RELEASE.md). Total conservative generation reserve is $5.12, including prior experiments and failed requests. Browser visual checks for this animation change remain unavailable because the browser tool denied its admin-policy verification; offline rendered frames and automated game flows are checked separately.
 
@@ -10,7 +10,7 @@ This page tracks current implementation and remaining work. Dated release notes 
 
 The [original curriculum workbook](../curriculum/README.md), maintained documentation and approved production assets are now in GitHub. No standing ChatGPT project attachments are required. The old setup, battle-scroll and teaching-card mockups are retired; see the [project maintenance guide](PROJECT_DESCRIPTION_UPDATE.md).
 
-Latest verified runtime build: `adaptive-reading-20260930-r1`, deployed from main `6882e3bbea690699890bf631b65a3e1451e63e29`. [Live release verification](ADAPTIVE_READING_DEPLOYMENT.json) covers the automatic reading challenge, preserved saves, proportional new-battle health and parent reporting. The corrected tower riddle and prior releases remain included. Earlier releases remain below as historical evidence. The narration completion draft is not merged or deployed.
+Previous verified runtime build: `adaptive-reading-20260930-r1`, deployed from main `6882e3bbea690699890bf631b65a3e1451e63e29`. [Live release verification](ADAPTIVE_READING_DEPLOYMENT.json) covers the automatic reading challenge, preserved saves, proportional new-battle health and parent reporting. The corrected tower riddle and prior releases remain included. Earlier releases remain below as historical evidence. The narration completion draft is not merged or deployed.
 
 ## Automatic reading challenge — 30 September 2026
 
