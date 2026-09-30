@@ -56,14 +56,14 @@ function impactSave(enemy='moss-golem'){
   s.learning.dailyPractice[word]={day:Core.dayKey(now),correct:3};
  }
  Core.startBattle(s,now,{strength:6});s.battle.introPending=false;const pending=Core.copy(Core.prepareBattle(s,now));
- assert.equal(pending.practiceKind,'speed-refill');assert.equal(pending.exposureMs,1500);
- let ui=boot(s);ui.resume();ui.ready();assert.equal(ui.state().battle.question.exposureMs,1500);
+ assert.equal(pending.practiceKind,'new');assert.equal(pending.exposureMs,1800);
+ let ui=boot(s);ui.resume();ui.ready();assert.equal(ui.state().battle.question.exposureMs,1800);
  ui=boot(ui.state());ui.resume();ui.ready();const q=ui.state().battle.question;
- assert.equal(q.id,pending.id);assert.deepEqual(q.options,pending.options);assert.equal(q.exposureMs,1500);
+ assert.equal(q.id,pending.id);assert.deepEqual(q.options,pending.options);assert.equal(q.exposureMs,1800);
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
- assert.equal(ui.state().battle.enemyHealth,5);assert.equal(ui.state().learning.dailyPractice[q.target].correct,3);
+ assert.equal(ui.state().battle.enemyHealth,5);assert.equal(ui.state().learning.dailyPractice[q.target].correct,1);
  assert.equal(Core.practiceExposure(ui.state()),1800);assert.ok(ui.state().campaign.battleRecords.at(-1).correct);
- console.log('PASS daily cap and one-step faster refill survive UI save/reopen without changing Walk or saved choices');
+ console.log('PASS automatic learning ahead survive UI save/reopen without changing Walk or saved choices');
 }
 for(const help of [false,true])for(const kind of ['known','new','repeated','review']){
  const s=impactSave(),q=s.battle.question,w=s.learning.words[q.target];
@@ -1070,3 +1070,15 @@ for(const enemy of Content.enemyVariants){
  ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);
 }
 console.log('PASS all 60 variants animate counterattacks as the male mage while preserving saved hero preferences');
+{
+ const s=impactSave();Core.startBattle(s,Date.UTC(2026,8,22),{strength:32});s.battle.introPending=false;Core.prepareBattle(s,Date.UTC(2026,8,22));
+ let ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
+ assert.equal(ui.get('heroHearts').getAttribute('aria-label'),'10 of 10 hearts');
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));
+ assert.equal(ui.state().battle.heroHealth,9);assert.equal(ui.get('heroHearts').querySelector('.heartCount').textContent,'10 / 10');
+ ui.finishSpeech();ui.elapse(700);assert.equal(ui.get('heroHearts').querySelector('.heartCount').textContent,'9 / 10');
+ ui=boot(ui.state());ui.resume();assert.equal(ui.get('heroHearts').getAttribute('aria-label'),'9 of 10 hearts');
+ ui.click(ui.get('homeBtn'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ assert.match(ui.get('parentChallenge').textContent,/80–90%/);assert.match(ui.get('parentChallenge').textContent,/Help requests/);
+ console.log('PASS adaptive battle hearts display only at impact and survive reload; Parents explains automatic challenge');
+}

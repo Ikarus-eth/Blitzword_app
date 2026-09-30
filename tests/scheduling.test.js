@@ -47,101 +47,6 @@ function field(index=0,{accuracy=1}={}){
 }
 const next=s=>Core.prepareBattle(s,NOW,()=>.4);
 
-test('three independent successes cap each current word, then at most three preview words, then faster refill',()=>{
-  const s=fresh();Core.startBattle(s,NOW,{strength:300});
-  const current=new Set(Content.areas[0].words),preview=new Set(Content.areas[1].words),ordinary={},previews=new Set();
-  let fast=0;
-  for(let i=0;i<45;i++){
-    const q=answer(s,NOW+i*8000);
-    if(q.practiceKind==='current'){ordinary[q.target]=(ordinary[q.target]||0)+1;assert.ok(ordinary[q.target]<=3);}
-    if(q.practiceKind==='preview'){assert.ok(preview.has(q.target));previews.add(q.target);assert.ok(previews.size<=3);}
-    if(q.practiceKind==='speed-refill'){fast++;assert.ok(current.has(q.target));assert.equal(q.exposureMs,1500);}
-  }
-  assert.equal(Object.keys(ordinary).length,6);assert.ok(Object.values(ordinary).every(n=>n===3));
-  assert.equal(previews.size,3);assert.ok(fast>0);
-  assert.equal(s.session.newWords.length,9,'six chapter targets plus three approved previews');
-  for(const word of previews)assert.ok(s.learning.words[word].introducedAt);
-  assert.equal(Core.practiceExposure(s),1800,'faster refill does not change the selected speed');
-});
-
-test('freed turns prefer due review, then older unseen words least recently seen, then next-chapter previews',()=>{
-  const s=field(1),old=Content.areas[0].words;
-  s.learning.words[old[0]].dueAt=NOW-1;
-  s.learning.words[old[1]].lastSeenAt=new Date(NOW-2*DAY).toISOString();
-  s.learning.words[old[2]].lastSeenAt=new Date(NOW-3*DAY).toISOString();
-  assert.equal(next(s).target,old[0]);assert.equal(next(s).practiceKind,'review');answer(s,NOW);
-  assert.equal(next(s).target,old[2]);assert.equal(next(s).practiceKind,'older');answer(s,NOW);
-  assert.equal(next(s).target,old[1]);answer(s,NOW);
-  assert.equal(next(s).practiceKind,'preview');assert.ok(Content.areas[2].words.includes(next(s).target));
-});
-
-test('a capped current word is skipped even when due, while an older due review remains eligible',()=>{
-  const s=field(1);s.learning.words.water.dueAt=NOW-1;s.learning.words.on.dueAt=NOW-1;
-  assert.equal(next(s).target,'on');assert.equal(next(s).practiceKind,'review');
-});
-
-test('preview gate uses independent recent accuracy, accepts 80%, and stops below it',()=>{
-  const allowed=field(0,{accuracy:.8});
-  for(let i=0;i<20;i++)allowed.campaign.battleRecords.push({task:'battle',correct:false,supported:true});
-  assert.equal(next(allowed).practiceKind,'preview');
-  const blocked=field(0,{accuracy:.6});assert.equal(next(blocked).practiceKind,'speed-refill');
-  assert.ok(Content.areas[1].words.every(word=>!blocked.learning.words[word].introducedAt));
-  // The gate is checked again on every new question, including already introduced previews.
-  answer(allowed,NOW,{correct:false});
-  assert.equal(next(allowed).practiceKind,'speed-refill');
-});
-
-test('preview limit survives new sessions, a new day and save/reload; previews never unlock a chapter',()=>{
-  let s=field();
-  for(let i=0;i<12;i++)answer(s,NOW+i*8000);
-  const introduced=()=>Content.areas[1].words.filter(word=>s.learning.words[word].introducedAt);
-  assert.equal(introduced().length,3);
-  const before=introduced();s=reload(s);Core.completeSession(s,NOW);Core.beginSession(s,NOW+DAY);
-  for(const word of Content.areas[0].words)s.learning.dailyPractice[word]={day:Core.dayKey(NOW+DAY),correct:3};
-  for(let i=0;i<12;i++)answer(s,NOW+DAY+i*8000);
-  assert.deepEqual(introduced(),before);assert.deepEqual(s.story.clearedAreas,[]);
-  assert.equal(Core.storyProgress(s).areas[1].status,'locked');
-});
-
-test('preview across a campaign boundary still means the next map field, without unlocking its campaign',()=>{
-  const s=field(4),q=next(s);
-  assert.ok(Content.areas[5].words.includes(q.target));assert.equal(q.practiceKind,'preview');
-  assert.equal(Core.currentChapter(s).id,'chapter-1');assert.deepEqual(s.story.completedChapters,[]);
-});
-
-test('all refill paths preserve two distinct intervening answers after help',()=>{
-  const s=field(),q=next(s),target=q.target;
-  answer(s,NOW,{correct:false});Core.startTeaching(s,target,'battle',NOW);Core.leaveTeaching(s,NOW);
-  const first=answer(s,NOW+20000).target,second=answer(s,NOW+40000).target;
-  assert.notEqual(first,target);assert.notEqual(second,target);assert.notEqual(first,second);
-  // Accuracy may disable previews; neither that nor faster refill can waive eligibility.
-  for(let i=0;i<6;i++){
-    const candidate=next(s);assert.ok(s.learning.sequence>=s.learning.words[candidate.target].eligibleAfter);
-    answer(s,NOW+60000+i*8000);
-  }
-});
-
-test('faster refill takes exactly one exposure step and never compounds or changes a saved question',()=>{
-  for(const [base,expected] of [[2200,1800],[1800,1500],[1500,1200],[1200,950],[950,950]]){
-    let s=field(0,{accuracy:0});s.assessment.exposure=base;
-    const settings=Core.copy(s.settings),q=next(s);
-    assert.equal(q.exposureMs,expected);const saved=Core.copy(q);s=reload(s);
-    assert.deepEqual(Core.prepareBattle(s,NOW+DAY),saved);
-    for(let i=0;i<5;i++){answer(s,NOW,{supported:true});assert.equal(next(s).exposureMs,expected);}
-    assert.deepEqual(s.settings,settings);assert.equal(s.assessment.exposure,base);
-  }
-});
-
-test('Crawl stays self-paced and speed refill cannot unlock Ride or Fly',()=>{
-  const s=field(0,{accuracy:0});Core.chooseSpeed(s,'crawl');assert.equal(next(s).exposureMs,null);
-  answer(s,NOW,{supported:true});Core.chooseSpeed(s,'run');assert.equal(next(s).exposureMs,950);
-  assert.equal(Core.chooseSpeed(s,'ride'),false);assert.equal(Core.chooseSpeed(s,'fly'),false);
-  assert.deepEqual(Core.speedChoices(s).filter(x=>x.locked).map(x=>x.id),['ride','fly']);
-  // Existing, legitimately unlocked speeds are preserved as well.
-  answer(s,NOW,{supported:true});s.entitlements={expansion:true};s.story.chapterComplete=true;s.dragon.stage=3;
-  Core.chooseSpeed(s,'ride');assert.equal(next(s).exposureMs,600);
-});
-
 test('daily counts exclude support, demo and assessment and ignore duplicate answer delivery',()=>{
   const s=fresh();answer(s,NOW,{target:'on',supported:true});assert.equal(s.learning.dailyPractice.on,undefined);
   answer(s,NOW,{target:'on',correct:false});assert.equal(s.learning.dailyPractice.on,undefined);
@@ -152,24 +57,6 @@ test('daily counts exclude support, demo and assessment and ignore duplicate ans
   assert.equal(s.learning.dailyPractice.on.correct,1);
 });
 
-test('daily cap follows the local calendar date and resets at midnight without changing word progress',()=>{
-  let s=field(0,{accuracy:0});const before=Core.copy(s.learning.words);
-  const tomorrow=new Date(2026,8,25,0,0,0).getTime();
-  s=reload(s);const q=Core.prepareBattle(s,tomorrow);
-  assert.equal(q.practiceKind,'current');assert.equal(q.exposureMs,1800);
-  assert.deepEqual(s.learning.words,before);
-  answer(s,tomorrow);
-  assert.deepEqual(s.learning.dailyPractice[q.target],{day:Core.dayKey(tomorrow),correct:1});
-});
-
-test('daily cap survives compaction and reload after its evidence leaves the 500 raw answers',()=>{
-  let s=field();
-  for(let i=0;i<600;i++)s.campaign.battleRecords.push({task:'battle',target:'rock',correct:false,supported:true,at:new Date(NOW).toISOString()});
-  Core.compactHistory(s);s=reload(s);
-  assert.equal(s.campaign.battleRecords.length,500);assert.equal(next(s).practiceKind,'preview');
-  assert.equal(Object.keys(s.learning.dailyPractice).length,6);
-});
-
 test('old saves seed the cap from retained answers before compaction, preserving progress and pending questions',()=>{
   const s=field();delete s.learning.dailyPractice;s.campaign.battleRecords=[];
   s.timing.firstPracticeAt=new Date(NOW-2*DAY).toISOString();
@@ -178,12 +65,12 @@ test('old saves seed the cap from retained answers before compaction, preserving
   const migrated=reload(s);
   for(const key of ['profile','dragon','story','rewards','settings','timing','assessment','battle','session'])assert.deepEqual(migrated[key],s[key],key);
   assert.deepEqual(migrated.learning.words,s.learning.words);
-  assert.equal(next(migrated).practiceKind,'preview');
+  assert.equal(next(migrated).practiceKind,'new');
   const pending=Core.copy(migrated.battle.question),again=reload(migrated);
   assert.deepEqual(Core.prepareBattle(again,NOW),pending);assert.deepEqual(again.learning.dailyPractice,migrated.learning.dailyPractice);
 });
 
-test('cap and preview do not waive the ten-minute minimum, learning objectives or a living battle',()=>{
+test('learning ahead does not waive the ten-minute minimum, learning objectives or a living battle',()=>{
   const s=field();Object.assign(Core.chapterState(s,Content.areas[0].id),{wins:3,duels:1,activeMs:599999});
   next(s);assert.equal(Core.storyProgress(reload(s)).cleared,0);
   Core.chapterState(s,Content.areas[0].id).activeMs=600000;
@@ -198,4 +85,89 @@ test('post-story review remains available without previewing beyond the curricul
   const s=field(34);s.story.clearedAreas=Content.areas.map(a=>a.id);s.story.completedChapters=Content.chapters.map(c=>c.id);
   s.learning.words.on.dueAt=NOW-1;Core.startBattle(s,NOW,{strength:300});
   assert.equal(next(s).target,'on');assert.equal(next(s).practiceKind,'review');
+});
+
+function history(s,correct,total=20){
+  s.campaign.battleRecords=Array.from({length:total},(_,i)=>({id:'sample-'+i,task:'battle',target:'on',correct:i<correct,supported:false,timingValid:true,at:new Date(NOW-1000).toISOString()}));
+}
+test('automatic challenge uses an 80–90% band, enough evidence, and early struggle recovery',()=>{
+  for(const [correct,mode,limit] of [[19,'stretch',6],[18,'steady',4],[16,'steady',4],[15,'support',2]]){
+    const s=fresh();history(s,correct);
+    // Spread errors through the sample so this checks the full-window boundaries.
+    s.campaign.battleRecords.sort((a,b)=>a.id.localeCompare(b.id));
+    assert.equal(Core.adaptiveChallenge(s).mode,mode);assert.equal(Core.adaptiveChallenge(s).activeLimit,limit);
+  }
+  const s=fresh();history(s,9,9);assert.equal(Core.adaptiveChallenge(s).mode,'steady');
+  history(s,2,5);assert.equal(Core.adaptiveChallenge(s).mode,'support');
+  history(s,19);assert.equal(Core.adaptiveChallenge(s).mode,'stretch','one miss does not overreact');
+});
+test('help lowers challenge; interruptions, guided work and assessment do not distort it',()=>{
+  const s=fresh();history(s,20);
+  for(let i=0;i<5;i++)s.campaign.battleRecords.push({task:'battle',target:'on',correct:false,supported:true,timingValid:true,supportReasons:['help-request']});
+  assert.equal(Core.adaptiveChallenge(s).mode,'support');assert.equal(Core.adaptiveChallenge(s).correct,15);
+  const before=Core.adaptiveChallenge(s);
+  for(const r of [{task:'assessment',correct:false},{task:'demoBattle',correct:false},
+    {task:'battle',correct:false,supported:true,supportReasons:['guided-example']},
+    {task:'battle',correct:false,supported:true,timingValid:false,supportReasons:['help-request','interrupted-exposure']}])s.campaign.battleRecords.push(r);
+  assert.deepEqual(Core.adaptiveChallenge(s),before);
+});
+test('easy words leave routine practice after two separated successes; learning moves beyond the next field',()=>{
+  const s=fresh();Core.startBattle(s,NOW,{strength:300});const seen={};
+  for(let i=0;i<100;i++){
+    const q=answer(s,NOW+i*8000);seen[q.target]=(seen[q.target]||0)+1;
+    assert.ok(seen[q.target]<=2,'unnecessary repetition: '+q.target);
+    assert.notEqual(q.practiceKind,'comfort');assert.notEqual(q.practiceKind,'speed-refill');
+    assert.equal(q.exposureMs,1800);
+    const unfinished=Content.words.filter(x=>s.learning.words[x.w].introducedAt&&s.learning.words[x.w].practiceSuccesses<2);
+    assert.ok(unfinished.length<=6);
+  }
+  assert.ok(Object.keys(seen).length>=45);assert.ok(Content.areas[3].words.some(w=>seen[w]));
+  assert.equal(s.story.clearedAreas.length,0,'learning ahead never bypasses chapter gates');
+  assert.ok(Object.values(s.learning.words).every(w=>!w.securedAt),'two quick successes are not secured or retained mastery');
+});
+test('due reviews include future-field words and stop repeating after success',()=>{
+  const s=field(1),old=Content.areas[0].words[0],ahead=Content.areas[8].words[0];
+  Object.assign(s.learning.words[ahead],{introducedAt:new Date(NOW-4*DAY).toISOString(),practiceSuccesses:3,reviewStage:1,dueAt:NOW-1,lastSequence:-2});
+  s.learning.words[old].dueAt=NOW-1;s.learning.sequence=302;
+  assert.equal(next(s).target,ahead);answer(s,NOW);
+  assert.equal(s.learning.words[ahead].dueAt,NOW+7*DAY);
+  const nextWords=[];for(let i=0;i<20;i++)nextWords.push(answer(s,NOW+i*8000).target);
+  assert.ok(nextWords.includes(old));assert.ok(!nextWords.includes(ahead));
+});
+test('known not-due words do not fill turns before new curriculum; low accuracy reduces the active set',()=>{
+  const high=field();history(high,20);assert.equal(next(high).practiceKind,'new');
+  const low=field();history(low,10);const words=Content.areas[1].words.slice(0,2);
+  for(const word of words)Object.assign(low.learning.words[word],{introducedAt:new Date(NOW).toISOString(),practiceSuccesses:0});
+  const q=next(low);assert.ok(words.includes(q.target));assert.equal(q.practiceKind,'practice');
+  assert.equal(Core.adaptiveChallenge(low).activeLimit,2);
+});
+test('misses and help return easy words to practice without inventing mastery or spending help hearts',()=>{
+  const s=field();Core.prepareBattle(s,NOW);const q=s.battle.question,w=s.learning.words[q.target];
+  Object.assign(w,{practiceSuccesses:4,reviewStage:2,wordXPClaimed:true,securedAt:new Date(NOW-DAY).toISOString()});
+  q.phase='choices';const health=s.battle.heroHealth;Core.answerBattle(s,'?',NOW);
+  assert.equal(w.practiceSuccesses,0);assert.equal(w.reviewStage,2);assert.ok(w.securedAt);assert.equal(s.battle.heroHealth,health);
+  const first=answer(s,NOW+20000).target,second=answer(s,NOW+40000).target;
+  assert.notEqual(first,q.target);assert.notEqual(second,q.target);assert.notEqual(first,second);
+  assert.equal(Core.prepareBattle(s,NOW+61000).target,q.target);
+});
+test('adaptation preserves pending questions, chosen speeds, locked modes and the learning state across reload',()=>{
+  for(const speed of ['crawl','walk','stride','jog','run']){
+    let s=field();history(s,20);Core.chooseSpeed(s,speed);const q=Core.copy(next(s)),settings=Core.copy(s.settings);
+    history(s,0);s=reload(s);assert.deepEqual(Core.prepareBattle(s,NOW+DAY),q);assert.deepEqual(s.settings,settings);
+    assert.equal(Core.chooseSpeed(s,'ride'),false);assert.equal(Core.chooseSpeed(s,'fly'),false);
+    assert.equal(q.exposureMs,Core.practiceExposure(s));
+  }
+});
+test('all-known curriculum offers bounded review without throwing or silently accelerating',()=>{
+  const s=field(34);history(s,20);const before=Core.copy(s.settings);
+  for(let i=0;i<20;i++){const q=answer(s,NOW+i*8000);assert.equal(q.practiceKind,'comfort');assert.ok(Content.words.some(w=>w.w===q.target));}
+  assert.deepEqual(s.settings,before);
+});
+test('new long battles scale mistake allowance; old in-flight battles keep every saved value',()=>{
+  for(const [strength,hearts] of [[3,3],[4,3],[8,4],[16,6],[32,10]]){
+    const s=fresh();Core.startBattle(s,NOW,{strength});assert.equal(s.battle.heroHealth,hearts);assert.equal(s.battle.heroMaxHealth,hearts);
+  }
+  const s=field();s.battle.maxHealth=32;s.battle.enemyHealth=19;s.battle.heroHealth=1;delete s.battle.heroMaxHealth;
+  const before=Core.copy(s.battle);assert.deepEqual(reload(s).battle,before);
+  Core.startBattle(s,NOW,{demo:true});assert.equal(s.battle.heroHealth,3);
 });
