@@ -1,0 +1,14 @@
+{
+  "build": "story-rescue-20260930-r3",
+  "mode": "Built-in image_gen",
+  "useCase": "precise-object-edit",
+  "prompt": "Use case: precise-object-edit. Asset type: BlitzWord illustrated children's story, final tower puzzle. Input image 1 is the edit target. Change only the three blank brass door plaques. On the LEFT door, replace the blank plaque with a large brass medallion engraved with a very clear SUN symbol (circle with rays). On the MIDDLE door, a matching brass medallion engraved with a very clear crescent MOON. On the RIGHT door, a matching brass medallion engraved with a very clear five-point STAR. These three symbols must be distinct, high-contrast and readable when this image is shown small. They must look physically attached to the wooden doors, with the existing painted lighting and perspective; no floating badges or UI. Preserve Artus, Pip, the Stone Ram, rescue basket, ropes, all three closed doors, locks, scenery, composition, colors and 3:2 framing exactly. Do not add any letters, numbers, sentences, extra doors, extra symbols or inset panels.",
+  "reference": "assets/story-pilot/scenes/gate.webp",
+  "generatedSource": "exec-e0c258fe-1397-4ffd-93b2-3f0316f38f32.png",
+  "asset": "assets/story-pilot/scenes/gate-labelled.webp",
+  "generationCalls": 1,
+  "delivery": "WebP quality 88; original dimensions preserved",
+  "visualReview": "Sun, crescent moon, five-point star left to right. Artus, Pip, Ram, locks and rescue basket retained.",
+  "sha256": "19c327fbb40eb2346a68d3aa769fcb32140d3c90386701f73b06624486c86188",
+  "bytes": 460288
+}

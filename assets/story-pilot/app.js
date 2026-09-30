@@ -28,7 +28,7 @@
   function renderArrangement(story){
     const a=story.arrangement;if(!a)return null;
     const block=el('div','arrangement '+a.kind);block.id='story-arrangement';block.setAttribute('role','group');block.setAttribute('aria-label',a.label);
-    a.marks.forEach((mark,i)=>{const tile=el('div','arrangement-tile');tile.append(symbol(mark),el('strong',null,mark[0].toUpperCase()+mark.slice(1)));if(a.signs)tile.append(el('p',null,a.signs[i]));block.append(tile);});return block;
+    a.marks.forEach((mark,i)=>{const tile=el('div','arrangement-tile');tile.append(symbol(mark),el('strong',null,mark[0].toUpperCase()+mark.slice(1)+(a.signs?' door':'')));if(a.signs)tile.append(el('p',null,'“'+a.signs[i]+'”'));block.append(tile);});return block;
   }
   function renderReport(){
     $('report').replaceChildren(...Content.stories.map(story=>{
@@ -49,7 +49,9 @@
   function render(){
     const {story,entry}=active(),index=Content.stories.indexOf(story);
     document.title=story.title+' · Artus & Pip';$('story-title').textContent=story.title;$('story-level').textContent=`Stop ${index+1} · ${story.level}`;$('page-number').textContent=String(index+1).padStart(2,'0');
-    const paragraphs=[];story.paragraphs.forEach((text,i)=>{const p=el('p',null,text);p.id='clue-'+i;paragraphs.push(p);if(story.arrangement?.after===i)paragraphs.push(renderArrangement(story));});$('story-text').replaceChildren(...paragraphs);
+    $('scene-clues').replaceChildren();$('scene-clues').hidden=story.arrangement?.placement!=='scene';
+    const paragraphs=[];story.paragraphs.forEach((text,i)=>{const p=el('p',null,text);p.id='clue-'+i;paragraphs.push(p);if(story.arrangement?.after===i&&story.arrangement.placement!=='scene')paragraphs.push(renderArrangement(story));});$('story-text').replaceChildren(...paragraphs);
+    if(story.arrangement?.placement==='scene')$('scene-clues').append(el('p','signs-heading','The signs on the doors · left to right'),renderArrangement(story));
     $('scene-image').src=story.scene;$('scene-image').alt=story.sceneLabel;$('scene-caption').textContent=`${index+1} / 5 · The fox cub rescue`;
     $('questions').replaceChildren(...story.questions.map(q=>{
       const field=el('fieldset');field.append(el('legend',null,q.prompt));const choices=el('div','choices count-'+q.choices.length);

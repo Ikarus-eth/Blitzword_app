@@ -12,7 +12,7 @@ For ChatGPT project setup, use the [project maintenance guide](docs/PROJECT_DESC
 
 ## Current gameplay
 
-**Story adventures** on chapter-selection Home opens The fox cub rescue: one Artus and Pip journey through five linked reading and maths puzzles. Six integrated illustrations show the heroes and supporting cast in the actual story settings. Simple text, picture choices, hints and local progress; no Listen or speech. See [rescue story rules and verification](docs/story-pilot/RESCUE_RELEASE.md).
+**Story adventures** on chapter-selection Home opens The fox cub rescue: one Artus and Pip journey through five linked reading and maths puzzles. Six integrated illustrations show the heroes and supporting cast in the actual story settings. Simple text, picture choices, hints and local progress; no Listen or speech. See [rescue story rules and verification](docs/story-pilot/RESCUE_RELEASE.md) and the [tower-door riddle correction](docs/story-pilot/DOOR_RELEASE.md).
 
 Setup and hero selection lead to an optional guided battle or the existing adaptive reading check. A battle is one encounter: one creature or a group sharing a health bar. A chapter is one map field and requires at least ten interaction-confirmed active minutes, three reading wins, a played number duel and its learning objectives. If the duel ends at eight minutes, another battle continues the chapter. Pause/Home/reload preserve it. A campaign is one map of five chapters; seven campaigns contain the existing 200 words. After the story, review chapters continue the daily one-chapter goal.
 
