@@ -1,6 +1,6 @@
 # Automatic reading challenge — 30 September 2026
 
-Build: `adaptive-reading-20260930-r1`. Implemented and locally tested; deployment is pending.
+Build: `adaptive-reading-20260930-r1`. Implemented, tested, deployed and verified.
 
 ## Accepted direction and calibration
 
@@ -42,4 +42,4 @@ Reproduce core/UI checks with `npm test`; scheduling comparisons with `node scri
 
 ## Deployment
 
-Pending. The existing GitHub Pages route is retained. Current main must be checked immediately before merge, with intervening changes preserved. Deployment is verified only after the workflow succeeds and the live build and changed runtime bytes match the merged source.
+Deployed through the existing GitHub Pages route in [PR #112](https://github.com/Ikarus-eth/Blitzword_app/pull/112), merge `6882e3bbea690699890bf631b65a3e1451e63e29`. Current main was checked at `72583c76adc90026605c81f7f9e1c858151eb762` immediately before merge, with no intervening changes. [Pages run 36685268337](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36685268337) passed all checks and deployed successfully. At 07:45 UTC on 30 September, the live build marker and all four changed runtime files matched the merged source byte for byte. A fresh isolated live Chromium profile passed encounter health, adaptive selection, pending-question reload and parent reporting checks at all three tested sizes, with no errors. [Machine-readable deployment evidence](ADAPTIVE_READING_DEPLOYMENT.json). No real learner storage was written during verification.

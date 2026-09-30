@@ -1,0 +1,73 @@
+{
+  "build": "adaptive-reading-20260930-r1",
+  "sourceCommit": "6882e3bbea690699890bf631b65a3e1451e63e29",
+  "pr": "https://github.com/Ikarus-eth/Blitzword_app/pull/112",
+  "workflow": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36685268337",
+  "workflowConclusion": "success",
+  "verifiedAt": "2026-09-30T07:45:23.216094+00:00",
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "8e077e31b6a63d11b4788d219c062bf39cb398a11110351e787063879fe4a56e",
+      "matchesMergedSource": true
+    },
+    {
+      "file": "game-core.js",
+      "status": 200,
+      "sha256": "ee51aa922d4bbe3a50a189ec7de2ea740acb06878b7926ed4a2d4510bb32575f",
+      "matchesMergedSource": true
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "sha256": "d3acc322056291aa4da688a37bf1e1df6e93b3e623524131a620b9c3bc0fdb01",
+      "matchesMergedSource": true
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "sha256": "d29781ed1c4fb00993e6d064c099519d3550309c8f57ca07b01ae490a5ac0d82",
+      "matchesMergedSource": true
+    }
+  ],
+  "browser": {
+    "checks": [
+      {
+        "viewport": {
+          "width": 1180,
+          "height": 820
+        },
+        "hearts": true,
+        "adaptiveMode": true,
+        "pendingResume": true,
+        "parentSummary": true,
+        "noOverflow": true
+      },
+      {
+        "viewport": {
+          "width": 820,
+          "height": 1180
+        },
+        "hearts": true,
+        "adaptiveMode": true,
+        "pendingResume": true,
+        "parentSummary": true,
+        "noOverflow": true
+      },
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "hearts": true,
+        "adaptiveMode": true,
+        "pendingResume": true,
+        "parentSummary": true,
+        "noOverflow": true
+      }
+    ],
+    "errors": []
+  },
+  "physicalIPadSafariVerified": false
+}
