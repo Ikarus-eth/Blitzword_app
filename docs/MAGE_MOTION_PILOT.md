@@ -28,7 +28,7 @@ Only the current enemy's motion sheets are retained alongside the mage and Small
 
 Open `tests/motion-review.html` from a local server. It loads the actual game in an isolated in-memory save, with opponent/action selectors and a portrait toggle. It does not read or write learner storage. The exported battle videos use the same production frame renderer and timing, with a Canvas recreation of the current battle layout; they are **not browser screen recordings**.
 
-Automated checks cover impact timing, one-target group behavior, retirement, held final-heart defeat, cancellation, missing sheets, reduced motion and existing learner flows. **271 core/unit tests and 94 UI-flow groups pass.** Final counts and asset checks are recorded in `docs/mage-motion/verification.json`.
+Automated checks cover impact timing, one-target group behavior, retirement, held final-heart defeat, cancellation, missing sheets, reduced motion and existing learner flows. **273 core/unit tests and 94 UI-flow groups pass.** Final counts and asset checks are recorded in `docs/mage-motion/verification.json`.
 
 Browser visual verification is outstanding: the browser tool denied the local review URL because its admin-enforced security policy could not be verified. No alternate browser or automation route was used to bypass that denial. Physical iPad/Safari performance and final visual approval remain required before calling this a verified release.
 
