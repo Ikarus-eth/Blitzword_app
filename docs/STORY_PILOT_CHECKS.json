@@ -45,7 +45,7 @@
     "physicalIPadSafari": "not tested"
   },
   "newGeneratedBitmaps": 0,
-  "deployment": "pending",
+  "deployment": "verified; see STORY_PILOT_DEPLOYMENT.json",
   "sha256": {
     "index.html": "8b41cce344ee122aa0df55a3aa36cf8986f3e15fed0a937d946422fe8c7d9b6b",
     "app.js": "bfc753aec12a9a3c44ad051a1ced7ba6de402e9c9b97dde40878d6a8f08b265d",
