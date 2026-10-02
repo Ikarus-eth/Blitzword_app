@@ -2629,31 +2629,33 @@
   ];
   enemies.forEach(enemy=>{enemy.minHealth=3;enemy.maxHealth=5;enemy.tier=0;enemy.family=enemy.id;});
   // Total encounter HP, including every member of a group. Stable IDs are saved.
+  // A fourth, champion form (26–32 HP) was added on 2 October 2026 so the 32-HP ceiling rotates
+  // through all 20 families instead of only the adult Storm Griffin. Appending keeps saved IDs.
   const enemyPlans=[
-    ['thornling',['Baby',6,9,'baby'],['Young',12,17,'young'],['Adult',18,23,'adult']],
-    ['moss-golem',['Small',10,14,'baby'],['Grown',16,22,'young'],['Ancient',23,28,'adult']],
-    ['moon-moth',['One',5,8,'adult',1],['Two',10,16,'adult',2],['Three',15,24,'adult',3]],
-    ['root-sprite',['Sapling',8,12,'baby'],['Grown',15,20,'young'],['Elder',20,25,'adult']],
-    ['cave-troll',['Baby',10,14,'baby'],['Young',17,22,'young'],['Adult',23,30,'adult']],
-    ['acorn-imp',['One',7,9,'adult',1],['Two',14,18,'adult',2],['Three',21,27,'adult',3]],
-    ['mushroom-guard',['Sprout',9,13,'baby'],['Grown',15,20,'young'],['Elder',20,25,'adult']],
-    ['bark-beetle',['One',4,5,'adult',1],['Three',12,15,'adult',3],['Five',20,25,'adult',5]],
-    ['bramble-boar',['Piglet',8,12,'baby'],['Young',15,20,'young'],['Adult',20,26,'adult']],
-    ['reed-serpent',['Hatchling',7,11,'baby'],['Young',14,19,'young'],['Adult',19,25,'adult']],
-    ['bog-toad',['Toadlet',7,11,'baby'],['Young',14,19,'young'],['Adult',19,24,'adult']],
-    ['lantern-wisp',['One',6,8,'adult',1],['Two',12,16,'adult',2],['Three',18,24,'adult',3]],
-    ['crystal-crab',['Small',8,12,'baby'],['Grown',15,20,'young'],['Large',20,25,'adult']],
-    ['hollow-owl',['Fledgling',8,12,'baby'],['Young',14,18,'young'],['Adult',18,23,'adult']],
-    ['fern-wolf',['Young',8,12,'young'],['Adult',17,23,'adult'],['Two young',16,24,'young',2]],
-    ['stone-ram',['Lamb',10,14,'baby'],['Young',16,21,'young'],['Adult',22,28,'adult']],
-    ['briar-bat',['One',4,5,'adult',1],['Three',12,15,'adult',3],['Five',20,25,'adult',5]],
-    ['snail-knight',['Small',9,13,'baby'],['Grown',16,21,'young'],['Elder',21,26,'adult']],
-    ['chest-mimic',['Small box',10,14,'baby'],['Chest',17,23,'young'],['Large coffer',24,30,'adult']],
+    ['thornling',['Baby',6,9,'baby'],['Young',12,17,'young'],['Adult',18,23,'adult'],['Mighty',26,32,'adult']],
+    ['moss-golem',['Small',10,14,'baby'],['Grown',16,22,'young'],['Ancient',23,28,'adult'],['Mighty',26,32,'adult']],
+    ['moon-moth',['One',5,8,'adult',1],['Two',10,16,'adult',2],['Three',15,24,'adult',3],['Five',26,32,'adult',5]],
+    ['root-sprite',['Sapling',8,12,'baby'],['Grown',15,20,'young'],['Elder',20,25,'adult'],['Mighty',26,32,'adult']],
+    ['cave-troll',['Baby',10,14,'baby'],['Young',17,22,'young'],['Adult',23,30,'adult'],['Mighty',26,32,'adult']],
+    ['acorn-imp',['One',7,9,'adult',1],['Two',14,18,'adult',2],['Three',21,27,'adult',3],['Five',26,32,'adult',5]],
+    ['mushroom-guard',['Sprout',9,13,'baby'],['Grown',15,20,'young'],['Elder',20,25,'adult'],['Mighty',26,32,'adult']],
+    ['bark-beetle',['One',4,5,'adult',1],['Three',12,15,'adult',3],['Five',20,25,'adult',5],['Mighty',26,32,'adult']],
+    ['bramble-boar',['Piglet',8,12,'baby'],['Young',15,20,'young'],['Adult',20,26,'adult'],['Mighty',26,32,'adult']],
+    ['reed-serpent',['Hatchling',7,11,'baby'],['Young',14,19,'young'],['Adult',19,25,'adult'],['Mighty',26,32,'adult']],
+    ['bog-toad',['Toadlet',7,11,'baby'],['Young',14,19,'young'],['Adult',19,24,'adult'],['Mighty',26,32,'adult']],
+    ['lantern-wisp',['One',6,8,'adult',1],['Two',12,16,'adult',2],['Three',18,24,'adult',3],['Five',26,32,'adult',5]],
+    ['crystal-crab',['Small',8,12,'baby'],['Grown',15,20,'young'],['Large',20,25,'adult'],['Mighty',26,32,'adult']],
+    ['hollow-owl',['Fledgling',8,12,'baby'],['Young',14,18,'young'],['Adult',18,23,'adult'],['Mighty',26,32,'adult']],
+    ['fern-wolf',['Young',8,12,'young'],['Adult',17,23,'adult'],['Two young',16,24,'young',2],['Three',26,32,'adult',3]],
+    ['stone-ram',['Lamb',10,14,'baby'],['Young',16,21,'young'],['Adult',22,28,'adult'],['Mighty',26,32,'adult']],
+    ['briar-bat',['One',4,5,'adult',1],['Three',12,15,'adult',3],['Five',20,25,'adult',5],['Mighty',26,32,'adult']],
+    ['snail-knight',['Small',9,13,'baby'],['Grown',16,21,'young'],['Elder',21,26,'adult'],['Mighty',26,32,'adult']],
+    ['chest-mimic',['Small box',10,14,'baby'],['Chest',17,23,'young'],['Large coffer',24,30,'adult'],['Mighty',26,32,'adult']],
     ['storm-griffin',['Hatchling',11,15,'baby'],['Young',18,24,'young'],['Adult',25,32,'adult']]
   ];
   const enemyVariants=enemyPlans.flatMap(([family,...forms])=>forms.map(([label,minHealth,maxHealth,stage,count=1],i)=>{
     const base=enemies.find(e=>e.id===family);
-    return {...base,id:family+'--'+(i+1),family,stage,count,minHealth,maxHealth,
+    return {...base,id:family+'--'+(i+1),family,stage,count,minHealth,maxHealth,champion:i===3,
       name:count>1?count+' '+(label==='Two young'?'young ':'')+(family==='fern-wolf'?'Fern Wolves':base.name+'s'):label==='One'||label==='Chest'?base.name:label+' '+base.name};
   }));
   // Keep the existing 3-HP entry point; these training encounters are the only range exception.

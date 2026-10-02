@@ -50,3 +50,8 @@ All 244 core tests and 86 UI-flow groups pass. New tests cover roster ranges and
 The r2 escape correction merged in [PR #92](https://github.com/Ikarus-eth/Blitzword_app/pull/92) as `8fcc99dbc182ca12363ef58315c616e8b8daac17`. Combined main `d4470ce961dc620cb4965b7ec8265c578cc67f2c` also preserves the parallel archer correction. [Pages run 36091677491](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/36091677491) passed its test gate and deployment step. At 03:48 UTC on 25 September, the live build was `enemy-groups-20260925-r2`; all eight runtime/review files returned HTTP 200 and matched the tested source byte for byte. See [the verification record](GROUP_ENCOUNTERS_DEPLOYMENT.json).
 
 Reload the app to load the updated code. An active saved battle keeps its original opponent; the new roster applies to later encounter choices at the current HP level. Group eligibility starts at 10 total HP. The source-only verification update changes no runtime files or learner saves.
+
+## Champion forms — 2 October 2026
+
+Every family except the Storm Griffin gains a fourth form at 26–32 total HP, appended as `<family>--4`: Mighty Thornling, Moss Golem, Root Sprite, Cave Troll, Mushroom Guard, Bark Beetle, Bramble Boar, Reed Serpent, Bog Toad, Crystal Crab, Hollow Owl, Stone Ram, Briar Bat, Snail Knight and Chest Mimic; 5 Moon Moths, 5 Acorn Imps, 5 Lantern Wisps; 3 Fern Wolves. The table above remains exact for the original 60 variants. All 20 families are now eligible at 26–32 HP. See [the challenge release](../challenge/CHALLENGE_CHAMPIONS_RELEASE.md).
+

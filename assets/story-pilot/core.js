@@ -4,7 +4,26 @@
   const getStory=id=>Content.stories.find(s=>s.id===id);
   const shuffled=(a,random=Math.random)=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.min(i,Math.max(0,Math.floor(random()*(i+1))));[b[i],b[j]]=[b[j],b[i]];}return b;};
   function newRun(story,random){return {choices:{},orders:Object.fromEntries(story.questions.map(q=>[q.id,q.fixedOrder?q.choices.map(c=>c.id):shuffled(q.choices.map(c=>c.id),random)])),checks:0,hints:[],revealed:false,complete:false};}
-  function fresh(random){return {version:2,revision:0,activeId:Content.stories[0].id,stories:Object.fromEntries(Content.stories.map(s=>[s.id,{first:null,everComplete:false,replays:0,run:newRun(s,random)}]))};}
+  function fresh(random){return {version:2,revision:0,activeId:Content.stories[0].id,stories:Object.fromEntries(Content.stories.map(s=>[s.id,{first:null,everComplete:false,replays:0,run:newRun(s,random)}])),time:{days:{},idleMs:0}};}
+  // Reading-riddle time (2 October 2026): a tap confirms the time since the previous tap. Story
+  // pages are longer than one flashed word, so gaps up to two minutes count; longer gaps are idle.
+  const TIME_RULES=Object.freeze({idleLimitMs:120000,dayLimitMs:86400000,daysKept:400});
+  function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function cleanTime(value){
+    const out={days:{},idleMs:0};if(!value||typeof value!=='object')return out;
+    const days=value.days&&typeof value.days==='object'?value.days:{};
+    for(const key of Object.keys(days).filter(k=>/^\d{4}-\d{2}-\d{2}$/.test(k)).sort().slice(-TIME_RULES.daysKept))
+      if(Number.isSafeInteger(days[key])&&days[key]>0)out.days[key]=Math.min(TIME_RULES.dayLimitMs,days[key]);
+    out.idleMs=count(value.idleMs);return out;
+  }
+  function recordTime(state,elapsedMs,now){
+    if(!Number.isFinite(elapsedMs)||elapsedMs<=0)return 0;
+    const time=state.time||(state.time={days:{},idleMs:0}),ms=Math.round(elapsedMs);
+    if(ms>TIME_RULES.idleLimitMs){time.idleMs+=ms;return 0;}
+    const key=dayKey(now);time.days[key]=Math.min(TIME_RULES.dayLimitMs,(time.days[key]||0)+ms);
+    const keys=Object.keys(time.days).sort();for(const old of keys.slice(0,Math.max(0,keys.length-TIME_RULES.daysKept)))delete time.days[old];
+    return ms;
+  }
   const count=v=>Number.isSafeInteger(v)&&v>=0?v:0;
   function cleanChoices(story,v){const out={};for(const q of story.questions)if(q.choices.some(c=>c.id===v?.[q.id]))out[q.id]=v[q.id];return out;}
   function matches(story,choices){return Object.fromEntries(story.questions.map(q=>[q.id,choices[q.id]===q.answer]));}
@@ -13,6 +32,7 @@
     let saved;try{saved=JSON.parse(text);}catch{throw new Error('The story save could not be read. It has been kept unchanged.');}
     if(!saved||saved.version!==2||typeof saved.stories!=='object'||!saved.stories)throw new Error('This story save is not supported. It has been kept unchanged.');
     const state=fresh(random);state.revision=count(saved.revision);if(getStory(saved.activeId))state.activeId=saved.activeId;
+    state.time=cleanTime(saved.time);
     for(const story of Content.stories){
       const old=saved.stories[story.id],entry=state.stories[story.id];if(!old||typeof old!=='object')continue;
       entry.replays=count(old.replays);entry.everComplete=old.everComplete===true;
@@ -43,5 +63,5 @@
     let expected;
     return {load(){expected=storage.getItem(KEY);return restore(expected);},save(state){if(storage.getItem(KEY)!==expected){const e=new Error('Another tab changed your stories. Reload to keep that progress.');e.code='conflict';throw e;}const next=copy(state);next.revision=state.revision+1;const text=JSON.stringify(next);storage.setItem(KEY,text);expected=text;state.revision=next.revision;},changed(){return storage.getItem(KEY)!==expected;}};
   }
-  return {KEY,fresh,restore,active,selectStory,choose,ready,check,hint,reveal,replay,createStore};
+  return {KEY,TIME_RULES,dayKey,recordTime,fresh,restore,active,selectStory,choose,ready,check,hint,reveal,replay,createStore};
 });

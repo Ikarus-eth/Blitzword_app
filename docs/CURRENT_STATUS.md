@@ -1,4 +1,8 @@
-# BlitzWord current status — 30 September 2026
+# BlitzWord current status — 2 October 2026
+
+## Harder challenge, champion enemies and reading-riddle time — 2 October 2026
+
+**Implemented and tested; deployment pending.** Build `challenge-champions-20261002-r1` (story adventures `story-riddle-time-20261002-r1`). The automatic word challenge aims for 75–85% (was 80–90%). Familiar words now flash faster automatically after sustained success, down to 500 ms, and slow again after support; new words, Crawl and the saved speed setting are unchanged, and speed XP follows the chosen pace. 19 champion forms at 26–32 HP put all 20 families at the 32-HP ceiling; a win there offers two different families. Story adventures record tap-confirmed time, shown separately in Parents as Reading riddles. 280 core tests, 99 UI groups and 27 isolated Chromium checks pass. Physical iPad/Safari and the child's real accuracy are unverified. [Rules and verification](challenge/CHALLENGE_CHAMPIONS_RELEASE.md).
 
 ## All enemies and male mage — deployed, 30 September 2026
 
@@ -111,6 +115,7 @@ Deployed and verified: all 26 fixed sets pass the letter/length and one-letter c
 
 - Narration completion is authorized but blocked by ElevenLabs quota. Production retains all 1,029 approved clips. [Draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) preserves 320 new segments and one teaching alignment, with tested playback/cancellation changes. The last generation run on 24 September reported `quota_exceeded`: 10,000-credit limit, 26 remaining. This is the last observed allowance, not a fresh account-balance check. The user was asked to increase allowance; 18,534 text characters and 365 alignments remain. Current story sentences are already approved: they need recordings, not another rewrite. The incomplete batch is not deployed. New listening approval and physical iPad playback remain open.
 - Device review remains open: physical iPad/Safari audio, interruptions/resume, touch layouts, backup/restore and sustained combat have not been verified. Evolution scenes and selected combat layouts were rendered in Chromium. All 35 scenery files were verified live, but the complete tablet/phone scenery review was not completed; the earlier browser-policy blocker and review fixtures are recorded in [chapter scenery](CHAPTER_SCENERY_RELEASE.md).
+- Observe the child under the 75–85% band and automatic familiar-word speed-ups (2 October): accuracy, defeats at 32 HP, and whether 500 ms is comfortable. Parents shows the current flash time.
 - Child-session pacing needs observation under the 15,000 / 45,000 / 70,000 growth thresholds. Current XP pacing evidence comes from deterministic simulations, not a new observed child session.
 - Optional user review remains for 18 rare practice distractors ([candidate table in PR #58](https://github.com/Ikarus-eth/Blitzword_app/pull/58)), the implemented Stride/Jog names and icons, and the faint square edge around the evolution illustrations ([details](EVOLUTION_RELEASE.md)). The separate neighbouring-row sprite defect is fixed.
 - Number-duel point 10 remains parked: difficulty/adaptation and less guessable choices require discussion. Twenty enemy families are shipped; their approved health ranges, group encounters and age proportions are deployed and verified in the group release described above. The fifteen added enemy names still use device speech pending the narration batch.

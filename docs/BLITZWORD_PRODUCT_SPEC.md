@@ -970,6 +970,16 @@ The user requested implementation of adaptive progression after reviewing the sa
 
 New reading battles use hero hearts proportional to encounter length (`max(3, ceil(enemyHP / 4) + 2)`), so adding unfamiliar words does not require near-perfect accuracy to survive a long opponent. The demo remains at three hearts; existing pending battles keep their exact saved health and question. Enemy catalog/ranges, individual heart damage, earned shields, story requirements, XP and learner history remain. Parents reports the adaptive sample separately from delayed-retention evidence. No automatic speed increase, new vocabulary, artwork or replacement comprehension activity is included.
 
+## Harder challenge, champion enemies and reading-riddle time — approved 2 October 2026
+
+The parent reported the game was still not challenging enough and that the child only fought the Storm Griffin at 32 HP, then accepted the proposed defaults. This supersedes the 80–90% band and the 30 September exclusion of automatic speed increases.
+
+- Target 75–85% unaided success. Familiar words (at least two unaided correct answers) flash one ladder step faster per challenge step (1800/1500/1200/950/800/650/500 ms): +1 step after 10 counted answers above the band, −1 after 5 below it. New words, Crawl and demo keep the chosen pace; the saved speed setting and Ride/Fly locks never change. Speed XP follows the chosen pace. Parents shows the current familiar-word flash time. Do not tell the child about steps.
+- Keep `max(3, ceil(HP/4)+2)` hearts and the 32-HP ceiling. Add a fourth champion form (26–32 HP) to every family except the Storm Griffin, reusing approved animated art: 15 "Mighty" creatures plus 5 Moon Moths, 5 Acorn Imps, 5 Lantern Wisps and 3 Fern Wolves. Existing IDs and ranges stay. After a win at 32 HP, offer two different families at Same strength.
+- Record story-adventure (reading riddle) time from taps, counting gaps up to two minutes and excluding hidden or longer gaps, in the story save. Parents shows it separately; it does not count towards active play, growth, chapter time, the daily bonus or backup.
+
+See [rules and verification](challenge/CHALLENGE_CHAMPIONS_RELEASE.md).
+
 ## All-enemy animation and temporary male-mage roster — 30 September 2026
 
 The user accepted the aimed-staff motion, requested the remaining enemy and group animations with low API costs, and explicitly authorized deployment. Only the male Mage is selectable and displayed for now. Preserve every saved hero/gender preference so re-enabling the roster later does not lose it. Use all 20 selected enemy identities across the existing 60 variants and 2/3/5-member groups. Each family has attack, hit, defeat and victory frames. Younger stages reuse the same complete artwork at uniformly smaller sizes to control cost; their old independently enlarged heads are superseded for these sprites. Groups reuse one family asset with independent member state, one target and one committed hit per answer.
