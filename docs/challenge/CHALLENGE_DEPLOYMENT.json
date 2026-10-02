@@ -1,0 +1,27 @@
+{
+ "build": "challenge-champions-20261002-r1",
+ "storyPilot": "story-riddle-time-20261002-r1",
+ "pullRequest": 115,
+ "mergeCommit": "32d17dfaccd50f4119ecb128b1f3d71cb96d5e8f",
+ "mainBeforeMerge": "ac366726bed7e387e6536b44dce5477c17e9beb7",
+ "pagesRun": {
+  "id": 37002717893,
+  "conclusion": "success",
+  "steps": [
+   "tests",
+   "still current main",
+   "upload",
+   "deploy"
+  ],
+  "completedAt": "2026-10-02T11:45:59Z"
+ },
+ "deploymentRecord": {
+  "id": 6807636830,
+  "sha": "32d17dfaccd50f4119ecb128b1f3d71cb96d5e8f",
+  "state": "success",
+  "environmentUrl": "https://ikarus-eth.github.io/Blitzword_app/"
+ },
+ "liveBytesVerified": false,
+ "liveVerificationBlocker": "Sandbox egress returns 403 \"Host not in allowlist: ikarus-eth.github.io\"; web_fetch refused the URL as not previously seen.",
+ "physicalIPadSafariVerified": false
+}
