@@ -36,7 +36,7 @@ test('first attempt survives correction, reload and replay without new rewards',
  const first=structuredClone(Core.active(state).entry.first);fill(state);assert.equal(Core.check(state).complete,true);
  const restored=Core.restore(JSON.stringify(state));Core.replay(restored);fill(restored);Core.check(restored);
  assert.deepEqual(Core.active(restored).entry.first,first);assert.equal(Core.active(restored).entry.replays,1);assert.equal(Core.active(restored).entry.everComplete,true);
- assert.deepEqual(Object.keys(restored).sort(),['activeId','revision','stories','version']);
+ assert.deepEqual(Object.keys(restored).sort(),['activeId','revision','stories','time','version']); // time added 2 October 2026
 });
 test('each story retains its choices and shuffled order when changing stories and reloading',()=>{
  const state=Core.fresh(()=>0.25);for(const story of stories){Core.selectStory(state,story.id);fill(state);}
@@ -114,4 +114,35 @@ test('revised content has one rescue goal and six integrated scenes without port
  for(const story of stories){assert.match(story.scene,/^scenes\//);assert.equal(story.questions.length,2);assert.ok(!story.guest);}
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.doesNotMatch(html,/hero-tag|artus-portrait|class="pip"|id="guest"/);
  const ui=boot();assert.equal(ui.document.querySelectorAll('.scene img').length,1);assert.equal(ui.get('scene-image').getAttribute('src'),'scenes/fox-call.webp');
+});
+// 2 October 2026: reading-riddle time for the parent dashboard.
+test('riddle time counts tap-confirmed gaps up to two minutes and restores safely',()=>{
+ const state=Core.fresh(()=>0.5),day=Date.UTC(2026,9,2,10);assert.deepEqual(state.time,{days:{},idleMs:0});
+ assert.equal(Core.recordTime(state,30000,day),30000);assert.equal(Core.recordTime(state,120000,day),120000);
+ assert.equal(Core.recordTime(state,120001,day),0);assert.equal(Core.recordTime(state,-5,day),0);assert.equal(Core.recordTime(state,NaN,day),0);
+ assert.deepEqual(state.time,{days:{[Core.dayKey(day)]:150000},idleMs:120001});
+ const restored=Core.restore(JSON.stringify(state));assert.deepEqual(restored.time,state.time);
+ const messy=Core.restore(JSON.stringify({...state,time:{days:{'2026-10-01':5000,'bad':7,'2026-09-30':-1,'2026-09-29':1.5,'2026-09-28':9e9},idleMs:'x'}}));
+ assert.deepEqual(messy.time,{days:{'2026-10-01':5000,'2026-09-28':86400000},idleMs:0});
+ const old=JSON.parse(JSON.stringify(state));delete old.time;assert.deepEqual(Core.restore(JSON.stringify(old)).time,{days:{},idleMs:0});
+ for(let i=0;i<410;i++)Core.recordTime(state,1000,Date.UTC(2025,0,1+i,12));
+ assert.equal(Object.keys(state.time.days).length,Core.TIME_RULES.daysKept);
+});
+test('the story page records riddle time on taps, excludes hidden and long gaps, and saves on Back to map',()=>{
+ const {window,document}=parseHTML(fs.readFileSync(path.join(root,'index.html'),'utf8'));
+ const storage=memory();window.localStorage=storage;window.innerWidth=1024;window.location={reload(){}};
+ window.BlitzStoryPilotContent={stories};window.BlitzStoryPilot=Core;
+ let now=Date.UTC(2026,9,2,9),visibility='visible';Object.defineProperty(document,'visibilityState',{configurable:true,get:()=>visibility});
+ class FakeDate extends Date{constructor(...a){super(...(a.length?a:[now]));}static now(){return now;}}
+ vm.runInNewContext(fs.readFileSync(path.join(root,'app.js'),'utf8'),{window,document,Date:FakeDate});
+ const saved=()=>JSON.parse(storage.values.get(Core.KEY)).time,key=Core.dayKey(now);
+ const tap=()=>{const q=stories[0].questions[0];document.querySelector(`[data-question="${q.id}"][data-value="${q.choices[0].id}"]`).onclick();};
+ now+=30000;tap();assert.deepEqual(saved(),{days:{[key]:30000},idleMs:0});
+ now+=170000;tap();assert.deepEqual(saved(),{days:{[key]:30000},idleMs:170000});
+ now+=10000;visibility='hidden';document.dispatchEvent(new window.Event('visibilitychange'));
+ now+=600000;visibility='visible';document.dispatchEvent(new window.Event('visibilitychange'));
+ now+=20000;tap();assert.deepEqual(saved(),{days:{[key]:50000},idleMs:170000},'hidden time and its unconfirmed interval are excluded');
+ now+=10000;document.querySelector('.map-link').dispatchEvent(new window.Event('click'));
+ assert.deepEqual(saved(),{days:{[key]:60000},idleMs:170000});
+ assert.equal(storage.values.get('blitzword_v1'),'main learner data');
 });

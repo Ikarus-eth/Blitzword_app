@@ -1,7 +1,8 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.join(__dirname,'..');require('../assets/battle-motion/manifest.js');const M=require('../assets/battle-motion/runtime'),C=require('../content');
-test('all 60 approved enemy variants and groups have four complete motions',()=>{
-  assert.equal(C.enemyVariants.length,60);
+// 2 October 2026: 19 champion forms extend the approved 60 variants to 79 (same 20 motion sets).
+test('all 79 approved enemy variants and groups have four complete motions',()=>{
+  assert.equal(C.enemyVariants.length,79);
   for(const enemy of C.enemyVariants){const key=M.enemyKey(enemy);assert.ok(key,enemy.id);assert.ok(M.render(key,{stage:enemy.stage}).includes('motionStill'));assert.deepEqual(Object.keys(M.asset(key).clips).sort(),['attack','defeat','hit','victory']);}
   assert.equal(new Set(C.enemyVariants.map(M.enemyKey)).size,20);
 });

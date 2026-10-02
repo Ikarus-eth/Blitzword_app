@@ -1069,7 +1069,7 @@ for(const enemy of Content.enemyVariants){
  assert.ok(ui.motionDraws.some(url=>url.includes('-attack')),enemy.id);assert.equal(ui.state().battle.heroHealth,s.battle.heroHealth-1);
  ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);
 }
-console.log('PASS all 60 variants animate counterattacks as the male mage while preserving saved hero preferences');
+console.log('PASS all 79 variants animate counterattacks as the male mage while preserving saved hero preferences');
 {
  const s=impactSave();Core.startBattle(s,Date.UTC(2026,8,22),{strength:32});s.battle.introPending=false;Core.prepareBattle(s,Date.UTC(2026,8,22));
  let ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const q=ui.state().battle.question;
@@ -1079,6 +1079,44 @@ console.log('PASS all 60 variants animate counterattacks as the male mage while 
  ui.finishSpeech();ui.elapse(700);assert.equal(ui.get('heroHearts').querySelector('.heartCount').textContent,'9 / 10');
  ui=boot(ui.state());ui.resume();assert.equal(ui.get('heroHearts').getAttribute('aria-label'),'9 of 10 hearts');
  ui.click(ui.get('homeBtn'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
- assert.match(ui.get('parentChallenge').textContent,/80–90%/);assert.match(ui.get('parentChallenge').textContent,/Help requests/);
+ assert.match(ui.get('parentChallenge').textContent,/75–85%/);assert.match(ui.get('parentChallenge').textContent,/Familiar words flash at the chosen pace/);assert.match(ui.get('parentChallenge').textContent,/Help requests/);
  console.log('PASS adaptive battle hearts display only at impact and survive reload; Parents explains automatic challenge');
+}
+{
+ // 2 October 2026: after a win at the 32-HP ceiling there is no Stronger card, so two families are offered.
+ const s=impactSave();s.campaign.enemyHistory=[];Core.startBattle(s,Date.UTC(2026,8,22),{strength:32,enemyId:'storm-griffin--3'});
+ s.battle.enemyHealth=0;s.battle.heroHealth=5;Core.prepareBattle(s,Date.UTC(2026,8,22));
+ const ui=boot(s);ui.resume();assert.ok(ui.get('result').classList.contains('active'));
+ const cards=[...ui.get('opponents').children];assert.equal(cards.length,2);
+ assert.deepEqual(cards.map(card=>card.querySelector('.opponentName').textContent.trim()),['= Same','= Same']);
+ const enemies=cards.map(card=>Content.enemyAt(card.dataset.enemy));assert.notEqual(enemies[0].family,enemies[1].family);
+ assert.ok(enemies.every(e=>e.family!=='storm-griffin'&&32>=e.minHealth&&32<=e.maxHealth),enemies.map(e=>e.id).join());
+ ui.click(cards[1]);assert.equal(ui.state().battle.maxHealth,32);assert.equal(ui.state().battle.enemyId,enemies[1].id);assert.equal(ui.state().battle.heroMaxHealth,10);
+ console.log('PASS the 32-HP ceiling offers two different non-griffin families after a win');
+}
+{
+ // Familiar words flash faster after sustained success; new words keep the chosen pace; Parents reports it.
+ const s=impactSave();s.settings.speed='walk';s.learning.challengePace={steps:2,since:0};
+ Core.startBattle(s,Date.UTC(2026,8,22),{strength:8});s.battle.introPending=false;
+ const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();ui.click(ui.get('homeBtn'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ assert.match(ui.get('parentChallenge').textContent,/Familiar words now flash for 1\.20 s \(2 steps faster than the chosen 1\.80 s\); new words keep the chosen pace\./);
+ console.log('PASS Parents reports the automatic familiar-word pace');
+}
+{
+ // Reading-riddle time from Story adventures appears as its own column and total; other totals exclude it.
+ const s=impactSave(),today=Core.dayKey(Date.UTC(2026,8,22));s.timing.days={[today]:{practice:600000,math:60000,assessment:0,demo:0,idle:0}};
+ const ui=boot(s,{heldNarration:true});
+ ui.memory.set(Core.RIDDLE_KEY,JSON.stringify({version:2,revision:3,activeId:'x',stories:{},time:{days:{[today]:185000,'2026-09-20':61000,'bad':5,'2026-09-19':-4},idleMs:300000}}));
+ const pilotBefore=ui.memory.get(Core.RIDDLE_KEY);
+ ui.resume();ui.ready();ui.click(ui.get('homeBtn'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ assert.equal(ui.get('parentRiddles').textContent,'4 min 06 sec');assert.equal(ui.get('parentRiddlesToday').textContent,'Today: 3 min 05 sec');
+ assert.match(ui.get('parentToday').textContent,/^11 min 0\d sec$/,'riddle time (3 min 05 sec) stays out of active play');
+ const head=[...ui.document.querySelectorAll('#parentDays')[0].closest('table').querySelectorAll('th')].map(th=>th.textContent);
+ assert.deepEqual(head,['Date on this device','Reading practice','Reading riddles','Multiplication','Reading check + demo','Idle excluded']);
+ const rows=[...ui.get('parentDays').children].map(row=>[...row.children].map(cell=>cell.textContent));
+ rows[0][1]=rows[0][1].replace(/^10 min 0\d sec$/,'10 min 00 sec');assert.deepEqual(rows,[[today,'10 min 00 sec','3 min 05 sec','1 min 00 sec','0 min 00 sec','0 min 00 sec'],['2026-09-20','0 min 00 sec','1 min 01 sec','0 min 00 sec','0 min 00 sec','0 min 00 sec']]);
+ assert.equal(ui.get('parentEmpty').hidden,true);assert.equal(ui.memory.get(Core.RIDDLE_KEY),pilotBefore,'Parents never writes the story save');
+ ui.memory.set(Core.RIDDLE_KEY,'{broken');ui.click(ui.get('parentHome'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ assert.equal(ui.get('parentRiddles').textContent,'Unreadable');assert.match(ui.get('parentRiddlesToday').textContent,/left unchanged/);assert.equal(ui.get('parentDays').children.length,1);assert.equal(ui.memory.get(Core.RIDDLE_KEY),'{broken');
+ console.log('PASS Parents shows reading-riddle time separately without changing the story save');
 }

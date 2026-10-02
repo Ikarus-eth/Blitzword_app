@@ -18,7 +18,7 @@
     return {schemaVersion:2, xpRulesVersion:1, growthRulesVersion:2, chapterRulesVersion:1, revision:0, nextId:1,
       profile:{name:'',age:7,gender:'boy',heroClass:'Mage',heroIndex:0},
       assessment:{done:false,records:[],level:0,exposure:1800,lastAxis:'exposure',progress:null},
-      learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[],dailyPractice:{},speedPractice:null},
+      learning:{supportedWords:[],teaching:[],supportExposures:[],words:{},sequence:0,recent:[],dailyPractice:{},speedPractice:null,challengePace:null},
       campaign:{wins:0,checkpointWins:0,enemyStrength:3,battleRecords:[]},
       dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false,evolutionSeen:0,evolution:null},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{},scenes:{},scene:null},
       timing:{version:1,days:{},firstPracticeAt:null},
@@ -57,6 +57,7 @@
       if(!Array.isArray(p.recent))s.learning.speedPractice=null;
       else {p.recent=p.recent.filter(r=>r&&byWord[r.target]&&typeof r.correct==='boolean').slice(-20);p.sinceOffer=Math.max(0,Math.min(20,Number(p.sinceOffer)||0));}
     }
+    s.learning.challengePace=cleanChallengePace(s.learning.challengePace);
     for (const item of Object.values(byWord)) {
       if (!s.learning.words[item.w]) {
         const evidence = s.assessment.records.filter(r => r.target === item.w);
@@ -290,10 +291,13 @@
     if(s.result){s.result.reviewJustComplete=true;s.result.xpEarned=s.battle.xpEarned||0;}
   }
   function readingXP(s,q,rec,w,now){
-    const key=String(q.exposureMs),history=s.rewards.speedHistory[key] ||= [];
+    // Speed XP rewards the pace the child chose. Automatic familiar-word speed-ups make reading
+    // harder but do not change the approved XP calibration.
+    const paceMs=Number.isFinite(q.chosenExposureMs)?q.chosenExposureMs:q.exposureMs;
+    const key=String(paceMs),history=s.rewards.speedHistory[key] ||= [];
     if(!rec.supported){history.push(rec.correct);if(history.length>20)history.shift();}
     if(!rec.correct||rec.supported)return 0;
-    const fast=!!w.securedAt&&q.exposureMs!==null&&q.exposureMs<=950&&rec.timingValid&&history.length===20&&history.filter(Boolean).length>=18;
+    const fast=!!w.securedAt&&paceMs!==null&&paceMs<=950&&rec.timingValid&&history.length===20&&history.filter(Boolean).length>=18;
     let xp=awardXP(s,XP_REWARDS.answer+(fast?XP_REWARDS.speed:0),'answers',now,{boost:true});rec.speedXP=fast?XP_REWARDS.speed:0;
     if(!w.wordXPClaimed){
       const trail=w.xpEvidence ||= [];
@@ -340,6 +344,19 @@
       wordSpeeds:wordSpeeds(s),
       storyChecks:Content.areas.filter(a=>s.story.scenes[a.id]).map(a=>({areaId:a.id,...s.story.scenes[a.id]})),
       introduced:Content.words.filter(x=>s.learning.words[x.w]?.introducedAt).length,practiced:Content.words.filter(x=>s.learning.words[x.w]?.practiceSuccesses>=2).length};
+  }
+  // Story adventures (reading riddles) keep their own save. Parents reads its time, never writes it.
+  const RIDDLE_KEY='blitzword_story_pilot_v2';
+  function riddleTime(text,now=Date.now()){
+    const empty={available:false,days:{},totalMs:0,todayMs:0,idleMs:0,unreadable:false};
+    if(text===null||text===undefined)return empty;
+    let saved;try{saved=JSON.parse(text);}catch{return {...empty,unreadable:true};}
+    const time=saved&&typeof saved==='object'&&saved.time&&typeof saved.time==='object'?saved.time:null;
+    if(!time)return {...empty,available:!!saved};
+    const days={},source=time.days&&typeof time.days==='object'?time.days:{};
+    for(const [key,ms] of Object.entries(source))if(/^\d{4}-\d{2}-\d{2}$/.test(key)&&Number.isSafeInteger(ms)&&ms>0)days[key]=Math.min(DAY,ms);
+    const totalMs=Object.values(days).reduce((a,b)=>a+b,0);
+    return {available:true,days,totalMs,todayMs:days[dayKey(now)]||0,idleMs:Number.isSafeInteger(time.idleMs)&&time.idleMs>0?time.idleMs:0,unreadable:false};
   }
   function quickAnswer(r){
     return r.task==='battle'&&r.correct===true&&!r.supported&&r.timingValid!==false&&
@@ -517,7 +534,36 @@
     offer.status=accept?'accepted':'declined';return true;
   }
   // This is a tuning band, not a claim that an exact error rate proves learning.
-  const ADAPTIVE_RULES=Object.freeze({low:.8,high:.9,window:20,minSample:10});
+  // 2 October 2026: the family reported the 80–90% band was still too easy; 75–85% keeps a
+  // 32-HP battle with ten hearts winnable (about 30% defeat risk at 80% accuracy).
+  const ADAPTIVE_RULES=Object.freeze({low:.75,high:.85,window:20,minSample:10});
+  // Exposure is the second difficulty axis. Familiar words (two or more unaided correct answers)
+  // flash one ladder step faster for each challenge step; new and still-unfinished words keep the
+  // chosen pace. Steps rise only after sustained success above the band and fall after support.
+  const CHALLENGE_PACE=Object.freeze({ladder:[1800,1500,1200,950,800,650,500],stepUpAfter:10,stepDownAfter:5});
+  function cleanChallengePace(value){
+    if(!value||typeof value!=='object')return null;
+    const whole=(v,max)=>Number.isSafeInteger(v)?Math.max(0,Math.min(max,v)):0;
+    return {steps:whole(value.steps,CHALLENGE_PACE.ladder.length-1),since:whole(value.since,1000)};
+  }
+  function challengeExposure(base,steps){
+    if(base===null||base===undefined||!steps)return base;
+    const ladder=CHALLENGE_PACE.ladder;let start=-1;
+    // Start from the ladder position at or slower than the current pace, then step faster.
+    for(let i=0;i<ladder.length;i++)if(ladder[i]>=base)start=i;
+    return Math.min(base,ladder[Math.min(ladder.length-1,start+steps)]);
+  }
+  function familiarWord(word){return !!word&&(!!word.familiar||(word.independentCorrect||0)>=2);}
+  function updateChallengePace(s){
+    const pace=s.learning.challengePace||={steps:0,since:0},challenge=adaptiveChallenge(s);
+    pace.since=Math.min(1000,pace.since+1);
+    if(challenge.mode==='stretch'&&pace.since>=CHALLENGE_PACE.stepUpAfter&&pace.steps<CHALLENGE_PACE.ladder.length-1){pace.steps++;pace.since=0;}
+    else if(challenge.mode==='support'&&pace.since>=CHALLENGE_PACE.stepDownAfter&&pace.steps>0){pace.steps--;pace.since=0;}
+  }
+  function challengePaceSummary(s){
+    const steps=s.learning.challengePace?.steps||0,base=practiceExposure(s);
+    return {steps,baseMs:base,familiarMs:challengeExposure(base,steps),selfPaced:base===null};
+  }
   function adaptiveChallenge(s) {
     const records=s.campaign.battleRecords.filter(r=>r.task==='battle'&&r.timingValid!==false&&
       typeof r.correct==='boolean'&&(!r.supported||r.supportReasons?.includes('help-request'))).slice(-ADAPTIVE_RULES.window);
@@ -730,7 +776,10 @@
     }
     const guided=b.demo && b.turn===0;
     let exposureMs=b.demo?null:practiceExposure(s);
+    const chosenMs=exposureMs;
+    if(!b.demo&&!isNew&&familiarWord(word))exposureMs=challengeExposure(exposureMs,s.learning.challengePace?.steps||0);
     b.question=makeQuestion(s,item,now,random,{exposureMs,...(practiceKind?{practiceKind,challengeMode}:{}),
+      ...(exposureMs!==chosenMs?{chosenExposureMs:chosenMs}:{}),
       isNew,guided,supportReasons:guided?['guided-example']:[],retentionDue:word.reviewStage>=0 && word.dueAt<=now});
     // Snapshot the gap before showing the word. Time away with a pending question is not retention.
     const previous=word.lastSeenAt||s.campaign.battleRecords.filter(r=>r.target===item.w).at(-1)?.at||s.archive?.words?.[item.w]?.lastAt;
@@ -742,7 +791,7 @@
   function observation(s,q,opt,now,task) {
     const word=s.learning.words[q.target];
     return {id:q.id,task,language:'en',...(q.practiceKind?{practiceKind:q.practiceKind,challengeMode:q.challengeMode}:{}),target:q.target,alternatives:[...q.options],firstResponse:opt,
-      correct:opt===q.target,exposureMs:q.exposureMs,observedExposureMs:Math.round(q.wordViewedMs),
+      correct:opt===q.target,exposureMs:q.exposureMs,...(Number.isFinite(q.chosenExposureMs)?{chosenExposureMs:q.chosenExposureMs}:{}),observedExposureMs:Math.round(q.wordViewedMs),
       responseMs:Math.round(q.responseMs),supported:q.supportReasons.length>0,
       familiarBefore:!!word?.familiar||(word?.independentCorrect||0)>=2,
       retentionGapMs:q.retentionGapMs??null,retentionWeek:weekKey(now),
@@ -773,6 +822,7 @@
     }
     rec.healthChanged=!rec.supported && !q.freeMistake && !q.shieldUsed;
     s.campaign.battleRecords.push(rec);compactHistory(s);
+    if(!b.demo&&rec.timingValid&&(!rec.supported||rec.supportReasons.includes('help-request')))updateChallengePace(s);
     const L=s.learning,w=L.words[q.target];
     L.sequence++; L.recent.push(q.target); L.recent=L.recent.slice(-6);
     w.observations++; w.lastSeenAt=rec.at; w.lastSequence=L.sequence;
@@ -989,5 +1039,6 @@
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,speedSuggestion,respondSpeedSuggestion,wordSpeeds,quickAnswer,
     HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions,
-    WORD_STATUS,parentLearning,parentWordHistory,weekKey,ADAPTIVE_RULES,adaptiveChallenge};
+    WORD_STATUS,parentLearning,parentWordHistory,weekKey,ADAPTIVE_RULES,adaptiveChallenge,
+    CHALLENGE_PACE,challengeExposure,challengePaceSummary,RIDDLE_KEY,riddleTime};
 });

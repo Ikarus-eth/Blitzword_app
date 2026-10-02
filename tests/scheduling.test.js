@@ -90,8 +90,10 @@ test('post-story review remains available without previewing beyond the curricul
 function history(s,correct,total=20){
   s.campaign.battleRecords=Array.from({length:total},(_,i)=>({id:'sample-'+i,task:'battle',target:'on',correct:i<correct,supported:false,timingValid:true,at:new Date(NOW-1000).toISOString()}));
 }
-test('automatic challenge uses an 80–90% band, enough evidence, and early struggle recovery',()=>{
-  for(const [correct,mode,limit] of [[19,'stretch',6],[18,'steady',4],[16,'steady',4],[15,'support',2]]){
+// 2 October 2026: the family asked for more challenge; the band moved from 80–90% to 75–85%.
+test('automatic challenge uses a 75–85% band, enough evidence, and early struggle recovery',()=>{
+  assert.equal(Core.ADAPTIVE_RULES.low,.75);assert.equal(Core.ADAPTIVE_RULES.high,.85);
+  for(const [correct,mode,limit] of [[18,'stretch',6],[17,'steady',4],[15,'steady',4],[14,'support',2]]){
     const s=fresh();history(s,correct);
     // Spread errors through the sample so this checks the full-window boundaries.
     s.campaign.battleRecords.sort((a,b)=>a.id.localeCompare(b.id));
@@ -170,4 +172,46 @@ test('new long battles scale mistake allowance; old in-flight battles keep every
   const s=field();s.battle.maxHealth=32;s.battle.enemyHealth=19;s.battle.heroHealth=1;delete s.battle.heroMaxHealth;
   const before=Core.copy(s.battle);assert.deepEqual(reload(s).battle,before);
   Core.startBattle(s,NOW,{demo:true});assert.equal(s.battle.heroHealth,3);
+});
+
+// 2 October 2026: exposure is the second automatic difficulty axis.
+test('familiar words step faster after sustained success and slower after support; new words keep the chosen pace',()=>{
+  const s=fresh();Core.chooseSpeed(s,'walk');history(s,20);
+  for(let i=0;i<9;i++)answer(s,NOW+i*8000);
+  assert.equal(s.learning.challengePace.steps,0,'no change before ten counted answers');
+  answer(s,NOW+9*8000);assert.deepEqual(s.learning.challengePace,{steps:1,since:0});
+  for(let i=10;i<20;i++)answer(s,NOW+i*8000);assert.equal(s.learning.challengePace.steps,2);
+  // A known word now flashes two steps faster; an unseen word keeps Walk.
+  const known=Content.words.find(x=>s.learning.words[x.w].independentCorrect>=2);
+  assert.equal(Core.challengeExposure(1800,2),1200);
+  s.battle.question=null;Object.assign(s.learning.words[known.w],{dueAt:NOW-1,reviewStage:0,eligibleAfter:0,lastSequence:-99});s.learning.sequence=s.learning.sequence-(s.learning.sequence%3)+2;
+  const review=Core.prepareBattle(s,NOW+DAY);assert.equal(review.practiceKind,'review');assert.equal(review.exposureMs,1200);assert.equal(review.chosenExposureMs,1800);
+  review.phase='choices';Core.answerBattle(s,review.target,NOW+DAY);
+  const fresh2=Core.prepareBattle(s,NOW+DAY+8000);if(fresh2.isNew){assert.equal(fresh2.exposureMs,1800);assert.equal(fresh2.chosenExposureMs,undefined);}
+  // Five struggling answers step back down; steps never go below zero.
+  s.battle.question=null;for(let i=0;i<5;i++)answer(s,NOW+DAY+20000+i*8000,{correct:false});
+  assert.equal(s.learning.challengePace.steps,1);
+  for(let i=0;i<20;i++){s.battle&&(s.battle.heroHealth=10);answer(s,NOW+2*DAY+i*8000,{correct:false});}
+  assert.equal(s.learning.challengePace.steps,0);
+});
+test('challenge pace survives reload, is sanitized, ignores Crawl/demo/interruptions and never slows below the chosen pace',()=>{
+  const s=fresh();s.learning.challengePace={steps:3,since:4};assert.deepEqual(reload(s).learning.challengePace,{steps:3,since:4});
+  for(const [bad,clean] of [[{steps:99,since:-3},{steps:6,since:0}],[{steps:'x'},{steps:0,since:0}],['nope',null],[null,null]]){
+    s.learning.challengePace=bad;assert.deepEqual(reload(s).learning.challengePace,clean);
+  }
+  assert.equal(Core.challengeExposure(null,4),null,'Crawl stays untimed');assert.equal(Core.challengeExposure(350,6),350,'Fly is never slowed');
+  assert.equal(Core.challengeExposure(950,1),800);assert.equal(Core.challengeExposure(950,6),500);assert.equal(Core.challengeExposure(2200,1),1800);
+  const t=fresh();t.learning.challengePace={steps:0,since:0};
+  answer(t,NOW,{supported:true});assert.equal(t.learning.challengePace.since,0,'interrupted displays do not count');
+  answer(t,NOW+8000);assert.equal(t.learning.challengePace.since,1);
+  const d=fresh();d.learning.challengePace={steps:2,since:0};Core.startBattle(d,NOW,{demo:true});
+  const q=Core.prepareBattle(d,NOW);assert.equal(q.exposureMs,null);q.phase='choices';Core.answerBattle(d,q.target,NOW);assert.deepEqual(d.learning.challengePace,{steps:2,since:0});
+});
+test('speed XP follows the chosen pace, so automatic speed-ups do not change the XP calibration',()=>{
+  const s=fresh();Core.chooseSpeed(s,'walk');s.learning.challengePace={steps:4,since:0};Core.startBattle(s,NOW,{strength:30});
+  const q=Core.prepareBattle(s,NOW),w=s.learning.words[q.target];Object.assign(w,{independentCorrect:3,securedAt:new Date(NOW-DAY).toISOString()});
+  q.exposureMs=800;q.chosenExposureMs=1800;q.phase='choices';s.rewards.speedHistory={'800':Array(20).fill(true),'1800':Array(20).fill(true)};
+  Core.answerBattle(s,q.target,NOW);const rec=s.campaign.battleRecords.at(-1);
+  assert.equal(rec.speedXP,0);assert.equal(rec.chosenExposureMs,1800);assert.equal(rec.exposureMs,800);
+  assert.equal(s.rewards.speedHistory['800'].length,20,'challenge exposures do not start a separate speed history');
 });

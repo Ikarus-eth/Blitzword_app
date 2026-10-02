@@ -23,7 +23,10 @@ test('twenty familiar independent answers produce a saved, voluntary, one-step o
  const offer=finish(s);assert.equal(offer.to,'stride');assert.equal(offer.correct,20);assert.equal(offer.status,'pending');assert.equal(s.learning.speedPractice.sinceOffer,0);
  s=C.migrate(C.copy(s));assert.deepEqual(s.result.speedSuggestion,offer);const pending=C.copy(s.battle.question);
  assert.ok(C.respondSpeedSuggestion(s,true));assert.equal(C.practiceExposure(s),1500);assert.deepEqual(s.battle.question,pending);assert.equal(s.result.speedSuggestion.status,'accepted');assert.equal(C.respondSpeedSuggestion(s,true),false);
- C.startBattle(s,NOW);assert.equal(C.prepareBattle(s,NOW).exposureMs,1500);
+ // The accepted pace is the chosen pace; twenty correct answers also raised the automatic
+ // familiar-word challenge, so a familiar question flashes faster than Stride (2 October 2026).
+ C.startBattle(s,NOW);const q=C.prepareBattle(s,NOW),pace=C.challengePaceSummary(s);assert.equal(pace.baseMs,1500);
+ assert.ok(pace.steps>0);assert.equal(q.chosenExposureMs,1500);assert.equal(q.exposureMs,C.challengeExposure(1500,pace.steps));
 });
 test('decline survives reopening and twenty fresh answers are needed before another offer',()=>{
  let s=learner();window(s);finish(s);assert.ok(C.respondSpeedSuggestion(s,false));s=C.migrate(s);assert.equal(s.result.speedSuggestion.status,'declined');assert.equal(C.practiceExposure(s),1800);assert.equal(C.speedSuggestion(s),null);

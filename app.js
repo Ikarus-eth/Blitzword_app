@@ -232,7 +232,9 @@ function renderParent(){
   const bonus=Core.bonusProgress(state,Date.now());$('#parentConsistency').textContent=bonus.practiceDays+' practice days in the last 7 days (at least 10 active minutes each). '+(bonus.consistencyEarned?'Returning bonus today: +'+xpText(bonus.consistencyEarned)+' XP.':bonus.active?'Daily reward earned. Returning bonuses apply on future practice days.':bonus.consistencyXP?'Reach 10 active minutes today for +'+xpText(bonus.consistencyXP)+' returning XP, alongside the daily reward.':'Return on another day for a small consistency bonus.');
   $('#parentLearning').textContent=p.introduced+' / '+Content.words.length+' words introduced · '+p.practiced+' practiced twice · '+p.correct+' / '+p.independent+' unaided answers correct.';
   const challenge=Core.adaptiveChallenge(state);
-  $('#parentChallenge').textContent='Automatic word challenge · aiming for 80–90% unaided success. '+(challenge.total?challenge.correct+' / '+challenge.total+' recent checks ('+Math.round(challenge.accuracy*100)+'%). ':'Collecting first checks. ')+({support:'Fewer new words; more support and practice.',steady:'Balancing new words and practice.',stretch:'Moving into new words sooner.'}[challenge.mode])+' Help requests count as not yet known; interrupted displays are excluded. Delayed recall is tracked separately.';
+  const pace=Core.challengePaceSummary(state),band=Math.round(challenge.low*100)+'–'+Math.round(challenge.high*100)+'%';
+  const paceText=pace.selfPaced?'Crawl is untimed, so familiar words are not sped up.':pace.steps?'Familiar words now flash for '+(pace.familiarMs/1000).toFixed(2)+' s ('+pace.steps+' step'+(pace.steps===1?'':'s')+' faster than the chosen '+(pace.baseMs/1000).toFixed(2)+' s); new words keep the chosen pace.':'Familiar words flash at the chosen pace ('+(pace.baseMs/1000).toFixed(2)+' s).';
+  $('#parentChallenge').textContent='Automatic word challenge · aiming for '+band+' unaided success. '+(challenge.total?challenge.correct+' / '+challenge.total+' recent checks ('+Math.round(challenge.accuracy*100)+'%). ':'Collecting first checks. ')+({support:'Fewer new words; more support and practice.',steady:'Balancing new words and practice.',stretch:'Moving into new words sooner.'}[challenge.mode])+' '+paceText+' Help requests count as not yet known; interrupted displays are excluded. Delayed recall is tracked separately.';
   renderParentLearning();
   const checked=p.storyChecks.filter(r=>typeof r.correct==='boolean'),matched=checked.filter(r=>r.correct).length;
   $('#parentStorySummary').textContent=checked.length?matched+' / '+checked.length+' first choices matched · '+checked.filter(r=>r.helped).length+' used listening.':'No picture choices recorded yet.';
@@ -244,11 +246,17 @@ function renderParent(){
     for(const value of [place.campaignNumber+'.'+place.chapterNumber+' '+place.area.name,record.sentence?dragonText(record.sentence):'Earlier sentence',result,help]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}
     stories.append(row);
   }
+  let riddleText=null;try{riddleText=window.localStorage.getItem(Core.RIDDLE_KEY);}catch{}
+  const riddles=Core.riddleTime(riddleText,Date.now());
+  $('#parentRiddles').textContent=riddles.unreadable?'Unreadable':formatTime(riddles.totalMs);
+  $('#parentRiddlesToday').textContent=riddles.unreadable?'The story save could not be read; it was left unchanged.':'Today: '+formatTime(riddles.todayMs);
+  const timing=new Map(p.days),dates=[...new Set([...timing.keys(),...Object.keys(riddles.days)])].sort((a,b)=>b.localeCompare(a));
   const body=$('#parentDays');body.replaceChildren();
-  for(const [date,d] of p.days.slice(0,30)){
-    const row=document.createElement('tr');for(const value of [date,formatTime(d.practice),formatTime(d.math||0),formatTime(d.assessment+d.demo),formatTime(d.idle)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);
+  for(const date of dates.slice(0,30)){
+    const d={practice:0,math:0,assessment:0,demo:0,idle:0,...(timing.get(date)||{})};
+    const row=document.createElement('tr');for(const value of [date,formatTime(d.practice),formatTime(riddles.days[date]||0),formatTime(d.math||0),formatTime(d.assessment+d.demo),formatTime(d.idle)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);
   }
-  $('#parentEmpty').hidden=p.days.length>0;populateSoundSettings();$('#backupStatus').textContent='';save();
+  $('#parentEmpty').hidden=dates.length>0;populateSoundSettings();$('#backupStatus').textContent='';save();
 }
 function parentRow(body,values){
   const row=document.createElement('tr');for(const value of values){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);return row;
@@ -880,6 +888,8 @@ function renderResult() {
   const enemies=Core.enemyChoices(state,result.strength);
   const choices=[{hp:result.strength,label:'Same',symbol:'=',enemy:enemies[0]}];
   if(result.victory&&result.strength<32)choices.push({hp:result.strength+1,label:'Stronger',symbol:'↑',enemy:Core.enemyChoices(state,result.strength+1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength+1)[0]});
+  // At the 32-HP ceiling there is no Stronger card; offer a second creature family instead.
+  else if(result.victory){const other=enemies.find(e=>e.family!==enemies[0].family);if(other)choices.push({hp:result.strength,label:'Same',symbol:'=',enemy:other});}
   else if(result.strength>3)choices.unshift({hp:result.strength-1,label:'Easier',symbol:'↓',enemy:Core.enemyChoices(state,result.strength-1).find(e=>e.id!==enemies[0].id)||Core.enemyChoices(state,result.strength-1)[0]});
   else if(!result.victory)choices.push({hp:3,label:'Same',symbol:'=',enemy:enemies[1]||enemies[0]});
   const box=$('#opponents');box.replaceChildren();

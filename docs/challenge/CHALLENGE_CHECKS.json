@@ -1,0 +1,297 @@
+{
+ "build": "challenge-champions-20261002-r1",
+ "storyPilot": "story-riddle-time-20261002-r1",
+ "browser": "Chromium 141 headless, isolated profiles, reduced motion",
+ "viewports": [
+  [
+   1180,
+   820
+  ],
+  [
+   820,
+   1180
+  ],
+  [
+   390,
+   844
+  ]
+ ],
+ "checks": [
+  {
+   "viewport": 1180,
+   "check": "champion",
+   "id": "moon-moth--4",
+   "name": "5 Moon Moths",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 1180,
+   "check": "champion",
+   "id": "acorn-imp--4",
+   "name": "5 Acorn Imps",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 1180,
+   "check": "champion",
+   "id": "lantern-wisp--4",
+   "name": "5 Lantern Wisps",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 1180,
+   "check": "champion",
+   "id": "fern-wolf--4",
+   "name": "3 Fern Wolves",
+   "members": 3,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 1180,
+   "check": "champion",
+   "id": "cave-troll--4",
+   "name": "Mighty Cave Troll",
+   "members": 0,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 1180,
+   "check": "champion",
+   "id": "briar-bat--4",
+   "name": "Mighty Briar Bat",
+   "members": 0,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 1180,
+   "check": "ceiling",
+   "cards": [
+    {
+     "id": "thornling--4",
+     "name": "Mighty Thornling",
+     "label": "= Same"
+    },
+    {
+     "id": "moss-golem--4",
+     "name": "Mighty Moss Golem",
+     "label": "= Same"
+    }
+   ]
+  },
+  {
+   "viewport": 1180,
+   "check": "parents",
+   "row": [
+    "2026-10-02",
+    "10 min 00 sec",
+    "3 min 05 sec",
+    "1 min 00 sec",
+    "0 min 00 sec",
+    "0 min 00 sec"
+   ]
+  },
+  {
+   "viewport": 1180,
+   "check": "story-time",
+   "totalMs": 1550
+  },
+  {
+   "viewport": 820,
+   "check": "champion",
+   "id": "moon-moth--4",
+   "name": "5 Moon Moths",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 820,
+   "check": "champion",
+   "id": "acorn-imp--4",
+   "name": "5 Acorn Imps",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 820,
+   "check": "champion",
+   "id": "lantern-wisp--4",
+   "name": "5 Lantern Wisps",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 820,
+   "check": "champion",
+   "id": "fern-wolf--4",
+   "name": "3 Fern Wolves",
+   "members": 3,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 820,
+   "check": "champion",
+   "id": "cave-troll--4",
+   "name": "Mighty Cave Troll",
+   "members": 0,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 820,
+   "check": "champion",
+   "id": "briar-bat--4",
+   "name": "Mighty Briar Bat",
+   "members": 0,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 820,
+   "check": "ceiling",
+   "cards": [
+    {
+     "id": "thornling--4",
+     "name": "Mighty Thornling",
+     "label": "= Same"
+    },
+    {
+     "id": "moss-golem--4",
+     "name": "Mighty Moss Golem",
+     "label": "= Same"
+    }
+   ]
+  },
+  {
+   "viewport": 820,
+   "check": "parents",
+   "row": [
+    "2026-10-02",
+    "10 min 00 sec",
+    "3 min 05 sec",
+    "1 min 00 sec",
+    "0 min 00 sec",
+    "0 min 00 sec"
+   ]
+  },
+  {
+   "viewport": 820,
+   "check": "story-time",
+   "totalMs": 1556
+  },
+  {
+   "viewport": 390,
+   "check": "champion",
+   "id": "moon-moth--4",
+   "name": "5 Moon Moths",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 390,
+   "check": "champion",
+   "id": "acorn-imp--4",
+   "name": "5 Acorn Imps",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 390,
+   "check": "champion",
+   "id": "lantern-wisp--4",
+   "name": "5 Lantern Wisps",
+   "members": 5,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 390,
+   "check": "champion",
+   "id": "fern-wolf--4",
+   "name": "3 Fern Wolves",
+   "members": 3,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 390,
+   "check": "champion",
+   "id": "cave-troll--4",
+   "name": "Mighty Cave Troll",
+   "members": 0,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 390,
+   "check": "champion",
+   "id": "briar-bat--4",
+   "name": "Mighty Briar Bat",
+   "members": 0,
+   "hearts": "10 of 10 hearts"
+  },
+  {
+   "viewport": 390,
+   "check": "ceiling",
+   "cards": [
+    {
+     "id": "thornling--4",
+     "name": "Mighty Thornling",
+     "label": "= Same"
+    },
+    {
+     "id": "moss-golem--4",
+     "name": "Mighty Moss Golem",
+     "label": "= Same"
+    }
+   ]
+  },
+  {
+   "viewport": 390,
+   "check": "parents",
+   "row": [
+    "2026-10-02",
+    "10 min 00 sec",
+    "3 min 05 sec",
+    "1 min 00 sec",
+    "0 min 00 sec",
+    "0 min 00 sec"
+   ]
+  },
+  {
+   "viewport": 390,
+   "check": "story-time",
+   "totalMs": 1551
+  }
+ ],
+ "pageErrors": [],
+ "coreTests": {
+  "passed": 280,
+  "failed": 0
+ },
+ "uiGroups": {
+  "passed": 99,
+  "failed": 0
+ },
+ "physicalIPadSafariVerified": false,
+ "xpModel": {
+  "scenario": "scripts/calibrate-xp.cjs simulate(30,7)",
+  "before7DayXP": 7870,
+  "after7DayXP": 7806,
+  "afterDaily": [
+   789,
+   1113,
+   1131,
+   1200,
+   1511,
+   1003,
+   1059
+  ]
+ },
+ "defeatModel": {
+  "note": "Probability of losing a new battle with ceil(HP/4)+2 hearts, independent answers, no shield",
+  "32HP10hearts": {
+   "0.90": 0.01,
+   "0.85": 0.08,
+   "0.80": 0.3,
+   "0.75": 0.6
+  }
+ }
+}

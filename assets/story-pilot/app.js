@@ -4,7 +4,10 @@
   let store,state,blocked=false;
   function storageProblem(error){blocked=true;$('save-warning').hidden=false;$('save-message').textContent=error.code==='conflict'?error.message:'Story progress could not be saved or opened. Your game progress is unchanged. '+error.message;document.querySelectorAll('button:not(#reload)').forEach(b=>b.disabled=true);}
   try{store=Core.createStore(window.localStorage);state=store.load();}catch(error){state=Core.fresh();storageProblem(error);}
-  function persist(){try{store.save(state);return true;}catch(error){storageProblem(error);return false;}}
+  // Hidden or closed pages and long gaps never count; the next tap restarts the clock.
+  let lastAction=document.visibilityState==='hidden'?null:Date.now();
+  function confirmTime(){const now=Date.now();if(lastAction!==null&&!blocked)Core.recordTime(state,now-lastAction,now);lastAction=now;}
+  function persist(){confirmTime();try{store.save(state);return true;}catch(error){storageProblem(error);return false;}}
   function active(){return Core.active(state);}
   function el(tag,className,text){const e=document.createElement(tag);if(className)e.className=className;if(text!==undefined)e.textContent=text;return e;}
   function symbol(name,colour){const img=el('span','symbol');img.setAttribute('aria-hidden','true');img.style.setProperty('--symbol',`url("assets/${name}.svg")`);if(colour)img.classList.add('colour-'+colour);return img;}
@@ -80,6 +83,8 @@
   $('reload').onclick=()=>window.location.reload();
   function checkExternalSave(){if(blocked||!store)return;try{if(store.changed())storageProblem(Object.assign(new Error('Another tab changed your stories. Reload to keep that progress.'),{code:'conflict'}));}catch(error){storageProblem(error);}}
   window.addEventListener('storage',event=>{if(event.key===Core.KEY||event.key===null)checkExternalSave();});
-  window.addEventListener('pageshow',event=>{if(event.persisted)checkExternalSave();});
+  window.addEventListener('pageshow',event=>{lastAction=Date.now();if(event.persisted)checkExternalSave();});
+  document.addEventListener('visibilitychange',()=>{lastAction=document.visibilityState==='hidden'?null:Date.now();});
+  document.querySelectorAll('a[href="../../"]').forEach(link=>link.addEventListener('click',()=>{if(!blocked)persist();}));
   render();
 })();
