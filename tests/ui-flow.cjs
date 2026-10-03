@@ -20,7 +20,7 @@ function boot(saved,options={}){
    window.requestAnimationFrame=fn=>schedule(()=>fn(now),16);window.cancelAnimationFrame=id=>jobs.delete(id);
    const FakeImage=class{set src(url){this.url=url;if(options.failedMotion)this.onerror?.();else this.onload?.();}};
    const motionContext={...ctx,window:new Proxy(window,{get:(target,key)=>key==='Image'?FakeImage:key==='performance'?ctx.performance:Reflect.get(target,key)})};
-   const create=document.createElement.bind(document);document.createElement=(tag,...args)=>{const el=create(tag,...args);if(tag==='canvas')el.getContext=()=>new Proxy({drawImage(image){motionDraws.push(image.url);},createLinearGradient(){return {addColorStop(){}};}}, {get:(obj,key)=>obj[key]||(()=>{})});return el;};
+   const create=document.createElement.bind(document);document.createElement=(tag,...args)=>{const el=create(tag,...args);if(tag==='canvas')el.getContext=()=>new Proxy({drawImage(image){el.url=image.url;motionDraws.push(image.url);},getImageData(){return {data:new Uint8ClampedArray(4)};},putImageData(){},createLinearGradient(){return {addColorStop(){}};}}, {get:(obj,key)=>obj[key]||(()=>{})});return el;};
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/manifest.js','utf8'),motionContext);
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/runtime.js','utf8'),motionContext);
  }

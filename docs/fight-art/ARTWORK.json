@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "source": "assets/battle-motion/pip-still.webp",
+  "output": "assets/battle-motion/pip-friendly.png",
+  "transparent_background": true,
+  "prompt": "Use case: precise-object-edit. Edit target: the provided Pip game sprite. Change only Pip's facial expression to friendly neutral: relax and gently raise the brow, soft open curious eyes, relaxed closed mouth with the tiniest friendly upturn. He should be calm and approachable, not angry, fierce or grinning. Preserve EXACT character identity, pose, proportions, orange scales, cream belly, horns, wings, tail, texture, direction facing right, and original placement and scale within the square frame. Remove ALL blue background and blue edge contamination, retaining genuinely transparent alpha background and smooth natural edges. Full body in exact same composition as reference. No new objects, shadow, outlines, text or checkerboard. Production game sprite."
+}

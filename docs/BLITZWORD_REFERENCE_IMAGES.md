@@ -2,6 +2,10 @@
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
+### Fight expression and cutout correction — 3 October 2026
+
+`assets/battle-motion/pip-friendly.png` is the targeted, built-in ImageGen edit of the existing small Pip battle still: relaxed brow, friendly neutral eyes and closed mouth; the orange/cream identity, pose and wings remain. The existing fire motion is retained, with a short return to the friendly still before feedback ends. Other growth artwork remains the existing approved art. The mage's still and five animation sheets receive matching runtime blue-edge alpha suppression. Source frames are retained unchanged. See [implementation and verification](fight-art/RELEASE.md).
+
 ### Story rescue illustrations — 30 September 2026
 
 The user rejected the pilot's generic scenes, missing full Artus and pasted enemy cards. Six new integrated paintings now depict the fox-cub rescue: tunnel, broken bridge, troll's locked gate, owl's chest store, tower doors, and reunion. Artus and Pip appear in every image; the supporting characters share the scene's perspective and lighting. The full 3:2 images are uncropped, with no character overlays. The owl's four chests were edited into a single row to match the reading clue. [Exact prompts, references and hashes](story-pilot/RESCUE_ARTWORK.json), [release](story-pilot/RESCUE_RELEASE.md).

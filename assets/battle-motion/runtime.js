@@ -2,6 +2,7 @@
 (function(root,factory){const api=factory(root);if(typeof module==='object')module.exports=api;else root.BlitzMotion=api;})(typeof window==='object'?window:globalThis,function(root){
 'use strict';
 const DURATION=1200,IMPACT=660,active=new Set(),cache=new Map();
+let filterSerial=0;
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 const smooth=v=>{v=clamp(v);return v*v*(3-2*v);};
 const data=()=>root.BlitzMotionAssets||{};
@@ -10,21 +11,39 @@ function enemyKey(enemy){const family=enemy.family||enemy.id,key=({'moss-golem':
 function stageScale(stage){return stage==='baby'?.72:stage==='young'?.86:1;}
 function stageRect(rect,stage){const scale=stageScale(stage);return {x:rect.x+rect.w*(1-scale)/2,y:rect.y+rect.h*(1-scale),w:rect.w*scale,h:rect.h*scale};}
 function attackMode(key){return asset(key)?.attackMode||(key==='golem'?'shock':'melee');}
-function render(key,{stage='adult'}={}){const a=asset(key);if(!a)return null;const scale=stageScale(stage),cx=a.view[0]+a.view[2]/2,bottom=a.view[1]+a.view[3];return `<svg class="motionStill" viewBox="${a.view.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><g transform="translate(${cx} ${bottom}) scale(${scale}) translate(${-cx} ${-bottom})"><image href="${a.still}" width="512" height="512"/></g></svg>`;}
+// Blue-screen residue is absent from the mage's approved warm/green palette.
+// Apply the same soft alpha key to stills and decoded animation sheets.
+function blueMatte(r,g,b){return clamp(1+(r+g-2*b+16)/64);}
+function cleanBluePixels(pixels){for(let i=0;i<pixels.length;i+=4)pixels[i+3]=Math.round(pixels[i+3]*blueMatte(pixels[i],pixels[i+1],pixels[i+2]));return pixels;}
+function prepareImage(image,url){
+  if(!/\/mage-[^/]+\.webp$/.test(url)||!root.document)return image;
+  const canvas=root.document.createElement('canvas');canvas.width=image.width;canvas.height=image.height;
+  const ctx=canvas.getContext('2d',{willReadFrequently:true});if(!ctx)return image;
+  ctx.drawImage(image,0,0);const frame=ctx.getImageData(0,0,canvas.width,canvas.height);
+  cleanBluePixels(frame.data);ctx.putImageData(frame,0,0);return canvas;
+}
+function render(key,{stage='adult'}={}){
+  const a=asset(key);if(!a)return null;
+  const scale=stageScale(stage),cx=a.view[0]+a.view[2]/2,bottom=a.view[1]+a.view[3],id='motion-matte-'+(++filterSerial);
+  // sRGB matches the canvas key. Multiply the key by the existing alpha;
+  // never replace transparency or let hidden blue RGB become visible.
+  const filter=key==='mage'?`<defs><filter id="${id}" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 3.984375 3.984375 -7.96875 0 1.25"/><feComposite in="SourceGraphic" operator="in"/></filter></defs>`:'';
+  return `<svg class="motionStill" viewBox="${a.view.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true">${filter}<g transform="translate(${cx} ${bottom}) scale(${scale}) translate(${-cx} ${-bottom})"><image href="${a.still}" width="512" height="512"${key==='mage'?` filter="url(#${id})"`:''}/></g></svg>`;
+}
 function load(url){
   if(cache.has(url))return cache.get(url).promise;
   if(!root.Image)return Promise.resolve(null);
   const item={image:null,promise:null},image=new root.Image();
-  item.promise=new Promise(resolve=>{image.onload=()=>{item.image=image;resolve(image);};image.onerror=()=>{cache.delete(url);resolve(null);};});
+  item.promise=new Promise(resolve=>{image.onload=()=>{try{item.image=prepareImage(image,url);resolve(item.image);}catch{cache.delete(url);resolve(null);}};image.onerror=()=>{cache.delete(url);resolve(null);};});
   cache.set(url,item);image.src=url;return item.promise;
 }
 function warm(key){
   const a=asset(key);if(!a)return Promise.resolve([]);
   if(key!=='mage'&&key!=='pip'){
-    const keep=new Set(['mage','pip',key].flatMap(k=>Object.values(asset(k)?.clips||{}).flatMap(c=>c.sheets)));
+    const keep=new Set(['mage','pip',key].flatMap(k=>[asset(k)?.still,...Object.values(asset(k)?.clips||{}).flatMap(c=>c.sheets)]));
     for(const url of cache.keys())if(!keep.has(url))cache.delete(url);
   }
-  return Promise.all(Object.values(a.clips).flatMap(c=>c.sheets.map(load)));
+  return Promise.all([load(a.still),...Object.values(a.clips).flatMap(c=>c.sheets.map(load))]);
 }
 function ready(key,clip){return !!asset(key)?.clips[clip]?.sheets.every(url=>cache.get(url)?.image);}
 function fit(view,rect){const scale=Math.min(rect.w/view[2],rect.h/view[3]);return {x:rect.x+(rect.w-view[2]*scale)/2-view[0]*scale,y:rect.y+rect.h-view[3]*scale-view[1]*scale,scale};}
@@ -87,7 +106,7 @@ function run(container,actors,duration,draw,hold=false){
   const canvas=root.document.createElement('canvas');canvas.className='motionOverlay';canvas.setAttribute('aria-hidden','true');
   const dpr=Math.min(root.devicePixelRatio||1,2);canvas.width=Math.round(box.width*dpr);canvas.height=Math.round(box.height*dpr);
   const ctx=canvas.getContext?.('2d');if(!ctx)return false;
-  const images={};for(const a of actors){if(!ready(a.key,a.clip))return false;for(const url of asset(a.key).clips[a.clip].sheets)images[url]=cache.get(url).image;a.rect=rect(a.element,box);}
+  const images={};for(const a of actors){if(!ready(a.key,a.clip))return false;for(const url of asset(a.key).clips[a.clip].sheets)images[url]=cache.get(url).image;if(cache.get(asset(a.key).still)?.image)images[asset(a.key).still]=cache.get(asset(a.key).still).image;a.rect=rect(a.element,box);}
   container.append(canvas);ctx.scale(dpr,dpr);
   const old=actors.map(a=>[a.element,a.element.style.visibility]);for(const [el]of old)el.style.visibility='hidden';
   let id,start=root.performance?.now?.(),stopped=false;
@@ -98,12 +117,13 @@ function run(container,actors,duration,draw,hold=false){
 function reaction({container,hero,enemy,pip,correct,defeated,heroDefeated,assist,shield}){
   const hk=hero?.dataset.motionActor,ek=enemy?.dataset.motionActor,pk=pip?.dataset.motionActor;
   if(hk!=='mage'||!ek)return false;
-  const usePip=correct&&assist&&pk==='pip'&&ready('pip','fire');
+  const usePip=correct&&assist&&pk==='pip'&&ready('pip','fire')&&!!cache.get(asset('pip').still)?.image;
   const hc=correct?castClip(usePip):shield?'cast':heroDefeated?'defeat':'hit',ec=correct?(defeated?'defeat':'hit'):'attack';
   const actors=[{element:hero,key:hk,clip:hc},{element:enemy,key:ek,clip:ec}];
   if(usePip)actors.push({element:pip,key:pk,clip:'fire'});
   return run(container,actors,DURATION,(ctx,images,ms,a)=>drawBattle(ctx,images,{hero:a[0].rect,enemy:a[1].rect,pip:usePip?a[2].rect:null},{correct,enemy:ek,defeated,heroDefeated,assist:usePip,shield,stage:enemy.dataset.motionStage},ms),defeated||heroDefeated);
 }
+function pipAttackWeight(ms){return smooth(ms/120)*(1-smooth((ms-850)/200));}
 function drawBattle(ctx,images,layout,options,ms){
   const {correct=true,enemy:ek='thornling',defeated=false,heroDefeated=false,assist=false,shield=false}=options;
   const hr=layout.hero,er=stageRect(layout.enemy,options.stage),start=spellPoint(hr,assist),end=point(ek,er,asset(ek).target),heroTarget=point('mage',hr,asset('mage').target);
@@ -115,7 +135,11 @@ function drawBattle(ctx,images,layout,options,ms){
   const hc=correct?castClip(assist):shield?'cast':heroDefeated?'defeat':'hit',ec=correct?(defeated?'defeat':'hit'):'attack';
   drawActor(ctx,images,'mage',hc,s.hero.p,hr,!correct&&!shield?-10*Math.sin(Math.PI*s.hero.p):0);
   drawActor(ctx,images,ek,ec,s.enemy.p,er,s.enemy.x+(correct&&!defeated?8*Math.sin(Math.PI*s.enemy.p):0),defeated&&ms>1100?Math.max(0,1-(ms-1100)/100):1,!correct&&travel?landingShift*(-s.enemy.x/travel):0);
-  if(assist&&layout.pip)drawActor(ctx,images,'pip','fire',s.pip.p,layout.pip);
+  if(assist&&layout.pip){
+    const still=images[asset('pip').still],attack=pipAttackWeight(ms);
+    if(still&&attack<1){const f=fit(asset('pip').view,layout.pip);ctx.save();ctx.globalAlpha=1-attack;ctx.drawImage(still,f.x,f.y,512*f.scale,512*f.scale);ctx.restore();}
+    if(attack>0||!still)drawActor(ctx,images,'pip','fire',s.pip.p,layout.pip,0,still?attack:1);
+  }
   drawEffects(ctx,s,{start,end,enemyStart:enemyFront,ground:hr.y+hr.h-5,heroTarget,correct,shield,assistStart:assist&&layout.pip?point('pip',layout.pip,asset('pip').mouth):null});
 }
 
@@ -124,5 +148,5 @@ function celebrate(container,element,clip='victory'){
   const actors=targets.map(element=>({element,key:element.dataset.motionActor,clip}));if(!actors.length)return false;
   return run(container,actors,1600,(ctx,images,ms,a)=>{for(const item of a)drawActor(ctx,images,item.key,clip,ms/1600,stageRect(item.rect,item.element.dataset.motionStage));});
 }
-return {DURATION,IMPACT,asset,enemyKey,stageScale,stageRect,attackMode,render,warm,ready,fit,point,castClip,spellPoint,frameIndex,drawActor,timeline,drawEffects,drawBattle,reaction,celebrate,cancelAll};
+return {blueMatte,cleanBluePixels,prepareImage,pipAttackWeight,DURATION,IMPACT,asset,enemyKey,stageScale,stageRect,attackMode,render,warm,ready,fit,point,castClip,spellPoint,frameIndex,drawActor,timeline,drawEffects,drawBattle,reaction,celebrate,cancelAll};
 });
