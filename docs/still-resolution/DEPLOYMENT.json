@@ -1,0 +1,87 @@
+{
+  "build": "pip-b-scenery-20261003-r1",
+  "runtimeCommit": "e11e9840f4161675aaa9d2fcb38069ed4ad2d694",
+  "pr": 119,
+  "pagesRun": 37111903011,
+  "verifiedAt": "2026-10-03T09:08:01.926356+00:00",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "4fc855e1f944f85d46c0996ea6178a7e9bdd9750ee26b83fab37979ca6593562",
+      "liveSha256": "4fc855e1f944f85d46c0996ea6178a7e9bdd9750ee26b83fab37979ca6593562",
+      "matches": true
+    },
+    {
+      "path": "app.js",
+      "localSha256": "997f40804318ad015cc59f6167328795ac68f7fecaa8452a4a1a2e17262a2b74",
+      "liveSha256": "997f40804318ad015cc59f6167328795ac68f7fecaa8452a4a1a2e17262a2b74",
+      "matches": true
+    },
+    {
+      "path": "content.js",
+      "localSha256": "97aafb9de48438975eeaf3f6341de463cca782ad489ca62cdcaa6bbcd0a4865c",
+      "liveSha256": "97aafb9de48438975eeaf3f6341de463cca782ad489ca62cdcaa6bbcd0a4865c",
+      "matches": true
+    },
+    {
+      "path": "assets/battle-motion/manifest.js",
+      "localSha256": "dd11a5b3f5bd79e16a6fa9518a6782c67e0877dacef95c1bc7e25f162196a03b",
+      "liveSha256": "dd11a5b3f5bd79e16a6fa9518a6782c67e0877dacef95c1bc7e25f162196a03b",
+      "matches": true
+    },
+    {
+      "path": "assets/battle-motion/manifest.json",
+      "localSha256": "055803c78c6c8616c535f7504a75e446e27fc1864880900736a94b1ccdb66ede",
+      "liveSha256": "055803c78c6c8616c535f7504a75e446e27fc1864880900736a94b1ccdb66ede",
+      "matches": true
+    },
+    {
+      "path": "assets/battle-motion/pip-friendly-b.png",
+      "localSha256": "93f3ad06d0b7cd9e153299c82cc4aec1eb7a66db7d87089c513751b50c3d3279",
+      "liveSha256": "93f3ad06d0b7cd9e153299c82cc4aec1eb7a66db7d87089c513751b50c3d3279",
+      "matches": true
+    },
+    {
+      "path": "assets/campaign-hd/forest.webp",
+      "localSha256": "d9d428b268bb85e75d79d7da8ca2485955cfe0c001e47d0694198a0bf9982358",
+      "liveSha256": "d9d428b268bb85e75d79d7da8ca2485955cfe0c001e47d0694198a0bf9982358",
+      "matches": true
+    },
+    {
+      "path": "assets/campaign-hd/river.webp",
+      "localSha256": "bad0b7f9284752c51224a2d309d8c842a6153162e159052f10651bbc2b209f8e",
+      "liveSha256": "bad0b7f9284752c51224a2d309d8c842a6153162e159052f10651bbc2b209f8e",
+      "matches": true
+    },
+    {
+      "path": "assets/campaign-hd/oak.webp",
+      "localSha256": "18dc92d290b6c18e5715f54bcd4c1a934e024d7fea1857baa454eda1cc0e432e",
+      "liveSha256": "18dc92d290b6c18e5715f54bcd4c1a934e024d7fea1857baa454eda1cc0e432e",
+      "matches": true
+    },
+    {
+      "path": "assets/campaign-hd/ruins.webp",
+      "localSha256": "774b261953c5423cef85323052fef490258993bc1b9eddf4bb882da8e20b2090",
+      "liveSha256": "774b261953c5423cef85323052fef490258993bc1b9eddf4bb882da8e20b2090",
+      "matches": true
+    },
+    {
+      "path": "assets/campaign-hd/moon.webp",
+      "localSha256": "3337160f060d4cecfbaa48051335de7caf298be81b6839375a06335df855e77a",
+      "liveSha256": "3337160f060d4cecfbaa48051335de7caf298be81b6839375a06335df855e77a",
+      "matches": true
+    },
+    {
+      "path": "assets/campaign-hd/cave.webp",
+      "localSha256": "4b5ebbd0e527a1eea93b8fa3f71b60ef1ab8c1d0a59dd37fd2593aa0196c4440",
+      "liveSha256": "4b5ebbd0e527a1eea93b8fa3f71b60ef1ab8c1d0a59dd37fd2593aa0196c4440",
+      "matches": true
+    },
+    {
+      "path": "assets/campaign-hd/keep.webp",
+      "localSha256": "11b4390d59ee7e5d35017f7b3bc66ea26b4f1b9d34657914cc695d384d442415",
+      "liveSha256": "11b4390d59ee7e5d35017f7b3bc66ea26b4f1b9d34657914cc695d384d442415",
+      "matches": true
+    }
+  ]
+}

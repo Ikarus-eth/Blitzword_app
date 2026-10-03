@@ -2,7 +2,7 @@
 
 ## Pip B and clearer campaign backgrounds — 3 October 2026
 
-**Implemented and locally tested; deployment pending.** Build `pip-b-scenery-20261003-r1` implements the user's selected Pip B mouth/chin. Seven standalone campaign backgrounds replace atlas enlargement; six scenes increase from 512×512 to 1254×1254 and are reused by their matching chapters. The first map has restored detail at its existing 1536×1024 size. Audit: 89 unique still-image files across 313 uses, including effective atlas crop sizes. This does not claim all legacy sprites or full-screen imagery are Retina-native. [Release, tests and limitations](still-resolution/RELEASE.md).
+**Deployed and verified.** [PR #119](https://github.com/Ikarus-eth/Blitzword_app/pull/119) merged as `e11e9840f4161675aaa9d2fcb38069ed4ad2d694`; [Pages run 37111903011](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37111903011) succeeded. All 13 changed runtime/artwork files match the tested source ([live hashes](still-resolution/DEPLOYMENT.json)). Build `pip-b-scenery-20261003-r1` implements the user's selected Pip B mouth/chin. Seven standalone campaign backgrounds replace atlas enlargement; six scenes increase from 512×512 to 1254×1254 and are reused by their matching chapters. The first map has restored detail at its existing 1536×1024 size. Audit: 89 unique still-image files across 313 uses, including effective atlas crop sizes. This does not claim all legacy sprites or full-screen imagery are Retina-native. [Release, tests and limitations](still-resolution/RELEASE.md).
 
 
 ## Fight artwork correction — 3 October 2026
