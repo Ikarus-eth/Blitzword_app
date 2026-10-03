@@ -1,9 +1,6 @@
 name: Generate mission illustrations with fal.ai
 
 on:
-  push:
-    branches: [codex/creature-campaigns-20261003]
-    paths: [.github/workflows/mission-art.yml, docs/adventures/art-prompts.json]
   workflow_dispatch:
 
 permissions:
