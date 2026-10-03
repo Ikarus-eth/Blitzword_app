@@ -70,3 +70,18 @@ test('solo and Pip-assisted spells leave their own held staff crystals',()=>{
   assert.notDeepEqual(M.spellPoint(rect,false),M.spellPoint(rect,true));
   assert.notDeepEqual(mage.clips.cast.sheets,mage.clips.assistCast.sheets);
 });
+
+test('mage matte removes blue residue without erasing warm artwork or restoring alpha',()=>{
+  const p=new Uint8ClampedArray([41,29,118,255, 40,48,139,218, 172,120,60,255, 220,220,220,128, 14,20,216,0]);
+  M.cleanBluePixels(p);
+  assert.equal(p[3],0);assert.equal(p[7],0);assert.equal(p[11],255);assert.equal(p[15],128);assert.equal(p[19],0);
+  assert.ok(M.render('mage').includes('color-interpolation-filters="sRGB"'));
+  assert.ok(!M.render('thornling').includes('feColorMatrix'));
+});
+test('Pip is friendly before and after attacking, including a held final blow',()=>{
+  assert.match(M.asset('pip').still,/pip-friendly\.png$/);
+  assert.equal(M.pipAttackWeight(0),0);assert.equal(M.pipAttackWeight(500),1);
+  assert.ok(M.pipAttackWeight(950)>0&&M.pipAttackWeight(950)<1);
+  assert.equal(M.pipAttackWeight(1050),0);assert.equal(M.pipAttackWeight(1200),0);
+  assert.equal(M.pipAttackWeight(5000),0);
+});

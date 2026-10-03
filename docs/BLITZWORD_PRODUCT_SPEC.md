@@ -985,3 +985,7 @@ See [rules and verification](challenge/CHALLENGE_CHAMPIONS_RELEASE.md).
 The user accepted the aimed-staff motion, requested the remaining enemy and group animations with low API costs, and explicitly authorized deployment. Only the male Mage is selectable and displayed for now. Preserve every saved hero/gender preference so re-enabling the roster later does not lose it. Use all 20 selected enemy identities across the existing 60 variants and 2/3/5-member groups. Each family has attack, hit, defeat and victory frames. Younger stages reuse the same complete artwork at uniformly smaller sizes to control cost; their old independently enlarged heads are superseded for these sprites. Groups reuse one family asset with independent member state, one target and one committed hit per answer.
 
 Keep the aimed solo staff cast and distinct braced Pip-assisted cast, 1,200 ms feedback and 660 ms impact. No movement runs during reading. Preserve HP ranges, adaptive reading, XP, curriculum, saves and the existing Pages route. Total generation reserve, including prior experiments, must stay below $10; local playback has no API charge. [Release and verification](enemies/ALL_ENEMY_MOTION_RELEASE.md).
+
+## Fight artwork correction — 3 October 2026
+
+The hero must have clean transparent edges without a blue keying fringe, both at rest and throughout combat animation. Pip must look friendly and neutral outside his own attacks; a determined expression during an attack is allowed. Preserve the approved character identities, motions, growth stages and learner saves.
