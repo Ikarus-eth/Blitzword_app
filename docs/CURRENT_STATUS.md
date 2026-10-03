@@ -2,7 +2,7 @@
 
 ## Fight artwork correction — 3 October 2026
 
-**Implemented and locally tested; deployment pending.** Build `fight-art-20261003-r1` removes the mage's blue cutout fringe at rest and across all five motions. Small Pip has a friendly-neutral resting face and returns to it before his attack ends, including a finishing blow. Existing character identities, growth forms, gameplay and saves remain. 282 unit tests and 99 UI groups pass; isolated Chromium covers the rendered edges, attack transitions and phone/tablet layouts. Physical iPad/Safari is unverified. [Correction details](fight-art/RELEASE.md).
+**Deployed and verified by live file hashes.** [PR #117](https://github.com/Ikarus-eth/Blitzword_app/pull/117) merged as `7d577a7ca16f8ff5bdba911763a6c90b0470c060`; [Pages run 37109896368](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37109896368) succeeded. All five changed runtime/artwork files match the tested source ([evidence](fight-art/DEPLOYMENT.json)). Build `fight-art-20261003-r1` removes the mage's blue cutout fringe at rest and across all five motions. Small Pip has a friendly-neutral resting face and returns to it before his attack ends, including a finishing blow. Existing character identities, growth forms, gameplay and saves remain. 282 unit tests and 99 UI groups pass; isolated Chromium covers the rendered edges, attack transitions and phone/tablet layouts. Physical iPad/Safari is unverified. [Correction details](fight-art/RELEASE.md).
 
 
 ## Harder challenge, champion enemies and reading-riddle time — 2 October 2026

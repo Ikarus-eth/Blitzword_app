@@ -1,0 +1,38 @@
+{
+  "build": "fight-art-20261003-r1",
+  "runtimeCommit": "7d577a7ca16f8ff5bdba911763a6c90b0470c060",
+  "pr": 117,
+  "runId": 37109896368,
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "777d23ada6d7a427544a3e165cc30e04ff60d8e1ffbc0098fdba2bed0d97bb1d",
+      "liveSha256": "777d23ada6d7a427544a3e165cc30e04ff60d8e1ffbc0098fdba2bed0d97bb1d",
+      "matches": true
+    },
+    {
+      "path": "assets/battle-motion/runtime.js",
+      "localSha256": "e78950bfd2a0dd71d90324105718e3be3047c3f0773a775def942d539b7c6a43",
+      "liveSha256": "e78950bfd2a0dd71d90324105718e3be3047c3f0773a775def942d539b7c6a43",
+      "matches": true
+    },
+    {
+      "path": "assets/battle-motion/manifest.js",
+      "localSha256": "5964ec8d43f92baecac03ef8f9b35009d566b80a70e92e463996e7699ed2aea6",
+      "liveSha256": "5964ec8d43f92baecac03ef8f9b35009d566b80a70e92e463996e7699ed2aea6",
+      "matches": true
+    },
+    {
+      "path": "assets/battle-motion/manifest.json",
+      "localSha256": "1fd9e709f6e593ab10473182ebd3134d992b6c3c2b5b5566032a735fc7de36c4",
+      "liveSha256": "1fd9e709f6e593ab10473182ebd3134d992b6c3c2b5b5566032a735fc7de36c4",
+      "matches": true
+    },
+    {
+      "path": "assets/battle-motion/pip-friendly.png",
+      "localSha256": "fafd9549eb54df673fb860c1acbe9e51b5c7ae39809303b875203993791c9b79",
+      "liveSha256": "fafd9549eb54df673fb860c1acbe9e51b5c7ae39809303b875203993791c9b79",
+      "matches": true
+    }
+  ]
+}
