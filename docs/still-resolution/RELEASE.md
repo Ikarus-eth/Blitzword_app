@@ -1,6 +1,6 @@
 # Pip B and still-image clarity — 3 October 2026
 
-Build `pip-b-scenery-20261003-r1`. Implemented and locally tested; deployment pending.
+Build `pip-b-scenery-20261003-r1`. Deployed and verified. [PR #119](https://github.com/Ikarus-eth/Blitzword_app/pull/119) merged as `e11e9840f4161675aaa9d2fcb38069ed4ad2d694`. [Pages run 37111903011](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37111903011) succeeded; all 13 changed runtime/artwork files match local SHA-256 hashes. [Deployment evidence](DEPLOYMENT.json).
 
 ## Changes
 
