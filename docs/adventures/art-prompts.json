@@ -1,0 +1,116 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "estimatedBatchUSD": 0.468,
+  "priceChecked": "2026-10-03",
+  "style": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old. Warm painterly materials, luminous colours, expressive appealing characters, richly realised environment and readable composition. Image 1 is the exact young male mage identity, brown hair, cream embroidered tunic, green-brown cloak with a red collar, leather boots and glowing wooden staff. Image 2 is the exact small friendly dragon Pip identity, orange-gold scales, cream belly, large brown eyes, curved gold horns and warm dark wing membranes; keep this small form. Image 3 is the exact woodland creature identity. These images are character references, not a collage. Repose and integrate the three characters naturally in one coherent scene, matching ground contact, light and perspective. Full scene, no text, no lettering, no UI, no borders, no separate portraits, no cutout pasted on scenery. Child-friendly magic, no threats or violence. Illustrate the story setup without revealing a puzzle answer. Keep complete characters comfortably inside the frame.",
+  "images": [
+    {
+      "id": "first-spark",
+      "prompt": "On a forest lantern trail at sunset, the young mage and small Pip kneel beside a curious Thornling pointing toward a mysterious mossy hollow log. A faint warm glow shines within. Fireflies and unlit hanging lanterns.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/thornling-d.webp"
+      ]
+    },
+    {
+      "id": "moth-post",
+      "prompt": "At a woodland crossing, the mage and Pip meet a luminous Moon Moth beside a tiny forest post office made from a tree stump. Sealed letters, acorn packages, branching trails and softly glowing flowers.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/moon-moth-c.webp"
+      ]
+    },
+    {
+      "id": "root-workshop",
+      "prompt": "Inside a giant tree’s cosy root workshop, the mage and Pip help a Root Sprite inspect a small wooden lifting machine. Gears, rope, pots and gently glowing leaves. Whimsical inventiveness.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/root-sprite-d.webp"
+      ]
+    },
+    {
+      "id": "owl-watch",
+      "prompt": "In ancient forest lantern ruins at twilight, the mage and Pip look up with the Hollow Owl toward tall trees, searching for a lost chick. A folded ladder and empty wicker basket nearby. Safe and wondrous.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/hollow-owl-c.webp"
+      ]
+    },
+    {
+      "id": "mimic-vault",
+      "prompt": "In a hidden woodland vault, the mage smiles and Pip giggles beside a friendly Chest Mimic with expressive eyes and a broad laughing mouth. A soft brush, old carved stone arches and golden motes. No scary teeth.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/chest-mimic-d.webp"
+      ]
+    },
+    {
+      "id": "oak-heart",
+      "prompt": "Beneath an enormous ancient oak, the mage and small Pip stand with a gentle Moss Golem beside an incomplete circular light-seed shrine. A few glimmers rise up the trunk. Majestic canopy and hopeful golden dusk.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/moss-golem-b.webp"
+      ]
+    },
+    {
+      "id": "reed-message",
+      "prompt": "On a quiet misty riverbank, the mage and Pip meet the Reed Serpent among tall green reeds, studying a sealed message bottle. Still water reflects willow branches. A sense of discovery and a journey beginning.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/reed-serpent-d.webp"
+      ]
+    },
+    {
+      "id": "crab-ferry",
+      "prompt": "At a clear woodland pool, the mage and Pip help the Crystal Crab inspect a little wooden ferry with a large crystal bell on its deck. Shallow sparkling water and a dock with ropes, inviting river adventure.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/crystal-crab-d.webp"
+      ]
+    },
+    {
+      "id": "stone-dam",
+      "prompt": "Beside an old stone bridge, the mage and Pip inspect a stopped wooden waterwheel with a friendly sleepy Cave Troll. A few repair tools, wooden water cups, mossy stones and bright moving water.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/cave-troll-c.webp"
+      ]
+    },
+    {
+      "id": "mist-lamps",
+      "prompt": "On a river path surrounded by soft silver mist, the mage and small Pip follow a friendly floating Lantern Wisp. Lamps illuminate reeds and stepping stones, mysterious but reassuring, warm gold against cool mist.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/lantern-wisp-c.webp"
+      ]
+    },
+    {
+      "id": "high-nest",
+      "prompt": "On a broad safe rocky ledge above a beautiful waterfall, the mage and Pip meet the proud friendly Storm Griffin beside its nest and a small wind bell. Wide view, soaring cliffs, moss and rainbow spray.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/storm-griffin-b.webp"
+      ]
+    },
+    {
+      "id": "river-heart",
+      "prompt": "At magnificent ancient river gates, the mage and Pip meet a friendly Stone Ram beside a row of hanging water bells. The gates are closed, calm water waits, sunrise glows on carved stone. A grand hopeful finale.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/stone-ram-b.webp"
+      ]
+    }
+  ]
+}
