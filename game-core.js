@@ -1,7 +1,7 @@
 (function(root, factory) {
-  if (typeof module === 'object' && module.exports) module.exports = factory(require('./content.js'));
-  else root.BlitzCore = factory(root.BlitzContent);
-})(typeof globalThis !== 'undefined' ? globalThis : this, function(Content) {
+  if (typeof module === 'object' && module.exports) module.exports = factory(require('./content.js'),require('./adventure-core.js'));
+  else root.BlitzCore = factory(root.BlitzContent,root.BlitzAdventure);
+})(typeof globalThis !== 'undefined' ? globalThis : this, function(Content,Adventure) {
   'use strict';
   const DAY = 86400000;
   const GAPS = [1,3,7,14,30];
@@ -32,6 +32,7 @@
     const base = fresh();
     const s = {...base,...copy(old)};
     for (const key of ['profile','assessment','learning','campaign','settings','dragon','story','timing','math','rewards']) s[key] = {...base[key],...s[key]};
+    Adventure.init(s);
     s.rewards.shield=s.rewards.shield===true;
     s.rewards.readingWins=Math.max(0,Math.min(3,Number(s.rewards.readingWins)||0));
     // Convert the pending UI only. Keep time, factors, accepted answers and old PRs.
@@ -282,7 +283,7 @@
     s.dragon.evolution=null;return scene;
   }
   function chapterState(s,areaId){return s.story.chapters[areaId] ||= {activeMs:0,wins:0,duels:0,attempts:0,correct:0};}
-  function activeChapterState(s){return s.battle?.reviewId?s.story.review: s.battle?.areaId?chapterState(s,s.battle.areaId):null;}
+  function activeChapterState(s){return s.battle?.missionId?Adventure.stats(s,s.battle.missionId):s.battle?.reviewId?s.story.review: s.battle?.areaId?chapterState(s,s.battle.areaId):null;}
   function completeReviewChapter(s,now){
     const p=s.story.review;if(!s.battle?.reviewId||!p||p.completedAt||!s.battle.resolved||p.activeMs<TARGET_MS||p.wins<3||p.duels<1||s.math.round&&s.math.round.status!=='result')return;
     p.completedAt=iso(now);s.story.dailyChapters[dayKey(now)]=(s.story.dailyChapters[dayKey(now)]||0)+1;
@@ -326,7 +327,7 @@
     if(category==='practice'||category==='math'){
       if(!s.timing.firstPracticeAt)s.timing.firstPracticeAt=iso(now-ms);
       if(s.session&&!s.session.completedAt)s.session.elapsedMs+=ms;
-      if(s.battle&&!s.battle.demo&&!s.battle.finalEncounter&&(s.battle.reviewId||!s.story.clearedAreas.includes(s.battle.areaId)))activeChapterState(s).activeMs+=ms;
+      if(s.battle&&!s.battle.demo&&!s.battle.finalEncounter&&(s.battle.missionId||s.battle.reviewId||!s.story.clearedAreas.includes(s.battle.areaId)))activeChapterState(s).activeMs+=ms;
     }
     syncProgress(s,now);
   }
@@ -643,6 +644,7 @@
       firstChoice:null,correct:null,answeredAt:null,listenedSentence:!!scene.helped,listenedWords:[],pictureUnavailable:false};
   }
   function beginChapterStory(s,now){
+    if(s.battle?.missionId)return false;
     if(s.story.scene){ensureStoryReading(s.story.scene);s.activity='chapterStory';return true;}
     const b=s.battle,area=Content.areas.find(a=>a.id===b?.areaId),index=Content.areas.indexOf(area);
     // The initial guided battle keeps its approved short introduction. Never interrupt a saved question.
@@ -706,7 +708,7 @@
       fraction,startXP:start,steps,nextStepXP,stepRemaining:next?Math.ceil(Math.max(0,nextStepXP-xp)):0};
   }
   function syncProgress(s,now=Date.now()){
-    for (let i=0;i<Content.areas.length;i++){
+    for (let i=0;i<Content.areas.length&&s.expedition?.context!=='mission';i++){
       const area=Content.areas[i],p=areaProgress(s,area),previous=i===0||s.story.clearedAreas.includes(Content.areas[i-1].id);
       const c=Content.chapters.findIndex(chapter=>chapter.id===area.chapterId),campaignOpen=c===0||s.story.completedChapters.includes(Content.chapters[c-1].id);
       const betweenBattles=!s.battle||s.battle.resolved||s.battle.areaId!==area.id;
@@ -720,7 +722,7 @@
         if(s.result&&s.battle?.areaId===area.id){s.result.fieldJustComplete=area.id;s.result.xpEarned=s.battle.xpEarned||0;}
       }
     }
-    completeReviewChapter(s,now);
+    if(s.expedition?.context!=='mission')completeReviewChapter(s,now);
     for(let stage=s.dragon.stage+1;stage<Content.dragonStages.length;stage++){
       if(s.dragon.xp>=Content.dragonStages[stage].xp){s.dragon.stage=stage;s.dragon.growthOrigin={stage,xp:Content.dragonStages[stage].xp};}else break;
     }
@@ -732,21 +734,25 @@
       areas:areas.map((area,i)=>({...area,...areaProgress(s,area),
         status:s.story.clearedAreas.includes(area.id)?'cleared':!area.available?'future':i===0||s.story.clearedAreas.includes(areas[i-1].id)?'current':'locked'}))};
   }
-  function startBattle(s,now,{demo=false,strength=null,enemyId=null,fromAssessment=false}={}) {
+  function startBattle(s,now,{demo=false,strength=null,enemyId=null,fromAssessment=false,mission=null}={}) {
     if (!demo) beginSession(s,now);
     const story=storyProgress(s),chapter=story.chapter;
-    const finalEncounter=!demo&&!s.story.completedChapters.includes(chapter.id)&&story.areas.every(area=>area.status==='cleared');
+    const finalEncounter=!mission&&!demo&&!s.story.completedChapters.includes(chapter.id)&&story.areas.every(area=>area.status==='cleared');
     const health=demo?5:Math.max(finalEncounter?6:3,strength || s.campaign.enemyStrength || 3);
     const available=enemyChoices(s,health);
     // Explicit legacy base IDs remain valid for old integrations; normal choices use variants.
     const chosen=demo?'thornling':available.find(enemy=>enemy.id===enemyId)?.id||
       Content.enemiesForHealth(health).find(enemy=>enemy.id===enemyId)?.id||
       Content.enemies.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
-    const heroMaxHealth=demo?3:Math.max(3,Math.ceil(health/4)+2);
+    const heroMaxHealth=demo?3:mission?Math.max(4,Math.ceil(health/3)+2):Math.max(3,Math.ceil(health/4)+2);
     s.battle={id:id(s,'battle'),demo,heroHealth:heroMaxHealth,heroMaxHealth,enemyHealth:health,maxHealth:health,
       enemyId:chosen,introPending:!demo,fromAssessment,finalEncounter,chapterId:chapter.id,areaId:story.areas.find(a=>a.status==='current')?.id||story.areas.at(-1).id,xpStart:s.dragon.xp,
       firstMistakeFree:demo,turn:0,question:null,resolved:false,xpEarned:0};
-    if(!demo&&story.complete){
+    if(mission){
+      s.battle.missionId=mission.missionId;s.battle.missionStep=mission.step;s.battle.champion=mission.champion;
+      s.battle.areaId=Adventure.Data.byId[mission.missionId].area;s.battle.newDiscovery=Adventure.reveal(s,mission.family,now);
+    }
+    if(!mission&&!demo&&story.complete){
       if(!s.story.review||s.story.review.completedAt)s.story.review={id:id(s,'reviewChapter'),activeMs:0,wins:0,duels:0,attempts:0,correct:0};
       s.battle.reviewId=s.story.review.id;
     }
@@ -759,6 +765,13 @@
       s.campaign.enemyVisits||={};s.campaign.enemyVisits[chosen]=(s.campaign.enemyVisits[chosen]||0)+1;
     }
     s.result=null; s.activity='battle';
+  }
+  function startMission(s,missionId,now){return Adventure.begin(s,missionId,now);}
+  function startMissionBattle(s,now){
+    const e=Adventure.of(s),c=e.current;
+    if(e.context!=='mission'||!c||!['intro','retry'].includes(c.phase))return false;
+    const plan=Adventure.fight(s);c.phase='battle';
+    startBattle(s,now,{strength:plan.health,enemyId:plan.family,mission:plan});return true;
   }
   function prepareBattle(s,now,random=Math.random) {
     const b=s.battle;
@@ -893,6 +906,12 @@
     b.resolved=true;
     if (b.demo) { s.demoComplete=true; s.handoff={victory:b.enemyHealth<=0};s.battle=null;s.activity='handoff';return; }
     const victory=b.enemyHealth<=0;
+    if(b.missionId){
+      if(!Adventure.won(s,victory,now))return;
+      if(victory)s.session.victories++;
+      s.result={victory,strength:b.maxHealth,battleId:b.id,enemyId:b.enemyId,xpEarned:b.xpEarned||0,missionId:b.missionId,newDiscovery:!!b.newDiscovery};
+      s.activity='result';syncProgress(s,now);return;
+    }
     s.math.winStreak=victory?s.math.winStreak+1:0;
     s.rewards.readingWins=victory?Math.min(3,s.rewards.readingWins+1):0;
     if (victory) { s.campaign.wins++; s.session.victories++; if (s.campaign.wins%2===0) s.campaign.checkpointWins=s.campaign.wins; }
@@ -1033,7 +1052,7 @@
       q.phase='ready';
     }
   }
-  return {fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
+  return {Adventure,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,

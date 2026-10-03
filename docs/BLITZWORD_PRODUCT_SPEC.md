@@ -1,5 +1,13 @@
 # BlitzWord — Current Product Spec
 
+## Accepted creature-campaign revision — 3 October 2026
+
+The user approved replacing the default easy read-and-pick-picture segments with light deduction riddles, adding a Pokédex-style Creature Book, and arranging shorter fights into connected missions. Build two campaigns for roughly two hours total. Existing campaigns may change, but learner saves and concurrent work must remain intact. Implemented scope is two campaigns with six missions each, four 8–12-hit fights and four untimed riddles per mission, branch choices and one treasure endpoint. Mission completion depends on tasks, never a ten-minute gate. Original gated chapters remain accessible as Word trails. Reading challenge stays adaptive independently of authored reasoning difficulty and optional support.
+
+The Creature Book covers all 20 current enemy families. Meeting, solving a clue and winning a guardian encounter earn separate persistent stamps; location clues support deliberate collecting and a favourite can join camp. No random drops or duplicate grind. New families can be added later. Riddles preserve first-choice evidence, have hints/listening/worked solutions and save partial ordering. Collection, riddles and both inactive/active gameplay contexts travel in main backups. The approved curriculum and earned growth remain intact. [Implementation and pacing assumptions](adventures/RELEASE.md).
+
+The user also enabled cheap fal.ai artwork generation. The repository secret is actually named `AL_AI_API`; see [the provider setup](FAL_AI_IMAGES.md). Secrets stay on the generation runner. Reviewed images are deployed as static assets.
+
 Status: approved decisions through 25 September 2026; documentation reconciled on 25 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
 
 ## Source-of-truth order

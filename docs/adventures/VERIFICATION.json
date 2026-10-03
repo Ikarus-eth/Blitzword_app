@@ -1,0 +1,78 @@
+{
+  "build": "creature-campaigns-20261003-r1",
+  "sourceMain": "36116ea12a21b6254bfd427ded72fd59b9ca78a7",
+  "checks": {
+    "cleanInstall": "npm ci --ignore-scripts passed; 0 audit vulnerabilities",
+    "unitTests": 289,
+    "uiFlowGroups": 103,
+    "unitAndUiPassed": true,
+    "fullCampaignSimulation": {
+      "campaigns": 2,
+      "missions": 12,
+      "riddles": 48,
+      "successfulReadingHits": 468,
+      "allTwentyCreatureStampsReachable": true
+    },
+    "browserViewports": [
+      [
+        1024,
+        768
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "browserScenes": [
+      "forest hub",
+      "river hub",
+      "mission intro",
+      "riddle incorrect and correct",
+      "ordering",
+      "mission completion",
+      "Creature Book"
+    ],
+    "browserConsoleErrors": 0,
+    "physicalIPadTested": false,
+    "childPacingMeasured": false
+  },
+  "estimatedMinutes": 120,
+  "assumptions": {
+    "readingAccuracy": 0.8,
+    "secondsPerAnswer": 8,
+    "secondsPerRiddle": 45,
+    "transitionSecondsPerMission": 30
+  },
+  "fal": {
+    "model": "fal-ai/nano-banana/edit",
+    "workflowRun": 37125039989,
+    "images": 12,
+    "estimatedUSD": 0.468,
+    "invoiceVerified": false
+  },
+  "files": {
+    "index.html": "3e9501e8c2b55d67c1c745947891871f479521180679209d2183fc06746683fc",
+    "app.js": "b891f47fde2a84477a39de7eb1516689d4941f01dacdc6505f24758ce4e90077",
+    "game-core.js": "ca5e0678ce90bc17970daaa79d07e4ef270eabc295fdfa0fc72ec0e434bc11b9",
+    "missions.js": "003cc36b5a9c7f39cd64b91a0a5c09fe4a50a8a91282e78776276bb3675d99ef",
+    "adventure-core.js": "4286f4bcfa558282397310fa0a5c58e7acc31926792ca9e5dc3aee9b380fd4f1",
+    "adventure-ui.js": "8d179519460068e56883110eaf7f6f4320ceca7d5c186f9f090c14b7ead51c16",
+    "adventures.css": "57ea2e4988c976fc3ecdb75d376e597af9f37cde3dec79ff3f372e5a12b8f770",
+    "assets/adventures/crab-ferry.webp": "8563eb43c6077644c4e40259bb14136266a628801a94aabcf128196aa38d52de",
+    "assets/adventures/first-spark.webp": "24df274297dfec29496bcbb891bb978e14d062ae59f3bfba0a8289809bf8a327",
+    "assets/adventures/high-nest.webp": "8fc315a74c66587cceb08be74241c7e7d489e7ede199d4a7ac1709a4268f2c7c",
+    "assets/adventures/mimic-vault.webp": "6ed44bf4c22d39faeef142b9b03dfea07b0453c854b7409fce23658f5eb672aa",
+    "assets/adventures/mist-lamps.webp": "393461b70fd377f8741e0e604ecd27104015734ba599b9403b35f858229ab93f",
+    "assets/adventures/moth-post.webp": "7d88eebcdd5cd7e0be33cd718dad00e95b5de26ffe1e833d8cc72afa605ad7dc",
+    "assets/adventures/oak-heart.webp": "15c6e855c6f3912846af08088d2beb0a44ccc8dc3cc62276b00eb61917a8f84b",
+    "assets/adventures/owl-watch.webp": "309da5dd41d8f4b6055d1d72ec4dbab6fc2ebd90f113d6f8c3efd5121be26d12",
+    "assets/adventures/reed-message.webp": "1b37eb33352c120267ad95972f363e4f7db11e25ca3f7fcb95f1ab2403a3a602",
+    "assets/adventures/river-heart.webp": "32787d76d333cd98cd7e4afaed1e6eeccc66ae8dbbb2b303ef4d3cba1551b3f6",
+    "assets/adventures/root-workshop.webp": "ef59402b1d5471d78e89fbe9b3599dbaa28c10fe55388d5cf62dcf68f05c69eb",
+    "assets/adventures/stone-dam.webp": "03bc1e85f7229aacc936001ec5f291fd0fe2ed3eac40ea3b9093e5940ba3ccd2"
+  }
+}

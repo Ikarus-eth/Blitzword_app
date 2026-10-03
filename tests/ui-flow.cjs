@@ -2,6 +2,7 @@ const {parseHTML}=require('linkedom');
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=require('node:path').join(__dirname,'../'),Core=require(root+'game-core'),Content=require(root+'content'),Storage=require(root+'storage'),Audio=require(root+'audio');
 function boot(saved,options={}){
+ if(saved&&!options.adventures){saved=Core.copy(saved);Core.Adventure.of(saved).preferLegacy=true;}
  const {window,document}=parseHTML(fs.readFileSync(root+'index.html','utf8'));
  let now=Date.UTC(2026,8,22),uid=0;const jobs=new Map(),memory=new Map(saved?[[Storage.KEY,JSON.stringify(saved)]]:[]);
  let failWrites=options.failWrites||false,heartbeat=()=>{},reloads=0;const destinations=[];
@@ -24,6 +25,7 @@ function boot(saved,options={}){
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/manifest.js','utf8'),motionContext);
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/runtime.js','utf8'),motionContext);
  }
+ vm.runInNewContext(fs.readFileSync(root+'adventure-ui.js','utf8'),ctx);
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
@@ -1119,4 +1121,46 @@ console.log('PASS all 79 variants animate counterattacks as the male mage while 
  ui.memory.set(Core.RIDDLE_KEY,'{broken');ui.click(ui.get('parentHome'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
  assert.equal(ui.get('parentRiddles').textContent,'Unreadable');assert.match(ui.get('parentRiddlesToday').textContent,/left unchanged/);assert.equal(ui.get('parentDays').children.length,1);assert.equal(ui.memory.get(Core.RIDDLE_KEY),'{broken');
  console.log('PASS Parents shows reading-riddle time separately without changing the story save');
+}
+// Mission flows use the new default hub; the earlier tests explicitly cover Word trails.
+function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('button')].find(b=>b.textContent===label);}
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
+ let ui=boot(s,{adventures:true});assert.ok(ui.get('adventureHub').classList.contains('active'));
+ ui.click(ui.get('adventureHub').querySelector('[data-mission="first-spark"]'));assert.equal(ui.state().expedition.current.phase,'intro');
+ ui.click(missionButton(ui,'Let’s go'));assert.equal(ui.state().battle.maxHealth,8);assert.equal(ui.state().battle.missionId,'first-spark');
+ ui.ready();const pending=ui.state().battle.question;ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));ui.ready();assert.equal(ui.state().battle.question.id,pending.id);assert.deepEqual(ui.state().battle.question.options,pending.options);
+ console.log('PASS new hub starts an eight-hit mission and resumes the same saved reading question');
+}
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;
+ Core.startMission(s,'first-spark',now);Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s,()=>.5);
+ let ui=boot(s,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));ui.elapse(45000);
+ ui.click(ui.get('mission').querySelector('[data-choice="red"]'));assert.equal(A.report(ui.state()).riddleMs,45000);
+ ui.click(missionButton(ui,'Try it'));assert.equal(ui.state().expedition.current.puzzle.first.correct,false);const order=ui.state().expedition.current.puzzle.order;
+ ui.click(missionButton(ui,'Listen'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));
+ assert.deepEqual(ui.state().expedition.current.puzzle.order,order);assert.equal(ui.state().expedition.current.puzzle.listened,true);
+ ui.click(missionButton(ui,'Show me how'));assert.equal(ui.state().expedition.current.puzzle.assisted,true);assert.equal(ui.state().expedition.book.thornling.studied,true);
+ ui.click(missionButton(ui,'Follow the trail'));assert.equal(ui.state().expedition.current.step,1);ui.click(ui.get('homeBtn'));
+ ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="thornling"]'));
+ ui.click([...ui.get('creatureBook').querySelectorAll('button')].find(b=>b.textContent==='Invite to camp'));assert.equal(ui.state().expedition.favourite,'thornling');
+ const backup=Storage.readBackup(Storage.backupFile(ui.state()).text).state;assert.equal(backup.expedition.favourite,'thornling');assert.equal(backup.expedition.missions['first-spark'].riddles['spark-bag'].first.correct,false);
+ console.log('PASS riddle timing, wrong first evidence, help, collection and favourite survive reopen and backup');
+}
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;
+ Core.startMission(s,'first-spark',now);s.expedition.current.step=2;Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s);
+ let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));const answer=A.Data.puzzles[ui.state().expedition.current.puzzle.id].answer;
+ ui.click(ui.get('mission').querySelector('[data-choice="'+answer[0]+'"]'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.state().expedition.current.puzzle.selection.length,1);
+ for(const id of answer.slice(1))ui.click(ui.get('mission').querySelector('[data-choice="'+id+'"]'));ui.click(missionButton(ui,'Try it'));ui.click(missionButton(ui,'Follow the trail'));
+ const last=ui.state();Core.startMissionBattle(last,now);last.battle.enemyHealth=0;Core.resolveBattle(last,now);A.startPuzzle(last);ui=boot(last,{adventures:true});ui.click(ui.get('missionResume'));ui.click(ui.get('mission').querySelector('[data-choice="sun"]'));ui.click(missionButton(ui,'Try it'));ui.click(missionButton(ui,'Claim the treasure'));
+ assert.equal(ui.state().expedition.current.phase,'complete');assert.ok(A.unlocked(ui.state(),'moth-post'));assert.ok(A.unlocked(ui.state(),'root-workshop'));
+ ui.click(missionButton(ui,'Choose another mission'));assert.ok(ui.get('adventureHub').classList.contains('active'));
+ console.log('PASS partial ordering resumes exactly and claiming treasure unlocks both branch choices');
+}
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.UTC(2026,8,22));Core.prepareBattle(s,Date.UTC(2026,8,22));
+ const ui=boot(s,{adventures:true}),old=ui.state().battle;ui.setFailWrites(true);ui.click(ui.get('adventureHub').querySelector('[data-mission="first-spark"]'));
+ assert.equal(ui.state().expedition.current,null);assert.deepEqual(ui.state().battle,old);assert.equal(ui.get('saveNotice').hidden,false);
+ console.log('PASS failed save blocks the mission switch and retains the original learner encounter');
 }
