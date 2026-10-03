@@ -26,6 +26,10 @@ async function allowance(){
 }
 (async()=>{
   const record={runner:'narration-completion-20261004',ranAt:new Date().toISOString(),mode:run.mode,allowanceBefore:await allowance(),generated:[],notGenerated:[],stopReason:null};
+  // Diagnostics without credits: key shape only (never its value) and two read-only endpoints.
+  record.keyShape={length:key.length,trimmedLength:key.trim().length,startsWithSk:key.startsWith('sk_')};
+  record.endpoints={};
+  for(const endpoint of ['user','models']){try{await call('GET',endpoint);record.endpoints[endpoint]='ok';}catch(error){record.endpoints[endpoint]=redact(error.message).slice(0,400);}}
   console.log('ALLOWANCE '+JSON.stringify(record.allowanceBefore));
   if(run.mode==='generate'){
     const plan=JSON.parse(fs.readFileSync(path.join(root,run.request),'utf8'));
