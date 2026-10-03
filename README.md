@@ -6,13 +6,19 @@
 
 An iPad-first English reading game. Play the current web build at https://ikarus-eth.github.io/Blitzword_app/.
 
+Low-cost artwork generation is available through the repository’s fal.ai secret; see [the exact secret name, workflow, pricing estimate and review process](docs/FAL_AI_IMAGES.md).
+
 See [current implementation, latest verified build and outstanding work](docs/CURRENT_STATUS.md) first. Older release notes describe their own milestones, not the current backlog. The earlier [verification record](docs/BUGS_ASSESSMENT_DEPLOYMENT.json) covers the reload/Pip fixes and fair reading-check choices.
 
 For ChatGPT project setup, use the [project maintenance guide](docs/PROJECT_DESCRIPTION_UPDATE.md). No standing project attachments are required: documentation, approved production assets and the [original curriculum workbook](curriculum/README.md) are maintained in GitHub. Old setup, battle-scroll and teaching-card mockups are retired.
 
 ## Current gameplay
 
-**Story adventures** on chapter-selection Home opens The fox cub rescue: one Artus and Pip journey through five linked reading and maths puzzles. Six integrated illustrations show the heroes and supporting cast in the actual story settings. Simple text, picture choices, hints and local progress; no Listen or speech. See [rescue story rules and verification](docs/story-pilot/RESCUE_RELEASE.md) and the [tower-door riddle correction](docs/story-pilot/DOOR_RELEASE.md).
+**Two creature campaigns are the new default:** The Lost Forest Lights and The River That Lost Its Song. Twelve missions combine short reading fights, 48 light deduction/ordering/number riddles, branch choices and treasures. The Creature Book has all 20 current enemy families, discovery/secret/guardian stamps, location clues and a favourite companion. Plan for roughly two hours across both campaigns, with saved progress and natural breaks; actual child pacing has not yet been measured. See [campaign rules and verification](docs/adventures/RELEASE.md).
+
+The original seven campaigns remain under **Word trails**. Their chapter rules, picture checks, number duels and saved progress below apply to that retained mode. Reading practice, word history, XP and Pip growth are shared.
+
+**Story adventures** on the Word trails chapter-selection Home opens The fox cub rescue: one Artus and Pip journey through five linked reading and maths puzzles. Six integrated illustrations show the heroes and supporting cast in the actual story settings. Simple text, picture choices, hints and local progress; no Listen or speech. See [rescue story rules and verification](docs/story-pilot/RESCUE_RELEASE.md) and the [tower-door riddle correction](docs/story-pilot/DOOR_RELEASE.md).
 
 Setup and hero selection lead to an optional guided battle or the existing adaptive reading check. A battle is one encounter: one creature or a group sharing a health bar. A chapter is one map field and requires at least ten interaction-confirmed active minutes, three reading wins, a played number duel and its learning objectives. If the duel ends at eight minutes, another battle continues the chapter. Pause/Home/reload preserve it. A campaign is one map of five chapters; seven campaigns contain the existing 200 words. After the story, review chapters continue the daily one-chapter goal.
 

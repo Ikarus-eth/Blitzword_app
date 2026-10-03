@@ -18,6 +18,27 @@ let spriteSerial=0;
 let selectedMapArea=null;
 let storyControls=null;
 let parentReport=null,parentWordReturn=null;
+const adventures=window.BlitzAdventureUI.create({Core,Content,state:()=>state,save,show,home,enter,cancelWork,
+  paintEnemy,paintPip,paintHero,heroIndex,dragonText:text=>dragonText(text),speak,growth:()=>openGrowth(),
+  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,
+  suspend:suspendAdventureUI,active:()=>!paused&&!blocked&&playing});
+function suspendAdventureUI(){
+  if(playing&&!paused)confirmActivity();account();Core.interruptQuestion(state);cancelWork();paused=true;playing=false;
+  playClock.discard();drainExcluded();$('#pausePanel').hidden=true;return save();
+}
+function launchMission(id){
+  if(blocked||!suspendAdventureUI())return;
+  if(Core.startMission(state,id,Date.now())){
+    if(state.session?.completedAt)Core.beginSession(state,Date.now());
+    const c=Core.Adventure.of(state).current;
+    if(state.activity==='summary'||state.activity==='route')state.activity=c.phase==='battle'?(state.teaching?'teaching':'battle'):['spoils','retry'].includes(c.phase)?'result':'mission';
+    if(save())enter();
+  }
+}
+function legacyAdventure(){
+  if(blocked)return;adventures.timeTap();if(!suspendAdventureUI())return;Core.Adventure.switchTo(state,'legacy');
+  Core.Adventure.of(state).preferLegacy=true;if(save())home();
+}
 const COMBAT_MS=1200;
 // Learning and damage are committed on answer; only the health presentation waits.
 const IMPACT_MS=Math.round(COMBAT_MS*.55);
@@ -114,6 +135,11 @@ function growthCaption(p){
 }
 function growthStepCaption(p){return p.next?xpText(p.stepRemaining)+' XP to step '+(p.steps+1)+' of 10':dragonText('Pip is ready to ride');}
 function renderChapter(element,compact=false){
+  if(state.battle?.missionId){
+    const m=Core.Adventure.Data.byId[state.battle.missionId];element.replaceChildren();
+    const title=document.createElement('span');title.className='chapterLabel';title.textContent=m.name;
+    const count=document.createElement('span');count.className='chapterCount';count.textContent='Challenge '+(state.battle.missionStep+1)+' / 4';element.append(title,count);return;
+  }
   const p=Core.chapterLocation(state,state.battle?.areaId);element.replaceChildren();
   const title=document.createElement('span');title.className='chapterLabel';title.textContent='Campaign '+p.campaignNumber+' · Chapter '+p.chapterNumber;
   const count=document.createElement('span');count.className='chapterCount';count.textContent=p.cleared+' / '+p.total+(compact?'':' chapters');
@@ -179,7 +205,7 @@ function clearCombat(){
   for(const el of $$('#enemyFace .retiring'))el.classList.remove('retiring');
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
 }
-function cancelWork(){clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
+function cancelWork(){adventures.stopTiming();clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
 function activityCategory(){
   if(!state||paused||blocked||!playing||state.screen==='evolution')return null;
@@ -246,7 +272,10 @@ function renderParent(){
     stories.append(row);
   }
   let riddleText=null;try{riddleText=window.localStorage.getItem(Core.RIDDLE_KEY);}catch{}
-  const riddles=Core.riddleTime(riddleText,Date.now());
+  const riddles=Core.riddleTime(riddleText,Date.now()),missions=Core.Adventure.report(state);
+  $('#parentMissions').textContent=missions.completed+' / 12 missions complete · '+missions.seen+' / 20 creatures discovered · '+missions.studied+' secrets learned · '+missions.champions+' guardian stamps. '+missions.correct+' / '+missions.firsts+' first riddle answers correct; '+missions.helped+' first answers used a clue or listening.';
+  riddles.totalMs+=missions.riddleMs;riddles.todayMs+=missions.days[Core.dayKey(Date.now())]||0;
+  for(const [day,ms] of Object.entries(missions.days))riddles.days[day]=(riddles.days[day]||0)+ms;
   $('#parentRiddles').textContent=riddles.unreadable?'Unreadable':formatTime(riddles.totalMs);
   $('#parentRiddlesToday').textContent=riddles.unreadable?'The story save could not be read; it was left unchanged.':'Today: '+formatTime(riddles.todayMs);
   const timing=new Map(p.days),dates=[...new Set([...timing.keys(),...Object.keys(riddles.days)])].sort((a,b)=>b.localeCompare(a));
@@ -376,8 +405,8 @@ function show(id) {
   closeSpeed(false);
   $$('.screen').forEach(el=>el.classList.toggle('active',el.id===id));
   $('#app').classList.toggle('mapHome',id==='campaignMap');
-  $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge','chapterStory','evolution'].includes(id);
-  $('#homeBtn').hidden=['setup','route','campaignMap','parentDashboard'].includes(id);
+  $('#pauseBtn').hidden=!['battle','assessment','result','mathChallenge','chapterStory','evolution','mission'].includes(id);
+  $('#homeBtn').hidden=['setup','route','campaignMap','adventureHub','parentDashboard'].includes(id);
   $('#backBtn').hidden=id!=='hero';
   if(!['battle','assessment'].includes(id))$('#wordReady').hidden=true;
   state.screen=id;syncSound();updateDailyXP();updateDragonLabels();
@@ -426,10 +455,12 @@ function renderHeroes(){
   });
 }
 function home() {
+  if(state.screen==='mission')adventures.timeTap();
   const deferEvolution=state.screen==='evolution'&&!!state.dragon.evolution;
   if(playing&&!paused)confirmActivity();account();Core.interruptQuestion(state);cancelWork();paused=true;playing=false;playClock.discard();drainExcluded();
   $('#pausePanel').hidden=true;
   selectedMapArea=null;
+  if(state.assessment.done&&!Core.Adventure.of(state).preferLegacy){adventures.renderHub();save();if(!deferEvolution&&!maybeEvolution())maybeOfferName();return;}
   if(state.assessment.done){renderMap(deferEvolution);return;}
   paintHero($('#routeHeroImg'),heroIndex());
   $('#routeTitle').textContent='Hi, '+state.profile.name+'!';
@@ -447,6 +478,7 @@ function enter() {
   paused=false;playing=true;windowFocused=true;playClock.reset(performance.now());drainExcluded();lastTick=performance.now();$('#pausePanel').hidden=true;renderActivity();
 }
 function continueAdventure() {
+  if(Core.Adventure.of(state).context==='mission'&&state.expedition.current){launchMission(state.expedition.current.missionId);return;}
   if(state.dragon.evolution){enter();return;}
   if(state.session?.completedAt) {
     Core.beginSession(state,Date.now());
@@ -467,6 +499,7 @@ function continueAdventure() {
 }
 function pause(reason='manual'){
   if(paused||blocked||!playing)return;
+  if(reason==='manual'&&state.screen==='mission')adventures.timeTap();
   if(reason==='manual'){confirmActivity();if(paused||blocked)return;}
   else{playClock.discard();drainExcluded();}
   Core.interruptQuestion(state);paused=true;cancelWork();
@@ -476,11 +509,12 @@ function showPausePanel(){
   $('#selfPacedSetting').checked=state.settings.selfPaced;
   $('#paceSetting').hidden=state.activity==='assessment'||state.activity==='mathChallenge'||!state.assessment.done;
   $('#pauseSpeed').hidden=state.activity==='assessment'||state.activity==='mathChallenge'||!state.assessment.done;
-  $('#pauseTime').textContent=state.session?`${Math.floor(state.session.elapsedMs/60000)} min practiced · chapters need at least 10 active minutes`:'';
+  $('#pauseTime').textContent=state.session?`${Math.floor(state.session.elapsedMs/60000)} min practiced`+(state.expedition?.context==='mission'?' · missions end when their tasks are done':' · word-trail chapters need at least 10 active minutes'):'';
   populateVoices();populateSoundSettings();$('#grownupSettings').open=false;$('#pausePanel').hidden=false;
 }
 function finishForNow() {
   if(blocked)return;
+  if(state.expedition?.context==='mission'){if(state.session&&!state.session.completedAt)Core.completeSession(state,Date.now());if(save())home();return;}
   if(state.screen==='evolution'){home();return;}
   if(state.session&&!state.session.completedAt&&!state.battle?.demo){Core.completeSession(state,Date.now());if(save())enter();}
   else home();
@@ -494,6 +528,7 @@ function renderActivity() {
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge');
   $('#combatEffects').className='combatEffects';$('#battle').classList.remove('correcting');
   $('#encounterIntro').hidden=true;$('#assessmentIntro').hidden=true;
+  if(state.activity==='mission'){adventures.renderMission();return;}
   if(state.activity==='chapterStory'){renderChapterStory();return;}
   if(state.activity.startsWith('math')){renderMath();return;}
   if(state.story.mapPending){selectedMapArea=null;home();return;}
@@ -748,6 +783,11 @@ function renderEncounter(){
   $('#battleScroll').textContent='';$('#battleAnswers').replaceChildren();$('#battleUnsure').hidden=true;$('#wordReady').hidden=true;
   $('#encounterIntro').hidden=false;
   const b=state.battle,enemy=Content.enemyAt(b.enemyId);
+  if(b.missionId){
+    const m=Core.Adventure.Data.byId[b.missionId];$('#encounterLead').textContent=b.champion?'Guardian challenge':'A woodland challenge';
+    $('#encounterTitle').textContent=enemy.name;renderChapter($('#encounterChapter'));paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
+    $('#encounterLearning').textContent='Win this challenge to find the next clue.';speak('A '+enemy.name+' is ready for your challenge.');save();return;
+  }
   $('#encounterLead').textContent=b.finalEncounter?'Last fight':b.fromAssessment?'Let’s play':'Ready?';
   $('#encounterTitle').textContent=Content.areas.find(area=>area.id===b.areaId)?.name||'Lantern Trail';renderChapter($('#encounterChapter'));
   paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
@@ -869,6 +909,7 @@ function renderHandoff(){
 }
 function renderResult() {
   show('result');const result=state.result;if(!result){home();return;}
+  $('#resultNext').textContent='Map';$('#opponents').classList.remove('missionResultActions');
   paintHero($('#resultHero'),heroIndex());
   $('#resultTitle').textContent=result.victory?'You did it!':'Let’s try again';
   const chapter=Core.activeChapterState(state);
@@ -879,6 +920,7 @@ function renderResult() {
   $('#resultGrowthFill').style.width=(growth.fraction*100)+'%';$('#resultGrowthBar').setAttribute('aria-valuenow',String(Math.round(growth.fraction*100)));
   $('#resultGrowthNote').textContent=growthStepCaption(growth)+' · Tap to see';$('#resultGrowthBar').classList.add('steppedGrowth');$('#resultGrowthBar').setAttribute('aria-valuetext',growthStepCaption(growth));
   $('#resultShield').hidden=!state.rewards.shield;$('#resultShield').innerHTML=shieldIcon+'<span>1 shield</span>';
+  if(result.missionId){$('#speedSuggestion').hidden=true;adventures.renderResult();resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));else defeatReaction(result,result.enemyId,result.strength);maybeOfferName();return;}
   const progress=Core.chapterProgress(state);
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');
   const enemies=Core.enemyChoices(state,result.strength);
@@ -1119,6 +1161,7 @@ function continueMap(){
 }
 $('#mapTraveller').onclick=()=>{renderHeroes();show('hero');save();};
 $('#mapStoryPilot').onclick=()=>{if(blocked||state.screen!=='campaignMap'||!save())return;cancelWork();location.assign('assets/story-pilot/');};
+$('#mapNewAdventures').onclick=()=>{Core.Adventure.of(state).preferLegacy=false;home();};
 $('#mapParents').onclick=openParentGate;$('#routeParents').onclick=openParentGate;
 $('#parentCancel').onclick=()=>{$('#parentGate').hidden=true;parentAnswer=null;$(state.screen==='campaignMap'?'#mapParents':'#routeParents').focus?.();};
 $('#parentUnlock').onclick=()=>{if($('#parentGate').hidden||parentAnswer===null)return;const answer=$('#parentAnswer').value.trim();if(!/^\d+$/.test(answer)||Number(answer)!==parentAnswer){$('#parentGateMessage').textContent='Please try again.';return;}$('#parentGate').hidden=true;parentAnswer=null;renderParent();};
@@ -1161,7 +1204,7 @@ window.addEventListener('storage',event=>{
 });
 setInterval(()=>{
   account();if(paused||blocked||!playing)return;
-  if(state.screen!=='evolution'&&state.activity==='result'&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());state.activity='result';if(save())renderActivity();}
+  if(state.screen!=='evolution'&&state.activity==='result'&&!state.battle?.missionId&&Core.isSessionDue(state)){Core.completeSession(state,Date.now());state.activity='result';if(save())renderActivity();}
   else if(performance.now()-lastSaveAt>=SAVE_EVERY_MS)save();
 },1000);
 Core.interruptQuestion(state);

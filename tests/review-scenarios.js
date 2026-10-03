@@ -10,6 +10,22 @@ window.makeReviewSave=function(scenario){
   if(scenario==='handoff'){s.demoComplete=true;s.handoff={victory:true};s.activity='handoff';return s;}
   if(scenario==='assessment'){C.startAssessment(s,now);return s;}
   s.assessment.done=true;s.demoComplete=true;s.settings.selfPaced=true;
+  if(scenario.startsWith('mission-')){
+    const A=C.Adventure;s.settings.soundscape=false;
+    if(scenario==='mission-hub')return s;
+    if(scenario==='mission-river'){
+      for(const id of A.Data.campaigns[0].missions)A.stats(s,id).completedAt=new Date(now).toISOString();
+      s.expedition.selectedCampaign='river-song';return s;
+    }
+    C.startMission(s,'first-spark',now);
+    if(scenario==='mission-intro')return s;
+    if(scenario==='mission-order')s.expedition.current.step=2;
+    if(scenario==='mission-complete')s.expedition.current.step=3;
+    C.startMissionBattle(s,now);s.battle.introPending=false;s.battle.enemyHealth=0;C.resolveBattle(s,now);A.startPuzzle(s,()=>.4);
+    if(scenario==='mission-complete'){for(const id of [A.Data.puzzles[s.expedition.current.puzzle.id].answer].flat())A.choose(s,id);A.check(s,now);}
+    return s;
+  }
+  C.Adventure.of(s).preferLegacy=true;
   if(scenario.startsWith('motion-all:')){
     const [,enemyId,action]=scenario.split(':'),enemy=BlitzContent.enemyAt(enemyId),hp=enemy.minHealth;
     s.profile.heroClass='Mage';s.profile.gender='boy';

@@ -1,0 +1,233 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "requests": {
+    "first-spark": {
+      "state": "downloaded",
+      "prompt": "On a forest lantern trail at sunset, the young mage and small Pip kneel beside a curious Thornling pointing toward a mysterious mossy hollow log. A faint warm glow shines within. Fireflies and unlit hanging lanterns.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/thornling-d.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101df-71da-7c41-b904-61e469c45091",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-71da-7c41-b904-61e469c45091",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-71da-7c41-b904-61e469c45091/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-71da-7c41-b904-61e469c45091/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 131964,
+      "image_url": "https://v3b.fal.media/files/b/0aace62e/nJyqJlFgcVY2PlJHr6f11_Ozq8hHJk.webp"
+    },
+    "moth-post": {
+      "state": "downloaded",
+      "prompt": "At a woodland crossing, the mage and Pip meet a luminous Moon Moth beside a tiny forest post office made from a tree stump. Sealed letters, acorn packages, branching trails and softly glowing flowers.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/moon-moth-c.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101df-71d9-7532-a4ae-04bed19438f3",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-71d9-7532-a4ae-04bed19438f3",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-71d9-7532-a4ae-04bed19438f3/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-71d9-7532-a4ae-04bed19438f3/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 146896,
+      "image_url": "https://v3b.fal.media/files/b/0aace62e/_rMrwks_NkOhjh_tIBD3o_8E1Rqr59.webp"
+    },
+    "root-workshop": {
+      "state": "downloaded",
+      "prompt": "Inside a giant tree\u2019s cosy root workshop, the mage and Pip help a Root Sprite inspect a small wooden lifting machine. Gears, rope, pots and gently glowing leaves. Whimsical inventiveness.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/root-sprite-d.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101df-b2c0-7a81-8613-cebf1020eab4",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-b2c0-7a81-8613-cebf1020eab4",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-b2c0-7a81-8613-cebf1020eab4/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-b2c0-7a81-8613-cebf1020eab4/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 147286,
+      "image_url": "https://v3b.fal.media/files/b/0aace630/Gz5jQnJs2wvMtN2fW7Fe__l3zovsPi.webp"
+    },
+    "owl-watch": {
+      "state": "downloaded",
+      "prompt": "In ancient forest lantern ruins at twilight, the mage and Pip look up with the Hollow Owl toward tall trees, searching for a lost chick. A folded ladder and empty wicker basket nearby. Safe and wondrous.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/hollow-owl-c.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101df-b39b-7f00-817e-4e5757febd4c",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-b39b-7f00-817e-4e5757febd4c",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-b39b-7f00-817e-4e5757febd4c/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-b39b-7f00-817e-4e5757febd4c/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 144122,
+      "image_url": "https://v3b.fal.media/files/b/0aace630/mNOQR0lsQVHSDkI-VMRth_yH7wstjn.webp"
+    },
+    "mimic-vault": {
+      "state": "downloaded",
+      "prompt": "In a hidden woodland vault, the mage smiles and Pip giggles beside a friendly Chest Mimic with expressive eyes and a broad laughing mouth. A soft brush, old carved stone arches and golden motes. No scary teeth.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/chest-mimic-d.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101df-f3c7-7f92-afd9-6e684b4a1ffb",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-f3c7-7f92-afd9-6e684b4a1ffb",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-f3c7-7f92-afd9-6e684b4a1ffb/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-f3c7-7f92-afd9-6e684b4a1ffb/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 147188,
+      "image_url": "https://v3b.fal.media/files/b/0aace631/P-O1uUq3PXygBwph48H8i_sCw6xZ4T.webp"
+    },
+    "oak-heart": {
+      "state": "downloaded",
+      "prompt": "Beneath an enormous ancient oak, the mage and small Pip stand with a gentle Moss Golem beside an incomplete circular light-seed shrine. A few glimmers rise up the trunk. Majestic canopy and hopeful golden dusk.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/moss-golem-b.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101df-f470-7ed0-8e4d-4532af21febe",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-f470-7ed0-8e4d-4532af21febe",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-f470-7ed0-8e4d-4532af21febe/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101df-f470-7ed0-8e4d-4532af21febe/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 154988,
+      "image_url": "https://v3b.fal.media/files/b/0aace631/AajICFUYX2-YeLGJl97aY_8EXxMH4f.webp"
+    },
+    "reed-message": {
+      "state": "downloaded",
+      "prompt": "On a quiet misty riverbank, the mage and Pip meet the Reed Serpent among tall green reeds, studying a sealed message bottle. Still water reflects willow branches. A sense of discovery and a journey beginning.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/reed-serpent-d.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101e0-3407-7822-a2d3-772cc8571f1f",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-3407-7822-a2d3-772cc8571f1f",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-3407-7822-a2d3-772cc8571f1f/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-3407-7822-a2d3-772cc8571f1f/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 141228,
+      "image_url": "https://v3b.fal.media/files/b/0aace633/5Ilm7dEK6cXG_kGGZj1Jd_t3Am11Ji.webp"
+    },
+    "crab-ferry": {
+      "state": "downloaded",
+      "prompt": "At a clear woodland pool, the mage and Pip help the Crystal Crab inspect a little wooden ferry with a large crystal bell on its deck. Shallow sparkling water and a dock with ropes, inviting river adventure.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/crystal-crab-d.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101e0-34a0-7471-aeb7-5153c2021189",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-34a0-7471-aeb7-5153c2021189",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-34a0-7471-aeb7-5153c2021189/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-34a0-7471-aeb7-5153c2021189/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 167100,
+      "image_url": "https://v3b.fal.media/files/b/0aace633/6Ft5S7iP5rxtJCZxxvS-m_ACUAKcLz.webp"
+    },
+    "stone-dam": {
+      "state": "downloaded",
+      "prompt": "Beside an old stone bridge, the mage and Pip inspect a stopped wooden waterwheel with a friendly sleepy Cave Troll. A few repair tools, wooden water cups, mossy stones and bright moving water.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/cave-troll-c.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101e0-73ab-74c2-9719-c4b5e92845cc",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-73ab-74c2-9719-c4b5e92845cc",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-73ab-74c2-9719-c4b5e92845cc/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-73ab-74c2-9719-c4b5e92845cc/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 163966,
+      "image_url": "https://v3b.fal.media/files/b/0aace634/EsAdaKJU7mSEx5R2cKXpE_DXfZZ9Wz.webp"
+    },
+    "mist-lamps": {
+      "state": "downloaded",
+      "prompt": "On a river path surrounded by soft silver mist, the mage and small Pip follow a friendly floating Lantern Wisp. Lamps illuminate reeds and stepping stones, mysterious but reassuring, warm gold against cool mist.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/lantern-wisp-c.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101e0-742e-7642-97eb-a6de8d5e57df",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-742e-7642-97eb-a6de8d5e57df",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-742e-7642-97eb-a6de8d5e57df/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-742e-7642-97eb-a6de8d5e57df/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 138674,
+      "image_url": "https://v3b.fal.media/files/b/0aace634/-rZKdC5FI8klyfa3Kascm_EtHufWbY.webp"
+    },
+    "high-nest": {
+      "state": "downloaded",
+      "prompt": "On a broad safe rocky ledge above a beautiful waterfall, the mage and Pip meet the proud friendly Storm Griffin beside its nest and a small wind bell. Wide view, soaring cliffs, moss and rainbow spray.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/storm-griffin-b.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101e0-b374-71c3-ba97-60e388611750",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-b374-71c3-ba97-60e388611750",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-b374-71c3-ba97-60e388611750/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-b374-71c3-ba97-60e388611750/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 129520,
+      "image_url": "https://v3b.fal.media/files/b/0aace636/aOcH74Xl9GWmnEd981hgY_ieiiSKp0.webp"
+    },
+    "river-heart": {
+      "state": "downloaded",
+      "prompt": "At magnificent ancient river gates, the mage and Pip meet a friendly Stone Ram beside a row of hanging water bells. The gates are closed, calm water waits, sunrise glows on carved stone. A grand hopeful finale.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/pip-friendly-b.png",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/stone-ram-b.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a101e0-b4aa-77d1-8b9e-19135f9e7c3e",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-b4aa-77d1-8b9e-19135f9e7c3e",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-b4aa-77d1-8b9e-19135f9e7c3e/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a101e0-b4aa-77d1-8b9e-19135f9e7c3e/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "bytes": 155466,
+      "image_url": "https://v3b.fal.media/files/b/0aace636/dMwvXD8e7SaG9FNnywq8a_pfB2SQXR.webp"
+    }
+  }
+}

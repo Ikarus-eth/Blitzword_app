@@ -2,6 +2,10 @@
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
+### Creature mission illustrations — 3 October 2026
+
+Twelve integrated fal.ai paintings in `assets/adventures/` depict the active male mage, Small Pip using the selected friendly B design, and the approved enemy cast. These are new mission scenes, not replacements for battle motion. Character reference paths, exact prompts and request IDs are recorded in [the campaign artwork prompts](adventures/art-prompts.json) and [generation provenance](adventures/art-requests.json). The full 3:2 scenes are uncropped in mission pages. Puzzle answers are specified in text/cards and diagrams, rather than relying on exact generated object counts. Code-generated line icons serve simple answer controls. [Provider setup and cost](FAL_AI_IMAGES.md).
+
 ### Pip B and campaign clarity — 3 October 2026
 
 The user chose alternative B, the natural slim dragon jaw, after reviewing three mouth/chin alternatives. `assets/battle-motion/pip-friendly-b.png` is the exact selected 1280×1280 image, replacing the previous friendly still only in small Pip's battle renderer. The existing fire clip and return to neutral remain.
