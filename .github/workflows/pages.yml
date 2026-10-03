@@ -29,6 +29,9 @@ jobs:
         run: |
           node --check app.js
           node --check game-core.js
+          node --check missions.js
+          node --check adventure-core.js
+          node --check adventure-ui.js
           node --check storage.js
           node --check engagement.js
           node --check soundscape.js
@@ -43,7 +46,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site/tests
-          cp index.html styles.css app.js content.js game-core.js storage.js audio.js narration.js soundscape.js engagement.js manifest.webmanifest enemy-art.js enemy-art-data.js enemy-art.css _site/
+          cp index.html styles.css adventures.css app.js content.js missions.js adventure-core.js adventure-ui.js game-core.js storage.js audio.js narration.js soundscape.js engagement.js manifest.webmanifest enemy-art.js enemy-art-data.js enemy-art.css _site/
           cp -R assets _site/assets
           cp -R snowmoon _site/snowmoon
           cp tests/visual-review.html tests/review-app.html tests/review-scenarios.js tests/scenery-review.html tests/narration-qa.html tests/narration-qa.js tests/narration-remainder-qa.html tests/narration-remainder-qa.js tests/enemy-review.html _site/tests/
