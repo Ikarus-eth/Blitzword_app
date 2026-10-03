@@ -42,4 +42,4 @@ Twelve integrated 1248×832 story paintings are saved in `assets/adventures/`. T
 - Browser review uses the isolated, memory-only `tests/review-app.html?scene=mission-hub`, `mission-riddle`, `mission-order` and `mission-complete` fixtures. It does not modify learner storage.
 - Tablet landscape (1024×768), tablet portrait (768×1024), and phone (390×844) reviewed. Physical iPad testing and a child's two-hour pacing observation remain unverified.
 
-Deployment status and exact checks belong in [CURRENT_STATUS](../CURRENT_STATUS.md) and `DEPLOYMENT.json` once live verification completes.
+Deployed through [PR #121](https://github.com/Ikarus-eth/Blitzword_app/pull/121), commit `f319eb872ab01aee129f0c8076050fd7c16e6f23`, and successful [Pages run 37126185768](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37126185768). All 19 runtime/artwork files match tested hashes, including the build marker and all twelve illustrations. [Deployment evidence](DEPLOYMENT.json), [CURRENT_STATUS](../CURRENT_STATUS.md).
