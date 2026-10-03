@@ -1,0 +1,152 @@
+{
+  "verifiedAt": "2026-10-03T13:28:46.146590+00:00",
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "build": "creature-campaigns-20261003-r1",
+  "commit": "f319eb872ab01aee129f0c8076050fd7c16e6f23",
+  "pullRequest": 121,
+  "pagesRun": 37126185768,
+  "deploymentStep": "success",
+  "files": [
+    {
+      "path": "index.html",
+      "httpStatus": 200,
+      "bytes": 37815,
+      "sha256": "3e9501e8c2b55d67c1c745947891871f479521180679209d2183fc06746683fc",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "app.js",
+      "httpStatus": 200,
+      "bytes": 108827,
+      "sha256": "b891f47fde2a84477a39de7eb1516689d4941f01dacdc6505f24758ce4e90077",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "game-core.js",
+      "httpStatus": 200,
+      "bytes": 76249,
+      "sha256": "ca5e0678ce90bc17970daaa79d07e4ef270eabc295fdfa0fc72ec0e434bc11b9",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "missions.js",
+      "httpStatus": 200,
+      "bytes": 30714,
+      "sha256": "003cc36b5a9c7f39cd64b91a0a5c09fe4a50a8a91282e78776276bb3675d99ef",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "adventure-core.js",
+      "httpStatus": 200,
+      "bytes": 8025,
+      "sha256": "4286f4bcfa558282397310fa0a5c58e7acc31926792ca9e5dc3aee9b380fd4f1",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "adventure-ui.js",
+      "httpStatus": 200,
+      "bytes": 17247,
+      "sha256": "8d179519460068e56883110eaf7f6f4320ceca7d5c186f9f090c14b7ead51c16",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "adventures.css",
+      "httpStatus": 200,
+      "bytes": 12302,
+      "sha256": "57ea2e4988c976fc3ecdb75d376e597af9f37cde3dec79ff3f372e5a12b8f770",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/crab-ferry.webp",
+      "httpStatus": 200,
+      "bytes": 167100,
+      "sha256": "8563eb43c6077644c4e40259bb14136266a628801a94aabcf128196aa38d52de",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/first-spark.webp",
+      "httpStatus": 200,
+      "bytes": 131964,
+      "sha256": "24df274297dfec29496bcbb891bb978e14d062ae59f3bfba0a8289809bf8a327",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/high-nest.webp",
+      "httpStatus": 200,
+      "bytes": 129520,
+      "sha256": "8fc315a74c66587cceb08be74241c7e7d489e7ede199d4a7ac1709a4268f2c7c",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/mimic-vault.webp",
+      "httpStatus": 200,
+      "bytes": 147188,
+      "sha256": "6ed44bf4c22d39faeef142b9b03dfea07b0453c854b7409fce23658f5eb672aa",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/mist-lamps.webp",
+      "httpStatus": 200,
+      "bytes": 138674,
+      "sha256": "393461b70fd377f8741e0e604ecd27104015734ba599b9403b35f858229ab93f",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/moth-post.webp",
+      "httpStatus": 200,
+      "bytes": 146896,
+      "sha256": "7d88eebcdd5cd7e0be33cd718dad00e95b5de26ffe1e833d8cc72afa605ad7dc",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/oak-heart.webp",
+      "httpStatus": 200,
+      "bytes": 154988,
+      "sha256": "15c6e855c6f3912846af08088d2beb0a44ccc8dc3cc62276b00eb61917a8f84b",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/owl-watch.webp",
+      "httpStatus": 200,
+      "bytes": 144122,
+      "sha256": "309da5dd41d8f4b6055d1d72ec4dbab6fc2ebd90f113d6f8c3efd5121be26d12",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/reed-message.webp",
+      "httpStatus": 200,
+      "bytes": 141228,
+      "sha256": "1b37eb33352c120267ad95972f363e4f7db11e25ca3f7fcb95f1ab2403a3a602",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/river-heart.webp",
+      "httpStatus": 200,
+      "bytes": 155466,
+      "sha256": "32787d76d333cd98cd7e4afaed1e6eeccc66ae8dbbb2b303ef4d3cba1551b3f6",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/root-workshop.webp",
+      "httpStatus": 200,
+      "bytes": 147286,
+      "sha256": "ef59402b1d5471d78e89fbe9b3599dbaa28c10fe55388d5cf62dcf68f05c69eb",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "assets/adventures/stone-dam.webp",
+      "httpStatus": 200,
+      "bytes": 163966,
+      "sha256": "03bc1e85f7229aacc936001ec5f291fd0fe2ed3eac40ea3b9093e5940ba3ccd2",
+      "matchesTestedSource": true
+    }
+  ],
+  "liveBrowser": {
+    "fixture": "tests/review-app.html?scene=mission-riddle",
+    "usesLearnerStorage": false,
+    "build": "creature-campaigns-20261003-r1",
+    "sceneImageLoaded": true,
+    "horizontalOverflow": false,
+    "consoleErrors": 0
+  }
+}
