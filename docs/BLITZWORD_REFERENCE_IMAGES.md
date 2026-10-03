@@ -2,6 +2,12 @@
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
+### Pip B and campaign clarity — 3 October 2026
+
+The user chose alternative B, the natural slim dragon jaw, after reviewing three mouth/chin alternatives. `assets/battle-motion/pip-friendly-b.png` is the exact selected 1280×1280 image, replacing the previous friendly still only in small Pip's battle renderer. The existing fire clip and return to neutral remain.
+
+`assets/campaign-hd/` contains seven built-in ImageGen restorations referenced from the approved scenes. The six 512×512 atlas panels become standalone 1254×1254 images, shared with their matching chapter scenes. The first campaign restoration retains 1536×1024 dimensions and clearer painted detail; it is not a pixel-dimension increase. Landmark subjects, composition, time of day and palette are retained, with newly generated fine detail. These are restorations, not lossless enlargements. [Prompts](still-resolution/GENERATION_PROMPTS.json), [asset dimensions and hashes](still-resolution/ASSETS.json), [release and honest resolution limits](still-resolution/RELEASE.md).
+
 ### Fight expression and cutout correction — 3 October 2026
 
 `assets/battle-motion/pip-friendly.png` is the targeted, built-in ImageGen edit of the existing small Pip battle still: relaxed brow, friendly neutral eyes and closed mouth; the orange/cream identity, pose and wings remain. The existing fire motion is retained, with a short return to the friendly still before feedback ends. Other growth artwork remains the existing approved art. The mage's still and five animation sheets receive matching runtime blue-edge alpha suppression. Source frames are retained unchanged. See [implementation and verification](fight-art/RELEASE.md).

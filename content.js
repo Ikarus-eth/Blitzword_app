@@ -2702,6 +2702,16 @@
     {id:'chapter-6',name:'Crystal Cave',scene:4},
     {id:'chapter-7',name:'Sky Keep',scene:5}
   ];
+  // Full-size standalone campaign images; never enlarge a 512px atlas tile.
+  const campaignBackgrounds={
+    'chapter-1':{src:'assets/campaign-hd/forest.webp'},
+    'chapter-2':{src:'assets/campaign-hd/river.webp'},
+    'chapter-3':{src:'assets/campaign-hd/oak.webp'},
+    'chapter-4':{src:'assets/campaign-hd/ruins.webp'},
+    'chapter-5':{src:'assets/campaign-hd/moon.webp'},
+    'chapter-6':{src:'assets/campaign-hd/cave.webp'},
+    'chapter-7':{src:'assets/campaign-hd/keep.webp'}
+  };
   const placeNames=[[],['River Bank','Stone Bridge','Reed Path','Blue Pool','River Gate'],['Oak Path','Leaf Den','Moss Steps','Root Arch','Old Oak'],['Stone Path','Lamp Grove','Old Wall','Gold Door','Light Hall'],['Moon Path','Owl Tree','Star Pool','Night Arch','Moon Nest'],['Cave Mouth','Blue Stone','Deep Pool','Glow Hall','Crystal Gate'],['Hill Path','Cloud Steps','Sky Bridge','High Tower','Sky Keep']];
   areas.forEach((a,i)=>{a.chapterId='chapter-1';a.shortName=['Path','Fox','Trees','Cave','Home'][i];});
   const coords=areas.map(a=>[a.x,a.y]);
@@ -2720,35 +2730,35 @@
     'lantern-ruins': {src:'assets/scenery/lantern-ruins.webp',width:1536,height:1024},
     'hidden-nest': {src:'assets/scenery/hidden-nest.webp',width:1536,height:1024},
     'chapter-2-place-1': {src:'assets/scenery/chapter-2-place-1.webp',width:1536,height:1024},
-    'chapter-2-place-2': {src:'assets/scenery/chapter-2-place-2.webp',width:512,height:512},
+    'chapter-2-place-2': {src:'assets/campaign-hd/river.webp',width:1254,height:1254},
     'chapter-2-place-3': {src:'assets/scenery/chapter-2-place-3.webp',width:1536,height:1024},
     'chapter-2-place-4': {src:'assets/scenery/chapter-2-place-4.webp',width:1536,height:1024},
     'chapter-2-place-5': {src:'assets/scenery/chapter-2-place-5.webp',width:1536,height:1024},
-    'chapter-3-place-1': {src:'assets/scenery/chapter-3-place-1.webp',width:512,height:512},
+    'chapter-3-place-1': {src:'assets/campaign-hd/oak.webp',width:1254,height:1254},
     'chapter-3-place-2': {src:'assets/scenery/chapter-3-place-2.webp',width:1536,height:1024},
     'chapter-3-place-3': {src:'assets/scenery/chapter-3-place-3.webp',width:1536,height:1024},
     'chapter-3-place-4': {src:'assets/scenery/chapter-3-place-4.webp',width:1536,height:1024},
     'chapter-3-place-5': {src:'assets/scenery/chapter-3-place-5.webp',width:1536,height:1024},
-    'chapter-4-place-1': {src:'assets/scenery/chapter-4-place-1.webp',width:512,height:512},
+    'chapter-4-place-1': {src:'assets/campaign-hd/ruins.webp',width:1254,height:1254},
     'chapter-4-place-2': {src:'assets/scenery/chapter-4-place-2.webp',width:1536,height:1024},
     'chapter-4-place-3': {src:'assets/scenery/chapter-4-place-3.webp',width:1536,height:1024},
     'chapter-4-place-4': {src:'assets/scenery/chapter-4-place-4.webp',width:1536,height:1024},
     'chapter-4-place-5': {src:'assets/scenery/chapter-4-place-5.webp',width:1536,height:1024},
     'chapter-5-place-1': {src:'assets/scenery/chapter-5-place-1.webp',width:1536,height:1024},
     'chapter-5-place-2': {src:'assets/scenery/chapter-5-place-2.webp',width:1536,height:1024},
-    'chapter-5-place-3': {src:'assets/scenery/chapter-5-place-3.webp',width:512,height:512},
+    'chapter-5-place-3': {src:'assets/campaign-hd/moon.webp',width:1254,height:1254},
     'chapter-5-place-4': {src:'assets/scenery/chapter-5-place-4.webp',width:1536,height:1024},
     'chapter-5-place-5': {src:'assets/scenery/chapter-5-place-5.webp',width:1536,height:1024},
     'chapter-6-place-1': {src:'assets/scenery/chapter-6-place-1.webp',width:1536,height:1024},
     'chapter-6-place-2': {src:'assets/scenery/chapter-6-place-2.webp',width:1536,height:1024},
     'chapter-6-place-3': {src:'assets/scenery/chapter-6-place-3.webp',width:1536,height:1024},
-    'chapter-6-place-4': {src:'assets/scenery/chapter-6-place-4.webp',width:512,height:512},
+    'chapter-6-place-4': {src:'assets/campaign-hd/cave.webp',width:1254,height:1254},
     'chapter-6-place-5': {src:'assets/scenery/chapter-6-place-5.webp',width:1536,height:1024},
     'chapter-7-place-1': {src:'assets/scenery/chapter-7-place-1.webp',width:1536,height:1024},
     'chapter-7-place-2': {src:'assets/scenery/chapter-7-place-2.webp',width:1536,height:1024},
     'chapter-7-place-3': {src:'assets/scenery/chapter-7-place-3.webp',width:1536,height:1024},
     'chapter-7-place-4': {src:'assets/scenery/chapter-7-place-4.webp',width:1536,height:1024},
-    'chapter-7-place-5': {src:'assets/scenery/chapter-7-place-5.webp',width:512,height:512}
+    'chapter-7-place-5': {src:'assets/campaign-hd/keep.webp',width:1254,height:1254}
   };
   // One short transition for each later map field.
   const storyLines = [
@@ -3177,5 +3187,5 @@
   const evolution={intro:"Look! Your dragon is glowing. Let's see what happens.",
     frames:[0,1,2,3].map(stage=>'assets/evolution/pip-stage-'+stage+'.webp'),
     lines:[null,['I am big.','I can help.'],['My wings are big.','I can help you.'],['Hop on my back.','We can go far.']]};
-  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyVariants, enemyAt, enemiesForHealth, enemyMembers, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, dragonStages, evolution, chapterWordGoal:30};
+  return {teachingSource, words, legacyWords, assessmentPools, demoWords, enemies, enemyVariants, enemyAt, enemiesForHealth, enemyMembers, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, campaignBackgrounds, dragonStages, evolution, chapterWordGoal:30};
 });

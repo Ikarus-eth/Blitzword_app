@@ -11,7 +11,7 @@ const url=process.env.FIGHT_URL||'http://127.0.0.1:8779/',out=process.env.FIGHT_
   const M=BlitzMotion;document.body.innerHTML='<main style="display:flex;gap:30px;color:white;font:20px sans-serif"><section>Before<div id="before"></div></section><section>After<div id="after"></div></section></main>';
   document.body.style.cssText='margin:0;padding:20px;background:#18372c';
   const panel='<div style="display:flex;height:500px;background:#c9c4ae;padding:10px"><div style="width:270px;height:430px">'+M.render('mage')+'</div><div style="width:190px;height:230px;margin-top:220px">'+M.render('pip')+'</div></div>';
-  document.querySelector('#after').innerHTML=panel;document.querySelector('#before').innerHTML=panel.replace(/ filter="url\(#[^)]+\)"/g,'').replace('pip-friendly.png','pip-still.webp');
+  document.querySelector('#after').innerHTML=panel;document.querySelector('#before').innerHTML=panel.replace(/ filter="url\(#[^)]+\)"/g,'').replace('pip-friendly-b.png','pip-still.webp');
  });
  await page.waitForTimeout(300);await page.screenshot({path:out+'/before-after.png'});
  const result=await page.evaluate(async()=>{

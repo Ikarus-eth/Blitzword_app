@@ -1,0 +1,40 @@
+{
+  "tool": "built-in image_gen",
+  "prompts": [
+    {
+      "name": "campaign-forest",
+      "source": "assets/campaign-forest.png",
+      "prompt": "Use case: precise-object-edit. The supplied image is the exact approved game background to restore at higher resolution. Recreate the SAME painting with finely resolved, crisp natural detail suitable for a full-screen retina iPad. Preserve the exact composition, perspective, framing, paths, all landmark positions, rocks, trees, architecture, sky, light and palette. Restore fine leaves, bark, masonry, water and painted texture without blur, pixelation, oversharpened halos or repeating fake texture. Preserve the warm hand-painted fantasy storybook illustration style; not photorealistic. Do not redesign, change season/time, move landmarks or add anything. No characters, enemies, words, numbers, labels, buttons, borders, UI, signature or watermark. Full bleed opaque image. Output size: 3072 x 2048 landscape; use the highest available native output resolution."
+    },
+    {
+      "name": "river",
+      "source": "assets/scenery/chapter-2-place-2.webp",
+      "prompt": "Use case: precise-object-edit. The supplied image is the exact approved game background to restore at higher resolution. Recreate the SAME painting with finely resolved, crisp natural detail suitable for a full-screen retina iPad. Preserve the exact composition, perspective, framing, paths, all landmark positions, rocks, trees, architecture, sky, light and palette. Restore fine leaves, bark, masonry, water and painted texture without blur, pixelation, oversharpened halos or repeating fake texture. Preserve the warm hand-painted fantasy storybook illustration style; not photorealistic. Do not redesign, change season/time, move landmarks or add anything. No characters, enemies, words, numbers, labels, buttons, borders, UI, signature or watermark. Full bleed opaque image. Output size: 2560 x 2560 square; use the highest available native output resolution."
+    },
+    {
+      "name": "oak",
+      "source": "assets/scenery/chapter-3-place-1.webp",
+      "prompt": "Use case: precise-object-edit. The supplied image is the exact approved game background to restore at higher resolution. Recreate the SAME painting with finely resolved, crisp natural detail suitable for a full-screen retina iPad. Preserve the exact composition, perspective, framing, paths, all landmark positions, rocks, trees, architecture, sky, light and palette. Restore fine leaves, bark, masonry, water and painted texture without blur, pixelation, oversharpened halos or repeating fake texture. Preserve the warm hand-painted fantasy storybook illustration style; not photorealistic. Do not redesign, change season/time, move landmarks or add anything. No characters, enemies, words, numbers, labels, buttons, borders, UI, signature or watermark. Full bleed opaque image. Output size: 2560 x 2560 square; use the highest available native output resolution."
+    },
+    {
+      "name": "ruins",
+      "source": "assets/scenery/chapter-4-place-1.webp",
+      "prompt": "Use case: precise-object-edit. The supplied image is the exact approved game background to restore at higher resolution. Recreate the SAME painting with finely resolved, crisp natural detail suitable for a full-screen retina iPad. Preserve the exact composition, perspective, framing, paths, all landmark positions, rocks, trees, architecture, sky, light and palette. Restore fine leaves, bark, masonry, water and painted texture without blur, pixelation, oversharpened halos or repeating fake texture. Preserve the warm hand-painted fantasy storybook illustration style; not photorealistic. Do not redesign, change season/time, move landmarks or add anything. No characters, enemies, words, numbers, labels, buttons, borders, UI, signature or watermark. Full bleed opaque image. Output size: 2560 x 2560 square; use the highest available native output resolution."
+    },
+    {
+      "name": "moon",
+      "source": "assets/scenery/chapter-5-place-3.webp",
+      "prompt": "Use case: precise-object-edit. The supplied image is the exact approved game background to restore at higher resolution. Recreate the SAME painting with finely resolved, crisp natural detail suitable for a full-screen retina iPad. Preserve the exact composition, perspective, framing, paths, all landmark positions, rocks, trees, architecture, sky, light and palette. Restore fine leaves, bark, masonry, water and painted texture without blur, pixelation, oversharpened halos or repeating fake texture. Preserve the warm hand-painted fantasy storybook illustration style; not photorealistic. Do not redesign, change season/time, move landmarks or add anything. No characters, enemies, words, numbers, labels, buttons, borders, UI, signature or watermark. Full bleed opaque image. Output size: 2560 x 2560 square; use the highest available native output resolution."
+    },
+    {
+      "name": "cave",
+      "source": "assets/scenery/chapter-6-place-4.webp",
+      "prompt": "Use case: precise-object-edit. The supplied image is the exact approved game background to restore at higher resolution. Recreate the SAME painting with finely resolved, crisp natural detail suitable for a full-screen retina iPad. Preserve the exact composition, perspective, framing, paths, all landmark positions, rocks, trees, architecture, sky, light and palette. Restore fine leaves, bark, masonry, water and painted texture without blur, pixelation, oversharpened halos or repeating fake texture. Preserve the warm hand-painted fantasy storybook illustration style; not photorealistic. Do not redesign, change season/time, move landmarks or add anything. No characters, enemies, words, numbers, labels, buttons, borders, UI, signature or watermark. Full bleed opaque image. Output size: 2560 x 2560 square; use the highest available native output resolution."
+    },
+    {
+      "name": "keep",
+      "source": "assets/scenery/chapter-7-place-5.webp",
+      "prompt": "Use case: precise-object-edit. The supplied image is the exact approved game background to restore at higher resolution. Recreate the SAME painting with finely resolved, crisp natural detail suitable for a full-screen retina iPad. Preserve the exact composition, perspective, framing, paths, all landmark positions, rocks, trees, architecture, sky, light and palette. Restore fine leaves, bark, masonry, water and painted texture without blur, pixelation, oversharpened halos or repeating fake texture. Preserve the warm hand-painted fantasy storybook illustration style; not photorealistic. Do not redesign, change season/time, move landmarks or add anything. No characters, enemies, words, numbers, labels, buttons, borders, UI, signature or watermark. Full bleed opaque image. Output size: 2560 x 2560 square; use the highest available native output resolution."
+    }
+  ]
+}

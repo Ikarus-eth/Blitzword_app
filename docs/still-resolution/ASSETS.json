@@ -1,0 +1,65 @@
+[
+  {
+    "name": "forest",
+    "generatedFile": "exec-b5c00cf5-6201-4080-bafd-892f5bf4ec48.png",
+    "output": "assets/campaign-hd/forest.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 696630,
+    "sha256": "d9d428b268bb85e75d79d7da8ca2485955cfe0c001e47d0694198a0bf9982358"
+  },
+  {
+    "name": "river",
+    "generatedFile": "exec-52a1dc4d-da39-4d73-a443-59a615a92ec4.png",
+    "output": "assets/campaign-hd/river.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 654500,
+    "sha256": "bad0b7f9284752c51224a2d309d8c842a6153162e159052f10651bbc2b209f8e"
+  },
+  {
+    "name": "oak",
+    "generatedFile": "exec-f500d3f5-d684-4f50-8231-c83ca3e93d59.png",
+    "output": "assets/campaign-hd/oak.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 652834,
+    "sha256": "18dc92d290b6c18e5715f54bcd4c1a934e024d7fea1857baa454eda1cc0e432e"
+  },
+  {
+    "name": "ruins",
+    "generatedFile": "exec-4ccf548f-a53e-4953-af14-23ddf2fa7bcb.png",
+    "output": "assets/campaign-hd/ruins.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 570402,
+    "sha256": "774b261953c5423cef85323052fef490258993bc1b9eddf4bb882da8e20b2090"
+  },
+  {
+    "name": "moon",
+    "generatedFile": "exec-27007ea9-a899-4ec7-8a90-f830e4ffd0bf.png",
+    "output": "assets/campaign-hd/moon.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 572766,
+    "sha256": "3337160f060d4cecfbaa48051335de7caf298be81b6839375a06335df855e77a"
+  },
+  {
+    "name": "cave",
+    "generatedFile": "exec-ec22555f-6739-45c5-98b4-f2143ef06c5a.png",
+    "output": "assets/campaign-hd/cave.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 548584,
+    "sha256": "4b5ebbd0e527a1eea93b8fa3f71b60ef1ab8c1d0a59dd37fd2593aa0196c4440"
+  },
+  {
+    "name": "keep",
+    "generatedFile": "exec-d29787cf-d939-4b23-85dd-8f136bcaa6ce.png",
+    "output": "assets/campaign-hd/keep.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 547430,
+    "sha256": "11b4390d59ee7e5d35017f7b3bc66ea26b4f1b9d34657914cc695d384d442415"
+  }
+]

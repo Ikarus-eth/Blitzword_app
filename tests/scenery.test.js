@@ -16,3 +16,13 @@ test('scenery adds no migration or learner-state fields',()=>{
  Core.startBattle(s,Date.now());const before=JSON.stringify(s);Core.migrate(s);assert.equal(JSON.stringify(s),before);
  assert.ok(!before.includes('assets/scenery'));assert.equal(s.battle.areaId,'chapter-2-place-2');
 });
+
+test('all seven campaign maps use their own full-size image, with no atlas scaling',()=>{
+ assert.deepEqual(Object.keys(Content.campaignBackgrounds),Content.chapters.map(c=>c.id));
+ for(const chapter of Content.chapters){const bg=Content.campaignBackgrounds[chapter.id];assert.ok(fs.existsSync(path.join(__dirname,'..',bg.src)));assert.match(bg.src,/assets\/campaign-hd\//);}
+ const source=fs.readFileSync(path.join(__dirname,'../app.js'),'utf8');
+ assert.ok(!source.includes('assets/chapter-scenes.webp'));assert.ok(!source.includes('max(300vw'));
+ for(const id of ['chapter-2-place-2','chapter-3-place-1','chapter-4-place-1','chapter-5-place-3','chapter-6-place-4','chapter-7-place-5']){
+  const bg=Content.chapterBackgrounds[id];assert.ok(bg.width>=1200&&bg.height>=1200,id);assert.match(bg.src,/campaign-hd/);
+ }
+});
