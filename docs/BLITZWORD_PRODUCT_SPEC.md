@@ -989,3 +989,7 @@ Keep the aimed solo staff cast and distinct braced Pip-assisted cast, 1,200 ms f
 ## Fight artwork correction — 3 October 2026
 
 The hero must have clean transparent edges without a blue keying fringe, both at rest and throughout combat animation. Pip must look friendly and neutral outside his own attacks; a determined expression during an attack is allowed. Preserve the approved character identities, motions, growth stages and learner saves.
+
+## Pip B and still-image resolution — 3 October 2026
+
+The user selected mouth/chin alternative B (Natural dragon jaw) for small Pip's friendly resting battle face. Keep his existing attack and return-to-neutral behavior. Audit still-image source dimensions and improve the visibly soft campaign imagery while preserving the established scene subjects, map controls and saves. Seven standalone map files replace full-screen atlas enlargement; six enhanced scenes also replace the same low-resolution images in chapter presentations.

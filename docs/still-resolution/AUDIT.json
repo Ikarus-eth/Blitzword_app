@@ -1,0 +1,6115 @@
+{
+  "date": "2026-10-03",
+  "uniqueAssets": 89,
+  "usageRecords": 313,
+  "notes": [
+    "All main-game still source categories audited, including atlas crop resolution.",
+    "Family-review alternatives, retired prototypes and animation sheets are excluded.",
+    "A 2x display needs twice as many source pixels per axis. Larger file size alone is not evidence of more detail.",
+    "The generator returned native sizes recorded below, not the larger requested output sizes.",
+    "Character/teaching atlas crops retain their native source resolution; not every existing still is Retina-native."
+  ],
+  "assets": {
+    "assets/campaign-hd/forest.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 696630
+    },
+    "assets/campaign-hd/river.webp": {
+      "width": 1254,
+      "height": 1254,
+      "bytes": 654500
+    },
+    "assets/campaign-hd/oak.webp": {
+      "width": 1254,
+      "height": 1254,
+      "bytes": 652834
+    },
+    "assets/campaign-hd/ruins.webp": {
+      "width": 1254,
+      "height": 1254,
+      "bytes": 570402
+    },
+    "assets/campaign-hd/moon.webp": {
+      "width": 1254,
+      "height": 1254,
+      "bytes": 572766
+    },
+    "assets/campaign-hd/cave.webp": {
+      "width": 1254,
+      "height": 1254,
+      "bytes": 548584
+    },
+    "assets/campaign-hd/keep.webp": {
+      "width": 1254,
+      "height": 1254,
+      "bytes": 547430
+    },
+    "assets/forest-clearing.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 637316
+    },
+    "assets/scenery/fox-crossing.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 422790
+    },
+    "assets/scenery/old-grove.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 440804
+    },
+    "assets/scenery/lantern-ruins.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 336882
+    },
+    "assets/scenery/hidden-nest.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 416676
+    },
+    "assets/scenery/chapter-2-place-1.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 542710
+    },
+    "assets/scenery/chapter-2-place-3.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 335520
+    },
+    "assets/scenery/chapter-2-place-4.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 454908
+    },
+    "assets/scenery/chapter-2-place-5.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 472040
+    },
+    "assets/scenery/chapter-3-place-2.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 520156
+    },
+    "assets/scenery/chapter-3-place-3.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 543664
+    },
+    "assets/scenery/chapter-3-place-4.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 406690
+    },
+    "assets/scenery/chapter-3-place-5.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 512856
+    },
+    "assets/scenery/chapter-4-place-2.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 363588
+    },
+    "assets/scenery/chapter-4-place-3.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 432518
+    },
+    "assets/scenery/chapter-4-place-4.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 421000
+    },
+    "assets/scenery/chapter-4-place-5.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 204006
+    },
+    "assets/scenery/chapter-5-place-1.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 295750
+    },
+    "assets/scenery/chapter-5-place-2.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 434226
+    },
+    "assets/scenery/chapter-5-place-4.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 321918
+    },
+    "assets/scenery/chapter-5-place-5.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 388020
+    },
+    "assets/scenery/chapter-6-place-1.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 390526
+    },
+    "assets/scenery/chapter-6-place-2.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 253786
+    },
+    "assets/scenery/chapter-6-place-3.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 364474
+    },
+    "assets/scenery/chapter-6-place-5.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 369648
+    },
+    "assets/scenery/chapter-7-place-1.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 367288
+    },
+    "assets/scenery/chapter-7-place-2.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 332466
+    },
+    "assets/scenery/chapter-7-place-3.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 302792
+    },
+    "assets/scenery/chapter-7-place-4.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 338762
+    },
+    "assets/battle-motion/beetle-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 31680
+    },
+    "assets/battle-motion/pip-friendly-b.png": {
+      "width": 1254,
+      "height": 1254,
+      "bytes": 936883
+    },
+    "assets/battle-motion/mage-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 35702
+    },
+    "assets/battle-motion/golem-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 51832
+    },
+    "assets/battle-motion/thornling-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 42212
+    },
+    "assets/battle-motion/moon-moth-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 41576
+    },
+    "assets/battle-motion/root-sprite-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 36694
+    },
+    "assets/battle-motion/cave-troll-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 48984
+    },
+    "assets/battle-motion/acorn-imp-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 30564
+    },
+    "assets/battle-motion/mushroom-guard-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 43042
+    },
+    "assets/battle-motion/bramble-boar-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 40128
+    },
+    "assets/battle-motion/reed-serpent-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 45830
+    },
+    "assets/battle-motion/bog-toad-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 33872
+    },
+    "assets/battle-motion/lantern-wisp-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 32542
+    },
+    "assets/battle-motion/crystal-crab-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 30112
+    },
+    "assets/battle-motion/hollow-owl-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 37416
+    },
+    "assets/battle-motion/fern-wolf-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 31856
+    },
+    "assets/battle-motion/stone-ram-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 43610
+    },
+    "assets/battle-motion/briar-bat-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 30402
+    },
+    "assets/battle-motion/snail-knight-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 40668
+    },
+    "assets/battle-motion/chest-mimic-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 35274
+    },
+    "assets/battle-motion/storm-griffin-still.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 40266
+    },
+    "assets/teaching/sat-rock.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 202930
+    },
+    "assets/teaching/green-tree.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912
+    },
+    "assets/teaching/fox.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744
+    },
+    "assets/teaching/cave.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536
+    },
+    "assets/teaching/chapter-teaching.png": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027
+    },
+    "assets/teaching/core-teaching.webp": {
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830
+    },
+    "assets/scenery/chapter-6-place-4.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 357064
+    },
+    "assets/scenery/chapter-5-place-3.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 364232
+    },
+    "assets/scenery/chapter-7-place-5.webp": {
+      "width": 512,
+      "height": 512,
+      "bytes": 385624
+    },
+    "assets/evolution/pip-stage-0.webp": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 209580
+    },
+    "assets/evolution/pip-stage-1.webp": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 108712
+    },
+    "assets/evolution/pip-stage-2.webp": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 142670
+    },
+    "assets/evolution/pip-stage-3.webp": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 140146
+    },
+    "assets/pip-growth.png": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2282083
+    },
+    "assets/story-pilot/scenes/bridge.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 526690
+    },
+    "assets/story-pilot/scenes/fox-call.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 436578
+    },
+    "assets/story-pilot/scenes/gate-labelled.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 460288
+    },
+    "assets/story-pilot/scenes/gate.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 507596
+    },
+    "assets/story-pilot/scenes/owl.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 469116
+    },
+    "assets/story-pilot/scenes/reunion.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 468278
+    },
+    "assets/story-pilot/scenes/troll.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 500398
+    },
+    "assets/forest-characters.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 561646
+    },
+    "assets/rowanfire-boys-2026-09-21.png": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2787633
+    },
+    "assets/hero4.webp": {
+      "width": 192,
+      "height": 192,
+      "bytes": 7172
+    },
+    "assets/hero5.webp": {
+      "width": 192,
+      "height": 192,
+      "bytes": 6094
+    },
+    "assets/hero6.webp": {
+      "width": 192,
+      "height": 192,
+      "bytes": 6832
+    },
+    "assets/pip.webp": {
+      "width": 192,
+      "height": 192,
+      "bytes": 7932
+    },
+    "assets/pip-forest-welcome.png": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3092664
+    },
+    "assets/forest-opponents.png": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2787638
+    },
+    "assets/campaign-forest.png": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3568725
+    },
+    "assets/chapter-scenes.webp": {
+      "width": 1536,
+      "height": 1024,
+      "bytes": 642824
+    }
+  },
+  "records": [
+    {
+      "role": "campaign:chapter-1",
+      "src": "assets/campaign-hd/forest.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 696630,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "campaign:chapter-2",
+      "src": "assets/campaign-hd/river.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 654500,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "campaign:chapter-3",
+      "src": "assets/campaign-hd/oak.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 652834,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "campaign:chapter-4",
+      "src": "assets/campaign-hd/ruins.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 570402,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "campaign:chapter-5",
+      "src": "assets/campaign-hd/moon.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 572766,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "campaign:chapter-6",
+      "src": "assets/campaign-hd/cave.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 548584,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "campaign:chapter-7",
+      "src": "assets/campaign-hd/keep.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 547430,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "chapter:lantern-trail",
+      "src": "assets/forest-clearing.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 637316,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:fox-crossing",
+      "src": "assets/scenery/fox-crossing.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 422790,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:old-grove",
+      "src": "assets/scenery/old-grove.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 440804,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:lantern-ruins",
+      "src": "assets/scenery/lantern-ruins.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 336882,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:hidden-nest",
+      "src": "assets/scenery/hidden-nest.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 416676,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-2-place-1",
+      "src": "assets/scenery/chapter-2-place-1.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 542710,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-2-place-2",
+      "src": "assets/campaign-hd/river.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 654500,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "chapter:chapter-2-place-3",
+      "src": "assets/scenery/chapter-2-place-3.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 335520,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-2-place-4",
+      "src": "assets/scenery/chapter-2-place-4.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 454908,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-2-place-5",
+      "src": "assets/scenery/chapter-2-place-5.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 472040,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-3-place-1",
+      "src": "assets/campaign-hd/oak.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 652834,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "chapter:chapter-3-place-2",
+      "src": "assets/scenery/chapter-3-place-2.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 520156,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-3-place-3",
+      "src": "assets/scenery/chapter-3-place-3.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 543664,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-3-place-4",
+      "src": "assets/scenery/chapter-3-place-4.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 406690,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-3-place-5",
+      "src": "assets/scenery/chapter-3-place-5.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 512856,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-4-place-1",
+      "src": "assets/campaign-hd/ruins.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 570402,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "chapter:chapter-4-place-2",
+      "src": "assets/scenery/chapter-4-place-2.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 363588,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-4-place-3",
+      "src": "assets/scenery/chapter-4-place-3.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 432518,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-4-place-4",
+      "src": "assets/scenery/chapter-4-place-4.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 421000,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-4-place-5",
+      "src": "assets/scenery/chapter-4-place-5.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 204006,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-5-place-1",
+      "src": "assets/scenery/chapter-5-place-1.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 295750,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-5-place-2",
+      "src": "assets/scenery/chapter-5-place-2.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 434226,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-5-place-3",
+      "src": "assets/campaign-hd/moon.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 572766,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "chapter:chapter-5-place-4",
+      "src": "assets/scenery/chapter-5-place-4.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 321918,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-5-place-5",
+      "src": "assets/scenery/chapter-5-place-5.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 388020,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-6-place-1",
+      "src": "assets/scenery/chapter-6-place-1.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 390526,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-6-place-2",
+      "src": "assets/scenery/chapter-6-place-2.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 253786,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-6-place-3",
+      "src": "assets/scenery/chapter-6-place-3.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 364474,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-6-place-4",
+      "src": "assets/campaign-hd/cave.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 548584,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "chapter:chapter-6-place-5",
+      "src": "assets/scenery/chapter-6-place-5.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 369648,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-7-place-1",
+      "src": "assets/scenery/chapter-7-place-1.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 367288,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-7-place-2",
+      "src": "assets/scenery/chapter-7-place-2.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 332466,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-7-place-3",
+      "src": "assets/scenery/chapter-7-place-3.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 302792,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-7-place-4",
+      "src": "assets/scenery/chapter-7-place-4.webp",
+      "fullscreen": true,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 338762,
+      "effectivePixels": [
+        1536,
+        1024
+      ],
+      "pixelsPerCssPixelAt820x1180": 0.868,
+      "pixelsPerDevicePixelAt2x": 0.434
+    },
+    {
+      "role": "chapter:chapter-7-place-5",
+      "src": "assets/campaign-hd/keep.webp",
+      "fullscreen": true,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 547430,
+      "effectivePixels": [
+        1254,
+        1254
+      ],
+      "pixelsPerCssPixelAt820x1180": 1.063,
+      "pixelsPerDevicePixelAt2x": 0.531
+    },
+    {
+      "role": "character:beetle",
+      "src": "assets/battle-motion/beetle-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        72,
+        186,
+        368,
+        262
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 31680,
+      "effectivePixels": [
+        368,
+        262
+      ]
+    },
+    {
+      "role": "character:pip",
+      "src": "assets/battle-motion/pip-friendly-b.png",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        60,
+        122,
+        384,
+        326
+      ],
+      "width": 1254,
+      "height": 1254,
+      "bytes": 936883,
+      "effectivePixels": [
+        941,
+        798
+      ]
+    },
+    {
+      "role": "character:mage",
+      "src": "assets/battle-motion/mage-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        116,
+        40,
+        280,
+        410
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 35702,
+      "effectivePixels": [
+        280,
+        410
+      ]
+    },
+    {
+      "role": "character:golem",
+      "src": "assets/battle-motion/golem-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        68,
+        42,
+        368,
+        406
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 51832,
+      "effectivePixels": [
+        368,
+        406
+      ]
+    },
+    {
+      "role": "character:thornling",
+      "src": "assets/battle-motion/thornling-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        46,
+        120,
+        422,
+        284
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 42212,
+      "effectivePixels": [
+        422,
+        284
+      ]
+    },
+    {
+      "role": "character:moon-moth",
+      "src": "assets/battle-motion/moon-moth-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        0,
+        88,
+        512,
+        382
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 41576,
+      "effectivePixels": [
+        512,
+        382
+      ]
+    },
+    {
+      "role": "character:root-sprite",
+      "src": "assets/battle-motion/root-sprite-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        0,
+        48,
+        440,
+        406
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 36694,
+      "effectivePixels": [
+        440,
+        406
+      ]
+    },
+    {
+      "role": "character:cave-troll",
+      "src": "assets/battle-motion/cave-troll-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        2,
+        62,
+        494,
+        392
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 48984,
+      "effectivePixels": [
+        494,
+        392
+      ]
+    },
+    {
+      "role": "character:acorn-imp",
+      "src": "assets/battle-motion/acorn-imp-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        0,
+        0,
+        466,
+        450
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 30564,
+      "effectivePixels": [
+        466,
+        450
+      ]
+    },
+    {
+      "role": "character:mushroom-guard",
+      "src": "assets/battle-motion/mushroom-guard-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        0,
+        36,
+        508,
+        456
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 43042,
+      "effectivePixels": [
+        508,
+        456
+      ]
+    },
+    {
+      "role": "character:bramble-boar",
+      "src": "assets/battle-motion/bramble-boar-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        10,
+        88,
+        464,
+        372
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 40128,
+      "effectivePixels": [
+        464,
+        372
+      ]
+    },
+    {
+      "role": "character:reed-serpent",
+      "src": "assets/battle-motion/reed-serpent-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        0,
+        51,
+        504,
+        399
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 45830,
+      "effectivePixels": [
+        504,
+        399
+      ]
+    },
+    {
+      "role": "character:bog-toad",
+      "src": "assets/battle-motion/bog-toad-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        18,
+        44,
+        494,
+        408
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 33872,
+      "effectivePixels": [
+        494,
+        408
+      ]
+    },
+    {
+      "role": "character:lantern-wisp",
+      "src": "assets/battle-motion/lantern-wisp-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        22,
+        54,
+        482,
+        458
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 32542,
+      "effectivePixels": [
+        482,
+        458
+      ]
+    },
+    {
+      "role": "character:crystal-crab",
+      "src": "assets/battle-motion/crystal-crab-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        0,
+        82,
+        448,
+        370
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 30112,
+      "effectivePixels": [
+        448,
+        370
+      ]
+    },
+    {
+      "role": "character:hollow-owl",
+      "src": "assets/battle-motion/hollow-owl-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        10,
+        78,
+        498,
+        384
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 37416,
+      "effectivePixels": [
+        498,
+        384
+      ]
+    },
+    {
+      "role": "character:fern-wolf",
+      "src": "assets/battle-motion/fern-wolf-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        34,
+        118,
+        448,
+        342
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 31856,
+      "effectivePixels": [
+        448,
+        342
+      ]
+    },
+    {
+      "role": "character:stone-ram",
+      "src": "assets/battle-motion/stone-ram-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        6,
+        72,
+        474,
+        390
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 43610,
+      "effectivePixels": [
+        474,
+        390
+      ]
+    },
+    {
+      "role": "character:briar-bat",
+      "src": "assets/battle-motion/briar-bat-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        54,
+        124,
+        458,
+        326
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 30402,
+      "effectivePixels": [
+        458,
+        326
+      ]
+    },
+    {
+      "role": "character:snail-knight",
+      "src": "assets/battle-motion/snail-knight-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        24,
+        132,
+        422,
+        320
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 40668,
+      "effectivePixels": [
+        422,
+        320
+      ]
+    },
+    {
+      "role": "character:chest-mimic",
+      "src": "assets/battle-motion/chest-mimic-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        52,
+        60,
+        414,
+        394
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 35274,
+      "effectivePixels": [
+        414,
+        394
+      ]
+    },
+    {
+      "role": "character:storm-griffin",
+      "src": "assets/battle-motion/storm-griffin-still.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": [
+        4,
+        88,
+        508,
+        362
+      ],
+      "width": 512,
+      "height": 512,
+      "bytes": 40266,
+      "effectivePixels": [
+        508,
+        362
+      ]
+    },
+    {
+      "role": "teaching:on",
+      "src": "assets/teaching/sat-rock.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 202930,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:rock",
+      "src": "assets/teaching/sat-rock.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 202930,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:tree",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:green",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:fox",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:cave",
+      "src": "assets/teaching/cave.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:water",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:bird",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:wing",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:jump",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:over",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:up",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:big",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:small",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:two",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:red",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:book",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:open",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:night",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:moon",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:light",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:fire",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:owl",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:forest",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:dragon",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:treasure",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:coin",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:gate",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:castle",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:magic",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:the",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:and",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:a",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:to",
+      "src": "assets/teaching/cave.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:i",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:you",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:in",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:of",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:it",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:he",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:is",
+      "src": "assets/teaching/sat-rock.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 202930,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:was",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:for",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:that",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:with",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:but",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:his",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:all",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:they",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:my",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:so",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:be",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:she",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:at",
+      "src": "assets/teaching/cave.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:are",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:one",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:said",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:what",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:this",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:when",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:we",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:me",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:have",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:as",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:do",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:like",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:out",
+      "src": "assets/teaching/cave.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:can",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:her",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:not",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:then",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:your",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:no",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:there",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:day",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:just",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:it's",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:see",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:little",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:time",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:from",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:had",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:now",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:will",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:i'm",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:go",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:were",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:too",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:them",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:him",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:some",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:get",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:if",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:good",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:don't",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:down",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:by",
+      "src": "assets/teaching/cave.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:how",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:know",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:an",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:oh",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:more",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:their",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:could",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:about",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:back",
+      "src": "assets/teaching/cave.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:who",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:or",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:make",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:into",
+      "src": "assets/teaching/cave.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:look",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:very",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:would",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:right",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:here",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:love",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:way",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:did",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:new",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:come",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:our",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:want",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:made",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:around",
+      "src": "assets/teaching/cave.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:after",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:again",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:always",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:any",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:ask",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:away",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:because",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:before",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:best",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:both",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:bring",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:carry",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:cut",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:every",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:fast",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:find",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:first",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:found",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:gave",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:hold",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:hot",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:keep",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:kind",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:long",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:many",
+      "src": "assets/teaching/green-tree.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:off",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "teaching:only",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:own",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:pull",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:read",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:run",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:saw",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:show",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:sit",
+      "src": "assets/teaching/sat-rock.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 202930,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:sleep",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:start",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:stop",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:take",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:tell",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:thank",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:think",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:walk",
+      "src": "assets/teaching/fox.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "teaching:white",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:wish",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:work",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:write",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:cat",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:car",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:house",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:mom",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:dad",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:ship",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:shark",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:map",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:queen",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:snake",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:spell",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:sword",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:rain",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:child",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:ghost",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:unicorn",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:lion",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:pig",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:yellow",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:wizard",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:chicken",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:man",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:wet",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:bat",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:yes",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:pan",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:bell",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:mule",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:ball",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "teaching:thin",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "meaning-picture:jump",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "meaning-picture:rock",
+      "src": "assets/teaching/sat-rock.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 202930,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:fox",
+      "src": "assets/teaching/fox.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 206744,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:tree",
+      "src": "assets/teaching/green-tree.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 181912,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:cave",
+      "src": "assets/teaching/cave.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201536,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:owl-fire",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "meaning-picture:treasure-gate",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        768,
+        512
+      ]
+    },
+    {
+      "role": "meaning-picture:open-book",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        880,
+        225,
+        425,
+        200
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        425,
+        200
+      ]
+    },
+    {
+      "role": "meaning-picture:closed-book",
+      "src": "assets/teaching/chapter-teaching.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        1320,
+        280,
+        170,
+        140
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3460027,
+      "effectivePixels": [
+        170,
+        140
+      ]
+    },
+    {
+      "role": "meaning-picture:pan-fire",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1086,
+        1448
+      ],
+      "crop": [
+        362,
+        1086,
+        362,
+        362
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "meaning-picture:queen",
+      "src": "assets/teaching/core-teaching.webp",
+      "virtual": [
+        1086,
+        1448
+      ],
+      "crop": [
+        362,
+        362,
+        362,
+        362
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 681830,
+      "effectivePixels": [
+        362,
+        362
+      ]
+    },
+    {
+      "role": "meaning-picture:open-gate",
+      "src": "assets/scenery/chapter-2-place-5.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 472040,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:forest-pool",
+      "src": "assets/scenery/chapter-2-place-4.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 454908,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:cave-pool",
+      "src": "assets/scenery/chapter-6-place-3.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 364474,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:glow-cave",
+      "src": "assets/scenery/chapter-6-place-4.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": null,
+      "width": 512,
+      "height": 512,
+      "bytes": 357064,
+      "effectivePixels": [
+        512,
+        512
+      ]
+    },
+    {
+      "role": "meaning-picture:autumn-tree",
+      "src": "assets/scenery/chapter-3-place-5.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 512856,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:cave-light",
+      "src": "assets/scenery/chapter-6-place-2.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 253786,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:moon-path",
+      "src": "assets/scenery/chapter-5-place-1.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 295750,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:day-path",
+      "src": "assets/scenery/chapter-2-place-3.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 335520,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:star-pool",
+      "src": "assets/scenery/chapter-5-place-3.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": null,
+      "width": 512,
+      "height": 512,
+      "bytes": 364232,
+      "effectivePixels": [
+        512,
+        512
+      ]
+    },
+    {
+      "role": "meaning-picture:hill-castle",
+      "src": "assets/scenery/chapter-7-place-1.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 367288,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:cloud-steps",
+      "src": "assets/scenery/chapter-7-place-2.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 332466,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:sky-bridge",
+      "src": "assets/scenery/chapter-7-place-3.webp",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 302792,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "meaning-picture:sky-keep",
+      "src": "assets/scenery/chapter-7-place-5.webp",
+      "virtual": [
+        512,
+        512
+      ],
+      "crop": null,
+      "width": 512,
+      "height": 512,
+      "bytes": 385624,
+      "effectivePixels": [
+        512,
+        512
+      ]
+    },
+    {
+      "role": "evolution:0",
+      "src": "assets/evolution/pip-stage-0.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 209580,
+      "effectivePixels": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "role": "evolution:1",
+      "src": "assets/evolution/pip-stage-1.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 108712,
+      "effectivePixels": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "role": "evolution:2",
+      "src": "assets/evolution/pip-stage-2.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 142670,
+      "effectivePixels": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "role": "evolution:3",
+      "src": "assets/evolution/pip-stage-3.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 140146,
+      "effectivePixels": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "role": "grown-pip:1",
+      "src": "assets/pip-growth.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        838,
+        11,
+        542,
+        460
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2282083,
+      "effectivePixels": [
+        542,
+        460
+      ]
+    },
+    {
+      "role": "grown-pip:2",
+      "src": "assets/pip-growth.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        88,
+        494,
+        615,
+        491
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2282083,
+      "effectivePixels": [
+        615,
+        491
+      ]
+    },
+    {
+      "role": "grown-pip:3",
+      "src": "assets/pip-growth.png",
+      "virtual": [
+        1536,
+        1024
+      ],
+      "crop": [
+        869,
+        464,
+        657,
+        533
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2282083,
+      "effectivePixels": [
+        657,
+        533
+      ]
+    },
+    {
+      "role": "story-adventure:bridge.webp",
+      "src": "assets/story-pilot/scenes/bridge.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 526690,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "story-adventure:fox-call.webp",
+      "src": "assets/story-pilot/scenes/fox-call.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 436578,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "story-adventure:gate-labelled.webp",
+      "src": "assets/story-pilot/scenes/gate-labelled.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 460288,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "story-adventure:gate.webp",
+      "src": "assets/story-pilot/scenes/gate.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 507596,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "story-adventure:owl.webp",
+      "src": "assets/story-pilot/scenes/owl.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 469116,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "story-adventure:reunion.webp",
+      "src": "assets/story-pilot/scenes/reunion.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 468278,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "story-adventure:troll.webp",
+      "src": "assets/story-pilot/scenes/troll.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 500398,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "shared-or-fallback:forest-characters.webp",
+      "src": "assets/forest-characters.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 561646,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "shared-or-fallback:rowanfire-boys-2026-09-21.png",
+      "src": "assets/rowanfire-boys-2026-09-21.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2787633,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "shared-or-fallback:hero4.webp",
+      "src": "assets/hero4.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 7172,
+      "effectivePixels": [
+        192,
+        192
+      ]
+    },
+    {
+      "role": "shared-or-fallback:hero5.webp",
+      "src": "assets/hero5.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 6094,
+      "effectivePixels": [
+        192,
+        192
+      ]
+    },
+    {
+      "role": "shared-or-fallback:hero6.webp",
+      "src": "assets/hero6.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 6832,
+      "effectivePixels": [
+        192,
+        192
+      ]
+    },
+    {
+      "role": "shared-or-fallback:pip.webp",
+      "src": "assets/pip.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 7932,
+      "effectivePixels": [
+        192,
+        192
+      ]
+    },
+    {
+      "role": "shared-or-fallback:pip-forest-welcome.png",
+      "src": "assets/pip-forest-welcome.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3092664,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "shared-or-fallback:forest-clearing.webp",
+      "src": "assets/forest-clearing.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 637316,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "shared-or-fallback:forest-opponents.png",
+      "src": "assets/forest-opponents.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2787638,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "shared-or-fallback:campaign-forest.png",
+      "src": "assets/campaign-forest.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3568725,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "role": "shared-or-fallback:chapter-scenes.webp",
+      "src": "assets/chapter-scenes.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 642824,
+      "effectivePixels": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}

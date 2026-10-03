@@ -1,0 +1,8 @@
+{
+  "selection": "B \u2014 Natural dragon jaw",
+  "approved": "2026-10-03",
+  "tool": "built-in image_gen",
+  "output": "assets/battle-motion/pip-friendly-b.png",
+  "sha256": "93f3ad06d0b7cd9e153299c82cc4aec1eb7a66db7d87089c513751b50c3d3279",
+  "prompt": "Use case: precise-object-edit. Input image is the edit target: Pip, the approved orange dragon game sprite. Create ONE full-body sprite alternative, not a sheet. Change only the mouth, muzzle underside and chin anatomy. The current long flat cream lower lip/chin looks odd: replace it with a coherent natural jaw, clean mouth corner and smoothly joined throat. Keep friendly neutral expression, existing eyes/brows, exact character identity, same head angle facing right, horns, scales, orange and cream palette, wings, limbs, tail, body silhouette, painterly style and placement/scale in the square canvas. Preserve all artwork outside the lower face as closely as possible. Actual transparent background, no fringe, no text or labels. No beard, human lips, teeth, protruding lower lip, bulky cream shelf, extra mouth crease or grin. Keep a slightly longer, refined reptilian muzzle. Give him a slim tapered lower jaw, a subtle rounded chin sitting behind the nose, cream restricted to the underside. A relaxed near-straight closed mouth with a soft mouth corner; natural, alert, friendly-neutral face. Anatomically clear upper muzzle and lower jaw, without a smile drawn across the cheek."
+}

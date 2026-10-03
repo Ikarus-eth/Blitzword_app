@@ -124,10 +124,9 @@ function renderMap(deferEvolution=false){
   show('campaignMap');$('#pausePanel').hidden=true;
   renderSpeedLauncher();
   const progress=Core.storyProgress(state),growth=Core.dragonProgress(state);
-  const terrain=$('.mapTerrain'),mapScene=progress.chapter.scene;
-  terrain.style.backgroundImage=mapScene===null?'url("assets/campaign-forest.png")':'url("assets/chapter-scenes.webp")';
-  // Fill the viewport without stretching either the map or a square atlas panel.
-  terrain.style.backgroundSize=mapScene===null?'cover':'max(300vw, 300dvh) max(200vw, 200dvh)';terrain.style.backgroundPosition=mapScene===null?'center':(mapScene%3*50)+'% '+(mapScene<3?0:100)+'%';
+  const terrain=$('.mapTerrain'),art=Content.campaignBackgrounds[progress.chapter.id]||Content.campaignBackgrounds['chapter-1'];
+  terrain.style.backgroundImage=`url("${art.src}")`;
+  terrain.style.backgroundSize='cover';terrain.style.backgroundPosition='center';
   $('#mapTitle').textContent=dragonText(progress.chapter.name);terrain.setAttribute('aria-label','Campaign '+progress.chapterNumber+' map');
   $('#chapterSelect').replaceChildren();Content.chapters.forEach((chapter,i)=>{
     const chip=document.createElement('span');chip.className='chapterBead'+(chapter.id===progress.chapter.id?' current':'')+(state.story.completedChapters.includes(chapter.id)?' complete':'');chip.textContent=String(i+1);chip.setAttribute('aria-label','Campaign '+(i+1)+(state.story.completedChapters.includes(chapter.id)?' complete':chapter.id===progress.chapter.id?' current':' locked'));$('#chapterSelect').append(chip);
@@ -389,11 +388,8 @@ function show(id) {
 function renderScenery(screen){
   const layer=$('#chapterScenery');
   if(screen==='campaignMap'){
-    const scene=Core.currentChapter(state).scene;
-    layer.hidden=scene===null;layer.dataset.area='';
-    layer.style.backgroundImage=scene===null?'none':'url("assets/chapter-scenes.webp")';
-    layer.style.backgroundSize='300% 200%';
-    layer.style.backgroundPosition=(scene%3*50)+'% '+(scene<3?0:100)+'%';
+    // The full-screen map terrain owns its one active image; no hidden atlas download.
+    layer.hidden=true;layer.dataset.area='';layer.style.backgroundImage='none';
     return;
   }
   const active=['battle','teaching','result','chapterStory','mathIntro','mathChallenge','mathResult','summary','handoff'].includes(screen);

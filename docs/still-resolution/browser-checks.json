@@ -1,0 +1,363 @@
+{
+  "maps": [
+    {
+      "campaign": 1,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "width": 1536,
+      "height": 1024,
+      "box": [
+        820,
+        1180
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/forest.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 2,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        820,
+        1180
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/river.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 3,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        820,
+        1180
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/oak.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 4,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        820,
+        1180
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/ruins.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 5,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        820,
+        1180
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/moon.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 6,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        820,
+        1180
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/cave.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 7,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        820,
+        1180
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/keep.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 1,
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "width": 1536,
+      "height": 1024,
+      "box": [
+        1180,
+        820
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/forest.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 2,
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        1180,
+        820
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/river.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 3,
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        1180,
+        820
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/oak.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 4,
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        1180,
+        820
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/ruins.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 5,
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        1180,
+        820
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/moon.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 6,
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        1180,
+        820
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/cave.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 7,
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        1180,
+        820
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/keep.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 1,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "width": 1536,
+      "height": 1024,
+      "box": [
+        390,
+        844
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/forest.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 2,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        390,
+        844
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/river.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 3,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        390,
+        844
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/oak.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 4,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        390,
+        844
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/ruins.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 5,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        390,
+        844
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/moon.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 6,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        390,
+        844
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/cave.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    },
+    {
+      "campaign": 7,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "width": 1254,
+      "height": 1254,
+      "box": [
+        390,
+        844
+      ],
+      "size": "cover",
+      "background": "url(\"http://127.0.0.1:8779/assets/campaign-hd/keep.webp\")",
+      "overflow": false,
+      "underlayHidden": true
+    }
+  ],
+  "decodedStillAssets": 89,
+  "errors": []
+}

@@ -79,7 +79,7 @@ test('mage matte removes blue residue without erasing warm artwork or restoring 
   assert.ok(!M.render('thornling').includes('feColorMatrix'));
 });
 test('Pip is friendly before and after attacking, including a held final blow',()=>{
-  assert.match(M.asset('pip').still,/pip-friendly\.png$/);
+  assert.match(M.asset('pip').still,/pip-friendly-b\.png$/);
   assert.equal(M.pipAttackWeight(0),0);assert.equal(M.pipAttackWeight(500),1);
   assert.ok(M.pipAttackWeight(950)>0&&M.pipAttackWeight(950)<1);
   assert.equal(M.pipAttackWeight(1050),0);assert.equal(M.pipAttackWeight(1200),0);
