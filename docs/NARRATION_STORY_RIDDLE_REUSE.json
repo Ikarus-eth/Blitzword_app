@@ -1,0 +1,1137 @@
+{
+  "sourceCommit": "12b9e3054c2ecf6ad81c0282825517ddfd270aa9",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "clips": {
+    "Jump, Pip!": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 0,
+      "duration": 0.9925,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0,
+          "end": 0.372
+        },
+        {
+          "charIndex": 6,
+          "charLength": 3,
+          "start": 0.453,
+          "end": 0.731
+        }
+      ]
+    },
+    "Pip, jump over water.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 0.9925,
+      "duration": 1.678,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.4355
+        },
+        {
+          "charIndex": 5,
+          "charLength": 4,
+          "start": 0.5165,
+          "end": 0.7255
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.7955,
+          "end": 0.9815
+        },
+        {
+          "charIndex": 15,
+          "charLength": 5,
+          "start": 1.0505,
+          "end": 1.4685
+        }
+      ]
+    },
+    "Open the book, Pip.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 2.6705,
+      "duration": 1.306,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.0815,
+          "end": 0.3595
+        },
+        {
+          "charIndex": 5,
+          "charLength": 3,
+          "start": 0.4065,
+          "end": 0.4755
+        },
+        {
+          "charIndex": 9,
+          "charLength": 4,
+          "start": 0.5105,
+          "end": 0.7085
+        },
+        {
+          "charIndex": 15,
+          "charLength": 3,
+          "start": 0.7775,
+          "end": 1.0445
+        }
+      ]
+    },
+    "Look up, Pip.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 3.9765,
+      "duration": 1.097,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.1335,
+          "end": 0.3545
+        },
+        {
+          "charIndex": 5,
+          "charLength": 2,
+          "start": 0.4235,
+          "end": 0.5395
+        },
+        {
+          "charIndex": 9,
+          "charLength": 3,
+          "start": 0.5975,
+          "end": 0.8535
+        }
+      ]
+    },
+    "Pip, jump up!": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 5.0735,
+      "duration": 1.3585,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1165,
+          "end": 0.4295
+        },
+        {
+          "charIndex": 5,
+          "charLength": 4,
+          "start": 0.5455,
+          "end": 0.8125
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.9055,
+          "end": 1.0795
+        }
+      ]
+    },
+    "Open the gate.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 6.432,
+      "duration": 1.126,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.116,
+          "end": 0.395
+        },
+        {
+          "charIndex": 5,
+          "charLength": 3,
+          "start": 0.464,
+          "end": 0.534
+        },
+        {
+          "charIndex": 9,
+          "charLength": 4,
+          "start": 0.569,
+          "end": 0.975
+        }
+      ]
+    },
+    "The bird is over the water.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 7.558,
+      "duration": 1.643,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.232
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.279,
+          "end": 0.511
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.581,
+          "end": 0.65
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.72,
+          "end": 0.894
+        },
+        {
+          "charIndex": 17,
+          "charLength": 3,
+          "start": 0.941,
+          "end": 1.01
+        },
+        {
+          "charIndex": 21,
+          "charLength": 5,
+          "start": 1.057,
+          "end": 1.475
+        }
+      ]
+    },
+    "The water is in the forest.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 9.201,
+      "duration": 1.7588,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.18
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.226,
+          "end": 0.54
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.586,
+          "end": 0.656
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 0.702,
+          "end": 0.76
+        },
+        {
+          "charIndex": 16,
+          "charLength": 3,
+          "start": 0.807,
+          "end": 0.876
+        },
+        {
+          "charIndex": 20,
+          "charLength": 6,
+          "start": 0.923,
+          "end": 1.434
+        }
+      ]
+    },
+    "Pip is at the gate.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 0,
+      "duration": 1.254,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.29
+        },
+        {
+          "charIndex": 4,
+          "charLength": 2,
+          "start": 0.337,
+          "end": 0.406
+        },
+        {
+          "charIndex": 7,
+          "charLength": 2,
+          "start": 0.453,
+          "end": 0.534
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.569,
+          "end": 0.639
+        },
+        {
+          "charIndex": 14,
+          "charLength": 4,
+          "start": 0.685,
+          "end": 1.126
+        }
+      ]
+    },
+    "The tree is big.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 1.254,
+      "duration": 1.3755,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.244,
+          "end": 0.453
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.487,
+          "end": 0.569
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.65,
+          "end": 0.998
+        }
+      ]
+    },
+    "Pip can jump over the water.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 2.6295,
+      "duration": 2.044,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.4585
+        },
+        {
+          "charIndex": 4,
+          "charLength": 3,
+          "start": 0.5285,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 8,
+          "charLength": 4,
+          "start": 0.7145,
+          "end": 0.8885
+        },
+        {
+          "charIndex": 13,
+          "charLength": 4,
+          "start": 0.9575,
+          "end": 1.1085
+        },
+        {
+          "charIndex": 18,
+          "charLength": 3,
+          "start": 1.1785,
+          "end": 1.2485
+        },
+        {
+          "charIndex": 22,
+          "charLength": 5,
+          "start": 1.2945,
+          "end": 1.7475
+        }
+      ]
+    },
+    "There is a big tree.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 4.6735,
+      "duration": 1.4565,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 5,
+          "start": 0.1335,
+          "end": 0.3305
+        },
+        {
+          "charIndex": 6,
+          "charLength": 2,
+          "start": 0.3655,
+          "end": 0.4345
+        },
+        {
+          "charIndex": 9,
+          "charLength": 1,
+          "start": 0.4695,
+          "end": 0.5045
+        },
+        {
+          "charIndex": 11,
+          "charLength": 3,
+          "start": 0.5505,
+          "end": 0.7365
+        },
+        {
+          "charIndex": 15,
+          "charLength": 4,
+          "start": 0.8065,
+          "end": 1.2945
+        }
+      ]
+    },
+    "The fire is in the forest.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 6.13,
+      "duration": 1.6485,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.267,
+          "end": 0.581
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.615,
+          "end": 0.685
+        },
+        {
+          "charIndex": 12,
+          "charLength": 2,
+          "start": 0.731,
+          "end": 0.801
+        },
+        {
+          "charIndex": 15,
+          "charLength": 3,
+          "start": 0.836,
+          "end": 0.906
+        },
+        {
+          "charIndex": 19,
+          "charLength": 6,
+          "start": 0.952,
+          "end": 1.44
+        }
+      ]
+    },
+    "The gate is not open.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 7.7785,
+      "duration": 1.6255,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.1975
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2435,
+          "end": 0.4875
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.5225,
+          "end": 0.5805
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.6505,
+          "end": 0.7785
+        },
+        {
+          "charIndex": 16,
+          "charLength": 4,
+          "start": 0.8475,
+          "end": 1.2195
+        }
+      ]
+    },
+    "Pip is by the treasure.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 9.404,
+      "duration": 1.8055,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.499
+        },
+        {
+          "charIndex": 4,
+          "charLength": 2,
+          "start": 0.569,
+          "end": 0.639
+        },
+        {
+          "charIndex": 7,
+          "charLength": 2,
+          "start": 0.708,
+          "end": 0.824
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.894,
+          "end": 0.964
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 1.01,
+          "end": 1.521
+        }
+      ]
+    },
+    "Look at the moon.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 11.2095,
+      "duration": 1.3293,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.1565,
+          "end": 0.3545
+        },
+        {
+          "charIndex": 5,
+          "charLength": 2,
+          "start": 0.3885,
+          "end": 0.4465
+        },
+        {
+          "charIndex": 8,
+          "charLength": 3,
+          "start": 0.4815,
+          "end": 0.5515
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.5975,
+          "end": 0.9575
+        }
+      ]
+    },
+    "It is not day.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 0,
+      "duration": 1.248,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0,
+          "end": 0.174
+        },
+        {
+          "charIndex": 3,
+          "charLength": 2,
+          "start": 0.221,
+          "end": 0.302
+        },
+        {
+          "charIndex": 6,
+          "charLength": 3,
+          "start": 0.372,
+          "end": 0.546
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.615,
+          "end": 1.022
+        }
+      ]
+    },
+    "The owl is in the tree.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 1.248,
+      "duration": 1.608,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.192
+        },
+        {
+          "charIndex": 4,
+          "charLength": 3,
+          "start": 0.273,
+          "end": 0.552
+        },
+        {
+          "charIndex": 8,
+          "charLength": 2,
+          "start": 0.621,
+          "end": 0.702
+        },
+        {
+          "charIndex": 11,
+          "charLength": 2,
+          "start": 0.749,
+          "end": 0.807
+        },
+        {
+          "charIndex": 14,
+          "charLength": 3,
+          "start": 0.853,
+          "end": 0.923
+        },
+        {
+          "charIndex": 18,
+          "charLength": 4,
+          "start": 0.97,
+          "end": 1.434
+        }
+      ]
+    },
+    "The light is on the water.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 2.856,
+      "duration": 1.7125,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.511
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.557,
+          "end": 0.627
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 0.673,
+          "end": 0.743
+        },
+        {
+          "charIndex": 16,
+          "charLength": 3,
+          "start": 0.79,
+          "end": 0.859
+        },
+        {
+          "charIndex": 20,
+          "charLength": 5,
+          "start": 0.906,
+          "end": 1.37
+        }
+      ]
+    },
+    "We can see the moon.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 4.5685,
+      "duration": 1.6485,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0.1795,
+          "end": 0.3305
+        },
+        {
+          "charIndex": 3,
+          "charLength": 3,
+          "start": 0.3775,
+          "end": 0.4935
+        },
+        {
+          "charIndex": 7,
+          "charLength": 3,
+          "start": 0.5635,
+          "end": 0.7485
+        },
+        {
+          "charIndex": 11,
+          "charLength": 3,
+          "start": 0.7835,
+          "end": 0.8535
+        },
+        {
+          "charIndex": 15,
+          "charLength": 4,
+          "start": 0.8995,
+          "end": 1.2715
+        }
+      ]
+    },
+    "Pip is by the fire.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 6.217,
+      "duration": 1.933,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.215,
+          "end": 0.505
+        },
+        {
+          "charIndex": 4,
+          "charLength": 2,
+          "start": 0.575,
+          "end": 0.644
+        },
+        {
+          "charIndex": 7,
+          "charLength": 2,
+          "start": 0.714,
+          "end": 0.865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.935,
+          "end": 1.004
+        },
+        {
+          "charIndex": 14,
+          "charLength": 4,
+          "start": 1.074,
+          "end": 1.597
+        }
+      ]
+    },
+    "Look into the cave.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 8.15,
+      "duration": 1.515,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.244,
+          "end": 0.453
+        },
+        {
+          "charIndex": 5,
+          "charLength": 4,
+          "start": 0.499,
+          "end": 0.65
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.72,
+          "end": 0.79
+        },
+        {
+          "charIndex": 14,
+          "charLength": 4,
+          "start": 0.836,
+          "end": 1.382
+        }
+      ]
+    },
+    "There is light in the cave.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 9.665,
+      "duration": 1.6835,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 5,
+          "start": 0.064,
+          "end": 0.262
+        },
+        {
+          "charIndex": 6,
+          "charLength": 2,
+          "start": 0.296,
+          "end": 0.366
+        },
+        {
+          "charIndex": 9,
+          "charLength": 5,
+          "start": 0.447,
+          "end": 0.679
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 0.726,
+          "end": 0.784
+        },
+        {
+          "charIndex": 18,
+          "charLength": 3,
+          "start": 0.819,
+          "end": 0.888
+        },
+        {
+          "charIndex": 22,
+          "charLength": 4,
+          "start": 0.935,
+          "end": 1.457
+        }
+      ]
+    },
+    "The water is in the cave.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 11.3485,
+      "duration": 1.8869,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2495
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3195,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.6915,
+          "end": 0.7605
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 0.8075,
+          "end": 0.8655
+        },
+        {
+          "charIndex": 16,
+          "charLength": 3,
+          "start": 0.9115,
+          "end": 0.9815
+        },
+        {
+          "charIndex": 20,
+          "charLength": 4,
+          "start": 1.0275,
+          "end": 1.5735
+        }
+      ]
+    },
+    "We are in the cave.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 0,
+      "duration": 1.2655,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 3,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.36
+        },
+        {
+          "charIndex": 7,
+          "charLength": 2,
+          "start": 0.406,
+          "end": 0.464
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.511,
+          "end": 0.58
+        },
+        {
+          "charIndex": 14,
+          "charLength": 4,
+          "start": 0.627,
+          "end": 1.138
+        }
+      ]
+    },
+    "The gate is open.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 1.2655,
+      "duration": 1.4515,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.1975
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2435,
+          "end": 0.4995
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.5345,
+          "end": 0.6155
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.6845,
+          "end": 1.0795
+        }
+      ]
+    },
+    "Look up at the castle.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 2.717,
+      "duration": 1.5325,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.244,
+          "end": 0.453
+        },
+        {
+          "charIndex": 5,
+          "charLength": 2,
+          "start": 0.499,
+          "end": 0.58
+        },
+        {
+          "charIndex": 8,
+          "charLength": 2,
+          "start": 0.627,
+          "end": 0.685
+        },
+        {
+          "charIndex": 11,
+          "charLength": 3,
+          "start": 0.72,
+          "end": 0.789
+        },
+        {
+          "charIndex": 15,
+          "charLength": 6,
+          "start": 0.836,
+          "end": 1.428
+        }
+      ]
+    },
+    "We go up.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 4.2495,
+      "duration": 1.1085,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0.0695,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 3,
+          "charLength": 2,
+          "start": 0.2905,
+          "end": 0.4175
+        },
+        {
+          "charIndex": 6,
+          "charLength": 2,
+          "start": 0.5225,
+          "end": 0.7545
+        }
+      ]
+    },
+    "We can see the castle.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 5.358,
+      "duration": 1.7995,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0.157,
+          "end": 0.308
+        },
+        {
+          "charIndex": 3,
+          "charLength": 3,
+          "start": 0.354,
+          "end": 0.47
+        },
+        {
+          "charIndex": 7,
+          "charLength": 3,
+          "start": 0.54,
+          "end": 0.726
+        },
+        {
+          "charIndex": 11,
+          "charLength": 3,
+          "start": 0.76,
+          "end": 0.83
+        },
+        {
+          "charIndex": 15,
+          "charLength": 6,
+          "start": 0.877,
+          "end": 1.503
+        }
+      ]
+    },
+    "The castle is by the tree.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 7.1575,
+      "duration": 2.0025,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.3305
+        },
+        {
+          "charIndex": 4,
+          "charLength": 6,
+          "start": 0.4005,
+          "end": 0.8415
+        },
+        {
+          "charIndex": 11,
+          "charLength": 2,
+          "start": 0.8765,
+          "end": 0.9465
+        },
+        {
+          "charIndex": 14,
+          "charLength": 2,
+          "start": 1.0155,
+          "end": 1.1435
+        },
+        {
+          "charIndex": 17,
+          "charLength": 3,
+          "start": 1.2245,
+          "end": 1.2945
+        },
+        {
+          "charIndex": 21,
+          "charLength": 4,
+          "start": 1.3415,
+          "end": 1.8055
+        }
+      ]
+    },
+    "The queen is by the gate.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 9.16,
+      "duration": 1.7825,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.232
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.302,
+          "end": 0.581
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.627,
+          "end": 0.697
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 0.767,
+          "end": 0.917
+        },
+        {
+          "charIndex": 16,
+          "charLength": 3,
+          "start": 0.987,
+          "end": 1.057
+        },
+        {
+          "charIndex": 20,
+          "charLength": 4,
+          "start": 1.103,
+          "end": 1.533
+        }
+      ]
+    }
+  }
+}

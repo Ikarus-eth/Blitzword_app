@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "base": "7107bf5f9105fd5a916c1b549be6c7483b4be3d0",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "maxCharacters": 6000,
+  "characters": 5348,
+  "segmentCount": 49,
+  "batches": [
+    {
+      "id": "story-riddle-001",
+      "text": "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?\n\nThe Thornling says, “Take a dry path.” “Keep away from the cave too.” Which trail fits both clues?\n\nPut the seed cup down before you add the oil. Add the oil before you light the lamp.\n\nTap the actions in the right order.\n\nThree boxes have leaf, sun and moon marks. The seed is not in the leaf box. Its mark lights and warms the day. Open the seed box.\n\nThe moth’s parcel is small. It has a star on it, not a leaf. Which parcel belongs to the moth?\n\nThe imp has seven letters. Two go to the owl. Three go to the moth. How many letters are left?\n\nClose the bag before you cross. Cross before you hand the bag to the moth.",
+      "segments": [
+        {
+          "key": "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?",
+          "text": "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The Thornling says, “Take a dry path.” “Keep away from the cave too.” Which trail fits both clues?",
+          "text": "The Thornling says, “Take a dry path.” “Keep away from the cave too.” Which trail fits both clues?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Put the seed cup down before you add the oil. Add the oil before you light the lamp.",
+          "text": "Put the seed cup down before you add the oil. Add the oil before you light the lamp.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "Tap the actions in the right order.",
+          "text": "Tap the actions in the right order.",
+          "kind": "ordering-prompt"
+        },
+        {
+          "key": "Three boxes have leaf, sun and moon marks. The seed is not in the leaf box. Its mark lights and warms the day. Open the seed box.",
+          "text": "Three boxes have leaf, sun and moon marks. The seed is not in the leaf box. Its mark lights and warms the day. Open the seed box.",
+          "kind": "riddle"
+        },
+        {
+          "key": "The moth’s parcel is small. It has a star on it, not a leaf. Which parcel belongs to the moth?",
+          "text": "The moth’s parcel is small. It has a star on it, not a leaf. Which parcel belongs to the moth?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The imp has seven letters. Two go to the owl. Three go to the moth. How many letters are left?",
+          "text": "The imp has seven letters. Two go to the owl. Three go to the moth. How many letters are left?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Close the bag before you cross. Cross before you hand the bag to the moth.",
+          "text": "Close the bag before you cross. Cross before you hand the bag to the moth.",
+          "kind": "ordering-riddle"
+        }
+      ]
+    },
+    {
+      "id": "story-riddle-002",
+      "text": "The pocket opens with an even number. It is more than four and less than eight. Which number opens it?\n\nThe lift needs a long rope. A wet rope will slip. Choose the rope.\n\nThere are nine pegs in the tray. Three are bent. Pip brings two more good pegs. How many good pegs can you use?\n\nThe guard takes a gear from the green box. She puts it under the blue box. The green box goes on a shelf. Where is the gear now?\n\nFit the gear before you pull the rope. Put the seed in the lift before you fit the gear.\n\nThree trees stand in a row: oak, pine, birch. The chick is not at either end. Which tree should you search?\n\nThe owl flew past before the bat. The moth flew past after the bat. Who flew past last?\n\nThe ladder needs eight rungs. Six rungs are already fixed in place. Pip has three spare rungs. How many spare rungs will be left after the repair?",
+      "segments": [
+        {
+          "key": "The pocket opens with an even number. It is more than four and less than eight. Which number opens it?",
+          "text": "The pocket opens with an even number. It is more than four and less than eight. Which number opens it?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The lift needs a long rope. A wet rope will slip. Choose the rope.",
+          "text": "The lift needs a long rope. A wet rope will slip. Choose the rope.",
+          "kind": "riddle"
+        },
+        {
+          "key": "There are nine pegs in the tray. Three are bent. Pip brings two more good pegs. How many good pegs can you use?",
+          "text": "There are nine pegs in the tray. Three are bent. Pip brings two more good pegs. How many good pegs can you use?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The guard takes a gear from the green box. She puts it under the blue box. The green box goes on a shelf. Where is the gear now?",
+          "text": "The guard takes a gear from the green box. She puts it under the blue box. The green box goes on a shelf. Where is the gear now?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Fit the gear before you pull the rope. Put the seed in the lift before you fit the gear.",
+          "text": "Fit the gear before you pull the rope. Put the seed in the lift before you fit the gear.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "Three trees stand in a row: oak, pine, birch. The chick is not at either end. Which tree should you search?",
+          "text": "Three trees stand in a row: oak, pine, birch. The chick is not at either end. Which tree should you search?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The owl flew past before the bat. The moth flew past after the bat. Who flew past last?",
+          "text": "The owl flew past before the bat. The moth flew past after the bat. Who flew past last?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The ladder needs eight rungs. Six rungs are already fixed in place. Pip has three spare rungs. How many spare rungs will be left after the repair?",
+          "text": "The ladder needs eight rungs. Six rungs are already fixed in place. Pip has three spare rungs. How many spare rungs will be left after the repair?",
+          "kind": "riddle"
+        }
+      ]
+    },
+    {
+      "id": "story-riddle-003",
+      "text": "The chick needs a basket with a lid. It must have no hole in the bottom. Choose its basket.\n\nUse something soft with no sharp teeth. It must brush dust from a tiny lock. Which tool should you take?\n\nThe knight has a round key and a square key. The round key opens the gate. The other key opens the vault. Which key opens the vault?\n\nThe vault has three rows of bells. There are four bells in each row. Two bells make no sound. How many bells can ring?\n\nKnock before you turn the key. Step back after you turn the key.\n\nThe boar crossed no bridge. It went past a pond, then under an arch. Which trail did it take?\n\nThe ring has six spaces. You have five seeds. The golem has the last one. Two of your seeds are already in the ring. How many more seeds must go in?\n\nThree pots show a moon, a leaf and a sun. The last seed is not under the leaf. The golem says, “Its mark gives light, but is not the sun.” Lift the right pot.",
+      "segments": [
+        {
+          "key": "The chick needs a basket with a lid. It must have no hole in the bottom. Choose its basket.",
+          "text": "The chick needs a basket with a lid. It must have no hole in the bottom. Choose its basket.",
+          "kind": "riddle"
+        },
+        {
+          "key": "Use something soft with no sharp teeth. It must brush dust from a tiny lock. Which tool should you take?",
+          "text": "Use something soft with no sharp teeth. It must brush dust from a tiny lock. Which tool should you take?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The knight has a round key and a square key. The round key opens the gate. The other key opens the vault. Which key opens the vault?",
+          "text": "The knight has a round key and a square key. The round key opens the gate. The other key opens the vault. Which key opens the vault?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The vault has three rows of bells. There are four bells in each row. Two bells make no sound. How many bells can ring?",
+          "text": "The vault has three rows of bells. There are four bells in each row. Two bells make no sound. How many bells can ring?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Knock before you turn the key. Step back after you turn the key.",
+          "text": "Knock before you turn the key. Step back after you turn the key.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "The boar crossed no bridge. It went past a pond, then under an arch. Which trail did it take?",
+          "text": "The boar crossed no bridge. It went past a pond, then under an arch. Which trail did it take?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The ring has six spaces. You have five seeds. The golem has the last one. Two of your seeds are already in the ring. How many more seeds must go in?",
+          "text": "The ring has six spaces. You have five seeds. The golem has the last one. Two of your seeds are already in the ring. How many more seeds must go in?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Three pots show a moon, a leaf and a sun. The last seed is not under the leaf. The golem says, “Its mark gives light, but is not the sun.” Lift the right pot.",
+          "text": "Three pots show a moon, a leaf and a sun. The last seed is not under the leaf. The golem says, “Its mark gives light, but is not the sun.” Lift the right pot.",
+          "kind": "riddle"
+        }
+      ]
+    },
+    {
+      "id": "story-riddle-004",
+      "text": "Put every seed in before you close the ring. Close the ring before you ring the bell.\n\nThe serpent puts the bottle beside a rock. The toad moves it behind a tall reed. Pip lifts the rock, but finds nothing. Where is the bottle?\n\nThe toad needs a path with four stones. None of the stones may be under water. Choose its path.\n\nThe toad carries two small notes on each trip. There are eight notes to deliver. How many trips does it need?\n\nLift the bell after you untie the reed. Ring the bell after you lift it clear of the mud.\n\nThe bell weighs four stones. The boat can carry six stones in all. Choose one extra load that fills it exactly. Which load goes with the bell?\n\nThe hole is wide. Use a wide board with no crack. Choose a board.\n\nCoils sit in four boxes: sun, leaf, moon, star. Take a box between sun and star. Do not take the leaf box. Which box has your rope?",
+      "segments": [
+        {
+          "key": "Put every seed in before you close the ring. Close the ring before you ring the bell.",
+          "text": "Put every seed in before you close the ring. Close the ring before you ring the bell.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "The serpent puts the bottle beside a rock. The toad moves it behind a tall reed. Pip lifts the rock, but finds nothing. Where is the bottle?",
+          "text": "The serpent puts the bottle beside a rock. The toad moves it behind a tall reed. Pip lifts the rock, but finds nothing. Where is the bottle?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The toad needs a path with four stones. None of the stones may be under water. Choose its path.",
+          "text": "The toad needs a path with four stones. None of the stones may be under water. Choose its path.",
+          "kind": "riddle"
+        },
+        {
+          "key": "The toad carries two small notes on each trip. There are eight notes to deliver. How many trips does it need?",
+          "text": "The toad carries two small notes on each trip. There are eight notes to deliver. How many trips does it need?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Lift the bell after you untie the reed. Ring the bell after you lift it clear of the mud.",
+          "text": "Lift the bell after you untie the reed. Ring the bell after you lift it clear of the mud.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "The bell weighs four stones. The boat can carry six stones in all. Choose one extra load that fills it exactly. Which load goes with the bell?",
+          "text": "The bell weighs four stones. The boat can carry six stones in all. Choose one extra load that fills it exactly. Which load goes with the bell?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The hole is wide. Use a wide board with no crack. Choose a board.",
+          "text": "The hole is wide. Use a wide board with no crack. Choose a board.",
+          "kind": "riddle"
+        },
+        {
+          "key": "Coils sit in four boxes: sun, leaf, moon, star. Take a box between sun and star. Do not take the leaf box. Which box has your rope?",
+          "text": "Coils sit in four boxes: sun, leaf, moon, star. Take a box between sun and star. Do not take the leaf box. Which box has your rope?",
+          "kind": "riddle"
+        }
+      ]
+    },
+    {
+      "id": "story-riddle-005",
+      "text": "Tie the boat before you lift the bell out. Lift the bell out before you untie the boat.\n\nThe guard gives the wrench to the troll. The troll lends it to Pip. Pip puts it on the flat stone. Where should you look for it?\n\nThere are four cups on the wheel. Each good cup lifts three scoops of water. One cup has a hole and lifts no water. How many scoops can one turn lift?\n\nStop the wheel before you change the cup. Open the gate after you change the cup.\n\nThe pool needs twelve scoops. The mended wheel lifts four cups of three scoops each turn. How many full turns fill the empty pool?\n\nA safe lamp blinks twice, then stays on. A lamp that goes dark marks deep water. Which signal should the wolves follow?\n\nEvery sign tells the truth. The left sign says, “This bank is wet.” The middle sign says, “The right bank is dry.” Which bank is definitely dry?\n\nThe wolf and two pups each need two blankets. There are eight blankets in the boat. How many blankets will be left?",
+      "segments": [
+        {
+          "key": "Tie the boat before you lift the bell out. Lift the bell out before you untie the boat.",
+          "text": "Tie the boat before you lift the bell out. Lift the bell out before you untie the boat.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "The guard gives the wrench to the troll. The troll lends it to Pip. Pip puts it on the flat stone. Where should you look for it?",
+          "text": "The guard gives the wrench to the troll. The troll lends it to Pip. Pip puts it on the flat stone. Where should you look for it?",
+          "kind": "riddle"
+        },
+        {
+          "key": "There are four cups on the wheel. Each good cup lifts three scoops of water. One cup has a hole and lifts no water. How many scoops can one turn lift?",
+          "text": "There are four cups on the wheel. Each good cup lifts three scoops of water. One cup has a hole and lifts no water. How many scoops can one turn lift?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Stop the wheel before you change the cup. Open the gate after you change the cup.",
+          "text": "Stop the wheel before you change the cup. Open the gate after you change the cup.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "The pool needs twelve scoops. The mended wheel lifts four cups of three scoops each turn. How many full turns fill the empty pool?",
+          "text": "The pool needs twelve scoops. The mended wheel lifts four cups of three scoops each turn. How many full turns fill the empty pool?",
+          "kind": "riddle"
+        },
+        {
+          "key": "A safe lamp blinks twice, then stays on. A lamp that goes dark marks deep water. Which signal should the wolves follow?",
+          "text": "A safe lamp blinks twice, then stays on. A lamp that goes dark marks deep water. Which signal should the wolves follow?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Every sign tells the truth. The left sign says, “This bank is wet.” The middle sign says, “The right bank is dry.” Which bank is definitely dry?",
+          "text": "Every sign tells the truth. The left sign says, “This bank is wet.” The middle sign says, “The right bank is dry.” Which bank is definitely dry?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The wolf and two pups each need two blankets. There are eight blankets in the boat. How many blankets will be left?",
+          "text": "The wolf and two pups each need two blankets. There are eight blankets in the boat. How many blankets will be left?",
+          "kind": "riddle"
+        }
+      ]
+    },
+    {
+      "id": "story-riddle-006",
+      "text": "Push the thorns aside before you reach for the bell. Put on gloves before you push the thorns.\n\nUse a route that passes the pine. Do not cross a bridge. Choose the safe route.\n\nThere are fifteen steps to the nest. You climb six, then four more. How many steps are left?\n\nThe lock uses a number in the three times table. It is greater than ten and less than fifteen. Choose the number.\n\nTie the rope to the bell before you lower it. Test the knot after you tie it, but before you lower it.\n\nThe three chests are red, blue and green. All three clues are true: the bell is not in red; blue holds rope; each chest holds just one thing. Which chest holds the bell?\n\nThere are six gates. Two friends must stand at each gate. Eight friends are in place. How many more friends do you need?\n\nRing the small bell before the big bell. Raise the flag after the small bell, but before the big bell.",
+      "segments": [
+        {
+          "key": "Push the thorns aside before you reach for the bell. Put on gloves before you push the thorns.",
+          "text": "Push the thorns aside before you reach for the bell. Put on gloves before you push the thorns.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "Use a route that passes the pine. Do not cross a bridge. Choose the safe route.",
+          "text": "Use a route that passes the pine. Do not cross a bridge. Choose the safe route.",
+          "kind": "riddle"
+        },
+        {
+          "key": "There are fifteen steps to the nest. You climb six, then four more. How many steps are left?",
+          "text": "There are fifteen steps to the nest. You climb six, then four more. How many steps are left?",
+          "kind": "riddle"
+        },
+        {
+          "key": "The lock uses a number in the three times table. It is greater than ten and less than fifteen. Choose the number.",
+          "text": "The lock uses a number in the three times table. It is greater than ten and less than fifteen. Choose the number.",
+          "kind": "riddle"
+        },
+        {
+          "key": "Tie the rope to the bell before you lower it. Test the knot after you tie it, but before you lower it.",
+          "text": "Tie the rope to the bell before you lower it. Test the knot after you tie it, but before you lower it.",
+          "kind": "ordering-riddle"
+        },
+        {
+          "key": "The three chests are red, blue and green. All three clues are true: the bell is not in red; blue holds rope; each chest holds just one thing. Which chest holds the bell?",
+          "text": "The three chests are red, blue and green. All three clues are true: the bell is not in red; blue holds rope; each chest holds just one thing. Which chest holds the bell?",
+          "kind": "riddle"
+        },
+        {
+          "key": "There are six gates. Two friends must stand at each gate. Eight friends are in place. How many more friends do you need?",
+          "text": "There are six gates. Two friends must stand at each gate. Eight friends are in place. How many more friends do you need?",
+          "kind": "riddle"
+        },
+        {
+          "key": "Ring the small bell before the big bell. Raise the flag after the small bell, but before the big bell.",
+          "text": "Ring the small bell before the big bell. Raise the flag after the small bell, but before the big bell.",
+          "kind": "ordering-riddle"
+        }
+      ]
+    },
+    {
+      "id": "story-riddle-007",
+      "text": "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?",
+      "segments": [
+        {
+          "key": "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?",
+          "text": "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?",
+          "kind": "riddle"
+        }
+      ]
+    }
+  ]
+}
