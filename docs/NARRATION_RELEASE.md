@@ -2,7 +2,7 @@
 
 ## Current narration status — 4 October 2026
 
-The focused update adds recorded wrong-answer comparisons, all current Word-trail intros, the 20 mission intros and the practice prefix using 7,372 new text characters. All existing recordings remain. See [current scope and verification](NARRATION_BUDGET_RELEASE.md). The 31 chapter reading sentences, 48 riddle Listen passages and teaching alignments remain outside this release; the quota limitation below is historical.
+The focused battle/correction release is deployed. The subsequent story/riddle completion supplies recorded coverage for all 34 chapter reading sentences and all 48 riddle Listen passages, using the already-paid 31 missing sentences and 5,348 newly submitted characters. See [latest implementation, testing and deployment status](NARRATION_STORY_RIDDLE_RELEASE.md). Personalized names and failed/unavailable audio retain device fallback; original teaching-word alignment remains separate work. The older quota limitation below is historical.
 
 ## Previous narration status — checked 25 September 2026
 

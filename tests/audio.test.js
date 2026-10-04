@@ -131,3 +131,13 @@ test('invalid later segment falls back before any part starts',async()=>{
  const h=recordedHarness({'You chose rack.':{file:'ok.mp3',offset:0,duration:1},'The word is rock.':{file:'bad.mp3',offset:29,duration:5}});
  h.speak(text);await flushAudio();assert.equal(h.sources.length,0);assert.equal(h.spoken[0].text,text);
 });
+
+test('ordering riddles play their recorded passage and shared instruction in order',async()=>{
+ const {recordedParts}=require('../audio'),body='Pip finds a key. Then he opens the box.',prompt='Tap the actions in the right order.';
+ const clips={[body]:{file:'riddle.mp3',offset:2,duration:3},[prompt]:{file:'prompt.mp3',offset:1,duration:2}};
+ const text=body+' '+prompt;assert.deepEqual(recordedParts(text,clips),[body,prompt]);
+ const h=recordedHarness(clips);h.speak(text);await flushAudio();assert.deepEqual(h.sources[0].args,[0,2,3]);
+ h.sources[0].onended();assert.deepEqual(h.sources[1].args,[0,1,2]);h.sources[1].onended();assert.equal(h.done,1);assert.equal(h.spoken.length,0);
+ const failed=recordedHarness(clips,{fetcher:async file=>({ok:file!=='prompt.mp3',arrayBuffer:async()=>new ArrayBuffer(8)})});
+ failed.speak(text);await flushAudio();assert.equal(failed.sources.length,0);assert.equal(failed.spoken[0].text,text);
+});

@@ -1,7 +1,7 @@
 """Bounded, resumable generation. Runs only in Actions with the repository secret.
 No retries and no account/plan changes. Successful paid outputs survive errors.
 """
-import base64, hashlib, json, os, pathlib, subprocess, sys, urllib.request, urllib.error
+import base64, hashlib, json, os, pathlib, shutil, subprocess, sys, urllib.request, urllib.error
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 MODE=sys.argv[1] if len(sys.argv)>1 else 'budget'
 CONFIG={'budget':('NARRATION_BUDGET_REQUEST.json','narration-budget',8000),'story-riddle':('NARRATION_STORY_RIDDLE_REQUEST.json','narration-story-riddle',6000)}
@@ -12,7 +12,7 @@ OUT=ROOT/(folder+'-output');OUT.mkdir(exist_ok=True)
 KEY=os.environ['ELEVENLABS_API_KEY']
 assert KEY and PLAN['voiceId']=='JBFqnCBsd6RMkjVDRZzb'
 assert PLAN['model']=='eleven_multilingual_v2' and PLAN['characters']<=cap
-assert all(__import__('shutil').which(binary) for binary in ['ffmpeg','ffprobe']),'Audio validation tools must exist before any paid request'
+assert all(shutil.which(binary) for binary in ['ffmpeg','ffprobe']),'Audio validation tools must exist before any paid request'
 assert sum(len(b['text']) for b in PLAN['batches'])==PLAN['characters']
 def request(endpoint,data=None):
  req=urllib.request.Request('https://api.elevenlabs.io/v1/'+endpoint,data=None if data is None else json.dumps(data).encode(),headers={'xi-api-key':KEY,'Content-Type':'application/json'})

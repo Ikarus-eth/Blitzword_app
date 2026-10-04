@@ -1,5 +1,9 @@
 # BlitzWord — Current Product Spec
 
+## Finish chapter and riddle narration — 4 October 2026
+
+The user approved finishing the remaining 31 chapter reading sentences and 48 riddle Listen passages and deploying the result. Reuse the already-paid chapter sentences; record the riddles in George's current voice within a 6,000-character generation cap, reusing the repeated ordering instruction. Preserve the approved wording, learner saves and all current gameplay. Custom dragon-name text stays local, and device speech remains the fallback for unavailable audio or unknown saved text. This does not include teaching-word alignment or additional unspoken UI text. The user authorized deployment without a separate pre-deployment listening gate; no physical-device or pronunciation approval is implied. [Implementation and budget](NARRATION_STORY_RIDDLE_RELEASE.md).
+
 ## Focused, lower-budget narration — 4 October 2026
 
 The user requested a cheaper solution, then explicitly authorized creation and deployment of wrong-answer feedback, Word-trail battle intros, new creature-mission encounters and the reusable practice-turn prefix. Reuse already-paid audio and existing word recordings; join whole recorded labels/words where full clauses are absent. Preserve the current wording, chosen/target comparison, gameplay, saves and local fallback. Use George with the existing Multilingual v2 settings. This focused deployment request supersedes the earlier requirement to finish the entire draft narration batch and obtain a separate pre-deployment listening approval. It does not claim physical-device or human pronunciation approval. Chapter reading sentences, riddle listening and teaching alignments remain outside this release. [Budget and implementation](NARRATION_BUDGET_RELEASE.md).

@@ -1,6 +1,6 @@
 (function(root){
 const narration={
-  "version": "recorded-voice-budget-20261004-r1",
+  "version": "recorded-voice-complete-20261004-r1",
   "voice": "Mixed approved British male recordings",
   "voices": [
     {
@@ -15,8 +15,8 @@ const narration={
   ],
   "language": "en-GB",
   "recoveredClipCount": 994,
-  "recordedClipCount": 2195,
-  "runtimeClipCount": 2195,
+  "recordedClipCount": 2275,
+  "runtimeClipCount": 2275,
   "fallbackOnly": [],
   "clips": {
     "on": {
@@ -20111,6 +20111,1430 @@ const narration={
       "offset": 16.718,
       "duration": 0.732,
       "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "Jump, Pip!": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 0,
+      "duration": 0.9925,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0,
+          "end": 0.372
+        },
+        {
+          "charIndex": 6,
+          "charLength": 3,
+          "start": 0.453,
+          "end": 0.731
+        }
+      ]
+    },
+    "Pip, jump over water.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 0.9925,
+      "duration": 1.678,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.4355
+        },
+        {
+          "charIndex": 5,
+          "charLength": 4,
+          "start": 0.5165,
+          "end": 0.7255
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.7955,
+          "end": 0.9815
+        },
+        {
+          "charIndex": 15,
+          "charLength": 5,
+          "start": 1.0505,
+          "end": 1.4685
+        }
+      ]
+    },
+    "Open the book, Pip.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 2.6705,
+      "duration": 1.306,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.0815,
+          "end": 0.3595
+        },
+        {
+          "charIndex": 5,
+          "charLength": 3,
+          "start": 0.4065,
+          "end": 0.4755
+        },
+        {
+          "charIndex": 9,
+          "charLength": 4,
+          "start": 0.5105,
+          "end": 0.7085
+        },
+        {
+          "charIndex": 15,
+          "charLength": 3,
+          "start": 0.7775,
+          "end": 1.0445
+        }
+      ]
+    },
+    "Look up, Pip.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 3.9765,
+      "duration": 1.097,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.1335,
+          "end": 0.3545
+        },
+        {
+          "charIndex": 5,
+          "charLength": 2,
+          "start": 0.4235,
+          "end": 0.5395
+        },
+        {
+          "charIndex": 9,
+          "charLength": 3,
+          "start": 0.5975,
+          "end": 0.8535
+        }
+      ]
+    },
+    "Pip, jump up!": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 5.0735,
+      "duration": 1.3585,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1165,
+          "end": 0.4295
+        },
+        {
+          "charIndex": 5,
+          "charLength": 4,
+          "start": 0.5455,
+          "end": 0.8125
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.9055,
+          "end": 1.0795
+        }
+      ]
+    },
+    "Open the gate.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 6.432,
+      "duration": 1.126,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.116,
+          "end": 0.395
+        },
+        {
+          "charIndex": 5,
+          "charLength": 3,
+          "start": 0.464,
+          "end": 0.534
+        },
+        {
+          "charIndex": 9,
+          "charLength": 4,
+          "start": 0.569,
+          "end": 0.975
+        }
+      ]
+    },
+    "The bird is over the water.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 7.558,
+      "duration": 1.643,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.232
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.279,
+          "end": 0.511
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.581,
+          "end": 0.65
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.72,
+          "end": 0.894
+        },
+        {
+          "charIndex": 17,
+          "charLength": 3,
+          "start": 0.941,
+          "end": 1.01
+        },
+        {
+          "charIndex": 21,
+          "charLength": 5,
+          "start": 1.057,
+          "end": 1.475
+        }
+      ]
+    },
+    "The water is in the forest.": {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "offset": 9.201,
+      "duration": 1.7588,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.18
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.226,
+          "end": 0.54
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.586,
+          "end": 0.656
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 0.702,
+          "end": 0.76
+        },
+        {
+          "charIndex": 16,
+          "charLength": 3,
+          "start": 0.807,
+          "end": 0.876
+        },
+        {
+          "charIndex": 20,
+          "charLength": 6,
+          "start": 0.923,
+          "end": 1.434
+        }
+      ]
+    },
+    "Pip is at the gate.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 0,
+      "duration": 1.254,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.29
+        },
+        {
+          "charIndex": 4,
+          "charLength": 2,
+          "start": 0.337,
+          "end": 0.406
+        },
+        {
+          "charIndex": 7,
+          "charLength": 2,
+          "start": 0.453,
+          "end": 0.534
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.569,
+          "end": 0.639
+        },
+        {
+          "charIndex": 14,
+          "charLength": 4,
+          "start": 0.685,
+          "end": 1.126
+        }
+      ]
+    },
+    "The tree is big.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 1.254,
+      "duration": 1.3755,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.244,
+          "end": 0.453
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.487,
+          "end": 0.569
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.65,
+          "end": 0.998
+        }
+      ]
+    },
+    "Pip can jump over the water.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 2.6295,
+      "duration": 2.044,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.4585
+        },
+        {
+          "charIndex": 4,
+          "charLength": 3,
+          "start": 0.5285,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 8,
+          "charLength": 4,
+          "start": 0.7145,
+          "end": 0.8885
+        },
+        {
+          "charIndex": 13,
+          "charLength": 4,
+          "start": 0.9575,
+          "end": 1.1085
+        },
+        {
+          "charIndex": 18,
+          "charLength": 3,
+          "start": 1.1785,
+          "end": 1.2485
+        },
+        {
+          "charIndex": 22,
+          "charLength": 5,
+          "start": 1.2945,
+          "end": 1.7475
+        }
+      ]
+    },
+    "There is a big tree.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 4.6735,
+      "duration": 1.4565,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 5,
+          "start": 0.1335,
+          "end": 0.3305
+        },
+        {
+          "charIndex": 6,
+          "charLength": 2,
+          "start": 0.3655,
+          "end": 0.4345
+        },
+        {
+          "charIndex": 9,
+          "charLength": 1,
+          "start": 0.4695,
+          "end": 0.5045
+        },
+        {
+          "charIndex": 11,
+          "charLength": 3,
+          "start": 0.5505,
+          "end": 0.7365
+        },
+        {
+          "charIndex": 15,
+          "charLength": 4,
+          "start": 0.8065,
+          "end": 1.2945
+        }
+      ]
+    },
+    "The fire is in the forest.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 6.13,
+      "duration": 1.6485,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.267,
+          "end": 0.581
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.615,
+          "end": 0.685
+        },
+        {
+          "charIndex": 12,
+          "charLength": 2,
+          "start": 0.731,
+          "end": 0.801
+        },
+        {
+          "charIndex": 15,
+          "charLength": 3,
+          "start": 0.836,
+          "end": 0.906
+        },
+        {
+          "charIndex": 19,
+          "charLength": 6,
+          "start": 0.952,
+          "end": 1.44
+        }
+      ]
+    },
+    "The gate is not open.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 7.7785,
+      "duration": 1.6255,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.1975
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2435,
+          "end": 0.4875
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.5225,
+          "end": 0.5805
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.6505,
+          "end": 0.7785
+        },
+        {
+          "charIndex": 16,
+          "charLength": 4,
+          "start": 0.8475,
+          "end": 1.2195
+        }
+      ]
+    },
+    "Pip is by the treasure.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 9.404,
+      "duration": 1.8055,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.499
+        },
+        {
+          "charIndex": 4,
+          "charLength": 2,
+          "start": 0.569,
+          "end": 0.639
+        },
+        {
+          "charIndex": 7,
+          "charLength": 2,
+          "start": 0.708,
+          "end": 0.824
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.894,
+          "end": 0.964
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 1.01,
+          "end": 1.521
+        }
+      ]
+    },
+    "Look at the moon.": {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "offset": 11.2095,
+      "duration": 1.3293,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.1565,
+          "end": 0.3545
+        },
+        {
+          "charIndex": 5,
+          "charLength": 2,
+          "start": 0.3885,
+          "end": 0.4465
+        },
+        {
+          "charIndex": 8,
+          "charLength": 3,
+          "start": 0.4815,
+          "end": 0.5515
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.5975,
+          "end": 0.9575
+        }
+      ]
+    },
+    "It is not day.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 0,
+      "duration": 1.248,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0,
+          "end": 0.174
+        },
+        {
+          "charIndex": 3,
+          "charLength": 2,
+          "start": 0.221,
+          "end": 0.302
+        },
+        {
+          "charIndex": 6,
+          "charLength": 3,
+          "start": 0.372,
+          "end": 0.546
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.615,
+          "end": 1.022
+        }
+      ]
+    },
+    "The owl is in the tree.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 1.248,
+      "duration": 1.608,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.192
+        },
+        {
+          "charIndex": 4,
+          "charLength": 3,
+          "start": 0.273,
+          "end": 0.552
+        },
+        {
+          "charIndex": 8,
+          "charLength": 2,
+          "start": 0.621,
+          "end": 0.702
+        },
+        {
+          "charIndex": 11,
+          "charLength": 2,
+          "start": 0.749,
+          "end": 0.807
+        },
+        {
+          "charIndex": 14,
+          "charLength": 3,
+          "start": 0.853,
+          "end": 0.923
+        },
+        {
+          "charIndex": 18,
+          "charLength": 4,
+          "start": 0.97,
+          "end": 1.434
+        }
+      ]
+    },
+    "The light is on the water.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 2.856,
+      "duration": 1.7125,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.511
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.557,
+          "end": 0.627
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 0.673,
+          "end": 0.743
+        },
+        {
+          "charIndex": 16,
+          "charLength": 3,
+          "start": 0.79,
+          "end": 0.859
+        },
+        {
+          "charIndex": 20,
+          "charLength": 5,
+          "start": 0.906,
+          "end": 1.37
+        }
+      ]
+    },
+    "We can see the moon.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 4.5685,
+      "duration": 1.6485,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0.1795,
+          "end": 0.3305
+        },
+        {
+          "charIndex": 3,
+          "charLength": 3,
+          "start": 0.3775,
+          "end": 0.4935
+        },
+        {
+          "charIndex": 7,
+          "charLength": 3,
+          "start": 0.5635,
+          "end": 0.7485
+        },
+        {
+          "charIndex": 11,
+          "charLength": 3,
+          "start": 0.7835,
+          "end": 0.8535
+        },
+        {
+          "charIndex": 15,
+          "charLength": 4,
+          "start": 0.8995,
+          "end": 1.2715
+        }
+      ]
+    },
+    "Pip is by the fire.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 6.217,
+      "duration": 1.933,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.215,
+          "end": 0.505
+        },
+        {
+          "charIndex": 4,
+          "charLength": 2,
+          "start": 0.575,
+          "end": 0.644
+        },
+        {
+          "charIndex": 7,
+          "charLength": 2,
+          "start": 0.714,
+          "end": 0.865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.935,
+          "end": 1.004
+        },
+        {
+          "charIndex": 14,
+          "charLength": 4,
+          "start": 1.074,
+          "end": 1.597
+        }
+      ]
+    },
+    "Look into the cave.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 8.15,
+      "duration": 1.515,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.244,
+          "end": 0.453
+        },
+        {
+          "charIndex": 5,
+          "charLength": 4,
+          "start": 0.499,
+          "end": 0.65
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.72,
+          "end": 0.79
+        },
+        {
+          "charIndex": 14,
+          "charLength": 4,
+          "start": 0.836,
+          "end": 1.382
+        }
+      ]
+    },
+    "There is light in the cave.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 9.665,
+      "duration": 1.6835,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 5,
+          "start": 0.064,
+          "end": 0.262
+        },
+        {
+          "charIndex": 6,
+          "charLength": 2,
+          "start": 0.296,
+          "end": 0.366
+        },
+        {
+          "charIndex": 9,
+          "charLength": 5,
+          "start": 0.447,
+          "end": 0.679
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 0.726,
+          "end": 0.784
+        },
+        {
+          "charIndex": 18,
+          "charLength": 3,
+          "start": 0.819,
+          "end": 0.888
+        },
+        {
+          "charIndex": 22,
+          "charLength": 4,
+          "start": 0.935,
+          "end": 1.457
+        }
+      ]
+    },
+    "The water is in the cave.": {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "offset": 11.3485,
+      "duration": 1.8869,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2495
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3195,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.6915,
+          "end": 0.7605
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 0.8075,
+          "end": 0.8655
+        },
+        {
+          "charIndex": 16,
+          "charLength": 3,
+          "start": 0.9115,
+          "end": 0.9815
+        },
+        {
+          "charIndex": 20,
+          "charLength": 4,
+          "start": 1.0275,
+          "end": 1.5735
+        }
+      ]
+    },
+    "We are in the cave.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 0,
+      "duration": 1.2655,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 3,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.36
+        },
+        {
+          "charIndex": 7,
+          "charLength": 2,
+          "start": 0.406,
+          "end": 0.464
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.511,
+          "end": 0.58
+        },
+        {
+          "charIndex": 14,
+          "charLength": 4,
+          "start": 0.627,
+          "end": 1.138
+        }
+      ]
+    },
+    "The gate is open.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 1.2655,
+      "duration": 1.4515,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.1975
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2435,
+          "end": 0.4995
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.5345,
+          "end": 0.6155
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.6845,
+          "end": 1.0795
+        }
+      ]
+    },
+    "Look up at the castle.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 2.717,
+      "duration": 1.5325,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 4,
+          "start": 0.244,
+          "end": 0.453
+        },
+        {
+          "charIndex": 5,
+          "charLength": 2,
+          "start": 0.499,
+          "end": 0.58
+        },
+        {
+          "charIndex": 8,
+          "charLength": 2,
+          "start": 0.627,
+          "end": 0.685
+        },
+        {
+          "charIndex": 11,
+          "charLength": 3,
+          "start": 0.72,
+          "end": 0.789
+        },
+        {
+          "charIndex": 15,
+          "charLength": 6,
+          "start": 0.836,
+          "end": 1.428
+        }
+      ]
+    },
+    "We go up.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 4.2495,
+      "duration": 1.1085,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0.0695,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 3,
+          "charLength": 2,
+          "start": 0.2905,
+          "end": 0.4175
+        },
+        {
+          "charIndex": 6,
+          "charLength": 2,
+          "start": 0.5225,
+          "end": 0.7545
+        }
+      ]
+    },
+    "We can see the castle.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 5.358,
+      "duration": 1.7995,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0.157,
+          "end": 0.308
+        },
+        {
+          "charIndex": 3,
+          "charLength": 3,
+          "start": 0.354,
+          "end": 0.47
+        },
+        {
+          "charIndex": 7,
+          "charLength": 3,
+          "start": 0.54,
+          "end": 0.726
+        },
+        {
+          "charIndex": 11,
+          "charLength": 3,
+          "start": 0.76,
+          "end": 0.83
+        },
+        {
+          "charIndex": 15,
+          "charLength": 6,
+          "start": 0.877,
+          "end": 1.503
+        }
+      ]
+    },
+    "The castle is by the tree.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 7.1575,
+      "duration": 2.0025,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.3305
+        },
+        {
+          "charIndex": 4,
+          "charLength": 6,
+          "start": 0.4005,
+          "end": 0.8415
+        },
+        {
+          "charIndex": 11,
+          "charLength": 2,
+          "start": 0.8765,
+          "end": 0.9465
+        },
+        {
+          "charIndex": 14,
+          "charLength": 2,
+          "start": 1.0155,
+          "end": 1.1435
+        },
+        {
+          "charIndex": 17,
+          "charLength": 3,
+          "start": 1.2245,
+          "end": 1.2945
+        },
+        {
+          "charIndex": 21,
+          "charLength": 4,
+          "start": 1.3415,
+          "end": 1.8055
+        }
+      ]
+    },
+    "The queen is by the gate.": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 9.16,
+      "duration": 1.7825,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.232
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.302,
+          "end": 0.581
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.627,
+          "end": 0.697
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 0.767,
+          "end": 0.917
+        },
+        {
+          "charIndex": 16,
+          "charLength": 3,
+          "start": 0.987,
+          "end": 1.057
+        },
+        {
+          "charIndex": 20,
+          "charLength": 4,
+          "start": 1.103,
+          "end": 1.533
+        }
+      ]
+    },
+    "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 0,
+      "duration": 8.8525,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "The Thornling says, “Take a dry path.” “Keep away from the cave too.” Which trail fits both clues?": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 8.8525,
+      "duration": 7.8545,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "Put the seed cup down before you add the oil. Add the oil before you light the lamp.": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 16.707,
+      "duration": 5.9215,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "Tap the actions in the right order.": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 22.6285,
+      "duration": 2.5075,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "Three boxes have leaf, sun and moon marks. The seed is not in the leaf box. Its mark lights and warms the day. Open the seed box.": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 25.136,
+      "duration": 9.892,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "The moth’s parcel is small. It has a star on it, not a leaf. Which parcel belongs to the moth?": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 35.028,
+      "duration": 7.3025,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "The imp has seven letters. Two go to the owl. Three go to the moth. How many letters are left?": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 42.3305,
+      "duration": 7.767,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "Close the bag before you cross. Cross before you hand the bag to the moth.": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 50.0975,
+      "duration": 5.0731,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "The pocket opens with an even number. It is more than four and less than eight. Which number opens it?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 0,
+      "duration": 7.053,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The lift needs a long rope. A wet rope will slip. Choose the rope.": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 7.053,
+      "duration": 4.8295,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "There are nine pegs in the tray. Three are bent. Pip brings two more good pegs. How many good pegs can you use?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 11.8825,
+      "duration": 8.8705,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The guard takes a gear from the green box. She puts it under the blue box. The green box goes on a shelf. Where is the gear now?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 20.753,
+      "duration": 9.259,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "Fit the gear before you pull the rope. Put the seed in the lift before you fit the gear.": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 30.012,
+      "duration": 5.916,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "Three trees stand in a row: oak, pine, birch. The chick is not at either end. Which tree should you search?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 35.928,
+      "duration": 8.98,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The owl flew past before the bat. The moth flew past after the bat. Who flew past last?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 44.908,
+      "duration": 7.3665,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The ladder needs eight rungs. Six rungs are already fixed in place. Pip has three spare rungs. How many spare rungs will be left after the repair?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 52.2745,
+      "duration": 10.6806,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The chick needs a basket with a lid. It must have no hole in the bottom. Choose its basket.": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 0,
+      "duration": 5.799,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "Use something soft with no sharp teeth. It must brush dust from a tiny lock. Which tool should you take?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 5.799,
+      "duration": 7.274,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "The knight has a round key and a square key. The round key opens the gate. The other key opens the vault. Which key opens the vault?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 13.073,
+      "duration": 9.8625,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "The vault has three rows of bells. There are four bells in each row. Two bells make no sound. How many bells can ring?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 22.9355,
+      "duration": 9.52,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "Knock before you turn the key. Step back after you turn the key.": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 32.4555,
+      "duration": 4.6205,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "The boar crossed no bridge. It went past a pond, then under an arch. Which trail did it take?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 37.076,
+      "duration": 6.7745,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "The ring has six spaces. You have five seeds. The golem has the last one. Two of your seeds are already in the ring. How many more seeds must go in?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 43.8505,
+      "duration": 10.513,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "Three pots show a moon, a leaf and a sun. The last seed is not under the leaf. The golem says, “Its mark gives light, but is not the sun.” Lift the right pot.": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 54.3635,
+      "duration": 12.0398,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "Put every seed in before you close the ring. Close the ring before you ring the bell.": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 0,
+      "duration": 5.1145,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The serpent puts the bottle beside a rock. The toad moves it behind a tall reed. Pip lifts the rock, but finds nothing. Where is the bottle?": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 5.1145,
+      "duration": 9.9145,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The toad needs a path with four stones. None of the stones may be under water. Choose its path.": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 15.029,
+      "duration": 7.0935,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The toad carries two small notes on each trip. There are eight notes to deliver. How many trips does it need?": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 22.1225,
+      "duration": 8.0515,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "Lift the bell after you untie the reed. Ring the bell after you lift it clear of the mud.": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 30.174,
+      "duration": 6.3395,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The bell weighs four stones. The boat can carry six stones in all. Choose one extra load that fills it exactly. Which load goes with the bell?": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 36.5135,
+      "duration": 11.0645,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The hole is wide. Use a wide board with no crack. Choose a board.": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 47.578,
+      "duration": 5.8395,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "Coils sit in four boxes: sun, leaf, moon, star. Take a box between sun and star. Do not take the leaf box. Which box has your rope?": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 53.4175,
+      "duration": 12.6984,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "Tie the boat before you lift the bell out. Lift the bell out before you untie the boat.": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 0,
+      "duration": 5.3405,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "The guard gives the wrench to the troll. The troll lends it to Pip. Pip puts it on the flat stone. Where should you look for it?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 5.3405,
+      "duration": 9.0845,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "There are four cups on the wheel. Each good cup lifts three scoops of water. One cup has a hole and lifts no water. How many scoops can one turn lift?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 14.425,
+      "duration": 11.4245,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "Stop the wheel before you change the cup. Open the gate after you change the cup.": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 25.8495,
+      "duration": 5.538,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "The pool needs twelve scoops. The mended wheel lifts four cups of three scoops each turn. How many full turns fill the empty pool?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 31.3875,
+      "duration": 10.025,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "A safe lamp blinks twice, then stays on. A lamp that goes dark marks deep water. Which signal should the wolves follow?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 41.4125,
+      "duration": 10.042,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "Every sign tells the truth. The left sign says, “This bank is wet.” The middle sign says, “The right bank is dry.” Which bank is definitely dry?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 51.4545,
+      "duration": 12.382,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "The wolf and two pups each need two blankets. There are eight blankets in the boat. How many blankets will be left?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 63.8365,
+      "duration": 8.1308,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "Push the thorns aside before you reach for the bell. Put on gloves before you push the thorns.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 0,
+      "duration": 5.6365,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "Use a route that passes the pine. Do not cross a bridge. Choose the safe route.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 5.6365,
+      "duration": 5.4335,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "There are fifteen steps to the nest. You climb six, then four more. How many steps are left?": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 11.07,
+      "duration": 6.9365,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "The lock uses a number in the three times table. It is greater than ten and less than fifteen. Choose the number.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 18.0065,
+      "duration": 8.156,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "Tie the rope to the bell before you lower it. Test the knot after you tie it, but before you lower it.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 26.1625,
+      "duration": 6.7055,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "The three chests are red, blue and green. All three clues are true: the bell is not in red; blue holds rope; each chest holds just one thing. Which chest holds the bell?": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 32.868,
+      "duration": 12.8115,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "There are six gates. Two friends must stand at each gate. Eight friends are in place. How many more friends do you need?": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 45.6795,
+      "duration": 7.9475,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "Ring the small bell before the big bell. Raise the flag after the small bell, but before the big bell.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 53.627,
+      "duration": 6.6897,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?": {
+      "file": "assets/narration/story-riddle-007.mp3",
+      "offset": 0,
+      "duration": 7.8367,
+      "sha256": "8cbb0951def1f1eb0c65712a42d48c5b45a888438260743000d8eb41722efddd"
     }
   }
 };
