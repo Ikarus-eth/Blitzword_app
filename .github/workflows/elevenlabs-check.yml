@@ -1,0 +1,42 @@
+name: Check ElevenLabs connection
+on:
+  push:
+    branches: [codex/elevenlabs-check-20261004]
+    paths: [.github/workflows/elevenlabs-check.yml]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check allowance and one short speech request
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,datetime
+          key=os.environ.get('ELEVENLABS_API_KEY')
+          if not key: raise SystemExit('ELEVENLABS_API_KEY is missing')
+          print('Checked at',datetime.datetime.now(datetime.timezone.utc).isoformat())
+          def call(path, payload=None):
+              data=None if payload is None else json.dumps(payload).encode()
+              req=urllib.request.Request('https://api.elevenlabs.io/v1/'+path,data=data,headers={'xi-api-key':key,'Content-Type':'application/json'})
+              try:
+                  with urllib.request.urlopen(req,timeout=60) as r:
+                      body=r.read()
+                      print(path, 'HTTP',r.status)
+                      return body
+              except urllib.error.HTTPError as e:
+                  print(path,'HTTP',e.code,e.read().decode()[:1000].replace(key,'[REDACTED]'))
+                  return None
+          raw=call('user/subscription')
+          if raw:
+              s=json.loads(raw)
+              print(json.dumps({k:s.get(k) for k in ['tier','status','character_count','character_limit','next_character_count_reset_unix']}))
+          raw=call('text-to-speech/JBFqnCBsd6RMkjVDRZzb',{'text':'Hello, Pip.','model_id':'eleven_multilingual_v2','voice_settings':{'stability':0.65,'similarity_boost':0.8,'style':0,'use_speaker_boost':True,'speed':0.9}})
+          if raw:
+              print('Speech generation succeeded:',len(raw),'audio bytes')
+          else:
+              raise SystemExit('Speech generation failed; see provider response above')
+          PY
