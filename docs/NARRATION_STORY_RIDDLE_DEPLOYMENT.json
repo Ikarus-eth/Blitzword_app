@@ -1,0 +1,179 @@
+{
+  "verifiedAt": "2026-10-04T02:50:01.456410+00:00",
+  "mergeCommit": "e69dbf561f1e4f86c37294d73d6299fa93f11c5a",
+  "pullRequest": 127,
+  "pagesRun": 37172174610,
+  "build": "story-riddle-narration-20261004-r1",
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "files": [
+    {
+      "file": "adventure-core.js",
+      "status": 200,
+      "sha256": "b5a9550ffabd170c904221b973d58b7ddeeb18dc1afa3808bc4333b4b4171586",
+      "expectedSha256": "b5a9550ffabd170c904221b973d58b7ddeeb18dc1afa3808bc4333b4b4171586",
+      "matches": true,
+      "bytes": 9656
+    },
+    {
+      "file": "adventure-ui.js",
+      "status": 200,
+      "sha256": "95edb37bfc6f35f1fb92d41cd759dfcfe073f836104364e2f2f1b97b302e9682",
+      "expectedSha256": "95edb37bfc6f35f1fb92d41cd759dfcfe073f836104364e2f2f1b97b302e9682",
+      "matches": true,
+      "bytes": 20490
+    },
+    {
+      "file": "adventures.css",
+      "status": 200,
+      "sha256": "b821a8ed8081e9100b517e8b6e15f1a25e2998a6b2a2d557905047a0f558222b",
+      "expectedSha256": "b821a8ed8081e9100b517e8b6e15f1a25e2998a6b2a2d557905047a0f558222b",
+      "matches": true,
+      "bytes": 17661
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "sha256": "8a60b56c06264ffbb9be5a62f88840d673553718ebaaf9e00f40c0e4486dd8c0",
+      "expectedSha256": "8a60b56c06264ffbb9be5a62f88840d673553718ebaaf9e00f40c0e4486dd8c0",
+      "matches": true,
+      "bytes": 108817
+    },
+    {
+      "file": "assets/narration/completion-batch-001.mp3",
+      "status": 200,
+      "sha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "expectedSha256": "0056d9676efdefc294c3e566f3b08b715deb54873fbc812fbe2da8086c446aac",
+      "matches": true,
+      "bytes": 176422
+    },
+    {
+      "file": "assets/narration/completion-batch-002.mp3",
+      "status": 200,
+      "sha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "expectedSha256": "1ed6fc871f665dd3f84dd111decf27e21f234c446884d10c610fed8677bf0e2e",
+      "matches": true,
+      "bytes": 201500
+    },
+    {
+      "file": "assets/narration/completion-batch-003.mp3",
+      "status": 200,
+      "sha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "expectedSha256": "a9e2d6241f9fa7ca4b4d24e6eac28c0f708ac9efb31144a5f1c13664d16f6a8b",
+      "matches": true,
+      "bytes": 212785
+    },
+    {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "status": 200,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "expectedSha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "matches": true,
+      "bytes": 238698
+    },
+    {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "status": 200,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc",
+      "expectedSha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc",
+      "matches": true,
+      "bytes": 883191
+    },
+    {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "status": 200,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660",
+      "expectedSha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660",
+      "matches": true,
+      "bytes": 1007743
+    },
+    {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "status": 200,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba",
+      "expectedSha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba",
+      "matches": true,
+      "bytes": 1062914
+    },
+    {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "status": 200,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d",
+      "expectedSha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d",
+      "matches": true,
+      "bytes": 1058316
+    },
+    {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "status": 200,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5",
+      "expectedSha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5",
+      "matches": true,
+      "bytes": 1151939
+    },
+    {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "status": 200,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43",
+      "expectedSha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43",
+      "matches": true,
+      "bytes": 965529
+    },
+    {
+      "file": "assets/narration/story-riddle-007.mp3",
+      "status": 200,
+      "sha256": "8cbb0951def1f1eb0c65712a42d48c5b45a888438260743000d8eb41722efddd",
+      "expectedSha256": "8cbb0951def1f1eb0c65712a42d48c5b45a888438260743000d8eb41722efddd",
+      "matches": true,
+      "bytes": 125849
+    },
+    {
+      "file": "audio.js",
+      "status": 200,
+      "sha256": "4ef2c04fd582856f8f2bb73865bf2edf819b04ba432f1f214b99f47e2c4250b4",
+      "expectedSha256": "4ef2c04fd582856f8f2bb73865bf2edf819b04ba432f1f214b99f47e2c4250b4",
+      "matches": true,
+      "bytes": 8609
+    },
+    {
+      "file": "content.js",
+      "status": 200,
+      "sha256": "97aafb9de48438975eeaf3f6341de463cca782ad489ca62cdcaa6bbcd0a4865c",
+      "expectedSha256": "97aafb9de48438975eeaf3f6341de463cca782ad489ca62cdcaa6bbcd0a4865c",
+      "matches": true,
+      "bytes": 85625
+    },
+    {
+      "file": "game-core.js",
+      "status": 200,
+      "sha256": "a7b03841c8dede0c38375af6b7f3924dff7f2a669e282e84ac9f687ecf384cd1",
+      "expectedSha256": "a7b03841c8dede0c38375af6b7f3924dff7f2a669e282e84ac9f687ecf384cd1",
+      "matches": true,
+      "bytes": 76621
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "ab213f1a20287f681e7997a4787557cafafeded332e3a519a77d6a1baaecd61b",
+      "expectedSha256": "ab213f1a20287f681e7997a4787557cafafeded332e3a519a77d6a1baaecd61b",
+      "matches": true,
+      "bytes": 38104
+    },
+    {
+      "file": "missions.js",
+      "status": 200,
+      "sha256": "95e6e98dde26d348c5423148abac239f80410fca32f7e281d1769a0767e8f84f",
+      "expectedSha256": "95e6e98dde26d348c5423148abac239f80410fca32f7e281d1769a0767e8f84f",
+      "matches": true,
+      "bytes": 28436
+    },
+    {
+      "file": "narration.js",
+      "status": 200,
+      "sha256": "552a2072195775ae4592e4e57fc109330716b3305da068a04753c310d4a518dc",
+      "expectedSha256": "552a2072195775ae4592e4e57fc109330716b3305da068a04753c310d4a518dc",
+      "matches": true,
+      "bytes": 665628
+    }
+  ],
+  "allMatch": true
+}
