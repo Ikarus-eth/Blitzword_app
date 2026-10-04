@@ -1,6 +1,6 @@
 # Quest clarity and animal teammates — 4 October 2026
 
-Build: `quest-clarity-20261004-r1`. Status: implemented and tested locally; deployment pending.
+Build: `quest-clarity-20261004-r1`. Status: deployed and verified.
 
 This revision follows the parent’s playtest: the introductions were hard to read, lives felt too generous, quest length and book symbols were unclear, and the child wanted collected animals on his side.
 
@@ -30,3 +30,5 @@ The original roughly two-hour estimate covered the authored content, not a measu
 - Physical iPad/Safari, the child’s reading comfort, real session length and preference for the four-heart setting are unverified.
 
 [Reviewed tablet battle](quest-clarity-tablet.jpg). See [current deployment status](../CURRENT_STATUS.md).
+
+Deployed through [PR #123](https://github.com/Ikarus-eth/Blitzword_app/pull/123), commit `dfda09124d6ac11424695b0c9f6c7cf7f1262eb9`, and successful [Pages run 37166504244](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37166504244). All nine changed runtime/review files match the tested source and the live build marker is correct. The memory-only live quest preview rendered its short introduction, 8-step trail, carried hearts and chosen teammate without console errors. [Live hashes](QUEST_CLARITY_DEPLOYMENT.json), [live preview screenshot](quest-clarity-live.jpg).
