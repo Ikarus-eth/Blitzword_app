@@ -135,11 +135,8 @@ function growthCaption(p){
 }
 function growthStepCaption(p){return p.next?xpText(p.stepRemaining)+' XP to step '+(p.steps+1)+' of 10':dragonText('Pip is ready to ride');}
 function renderChapter(element,compact=false){
-  if(state.battle?.missionId){
-    const m=Core.Adventure.Data.byId[state.battle.missionId];element.replaceChildren();
-    const title=document.createElement('span');title.className='chapterLabel';title.textContent=m.name;
-    const count=document.createElement('span');count.className='chapterCount';count.textContent='Challenge '+(state.battle.missionStep+1)+' / 4';element.append(title,count);return;
-  }
+  if(state.battle?.missionId){adventures.renderProgress(element,compact);return;}
+  element.classList.remove('questProgress','compactQuest');
   const p=Core.chapterLocation(state,state.battle?.areaId);element.replaceChildren();
   const title=document.createElement('span');title.className='chapterLabel';title.textContent='Campaign '+p.campaignNumber+' · Chapter '+p.chapterNumber;
   const count=document.createElement('span');count.className='chapterCount';count.textContent=p.cleared+' / '+p.total+(compact?'':' chapters');
@@ -204,6 +201,7 @@ function clearCombat(){
   for(const el of $$('#enemyFace .memberMotion'))el.classList.remove('enemyHit','enemyAttack','enemyDefeated');
   for(const el of $$('#enemyFace .retiring'))el.classList.remove('retiring');
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
+  $('#battleCompanion').classList.remove('protecting');
 }
 function cancelWork(){adventures.stopTiming();clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
@@ -697,6 +695,7 @@ function combatReaction(correct){
   const revealHealth=()=>{if(paused||blocked||epoch!==token||state.activity!=='battle'||state.battle?.question?.id!==questionId)return;pendingHealth=null;impactTimer=null;renderHealth(true);};
   if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)revealHealth();
   else impactTimer=setTimeout(revealHealth,IMPACT_MS);
+  if(q.companionSaved)$('#battleCompanion').classList.add('protecting');
   sound.cue(correct?activeHeroClass().toLowerCase():q.shieldUsed?'shield':'hit',correct?.20:.12);
   const effects=$('#combatEffects');effects.className='combatEffects '+(correct?'heroStrike ':'enemyStrike ')+activeHeroClass().toLowerCase();
   effects.removeAttribute('style');
@@ -744,9 +743,9 @@ function correction(animate=false) {
   const replay=document.createElement('button');replay.className='replay';replay.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg>';replay.setAttribute('aria-label',contrast?'Replay both words':'Replay the correct word');
   replay.onclick=()=>{if(!current()||!confirmActivity())return;cancelWork();Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak(correction);};
   $('#battleAnswers').append(replay,next);
-  if(q.shieldUsed){$('#feedback').textContent='Shield saved a heart';$('#feedback').classList.add('show');}
+  if(q.shieldUsed){$('#feedback').textContent=q.companionSaved?Content.enemyAt(q.companionSaved).name+' saved a heart!':'Shield saved a heart';$('#feedback').classList.add('show');}
   const finishCorrection=()=>{if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);};
-  if(q.shieldUsed)speak('Your shield stopped the hit.',{onEnd:()=>speak(correction,{onEnd:finishCorrection})});
+  if(q.shieldUsed)speak(q.companionSaved?Content.enemyAt(q.companionSaved).name+' stopped the hit.':'Your shield stopped the hit.',{onEnd:()=>speak(correction,{onEnd:finishCorrection})});
   else speak((q.freeMistake?'Practice turn. You keep your heart. ':'')+correction,{onEnd:finishCorrection});
 }
 
@@ -774,7 +773,7 @@ function renderHealth(animate=false) {
   $('#enemyFace').setAttribute('aria-label',Content.enemyAt(b.enemyId).name+(members.length>1?`, ${members.filter(m=>m.health>0).length} remaining`:''));
 }
 function renderHud() {
-  const b=state.battle;
+  const b=state.battle;adventures.renderBattleTeam();
   paintEnemy($('#enemyFace'),b.enemyId,b.maxHealth,pendingHealth?.enemyHealth??b.enemyHealth);renderHealth();
   $('#battleChapter').hidden=b.demo;if(!b.demo)renderChapter($('#battleChapter'),true);
 }
@@ -784,9 +783,9 @@ function renderEncounter(){
   $('#encounterIntro').hidden=false;
   const b=state.battle,enemy=Content.enemyAt(b.enemyId);
   if(b.missionId){
-    const m=Core.Adventure.Data.byId[b.missionId];$('#encounterLead').textContent=b.champion?'Guardian challenge':'A woodland challenge';
+    $('#encounterLead').textContent=b.champion?'Big fight':'Next fight';
     $('#encounterTitle').textContent=enemy.name;renderChapter($('#encounterChapter'));paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
-    $('#encounterLearning').textContent='Win this challenge to find the next clue.';speak('A '+enemy.name+' is ready for your challenge.');save();return;
+    $('#encounterLearning').textContent='Win the fight. Get a clue.';speak(enemy.name+' is ready. Let’s play.');save();return;
   }
   $('#encounterLead').textContent=b.finalEncounter?'Last fight':b.fromAssessment?'Let’s play':'Ready?';
   $('#encounterTitle').textContent=Content.areas.find(area=>area.id===b.areaId)?.name||'Lantern Trail';renderChapter($('#encounterChapter'));
@@ -908,6 +907,7 @@ function renderHandoff(){
   $('#handoffTitle').textContent=state.handoff?.victory?'The path is clear!':'Good practice!';
 }
 function renderResult() {
+  $('#resultCompanion').hidden=true;
   show('result');const result=state.result;if(!result){home();return;}
   $('#resultNext').textContent='Map';$('#opponents').classList.remove('missionResultActions');
   paintHero($('#resultHero'),heroIndex());

@@ -1,5 +1,15 @@
 # BlitzWord — Current Product Spec
 
+## Quest clarity and collected teammates — 4 October 2026
+
+The parent’s playtest feedback asks for easier introductions while keeping the challenges, fewer lives carried into later story steps, a clear remaining-step count, explained book symbols, and choosing collected animals to stand on the child’s side.
+
+Implementation defaults: new creature quests start with **four shared hearts** across four fights and four clues. Clues do not cost hearts. At zero hearts the current fight can be retried with four hearts; solved clues and discoveries stay. New quests refill the pool. Existing pending quests inherit their saved battle health and maximum, including a quest parked in Word trails; no saved heart is removed during migration. Word trails retains its existing proportional-health rules.
+
+Show all **eight steps** (Fight / Clue repeated four times), completed count, steps left and the treasure endpoint on quest screens, encounters and results, with compact progress during fights. Book stamps have plain labels and a legend: **◆ Met**, **✦ Clue**, **★ Star**. Preserve existing stamp records.
+
+One already-met animal can be chosen for the team in the book. It is visible beside the hero and Pip during creature-quest fights and in quest/results/camp views. It automatically stops **one otherwise damaging unaided mistake per quest**, before spending an earned shield. The answer still counts as a miss for learning; this help awards no XP and deals no enemy damage. Help requests and other non-damaging answers do not spend it. Changing animals, retrying or reopening cannot recharge it; a new quest can. An old favourite remains selected. Approved existing artwork is reused, with still characters during reading. All 48 riddle definitions, curriculum, XP and adaptive-reading rules remain unchanged. Shorter intros, goals, endings and transition copy use simple sentences. [Rules and verification](adventures/QUEST_CLARITY_RELEASE.md).
+
 ## Accepted creature-campaign revision — 3 October 2026
 
 The user approved replacing the default easy read-and-pick-picture segments with light deduction riddles, adding a Pokédex-style Creature Book, and arranging shorter fights into connected missions. Build two campaigns for roughly two hours total. Existing campaigns may change, but learner saves and concurrent work must remain intact. Implemented scope is two campaigns with six missions each, four 8–12-hit fights and four untimed riddles per mission, branch choices and one treasure endpoint. Mission completion depends on tasks, never a ten-minute gate. Original gated chapters remain accessible as Word trails. Reading challenge stays adaptive independently of authored reasoning difficulty and optional support.
@@ -8,7 +18,7 @@ The Creature Book covers all 20 current enemy families. Meeting, solving a clue 
 
 The user also enabled cheap fal.ai artwork generation. The repository secret is actually named `AL_AI_API`; see [the provider setup](FAL_AI_IMAGES.md). Secrets stay on the generation runner. Reviewed images are deployed as static assets.
 
-Status: approved decisions through 25 September 2026; documentation reconciled on 25 September 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
+Status: approved decisions and playtest feedback through 4 October 2026. Start with [current status](CURRENT_STATUS.md) for the implemented behavior and outstanding work. Earlier sections and dated milestones retain design history; later approved updates supersede conflicting terminology, growth gates, curriculum limits and release status.
 
 ## Source-of-truth order
 

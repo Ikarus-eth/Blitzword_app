@@ -1,5 +1,7 @@
 # Creature campaigns — 3 October 2026
 
+Historical release. The [4 October playtest follow-up](QUEST_CLARITY_RELEASE.md) supersedes the heart, companion and presentation behavior below; its stricter heart pool can add retries to the original pacing model.
+
 The user approved three changes after the original game lost its novelty: light deduction riddles in the main loop, a persistent collection book, and short fights arranged into missions with meaningful endings. Two new campaigns are the default home after the reading check. Original campaigns remain available as **Word trails**, with their existing progress preserved.
 
 ## Playable content

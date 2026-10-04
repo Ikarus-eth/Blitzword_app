@@ -18,6 +18,16 @@ window.makeReviewSave=function(scenario){
       s.expedition.selectedCampaign='river-song';return s;
     }
     C.startMission(s,'first-spark',now);
+    if(scenario.startsWith('mission-team')){
+      A.reveal(s,'moon-moth',now);A.selectCompanion(s,'moon-moth');
+      s.expedition.current.hearts=2;
+      if(scenario==='mission-team-intro')return s;
+      for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();word.independentCorrect=2;}
+      C.startMissionBattle(s,now);s.battle.introPending=false;C.prepareBattle(s,now);s.battle.question.phase='choices';
+      if(scenario==='mission-team-result'){s.battle.enemyHealth=0;C.resolveBattle(s,now);}
+      if(scenario==='mission-team-retry'){s.battle.heroHealth=0;C.resolveBattle(s,now);}
+      return s;
+    }
     if(scenario==='mission-intro')return s;
     if(scenario==='mission-order')s.expedition.current.step=2;
     if(scenario==='mission-complete')s.expedition.current.step=3;
