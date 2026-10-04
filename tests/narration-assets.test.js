@@ -3,7 +3,7 @@ const root=path.join(__dirname,'..'),manifest=require('../narration'),corpus=req
 const fallbackOnly=new Set(corpus.runtimeFallbackOnly||[]);
 test('every recovered narration clip has a verified local MP3 and runtime lookup matches approval state',()=>{
  // 990 recovered clips, four Pip evolution recordings, 34 stable story introductions and one shield prefix.
- const newCount=Object.keys(require('../docs/NARRATION_BUDGET_REUSE.json').clips).length+require('../docs/NARRATION_BUDGET_REQUEST.json').segmentCount+20;
+ const newCount=Object.keys(require('../docs/NARRATION_BUDGET_REUSE.json').clips).length+require('../docs/NARRATION_BUDGET_REQUEST.json').segmentCount+20+Object.keys(require('../docs/NARRATION_STORY_RIDDLE_REUSE.json').clips).length+require('../docs/NARRATION_STORY_RIDDLE_REQUEST.json').segmentCount;
  assert.equal(corpus.clips.length,1029);assert.equal(manifest.recoveredClipCount,994);assert.equal(manifest.recordedClipCount,1029+newCount);
  assert.equal(Object.keys(manifest.clips).length,corpus.runtimeClipCount+newCount);assert.equal(manifest.runtimeClipCount,corpus.runtimeClipCount+newCount);
  assert.deepEqual(new Set(manifest.fallbackOnly||[]),fallbackOnly);
@@ -41,14 +41,10 @@ test('all fifteen added creature introductions now resolve to recorded audio',()
   assert.ok(recordedParts(text,manifest.clips),text);
  }
 });
-test('stable story introductions and reusable shield prefix are recorded; rewrite-pending story sentences stay local',()=>{
- const {narrator}=require('../audio');let downloads=0,spoken=[];
- const n=narrator({clips:manifest.clips,fetchAudio:()=>{downloads++;throw Error('Unexpected download');},AudioContext:function(){throw Error('Unexpected audio request');},synth:{cancel(){},resume(){},getVoices(){return[];},speak:u=>spoken.push(u.text)},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule:()=>{}});
+test('stable story introductions, reusable shield prefix and all approved reading sentences are recorded',()=>{
  const areas=C.areas.slice(1);
  for(const area of areas){const story=C.chapterStories[area.id];assert.ok(manifest.clips[story.narration],area.id+' intro');}
  assert.ok(manifest.clips['Your shield stopped the hit.']);
  const missingSentences=[...new Set(areas.map(area=>C.chapterStories[area.id].sentence))].filter(text=>!manifest.clips[text]);
- assert.ok(missingSentences.length>=25);
- for(const text of missingSentences){n.speak(text);assert.equal(spoken.at(-1),text.replace(/\bgate\b/gi,w=>w[0]==='G'?'Gait':'gait'));}
- assert.equal(downloads,0);assert.equal(spoken.length,missingSentences.length);
+ assert.equal(missingSentences.length,0);
 });

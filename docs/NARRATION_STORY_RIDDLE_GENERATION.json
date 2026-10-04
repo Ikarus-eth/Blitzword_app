@@ -1,0 +1,380 @@
+{
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "charactersRequested": 5348,
+  "before": {
+    "character_count": 79488,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  },
+  "batches": [
+    {
+      "id": "story-riddle-001",
+      "duration": 55.170612,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc",
+      "requestId": "hTVIvJL8E0xmOOPfygUG",
+      "characters": 742,
+      "segments": 8
+    },
+    {
+      "id": "story-riddle-002",
+      "duration": 62.955102,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660",
+      "requestId": "Zv7kKVpwOyL0yeIF23NA",
+      "characters": 849,
+      "segments": 8
+    },
+    {
+      "id": "story-riddle-003",
+      "duration": 66.403265,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba",
+      "requestId": "aXC07ipp6ZBu8z1xEb8L",
+      "characters": 922,
+      "segments": 8
+    },
+    {
+      "id": "story-riddle-004",
+      "duration": 66.115918,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d",
+      "requestId": "M0T2kv8PqWVMEyJXg4j5",
+      "characters": 870,
+      "segments": 8
+    },
+    {
+      "id": "story-riddle-005",
+      "duration": 71.967347,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5",
+      "requestId": "ix12DcvXRI1nAkydEcfm",
+      "characters": 968,
+      "segments": 8
+    },
+    {
+      "id": "story-riddle-006",
+      "duration": 60.316735,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43",
+      "requestId": "4wcHi82AJ0p1M8YxFydj",
+      "characters": 885,
+      "segments": 8
+    },
+    {
+      "id": "story-riddle-007",
+      "duration": 7.836735,
+      "sha256": "8cbb0951def1f1eb0c65712a42d48c5b45a888438260743000d8eb41722efddd",
+      "requestId": "VYPpUHfjsmQlIoerh6ay",
+      "characters": 112,
+      "segments": 1
+    }
+  ],
+  "clips": {
+    "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 0,
+      "duration": 8.8525,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "The Thornling says, “Take a dry path.” “Keep away from the cave too.” Which trail fits both clues?": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 8.8525,
+      "duration": 7.8545,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "Put the seed cup down before you add the oil. Add the oil before you light the lamp.": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 16.707,
+      "duration": 5.9215,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "Tap the actions in the right order.": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 22.6285,
+      "duration": 2.5075,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "Three boxes have leaf, sun and moon marks. The seed is not in the leaf box. Its mark lights and warms the day. Open the seed box.": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 25.136,
+      "duration": 9.892,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "The moth’s parcel is small. It has a star on it, not a leaf. Which parcel belongs to the moth?": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 35.028,
+      "duration": 7.3025,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "The imp has seven letters. Two go to the owl. Three go to the moth. How many letters are left?": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 42.3305,
+      "duration": 7.767,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "Close the bag before you cross. Cross before you hand the bag to the moth.": {
+      "file": "assets/narration/story-riddle-001.mp3",
+      "offset": 50.0975,
+      "duration": 5.0731,
+      "sha256": "a17b22a3e431c5343df0dfee06f5395a1a346d5a153383d360b85449977157cc"
+    },
+    "The pocket opens with an even number. It is more than four and less than eight. Which number opens it?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 0,
+      "duration": 7.053,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The lift needs a long rope. A wet rope will slip. Choose the rope.": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 7.053,
+      "duration": 4.8295,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "There are nine pegs in the tray. Three are bent. Pip brings two more good pegs. How many good pegs can you use?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 11.8825,
+      "duration": 8.8705,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The guard takes a gear from the green box. She puts it under the blue box. The green box goes on a shelf. Where is the gear now?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 20.753,
+      "duration": 9.259,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "Fit the gear before you pull the rope. Put the seed in the lift before you fit the gear.": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 30.012,
+      "duration": 5.916,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "Three trees stand in a row: oak, pine, birch. The chick is not at either end. Which tree should you search?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 35.928,
+      "duration": 8.98,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The owl flew past before the bat. The moth flew past after the bat. Who flew past last?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 44.908,
+      "duration": 7.3665,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The ladder needs eight rungs. Six rungs are already fixed in place. Pip has three spare rungs. How many spare rungs will be left after the repair?": {
+      "file": "assets/narration/story-riddle-002.mp3",
+      "offset": 52.2745,
+      "duration": 10.6806,
+      "sha256": "d960e694e696d127a0f46117f8b88c41477a1badd8ba0d8fd4956799d8817660"
+    },
+    "The chick needs a basket with a lid. It must have no hole in the bottom. Choose its basket.": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 0,
+      "duration": 5.799,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "Use something soft with no sharp teeth. It must brush dust from a tiny lock. Which tool should you take?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 5.799,
+      "duration": 7.274,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "The knight has a round key and a square key. The round key opens the gate. The other key opens the vault. Which key opens the vault?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 13.073,
+      "duration": 9.8625,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "The vault has three rows of bells. There are four bells in each row. Two bells make no sound. How many bells can ring?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 22.9355,
+      "duration": 9.52,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "Knock before you turn the key. Step back after you turn the key.": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 32.4555,
+      "duration": 4.6205,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "The boar crossed no bridge. It went past a pond, then under an arch. Which trail did it take?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 37.076,
+      "duration": 6.7745,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "The ring has six spaces. You have five seeds. The golem has the last one. Two of your seeds are already in the ring. How many more seeds must go in?": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 43.8505,
+      "duration": 10.513,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "Three pots show a moon, a leaf and a sun. The last seed is not under the leaf. The golem says, “Its mark gives light, but is not the sun.” Lift the right pot.": {
+      "file": "assets/narration/story-riddle-003.mp3",
+      "offset": 54.3635,
+      "duration": 12.0398,
+      "sha256": "1e775de6e35cd4563f748cae8d461dbde33c5c06ac64e195695c59bcc750a5ba"
+    },
+    "Put every seed in before you close the ring. Close the ring before you ring the bell.": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 0,
+      "duration": 5.1145,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The serpent puts the bottle beside a rock. The toad moves it behind a tall reed. Pip lifts the rock, but finds nothing. Where is the bottle?": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 5.1145,
+      "duration": 9.9145,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The toad needs a path with four stones. None of the stones may be under water. Choose its path.": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 15.029,
+      "duration": 7.0935,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The toad carries two small notes on each trip. There are eight notes to deliver. How many trips does it need?": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 22.1225,
+      "duration": 8.0515,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "Lift the bell after you untie the reed. Ring the bell after you lift it clear of the mud.": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 30.174,
+      "duration": 6.3395,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The bell weighs four stones. The boat can carry six stones in all. Choose one extra load that fills it exactly. Which load goes with the bell?": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 36.5135,
+      "duration": 11.0645,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "The hole is wide. Use a wide board with no crack. Choose a board.": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 47.578,
+      "duration": 5.8395,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "Coils sit in four boxes: sun, leaf, moon, star. Take a box between sun and star. Do not take the leaf box. Which box has your rope?": {
+      "file": "assets/narration/story-riddle-004.mp3",
+      "offset": 53.4175,
+      "duration": 12.6984,
+      "sha256": "86dc1ea1bdadb3f503c90f3efee13637e44ea0b14e5c278c8d5d2a177bf3400d"
+    },
+    "Tie the boat before you lift the bell out. Lift the bell out before you untie the boat.": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 0,
+      "duration": 5.3405,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "The guard gives the wrench to the troll. The troll lends it to Pip. Pip puts it on the flat stone. Where should you look for it?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 5.3405,
+      "duration": 9.0845,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "There are four cups on the wheel. Each good cup lifts three scoops of water. One cup has a hole and lifts no water. How many scoops can one turn lift?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 14.425,
+      "duration": 11.4245,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "Stop the wheel before you change the cup. Open the gate after you change the cup.": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 25.8495,
+      "duration": 5.538,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "The pool needs twelve scoops. The mended wheel lifts four cups of three scoops each turn. How many full turns fill the empty pool?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 31.3875,
+      "duration": 10.025,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "A safe lamp blinks twice, then stays on. A lamp that goes dark marks deep water. Which signal should the wolves follow?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 41.4125,
+      "duration": 10.042,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "Every sign tells the truth. The left sign says, “This bank is wet.” The middle sign says, “The right bank is dry.” Which bank is definitely dry?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 51.4545,
+      "duration": 12.382,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "The wolf and two pups each need two blankets. There are eight blankets in the boat. How many blankets will be left?": {
+      "file": "assets/narration/story-riddle-005.mp3",
+      "offset": 63.8365,
+      "duration": 8.1308,
+      "sha256": "7c0cda84aa1de185b1525c4107639f189f143a24231f9aa98040837e09a483a5"
+    },
+    "Push the thorns aside before you reach for the bell. Put on gloves before you push the thorns.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 0,
+      "duration": 5.6365,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "Use a route that passes the pine. Do not cross a bridge. Choose the safe route.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 5.6365,
+      "duration": 5.4335,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "There are fifteen steps to the nest. You climb six, then four more. How many steps are left?": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 11.07,
+      "duration": 6.9365,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "The lock uses a number in the three times table. It is greater than ten and less than fifteen. Choose the number.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 18.0065,
+      "duration": 8.156,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "Tie the rope to the bell before you lower it. Test the knot after you tie it, but before you lower it.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 26.1625,
+      "duration": 6.7055,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "The three chests are red, blue and green. All three clues are true: the bell is not in red; blue holds rope; each chest holds just one thing. Which chest holds the bell?": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 32.868,
+      "duration": 12.8115,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "There are six gates. Two friends must stand at each gate. Eight friends are in place. How many more friends do you need?": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 45.6795,
+      "duration": 7.9475,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "Ring the small bell before the big bell. Raise the flag after the small bell, but before the big bell.": {
+      "file": "assets/narration/story-riddle-006.mp3",
+      "offset": 53.627,
+      "duration": 6.6897,
+      "sha256": "d19156368e2f4420aa68800288d6434801f92c3ea7d7e35fa4fb4010efc89f43"
+    },
+    "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?": {
+      "file": "assets/narration/story-riddle-007.mp3",
+      "offset": 0,
+      "duration": 7.8367,
+      "sha256": "8cbb0951def1f1eb0c65712a42d48c5b45a888438260743000d8eb41722efddd"
+    }
+  },
+  "status": "complete",
+  "after": {
+    "character_count": 80594,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  },
+  "reusedStories": 31,
+  "totalTextCharacters": 5348,
+  "listeningReview": "Decode and playback checks are recorded separately; no claim of human pronunciation approval or physical iPad testing."
+}

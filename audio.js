@@ -40,6 +40,11 @@
       const name=text.slice(0,-suffix.length),tail=suffix.trim();
       if(clips[name]&&clips[tail])return [name,tail];
     }
+    const ordering='Tap the actions in the right order.';
+    if(text.endsWith(' '+ordering)){
+      const story=text.slice(0,-ordering.length-1);
+      if(clips[story]&&clips[ordering])return [story,ordering];
+    }
     return null;
   }
   // Completion and word timing stay independent of the question/animation timer.

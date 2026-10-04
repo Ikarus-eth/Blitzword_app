@@ -1,0 +1,17 @@
+{
+  "decodedFiles": 11,
+  "checkedSegments": 80,
+  "invalid": [],
+  "silent": [],
+  "completed": [
+    "Jump, Pip!",
+    "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?",
+    "Put the seed cup down before you add the oil. Add the oil before you light the lamp. Tap the actions in the right order.",
+    "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?"
+  ],
+  "deviceSpeech": [],
+  "playedParts": 6,
+  "cancelledSequenceStopped": true,
+  "build": "story-riddle-narration-20261004-r1",
+  "pageErrors": []
+}
