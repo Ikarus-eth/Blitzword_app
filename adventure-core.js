@@ -6,12 +6,21 @@
   const copy=v=>v==null?null:JSON.parse(JSON.stringify(v)),date=now=>new Date(now).toISOString();
   const empty=()=>({version:1,context:'legacy',preferLegacy:false,selectedCampaign:'lost-lights',current:null,missions:{},book:{},favourite:null,riddleDays:{},legacy:null,runtime:null});
   const valid=v=>v&&typeof v==='object'&&!Array.isArray(v);
+  const QUEST_HEARTS=4;
   function init(s){
     const old=s.expedition;
     if(old&&(!valid(old)||old.version&&old.version!==1))throw new Error('Unsupported mission save');
     const e=s.expedition={...empty(),...old};
     for(const key of ['missions','book','riddleDays'])if(!valid(e[key]))throw new Error('Invalid mission records');
     if(e.current&&!Data.byId[e.current.missionId])throw new Error('Unknown saved mission');
+    if(e.current){
+      // Keep hearts already earned in an older in-progress quest, even when parked in Word trails.
+      const b=e.context==='mission'?s.battle:e.runtime?.battle,c=e.current;
+      const matching=b?.missionId===c.missionId;
+      if(!Number.isFinite(c.maxHearts))c.maxHearts=matching?(b.heroMaxHealth||Math.max(QUEST_HEARTS,b.heroHealth)):QUEST_HEARTS;
+      if(!Number.isFinite(c.hearts))c.hearts=matching?b.heroHealth:c.maxHearts;
+      c.companionHelpUsed=!!c.companionHelpUsed;
+    }
     // The old record proves an encounter, not a win or a completed creature quest.
     if(!old){
       for(const id of new Set([...(s.campaign.enemyHistory||[]).map(r=>r.enemyId),...Object.keys(s.campaign.enemyVisits||{}),s.battle?.enemyId].filter(Boolean))){
@@ -49,7 +58,7 @@
     if(!m||!unlocked(s,id)||e.current&&e.current.phase!=='complete'&&e.current.missionId!==id)return false;
     switchTo(s,'mission');e.preferLegacy=false;e.selectedCampaign=m.campaign;
     if(e.current?.missionId===id&&e.current.phase!=='complete')return true;
-    e.current={missionId:id,step:0,phase:'intro',puzzle:null,startedAt:date(now),replay:!!stats(s,id).completedAt};
+    e.current={missionId:id,step:0,phase:'intro',puzzle:null,startedAt:date(now),replay:!!stats(s,id).completedAt,hearts:QUEST_HEARTS,maxHearts:QUEST_HEARTS,companionHelpUsed:false};
     stats(s,id).plays++;s.battle=null;s.result=null;s.teaching=null;s.math.round=null;s.story.scene=null;s.story.mapPending=false;s.activity='mission';return true;
   }
   function reveal(s,family,now){
@@ -60,6 +69,25 @@
   function fight(s){
     const m=current(s),c=of(s).current;if(!m||!c)return null;
     return {family:m.encounters[c.step],health:m.health[c.step],missionId:m.id,step:c.step,champion:c.step>=2};
+  }
+  function companion(s){const e=of(s);return e.book[e.favourite]?.seen&&Data.lore[e.favourite]?e.favourite:null;}
+  function selectCompanion(s,family){
+    if(!Data.lore[family]||!of(s).book[family]?.seen)return false;
+    of(s).favourite=family;return true;
+  }
+  function protect(s){
+    const e=of(s),c=e.current,friend=companion(s);
+    if(e.context!=='mission'||!c||c.phase!=='battle'||s.battle?.missionId!==c.missionId||c.companionHelpUsed||!friend)return null;
+    c.companionHelpUsed=true;return friend;
+  }
+  function syncHearts(s){
+    const e=of(s),c=e.current,b=s.battle;
+    if(e.context==='mission'&&c&&b?.missionId===c.missionId)c.hearts=b.heroHealth;
+  }
+  function progress(s){
+    const c=of(s).current;if(!c)return null;
+    const done=c.phase==='complete'?8:c.step*2+(['spoils','puzzle'].includes(c.phase)?1:0)+(c.phase==='puzzle'&&c.puzzle?.solved?1:0);
+    return {done,left:8-done,total:8,next:done===8?'Treasure':done%2?'Clue':'Fight'};
   }
   function won(s,victory,now){
     const c=of(s).current,m=current(s);if(!c||!m||c.phase!=='battle')return false;
@@ -115,5 +143,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {Data,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,next,recordRiddleTime,report,findMission};
+  return {Data,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress};
 });

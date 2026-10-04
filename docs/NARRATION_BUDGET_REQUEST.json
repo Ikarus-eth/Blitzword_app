@@ -11,8 +11,8 @@
     "speed": 0.9
   },
   "maxCharacters": 8000,
-  "characters": 7333,
-  "segmentCount": 855,
+  "characters": 7372,
+  "segmentCount": 857,
   "batches": [
     {
       "id": "budget-001",
@@ -4930,6 +4930,23 @@
           "kind": "mission-encounter"
         }
       ]
+    },
+    {
+      "id": "budget-108",
+      "text": "is ready. Let’s play.\n\nstopped the hit.",
+      "segments": [
+        {
+          "key": "is ready. Let’s play.",
+          "text": "is ready. Let’s play.",
+          "kind": "current-mission-prefix"
+        },
+        {
+          "key": "stopped the hit.",
+          "text": "stopped the hit.",
+          "kind": "current-mission-prefix"
+        }
+      ]
     }
-  ]
+  ],
+  "reconciledMain": "3951f8184af52a37dddf6690652c6edcd11a93b6"
 }

@@ -744,11 +744,12 @@
     const chosen=demo?'thornling':available.find(enemy=>enemy.id===enemyId)?.id||
       Content.enemiesForHealth(health).find(enemy=>enemy.id===enemyId)?.id||
       Content.enemies.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
-    const heroMaxHealth=demo?3:mission?Math.max(4,Math.ceil(health/3)+2):Math.max(3,Math.ceil(health/4)+2);
+    const heroMaxHealth=demo?3:mission?Adventure.of(s).current.maxHearts:Math.max(3,Math.ceil(health/4)+2);
     s.battle={id:id(s,'battle'),demo,heroHealth:heroMaxHealth,heroMaxHealth,enemyHealth:health,maxHealth:health,
       enemyId:chosen,introPending:!demo,fromAssessment,finalEncounter,chapterId:chapter.id,areaId:story.areas.find(a=>a.status==='current')?.id||story.areas.at(-1).id,xpStart:s.dragon.xp,
       firstMistakeFree:demo,turn:0,question:null,resolved:false,xpEarned:0};
     if(mission){
+      s.battle.heroHealth=Adventure.of(s).current.hearts;
       s.battle.missionId=mission.missionId;s.battle.missionStep=mission.step;s.battle.champion=mission.champion;
       s.battle.areaId=Adventure.Data.byId[mission.missionId].area;s.battle.newDiscovery=Adventure.reveal(s,mission.family,now);
     }
@@ -770,6 +771,7 @@
   function startMissionBattle(s,now){
     const e=Adventure.of(s),c=e.current;
     if(e.context!=='mission'||!c||!['intro','retry'].includes(c.phase))return false;
+    if(c.phase==='retry'){c.hearts=Adventure.QUEST_HEARTS;c.maxHearts=Adventure.QUEST_HEARTS;}
     const plan=Adventure.fight(s);c.phase='battle';
     startBattle(s,now,{strength:plan.health,enemyId:plan.family,mission:plan});return true;
   }
@@ -830,9 +832,11 @@
     if (!rec.supported) {
       if (rec.correct) b.enemyHealth--;
       else if (b.firstMistakeFree) b.firstMistakeFree=false;
+      else if(b.missionId&&(q.companionSaved=Adventure.protect(s))){q.shieldUsed=true;rec.shieldUsed=true;rec.companionSaved=q.companionSaved;}
       else if(!b.demo&&s.rewards.shield){s.rewards.shield=false;q.shieldUsed=true;rec.shieldUsed=true;}
       else b.heroHealth--;
     }
+    if(b.missionId)Adventure.syncHearts(s);
     rec.healthChanged=!rec.supported && !q.freeMistake && !q.shieldUsed;
     s.campaign.battleRecords.push(rec);compactHistory(s);
     if(!b.demo&&rec.timingValid&&(!rec.supported||rec.supportReasons.includes('help-request')))updateChallengePace(s);
@@ -907,6 +911,7 @@
     if (b.demo) { s.demoComplete=true; s.handoff={victory:b.enemyHealth<=0};s.battle=null;s.activity='handoff';return; }
     const victory=b.enemyHealth<=0;
     if(b.missionId){
+      Adventure.syncHearts(s);
       if(!Adventure.won(s,victory,now))return;
       if(victory)s.session.victories++;
       s.result={victory,strength:b.maxHealth,battleId:b.id,enemyId:b.enemyId,xpEarned:b.xpEarned||0,missionId:b.missionId,newDiscovery:!!b.newDiscovery};
