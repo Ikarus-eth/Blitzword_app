@@ -1,4 +1,10 @@
-# BlitzWord current status — 3 October 2026
+# BlitzWord current status — 4 October 2026
+
+## Focused narration at a smaller budget — 4 October 2026
+
+**Implemented and tested; deployment pending.** Build `budget-narration-20261004-r1` covers wrong-answer comparisons, all current Word-trail battle intros (including groups and first encounters), all 20 creature-mission encounter lines, and the reusable practice-turn prefix. It preserves the existing 1,029 recordings, adds 289 reused paid segments and 855 new segments, and resolves comparisons from whole labels/words when a full clause is unavailable. Contractions and historical misplaced-apostrophe distractors are covered. George, Multilingual v2, 0.90× speed and the earlier voice settings are retained.
+
+The generation submitted **7,333 characters**; the observed ElevenLabs account counter increased by **2,159 credits** across both runs. The first paid batch was recovered after the runner lacked ffprobe, so it was not regenerated. No subscription/allowance changes. 301 unit tests and 103 UI flow groups pass. Real Chrome playback and deployment verification are recorded separately in [the release](NARRATION_BUDGET_RELEASE.md). Learner saves, gameplay and parallel main changes remain intact.
 
 ## Creature campaigns, riddles and collection — 3 October 2026
 
@@ -129,12 +135,12 @@ Deployed and verified: all 26 fixed sets pass the letter/length and one-letter c
 
 ## Outstanding work and ownership
 
-- Narration completion is authorized but blocked by ElevenLabs quota. Production retains all 1,029 approved clips. [Draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) preserves 320 new segments and one teaching alignment, with tested playback/cancellation changes. The last generation run on 24 September reported `quota_exceeded`: 10,000-credit limit, 26 remaining. This is the last observed allowance, not a fresh account-balance check. The user was asked to increase allowance; 18,534 text characters and 365 alignments remain. Current story sentences are already approved: they need recordings, not another rewrite. The incomplete batch is not deployed. New listening approval and physical iPad playback remain open.
+- Narration scope was narrowed on 4 October to the four categories in the focused release above. Their generation is complete. Remaining chapter reading sentences (31), creature-riddle Listen passages (48), and synchronized teaching highlighting are outside this release. Draft #80 retains the earlier story/alignment work; reconcile it with current main and reuse paid outputs before any continuation. Its 24 September quota report is historical, not a current blocker or account balance. Physical iPad listening remains open.
 - Device review remains open: physical iPad/Safari audio, interruptions/resume, touch layouts, backup/restore and sustained combat have not been verified. Evolution scenes and selected combat layouts were rendered in Chromium. All 35 scenery files were verified live, but the complete tablet/phone scenery review was not completed; the earlier browser-policy blocker and review fixtures are recorded in [chapter scenery](CHAPTER_SCENERY_RELEASE.md).
 - Observe the child under the 75–85% band and automatic familiar-word speed-ups (2 October): accuracy, defeats at 32 HP, and whether 500 ms is comfortable. Parents shows the current flash time.
 - Child-session pacing needs observation under the 15,000 / 45,000 / 70,000 growth thresholds. Current XP pacing evidence comes from deterministic simulations, not a new observed child session.
 - Optional user review remains for 18 rare practice distractors ([candidate table in PR #58](https://github.com/Ikarus-eth/Blitzword_app/pull/58)), the implemented Stride/Jog names and icons, and the faint square edge around the evolution illustrations ([details](EVOLUTION_RELEASE.md)). The separate neighbouring-row sprite defect is fixed.
-- Number-duel point 10 remains parked: difficulty/adaptation and less guessable choices require discussion. Twenty enemy families are shipped; their approved health ranges, group encounters and age proportions are deployed and verified in the group release described above. The fifteen added enemy names still use device speech pending the narration batch.
+- Number-duel point 10 remains parked: difficulty/adaptation and less guessable choices require discussion. Twenty enemy families are shipped; their approved health ranges, group encounters and age proportions are deployed and verified in the group release described above. All twenty families now have recorded introductions in the focused narration release.
 - Native iPad/App Store packaging, offline support/progress transfer, purchase/restore, pricing and commercial validation remain later-phase work. The 1,000-word workbook is a future pool; only the Core 200 is playable. Optional phonics, spellbook and an additional dragon after full growth are not approved current tasks. Pip remains a provisional child-facing label; no commercial rename is established.
 
 ## Reading the historical records below

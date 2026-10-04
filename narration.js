@@ -1,6 +1,6 @@
 (function(root){
 const narration={
-  "version": "recorded-voice-20260924-r5",
+  "version": "recorded-voice-budget-20261004-r1",
   "voice": "Mixed approved British male recordings",
   "voices": [
     {
@@ -15,8 +15,8 @@ const narration={
   ],
   "language": "en-GB",
   "recoveredClipCount": 994,
-  "recordedClipCount": 1029,
-  "runtimeClipCount": 1029,
+  "recordedClipCount": 2173,
+  "runtimeClipCount": 2173,
   "fallbackOnly": [],
   "clips": {
     "on": {
@@ -5163,6 +5163,14822 @@ const narration={
       "file": "assets/narration/shield-stopped.mp3",
       "duration": 1.619592,
       "sha256": "12117a8a2b75ec585d8e6caf6ba5c89cab8e707359895a94d5ea992b4422943a"
+    },
+    "An Acorn Imp is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "offset": 10.9425,
+      "duration": 3.9183,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 2,
+          "start": 0.1565,
+          "end": 0.3195
+        },
+        {
+          "charIndex": 3,
+          "charLength": 5,
+          "start": 0.4005,
+          "end": 0.8305
+        },
+        {
+          "charIndex": 9,
+          "charLength": 3,
+          "start": 0.9115,
+          "end": 1.1785
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 1.2475,
+          "end": 1.3295
+        },
+        {
+          "charIndex": 16,
+          "charLength": 2,
+          "start": 1.3755,
+          "end": 1.4455
+        },
+        {
+          "charIndex": 19,
+          "charLength": 3,
+          "start": 1.4915,
+          "end": 1.5615
+        },
+        {
+          "charIndex": 23,
+          "charLength": 4,
+          "start": 1.6075,
+          "end": 2.0495
+        },
+        {
+          "charIndex": 29,
+          "charLength": 5,
+          "start": 2.7575,
+          "end": 3.0015
+        },
+        {
+          "charIndex": 35,
+          "charLength": 2,
+          "start": 3.0475,
+          "end": 3.1055
+        },
+        {
+          "charIndex": 38,
+          "charLength": 6,
+          "start": 3.1755,
+          "end": 3.6625
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. An Acorn Imp is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "offset": 0,
+      "duration": 7.6975,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0,
+          "end": 0.395
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.464,
+          "end": 0.685
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.755,
+          "end": 1.358
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 1.602,
+          "end": 1.788
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 1.858,
+          "end": 1.985
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.055,
+          "end": 2.299
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.345,
+          "end": 2.682
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 2.752,
+          "end": 3.297
+        },
+        {
+          "charIndex": 55,
+          "charLength": 2,
+          "start": 3.947,
+          "end": 4.11
+        },
+        {
+          "charIndex": 58,
+          "charLength": 5,
+          "start": 4.191,
+          "end": 4.598
+        },
+        {
+          "charIndex": 64,
+          "charLength": 3,
+          "start": 4.679,
+          "end": 4.923
+        },
+        {
+          "charIndex": 68,
+          "charLength": 2,
+          "start": 5.004,
+          "end": 5.108
+        },
+        {
+          "charIndex": 71,
+          "charLength": 2,
+          "start": 5.155,
+          "end": 5.224
+        },
+        {
+          "charIndex": 74,
+          "charLength": 3,
+          "start": 5.271,
+          "end": 5.341
+        },
+        {
+          "charIndex": 78,
+          "charLength": 4,
+          "start": 5.387,
+          "end": 5.828
+        },
+        {
+          "charIndex": 84,
+          "charLength": 5,
+          "start": 6.478,
+          "end": 6.711
+        },
+        {
+          "charIndex": 90,
+          "charLength": 2,
+          "start": 6.757,
+          "end": 6.815
+        },
+        {
+          "charIndex": 93,
+          "charLength": 6,
+          "start": 6.885,
+          "end": 7.407
+        }
+      ]
+    },
+    "A Mushroom Guard is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "offset": 7.6975,
+      "duration": 3.9005,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.2435,
+          "end": 0.3245
+        },
+        {
+          "charIndex": 2,
+          "charLength": 8,
+          "start": 0.4175,
+          "end": 0.8245
+        },
+        {
+          "charIndex": 11,
+          "charLength": 5,
+          "start": 0.8935,
+          "end": 1.1845
+        },
+        {
+          "charIndex": 17,
+          "charLength": 2,
+          "start": 1.2305,
+          "end": 1.3005
+        },
+        {
+          "charIndex": 20,
+          "charLength": 2,
+          "start": 1.3465,
+          "end": 1.4165
+        },
+        {
+          "charIndex": 23,
+          "charLength": 3,
+          "start": 1.4515,
+          "end": 1.5205
+        },
+        {
+          "charIndex": 27,
+          "charLength": 4,
+          "start": 1.5675,
+          "end": 2.0085
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.8445,
+          "end": 3.0765
+        },
+        {
+          "charIndex": 39,
+          "charLength": 2,
+          "start": 3.1225,
+          "end": 3.1815
+        },
+        {
+          "charIndex": 42,
+          "charLength": 6,
+          "start": 3.2505,
+          "end": 3.7615
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Mushroom Guard is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "offset": 11.598,
+      "duration": 7.8135,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.116,
+          "end": 0.43
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.5,
+          "end": 0.72
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.79,
+          "end": 1.405
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 1.672,
+          "end": 1.893
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 1.974,
+          "end": 2.102
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.148,
+          "end": 2.392
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.427,
+          "end": 2.764
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 2.833,
+          "end": 3.367
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.203,
+          "end": 4.296
+        },
+        {
+          "charIndex": 57,
+          "charLength": 8,
+          "start": 4.377,
+          "end": 4.76
+        },
+        {
+          "charIndex": 66,
+          "charLength": 5,
+          "start": 4.83,
+          "end": 5.109
+        },
+        {
+          "charIndex": 72,
+          "charLength": 2,
+          "start": 5.155,
+          "end": 5.225
+        },
+        {
+          "charIndex": 75,
+          "charLength": 2,
+          "start": 5.271,
+          "end": 5.341
+        },
+        {
+          "charIndex": 78,
+          "charLength": 3,
+          "start": 5.376,
+          "end": 5.445
+        },
+        {
+          "charIndex": 82,
+          "charLength": 4,
+          "start": 5.492,
+          "end": 5.945
+        },
+        {
+          "charIndex": 88,
+          "charLength": 5,
+          "start": 6.78,
+          "end": 7.024
+        },
+        {
+          "charIndex": 94,
+          "charLength": 2,
+          "start": 7.071,
+          "end": 7.129
+        },
+        {
+          "charIndex": 97,
+          "charLength": 6,
+          "start": 7.198,
+          "end": 7.686
+        }
+      ]
+    },
+    "A Bark Beetle is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "offset": 19.4115,
+      "duration": 3.7445,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.0815,
+          "end": 0.1625
+        },
+        {
+          "charIndex": 2,
+          "charLength": 4,
+          "start": 0.2675,
+          "end": 0.5345
+        },
+        {
+          "charIndex": 7,
+          "charLength": 6,
+          "start": 0.6155,
+          "end": 0.9755
+        },
+        {
+          "charIndex": 14,
+          "charLength": 2,
+          "start": 1.0215,
+          "end": 1.1265
+        },
+        {
+          "charIndex": 17,
+          "charLength": 2,
+          "start": 1.1725,
+          "end": 1.2425
+        },
+        {
+          "charIndex": 20,
+          "charLength": 3,
+          "start": 1.2775,
+          "end": 1.3355
+        },
+        {
+          "charIndex": 24,
+          "charLength": 4,
+          "start": 1.3815,
+          "end": 1.8115
+        },
+        {
+          "charIndex": 30,
+          "charLength": 5,
+          "start": 2.4385,
+          "end": 2.6825
+        },
+        {
+          "charIndex": 36,
+          "charLength": 2,
+          "start": 2.7515,
+          "end": 2.7985
+        },
+        {
+          "charIndex": 39,
+          "charLength": 6,
+          "start": 2.8675,
+          "end": 3.3555
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Bark Beetle is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "offset": 23.156,
+      "duration": 7.906,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.308,
+          "end": 0.691
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.772,
+          "end": 1.086
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 1.19,
+          "end": 1.84
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 2.107,
+          "end": 2.316
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.397,
+          "end": 2.537
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.606,
+          "end": 2.92
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.955,
+          "end": 3.291
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.349,
+          "end": 3.884
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.522,
+          "end": 4.603
+        },
+        {
+          "charIndex": 57,
+          "charLength": 4,
+          "start": 4.696,
+          "end": 4.975
+        },
+        {
+          "charIndex": 62,
+          "charLength": 6,
+          "start": 5.056,
+          "end": 5.404
+        },
+        {
+          "charIndex": 69,
+          "charLength": 2,
+          "start": 5.451,
+          "end": 5.544
+        },
+        {
+          "charIndex": 72,
+          "charLength": 2,
+          "start": 5.59,
+          "end": 5.648
+        },
+        {
+          "charIndex": 75,
+          "charLength": 3,
+          "start": 5.695,
+          "end": 5.753
+        },
+        {
+          "charIndex": 79,
+          "charLength": 4,
+          "start": 5.799,
+          "end": 6.217
+        },
+        {
+          "charIndex": 85,
+          "charLength": 5,
+          "start": 6.844,
+          "end": 7.076
+        },
+        {
+          "charIndex": 91,
+          "charLength": 2,
+          "start": 7.123,
+          "end": 7.181
+        },
+        {
+          "charIndex": 94,
+          "charLength": 6,
+          "start": 7.25,
+          "end": 7.75
+        }
+      ]
+    },
+    "A Bramble Boar is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "offset": 31.062,
+      "duration": 4.0055,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.122,
+          "end": 0.215
+        },
+        {
+          "charIndex": 2,
+          "charLength": 7,
+          "start": 0.285,
+          "end": 0.691
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.726,
+          "end": 0.947
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 1.028,
+          "end": 1.098
+        },
+        {
+          "charIndex": 18,
+          "charLength": 2,
+          "start": 1.167,
+          "end": 1.225
+        },
+        {
+          "charIndex": 21,
+          "charLength": 3,
+          "start": 1.272,
+          "end": 1.33
+        },
+        {
+          "charIndex": 25,
+          "charLength": 4,
+          "start": 1.376,
+          "end": 1.852
+        },
+        {
+          "charIndex": 31,
+          "charLength": 5,
+          "start": 2.758,
+          "end": 3.013
+        },
+        {
+          "charIndex": 37,
+          "charLength": 2,
+          "start": 3.071,
+          "end": 3.129
+        },
+        {
+          "charIndex": 40,
+          "charLength": 6,
+          "start": 3.187,
+          "end": 3.698
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Bramble Boar is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "offset": 35.0675,
+      "duration": 8.435,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.2265,
+          "end": 0.5985
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.6675,
+          "end": 0.9815
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 1.0975,
+          "end": 1.7705
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 2.2235,
+          "end": 2.4675
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.5485,
+          "end": 2.6645
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.7345,
+          "end": 2.9665
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 3.0125,
+          "end": 3.4305
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.5125,
+          "end": 4.1395
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.7315,
+          "end": 4.8245
+        },
+        {
+          "charIndex": 57,
+          "charLength": 7,
+          "start": 4.9165,
+          "end": 5.3345
+        },
+        {
+          "charIndex": 65,
+          "charLength": 4,
+          "start": 5.3695,
+          "end": 5.6255
+        },
+        {
+          "charIndex": 70,
+          "charLength": 2,
+          "start": 5.7065,
+          "end": 5.8105
+        },
+        {
+          "charIndex": 73,
+          "charLength": 2,
+          "start": 5.8575,
+          "end": 5.9275
+        },
+        {
+          "charIndex": 76,
+          "charLength": 3,
+          "start": 5.9735,
+          "end": 6.0435
+        },
+        {
+          "charIndex": 80,
+          "charLength": 4,
+          "start": 6.0895,
+          "end": 6.5425
+        },
+        {
+          "charIndex": 86,
+          "charLength": 5,
+          "start": 7.1345,
+          "end": 7.4135
+        },
+        {
+          "charIndex": 92,
+          "charLength": 2,
+          "start": 7.4595,
+          "end": 7.5295
+        },
+        {
+          "charIndex": 95,
+          "charLength": 6,
+          "start": 7.5985,
+          "end": 8.1215
+        }
+      ]
+    },
+    "A Reed Serpent is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "offset": 43.5025,
+      "duration": 4.0984,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.2435,
+          "end": 0.3365
+        },
+        {
+          "charIndex": 2,
+          "charLength": 4,
+          "start": 0.4405,
+          "end": 0.6965
+        },
+        {
+          "charIndex": 7,
+          "charLength": 7,
+          "start": 0.7775,
+          "end": 1.2185
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 1.2655,
+          "end": 1.3465
+        },
+        {
+          "charIndex": 18,
+          "charLength": 2,
+          "start": 1.3935,
+          "end": 1.4625
+        },
+        {
+          "charIndex": 21,
+          "charLength": 3,
+          "start": 1.5095,
+          "end": 1.5785
+        },
+        {
+          "charIndex": 25,
+          "charLength": 4,
+          "start": 1.6255,
+          "end": 2.0665
+        },
+        {
+          "charIndex": 31,
+          "charLength": 5,
+          "start": 2.9025,
+          "end": 3.1575
+        },
+        {
+          "charIndex": 37,
+          "charLength": 2,
+          "start": 3.2045,
+          "end": 3.2735
+        },
+        {
+          "charIndex": 40,
+          "charLength": 6,
+          "start": 3.3435,
+          "end": 3.8315
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Reed Serpent is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "offset": 0,
+      "duration": 8.0165,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0,
+          "end": 0.383
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.453,
+          "end": 0.731
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.848,
+          "end": 1.44
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 1.73,
+          "end": 1.916
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 1.974,
+          "end": 2.101
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.171,
+          "end": 2.415
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.461,
+          "end": 2.821
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 2.879,
+          "end": 3.437
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.191,
+          "end": 4.272
+        },
+        {
+          "charIndex": 57,
+          "charLength": 4,
+          "start": 4.389,
+          "end": 4.609
+        },
+        {
+          "charIndex": 62,
+          "charLength": 7,
+          "start": 4.679,
+          "end": 5.062
+        },
+        {
+          "charIndex": 70,
+          "charLength": 2,
+          "start": 5.108,
+          "end": 5.178
+        },
+        {
+          "charIndex": 73,
+          "charLength": 2,
+          "start": 5.248,
+          "end": 5.317
+        },
+        {
+          "charIndex": 76,
+          "charLength": 3,
+          "start": 5.364,
+          "end": 5.433
+        },
+        {
+          "charIndex": 80,
+          "charLength": 4,
+          "start": 5.468,
+          "end": 5.898
+        },
+        {
+          "charIndex": 86,
+          "charLength": 5,
+          "start": 6.745,
+          "end": 6.978
+        },
+        {
+          "charIndex": 92,
+          "charLength": 2,
+          "start": 7.012,
+          "end": 7.07
+        },
+        {
+          "charIndex": 95,
+          "charLength": 6,
+          "start": 7.14,
+          "end": 7.616
+        }
+      ]
+    },
+    "A Bog Toad is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "offset": 8.0165,
+      "duration": 3.895,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.3655,
+          "end": 0.4475
+        },
+        {
+          "charIndex": 2,
+          "charLength": 3,
+          "start": 0.5285,
+          "end": 0.7495
+        },
+        {
+          "charIndex": 6,
+          "charLength": 4,
+          "start": 0.8305,
+          "end": 1.1325
+        },
+        {
+          "charIndex": 11,
+          "charLength": 2,
+          "start": 1.1665,
+          "end": 1.2485
+        },
+        {
+          "charIndex": 14,
+          "charLength": 2,
+          "start": 1.2835,
+          "end": 1.3525
+        },
+        {
+          "charIndex": 17,
+          "charLength": 3,
+          "start": 1.3875,
+          "end": 1.4455
+        },
+        {
+          "charIndex": 21,
+          "charLength": 4,
+          "start": 1.4925,
+          "end": 1.9105
+        },
+        {
+          "charIndex": 27,
+          "charLength": 5,
+          "start": 2.6765,
+          "end": 2.8965
+        },
+        {
+          "charIndex": 33,
+          "charLength": 2,
+          "start": 2.9435,
+          "end": 2.9895
+        },
+        {
+          "charIndex": 36,
+          "charLength": 6,
+          "start": 3.0595,
+          "end": 3.5475
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Bog Toad is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "offset": 11.9115,
+      "duration": 7.912,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.3135,
+          "end": 0.6275
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.6965,
+          "end": 0.9755
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 1.0805,
+          "end": 1.6725
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 1.9505,
+          "end": 2.1595
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.2295,
+          "end": 2.3455
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.4155,
+          "end": 2.6595
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.7055,
+          "end": 3.0425
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.1005,
+          "end": 3.6115
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.3885,
+          "end": 4.4705
+        },
+        {
+          "charIndex": 57,
+          "charLength": 3,
+          "start": 4.5745,
+          "end": 4.7835
+        },
+        {
+          "charIndex": 61,
+          "charLength": 4,
+          "start": 4.8645,
+          "end": 5.1665
+        },
+        {
+          "charIndex": 66,
+          "charLength": 2,
+          "start": 5.2135,
+          "end": 5.2715
+        },
+        {
+          "charIndex": 69,
+          "charLength": 2,
+          "start": 5.3405,
+          "end": 5.3985
+        },
+        {
+          "charIndex": 72,
+          "charLength": 3,
+          "start": 5.4335,
+          "end": 5.5035
+        },
+        {
+          "charIndex": 76,
+          "charLength": 4,
+          "start": 5.5495,
+          "end": 5.9675
+        },
+        {
+          "charIndex": 82,
+          "charLength": 5,
+          "start": 6.7225,
+          "end": 6.9425
+        },
+        {
+          "charIndex": 88,
+          "charLength": 2,
+          "start": 6.9895,
+          "end": 7.0475
+        },
+        {
+          "charIndex": 91,
+          "charLength": 6,
+          "start": 7.1165,
+          "end": 7.6165
+        }
+      ]
+    },
+    "A Lantern Wisp is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "offset": 19.8235,
+      "duration": 3.7965,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.2615,
+          "end": 0.3545
+        },
+        {
+          "charIndex": 2,
+          "charLength": 7,
+          "start": 0.4475,
+          "end": 0.8305
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.8995,
+          "end": 1.2135
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 1.2835,
+          "end": 1.3525
+        },
+        {
+          "charIndex": 18,
+          "charLength": 2,
+          "start": 1.4225,
+          "end": 1.4925
+        },
+        {
+          "charIndex": 21,
+          "charLength": 3,
+          "start": 1.5265,
+          "end": 1.5965
+        },
+        {
+          "charIndex": 25,
+          "charLength": 4,
+          "start": 1.6425,
+          "end": 2.0495
+        },
+        {
+          "charIndex": 31,
+          "charLength": 5,
+          "start": 2.8035,
+          "end": 3.0245
+        },
+        {
+          "charIndex": 37,
+          "charLength": 2,
+          "start": 3.0715,
+          "end": 3.1295
+        },
+        {
+          "charIndex": 40,
+          "charLength": 6,
+          "start": 3.1985,
+          "end": 3.6515
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Lantern Wisp is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "offset": 23.62,
+      "duration": 8.0925,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.122,
+          "end": 0.459
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.54,
+          "end": 0.842
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.923,
+          "end": 1.562
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 2.2,
+          "end": 2.386
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.467,
+          "end": 2.595
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.653,
+          "end": 2.943
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.99,
+          "end": 3.326
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.384,
+          "end": 3.953
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.499,
+          "end": 4.58
+        },
+        {
+          "charIndex": 57,
+          "charLength": 7,
+          "start": 4.685,
+          "end": 5.056
+        },
+        {
+          "charIndex": 65,
+          "charLength": 4,
+          "start": 5.126,
+          "end": 5.416
+        },
+        {
+          "charIndex": 70,
+          "charLength": 2,
+          "start": 5.486,
+          "end": 5.567
+        },
+        {
+          "charIndex": 73,
+          "charLength": 2,
+          "start": 5.602,
+          "end": 5.672
+        },
+        {
+          "charIndex": 76,
+          "charLength": 3,
+          "start": 5.718,
+          "end": 5.776
+        },
+        {
+          "charIndex": 80,
+          "charLength": 4,
+          "start": 5.823,
+          "end": 6.24
+        },
+        {
+          "charIndex": 86,
+          "charLength": 5,
+          "start": 6.925,
+          "end": 7.146
+        },
+        {
+          "charIndex": 92,
+          "charLength": 2,
+          "start": 7.216,
+          "end": 7.262
+        },
+        {
+          "charIndex": 95,
+          "charLength": 6,
+          "start": 7.332,
+          "end": 7.831
+        }
+      ]
+    },
+    "A Crystal Crab is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "offset": 31.7125,
+      "duration": 3.8775,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.2265,
+          "end": 0.3195
+        },
+        {
+          "charIndex": 2,
+          "charLength": 7,
+          "start": 0.4005,
+          "end": 0.7715
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.8415,
+          "end": 1.1545
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 1.2245,
+          "end": 1.2825
+        },
+        {
+          "charIndex": 18,
+          "charLength": 2,
+          "start": 1.3295,
+          "end": 1.3875
+        },
+        {
+          "charIndex": 21,
+          "charLength": 3,
+          "start": 1.4335,
+          "end": 1.5035
+        },
+        {
+          "charIndex": 25,
+          "charLength": 4,
+          "start": 1.5265,
+          "end": 1.9445
+        },
+        {
+          "charIndex": 31,
+          "charLength": 5,
+          "start": 2.6995,
+          "end": 2.9545
+        },
+        {
+          "charIndex": 37,
+          "charLength": 2,
+          "start": 3.0005,
+          "end": 3.0595
+        },
+        {
+          "charIndex": 40,
+          "charLength": 6,
+          "start": 3.1285,
+          "end": 3.6275
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Crystal Crab is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "offset": 35.59,
+      "duration": 8.3595,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.226,
+          "end": 0.575
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.633,
+          "end": 0.9
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.958,
+          "end": 1.585
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 2.119,
+          "end": 2.351
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.433,
+          "end": 2.56
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.618,
+          "end": 2.885
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.92,
+          "end": 3.315
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.396,
+          "end": 3.977
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.627,
+          "end": 4.72
+        },
+        {
+          "charIndex": 57,
+          "charLength": 7,
+          "start": 4.813,
+          "end": 5.184
+        },
+        {
+          "charIndex": 65,
+          "charLength": 4,
+          "start": 5.277,
+          "end": 5.614
+        },
+        {
+          "charIndex": 70,
+          "charLength": 2,
+          "start": 5.683,
+          "end": 5.753
+        },
+        {
+          "charIndex": 73,
+          "charLength": 2,
+          "start": 5.823,
+          "end": 5.904
+        },
+        {
+          "charIndex": 76,
+          "charLength": 3,
+          "start": 5.95,
+          "end": 6.02
+        },
+        {
+          "charIndex": 80,
+          "charLength": 4,
+          "start": 6.067,
+          "end": 6.519
+        },
+        {
+          "charIndex": 86,
+          "charLength": 5,
+          "start": 7.17,
+          "end": 7.437
+        },
+        {
+          "charIndex": 92,
+          "charLength": 2,
+          "start": 7.483,
+          "end": 7.553
+        },
+        {
+          "charIndex": 95,
+          "charLength": 6,
+          "start": 7.622,
+          "end": 8.156
+        }
+      ]
+    },
+    "A Hollow Owl is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "offset": 43.9495,
+      "duration": 3.7907,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.1335,
+          "end": 0.2265
+        },
+        {
+          "charIndex": 2,
+          "charLength": 6,
+          "start": 0.3305,
+          "end": 0.6215
+        },
+        {
+          "charIndex": 9,
+          "charLength": 3,
+          "start": 0.7145,
+          "end": 1.0155
+        },
+        {
+          "charIndex": 13,
+          "charLength": 2,
+          "start": 1.0855,
+          "end": 1.1665
+        },
+        {
+          "charIndex": 16,
+          "charLength": 2,
+          "start": 1.2135,
+          "end": 1.2825
+        },
+        {
+          "charIndex": 19,
+          "charLength": 3,
+          "start": 1.3175,
+          "end": 1.3875
+        },
+        {
+          "charIndex": 23,
+          "charLength": 4,
+          "start": 1.4335,
+          "end": 1.8755
+        },
+        {
+          "charIndex": 29,
+          "charLength": 5,
+          "start": 2.6065,
+          "end": 2.8735
+        },
+        {
+          "charIndex": 35,
+          "charLength": 2,
+          "start": 2.9195,
+          "end": 2.9775
+        },
+        {
+          "charIndex": 38,
+          "charLength": 6,
+          "start": 3.0475,
+          "end": 3.5235
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Hollow Owl is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "offset": 0,
+      "duration": 7.645,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0,
+          "end": 0.406
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.488,
+          "end": 0.743
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.813,
+          "end": 1.451
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 1.765,
+          "end": 1.927
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 1.974,
+          "end": 2.09
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.136,
+          "end": 2.345
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.38,
+          "end": 2.717
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 2.786,
+          "end": 3.39
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.04,
+          "end": 4.133
+        },
+        {
+          "charIndex": 57,
+          "charLength": 6,
+          "start": 4.238,
+          "end": 4.505
+        },
+        {
+          "charIndex": 64,
+          "charLength": 3,
+          "start": 4.598,
+          "end": 4.876
+        },
+        {
+          "charIndex": 68,
+          "charLength": 2,
+          "start": 4.957,
+          "end": 5.039
+        },
+        {
+          "charIndex": 71,
+          "charLength": 2,
+          "start": 5.085,
+          "end": 5.155
+        },
+        {
+          "charIndex": 74,
+          "charLength": 3,
+          "start": 5.19,
+          "end": 5.259
+        },
+        {
+          "charIndex": 78,
+          "charLength": 4,
+          "start": 5.306,
+          "end": 5.759
+        },
+        {
+          "charIndex": 84,
+          "charLength": 5,
+          "start": 6.49,
+          "end": 6.745
+        },
+        {
+          "charIndex": 90,
+          "charLength": 2,
+          "start": 6.792,
+          "end": 6.85
+        },
+        {
+          "charIndex": 93,
+          "charLength": 6,
+          "start": 6.92,
+          "end": 7.43
+        }
+      ]
+    },
+    "A Fern Wolf is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "offset": 7.645,
+      "duration": 3.733,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.18,
+          "end": 0.261
+        },
+        {
+          "charIndex": 2,
+          "charLength": 4,
+          "start": 0.389,
+          "end": 0.703
+        },
+        {
+          "charIndex": 7,
+          "charLength": 4,
+          "start": 0.749,
+          "end": 0.97
+        },
+        {
+          "charIndex": 12,
+          "charLength": 2,
+          "start": 1.039,
+          "end": 1.109
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 1.155,
+          "end": 1.225
+        },
+        {
+          "charIndex": 18,
+          "charLength": 3,
+          "start": 1.26,
+          "end": 1.33
+        },
+        {
+          "charIndex": 22,
+          "charLength": 4,
+          "start": 1.376,
+          "end": 1.817
+        },
+        {
+          "charIndex": 28,
+          "charLength": 5,
+          "start": 2.525,
+          "end": 2.781
+        },
+        {
+          "charIndex": 34,
+          "charLength": 2,
+          "start": 2.827,
+          "end": 2.885
+        },
+        {
+          "charIndex": 37,
+          "charLength": 6,
+          "start": 2.955,
+          "end": 3.443
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Fern Wolf is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "offset": 11.378,
+      "duration": 8.167,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.244,
+          "end": 0.58
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.65,
+          "end": 0.882
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.963,
+          "end": 1.579
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 2.194,
+          "end": 2.426
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.508,
+          "end": 2.635
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.705,
+          "end": 2.949
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.984,
+          "end": 3.32
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.39,
+          "end": 3.947
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.597,
+          "end": 4.679
+        },
+        {
+          "charIndex": 57,
+          "charLength": 4,
+          "start": 4.806,
+          "end": 5.085
+        },
+        {
+          "charIndex": 62,
+          "charLength": 4,
+          "start": 5.12,
+          "end": 5.34
+        },
+        {
+          "charIndex": 67,
+          "charLength": 2,
+          "start": 5.41,
+          "end": 5.48
+        },
+        {
+          "charIndex": 70,
+          "charLength": 2,
+          "start": 5.526,
+          "end": 5.596
+        },
+        {
+          "charIndex": 73,
+          "charLength": 3,
+          "start": 5.631,
+          "end": 5.7
+        },
+        {
+          "charIndex": 77,
+          "charLength": 4,
+          "start": 5.747,
+          "end": 6.211
+        },
+        {
+          "charIndex": 83,
+          "charLength": 5,
+          "start": 7.047,
+          "end": 7.291
+        },
+        {
+          "charIndex": 89,
+          "charLength": 2,
+          "start": 7.337,
+          "end": 7.395
+        },
+        {
+          "charIndex": 92,
+          "charLength": 6,
+          "start": 7.476,
+          "end": 7.952
+        }
+      ]
+    },
+    "A Stone Ram is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "offset": 19.545,
+      "duration": 3.3325,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.18,
+          "end": 0.262
+        },
+        {
+          "charIndex": 2,
+          "charLength": 5,
+          "start": 0.354,
+          "end": 0.668
+        },
+        {
+          "charIndex": 8,
+          "charLength": 3,
+          "start": 0.714,
+          "end": 0.935
+        },
+        {
+          "charIndex": 12,
+          "charLength": 2,
+          "start": 1.005,
+          "end": 1.074
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 1.121,
+          "end": 1.19
+        },
+        {
+          "charIndex": 18,
+          "charLength": 3,
+          "start": 1.214,
+          "end": 1.283
+        },
+        {
+          "charIndex": 22,
+          "charLength": 4,
+          "start": 1.33,
+          "end": 1.771
+        },
+        {
+          "charIndex": 28,
+          "charLength": 5,
+          "start": 2.119,
+          "end": 2.363
+        },
+        {
+          "charIndex": 34,
+          "charLength": 2,
+          "start": 2.409,
+          "end": 2.467
+        },
+        {
+          "charIndex": 37,
+          "charLength": 6,
+          "start": 2.549,
+          "end": 3.013
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Stone Ram is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "offset": 22.8775,
+      "duration": 8.446,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.2725,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.7255,
+          "end": 1.0505
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 1.1785,
+          "end": 1.8865
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 2.5595,
+          "end": 2.7925
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.8735,
+          "end": 3.0015
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 3.0825,
+          "end": 3.3725
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 3.4185,
+          "end": 3.8135
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.8835,
+          "end": 4.4755
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 5.0215,
+          "end": 5.1025
+        },
+        {
+          "charIndex": 57,
+          "charLength": 5,
+          "start": 5.2065,
+          "end": 5.5435
+        },
+        {
+          "charIndex": 63,
+          "charLength": 3,
+          "start": 5.5905,
+          "end": 5.8335
+        },
+        {
+          "charIndex": 67,
+          "charLength": 2,
+          "start": 5.9035,
+          "end": 5.9735
+        },
+        {
+          "charIndex": 70,
+          "charLength": 2,
+          "start": 6.0195,
+          "end": 6.0775
+        },
+        {
+          "charIndex": 73,
+          "charLength": 3,
+          "start": 6.1125,
+          "end": 6.1825
+        },
+        {
+          "charIndex": 77,
+          "charLength": 4,
+          "start": 6.2285,
+          "end": 6.6695
+        },
+        {
+          "charIndex": 83,
+          "charLength": 5,
+          "start": 7.2615,
+          "end": 7.4945
+        },
+        {
+          "charIndex": 89,
+          "charLength": 2,
+          "start": 7.5405,
+          "end": 7.5985
+        },
+        {
+          "charIndex": 92,
+          "charLength": 6,
+          "start": 7.6795,
+          "end": 8.1795
+        }
+      ]
+    },
+    "A Briar Bat is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "offset": 31.3235,
+      "duration": 3.6865,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.1745,
+          "end": 0.2555
+        },
+        {
+          "charIndex": 2,
+          "charLength": 5,
+          "start": 0.3485,
+          "end": 0.6505
+        },
+        {
+          "charIndex": 8,
+          "charLength": 3,
+          "start": 0.6965,
+          "end": 0.9285
+        },
+        {
+          "charIndex": 12,
+          "charLength": 2,
+          "start": 0.9985,
+          "end": 1.0565
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 1.1035,
+          "end": 1.1725
+        },
+        {
+          "charIndex": 18,
+          "charLength": 3,
+          "start": 1.2075,
+          "end": 1.2775
+        },
+        {
+          "charIndex": 22,
+          "charLength": 4,
+          "start": 1.3235,
+          "end": 1.7645
+        },
+        {
+          "charIndex": 28,
+          "charLength": 5,
+          "start": 2.4035,
+          "end": 2.6475
+        },
+        {
+          "charIndex": 34,
+          "charLength": 2,
+          "start": 2.6935,
+          "end": 2.7515
+        },
+        {
+          "charIndex": 37,
+          "charLength": 6,
+          "start": 2.8215,
+          "end": 3.3325
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Briar Bat is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "offset": 35.01,
+      "duration": 8.1735,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.273,
+          "end": 0.644
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.725,
+          "end": 0.969
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 1.039,
+          "end": 1.701
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 1.991,
+          "end": 2.247
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.328,
+          "end": 2.467
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.525,
+          "end": 2.792
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.827,
+          "end": 3.164
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.233,
+          "end": 3.825
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.418,
+          "end": 4.51
+        },
+        {
+          "charIndex": 57,
+          "charLength": 5,
+          "start": 4.603,
+          "end": 4.917
+        },
+        {
+          "charIndex": 63,
+          "charLength": 3,
+          "start": 4.986,
+          "end": 5.265
+        },
+        {
+          "charIndex": 67,
+          "charLength": 2,
+          "start": 5.335,
+          "end": 5.416
+        },
+        {
+          "charIndex": 70,
+          "charLength": 2,
+          "start": 5.463,
+          "end": 5.532
+        },
+        {
+          "charIndex": 73,
+          "charLength": 3,
+          "start": 5.579,
+          "end": 5.648
+        },
+        {
+          "charIndex": 77,
+          "charLength": 4,
+          "start": 5.695,
+          "end": 6.159
+        },
+        {
+          "charIndex": 83,
+          "charLength": 5,
+          "start": 6.844,
+          "end": 7.1
+        },
+        {
+          "charIndex": 89,
+          "charLength": 2,
+          "start": 7.146,
+          "end": 7.216
+        },
+        {
+          "charIndex": 92,
+          "charLength": 6,
+          "start": 7.285,
+          "end": 7.831
+        }
+      ]
+    },
+    "A Snail Knight is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "offset": 43.1835,
+      "duration": 3.7672,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.2145,
+          "end": 0.3075
+        },
+        {
+          "charIndex": 2,
+          "charLength": 5,
+          "start": 0.4005,
+          "end": 0.7955
+        },
+        {
+          "charIndex": 8,
+          "charLength": 6,
+          "start": 0.8415,
+          "end": 1.0855
+        },
+        {
+          "charIndex": 15,
+          "charLength": 2,
+          "start": 1.1315,
+          "end": 1.2015
+        },
+        {
+          "charIndex": 18,
+          "charLength": 2,
+          "start": 1.2485,
+          "end": 1.3175
+        },
+        {
+          "charIndex": 21,
+          "charLength": 3,
+          "start": 1.3525,
+          "end": 1.4225
+        },
+        {
+          "charIndex": 25,
+          "charLength": 4,
+          "start": 1.4685,
+          "end": 1.9215
+        },
+        {
+          "charIndex": 31,
+          "charLength": 5,
+          "start": 2.5485,
+          "end": 2.8265
+        },
+        {
+          "charIndex": 37,
+          "charLength": 2,
+          "start": 2.8965,
+          "end": 2.9545
+        },
+        {
+          "charIndex": 40,
+          "charLength": 6,
+          "start": 3.0245,
+          "end": 3.5235
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Snail Knight is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "offset": 0,
+      "duration": 8.0285,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0,
+          "end": 0.418
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.488,
+          "end": 0.766
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.871,
+          "end": 1.486
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 1.974,
+          "end": 2.171
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.252,
+          "end": 2.38
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.45,
+          "end": 2.694
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.74,
+          "end": 3.088
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.17,
+          "end": 3.762
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.493,
+          "end": 4.586
+        },
+        {
+          "charIndex": 57,
+          "charLength": 5,
+          "start": 4.679,
+          "end": 5.027
+        },
+        {
+          "charIndex": 63,
+          "charLength": 6,
+          "start": 5.074,
+          "end": 5.283
+        },
+        {
+          "charIndex": 70,
+          "charLength": 2,
+          "start": 5.329,
+          "end": 5.399
+        },
+        {
+          "charIndex": 73,
+          "charLength": 2,
+          "start": 5.445,
+          "end": 5.515
+        },
+        {
+          "charIndex": 76,
+          "charLength": 3,
+          "start": 5.55,
+          "end": 5.619
+        },
+        {
+          "charIndex": 80,
+          "charLength": 4,
+          "start": 5.666,
+          "end": 6.107
+        },
+        {
+          "charIndex": 86,
+          "charLength": 5,
+          "start": 6.943,
+          "end": 7.187
+        },
+        {
+          "charIndex": 92,
+          "charLength": 2,
+          "start": 7.233,
+          "end": 7.291
+        },
+        {
+          "charIndex": 95,
+          "charLength": 6,
+          "start": 7.372,
+          "end": 7.883
+        }
+      ]
+    },
+    "A Chest Mimic is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "offset": 8.0285,
+      "duration": 3.5465,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.0985,
+          "end": 0.1915
+        },
+        {
+          "charIndex": 2,
+          "charLength": 5,
+          "start": 0.2845,
+          "end": 0.5745
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.6675,
+          "end": 0.9575
+        },
+        {
+          "charIndex": 14,
+          "charLength": 2,
+          "start": 1.0275,
+          "end": 1.1085
+        },
+        {
+          "charIndex": 17,
+          "charLength": 2,
+          "start": 1.1545,
+          "end": 1.2245
+        },
+        {
+          "charIndex": 20,
+          "charLength": 3,
+          "start": 1.2595,
+          "end": 1.3295
+        },
+        {
+          "charIndex": 24,
+          "charLength": 4,
+          "start": 1.3755,
+          "end": 1.8165
+        },
+        {
+          "charIndex": 30,
+          "charLength": 5,
+          "start": 2.5245,
+          "end": 2.7685
+        },
+        {
+          "charIndex": 36,
+          "charLength": 2,
+          "start": 2.8155,
+          "end": 2.8735
+        },
+        {
+          "charIndex": 39,
+          "charLength": 6,
+          "start": 2.9545,
+          "end": 3.4305
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Chest Mimic is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "offset": 11.575,
+      "duration": 7.628,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.081,
+          "end": 0.395
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.465,
+          "end": 0.697
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 0.766,
+          "end": 1.393
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 2.09,
+          "end": 2.287
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.369,
+          "end": 2.485
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.531,
+          "end": 2.752
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.787,
+          "end": 3.123
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.193,
+          "end": 3.75
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.4,
+          "end": 4.493
+        },
+        {
+          "charIndex": 57,
+          "charLength": 5,
+          "start": 4.586,
+          "end": 4.865
+        },
+        {
+          "charIndex": 63,
+          "charLength": 5,
+          "start": 4.946,
+          "end": 5.213
+        },
+        {
+          "charIndex": 69,
+          "charLength": 2,
+          "start": 5.283,
+          "end": 5.352
+        },
+        {
+          "charIndex": 72,
+          "charLength": 2,
+          "start": 5.399,
+          "end": 5.468
+        },
+        {
+          "charIndex": 75,
+          "charLength": 3,
+          "start": 5.503,
+          "end": 5.573
+        },
+        {
+          "charIndex": 79,
+          "charLength": 4,
+          "start": 5.62,
+          "end": 6.049
+        },
+        {
+          "charIndex": 85,
+          "charLength": 5,
+          "start": 6.374,
+          "end": 6.618
+        },
+        {
+          "charIndex": 91,
+          "charLength": 2,
+          "start": 6.665,
+          "end": 6.723
+        },
+        {
+          "charIndex": 94,
+          "charLength": 6,
+          "start": 6.804,
+          "end": 7.28
+        }
+      ]
+    },
+    "A Storm Griffin is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "offset": 19.203,
+      "duration": 4.116,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 1,
+          "start": 0.244,
+          "end": 0.337
+        },
+        {
+          "charIndex": 2,
+          "charLength": 5,
+          "start": 0.43,
+          "end": 0.743
+        },
+        {
+          "charIndex": 8,
+          "charLength": 7,
+          "start": 0.79,
+          "end": 1.115
+        },
+        {
+          "charIndex": 16,
+          "charLength": 2,
+          "start": 1.161,
+          "end": 1.231
+        },
+        {
+          "charIndex": 19,
+          "charLength": 2,
+          "start": 1.277,
+          "end": 1.347
+        },
+        {
+          "charIndex": 22,
+          "charLength": 3,
+          "start": 1.382,
+          "end": 1.451
+        },
+        {
+          "charIndex": 26,
+          "charLength": 4,
+          "start": 1.498,
+          "end": 1.939
+        },
+        {
+          "charIndex": 32,
+          "charLength": 5,
+          "start": 2.67,
+          "end": 2.926
+        },
+        {
+          "charIndex": 38,
+          "charLength": 2,
+          "start": 2.972,
+          "end": 3.03
+        },
+        {
+          "charIndex": 41,
+          "charLength": 6,
+          "start": 3.1,
+          "end": 3.634
+        }
+      ]
+    },
+    "Reading check complete. Now your first chapter begins. A Storm Griffin is on the path. Ready to battle?": {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "offset": 23.319,
+      "duration": 8.1615,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 7,
+          "start": 0.389,
+          "end": 0.772
+        },
+        {
+          "charIndex": 8,
+          "charLength": 5,
+          "start": 0.853,
+          "end": 1.132
+        },
+        {
+          "charIndex": 14,
+          "charLength": 8,
+          "start": 1.213,
+          "end": 1.875
+        },
+        {
+          "charIndex": 24,
+          "charLength": 3,
+          "start": 2.165,
+          "end": 2.351
+        },
+        {
+          "charIndex": 28,
+          "charLength": 4,
+          "start": 2.421,
+          "end": 2.548
+        },
+        {
+          "charIndex": 33,
+          "charLength": 5,
+          "start": 2.618,
+          "end": 2.908
+        },
+        {
+          "charIndex": 39,
+          "charLength": 7,
+          "start": 2.955,
+          "end": 3.303
+        },
+        {
+          "charIndex": 47,
+          "charLength": 6,
+          "start": 3.373,
+          "end": 3.976
+        },
+        {
+          "charIndex": 55,
+          "charLength": 1,
+          "start": 4.627,
+          "end": 4.719
+        },
+        {
+          "charIndex": 57,
+          "charLength": 5,
+          "start": 4.824,
+          "end": 5.137
+        },
+        {
+          "charIndex": 63,
+          "charLength": 7,
+          "start": 5.207,
+          "end": 5.52
+        },
+        {
+          "charIndex": 71,
+          "charLength": 2,
+          "start": 5.567,
+          "end": 5.637
+        },
+        {
+          "charIndex": 74,
+          "charLength": 2,
+          "start": 5.683,
+          "end": 5.753
+        },
+        {
+          "charIndex": 77,
+          "charLength": 3,
+          "start": 5.788,
+          "end": 5.857
+        },
+        {
+          "charIndex": 81,
+          "charLength": 4,
+          "start": 5.904,
+          "end": 6.345
+        },
+        {
+          "charIndex": 87,
+          "charLength": 5,
+          "start": 7.03,
+          "end": 7.285
+        },
+        {
+          "charIndex": 93,
+          "charLength": 2,
+          "start": 7.332,
+          "end": 7.39
+        },
+        {
+          "charIndex": 96,
+          "charLength": 6,
+          "start": 7.471,
+          "end": 7.993
+        }
+      ]
+    },
+    "You chose own.": {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "offset": 31.4805,
+      "duration": 1.44,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2615
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6565
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.7255,
+          "end": 1.1205
+        }
+      ]
+    },
+    "You chose an.": {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "offset": 32.9205,
+      "duration": 1.4625,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.3075
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3885,
+          "end": 0.7025
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.7485,
+          "end": 1.1085
+        }
+      ]
+    },
+    "You chose awn.": {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "offset": 34.383,
+      "duration": 1.5615,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.157,
+          "end": 0.296
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.378,
+          "end": 0.726
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.772,
+          "end": 1.213
+        }
+      ]
+    },
+    "You chose in.": {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "offset": 0,
+      "duration": 1.1785,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.557
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.604,
+          "end": 0.894
+        }
+      ]
+    },
+    "You chose un.": {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "offset": 1.1785,
+      "duration": 1.335,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.2955
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3655,
+          "end": 0.6795
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.7485,
+          "end": 1.0505
+        }
+      ]
+    },
+    "You chose om.": {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "offset": 2.5135,
+      "duration": 1.2485,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.2845
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3545,
+          "end": 0.6325
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.6795,
+          "end": 1.0045
+        }
+      ]
+    },
+    "The word is on.": {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "offset": 3.762,
+      "duration": 1.306,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.22
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.267,
+          "end": 0.487
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.534,
+          "end": 0.615
+        },
+        {
+          "charIndex": 12,
+          "charLength": 2,
+          "start": 0.696,
+          "end": 0.998
+        }
+      ]
+    },
+    "You chose rack.": {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "offset": 5.068,
+      "duration": 1.3,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.319
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.667
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.714,
+          "end": 1.074
+        }
+      ]
+    },
+    "You chose lock.": {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "offset": 6.368,
+      "duration": 1.144,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.552
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.598,
+          "end": 0.9
+        }
+      ]
+    },
+    "You chose lack.": {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "offset": 7.512,
+      "duration": 1.2015,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.603
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.65,
+          "end": 0.975
+        }
+      ]
+    },
+    "You chose sock.": {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "offset": 8.7135,
+      "duration": 1.3175,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6205,
+          "end": 0.9575
+        }
+      ]
+    },
+    "You chose sack.": {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "offset": 0,
+      "duration": 1.329,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.557
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.592,
+          "end": 0.987
+        }
+      ]
+    },
+    "You chose rick.": {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "offset": 1.329,
+      "duration": 1.318,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.32
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.691
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.761,
+          "end": 1.063
+        }
+      ]
+    },
+    "You chose lick.": {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "offset": 2.647,
+      "duration": 1.19,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.65,
+          "end": 0.964
+        }
+      ]
+    },
+    "You chose ruck.": {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "offset": 3.837,
+      "duration": 1.161,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.598
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.644,
+          "end": 0.97
+        }
+      ]
+    },
+    "The word is rock.": {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "offset": 4.998,
+      "duration": 1.1845,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.168
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.215,
+          "end": 0.412
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.459,
+          "end": 0.54
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.621,
+          "end": 0.958
+        }
+      ]
+    },
+    "You chose free.": {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "offset": 6.1825,
+      "duration": 1.1725,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2265
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2955,
+          "end": 0.5625
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6095,
+          "end": 1.0275
+        }
+      ]
+    },
+    "You chose tee.": {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "offset": 7.355,
+      "duration": 1.2425,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.586
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.633,
+          "end": 1.062
+        }
+      ]
+    },
+    "You chose fee.": {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "offset": 8.5975,
+      "duration": 1.2942,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5745
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6205,
+          "end": 0.9925
+        }
+      ]
+    },
+    "You chose true.": {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "offset": 0,
+      "duration": 1.329,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.58
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.615,
+          "end": 1.08
+        }
+      ]
+    },
+    "You chose frue.": {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "offset": 1.329,
+      "duration": 1.475,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.331
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.401,
+          "end": 0.703
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.749,
+          "end": 1.214
+        }
+      ]
+    },
+    "You chose trie.": {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "offset": 2.804,
+      "duration": 1.3405,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.319
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.691
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.725,
+          "end": 1.19
+        }
+      ]
+    },
+    "You chose trea.": {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "offset": 4.1445,
+      "duration": 1.3875,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.5575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.5925,
+          "end": 1.0795
+        }
+      ]
+    },
+    "You chose three.": {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "offset": 5.532,
+      "duration": 1.3235,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.319
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.668
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.714,
+          "end": 1.144
+        }
+      ]
+    },
+    "The word is tree.": {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "offset": 6.8555,
+      "duration": 1.335,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2845,
+          "end": 0.5165
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.5635,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.7145,
+          "end": 1.1555
+        }
+      ]
+    },
+    "You chose greet.": {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "offset": 8.1905,
+      "duration": 1.324,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2735
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6915,
+          "end": 1.0975
+        }
+      ]
+    },
+    "You chose grean.": {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "offset": 9.5145,
+      "duration": 1.3989,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6215,
+          "end": 1.0385
+        }
+      ]
+    },
+    "You chose great.": {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "offset": 0,
+      "duration": 1.167,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.58
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.615,
+          "end": 0.998
+        }
+      ]
+    },
+    "You chose greed.": {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "offset": 1.167,
+      "duration": 1.3235,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.18
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.249,
+          "end": 0.528
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.574,
+          "end": 1.039
+        }
+      ]
+    },
+    "You chose gread.": {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "offset": 2.4905,
+      "duration": 1.2945,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.2955
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3655,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6905,
+          "end": 1.0965
+        }
+      ]
+    },
+    "You chose grain.": {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "offset": 3.785,
+      "duration": 1.3755,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.07,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.546
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.592,
+          "end": 1.033
+        }
+      ]
+    },
+    "The word is green.": {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "offset": 5.1605,
+      "duration": 1.55,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.3315
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.3775,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.6905,
+          "end": 0.7725
+        },
+        {
+          "charIndex": 12,
+          "charLength": 5,
+          "start": 0.8535,
+          "end": 1.3065
+        }
+      ]
+    },
+    "You chose fix.": {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "offset": 6.7105,
+      "duration": 1.3585,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1165,
+          "end": 0.2435
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3255,
+          "end": 0.6035
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6505,
+          "end": 1.0795
+        }
+      ]
+    },
+    "You chose fog.": {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "offset": 8.069,
+      "duration": 1.254,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.615
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.662,
+          "end": 1.033
+        }
+      ]
+    },
+    "You chose fig.": {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "offset": 9.323,
+      "duration": 1.4046,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.337,
+          "end": 0.638
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.685,
+          "end": 1.08
+        }
+      ]
+    },
+    "You chose for.": {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "offset": 0,
+      "duration": 1.283,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.592
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.639,
+          "end": 0.987
+        }
+      ]
+    },
+    "You chose fir.": {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "offset": 1.283,
+      "duration": 1.2305,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.157,
+          "end": 0.296
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.366,
+          "end": 0.656
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.702,
+          "end": 1.039
+        }
+      ]
+    },
+    "You chose fax.": {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "offset": 2.5135,
+      "duration": 1.3,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.1805
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2495,
+          "end": 0.5285
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.5745,
+          "end": 1.0395
+        }
+      ]
+    },
+    "You chose far.": {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "offset": 3.8135,
+      "duration": 1.347,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2735
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6795,
+          "end": 1.0855
+        }
+      ]
+    },
+    "You chose foz.": {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "offset": 5.1605,
+      "duration": 1.5095,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2725
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6565
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6905,
+          "end": 1.1665
+        }
+      ]
+    },
+    "The word is fox.": {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "offset": 6.67,
+      "duration": 1.521,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.215,
+          "end": 0.331
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.4,
+          "end": 0.644
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.691,
+          "end": 0.772
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.853,
+          "end": 1.294
+        }
+      ]
+    },
+    "You chose cove.": {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "offset": 8.191,
+      "duration": 1.393,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.609
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.656,
+          "end": 1.19
+        }
+      ]
+    },
+    "You chose came.": {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "offset": 9.584,
+      "duration": 1.4687,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.157,
+          "end": 0.296
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.366,
+          "end": 0.668
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.714,
+          "end": 1.167
+        }
+      ]
+    },
+    "You chose come.": {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "offset": 0,
+      "duration": 1.1555,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.615,
+          "end": 1.022
+        }
+      ]
+    },
+    "You chose gave.": {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "offset": 1.1555,
+      "duration": 1.2885,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.6095
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6555,
+          "end": 1.1545
+        }
+      ]
+    },
+    "You chose game.": {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "offset": 2.444,
+      "duration": 1.178,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.54
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.586,
+          "end": 1.027
+        }
+      ]
+    },
+    "You chose save.": {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "offset": 3.622,
+      "duration": 1.2835,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.256
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.616
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.65,
+          "end": 1.15
+        }
+      ]
+    },
+    "You chose same.": {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "offset": 4.9055,
+      "duration": 1.2535,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3185,
+          "end": 0.6205
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6555,
+          "end": 1.1205
+        }
+      ]
+    },
+    "You chose cive.": {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "offset": 6.159,
+      "duration": 1.254,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.215
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.285,
+          "end": 0.563
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.598,
+          "end": 1.062
+        }
+      ]
+    },
+    "The word is cave.": {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "offset": 7.413,
+      "duration": 1.3755,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.157,
+          "end": 0.261
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.308,
+          "end": 0.551
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.621,
+          "end": 0.691
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.772,
+          "end": 1.26
+        }
+      ]
+    },
+    "You chose later.": {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "offset": 8.7885,
+      "duration": 1.3818,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.1975
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2675,
+          "end": 0.5455
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.5925,
+          "end": 1.0105
+        }
+      ]
+    },
+    "You chose waver.": {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "offset": 0,
+      "duration": 1.411,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.58
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.627,
+          "end": 1.068
+        }
+      ]
+    },
+    "You chose laver.": {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "offset": 1.411,
+      "duration": 1.4975,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.33
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.4,
+          "end": 0.702
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.772,
+          "end": 1.213
+        }
+      ]
+    },
+    "You chose cater.": {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "offset": 2.9085,
+      "duration": 1.3875,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.2955
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3655,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6905,
+          "end": 1.1435
+        }
+      ]
+    },
+    "You chose caver.": {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "offset": 4.296,
+      "duration": 1.358,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.615
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.661,
+          "end": 1.114
+        }
+      ]
+    },
+    "You chose wafer.": {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "offset": 5.654,
+      "duration": 1.3875,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.615
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.662,
+          "end": 1.115
+        }
+      ]
+    },
+    "You chose lafer.": {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "offset": 7.0415,
+      "duration": 1.3585,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2725
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6325
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6795,
+          "end": 1.1315
+        }
+      ]
+    },
+    "You chose watre.": {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "offset": 8.4,
+      "duration": 1.242,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.307,
+          "end": 0.586
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.633,
+          "end": 1.143
+        }
+      ]
+    },
+    "You chose waiter.": {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "offset": 9.642,
+      "duration": 1.4571,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.621,
+          "end": 1.074
+        }
+      ]
+    },
+    "The word is water.": {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "offset": 0,
+      "duration": 1.666,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.174
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.221,
+          "end": 0.499
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.546,
+          "end": 0.627
+        },
+        {
+          "charIndex": 12,
+          "charLength": 5,
+          "start": 0.708,
+          "end": 1.184
+        }
+      ]
+    },
+    "You chose bard.": {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "offset": 1.666,
+      "duration": 1.5325,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.284,
+          "end": 0.447
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.528,
+          "end": 0.888
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.935,
+          "end": 1.387
+        }
+      ]
+    },
+    "You chose bind.": {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "offset": 3.1985,
+      "duration": 1.533,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.2035
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2725,
+          "end": 0.5865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6325,
+          "end": 1.1205
+        }
+      ]
+    },
+    "You chose band.": {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "offset": 4.7315,
+      "duration": 1.764,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2845,
+          "end": 0.4345
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.5165,
+          "end": 0.8295
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.8765,
+          "end": 1.3525
+        }
+      ]
+    },
+    "You chose wird.": {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "offset": 6.4955,
+      "duration": 1.7595,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2845,
+          "end": 0.4355
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.5165,
+          "end": 0.8425
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.8885,
+          "end": 1.3875
+        }
+      ]
+    },
+    "You chose wind.": {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "offset": 8.255,
+      "duration": 1.625,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.383
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.452,
+          "end": 0.766
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.812,
+          "end": 1.254
+        }
+      ]
+    },
+    "You chose ward.": {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "offset": 9.88,
+      "duration": 1.73,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.395
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.464,
+          "end": 0.778
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.824,
+          "end": 1.289
+        }
+      ]
+    },
+    "You chose birn.": {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "offset": 11.61,
+      "duration": 1.7183,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.337,
+          "end": 0.488
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.557,
+          "end": 0.871
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.917,
+          "end": 1.358
+        }
+      ]
+    },
+    "The word is bird.": {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "offset": 0,
+      "duration": 1.3005,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.174
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.221,
+          "end": 0.464
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.534,
+          "end": 0.604
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.685,
+          "end": 1.149
+        }
+      ]
+    },
+    "You chose ring.": {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "offset": 1.3005,
+      "duration": 1.2015,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.6035
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6735,
+          "end": 1.0095
+        }
+      ]
+    },
+    "You chose wig.": {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "offset": 2.502,
+      "duration": 1.1145,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.586
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.633,
+          "end": 0.981
+        }
+      ]
+    },
+    "You chose rig.": {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "offset": 3.6165,
+      "duration": 1.2245,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.2035
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2725,
+          "end": 0.5865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6555,
+          "end": 1.0275
+        }
+      ]
+    },
+    "You chose ping.": {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "offset": 4.841,
+      "duration": 1.2425,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.256
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.627
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.674,
+          "end": 1.034
+        }
+      ]
+    },
+    "You chose pig.": {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "offset": 6.0835,
+      "duration": 1.19,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.6035
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6505,
+          "end": 1.0215
+        }
+      ]
+    },
+    "You chose ding.": {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "offset": 7.2735,
+      "duration": 1.219,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.6095
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6565,
+          "end": 1.0165
+        }
+      ]
+    },
+    "You chose dig.": {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "offset": 8.4925,
+      "duration": 1.3992,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.6215
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6565,
+          "end": 1.0275
+        }
+      ]
+    },
+    "You chose wung.": {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "offset": 0,
+      "duration": 1.254,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.65,
+          "end": 1.01
+        }
+      ]
+    },
+    "You chose win.": {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "offset": 1.254,
+      "duration": 1.4045,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.638
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.685,
+          "end": 1.033
+        }
+      ]
+    },
+    "The word is wing.": {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "offset": 2.6585,
+      "duration": 1.4395,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2435,
+          "end": 0.3485
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.3945,
+          "end": 0.6155
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.6615,
+          "end": 0.7435
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.8245,
+          "end": 1.1965
+        }
+      ]
+    },
+    "You chose jamp.": {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "offset": 4.098,
+      "duration": 1.301,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.256
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.616
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.662,
+          "end": 1.045
+        }
+      ]
+    },
+    "You chose lump.": {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "offset": 5.399,
+      "duration": 1.265,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.638
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.685,
+          "end": 0.986
+        }
+      ]
+    },
+    "You chose lamp.": {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "offset": 6.664,
+      "duration": 1.2365,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.256
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.627
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.674,
+          "end": 1.01
+        }
+      ]
+    },
+    "You chose dump.": {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "offset": 7.9005,
+      "duration": 1.2365,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5985
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6445,
+          "end": 0.9575
+        }
+      ]
+    },
+    "You chose damp.": {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "offset": 9.137,
+      "duration": 1.4049,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.627
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.673,
+          "end": 1.033
+        }
+      ]
+    },
+    "You chose jimp.": {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "offset": 0,
+      "duration": 1.219,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.673,
+          "end": 1.01
+        }
+      ]
+    },
+    "You chose limp.": {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "offset": 1.219,
+      "duration": 1.1435,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.221
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.29,
+          "end": 0.581
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.627,
+          "end": 0.917
+        }
+      ]
+    },
+    "You chose jumb.": {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "offset": 2.3625,
+      "duration": 1.1845,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5745
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6215,
+          "end": 0.9575
+        }
+      ]
+    },
+    "You chose just.": {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "offset": 3.547,
+      "duration": 1.457,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.609
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.656,
+          "end": 1.085
+        }
+      ]
+    },
+    "The word is jump.": {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "offset": 5.004,
+      "duration": 1.3525,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.36
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.406,
+          "end": 0.65
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.696,
+          "end": 0.778
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.859,
+          "end": 1.161
+        }
+      ]
+    },
+    "You chose oven.": {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "offset": 6.3565,
+      "duration": 1.2075,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.1795
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2495,
+          "end": 0.5395
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.5865,
+          "end": 0.9815
+        }
+      ]
+    },
+    "You chose ovar.": {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "offset": 7.564,
+      "duration": 1.2885,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.598
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.644,
+          "end": 1.143
+        }
+      ]
+    },
+    "You chose even.": {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "offset": 8.8525,
+      "duration": 1.3643,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.1805
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2495,
+          "end": 0.5635
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6095,
+          "end": 0.9925
+        }
+      ]
+    },
+    "You chose ever.": {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "offset": 0,
+      "duration": 1.376,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.592
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.662,
+          "end": 1.057
+        }
+      ]
+    },
+    "You chose ovan.": {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "offset": 1.376,
+      "duration": 1.335,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.157,
+          "end": 0.296
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.365,
+          "end": 0.644
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.691,
+          "end": 1.143
+        }
+      ]
+    },
+    "You chose evar.": {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "offset": 2.711,
+      "duration": 1.3585,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.215
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.284,
+          "end": 0.575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.621,
+          "end": 1.097
+        }
+      ]
+    },
+    "You chose ower.": {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "offset": 4.0695,
+      "duration": 1.393,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2725
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6555
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.7025,
+          "end": 1.0855
+        }
+      ]
+    },
+    "The word is over.": {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "offset": 5.4625,
+      "duration": 1.37,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1795,
+          "end": 0.2965
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.3425,
+          "end": 0.5635
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.6095,
+          "end": 0.6905
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.7605,
+          "end": 1.1085
+        }
+      ]
+    },
+    "You chose ump.": {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "offset": 6.8325,
+      "duration": 1.3695,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2725
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.7135,
+          "end": 0.9925
+        }
+      ]
+    },
+    "You chose ap.": {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "offset": 8.202,
+      "duration": 1.4515,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.308
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.378,
+          "end": 0.645
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.714,
+          "end": 0.97
+        }
+      ]
+    },
+    "You chose amp.": {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "offset": 9.6535,
+      "duration": 1.5385,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.3425
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.4125,
+          "end": 0.7145
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.7835,
+          "end": 1.1085
+        }
+      ]
+    },
+    "You chose ip.": {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "offset": 0,
+      "duration": 1.393,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.592
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.673,
+          "end": 0.964
+        }
+      ]
+    },
+    "You chose imp.": {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "offset": 1.393,
+      "duration": 1.469,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.267
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.348,
+          "end": 0.674
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.72,
+          "end": 1.057
+        }
+      ]
+    },
+    "You chose us.": {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "offset": 2.862,
+      "duration": 1.4625,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.215,
+          "end": 0.366
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.447,
+          "end": 0.772
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.842,
+          "end": 1.201
+        }
+      ]
+    },
+    "You chose um.": {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "offset": 4.3245,
+      "duration": 1.4635,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2495
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3315,
+          "end": 0.6565
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.7255,
+          "end": 1.0855
+        }
+      ]
+    },
+    "The word is up.": {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "offset": 5.788,
+      "duration": 1.277,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.296
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.342,
+          "end": 0.574
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.621,
+          "end": 0.714
+        },
+        {
+          "charIndex": 12,
+          "charLength": 2,
+          "start": 0.806,
+          "end": 1.073
+        }
+      ]
+    },
+    "You chose bag.": {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "offset": 7.065,
+      "duration": 1.2015,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.528
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.574,
+          "end": 1.039
+        }
+      ]
+    },
+    "You chose bug.": {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "offset": 8.2665,
+      "duration": 1.2015,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.5915
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6385,
+          "end": 1.0095
+        }
+      ]
+    },
+    "You chose bit.": {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "offset": 9.468,
+      "duration": 1.3525,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.621
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.656,
+          "end": 0.993
+        }
+      ]
+    },
+    "You chose bat.": {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "offset": 0,
+      "duration": 1.231,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.592
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.639,
+          "end": 1.033
+        }
+      ]
+    },
+    "You chose but.": {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "offset": 1.231,
+      "duration": 1.294,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.627
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.673,
+          "end": 1.033
+        }
+      ]
+    },
+    "You chose bad.": {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "offset": 2.525,
+      "duration": 1.2715,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.157,
+          "end": 0.296
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.366,
+          "end": 0.668
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.714,
+          "end": 1.121
+        }
+      ]
+    },
+    "You chose bid.": {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "offset": 3.7965,
+      "duration": 1.126,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.5925
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6265,
+          "end": 0.9635
+        }
+      ]
+    },
+    "You chose beg.": {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "offset": 4.9225,
+      "duration": 1.2135,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.6035
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6385,
+          "end": 1.0455
+        }
+      ]
+    },
+    "The word is big.": {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "offset": 6.136,
+      "duration": 1.277,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.215
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.284,
+          "end": 0.54
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.586,
+          "end": 0.667
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.749,
+          "end": 1.097
+        }
+      ]
+    },
+    "You chose smell.": {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "offset": 7.413,
+      "duration": 1.335,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.609
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.644,
+          "end": 1.109
+        }
+      ]
+    },
+    "You chose shall.": {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "offset": 8.748,
+      "duration": 1.4688,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.319,
+          "end": 0.621
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.644,
+          "end": 1.062
+        }
+      ]
+    },
+    "You chose shell.": {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "offset": 0,
+      "duration": 1.196,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.534
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.569,
+          "end": 0.987
+        }
+      ]
+    },
+    "You chose smoll.": {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "offset": 1.196,
+      "duration": 1.242,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.22
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.29,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.592,
+          "end": 1.033
+        }
+      ]
+    },
+    "You chose snall.": {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "offset": 2.438,
+      "duration": 1.3585,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.256,
+          "end": 0.511
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.534,
+          "end": 0.987
+        }
+      ]
+    },
+    "The word is small.": {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "offset": 3.7965,
+      "duration": 1.428,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2435,
+          "end": 0.3595
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.4065,
+          "end": 0.6265
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.6965,
+          "end": 0.7665
+        },
+        {
+          "charIndex": 12,
+          "charLength": 5,
+          "start": 0.8015,
+          "end": 1.2195
+        }
+      ]
+    },
+    "You chose too.": {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "offset": 5.2245,
+      "duration": 1.0855,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2085
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2785,
+          "end": 0.5455
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.5805,
+          "end": 0.8825
+        }
+      ]
+    },
+    "You chose toe.": {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "offset": 6.31,
+      "duration": 1.126,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.192
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.261,
+          "end": 0.528
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.575,
+          "end": 1.016
+        }
+      ]
+    },
+    "You chose owe.": {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "offset": 7.436,
+      "duration": 1.1265,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.192
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.261,
+          "end": 0.54
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.61,
+          "end": 0.993
+        }
+      ]
+    },
+    "You chose ewe.": {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "offset": 8.5625,
+      "duration": 1.2828,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.1915
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2615,
+          "end": 0.5285
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.5745,
+          "end": 0.9805
+        }
+      ]
+    },
+    "You chose awe.": {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "offset": 0,
+      "duration": 1.341,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.65,
+          "end": 1.091
+        }
+      ]
+    },
+    "You chose tow.": {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "offset": 1.341,
+      "duration": 1.364,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.215,
+          "end": 0.366
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.447,
+          "end": 0.76
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.807,
+          "end": 1.144
+        }
+      ]
+    },
+    "You chose twu.": {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "offset": 2.705,
+      "duration": 1.405,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.221
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.29,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.639,
+          "end": 0.999
+        }
+      ]
+    },
+    "The word is two.": {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "offset": 4.11,
+      "duration": 1.5965,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.348
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.395,
+          "end": 0.638
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.685,
+          "end": 0.778
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.847,
+          "end": 1.184
+        }
+      ]
+    },
+    "You chose bed.": {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "offset": 5.7065,
+      "duration": 1.4975,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.3655
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.4465,
+          "end": 0.7715
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.8185,
+          "end": 1.1895
+        }
+      ]
+    },
+    "You chose rad.": {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "offset": 7.204,
+      "duration": 1.3465,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.319
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.702
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.749,
+          "end": 1.155
+        }
+      ]
+    },
+    "You chose rid.": {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "offset": 8.5505,
+      "duration": 1.254,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3195,
+          "end": 0.6325
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6795,
+          "end": 1.0275
+        }
+      ]
+    },
+    "You chose led.": {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "offset": 9.8045,
+      "duration": 1.434,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2725
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6565
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.7025,
+          "end": 1.0625
+        }
+      ]
+    },
+    "You chose lad.": {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "offset": 0,
+      "duration": 1.1265,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.615,
+          "end": 0.987
+        }
+      ]
+    },
+    "You chose rod.": {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "offset": 1.1265,
+      "duration": 1.1435,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0695,
+          "end": 0.2085
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2785,
+          "end": 0.5565
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6265,
+          "end": 0.9985
+        }
+      ]
+    },
+    "You chose read.": {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "offset": 2.27,
+      "duration": 1.3525,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.574
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.644,
+          "end": 1.004
+        }
+      ]
+    },
+    "The word is red.": {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "offset": 3.6225,
+      "duration": 1.5615,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2435,
+          "end": 0.3595
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.4295,
+          "end": 0.7085
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.7545,
+          "end": 0.8355
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.9285,
+          "end": 1.2765
+        }
+      ]
+    },
+    "You chose look.": {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "offset": 5.184,
+      "duration": 1.184,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.157,
+          "end": 0.296
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.366,
+          "end": 0.667
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.714,
+          "end": 1.016
+        }
+      ]
+    },
+    "You chose bock.": {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "offset": 6.368,
+      "duration": 1.126,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.563
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.598,
+          "end": 0.935
+        }
+      ]
+    },
+    "You chose rook.": {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "offset": 7.494,
+      "duration": 1.1495,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.645,
+          "end": 0.958
+        }
+      ]
+    },
+    "You chose rock.": {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "offset": 8.6435,
+      "duration": 1.3411,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.2035
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2725,
+          "end": 0.5635
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6095,
+          "end": 0.9695
+        }
+      ]
+    },
+    "You chose boak.": {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "offset": 0,
+      "duration": 1.364,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.615,
+          "end": 0.952
+        }
+      ]
+    },
+    "You chose boot.": {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "offset": 1.364,
+      "duration": 1.289,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.215,
+          "end": 0.354
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.424,
+          "end": 0.726
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.772,
+          "end": 1.097
+        }
+      ]
+    },
+    "You chose back.": {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "offset": 2.653,
+      "duration": 1.1725,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.18
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.249,
+          "end": 0.528
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.575,
+          "end": 0.934
+        }
+      ]
+    },
+    "The word is book.": {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "offset": 3.8255,
+      "duration": 1.3815,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2035
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2495,
+          "end": 0.4815
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.5285,
+          "end": 0.6095
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.6795,
+          "end": 1.0045
+        }
+      ]
+    },
+    "You chose opan.": {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "offset": 5.207,
+      "duration": 1.4745,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.308
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.377,
+          "end": 0.644
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.691,
+          "end": 1.167
+        }
+      ]
+    },
+    "You chose oper.": {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "offset": 6.6815,
+      "duration": 1.3755,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1795,
+          "end": 0.3195
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3885,
+          "end": 0.6905
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.7375,
+          "end": 1.1325
+        }
+      ]
+    },
+    "You chose over.": {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "offset": 8.057,
+      "duration": 1.2425,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.233
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.302,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.65,
+          "end": 1.034
+        }
+      ]
+    },
+    "You chose opne.": {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "offset": 9.2995,
+      "duration": 1.4746,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.5925
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6385,
+          "end": 1.1265
+        }
+      ]
+    },
+    "The word is open.": {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "offset": 0,
+      "duration": 1.347,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.174
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.221,
+          "end": 0.464
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.511,
+          "end": 0.592
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.673,
+          "end": 1.126
+        }
+      ]
+    },
+    "You chose light.": {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "offset": 1.347,
+      "duration": 1.178,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.638
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.685,
+          "end": 1.033
+        }
+      ]
+    },
+    "You chose nught.": {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "offset": 2.525,
+      "duration": 1.1205,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.18
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.25,
+          "end": 0.563
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.633,
+          "end": 0.958
+        }
+      ]
+    },
+    "You chose lught.": {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "offset": 3.6455,
+      "duration": 1.1205,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.1975
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2675,
+          "end": 0.5575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6035,
+          "end": 0.9405
+        }
+      ]
+    },
+    "You chose might.": {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "offset": 4.766,
+      "duration": 1.161,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.215
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.284,
+          "end": 0.575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.621,
+          "end": 0.958
+        }
+      ]
+    },
+    "You chose mught.": {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "offset": 5.927,
+      "duration": 1.155,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.215
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.284,
+          "end": 0.586
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.633,
+          "end": 0.946
+        }
+      ]
+    },
+    "You chose nigth.": {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "offset": 7.082,
+      "duration": 1.2595,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.256
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.615
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.662,
+          "end": 1.057
+        }
+      ]
+    },
+    "You chose nite.": {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "offset": 8.3415,
+      "duration": 1.3644,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.6215
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6675,
+          "end": 1.0625
+        }
+      ]
+    },
+    "You chose right.": {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "offset": 0,
+      "duration": 1.3295,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.639,
+          "end": 1.01
+        }
+      ]
+    },
+    "The word is night.": {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "offset": 1.3295,
+      "duration": 1.544,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.3305
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.3775,
+          "end": 0.6205
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.6905,
+          "end": 0.7835
+        },
+        {
+          "charIndex": 12,
+          "charLength": 5,
+          "start": 0.8765,
+          "end": 1.2365
+        }
+      ]
+    },
+    "You chose moan.": {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "offset": 2.8735,
+      "duration": 1.4625,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1795,
+          "end": 0.3195
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3885,
+          "end": 0.7025
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.7485,
+          "end": 1.1555
+        }
+      ]
+    },
+    "You chose noon.": {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "offset": 4.336,
+      "duration": 1.452,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.308
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.703
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.749,
+          "end": 1.144
+        }
+      ]
+    },
+    "You chose noan.": {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "offset": 5.788,
+      "duration": 1.5845,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.319
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.702
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.748,
+          "end": 1.213
+        }
+      ]
+    },
+    "You chose mood.": {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "offset": 7.3725,
+      "duration": 1.4275,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2435,
+          "end": 0.3945
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.4645,
+          "end": 0.7665
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.8125,
+          "end": 1.2185
+        }
+      ]
+    },
+    "You chose noad.": {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "offset": 8.8,
+      "duration": 1.469,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.256
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.627
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.674,
+          "end": 1.208
+        }
+      ]
+    },
+    "You chose moom.": {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "offset": 10.269,
+      "duration": 1.4803,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.319
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.702
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.749,
+          "end": 1.097
+        }
+      ]
+    },
+    "The word is moon.": {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "offset": 0,
+      "duration": 1.376,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.163
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.209,
+          "end": 0.418
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.488,
+          "end": 0.569
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.65,
+          "end": 1.033
+        }
+      ]
+    },
+    "You chose rught.": {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "offset": 1.376,
+      "duration": 1.457,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.215,
+          "end": 0.365
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.447,
+          "end": 0.772
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.842,
+          "end": 1.213
+        }
+      ]
+    },
+    "You chose ligth.": {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "offset": 2.833,
+      "duration": 1.399,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.615
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.685,
+          "end": 1.056
+        }
+      ]
+    },
+    "You chose lign.": {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "offset": 4.232,
+      "duration": 1.5675,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.215,
+          "end": 0.366
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.435,
+          "end": 0.725
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.772,
+          "end": 1.155
+        }
+      ]
+    },
+    "You chose lift.": {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "offset": 5.7995,
+      "duration": 1.6195,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2845,
+          "end": 0.4235
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.4935,
+          "end": 0.8065
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.8535,
+          "end": 1.2705
+        }
+      ]
+    },
+    "The word is light.": {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "offset": 7.419,
+      "duration": 1.3875,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.36
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.406,
+          "end": 0.603
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.65,
+          "end": 0.731
+        },
+        {
+          "charIndex": 12,
+          "charLength": 5,
+          "start": 0.812,
+          "end": 1.126
+        }
+      ]
+    },
+    "You chose fore.": {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "offset": 8.8065,
+      "duration": 1.2185,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2845
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3535,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6905,
+          "end": 1.1205
+        }
+      ]
+    },
+    "You chose fare.": {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "offset": 10.025,
+      "duration": 1.3528,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.621,
+          "end": 1.063
+        }
+      ]
+    },
+    "You chose firm.": {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "offset": 0,
+      "duration": 1.2595,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.615,
+          "end": 0.998
+        }
+      ]
+    },
+    "You chose form.": {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "offset": 1.2595,
+      "duration": 1.3705,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2615
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3315,
+          "end": 0.6325
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6795,
+          "end": 1.0625
+        }
+      ]
+    },
+    "You chose hire.": {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "offset": 2.63,
+      "duration": 1.3115,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.319
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.389,
+          "end": 0.69
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.737,
+          "end": 1.178
+        }
+      ]
+    },
+    "You chose fier.": {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "offset": 3.9415,
+      "duration": 1.2075,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2145
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2845,
+          "end": 0.5865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6325,
+          "end": 1.0045
+        }
+      ]
+    },
+    "You chose fine.": {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "offset": 5.149,
+      "duration": 1.2365,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.61
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.656,
+          "end": 1.12
+        }
+      ]
+    },
+    "The word is fire.": {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "offset": 6.3855,
+      "duration": 1.37,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.1975
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2675,
+          "end": 0.5455
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.5925,
+          "end": 0.6735
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.7435,
+          "end": 1.2195
+        }
+      ]
+    },
+    "You chose oil.": {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "offset": 7.7555,
+      "duration": 1.254,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1165,
+          "end": 0.2555
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3255,
+          "end": 0.6385
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.7085,
+          "end": 1.0445
+        }
+      ]
+    },
+    "You chose awl.": {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "offset": 9.0095,
+      "duration": 1.393,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.6035
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6505,
+          "end": 0.9985
+        }
+      ]
+    },
+    "You chose ail.": {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "offset": 0,
+      "duration": 1.248,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.592
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.639,
+          "end": 1.057
+        }
+      ]
+    },
+    "You chose owp.": {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "offset": 1.248,
+      "duration": 1.643,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.563
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.61,
+          "end": 1.167
+        }
+      ]
+    },
+    "The word is owl.": {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "offset": 2.891,
+      "duration": 1.3815,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.232
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.279,
+          "end": 0.499
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.569,
+          "end": 0.662
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.743,
+          "end": 1.138
+        }
+      ]
+    },
+    "You chose forget.": {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "offset": 4.2725,
+      "duration": 1.341,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1165,
+          "end": 0.2555
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3255,
+          "end": 0.6035
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.6505,
+          "end": 1.1145
+        }
+      ]
+    },
+    "You chose foreset.": {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "offset": 5.6135,
+      "duration": 1.463,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2265
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2955,
+          "end": 0.5515
+        },
+        {
+          "charIndex": 10,
+          "charLength": 7,
+          "start": 0.5975,
+          "end": 1.1785
+        }
+      ]
+    },
+    "You chose forset.": {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "offset": 7.0765,
+      "duration": 1.509,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.2845
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3535,
+          "end": 0.6555
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.7025,
+          "end": 1.2825
+        }
+      ]
+    },
+    "You chose korest.": {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "offset": 8.5855,
+      "duration": 1.4575,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2265
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2965,
+          "end": 0.5635
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.5975,
+          "end": 1.2135
+        }
+      ]
+    },
+    "You chose farest.": {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "offset": 10.043,
+      "duration": 1.567,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.243
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.313,
+          "end": 0.603
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.65,
+          "end": 1.219
+        }
+      ]
+    },
+    "You chose forst.": {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "offset": 0,
+      "duration": 1.219,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.615,
+          "end": 1.057
+        }
+      ]
+    },
+    "The word is forest.": {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "offset": 1.219,
+      "duration": 1.3875,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.232,
+          "end": 0.453
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.499,
+          "end": 0.581
+        },
+        {
+          "charIndex": 12,
+          "charLength": 6,
+          "start": 0.65,
+          "end": 1.173
+        }
+      ]
+    },
+    "You chose drogon.": {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "offset": 2.6065,
+      "duration": 1.37,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5635
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.5975,
+          "end": 1.1665
+        }
+      ]
+    },
+    "You chose dragan.": {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "offset": 3.9765,
+      "duration": 1.37,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2035
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2725,
+          "end": 0.5285
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.5635,
+          "end": 1.0855
+        }
+      ]
+    },
+    "You chose drogan.": {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "offset": 5.3465,
+      "duration": 1.393,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.2845
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3535,
+          "end": 0.6095
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.6445,
+          "end": 1.1665
+        }
+      ]
+    },
+    "You chose dregon.": {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "offset": 6.7395,
+      "duration": 1.3815,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2265
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2965,
+          "end": 0.5515
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.5865,
+          "end": 1.1555
+        }
+      ]
+    },
+    "You chose dregan.": {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "offset": 8.121,
+      "duration": 1.4225,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.227
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.296,
+          "end": 0.552
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.586,
+          "end": 1.179
+        }
+      ]
+    },
+    "You chose drigon.": {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "offset": 9.5435,
+      "duration": 1.5556,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1165,
+          "end": 0.2435
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3135,
+          "end": 0.5685
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.6035,
+          "end": 1.1725
+        }
+      ]
+    },
+    "You chose drgaon.": {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "offset": 0,
+      "duration": 1.625,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.615,
+          "end": 1.382
+        }
+      ]
+    },
+    "You chose dragoon.": {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "offset": 1.625,
+      "duration": 1.7125,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.256
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 7,
+          "start": 0.639,
+          "end": 1.301
+        }
+      ]
+    },
+    "The word is dragon.": {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "offset": 3.3375,
+      "duration": 1.597,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2845,
+          "end": 0.4005
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.4475,
+          "end": 0.6915
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.7605,
+          "end": 0.8305
+        },
+        {
+          "charIndex": 12,
+          "charLength": 6,
+          "start": 0.8765,
+          "end": 1.3875
+        }
+      ]
+    },
+    "You chose treasury.": {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "offset": 4.9345,
+      "duration": 1.335,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2895,
+          "end": 0.5575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 8,
+          "start": 0.5915,
+          "end": 1.1495
+        }
+      ]
+    },
+    "You chose treasore.": {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "offset": 6.2695,
+      "duration": 1.48,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.5805
+        },
+        {
+          "charIndex": 10,
+          "charLength": 8,
+          "start": 0.6155,
+          "end": 1.3115
+        }
+      ]
+    },
+    "You chose treasory.": {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "offset": 7.7495,
+      "duration": 1.4455,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 8,
+          "start": 0.6215,
+          "end": 1.2365
+        }
+      ]
+    },
+    "You chose treesure.": {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "offset": 9.195,
+      "duration": 1.457,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.221
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.29,
+          "end": 0.581
+        },
+        {
+          "charIndex": 10,
+          "charLength": 8,
+          "start": 0.615,
+          "end": 1.289
+        }
+      ]
+    },
+    "You chose treesury.": {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "offset": 10.652,
+      "duration": 1.701,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.598
+        },
+        {
+          "charIndex": 10,
+          "charLength": 8,
+          "start": 0.633,
+          "end": 1.341
+        }
+      ]
+    },
+    "You chose traesure.": {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "offset": 0,
+      "duration": 1.3465,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.546
+        },
+        {
+          "charIndex": 10,
+          "charLength": 8,
+          "start": 0.58,
+          "end": 1.231
+        }
+      ]
+    },
+    "You chose trasure.": {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "offset": 1.3465,
+      "duration": 1.376,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2675,
+          "end": 0.5455
+        },
+        {
+          "charIndex": 10,
+          "charLength": 7,
+          "start": 0.5805,
+          "end": 1.2545
+        }
+      ]
+    },
+    "You chose treason.": {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "offset": 2.7225,
+      "duration": 1.4805,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5975
+        },
+        {
+          "charIndex": 10,
+          "charLength": 7,
+          "start": 0.6325,
+          "end": 1.1325
+        }
+      ]
+    },
+    "The word is treasure.": {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "offset": 4.203,
+      "duration": 1.4685,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.36
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.406,
+          "end": 0.65
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.696,
+          "end": 0.778
+        },
+        {
+          "charIndex": 12,
+          "charLength": 8,
+          "start": 0.847,
+          "end": 1.335
+        }
+      ]
+    },
+    "You chose corn.": {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "offset": 5.6715,
+      "duration": 1.219,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5745
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6215,
+          "end": 1.0395
+        }
+      ]
+    },
+    "You chose boin.": {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "offset": 6.8905,
+      "duration": 1.277,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2145
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2845,
+          "end": 0.5635
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6095,
+          "end": 1.0735
+        }
+      ]
+    },
+    "You chose born.": {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "offset": 8.1675,
+      "duration": 1.196,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.6095
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6445,
+          "end": 1.0505
+        }
+      ]
+    },
+    "You chose toin.": {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "offset": 9.3635,
+      "duration": 1.4106,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.2035
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2725,
+          "end": 0.5515
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.5975,
+          "end": 1.0395
+        }
+      ]
+    },
+    "You chose torn.": {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "offset": 0,
+      "duration": 1.271,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.209
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.29,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.639,
+          "end": 1.08
+        }
+      ]
+    },
+    "You chose cain.": {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "offset": 1.271,
+      "duration": 1.2775,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.621,
+          "end": 1.051
+        }
+      ]
+    },
+    "You chose coim.": {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "offset": 2.5485,
+      "duration": 1.271,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.6095
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6555,
+          "end": 1.0625
+        }
+      ]
+    },
+    "You chose coil.": {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "offset": 3.8195,
+      "duration": 1.3125,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.5925
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6385,
+          "end": 1.0685
+        }
+      ]
+    },
+    "The word is coin.": {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "offset": 5.132,
+      "duration": 1.48,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.232
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.301,
+          "end": 0.592
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.638,
+          "end": 0.719
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.801,
+          "end": 1.253
+        }
+      ]
+    },
+    "You chose rate.": {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "offset": 6.612,
+      "duration": 1.1725,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.308,
+          "end": 0.609
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.679,
+          "end": 1.085
+        }
+      ]
+    },
+    "You chose rave.": {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "offset": 7.7845,
+      "duration": 1.2425,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.2035
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2725,
+          "end": 0.5745
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6555,
+          "end": 1.1315
+        }
+      ]
+    },
+    "You chose fate.": {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "offset": 9.027,
+      "duration": 1.3291,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.586
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.633,
+          "end": 1.027
+        }
+      ]
+    },
+    "You chose fame.": {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "offset": 0,
+      "duration": 1.306,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.557
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.604,
+          "end": 1.08
+        }
+      ]
+    },
+    "You chose gote.": {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "offset": 1.306,
+      "duration": 1.3645,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.157,
+          "end": 0.296
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.366,
+          "end": 0.644
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.679,
+          "end": 1.179
+        }
+      ]
+    },
+    "You chose gait.": {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "offset": 2.6705,
+      "duration": 1.19,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.5685
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.6155,
+          "end": 0.9865
+        }
+      ]
+    },
+    "The word is gate.": {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "offset": 3.8605,
+      "duration": 1.358,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2145
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2615,
+          "end": 0.5165
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.5625,
+          "end": 0.6325
+        },
+        {
+          "charIndex": 12,
+          "charLength": 4,
+          "start": 0.7135,
+          "end": 1.1555
+        }
+      ]
+    },
+    "You chose cattle.": {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "offset": 5.2185,
+      "duration": 1.2655,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.2965
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3655,
+          "end": 0.6215
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.6565,
+          "end": 1.1665
+        }
+      ]
+    },
+    "You chose battle.": {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "offset": 6.484,
+      "duration": 1.202,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.575
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.621,
+          "end": 1.097
+        }
+      ]
+    },
+    "You chose bastle.": {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "offset": 7.686,
+      "duration": 1.3755,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.081,
+          "end": 0.22
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.302,
+          "end": 0.592
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.638,
+          "end": 1.196
+        }
+      ]
+    },
+    "You chose caste.": {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "offset": 9.0615,
+      "duration": 1.5268,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2845
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3655,
+          "end": 0.6675
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.7145,
+          "end": 1.2135
+        }
+      ]
+    },
+    "You chose paste.": {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "offset": 0,
+      "duration": 1.2595,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.557
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.604,
+          "end": 1.126
+        }
+      ]
+    },
+    "You chose pastle.": {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "offset": 1.2595,
+      "duration": 1.3645,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5985
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.6445,
+          "end": 1.2135
+        }
+      ]
+    },
+    "You chose castel.": {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "offset": 2.624,
+      "duration": 1.4915,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.604
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.638,
+          "end": 1.196
+        }
+      ]
+    },
+    "You chose castal.": {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "offset": 4.1155,
+      "duration": 1.463,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2735
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6215
+        },
+        {
+          "charIndex": 10,
+          "charLength": 6,
+          "start": 0.6565,
+          "end": 1.2015
+        }
+      ]
+    },
+    "The word is castle.": {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "offset": 5.5785,
+      "duration": 1.4685,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2495
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.2965,
+          "end": 0.5395
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.6095,
+          "end": 0.6795
+        },
+        {
+          "charIndex": 12,
+          "charLength": 6,
+          "start": 0.7485,
+          "end": 1.3295
+        }
+      ]
+    },
+    "You chose manic.": {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "offset": 7.047,
+      "duration": 1.283,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.256
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.616
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.662,
+          "end": 1.057
+        }
+      ]
+    },
+    "You chose magik.": {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "offset": 8.33,
+      "duration": 1.3465,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.227
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.296,
+          "end": 0.563
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.61,
+          "end": 1.086
+        }
+      ]
+    },
+    "You chose manik.": {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "offset": 9.6765,
+      "duration": 1.4226,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2735
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6095
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6565,
+          "end": 1.0395
+        }
+      ]
+    },
+    "You chose mafic.": {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "offset": 0,
+      "duration": 1.492,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.197
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.279,
+          "end": 0.615
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.685,
+          "end": 1.184
+        }
+      ]
+    },
+    "You chose malic.": {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "offset": 1.492,
+      "duration": 1.4395,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.331
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.412,
+          "end": 0.749
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.795,
+          "end": 1.213
+        }
+      ]
+    },
+    "You chose makic.": {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "offset": 2.9315,
+      "duration": 1.399,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.6095
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6555,
+          "end": 1.1555
+        }
+      ]
+    },
+    "You chose magci.": {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "offset": 4.3305,
+      "duration": 1.4455,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1165,
+          "end": 0.2555
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3365,
+          "end": 0.6385
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.6855,
+          "end": 1.2425
+        }
+      ]
+    },
+    "You chose magma.": {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "offset": 5.776,
+      "duration": 1.5905,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.099,
+          "end": 0.238
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.319,
+          "end": 0.633
+        },
+        {
+          "charIndex": 10,
+          "charLength": 5,
+          "start": 0.679,
+          "end": 1.178
+        }
+      ]
+    },
+    "The word is magic.": {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "offset": 7.3665,
+      "duration": 1.579,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2845,
+          "end": 0.4005
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.4475,
+          "end": 0.7145
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.7605,
+          "end": 0.8415
+        },
+        {
+          "charIndex": 12,
+          "charLength": 5,
+          "start": 0.9235,
+          "end": 1.3875
+        }
+      ]
+    },
+    "You chose she.": {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "offset": 8.9455,
+      "duration": 1.184,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0635,
+          "end": 0.2035
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2725,
+          "end": 0.5745
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6095,
+          "end": 1.0045
+        }
+      ]
+    },
+    "You chose see.": {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "offset": 10.1295,
+      "duration": 1.3876,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2385
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3195,
+          "end": 0.6325
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6795,
+          "end": 1.1085
+        }
+      ]
+    },
+    "You chose then.": {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "offset": 0,
+      "duration": 1.1495,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.267,
+          "end": 0.592
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.627,
+          "end": 0.94
+        }
+      ]
+    },
+    "You chose ten.": {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "offset": 1.1495,
+      "duration": 1.3175,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0815,
+          "end": 0.2205
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.2905,
+          "end": 0.5915
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6385,
+          "end": 1.0095
+        }
+      ]
+    },
+    "You chose teen.": {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "offset": 2.467,
+      "duration": 1.411,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.331
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.401,
+          "end": 0.703
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.737,
+          "end": 1.167
+        }
+      ]
+    },
+    "You chose thee.": {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "offset": 3.878,
+      "duration": 1.2475,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.627
+        },
+        {
+          "charIndex": 10,
+          "charLength": 4,
+          "start": 0.662,
+          "end": 1.068
+        }
+      ]
+    },
+    "You chose teh.": {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "offset": 5.1255,
+      "duration": 1.347,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2735
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6445
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6795,
+          "end": 1.0515
+        }
+      ]
+    },
+    "The word is the.": {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "offset": 6.4725,
+      "duration": 1.5445,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2145,
+          "end": 0.3305
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.3775,
+          "end": 0.6565
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.7025,
+          "end": 0.7955
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.8655,
+          "end": 1.2825
+        }
+      ]
+    },
+    "You chose add.": {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "offset": 8.017,
+      "duration": 1.265,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.18,
+          "end": 0.331
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.4,
+          "end": 0.714
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.76,
+          "end": 1.12
+        }
+      ]
+    },
+    "You chose aid.": {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "offset": 9.282,
+      "duration": 1.2599,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.064,
+          "end": 0.203
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.273,
+          "end": 0.586
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.656,
+          "end": 1.039
+        }
+      ]
+    },
+    "You chose ad.": {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "offset": 0,
+      "duration": 1.289,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.255,
+          "end": 0.569
+        },
+        {
+          "charIndex": 10,
+          "charLength": 2,
+          "start": 0.639,
+          "end": 1.068
+        }
+      ]
+    },
+    "You chose had.": {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "offset": 1.289,
+      "duration": 1.3755,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.116,
+          "end": 0.255
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.325,
+          "end": 0.627
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.696,
+          "end": 1.091
+        }
+      ]
+    },
+    "You chose ant.": {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "offset": 2.6645,
+      "duration": 1.254,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1565,
+          "end": 0.2965
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3655,
+          "end": 0.6325
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6795,
+          "end": 1.0625
+        }
+      ]
+    },
+    "You chose amd.": {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "offset": 3.9185,
+      "duration": 1.7005,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.0985,
+          "end": 0.2375
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3075,
+          "end": 0.5865
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.6555,
+          "end": 1.3295
+        }
+      ]
+    },
+    "You chose end.": {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "offset": 5.619,
+      "duration": 1.637,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.383
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.453,
+          "end": 0.766
+        },
+        {
+          "charIndex": 10,
+          "charLength": 3,
+          "start": 0.836,
+          "end": 1.266
+        }
+      ]
+    },
+    "The word is and.": {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "offset": 7.256,
+      "duration": 1.6665,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.244,
+          "end": 0.36
+        },
+        {
+          "charIndex": 4,
+          "charLength": 4,
+          "start": 0.43,
+          "end": 0.72
+        },
+        {
+          "charIndex": 9,
+          "charLength": 2,
+          "start": 0.79,
+          "end": 0.883
+        },
+        {
+          "charIndex": 12,
+          "charLength": 3,
+          "start": 0.964,
+          "end": 1.405
+        }
+      ]
+    },
+    "You chose e.": {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "offset": 8.9225,
+      "duration": 1.387,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.1335,
+          "end": 0.2725
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.3425,
+          "end": 0.6555
+        },
+        {
+          "charIndex": 10,
+          "charLength": 1,
+          "start": 0.7025,
+          "end": 1.0155
+        }
+      ]
+    },
+    "You chose o.": {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "offset": 10.3095,
+      "duration": 1.5327,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "words": [
+        {
+          "charIndex": 0,
+          "charLength": 3,
+          "start": 0.2435,
+          "end": 0.3835
+        },
+        {
+          "charIndex": 4,
+          "charLength": 5,
+          "start": 0.4525,
+          "end": 0.7665
+        },
+        {
+          "charIndex": 10,
+          "charLength": 1,
+          "start": 0.8125,
+          "end": 1.1265
+        }
+      ]
+    },
+    "u": {
+      "file": "assets/narration/budget-001.mp3",
+      "offset": 0,
+      "duration": 0.383,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5"
+    },
+    "c": {
+      "file": "assets/narration/budget-001.mp3",
+      "offset": 0.383,
+      "duration": 0.627,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5"
+    },
+    "d": {
+      "file": "assets/narration/budget-001.mp3",
+      "offset": 1.01,
+      "duration": 0.546,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5"
+    },
+    "goo": {
+      "file": "assets/narration/budget-001.mp3",
+      "offset": 1.556,
+      "duration": 0.754,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5"
+    },
+    "zoo": {
+      "file": "assets/narration/budget-001.mp3",
+      "offset": 2.31,
+      "duration": 0.7085,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5"
+    },
+    "zo": {
+      "file": "assets/narration/budget-001.mp3",
+      "offset": 3.0185,
+      "duration": 0.714,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5"
+    },
+    "te": {
+      "file": "assets/narration/budget-001.mp3",
+      "offset": 3.7325,
+      "duration": 0.511,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5"
+    },
+    "ta": {
+      "file": "assets/narration/budget-001.mp3",
+      "offset": 4.2435,
+      "duration": 0.7981,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5"
+    },
+    "l": {
+      "file": "assets/narration/budget-002.mp3",
+      "offset": 0,
+      "duration": 0.232,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f"
+    },
+    "j": {
+      "file": "assets/narration/budget-002.mp3",
+      "offset": 0.232,
+      "duration": 0.273,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f"
+    },
+    "t": {
+      "file": "assets/narration/budget-002.mp3",
+      "offset": 0.505,
+      "duration": 0.354,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f"
+    },
+    "f": {
+      "file": "assets/narration/budget-002.mp3",
+      "offset": 0.859,
+      "duration": 0.3775,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f"
+    },
+    "r": {
+      "file": "assets/narration/budget-002.mp3",
+      "offset": 1.2365,
+      "duration": 0.383,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f"
+    },
+    "yau": {
+      "file": "assets/narration/budget-002.mp3",
+      "offset": 1.6195,
+      "duration": 0.7315,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f"
+    },
+    "yaur": {
+      "file": "assets/narration/budget-002.mp3",
+      "offset": 2.351,
+      "duration": 0.9,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f"
+    },
+    "yeu": {
+      "file": "assets/narration/budget-002.mp3",
+      "offset": 3.251,
+      "duration": 0.7719,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f"
+    },
+    "yeur": {
+      "file": "assets/narration/budget-003.mp3",
+      "offset": 0,
+      "duration": 0.47,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884"
+    },
+    "yuo": {
+      "file": "assets/narration/budget-003.mp3",
+      "offset": 0.47,
+      "duration": 0.4995,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884"
+    },
+    "yow": {
+      "file": "assets/narration/budget-003.mp3",
+      "offset": 0.9695,
+      "duration": 0.511,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884"
+    },
+    "ion": {
+      "file": "assets/narration/budget-003.mp3",
+      "offset": 1.4805,
+      "duration": 0.5395,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884"
+    },
+    "inn": {
+      "file": "assets/narration/budget-003.mp3",
+      "offset": 2.02,
+      "duration": 0.4005,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884"
+    },
+    "im": {
+      "file": "assets/narration/budget-003.mp3",
+      "offset": 2.4205,
+      "duration": 0.3775,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884"
+    },
+    "iff": {
+      "file": "assets/narration/budget-003.mp3",
+      "offset": 2.798,
+      "duration": 0.4645,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884"
+    },
+    "oaf": {
+      "file": "assets/narration/budget-003.mp3",
+      "offset": 3.2625,
+      "duration": 0.7604,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884"
+    },
+    "ov": {
+      "file": "assets/narration/budget-004.mp3",
+      "offset": 0,
+      "duration": 0.2725,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734"
+    },
+    "int": {
+      "file": "assets/narration/budget-004.mp3",
+      "offset": 0.2725,
+      "duration": 0.3425,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734"
+    },
+    "irt": {
+      "file": "assets/narration/budget-004.mp3",
+      "offset": 0.615,
+      "duration": 0.6215,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734"
+    },
+    "art": {
+      "file": "assets/narration/budget-004.mp3",
+      "offset": 1.2365,
+      "duration": 0.4005,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734"
+    },
+    "hue": {
+      "file": "assets/narration/budget-004.mp3",
+      "offset": 1.637,
+      "duration": 0.6215,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734"
+    },
+    "de": {
+      "file": "assets/narration/budget-004.mp3",
+      "offset": 2.2585,
+      "duration": 0.534,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734"
+    },
+    "due": {
+      "file": "assets/narration/budget-004.mp3",
+      "offset": 2.7925,
+      "duration": 0.6905,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734"
+    },
+    "hee": {
+      "file": "assets/narration/budget-004.mp3",
+      "offset": 3.483,
+      "duration": 0.8272,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734"
+    },
+    "bee": {
+      "file": "assets/narration/budget-005.mp3",
+      "offset": 0,
+      "duration": 0.528,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6"
+    },
+    "ha": {
+      "file": "assets/narration/budget-005.mp3",
+      "offset": 0.528,
+      "duration": 0.488,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6"
+    },
+    "hi": {
+      "file": "assets/narration/budget-005.mp3",
+      "offset": 1.016,
+      "duration": 0.569,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6"
+    },
+    "its": {
+      "file": "assets/narration/budget-005.mp3",
+      "offset": 1.585,
+      "duration": 0.4355,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6"
+    },
+    "ats": {
+      "file": "assets/narration/budget-005.mp3",
+      "offset": 2.0205,
+      "duration": 0.6385,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6"
+    },
+    "uts": {
+      "file": "assets/narration/budget-005.mp3",
+      "offset": 2.659,
+      "duration": 0.7135,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6"
+    },
+    "has": {
+      "file": "assets/narration/budget-005.mp3",
+      "offset": 3.3725,
+      "duration": 0.6505,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6"
+    },
+    "wis": {
+      "file": "assets/narration/budget-005.mp3",
+      "offset": 4.023,
+      "duration": 0.9403,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6"
+    },
+    "gas": {
+      "file": "assets/narration/budget-006.mp3",
+      "offset": 0,
+      "duration": 0.563,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b"
+    },
+    "wos": {
+      "file": "assets/narration/budget-006.mp3",
+      "offset": 0.563,
+      "duration": 0.621,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b"
+    },
+    "war": {
+      "file": "assets/narration/budget-006.mp3",
+      "offset": 1.184,
+      "duration": 0.743,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b"
+    },
+    "four": {
+      "file": "assets/narration/budget-006.mp3",
+      "offset": 1.927,
+      "duration": 0.691,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b"
+    },
+    "fur": {
+      "file": "assets/narration/budget-006.mp3",
+      "offset": 2.618,
+      "duration": 0.6675,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b"
+    },
+    "fury": {
+      "file": "assets/narration/budget-006.mp3",
+      "offset": 3.2855,
+      "duration": 0.772,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b"
+    },
+    "chat": {
+      "file": "assets/narration/budget-006.mp3",
+      "offset": 4.0575,
+      "duration": 0.7255,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b"
+    },
+    "chart": {
+      "file": "assets/narration/budget-006.mp3",
+      "offset": 4.783,
+      "duration": 1.0162,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b"
+    },
+    "thet": {
+      "file": "assets/narration/budget-007.mp3",
+      "offset": 0,
+      "duration": 0.8185,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb"
+    },
+    "whet": {
+      "file": "assets/narration/budget-007.mp3",
+      "offset": 0.8185,
+      "duration": 0.72,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb"
+    },
+    "taht": {
+      "file": "assets/narration/budget-007.mp3",
+      "offset": 1.5385,
+      "duration": 0.7605,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb"
+    },
+    "than": {
+      "file": "assets/narration/budget-007.mp3",
+      "offset": 2.299,
+      "duration": 0.737,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb"
+    },
+    "dish": {
+      "file": "assets/narration/budget-007.mp3",
+      "offset": 3.036,
+      "duration": 0.7315,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb"
+    },
+    "dith": {
+      "file": "assets/narration/budget-007.mp3",
+      "offset": 3.7675,
+      "duration": 0.824,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb"
+    },
+    "witch": {
+      "file": "assets/narration/budget-007.mp3",
+      "offset": 4.5915,
+      "duration": 0.755,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb"
+    },
+    "ditch": {
+      "file": "assets/narration/budget-007.mp3",
+      "offset": 5.3465,
+      "duration": 0.949,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb"
+    },
+    "wiht": {
+      "file": "assets/narration/budget-008.mp3",
+      "offset": 0,
+      "duration": 0.563,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479"
+    },
+    "wuth": {
+      "file": "assets/narration/budget-008.mp3",
+      "offset": 0.563,
+      "duration": 0.691,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479"
+    },
+    "pit": {
+      "file": "assets/narration/budget-008.mp3",
+      "offset": 1.254,
+      "duration": 0.6095,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479"
+    },
+    "put": {
+      "file": "assets/narration/budget-008.mp3",
+      "offset": 1.8635,
+      "duration": 0.627,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479"
+    },
+    "bet": {
+      "file": "assets/narration/budget-008.mp3",
+      "offset": 2.4905,
+      "duration": 0.7135,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479"
+    },
+    "bun": {
+      "file": "assets/narration/budget-008.mp3",
+      "offset": 3.204,
+      "duration": 0.6795,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479"
+    },
+    "hat": {
+      "file": "assets/narration/budget-008.mp3",
+      "offset": 3.8835,
+      "duration": 0.563,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479"
+    },
+    "hit": {
+      "file": "assets/narration/budget-008.mp3",
+      "offset": 4.4465,
+      "duration": 0.8041,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479"
+    },
+    "ham": {
+      "file": "assets/narration/budget-009.mp3",
+      "offset": 0,
+      "duration": 0.598,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567"
+    },
+    "hid": {
+      "file": "assets/narration/budget-009.mp3",
+      "offset": 0.598,
+      "duration": 0.505,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567"
+    },
+    "hits": {
+      "file": "assets/narration/budget-009.mp3",
+      "offset": 1.103,
+      "duration": 0.7485,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567"
+    },
+    "ill": {
+      "file": "assets/narration/budget-009.mp3",
+      "offset": 1.8515,
+      "duration": 0.6445,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567"
+    },
+    "aal": {
+      "file": "assets/narration/budget-009.mp3",
+      "offset": 2.496,
+      "duration": 0.772,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567"
+    },
+    "ale": {
+      "file": "assets/narration/budget-009.mp3",
+      "offset": 3.268,
+      "duration": 0.772,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567"
+    },
+    "thay": {
+      "file": "assets/narration/budget-009.mp3",
+      "offset": 4.04,
+      "duration": 0.732,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567"
+    },
+    "tehy": {
+      "file": "assets/narration/budget-009.mp3",
+      "offset": 4.772,
+      "duration": 1.0272,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567"
+    },
+    "may": {
+      "file": "assets/narration/budget-010.mp3",
+      "offset": 0,
+      "duration": 0.3365,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4"
+    },
+    "bay": {
+      "file": "assets/narration/budget-010.mp3",
+      "offset": 0.3365,
+      "duration": 0.5575,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4"
+    },
+    "buy": {
+      "file": "assets/narration/budget-010.mp3",
+      "offset": 0.894,
+      "duration": 0.4235,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4"
+    },
+    "boy": {
+      "file": "assets/narration/budget-010.mp3",
+      "offset": 1.3175,
+      "duration": 0.279,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4"
+    },
+    "mi": {
+      "file": "assets/narration/budget-010.mp3",
+      "offset": 1.5965,
+      "duration": 0.2785,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4"
+    },
+    "soo": {
+      "file": "assets/narration/budget-010.mp3",
+      "offset": 1.875,
+      "duration": 0.4875,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4"
+    },
+    "sa": {
+      "file": "assets/narration/budget-010.mp3",
+      "offset": 2.3625,
+      "duration": 0.482,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4"
+    },
+    "se": {
+      "file": "assets/narration/budget-010.mp3",
+      "offset": 2.8445,
+      "duration": 0.8126,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4"
+    },
+    "son": {
+      "file": "assets/narration/budget-011.mp3",
+      "offset": 0,
+      "duration": 0.575,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee"
+    },
+    "bye": {
+      "file": "assets/narration/budget-011.mp3",
+      "offset": 0.575,
+      "duration": 0.5745,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee"
+    },
+    "dye": {
+      "file": "assets/narration/budget-011.mp3",
+      "offset": 1.1495,
+      "duration": 0.6035,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee"
+    },
+    "ba": {
+      "file": "assets/narration/budget-011.mp3",
+      "offset": 1.753,
+      "duration": 0.6215,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee"
+    },
+    "shed": {
+      "file": "assets/narration/budget-011.mp3",
+      "offset": 2.3745,
+      "duration": 0.6555,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee"
+    },
+    "seed": {
+      "file": "assets/narration/budget-011.mp3",
+      "offset": 3.03,
+      "duration": 0.749,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee"
+    },
+    "seh": {
+      "file": "assets/narration/budget-011.mp3",
+      "offset": 3.779,
+      "duration": 0.633,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee"
+    },
+    "shy": {
+      "file": "assets/narration/budget-011.mp3",
+      "offset": 4.412,
+      "duration": 0.8647,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee"
+    },
+    "ace": {
+      "file": "assets/narration/budget-012.mp3",
+      "offset": 0,
+      "duration": 0.534,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7"
+    },
+    "act": {
+      "file": "assets/narration/budget-012.mp3",
+      "offset": 0.534,
+      "duration": 0.6735,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7"
+    },
+    "ore": {
+      "file": "assets/narration/budget-012.mp3",
+      "offset": 1.2075,
+      "duration": 0.5165,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7"
+    },
+    "aer": {
+      "file": "assets/narration/budget-012.mp3",
+      "offset": 1.724,
+      "duration": 0.6155,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7"
+    },
+    "arm": {
+      "file": "assets/narration/budget-012.mp3",
+      "offset": 2.3395,
+      "duration": 0.673,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7"
+    },
+    "once": {
+      "file": "assets/narration/budget-012.mp3",
+      "offset": 3.0125,
+      "duration": 0.732,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7"
+    },
+    "orce": {
+      "file": "assets/narration/budget-012.mp3",
+      "offset": 3.7445,
+      "duration": 0.7485,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7"
+    },
+    "oen": {
+      "file": "assets/narration/budget-012.mp3",
+      "offset": 4.493,
+      "duration": 0.8882,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7"
+    },
+    "maid": {
+      "file": "assets/narration/budget-013.mp3",
+      "offset": 0,
+      "duration": 0.644,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad"
+    },
+    "sad": {
+      "file": "assets/narration/budget-013.mp3",
+      "offset": 0.644,
+      "duration": 0.7085,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad"
+    },
+    "mad": {
+      "file": "assets/narration/budget-013.mp3",
+      "offset": 1.3525,
+      "duration": 0.6615,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad"
+    },
+    "paid": {
+      "file": "assets/narration/budget-013.mp3",
+      "offset": 2.014,
+      "duration": 0.761,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad"
+    },
+    "pad": {
+      "file": "assets/narration/budget-013.mp3",
+      "offset": 2.775,
+      "duration": 0.7195,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad"
+    },
+    "sadi": {
+      "file": "assets/narration/budget-013.mp3",
+      "offset": 3.4945,
+      "duration": 0.749,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad"
+    },
+    "sand": {
+      "file": "assets/narration/budget-013.mp3",
+      "offset": 4.2435,
+      "duration": 0.749,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad"
+    },
+    "sail": {
+      "file": "assets/narration/budget-013.mp3",
+      "offset": 4.9925,
+      "duration": 0.9373,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad"
+    },
+    "heat": {
+      "file": "assets/narration/budget-014.mp3",
+      "offset": 0,
+      "duration": 0.476,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c"
+    },
+    "wheat": {
+      "file": "assets/narration/budget-014.mp3",
+      "offset": 0.476,
+      "duration": 0.447,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c"
+    },
+    "cheat": {
+      "file": "assets/narration/budget-014.mp3",
+      "offset": 0.923,
+      "duration": 0.476,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c"
+    },
+    "waht": {
+      "file": "assets/narration/budget-014.mp3",
+      "offset": 1.399,
+      "duration": 0.4295,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c"
+    },
+    "whot": {
+      "file": "assets/narration/budget-014.mp3",
+      "offset": 1.8285,
+      "duration": 0.714,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c"
+    },
+    "thus": {
+      "file": "assets/narration/budget-014.mp3",
+      "offset": 2.5425,
+      "duration": 0.534,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c"
+    },
+    "thun": {
+      "file": "assets/narration/budget-014.mp3",
+      "offset": 3.0765,
+      "duration": 0.7255,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c"
+    },
+    "thes": {
+      "file": "assets/narration/budget-014.mp3",
+      "offset": 3.802,
+      "duration": 1.0307,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c"
+    },
+    "thas": {
+      "file": "assets/narration/budget-015.mp3",
+      "offset": 0,
+      "duration": 0.5515,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3"
+    },
+    "thsi": {
+      "file": "assets/narration/budget-015.mp3",
+      "offset": 0.5515,
+      "duration": 0.7315,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3"
+    },
+    "whin": {
+      "file": "assets/narration/budget-015.mp3",
+      "offset": 1.283,
+      "duration": 0.6735,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3"
+    },
+    "whan": {
+      "file": "assets/narration/budget-015.mp3",
+      "offset": 1.9565,
+      "duration": 0.6385,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3"
+    },
+    "whne": {
+      "file": "assets/narration/budget-015.mp3",
+      "offset": 2.595,
+      "duration": 0.801,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3"
+    },
+    "went": {
+      "file": "assets/narration/budget-015.mp3",
+      "offset": 3.396,
+      "duration": 0.865,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3"
+    },
+    "woe": {
+      "file": "assets/narration/budget-015.mp3",
+      "offset": 4.261,
+      "duration": 0.859,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3"
+    },
+    "fe": {
+      "file": "assets/narration/budget-015.mp3",
+      "offset": 5.12,
+      "duration": 0.9143,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3"
+    },
+    "foe": {
+      "file": "assets/narration/budget-016.mp3",
+      "offset": 0,
+      "duration": 0.615,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe"
+    },
+    "doe": {
+      "file": "assets/narration/budget-016.mp3",
+      "offset": 0.615,
+      "duration": 0.749,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe"
+    },
+    "wo": {
+      "file": "assets/narration/budget-016.mp3",
+      "offset": 1.364,
+      "duration": 0.749,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe"
+    },
+    "wi": {
+      "file": "assets/narration/budget-016.mp3",
+      "offset": 2.113,
+      "duration": 0.7835,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe"
+    },
+    "moe": {
+      "file": "assets/narration/budget-016.mp3",
+      "offset": 2.8965,
+      "duration": 0.743,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe"
+    },
+    "ma": {
+      "file": "assets/narration/budget-016.mp3",
+      "offset": 3.6395,
+      "duration": 0.7205,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe"
+    },
+    "met": {
+      "file": "assets/narration/budget-016.mp3",
+      "offset": 4.36,
+      "duration": 0.6785,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe"
+    },
+    "give": {
+      "file": "assets/narration/budget-016.mp3",
+      "offset": 5.0385,
+      "duration": 0.8913,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe"
+    },
+    "hive": {
+      "file": "assets/narration/budget-017.mp3",
+      "offset": 0,
+      "duration": 0.5865,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f"
+    },
+    "hare": {
+      "file": "assets/narration/budget-017.mp3",
+      "offset": 0.5865,
+      "duration": 0.6095,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f"
+    },
+    "rare": {
+      "file": "assets/narration/budget-017.mp3",
+      "offset": 1.196,
+      "duration": 0.731,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f"
+    },
+    "haev": {
+      "file": "assets/narration/budget-017.mp3",
+      "offset": 1.927,
+      "duration": 0.79,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f"
+    },
+    "hate": {
+      "file": "assets/narration/budget-017.mp3",
+      "offset": 2.717,
+      "duration": 0.6905,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f"
+    },
+    "ads": {
+      "file": "assets/narration/budget-017.mp3",
+      "offset": 3.4075,
+      "duration": 0.615,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f"
+    },
+    "ids": {
+      "file": "assets/narration/budget-017.mp3",
+      "offset": 4.0225,
+      "duration": 0.697,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f"
+    },
+    "abs": {
+      "file": "assets/narration/budget-017.mp3",
+      "offset": 4.7195,
+      "duration": 0.8968,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f"
+    },
+    "doo": {
+      "file": "assets/narration/budget-018.mp3",
+      "offset": 0,
+      "duration": 0.6675,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146"
+    },
+    "da": {
+      "file": "assets/narration/budget-018.mp3",
+      "offset": 0.6675,
+      "duration": 0.7725,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146"
+    },
+    "dot": {
+      "file": "assets/narration/budget-018.mp3",
+      "offset": 1.44,
+      "duration": 0.4175,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146"
+    },
+    "lake": {
+      "file": "assets/narration/budget-018.mp3",
+      "offset": 1.8575,
+      "duration": 0.6155,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146"
+    },
+    "mike": {
+      "file": "assets/narration/budget-018.mp3",
+      "offset": 2.473,
+      "duration": 0.708,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146"
+    },
+    "line": {
+      "file": "assets/narration/budget-018.mp3",
+      "offset": 3.181,
+      "duration": 0.662,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146"
+    },
+    "mine": {
+      "file": "assets/narration/budget-018.mp3",
+      "offset": 3.843,
+      "duration": 0.7255,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146"
+    },
+    "liek": {
+      "file": "assets/narration/budget-018.mp3",
+      "offset": 4.5685,
+      "duration": 0.9433,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146"
+    },
+    "oat": {
+      "file": "assets/narration/budget-019.mp3",
+      "offset": 0,
+      "duration": 0.557,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4"
+    },
+    "hut": {
+      "file": "assets/narration/budget-019.mp3",
+      "offset": 0.557,
+      "duration": 0.674,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4"
+    },
+    "uot": {
+      "file": "assets/narration/budget-019.mp3",
+      "offset": 1.231,
+      "duration": 0.6675,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4"
+    },
+    "con": {
+      "file": "assets/narration/budget-019.mp3",
+      "offset": 1.8985,
+      "duration": 0.4465,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4"
+    },
+    "cap": {
+      "file": "assets/narration/budget-019.mp3",
+      "offset": 2.345,
+      "duration": 0.418,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4"
+    },
+    "cop": {
+      "file": "assets/narration/budget-019.mp3",
+      "offset": 2.763,
+      "duration": 0.3895,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4"
+    },
+    "tan": {
+      "file": "assets/narration/budget-019.mp3",
+      "offset": 3.1525,
+      "duration": 0.464,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4"
+    },
+    "ton": {
+      "file": "assets/narration/budget-019.mp3",
+      "offset": 3.6165,
+      "duration": 0.7982,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4"
+    },
+    "cot": {
+      "file": "assets/narration/budget-020.mp3",
+      "offset": 0,
+      "duration": 0.5515,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae"
+    },
+    "cen": {
+      "file": "assets/narration/budget-020.mp3",
+      "offset": 0.5515,
+      "duration": 0.4235,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae"
+    },
+    "hear": {
+      "file": "assets/narration/budget-020.mp3",
+      "offset": 0.975,
+      "duration": 0.581,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae"
+    },
+    "ear": {
+      "file": "assets/narration/budget-020.mp3",
+      "offset": 1.556,
+      "duration": 0.708,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae"
+    },
+    "pear": {
+      "file": "assets/narration/budget-020.mp3",
+      "offset": 2.264,
+      "duration": 0.7955,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae"
+    },
+    "per": {
+      "file": "assets/narration/budget-020.mp3",
+      "offset": 3.0595,
+      "duration": 0.6385,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae"
+    },
+    "bear": {
+      "file": "assets/narration/budget-020.mp3",
+      "offset": 3.698,
+      "duration": 0.743,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae"
+    },
+    "hir": {
+      "file": "assets/narration/budget-020.mp3",
+      "offset": 4.441,
+      "duration": 0.9402,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae"
+    },
+    "hen": {
+      "file": "assets/narration/budget-021.mp3",
+      "offset": 0,
+      "duration": 0.418,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670"
+    },
+    "net": {
+      "file": "assets/narration/budget-021.mp3",
+      "offset": 0.418,
+      "duration": 0.6905,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670"
+    },
+    "nut": {
+      "file": "assets/narration/budget-021.mp3",
+      "offset": 1.1085,
+      "duration": 0.6505,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670"
+    },
+    "nit": {
+      "file": "assets/narration/budget-021.mp3",
+      "offset": 1.759,
+      "duration": 0.708,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670"
+    },
+    "tehn": {
+      "file": "assets/narration/budget-021.mp3",
+      "offset": 2.467,
+      "duration": 0.778,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670"
+    },
+    "yours": {
+      "file": "assets/narration/budget-021.mp3",
+      "offset": 3.245,
+      "duration": 0.8475,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670"
+    },
+    "tour": {
+      "file": "assets/narration/budget-021.mp3",
+      "offset": 4.0925,
+      "duration": 0.7485,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670"
+    },
+    "yoar": {
+      "file": "assets/narration/budget-021.mp3",
+      "offset": 4.841,
+      "duration": 0.9059,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670"
+    },
+    "toar": {
+      "file": "assets/narration/budget-022.mp3",
+      "offset": 0,
+      "duration": 0.4815,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5"
+    },
+    "sour": {
+      "file": "assets/narration/budget-022.mp3",
+      "offset": 0.4815,
+      "duration": 0.4935,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5"
+    },
+    "yuor": {
+      "file": "assets/narration/budget-022.mp3",
+      "offset": 0.975,
+      "duration": 0.523,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5"
+    },
+    "yore": {
+      "file": "assets/narration/budget-022.mp3",
+      "offset": 1.498,
+      "duration": 0.58,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5"
+    },
+    "noo": {
+      "file": "assets/narration/budget-022.mp3",
+      "offset": 2.078,
+      "duration": 0.4355,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5"
+    },
+    "na": {
+      "file": "assets/narration/budget-022.mp3",
+      "offset": 2.5135,
+      "duration": 0.389,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5"
+    },
+    "nu": {
+      "file": "assets/narration/budget-022.mp3",
+      "offset": 2.9025,
+      "duration": 0.418,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5"
+    },
+    "nod": {
+      "file": "assets/narration/budget-022.mp3",
+      "offset": 3.3205,
+      "duration": 0.8068,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5"
+    },
+    "these": {
+      "file": "assets/narration/budget-023.mp3",
+      "offset": 0,
+      "duration": 0.7255,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277"
+    },
+    "where": {
+      "file": "assets/narration/budget-023.mp3",
+      "offset": 0.7255,
+      "duration": 0.7025,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277"
+    },
+    "thete": {
+      "file": "assets/narration/budget-023.mp3",
+      "offset": 1.428,
+      "duration": 0.6795,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277"
+    },
+    "whete": {
+      "file": "assets/narration/budget-023.mp3",
+      "offset": 2.1075,
+      "duration": 0.731,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277"
+    },
+    "thene": {
+      "file": "assets/narration/budget-023.mp3",
+      "offset": 2.8385,
+      "duration": 0.755,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277"
+    },
+    "thare": {
+      "file": "assets/narration/budget-023.mp3",
+      "offset": 3.5935,
+      "duration": 0.7545,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277"
+    },
+    "thera": {
+      "file": "assets/narration/budget-023.mp3",
+      "offset": 4.348,
+      "duration": 0.917,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277"
+    },
+    "days": {
+      "file": "assets/narration/budget-023.mp3",
+      "offset": 5.265,
+      "duration": 1.0828,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277"
+    },
+    "dry": {
+      "file": "assets/narration/budget-024.mp3",
+      "offset": 0,
+      "duration": 0.5455,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0"
+    },
+    "dey": {
+      "file": "assets/narration/budget-024.mp3",
+      "offset": 0.5455,
+      "duration": 0.3195,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0"
+    },
+    "bey": {
+      "file": "assets/narration/budget-024.mp3",
+      "offset": 0.865,
+      "duration": 0.563,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0"
+    },
+    "dab": {
+      "file": "assets/narration/budget-024.mp3",
+      "offset": 1.428,
+      "duration": 0.598,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0"
+    },
+    "jest": {
+      "file": "assets/narration/budget-024.mp3",
+      "offset": 2.026,
+      "duration": 0.5515,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0"
+    },
+    "must": {
+      "file": "assets/narration/budget-024.mp3",
+      "offset": 2.5775,
+      "duration": 0.5105,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0"
+    },
+    "mest": {
+      "file": "assets/narration/budget-024.mp3",
+      "offset": 3.088,
+      "duration": 0.6505,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0"
+    },
+    "rust": {
+      "file": "assets/narration/budget-024.mp3",
+      "offset": 3.7385,
+      "duration": 0.8852,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0"
+    },
+    "rest": {
+      "file": "assets/narration/budget-025.mp3",
+      "offset": 0,
+      "duration": 0.6155,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0"
+    },
+    "jast": {
+      "file": "assets/narration/budget-025.mp3",
+      "offset": 0.6155,
+      "duration": 0.58,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0"
+    },
+    "dust": {
+      "file": "assets/narration/budget-025.mp3",
+      "offset": 1.1955,
+      "duration": 0.714,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0"
+    },
+    "at's": {
+      "file": "assets/narration/budget-025.mp3",
+      "offset": 1.9095,
+      "duration": 0.5055,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0"
+    },
+    "in's": {
+      "file": "assets/narration/budget-025.mp3",
+      "offset": 2.415,
+      "duration": 0.476,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0"
+    },
+    "ins": {
+      "file": "assets/narration/budget-025.mp3",
+      "offset": 2.891,
+      "duration": 0.5745,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0"
+    },
+    "it'z": {
+      "file": "assets/narration/budget-025.mp3",
+      "offset": 3.4655,
+      "duration": 0.43,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0"
+    },
+    "is't": {
+      "file": "assets/narration/budget-025.mp3",
+      "offset": 3.8955,
+      "duration": 0.7804,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0"
+    },
+    "sse": {
+      "file": "assets/narration/budget-026.mp3",
+      "offset": 0,
+      "duration": 0.586,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01"
+    },
+    "sea": {
+      "file": "assets/narration/budget-026.mp3",
+      "offset": 0.586,
+      "duration": 0.633,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01"
+    },
+    "set": {
+      "file": "assets/narration/budget-026.mp3",
+      "offset": 1.219,
+      "duration": 0.5225,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01"
+    },
+    "kittle": {
+      "file": "assets/narration/budget-026.mp3",
+      "offset": 1.7415,
+      "duration": 0.5865,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01"
+    },
+    "lettle": {
+      "file": "assets/narration/budget-026.mp3",
+      "offset": 2.328,
+      "duration": 0.5395,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01"
+    },
+    "kettle": {
+      "file": "assets/narration/budget-026.mp3",
+      "offset": 2.8675,
+      "duration": 0.569,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01"
+    },
+    "lattle": {
+      "file": "assets/narration/budget-026.mp3",
+      "offset": 3.4365,
+      "duration": 0.476,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01"
+    },
+    "bittle": {
+      "file": "assets/narration/budget-026.mp3",
+      "offset": 3.9125,
+      "duration": 0.8157,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01"
+    },
+    "litle": {
+      "file": "assets/narration/budget-027.mp3",
+      "offset": 0,
+      "duration": 0.8535,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658"
+    },
+    "litlle": {
+      "file": "assets/narration/budget-027.mp3",
+      "offset": 0.8535,
+      "duration": 1.132,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658"
+    },
+    "litter": {
+      "file": "assets/narration/budget-027.mp3",
+      "offset": 1.9855,
+      "duration": 0.9225,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658"
+    },
+    "tie": {
+      "file": "assets/narration/budget-027.mp3",
+      "offset": 2.908,
+      "duration": 0.7665,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658"
+    },
+    "lime": {
+      "file": "assets/narration/budget-027.mp3",
+      "offset": 3.6745,
+      "duration": 0.917,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658"
+    },
+    "lie": {
+      "file": "assets/narration/budget-027.mp3",
+      "offset": 4.5915,
+      "duration": 0.8595,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658"
+    },
+    "tame": {
+      "file": "assets/narration/budget-027.mp3",
+      "offset": 5.451,
+      "duration": 0.6965,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658"
+    },
+    "tile": {
+      "file": "assets/narration/budget-027.mp3",
+      "offset": 6.1475,
+      "duration": 0.9839,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658"
+    },
+    "tale": {
+      "file": "assets/narration/budget-028.mp3",
+      "offset": 0,
+      "duration": 0.8065,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b"
+    },
+    "tiem": {
+      "file": "assets/narration/budget-028.mp3",
+      "offset": 0.8065,
+      "duration": 0.929,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b"
+    },
+    "tide": {
+      "file": "assets/narration/budget-028.mp3",
+      "offset": 1.7355,
+      "duration": 0.9175,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b"
+    },
+    "prom": {
+      "file": "assets/narration/budget-028.mp3",
+      "offset": 2.653,
+      "duration": 0.673,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b"
+    },
+    "frim": {
+      "file": "assets/narration/budget-028.mp3",
+      "offset": 3.326,
+      "duration": 0.6275,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b"
+    },
+    "prim": {
+      "file": "assets/narration/budget-028.mp3",
+      "offset": 3.9535,
+      "duration": 0.5395,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b"
+    },
+    "fram": {
+      "file": "assets/narration/budget-028.mp3",
+      "offset": 4.493,
+      "duration": 0.4875,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b"
+    },
+    "pram": {
+      "file": "assets/narration/budget-028.mp3",
+      "offset": 4.9805,
+      "duration": 0.8709,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b"
+    },
+    "frmo": {
+      "file": "assets/narration/budget-029.mp3",
+      "offset": 0,
+      "duration": 0.627,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db"
+    },
+    "frog": {
+      "file": "assets/narration/budget-029.mp3",
+      "offset": 0.627,
+      "duration": 0.4645,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db"
+    },
+    "hand": {
+      "file": "assets/narration/budget-029.mp3",
+      "offset": 1.0915,
+      "duration": 0.5105,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db"
+    },
+    "hed": {
+      "file": "assets/narration/budget-029.mp3",
+      "offset": 1.602,
+      "duration": 0.5865,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db"
+    },
+    "hew": {
+      "file": "assets/narration/budget-029.mp3",
+      "offset": 2.1885,
+      "duration": 0.5225,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db"
+    },
+    "sow": {
+      "file": "assets/narration/budget-029.mp3",
+      "offset": 2.711,
+      "duration": 0.47,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db"
+    },
+    "sew": {
+      "file": "assets/narration/budget-029.mp3",
+      "offset": 3.181,
+      "duration": 0.4585,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db"
+    },
+    "naw": {
+      "file": "assets/narration/budget-029.mp3",
+      "offset": 3.6395,
+      "duration": 0.7752,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db"
+    },
+    "bill": {
+      "file": "assets/narration/budget-030.mp3",
+      "offset": 0,
+      "duration": 0.8765,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51"
+    },
+    "well": {
+      "file": "assets/narration/budget-030.mp3",
+      "offset": 0.8765,
+      "duration": 0.7545,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51"
+    },
+    "wall": {
+      "file": "assets/narration/budget-030.mp3",
+      "offset": 1.631,
+      "duration": 0.5865,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51"
+    },
+    "till": {
+      "file": "assets/narration/budget-030.mp3",
+      "offset": 2.2175,
+      "duration": 0.569,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51"
+    },
+    "wull": {
+      "file": "assets/narration/budget-030.mp3",
+      "offset": 2.7865,
+      "duration": 0.8065,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51"
+    },
+    "a'm": {
+      "file": "assets/narration/budget-030.mp3",
+      "offset": 3.593,
+      "duration": 0.6155,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51"
+    },
+    "am": {
+      "file": "assets/narration/budget-030.mp3",
+      "offset": 4.2085,
+      "duration": 0.6385,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51"
+    },
+    "u'm": {
+      "file": "assets/narration/budget-030.mp3",
+      "offset": 4.847,
+      "duration": 0.8477,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51"
+    },
+    "i'd": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 0,
+      "duration": 0.2725,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "im'": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 0.2725,
+      "duration": 0.366,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "i'll": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 0.6385,
+      "duration": 0.4065,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "mo": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 1.045,
+      "duration": 0.493,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "moo": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 1.538,
+      "duration": 0.6855,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "ga": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 2.2235,
+      "duration": 0.7605,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "gi": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 2.984,
+      "duration": 0.6325,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "got": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 3.6165,
+      "duration": 0.7982,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "wire": {
+      "file": "assets/narration/budget-032.mp3",
+      "offset": 0,
+      "duration": 0.749,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691"
+    },
+    "mere": {
+      "file": "assets/narration/budget-032.mp3",
+      "offset": 0.749,
+      "duration": 0.6965,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691"
+    },
+    "wore": {
+      "file": "assets/narration/budget-032.mp3",
+      "offset": 1.4455,
+      "duration": 0.72,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691"
+    },
+    "wree": {
+      "file": "assets/narration/budget-032.mp3",
+      "offset": 2.1655,
+      "duration": 0.673,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691"
+    },
+    "ware": {
+      "file": "assets/narration/budget-032.mp3",
+      "offset": 2.8385,
+      "duration": 0.656,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691"
+    },
+    "top": {
+      "file": "assets/narration/budget-032.mp3",
+      "offset": 3.4945,
+      "duration": 0.685,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691"
+    },
+    "tham": {
+      "file": "assets/narration/budget-032.mp3",
+      "offset": 4.1795,
+      "duration": 0.714,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691"
+    },
+    "thim": {
+      "file": "assets/narration/budget-032.mp3",
+      "offset": 4.8935,
+      "duration": 0.9057,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691"
+    },
+    "tehm": {
+      "file": "assets/narration/budget-033.mp3",
+      "offset": 0,
+      "duration": 0.7375,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69"
+    },
+    "hum": {
+      "file": "assets/narration/budget-033.mp3",
+      "offset": 0.7375,
+      "duration": 0.673,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69"
+    },
+    "hole": {
+      "file": "assets/narration/budget-033.mp3",
+      "offset": 1.4105,
+      "duration": 0.7605,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69"
+    },
+    "home": {
+      "file": "assets/narration/budget-033.mp3",
+      "offset": 2.171,
+      "duration": 0.749,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69"
+    },
+    "sole": {
+      "file": "assets/narration/budget-033.mp3",
+      "offset": 2.92,
+      "duration": 0.731,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69"
+    },
+    "smoe": {
+      "file": "assets/narration/budget-033.mp3",
+      "offset": 3.651,
+      "duration": 0.871,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69"
+    },
+    "sum": {
+      "file": "assets/narration/budget-033.mp3",
+      "offset": 4.522,
+      "duration": 0.714,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69"
+    },
+    "let": {
+      "file": "assets/narration/budget-033.mp3",
+      "offset": 5.236,
+      "duration": 0.746,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69"
+    },
+    "lot": {
+      "file": "assets/narration/budget-034.mp3",
+      "offset": 0,
+      "duration": 0.534,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6"
+    },
+    "gut": {
+      "file": "assets/narration/budget-034.mp3",
+      "offset": 0.534,
+      "duration": 0.482,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6"
+    },
+    "git": {
+      "file": "assets/narration/budget-034.mp3",
+      "offset": 1.016,
+      "duration": 0.522,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6"
+    },
+    "gem": {
+      "file": "assets/narration/budget-034.mp3",
+      "offset": 1.538,
+      "duration": 0.5925,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6"
+    },
+    "ig": {
+      "file": "assets/narration/budget-034.mp3",
+      "offset": 2.1305,
+      "duration": 0.598,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6"
+    },
+    "gold": {
+      "file": "assets/narration/budget-034.mp3",
+      "offset": 2.7285,
+      "duration": 0.772,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6"
+    },
+    "hood": {
+      "file": "assets/narration/budget-034.mp3",
+      "offset": 3.5005,
+      "duration": 0.7025,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6"
+    },
+    "mold": {
+      "file": "assets/narration/budget-034.mp3",
+      "offset": 4.203,
+      "duration": 0.9954,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6"
+    },
+    "godo": {
+      "file": "assets/narration/budget-035.mp3",
+      "offset": 0,
+      "duration": 0.813,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b"
+    },
+    "goad": {
+      "file": "assets/narration/budget-035.mp3",
+      "offset": 0.813,
+      "duration": 0.8065,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b"
+    },
+    "goon": {
+      "file": "assets/narration/budget-035.mp3",
+      "offset": 1.6195,
+      "duration": 0.9055,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b"
+    },
+    "won't": {
+      "file": "assets/narration/budget-035.mp3",
+      "offset": 2.525,
+      "duration": 0.714,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b"
+    },
+    "dont": {
+      "file": "assets/narration/budget-035.mp3",
+      "offset": 3.239,
+      "duration": 0.7255,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b"
+    },
+    "wont": {
+      "file": "assets/narration/budget-035.mp3",
+      "offset": 3.9645,
+      "duration": 0.778,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b"
+    },
+    "can't": {
+      "file": "assets/narration/budget-035.mp3",
+      "offset": 4.7425,
+      "duration": 0.8185,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b"
+    },
+    "dan't": {
+      "file": "assets/narration/budget-035.mp3",
+      "offset": 5.561,
+      "duration": 0.9435,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b"
+    },
+    "con't": {
+      "file": "assets/narration/budget-036.mp3",
+      "offset": 0,
+      "duration": 0.505,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d"
+    },
+    "do'nt": {
+      "file": "assets/narration/budget-036.mp3",
+      "offset": 0.505,
+      "duration": 0.4585,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d"
+    },
+    "done": {
+      "file": "assets/narration/budget-036.mp3",
+      "offset": 0.9635,
+      "duration": 0.575,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d"
+    },
+    "don": {
+      "file": "assets/narration/budget-036.mp3",
+      "offset": 1.5385,
+      "duration": 0.36,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d"
+    },
+    "town": {
+      "file": "assets/narration/budget-036.mp3",
+      "offset": 1.8985,
+      "duration": 0.499,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d"
+    },
+    "dawn": {
+      "file": "assets/narration/budget-036.mp3",
+      "offset": 2.3975,
+      "duration": 0.6095,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d"
+    },
+    "gown": {
+      "file": "assets/narration/budget-036.mp3",
+      "offset": 3.007,
+      "duration": 0.65,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d"
+    },
+    "dwon": {
+      "file": "assets/narration/budget-036.mp3",
+      "offset": 3.657,
+      "duration": 0.9667,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d"
+    },
+    "bi": {
+      "file": "assets/narration/budget-037.mp3",
+      "offset": 0,
+      "duration": 0.4415,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7"
+    },
+    "hwo": {
+      "file": "assets/narration/budget-037.mp3",
+      "offset": 0.4415,
+      "duration": 0.464,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7"
+    },
+    "knew": {
+      "file": "assets/narration/budget-037.mp3",
+      "offset": 0.9055,
+      "duration": 0.679,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7"
+    },
+    "knot": {
+      "file": "assets/narration/budget-037.mp3",
+      "offset": 1.5845,
+      "duration": 0.778,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7"
+    },
+    "knet": {
+      "file": "assets/narration/budget-037.mp3",
+      "offset": 2.3625,
+      "duration": 0.7605,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7"
+    },
+    "known": {
+      "file": "assets/narration/budget-037.mp3",
+      "offset": 3.123,
+      "duration": 0.6215,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7"
+    },
+    "knewn": {
+      "file": "assets/narration/budget-037.mp3",
+      "offset": 3.7445,
+      "duration": 0.644,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7"
+    },
+    "knwo": {
+      "file": "assets/narration/budget-037.mp3",
+      "offset": 4.3885,
+      "duration": 0.9927,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7"
+    },
+    "knob": {
+      "file": "assets/narration/budget-038.mp3",
+      "offset": 0,
+      "duration": 0.4235,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373"
+    },
+    "ooh": {
+      "file": "assets/narration/budget-038.mp3",
+      "offset": 0.4235,
+      "duration": 0.3545,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373"
+    },
+    "ah": {
+      "file": "assets/narration/budget-038.mp3",
+      "offset": 0.778,
+      "duration": 0.3425,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373"
+    },
+    "aah": {
+      "file": "assets/narration/budget-038.mp3",
+      "offset": 1.1205,
+      "duration": 0.3775,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373"
+    },
+    "oath": {
+      "file": "assets/narration/budget-038.mp3",
+      "offset": 1.498,
+      "duration": 0.5745,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373"
+    },
+    "ho": {
+      "file": "assets/narration/budget-038.mp3",
+      "offset": 2.0725,
+      "duration": 0.4235,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373"
+    },
+    "core": {
+      "file": "assets/narration/budget-038.mp3",
+      "offset": 2.496,
+      "duration": 0.534,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373"
+    },
+    "move": {
+      "file": "assets/narration/budget-038.mp3",
+      "offset": 3.03,
+      "duration": 0.81,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373"
+    },
+    "mroe": {
+      "file": "assets/narration/budget-039.mp3",
+      "offset": 0,
+      "duration": 0.7725,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689"
+    },
+    "mare": {
+      "file": "assets/narration/budget-039.mp3",
+      "offset": 0.7725,
+      "duration": 0.8295,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689"
+    },
+    "thair": {
+      "file": "assets/narration/budget-039.mp3",
+      "offset": 1.602,
+      "duration": 0.778,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689"
+    },
+    "theer": {
+      "file": "assets/narration/budget-039.mp3",
+      "offset": 2.38,
+      "duration": 0.7605,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689"
+    },
+    "thaer": {
+      "file": "assets/narration/budget-039.mp3",
+      "offset": 3.1405,
+      "duration": 0.871,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689"
+    },
+    "thear": {
+      "file": "assets/narration/budget-039.mp3",
+      "offset": 4.0115,
+      "duration": 0.882,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689"
+    },
+    "thier": {
+      "file": "assets/narration/budget-039.mp3",
+      "offset": 4.8935,
+      "duration": 0.79,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689"
+    },
+    "ther": {
+      "file": "assets/narration/budget-039.mp3",
+      "offset": 5.6835,
+      "duration": 0.9516,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689"
+    },
+    "cound": {
+      "file": "assets/narration/budget-040.mp3",
+      "offset": 0,
+      "duration": 0.621,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6"
+    },
+    "wound": {
+      "file": "assets/narration/budget-040.mp3",
+      "offset": 0.621,
+      "duration": 0.54,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6"
+    },
+    "mould": {
+      "file": "assets/narration/budget-040.mp3",
+      "offset": 1.161,
+      "duration": 0.5225,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6"
+    },
+    "mound": {
+      "file": "assets/narration/budget-040.mp3",
+      "offset": 1.6835,
+      "duration": 0.5805,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6"
+    },
+    "cuold": {
+      "file": "assets/narration/budget-040.mp3",
+      "offset": 2.264,
+      "duration": 0.656,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6"
+    },
+    "coud": {
+      "file": "assets/narration/budget-040.mp3",
+      "offset": 2.92,
+      "duration": 0.528,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6"
+    },
+    "cold": {
+      "file": "assets/narration/budget-040.mp3",
+      "offset": 3.448,
+      "duration": 0.598,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6"
+    },
+    "abaut": {
+      "file": "assets/narration/budget-040.mp3",
+      "offset": 4.046,
+      "duration": 0.9956,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6"
+    },
+    "aboot": {
+      "file": "assets/narration/budget-041.mp3",
+      "offset": 0,
+      "duration": 0.865,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9"
+    },
+    "abeut": {
+      "file": "assets/narration/budget-041.mp3",
+      "offset": 0.865,
+      "duration": 0.9345,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9"
+    },
+    "ebout": {
+      "file": "assets/narration/budget-041.mp3",
+      "offset": 1.7995,
+      "duration": 0.958,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9"
+    },
+    "ebaut": {
+      "file": "assets/narration/budget-041.mp3",
+      "offset": 2.7575,
+      "duration": 1.0215,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9"
+    },
+    "abuot": {
+      "file": "assets/narration/budget-041.mp3",
+      "offset": 3.779,
+      "duration": 0.9755,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9"
+    },
+    "abot": {
+      "file": "assets/narration/budget-041.mp3",
+      "offset": 4.7545,
+      "duration": 0.731,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9"
+    },
+    "abort": {
+      "file": "assets/narration/budget-041.mp3",
+      "offset": 5.4855,
+      "duration": 0.958,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9"
+    },
+    "bark": {
+      "file": "assets/narration/budget-041.mp3",
+      "offset": 6.4435,
+      "duration": 1.1059,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9"
+    },
+    "pack": {
+      "file": "assets/narration/budget-042.mp3",
+      "offset": 0,
+      "duration": 0.5865,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee"
+    },
+    "park": {
+      "file": "assets/narration/budget-042.mp3",
+      "offset": 0.5865,
+      "duration": 0.6265,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee"
+    },
+    "bank": {
+      "file": "assets/narration/budget-042.mp3",
+      "offset": 1.213,
+      "duration": 0.604,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee"
+    },
+    "rank": {
+      "file": "assets/narration/budget-042.mp3",
+      "offset": 1.817,
+      "duration": 0.604,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee"
+    },
+    "bakc": {
+      "file": "assets/narration/budget-042.mp3",
+      "offset": 2.421,
+      "duration": 0.917,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee"
+    },
+    "buck": {
+      "file": "assets/narration/budget-042.mp3",
+      "offset": 3.338,
+      "duration": 0.65,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee"
+    },
+    "woo": {
+      "file": "assets/narration/budget-042.mp3",
+      "offset": 3.988,
+      "duration": 0.784,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee"
+    },
+    "tho": {
+      "file": "assets/narration/budget-042.mp3",
+      "offset": 4.772,
+      "duration": 0.8966,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee"
+    },
+    "why": {
+      "file": "assets/narration/budget-043.mp3",
+      "offset": 0,
+      "duration": 0.673,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78"
+    },
+    "whom": {
+      "file": "assets/narration/budget-043.mp3",
+      "offset": 0.673,
+      "duration": 0.935,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78"
+    },
+    "woh": {
+      "file": "assets/narration/budget-043.mp3",
+      "offset": 1.608,
+      "duration": 0.8415,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78"
+    },
+    "oar": {
+      "file": "assets/narration/budget-043.mp3",
+      "offset": 2.4495,
+      "duration": 0.714,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78"
+    },
+    "ar": {
+      "file": "assets/narration/budget-043.mp3",
+      "offset": 3.1635,
+      "duration": 0.778,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78"
+    },
+    "er": {
+      "file": "assets/narration/budget-043.mp3",
+      "offset": 3.9415,
+      "duration": 0.685,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78"
+    },
+    "male": {
+      "file": "assets/narration/budget-043.mp3",
+      "offset": 4.6265,
+      "duration": 0.708,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78"
+    },
+    "mile": {
+      "file": "assets/narration/budget-043.mp3",
+      "offset": 5.3345,
+      "duration": 0.9349,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78"
+    },
+    "maek": {
+      "file": "assets/narration/budget-044.mp3",
+      "offset": 0,
+      "duration": 0.5285,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516"
+    },
+    "onto": {
+      "file": "assets/narration/budget-044.mp3",
+      "offset": 0.5285,
+      "duration": 0.8705,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516"
+    },
+    "intro": {
+      "file": "assets/narration/budget-044.mp3",
+      "offset": 1.399,
+      "duration": 0.9865,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516"
+    },
+    "ontro": {
+      "file": "assets/narration/budget-044.mp3",
+      "offset": 2.3855,
+      "duration": 0.929,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516"
+    },
+    "info": {
+      "file": "assets/narration/budget-044.mp3",
+      "offset": 3.3145,
+      "duration": 0.8245,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516"
+    },
+    "unto": {
+      "file": "assets/narration/budget-044.mp3",
+      "offset": 4.139,
+      "duration": 0.743,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516"
+    },
+    "itno": {
+      "file": "assets/narration/budget-044.mp3",
+      "offset": 4.882,
+      "duration": 0.8245,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516"
+    },
+    "took": {
+      "file": "assets/narration/budget-044.mp3",
+      "offset": 5.7065,
+      "duration": 0.8764,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516"
+    },
+    "tock": {
+      "file": "assets/narration/budget-045.mp3",
+      "offset": 0,
+      "duration": 0.5515,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead"
+    },
+    "loak": {
+      "file": "assets/narration/budget-045.mp3",
+      "offset": 0.5515,
+      "duration": 0.528,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead"
+    },
+    "loop": {
+      "file": "assets/narration/budget-045.mp3",
+      "offset": 1.0795,
+      "duration": 0.5515,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead"
+    },
+    "vary": {
+      "file": "assets/narration/budget-045.mp3",
+      "offset": 1.631,
+      "duration": 0.761,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead"
+    },
+    "wery": {
+      "file": "assets/narration/budget-045.mp3",
+      "offset": 2.392,
+      "duration": 0.673,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead"
+    },
+    "wary": {
+      "file": "assets/narration/budget-045.mp3",
+      "offset": 3.065,
+      "duration": 0.7955,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead"
+    },
+    "verb": {
+      "file": "assets/narration/budget-045.mp3",
+      "offset": 3.8605,
+      "duration": 0.667,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead"
+    },
+    "varb": {
+      "file": "assets/narration/budget-045.mp3",
+      "offset": 4.5275,
+      "duration": 0.906,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead"
+    },
+    "vrey": {
+      "file": "assets/narration/budget-046.mp3",
+      "offset": 0,
+      "duration": 0.708,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7"
+    },
+    "wuold": {
+      "file": "assets/narration/budget-046.mp3",
+      "offset": 0.708,
+      "duration": 0.7725,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7"
+    },
+    "woud": {
+      "file": "assets/narration/budget-046.mp3",
+      "offset": 1.4805,
+      "duration": 0.766,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7"
+    },
+    "rigth": {
+      "file": "assets/narration/budget-046.mp3",
+      "offset": 2.2465,
+      "duration": 0.778,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7"
+    },
+    "rigt": {
+      "file": "assets/narration/budget-046.mp3",
+      "offset": 3.0245,
+      "duration": 0.6035,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7"
+    },
+    "rigid": {
+      "file": "assets/narration/budget-046.mp3",
+      "offset": 3.628,
+      "duration": 0.7665,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7"
+    },
+    "heer": {
+      "file": "assets/narration/budget-046.mp3",
+      "offset": 4.3945,
+      "duration": 0.656,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7"
+    },
+    "live": {
+      "file": "assets/narration/budget-046.mp3",
+      "offset": 5.0505,
+      "duration": 0.8009,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7"
+    },
+    "dove": {
+      "file": "assets/narration/budget-047.mp3",
+      "offset": 0,
+      "duration": 0.511,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f"
+    },
+    "dive": {
+      "file": "assets/narration/budget-047.mp3",
+      "offset": 0.511,
+      "duration": 0.6905,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f"
+    },
+    "lone": {
+      "file": "assets/narration/budget-047.mp3",
+      "offset": 1.2015,
+      "duration": 0.7895,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f"
+    },
+    "lvoe": {
+      "file": "assets/narration/budget-047.mp3",
+      "offset": 1.991,
+      "duration": 0.9115,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f"
+    },
+    "lose": {
+      "file": "assets/narration/budget-047.mp3",
+      "offset": 2.9025,
+      "duration": 0.7605,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f"
+    },
+    "say": {
+      "file": "assets/narration/budget-047.mp3",
+      "offset": 3.663,
+      "duration": 0.685,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f"
+    },
+    "wry": {
+      "file": "assets/narration/budget-047.mp3",
+      "offset": 4.348,
+      "duration": 0.836,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f"
+    },
+    "wey": {
+      "file": "assets/narration/budget-047.mp3",
+      "offset": 5.184,
+      "duration": 0.9025,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f"
+    },
+    "mid": {
+      "file": "assets/narration/budget-048.mp3",
+      "offset": 0,
+      "duration": 0.447,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497"
+    },
+    "lid": {
+      "file": "assets/narration/budget-048.mp3",
+      "offset": 0.447,
+      "duration": 0.499,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497"
+    },
+    "ded": {
+      "file": "assets/narration/budget-048.mp3",
+      "offset": 0.946,
+      "duration": 0.4295,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497"
+    },
+    "nwe": {
+      "file": "assets/narration/budget-048.mp3",
+      "offset": 1.3755,
+      "duration": 0.569,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497"
+    },
+    "cope": {
+      "file": "assets/narration/budget-048.mp3",
+      "offset": 1.9445,
+      "duration": 0.592,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497"
+    },
+    "hope": {
+      "file": "assets/narration/budget-048.mp3",
+      "offset": 2.5365,
+      "duration": 0.6445,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497"
+    },
+    "cmoe": {
+      "file": "assets/narration/budget-048.mp3",
+      "offset": 3.181,
+      "duration": 0.8015,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497"
+    },
+    "cone": {
+      "file": "assets/narration/budget-048.mp3",
+      "offset": 3.9825,
+      "duration": 0.8763,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497"
+    },
+    "oru": {
+      "file": "assets/narration/budget-049.mp3",
+      "offset": 0,
+      "duration": 0.6965,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca"
+    },
+    "rant": {
+      "file": "assets/narration/budget-049.mp3",
+      "offset": 0.6965,
+      "duration": 0.7835,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca"
+    },
+    "rent": {
+      "file": "assets/narration/budget-049.mp3",
+      "offset": 1.48,
+      "duration": 0.685,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca"
+    },
+    "wand": {
+      "file": "assets/narration/budget-049.mp3",
+      "offset": 2.165,
+      "duration": 0.7375,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca"
+    },
+    "wend": {
+      "file": "assets/narration/budget-049.mp3",
+      "offset": 2.9025,
+      "duration": 0.9055,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca"
+    },
+    "wnat": {
+      "file": "assets/narration/budget-049.mp3",
+      "offset": 3.808,
+      "duration": 0.987,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca"
+    },
+    "wade": {
+      "file": "assets/narration/budget-049.mp3",
+      "offset": 4.795,
+      "duration": 0.8065,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca"
+    },
+    "wake": {
+      "file": "assets/narration/budget-049.mp3",
+      "offset": 5.6015,
+      "duration": 0.9291,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca"
+    },
+    "mode": {
+      "file": "assets/narration/budget-050.mp3",
+      "offset": 0,
+      "duration": 0.772,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c"
+    },
+    "maed": {
+      "file": "assets/narration/budget-050.mp3",
+      "offset": 0.772,
+      "duration": 0.923,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c"
+    },
+    "mate": {
+      "file": "assets/narration/budget-050.mp3",
+      "offset": 1.695,
+      "duration": 0.6445,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c"
+    },
+    "ground": {
+      "file": "assets/narration/budget-050.mp3",
+      "offset": 2.3395,
+      "duration": 0.882,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c"
+    },
+    "aroond": {
+      "file": "assets/narration/budget-050.mp3",
+      "offset": 3.2215,
+      "duration": 0.749,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c"
+    },
+    "groond": {
+      "file": "assets/narration/budget-050.mp3",
+      "offset": 3.9705,
+      "duration": 0.697,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c"
+    },
+    "aruond": {
+      "file": "assets/narration/budget-050.mp3",
+      "offset": 4.6675,
+      "duration": 0.7775,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c"
+    },
+    "gruond": {
+      "file": "assets/narration/budget-050.mp3",
+      "offset": 5.445,
+      "duration": 1.0072,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c"
+    },
+    "arond": {
+      "file": "assets/narration/budget-051.mp3",
+      "offset": 0,
+      "duration": 0.4995,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494"
+    },
+    "abound": {
+      "file": "assets/narration/budget-051.mp3",
+      "offset": 0.4995,
+      "duration": 0.6035,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494"
+    },
+    "alter": {
+      "file": "assets/narration/budget-051.mp3",
+      "offset": 1.103,
+      "duration": 0.5455,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494"
+    },
+    "aftar": {
+      "file": "assets/narration/budget-051.mp3",
+      "offset": 1.6485,
+      "duration": 0.668,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494"
+    },
+    "altar": {
+      "file": "assets/narration/budget-051.mp3",
+      "offset": 2.3165,
+      "duration": 0.592,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494"
+    },
+    "aster": {
+      "file": "assets/narration/budget-051.mp3",
+      "offset": 2.9085,
+      "duration": 0.58,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494"
+    },
+    "astar": {
+      "file": "assets/narration/budget-051.mp3",
+      "offset": 3.4885,
+      "duration": 0.627,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494"
+    },
+    "atfer": {
+      "file": "assets/narration/budget-051.mp3",
+      "offset": 4.1155,
+      "duration": 0.9784,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494"
+    },
+    "afetr": {
+      "file": "assets/narration/budget-052.mp3",
+      "offset": 0,
+      "duration": 0.882,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44"
+    },
+    "agein": {
+      "file": "assets/narration/budget-052.mp3",
+      "offset": 0.882,
+      "duration": 0.8595,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44"
+    },
+    "egain": {
+      "file": "assets/narration/budget-052.mp3",
+      "offset": 1.7415,
+      "duration": 0.9465,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44"
+    },
+    "egein": {
+      "file": "assets/narration/budget-052.mp3",
+      "offset": 2.688,
+      "duration": 0.94,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44"
+    },
+    "agoin": {
+      "file": "assets/narration/budget-052.mp3",
+      "offset": 3.628,
+      "duration": 0.836,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44"
+    },
+    "gain": {
+      "file": "assets/narration/budget-052.mp3",
+      "offset": 4.464,
+      "duration": 0.685,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44"
+    },
+    "agian": {
+      "file": "assets/narration/budget-052.mp3",
+      "offset": 5.149,
+      "duration": 0.8185,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44"
+    },
+    "align": {
+      "file": "assets/narration/budget-052.mp3",
+      "offset": 5.9675,
+      "duration": 0.9811,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44"
+    },
+    "agin": {
+      "file": "assets/narration/budget-053.mp3",
+      "offset": 0,
+      "duration": 0.7955,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460"
+    },
+    "allays": {
+      "file": "assets/narration/budget-053.mp3",
+      "offset": 0.7955,
+      "duration": 0.946,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460"
+    },
+    "alwoys": {
+      "file": "assets/narration/budget-053.mp3",
+      "offset": 1.7415,
+      "duration": 1.0395,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460"
+    },
+    "alloys": {
+      "file": "assets/narration/budget-053.mp3",
+      "offset": 2.781,
+      "duration": 1.004,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460"
+    },
+    "alwais": {
+      "file": "assets/narration/budget-053.mp3",
+      "offset": 3.785,
+      "duration": 0.9925,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460"
+    },
+    "allais": {
+      "file": "assets/narration/budget-053.mp3",
+      "offset": 4.7775,
+      "duration": 0.94,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460"
+    },
+    "alwyas": {
+      "file": "assets/narration/budget-053.mp3",
+      "offset": 5.7175,
+      "duration": 1.115,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460"
+    },
+    "alwavs": {
+      "file": "assets/narration/budget-053.mp3",
+      "offset": 6.8325,
+      "duration": 1.2393,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460"
+    },
+    "ary": {
+      "file": "assets/narration/budget-054.mp3",
+      "offset": 0,
+      "duration": 0.679,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118"
+    },
+    "army": {
+      "file": "assets/narration/budget-054.mp3",
+      "offset": 0.679,
+      "duration": 0.819,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118"
+    },
+    "amy": {
+      "file": "assets/narration/budget-054.mp3",
+      "offset": 1.498,
+      "duration": 0.812,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118"
+    },
+    "ark": {
+      "file": "assets/narration/budget-054.mp3",
+      "offset": 2.31,
+      "duration": 0.7955,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118"
+    },
+    "ash": {
+      "file": "assets/narration/budget-054.mp3",
+      "offset": 3.1055,
+      "duration": 0.836,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118"
+    },
+    "asp": {
+      "file": "assets/narration/budget-054.mp3",
+      "offset": 3.9415,
+      "duration": 0.929,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118"
+    },
+    "aks": {
+      "file": "assets/narration/budget-054.mp3",
+      "offset": 4.8705,
+      "duration": 0.929,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118"
+    },
+    "atay": {
+      "file": "assets/narration/budget-054.mp3",
+      "offset": 5.7995,
+      "duration": 0.914,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118"
+    },
+    "sway": {
+      "file": "assets/narration/budget-055.mp3",
+      "offset": 0,
+      "duration": 0.6675,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc"
+    },
+    "stay": {
+      "file": "assets/narration/budget-055.mp3",
+      "offset": 0.6675,
+      "duration": 0.743,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc"
+    },
+    "awry": {
+      "file": "assets/narration/budget-055.mp3",
+      "offset": 1.4105,
+      "duration": 0.906,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc"
+    },
+    "awey": {
+      "file": "assets/narration/budget-055.mp3",
+      "offset": 2.3165,
+      "duration": 0.8415,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc"
+    },
+    "awya": {
+      "file": "assets/narration/budget-055.mp3",
+      "offset": 3.158,
+      "duration": 0.952,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc"
+    },
+    "becouse": {
+      "file": "assets/narration/budget-055.mp3",
+      "offset": 4.11,
+      "duration": 0.9695,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc"
+    },
+    "bacause": {
+      "file": "assets/narration/budget-055.mp3",
+      "offset": 5.0795,
+      "duration": 0.9695,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc"
+    },
+    "bacouse": {
+      "file": "assets/narration/budget-055.mp3",
+      "offset": 6.049,
+      "duration": 1.1869,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc"
+    },
+    "becaose": {
+      "file": "assets/narration/budget-056.mp3",
+      "offset": 0,
+      "duration": 1.1205,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63"
+    },
+    "becuase": {
+      "file": "assets/narration/budget-056.mp3",
+      "offset": 1.1205,
+      "duration": 1.1955,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63"
+    },
+    "became": {
+      "file": "assets/narration/budget-056.mp3",
+      "offset": 2.316,
+      "duration": 0.8595,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63"
+    },
+    "becase": {
+      "file": "assets/narration/budget-056.mp3",
+      "offset": 3.1755,
+      "duration": 1.0155,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63"
+    },
+    "bofore": {
+      "file": "assets/narration/budget-056.mp3",
+      "offset": 4.191,
+      "duration": 0.836,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63"
+    },
+    "befere": {
+      "file": "assets/narration/budget-056.mp3",
+      "offset": 5.027,
+      "duration": 0.865,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63"
+    },
+    "bofere": {
+      "file": "assets/narration/budget-056.mp3",
+      "offset": 5.892,
+      "duration": 0.865,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63"
+    },
+    "become": {
+      "file": "assets/narration/budget-056.mp3",
+      "offset": 6.757,
+      "duration": 1.0275,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63"
+    },
+    "befure": {
+      "file": "assets/narration/budget-057.mp3",
+      "offset": 0,
+      "duration": 0.836,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c"
+    },
+    "bafore": {
+      "file": "assets/narration/budget-057.mp3",
+      "offset": 0.836,
+      "duration": 0.807,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c"
+    },
+    "befroe": {
+      "file": "assets/narration/budget-057.mp3",
+      "offset": 1.643,
+      "duration": 0.888,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c"
+    },
+    "befor": {
+      "file": "assets/narration/budget-057.mp3",
+      "offset": 2.531,
+      "duration": 0.8245,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c"
+    },
+    "bent": {
+      "file": "assets/narration/budget-057.mp3",
+      "offset": 3.3555,
+      "duration": 0.615,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c"
+    },
+    "west": {
+      "file": "assets/narration/budget-057.mp3",
+      "offset": 3.9705,
+      "duration": 0.72,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c"
+    },
+    "test": {
+      "file": "assets/narration/budget-057.mp3",
+      "offset": 4.6905,
+      "duration": 0.6905,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c"
+    },
+    "tent": {
+      "file": "assets/narration/budget-057.mp3",
+      "offset": 5.381,
+      "duration": 0.9145,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c"
+    },
+    "bset": {
+      "file": "assets/narration/budget-058.mp3",
+      "offset": 0,
+      "duration": 0.7375,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b"
+    },
+    "bast": {
+      "file": "assets/narration/budget-058.mp3",
+      "offset": 0.7375,
+      "duration": 0.766,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b"
+    },
+    "bath": {
+      "file": "assets/narration/budget-058.mp3",
+      "offset": 1.5035,
+      "duration": 0.789,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b"
+    },
+    "moth": {
+      "file": "assets/narration/budget-058.mp3",
+      "offset": 2.2925,
+      "duration": 0.7495,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b"
+    },
+    "math": {
+      "file": "assets/narration/budget-058.mp3",
+      "offset": 3.042,
+      "duration": 0.8065,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b"
+    },
+    "bonth": {
+      "file": "assets/narration/budget-058.mp3",
+      "offset": 3.8485,
+      "duration": 0.929,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b"
+    },
+    "month": {
+      "file": "assets/narration/budget-058.mp3",
+      "offset": 4.7775,
+      "duration": 0.9405,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b"
+    },
+    "btoh": {
+      "file": "assets/narration/budget-058.mp3",
+      "offset": 5.718,
+      "duration": 1.1522,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b"
+    },
+    "booth": {
+      "file": "assets/narration/budget-059.mp3",
+      "offset": 0,
+      "duration": 0.6155,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f"
+    },
+    "brang": {
+      "file": "assets/narration/budget-059.mp3",
+      "offset": 0.6155,
+      "duration": 0.7135,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f"
+    },
+    "brink": {
+      "file": "assets/narration/budget-059.mp3",
+      "offset": 1.329,
+      "duration": 0.6795,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f"
+    },
+    "brank": {
+      "file": "assets/narration/budget-059.mp3",
+      "offset": 2.0085,
+      "duration": 0.737,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f"
+    },
+    "being": {
+      "file": "assets/narration/budget-059.mp3",
+      "offset": 2.7455,
+      "duration": 0.5285,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f"
+    },
+    "brine": {
+      "file": "assets/narration/budget-059.mp3",
+      "offset": 3.274,
+      "duration": 0.569,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f"
+    },
+    "brig": {
+      "file": "assets/narration/budget-059.mp3",
+      "offset": 3.843,
+      "duration": 0.5455,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f"
+    },
+    "biring": {
+      "file": "assets/narration/budget-059.mp3",
+      "offset": 4.3885,
+      "duration": 1.045,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f"
+    },
+    "brign": {
+      "file": "assets/narration/budget-060.mp3",
+      "offset": 0,
+      "duration": 0.7025,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec"
+    },
+    "cerry": {
+      "file": "assets/narration/budget-060.mp3",
+      "offset": 0.7025,
+      "duration": 0.859,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec"
+    },
+    "marry": {
+      "file": "assets/narration/budget-060.mp3",
+      "offset": 1.5615,
+      "duration": 0.952,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec"
+    },
+    "merry": {
+      "file": "assets/narration/budget-060.mp3",
+      "offset": 2.5135,
+      "duration": 0.807,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec"
+    },
+    "curry": {
+      "file": "assets/narration/budget-060.mp3",
+      "offset": 3.3205,
+      "duration": 0.7255,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec"
+    },
+    "parry": {
+      "file": "assets/narration/budget-060.mp3",
+      "offset": 4.046,
+      "duration": 0.708,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec"
+    },
+    "carri": {
+      "file": "assets/narration/budget-060.mp3",
+      "offset": 4.754,
+      "duration": 0.714,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec"
+    },
+    "carrry": {
+      "file": "assets/narration/budget-060.mp3",
+      "offset": 5.468,
+      "duration": 0.9842,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec"
+    },
+    "pat": {
+      "file": "assets/narration/budget-061.mp3",
+      "offset": 0,
+      "duration": 0.65,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a"
+    },
+    "cet": {
+      "file": "assets/narration/budget-061.mp3",
+      "offset": 0.65,
+      "duration": 0.424,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a"
+    },
+    "cup": {
+      "file": "assets/narration/budget-061.mp3",
+      "offset": 1.074,
+      "duration": 0.5685,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a"
+    },
+    "evary": {
+      "file": "assets/narration/budget-061.mp3",
+      "offset": 1.6425,
+      "duration": 0.8765,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a"
+    },
+    "emery": {
+      "file": "assets/narration/budget-061.mp3",
+      "offset": 2.519,
+      "duration": 0.79,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a"
+    },
+    "emary": {
+      "file": "assets/narration/budget-061.mp3",
+      "offset": 3.309,
+      "duration": 0.836,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a"
+    },
+    "evory": {
+      "file": "assets/narration/budget-061.mp3",
+      "offset": 4.145,
+      "duration": 0.8765,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a"
+    },
+    "evrey": {
+      "file": "assets/narration/budget-061.mp3",
+      "offset": 5.0215,
+      "duration": 1.065,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a"
+    },
+    "evry": {
+      "file": "assets/narration/budget-062.mp3",
+      "offset": 0,
+      "duration": 0.5455,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a"
+    },
+    "entry": {
+      "file": "assets/narration/budget-062.mp3",
+      "offset": 0.5455,
+      "duration": 0.7025,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a"
+    },
+    "fist": {
+      "file": "assets/narration/budget-062.mp3",
+      "offset": 1.248,
+      "duration": 0.6795,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a"
+    },
+    "last": {
+      "file": "assets/narration/budget-062.mp3",
+      "offset": 1.9275,
+      "duration": 0.644,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a"
+    },
+    "list": {
+      "file": "assets/narration/budget-062.mp3",
+      "offset": 2.5715,
+      "duration": 0.7665,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a"
+    },
+    "fact": {
+      "file": "assets/narration/budget-062.mp3",
+      "offset": 3.338,
+      "duration": 0.766,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a"
+    },
+    "past": {
+      "file": "assets/narration/budget-062.mp3",
+      "offset": 4.104,
+      "duration": 0.5865,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a"
+    },
+    "pact": {
+      "file": "assets/narration/budget-062.mp3",
+      "offset": 4.6905,
+      "duration": 0.8736,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a"
+    },
+    "fats": {
+      "file": "assets/narration/budget-063.mp3",
+      "offset": 0,
+      "duration": 0.708,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580"
+    },
+    "fond": {
+      "file": "assets/narration/budget-063.mp3",
+      "offset": 0.708,
+      "duration": 0.546,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580"
+    },
+    "bond": {
+      "file": "assets/narration/budget-063.mp3",
+      "offset": 1.254,
+      "duration": 0.499,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580"
+    },
+    "fand": {
+      "file": "assets/narration/budget-063.mp3",
+      "offset": 1.753,
+      "duration": 0.6505,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580"
+    },
+    "fidn": {
+      "file": "assets/narration/budget-063.mp3",
+      "offset": 2.4035,
+      "duration": 0.505,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580"
+    },
+    "fund": {
+      "file": "assets/narration/budget-063.mp3",
+      "offset": 2.9085,
+      "duration": 0.4875,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580"
+    },
+    "farst": {
+      "file": "assets/narration/budget-063.mp3",
+      "offset": 3.396,
+      "duration": 0.5515,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580"
+    },
+    "ferst": {
+      "file": "assets/narration/budget-063.mp3",
+      "offset": 3.9475,
+      "duration": 0.9113,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580"
+    },
+    "fest": {
+      "file": "assets/narration/budget-064.mp3",
+      "offset": 0,
+      "duration": 0.685,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd"
+    },
+    "frist": {
+      "file": "assets/narration/budget-064.mp3",
+      "offset": 0.685,
+      "duration": 0.766,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd"
+    },
+    "firt": {
+      "file": "assets/narration/budget-064.mp3",
+      "offset": 1.451,
+      "duration": 0.7955,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd"
+    },
+    "pound": {
+      "file": "assets/narration/budget-064.mp3",
+      "offset": 2.2465,
+      "duration": 0.7605,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd"
+    },
+    "pond": {
+      "file": "assets/narration/budget-064.mp3",
+      "offset": 3.007,
+      "duration": 0.592,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd"
+    },
+    "bound": {
+      "file": "assets/narration/budget-064.mp3",
+      "offset": 3.599,
+      "duration": 0.534,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd"
+    },
+    "fuond": {
+      "file": "assets/narration/budget-064.mp3",
+      "offset": 4.133,
+      "duration": 0.7315,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd"
+    },
+    "foudn": {
+      "file": "assets/narration/budget-064.mp3",
+      "offset": 4.8645,
+      "duration": 1.0653,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd"
+    },
+    "gaev": {
+      "file": "assets/narration/budget-065.mp3",
+      "offset": 0,
+      "duration": 0.557,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9"
+    },
+    "gaze": {
+      "file": "assets/narration/budget-065.mp3",
+      "offset": 0.557,
+      "duration": 0.5635,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9"
+    },
+    "fold": {
+      "file": "assets/narration/budget-065.mp3",
+      "offset": 1.1205,
+      "duration": 0.563,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9"
+    },
+    "food": {
+      "file": "assets/narration/budget-065.mp3",
+      "offset": 1.6835,
+      "duration": 0.5745,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9"
+    },
+    "holb": {
+      "file": "assets/narration/budget-065.mp3",
+      "offset": 2.258,
+      "duration": 0.5865,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9"
+    },
+    "held": {
+      "file": "assets/narration/budget-065.mp3",
+      "offset": 2.8445,
+      "duration": 0.517,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9"
+    },
+    "told": {
+      "file": "assets/narration/budget-065.mp3",
+      "offset": 3.3615,
+      "duration": 0.5045,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9"
+    },
+    "lit": {
+      "file": "assets/narration/budget-065.mp3",
+      "offset": 3.866,
+      "duration": 0.7577,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9"
+    },
+    "het": {
+      "file": "assets/narration/budget-066.mp3",
+      "offset": 0,
+      "duration": 0.337,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca"
+    },
+    "kelp": {
+      "file": "assets/narration/budget-066.mp3",
+      "offset": 0.337,
+      "duration": 0.627,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca"
+    },
+    "heep": {
+      "file": "assets/narration/budget-066.mp3",
+      "offset": 0.964,
+      "duration": 0.464,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca"
+    },
+    "help": {
+      "file": "assets/narration/budget-066.mp3",
+      "offset": 1.428,
+      "duration": 0.4235,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca"
+    },
+    "yeep": {
+      "file": "assets/narration/budget-066.mp3",
+      "offset": 1.8515,
+      "duration": 0.401,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca"
+    },
+    "yelp": {
+      "file": "assets/narration/budget-066.mp3",
+      "offset": 2.2525,
+      "duration": 0.4525,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca"
+    },
+    "keap": {
+      "file": "assets/narration/budget-066.mp3",
+      "offset": 2.705,
+      "duration": 0.3545,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca"
+    },
+    "keen": {
+      "file": "assets/narration/budget-066.mp3",
+      "offset": 3.0595,
+      "duration": 0.7805,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca"
+    },
+    "kid": {
+      "file": "assets/narration/budget-067.mp3",
+      "offset": 0,
+      "duration": 0.5865,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578"
+    },
+    "mind": {
+      "file": "assets/narration/budget-067.mp3",
+      "offset": 0.5865,
+      "duration": 0.563,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578"
+    },
+    "kidn": {
+      "file": "assets/narration/budget-067.mp3",
+      "offset": 1.1495,
+      "duration": 0.499,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578"
+    },
+    "king": {
+      "file": "assets/narration/budget-067.mp3",
+      "offset": 1.6485,
+      "duration": 0.4295,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578"
+    },
+    "kiln": {
+      "file": "assets/narration/budget-067.mp3",
+      "offset": 2.078,
+      "duration": 0.5515,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578"
+    },
+    "lung": {
+      "file": "assets/narration/budget-067.mp3",
+      "offset": 2.6295,
+      "duration": 0.5225,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578"
+    },
+    "song": {
+      "file": "assets/narration/budget-067.mp3",
+      "offset": 3.152,
+      "duration": 0.505,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578"
+    },
+    "sung": {
+      "file": "assets/narration/budget-067.mp3",
+      "offset": 3.657,
+      "duration": 0.8361,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578"
+    },
+    "ling": {
+      "file": "assets/narration/budget-068.mp3",
+      "offset": 0,
+      "duration": 0.6095,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b"
+    },
+    "sing": {
+      "file": "assets/narration/budget-068.mp3",
+      "offset": 0.6095,
+      "duration": 0.592,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b"
+    },
+    "lonk": {
+      "file": "assets/narration/budget-068.mp3",
+      "offset": 1.2015,
+      "duration": 0.685,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b"
+    },
+    "mane": {
+      "file": "assets/narration/budget-068.mp3",
+      "offset": 1.8865,
+      "duration": 0.726,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b"
+    },
+    "miny": {
+      "file": "assets/narration/budget-068.mp3",
+      "offset": 2.6125,
+      "duration": 0.6555,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b"
+    },
+    "maky": {
+      "file": "assets/narration/budget-068.mp3",
+      "offset": 3.268,
+      "duration": 0.819,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b"
+    },
+    "mamy": {
+      "file": "assets/narration/budget-068.mp3",
+      "offset": 4.087,
+      "duration": 0.8415,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b"
+    },
+    "oof": {
+      "file": "assets/narration/budget-068.mp3",
+      "offset": 4.9285,
+      "duration": 0.9229,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b"
+    },
+    "oft": {
+      "file": "assets/narration/budget-069.mp3",
+      "offset": 0,
+      "duration": 0.389,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9"
+    },
+    "aff": {
+      "file": "assets/narration/budget-069.mp3",
+      "offset": 0.389,
+      "duration": 0.4645,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9"
+    },
+    "oily": {
+      "file": "assets/narration/budget-069.mp3",
+      "offset": 0.8535,
+      "duration": 0.5455,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9"
+    },
+    "anly": {
+      "file": "assets/narration/budget-069.mp3",
+      "offset": 1.399,
+      "duration": 0.528,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9"
+    },
+    "aily": {
+      "file": "assets/narration/budget-069.mp3",
+      "offset": 1.927,
+      "duration": 0.7085,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9"
+    },
+    "omly": {
+      "file": "assets/narration/budget-069.mp3",
+      "offset": 2.6355,
+      "duration": 0.714,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9"
+    },
+    "onli": {
+      "file": "assets/narration/budget-069.mp3",
+      "offset": 3.3495,
+      "duration": 0.557,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9"
+    },
+    "unly": {
+      "file": "assets/narration/budget-069.mp3",
+      "offset": 3.9065,
+      "duration": 0.8739,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9"
+    },
+    "onyl": {
+      "file": "assets/narration/budget-070.mp3",
+      "offset": 0,
+      "duration": 0.656,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f"
+    },
+    "owner": {
+      "file": "assets/narration/budget-070.mp3",
+      "offset": 0.656,
+      "duration": 0.685,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f"
+    },
+    "owm": {
+      "file": "assets/narration/budget-070.mp3",
+      "offset": 1.341,
+      "duration": 0.6735,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f"
+    },
+    "pill": {
+      "file": "assets/narration/budget-070.mp3",
+      "offset": 2.0145,
+      "duration": 0.673,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f"
+    },
+    "full": {
+      "file": "assets/narration/budget-070.mp3",
+      "offset": 2.6875,
+      "duration": 0.5865,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f"
+    },
+    "fill": {
+      "file": "assets/narration/budget-070.mp3",
+      "offset": 3.274,
+      "duration": 0.5515,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f"
+    },
+    "bull": {
+      "file": "assets/narration/budget-070.mp3",
+      "offset": 3.8255,
+      "duration": 0.575,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f"
+    },
+    "hull": {
+      "file": "assets/narration/budget-070.mp3",
+      "offset": 4.4005,
+      "duration": 0.8501,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f"
+    },
+    "hill": {
+      "file": "assets/narration/budget-071.mp3",
+      "offset": 0,
+      "duration": 0.656,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d"
+    },
+    "pall": {
+      "file": "assets/narration/budget-071.mp3",
+      "offset": 0.656,
+      "duration": 0.679,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d"
+    },
+    "pool": {
+      "file": "assets/narration/budget-071.mp3",
+      "offset": 1.335,
+      "duration": 0.784,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d"
+    },
+    "lead": {
+      "file": "assets/narration/budget-071.mp3",
+      "offset": 2.119,
+      "duration": 0.6735,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d"
+    },
+    "road": {
+      "file": "assets/narration/budget-071.mp3",
+      "offset": 2.7925,
+      "duration": 0.656,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d"
+    },
+    "load": {
+      "file": "assets/narration/budget-071.mp3",
+      "offset": 3.4485,
+      "duration": 0.6615,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d"
+    },
+    "rear": {
+      "file": "assets/narration/budget-071.mp3",
+      "offset": 4.11,
+      "duration": 0.6675,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d"
+    },
+    "roar": {
+      "file": "assets/narration/budget-071.mp3",
+      "offset": 4.7775,
+      "duration": 0.9172,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d"
+    },
+    "raed": {
+      "file": "assets/narration/budget-072.mp3",
+      "offset": 0,
+      "duration": 0.499,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2"
+    },
+    "real": {
+      "file": "assets/narration/budget-072.mp3",
+      "offset": 0.499,
+      "duration": 0.4585,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2"
+    },
+    "ran": {
+      "file": "assets/narration/budget-072.mp3",
+      "offset": 0.9575,
+      "duration": 0.4125,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2"
+    },
+    "fun": {
+      "file": "assets/narration/budget-072.mp3",
+      "offset": 1.37,
+      "duration": 0.6215,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2"
+    },
+    "fan": {
+      "file": "assets/narration/budget-072.mp3",
+      "offset": 1.9915,
+      "duration": 0.534,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2"
+    },
+    "ban": {
+      "file": "assets/narration/budget-072.mp3",
+      "offset": 2.5255,
+      "duration": 0.371,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2"
+    },
+    "pun": {
+      "file": "assets/narration/budget-072.mp3",
+      "offset": 2.8965,
+      "duration": 0.418,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2"
+    },
+    "rnu": {
+      "file": "assets/narration/budget-072.mp3",
+      "offset": 3.3145,
+      "duration": 0.9435,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2"
+    },
+    "rug": {
+      "file": "assets/narration/budget-073.mp3",
+      "offset": 0,
+      "duration": 0.534,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275"
+    },
+    "law": {
+      "file": "assets/narration/budget-073.mp3",
+      "offset": 0.534,
+      "duration": 0.592,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275"
+    },
+    "low": {
+      "file": "assets/narration/budget-073.mp3",
+      "offset": 1.126,
+      "duration": 0.563,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275"
+    },
+    "raw": {
+      "file": "assets/narration/budget-073.mp3",
+      "offset": 1.689,
+      "duration": 0.656,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275"
+    },
+    "row": {
+      "file": "assets/narration/budget-073.mp3",
+      "offset": 2.345,
+      "duration": 0.633,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275"
+    },
+    "slow": {
+      "file": "assets/narration/budget-073.mp3",
+      "offset": 2.978,
+      "duration": 0.6905,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275"
+    },
+    "shot": {
+      "file": "assets/narration/budget-073.mp3",
+      "offset": 3.6685,
+      "duration": 0.633,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275"
+    },
+    "slot": {
+      "file": "assets/narration/budget-073.mp3",
+      "offset": 4.3015,
+      "duration": 0.8969,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275"
+    },
+    "stow": {
+      "file": "assets/narration/budget-074.mp3",
+      "offset": 0,
+      "duration": 0.5225,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae"
+    },
+    "shop": {
+      "file": "assets/narration/budget-074.mp3",
+      "offset": 0.5225,
+      "duration": 0.47,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae"
+    },
+    "shwo": {
+      "file": "assets/narration/budget-074.mp3",
+      "offset": 0.9925,
+      "duration": 0.5285,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae"
+    },
+    "shaw": {
+      "file": "assets/narration/budget-074.mp3",
+      "offset": 1.521,
+      "duration": 0.4875,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae"
+    },
+    "six": {
+      "file": "assets/narration/budget-074.mp3",
+      "offset": 2.0085,
+      "duration": 0.4875,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae"
+    },
+    "sheep": {
+      "file": "assets/narration/budget-074.mp3",
+      "offset": 2.496,
+      "duration": 0.5515,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae"
+    },
+    "sleet": {
+      "file": "assets/narration/budget-074.mp3",
+      "offset": 3.0475,
+      "duration": 0.499,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae"
+    },
+    "sheet": {
+      "file": "assets/narration/budget-074.mp3",
+      "offset": 3.5465,
+      "duration": 0.8159,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae"
+    },
+    "sweep": {
+      "file": "assets/narration/budget-075.mp3",
+      "offset": 0,
+      "duration": 0.662,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c"
+    },
+    "sweet": {
+      "file": "assets/narration/budget-075.mp3",
+      "offset": 0.662,
+      "duration": 0.5045,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c"
+    },
+    "slep": {
+      "file": "assets/narration/budget-075.mp3",
+      "offset": 1.1665,
+      "duration": 0.465,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c"
+    },
+    "sleap": {
+      "file": "assets/narration/budget-075.mp3",
+      "offset": 1.6315,
+      "duration": 0.4525,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c"
+    },
+    "stare": {
+      "file": "assets/narration/budget-075.mp3",
+      "offset": 2.084,
+      "duration": 0.6845,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c"
+    },
+    "scart": {
+      "file": "assets/narration/budget-075.mp3",
+      "offset": 2.7685,
+      "duration": 0.697,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c"
+    },
+    "scare": {
+      "file": "assets/narration/budget-075.mp3",
+      "offset": 3.4655,
+      "duration": 0.54,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c"
+    },
+    "stark": {
+      "file": "assets/narration/budget-075.mp3",
+      "offset": 4.0055,
+      "duration": 0.9055,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c"
+    },
+    "spart": {
+      "file": "assets/narration/budget-076.mp3",
+      "offset": 0,
+      "duration": 0.7835,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0"
+    },
+    "spark": {
+      "file": "assets/narration/budget-076.mp3",
+      "offset": 0.7835,
+      "duration": 0.7545,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0"
+    },
+    "strat": {
+      "file": "assets/narration/budget-076.mp3",
+      "offset": 1.538,
+      "duration": 0.772,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0"
+    },
+    "sart": {
+      "file": "assets/narration/budget-076.mp3",
+      "offset": 2.31,
+      "duration": 0.7495,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0"
+    },
+    "stip": {
+      "file": "assets/narration/budget-076.mp3",
+      "offset": 3.0595,
+      "duration": 0.7255,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0"
+    },
+    "slop": {
+      "file": "assets/narration/budget-076.mp3",
+      "offset": 3.785,
+      "duration": 0.7605,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0"
+    },
+    "slip": {
+      "file": "assets/narration/budget-076.mp3",
+      "offset": 4.5455,
+      "duration": 0.731,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0"
+    },
+    "sotp": {
+      "file": "assets/narration/budget-076.mp3",
+      "offset": 5.2765,
+      "duration": 1.0713,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0"
+    },
+    "step": {
+      "file": "assets/narration/budget-077.mp3",
+      "offset": 0,
+      "duration": 0.511,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303"
+    },
+    "cake": {
+      "file": "assets/narration/budget-077.mp3",
+      "offset": 0.511,
+      "duration": 0.5745,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303"
+    },
+    "taek": {
+      "file": "assets/narration/budget-077.mp3",
+      "offset": 1.0855,
+      "duration": 0.5805,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303"
+    },
+    "tall": {
+      "file": "assets/narration/budget-077.mp3",
+      "offset": 1.666,
+      "duration": 0.4935,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303"
+    },
+    "fell": {
+      "file": "assets/narration/budget-077.mp3",
+      "offset": 2.1595,
+      "duration": 0.4295,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303"
+    },
+    "fall": {
+      "file": "assets/narration/budget-077.mp3",
+      "offset": 2.589,
+      "duration": 0.476,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303"
+    },
+    "tlel": {
+      "file": "assets/narration/budget-077.mp3",
+      "offset": 3.065,
+      "duration": 0.6095,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303"
+    },
+    "thunk": {
+      "file": "assets/narration/budget-077.mp3",
+      "offset": 3.6745,
+      "duration": 0.8186,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303"
+    },
+    "thnak": {
+      "file": "assets/narration/budget-078.mp3",
+      "offset": 0,
+      "duration": 0.6445,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78"
+    },
+    "thonk": {
+      "file": "assets/narration/budget-078.mp3",
+      "offset": 0.6445,
+      "duration": 0.592,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78"
+    },
+    "thick": {
+      "file": "assets/narration/budget-078.mp3",
+      "offset": 1.2365,
+      "duration": 0.5455,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78"
+    },
+    "thack": {
+      "file": "assets/narration/budget-078.mp3",
+      "offset": 1.782,
+      "duration": 0.604,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78"
+    },
+    "thnik": {
+      "file": "assets/narration/budget-078.mp3",
+      "offset": 2.386,
+      "duration": 0.65,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78"
+    },
+    "thing": {
+      "file": "assets/narration/budget-078.mp3",
+      "offset": 3.036,
+      "duration": 0.5515,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78"
+    },
+    "wask": {
+      "file": "assets/narration/budget-078.mp3",
+      "offset": 3.5875,
+      "duration": 0.6035,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78"
+    },
+    "talk": {
+      "file": "assets/narration/budget-078.mp3",
+      "offset": 4.191,
+      "duration": 0.8506,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78"
+    },
+    "task": {
+      "file": "assets/narration/budget-079.mp3",
+      "offset": 0,
+      "duration": 0.679,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c"
+    },
+    "balk": {
+      "file": "assets/narration/budget-079.mp3",
+      "offset": 0.679,
+      "duration": 0.581,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c"
+    },
+    "bask": {
+      "file": "assets/narration/budget-079.mp3",
+      "offset": 1.26,
+      "duration": 0.5915,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c"
+    },
+    "wolk": {
+      "file": "assets/narration/budget-079.mp3",
+      "offset": 1.8515,
+      "duration": 0.639,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c"
+    },
+    "wlak": {
+      "file": "assets/narration/budget-079.mp3",
+      "offset": 2.4905,
+      "duration": 0.8705,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c"
+    },
+    "while": {
+      "file": "assets/narration/budget-079.mp3",
+      "offset": 3.361,
+      "duration": 0.5635,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c"
+    },
+    "whate": {
+      "file": "assets/narration/budget-079.mp3",
+      "offset": 3.9245,
+      "duration": 0.383,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c"
+    },
+    "whale": {
+      "file": "assets/narration/budget-079.mp3",
+      "offset": 4.3075,
+      "duration": 0.8386,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c"
+    },
+    "whote": {
+      "file": "assets/narration/budget-080.mp3",
+      "offset": 0,
+      "duration": 0.627,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169"
+    },
+    "whole": {
+      "file": "assets/narration/budget-080.mp3",
+      "offset": 0.627,
+      "duration": 0.801,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169"
+    },
+    "whiet": {
+      "file": "assets/narration/budget-080.mp3",
+      "offset": 1.428,
+      "duration": 0.7605,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169"
+    },
+    "wash": {
+      "file": "assets/narration/budget-080.mp3",
+      "offset": 2.1885,
+      "duration": 0.813,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169"
+    },
+    "dash": {
+      "file": "assets/narration/budget-080.mp3",
+      "offset": 3.0015,
+      "duration": 0.766,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169"
+    },
+    "fish": {
+      "file": "assets/narration/budget-080.mp3",
+      "offset": 3.7675,
+      "duration": 0.7895,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169"
+    },
+    "wihs": {
+      "file": "assets/narration/budget-080.mp3",
+      "offset": 4.557,
+      "duration": 0.9515,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169"
+    },
+    "wark": {
+      "file": "assets/narration/budget-080.mp3",
+      "offset": 5.5085,
+      "duration": 0.996,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169"
+    },
+    "pork": {
+      "file": "assets/narration/budget-081.mp3",
+      "offset": 0,
+      "duration": 0.679,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488"
+    },
+    "fork": {
+      "file": "assets/narration/budget-081.mp3",
+      "offset": 0.679,
+      "duration": 0.755,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488"
+    },
+    "word": {
+      "file": "assets/narration/budget-081.mp3",
+      "offset": 1.434,
+      "duration": 0.772,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488"
+    },
+    "worm": {
+      "file": "assets/narration/budget-081.mp3",
+      "offset": 2.206,
+      "duration": 0.7085,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488"
+    },
+    "wrok": {
+      "file": "assets/narration/budget-081.mp3",
+      "offset": 2.9145,
+      "duration": 0.783,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488"
+    },
+    "wrote": {
+      "file": "assets/narration/budget-081.mp3",
+      "offset": 3.6975,
+      "duration": 0.7665,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488"
+    },
+    "wrate": {
+      "file": "assets/narration/budget-081.mp3",
+      "offset": 4.464,
+      "duration": 0.7545,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488"
+    },
+    "wirte": {
+      "file": "assets/narration/budget-081.mp3",
+      "offset": 5.2185,
+      "duration": 0.9986,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488"
+    },
+    "writ": {
+      "file": "assets/narration/budget-082.mp3",
+      "offset": 0,
+      "duration": 0.679,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc"
+    },
+    "cor": {
+      "file": "assets/narration/budget-082.mp3",
+      "offset": 0.679,
+      "duration": 0.5285,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc"
+    },
+    "cur": {
+      "file": "assets/narration/budget-082.mp3",
+      "offset": 1.2075,
+      "duration": 0.644,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc"
+    },
+    "hose": {
+      "file": "assets/narration/budget-082.mp3",
+      "offset": 1.8515,
+      "duration": 0.7725,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc"
+    },
+    "rouse": {
+      "file": "assets/narration/budget-082.mp3",
+      "offset": 2.624,
+      "duration": 0.7835,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc"
+    },
+    "rose": {
+      "file": "assets/narration/budget-082.mp3",
+      "offset": 3.4075,
+      "duration": 0.7895,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc"
+    },
+    "nouse": {
+      "file": "assets/narration/budget-082.mp3",
+      "offset": 4.197,
+      "duration": 0.859,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc"
+    },
+    "nose": {
+      "file": "assets/narration/budget-082.mp3",
+      "offset": 5.056,
+      "duration": 1.0567,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc"
+    },
+    "huose": {
+      "file": "assets/narration/budget-083.mp3",
+      "offset": 0,
+      "duration": 0.7255,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d"
+    },
+    "hous": {
+      "file": "assets/narration/budget-083.mp3",
+      "offset": 0.7255,
+      "duration": 0.598,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d"
+    },
+    "horse": {
+      "file": "assets/narration/budget-083.mp3",
+      "offset": 1.3235,
+      "duration": 0.6325,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d"
+    },
+    "mam": {
+      "file": "assets/narration/budget-083.mp3",
+      "offset": 1.956,
+      "duration": 0.627,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d"
+    },
+    "mop": {
+      "file": "assets/narration/budget-083.mp3",
+      "offset": 2.583,
+      "duration": 0.523,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d"
+    },
+    "mum": {
+      "file": "assets/narration/budget-083.mp3",
+      "offset": 3.106,
+      "duration": 0.557,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d"
+    },
+    "mob": {
+      "file": "assets/narration/budget-083.mp3",
+      "offset": 3.663,
+      "duration": 0.5455,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d"
+    },
+    "mem": {
+      "file": "assets/narration/budget-083.mp3",
+      "offset": 4.2085,
+      "duration": 0.8331,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d"
+    },
+    "chip": {
+      "file": "assets/narration/budget-084.mp3",
+      "offset": 0,
+      "duration": 0.4125,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd"
+    },
+    "chop": {
+      "file": "assets/narration/budget-084.mp3",
+      "offset": 0.4125,
+      "duration": 0.435,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd"
+    },
+    "shin": {
+      "file": "assets/narration/budget-084.mp3",
+      "offset": 0.8475,
+      "duration": 0.511,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd"
+    },
+    "skip": {
+      "file": "assets/narration/budget-084.mp3",
+      "offset": 1.3585,
+      "duration": 0.4585,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd"
+    },
+    "skin": {
+      "file": "assets/narration/budget-084.mp3",
+      "offset": 1.817,
+      "duration": 0.569,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd"
+    },
+    "sihp": {
+      "file": "assets/narration/budget-084.mp3",
+      "offset": 2.386,
+      "duration": 0.5105,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd"
+    },
+    "share": {
+      "file": "assets/narration/budget-084.mp3",
+      "offset": 2.8965,
+      "duration": 0.5055,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd"
+    },
+    "spare": {
+      "file": "assets/narration/budget-084.mp3",
+      "offset": 3.402,
+      "duration": 0.9082,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd"
+    },
+    "shrak": {
+      "file": "assets/narration/budget-085.mp3",
+      "offset": 0,
+      "duration": 0.644,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456"
+    },
+    "shork": {
+      "file": "assets/narration/budget-085.mp3",
+      "offset": 0.644,
+      "duration": 0.8825,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456"
+    },
+    "sharp": {
+      "file": "assets/narration/budget-085.mp3",
+      "offset": 1.5265,
+      "duration": 0.8245,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456"
+    },
+    "tap": {
+      "file": "assets/narration/budget-085.mp3",
+      "offset": 2.351,
+      "duration": 0.731,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456"
+    },
+    "mep": {
+      "file": "assets/narration/budget-085.mp3",
+      "offset": 3.082,
+      "duration": 0.7435,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456"
+    },
+    "mat": {
+      "file": "assets/narration/budget-085.mp3",
+      "offset": 3.8255,
+      "duration": 0.813,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456"
+    },
+    "quien": {
+      "file": "assets/narration/budget-085.mp3",
+      "offset": 4.6385,
+      "duration": 0.7835,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456"
+    },
+    "queon": {
+      "file": "assets/narration/budget-085.mp3",
+      "offset": 5.422,
+      "duration": 1.0302,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456"
+    },
+    "quion": {
+      "file": "assets/narration/budget-086.mp3",
+      "offset": 0,
+      "duration": 0.6385,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672"
+    },
+    "queem": {
+      "file": "assets/narration/budget-086.mp3",
+      "offset": 0.6385,
+      "duration": 0.6155,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672"
+    },
+    "quiem": {
+      "file": "assets/narration/budget-086.mp3",
+      "offset": 1.254,
+      "duration": 0.627,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672"
+    },
+    "quene": {
+      "file": "assets/narration/budget-086.mp3",
+      "offset": 1.881,
+      "duration": 0.6035,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672"
+    },
+    "queue": {
+      "file": "assets/narration/budget-086.mp3",
+      "offset": 2.4845,
+      "duration": 0.7375,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672"
+    },
+    "shake": {
+      "file": "assets/narration/budget-086.mp3",
+      "offset": 3.222,
+      "duration": 0.743,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672"
+    },
+    "snare": {
+      "file": "assets/narration/budget-086.mp3",
+      "offset": 3.965,
+      "duration": 0.598,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672"
+    },
+    "stake": {
+      "file": "assets/narration/budget-086.mp3",
+      "offset": 4.563,
+      "duration": 0.8705,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672"
+    },
+    "snkae": {
+      "file": "assets/narration/budget-087.mp3",
+      "offset": 0,
+      "duration": 0.7085,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a"
+    },
+    "snace": {
+      "file": "assets/narration/budget-087.mp3",
+      "offset": 0.7085,
+      "duration": 0.7135,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a"
+    },
+    "spill": {
+      "file": "assets/narration/budget-087.mp3",
+      "offset": 1.422,
+      "duration": 0.5925,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a"
+    },
+    "smill": {
+      "file": "assets/narration/budget-087.mp3",
+      "offset": 2.0145,
+      "duration": 0.499,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a"
+    },
+    "swell": {
+      "file": "assets/narration/budget-087.mp3",
+      "offset": 2.5135,
+      "duration": 0.511,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a"
+    },
+    "swill": {
+      "file": "assets/narration/budget-087.mp3",
+      "offset": 3.0245,
+      "duration": 0.476,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a"
+    },
+    "spel": {
+      "file": "assets/narration/budget-087.mp3",
+      "offset": 3.5005,
+      "duration": 0.493,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a"
+    },
+    "speil": {
+      "file": "assets/narration/budget-087.mp3",
+      "offset": 3.9935,
+      "duration": 0.9175,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a"
+    },
+    "swore": {
+      "file": "assets/narration/budget-088.mp3",
+      "offset": 0,
+      "duration": 0.633,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b"
+    },
+    "stord": {
+      "file": "assets/narration/budget-088.mp3",
+      "offset": 0.633,
+      "duration": 0.557,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b"
+    },
+    "store": {
+      "file": "assets/narration/budget-088.mp3",
+      "offset": 1.19,
+      "duration": 0.4355,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b"
+    },
+    "shord": {
+      "file": "assets/narration/budget-088.mp3",
+      "offset": 1.6255,
+      "duration": 0.453,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b"
+    },
+    "shore": {
+      "file": "assets/narration/budget-088.mp3",
+      "offset": 2.0785,
+      "duration": 0.435,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b"
+    },
+    "swrod": {
+      "file": "assets/narration/budget-088.mp3",
+      "offset": 2.5135,
+      "duration": 0.5225,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b"
+    },
+    "sord": {
+      "file": "assets/narration/budget-088.mp3",
+      "offset": 3.036,
+      "duration": 0.447,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b"
+    },
+    "sworn": {
+      "file": "assets/narration/budget-088.mp3",
+      "offset": 3.483,
+      "duration": 0.9317,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b"
+    },
+    "main": {
+      "file": "assets/narration/budget-089.mp3",
+      "offset": 0,
+      "duration": 0.5745,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc"
+    },
+    "pain": {
+      "file": "assets/narration/budget-089.mp3",
+      "offset": 0.5745,
+      "duration": 0.668,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc"
+    },
+    "ruin": {
+      "file": "assets/narration/budget-089.mp3",
+      "offset": 1.2425,
+      "duration": 0.685,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc"
+    },
+    "rian": {
+      "file": "assets/narration/budget-089.mp3",
+      "offset": 1.9275,
+      "duration": 0.818,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc"
+    },
+    "rein": {
+      "file": "assets/narration/budget-089.mp3",
+      "offset": 2.7455,
+      "duration": 0.72,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc"
+    },
+    "raid": {
+      "file": "assets/narration/budget-089.mp3",
+      "offset": 3.4655,
+      "duration": 0.6505,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc"
+    },
+    "chill": {
+      "file": "assets/narration/budget-089.mp3",
+      "offset": 4.116,
+      "duration": 0.725,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc"
+    },
+    "chald": {
+      "file": "assets/narration/budget-089.mp3",
+      "offset": 4.841,
+      "duration": 0.9582,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc"
+    },
+    "chall": {
+      "file": "assets/narration/budget-090.mp3",
+      "offset": 0,
+      "duration": 0.6445,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800"
+    },
+    "chold": {
+      "file": "assets/narration/budget-090.mp3",
+      "offset": 0.6445,
+      "duration": 0.778,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800"
+    },
+    "choll": {
+      "file": "assets/narration/budget-090.mp3",
+      "offset": 1.4225,
+      "duration": 0.7775,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800"
+    },
+    "chlid": {
+      "file": "assets/narration/budget-090.mp3",
+      "offset": 2.2,
+      "duration": 0.784,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800"
+    },
+    "chide": {
+      "file": "assets/narration/budget-090.mp3",
+      "offset": 2.984,
+      "duration": 0.8185,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800"
+    },
+    "ghast": {
+      "file": "assets/narration/budget-090.mp3",
+      "offset": 3.8025,
+      "duration": 0.894,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800"
+    },
+    "gholt": {
+      "file": "assets/narration/budget-090.mp3",
+      "offset": 4.6965,
+      "duration": 0.778,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800"
+    },
+    "ghalt": {
+      "file": "assets/narration/budget-090.mp3",
+      "offset": 5.4745,
+      "duration": 0.9255,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800"
+    },
+    "ghist": {
+      "file": "assets/narration/budget-091.mp3",
+      "offset": 0,
+      "duration": 0.766,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7"
+    },
+    "ghilt": {
+      "file": "assets/narration/budget-091.mp3",
+      "offset": 0.766,
+      "duration": 0.7955,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7"
+    },
+    "ghsot": {
+      "file": "assets/narration/budget-091.mp3",
+      "offset": 1.5615,
+      "duration": 0.929,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7"
+    },
+    "gohst": {
+      "file": "assets/narration/budget-091.mp3",
+      "offset": 2.4905,
+      "duration": 0.905,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7"
+    },
+    "ghoul": {
+      "file": "assets/narration/budget-091.mp3",
+      "offset": 3.3955,
+      "duration": 0.9405,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7"
+    },
+    "unacorn": {
+      "file": "assets/narration/budget-091.mp3",
+      "offset": 4.336,
+      "duration": 1.161,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7"
+    },
+    "unicarn": {
+      "file": "assets/narration/budget-091.mp3",
+      "offset": 5.497,
+      "duration": 1.121,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7"
+    },
+    "unacarn": {
+      "file": "assets/narration/budget-091.mp3",
+      "offset": 6.618,
+      "duration": 1.2187,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7"
+    },
+    "unicorm": {
+      "file": "assets/narration/budget-092.mp3",
+      "offset": 0,
+      "duration": 0.9465,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6"
+    },
+    "unecorn": {
+      "file": "assets/narration/budget-092.mp3",
+      "offset": 0.9465,
+      "duration": 1.1895,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6"
+    },
+    "unicron": {
+      "file": "assets/narration/budget-092.mp3",
+      "offset": 2.136,
+      "duration": 1.2425,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6"
+    },
+    "unihorn": {
+      "file": "assets/narration/budget-092.mp3",
+      "offset": 3.3785,
+      "duration": 1.277,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6"
+    },
+    "uniform": {
+      "file": "assets/narration/budget-092.mp3",
+      "offset": 4.6555,
+      "duration": 1.1785,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6"
+    },
+    "loon": {
+      "file": "assets/narration/budget-092.mp3",
+      "offset": 5.834,
+      "duration": 0.9695,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6"
+    },
+    "lian": {
+      "file": "assets/narration/budget-092.mp3",
+      "offset": 6.8035,
+      "duration": 0.958,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6"
+    },
+    "loan": {
+      "file": "assets/narration/budget-092.mp3",
+      "offset": 7.7615,
+      "duration": 0.9634,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6"
+    },
+    "lien": {
+      "file": "assets/narration/budget-093.mp3",
+      "offset": 0,
+      "duration": 0.6615,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014"
+    },
+    "loin": {
+      "file": "assets/narration/budget-093.mp3",
+      "offset": 0.6615,
+      "duration": 0.4995,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014"
+    },
+    "pug": {
+      "file": "assets/narration/budget-093.mp3",
+      "offset": 1.161,
+      "duration": 0.395,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014"
+    },
+    "peg": {
+      "file": "assets/narration/budget-093.mp3",
+      "offset": 1.556,
+      "duration": 0.377,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014"
+    },
+    "pin": {
+      "file": "assets/narration/budget-093.mp3",
+      "offset": 1.933,
+      "duration": 0.4585,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014"
+    },
+    "yallow": {
+      "file": "assets/narration/budget-093.mp3",
+      "offset": 2.3915,
+      "duration": 0.47,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014"
+    },
+    "fellow": {
+      "file": "assets/narration/budget-093.mp3",
+      "offset": 2.8615,
+      "duration": 0.36,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014"
+    },
+    "fallow": {
+      "file": "assets/narration/budget-093.mp3",
+      "offset": 3.2215,
+      "duration": 0.8536,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014"
+    },
+    "yillow": {
+      "file": "assets/narration/budget-094.mp3",
+      "offset": 0,
+      "duration": 0.644,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df"
+    },
+    "bellow": {
+      "file": "assets/narration/budget-094.mp3",
+      "offset": 0.644,
+      "duration": 0.5865,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df"
+    },
+    "billow": {
+      "file": "assets/narration/budget-094.mp3",
+      "offset": 1.2305,
+      "duration": 0.662,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df"
+    },
+    "yelow": {
+      "file": "assets/narration/budget-094.mp3",
+      "offset": 1.8925,
+      "duration": 0.714,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df"
+    },
+    "mellow": {
+      "file": "assets/narration/budget-094.mp3",
+      "offset": 2.6065,
+      "duration": 0.755,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df"
+    },
+    "lizard": {
+      "file": "assets/narration/budget-094.mp3",
+      "offset": 3.3615,
+      "duration": 0.8705,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df"
+    },
+    "wizerd": {
+      "file": "assets/narration/budget-094.mp3",
+      "offset": 4.232,
+      "duration": 0.8825,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df"
+    },
+    "lizerd": {
+      "file": "assets/narration/budget-094.mp3",
+      "offset": 5.1145,
+      "duration": 0.972,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df"
+    },
+    "wazard": {
+      "file": "assets/narration/budget-095.mp3",
+      "offset": 0,
+      "duration": 1.004,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93"
+    },
+    "wizord": {
+      "file": "assets/narration/budget-095.mp3",
+      "offset": 1.004,
+      "duration": 1.2775,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93"
+    },
+    "wizrad": {
+      "file": "assets/narration/budget-095.mp3",
+      "offset": 2.2815,
+      "duration": 1.242,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93"
+    },
+    "thicken": {
+      "file": "assets/narration/budget-095.mp3",
+      "offset": 3.5235,
+      "duration": 0.952,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93"
+    },
+    "chucken": {
+      "file": "assets/narration/budget-095.mp3",
+      "offset": 4.4755,
+      "duration": 1.045,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93"
+    },
+    "thucken": {
+      "file": "assets/narration/budget-095.mp3",
+      "offset": 5.5205,
+      "duration": 1.0105,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93"
+    },
+    "chickon": {
+      "file": "assets/narration/budget-095.mp3",
+      "offset": 6.531,
+      "duration": 1.091,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93"
+    },
+    "chiken": {
+      "file": "assets/narration/budget-095.mp3",
+      "offset": 7.622,
+      "duration": 1.1551,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93"
+    },
+    "chikcen": {
+      "file": "assets/narration/budget-096.mp3",
+      "offset": 0,
+      "duration": 0.7255,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830"
+    },
+    "men": {
+      "file": "assets/narration/budget-096.mp3",
+      "offset": 0.7255,
+      "duration": 0.366,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830"
+    },
+    "pen": {
+      "file": "assets/narration/budget-096.mp3",
+      "offset": 1.0915,
+      "duration": 0.441,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830"
+    },
+    "mon": {
+      "file": "assets/narration/budget-096.mp3",
+      "offset": 1.5325,
+      "duration": 0.3365,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830"
+    },
+    "wit": {
+      "file": "assets/narration/budget-096.mp3",
+      "offset": 1.869,
+      "duration": 0.5405,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830"
+    },
+    "wot": {
+      "file": "assets/narration/budget-096.mp3",
+      "offset": 2.4095,
+      "duration": 0.5915,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830"
+    },
+    "web": {
+      "file": "assets/narration/budget-096.mp3",
+      "offset": 3.001,
+      "duration": 0.5165,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830"
+    },
+    "yet": {
+      "file": "assets/narration/budget-096.mp3",
+      "offset": 3.5175,
+      "duration": 0.7927,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830"
+    },
+    "yas": {
+      "file": "assets/narration/budget-097.mp3",
+      "offset": 0,
+      "duration": 0.6035,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b"
+    },
+    "yat": {
+      "file": "assets/narration/budget-097.mp3",
+      "offset": 0.6035,
+      "duration": 0.5805,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b"
+    },
+    "yos": {
+      "file": "assets/narration/budget-097.mp3",
+      "offset": 1.184,
+      "duration": 0.6155,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b"
+    },
+    "yot": {
+      "file": "assets/narration/budget-097.mp3",
+      "offset": 1.7995,
+      "duration": 0.714,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b"
+    },
+    "yew": {
+      "file": "assets/narration/budget-097.mp3",
+      "offset": 2.5135,
+      "duration": 0.7315,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b"
+    },
+    "tin": {
+      "file": "assets/narration/budget-097.mp3",
+      "offset": 3.245,
+      "duration": 0.5865,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b"
+    },
+    "pon": {
+      "file": "assets/narration/budget-097.mp3",
+      "offset": 3.8315,
+      "duration": 0.528,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b"
+    },
+    "bel": {
+      "file": "assets/narration/budget-097.mp3",
+      "offset": 4.3595,
+      "duration": 0.8389,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b"
+    },
+    "belt": {
+      "file": "assets/narration/budget-098.mp3",
+      "offset": 0,
+      "duration": 0.476,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498"
+    },
+    "mole": {
+      "file": "assets/narration/budget-098.mp3",
+      "offset": 0.476,
+      "duration": 0.563,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498"
+    },
+    "rule": {
+      "file": "assets/narration/budget-098.mp3",
+      "offset": 1.039,
+      "duration": 0.5805,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498"
+    },
+    "role": {
+      "file": "assets/narration/budget-098.mp3",
+      "offset": 1.6195,
+      "duration": 0.6035,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498"
+    },
+    "mute": {
+      "file": "assets/narration/budget-098.mp3",
+      "offset": 2.223,
+      "duration": 0.5865,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498"
+    },
+    "hall": {
+      "file": "assets/narration/budget-098.mp3",
+      "offset": 2.8095,
+      "duration": 0.569,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498"
+    },
+    "bal": {
+      "file": "assets/narration/budget-098.mp3",
+      "offset": 3.3785,
+      "duration": 0.7025,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498"
+    },
+    "theng": {
+      "file": "assets/narration/budget-098.mp3",
+      "offset": 4.081,
+      "duration": 0.9345,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498"
+    },
+    "thni": {
+      "file": "assets/narration/budget-099.mp3",
+      "offset": 0,
+      "duration": 0.656,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18"
+    },
+    "sap": {
+      "file": "assets/narration/budget-099.mp3",
+      "offset": 0.656,
+      "duration": 0.5515,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18"
+    },
+    "scar": {
+      "file": "assets/narration/budget-099.mp3",
+      "offset": 1.2075,
+      "duration": 0.592,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18"
+    },
+    "scay": {
+      "file": "assets/narration/budget-099.mp3",
+      "offset": 1.7995,
+      "duration": 0.7895,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18"
+    },
+    "nought": {
+      "file": "assets/narration/budget-099.mp3",
+      "offset": 2.589,
+      "duration": 0.6675,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18"
+    },
+    "lought": {
+      "file": "assets/narration/budget-099.mp3",
+      "offset": 3.2565,
+      "duration": 0.575,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18"
+    },
+    "blight": {
+      "file": "assets/narration/budget-099.mp3",
+      "offset": 3.8315,
+      "duration": 0.505,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18"
+    },
+    "fright": {
+      "file": "assets/narration/budget-099.mp3",
+      "offset": 4.3365,
+      "duration": 0.8619,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18"
+    },
+    "flight": {
+      "file": "assets/narration/budget-100.mp3",
+      "offset": 0,
+      "duration": 0.5575,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7"
+    },
+    "shone": {
+      "file": "assets/narration/budget-100.mp3",
+      "offset": 0.5575,
+      "duration": 0.656,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7"
+    },
+    "stork": {
+      "file": "assets/narration/budget-100.mp3",
+      "offset": 1.2135,
+      "duration": 0.7545,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7"
+    },
+    "swarm": {
+      "file": "assets/narration/budget-100.mp3",
+      "offset": 1.968,
+      "duration": 0.708,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7"
+    },
+    "swark": {
+      "file": "assets/narration/budget-100.mp3",
+      "offset": 2.676,
+      "duration": 0.824,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7"
+    },
+    "wagon": {
+      "file": "assets/narration/budget-100.mp3",
+      "offset": 3.5,
+      "duration": 0.929,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7"
+    },
+    "wagoon": {
+      "file": "assets/narration/budget-100.mp3",
+      "offset": 4.429,
+      "duration": 0.894,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7"
+    },
+    "shadew": {
+      "file": "assets/narration/budget-100.mp3",
+      "offset": 5.323,
+      "duration": 1.077,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7"
+    },
+    "meadow": {
+      "file": "assets/narration/budget-101.mp3",
+      "offset": 0,
+      "duration": 0.656,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38"
+    },
+    "meadew": {
+      "file": "assets/narration/budget-101.mp3",
+      "offset": 0.656,
+      "duration": 0.8245,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38"
+    },
+    "solver": {
+      "file": "assets/narration/budget-101.mp3",
+      "offset": 1.4805,
+      "duration": 0.8645,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38"
+    },
+    "silber": {
+      "file": "assets/narration/budget-101.mp3",
+      "offset": 2.345,
+      "duration": 0.813,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38"
+    },
+    "solber": {
+      "file": "assets/narration/budget-101.mp3",
+      "offset": 3.158,
+      "duration": 0.9465,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38"
+    },
+    "whisker": {
+      "file": "assets/narration/budget-101.mp3",
+      "offset": 4.1045,
+      "duration": 0.859,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38"
+    },
+    "whimper": {
+      "file": "assets/narration/budget-101.mp3",
+      "offset": 4.9635,
+      "duration": 0.917,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38"
+    },
+    "whimker": {
+      "file": "assets/narration/budget-101.mp3",
+      "offset": 5.8805,
+      "duration": 1.1203,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38"
+    },
+    "journal": {
+      "file": "assets/narration/budget-102.mp3",
+      "offset": 0,
+      "duration": 0.7725,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193"
+    },
+    "jourmey": {
+      "file": "assets/narration/budget-102.mp3",
+      "offset": 0.7725,
+      "duration": 1.0445,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193"
+    },
+    "jourmal": {
+      "file": "assets/narration/budget-102.mp3",
+      "offset": 1.817,
+      "duration": 0.894,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193"
+    },
+    "pattern": {
+      "file": "assets/narration/budget-102.mp3",
+      "offset": 2.711,
+      "duration": 0.685,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193"
+    },
+    "lantren": {
+      "file": "assets/narration/budget-102.mp3",
+      "offset": 3.396,
+      "duration": 0.865,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193"
+    },
+    "pattren": {
+      "file": "assets/narration/budget-102.mp3",
+      "offset": 4.261,
+      "duration": 0.772,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193"
+    },
+    "creasure": {
+      "file": "assets/narration/budget-102.mp3",
+      "offset": 5.033,
+      "duration": 0.714,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193"
+    },
+    "treature": {
+      "file": "assets/narration/budget-102.mp3",
+      "offset": 5.747,
+      "duration": 1.071,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193"
+    },
+    "You chose.": {
+      "file": "assets/narration/budget-103.mp3",
+      "offset": 0,
+      "duration": 0.9055,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf"
+    },
+    "The word is.": {
+      "file": "assets/narration/budget-103.mp3",
+      "offset": 0.9055,
+      "duration": 0.9465,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf"
+    },
+    "Practice turn. You keep your heart.": {
+      "file": "assets/narration/budget-103.mp3",
+      "offset": 1.852,
+      "duration": 2.7285,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf"
+    },
+    "Reading check complete. Now your first chapter begins.": {
+      "file": "assets/narration/budget-103.mp3",
+      "offset": 4.5805,
+      "duration": 3.8775,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf"
+    },
+    "2 Moon Moths are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-103.mp3",
+      "offset": 8.458,
+      "duration": 3.5525,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf"
+    },
+    "3 Moon Moths are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-103.mp3",
+      "offset": 12.0105,
+      "duration": 3.5295,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf"
+    },
+    "5 Moon Moths are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-103.mp3",
+      "offset": 15.54,
+      "duration": 3.39,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf"
+    },
+    "2 Acorn Imps are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-103.mp3",
+      "offset": 18.93,
+      "duration": 4.0055,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf"
+    },
+    "3 Acorn Imps are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-104.mp3",
+      "offset": 0,
+      "duration": 3.46,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80"
+    },
+    "5 Acorn Imps are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-104.mp3",
+      "offset": 3.46,
+      "duration": 3.866,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80"
+    },
+    "3 Bark Beetles are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-104.mp3",
+      "offset": 7.326,
+      "duration": 3.802,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80"
+    },
+    "5 Bark Beetles are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-104.mp3",
+      "offset": 11.128,
+      "duration": 3.762,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80"
+    },
+    "2 Lantern Wisps are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-104.mp3",
+      "offset": 14.89,
+      "duration": 3.802,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80"
+    },
+    "3 Lantern Wisps are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-104.mp3",
+      "offset": 18.692,
+      "duration": 3.86,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80"
+    },
+    "5 Lantern Wisps are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-104.mp3",
+      "offset": 22.552,
+      "duration": 4.029,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80"
+    },
+    "2 young Fern Wolves are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-104.mp3",
+      "offset": 26.581,
+      "duration": 3.8255,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80"
+    },
+    "3 Fern Wolves are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 0,
+      "duration": 3.924,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "3 Briar Bats are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 3.924,
+      "duration": 3.9185,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "5 Briar Bats are on the path. Ready to battle?": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 7.8425,
+      "duration": 3.9125,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "A Thornling is ready for your challenge.": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 11.755,
+      "duration": 2.206,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "A Bark Beetle is ready for your challenge.": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 13.961,
+      "duration": 2.5075,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "A Moon Moth is ready for your challenge.": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 16.4685,
+      "duration": 2.357,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "A Acorn Imp is ready for your challenge.": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 18.8255,
+      "duration": 2.8965,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "A Root Sprite is ready for your challenge.": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 21.722,
+      "duration": 2.7025,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "A Mushroom Guard is ready for your challenge.": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 0,
+      "duration": 2.461,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "A Hollow Owl is ready for your challenge.": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 2.461,
+      "duration": 2.45,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "A Briar Bat is ready for your challenge.": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 4.911,
+      "duration": 2.334,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "A Chest Mimic is ready for your challenge.": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 7.245,
+      "duration": 2.4435,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "A Snail Knight is ready for your challenge.": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 9.6885,
+      "duration": 2.4325,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "A Moss Golem is ready for your challenge.": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 12.121,
+      "duration": 2.4205,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "A Bramble Boar is ready for your challenge.": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 14.5415,
+      "duration": 2.543,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "A Reed Serpent is ready for your challenge.": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 17.0845,
+      "duration": 2.7424,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "A Bog Toad is ready for your challenge.": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 0,
+      "duration": 2.3275,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "A Crystal Crab is ready for your challenge.": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 2.3275,
+      "duration": 2.5545,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "A Stone Ram is ready for your challenge.": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 4.882,
+      "duration": 2.868,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "A Cave Troll is ready for your challenge.": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 7.75,
+      "duration": 2.7865,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "A Lantern Wisp is ready for your challenge.": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 10.5365,
+      "duration": 2.908,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "A Fern Wolf is ready for your challenge.": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 13.4445,
+      "duration": 2.804,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "A Storm Griffin is ready for your challenge.": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 16.2485,
+      "duration": 2.8731,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
     }
   }
 };

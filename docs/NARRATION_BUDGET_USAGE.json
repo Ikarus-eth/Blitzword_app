@@ -1,0 +1,13 @@
+{
+  "textCharacters": 7333,
+  "initialCharacterCount": 76247,
+  "finalCharacterCount": 78406,
+  "observedUsageIncrease": 2159,
+  "characterLimit": 121026,
+  "generationRuns": [
+    37166146767,
+    37166276273
+  ],
+  "firstBatchRecoveredWithoutRegeneration": true,
+  "note": "Observed account counter difference, not an invoice or a guarantee of another plan\u2019s rate. Existing paid clips were reused. No subscription or key allowance was changed."
+}
