@@ -1,6 +1,6 @@
 # Focused narration — 4 October 2026
 
-Build: `budget-narration-20261004-r1`. Implemented and tested; deployment pending.
+Build: `budget-narration-20261004-r1`. Deployed and verified.
 
 The user requested a smaller budget and authorized generation and deployment of four categories: wrong-answer feedback, Word-trail battle introductions, creature-mission encounters and the reusable practice-turn prefix.
 
@@ -12,7 +12,7 @@ The user requested a smaller budget and authorized generation and deployment of 
 - Use the existing George voice, `eleven_multilingual_v2`, stability 0.65, similarity 0.8, style 0, speaker boost enabled and speed 0.90.
 - Submit 7,372 characters, including punctuation and batch separators. The account counter updates asynchronously, so its earlier 2,159 increase is not a verified final charge. Use 7,372 credits as a conservative one-credit-per-character budget. [Usage evidence](NARRATION_BUDGET_USAGE.json).
 
-The first batch was preserved when validation stopped because the runner did not contain ffprobe. Installing FFmpeg fixed that runner dependency; the next run recovered the batch without another generation request. [Completed generation run](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37166276273). There are no automatic paid retries and no subscription/allowance changes.
+The first batch was preserved when validation stopped because the runner did not contain ffprobe. Installing FFmpeg fixed that runner dependency; the next run recovered the batch without another generation request. [Main generation run](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37166276273); [39-character supplement](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37166864991). There are no automatic paid retries and no subscription/allowance changes.
 
 ## Playback
 
@@ -34,4 +34,4 @@ The 31 missing chapter reading sentences, 48 creature-riddle Listen passages and
 
 ## Deployment
 
-Pending pull request, main re-check and the existing GitHub Pages deployment route. Verify the live build marker plus changed runtime/audio hashes before marking this release live.
+[PR #125](https://github.com/Ikarus-eth/Blitzword_app/pull/125) merged as `48b8920f82a974fbb03085d62f21eba71c162198` after current main `3951f8184af52a37dddf6690652c6edcd11a93b6` was incorporated and rechecked. [Pages run 37167145074](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37167145074) passed tests and deployment. All 154 checked live files match the tested source: nine runtime files and all 145 added/reused MP3s. The live marker is `budget-narration-20261004-r1`. [Exact hashes and verification time](NARRATION_BUDGET_DEPLOYMENT.json).

@@ -1,0 +1,1244 @@
+{
+  "verifiedAt": "2026-10-04T01:11:07.072273+00:00",
+  "mergeCommit": "48b8920f82a974fbb03085d62f21eba71c162198",
+  "pullRequest": 125,
+  "build": "budget-narration-20261004-r1",
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "files": [
+    {
+      "file": "adventure-core.js",
+      "status": 200,
+      "sha256": "b5a9550ffabd170c904221b973d58b7ddeeb18dc1afa3808bc4333b4b4171586",
+      "expectedSha256": "b5a9550ffabd170c904221b973d58b7ddeeb18dc1afa3808bc4333b4b4171586",
+      "matches": true,
+      "bytes": 9656
+    },
+    {
+      "file": "adventure-ui.js",
+      "status": 200,
+      "sha256": "95edb37bfc6f35f1fb92d41cd759dfcfe073f836104364e2f2f1b97b302e9682",
+      "expectedSha256": "95edb37bfc6f35f1fb92d41cd759dfcfe073f836104364e2f2f1b97b302e9682",
+      "matches": true,
+      "bytes": 20490
+    },
+    {
+      "file": "adventures.css",
+      "status": 200,
+      "sha256": "b821a8ed8081e9100b517e8b6e15f1a25e2998a6b2a2d557905047a0f558222b",
+      "expectedSha256": "b821a8ed8081e9100b517e8b6e15f1a25e2998a6b2a2d557905047a0f558222b",
+      "matches": true,
+      "bytes": 17661
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "sha256": "8a60b56c06264ffbb9be5a62f88840d673553718ebaaf9e00f40c0e4486dd8c0",
+      "expectedSha256": "8a60b56c06264ffbb9be5a62f88840d673553718ebaaf9e00f40c0e4486dd8c0",
+      "matches": true,
+      "bytes": 108817
+    },
+    {
+      "file": "assets/narration/budget-001.mp3",
+      "status": 200,
+      "sha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5",
+      "expectedSha256": "432daf8d8ba4bb4a5dbdd4437ff65f38abc155cbcf1244a54634e3fe250af4b5",
+      "matches": true,
+      "bytes": 81128
+    },
+    {
+      "file": "assets/narration/budget-002.mp3",
+      "status": 200,
+      "sha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f",
+      "expectedSha256": "58ef882e294443b9619a7aef528f3d61f55f691d91172b4b6327843f7eba3e1f",
+      "matches": true,
+      "bytes": 64827
+    },
+    {
+      "file": "assets/narration/budget-003.mp3",
+      "status": 200,
+      "sha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884",
+      "expectedSha256": "2076616080327ec8828557b02ae9b14ff36128a39353c36725947ba24fcfa884",
+      "matches": true,
+      "bytes": 64827
+    },
+    {
+      "file": "assets/narration/budget-004.mp3",
+      "status": 200,
+      "sha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734",
+      "expectedSha256": "bac97d8a1e03e4be3296258647693e08431a1a7d5b0ca8988a4fc1bd7ef57734",
+      "matches": true,
+      "bytes": 69425
+    },
+    {
+      "file": "assets/narration/budget-005.mp3",
+      "status": 200,
+      "sha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6",
+      "expectedSha256": "967fcda1408ae119d70dfe59545b79325517f48852096ca15ecd6c74577509a6",
+      "matches": true,
+      "bytes": 79874
+    },
+    {
+      "file": "assets/narration/budget-006.mp3",
+      "status": 200,
+      "sha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b",
+      "expectedSha256": "ab6e6019c2679b5bc1370b3a46a9f3c62245237faf4b1f54530fca49b06da83b",
+      "matches": true,
+      "bytes": 93248
+    },
+    {
+      "file": "assets/narration/budget-007.mp3",
+      "status": 200,
+      "sha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb",
+      "expectedSha256": "cd10a38653f637372cded1ebe735b65089a0defbfc291fe0f8c09bd4172d42cb",
+      "matches": true,
+      "bytes": 101190
+    },
+    {
+      "file": "assets/narration/budget-008.mp3",
+      "status": 200,
+      "sha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479",
+      "expectedSha256": "e64862c4f4222c70bcf68427db8bab929462a8d568493b6d46b00b43e118e479",
+      "matches": true,
+      "bytes": 84471
+    },
+    {
+      "file": "assets/narration/budget-009.mp3",
+      "status": 200,
+      "sha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567",
+      "expectedSha256": "2079534c80125f743f7afe7bb5351608fa50555610522e7ccd6dadf392b82567",
+      "matches": true,
+      "bytes": 93248
+    },
+    {
+      "file": "assets/narration/budget-010.mp3",
+      "status": 200,
+      "sha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4",
+      "expectedSha256": "0447f0366162db141ba636f1a3817dc69ba20dc21be1e37ddcd9aee9786dfae4",
+      "matches": true,
+      "bytes": 58976
+    },
+    {
+      "file": "assets/narration/budget-011.mp3",
+      "status": 200,
+      "sha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee",
+      "expectedSha256": "3726dcfbc7711919540f5543f30b4526b0a3de4f74c7f3df43ef89d1af835fee",
+      "matches": true,
+      "bytes": 84889
+    },
+    {
+      "file": "assets/narration/budget-012.mp3",
+      "status": 200,
+      "sha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7",
+      "expectedSha256": "38bf24e8766652b037988e472fb28efa16f30f32612f442d503f37993ae8abe7",
+      "matches": true,
+      "bytes": 86561
+    },
+    {
+      "file": "assets/narration/budget-013.mp3",
+      "status": 200,
+      "sha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad",
+      "expectedSha256": "9e5c659700cdf8fffbc6fb9e50f5752356f0dd234b9b846148c9df3a904a05ad",
+      "matches": true,
+      "bytes": 95338
+    },
+    {
+      "file": "assets/narration/budget-014.mp3",
+      "status": 200,
+      "sha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c",
+      "expectedSha256": "637308bc6a539265cf0cb56fcd863d6da929258ef0374d1b23133e2f110cb58c",
+      "matches": true,
+      "bytes": 77784
+    },
+    {
+      "file": "assets/narration/budget-015.mp3",
+      "status": 200,
+      "sha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3",
+      "expectedSha256": "4298f85eed940a6d00da737cac29837792bd88e3072e4c906d832e169186aaf3",
+      "matches": true,
+      "bytes": 97010
+    },
+    {
+      "file": "assets/narration/budget-016.mp3",
+      "status": 200,
+      "sha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe",
+      "expectedSha256": "f4e21cfa75b7794462b0afd71136f096899720f70605b419f2b83169fe781dfe",
+      "matches": true,
+      "bytes": 95338
+    },
+    {
+      "file": "assets/narration/budget-017.mp3",
+      "status": 200,
+      "sha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f",
+      "expectedSha256": "147a2b3fcf1e812aa25a4e985067835e2b7b3c14ae1bc739e1ecc71c53d5973f",
+      "matches": true,
+      "bytes": 90323
+    },
+    {
+      "file": "assets/narration/budget-018.mp3",
+      "status": 200,
+      "sha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146",
+      "expectedSha256": "61a35254b4dd94e9e3f68b27a8a71bf0c387e9b6e82a50979f1915f0428da146",
+      "matches": true,
+      "bytes": 88651
+    },
+    {
+      "file": "assets/narration/budget-019.mp3",
+      "status": 200,
+      "sha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4",
+      "expectedSha256": "8382bfa51ab6b38019af3c3df04ed17b5bc8fa26091b3802752eddaf2d0175a4",
+      "matches": true,
+      "bytes": 71097
+    },
+    {
+      "file": "assets/narration/budget-020.mp3",
+      "status": 200,
+      "sha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae",
+      "expectedSha256": "ec960d5c94ecdf7df0a5379c16892f0477cf61afa9ab16bbdc48e79f07d0c6ae",
+      "matches": true,
+      "bytes": 86561
+    },
+    {
+      "file": "assets/narration/budget-021.mp3",
+      "status": 200,
+      "sha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670",
+      "expectedSha256": "01e2581afdadc44c59f9201b338f6f9f14567a6fe4eb65b304d3f251f704e670",
+      "matches": true,
+      "bytes": 92413
+    },
+    {
+      "file": "assets/narration/budget-022.mp3",
+      "status": 200,
+      "sha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5",
+      "expectedSha256": "e687aab6c681f6fc96d425635bf646f09e51eead7a72335e0cd986972fc51bf5",
+      "matches": true,
+      "bytes": 66499
+    },
+    {
+      "file": "assets/narration/budget-023.mp3",
+      "status": 200,
+      "sha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277",
+      "expectedSha256": "ba3f87f2d892c67c89316d654d75a0ce9d9759cf55413dcc55fbdbcaf12df277",
+      "matches": true,
+      "bytes": 102026
+    },
+    {
+      "file": "assets/narration/budget-024.mp3",
+      "status": 200,
+      "sha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0",
+      "expectedSha256": "7b91f1f68da9bd635e49fc3d506255c0235e91b20b0b1063fa669645de36b5e0",
+      "matches": true,
+      "bytes": 74440
+    },
+    {
+      "file": "assets/narration/budget-025.mp3",
+      "status": 200,
+      "sha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0",
+      "expectedSha256": "9a4fef89935ba5d3b9a6e5ce16e013d98bac27a7d28cbc774a8e9279728ea6e0",
+      "matches": true,
+      "bytes": 75276
+    },
+    {
+      "file": "assets/narration/budget-026.mp3",
+      "status": 200,
+      "sha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01",
+      "expectedSha256": "687cf559c4374fd850cf24a88537f30b321e1300ab3820b11244ed65d564bc01",
+      "matches": true,
+      "bytes": 76112
+    },
+    {
+      "file": "assets/narration/budget-027.mp3",
+      "status": 200,
+      "sha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658",
+      "expectedSha256": "b2559de871e46f7412219bb579b9ef20df1e2990dced0945c65d575c2ca30658",
+      "matches": true,
+      "bytes": 114564
+    },
+    {
+      "file": "assets/narration/budget-028.mp3",
+      "status": 200,
+      "sha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b",
+      "expectedSha256": "91c71fac665db927cd5266c1a331e6667d2d02d5aae7271adb099f613824fa6b",
+      "matches": true,
+      "bytes": 94084
+    },
+    {
+      "file": "assets/narration/budget-029.mp3",
+      "status": 200,
+      "sha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db",
+      "expectedSha256": "e2958b08cdc8aa6825cd099fb63d2830f8c64348915ccce53ff0b30b86e626db",
+      "matches": true,
+      "bytes": 71097
+    },
+    {
+      "file": "assets/narration/budget-030.mp3",
+      "status": 200,
+      "sha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51",
+      "expectedSha256": "11a033831e3e534f2607db5281402ecb0a3459b7137203f0d86a0a5348be5c51",
+      "matches": true,
+      "bytes": 91577
+    },
+    {
+      "file": "assets/narration/budget-031.mp3",
+      "status": 200,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6",
+      "expectedSha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6",
+      "matches": true,
+      "bytes": 71097
+    },
+    {
+      "file": "assets/narration/budget-032.mp3",
+      "status": 200,
+      "sha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691",
+      "expectedSha256": "a09cb33e9298050e2726b6d2bf88d74e9a963e558a6fc624f1ebe5bd27b14691",
+      "matches": true,
+      "bytes": 93248
+    },
+    {
+      "file": "assets/narration/budget-033.mp3",
+      "status": 200,
+      "sha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69",
+      "expectedSha256": "e638d15f3e4e8117fbb91bbac30571517ad8e3ba960ef25479771f0ee5541d69",
+      "matches": true,
+      "bytes": 96174
+    },
+    {
+      "file": "assets/narration/budget-034.mp3",
+      "status": 200,
+      "sha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6",
+      "expectedSha256": "029034affd32198b0ec28c4e81928443847f74d46bf81220ef14ff4d7d0596d6",
+      "matches": true,
+      "bytes": 83635
+    },
+    {
+      "file": "assets/narration/budget-035.mp3",
+      "status": 200,
+      "sha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b",
+      "expectedSha256": "6ef99978e146c4669c8453ac2d196348cc4c28bfa290fb9b0a36cc41681fe75b",
+      "matches": true,
+      "bytes": 104533
+    },
+    {
+      "file": "assets/narration/budget-036.mp3",
+      "status": 200,
+      "sha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d",
+      "expectedSha256": "06205db4dfc68b33efebe0544c823bd31765b36c13fc8318162ffe2fd56ef46d",
+      "matches": true,
+      "bytes": 74440
+    },
+    {
+      "file": "assets/narration/budget-037.mp3",
+      "status": 200,
+      "sha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7",
+      "expectedSha256": "23f3578173819332e8f5937c2709812bfa63b5c45dd58db1ee9d2588cc0c47d7",
+      "matches": true,
+      "bytes": 86561
+    },
+    {
+      "file": "assets/narration/budget-038.mp3",
+      "status": 200,
+      "sha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373",
+      "expectedSha256": "6993bc5c3ea1a46064a332dc4227250b75dc4ca45f051c71f4486835a7759373",
+      "matches": true,
+      "bytes": 61902
+    },
+    {
+      "file": "assets/narration/budget-039.mp3",
+      "status": 200,
+      "sha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689",
+      "expectedSha256": "a79a64592b391ea87df313e7755726014198f1b5b31c5580afae2bb8a73e7689",
+      "matches": true,
+      "bytes": 106623
+    },
+    {
+      "file": "assets/narration/budget-040.mp3",
+      "status": 200,
+      "sha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6",
+      "expectedSha256": "df618c45fc3baf0aaadf110f4ce9e1d1e8c1dbc9c2f5e995c1c6305e7d4f41f6",
+      "matches": true,
+      "bytes": 81128
+    },
+    {
+      "file": "assets/narration/budget-041.mp3",
+      "status": 200,
+      "sha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9",
+      "expectedSha256": "8c9059267467052f9ae82109aeb337aafe406c7a81d399b76c7c1d2fa31314c9",
+      "matches": true,
+      "bytes": 121252
+    },
+    {
+      "file": "assets/narration/budget-042.mp3",
+      "status": 200,
+      "sha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee",
+      "expectedSha256": "d6d05ffeb55192a6ebdb1fde8f95315ce7152fead487acfdfc5f0ace2abb21ee",
+      "matches": true,
+      "bytes": 91159
+    },
+    {
+      "file": "assets/narration/budget-043.mp3",
+      "status": 200,
+      "sha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78",
+      "expectedSha256": "472560d7c857d41d3c909d6644a95f4fab9ba242ab6abf22e24ff72e34debf78",
+      "matches": true,
+      "bytes": 100772
+    },
+    {
+      "file": "assets/narration/budget-044.mp3",
+      "status": 200,
+      "sha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516",
+      "expectedSha256": "8dfc295c4b6905ed828345820e6230e26fc6f57011d94e799d0aa65e1a7fb516",
+      "matches": true,
+      "bytes": 105787
+    },
+    {
+      "file": "assets/narration/budget-045.mp3",
+      "status": 200,
+      "sha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead",
+      "expectedSha256": "322779f21cba42b24b3b5f3ed9d8f70012908906d532a56639407364e8da7ead",
+      "matches": true,
+      "bytes": 87397
+    },
+    {
+      "file": "assets/narration/budget-046.mp3",
+      "status": 200,
+      "sha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7",
+      "expectedSha256": "9efd005b764d247a85d735f09ceba0329353c2534cf0a44d1981757202694cb7",
+      "matches": true,
+      "bytes": 94084
+    },
+    {
+      "file": "assets/narration/budget-047.mp3",
+      "status": 200,
+      "sha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f",
+      "expectedSha256": "2a2166839697a8a23214e3728de09891c8838be80d4657c92fa309552ab6523f",
+      "matches": true,
+      "bytes": 97846
+    },
+    {
+      "file": "assets/narration/budget-048.mp3",
+      "status": 200,
+      "sha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497",
+      "expectedSha256": "235d74dffde0928af88d39c2776f77d8699ba08fa8824b149fe14a0501248497",
+      "matches": true,
+      "bytes": 78202
+    },
+    {
+      "file": "assets/narration/budget-049.mp3",
+      "status": 200,
+      "sha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca",
+      "expectedSha256": "940d86ee74fc60e4ca6db58592a24d7dac7f9753757cba7f3f8fe7f65efe0cca",
+      "matches": true,
+      "bytes": 104951
+    },
+    {
+      "file": "assets/narration/budget-050.mp3",
+      "status": 200,
+      "sha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c",
+      "expectedSha256": "e11357796e2f37f871470937464186c8ecee528f68afc58b7edd3cb05967cd5c",
+      "matches": true,
+      "bytes": 103697
+    },
+    {
+      "file": "assets/narration/budget-051.mp3",
+      "status": 200,
+      "sha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494",
+      "expectedSha256": "c618d97ad680367e80f5b513ea82c6bb45675c15ccf501fd3201d504a4ddb494",
+      "matches": true,
+      "bytes": 81964
+    },
+    {
+      "file": "assets/narration/budget-052.mp3",
+      "status": 200,
+      "sha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44",
+      "expectedSha256": "eb0dc7f1b73cc5c49a0c945bdf84efc753959f3f0f3f4518a70fbb6772a7fb44",
+      "matches": true,
+      "bytes": 111639
+    },
+    {
+      "file": "assets/narration/budget-053.mp3",
+      "status": 200,
+      "sha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460",
+      "expectedSha256": "be15963b98e509f6d6ba1a482b081afac925c2ad5707f85b5e33d6133013d460",
+      "matches": true,
+      "bytes": 129611
+    },
+    {
+      "file": "assets/narration/budget-054.mp3",
+      "status": 200,
+      "sha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118",
+      "expectedSha256": "b4f3afac198ea80614fa40f88c69a19e79485884acf9cd959f3eeb0034e88118",
+      "matches": true,
+      "bytes": 107877
+    },
+    {
+      "file": "assets/narration/budget-055.mp3",
+      "status": 200,
+      "sha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc",
+      "expectedSha256": "d6c07915696ff55bfe78b9aa2dd44f73b6af75cd95abf385508c271c8a96cccc",
+      "matches": true,
+      "bytes": 116236
+    },
+    {
+      "file": "assets/narration/budget-056.mp3",
+      "status": 200,
+      "sha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63",
+      "expectedSha256": "17de2326603440b7f0ad14256109f8857a9204f2a24b3832f9b55d9fd04daf63",
+      "matches": true,
+      "bytes": 125013
+    },
+    {
+      "file": "assets/narration/budget-057.mp3",
+      "status": 200,
+      "sha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c",
+      "expectedSha256": "b8dd0201b35c4464403470973bacd8436190102a4d52436ef0332a63d5efc00c",
+      "matches": true,
+      "bytes": 101190
+    },
+    {
+      "file": "assets/narration/budget-058.mp3",
+      "status": 200,
+      "sha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b",
+      "expectedSha256": "73c1f58365a53221b54932c77ad29c8a9afadc5c24d319978d2f48340e63446b",
+      "matches": true,
+      "bytes": 110385
+    },
+    {
+      "file": "assets/narration/budget-059.mp3",
+      "status": 200,
+      "sha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f",
+      "expectedSha256": "5342f9d122d05836e40ee2a141fecb940446c4d94da4ec5ffede36b3d6b5ff1f",
+      "matches": true,
+      "bytes": 87397
+    },
+    {
+      "file": "assets/narration/budget-060.mp3",
+      "status": 200,
+      "sha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec",
+      "expectedSha256": "5c67e9dd8565e1dc69e1a864a5f67325aec9b75cd9d9ae94d0fbf7a4db22cbec",
+      "matches": true,
+      "bytes": 103697
+    },
+    {
+      "file": "assets/narration/budget-061.mp3",
+      "status": 200,
+      "sha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a",
+      "expectedSha256": "ceb1dfdcf651cc51ccfd5768a69ead1e31d16d63ddd6717d03afd5e9376c540a",
+      "matches": true,
+      "bytes": 97846
+    },
+    {
+      "file": "assets/narration/budget-062.mp3",
+      "status": 200,
+      "sha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a",
+      "expectedSha256": "cb50d4039eff0cfc6bca1978114b7904e003cb3169d32672869c7575ec40da4a",
+      "matches": true,
+      "bytes": 89487
+    },
+    {
+      "file": "assets/narration/budget-063.mp3",
+      "status": 200,
+      "sha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580",
+      "expectedSha256": "330a49f78976d1fa097e4f6783d9cb661fd003b5eb27708197d1584ba6b4e580",
+      "matches": true,
+      "bytes": 78202
+    },
+    {
+      "file": "assets/narration/budget-064.mp3",
+      "status": 200,
+      "sha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd",
+      "expectedSha256": "3ea49a41c2775b878faccb3dda4ce71631f73cb338a898f4abfaff01037090dd",
+      "matches": true,
+      "bytes": 95338
+    },
+    {
+      "file": "assets/narration/budget-065.mp3",
+      "status": 200,
+      "sha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9",
+      "expectedSha256": "9683df1478b83988cd9103c98bb7a9029a1b1a8066f66ea39dab8a3d19ba33c9",
+      "matches": true,
+      "bytes": 74440
+    },
+    {
+      "file": "assets/narration/budget-066.mp3",
+      "status": 200,
+      "sha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca",
+      "expectedSha256": "adf766605a56ed64636da11710748d2c0fc285a2f4703d1f64183fb895efcbca",
+      "matches": true,
+      "bytes": 61902
+    },
+    {
+      "file": "assets/narration/budget-067.mp3",
+      "status": 200,
+      "sha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578",
+      "expectedSha256": "7696531ffdfa012df636ff158a1c8759d067f0cdfbaf416e8da79e606d489578",
+      "matches": true,
+      "bytes": 72351
+    },
+    {
+      "file": "assets/narration/budget-068.mp3",
+      "status": 200,
+      "sha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b",
+      "expectedSha256": "1d2a12f8be737e72f4344381bd20f329105f29e06029a353416aaad84f90d03b",
+      "matches": true,
+      "bytes": 94084
+    },
+    {
+      "file": "assets/narration/budget-069.mp3",
+      "status": 200,
+      "sha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9",
+      "expectedSha256": "89205a2f833a58ec53d34daa800799bf9dd533d7c49dfa16f5e73901fef89bb9",
+      "matches": true,
+      "bytes": 76948
+    },
+    {
+      "file": "assets/narration/budget-070.mp3",
+      "status": 200,
+      "sha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f",
+      "expectedSha256": "c9ad015028826f4508b869b55c2103af9705bfb9d00a10eca2940b10138c3e6f",
+      "matches": true,
+      "bytes": 84471
+    },
+    {
+      "file": "assets/narration/budget-071.mp3",
+      "status": 200,
+      "sha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d",
+      "expectedSha256": "6ea1579626cd2c89d5d6f9986cf64cfc5f99ef730d8763002d8011688bc6d12d",
+      "matches": true,
+      "bytes": 91577
+    },
+    {
+      "file": "assets/narration/budget-072.mp3",
+      "status": 200,
+      "sha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2",
+      "expectedSha256": "d36d6faaf34a7b65b67d8f3408b7c09a0a99e923d199e8ddb2488632a10622a2",
+      "matches": true,
+      "bytes": 68589
+    },
+    {
+      "file": "assets/narration/budget-073.mp3",
+      "status": 200,
+      "sha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275",
+      "expectedSha256": "4c639365b5261052904b0ef22cb7ab43c95c34ad516309cd86b0a7838b2d1275",
+      "matches": true,
+      "bytes": 83635
+    },
+    {
+      "file": "assets/narration/budget-074.mp3",
+      "status": 200,
+      "sha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae",
+      "expectedSha256": "9640f80d0d648fd3438d530f6c94a1a33b0b5b569280c38f431d6767fcba02ae",
+      "matches": true,
+      "bytes": 70261
+    },
+    {
+      "file": "assets/narration/budget-075.mp3",
+      "status": 200,
+      "sha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c",
+      "expectedSha256": "1e95b510e29280e170bfbabbe34931a7d460002eb060ef33c3ffc65bca806e8c",
+      "matches": true,
+      "bytes": 79038
+    },
+    {
+      "file": "assets/narration/budget-076.mp3",
+      "status": 200,
+      "sha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0",
+      "expectedSha256": "27a404490c942d8e0af5e03db49d697f83d0d0e42b9c50ae928f6804eaa6e3e0",
+      "matches": true,
+      "bytes": 102026
+    },
+    {
+      "file": "assets/narration/budget-077.mp3",
+      "status": 200,
+      "sha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303",
+      "expectedSha256": "1ec90cd4bad9ec1789fd87bc5317224cd8ad8449fbe267cc2a1a5bcd6a566303",
+      "matches": true,
+      "bytes": 72351
+    },
+    {
+      "file": "assets/narration/budget-078.mp3",
+      "status": 200,
+      "sha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78",
+      "expectedSha256": "63468afd2040de2487310c1160bbc06933e733f5adafe0c73281727e34d1ab78",
+      "matches": true,
+      "bytes": 81128
+    },
+    {
+      "file": "assets/narration/budget-079.mp3",
+      "status": 200,
+      "sha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c",
+      "expectedSha256": "ca2fdf59e1798749ac647f6545baa1be0171abc67a9c610fc12539db0ccdcd2c",
+      "matches": true,
+      "bytes": 82799
+    },
+    {
+      "file": "assets/narration/budget-080.mp3",
+      "status": 200,
+      "sha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169",
+      "expectedSha256": "d530205bf2453ffb2351f6caea58c6f79d2eab260af7bf973f6dd21e4b8e5169",
+      "matches": true,
+      "bytes": 104533
+    },
+    {
+      "file": "assets/narration/budget-081.mp3",
+      "status": 200,
+      "sha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488",
+      "expectedSha256": "1b6527eddbb409dc09fde25c926f507ce60ea2af43ec0b3c6938149a5c19c488",
+      "matches": true,
+      "bytes": 99936
+    },
+    {
+      "file": "assets/narration/budget-082.mp3",
+      "status": 200,
+      "sha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc",
+      "expectedSha256": "9aa2e4698056aa70f92ff13e0d3a5b39b6ba82e96519ea560bf165ecd5b749fc",
+      "matches": true,
+      "bytes": 98264
+    },
+    {
+      "file": "assets/narration/budget-083.mp3",
+      "status": 200,
+      "sha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d",
+      "expectedSha256": "6ad35019a19b29fe133a857187bd056e0a568c4b6311408f6788da5b4ffc6c2d",
+      "matches": true,
+      "bytes": 81128
+    },
+    {
+      "file": "assets/narration/budget-084.mp3",
+      "status": 200,
+      "sha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd",
+      "expectedSha256": "1683eb161d937bd01f3758198510f54750ce2f38fd6cf7fa1a61f2a2330581dd",
+      "matches": true,
+      "bytes": 69425
+    },
+    {
+      "file": "assets/narration/budget-085.mp3",
+      "status": 200,
+      "sha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456",
+      "expectedSha256": "cf8483b08d0da4bc6841be5303375645213396ba6b01c02e3fc214f0e26f7456",
+      "matches": true,
+      "bytes": 103697
+    },
+    {
+      "file": "assets/narration/budget-086.mp3",
+      "status": 200,
+      "sha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672",
+      "expectedSha256": "02dbeb2d220eb9cfc28d5f4ce2d7d37a60d153edd6a9c889cdedb14f3eaaa672",
+      "matches": true,
+      "bytes": 87397
+    },
+    {
+      "file": "assets/narration/budget-087.mp3",
+      "status": 200,
+      "sha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a",
+      "expectedSha256": "c2a1ef67eb185b109f540f8158baf40c75ca38150be176335e6f4f6e0fc9918a",
+      "matches": true,
+      "bytes": 79038
+    },
+    {
+      "file": "assets/narration/budget-088.mp3",
+      "status": 200,
+      "sha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b",
+      "expectedSha256": "0547a4dd459740628eedc86088009ce50d27878f35c6fe68724d2d2e6cc9325b",
+      "matches": true,
+      "bytes": 71097
+    },
+    {
+      "file": "assets/narration/budget-089.mp3",
+      "status": 200,
+      "sha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc",
+      "expectedSha256": "c09eefeb2e9c2ce313b200a4a007142918f86e931772e34c439c95e12942fcdc",
+      "matches": true,
+      "bytes": 93248
+    },
+    {
+      "file": "assets/narration/budget-090.mp3",
+      "status": 200,
+      "sha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800",
+      "expectedSha256": "bcedd8f301c2d8923348e9a811777aeb074c6b6833489f9747aac282a2eb4800",
+      "matches": true,
+      "bytes": 102862
+    },
+    {
+      "file": "assets/narration/budget-091.mp3",
+      "status": 200,
+      "sha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7",
+      "expectedSha256": "f808cb9efba38526963b3900cd80f1b5f2c077a4f41ca979306927893d00c3b7",
+      "matches": true,
+      "bytes": 125849
+    },
+    {
+      "file": "assets/narration/budget-092.mp3",
+      "status": 200,
+      "sha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6",
+      "expectedSha256": "208b9ba8a0a8a94fd8c4482532ac68e10192274b12d4db9fc3a1b6a0148acbc6",
+      "matches": true,
+      "bytes": 140060
+    },
+    {
+      "file": "assets/narration/budget-093.mp3",
+      "status": 200,
+      "sha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014",
+      "expectedSha256": "2c49289a5aec0e20cfbbe1cb377d1546b2c698089876627f0c1a3a2435864014",
+      "matches": true,
+      "bytes": 65663
+    },
+    {
+      "file": "assets/narration/budget-094.mp3",
+      "status": 200,
+      "sha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df",
+      "expectedSha256": "18c28caab7b041b56b7ab357401c4664ea07bca77862e65a4580cc88db1687df",
+      "matches": true,
+      "bytes": 97846
+    },
+    {
+      "file": "assets/narration/budget-095.mp3",
+      "status": 200,
+      "sha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93",
+      "expectedSha256": "b4fcc4d9cab4531df4a35c6d694127b0f1ee1996555394a7d82a9d33b6355a93",
+      "matches": true,
+      "bytes": 140896
+    },
+    {
+      "file": "assets/narration/budget-096.mp3",
+      "status": 200,
+      "sha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830",
+      "expectedSha256": "ef783d90aebef68878278d835970bcd5036a4bf233c0addba0754d109087d830",
+      "matches": true,
+      "bytes": 69425
+    },
+    {
+      "file": "assets/narration/budget-097.mp3",
+      "status": 200,
+      "sha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b",
+      "expectedSha256": "43edf3eba5c8f7812effa1488c42def176420d35b0e230ed2d43cb1c9c6f368b",
+      "matches": true,
+      "bytes": 83635
+    },
+    {
+      "file": "assets/narration/budget-098.mp3",
+      "status": 200,
+      "sha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498",
+      "expectedSha256": "56be8880932587a799fc5667f4308a159e943002cf33b7408780345883002498",
+      "matches": true,
+      "bytes": 80710
+    },
+    {
+      "file": "assets/narration/budget-099.mp3",
+      "status": 200,
+      "sha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18",
+      "expectedSha256": "4885f22c2cff70d244d7fe0ec8e80106f1b9b0c4fa79cb085b8feaed80034b18",
+      "matches": true,
+      "bytes": 83635
+    },
+    {
+      "file": "assets/narration/budget-100.mp3",
+      "status": 200,
+      "sha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7",
+      "expectedSha256": "548a2c3f03395cf7605a469b3e841826fb1bff1932acca3fd6a0135b3a263dd7",
+      "matches": true,
+      "bytes": 102862
+    },
+    {
+      "file": "assets/narration/budget-101.mp3",
+      "status": 200,
+      "sha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38",
+      "expectedSha256": "30085dfed2776b7b62f2cc3aeae44c204cdc386240706aef5aea2fcbe5633b38",
+      "matches": true,
+      "bytes": 112475
+    },
+    {
+      "file": "assets/narration/budget-102.mp3",
+      "status": 200,
+      "sha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193",
+      "expectedSha256": "9f3419a3ea126ae8c31deaf160a19536d55d3fb143dc7ca9599a78217050a193",
+      "matches": true,
+      "bytes": 109549
+    },
+    {
+      "file": "assets/narration/budget-103.mp3",
+      "status": 200,
+      "sha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf",
+      "expectedSha256": "c39f5e61760060182577b18203a35d13fc540dd174c8abfd75f08e7ca6305fbf",
+      "matches": true,
+      "bytes": 367430
+    },
+    {
+      "file": "assets/narration/budget-104.mp3",
+      "status": 200,
+      "sha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80",
+      "expectedSha256": "0893508298785cb84628b72e7f959c205235f8b885ef1aa23a2daa3bf4695e80",
+      "matches": true,
+      "bytes": 486966
+    },
+    {
+      "file": "assets/narration/budget-105.mp3",
+      "status": 200,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f",
+      "expectedSha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f",
+      "matches": true,
+      "bytes": 391253
+    },
+    {
+      "file": "assets/narration/budget-106.mp3",
+      "status": 200,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb",
+      "expectedSha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb",
+      "matches": true,
+      "bytes": 317693
+    },
+    {
+      "file": "assets/narration/budget-107.mp3",
+      "status": 200,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4",
+      "expectedSha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4",
+      "matches": true,
+      "bytes": 306408
+    },
+    {
+      "file": "assets/narration/budget-108.mp3",
+      "status": 200,
+      "sha256": "3749e2f8f8d4bf014cf6f8f569729da897d1bd307511d0e8c19884fe0014fefc",
+      "expectedSha256": "3749e2f8f8d4bf014cf6f8f569729da897d1bd307511d0e8c19884fe0014fefc",
+      "matches": true,
+      "bytes": 44765
+    },
+    {
+      "file": "assets/narration/completion-batch-004.mp3",
+      "status": 200,
+      "sha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "expectedSha256": "96286077c60ada5e264b91566b6c7351214e51b0932e2f86858209cab800ec14",
+      "matches": true,
+      "bytes": 238698
+    },
+    {
+      "file": "assets/narration/completion-batch-005.mp3",
+      "status": 200,
+      "sha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "expectedSha256": "e57cf8caaadc37697f9c5f3dd59dc5cad5be58341882672dd8a57491463894c3",
+      "matches": true,
+      "bytes": 762819
+    },
+    {
+      "file": "assets/narration/completion-batch-006.mp3",
+      "status": 200,
+      "sha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "expectedSha256": "b56d196e6be04d05130da281984a1a5559bcd109cb0d77d89bd50dd9d8d040d9",
+      "matches": true,
+      "bytes": 764909
+    },
+    {
+      "file": "assets/narration/completion-batch-007.mp3",
+      "status": 200,
+      "sha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "expectedSha256": "62723b6d364bd7387c2661971be8bb1f34f11f1c6f2c3919a73ffc1a0fdd18d0",
+      "matches": true,
+      "bytes": 752370
+    },
+    {
+      "file": "assets/narration/completion-batch-008.mp3",
+      "status": 200,
+      "sha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "expectedSha256": "49866416a6b92a375d3b56d398c481751a5cd81e1f3f64e0da9b3558e798e389",
+      "matches": true,
+      "bytes": 575991
+    },
+    {
+      "file": "assets/narration/completion-batch-009.mp3",
+      "status": 200,
+      "sha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "expectedSha256": "4648d68b023e399005af7cc476ff8ef06688f17d4c6911c4ac333725a7e41782",
+      "matches": true,
+      "bytes": 161376
+    },
+    {
+      "file": "assets/narration/completion-batch-010.mp3",
+      "status": 200,
+      "sha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "expectedSha256": "93bbff36f48e768cafcece66faf2f923c2b8d670bb25b391fa2991a26b177752",
+      "matches": true,
+      "bytes": 159286
+    },
+    {
+      "file": "assets/narration/completion-batch-011.mp3",
+      "status": 200,
+      "sha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "expectedSha256": "c06d45eda043a02534652bb0fc14cd557f7037f9b26bed317c5cb20c758da3fc",
+      "matches": true,
+      "bytes": 175586
+    },
+    {
+      "file": "assets/narration/completion-batch-012.mp3",
+      "status": 200,
+      "sha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "expectedSha256": "1c06894bcbd28656c80b12acf808f3030a0b824d1a7729272212a7ffafe2ccfb",
+      "matches": true,
+      "bytes": 172661
+    },
+    {
+      "file": "assets/narration/completion-batch-013.mp3",
+      "status": 200,
+      "sha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "expectedSha256": "588deedc241ea592b5fc89e0822eda43027bab881edd1e3b9de0523055e20030",
+      "matches": true,
+      "bytes": 178094
+    },
+    {
+      "file": "assets/narration/completion-batch-014.mp3",
+      "status": 200,
+      "sha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "expectedSha256": "a0fb69078661c6cc5c9c60783e08d078fa92f07e6720930449b58d160d84f6e0",
+      "matches": true,
+      "bytes": 163884
+    },
+    {
+      "file": "assets/narration/completion-batch-015.mp3",
+      "status": 200,
+      "sha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "expectedSha256": "e622285c30cfbb86a9f51242c204ebb0a212b4882ab2e4714167764504eb368f",
+      "matches": true,
+      "bytes": 178512
+    },
+    {
+      "file": "assets/narration/completion-batch-016.mp3",
+      "status": 200,
+      "sha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "expectedSha256": "6c04ad25d7825d2605552fae77cb45cb5e2f89e644889f8f7b263204ed616c42",
+      "matches": true,
+      "bytes": 214457
+    },
+    {
+      "file": "assets/narration/completion-batch-017.mp3",
+      "status": 200,
+      "sha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "expectedSha256": "82eb6dd4aeac89884574ca1978761ece6dd7e3944f336eb0553734073ee6afb2",
+      "matches": true,
+      "bytes": 159286
+    },
+    {
+      "file": "assets/narration/completion-batch-018.mp3",
+      "status": 200,
+      "sha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "expectedSha256": "9bc3e619d464783d69a6579645da644510994cb0018ac0017b2c94f88e8b520a",
+      "matches": true,
+      "bytes": 169735
+    },
+    {
+      "file": "assets/narration/completion-batch-019.mp3",
+      "status": 200,
+      "sha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "expectedSha256": "cc75f0cb0ab8c2e89346e66947caffd4c224dcf0f113d42525a48a4d93db0d09",
+      "matches": true,
+      "bytes": 164719
+    },
+    {
+      "file": "assets/narration/completion-batch-020.mp3",
+      "status": 200,
+      "sha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "expectedSha256": "1f1229b45963fdd4bdc6316928c52f197fa659b9b9e5c19766f808c92f92af87",
+      "matches": true,
+      "bytes": 180184
+    },
+    {
+      "file": "assets/narration/completion-batch-021.mp3",
+      "status": 200,
+      "sha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "expectedSha256": "2523a6de3a71494330c222761a33235d9a71d76949724e5247d326a449638e2f",
+      "matches": true,
+      "bytes": 174333
+    },
+    {
+      "file": "assets/narration/completion-batch-022.mp3",
+      "status": 200,
+      "sha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "expectedSha256": "cdc5c0bb80bfd62284df1d502d8e5be8f6683d307720d604bc24f876c14ed469",
+      "matches": true,
+      "bytes": 164719
+    },
+    {
+      "file": "assets/narration/completion-batch-023.mp3",
+      "status": 200,
+      "sha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "expectedSha256": "86a476e6c7df87c5d1a8a099e11ee927b9e841d893b501364c470c5ecc00090b",
+      "matches": true,
+      "bytes": 158450
+    },
+    {
+      "file": "assets/narration/completion-batch-024.mp3",
+      "status": 200,
+      "sha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "expectedSha256": "e4d5490552eba4c2c3f28a2ecec2cc0172d9a55cf7446e2f7ccb049b5479f32b",
+      "matches": true,
+      "bytes": 181020
+    },
+    {
+      "file": "assets/narration/completion-batch-025.mp3",
+      "status": 200,
+      "sha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "expectedSha256": "0f666eb6bde209796f4f03f80cffd036d2ac930eefd11509a88c65028cc01a24",
+      "matches": true,
+      "bytes": 160958
+    },
+    {
+      "file": "assets/narration/completion-batch-026.mp3",
+      "status": 200,
+      "sha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "expectedSha256": "cb5a61936f7b9b0546e15ccb4a0b0ae499aaead8e66bb789767122e08e741eab",
+      "matches": true,
+      "bytes": 173497
+    },
+    {
+      "file": "assets/narration/completion-batch-027.mp3",
+      "status": 200,
+      "sha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "expectedSha256": "08c8757e843b0148515f0fa3354671e81ad0ac1c4825ecff750b11e0e08056b8",
+      "matches": true,
+      "bytes": 156360
+    },
+    {
+      "file": "assets/narration/completion-batch-028.mp3",
+      "status": 200,
+      "sha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "expectedSha256": "8a5ce366527dc6556b886e4812d6fbdf232c8de6cd0ab2d020a33392da0e98e3",
+      "matches": true,
+      "bytes": 188961
+    },
+    {
+      "file": "assets/narration/completion-batch-029.mp3",
+      "status": 200,
+      "sha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "expectedSha256": "66999991c6fda6cfd2bc520ea0cb07c252fd05eef67b34ca611753ce893003d6",
+      "matches": true,
+      "bytes": 183110
+    },
+    {
+      "file": "assets/narration/completion-batch-030.mp3",
+      "status": 200,
+      "sha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "expectedSha256": "4b2d6535a84b391981621e465b260136f1b3236b2e04b1c8ce0f2983dfec0a83",
+      "matches": true,
+      "bytes": 167645
+    },
+    {
+      "file": "assets/narration/completion-batch-031.mp3",
+      "status": 200,
+      "sha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "expectedSha256": "f791958c6fcc2337fc4e39646d36d7d65d15d8d7be49945efad97b86049daf6b",
+      "matches": true,
+      "bytes": 186871
+    },
+    {
+      "file": "assets/narration/completion-batch-032.mp3",
+      "status": 200,
+      "sha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "expectedSha256": "ece0dada26d00690d832fe227edcc335c1f08dc9c7f9ab2b9f6b26e89e1ce201",
+      "matches": true,
+      "bytes": 178512
+    },
+    {
+      "file": "assets/narration/completion-batch-033.mp3",
+      "status": 200,
+      "sha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "expectedSha256": "a7b551dd79934b11cf08e4986792b03416b721eeeb3f1505e8a4d69c49f3ceda",
+      "matches": true,
+      "bytes": 198574
+    },
+    {
+      "file": "assets/narration/completion-batch-034.mp3",
+      "status": 200,
+      "sha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "expectedSha256": "9dcd198a7fcde22de998a797a5d10e790e9757290726744c2e7010c193dc5dcc",
+      "matches": true,
+      "bytes": 173497
+    },
+    {
+      "file": "assets/narration/completion-batch-035.mp3",
+      "status": 200,
+      "sha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "expectedSha256": "d025f2ca1cc27cf23705acf61760c1873ade2d263d4a1f3ba0c259300d6d4c80",
+      "matches": true,
+      "bytes": 166809
+    },
+    {
+      "file": "assets/narration/completion-batch-036.mp3",
+      "status": 200,
+      "sha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "expectedSha256": "84e8dc09fbceb6d8d87fa00bc5b0d83e7b7120ae3e707fa7a73b31207da2aee2",
+      "matches": true,
+      "bytes": 170571
+    },
+    {
+      "file": "assets/narration/completion-batch-037.mp3",
+      "status": 200,
+      "sha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "expectedSha256": "c6ffc19272c106b8e4e7b98167cccb558c200ae13d2e636dd3520ee63e691d6a",
+      "matches": true,
+      "bytes": 178512
+    },
+    {
+      "file": "assets/narration/completion-batch-038.mp3",
+      "status": 200,
+      "sha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "expectedSha256": "503d51922523d08fb9d4cd46de68d71fbfa51c65640737055c719ba8b65b36b3",
+      "matches": true,
+      "bytes": 185199
+    },
+    {
+      "file": "assets/narration/completion-batch-039.mp3",
+      "status": 200,
+      "sha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "expectedSha256": "51bd37f56802c32ed0221d6d2fb73e23065eddafa4b235d5cef7082bcf2268ae",
+      "matches": true,
+      "bytes": 169735
+    },
+    {
+      "file": "assets/narration/completion-batch-040.mp3",
+      "status": 200,
+      "sha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "expectedSha256": "012618900cd6aff83a6afc8d8cbb727b572a14453fef2604ceb34b3df50781cb",
+      "matches": true,
+      "bytes": 190633
+    },
+    {
+      "file": "audio.js",
+      "status": 200,
+      "sha256": "2bbd945b1391bad36a40206e2635760ec69d4e46f982cbce5cb0193707bb098c",
+      "expectedSha256": "2bbd945b1391bad36a40206e2635760ec69d4e46f982cbce5cb0193707bb098c",
+      "matches": true,
+      "bytes": 8392
+    },
+    {
+      "file": "game-core.js",
+      "status": 200,
+      "sha256": "a7b03841c8dede0c38375af6b7f3924dff7f2a669e282e84ac9f687ecf384cd1",
+      "expectedSha256": "a7b03841c8dede0c38375af6b7f3924dff7f2a669e282e84ac9f687ecf384cd1",
+      "matches": true,
+      "bytes": 76621
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "534e6bbff583a1580d51a9bcdc95950342b22347634dcc4786e81642bf5a74b2",
+      "expectedSha256": "534e6bbff583a1580d51a9bcdc95950342b22347634dcc4786e81642bf5a74b2",
+      "matches": true,
+      "bytes": 38086
+    },
+    {
+      "file": "missions.js",
+      "status": 200,
+      "sha256": "95e6e98dde26d348c5423148abac239f80410fca32f7e281d1769a0767e8f84f",
+      "expectedSha256": "95e6e98dde26d348c5423148abac239f80410fca32f7e281d1769a0767e8f84f",
+      "matches": true,
+      "bytes": 28436
+    },
+    {
+      "file": "narration.js",
+      "status": 200,
+      "sha256": "aa209de457aa45ced9237e178380ae379af2945a6dbafceb737ee0925951d586",
+      "expectedSha256": "aa209de457aa45ced9237e178380ae379af2945a6dbafceb737ee0925951d586",
+      "matches": true,
+      "bytes": 624265
+    }
+  ],
+  "allMatch": true,
+  "pagesRun": 37167145074,
+  "pagesConclusion": "success"
+}
