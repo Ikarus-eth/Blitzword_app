@@ -3,8 +3,9 @@ const root=path.join(__dirname,'..'),manifest=require('../narration'),corpus=req
 const fallbackOnly=new Set(corpus.runtimeFallbackOnly||[]);
 test('every recovered narration clip has a verified local MP3 and runtime lookup matches approval state',()=>{
  // 990 recovered clips, four Pip evolution recordings, 34 stable story introductions and one shield prefix.
- assert.equal(corpus.clips.length,1029);assert.equal(manifest.recoveredClipCount,994);assert.equal(manifest.recordedClipCount,1029);
- assert.equal(Object.keys(manifest.clips).length,corpus.runtimeClipCount);assert.equal(manifest.runtimeClipCount,corpus.runtimeClipCount);
+ const newCount=Object.keys(require('../docs/NARRATION_BUDGET_REUSE.json').clips).length+require('../docs/NARRATION_BUDGET_REQUEST.json').segmentCount+20;
+ assert.equal(corpus.clips.length,1029);assert.equal(manifest.recoveredClipCount,994);assert.equal(manifest.recordedClipCount,1029+newCount);
+ assert.equal(Object.keys(manifest.clips).length,corpus.runtimeClipCount+newCount);assert.equal(manifest.runtimeClipCount,corpus.runtimeClipCount+newCount);
  assert.deepEqual(new Set(manifest.fallbackOnly||[]),fallbackOnly);
  const receipts=new Map(generation.clips.map(x=>[x.id,x]));
  for(const clip of corpus.clips){
@@ -32,15 +33,13 @@ test('recovered runtime covers all current approved words, teaching and correcti
  presentOrFallback('Pip is on the rock.');presentOrFallback('Let’s try a few words. Look at the word. When it hides, tap the same word. Tap the question mark if you are not sure.');
  assert.equal(fallbackOnly.size,0);for(const text of ['gate','The gate is by the castle.','Practice turn. You keep your heart. The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The word was gate.'])assert.ok(manifest.clips[text],text);
 });
-test('all fifteen new creature introductions speak their exact names through the existing fallback',()=>{
- const {narrator}=require('../audio');let downloads=0,spoken=[];
- const n=narrator({clips:manifest.clips,fetchAudio:()=>{downloads++;throw Error('Absent creature recording requested');},synth:{cancel(){},resume(){},getVoices(){return[];},speak:u=>spoken.push(u.text)},Utterance:function(text){this.text=text;},schedule:()=>1,unschedule:()=>{}});
+test('all fifteen added creature introductions now resolve to recorded audio',()=>{
+ const {recordedParts}=require('../audio');
  const added=C.enemies.filter(enemy=>!['thornling', 'moss-golem', 'moon-moth', 'root-sprite', 'cave-troll'].includes(enemy.id));assert.equal(added.length,15);
  for(const enemy of added)for(const prefix of ['', 'Reading check complete. Now your first chapter begins. ']){
   const text=prefix+(/^Acorn/.test(enemy.name)?'An ':'A ')+enemy.name+' is on the path. Ready to battle?';
-  assert.equal(manifest.clips[text],undefined);n.speak(text);assert.equal(spoken.at(-1),text);
+  assert.ok(recordedParts(text,manifest.clips),text);
  }
- assert.equal(downloads,0);assert.equal(spoken.length,30);
 });
 test('stable story introductions and reusable shield prefix are recorded; rewrite-pending story sentences stay local',()=>{
  const {narrator}=require('../audio');let downloads=0,spoken=[];

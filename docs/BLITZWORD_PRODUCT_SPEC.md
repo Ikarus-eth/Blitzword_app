@@ -1,5 +1,9 @@
 # BlitzWord — Current Product Spec
 
+## Focused, lower-budget narration — 4 October 2026
+
+The user requested a cheaper solution, then explicitly authorized creation and deployment of wrong-answer feedback, Word-trail battle intros, new creature-mission encounters and the reusable practice-turn prefix. Reuse already-paid audio and existing word recordings; join whole recorded labels/words where full clauses are absent. Preserve the current wording, chosen/target comparison, gameplay, saves and local fallback. Use George with the existing Multilingual v2 settings. This focused deployment request supersedes the earlier requirement to finish the entire draft narration batch and obtain a separate pre-deployment listening approval. It does not claim physical-device or human pronunciation approval. Chapter reading sentences, riddle listening and teaching alignments remain outside this release. [Budget and implementation](NARRATION_BUDGET_RELEASE.md).
+
 ## Quest clarity and collected teammates — 4 October 2026
 
 The parent’s playtest feedback asks for easier introductions while keeping the challenges, fewer lives carried into later story steps, a clear remaining-step count, explained book symbols, and choosing collected animals to stand on the child’s side.
@@ -34,7 +38,7 @@ When implementation differs from this spec unintentionally, treat it as a discre
 - A chapter is one map field: at least ten active minutes, three reading wins, a completed number duel and its learning objectives. A campaign contains five chapters; seven campaigns contain the fixed Core 200.
 - Growth is XP-only at **15,000 / 45,000 / 70,000**, with whole XP awards, ten visible steps and the returning-day bonus. Earned forms and learner saves remain preserved. See [point 9](#point-9-whole-xp-and-slower-growth--24-september-2026).
 - Practice uses rotating reviewed distractors; the 26 reading-check items use fair fixed sets. All 34 story sentences/picture pairs are approved and deployed. Their earlier review gates are closed.
-- Narration recovery and gate pronunciation review are complete. The remaining recordings and synchronized highlighting are authorized but not deployed; [draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) was last blocked by ElevenLabs quota.
+- Narration recovery and gate pronunciation review are complete. The 4 October focused release covers corrections and battle introductions; story/riddle recordings and synchronized highlighting remain separate. Draft #80 is retained as historical paid work, not a current quota report.
 - Points 1, 2, 3, 4, 6, 7 and 8 and the later point 9 are complete; point 5’s final narration batch remains open. Number-duel changes remain discussion items; the enemy extensions were authorized on 25 September; native/commercial packaging is later work. See [current status](CURRENT_STATUS.md#outstanding-work-and-ownership).
 
 ## Full-screen campaign map — 25 September 2026

@@ -1,0 +1,25 @@
+{
+  "textCharacters": 7372,
+  "initialCharacterCount": 76247,
+  "finalCharacterCount": 78406,
+  "observedUsageIncrease": 2159,
+  "characterLimit": 121026,
+  "generationRuns": [
+    37166146767,
+    37166276273,
+    37166864991
+  ],
+  "firstBatchRecoveredWithoutRegeneration": true,
+  "note": "Account counters lag: the 39-character supplement returned unchanged before/after counters, and the counter had changed between runs. The earlier 2,159 increase is an interim observation, not the final charge. Reliable total is 7,372 submitted characters; at the conservative 1-credit-per-character budget this is at most 7,372 credits before any provider discount. No subscription/key allowance was changed.",
+  "supplementBefore": {
+    "character_count": 79471,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  },
+  "supplementAfter": {
+    "character_count": 79471,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  },
+  "finalChargeVerified": false
+}

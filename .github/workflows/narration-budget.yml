@@ -1,0 +1,30 @@
+name: Generate budget narration
+on:
+  push:
+    branches: [codex/narration-budget-20261004]
+    paths: [docs/NARRATION_BUDGET_REQUEST.json, .github/workflows/narration-budget.yml]
+permissions:
+  contents: read
+concurrency:
+  group: budget-narration
+  cancel-in-progress: false
+jobs:
+  generate:
+    if: github.repository == 'Ikarus-eth/Blitzword_app'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install audio validation tools
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Generate only missing recordings
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/generate-budget-narration.py
+      - name: Preserve paid outputs even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: narration-budget
+          path: narration-budget-output
+          retention-days: 14

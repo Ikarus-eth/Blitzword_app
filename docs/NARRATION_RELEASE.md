@@ -1,6 +1,10 @@
 # Recorded narration release — recovered corpus
 
-## Current narration status — checked 25 September 2026
+## Current narration status — 4 October 2026
+
+The focused update adds recorded wrong-answer comparisons, all current Word-trail intros, the 20 mission intros and the practice prefix using 7,372 new text characters. All existing recordings remain. See [current scope and verification](NARRATION_BUDGET_RELEASE.md). The 31 chapter reading sentences, 48 riddle Listen passages and teaching alignments remain outside this release; the quota limitation below is historical.
+
+## Previous narration status — checked 25 September 2026
 
 Production maps **1,029 exact-text clips** in manifest `recorded-voice-20260924-r5`: 990 recovered/core, four evolution, 34 chapter-story introductions and one reusable shield prefix. The six targeted replacements and the 35 George remainder clips passed user listening review. All five gate-family recordings are enabled; their approval is not pending.
 

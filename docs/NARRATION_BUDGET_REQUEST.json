@@ -1,0 +1,4952 @@
+{
+  "version": 1,
+  "base": "53cf987bea9c14041775f782a55b338ddf45ba39",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "maxCharacters": 8000,
+  "characters": 7372,
+  "segmentCount": 857,
+  "batches": [
+    {
+      "id": "budget-001",
+      "text": "u.\n\nc.\n\nd.\n\ngoo.\n\nzoo.\n\nzo.\n\nte.\n\nta.",
+      "segments": [
+        {
+          "key": "u",
+          "text": "u.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "c",
+          "text": "c.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "d",
+          "text": "d.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "goo",
+          "text": "goo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "zoo",
+          "text": "zoo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "zo",
+          "text": "zo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "te",
+          "text": "te.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ta",
+          "text": "ta.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-002",
+      "text": "l.\n\nj.\n\nt.\n\nf.\n\nr.\n\nyau.\n\nyaur.\n\nyeu.",
+      "segments": [
+        {
+          "key": "l",
+          "text": "l.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "j",
+          "text": "j.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "t",
+          "text": "t.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "f",
+          "text": "f.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "r",
+          "text": "r.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yau",
+          "text": "yau.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yaur",
+          "text": "yaur.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yeu",
+          "text": "yeu.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-003",
+      "text": "yeur.\n\nyuo.\n\nyow.\n\nion.\n\ninn.\n\nim.\n\niff.\n\noaf.",
+      "segments": [
+        {
+          "key": "yeur",
+          "text": "yeur.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yuo",
+          "text": "yuo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yow",
+          "text": "yow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ion",
+          "text": "ion.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "inn",
+          "text": "inn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "im",
+          "text": "im.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "iff",
+          "text": "iff.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "oaf",
+          "text": "oaf.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-004",
+      "text": "ov.\n\nint.\n\nirt.\n\nart.\n\nhue.\n\nde.\n\ndue.\n\nhee.",
+      "segments": [
+        {
+          "key": "ov",
+          "text": "ov.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "int",
+          "text": "int.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "irt",
+          "text": "irt.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "art",
+          "text": "art.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hue",
+          "text": "hue.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "de",
+          "text": "de.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "due",
+          "text": "due.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hee",
+          "text": "hee.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-005",
+      "text": "bee.\n\nha.\n\nhi.\n\nits.\n\nats.\n\nuts.\n\nhas.\n\nwis.",
+      "segments": [
+        {
+          "key": "bee",
+          "text": "bee.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ha",
+          "text": "ha.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hi",
+          "text": "hi.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "its",
+          "text": "its.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ats",
+          "text": "ats.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "uts",
+          "text": "uts.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "has",
+          "text": "has.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wis",
+          "text": "wis.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-006",
+      "text": "gas.\n\nwos.\n\nwar.\n\nfour.\n\nfur.\n\nfury.\n\nchat.\n\nchart.",
+      "segments": [
+        {
+          "key": "gas",
+          "text": "gas.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wos",
+          "text": "wos.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "war",
+          "text": "war.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "four",
+          "text": "four.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fur",
+          "text": "fur.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fury",
+          "text": "fury.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chat",
+          "text": "chat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chart",
+          "text": "chart.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-007",
+      "text": "thet.\n\nwhet.\n\ntaht.\n\nthan.\n\ndish.\n\ndith.\n\nwitch.\n\nditch.",
+      "segments": [
+        {
+          "key": "thet",
+          "text": "thet.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whet",
+          "text": "whet.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "taht",
+          "text": "taht.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "than",
+          "text": "than.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dish",
+          "text": "dish.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dith",
+          "text": "dith.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "witch",
+          "text": "witch.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ditch",
+          "text": "ditch.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-008",
+      "text": "wiht.\n\nwuth.\n\npit.\n\nput.\n\nbet.\n\nbun.\n\nhat.\n\nhit.",
+      "segments": [
+        {
+          "key": "wiht",
+          "text": "wiht.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wuth",
+          "text": "wuth.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pit",
+          "text": "pit.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "put",
+          "text": "put.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bet",
+          "text": "bet.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bun",
+          "text": "bun.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hat",
+          "text": "hat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hit",
+          "text": "hit.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-009",
+      "text": "ham.\n\nhid.\n\nhits.\n\nill.\n\naal.\n\nale.\n\nthay.\n\ntehy.",
+      "segments": [
+        {
+          "key": "ham",
+          "text": "ham.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hid",
+          "text": "hid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hits",
+          "text": "hits.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ill",
+          "text": "ill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aal",
+          "text": "aal.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ale",
+          "text": "ale.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thay",
+          "text": "thay.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tehy",
+          "text": "tehy.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-010",
+      "text": "may.\n\nbay.\n\nbuy.\n\nboy.\n\nmi.\n\nsoo.\n\nsa.\n\nse.",
+      "segments": [
+        {
+          "key": "may",
+          "text": "may.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bay",
+          "text": "bay.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "buy",
+          "text": "buy.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "boy",
+          "text": "boy.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mi",
+          "text": "mi.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "soo",
+          "text": "soo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sa",
+          "text": "sa.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "se",
+          "text": "se.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-011",
+      "text": "son.\n\nbye.\n\ndye.\n\nba.\n\nshed.\n\nseed.\n\nseh.\n\nshy.",
+      "segments": [
+        {
+          "key": "son",
+          "text": "son.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bye",
+          "text": "bye.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dye",
+          "text": "dye.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ba",
+          "text": "ba.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shed",
+          "text": "shed.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "seed",
+          "text": "seed.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "seh",
+          "text": "seh.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shy",
+          "text": "shy.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-012",
+      "text": "ace.\n\nact.\n\nore.\n\naer.\n\narm.\n\nonce.\n\norce.\n\noen.",
+      "segments": [
+        {
+          "key": "ace",
+          "text": "ace.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "act",
+          "text": "act.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ore",
+          "text": "ore.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aer",
+          "text": "aer.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "arm",
+          "text": "arm.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "once",
+          "text": "once.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "orce",
+          "text": "orce.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "oen",
+          "text": "oen.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-013",
+      "text": "maid.\n\nsad.\n\nmad.\n\npaid.\n\npad.\n\nsadi.\n\nsand.\n\nsail.",
+      "segments": [
+        {
+          "key": "maid",
+          "text": "maid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sad",
+          "text": "sad.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mad",
+          "text": "mad.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "paid",
+          "text": "paid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pad",
+          "text": "pad.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sadi",
+          "text": "sadi.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sand",
+          "text": "sand.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sail",
+          "text": "sail.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-014",
+      "text": "heat.\n\nwheat.\n\ncheat.\n\nwaht.\n\nwhot.\n\nthus.\n\nthun.\n\nthes.",
+      "segments": [
+        {
+          "key": "heat",
+          "text": "heat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wheat",
+          "text": "wheat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cheat",
+          "text": "cheat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "waht",
+          "text": "waht.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whot",
+          "text": "whot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thus",
+          "text": "thus.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thun",
+          "text": "thun.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thes",
+          "text": "thes.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-015",
+      "text": "thas.\n\nthsi.\n\nwhin.\n\nwhan.\n\nwhne.\n\nwent.\n\nwoe.\n\nfe.",
+      "segments": [
+        {
+          "key": "thas",
+          "text": "thas.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thsi",
+          "text": "thsi.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whin",
+          "text": "whin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whan",
+          "text": "whan.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whne",
+          "text": "whne.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "went",
+          "text": "went.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "woe",
+          "text": "woe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fe",
+          "text": "fe.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-016",
+      "text": "foe.\n\ndoe.\n\nwo.\n\nwi.\n\nmoe.\n\nma.\n\nmet.\n\ngive.",
+      "segments": [
+        {
+          "key": "foe",
+          "text": "foe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "doe",
+          "text": "doe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wo",
+          "text": "wo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wi",
+          "text": "wi.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "moe",
+          "text": "moe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ma",
+          "text": "ma.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "met",
+          "text": "met.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "give",
+          "text": "give.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-017",
+      "text": "hive.\n\nhare.\n\nrare.\n\nhaev.\n\nhate.\n\nads.\n\nids.\n\nabs.",
+      "segments": [
+        {
+          "key": "hive",
+          "text": "hive.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hare",
+          "text": "hare.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rare",
+          "text": "rare.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "haev",
+          "text": "haev.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hate",
+          "text": "hate.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ads",
+          "text": "ads.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ids",
+          "text": "ids.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "abs",
+          "text": "abs.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-018",
+      "text": "doo.\n\nda.\n\ndot.\n\nlake.\n\nmike.\n\nline.\n\nmine.\n\nliek.",
+      "segments": [
+        {
+          "key": "doo",
+          "text": "doo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "da",
+          "text": "da.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dot",
+          "text": "dot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lake",
+          "text": "lake.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mike",
+          "text": "mike.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "line",
+          "text": "line.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mine",
+          "text": "mine.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "liek",
+          "text": "liek.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-019",
+      "text": "oat.\n\nhut.\n\nuot.\n\ncon.\n\ncap.\n\ncop.\n\ntan.\n\nton.",
+      "segments": [
+        {
+          "key": "oat",
+          "text": "oat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hut",
+          "text": "hut.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "uot",
+          "text": "uot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "con",
+          "text": "con.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cap",
+          "text": "cap.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cop",
+          "text": "cop.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tan",
+          "text": "tan.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ton",
+          "text": "ton.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-020",
+      "text": "cot.\n\ncen.\n\nhear.\n\near.\n\npear.\n\nper.\n\nbear.\n\nhir.",
+      "segments": [
+        {
+          "key": "cot",
+          "text": "cot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cen",
+          "text": "cen.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hear",
+          "text": "hear.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ear",
+          "text": "ear.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pear",
+          "text": "pear.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "per",
+          "text": "per.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bear",
+          "text": "bear.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hir",
+          "text": "hir.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-021",
+      "text": "hen.\n\nnet.\n\nnut.\n\nnit.\n\ntehn.\n\nyours.\n\ntour.\n\nyoar.",
+      "segments": [
+        {
+          "key": "hen",
+          "text": "hen.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "net",
+          "text": "net.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "nut",
+          "text": "nut.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "nit",
+          "text": "nit.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tehn",
+          "text": "tehn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yours",
+          "text": "yours.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tour",
+          "text": "tour.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yoar",
+          "text": "yoar.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-022",
+      "text": "toar.\n\nsour.\n\nyuor.\n\nyore.\n\nnoo.\n\nna.\n\nnu.\n\nnod.",
+      "segments": [
+        {
+          "key": "toar",
+          "text": "toar.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sour",
+          "text": "sour.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yuor",
+          "text": "yuor.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yore",
+          "text": "yore.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "noo",
+          "text": "noo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "na",
+          "text": "na.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "nu",
+          "text": "nu.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "nod",
+          "text": "nod.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-023",
+      "text": "these.\n\nwhere.\n\nthete.\n\nwhete.\n\nthene.\n\nthare.\n\nthera.\n\ndays.",
+      "segments": [
+        {
+          "key": "these",
+          "text": "these.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "where",
+          "text": "where.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thete",
+          "text": "thete.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whete",
+          "text": "whete.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thene",
+          "text": "thene.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thare",
+          "text": "thare.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thera",
+          "text": "thera.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "days",
+          "text": "days.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-024",
+      "text": "dry.\n\ndey.\n\nbey.\n\ndab.\n\njest.\n\nmust.\n\nmest.\n\nrust.",
+      "segments": [
+        {
+          "key": "dry",
+          "text": "dry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dey",
+          "text": "dey.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bey",
+          "text": "bey.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dab",
+          "text": "dab.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "jest",
+          "text": "jest.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "must",
+          "text": "must.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mest",
+          "text": "mest.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rust",
+          "text": "rust.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-025",
+      "text": "rest.\n\njast.\n\ndust.\n\nat's.\n\nin's.\n\nins.\n\nit'z.\n\nis't.",
+      "segments": [
+        {
+          "key": "rest",
+          "text": "rest.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "jast",
+          "text": "jast.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dust",
+          "text": "dust.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "at's",
+          "text": "at's.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "in's",
+          "text": "in's.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ins",
+          "text": "ins.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "it'z",
+          "text": "it'z.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "is't",
+          "text": "is't.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-026",
+      "text": "sse.\n\nsea.\n\nset.\n\nkittle.\n\nlettle.\n\nkettle.\n\nlattle.\n\nbittle.",
+      "segments": [
+        {
+          "key": "sse",
+          "text": "sse.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sea",
+          "text": "sea.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "set",
+          "text": "set.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "kittle",
+          "text": "kittle.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lettle",
+          "text": "lettle.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "kettle",
+          "text": "kettle.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lattle",
+          "text": "lattle.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bittle",
+          "text": "bittle.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-027",
+      "text": "litle.\n\nlitlle.\n\nlitter.\n\ntie.\n\nlime.\n\nlie.\n\ntame.\n\ntile.",
+      "segments": [
+        {
+          "key": "litle",
+          "text": "litle.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "litlle",
+          "text": "litlle.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "litter",
+          "text": "litter.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tie",
+          "text": "tie.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lime",
+          "text": "lime.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lie",
+          "text": "lie.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tame",
+          "text": "tame.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tile",
+          "text": "tile.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-028",
+      "text": "tale.\n\ntiem.\n\ntide.\n\nprom.\n\nfrim.\n\nprim.\n\nfram.\n\npram.",
+      "segments": [
+        {
+          "key": "tale",
+          "text": "tale.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tiem",
+          "text": "tiem.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tide",
+          "text": "tide.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "prom",
+          "text": "prom.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "frim",
+          "text": "frim.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "prim",
+          "text": "prim.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fram",
+          "text": "fram.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pram",
+          "text": "pram.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-029",
+      "text": "frmo.\n\nfrog.\n\nhand.\n\nhed.\n\nhew.\n\nsow.\n\nsew.\n\nnaw.",
+      "segments": [
+        {
+          "key": "frmo",
+          "text": "frmo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "frog",
+          "text": "frog.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hand",
+          "text": "hand.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hed",
+          "text": "hed.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hew",
+          "text": "hew.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sow",
+          "text": "sow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sew",
+          "text": "sew.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "naw",
+          "text": "naw.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-030",
+      "text": "bill.\n\nwell.\n\nwall.\n\ntill.\n\nwull.\n\na'm.\n\nam.\n\nu'm.",
+      "segments": [
+        {
+          "key": "bill",
+          "text": "bill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "well",
+          "text": "well.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wall",
+          "text": "wall.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "till",
+          "text": "till.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wull",
+          "text": "wull.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "a'm",
+          "text": "a'm.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "am",
+          "text": "am.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "u'm",
+          "text": "u'm.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-031",
+      "text": "i'd.\n\nim'.\n\ni'll.\n\nmo.\n\nmoo.\n\nga.\n\ngi.\n\ngot.",
+      "segments": [
+        {
+          "key": "i'd",
+          "text": "i'd.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "im'",
+          "text": "im'.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "i'll",
+          "text": "i'll.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mo",
+          "text": "mo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "moo",
+          "text": "moo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ga",
+          "text": "ga.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gi",
+          "text": "gi.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "got",
+          "text": "got.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-032",
+      "text": "wire.\n\nmere.\n\nwore.\n\nwree.\n\nware.\n\ntop.\n\ntham.\n\nthim.",
+      "segments": [
+        {
+          "key": "wire",
+          "text": "wire.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mere",
+          "text": "mere.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wore",
+          "text": "wore.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wree",
+          "text": "wree.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ware",
+          "text": "ware.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "top",
+          "text": "top.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tham",
+          "text": "tham.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thim",
+          "text": "thim.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-033",
+      "text": "tehm.\n\nhum.\n\nhole.\n\nhome.\n\nsole.\n\nsmoe.\n\nsum.\n\nlet.",
+      "segments": [
+        {
+          "key": "tehm",
+          "text": "tehm.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hum",
+          "text": "hum.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hole",
+          "text": "hole.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "home",
+          "text": "home.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sole",
+          "text": "sole.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "smoe",
+          "text": "smoe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sum",
+          "text": "sum.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "let",
+          "text": "let.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-034",
+      "text": "lot.\n\ngut.\n\ngit.\n\ngem.\n\nig.\n\ngold.\n\nhood.\n\nmold.",
+      "segments": [
+        {
+          "key": "lot",
+          "text": "lot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gut",
+          "text": "gut.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "git",
+          "text": "git.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gem",
+          "text": "gem.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ig",
+          "text": "ig.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gold",
+          "text": "gold.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hood",
+          "text": "hood.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mold",
+          "text": "mold.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-035",
+      "text": "godo.\n\ngoad.\n\ngoon.\n\nwon't.\n\ndont.\n\nwont.\n\ncan't.\n\ndan't.",
+      "segments": [
+        {
+          "key": "godo",
+          "text": "godo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "goad",
+          "text": "goad.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "goon",
+          "text": "goon.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "won't",
+          "text": "won't.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dont",
+          "text": "dont.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wont",
+          "text": "wont.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "can't",
+          "text": "can't.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dan't",
+          "text": "dan't.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-036",
+      "text": "con't.\n\ndo'nt.\n\ndone.\n\ndon.\n\ntown.\n\ndawn.\n\ngown.\n\ndwon.",
+      "segments": [
+        {
+          "key": "con't",
+          "text": "con't.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "do'nt",
+          "text": "do'nt.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "done",
+          "text": "done.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "don",
+          "text": "don.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "town",
+          "text": "town.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dawn",
+          "text": "dawn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gown",
+          "text": "gown.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dwon",
+          "text": "dwon.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-037",
+      "text": "bi.\n\nhwo.\n\nknew.\n\nknot.\n\nknet.\n\nknown.\n\nknewn.\n\nknwo.",
+      "segments": [
+        {
+          "key": "bi",
+          "text": "bi.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hwo",
+          "text": "hwo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "knew",
+          "text": "knew.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "knot",
+          "text": "knot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "knet",
+          "text": "knet.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "known",
+          "text": "known.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "knewn",
+          "text": "knewn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "knwo",
+          "text": "knwo.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-038",
+      "text": "knob.\n\nooh.\n\nah.\n\naah.\n\noath.\n\nho.\n\ncore.\n\nmove.",
+      "segments": [
+        {
+          "key": "knob",
+          "text": "knob.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ooh",
+          "text": "ooh.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ah",
+          "text": "ah.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aah",
+          "text": "aah.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "oath",
+          "text": "oath.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ho",
+          "text": "ho.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "core",
+          "text": "core.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "move",
+          "text": "move.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-039",
+      "text": "mroe.\n\nmare.\n\nthair.\n\ntheer.\n\nthaer.\n\nthear.\n\nthier.\n\nther.",
+      "segments": [
+        {
+          "key": "mroe",
+          "text": "mroe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mare",
+          "text": "mare.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thair",
+          "text": "thair.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "theer",
+          "text": "theer.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thaer",
+          "text": "thaer.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thear",
+          "text": "thear.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thier",
+          "text": "thier.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ther",
+          "text": "ther.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-040",
+      "text": "cound.\n\nwound.\n\nmould.\n\nmound.\n\ncuold.\n\ncoud.\n\ncold.\n\nabaut.",
+      "segments": [
+        {
+          "key": "cound",
+          "text": "cound.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wound",
+          "text": "wound.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mould",
+          "text": "mould.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mound",
+          "text": "mound.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cuold",
+          "text": "cuold.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "coud",
+          "text": "coud.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cold",
+          "text": "cold.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "abaut",
+          "text": "abaut.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-041",
+      "text": "aboot.\n\nabeut.\n\nebout.\n\nebaut.\n\nabuot.\n\nabot.\n\nabort.\n\nbark.",
+      "segments": [
+        {
+          "key": "aboot",
+          "text": "aboot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "abeut",
+          "text": "abeut.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ebout",
+          "text": "ebout.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ebaut",
+          "text": "ebaut.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "abuot",
+          "text": "abuot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "abot",
+          "text": "abot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "abort",
+          "text": "abort.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bark",
+          "text": "bark.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-042",
+      "text": "pack.\n\npark.\n\nbank.\n\nrank.\n\nbakc.\n\nbuck.\n\nwoo.\n\ntho.",
+      "segments": [
+        {
+          "key": "pack",
+          "text": "pack.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "park",
+          "text": "park.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bank",
+          "text": "bank.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rank",
+          "text": "rank.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bakc",
+          "text": "bakc.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "buck",
+          "text": "buck.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "woo",
+          "text": "woo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tho",
+          "text": "tho.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-043",
+      "text": "why.\n\nwhom.\n\nwoh.\n\noar.\n\nar.\n\ner.\n\nmale.\n\nmile.",
+      "segments": [
+        {
+          "key": "why",
+          "text": "why.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whom",
+          "text": "whom.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "woh",
+          "text": "woh.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "oar",
+          "text": "oar.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ar",
+          "text": "ar.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "er",
+          "text": "er.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "male",
+          "text": "male.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mile",
+          "text": "mile.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-044",
+      "text": "maek.\n\nonto.\n\nintro.\n\nontro.\n\ninfo.\n\nunto.\n\nitno.\n\ntook.",
+      "segments": [
+        {
+          "key": "maek",
+          "text": "maek.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "onto",
+          "text": "onto.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "intro",
+          "text": "intro.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ontro",
+          "text": "ontro.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "info",
+          "text": "info.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "unto",
+          "text": "unto.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "itno",
+          "text": "itno.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "took",
+          "text": "took.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-045",
+      "text": "tock.\n\nloak.\n\nloop.\n\nvary.\n\nwery.\n\nwary.\n\nverb.\n\nvarb.",
+      "segments": [
+        {
+          "key": "tock",
+          "text": "tock.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "loak",
+          "text": "loak.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "loop",
+          "text": "loop.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "vary",
+          "text": "vary.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wery",
+          "text": "wery.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wary",
+          "text": "wary.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "verb",
+          "text": "verb.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "varb",
+          "text": "varb.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-046",
+      "text": "vrey.\n\nwuold.\n\nwoud.\n\nrigth.\n\nrigt.\n\nrigid.\n\nheer.\n\nlive.",
+      "segments": [
+        {
+          "key": "vrey",
+          "text": "vrey.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wuold",
+          "text": "wuold.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "woud",
+          "text": "woud.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rigth",
+          "text": "rigth.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rigt",
+          "text": "rigt.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rigid",
+          "text": "rigid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "heer",
+          "text": "heer.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "live",
+          "text": "live.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-047",
+      "text": "dove.\n\ndive.\n\nlone.\n\nlvoe.\n\nlose.\n\nsay.\n\nwry.\n\nwey.",
+      "segments": [
+        {
+          "key": "dove",
+          "text": "dove.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dive",
+          "text": "dive.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lone",
+          "text": "lone.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lvoe",
+          "text": "lvoe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lose",
+          "text": "lose.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "say",
+          "text": "say.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wry",
+          "text": "wry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wey",
+          "text": "wey.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-048",
+      "text": "mid.\n\nlid.\n\nded.\n\nnwe.\n\ncope.\n\nhope.\n\ncmoe.\n\ncone.",
+      "segments": [
+        {
+          "key": "mid",
+          "text": "mid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lid",
+          "text": "lid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ded",
+          "text": "ded.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "nwe",
+          "text": "nwe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cope",
+          "text": "cope.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hope",
+          "text": "hope.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cmoe",
+          "text": "cmoe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cone",
+          "text": "cone.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-049",
+      "text": "oru.\n\nrant.\n\nrent.\n\nwand.\n\nwend.\n\nwnat.\n\nwade.\n\nwake.",
+      "segments": [
+        {
+          "key": "oru",
+          "text": "oru.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rant",
+          "text": "rant.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rent",
+          "text": "rent.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wand",
+          "text": "wand.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wend",
+          "text": "wend.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wnat",
+          "text": "wnat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wade",
+          "text": "wade.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wake",
+          "text": "wake.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-050",
+      "text": "mode.\n\nmaed.\n\nmate.\n\nground.\n\naroond.\n\ngroond.\n\naruond.\n\ngruond.",
+      "segments": [
+        {
+          "key": "mode",
+          "text": "mode.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "maed",
+          "text": "maed.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mate",
+          "text": "mate.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ground",
+          "text": "ground.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aroond",
+          "text": "aroond.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "groond",
+          "text": "groond.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aruond",
+          "text": "aruond.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gruond",
+          "text": "gruond.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-051",
+      "text": "arond.\n\nabound.\n\nalter.\n\naftar.\n\naltar.\n\naster.\n\nastar.\n\natfer.",
+      "segments": [
+        {
+          "key": "arond",
+          "text": "arond.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "abound",
+          "text": "abound.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "alter",
+          "text": "alter.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aftar",
+          "text": "aftar.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "altar",
+          "text": "altar.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aster",
+          "text": "aster.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "astar",
+          "text": "astar.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "atfer",
+          "text": "atfer.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-052",
+      "text": "afetr.\n\nagein.\n\negain.\n\negein.\n\nagoin.\n\ngain.\n\nagian.\n\nalign.",
+      "segments": [
+        {
+          "key": "afetr",
+          "text": "afetr.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "agein",
+          "text": "agein.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "egain",
+          "text": "egain.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "egein",
+          "text": "egein.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "agoin",
+          "text": "agoin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gain",
+          "text": "gain.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "agian",
+          "text": "agian.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "align",
+          "text": "align.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-053",
+      "text": "agin.\n\nallays.\n\nalwoys.\n\nalloys.\n\nalwais.\n\nallais.\n\nalwyas.\n\nalwavs.",
+      "segments": [
+        {
+          "key": "agin",
+          "text": "agin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "allays",
+          "text": "allays.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "alwoys",
+          "text": "alwoys.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "alloys",
+          "text": "alloys.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "alwais",
+          "text": "alwais.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "allais",
+          "text": "allais.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "alwyas",
+          "text": "alwyas.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "alwavs",
+          "text": "alwavs.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-054",
+      "text": "ary.\n\narmy.\n\namy.\n\nark.\n\nash.\n\nasp.\n\naks.\n\natay.",
+      "segments": [
+        {
+          "key": "ary",
+          "text": "ary.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "army",
+          "text": "army.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "amy",
+          "text": "amy.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ark",
+          "text": "ark.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ash",
+          "text": "ash.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "asp",
+          "text": "asp.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aks",
+          "text": "aks.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "atay",
+          "text": "atay.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-055",
+      "text": "sway.\n\nstay.\n\nawry.\n\nawey.\n\nawya.\n\nbecouse.\n\nbacause.\n\nbacouse.",
+      "segments": [
+        {
+          "key": "sway",
+          "text": "sway.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "stay",
+          "text": "stay.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "awry",
+          "text": "awry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "awey",
+          "text": "awey.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "awya",
+          "text": "awya.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "becouse",
+          "text": "becouse.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bacause",
+          "text": "bacause.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bacouse",
+          "text": "bacouse.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-056",
+      "text": "becaose.\n\nbecuase.\n\nbecame.\n\nbecase.\n\nbofore.\n\nbefere.\n\nbofere.\n\nbecome.",
+      "segments": [
+        {
+          "key": "becaose",
+          "text": "becaose.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "becuase",
+          "text": "becuase.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "became",
+          "text": "became.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "becase",
+          "text": "becase.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bofore",
+          "text": "bofore.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "befere",
+          "text": "befere.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bofere",
+          "text": "bofere.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "become",
+          "text": "become.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-057",
+      "text": "befure.\n\nbafore.\n\nbefroe.\n\nbefor.\n\nbent.\n\nwest.\n\ntest.\n\ntent.",
+      "segments": [
+        {
+          "key": "befure",
+          "text": "befure.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bafore",
+          "text": "bafore.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "befroe",
+          "text": "befroe.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "befor",
+          "text": "befor.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bent",
+          "text": "bent.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "west",
+          "text": "west.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "test",
+          "text": "test.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tent",
+          "text": "tent.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-058",
+      "text": "bset.\n\nbast.\n\nbath.\n\nmoth.\n\nmath.\n\nbonth.\n\nmonth.\n\nbtoh.",
+      "segments": [
+        {
+          "key": "bset",
+          "text": "bset.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bast",
+          "text": "bast.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bath",
+          "text": "bath.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "moth",
+          "text": "moth.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "math",
+          "text": "math.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bonth",
+          "text": "bonth.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "month",
+          "text": "month.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "btoh",
+          "text": "btoh.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-059",
+      "text": "booth.\n\nbrang.\n\nbrink.\n\nbrank.\n\nbeing.\n\nbrine.\n\nbrig.\n\nbiring.",
+      "segments": [
+        {
+          "key": "booth",
+          "text": "booth.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "brang",
+          "text": "brang.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "brink",
+          "text": "brink.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "brank",
+          "text": "brank.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "being",
+          "text": "being.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "brine",
+          "text": "brine.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "brig",
+          "text": "brig.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "biring",
+          "text": "biring.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-060",
+      "text": "brign.\n\ncerry.\n\nmarry.\n\nmerry.\n\ncurry.\n\nparry.\n\ncarri.\n\ncarrry.",
+      "segments": [
+        {
+          "key": "brign",
+          "text": "brign.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cerry",
+          "text": "cerry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "marry",
+          "text": "marry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "merry",
+          "text": "merry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "curry",
+          "text": "curry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "parry",
+          "text": "parry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "carri",
+          "text": "carri.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "carrry",
+          "text": "carrry.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-061",
+      "text": "pat.\n\ncet.\n\ncup.\n\nevary.\n\nemery.\n\nemary.\n\nevory.\n\nevrey.",
+      "segments": [
+        {
+          "key": "pat",
+          "text": "pat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cet",
+          "text": "cet.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cup",
+          "text": "cup.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "evary",
+          "text": "evary.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "emery",
+          "text": "emery.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "emary",
+          "text": "emary.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "evory",
+          "text": "evory.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "evrey",
+          "text": "evrey.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-062",
+      "text": "evry.\n\nentry.\n\nfist.\n\nlast.\n\nlist.\n\nfact.\n\npast.\n\npact.",
+      "segments": [
+        {
+          "key": "evry",
+          "text": "evry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "entry",
+          "text": "entry.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fist",
+          "text": "fist.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "last",
+          "text": "last.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "list",
+          "text": "list.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fact",
+          "text": "fact.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "past",
+          "text": "past.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pact",
+          "text": "pact.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-063",
+      "text": "fats.\n\nfond.\n\nbond.\n\nfand.\n\nfidn.\n\nfund.\n\nfarst.\n\nferst.",
+      "segments": [
+        {
+          "key": "fats",
+          "text": "fats.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fond",
+          "text": "fond.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bond",
+          "text": "bond.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fand",
+          "text": "fand.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fidn",
+          "text": "fidn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fund",
+          "text": "fund.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "farst",
+          "text": "farst.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ferst",
+          "text": "ferst.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-064",
+      "text": "fest.\n\nfrist.\n\nfirt.\n\npound.\n\npond.\n\nbound.\n\nfuond.\n\nfoudn.",
+      "segments": [
+        {
+          "key": "fest",
+          "text": "fest.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "frist",
+          "text": "frist.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "firt",
+          "text": "firt.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pound",
+          "text": "pound.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pond",
+          "text": "pond.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bound",
+          "text": "bound.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fuond",
+          "text": "fuond.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "foudn",
+          "text": "foudn.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-065",
+      "text": "gaev.\n\ngaze.\n\nfold.\n\nfood.\n\nholb.\n\nheld.\n\ntold.\n\nlit.",
+      "segments": [
+        {
+          "key": "gaev",
+          "text": "gaev.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gaze",
+          "text": "gaze.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fold",
+          "text": "fold.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "food",
+          "text": "food.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "holb",
+          "text": "holb.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "held",
+          "text": "held.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "told",
+          "text": "told.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lit",
+          "text": "lit.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-066",
+      "text": "het.\n\nkelp.\n\nheep.\n\nhelp.\n\nyeep.\n\nyelp.\n\nkeap.\n\nkeen.",
+      "segments": [
+        {
+          "key": "het",
+          "text": "het.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "kelp",
+          "text": "kelp.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "heep",
+          "text": "heep.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "help",
+          "text": "help.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yeep",
+          "text": "yeep.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yelp",
+          "text": "yelp.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "keap",
+          "text": "keap.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "keen",
+          "text": "keen.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-067",
+      "text": "kid.\n\nmind.\n\nkidn.\n\nking.\n\nkiln.\n\nlung.\n\nsong.\n\nsung.",
+      "segments": [
+        {
+          "key": "kid",
+          "text": "kid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mind",
+          "text": "mind.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "kidn",
+          "text": "kidn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "king",
+          "text": "king.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "kiln",
+          "text": "kiln.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lung",
+          "text": "lung.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "song",
+          "text": "song.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sung",
+          "text": "sung.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-068",
+      "text": "ling.\n\nsing.\n\nlonk.\n\nmane.\n\nminy.\n\nmaky.\n\nmamy.\n\noof.",
+      "segments": [
+        {
+          "key": "ling",
+          "text": "ling.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sing",
+          "text": "sing.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lonk",
+          "text": "lonk.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mane",
+          "text": "mane.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "miny",
+          "text": "miny.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "maky",
+          "text": "maky.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mamy",
+          "text": "mamy.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "oof",
+          "text": "oof.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-069",
+      "text": "oft.\n\naff.\n\noily.\n\nanly.\n\naily.\n\nomly.\n\nonli.\n\nunly.",
+      "segments": [
+        {
+          "key": "oft",
+          "text": "oft.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aff",
+          "text": "aff.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "oily",
+          "text": "oily.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "anly",
+          "text": "anly.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "aily",
+          "text": "aily.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "omly",
+          "text": "omly.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "onli",
+          "text": "onli.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "unly",
+          "text": "unly.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-070",
+      "text": "onyl.\n\nowner.\n\nowm.\n\npill.\n\nfull.\n\nfill.\n\nbull.\n\nhull.",
+      "segments": [
+        {
+          "key": "onyl",
+          "text": "onyl.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "owner",
+          "text": "owner.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "owm",
+          "text": "owm.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pill",
+          "text": "pill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "full",
+          "text": "full.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fill",
+          "text": "fill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bull",
+          "text": "bull.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hull",
+          "text": "hull.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-071",
+      "text": "hill.\n\npall.\n\npool.\n\nlead.\n\nroad.\n\nload.\n\nrear.\n\nroar.",
+      "segments": [
+        {
+          "key": "hill",
+          "text": "hill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pall",
+          "text": "pall.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pool",
+          "text": "pool.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lead",
+          "text": "lead.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "road",
+          "text": "road.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "load",
+          "text": "load.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rear",
+          "text": "rear.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "roar",
+          "text": "roar.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-072",
+      "text": "raed.\n\nreal.\n\nran.\n\nfun.\n\nfan.\n\nban.\n\npun.\n\nrnu.",
+      "segments": [
+        {
+          "key": "raed",
+          "text": "raed.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "real",
+          "text": "real.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ran",
+          "text": "ran.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fun",
+          "text": "fun.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fan",
+          "text": "fan.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ban",
+          "text": "ban.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pun",
+          "text": "pun.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rnu",
+          "text": "rnu.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-073",
+      "text": "rug.\n\nlaw.\n\nlow.\n\nraw.\n\nrow.\n\nslow.\n\nshot.\n\nslot.",
+      "segments": [
+        {
+          "key": "rug",
+          "text": "rug.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "law",
+          "text": "law.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "low",
+          "text": "low.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "raw",
+          "text": "raw.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "row",
+          "text": "row.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "slow",
+          "text": "slow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shot",
+          "text": "shot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "slot",
+          "text": "slot.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-074",
+      "text": "stow.\n\nshop.\n\nshwo.\n\nshaw.\n\nsix.\n\nsheep.\n\nsleet.\n\nsheet.",
+      "segments": [
+        {
+          "key": "stow",
+          "text": "stow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shop",
+          "text": "shop.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shwo",
+          "text": "shwo.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shaw",
+          "text": "shaw.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "six",
+          "text": "six.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sheep",
+          "text": "sheep.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sleet",
+          "text": "sleet.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sheet",
+          "text": "sheet.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-075",
+      "text": "sweep.\n\nsweet.\n\nslep.\n\nsleap.\n\nstare.\n\nscart.\n\nscare.\n\nstark.",
+      "segments": [
+        {
+          "key": "sweep",
+          "text": "sweep.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sweet",
+          "text": "sweet.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "slep",
+          "text": "slep.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sleap",
+          "text": "sleap.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "stare",
+          "text": "stare.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "scart",
+          "text": "scart.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "scare",
+          "text": "scare.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "stark",
+          "text": "stark.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-076",
+      "text": "spart.\n\nspark.\n\nstrat.\n\nsart.\n\nstip.\n\nslop.\n\nslip.\n\nsotp.",
+      "segments": [
+        {
+          "key": "spart",
+          "text": "spart.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "spark",
+          "text": "spark.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "strat",
+          "text": "strat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sart",
+          "text": "sart.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "stip",
+          "text": "stip.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "slop",
+          "text": "slop.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "slip",
+          "text": "slip.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sotp",
+          "text": "sotp.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-077",
+      "text": "step.\n\ncake.\n\ntaek.\n\ntall.\n\nfell.\n\nfall.\n\ntlel.\n\nthunk.",
+      "segments": [
+        {
+          "key": "step",
+          "text": "step.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cake",
+          "text": "cake.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "taek",
+          "text": "taek.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tall",
+          "text": "tall.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fell",
+          "text": "fell.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fall",
+          "text": "fall.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tlel",
+          "text": "tlel.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thunk",
+          "text": "thunk.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-078",
+      "text": "thnak.\n\nthonk.\n\nthick.\n\nthack.\n\nthnik.\n\nthing.\n\nwask.\n\ntalk.",
+      "segments": [
+        {
+          "key": "thnak",
+          "text": "thnak.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thonk",
+          "text": "thonk.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thick",
+          "text": "thick.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thack",
+          "text": "thack.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thnik",
+          "text": "thnik.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thing",
+          "text": "thing.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wask",
+          "text": "wask.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "talk",
+          "text": "talk.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-079",
+      "text": "task.\n\nbalk.\n\nbask.\n\nwolk.\n\nwlak.\n\nwhile.\n\nwhate.\n\nwhale.",
+      "segments": [
+        {
+          "key": "task",
+          "text": "task.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "balk",
+          "text": "balk.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bask",
+          "text": "bask.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wolk",
+          "text": "wolk.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wlak",
+          "text": "wlak.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "while",
+          "text": "while.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whate",
+          "text": "whate.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whale",
+          "text": "whale.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-080",
+      "text": "whote.\n\nwhole.\n\nwhiet.\n\nwash.\n\ndash.\n\nfish.\n\nwihs.\n\nwark.",
+      "segments": [
+        {
+          "key": "whote",
+          "text": "whote.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whole",
+          "text": "whole.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whiet",
+          "text": "whiet.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wash",
+          "text": "wash.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "dash",
+          "text": "dash.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fish",
+          "text": "fish.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wihs",
+          "text": "wihs.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wark",
+          "text": "wark.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-081",
+      "text": "pork.\n\nfork.\n\nword.\n\nworm.\n\nwrok.\n\nwrote.\n\nwrate.\n\nwirte.",
+      "segments": [
+        {
+          "key": "pork",
+          "text": "pork.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fork",
+          "text": "fork.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "word",
+          "text": "word.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "worm",
+          "text": "worm.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wrok",
+          "text": "wrok.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wrote",
+          "text": "wrote.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wrate",
+          "text": "wrate.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wirte",
+          "text": "wirte.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-082",
+      "text": "writ.\n\ncor.\n\ncur.\n\nhose.\n\nrouse.\n\nrose.\n\nnouse.\n\nnose.",
+      "segments": [
+        {
+          "key": "writ",
+          "text": "writ.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cor",
+          "text": "cor.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "cur",
+          "text": "cur.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hose",
+          "text": "hose.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rouse",
+          "text": "rouse.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rose",
+          "text": "rose.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "nouse",
+          "text": "nouse.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "nose",
+          "text": "nose.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-083",
+      "text": "huose.\n\nhous.\n\nhorse.\n\nmam.\n\nmop.\n\nmum.\n\nmob.\n\nmem.",
+      "segments": [
+        {
+          "key": "huose",
+          "text": "huose.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hous",
+          "text": "hous.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "horse",
+          "text": "horse.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mam",
+          "text": "mam.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mop",
+          "text": "mop.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mum",
+          "text": "mum.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mob",
+          "text": "mob.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mem",
+          "text": "mem.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-084",
+      "text": "chip.\n\nchop.\n\nshin.\n\nskip.\n\nskin.\n\nsihp.\n\nshare.\n\nspare.",
+      "segments": [
+        {
+          "key": "chip",
+          "text": "chip.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chop",
+          "text": "chop.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shin",
+          "text": "shin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "skip",
+          "text": "skip.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "skin",
+          "text": "skin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sihp",
+          "text": "sihp.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "share",
+          "text": "share.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "spare",
+          "text": "spare.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-085",
+      "text": "shrak.\n\nshork.\n\nsharp.\n\ntap.\n\nmep.\n\nmat.\n\nquien.\n\nqueon.",
+      "segments": [
+        {
+          "key": "shrak",
+          "text": "shrak.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shork",
+          "text": "shork.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sharp",
+          "text": "sharp.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tap",
+          "text": "tap.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mep",
+          "text": "mep.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mat",
+          "text": "mat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "quien",
+          "text": "quien.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "queon",
+          "text": "queon.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-086",
+      "text": "quion.\n\nqueem.\n\nquiem.\n\nquene.\n\nqueue.\n\nshake.\n\nsnare.\n\nstake.",
+      "segments": [
+        {
+          "key": "quion",
+          "text": "quion.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "queem",
+          "text": "queem.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "quiem",
+          "text": "quiem.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "quene",
+          "text": "quene.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "queue",
+          "text": "queue.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shake",
+          "text": "shake.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "snare",
+          "text": "snare.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "stake",
+          "text": "stake.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-087",
+      "text": "snkae.\n\nsnace.\n\nspill.\n\nsmill.\n\nswell.\n\nswill.\n\nspel.\n\nspeil.",
+      "segments": [
+        {
+          "key": "snkae",
+          "text": "snkae.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "snace",
+          "text": "snace.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "spill",
+          "text": "spill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "smill",
+          "text": "smill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "swell",
+          "text": "swell.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "swill",
+          "text": "swill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "spel",
+          "text": "spel.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "speil",
+          "text": "speil.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-088",
+      "text": "swore.\n\nstord.\n\nstore.\n\nshord.\n\nshore.\n\nswrod.\n\nsord.\n\nsworn.",
+      "segments": [
+        {
+          "key": "swore",
+          "text": "swore.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "stord",
+          "text": "stord.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "store",
+          "text": "store.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shord",
+          "text": "shord.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shore",
+          "text": "shore.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "swrod",
+          "text": "swrod.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sord",
+          "text": "sord.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sworn",
+          "text": "sworn.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-089",
+      "text": "main.\n\npain.\n\nruin.\n\nrian.\n\nrein.\n\nraid.\n\nchill.\n\nchald.",
+      "segments": [
+        {
+          "key": "main",
+          "text": "main.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pain",
+          "text": "pain.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ruin",
+          "text": "ruin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rian",
+          "text": "rian.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rein",
+          "text": "rein.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "raid",
+          "text": "raid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chill",
+          "text": "chill.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chald",
+          "text": "chald.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-090",
+      "text": "chall.\n\nchold.\n\ncholl.\n\nchlid.\n\nchide.\n\nghast.\n\ngholt.\n\nghalt.",
+      "segments": [
+        {
+          "key": "chall",
+          "text": "chall.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chold",
+          "text": "chold.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "choll",
+          "text": "choll.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chlid",
+          "text": "chlid.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chide",
+          "text": "chide.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ghast",
+          "text": "ghast.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gholt",
+          "text": "gholt.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ghalt",
+          "text": "ghalt.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-091",
+      "text": "ghist.\n\nghilt.\n\nghsot.\n\ngohst.\n\nghoul.\n\nunacorn.\n\nunicarn.\n\nunacarn.",
+      "segments": [
+        {
+          "key": "ghist",
+          "text": "ghist.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ghilt",
+          "text": "ghilt.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ghsot",
+          "text": "ghsot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "gohst",
+          "text": "gohst.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "ghoul",
+          "text": "ghoul.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "unacorn",
+          "text": "unacorn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "unicarn",
+          "text": "unicarn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "unacarn",
+          "text": "unacarn.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-092",
+      "text": "unicorm.\n\nunecorn.\n\nunicron.\n\nunihorn.\n\nuniform.\n\nloon.\n\nlian.\n\nloan.",
+      "segments": [
+        {
+          "key": "unicorm",
+          "text": "unicorm.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "unecorn",
+          "text": "unecorn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "unicron",
+          "text": "unicron.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "unihorn",
+          "text": "unihorn.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "uniform",
+          "text": "uniform.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "loon",
+          "text": "loon.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lian",
+          "text": "lian.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "loan",
+          "text": "loan.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-093",
+      "text": "lien.\n\nloin.\n\npug.\n\npeg.\n\npin.\n\nyallow.\n\nfellow.\n\nfallow.",
+      "segments": [
+        {
+          "key": "lien",
+          "text": "lien.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "loin",
+          "text": "loin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pug",
+          "text": "pug.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "peg",
+          "text": "peg.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pin",
+          "text": "pin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yallow",
+          "text": "yallow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fellow",
+          "text": "fellow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fallow",
+          "text": "fallow.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-094",
+      "text": "yillow.\n\nbellow.\n\nbillow.\n\nyelow.\n\nmellow.\n\nlizard.\n\nwizerd.\n\nlizerd.",
+      "segments": [
+        {
+          "key": "yillow",
+          "text": "yillow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bellow",
+          "text": "bellow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "billow",
+          "text": "billow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yelow",
+          "text": "yelow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mellow",
+          "text": "mellow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lizard",
+          "text": "lizard.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wizerd",
+          "text": "wizerd.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lizerd",
+          "text": "lizerd.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-095",
+      "text": "wazard.\n\nwizord.\n\nwizrad.\n\nthicken.\n\nchucken.\n\nthucken.\n\nchickon.\n\nchiken.",
+      "segments": [
+        {
+          "key": "wazard",
+          "text": "wazard.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wizord",
+          "text": "wizord.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wizrad",
+          "text": "wizrad.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thicken",
+          "text": "thicken.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chucken",
+          "text": "chucken.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "thucken",
+          "text": "thucken.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chickon",
+          "text": "chickon.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "chiken",
+          "text": "chiken.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-096",
+      "text": "chikcen.\n\nmen.\n\npen.\n\nmon.\n\nwit.\n\nwot.\n\nweb.\n\nyet.",
+      "segments": [
+        {
+          "key": "chikcen",
+          "text": "chikcen.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "men",
+          "text": "men.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pen",
+          "text": "pen.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mon",
+          "text": "mon.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wit",
+          "text": "wit.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wot",
+          "text": "wot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "web",
+          "text": "web.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yet",
+          "text": "yet.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-097",
+      "text": "yas.\n\nyat.\n\nyos.\n\nyot.\n\nyew.\n\ntin.\n\npon.\n\nbel.",
+      "segments": [
+        {
+          "key": "yas",
+          "text": "yas.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yat",
+          "text": "yat.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yos",
+          "text": "yos.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yot",
+          "text": "yot.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "yew",
+          "text": "yew.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "tin",
+          "text": "tin.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pon",
+          "text": "pon.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bel",
+          "text": "bel.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-098",
+      "text": "belt.\n\nmole.\n\nrule.\n\nrole.\n\nmute.\n\nhall.\n\nbal.\n\ntheng.",
+      "segments": [
+        {
+          "key": "belt",
+          "text": "belt.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mole",
+          "text": "mole.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "rule",
+          "text": "rule.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "role",
+          "text": "role.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "mute",
+          "text": "mute.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "hall",
+          "text": "hall.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "bal",
+          "text": "bal.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "theng",
+          "text": "theng.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-099",
+      "text": "thni.\n\nsap.\n\nscar.\n\nscay.\n\nnought.\n\nlought.\n\nblight.\n\nfright.",
+      "segments": [
+        {
+          "key": "thni",
+          "text": "thni.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "sap",
+          "text": "sap.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "scar",
+          "text": "scar.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "scay",
+          "text": "scay.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "nought",
+          "text": "nought.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lought",
+          "text": "lought.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "blight",
+          "text": "blight.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "fright",
+          "text": "fright.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-100",
+      "text": "flight.\n\nshone.\n\nstork.\n\nswarm.\n\nswark.\n\nwagon.\n\nwagoon.\n\nshadew.",
+      "segments": [
+        {
+          "key": "flight",
+          "text": "flight.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shone",
+          "text": "shone.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "stork",
+          "text": "stork.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "swarm",
+          "text": "swarm.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "swark",
+          "text": "swark.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wagon",
+          "text": "wagon.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "wagoon",
+          "text": "wagoon.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "shadew",
+          "text": "shadew.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-101",
+      "text": "meadow.\n\nmeadew.\n\nsolver.\n\nsilber.\n\nsolber.\n\nwhisker.\n\nwhimper.\n\nwhimker.",
+      "segments": [
+        {
+          "key": "meadow",
+          "text": "meadow.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "meadew",
+          "text": "meadew.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "solver",
+          "text": "solver.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "silber",
+          "text": "silber.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "solber",
+          "text": "solber.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whisker",
+          "text": "whisker.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whimper",
+          "text": "whimper.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "whimker",
+          "text": "whimker.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-102",
+      "text": "journal.\n\njourmey.\n\njourmal.\n\npattern.\n\nlantren.\n\npattren.\n\ncreasure.\n\ntreature.",
+      "segments": [
+        {
+          "key": "journal",
+          "text": "journal.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "jourmey",
+          "text": "jourmey.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "jourmal",
+          "text": "jourmal.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pattern",
+          "text": "pattern.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "lantren",
+          "text": "lantren.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "pattren",
+          "text": "pattren.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "creasure",
+          "text": "creasure.",
+          "kind": "choice-word"
+        },
+        {
+          "key": "treature",
+          "text": "treature.",
+          "kind": "choice-word"
+        }
+      ]
+    },
+    {
+      "id": "budget-103",
+      "text": "You chose.\n\nThe word is.\n\nPractice turn. You keep your heart.\n\nReading check complete. Now your first chapter begins.\n\n2 Moon Moths are on the path. Ready to battle?\n\n3 Moon Moths are on the path. Ready to battle?\n\n5 Moon Moths are on the path. Ready to battle?\n\n2 Acorn Imps are on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "You chose.",
+          "text": "You chose.",
+          "kind": "prefix"
+        },
+        {
+          "key": "The word is.",
+          "text": "The word is.",
+          "kind": "prefix"
+        },
+        {
+          "key": "Practice turn. You keep your heart.",
+          "text": "Practice turn. You keep your heart.",
+          "kind": "prefix"
+        },
+        {
+          "key": "Reading check complete. Now your first chapter begins.",
+          "text": "Reading check complete. Now your first chapter begins.",
+          "kind": "prefix"
+        },
+        {
+          "key": "2 Moon Moths are on the path. Ready to battle?",
+          "text": "2 Moon Moths are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "3 Moon Moths are on the path. Ready to battle?",
+          "text": "3 Moon Moths are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "5 Moon Moths are on the path. Ready to battle?",
+          "text": "5 Moon Moths are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "2 Acorn Imps are on the path. Ready to battle?",
+          "text": "2 Acorn Imps are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        }
+      ]
+    },
+    {
+      "id": "budget-104",
+      "text": "3 Acorn Imps are on the path. Ready to battle?\n\n5 Acorn Imps are on the path. Ready to battle?\n\n3 Bark Beetles are on the path. Ready to battle?\n\n5 Bark Beetles are on the path. Ready to battle?\n\n2 Lantern Wisps are on the path. Ready to battle?\n\n3 Lantern Wisps are on the path. Ready to battle?\n\n5 Lantern Wisps are on the path. Ready to battle?\n\n2 young Fern Wolves are on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "3 Acorn Imps are on the path. Ready to battle?",
+          "text": "3 Acorn Imps are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "5 Acorn Imps are on the path. Ready to battle?",
+          "text": "5 Acorn Imps are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "3 Bark Beetles are on the path. Ready to battle?",
+          "text": "3 Bark Beetles are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "5 Bark Beetles are on the path. Ready to battle?",
+          "text": "5 Bark Beetles are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "2 Lantern Wisps are on the path. Ready to battle?",
+          "text": "2 Lantern Wisps are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "3 Lantern Wisps are on the path. Ready to battle?",
+          "text": "3 Lantern Wisps are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "5 Lantern Wisps are on the path. Ready to battle?",
+          "text": "5 Lantern Wisps are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "2 young Fern Wolves are on the path. Ready to battle?",
+          "text": "2 young Fern Wolves are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        }
+      ]
+    },
+    {
+      "id": "budget-105",
+      "text": "3 Fern Wolves are on the path. Ready to battle?\n\n3 Briar Bats are on the path. Ready to battle?\n\n5 Briar Bats are on the path. Ready to battle?\n\nA Thornling is ready for your challenge.\n\nA Bark Beetle is ready for your challenge.\n\nA Moon Moth is ready for your challenge.\n\nA Acorn Imp is ready for your challenge.\n\nA Root Sprite is ready for your challenge.",
+      "segments": [
+        {
+          "key": "3 Fern Wolves are on the path. Ready to battle?",
+          "text": "3 Fern Wolves are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "3 Briar Bats are on the path. Ready to battle?",
+          "text": "3 Briar Bats are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "5 Briar Bats are on the path. Ready to battle?",
+          "text": "5 Briar Bats are on the path. Ready to battle?",
+          "kind": "trail-encounter"
+        },
+        {
+          "key": "A Thornling is ready for your challenge.",
+          "text": "A Thornling is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Bark Beetle is ready for your challenge.",
+          "text": "A Bark Beetle is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Moon Moth is ready for your challenge.",
+          "text": "A Moon Moth is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Acorn Imp is ready for your challenge.",
+          "text": "A Acorn Imp is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Root Sprite is ready for your challenge.",
+          "text": "A Root Sprite is ready for your challenge.",
+          "kind": "mission-encounter"
+        }
+      ]
+    },
+    {
+      "id": "budget-106",
+      "text": "A Mushroom Guard is ready for your challenge.\n\nA Hollow Owl is ready for your challenge.\n\nA Briar Bat is ready for your challenge.\n\nA Chest Mimic is ready for your challenge.\n\nA Snail Knight is ready for your challenge.\n\nA Moss Golem is ready for your challenge.\n\nA Bramble Boar is ready for your challenge.\n\nA Reed Serpent is ready for your challenge.",
+      "segments": [
+        {
+          "key": "A Mushroom Guard is ready for your challenge.",
+          "text": "A Mushroom Guard is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Hollow Owl is ready for your challenge.",
+          "text": "A Hollow Owl is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Briar Bat is ready for your challenge.",
+          "text": "A Briar Bat is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Chest Mimic is ready for your challenge.",
+          "text": "A Chest Mimic is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Snail Knight is ready for your challenge.",
+          "text": "A Snail Knight is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Moss Golem is ready for your challenge.",
+          "text": "A Moss Golem is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Bramble Boar is ready for your challenge.",
+          "text": "A Bramble Boar is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Reed Serpent is ready for your challenge.",
+          "text": "A Reed Serpent is ready for your challenge.",
+          "kind": "mission-encounter"
+        }
+      ]
+    },
+    {
+      "id": "budget-107",
+      "text": "A Bog Toad is ready for your challenge.\n\nA Crystal Crab is ready for your challenge.\n\nA Stone Ram is ready for your challenge.\n\nA Cave Troll is ready for your challenge.\n\nA Lantern Wisp is ready for your challenge.\n\nA Fern Wolf is ready for your challenge.\n\nA Storm Griffin is ready for your challenge.",
+      "segments": [
+        {
+          "key": "A Bog Toad is ready for your challenge.",
+          "text": "A Bog Toad is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Crystal Crab is ready for your challenge.",
+          "text": "A Crystal Crab is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Stone Ram is ready for your challenge.",
+          "text": "A Stone Ram is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Cave Troll is ready for your challenge.",
+          "text": "A Cave Troll is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Lantern Wisp is ready for your challenge.",
+          "text": "A Lantern Wisp is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Fern Wolf is ready for your challenge.",
+          "text": "A Fern Wolf is ready for your challenge.",
+          "kind": "mission-encounter"
+        },
+        {
+          "key": "A Storm Griffin is ready for your challenge.",
+          "text": "A Storm Griffin is ready for your challenge.",
+          "kind": "mission-encounter"
+        }
+      ]
+    },
+    {
+      "id": "budget-108",
+      "text": "is ready. Let’s play.\n\nstopped the hit.",
+      "segments": [
+        {
+          "key": "is ready. Let’s play.",
+          "text": "is ready. Let’s play.",
+          "kind": "current-mission-prefix"
+        },
+        {
+          "key": "stopped the hit.",
+          "text": "stopped the hit.",
+          "kind": "current-mission-prefix"
+        }
+      ]
+    }
+  ],
+  "reconciledMain": "3951f8184af52a37dddf6690652c6edcd11a93b6"
+}
