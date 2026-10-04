@@ -31,9 +31,28 @@ for(const [text,clip] of Object.entries({...reuse.clips,...result.clips})){
  if(manifest.clips[text]&&JSON.stringify(manifest.clips[text])!==JSON.stringify(clip))throw Error('Refusing to replace existing narration: '+text);
  manifest.clips[text]=clip;
 }
+// Main's simpler mission wording arrived after the batch was paid. Reuse the
+// exact creature-name spans from those receipts instead of recording 20 names.
+const names={};
+for(const enemy of require('../content').enemies){
+ const text='A '+enemy.name+' is ready for your challenge.',batch=expected.get(text);
+ if(!batch)throw Error('Missing paid source for creature name: '+enemy.name);
+ const r=JSON.parse(fs.readFileSync(path.join(raw,batch.id,'receipt.json'),'utf8')),a=r.alignment;
+ let cursor=0;for(const s of batch.segments){if(s.key===text)break;cursor+=s.text.length+2;}
+ const start=cursor+2,end=start+enemy.name.length;
+ if(a.characters.slice(start,end).join('')!==enemy.name)throw Error('Creature-name transcript mismatch');
+ const offset=(a.character_end_times_seconds[start-1]+a.character_start_times_seconds[start])/2;
+ const finish=(a.character_end_times_seconds[end-1]+a.character_start_times_seconds[end])/2;
+ const source=result.clips[text];
+ if(offset<source.offset||finish>source.offset+source.duration+.001||finish<=offset)throw Error('Creature-name range invalid');
+ names[enemy.name]={file:source.file,offset:Math.round(offset*1e4)/1e4,duration:Math.round((finish-offset)*1e4)/1e4,sha256:source.sha256};
+ if(manifest.clips[enemy.name]&&JSON.stringify(manifest.clips[enemy.name])!==JSON.stringify(names[enemy.name]))throw Error('Existing name recording changed');
+ manifest.clips[enemy.name]=names[enemy.name];
+}
 manifest.version='recorded-voice-budget-20261004-r1';manifest.recordedClipCount=manifest.runtimeClipCount=Object.keys(manifest.clips).length;
 fs.writeFileSync(path.join(root,'narration.js'),'(function(root){\nconst narration='+JSON.stringify(manifest,null,2)+";\nif(typeof module==='object'&&module.exports)module.exports=narration;else root.BlitzNarration=narration;\n})(typeof globalThis!=='undefined'?globalThis:this);\n");
 result.totalBatchCharacters=plan.characters;result.reusedSegments=Object.keys(reuse.clips).length;
+result.derivedNames=names;
 result.listeningReview='Technical decode, segment and runtime checks only; no claim of physical iPad or human pronunciation review.';
 fs.writeFileSync(path.join(root,'docs/NARRATION_BUDGET_GENERATION.json'),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({runtimeClips:manifest.runtimeClipCount,newSegments:plan.segmentCount,reusedSegments:result.reusedSegments,characters:plan.characters}));

@@ -15,8 +15,8 @@ const narration={
   ],
   "language": "en-GB",
   "recoveredClipCount": 994,
-  "recordedClipCount": 2173,
-  "runtimeClipCount": 2173,
+  "recordedClipCount": 2195,
+  "runtimeClipCount": 2195,
   "fallbackOnly": [],
   "clips": {
     "on": {
@@ -19978,6 +19978,138 @@ const narration={
       "file": "assets/narration/budget-107.mp3",
       "offset": 16.2485,
       "duration": 2.8731,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "is ready. Let’s play.": {
+      "file": "assets/narration/budget-108.mp3",
+      "offset": 0,
+      "duration": 1.5615,
+      "sha256": "3749e2f8f8d4bf014cf6f8f569729da897d1bd307511d0e8c19884fe0014fefc"
+    },
+    "stopped the hit.": {
+      "file": "assets/narration/budget-108.mp3",
+      "offset": 1.5615,
+      "duration": 1.2075,
+      "sha256": "3749e2f8f8d4bf014cf6f8f569729da897d1bd307511d0e8c19884fe0014fefc"
+    },
+    "Thornling": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 12.028,
+      "duration": 0.453,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "Moss Golem": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 12.423,
+      "duration": 0.65,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "Moon Moth": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 16.788,
+      "duration": 0.545,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "Root Sprite": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 22.163,
+      "duration": 0.639,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "Cave Troll": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 8.324,
+      "duration": 0.651,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "Acorn Imp": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 19.179,
+      "duration": 0.836,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "Mushroom Guard": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 0.174,
+      "duration": 0.708,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "Bark Beetle": {
+      "file": "assets/narration/budget-105.mp3",
+      "offset": 14.234,
+      "duration": 0.72,
+      "sha256": "4dc4a42e2b80ff1094cb503e97ae348f28b3ed264119e47d6d159fbac178773f"
+    },
+    "Bramble Boar": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 14.838,
+      "duration": 0.697,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "Reed Serpent": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 17.462,
+      "duration": 0.754,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "Bog Toad": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 0.174,
+      "duration": 0.604,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "Lantern Wisp": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 10.867,
+      "duration": 0.813,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "Crystal Crab": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 2.612,
+      "duration": 0.778,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "Hollow Owl": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 2.752,
+      "duration": 0.661,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "Fern Wolf": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 13.978,
+      "duration": 0.546,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "Stone Ram": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 5.201,
+      "duration": 0.72,
+      "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
+    },
+    "Briar Bat": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 5.213,
+      "duration": 0.58,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "Snail Knight": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 9.996,
+      "duration": 0.685,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "Chest Mimic": {
+      "file": "assets/narration/budget-106.mp3",
+      "offset": 7.546,
+      "duration": 0.662,
+      "sha256": "bcca1b6c3127d5a04ca3d982b6af1da793419ad6dae30c04b9ecf3fd170b9ecb"
+    },
+    "Storm Griffin": {
+      "file": "assets/narration/budget-107.mp3",
+      "offset": 16.718,
+      "duration": 0.732,
       "sha256": "bfa013973855998f1f474596a4ea6726a446398ce6fa8e2a13f5133f51de7ec4"
     }
   }

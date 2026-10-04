@@ -35,6 +35,11 @@
       const intro=text.slice(first.length+1);
       if(clips[first]&&clips[intro])return [first,intro];
     }
+    for(const suffix of [' is ready. Let’s play.',' stopped the hit.']){
+      if(!text.endsWith(suffix))continue;
+      const name=text.slice(0,-suffix.length),tail=suffix.trim();
+      if(clips[name]&&clips[tail])return [name,tail];
+    }
     return null;
   }
   // Completion and word timing stay independent of the question/animation timer.

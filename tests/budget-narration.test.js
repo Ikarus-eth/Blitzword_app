@@ -4,10 +4,10 @@ const plan=require('../docs/NARRATION_BUDGET_REQUEST.json'),reuse=require('../do
 const root=path.join(__dirname,'..'),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 test('bounded generation reuses paid clauses and keeps George model and voice settings',()=>{
  assert.equal(plan.voiceId,'JBFqnCBsd6RMkjVDRZzb');assert.equal(plan.model,'eleven_multilingual_v2');assert.equal(plan.settings.speed,.9);
- assert.equal(plan.characters,7333);assert.ok(plan.characters<=8000);
+ assert.equal(plan.characters,7372);assert.ok(plan.characters<=8000);
  assert.equal(plan.characters,plan.batches.reduce((n,b)=>n+b.text.length,0));
- assert.equal(plan.segmentCount,855);assert.equal(Object.keys(reuse.clips).length,289);
- assert.ok(plan.batches.flatMap(b=>b.segments).every(s=>['choice-word','prefix','trail-encounter','mission-encounter'].includes(s.kind)));
+ assert.equal(plan.segmentCount,857);assert.equal(Object.keys(reuse.clips).length,289);
+ assert.ok(plan.batches.flatMap(b=>b.segments).every(s=>['choice-word','prefix','trail-encounter','mission-encounter','current-mission-prefix'].includes(s.kind)));
 });
 test('every current and legacy wrong-choice correction resolves to complete recordings, including contractions and practice turns',()=>{
  let count=0;
@@ -30,12 +30,14 @@ test('all trail families, groups, first encounters and current mission introduct
   const text=(e.count||1)>1?e.name+' are on the path. Ready to battle?':(/^Acorn/.test(name)?'An ':'A ')+name+' is on the path. Ready to battle?';
   for(const prefix of ['', 'Reading check complete. Now your first chapter begins. '])assert.ok(recordedParts(prefix+text,N.clips),prefix+text);
  }
- for(const m of M.missions)for(const family of m.encounters){const text='A '+C.enemyAt(family).name+' is ready for your challenge.';assert.ok(recordedParts(text,N.clips),text);}
+ for(const m of M.missions)for(const family of m.encounters){const text=C.enemyAt(family).name+' is ready. Let’s play.';assert.ok(recordedParts(text,N.clips),text);}
+ for(const enemy of C.enemies)assert.ok(recordedParts(enemy.name+' stopped the hit.',N.clips));
 });
 test('new and reused audio has verified bytes and finite segments with no overlap',()=>{
  const generated=require('../docs/NARRATION_BUDGET_GENERATION.json'),files=new Map();
  assert.equal(generated.status,'complete');assert.equal(Object.keys(generated.clips).length,plan.segmentCount);
- for(const [text,clip] of Object.entries({...reuse.clips,...generated.clips})){
+ assert.equal(Object.keys(generated.derivedNames).length,20);
+ for(const [text,clip] of Object.entries({...reuse.clips,...generated.clips,...generated.derivedNames})){
   assert.deepEqual(N.clips[text],clip,text);
   if(!files.has(clip.file))files.set(clip.file,hash(fs.readFileSync(path.join(root,clip.file))));
   assert.equal(files.get(clip.file),clip.sha256,text);assert.ok(clip.offset>=0&&clip.duration>.15,text);

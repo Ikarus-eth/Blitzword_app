@@ -8,9 +8,9 @@ The user requested a smaller budget and authorized generation and deployment of 
 
 - Keep all 1,029 existing approved exact-text recordings and their file hashes.
 - Reuse 289 already-paid George segments from draft #80 at `12b9e3054c2ecf6ad81c0282825517ddfd270aa9`: 227 chosen-word clauses, 32 target clauses and 30 family introductions.
-- Generate 855 new segments: 816 missing choice words, four shared prefixes, 15 group introductions and 20 mission introductions. First group encounters share the assessment-complete prefix.
+- Generate 857 new segments: 816 missing choice words, four original shared prefixes, 15 group introductions, 20 original mission introductions and two extra shared phrases after main changed. First group encounters share the assessment-complete prefix. The 20 exact creature-name spans are reused from the timestamped mission recordings; no extra name generation.
 - Use the existing George voice, `eleven_multilingual_v2`, stability 0.65, similarity 0.8, style 0, speaker boost enabled and speed 0.90.
-- Submit 7,333 characters, including punctuation and batch separators. The observed account counter increased by 2,159 across the runs; this is an account observation, not an invoice or a promised rate. [Usage evidence](NARRATION_BUDGET_USAGE.json).
+- Submit 7,372 characters, including punctuation and batch separators. The account counter updates asynchronously, so its earlier 2,159 increase is not a verified final charge. Use 7,372 credits as a conservative one-credit-per-character budget. [Usage evidence](NARRATION_BUDGET_USAGE.json).
 
 The first batch was preserved when validation stopped because the runner did not contain ffprobe. Installing FFmpeg fixed that runner dependency; the next run recovered the batch without another generation request. [Completed generation run](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37166276273). There are no automatic paid retries and no subscription/allowance changes.
 
@@ -18,13 +18,13 @@ The first batch was preserved when validation stopped because the runner did not
 
 Exact recordings take priority. A comparison uses full recorded clauses where available, otherwise a recorded label followed by a whole recorded word. No letters or phonemes are spliced. All required parts download and validate before speech starts; failed or unavailable parts use one complete device-speech fallback. The shared batch MP3s play only their bounded segments. Cancellation, pause, mute, newer speech and backgrounding cannot launch a later part or finish an old turn. The decoded-audio cache is bounded to sixteen recent files.
 
-Both ordinary and free-practice comparisons are covered, including contractions and legacy distractors with misplaced apostrophes. Shield corrections retain their recorded prefix. All twenty enemy families, current grouped variants and assessment-to-first-battle prefixes are covered. New creature missions retain their exact “is ready for your challenge” wording.
+Both ordinary and free-practice comparisons are covered, including contractions and legacy distractors with misplaced apostrophes. Shield corrections retain their recorded prefix. All twenty enemy families, current grouped variants and assessment-to-first-battle prefixes are covered. The newer quest-clarity change from main is preserved: mission encounters say “[Creature] is ready. Let’s play.” and animal-teammate corrections say “[Creature] stopped the hit.” Only the two shared endings required further generation: 39 characters. Their creature-name spans reuse the just-paid audio.
 
-Learner saves, wording, assessment, question pools, XP, health, artwork and mission rules are unchanged. Unknown historical choices remain local fallback.
+The parallel quest-clarity/teammate release was merged intact from main `3951f8184af52a37dddf6690652c6edcd11a93b6`. This audio update changes no learner saves, wording, assessment, question pools, XP, health, artwork or mission rules. Unknown historical choices remain local fallback.
 
 ## Verification
 
-Clean dependency install; 301 unit tests and 103 UI flow groups passed. The old test expecting new enemy intros to fall back was intentionally replaced by recorded-coverage assertions. Original corpus hashes are still checked individually; additive counts are checked against the new receipts. Coverage enumerates current and legacy choice pools and every encounter variant, with explicit contraction, cancellation, missing-file and invalid-segment tests.
+Clean dependency install; 306 unit tests and 104 UI flow groups passed. The old test expecting new enemy intros to fall back was intentionally replaced by recorded-coverage assertions. Original corpus hashes are still checked individually; additive counts are checked against the new receipts. Coverage enumerates current and legacy choice pools and every encounter variant, with explicit contraction, cancellation, missing-file and invalid-segment tests.
 
 Every newly generated MP3 passed FFmpeg decoding and ordered timestamp validation in Actions. Packaging verifies receipts, hashes, segment bounds and adjacency. [Browser playback evidence](NARRATION_BUDGET_BROWSER.json) records actual Chrome MP3 decoding and playback separately. Human pronunciation review and physical iPad/Safari playback are not claimed.
 
