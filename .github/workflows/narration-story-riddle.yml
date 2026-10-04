@@ -1,0 +1,30 @@
+name: Generate final story and riddle narration
+on:
+  push:
+    branches: [codex/story-riddle-narration-20261004]
+    paths: [docs/NARRATION_STORY_RIDDLE_REQUEST.json, .github/workflows/narration-story-riddle.yml]
+permissions:
+  contents: read
+concurrency:
+  group: story-riddle-narration
+  cancel-in-progress: false
+jobs:
+  generate:
+    if: github.repository == 'Ikarus-eth/Blitzword_app'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install audio validation tools
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Generate missing riddle recordings
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/generate-budget-narration.py story-riddle
+      - name: Preserve paid outputs even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: narration-story-riddle
+          path: narration-story-riddle-output
+          retention-days: 14
