@@ -56,3 +56,55 @@ test('old sightings migrate conservatively and riddle time is bounded and separa
   const s=fresh();delete s.expedition;s.campaign.enemyHistory=[{enemyId:'thornling--3'}];A.init(s);assert.equal(s.expedition.book.thornling.seen,true);assert.equal(s.expedition.book.thornling.champion,false);
   const xp=s.dragon.xp;A.recordRiddleTime(s,45000,NOW);A.recordRiddleTime(s,120001,NOW);A.recordRiddleTime(s,NaN,NOW);assert.equal(A.report(s).riddleMs,45000);assert.equal(s.dragon.xp,xp);
 });
+function answer(s,{wrong=false,help=false}={}){
+  const q=C.prepareBattle(s,NOW);q.phase='choices';q.supportReasons=[];
+  return C.answerBattle(s,help?'?':wrong?q.options.find(w=>w!==q.target):q.target,NOW+1000);
+}
+test('quest hearts carry through clues, reload, backup, parked legacy play and the next fight',()=>{
+  let s=fresh();C.startMission(s,'first-spark',NOW);C.startMissionBattle(s,NOW);
+  assert.equal(s.battle.heroHealth,4);answer(s,{wrong:true});assert.equal(s.battle.heroHealth,3);assert.equal(s.expedition.current.hearts,3);
+  s.battle.enemyHealth=0;C.resolveBattle(s,NOW);solve(s);assert.equal(A.progress(s).done,2);
+  A.switchTo(s,'legacy');s=Storage.readBackup(Storage.backupFile(s).text).state;
+  C.startMission(s,'first-spark',NOW);C.startMissionBattle(s,NOW);assert.equal(s.battle.heroHealth,3);assert.equal(s.battle.heroMaxHealth,4);
+  s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(s.expedition.current.hearts,3);
+});
+test('older active and parked mission saves keep existing hearts and selected friends',()=>{
+  for(const parked of [false,true]){
+    let s=fresh();C.startMission(s,'first-spark',NOW);C.startMissionBattle(s,NOW);s.battle.heroHealth=5;s.battle.heroMaxHealth=6;
+    delete s.expedition.current.hearts;delete s.expedition.current.maxHearts;delete s.expedition.current.companionHelpUsed;
+    A.selectCompanion(s,'thornling');if(parked)A.switchTo(s,'legacy');s=C.migrate(JSON.parse(JSON.stringify(s)));
+    assert.equal(s.expedition.current.hearts,5);assert.equal(s.expedition.current.maxHearts,6);assert.equal(A.companion(s),'thornling');
+  }
+});
+test('a collected teammate blocks one unaided miss per quest without changing reading evidence or spending a shield',()=>{
+  let s=fresh();C.startMission(s,'first-spark',NOW);C.startMissionBattle(s,NOW);
+  assert.equal(A.selectCompanion(s,'moon-moth'),false);assert.equal(A.selectCompanion(s,'fake'),false);assert.equal(A.selectCompanion(s,'thornling'),true);
+  const xp=s.dragon.xp,enemy=s.battle.enemyHealth;s.rewards.shield=true;
+  const helped=answer(s,{help:true});assert.equal(helped.supported,true);assert.equal(s.expedition.current.companionHelpUsed,false);
+  const miss=answer(s,{wrong:true});assert.equal(miss.companionSaved,'thornling');assert.equal(miss.correct,false);assert.equal(miss.supported,false);assert.equal(miss.healthChanged,false);
+  assert.equal(s.battle.heroHealth,4);assert.equal(s.battle.enemyHealth,enemy);assert.equal(s.dragon.xp,xp);assert.equal(s.rewards.shield,true);assert.equal(s.expedition.current.companionHelpUsed,true);
+  const recordCount=s.campaign.battleRecords.length;assert.equal(C.answerBattle(s,s.battle.question.target,NOW),null);assert.equal(s.campaign.battleRecords.length,recordCount);
+  s=Storage.readBackup(Storage.backupFile(s).text).state;assert.equal(s.expedition.current.companionHelpUsed,true);A.reveal(s,'moon-moth',NOW);A.selectCompanion(s,'moon-moth');
+  const shield=answer(s,{wrong:true});assert.equal(shield.shieldUsed,true);assert.equal(shield.companionSaved,undefined);assert.equal(s.rewards.shield,false);
+  answer(s,{wrong:true});assert.equal(s.battle.heroHealth,3);assert.equal(s.expedition.current.hearts,3);
+  s.battle.heroHealth=0;C.resolveBattle(s,NOW);const family=s.battle.enemyId;C.startMissionBattle(s,NOW);
+  assert.equal(s.battle.heroHealth,4);assert.equal(s.battle.enemyId,family);assert.equal(s.expedition.current.companionHelpUsed,true);
+  answer(s,{wrong:true});assert.equal(s.battle.heroHealth,3);
+  s.expedition.current.phase='complete';C.startMission(s,'first-spark',NOW);C.startMissionBattle(s,NOW);
+  assert.equal(answer(s,{wrong:true}).companionSaved,'moon-moth');assert.equal(s.battle.heroHealth,4);
+});
+test('collected teammate does not change Word trails health or consume quest protection there',()=>{
+  const s=fresh();A.reveal(s,'moon-moth',NOW);A.selectCompanion(s,'moon-moth');C.startMission(s,'first-spark',NOW);A.switchTo(s,'legacy');C.startBattle(s,NOW,{strength:4});
+  const health=s.battle.heroHealth;answer(s,{wrong:true});assert.equal(s.battle.heroHealth,health-1);assert.equal(s.expedition.current.companionHelpUsed,false);
+});
+test('progress counts each fight and clue exactly once, including retries and the final treasure',()=>{
+  const s=fresh();C.startMission(s,'first-spark',NOW);
+  for(let step=0;step<4;step++){
+    assert.deepEqual(A.progress(s),{done:step*2,left:8-step*2,total:8,next:'Fight'});
+    C.startMissionBattle(s,NOW);s.battle.heroHealth=0;C.resolveBattle(s,NOW);assert.equal(A.progress(s).done,step*2);
+    win(s);assert.equal(A.progress(s).done,step*2+1);assert.equal(A.progress(s).next,'Clue');A.startPuzzle(s);
+    const q=D.puzzles[s.expedition.current.puzzle.id];for(const id of [q.answer].flat())A.choose(s,id);A.check(s,NOW);
+    assert.equal(A.progress(s).done,step*2+2);A.next(s,NOW);assert.equal(A.progress(s).done,step*2+2);
+  }
+  assert.deepEqual(A.progress(s),{done:8,left:0,total:8,next:'Treasure'});
+});

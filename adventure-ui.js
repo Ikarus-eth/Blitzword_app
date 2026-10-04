@@ -41,6 +41,28 @@
     function act(fn){if(!ctx.active())return;timeTap();fn();if(ctx.save())renderMission();}
     function missionArt(m){return m.art||Content.chapterBackgrounds[m.area].src;}
     function heading(kicker,title,detail){const h=el('header','adventureHeading');h.append(el('p','adventureEyebrow',kicker),el('h1','',title));if(detail)h.append(el('p','adventureIntro',detail));return h;}
+    function renderProgress(element,compact=false){
+      const s=ctx.state(),p=A.progress(s),m=A.current(s);element.replaceChildren();
+      element.classList.add('questProgress');element.classList.toggle('compactQuest',compact);
+      if(!p||!m)return;
+      element.append(el('strong','questProgressTitle',compact?'Quest':m.name),el('span','questProgressCount',p.done+' of 8 steps done · '+p.left+' left'));
+      const track=el('div','questSteps');track.setAttribute('role','progressbar');track.setAttribute('aria-label','Quest: four fights and four clues');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax','8');track.setAttribute('aria-valuenow',String(p.done));
+      for(let i=0;i<8;i++){const step=el('span','questStep'+(i<p.done?' done':i===p.done?' current':''),compact?'':(i%2?'Clue':'Fight'));step.setAttribute('aria-hidden','true');track.append(step);}element.append(track);
+      if(!compact)element.append(el('small','questNext',p.left?'Next: '+p.next.toLowerCase()+' · Treasure after step 8':'All done! Your treasure is ready.'));
+    }
+    function teamCard(){
+      const s=ctx.state(),c=A.of(s).current,family=A.companion(s),card=el('div','questTeam');
+      if(family){const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);card.append(art);}
+      const copy=el('div','questTeamCopy');copy.append(el('strong','',family?'On your side: '+Content.enemyAt(family).name:'Choose an animal for your team'),el('p','',!family?'It can stop one hit each quest.':c?.companionHelpUsed?'Your friend has stopped a hit. It can help again next quest.':'Your friend can stop one hit this quest.'));
+      copy.append(button(family?'Change animal':'Choose my animal','textButton',()=>openBook(family)));card.append(copy);return card;
+    }
+    function renderBattleTeam(){
+      const s=ctx.state(),family=s.battle?.missionId?A.companion(s):null,box=$('#battleCompanion');box.hidden=!family;$('#battle').classList.toggle('hasQuestCompanion',!!family);
+      if(!family)return;
+      const art=$('#battleCompanionArt');if(art.dataset.family!==family){ctx.paintEnemy(art,family,8);art.dataset.family=family;}
+      $('#battleCompanionName').textContent=Content.enemyAt(family).name;
+      $('#battleCompanionHelp').textContent=A.of(s).current.companionHelpUsed?'Saved a heart ✓':'Can stop one hit';
+    }
     function renderHub(){
       stopTiming();const s=ctx.state(),e=A.of(s),report=A.report(s);ctx.show('adventureHub');
       const screen=$('#adventureHub');screen.replaceChildren();
@@ -52,7 +74,7 @@
       const done=c.missions.filter(id=>e.missions[id]?.completedAt).length;
       screen.append(heading('Adventure '+(D.campaigns.indexOf(c)+1)+' · '+done+'/6 treasures',c.name,done===6?c.ending:c.intro));
       if(e.current&&e.current.phase!=='complete'){
-        const current=D.byId[e.current.missionId],resume=button('Continue '+current.name,'greenButton missionResume',()=>ctx.launch(current.id));resume.id='missionResume';screen.append(resume);
+        const current=D.byId[e.current.missionId],resume=button('Continue '+current.name+' · '+A.progress(s).left+' steps left','greenButton missionResume',()=>ctx.launch(current.id));resume.id='missionResume';screen.append(resume);
       }
       const grid=el('div','missionGrid');
       c.missions.forEach((id,i)=>{
@@ -63,10 +85,11 @@
         const medal=el('span','missionNumber',complete?'✓':String(i+1));art.append(medal);
         const creatures=el('span','missionCreatures');for(const family of m.families){const face=el('span','missionCreature sceneSprite');ctx.paintEnemy(face,family,8);if(!e.book[family]?.seen)face.classList.add('undiscovered');creatures.append(face);}art.append(creatures);
         const copy=el('div','missionCardCopy');copy.append(el('h2','',m.name),el('p','',m.goal));
-        const status=complete?'Treasure found · play again':!open?'Follow the earlier paths':busy?'Your current mission is saved':m.finale?'Final mission':'Choose this path';copy.append(el('span','missionCardStatus',status));card.append(art,copy);grid.append(card);
+        const status=e.current?.missionId===id&&e.current.phase!=='complete'?A.progress(s).left+' steps left':complete?'Treasure found · play again':!open?'Follow the earlier paths':busy?'Your current mission is saved':m.finale?'Final mission':'Choose this path';copy.append(el('span','missionCardStatus',status));card.append(art,copy);grid.append(card);
       });screen.append(grid);
       const camp=el('footer','adventureCamp'),pip=button('','campPip',ctx.growth);pip.setAttribute('aria-label','See Pip’s growth');const pipArt=el('span','sceneSprite');ctx.paintPip(pipArt);pip.append(pipArt,el('span','',ctx.dragonText('Pip')+' · '+Math.floor(s.dragon.xp||0)+' XP'));camp.append(pip);
-      if(e.favourite){const friend=button('','campFriend',()=>openBook(e.favourite));const art=el('span','sceneSprite');ctx.paintEnemy(art,e.favourite,8);friend.append(art,el('span','',Content.enemyAt(e.favourite).name));camp.append(friend);}
+      if(A.companion(s)){const friend=button('','campFriend',()=>openBook(e.favourite));const art=el('span','sceneSprite');ctx.paintEnemy(art,e.favourite,8);friend.append(art,el('span','','Your team · '+Content.enemyAt(e.favourite).name));camp.append(friend);}
+      else camp.append(button('Choose my animal','bookLauncher',()=>openBook()));
       const controls=el('div','campControls');controls.append(button('Word trails','textButton',ctx.legacy),button('Speed','textButton',ctx.speed),button('Parents','textButton',ctx.parents));camp.append(controls);screen.append(camp);
     }
     function renderMission(){
@@ -74,7 +97,7 @@
       const screen=$('#mission'),view=m.id+':'+c.step+':'+c.phase,scroll=screen.dataset.view===view?screen.scrollTop:0;
       ctx.show('mission');screen.replaceChildren();screen.dataset.view=view;
       const complete=c.phase==='complete',p=c.puzzle,q=D.puzzles[p?.id],solving=c.phase==='puzzle';
-      const top=el('div','missionTop');top.append(el('span','adventureEyebrow',D.campaigns.find(x=>x.id===m.campaign).shortName),el('span','',complete?'Treasure found':m.name+' · '+(c.step+1)+'/4'));screen.append(top);
+      const top=el('div','missionTop');renderProgress(top);screen.append(top);
       const body=el('div','missionBody'),scene=el('figure','missionScene');
       const image=el('img');image.src=missionArt(m);image.alt=m.artAlt||m.place;image.decoding='async';scene.append(image);
       const medallion=el('div','missionSceneMedallion');medallion.innerHTML=icon(complete?m.symbol:solving?'map':m.finale?'star':'leaf');scene.append(medallion);
@@ -82,17 +105,18 @@
       // Before an answer, the caption states the task rather than giving away its outcome.
       if(solving&&!p.solved)scene.querySelector('figcaption').textContent=m.goal;
       const panel=el('div','missionReading parchment');
+      if(!complete){const hearts=el('p','questHearts','♥ '+c.hearts+' / '+c.maxHearts+' hearts · Same hearts for this quest');panel.append(hearts);}
       if(complete){
         const campaign=D.campaigns.find(x=>x.id===m.campaign),all=A.campaignComplete(s,m.campaign);
         panel.append(heading(all?'Campaign complete!':'Mission complete!',all?campaign.prize:m.item,ctx.dragonText(m.ending)));
         const badge=el('div','treasureBadge');badge.innerHTML=icon(m.symbol);panel.append(badge);
-        const friends=el('div','missionFriends');for(const family of m.families){const b=button('','friendReward',()=>openBook(family));const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);b.append(art,el('strong','',Content.enemyAt(family).name),el('small','','Secret learned'));friends.append(b);}panel.append(friends);
+        const friends=el('div','missionFriends');for(const family of m.families){const b=button('','friendReward',()=>openBook(family));const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);b.append(art,el('strong','',Content.enemyAt(family).name),el('small','','Clue stamp earned'));friends.append(b);}panel.append(friends);
         panel.append(button(all&&m.campaign==='lost-lights'?'Explore the river':'Choose another mission','greenButton',()=>{if(all&&m.campaign==='lost-lights')e.selectedCampaign='river-song';ctx.save();ctx.home();}),button('Rest here','textButton',ctx.home));
       }else if(!solving){
         const family=m.encounters[c.step],first=c.step===0;
-        panel.append(heading(first?'A new mission':c.step>=2?'The guardian’s challenge':'The next part of your mission',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:'The '+Content.enemyAt(family).name+' has the next clue. Win this short challenge to find out what happens next.')));
+        panel.append(heading(first?'A new quest':c.step>=2?'Big fight':'Next fight',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:'Win this fight. Get the next clue.')));
         const actor=el('div','missionIntroEnemy sceneSprite');ctx.paintEnemy(actor,family,m.health[c.step]);panel.append(actor);
-        panel.append(button(first?'Let’s go':'Take the challenge','greenButton',()=>{if(!ctx.active())return;if(Core.startMissionBattle(s,Date.now())&&ctx.save())ctx.enter();}),button('Back to camp','textButton',ctx.home));
+        panel.append(button(first?'Let’s go':'Start the fight','greenButton',()=>{if(!ctx.active())return;if(Core.startMissionBattle(s,Date.now())&&ctx.save())ctx.enter();}),button('Back to camp','textButton',ctx.home));
       }else{
         panel.append(heading('Read the clues',q.title));
         const text=el('div','riddleText');q.text.forEach(line=>text.append(el('p','',ctx.dragonText(line))));panel.append(text);
@@ -117,14 +141,15 @@
           if(p.attempts)actions.append(button('Show me how','textButton',()=>act(()=>A.check(s,Date.now(),{reveal:true}))));
         }panel.append(actions);
       }
-      body.append(scene,panel);screen.append(body);screen.scrollTop=scroll;stamp=solving&&!p.solved?Date.now():null;
+      const picture=el('div','missionPicture');picture.append(scene,teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;stamp=solving&&!p.solved?Date.now():null;
     }
     function renderResult(){
       const s=ctx.state(),e=A.of(s),m=A.current(s),r=s.result,c=e.current;if(!r?.missionId||!m)return false;
-      $('#resultMessage').textContent=r.victory?(r.newDiscovery?'New creature discovered!':'A new clue is ready.'): 'Your clues and treasures are safe.';
+      $('#resultMessage').textContent=r.victory?(r.newDiscovery?'New creature discovered!':'A new clue is ready.'): 'No hearts left. Rest to get 4 hearts. Your clues stay solved.';
       $('#checkpoint').textContent='';const box=$('#opponents');box.replaceChildren();box.classList.add('missionResultActions');
-      box.append(button(r.victory?'Read the next clue':'Try this challenge again','greenButton',()=>{if(!ctx.active())return;if(r.victory)A.startPuzzle(s);else Core.startMissionBattle(s,Date.now());if(ctx.save())ctx.enter();}));
-      if(r.victory&&c.step===3)$('#resultMessage').textContent='Guardian stamp earned. One last clue!';
+      box.append(button(r.victory?'Read the next clue':'Rest and retry · 4 hearts','greenButton',()=>{if(!ctx.active())return;if(r.victory)A.startPuzzle(s);else Core.startMissionBattle(s,Date.now());if(ctx.save())ctx.enter();}));
+      if(r.victory&&c.step===3)$('#resultMessage').textContent='Star stamp earned! One clue left.';
+      const family=A.companion(s),friend=$('#resultCompanion');friend.hidden=!family;if(family)ctx.paintEnemy(friend,family,8);
       $('#resultNext').textContent='Back to camp';return true;
     }
     function openBook(family=null){
@@ -133,24 +158,26 @@
     function renderBook(){
       const s=ctx.state(),e=A.of(s),report=A.report(s);ctx.show('creatureBook');const screen=$('#creatureBook');screen.replaceChildren();
       const top=el('div','bookTop');top.append(button('← '+(bookReturn==='mission'?'Back to mission':'Back to camp'),'secondaryButton',()=>bookReturn==='mission'?ctx.enter():ctx.home()),el('span','bookCount',report.seen+' / 20 discovered'));screen.append(top);
-      screen.append(heading('Your woodland companions','Creature Book','Meet a creature. Solve its clue. Earn its guardian stamp.'));
+      screen.append(heading('Your animal friends','Creature Book','Choose a friend to join you in fights. It can stop one hit each quest.'));
+      const legend=el('div','bookLegend');for(const text of ['◆ Met: meet this friend','✦ Clue: solve its clue','★ Star: win its big fight'])legend.append(el('span','',text));screen.append(legend);
       const layout=el('div','bookLayout'),grid=el('div','creatureGrid');
       Content.enemies.forEach((enemy,i)=>{const entry=e.book[enemy.id],b=button('','creatureTile'+(!entry?.seen?' unseen':'')+(selectedCreature===enemy.id?' selected':''),()=>{selectedCreature=enemy.id;renderBook();$('#creatureDetail').scrollIntoView?.({block:'nearest'});});b.dataset.family=enemy.id;b.setAttribute('aria-label',entry?.seen?enemy.name:'Unknown creature '+(i+1));
-        const art=el('span','sceneSprite');ctx.paintEnemy(art,enemy.id,8);b.append(el('small','creatureNumber',String(i+1).padStart(2,'0')),art,el('strong','',entry?.seen?enemy.name:'???'));
-        const stamps=el('span','creatureStamps');for(const [field,label,symbol] of [['seen','Discovered','◆'],['studied','Secret learned','✦'],['champion','Guardian won','★']]){const stamp=el('span',entry?.[field]?'earned':'',symbol);stamp.setAttribute('aria-label',label+(entry?.[field]?': earned':': not yet'));stamps.append(stamp);}b.append(stamps);grid.append(b);
+        const art=el('span','sceneSprite');ctx.paintEnemy(art,enemy.id,8);art.setAttribute('aria-hidden','true');b.append(el('small','creatureNumber',String(i+1).padStart(2,'0')),art,el('strong','',entry?.seen?enemy.name:'???'));
+        const stamps=el('span','creatureStamps');for(const [field,label,symbol] of [['seen','Met','◆'],['studied','Clue','✦'],['champion','Star','★']]){const stamp=el('span',entry?.[field]?'earned':'',symbol+' '+label);stamp.setAttribute('aria-label',label+(entry?.[field]?': earned':': not yet'));stamps.append(stamp);}b.append(stamps);grid.append(b);
       });layout.append(grid);
       const detail=el('aside','creatureDetail parchment');detail.id='creatureDetail';
       if(selectedCreature){const enemy=Content.enemyAt(selectedCreature),entry=e.book[selectedCreature],m=A.findMission(selectedCreature),lore=D.lore[selectedCreature];
         const art=el('div','detailCreature sceneSprite'+(!entry?.seen?' undiscovered':''));ctx.paintEnemy(art,selectedCreature,8);detail.append(art,el('h2','',entry?.seen?enemy.name:'Who is hiding here?'),el('p','',entry?.studied?lore[1]:lore[0]));
         detail.append(el('p','creatureWhere','Find this friend: '+m.name));
+        const stamps=el('ul','bookStampList');for(const [field,label] of [['seen','Met this friend'],['studied','Solved its clue'],['champion','Won its big fight']])stamps.append(el('li',entry?.[field]?'earned':'',(entry?.[field]?'✓ ':'○ ')+label));detail.append(stamps);
         if(!entry?.studied)detail.append(el('p','bookHint','Finish a clue with this creature to learn its secret.'));
-        if(!entry?.champion)detail.append(el('p','bookHint','Win a guardian challenge to earn the star.'));
-        if(entry?.seen){const favourite=button(e.favourite===selectedCreature?'Your camp companion ✓':'Invite to camp','secondaryButton',()=>{e.favourite=selectedCreature;if(ctx.save())renderBook();});detail.append(favourite);}
+        if(!entry?.champion)detail.append(el('p','bookHint','Win its big fight to earn the star.'));
+        if(entry?.seen){const favourite=button(e.favourite===selectedCreature?'On your team ✓':'Choose for my team','secondaryButton',()=>{if(A.selectCompanion(s,selectedCreature)&&ctx.save())renderBook();});detail.append(favourite);}
         detail.append(button('Find this path','textButton',()=>{e.selectedCampaign=m.campaign;if(!ctx.save())return;ctx.home();const card=$('#adventureHub [data-mission="'+m.id+'"]');card?.classList.add('creatureTarget');card?.scrollIntoView?.({block:'center'});}));
       }else {detail.append(el('h2','','Every friend has a secret'),el('p','','Tap a page to see its clues. A dark shape means there is someone new to find.'));}
       layout.append(detail);screen.append(layout);
     }
-    return {renderHub,renderMission,renderResult,openBook,renderBook,timeTap,stopTiming,icon};
+    return {renderHub,renderMission,renderResult,openBook,renderBook,timeTap,stopTiming,icon,renderProgress,renderBattleTeam};
   }
   root.BlitzAdventureUI={create};
 })(typeof window==='object'?window:globalThis);

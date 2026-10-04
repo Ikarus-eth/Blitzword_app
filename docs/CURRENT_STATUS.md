@@ -1,4 +1,10 @@
-# BlitzWord current status — 3 October 2026
+# BlitzWord current status — 4 October 2026
+
+## Quest clarity, shared hearts and animal teammates — 4 October 2026
+
+**Implemented and tested locally; deployment pending.** Build `quest-clarity-20261004-r1` addresses the latest playtest feedback. All twelve mission introductions now use 11–16 words, goals/endings and fight transitions are simpler, and all 48 challenges remain identical. New quests carry four hearts across their four fights; a defeat retries the same fight with four hearts and preserves clues. Existing pending hearts are preserved. An eight-step Fight / Clue trail shows completed and remaining work throughout the quest. Book symbols now say Met, Clue and Star with a legend. A collected animal can be chosen to stand with the hero, stop one hit per quest and appear at camp/results; swapping, retrying and reopening do not recharge the help. Learner evidence, XP, Pip and Word trails retain their rules.
+
+Clean install and regression checks: 294 unit tests and 104 UI flow groups passed. Tablet landscape/portrait and phone previews checked; physical iPad and revised child pacing remain unverified. See [follow-up rules and evidence](adventures/QUEST_CLARITY_RELEASE.md). The earlier two-hour model is historical: stricter hearts can add retries, so it is not a measured duration for this revision.
 
 ## Creature campaigns, riddles and collection — 3 October 2026
 
