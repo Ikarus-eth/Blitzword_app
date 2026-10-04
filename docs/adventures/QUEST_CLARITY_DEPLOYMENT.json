@@ -1,0 +1,75 @@
+{
+  "verifiedAt": "2026-10-04T00:58:30.394548+00:00",
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "build": "quest-clarity-20261004-r1",
+  "commit": "dfda09124d6ac11424695b0c9f6c7cf7f1262eb9",
+  "pullRequest": 123,
+  "pagesRun": 37166504244,
+  "deploymentStep": "success",
+  "files": [
+    {
+      "path": "index.html",
+      "httpStatus": 200,
+      "bytes": 38088,
+      "sha256": "4191cb372e9c93ca30b216a55f739a224f89fec18cc55c316b926bf095137422",
+      "matchesTestedSource": true,
+      "buildMarkerMatches": true
+    },
+    {
+      "path": "missions.js",
+      "httpStatus": 200,
+      "bytes": 28436,
+      "sha256": "95e6e98dde26d348c5423148abac239f80410fca32f7e281d1769a0767e8f84f",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "adventure-core.js",
+      "httpStatus": 200,
+      "bytes": 9656,
+      "sha256": "b5a9550ffabd170c904221b973d58b7ddeeb18dc1afa3808bc4333b4b4171586",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "game-core.js",
+      "httpStatus": 200,
+      "bytes": 76621,
+      "sha256": "a7b03841c8dede0c38375af6b7f3924dff7f2a669e282e84ac9f687ecf384cd1",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "adventure-ui.js",
+      "httpStatus": 200,
+      "bytes": 20490,
+      "sha256": "95edb37bfc6f35f1fb92d41cd759dfcfe073f836104364e2f2f1b97b302e9682",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "app.js",
+      "httpStatus": 200,
+      "bytes": 108817,
+      "sha256": "8a60b56c06264ffbb9be5a62f88840d673553718ebaaf9e00f40c0e4486dd8c0",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "adventures.css",
+      "httpStatus": 200,
+      "bytes": 17661,
+      "sha256": "b821a8ed8081e9100b517e8b6e15f1a25e2998a6b2a2d557905047a0f558222b",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "tests/review-app.html",
+      "httpStatus": 200,
+      "bytes": 4171,
+      "sha256": "f8d50bd589747a3c9e444b69871125a794141ad12bd8192ff552d8c810d1ccd3",
+      "matchesTestedSource": true
+    },
+    {
+      "path": "tests/review-scenarios.js",
+      "httpStatus": 200,
+      "bytes": 9297,
+      "sha256": "a4a42717d26f60d4acde9a492e0dad995baa2305cea98f11fcda120000f4712a",
+      "matchesTestedSource": true
+    }
+  ]
+}
