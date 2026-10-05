@@ -9,7 +9,7 @@ function win(s,now=NOW){
 }
 function solve(s,now=NOW){assert.equal(A.startPuzzle(s,()=>0.4),true);const q=D.puzzles[s.expedition.current.puzzle.id];for(const id of [q.answer].flat())A.choose(s,id);assert.equal(A.check(s,now).correct,true);A.next(s,now);}
 test('two acyclic campaigns contain 48 unique solvable puzzles and all 20 creatures',()=>{
-  assert.equal(D.campaigns.length,2);assert.equal(D.missions.length,12);assert.equal(Object.keys(D.puzzles).length,48);
+  assert.equal(D.campaigns.length,2);assert.equal(D.missions.length,12);assert.equal(D.missions.flatMap(m=>m.riddles).length,48);assert.equal(D.legacyPuzzles.length,4);
   assert.deepEqual([...new Set(D.missions.flatMap(m=>m.families))].sort(),Content.enemies.map(e=>e.id).sort());
   const seen=new Set();for(const m of D.missions){assert.equal(m.riddles.length,4);for(const id of m.requires)assert.ok(seen.has(id));seen.add(m.id);
     assert.ok(Content.chapterBackgrounds[m.area]);
@@ -47,10 +47,10 @@ test('wrong answers, hints and worked solutions preserve first evidence; replay 
   assert.equal(r.first.correct,false);assert.equal(r.first.hint,false);assert.equal(r.last.hint,true);assert.equal(r.last.assisted,true);assert.equal(s.expedition.book.thornling.studied,true);
   assert.equal(A.check(s,NOW+2000),false);assert.equal(r.visits,1);A.next(s,NOW);assert.equal(s.expedition.current.step,1);
 });
-test('losses do not erase mission steps, discoveries or earned clues; retry uses the same encounter',()=>{
+test('losses rewind one encounter pair without erasing discoveries or earned clue evidence',()=>{
   const s=fresh();C.startMission(s,'first-spark',NOW);win(s);solve(s);C.startMissionBattle(s,NOW);const family=s.battle.enemyId;s.battle.heroHealth=0;C.resolveBattle(s,NOW);
   assert.equal(s.expedition.current.phase,'retry');assert.equal(A.stats(s).wins,1);assert.equal(A.stats(s).riddles['spark-bag'].first.correct,true);
-  assert.equal(C.startMissionBattle(s,NOW),true);assert.equal(s.battle.enemyId,family);assert.equal(s.expedition.current.step,1);
+  assert.equal(C.startMissionBattle(s,NOW),true);assert.equal(s.battle.enemyId,'thornling');assert.equal(s.expedition.current.step,0);
 });
 test('old sightings migrate conservatively and riddle time is bounded and separately recorded',()=>{
   const s=fresh();delete s.expedition;s.campaign.enemyHistory=[{enemyId:'thornling--3'}];A.init(s);assert.equal(s.expedition.book.thornling.seen,true);assert.equal(s.expedition.book.thornling.champion,false);
@@ -101,22 +101,39 @@ test('progress counts each fight and clue exactly once, including retries and th
   const s=fresh();C.startMission(s,'first-spark',NOW);
   for(let step=0;step<4;step++){
     assert.deepEqual(A.progress(s),{done:step*2,left:8-step*2,total:8,next:'Fight'});
-    C.startMissionBattle(s,NOW);s.battle.heroHealth=0;C.resolveBattle(s,NOW);assert.equal(A.progress(s).done,step*2);
     win(s);assert.equal(A.progress(s).done,step*2+1);assert.equal(A.progress(s).next,'Clue');A.startPuzzle(s);
     const q=D.puzzles[s.expedition.current.puzzle.id];for(const id of [q.answer].flat())A.choose(s,id);A.check(s,NOW);
     assert.equal(A.progress(s).done,step*2+2);A.next(s,NOW);assert.equal(A.progress(s).done,step*2+2);
   }
   assert.deepEqual(A.progress(s),{done:8,left:0,total:8,next:'Treasure'});
 });
-test('riddle mistakes spend one quest heart, lock duplicate submissions and preserve zero-heart rest',()=>{
+test('riddle defeat saves first evidence and restarts no earlier than the chapter start',()=>{
  let s=fresh();C.startMission(s,'first-spark',NOW);win(s);A.startPuzzle(s);let c=s.expedition.current;
  c.hearts=2;c.companionHelpUsed=true;
  A.choose(s,'red');assert.equal(A.check(s,NOW).heartLost,true);assert.equal(c.hearts,1);
  assert.equal(A.check(s,NOW+1),false);assert.equal(c.hearts,1);
- A.choose(s,'red');A.check(s,NOW+2);assert.equal(c.hearts,0);
- const first=JSON.stringify(c.puzzle.first);s=Storage.readBackup(Storage.backupFile(s).text).state;c=s.expedition.current;
+ A.choose(s,'red');A.check(s,NOW+2);assert.equal(c.hearts,0);assert.equal(s.activity,'result');assert.equal(c.retryTargetStep,0);
+ const first=JSON.stringify(A.stats(s).riddles['spark-bag'].first);s=Storage.readBackup(Storage.backupFile(s).text).state;c=s.expedition.current;
  assert.equal(c.hearts,0);assert.equal(A.choose(s,'blue'),false);assert.equal(A.check(s,NOW,{reveal:true}),false);
- assert.equal(A.restRiddle(s),true);assert.equal(c.hearts,4);assert.equal(c.companionHelpUsed,true);assert.equal(JSON.stringify(c.puzzle.first),first);assert.equal(c.puzzle.attempts,2);
- assert.equal(A.restRiddle(s),false);A.choose(s,'blue');A.check(s,NOW+3);assert.equal(c.hearts,4);assert.equal(c.puzzle.solved,true);
- A.next(s,NOW);C.startMissionBattle(s,NOW);assert.equal(s.battle.heroHealth,4);
+ assert.equal(C.startMissionBattle(s,NOW),true);assert.equal(c.hearts,4);assert.equal(c.companionHelpUsed,true);assert.equal(JSON.stringify(A.stats(s).riddles['spark-bag'].first),first);assert.equal(c.step,0);assert.equal(s.activity,'battle');
+ assert.equal(A.retry(s),false);
+});
+test('fight and riddle defeats rewind exactly two tracker steps once, including reload and backup',()=>{
+ for(const fromRiddle of [false,true])for(const step of [1,2,3]){
+  let s=fresh();C.startMission(s,'first-spark',NOW);s.expedition.current.step=step;C.startMissionBattle(s,NOW);
+  if(fromRiddle){s.battle.enemyHealth=0;C.resolveBattle(s,NOW);A.startPuzzle(s);s.expedition.current.hearts=1;const q=A.Data.puzzles[s.expedition.current.puzzle.id];s.expedition.current.puzzle.selection=q.type==='order'?[...q.answer].reverse():[q.options.find(o=>o.id!==q.answer).id];A.check(s,NOW);}
+  else{s.battle.heroHealth=0;C.resolveBattle(s,NOW);}
+  const from=step*2+(fromRiddle?1:0);assert.equal(s.expedition.current.retryTargetStep,from-2);
+  s=Storage.readBackup(Storage.backupFile(s).text).state;C.startMissionBattle(s,NOW);
+  assert.equal(A.progress(s).done,from-2);assert.equal(s.expedition.current.hearts,4);assert.equal(s.expedition.current.step,step-1);assert.equal(s.activity,fromRiddle?'mission':'battle');assert.equal(A.retry(s),false);
+ }
+});
+test('mapmaker replacement keeps mission unlocks, old pending vault answers and earned progress',()=>{
+ let s=fresh();for(const id of ['first-spark','moth-post','root-workshop'])A.stats(s,id).completedAt=new Date(NOW).toISOString();
+ C.startMission(s,'mimic-vault',NOW);const m=A.current(s);assert.equal(m.name,'The Boy and the Map');assert.equal(m.scenes.length,4);
+ win(s);A.startPuzzle(s);assert.equal(s.expedition.current.puzzle.id,'mapmaker-pen');
+ const p=s.expedition.current.puzzle;p.id='vault-tool';p.order=['saw','brush','comb'];p.selection=['brush'];
+ s=Storage.readBackup(Storage.backupFile(s).text).state;assert.equal(A.check(s,NOW).correct,true);assert.equal(A.stats(s).riddles['vault-tool'].first.selection[0],'brush');
+ A.next(s,NOW);win(s);A.startPuzzle(s);assert.equal(s.expedition.current.puzzle.id,'mapmaker-path');
+ assert.ok(A.stats(s,'moth-post').completedAt);assert.equal(A.unlocked(s,'oak-heart'),false);
 });

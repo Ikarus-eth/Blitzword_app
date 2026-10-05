@@ -2,6 +2,10 @@
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
+### Boy and map book — 6 October 2026
+
+The user explicitly selected the bottom-right scene in `assets/teaching/core-teaching.webp`: a brown-haired boy in a cream shirt and green waistcoat drawing in an open map book. It is the identity and painted-style reference for the fifth Forest Lights adventure. Four built-in ImageGen paintings retain the boy, book, feather pen and warm rural storybook style; [gallery and exact prompts](adventures/MAPMAKER_RELEASE.md). These replace that mission's narrative art, not the battle hero. The approved mage and small Pip also receive a reference-based paired sad retreat illustration for the defeat screen; their existing battle assets remain unchanged.
+
 ### Creature mission illustrations — 3 October 2026
 
 Twelve integrated fal.ai paintings in `assets/adventures/` depict the active male mage, Small Pip using the selected friendly B design, and the approved enemy cast. These are new mission scenes, not replacements for battle motion. Character reference paths, exact prompts and request IDs are recorded in [the campaign artwork prompts](adventures/art-prompts.json) and [generation provenance](adventures/art-requests.json). The full 3:2 scenes are uncropped in mission pages. Puzzle answers are specified in text/cards and diagrams, rather than relying on exact generated object counts. Code-generated line icons serve simple answer controls. [Provider setup and cost](FAL_AI_IMAGES.md).

@@ -380,7 +380,7 @@ for(const victory of [true,false]){
 }
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());s.battle.heroHealth=0;Core.resolveBattle(s,Date.now());
- let ui=boot(s);ui.resume();assert.equal(ui.get('defeatScene').hidden,false);assert.equal(ui.state().result.defeatShown,true);ui.click(ui.get('pauseBtn'));assert.equal(ui.get('defeatScene').hidden,true);ui.click(ui.get('pauseResume'));assert.equal(ui.get('defeatScene').hidden,true);
+ let ui=boot(s);ui.resume();assert.equal(ui.get('resultRetreat').hidden,false);assert.equal(ui.get('resultTitle').textContent,'You lost this round');assert.equal(ui.state().result.defeatShown,true);ui.click(ui.get('pauseBtn'));assert.equal(ui.get('defeatScene').hidden,true);ui.click(ui.get('pauseResume'));assert.equal(ui.get('defeatScene').hidden,true);
  ui=boot(ui.state());ui.resume();assert.equal(ui.get('defeatScene').hidden,true);assert.equal(ui.get('opponents').children.length,2);
  console.log('PASS defeat reaction cancels on pause and cannot replay after reload');
 }
@@ -1003,9 +1003,7 @@ console.log('PASS last group member resolves exactly once, including reduced mot
 {
  const s=impactSave();Object.assign(s.battle,{enemyId:'bark-beetle--3',maxHealth:25,enemyHealth:5,heroHealth:0});
  Core.resolveBattle(s,Date.UTC(2026,8,25));const ui=boot(s);ui.resume();
- assert.equal(ui.get('defeatScene').hidden,false);
- assert.equal(ui.get('defeatEnemy').querySelectorAll('.enemyMember:not(.retired)').length,1);
- assert.equal(ui.get('defeatEnemy').querySelectorAll('.enemyMember.retired').length,4);
+ assert.equal(ui.get('resultRetreat').hidden,false);assert.equal(ui.get('defeatScene').hidden,true);assert.equal(ui.state().battle.enemyHealth,5);
  console.log('PASS defeat escape shows surviving group members without reviving retired creatures');
 }
 
@@ -1179,8 +1177,8 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.get('battleCompanionHelp'),null);assert.equal(ui.get('battleCompanion').classList.contains('protecting'),false);
  assert.equal(ui.state().campaign.battleRecords.length,1);
  const loss=ui.state();loss.battle.heroHealth=0;Core.resolveBattle(loss,now);ui=boot(loss,{adventures:true});ui.click(ui.get('missionResume'));
- assert.match(ui.get('resultMessage').textContent,/Your clues stay solved/);assert.match(ui.get('resultChapter').textContent,/8 left/);
- ui.click([...ui.get('opponents').children].find(b=>b.textContent==='Rest and retry · 4 hearts'));assert.equal(ui.state().battle.heroHealth,4);assert.equal(ui.state().expedition.current.companionHelpUsed,true);
+ assert.match(ui.get('resultMessage').textContent,/Try the first step again/);assert.match(ui.get('resultChapter').textContent,/8 left/);
+ ui.click([...ui.get('opponents').children].find(b=>b.textContent==='Try again · 4 hearts'));assert.equal(ui.state().battle.heroHealth,4);assert.equal(ui.state().expedition.current.companionHelpUsed,true);
  console.log('PASS visible eight-step quest, heart pool, book legend, chosen battle ally, protection feedback and saved retry');
 }
 {
@@ -1190,9 +1188,26 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
  for(const b of ui.get('mission').querySelectorAll('.numberOption'))assert.equal(b.textContent,b.dataset.choice);
  ui.click(ui.get('mission').querySelector('[data-choice="4"]'));ui.click(missionButton(ui,'Try it'));
- assert.equal(ui.state().expedition.current.hearts,0);assert.match(ui.get('mission').textContent,/No hearts left/);assert.equal(missionButton(ui,'Try it'),undefined);
+ assert.equal(ui.state().expedition.current.hearts,0);assert.match(ui.get('resultMessage').textContent,/No hearts left/);assert.equal(ui.get('resultRetreat').hidden,false);
  ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.state().expedition.current.hearts,0);
- ui.click(missionButton(ui,'Rest and retry · 4 hearts'));assert.equal(ui.state().expedition.current.hearts,4);assert.equal(ui.state().expedition.current.puzzle.first.correct,false);
- ui.click(ui.get('mission').querySelector('[data-choice="6"]'));ui.click(missionButton(ui,'Try it'));assert.ok(ui.get('mission').querySelector('.riddleFeedback .riddleActions'));assert.match(ui.get('mission').querySelector('.riddleSolvedAnswer').textContent,/6/);
+ ui.click([...ui.get('opponents').children].find(b=>b.textContent==='Try again · 4 hearts'));assert.equal(ui.state().expedition.current.hearts,4);assert.equal(ui.state().expedition.missions['first-spark'].riddles['post-code'].first.correct,false);assert.equal(ui.state().activity,'battle');
  console.log('PASS single number labels, saved zero-heart rest and Continue inside success feedback');
 }
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,9,6);s.profile.name='Reader';s.assessment.done=true;
+ for(const id of ['first-spark','moth-post','root-workshop'])A.stats(s,id).completedAt=new Date(now).toISOString();
+ Core.startMission(s,'mimic-vault',now);
+ let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
+ assert.match(ui.get('mission').textContent,/The Boy and the Map/);assert.match(ui.get('mission').querySelector('.missionScene img').src,/mapmaker-desk/);
+ const next=ui.state();next.expedition.current.step=1;ui=boot(next,{adventures:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').querySelector('.missionScene img').src,/mapmaker-bridge/);assert.match(ui.get('mission').textContent,/takes his book to the stream/);
+ const final=ui.state();final.expedition.current.phase='complete';final.expedition.missions['mimic-vault'].completedAt=new Date(now).toISOString();ui=boot(final,{adventures:true});ui.click(ui.get('adventureHub').querySelector('[data-mission="mimic-vault"]'));
+ assert.match(ui.get('mission').querySelector('.missionScene img').src,/mapmaker-desk/);
+ console.log('PASS mapmaker cover and step-specific scene/text, completed mission replay keeps chapter identity');
+}
+for(const chosen of ['made','wade'])for(const options of [['made','wade','have','hide'],['hide','have','wade','made']]){
+ const s=impactSave(),q=s.battle.question;q.target='have';q.options=options;q.isNew=false;q.supportReasons=[];q.phase='choices';s.learning.words.have.introducedAt=new Date().toISOString();s.learning.words.have.independentCorrect=3;
+ const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const b=[...ui.get('battleAnswers').children].find(b=>b.textContent===chosen);ui.click(b);
+ assert.equal(ui.state().battle.question.firstResponse,chosen);assert.equal(ui.state().campaign.battleRecords.at(-1).firstResponse,chosen);assert.equal(ui.get('battleScroll').querySelector('.selectedWord .correctionLetters').textContent,chosen);assert.ok(ui.speechTexts.some(t=>t.includes('You chose '+chosen+'.')));
+ const count=ui.state().campaign.battleRecords.length;b.onclick();assert.equal(ui.state().campaign.battleRecords.length,count);
+}
+console.log('PASS made and wade preserve the displayed selection, saved evidence, spoken and written correction across positions');

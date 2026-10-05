@@ -73,17 +73,26 @@
         pick('owl-nest','A safe basket',['The chick needs a basket with a lid.','It must have no hole in the bottom.'],'Choose its basket.',[
           choice('open','No lid · no hole','basket'),choice('hole','Lid · hole','basket'),choice('safe','Lid · no hole','basket')],'safe','A lid is only one clue. Check the bottom too.','The lidded basket with no hole keeps the chick safe.','The blue light seed is yours.')
       ]},
-    {id:'mimic-vault',campaign:'lost-lights',name:'The Laughing Vault',place:'Hidden Nest',area:'hidden-nest',requires:['moth-post','root-workshop'],families:['chest-mimic','snail-knight'],
-      goal:'Open the chest. Find the seed.',item:'Gold light seed',symbol:'key',
-      intro:'The chest has a seed. It will not open. Find out how.',
-      ending:'The chest laughs and opens up. You catch the gold seed!',
+    {id:'mimic-vault',campaign:'lost-lights',name:'The Boy and the Map',place:'The Mapmaker’s Cottage',area:'hidden-nest',requires:['moth-post','root-workshop'],families:['chest-mimic','snail-knight'],
+      goal:'Help the boy draw a map. Find the gold seed.',item:'Gold light seed',symbol:'map',
+      intro:'A boy draws a map in his book. Help him find the gold seed.',
+      ending:'The boy shows his map to the chest. It opens! The gold seed lights up his book.',
+      art:'assets/adventures/mapmaker-desk.webp',artAlt:'The brown-haired boy in a green waistcoat draws a river map in his open book at a sunlit wooden desk.',
+      endingArt:'assets/adventures/mapmaker-finish.webp',endingArtAlt:'The boy proudly holds his finished map book beside a glowing gold seed in his cottage.',
+      scenes:[
+        {art:'assets/adventures/mapmaker-desk.webp',alt:'The boy draws in his open map book with a feather pen at his cottage desk.',intro:'The boy needs a pen for his map. The chest has a clue.'},
+        {art:'assets/adventures/mapmaker-bridge.webp',alt:'The boy compares his open map book with a wooden bridge over a woodland stream.',intro:'The boy takes his book to the stream. The snail knight knows the paths.'},
+        {art:'assets/adventures/mapmaker-hill.webp',alt:'The boy sits beneath an oak on a grassy hill, drawing the river and woodland landmarks in his book.',intro:'From the hill, the boy can see the wood. Help him count the marks on his map.'},
+        {art:'assets/adventures/mapmaker-finish.webp',alt:'The boy holds up his finished river map in the warm light of his cottage.',intro:'The boy goes home with his book. Help him finish the map and open the chest.'}
+      ],
       riddles:[
-        pick('vault-tool','The ticklish lock',['Use something soft with no sharp teeth.','It must brush dust from a tiny lock.'],'Which tool should you take?',[
-          choice('saw','Saw','tool'),choice('brush','Soft brush','tool'),choice('comb','Hard comb','tool')],'brush','Think about both the soft bristles and the job.','A soft brush can clear the lock without scratching it.','The dusty lock is clean.'),
-        pick('vault-key','The knight’s keys',['The knight has a round key and a square key.','The round key opens the gate.','The other key opens the vault.'],'Which key opens the vault?',[
-          choice('round','Round key','key'),choice('square','Square key','key'),choice('neither','Neither key','key')],'square','“The other key” means the one not used for the gate.','The square key is the other key.','The vault key turns.'),
-        pick('vault-code','Three rows of bells',['The vault has three rows of bells.','There are four bells in each row.','Two bells make no sound.'],'How many bells can ring?',[number(7),number(10),number(12)],'10','Count all three groups of four. Then leave out the two silent bells.','Three groups of four makes twelve. Two are silent, so ten can ring.','The ringing code wakes the vault.'),
-        order('vault-open','Mind your fingers',['Knock before you turn the key.','Step back after you turn the key.'],['Step back','Knock','Turn key'],[1,2,0],'Begin with the polite knock.','Knock, turn the key, then step back as the lid opens.','The gold light seed is yours.')
+        pick('mapmaker-pen','A pen for the map',['The boy needs a tool that can hold ink.','It must make a thin line, not a wide mark.','He has a feather pen, a wide brush and a spoon.'],'Which tool should he use?',[
+          choice('brush','Wide brush','tool'),choice('pen','Feather pen','wing'),choice('spoon','Spoon','tool')],'pen','Check both clues: ink and a thin line.','The feather pen holds ink and draws a thin line.','The boy draws the river.'),
+        pick('mapmaker-path','Across the stream',['The boy wants to keep his book dry.','He must cross the stream, then pass an oak.','The stepping stones are under water.'],'Which path fits all the clues?',[
+          choice('stones','Stones → oak','stone'),choice('bridge-oak','Bridge → oak','map'),choice('bridge-cave','Bridge → cave','cave')],'bridge-oak','Rule out the wet stones. Then check the place after the crossing.','The bridge keeps the book dry. The oak is the next place.','The boy adds the bridge and oak.'),
+        pick('mapmaker-marks','Marks on the map',['The boy draws three rows of small marks.','There are four marks in each row.','He crosses out two marks for paths that are closed.'],'How many marks are left?',[
+          number(7),number(10),number(12)],'10','Count the three groups of four. Then take away the two crossed-out marks.','Three groups of four makes twelve. Twelve minus two is ten.','The safe paths are on the map.'),
+        order('mapmaker-finish','Finish the map',['Draw the river before you draw the bridge.','Draw the path after you draw the bridge.'],['Draw path','Draw river','Draw bridge'],[1,2,0],'The river comes first. The path comes last.','River, bridge, then path. Now the map can guide a friend.','The chest opens. The gold light seed is yours.')
       ]},
     {id:'oak-heart',campaign:'lost-lights',name:'The Heart of the Oak',place:'The Oldest Oak',area:'chapter-3-place-5',requires:['owl-watch','mimic-vault'],families:['moss-golem','bramble-boar'],
       goal:'Find the last seed. Light up the woods.',item:'Ruby light seed',symbol:'sun',finale:true,
@@ -166,6 +175,16 @@
           choice('fire-wave','Wave · by fire','water'),choice('bell-leaf','Leaf · by bell','leaf'),choice('bell-wave','Wave · by bell','water')],'bell-wave','Use both the mark and its position.','The wave lever beside the bell matches both clues.','The river sings again!')
       ]}
   ];
+  const legacyPuzzles=[
+        pick('vault-tool','The ticklish lock',['Use something soft with no sharp teeth.','It must brush dust from a tiny lock.'],'Which tool should you take?',[
+          choice('saw','Saw','tool'),choice('brush','Soft brush','tool'),choice('comb','Hard comb','tool')],'brush','Think about both the soft bristles and the job.','A soft brush can clear the lock without scratching it.','The dusty lock is clean.'),
+        pick('vault-key','The knight’s keys',['The knight has a round key and a square key.','The round key opens the gate.','The other key opens the vault.'],'Which key opens the vault?',[
+          choice('round','Round key','key'),choice('square','Square key','key'),choice('neither','Neither key','key')],'square','“The other key” means the one not used for the gate.','The square key is the other key.','The vault key turns.'),
+        pick('vault-code','Three rows of bells',['The vault has three rows of bells.','There are four bells in each row.','Two bells make no sound.'],'How many bells can ring?',[number(7),number(10),number(12)],'10','Count all three groups of four. Then leave out the two silent bells.','Three groups of four makes twelve. Two are silent, so ten can ring.','The ringing code wakes the vault.'),
+        order('vault-open','Mind your fingers',['Knock before you turn the key.','Step back after you turn the key.'],['Step back','Knock','Turn key'],[1,2,0],'Begin with the polite knock.','Knock, turn the key, then step back as the lid opens.','The gold light seed is yours.')
+
+  ];
+  legacyPuzzles.forEach((r,i)=>{r.family=i%2?'snail-knight':'chest-mimic';r.number=i+1;});
   const lore={
     'thornling':['Find me on the Lantern Trail.','A Thornling grows a new leaf whenever it makes a friend.'],
     'bark-beetle':['Look inside a hollow log.','Bark Beetles tap secret messages on old wood.'],
@@ -175,8 +194,8 @@
     'mushroom-guard':['Visit the root workshop.','Mushroom Guards keep spare tools under their broad caps.'],
     'hollow-owl':['Listen near the night watch.','A Hollow Owl can remember every turn on a moonlit path.'],
     'briar-bat':['Follow the owl’s night watch.','Briar Bats fold their wings like little forest umbrellas.'],
-    'chest-mimic':['Find the laughing vault.','A Chest Mimic keeps its best jokes beneath its lid.'],
-    'snail-knight':['Seek the knight beside the vault.','Snail Knights polish their shells with soft moss.'],
+    'chest-mimic':['Visit the boy with the map book.','A Chest Mimic keeps its best jokes beneath its lid.'],
+    'snail-knight':['Find the bridge on the boy’s map.','Snail Knights polish their shells with soft moss.'],
     'moss-golem':['Climb to the oldest oak.','Moss Golems keep warm seeds safe in their stone hands.'],
     'bramble-boar':['Follow tracks to the old oak.','Bramble Boars use their tusks to lift fallen branches.'],
     'reed-serpent':['Look beside the river reeds.','Reed Serpents can tie a knot without using any hands.'],
@@ -189,13 +208,13 @@
     'storm-griffin':['Climb above the waterfall.','Storm Griffins spread their wings to shelter smaller friends.']
   };
   for(const m of missions){
-    m.art='assets/adventures/'+m.id+'.webp';
-    m.artAlt='The young mage and small Pip meet '+m.families[0].replace(/-/g,' ')+' at '+m.place+'.';
+    m.art ||= 'assets/adventures/'+m.id+'.webp';
+    m.artAlt ||= 'The young mage and small Pip meet '+m.families[0].replace(/-/g,' ')+' at '+m.place+'.';
     m.health=[8,9,10,12];
     m.encounters=[m.families[0],m.families[1],m.families[0],m.families[1]];
     m.riddles.forEach((r,i)=>{r.family=m.encounters[i];r.number=i+1;});
   }
   const byId=Object.fromEntries(missions.map(m=>[m.id,m]));
-  const puzzles=Object.fromEntries(missions.flatMap(m=>m.riddles.map(r=>[r.id,r])));
-  return {version:1,campaigns,missions,byId,puzzles,lore};
+  const puzzles=Object.fromEntries([...legacyPuzzles,...missions.flatMap(m=>m.riddles)].map(r=>[r.id,r]));
+  return {version:1,campaigns,missions,byId,puzzles,legacyPuzzles,lore};
 });

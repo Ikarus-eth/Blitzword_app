@@ -86,13 +86,13 @@
   }
   function progress(s){
     const c=of(s).current;if(!c)return null;
-    const done=c.phase==='complete'?8:c.step*2+(['spoils','puzzle'].includes(c.phase)?1:0)+(c.phase==='puzzle'&&c.puzzle?.solved?1:0);
+    const done=c.phase==='complete'?8:c.phase==='retry'&&Number.isInteger(c.retryFromStep)?c.retryFromStep:c.step*2+(['spoils','puzzle'].includes(c.phase)?1:0)+(c.phase==='puzzle'&&c.puzzle?.solved?1:0);
     return {done,left:8-done,total:8,next:done===8?'Treasure':done%2?'Clue':'Fight'};
   }
   function won(s,victory,now){
     const c=of(s).current,m=current(s);if(!c||!m||c.phase!=='battle')return false;
     if(victory){stats(s).wins++;c.phase='spoils';if(c.step>=2){const b=of(s).book[m.encounters[c.step]];b.champion=true;b.championAt ||=date(now);}}
-    else c.phase='retry';
+    else retreat(s,false);
     return true;
   }
   function startPuzzle(s,random=Math.random){
@@ -114,8 +114,8 @@
     const expected=Array.isArray(q.answer)?q.answer:[q.answer];
     if(!reveal&&p.selection.length!==expected.length)return false;
     const correct=reveal||expected.every((id,i)=>p.selection[i]===id);
-    if(!reveal){p.attempts++;p.first ||= {selection:[...p.selection],correct,hint:p.hint,listened:p.listened,at:date(now)};}
-    if(!correct){c.hearts=Math.max(0,c.hearts-1);p.wrong=true;p.hint=true;return {correct:false,heartLost:true};}
+    if(!reveal){p.attempts++;p.first ||= {selection:[...p.selection],correct,hint:p.hint,listened:p.listened,at:date(now)};stats(s).riddles[q.id] ||= {first:copy(p.first),visits:0};}
+    if(!correct){c.hearts=Math.max(0,c.hearts-1);p.wrong=true;p.hint=true;if(c.hearts===0){retreat(s,true);s.result={victory:false,missionId:c.missionId,riddleDefeat:true,xpEarned:0,enemyId:q.family,strength:current(s).health[c.step]};s.activity='result';}return {correct:false,heartLost:true};}
     if(reveal){p.selection=[...expected];p.assisted=true;}
     p.solved=true;p.wrong=false;p.solvedAt=date(now);
     const record=stats(s).riddles[q.id] ||= {first:copy(p.first),visits:0};
@@ -123,9 +123,19 @@
     const book=of(s).book[q.family] ||= {seen:true,studied:false,champion:false};book.studied=true;book.studiedAt ||=date(now);
     return {correct:true,assisted:p.assisted};
   }
-  function restRiddle(s){
-    const c=of(s).current;if(!c||c.phase!=='puzzle'||c.hearts>0||c.puzzle?.solved)return false;
-    c.hearts=c.maxHearts;c.puzzle.selection=[];c.puzzle.wrong=false;return true;
+  function retreat(s,fromRiddle){
+    const c=of(s).current;if(!c||c.phase==='retry')return false;
+    const from=c.step*2+(fromRiddle?1:0);
+    c.retryFromStep=from;c.retryTargetStep=Math.max(0,from-2);c.phase='retry';return true;
+  }
+  function retry(s){
+    const c=of(s).current;if(!c||c.phase!=='retry')return false;
+    const target=Number.isInteger(c.retryTargetStep)?c.retryTargetStep:Math.max(0,c.step*2-2);
+    c.step=Math.floor(target/2);c.hearts=QUEST_HEARTS;c.maxHearts=QUEST_HEARTS;c.puzzle=null;
+    delete c.retryFromStep;delete c.retryTargetStep;
+    s.battle=null;s.result=null;s.teaching=null;s.activity='mission';
+    if(target%2){c.phase='spoils';startPuzzle(s);}else c.phase='intro';
+    return true;
   }
   function next(s,now){
     const c=of(s).current,m=current(s);if(!c||!m||!c.puzzle?.solved)return false;
@@ -147,5 +157,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {Data,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,restRiddle,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress};
+  return {Data,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress};
 });

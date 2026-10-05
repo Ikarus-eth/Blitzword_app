@@ -1,5 +1,13 @@
 # BlitzWord current status — 6 October 2026
 
+## Mapmaker chapter, retreat and answer-selection checks — 6 October 2026
+
+**Implemented and tested; deployment pending.** Build `mapmaker-chapter-20261006-r1` replaces the fifth Forest Lights adventure with **The Boy and the Map**, four linked map riddles and four new paintings based on the exact boy-and-book reference the user chose. The boy is clearly visible in each scene. The mission identity, unlocks, earned rewards and old pending vault questions survive. New riddle Listen text uses existing device speech; the earlier recorded passages remain available.
+
+Reading defeats now show a persistent sad hero/Pip retreat screen. Creature-quest retry (fight or riddle death) returns two tracker steps, bounded at the start, and restores four hearts without deleting XP, first-answer evidence or used companion protection. Word trails keeps its own existing checkpoint rules. The paired retreat illustration has a short slide, not a frame-by-frame walking animation.
+
+The reported made/wade substitution was not reproduced. Direct taps in different positions preserve the exact chosen word in saved, visual and spoken feedback. Question-ID and connected-button guards now reject stale choice callbacks. 314 unit tests and 107 UI groups pass; Chrome checks cover all four new scenes/riddles and both defeat types at four tablet/phone viewports with no page errors. [Artwork, prompts, behavior and limits](adventures/MAPMAKER_RELEASE.md).
+
 ## Companion scale, riddle hearts and controls — 6 October 2026
 
 **Deployed and verified.** [PR #131](https://github.com/Ikarus-eth/Blitzword_app/pull/131) merged as `4a0a3edd3ea3cdd990e76fb2236df4b5f514f236`. [Pages run 37386495136](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37386495136) passed tests and deployment. All four changed runtime files match the tested source ([live hashes](adventures/RIDDLE_USABILITY_DEPLOYMENT.json)); live Chrome repeated all five viewport checks with no page errors. 312 unit tests and 105 UI groups pass. Build `riddle-usability-20261006-r1` enlarges the collected companion between Pip and the hero and removes its remaining visible name. Number options show one label. Wrong riddle submissions cost one quest heart, with duplicate-submit protection; at zero hearts Rest and retry resumes the same clue with the saved maximum hearts. Existing clue progress, first-answer history and used companion protection remain. All riddle actions have at least 60px touch targets. Completed riddles show compact feedback with the next-step button directly below the success heading instead of beneath the long clue page.

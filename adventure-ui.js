@@ -38,7 +38,7 @@
       stamp=now;
     }
     function stopTiming(){stamp=null;}
-    function act(fn){if(!ctx.active())return;timeTap();fn();if(ctx.save())renderMission();}
+    function act(fn){if(!ctx.active())return;timeTap();fn();if(ctx.save()){if(ctx.state().activity==='result')ctx.enter();else renderMission();}}
     function missionArt(m){return m.art||Content.chapterBackgrounds[m.area].src;}
     function heading(kicker,title,detail){const h=el('header','adventureHeading');h.append(el('p','adventureEyebrow',kicker),el('h1','',title));if(detail)h.append(el('p','adventureIntro',detail));return h;}
     function renderProgress(element,compact=false){
@@ -98,7 +98,7 @@
       const complete=c.phase==='complete',p=c.puzzle,q=D.puzzles[p?.id],solving=c.phase==='puzzle';
       const top=el('div','missionTop');renderProgress(top);screen.append(top);
       const body=el('div','missionBody'),scene=el('figure','missionScene');
-      const image=el('img');image.src=missionArt(m);image.alt=m.artAlt||m.place;image.decoding='async';scene.append(image);
+      const image=el('img');const pageArt=c.phase==='complete'?{art:m.endingArt||m.art,alt:m.endingArtAlt||m.artAlt}:m.scenes?.[c.step];image.src=pageArt?.art||missionArt(m);image.alt=pageArt?.alt||m.artAlt||m.place;image.decoding='async';scene.append(image);
       const medallion=el('div','missionSceneMedallion');medallion.innerHTML=icon(complete?m.symbol:solving?'map':m.finale?'star':'leaf');scene.append(medallion);
       scene.append(el('figcaption','',complete?m.item:solving?q.reward.replace(/\.$/,''):'Your goal: '+m.goal));
       // Before an answer, the caption states the task rather than giving away its outcome.
@@ -113,7 +113,7 @@
         panel.append(button(all&&m.campaign==='lost-lights'?'Explore the river':'Choose another mission','greenButton',()=>{if(all&&m.campaign==='lost-lights')e.selectedCampaign='river-song';ctx.save();ctx.home();}),button('Rest here','textButton',ctx.home));
       }else if(!solving){
         const family=m.encounters[c.step],first=c.step===0;
-        panel.append(heading(first?'A new quest':c.step>=2?'Big fight':'Next fight',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:'Win this fight. Get the next clue.')));
+        panel.append(heading(first?'A new quest':c.step>=2?'Big fight':'Next fight',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:m.scenes?.[c.step]?.intro||'Win this fight. Get the next clue.')));
         const actor=el('div','missionIntroEnemy sceneSprite');ctx.paintEnemy(actor,family,m.health[c.step]);panel.append(actor);
         panel.append(button(first?'Let’s go':'Start the fight','greenButton',()=>{if(!ctx.active())return;if(Core.startMissionBattle(s,Date.now())&&ctx.save())ctx.enter();}),button('Back to camp','textButton',ctx.home));
       }else{
@@ -133,7 +133,7 @@
         else if(p.hint)feedback.append(el('p','',q.hint));panel.append(feedback);
         const actions=el('div','riddleActions');
         if(p.solved){actions.append(button(c.step===3?'Claim the treasure':'Follow the trail','greenButton',()=>act(()=>A.next(s,Date.now()))));}
-        else if(c.hearts<=0){actions.append(button('Rest and retry · '+c.maxHearts+' hearts','greenButton',()=>act(()=>A.restRiddle(s))));}
+        else if(c.hearts<=0){actions.append(button('Rest and retry · '+c.maxHearts+' hearts','greenButton',()=>act(()=>{A.retreat(s,true);A.retry(s);})));}
         else{
           const ready=button('Try it','greenButton',()=>act(()=>A.check(s,Date.now())));ready.disabled=p.wrong||p.selection.length!==(Array.isArray(q.answer)?q.answer.length:1);actions.append(ready);
           if(q.type==='order')actions.append(button('Start order again','textButton',()=>act(()=>{p.selection=[];p.wrong=false;})));
@@ -145,9 +145,9 @@
     }
     function renderResult(){
       const s=ctx.state(),e=A.of(s),m=A.current(s),r=s.result,c=e.current;if(!r?.missionId||!m)return false;
-      $('#resultMessage').textContent=r.victory?(r.newDiscovery?'New creature discovered!':'A new clue is ready.'): 'No hearts left. Rest to get 4 hearts. Your clues stay solved.';
+      $('#resultMessage').textContent=r.victory?(r.newDiscovery?'New creature discovered!':'A new clue is ready.'): 'No hearts left. '+(c.retryFromStep===0?'Try the first step again.':'Go back '+((c.retryFromStep??c.step*2)-(c.retryTargetStep??Math.max(0,c.step*2-2)))+' steps. Your XP stays safe.');
       $('#checkpoint').textContent='';const box=$('#opponents');box.replaceChildren();box.classList.add('missionResultActions');
-      box.append(button(r.victory?'Read the next clue':'Rest and retry · 4 hearts','greenButton',()=>{if(!ctx.active())return;if(r.victory)A.startPuzzle(s);else Core.startMissionBattle(s,Date.now());if(ctx.save())ctx.enter();}));
+      box.append(button(r.victory?'Read the next clue':'Try again · 4 hearts','greenButton',()=>{if(!ctx.active())return;if(r.victory)A.startPuzzle(s);else Core.startMissionBattle(s,Date.now());if(ctx.save())ctx.enter();}));
       if(r.victory&&c.step===3)$('#resultMessage').textContent='Star stamp earned! One clue left.';
       const family=A.companion(s),friend=$('#resultCompanion');friend.hidden=!family;if(family)ctx.paintEnemy(friend,family,8);
       $('#resultNext').textContent='Back to camp';return true;

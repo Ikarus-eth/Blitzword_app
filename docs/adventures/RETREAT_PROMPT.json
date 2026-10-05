@@ -1,0 +1,9 @@
+{
+  "generator": "Built-in image_gen",
+  "prompt": "Use case: identity-preserve. Create a transparent-background full-body paired illustration for a children's game's defeat/retreat screen. Reference 1 is the exact approved young male mage hero: preserve his face, tousled brown hair, ornate green and cream robes, red scarf, leather boots, belt and wooden ember staff. The blue background is an unwanted matte, DO NOT include blue. Reference 2 is the exact small orange dragon Pip: preserve orange scales, cream underside, little cream horns, dark wing membranes, spines and tail. Both characters walk slowly toward the LEFT together, shown in three-quarter side view so both sad faces remain visible. The hero has lowered head and shoulders, downcast eyes and a small disappointed closed mouth, staff held lowered beside him; Pip walks beside him with head down, wings gently drooping and a sad closed-mouth expression. They are disappointed after losing a friendly battle, not wounded, not crying, not dead. Hero is taller; Pip's head reaches about the hero's waist. Both fully in frame with complete feet, staff and dragon tail. Preserve painterly storybook detailing. Empty genuinely transparent background, no scenery, no text, no speech bubbles, no border, no shadow box. This is a new retreat pose of the two referenced characters, not the map-drawing boy.",
+  "source": "/Users/ikarusjanzen/.codex/generated_images/01a10a18-22c9-77f2-8f59-66dee6c9b66e/exec-af4861da-87ff-4e8b-9e7f-298b431fdd8b.png",
+  "references": [
+    "assets/battle-motion/mage-still.webp",
+    "assets/battle-motion/pip-friendly-b.png"
+  ]
+}

@@ -57,3 +57,18 @@
 .riddleSolved .riddleSuccessTitle{font-size:30px;margin-bottom:8px}
 .riddleSolved .riddleActions{margin:14px 0}
 .riddleSolvedAnswer{font-weight:700;font-size:22px}
+
+.resultRetreat[hidden]{display:none}.resultRetreat{height:clamp(140px,27vh,250px);overflow:hidden;margin:0 auto 10px;width:100%;border-radius:16px;background:radial-gradient(ellipse at center,#dfd2b6,#eee5d0 70%)}.resultRetreat img{display:block;width:100%;height:100%;object-fit:contain;transform:translateX(-3%)}.retreatMoving img{animation:sadRetreat 2.2s ease-out both}.lostBattle .resultCompanions,.lostBattle #resultGrowth,.lostBattle #resultShield,.lostBattle #checkpoint{display:none}.lostBattle .resultTitle{color:#663f32}.lostBattle .resultCard{border-color:#9d8565}.lostBattle .resultMessage{font:19px/1.5 var(--reading-font)}.lostBattle #opponents button{min-height:60px}.lostBattle #resultNext{min-height:50px}@keyframes sadRetreat{from{transform:translateX(13%);opacity:.65}to{transform:translateX(-3%);opacity:1}}
+@media(max-height:580px) and (orientation:landscape){.lostBattle .resultCard{grid-template-columns:minmax(150px,.8fr) minmax(0,1.2fr)}.resultRetreat{grid-column:1;grid-row:1/8;height:210px;align-self:center}.lostBattle #resultChapter,.lostBattle #opponents,.lostBattle #resultNext{grid-column:2}}
+@media(prefers-reduced-motion:reduce){.retreatMoving img{animation:none}}
+/* Defeat has a dedicated layout, independent of the victory reward grid. */
+.lostBattle .resultCard{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:12px 24px;width:min(940px,94vw);align-items:center;padding:24px}
+.lostBattle .resultRetreat{grid-column:1;grid-row:1/6;height:clamp(240px,42vh,380px);margin:0}
+.lostBattle .resultRetreat img{width:86%;margin:auto}
+.lostBattle #resultTitle,.lostBattle #resultMessage,.lostBattle #resultChapter,.lostBattle #opponents,.lostBattle #resultNext{grid-column:2;margin:0}
+.lostBattle #resultChapter{width:100%;max-width:none}
+.lostBattle #opponents{justify-content:stretch}.lostBattle #opponents>button{width:100%}
+.lostBattle #resultTitle{font-size:32px}.lostBattle #resultNext{justify-self:center}
+@keyframes sadRetreat{from{transform:translateX(7%);opacity:.65}to{transform:translateX(-3%);opacity:1}}
+@media(orientation:portrait){.lostBattle .resultCard{display:flex;flex-direction:column;gap:14px;padding:20px}.lostBattle .resultRetreat{height:25vh;min-height:160px;max-height:250px}.lostBattle #opponents{width:100%}.lostBattle #resultTitle{font-size:28px}.lostBattle .resultMessage{font-size:18px}}
+@media(max-height:580px) and (orientation:landscape){#result.lostBattle{padding-top:64px;padding-bottom:10px}.lostBattle .resultCard{padding:14px 20px;gap:7px 18px}.lostBattle .resultRetreat{height:180px}.lostBattle #resultTitle{font-size:25px}.lostBattle .resultMessage{font-size:16px}.lostBattle #resultChapter{padding:7px 10px}.lostBattle #opponents button{min-height:48px;font-size:19px}.lostBattle #resultNext{min-height:44px;font-size:17px}.lostBattle #resultChapter .questProgressTitle{display:none}}
