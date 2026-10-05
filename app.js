@@ -193,6 +193,7 @@ function clearCombat(){
   window.BlitzMotion?.cancelAll();
   clearTimeout(impactTimer);impactTimer=null;
   if(pendingHealth){pendingHealth=null;if(state?.battle)renderHealth();}
+  $('#resultRetreat').classList.remove('retreatMoving');
   $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
   $('#heroHearts').classList.remove('shieldBlocked');
   $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();
@@ -636,11 +637,11 @@ function hideWord() {
 function drawChoices() {
   const q=Core.getQuestion(state),[scroll,answers]=stageElements();
   scroll.innerHTML=galaxyMask();answers.replaceChildren();
-  q.options.forEach(option=>{const button=document.createElement('button');button.className='answer';button.textContent=option;button.onclick=()=>answer(option);answers.append(button);});
+  q.options.forEach(option=>{const button=document.createElement('button');button.className='answer';button.textContent=option;button.dataset.questionId=q.id;button.dataset.answer=option;button.onclick=()=>{if(button.isConnected)answer(option,q.id);};answers.append(button);});
   $('#assessmentUnsure').hidden=state.activity!=='assessment';$('#battleUnsure').hidden=state.activity!=='battle';lastTick=performance.now();
 }
-function answer(option) {
-  if(paused||blocked)return;
+function answer(option,questionId=Core.getQuestion(state)?.id) {
+  if(paused||blocked||!['battle','assessment'].includes(state.activity)||Core.getQuestion(state)?.id!==questionId)return;
   if(!confirmActivity())return;const assessment=state.activity==='assessment';
   const shieldBefore=!!state.rewards.shield;
   const rec=assessment?Core.answerAssessment(state,option,Date.now()):Core.answerBattle(state,option,Date.now());
@@ -911,7 +912,8 @@ function renderResult() {
   show('result');const result=state.result;if(!result){home();return;}
   $('#resultNext').textContent='Map';$('#opponents').classList.remove('missionResultActions');
   paintHero($('#resultHero'),heroIndex());
-  $('#resultTitle').textContent=result.victory?'You did it!':'Let’s try again';
+  $('#result').classList.toggle('lostBattle',!result.victory);$('#resultRetreat').hidden=result.victory;
+  $('#resultTitle').textContent=result.victory?'You did it!':'You lost this round';
   const chapter=Core.activeChapterState(state);
   $('#resultMessage').textContent=result.chapterJustComplete?'New campaign!':result.fieldJustComplete||result.reviewJustComplete?'Chapter complete!':result.victory&&chapter?.duels&&chapter.activeMs<Core.TARGET_MS?'One more battle!':'';renderChapter($('#resultChapter'));
   const growth=Core.dragonProgress(state);
@@ -920,7 +922,7 @@ function renderResult() {
   $('#resultGrowthFill').style.width=(growth.fraction*100)+'%';$('#resultGrowthBar').setAttribute('aria-valuenow',String(Math.round(growth.fraction*100)));
   $('#resultGrowthNote').textContent=growthStepCaption(growth)+' · Tap to see';$('#resultGrowthBar').classList.add('steppedGrowth');$('#resultGrowthBar').setAttribute('aria-valuetext',growthStepCaption(growth));
   $('#resultShield').hidden=!state.rewards.shield;$('#resultShield').innerHTML=shieldIcon+'<span>1 shield</span>';
-  if(result.missionId){$('#speedSuggestion').hidden=true;adventures.renderResult();resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));else defeatReaction(result,result.enemyId,result.strength);maybeOfferName();return;}
+  if(result.missionId){$('#speedSuggestion').hidden=true;adventures.renderResult();resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));else retreatReaction(result);maybeOfferName();return;}
   const progress=Core.chapterProgress(state);
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');
   const enemies=Core.enemyChoices(state,result.strength);
@@ -941,7 +943,7 @@ function renderResult() {
       state.campaign.enemyStrength=choice.hp;Core.startBattle(state,Date.now(),{strength:choice.hp,enemyId:choice.enemy.id});if(save())renderActivity();};box.append(button);
   });box.classList.toggle('single',choices.length===1);
   renderSpeedSuggestion(result);
-  resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));if(!result.victory)defeatReaction(result,result.enemyId,result.strength);else maybeOfferName();
+  resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));if(!result.victory)retreatReaction(result);else maybeOfferName();
 }
 function renderSpeedSuggestion(result){
   const offer=result.speedSuggestion,box=$('#speedSuggestion');
@@ -955,6 +957,12 @@ function renderSpeedSuggestion(result){
 function resultSound(result,victory){
   if(result.audioCuePlayed||paused||blocked)return;
   result.audioCuePlayed=true;if(save())sound.cue(victory?'victory':'defeat');
+}
+function retreatReaction(result){
+  if(result.defeatShown||paused||blocked)return;
+  result.defeatShown=true;if(!save())return;
+  const scene=$('#resultRetreat');scene.classList.add('retreatMoving');
+  later(()=>scene.classList.remove('retreatMoving'),2200);
 }
 function defeatReaction(result,enemyId,strength){
   if(result.defeatShown||paused||blocked)return;

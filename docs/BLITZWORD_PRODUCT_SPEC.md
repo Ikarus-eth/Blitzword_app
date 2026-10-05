@@ -1029,3 +1029,10 @@ Keep the collected animal visibly separate from the hero and Pip during battles,
 ## Companion size and riddle usability — approved 6 October 2026
 
 The battle animal must be sized between Pip and the hero, with no visible title/caption underneath. Keep separate character lanes. Number answer options display their label once. Wrong submitted riddles lose one shared quest heart; incomplete answers, hints/listening and worked reveals do not. Duplicate submission without a new selection does not charge again. At zero hearts, explicitly rest and retry the same riddle with the saved maximum hearts, keeping earlier solved clues, first-answer evidence and spent companion protection. Correct answers and revealed solutions put a large next-step button directly in compact success feedback; the old clue/choice section is hidden in this completed view. Retry, help and ordering controls have large touch targets.
+
+
+## Boy-and-book chapter and defeat setback — approved 6 October 2026
+
+The user identified the bottom-right panel of `assets/teaching/core-teaching.webp` as the boy and map-book reference, then explicitly chose replacement of the fifth Forest Lights adventure. Replace The Laughing Vault with The Boy and the Map, using that boy, book and warm painted style in four story scenes. Retain the stable mission ID and old pending puzzle definitions; preserve previous learning and unlocked chapters. Other chapter images are not replaced by this release.
+
+On a reading defeat show a persistent loss screen with the hero and Pip retreating sadly. Creature-quest defeat in either a fight or riddle returns two steps on the eight-step tracker, clamped at the first step. This implementation interprets two parts as one fight plus one riddle (not two pairs). Apply it once on explicit retry, restore four hearts and preserve XP, collection stamps, first-answer evidence and spent companion help. This supersedes same-fight/same-riddle retries. Word trails retains its separate checkpoint rules. New chapter voice lines use the established speech fallback until recorded narration is separately requested.

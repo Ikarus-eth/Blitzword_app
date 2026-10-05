@@ -771,7 +771,7 @@
   function startMissionBattle(s,now){
     const e=Adventure.of(s),c=e.current;
     if(e.context!=='mission'||!c||!['intro','retry'].includes(c.phase))return false;
-    if(c.phase==='retry'){c.hearts=Adventure.QUEST_HEARTS;c.maxHearts=Adventure.QUEST_HEARTS;}
+    if(c.phase==='retry'){Adventure.retry(s);if(c.phase==='puzzle')return true;}
     const plan=Adventure.fight(s);c.phase='battle';
     startBattle(s,now,{strength:plan.health,enemyId:plan.family,mission:plan});return true;
   }
