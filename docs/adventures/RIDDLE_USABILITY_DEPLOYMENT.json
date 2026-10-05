@@ -1,0 +1,12 @@
+{
+  "build": "riddle-usability-20261006-r1",
+  "commit": "4a0a3edd3ea3cdd990e76fb2236df4b5f514f236",
+  "pull_request": 131,
+  "pages_run": 37386495136,
+  "live_sha256": {
+    "index.html": "27f4ee780c828b20c80baf38bc18a3c4654cd33952f19656eeec08436dad09c4",
+    "adventure-core.js": "155bcece79f301c9b243bb0e1f7fb1fdc47839e4c496f2a6811e6e4b9ece17ff",
+    "adventure-ui.js": "48a4fc961770554714c1e18d6d8d8222c9f514a0b69adf34acf571695a761835",
+    "adventures.css": "24a09d0a1dd83114ac285ce5e3ecbdabe59655426cf2b4299da1262008d57b8f"
+  }
+}
