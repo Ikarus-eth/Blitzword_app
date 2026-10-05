@@ -1,4 +1,10 @@
-# BlitzWord current status — 4 October 2026
+# BlitzWord current status — 5 October 2026
+
+## Fight companion and riddle feedback — 5 October 2026
+
+**Implemented and locally tested; deployment pending.** Build `fight-feedback-20261005-r1` gives the hero, collected animal and Pip separate battle lanes in landscape and portrait. The animal keeps its name but the redundant side/shield captions are removed. Its once-per-quest protection and hit feedback are unchanged. Solved riddles retain a large checkmark and “Correct!” panel, checkmarked answer cards and a green completed ordering sequence until Continue. “Show me how” says “Answer revealed” and preserves assisted/first-answer evidence. Feedback is focused and scrolled into view, including after resuming a solved riddle. No save format, scoring, curriculum or artwork changes.
+
+Validation: 311 unit tests and 104 UI flow groups pass, including correct/revealed feedback and save/reopen. Chrome checked separate ally bounds at 1180×820, 1024×768, 844×390, 768×1024 and 390×844 and correct-answer focus/display without page errors. Tablet and phone screenshots were inspected; physical iPad testing remains unverified.
 
 ## Chapter sentences and riddle listening — 4 October 2026
 

@@ -1140,7 +1140,7 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  ui.click(missionButton(ui,'Try it'));assert.equal(ui.state().expedition.current.puzzle.first.correct,false);const order=ui.state().expedition.current.puzzle.order;
  ui.click(missionButton(ui,'Listen'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));
  assert.deepEqual(ui.state().expedition.current.puzzle.order,order);assert.equal(ui.state().expedition.current.puzzle.listened,true);
- ui.click(missionButton(ui,'Show me how'));assert.equal(ui.state().expedition.current.puzzle.assisted,true);assert.equal(ui.state().expedition.book.thornling.studied,true);
+ ui.click(missionButton(ui,'Show me how'));assert.equal(ui.state().expedition.current.puzzle.assisted,true);assert.equal(ui.get('mission').querySelector('.riddleSuccessTitle').textContent,'Answer revealed');assert.ok(ui.get('mission').querySelector('.riddleOption.correct .riddleAnswerMark'));assert.equal(ui.state().expedition.book.thornling.studied,true);
  ui.click(missionButton(ui,'Follow the trail'));assert.equal(ui.state().expedition.current.step,1);ui.click(ui.get('homeBtn'));
  ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="thornling"]'));
  ui.click([...ui.get('creatureBook').querySelectorAll('button')].find(b=>b.textContent==='Choose for my team'));assert.equal(ui.state().expedition.favourite,'thornling');
@@ -1152,7 +1152,7 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  Core.startMission(s,'first-spark',now);s.expedition.current.step=2;Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s);
  let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));const answer=A.Data.puzzles[ui.state().expedition.current.puzzle.id].answer;
  ui.click(ui.get('mission').querySelector('[data-choice="'+answer[0]+'"]'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.state().expedition.current.puzzle.selection.length,1);
- for(const id of answer.slice(1))ui.click(ui.get('mission').querySelector('[data-choice="'+id+'"]'));ui.click(missionButton(ui,'Try it'));ui.click(missionButton(ui,'Follow the trail'));
+ for(const id of answer.slice(1))ui.click(ui.get('mission').querySelector('[data-choice="'+id+'"]'));ui.click(missionButton(ui,'Try it'));assert.equal(ui.get('mission').querySelector('.riddleSuccessTitle').textContent,'Correct!');assert.equal(ui.get('mission').querySelectorAll('.riddleOption.correct').length,answer.length);assert.ok(ui.get('mission').querySelector('.riddleSequence.solved'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.get('mission').querySelector('.riddleSuccessTitle').textContent,'Correct!');ui.click(missionButton(ui,'Follow the trail'));
  const last=ui.state();Core.startMissionBattle(last,now);last.battle.enemyHealth=0;Core.resolveBattle(last,now);A.startPuzzle(last);ui=boot(last,{adventures:true});ui.click(ui.get('missionResume'));ui.click(ui.get('mission').querySelector('[data-choice="sun"]'));ui.click(missionButton(ui,'Try it'));ui.click(missionButton(ui,'Claim the treasure'));
  assert.equal(ui.state().expedition.current.phase,'complete');assert.ok(A.unlocked(ui.state(),'moth-post'));assert.ok(A.unlocked(ui.state(),'root-workshop'));
  ui.click(missionButton(ui,'Choose another mission'));assert.ok(ui.get('adventureHub').classList.contains('active'));
@@ -1174,9 +1174,9 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  ui.click([...ui.get('creatureBook').querySelectorAll('button')].find(b=>b.textContent==='← Back to mission'));ui.click(missionButton(ui,'Let’s go'));ui.ready();
  assert.equal(ui.get('battleCompanion').hidden,false);assert.equal(ui.get('battleCompanionName').textContent,'Moon Moth');assert.match(ui.get('battleChapter').textContent,/0 of 8/);
  const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));
- assert.equal(ui.get('feedback').textContent,'Moon Moth saved a heart!');assert.equal(ui.get('battleCompanionHelp').textContent,'Saved a heart ✓');assert.equal(ui.state().battle.heroHealth,4);
+ assert.equal(ui.get('feedback').textContent,'Moon Moth saved a heart!');assert.equal(ui.get('battleCompanionHelp'),null);assert.equal(ui.state().battle.heroHealth,4);
  assert.equal(ui.speechTexts.at(-1),'Moon Moth stopped the hit.');ui.finishSpeech();ui.finishSpeech();assert.ok(ui.get('battleCompanion').classList.contains('protecting'));
- ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.get('battleCompanionHelp').textContent,'Saved a heart ✓');assert.equal(ui.get('battleCompanion').classList.contains('protecting'),false);
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.get('battleCompanionHelp'),null);assert.equal(ui.get('battleCompanion').classList.contains('protecting'),false);
  assert.equal(ui.state().campaign.battleRecords.length,1);
  const loss=ui.state();loss.battle.heroHealth=0;Core.resolveBattle(loss,now);ui=boot(loss,{adventures:true});ui.click(ui.get('missionResume'));
  assert.match(ui.get('resultMessage').textContent,/Your clues stay solved/);assert.match(ui.get('resultChapter').textContent,/8 left/);

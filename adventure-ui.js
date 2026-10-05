@@ -61,7 +61,6 @@
       if(!family)return;
       const art=$('#battleCompanionArt');if(art.dataset.family!==family){ctx.paintEnemy(art,family,8);art.dataset.family=family;}
       $('#battleCompanionName').textContent=Content.enemyAt(family).name;
-      $('#battleCompanionHelp').textContent=A.of(s).current.companionHelpUsed?'Saved a heart ✓':'Can stop one hit';
     }
     function renderHub(){
       stopTiming();const s=ctx.state(),e=A.of(s),report=A.report(s);ctx.show('adventureHub');
@@ -123,13 +122,13 @@
         if(q.diagram){const diagram=el('div','riddleDiagram');diagram.setAttribute('aria-label','Left to right');q.diagram.forEach((label,i)=>{const item=el('span','');item.append(el('small','',String(i+1)),el('strong','',label));diagram.append(item);});panel.append(diagram);}
         panel.append(el('h2','riddlePrompt',q.prompt));
         if(q.type==='order'){
-          const sequence=el('div','riddleSequence');sequence.setAttribute('aria-label','Your chosen order');for(let i=0;i<q.answer.length;i++){const id=p.selection[i];sequence.append(el('span','',String(i+1)+'. '+(id!==undefined?q.options.find(o=>o.id===id).label:'…')));}panel.append(sequence);
+          const sequence=el('div','riddleSequence'+(p.solved?' solved':''));sequence.setAttribute('aria-label','Your chosen order');for(let i=0;i<q.answer.length;i++){const id=p.selection[i];sequence.append(el('span','',String(i+1)+'. '+(id!==undefined?q.options.find(o=>o.id===id).label:'…')));}panel.append(sequence);
         }
         const choices=el('div','riddleChoices');choices.setAttribute('role','group');choices.setAttribute('aria-label',q.prompt);
-        p.order.forEach(id=>{const option=q.options.find(o=>o.id===id),selected=p.selection.includes(id),b=button('','riddleOption'+(selected?' selected':''),()=>act(()=>A.choose(s,id)));b.dataset.choice=id;b.setAttribute('aria-pressed',String(selected));b.disabled=p.solved||q.type==='order'&&selected;
-          const glyph=el('span','riddleGlyph');glyph.innerHTML=option.icon==='number'?'<span aria-hidden="true">'+option.id+'</span>':icon(option.icon);if(option.colour)glyph.style.color={red:'#a24436',blue:'#3766a0',green:'#497448'}[option.colour];b.append(glyph,el('span','',option.label));choices.append(b);});panel.append(choices);
+        p.order.forEach(id=>{const option=q.options.find(o=>o.id===id),selected=p.selection.includes(id),b=button('','riddleOption'+(selected?' selected':'')+(p.solved&&selected?' correct':''),()=>act(()=>A.choose(s,id)));b.dataset.choice=id;b.setAttribute('aria-pressed',String(selected));b.disabled=p.solved||q.type==='order'&&selected;
+          const glyph=el('span','riddleGlyph');glyph.innerHTML=option.icon==='number'?'<span aria-hidden="true">'+option.id+'</span>':icon(option.icon);if(option.colour)glyph.style.color={red:'#a24436',blue:'#3766a0',green:'#497448'}[option.colour];b.append(glyph,el('span','',option.label));if(p.solved&&selected){const mark=el('span','riddleAnswerMark','✓');mark.setAttribute('aria-label','Correct answer');b.append(mark);}choices.append(b);});panel.append(choices);
         const feedback=el('div','riddleFeedback');feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');
-        if(p.solved){feedback.classList.add('solved');feedback.append(el('strong','',q.reward),el('p','',q.explanation));}
+        if(p.solved){feedback.classList.add('solved');feedback.tabIndex=-1;const mark=el('span','riddleSuccessMark','✓');mark.setAttribute('aria-hidden','true');feedback.append(mark,el('strong','riddleSuccessTitle',p.assisted?'Answer revealed':'Correct!'),el('strong','',q.reward),el('p','',q.explanation));}
         else if(p.wrong)feedback.append(el('strong','','Let’s look at the clues again.'),el('p','',q.hint));
         else if(p.hint)feedback.append(el('p','',q.hint));panel.append(feedback);
         const actions=el('div','riddleActions');
@@ -141,7 +140,7 @@
           if(p.attempts)actions.append(button('Show me how','textButton',()=>act(()=>A.check(s,Date.now(),{reveal:true}))));
         }panel.append(actions);
       }
-      const picture=el('div','missionPicture');picture.append(scene,teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;stamp=solving&&!p.solved?Date.now():null;
+      const picture=el('div','missionPicture');picture.append(scene,teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;if(solving&&p.solved){const feedback=panel.querySelector('.riddleFeedback');feedback.focus?.({preventScroll:true});feedback.scrollIntoView?.({block:'nearest'});}stamp=solving&&!p.solved?Date.now():null;
     }
     function renderResult(){
       const s=ctx.state(),e=A.of(s),m=A.current(s),r=s.result,c=e.current;if(!r?.missionId||!m)return false;
