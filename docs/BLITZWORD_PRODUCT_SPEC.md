@@ -12,7 +12,7 @@ The user requested a cheaper solution, then explicitly authorized creation and d
 
 The parent’s playtest feedback asks for easier introductions while keeping the challenges, fewer lives carried into later story steps, a clear remaining-step count, explained book symbols, and choosing collected animals to stand on the child’s side.
 
-Implementation defaults: new creature quests start with **four shared hearts** across four fights and four clues. Clues do not cost hearts. At zero hearts the current fight can be retried with four hearts; solved clues and discoveries stay. New quests refill the pool. Existing pending quests inherit their saved battle health and maximum, including a quest parked in Word trails; no saved heart is removed during migration. Word trails retains its existing proportional-health rules.
+Implementation defaults: new creature quests start with **four shared hearts** across four fights and four clues. Superseded on 6 October: each wrong riddle submission costs one shared heart. At zero hearts the current fight can be retried with four hearts; solved clues and discoveries stay. New quests refill the pool. Existing pending quests inherit their saved battle health and maximum, including a quest parked in Word trails; no saved heart is removed during migration. Word trails retains its existing proportional-health rules.
 
 Show all **eight steps** (Fight / Clue repeated four times), completed count, steps left and the treasure endpoint on quest screens, encounters and results, with compact progress during fights. Book stamps have plain labels and a legend: **◆ Met**, **✦ Clue**, **★ Star**. Preserve existing stamp records.
 
@@ -1024,3 +1024,8 @@ The user selected mouth/chin alternative B (Natural dragon jaw) for small Pip's 
 ## Fight companion and riddle feedback — approved 5 October 2026
 
 Keep the collected animal visibly separate from the hero and Pip during battles, including landscape. Remove the persistent “On your side” and shield-explanation captions beneath it; retain the name and the existing protection event. Correct creature-riddle submissions show a persistent large checkmark, “Correct!” and checked answer cards; ordering answers also highlight the completed sequence. Bring the feedback into view and keep the explicit Continue action. Assisted reveals say “Answer revealed”, preserving first-answer and help evidence. Existing saves, artwork, combat and reward rules remain.
+
+
+## Companion size and riddle usability — approved 6 October 2026
+
+The battle animal must be sized between Pip and the hero, with no visible title/caption underneath. Keep separate character lanes. Number answer options display their label once. Wrong submitted riddles lose one shared quest heart; incomplete answers, hints/listening and worked reveals do not. Duplicate submission without a new selection does not charge again. At zero hearts, explicitly rest and retry the same riddle with the saved maximum hearts, keeping earlier solved clues, first-answer evidence and spent companion protection. Correct answers and revealed solutions put a large next-step button directly in compact success feedback; the old clue/choice section is hidden in this completed view. Retry, help and ordering controls have large touch targets.

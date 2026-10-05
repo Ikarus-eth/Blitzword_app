@@ -103,25 +103,29 @@
     c.puzzle={id:q.id,order:options,selection:[],attempts:0,first:null,hint:false,listened:false,solved:false,assisted:false};c.phase='puzzle';s.activity='mission';return true;
   }
   function choose(s,value){
-    const p=of(s).current?.puzzle,q=Data.puzzles[p?.id];if(!p||!q||p.solved||!p.order.includes(value))return false;
+    const p=of(s).current?.puzzle,q=Data.puzzles[p?.id];if(!p||!q||p.solved||of(s).current.hearts<=0||!p.order.includes(value))return false;
     if(q.type==='order'){if(p.selection.includes(value))return false;p.selection.push(value);}
     else p.selection=[value];
     p.wrong=false;return true;
   }
   function check(s,now,{reveal=false}={}){
     const c=of(s).current,p=c?.puzzle,q=Data.puzzles[p?.id];
-    if(!p||!q||p.solved||c.phase!=='puzzle'||reveal&&!p.attempts)return false;
+    if(!p||!q||p.solved||c.hearts<=0||c.phase!=='puzzle'||!reveal&&p.wrong||reveal&&!p.attempts)return false;
     const expected=Array.isArray(q.answer)?q.answer:[q.answer];
     if(!reveal&&p.selection.length!==expected.length)return false;
     const correct=reveal||expected.every((id,i)=>p.selection[i]===id);
     if(!reveal){p.attempts++;p.first ||= {selection:[...p.selection],correct,hint:p.hint,listened:p.listened,at:date(now)};}
-    if(!correct){p.wrong=true;p.hint=true;return {correct:false};}
+    if(!correct){c.hearts=Math.max(0,c.hearts-1);p.wrong=true;p.hint=true;return {correct:false,heartLost:true};}
     if(reveal){p.selection=[...expected];p.assisted=true;}
     p.solved=true;p.wrong=false;p.solvedAt=date(now);
     const record=stats(s).riddles[q.id] ||= {first:copy(p.first),visits:0};
     record.visits++;record.last={first:copy(p.first),attempts:p.attempts,hint:p.hint,listened:p.listened,assisted:p.assisted,solvedAt:p.solvedAt};
     const book=of(s).book[q.family] ||= {seen:true,studied:false,champion:false};book.studied=true;book.studiedAt ||=date(now);
     return {correct:true,assisted:p.assisted};
+  }
+  function restRiddle(s){
+    const c=of(s).current;if(!c||c.phase!=='puzzle'||c.hearts>0||c.puzzle?.solved)return false;
+    c.hearts=c.maxHearts;c.puzzle.selection=[];c.puzzle.wrong=false;return true;
   }
   function next(s,now){
     const c=of(s).current,m=current(s);if(!c||!m||!c.puzzle?.solved)return false;
@@ -143,5 +147,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {Data,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress};
+  return {Data,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,restRiddle,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress};
 });

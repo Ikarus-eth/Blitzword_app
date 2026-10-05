@@ -108,3 +108,15 @@ test('progress counts each fight and clue exactly once, including retries and th
   }
   assert.deepEqual(A.progress(s),{done:8,left:0,total:8,next:'Treasure'});
 });
+test('riddle mistakes spend one quest heart, lock duplicate submissions and preserve zero-heart rest',()=>{
+ let s=fresh();C.startMission(s,'first-spark',NOW);win(s);A.startPuzzle(s);let c=s.expedition.current;
+ c.hearts=2;c.companionHelpUsed=true;
+ A.choose(s,'red');assert.equal(A.check(s,NOW).heartLost,true);assert.equal(c.hearts,1);
+ assert.equal(A.check(s,NOW+1),false);assert.equal(c.hearts,1);
+ A.choose(s,'red');A.check(s,NOW+2);assert.equal(c.hearts,0);
+ const first=JSON.stringify(c.puzzle.first);s=Storage.readBackup(Storage.backupFile(s).text).state;c=s.expedition.current;
+ assert.equal(c.hearts,0);assert.equal(A.choose(s,'blue'),false);assert.equal(A.check(s,NOW,{reveal:true}),false);
+ assert.equal(A.restRiddle(s),true);assert.equal(c.hearts,4);assert.equal(c.companionHelpUsed,true);assert.equal(JSON.stringify(c.puzzle.first),first);assert.equal(c.puzzle.attempts,2);
+ assert.equal(A.restRiddle(s),false);A.choose(s,'blue');A.check(s,NOW+3);assert.equal(c.hearts,4);assert.equal(c.puzzle.solved,true);
+ A.next(s,NOW);C.startMissionBattle(s,NOW);assert.equal(s.battle.heroHealth,4);
+});
