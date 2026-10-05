@@ -32,4 +32,4 @@ No direct word substitution was reproduced. Tests tap “made” and “wade” 
 
 314 unit tests and 107 UI groups passed. Chrome checked all four chapter scenes and answers, chapter completion, and both fight/riddle defeat with the two-step rewind at 1180×820, 844×390, 768×1024 and 390×844. Screenshots were inspected and the tablet defeat layout corrected. No browser page errors. Physical iPad verification remains unperformed.
 
-Deployment pending; see CURRENT_STATUS.md and the later live hash record for verified release status.
+Deployed and verified: [PR #133](https://github.com/Ikarus-eth/Blitzword_app/pull/133), [successful Pages run](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37391155998), [13 matching live file hashes](MAPMAKER_DEPLOYMENT.json). Live Chrome repeated the chapter and retreat/retry checks with no page errors.
