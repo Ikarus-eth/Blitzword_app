@@ -1172,7 +1172,7 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  assert.match(ui.get('mission').textContent,/0 of 8 steps done · 8 left/);assert.match(ui.get('mission').textContent,/4 \/ 4 hearts/);assert.match(ui.get('mission').textContent,/On your side: Moon Moth/);
  ui.click(missionButton(ui,'Change animal'));assert.match(ui.get('creatureBook').textContent,/◆ Met: meet this friend/);assert.match(ui.get('creatureBook').textContent,/✦ Clue: solve its clue/);assert.match(ui.get('creatureBook').textContent,/★ Star: win its big fight/);
  ui.click([...ui.get('creatureBook').querySelectorAll('button')].find(b=>b.textContent==='← Back to mission'));ui.click(missionButton(ui,'Let’s go'));ui.ready();
- assert.equal(ui.get('battleCompanion').hidden,false);assert.equal(ui.get('battleCompanionName').textContent,'Moon Moth');assert.match(ui.get('battleChapter').textContent,/0 of 8/);
+ assert.equal(ui.get('battleCompanion').hidden,false);assert.equal(ui.get('battleCompanionName'),null);assert.equal(ui.get('battleCompanion').getAttribute('aria-label'),'Moon Moth companion');assert.match(ui.get('battleChapter').textContent,/0 of 8/);
  const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));
  assert.equal(ui.get('feedback').textContent,'Moon Moth saved a heart!');assert.equal(ui.get('battleCompanionHelp'),null);assert.equal(ui.state().battle.heroHealth,4);
  assert.equal(ui.speechTexts.at(-1),'Moon Moth stopped the hit.');ui.finishSpeech();ui.finishSpeech();assert.ok(ui.get('battleCompanion').classList.contains('protecting'));
@@ -1182,4 +1182,17 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  assert.match(ui.get('resultMessage').textContent,/Your clues stay solved/);assert.match(ui.get('resultChapter').textContent,/8 left/);
  ui.click([...ui.get('opponents').children].find(b=>b.textContent==='Rest and retry · 4 hearts'));assert.equal(ui.state().battle.heroHealth,4);assert.equal(ui.state().expedition.current.companionHelpUsed,true);
  console.log('PASS visible eight-step quest, heart pool, book legend, chosen battle ally, protection feedback and saved retry');
+}
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,9,6);s.profile.name='Reader';s.assessment.done=true;
+ Core.startMission(s,'first-spark',now);Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s);
+ s.expedition.current.puzzle={...s.expedition.current.puzzle,id:'post-code',order:['4','6','7','8']};s.expedition.current.hearts=1;
+ let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
+ for(const b of ui.get('mission').querySelectorAll('.numberOption'))assert.equal(b.textContent,b.dataset.choice);
+ ui.click(ui.get('mission').querySelector('[data-choice="4"]'));ui.click(missionButton(ui,'Try it'));
+ assert.equal(ui.state().expedition.current.hearts,0);assert.match(ui.get('mission').textContent,/No hearts left/);assert.equal(missionButton(ui,'Try it'),undefined);
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.state().expedition.current.hearts,0);
+ ui.click(missionButton(ui,'Rest and retry · 4 hearts'));assert.equal(ui.state().expedition.current.hearts,4);assert.equal(ui.state().expedition.current.puzzle.first.correct,false);
+ ui.click(ui.get('mission').querySelector('[data-choice="6"]'));ui.click(missionButton(ui,'Try it'));assert.ok(ui.get('mission').querySelector('.riddleFeedback .riddleActions'));assert.match(ui.get('mission').querySelector('.riddleSolvedAnswer').textContent,/6/);
+ console.log('PASS single number labels, saved zero-heart rest and Continue inside success feedback');
 }

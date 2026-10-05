@@ -1,4 +1,10 @@
-# BlitzWord current status — 5 October 2026
+# BlitzWord current status — 6 October 2026
+
+## Companion scale, riddle hearts and controls — 6 October 2026
+
+**Implemented and locally tested; deployment pending.** Build `riddle-usability-20261006-r1` enlarges the collected companion between Pip and the hero and removes its remaining visible name. Number options show one label. Wrong riddle submissions cost one quest heart, with duplicate-submit protection; at zero hearts Rest and retry resumes the same clue with the saved maximum hearts. Existing clue progress, first-answer history and used companion protection remain. All riddle actions have at least 60px touch targets. Completed riddles show compact feedback with the next-step button directly below the success heading instead of beneath the long clue page.
+
+Chrome verifies separate character lanes, relative sizes, no caption, heart loss, 60px controls and an on-screen next-step button at 1180×820, 1024×768, 844×390, 768×1024 and 390×844. Unit/UI tests cover single numbers and zero-heart save/reopen/rest. Physical iPad testing remains unverified.
 
 ## Fight companion and riddle feedback — 5 October 2026
 
