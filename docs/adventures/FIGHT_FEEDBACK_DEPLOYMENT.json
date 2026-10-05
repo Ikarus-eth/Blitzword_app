@@ -1,0 +1,13 @@
+{
+  "build": "fight-feedback-20261005-r1",
+  "commit": "d976b9eef9a401899a44c51603b5a98e3b0bf698",
+  "pull_request": 129,
+  "pages_run": 37259801754,
+  "conclusion": "success",
+  "live_sha256": {
+    "index.html": "140f9efd9c5f8f2aeb82032ab88a1eb346fe27cef517578531a0eee03b121ffc",
+    "adventure-ui.js": "04bc06739f9c621ac5c761e220c052a24a6557e2622edb5551277b0e5e88c4f7",
+    "adventures.css": "46e2afba202c2927e0e935f52cb4c9accd9ee7dca3f4b2ad45eb90bbdc27e9b3"
+  },
+  "browser": "Chrome: five tablet/phone viewport checks, correct-answer display/focus, no page errors"
+}
