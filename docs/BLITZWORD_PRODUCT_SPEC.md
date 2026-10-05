@@ -1019,3 +1019,8 @@ The hero must have clean transparent edges without a blue keying fringe, both at
 ## Pip B and still-image resolution — 3 October 2026
 
 The user selected mouth/chin alternative B (Natural dragon jaw) for small Pip's friendly resting battle face. Keep his existing attack and return-to-neutral behavior. Audit still-image source dimensions and improve the visibly soft campaign imagery while preserving the established scene subjects, map controls and saves. Seven standalone map files replace full-screen atlas enlargement; six enhanced scenes also replace the same low-resolution images in chapter presentations.
+
+
+## Fight companion and riddle feedback — approved 5 October 2026
+
+Keep the collected animal visibly separate from the hero and Pip during battles, including landscape. Remove the persistent “On your side” and shield-explanation captions beneath it; retain the name and the existing protection event. Correct creature-riddle submissions show a persistent large checkmark, “Correct!” and checked answer cards; ordering answers also highlight the completed sequence. Bring the feedback into view and keep the explicit Continue action. Assisted reveals say “Answer revealed”, preserving first-answer and help evidence. Existing saves, artwork, combat and reward rules remain.
