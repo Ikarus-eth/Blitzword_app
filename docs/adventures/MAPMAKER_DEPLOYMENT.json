@@ -1,0 +1,23 @@
+{
+  "build": "mapmaker-chapter-20261006-r1",
+  "commit": "9d20382e9111c44fa28c5620c4bac726d4ad9c56",
+  "pull_request": 133,
+  "pages_run": 37391155998,
+  "conclusion": "success",
+  "live_sha256": {
+    "index.html": "18af21776ba57837750fbf6d3a9afcd272979a628c531dd376776c29c8fec7a8",
+    "adventure-core.js": "25cee25206ffa8e6729af04d6c92b50f5c67b4fc23ae83db70841bd017790162",
+    "adventure-ui.js": "786f87c9bb772e390e04bee514e09e62d61fc4955640718dd4dcb19d98b21600",
+    "adventures.css": "82e65c372832d042a2a58a609b9415a82e223d7e481510a6745092b36c64a20a",
+    "game-core.js": "99dc30647378081723d3a397c058c8737366e4111276b6f709afa644751f1b45",
+    "app.js": "9302e277f0073c0f2af515c00f0727814ebab4eb773f2df1aea7ce0cd19b376f",
+    "missions.js": "aa2424a2ea015fc0a7d10d24bbff2481e2bb0c96266336f678a141641f199e36",
+    "tests/review-scenarios.js": "da5824f8b0237e3133f1fa5425bb17c9da377b5fad227370ae089b7659bdb77e",
+    "assets/adventures/mapmaker-desk.webp": "728ed0763629bfbc1aa4e099e7eb4865591ae546f2498422b91da73bf09d0bed",
+    "assets/adventures/mapmaker-bridge.webp": "c11e521ecfb7c9dedc665082500f95e3e2bb7b38d642ea355a1cdd81f65ae52f",
+    "assets/adventures/mapmaker-hill.webp": "1698ff1ce417bd647eb7766e43c397127e32ccdb2504422b947a495c475600a6",
+    "assets/adventures/mapmaker-finish.webp": "b9b1c43cfc612a08c49e85093945fcab442bd80a17680c362c20bc0f41876097",
+    "assets/adventures/hero-pip-retreat.webp": "999f7b4371684b2d9a154f7ad731c1ba462c0ee740fdf6e46fcadb743b07fdb4"
+  },
+  "browser": "Chrome: four chapter scenes and riddles, chapter completion; fight/riddle defeat and two-step retry at 1180x820, 844x390, 768x1024, 390x844; no page errors"
+}
