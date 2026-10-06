@@ -172,3 +172,7 @@ The user's latest explicit direction is that the mage points his staff at the en
 ## All-enemy motion selection — 30 September 2026
 
 The user accepted the corrected mage direction and authorized expanding and deploying it. The earlier three-enemy/deferred-replacement gate is superseded for Male Mage E and all 20 selected enemies. Every enemy uses derivatives of its recorded selection in `artwork/character-selections.json`; groups share those frames, and younger forms use uniform scale. Five other heroes are temporarily unavailable, with saved preferences preserved. Pip's existing stage artwork is retained; Small Pip's fire joins the assisted cast. [Current scope, costs and visual-check limits](enemies/ALL_ENEMY_MOTION_RELEASE.md).
+
+### 6 October: imaginative boy and wizard scenes
+
+The user requested varied adventures using the original boy picture’s painted style, and explicitly likes the wizard from the other teaching moment. Chapter 5 now pairs the boy with that blue-robed, white-bearded wizard and white unicorn across four different settings and actions. The original teaching atlas remains the visual reference. [Final assets and prompts](adventures/WIZARD_MAP_RELEASE.md).

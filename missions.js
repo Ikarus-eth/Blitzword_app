@@ -73,17 +73,17 @@
         pick('owl-nest','A safe basket',['The chick needs a basket with a lid.','It must have no hole in the bottom.'],'Choose its basket.',[
           choice('open','No lid · no hole','basket'),choice('hole','Lid · hole','basket'),choice('safe','Lid · no hole','basket')],'safe','A lid is only one clue. Check the bottom too.','The lidded basket with no hole keeps the chick safe.','The blue light seed is yours.')
       ]},
-    {id:'mimic-vault',campaign:'lost-lights',name:'The Boy and the Map',place:'The Mapmaker’s Cottage',area:'hidden-nest',requires:['moth-post','root-workshop'],families:['chest-mimic','snail-knight'],
-      goal:'Help the boy draw a map. Find the gold seed.',item:'Gold light seed',symbol:'map',
-      intro:'A boy draws a map in his book. Help him find the gold seed.',
-      ending:'The boy shows his map to the chest. It opens! The gold seed lights up his book.',
-      art:'assets/adventures/mapmaker-desk.webp',artAlt:'The brown-haired boy in a green waistcoat draws a river map in his open book at a sunlit wooden desk.',
-      endingArt:'assets/adventures/mapmaker-finish.webp',endingArtAlt:'The boy proudly holds his finished map book beside a glowing gold seed in his cottage.',
+    {id:'mimic-vault',campaign:'lost-lights',name:'The Boy and the Map',place:'The Wizard’s Wood',area:'hidden-nest',requires:['moth-post','root-workshop'],families:['chest-mimic','snail-knight'],
+      goal:'Draw a magic map. Find the gold seed.',item:'Gold light seed',symbol:'map',
+      intro:'The wizard opens a book. A river rises from its pages! Help the boy draw a map.',
+      ending:'The map opens the chest! The boy rides home with the gold seed. The wizard walks beside him.',
+      art:'assets/adventures/wizard-map-awakens.webp',artAlt:'In a tree library, the boy reaches toward a living river map floating from a book as the blue-robed wizard guides the magic.',
+      endingArt:'assets/adventures/wizard-map-homecoming.webp',endingArtAlt:'At sunrise, the boy rides a white unicorn with the gold seed while the wizard walks beside him.',
       scenes:[
-        {art:'assets/adventures/mapmaker-desk.webp',alt:'The boy draws in his open map book with a feather pen at his cottage desk.',intro:'The boy needs a pen for his map. The chest has a clue.'},
-        {art:'assets/adventures/mapmaker-bridge.webp',alt:'The boy compares his open map book with a wooden bridge over a woodland stream.',intro:'The boy takes his book to the stream. The snail knight knows the paths.'},
-        {art:'assets/adventures/mapmaker-hill.webp',alt:'The boy sits beneath an oak on a grassy hill, drawing the river and woodland landmarks in his book.',intro:'From the hill, the boy can see the wood. Help him count the marks on his map.'},
-        {art:'assets/adventures/mapmaker-finish.webp',alt:'The boy holds up his finished river map in the warm light of his cottage.',intro:'The boy goes home with his book. Help him finish the map and open the chest.'}
+        {art:'assets/adventures/wizard-map-awakens.webp',alt:'A book unfolds into a living river map between the boy and the wizard in a tall tree library.',intro:'The river curls out of the book. The boy needs a pen to draw its path.'},
+        {art:'assets/adventures/wizard-map-crossing.webp',alt:'The boy crosses a high stone bridge over a rushing stream. The wizard and his white unicorn follow.',intro:'The boy takes his book to the stream. The wizard and his unicorn follow. Which way stays dry?'},
+        {art:'assets/adventures/wizard-map-stars.webp',alt:'On a moonlit hill, the boy studies glowing markers while the wizard lifts his staff into a sky of golden star paths.',intro:'Night falls. The wizard lights paths in the sky. The boy marks safe paths in his book.'},
+        {art:'assets/adventures/wizard-map-homecoming.webp',alt:'The boy rides the wizard’s white unicorn through a golden meadow, carrying the light seed home.',intro:'Dawn comes. Finish the map to open the chest. Then ride home on the wizard’s unicorn!'}
       ],
       riddles:[
         pick('mapmaker-pen','A pen for the map',['The boy needs a tool that can hold ink.','It must make a thin line, not a wide mark.','He has a feather pen, a wide brush and a spoon.'],'Which tool should he use?',[

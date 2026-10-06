@@ -1198,10 +1198,10 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  for(const id of ['first-spark','moth-post','root-workshop'])A.stats(s,id).completedAt=new Date(now).toISOString();
  Core.startMission(s,'mimic-vault',now);
  let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
- assert.match(ui.get('mission').textContent,/The Boy and the Map/);assert.match(ui.get('mission').querySelector('.missionScene img').src,/mapmaker-desk/);
- const next=ui.state();next.expedition.current.step=1;ui=boot(next,{adventures:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').querySelector('.missionScene img').src,/mapmaker-bridge/);assert.match(ui.get('mission').textContent,/takes his book to the stream/);
+ assert.match(ui.get('mission').textContent,/The Boy and the Map/);assert.match(ui.get('mission').querySelector('.missionScene img').src,/wizard-map-awakens/);
+ const next=ui.state();next.expedition.current.step=1;ui=boot(next,{adventures:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').querySelector('.missionScene img').src,/wizard-map-crossing/);assert.match(ui.get('mission').textContent,/takes his book to the stream/);
  const final=ui.state();final.expedition.current.phase='complete';final.expedition.missions['mimic-vault'].completedAt=new Date(now).toISOString();ui=boot(final,{adventures:true});ui.click(ui.get('adventureHub').querySelector('[data-mission="mimic-vault"]'));
- assert.match(ui.get('mission').querySelector('.missionScene img').src,/mapmaker-desk/);
+ assert.match(ui.get('mission').querySelector('.missionScene img').src,/wizard-map-awakens/);
  console.log('PASS mapmaker cover and step-specific scene/text, completed mission replay keeps chapter identity');
 }
 for(const chosen of ['made','wade'])for(const options of [['made','wade','have','hide'],['hide','have','wade','made']]){
