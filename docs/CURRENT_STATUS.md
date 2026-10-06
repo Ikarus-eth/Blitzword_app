@@ -1,3 +1,7 @@
+## More imaginative boy-and-wizard chapter — 6 October 2026
+
+**Implemented and tested; deployment pending.** Four distinct painted scenes take the boy from a living map in a tree library, across a ravine, to a star-lit hill and a sunrise unicorn ride. The original teaching wizard joins him. Chapter 5 story transitions match the new journey; existing riddle answers and saves remain compatible. [Artwork and verification](adventures/WIZARD_MAP_RELEASE.md).
+
 # BlitzWord current status — 6 October 2026
 
 ## Mapmaker chapter, retreat and answer-selection checks — 6 October 2026

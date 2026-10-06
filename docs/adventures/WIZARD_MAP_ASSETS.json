@@ -1,0 +1,22 @@
+[
+  {
+    "file": "assets/adventures/wizard-map-awakens.webp",
+    "sha256": "7d5cad67bc48276e69297da27613da7cd27f81bb63173711c0327491be06c6b5",
+    "bytes": 484572
+  },
+  {
+    "file": "assets/adventures/wizard-map-crossing.webp",
+    "sha256": "f0c6a9f5256315666585d4ca571b1c9dfeb4981346e7b799a4acb25d57edce65",
+    "bytes": 606844
+  },
+  {
+    "file": "assets/adventures/wizard-map-stars.webp",
+    "sha256": "df528aaa76473f5c95dd6323ec9cec4e777a6c16557a0d5fbcf843b0d3ef2b0d",
+    "bytes": 567702
+  },
+  {
+    "file": "assets/adventures/wizard-map-homecoming.webp",
+    "sha256": "78c8e82f56a9304493977a046f51e01fb811e8de4abed75237b8e1dcc3df2cac",
+    "bytes": 496102
+  }
+]
