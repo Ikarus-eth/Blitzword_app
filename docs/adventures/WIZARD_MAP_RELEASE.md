@@ -20,4 +20,4 @@ Generated using the built-in image tool. Exact prompts: [WIZARD_MAP_PROMPTS.json
 
 ## Verification
 
-314 unit tests and 107 UI flow groups pass. Chrome verifies all four scene assets, their riddles and the treasure ending; fight/riddle retreat and two-step retry pass at 1180×820, 844×390, 768×1024 and 390×844 with no page errors. Generated art and the rendered chapter were visually inspected. Deployment is pending. Physical iPad testing is not claimed.
+314 unit tests and 107 UI flow groups pass. Chrome verifies all four scene assets, their riddles and the treasure ending; fight/riddle retreat and two-step retry pass at 1180×820, 844×390, 768×1024 and 390×844 with no page errors. Generated art and the rendered chapter were visually inspected. [PR #135](https://github.com/Ikarus-eth/Blitzword_app/pull/135) merged as `fea12a8eb5891620fcb43a61339ce1f74853c905`; [Pages run 37430733004](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37430733004) succeeded. All six changed live runtime/art files match the tested source. [Live hashes](WIZARD_MAP_DEPLOYMENT.json). Physical iPad testing is not claimed.
