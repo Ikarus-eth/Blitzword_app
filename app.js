@@ -119,7 +119,7 @@ function updateDragonLabels(){
 }
 function updateDailyXP(){
   if(!state)return;const p=Core.bonusProgress(state,Date.now()),label='XP boost';
-  const badge=$('#xpBonusBadge');badge.textContent=label;badge.hidden=!p.active||!['battle','result','mathIntro','mathChallenge','mathResult','summary'].includes(state.screen);
+  const badge=$('#xpBonusBadge');badge.textContent=label;badge.hidden=!p.active||!['battle','result','mathIntro','mathChallenge','mathResult','summary','mission'].includes(state.screen);
   badge.setAttribute('aria-label','Extra XP on correct answers for the rest of today');
   $('#mapDailyGoal').textContent='Chapter finished today ✓';$('#mapDailyGoal').hidden=!p.chapters;
   $('#mapDailySummary').hidden=!(p.chapters||p.active||p.consistencyEarned);
@@ -217,6 +217,7 @@ function activityCategory(){
 function drainExcluded(){const ms=playClock.takeExcluded();if(state&&ms)Core.recordTime(state,ms,'idle',Date.now());}
 function account(){
   syncSound();
+  if(state){adventures.timeTap();if(state.screen==='mission')updateDailyXP();}
   const now=performance.now();lastTick=now;if(!state)return;
   const category=activityCategory(),delta=playClock.sample({mono:now,wall:Date.now(),category,visible:!document.hidden,focused:windowFocused});
   drainExcluded();
@@ -229,7 +230,9 @@ function account(){
   if((category||state.activity==='chapterStory')&&playClock.expired&&!document.hidden&&windowFocused)pause('idle');
 }
 function confirmActivity(){
-  account();if(paused||blocked||playClock.expired)return false;
+  account();if(paused||blocked)return false;
+  if(state.screen==='mission'){playClock.reset(performance.now());updateDailyXP();return true;}
+  if(playClock.expired)return false;
   for(const part of playClock.confirm(performance.now()))Core.recordTime(state,part.ms,part.category,part.end);
   drainExcluded();updateDailyXP();return true;
 }
@@ -248,8 +251,8 @@ function openParentGate(){
 }
 function renderParent(){
   const p=Core.parentProgress(state,Date.now()),g=Core.dragonProgress(state);show('parentDashboard');
-  $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo);
-  $('#parentTotal').textContent=formatTime(p.activeMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math);
+  $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo+(state.expedition?.riddleDays?.[Core.dayKey(Date.now())]||0));
+  $('#parentTotal').textContent=formatTime(p.activeMs+Core.Adventure.report(state).riddleMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math+Core.Adventure.report(state).riddleMs);
   $('#parentMath').textContent=formatTime(p.totals.math)+' multiplication · PR: '+(state.math.best===null?'not set':state.math.best+' points in 60 seconds')+'.';
   $('#parentIdle').textContent=formatTime(p.totals.idle);$('#parentLegacy').textContent=formatTime(p.legacyMs);
   $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
@@ -1194,6 +1197,11 @@ $('#teachContinue').onclick=()=>{if(!confirmActivity())return;Core.leaveTeaching
 $('#resultNext').onclick=home;
 $('#anotherChallenge').onclick=continueAdventure;$('#doneToday').onclick=home;
 $('#retrySave').onclick=()=>{try{store.save(state);blocked=false;$('#saveNotice').hidden=true;if(playing)showPausePanel();else if(state.screen==='route')home();else show(state.screen);}catch(e){storageProblem(e);}};
+$('#parentAddXP').onclick=()=>{
+  if(blocked||state.screen!=='parentDashboard')return;
+  Core.grantParentXP(state,Date.now());
+  if(save()){renderParent();$('#parentXPStatus').textContent='Added 1,000 XP. Total: '+xpText(state.dragon.xp)+' XP.';}
+};
 $('#resetBtn').onclick=()=>{if(confirm('Erase the profile and all saved reading progress on this device? This cannot be undone.')){
   // Explicit existing reset action only. Never reset during deployment or migration.
   for(const suffix of ['','_backup','_legacy_backup','_unreadable_backup','_before_restore'])localStorage.removeItem(KEY+suffix);location.reload();

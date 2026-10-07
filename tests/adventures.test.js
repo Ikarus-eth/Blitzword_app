@@ -54,7 +54,7 @@ test('losses rewind one encounter pair without erasing discoveries or earned clu
 });
 test('old sightings migrate conservatively and riddle time is bounded and separately recorded',()=>{
   const s=fresh();delete s.expedition;s.campaign.enemyHistory=[{enemyId:'thornling--3'}];A.init(s);assert.equal(s.expedition.book.thornling.seen,true);assert.equal(s.expedition.book.thornling.champion,false);
-  const xp=s.dragon.xp;A.recordRiddleTime(s,45000,NOW);A.recordRiddleTime(s,120001,NOW);A.recordRiddleTime(s,NaN,NOW);assert.equal(A.report(s).riddleMs,45000);assert.equal(s.dragon.xp,xp);
+  C.startMission(s,'first-spark',NOW);win(s);A.startPuzzle(s);const xp=s.dragon.xp;A.recordRiddleTime(s,45000,NOW);A.recordRiddleTime(s,240000,NOW+240000);A.recordRiddleTime(s,NaN,NOW);assert.equal(A.report(s).riddleMs,180000);assert.equal(s.dragon.xp,xp);
 });
 function answer(s,{wrong=false,help=false}={}){
   const q=C.prepareBattle(s,NOW);q.phase='choices';q.supportReasons=[];

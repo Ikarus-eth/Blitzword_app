@@ -1,0 +1,20 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const C=require('../game-core'),assert=require('node:assert/strict'),fs=require('node:fs');
+const base=process.env.BASE_URL||'http://127.0.0.1:8767';
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});const errors=[];
+try{for(const [width,height] of [[1180,820],[390,844]]){
+ const context=await browser.newContext({viewport:{width,height},timezoneId:'Asia/Makassar'}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+ const now=Date.now(),s=C.migrate(C.fresh());s.profile.name='Reader';s.assessment.done=true;C.startMission(s,'first-spark',now);C.startMissionBattle(s,now);s.battle.enemyHealth=0;C.resolveBattle(s,now);C.Adventure.startPuzzle(s);C.recordTime(s,480000,'practice',now);
+ await page.addInitScript(save=>{localStorage.setItem('blitzword_state_v1',JSON.stringify(save));},s);
+ await page.clock.install({time:now});await page.goto(base);await page.locator('#missionResume').click();await page.clock.runFor(185000);
+ await page.getByRole('button',{name:'A clue, please',exact:true}).click();let saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('blitzword_state_v1')));
+ assert.equal(C.Adventure.report(saved).riddleMs,180000);assert.equal(await page.locator('#xpBonusBadge').isVisible(),true);
+ await page.locator('[data-choice="blue"]').click();await page.getByRole('button',{name:'Try it',exact:true}).click();assert.match(await page.locator('.riddleFeedback').textContent(),/\+88 XP/);
+ await page.locator('#homeBtn').click();await page.getByRole('button',{name:'Parents',exact:true}).click();const prompt=await page.locator('#parentQuestion').textContent();
+ const units='zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split(' '),tens={twenty:20,thirty:30,forty:40,fifty:50,sixty:60,seventy:70,eighty:80,ninety:90};
+ const number=t=>t.split(/[ -]+/).reduce((n,w)=>w==='hundred'?n*100:w==='and'?n:n+(tens[w]??units.indexOf(w)),0);const [a,b]=prompt.replace('What is ','').replace('?','').split(' minus ');
+ await page.locator('#parentAnswer').fill(String(number(a)-number(b)));await page.locator('#parentUnlock').click();
+ assert.equal(await page.locator('#parentToday').textContent(),'11 min 00 sec');saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('blitzword_state_v1')));const xp=saved.dragon.xp;
+ await page.locator('#parentAddXP').click();saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('blitzword_state_v1')));assert.equal(saved.dragon.xp,xp+1000);
+ await page.locator('#parentAddXP').scrollIntoViewIfNeeded();fs.mkdirSync('/tmp/blitzword-riddle-review',{recursive:true});await page.screenshot({path:`/tmp/blitzword-riddle-review/parent-${width}.png`});console.log('PASS Chrome',width,height,'cap, boost, riddle reward, total time, parent grant');await context.close();
+}assert.deepEqual(errors,[]);}finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1);});

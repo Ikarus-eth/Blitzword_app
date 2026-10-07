@@ -33,8 +33,9 @@
     };
     function icon(name){return '<svg viewBox="0 0 40 42" aria-hidden="true"><path d="'+(paths[name]||paths.mark)+'"/></svg>';}
     function timeTap(){
-      const s=ctx.state(),p=A.of(s).current?.puzzle,now=Date.now();
-      if(stamp!==null&&s.screen==='mission'&&p&&!p.solved&&ctx.active()&&!document.hidden)A.recordRiddleTime(s,now-stamp,now);
+      const s=ctx.state(),p=A.of(s).current?.puzzle,now=performance.now();
+      const delta=stamp===null?0:Math.max(0,now-stamp);
+      if(s.screen==='mission'&&p&&!p.solved&&ctx.active()&&!document.hidden&&delta<=5000)Core.recordRiddleTime(s,delta,Date.now());
       stamp=now;
     }
     function stopTiming(){stamp=null;}
@@ -128,20 +129,20 @@
         p.order.forEach(id=>{const option=q.options.find(o=>o.id===id),selected=p.selection.includes(id),b=button('','riddleOption'+(selected?' selected':'')+(p.solved&&selected?' correct':''),()=>act(()=>A.choose(s,id)));b.dataset.choice=id;b.setAttribute('aria-pressed',String(selected));b.disabled=p.solved||c.hearts<=0||q.type==='order'&&selected;
           if(option.icon==='number'){b.classList.add('numberOption');b.append(el('span','riddleNumber',option.label));}else{const glyph=el('span','riddleGlyph');glyph.innerHTML=icon(option.icon);if(option.colour)glyph.style.color={red:'#a24436',blue:'#3766a0',green:'#497448'}[option.colour];b.append(glyph,el('span','',option.label));}if(p.solved&&selected){const mark=el('span','riddleAnswerMark','✓');mark.setAttribute('aria-label','Correct answer');b.append(mark);}choices.append(b);});panel.append(choices);
         const feedback=el('div','riddleFeedback');feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');
-        if(p.solved){feedback.classList.add('solved');feedback.tabIndex=-1;const mark=el('span','riddleSuccessMark','✓');mark.setAttribute('aria-hidden','true');feedback.append(mark,el('strong','riddleSuccessTitle',p.assisted?'Answer revealed':'Correct!'),el('strong','',q.reward),el('p','',q.explanation));}
+        if(p.solved){feedback.classList.add('solved');feedback.tabIndex=-1;const mark=el('span','riddleSuccessMark','✓');mark.setAttribute('aria-hidden','true');feedback.append(mark,el('strong','riddleSuccessTitle',p.assisted?'Answer revealed':'Correct!'),el('strong','',q.reward+(p.xpEarned?' · +'+p.xpEarned+' XP':'')),el('p','',q.explanation));}
         else if(p.wrong){feedback.classList.add('wrong');feedback.append(el('strong','',c.hearts<=0?'No hearts left. Rest, then try this clue again.':'Not quite. −1 heart · '+c.hearts+' left'),el('p','',q.hint));}
         else if(p.hint)feedback.append(el('p','',q.hint));panel.append(feedback);
         const actions=el('div','riddleActions');
         if(p.solved){actions.append(button(c.step===3?'Claim the treasure':'Follow the trail','greenButton',()=>act(()=>A.next(s,Date.now()))));}
         else if(c.hearts<=0){actions.append(button('Rest and retry · '+c.maxHearts+' hearts','greenButton',()=>act(()=>{A.retreat(s,true);A.retry(s);})));}
         else{
-          const ready=button('Try it','greenButton',()=>act(()=>A.check(s,Date.now())));ready.disabled=p.wrong||p.selection.length!==(Array.isArray(q.answer)?q.answer.length:1);actions.append(ready);
+          const ready=button('Try it','greenButton',()=>act(()=>Core.checkRiddle(s,Date.now())));ready.disabled=p.wrong||p.selection.length!==(Array.isArray(q.answer)?q.answer.length:1);actions.append(ready);
           if(q.type==='order')actions.append(button('Start order again','textButton',()=>act(()=>{p.selection=[];p.wrong=false;})));
           actions.append(button('A clue, please','textButton',()=>act(()=>{p.hint=true;})),button('Listen','textButton',()=>{if(!ctx.active())return;timeTap();p.listened=true;if(ctx.save())ctx.speak(q.text.join(' ')+' '+q.prompt);}),);
-          if(p.attempts)actions.append(button('Show me how','textButton',()=>act(()=>A.check(s,Date.now(),{reveal:true}))));
+          if(p.attempts)actions.append(button('Show me how','textButton',()=>act(()=>Core.checkRiddle(s,Date.now(),{reveal:true}))));
         }if(p.solved){panel.classList.add('riddleSolved');const answer=el('p','riddleSolvedAnswer',[q.answer].flat().map(id=>q.options.find(o=>o.id===id).label).join(' → '));feedback.insertBefore(answer,feedback.querySelector('p'));feedback.insertBefore(actions,feedback.querySelector('p'));}else panel.append(actions);
       }
-      const picture=el('div','missionPicture');picture.append(scene,teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;if(solving&&p.solved){const feedback=panel.querySelector('.riddleFeedback');feedback.focus?.({preventScroll:true});feedback.scrollIntoView?.({block:'start'});}stamp=solving&&!p.solved?Date.now():null;
+      const picture=el('div','missionPicture');picture.append(scene,teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;if(solving&&p.solved){const feedback=panel.querySelector('.riddleFeedback');feedback.focus?.({preventScroll:true});feedback.scrollIntoView?.({block:'start'});}stamp=solving&&!p.solved?performance.now():null;
     }
     function renderResult(){
       const s=ctx.state(),e=A.of(s),m=A.current(s),r=s.result,c=e.current;if(!r?.missionId||!m)return false;

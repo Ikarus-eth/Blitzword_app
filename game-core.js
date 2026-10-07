@@ -243,23 +243,24 @@
     // One latest local date per word, capped at three: bounded independently of raw history.
     s.learning.dailyPractice[target]={day:dayKey(now),correct:Math.min(3,dailyCorrect(s,target,now)+1)};
   }
+  function eligibleTime(s,key){const d=s.timing.days[key]||{};return (d.practice||0)+(d.math||0)+(s.expedition?.riddleDays?.[key]||0);}
   function bonusProgress(s,now=Date.now()){
-    const d=s.timing.days[dayKey(now)]||{},activeMs=(d.practice||0)+(d.math||0);
+    const activeMs=eligibleTime(s,dayKey(now));
     // Count local calendar days, including across daylight-saving changes. A gap
     // does not erase the other qualifying days in this seven-day window.
     let previousDays=0;const date=new Date(now);
     for(let ago=1;ago<=6;ago++){
-      const prior=s.timing.days[dayKey(new Date(date.getFullYear(),date.getMonth(),date.getDate()-ago,12).getTime())]||{};
-      if((prior.practice||0)+(prior.math||0)>=TARGET_MS)previousDays++;
+      const key=dayKey(new Date(date.getFullYear(),date.getMonth(),date.getDate()-ago,12).getTime());
+      if(eligibleTime(s,key)>=TARGET_MS)previousDays++;
     }
     return {activeMs,active:activeMs>=TARGET_MS,multiplier:activeMs>=TARGET_MS?XP_MULTIPLIER:1,remainingMs:Math.max(0,TARGET_MS-activeMs),chapters:s.story.dailyChapters?.[dayKey(now)]||0,
       practiceDays:previousDays+(activeMs>=TARGET_MS?1:0),consistencyXP:Math.min(XP_REWARDS.consistencyMax,previousDays*XP_REWARDS.consistencyPerDay),consistencyEarned:s.rewards.xpDays[dayKey(now)]?.consistency||0};
   }
-  function awardXP(s,base,kind,now,{boost=false}={}){
+  function awardXP(s,base,kind,now,{boost=false,trackBattle=true}={}){
     const extra=boost&&bonusProgress(s,now).active?Math.round(base*XP_MULTIPLIER)-base:0,amount=base+extra;
     s.dragon.xp+=amount;
     const day=s.rewards.xpDays[dayKey(now)] ||= {total:0,boost:0};day.total+=amount;day.boost+=extra;day[kind]=(day[kind]||0)+base;
-    if(s.battle&&!s.battle.demo)s.battle.xpEarned=(s.battle.xpEarned||0)+amount;
+    if(trackBattle&&s.battle&&!s.battle.demo)s.battle.xpEarned=(s.battle.xpEarned||0)+amount;
     return amount;
   }
   function cleanDragonName(name){return typeof name==='string'?Array.from(name.replace(/[\u0000-\u001f\u007f<>]/g,'').replace(/\s+/g,' ').trim()).slice(0,18).join(''):'';}
@@ -310,18 +311,42 @@
     }
     return xp;
   }
+  function awardDaily(s,now){
+    const bonus=bonusProgress(s,now);
+    if(!bonus.active||s.rewards.xpDays[dayKey(now)]?.daily)return;
+    awardXP(s,DAILY_XP,'daily',now,{trackBattle:false});
+    if(bonus.consistencyXP)awardXP(s,bonus.consistencyXP,'consistency',now,{trackBattle:false});
+  }
+  function recordRiddleTime(s,ms,now=Date.now()){
+    const parts=Adventure.recordRiddleTime(s,ms,now);
+    for(const part of parts)awardDaily(s,part.end-1);
+    if(parts.length)syncProgress(s,now);
+    return parts.reduce((sum,p)=>sum+p.ms,0);
+  }
+  function checkRiddle(s,now=Date.now(),options={}){
+    const result=Adventure.check(s,now,options);
+    if(result?.correct){
+      const p=Adventure.of(s).current.puzzle,r=Adventure.stats(s).riddles[p.id];
+      if(!result.assisted&&r.visits===1){
+        awardDaily(s,now);
+        p.xpEarned=awardXP(s,50,'riddles',now,{boost:true,trackBattle:false});r.xpEarned=p.xpEarned;
+        syncProgress(s,now);
+      }
+    }
+    return result;
+  }
+  function grantParentXP(s,now=Date.now()){
+    if(s.screen!=='parentDashboard')return 0;
+    const amount=awardXP(s,1000,'parent',now,{trackBattle:false});syncProgress(s,now);return amount;
+  }
   function recordTime(s,ms,category,now){
     if(!Number.isFinite(ms)||ms<=0||!['practice','math','assessment','demo','idle'].includes(category))return;
     let cursor=now-ms;
     while(cursor<now){
       const d=new Date(cursor),next=new Date(d.getFullYear(),d.getMonth(),d.getDate()+1).getTime(),end=Math.min(now,next);
       const day=s.timing.days[dayKey(cursor)] ||= {practice:0,math:0,assessment:0,demo:0,idle:0};
-      const before=(day.practice||0)+(day.math||0);day[category]=(day[category]||0)+end-cursor;
-      if(['practice','math'].includes(category)&&before<TARGET_MS&&(day.practice||0)+(day.math||0)>=TARGET_MS&&!s.rewards.xpDays[dayKey(cursor)]?.daily){
-        awardXP(s,DAILY_XP,'daily',end-1);
-        const consistency=bonusProgress(s,end-1).consistencyXP;
-        if(consistency)awardXP(s,consistency,'consistency',end-1);
-      }
+      day[category]=(day[category]||0)+end-cursor;
+      if(['practice','math'].includes(category))awardDaily(s,end-1);
       cursor=end;
     }
     if(category==='practice'||category==='math'){
@@ -1057,7 +1082,7 @@
       q.phase='ready';
     }
   }
-  return {Adventure,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
+  return {Adventure,recordRiddleTime,checkRiddle,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,

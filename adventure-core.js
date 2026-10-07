@@ -143,11 +143,16 @@
     else {c.step++;c.phase='intro';c.puzzle=null;s.activity='mission';}
     return true;
   }
+  const RIDDLE_CAP_MS=180000;
   function recordRiddleTime(s,ms,now){
-    if(!Number.isFinite(ms)||ms<=0||ms>120000)return;
-    let cursor=now-ms;
-    while(cursor<now){const d=new Date(cursor),end=Math.min(now,new Date(d.getFullYear(),d.getMonth(),d.getDate()+1).getTime()),key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');of(s).riddleDays[key]=(of(s).riddleDays[key]||0)+end-cursor;cursor=end;}
+    const c=of(s).current,p=c?.puzzle;
+    if(!Number.isFinite(ms)||ms<=0||!Number.isFinite(now)||of(s).context!=='mission'||c?.phase!=='puzzle'||!p||p.solved)return [];
+    const used=c.riddleTimeById ||= {},credit=Math.min(ms,Math.max(0,RIDDLE_CAP_MS-(used[p.id]||0)));
+    used[p.id]=(used[p.id]||0)+credit;
+    const parts=[];let cursor=now-ms,finish=cursor+credit;
+    while(cursor<finish){const d=new Date(cursor),end=Math.min(finish,new Date(d.getFullYear(),d.getMonth(),d.getDate()+1).getTime()),key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');of(s).riddleDays[key]=(of(s).riddleDays[key]||0)+end-cursor;parts.push({ms:end-cursor,end});cursor=end;}
     const days=Object.keys(of(s).riddleDays).sort();while(days.length>400)delete of(s).riddleDays[days.shift()];
+    return parts;
   }
   function report(s){
     const e=of(s),firsts=Object.values(e.missions).flatMap(m=>Object.values(m.riddles).map(r=>r.first)).filter(Boolean);
@@ -157,5 +162,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {Data,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress};
+  return {Data,RIDDLE_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress};
 });

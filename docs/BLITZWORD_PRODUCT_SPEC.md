@@ -1,3 +1,9 @@
+## Riddle timing and XP — 7 October 2026
+
+Accepted request: credit longer riddle thinking, increase riddle XP, base fight/riddle boosts on total eligible time and add a parent-controlled 1,000 XP adjustment. The 50 XP amount and once-per-riddle reward are implementation defaults. This supersedes the historical separate/non-rewarding campaign-riddle rules below.
+
+Campaign riddles now count foreground thinking time up to three minutes per riddle per quest. The cap survives hints, retries, pause and reload; background tabs and suspended timers are excluded. Reading, multiplication and campaign-riddle time jointly unlock the ten-minute daily reward, returning-day bonus and existing 1.75× boost. First solved riddles award 50 XP (88 boosted), including hints/listening, but answer reveals and replays award none. Parents has a gated **Add 1,000 XP** button, with exact unboosted awards recorded separately from learning evidence. No automatic compensation or reconstructed historical time is applied. The independent Story adventures pilot retains its own timing/save rules.
+
 # BlitzWord — Current Product Spec
 
 ## Ship and kind shark chapter — 7 October 2026
