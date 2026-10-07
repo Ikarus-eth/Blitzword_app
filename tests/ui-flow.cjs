@@ -4,7 +4,7 @@ const root=require('node:path').join(__dirname,'../'),Core=require(root+'game-co
 function boot(saved,options={}){
  if(saved&&!options.adventures){saved=Core.copy(saved);Core.Adventure.of(saved).preferLegacy=true;}
  const {window,document}=parseHTML(fs.readFileSync(root+'index.html','utf8'));
- let now=Date.UTC(2026,8,22),uid=0;const jobs=new Map(),memory=new Map(saved?[[Storage.KEY,JSON.stringify(saved)]]:[]);
+ let now=options.now??Date.UTC(2026,8,22),uid=0;const jobs=new Map(),memory=new Map(saved?[[Storage.KEY,JSON.stringify(saved)]]:[]);
  let failWrites=options.failWrites||false,heartbeat=()=>{},reloads=0;const destinations=[];
  const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failWrites===true||typeof failWrites==='function'&&failWrites(k,v))throw new Error('Storage full');memory.set(k,v)},removeItem:k=>memory.delete(k)};
  const schedule=(fn,ms)=>(jobs.set(++uid,{fn,time:now+ms}),uid);
@@ -1213,15 +1213,15 @@ for(const chosen of ['made','wade'])for(const options of [['made','wade','have',
 console.log('PASS made and wade preserve the displayed selection, saved evidence, spoken and written correction across positions');
 
 {
- const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,8,22,12);s.profile.name='Reader';s.assessment.done=true;
  Core.startMission(s,'first-spark',now);Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s);
  Core.recordTime(s,480000,'practice',now);
- let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));ui.advance(150000);ui.click(missionButton(ui,'A clue, please'));
+ let ui=boot(s,{adventures:true,now});ui.click(ui.get('missionResume'));ui.advance(150000);ui.click(missionButton(ui,'A clue, please'));
  assert.equal(A.report(ui.state()).riddleMs,150000);assert.equal(Core.bonusProgress(ui.state(),now).active,true);
  ui.click(ui.get('pauseBtn'));ui.advance(300000);assert.equal(A.report(ui.state()).riddleMs,150000);
  ui.click(ui.get('pauseResume'));ui.advance(10000);ui.visibility(true);ui.advance(300000);ui.visibility(false);ui.click(ui.get('pauseResume'));
  ui.advance(120000,true);ui.click(missionButton(ui,'A clue, please'));assert.equal(A.report(ui.state()).riddleMs,160000,'sleep is excluded');
- ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));ui.advance(60000);ui.click(missionButton(ui,'A clue, please'));
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true,now});ui.click(ui.get('missionResume'));ui.advance(60000);ui.click(missionButton(ui,'A clue, please'));
  assert.equal(A.report(ui.state()).riddleMs,180000);assert.equal(ui.get('pausePanel').hidden,true);
  ui.click(ui.get('mission').querySelector('[data-choice="blue"]'));ui.click(missionButton(ui,'Try it'));
  assert.equal(ui.state().expedition.current.puzzle.xpEarned,88);assert.match(ui.get('mission').textContent,/\+88 XP/);
