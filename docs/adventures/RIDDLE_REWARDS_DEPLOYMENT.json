@@ -1,0 +1,46 @@
+{
+  "verifiedAt": "2026-10-07T01:45:47.186239+00:00",
+  "build": "riddle-rewards-20261007-r1",
+  "releaseCommit": "9299c2f7c415c0fd51b7fb97c5d4a054cc6d080f",
+  "deploymentCommit": "242b896820743ef97b2d5566aca961916b172474",
+  "run": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37558531473",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "d05265cceb394240a2800f3626a7d22a4161efe141188d89337ceeaed563eb68",
+      "matches": true
+    },
+    {
+      "path": "app.js",
+      "sha256": "021ab907dff1b1f6a3672d6e93911aaabd5c2b304159ccc214599eb48d5aa11c",
+      "matches": true
+    },
+    {
+      "path": "game-core.js",
+      "sha256": "7ad78a20366e8d860881e5b2516f326d45f9e3786a30f294d758e3698b2e0f27",
+      "matches": true
+    },
+    {
+      "path": "adventure-core.js",
+      "sha256": "c444b17e314c8756ee1619a40d8e4e41641515442c2efbdf65f737a35dd5421c",
+      "matches": true
+    },
+    {
+      "path": "adventure-ui.js",
+      "sha256": "c0903f1af42d3d6880a2a943a214a804dd5954db301ab8666d3adea1d48f6bb4",
+      "matches": true
+    },
+    {
+      "path": "missions.js",
+      "sha256": "964f2129d0891715caaeb845a1b433296507d26761be839b59c35209388b17c6",
+      "matches": true
+    }
+  ],
+  "unitTests": 320,
+  "uiGroups": 110,
+  "browserViewports": [
+    "1180x820",
+    "390x844"
+  ],
+  "physicalIPadVerified": false
+}
