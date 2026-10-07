@@ -1,0 +1,39 @@
+{
+  "verifiedAt": "2026-10-07T01:38:48.905331+00:00",
+  "commit": "b84518e38452922c821c13798c526864994fa796",
+  "pullRequest": 137,
+  "pagesRun": 37557959495,
+  "build": "kind-shark-20261007-r1",
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "df26164bf8f5c06b42dc53ea48245ab25ad7f73506b9571dc03abc0ceb506a28",
+      "matches": true
+    },
+    {
+      "file": "missions.js",
+      "sha256": "964f2129d0891715caaeb845a1b433296507d26761be839b59c35209388b17c6",
+      "matches": true
+    },
+    {
+      "file": "assets/adventures/kind-shark-departure.webp",
+      "sha256": "35ec8b2fc84ede47e555a8cbdae65be4b5e3240223e62013de584eb5588b50be",
+      "matches": true
+    },
+    {
+      "file": "assets/adventures/kind-shark-passage.webp",
+      "sha256": "cff20f70355bf2e6ff97a510d85d66cca725c18bc6e344dd69137e94107105be",
+      "matches": true
+    },
+    {
+      "file": "assets/adventures/kind-shark-treasure.webp",
+      "sha256": "f7eb879c937f4a883baa895ff781bcbd365a5ed17d2569cc8fad86bdfeac1ee2",
+      "matches": true
+    },
+    {
+      "file": "assets/adventures/kind-shark-homecoming.webp",
+      "sha256": "b9ccce6a5d5944df26aeeb5547b06267be83e8e9c8520c6ef2f1f8c10da8c011",
+      "matches": true
+    }
+  ]
+}
