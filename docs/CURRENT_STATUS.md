@@ -1,15 +1,15 @@
 # BlitzWord current status — 7 October 2026
 
+## Riddle timing and XP — 7 October 2026
+
+**Implemented and tested; deployment pending.** Build `riddle-rewards-20261007-r1`: 320 unit tests and 110 UI flow groups pass. Chrome verifies the three-minute cap, boost, riddle reward, parent totals and XP grant at 1180×820 and 390×844 without page errors; screenshots inspected. The supplied backup imports/exports with XP and expedition state preserved. Physical iPad testing remains unverified. [PR #139](https://github.com/Ikarus-eth/Blitzword_app/pull/139).
+
+Campaign riddles now count foreground thinking time up to three minutes per riddle per quest. The cap survives hints, retries, pause and reload; background tabs and suspended timers are excluded. Reading, multiplication and campaign-riddle time jointly unlock the ten-minute daily reward, returning-day bonus and existing 1.75× boost. First solved riddles award 50 XP (88 boosted), including hints/listening, but answer reveals and replays award none. Parents has a gated **Add 1,000 XP** button, with exact unboosted awards recorded separately from learning evidence. No automatic compensation or reconstructed historical time is applied. The independent Story adventures pilot retains its own timing/save rules.
+
 ## The Ship and the Kind Shark — 7 October 2026
 
 **Deployed and verified.** [PR #137](https://github.com/Ikarus-eth/Blitzword_app/pull/137) merged as `b84518e38452922c821c13798c526864994fa796`; [Pages run 37557959495](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37557959495) succeeded. All six changed live runtime/art files match the tested source ([live hashes](adventures/KIND_SHARK_DEPLOYMENT.json)). 315 unit tests, 108 UI flow groups and 12 Chrome scene/riddle checks pass. Chapter 6 of Forest Lights now follows the original teaching-picture ship and a kind shark through four illustrated scenes and four connected riddles. The shark helps recover the ruby seed and bring the forest lights back. The `oak-heart` mission ID, saved progress, previous pending oak riddles, rewards and river unlock are preserved. New riddle Listen text uses device speech; existing recordings remain available. [Artwork, tests and release status](adventures/KIND_SHARK_RELEASE.md).
 
-
-## Riddle timing and XP — 7 October 2026
-
-Implemented; local regression verification is in progress. Deployment has not yet been verified for build `riddle-rewards-20261007-r1`.
-
-Campaign riddles now count foreground thinking time up to three minutes per riddle per quest. The cap survives hints, retries, pause and reload; background tabs and suspended timers are excluded. Reading, multiplication and campaign-riddle time jointly unlock the ten-minute daily reward, returning-day bonus and existing 1.75× boost. First solved riddles award 50 XP (88 boosted), including hints/listening, but answer reveals and replays award none. Parents has a gated **Add 1,000 XP** button, with exact unboosted awards recorded separately from learning evidence. No automatic compensation or reconstructed historical time is applied. The independent Story adventures pilot retains its own timing/save rules.
 
 ## More imaginative boy-and-wizard chapter — 6 October 2026
 
