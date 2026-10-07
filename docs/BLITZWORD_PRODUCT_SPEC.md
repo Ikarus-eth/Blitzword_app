@@ -6,6 +6,11 @@ Campaign riddles now count foreground thinking time up to three minutes per ridd
 
 # BlitzWord — Current Product Spec
 
+## Ship and kind shark chapter — 7 October 2026
+
+The user requested that chapter six centre on the ship and shark from the ship/shark teaching moment, explicitly specifying a kind shark. Forest Lights chapter 6 becomes **The Ship and the Kind Shark**: a helpful sea guide leads the wooden ship through a safe passage, finds the ruby seed and returns it to the forest harbour. Four linked riddles cover route order, subtraction, elimination and action sequencing. The shark is a narrative friend, never a battle opponent. Keep the existing four forest-creature reading encounters, health and learning rules, mission ID `oak-heart`, prerequisites, earned records and river unlock. Old pending oak riddles remain resolvable after reload/backup; new clues use distinct IDs. New Listen passages use device speech fallback. [Implementation and art](adventures/KIND_SHARK_RELEASE.md).
+
+
 ## Finish chapter and riddle narration — 4 October 2026
 
 The user approved finishing the remaining 31 chapter reading sentences and 48 riddle Listen passages and deploying the result. Reuse the already-paid chapter sentences; record the riddles in George's current voice within a 6,000-character generation cap, reusing the repeated ordering instruction. Preserve the approved wording, learner saves and all current gameplay. Custom dragon-name text stays local, and device speech remains the fallback for unavailable audio or unknown saved text. This does not include teaching-word alignment or additional unspoken UI text. The user authorized deployment without a separate pre-deployment listening gate; no physical-device or pronunciation approval is implied. [Implementation and budget](NARRATION_STORY_RIDDLE_RELEASE.md).

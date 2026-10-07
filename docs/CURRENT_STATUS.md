@@ -1,3 +1,10 @@
+# BlitzWord current status — 7 October 2026
+
+## The Ship and the Kind Shark — 7 October 2026
+
+**Implemented and tested; deployment pending.** 315 unit tests, 108 UI flow groups and 12 Chrome scene/riddle checks pass. Chapter 6 of Forest Lights now follows the original teaching-picture ship and a kind shark through four illustrated scenes and four connected riddles. The shark helps recover the ruby seed and bring the forest lights back. The `oak-heart` mission ID, saved progress, previous pending oak riddles, rewards and river unlock are preserved. New riddle Listen text uses device speech; existing recordings remain available. [Artwork, tests and release status](adventures/KIND_SHARK_RELEASE.md).
+
+
 ## Riddle timing and XP — 7 October 2026
 
 Implemented; local regression verification is in progress. Deployment has not yet been verified for build `riddle-rewards-20261007-r1`.

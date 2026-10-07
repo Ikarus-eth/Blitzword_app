@@ -18,6 +18,8 @@ For ChatGPT project setup, use the [project maintenance guide](docs/PROJECT_DESC
 
 Chapter 5 of Forest Lights is **The Boy and the Map**, with four varied boy-and-wizard adventure scenes and linked map riddles. [Latest artwork](docs/adventures/WIZARD_MAP_RELEASE.md); [defeat rules and verification](docs/adventures/MAPMAKER_RELEASE.md).
 
+Chapter 6 is **The Ship and the Kind Shark**, based on the original ship/shark teaching picture. Four sea scenes and linked riddles follow a friendly shark bringing the last light seed home. [Artwork and verification](docs/adventures/KIND_SHARK_RELEASE.md).
+
 The original seven campaigns remain under **Word trails**. Their chapter rules, picture checks, number duels and saved progress below apply to that retained mode. Reading practice, word history, XP and Pip growth are shared.
 
 **Story adventures** on the Word trails chapter-selection Home opens The fox cub rescue: one Artus and Pip journey through five linked reading and maths puzzles. Six integrated illustrations show the heroes and supporting cast in the actual story settings. Simple text, picture choices, hints and local progress; no Listen or speech. See [rescue story rules and verification](docs/story-pilot/RESCUE_RELEASE.md) and the [tower-door riddle correction](docs/story-pilot/DOOR_RELEASE.md).

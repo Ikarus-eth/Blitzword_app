@@ -9,7 +9,7 @@ function win(s,now=NOW){
 }
 function solve(s,now=NOW){assert.equal(A.startPuzzle(s,()=>0.4),true);const q=D.puzzles[s.expedition.current.puzzle.id];for(const id of [q.answer].flat())A.choose(s,id);assert.equal(A.check(s,now).correct,true);A.next(s,now);}
 test('two acyclic campaigns contain 48 unique solvable puzzles and all 20 creatures',()=>{
-  assert.equal(D.campaigns.length,2);assert.equal(D.missions.length,12);assert.equal(D.missions.flatMap(m=>m.riddles).length,48);assert.equal(D.legacyPuzzles.length,4);
+  assert.equal(D.campaigns.length,2);assert.equal(D.missions.length,12);assert.equal(D.missions.flatMap(m=>m.riddles).length,48);assert.equal(D.legacyPuzzles.length,8);
   assert.deepEqual([...new Set(D.missions.flatMap(m=>m.families))].sort(),Content.enemies.map(e=>e.id).sort());
   const seen=new Set();for(const m of D.missions){assert.equal(m.riddles.length,4);for(const id of m.requires)assert.ok(seen.has(id));seen.add(m.id);
     assert.ok(Content.chapterBackgrounds[m.area]);
@@ -136,4 +136,17 @@ test('mapmaker replacement keeps mission unlocks, old pending vault answers and 
  s=Storage.readBackup(Storage.backupFile(s).text).state;assert.equal(A.check(s,NOW).correct,true);assert.equal(A.stats(s).riddles['vault-tool'].first.selection[0],'brush');
  A.next(s,NOW);win(s);A.startPuzzle(s);assert.equal(s.expedition.current.puzzle.id,'mapmaker-path');
  assert.ok(A.stats(s,'moth-post').completedAt);assert.equal(A.unlocked(s,'oak-heart'),false);
+});
+test('kind shark chapter retains every pending oak clue through backup and unlocks the river',()=>{
+ for(const [step,id] of ['oak-trail','oak-seeds','oak-mark','oak-wake'].entries()){
+  let s=fresh();for(const mid of D.campaigns[0].missions.slice(0,5))A.stats(s,mid).completedAt=new Date(NOW).toISOString();
+  C.startMission(s,'oak-heart',NOW);s.expedition.current.step=step;win(s);A.startPuzzle(s);
+  const old=D.puzzles[id];s.expedition.current.puzzle={...s.expedition.current.puzzle,id,order:old.options.map(o=>o.id),selection:[]};
+  const xp=s.dragon.xp;s=Storage.readBackup(Storage.backupFile(s).text).state;
+  assert.equal(s.dragon.xp,xp);assert.equal(A.current(s).name,'The Ship and the Kind Shark');
+  for(const answer of [old.answer].flat())A.choose(s,answer);
+  assert.equal(A.check(s,NOW).correct,true);assert.equal(A.stats(s).riddles[id].first.correct,true);A.next(s,NOW);
+  if(step===3){assert.equal(A.campaignComplete(s,'lost-lights'),true);assert.equal(A.unlocked(s,'reed-message'),true);}
+  else{win(s);A.startPuzzle(s);assert.equal(s.expedition.current.puzzle.id,D.byId['oak-heart'].riddles[step+1].id);}
+ }
 });
