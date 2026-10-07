@@ -1,0 +1,32 @@
+{
+  "generator": "built-in image_gen",
+  "reference": {
+    "path": "references/ship-shark-teaching.png",
+    "source": "assets/teaching/core-teaching.webp",
+    "physicalCrop": [
+      1,
+      363,
+      360,
+      360
+    ],
+    "note": "Ship/shark teaching tile; content.js crop coordinates use a logical 1536×2048 atlas."
+  },
+  "scenes": [
+    {
+      "name": "kind-shark-departure",
+      "prompt": "Create one landscape 3:2 hand-painted children's storybook illustration, watercolor and gouache with beautiful atmospheric detail, matching the supplied reference's traditional painted style. Reference identity: the same honey-brown wooden two-masted sailing ship with cream sails and a small red pennant, and the same natural blue-grey shark with white underside. The shark is KIND, a helpful calm guide, relaxed eye and gently closed mouth, no attack, no scary teeth. Keep recognizable ship structure and shark anatomy. No text, letters, labels, panels, collage, border, modern objects or UI. No recurring human heroes or dragon required; tiny indistinct sailors may appear on deck. Both ship and shark must be clearly visible. Scene one: sunny departure from a wooded bay. Eye-level split view above and below clear turquoise water. The ship glides toward the open sea to the right; the shark swims just ahead below the surface, showing the way. Green forested cliffs curve away behind, warm morning light, bright welcoming discovery, underwater sunbeams and little fish. Varied spacious wide composition."
+    },
+    {
+      "name": "kind-shark-passage",
+      "prompt": "Create one landscape 3:2 hand-painted children's storybook illustration, watercolor and gouache with beautiful atmospheric detail, matching the supplied reference's traditional painted style. Reference identity: the same honey-brown wooden two-masted sailing ship with cream sails and a small red pennant, and the same natural blue-grey shark with white underside. The shark is KIND, a helpful calm guide, relaxed eye and gently closed mouth, no attack, no scary teeth. Keep recognizable ship structure and shark anatomy. No text, letters, labels, panels, collage, border, modern objects or UI. No recurring human heroes or dragon required; tiny indistinct sailors may appear on deck. Both ship and shark must be clearly visible. Scene two: high oblique view down onto a winding turquoise channel between pale rocky islets and one magnificent natural stone sea arch. The ship carefully follows the shark's visible blue-grey shape beneath the crystal-clear water, past a sandy bay toward the arch. The shark is a helpful pilot, steering well clear of shallow rocks. Sweeping diagonal composition, breezy afternoon sunshine, sea birds, lush pine cliffs. Shark visibly natural and recognizable through water, large enough to read. No peril or attack."
+    },
+    {
+      "name": "kind-shark-treasure",
+      "prompt": "Create one landscape 3:2 hand-painted children's storybook illustration, watercolor and gouache with beautiful atmospheric detail, matching the supplied reference's traditional painted style. Reference identity: the same honey-brown wooden two-masted sailing ship with cream sails and a small red pennant, and the same natural blue-grey shark with white underside. The shark is KIND, a helpful calm guide, relaxed eye and gently closed mouth, no attack, no scary teeth. Keep recognizable ship structure and shark anatomy. No text, letters, labels, panels, collage, border, modern objects or UI. No recurring human heroes or dragon required; tiny indistinct sailors may appear on deck. Both ship and shark must be clearly visible. Scene three: magical underwater discovery in a sheltered sea grotto, camera mostly underwater looking slightly upward. The kind shark noses gently toward a small closed wooden treasure box with a simple crescent moon carved on its lid, resting on a sandy ledge among soft kelp. A tiny warm ruby-red glow shines through a crack in the box. A rope basket hangs down from the ship to collect the treasure, with natural rope rising to the surface. Through the clear water and a narrow above-water strip, show the wooden ship waiting overhead, cream sails gently furled. Turquoise shafts of sunlight, rock arch at distant edge, wonder and teamwork. Only one treasure box; moon motif is an illustration, no lettering. Calm closed mouth shark, no biting."
+    },
+    {
+      "name": "kind-shark-homecoming",
+      "prompt": "Create one landscape 3:2 hand-painted children's storybook illustration, watercolor and gouache with beautiful atmospheric detail, matching the supplied reference's traditional painted style. Reference identity: the same honey-brown wooden two-masted sailing ship with cream sails and a small red pennant, and the same natural blue-grey shark with white underside. The shark is KIND, a helpful calm guide, relaxed eye and gently closed mouth, no attack, no scary teeth. Keep recognizable ship structure and shark anatomy. No text, letters, labels, panels, collage, border, modern objects or UI. No recurring human heroes or dragon required; tiny indistinct sailors may appear on deck. Both ship and shark must be clearly visible. Scene four: joyful homecoming at a forest harbour at sunset. Wide low viewpoint from just above calm water. The wooden ship is safely moored beside a short rustic pier at left, cream sails partly furled, golden lanterns hanging. The friendly shark swims visibly just below the clear foreground water at right, glancing gently toward shore, mouth closed. On shore an enormous old oak glows with magical tiny coloured lights running through its branches into the forest; a small open treasure box with a ruby-red glowing seed rests at its roots near the pier. Warm amber and pink sky, rich blue-green water, sparkling reflections, peaceful celebration of helping a friend. No human closeups, no dragon, no aggressive creatures. Ship and shark both prominent. The tree is firmly on land, shark fully in water."
+    }
+  ]
+}

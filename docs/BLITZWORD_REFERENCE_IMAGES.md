@@ -2,6 +2,10 @@
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
 
+### Ship and kind shark — 7 October 2026
+
+The user selected the ship/shark teaching moment and specified that the shark is kind. The source is the first tile of the second row in `assets/teaching/core-teaching.webp`, shared by the `ship` and `shark` entries in `content.js`. The [reference crop](adventures/references/ship-shark-teaching.png) preserves the wooden cream-sailed ship and blue-grey shark. Four built-in ImageGen scenes keep their painted storybook identities, with a calm closed-mouth shark helping the ship. These are chapter-six narrative illustrations; the teaching atlas remains unchanged. [Scenes and exact prompts](adventures/KIND_SHARK_RELEASE.md).
+
 ### Boy and map book — 6 October 2026
 
 The user explicitly selected the bottom-right scene in `assets/teaching/core-teaching.webp`: a brown-haired boy in a cream shirt and green waistcoat drawing in an open map book. It is the identity and painted-style reference for the fifth Forest Lights adventure. Four built-in ImageGen paintings retain the boy, book, feather pen and warm rural storybook style; [gallery and exact prompts](adventures/MAPMAKER_RELEASE.md). These replace that mission's narrative art, not the battle hero. The approved mage and small Pip also receive a reference-based paired sad retreat illustration for the defeat screen; their existing battle assets remain unchanged.

@@ -1211,3 +1211,20 @@ for(const chosen of ['made','wade'])for(const options of [['made','wade','have',
  const count=ui.state().campaign.battleRecords.length;b.onclick();assert.equal(ui.state().campaign.battleRecords.length,count);
 }
 console.log('PASS made and wade preserve the displayed selection, saved evidence, spoken and written correction across positions');
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,9,7);s.profile.name='Reader';s.assessment.done=true;
+ for(const id of A.Data.campaigns[0].missions.slice(0,5))A.stats(s,id).completedAt=new Date(now).toISOString();
+ Core.startMission(s,'oak-heart',now);
+ for(const [step,name] of ['departure','passage','treasure','homecoming'].entries()){
+  s.expedition.current.step=step;s.expedition.current.phase='intro';
+  let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
+  assert.match(ui.get('mission').querySelector('.missionScene img').src,new RegExp('kind-shark-'+name));assert.match(ui.get('mission').textContent,/shark/i);
+  const next=ui.state();Core.startMissionBattle(next,now);next.battle.enemyHealth=0;Core.resolveBattle(next,now);A.startPuzzle(next);
+  ui=boot(next,{adventures:true});ui.click(ui.get('missionResume'));const q=A.Data.byId['oak-heart'].riddles[step];
+  for(const id of [q.answer].flat())ui.click(ui.get('mission').querySelector('[data-choice="'+id+'"]'));
+  ui.click(missionButton(ui,'Try it'));assert.equal(ui.state().expedition.current.puzzle.solved,true);
+  ui.click(missionButton(ui,step===3?'Claim the treasure':'Follow the trail'));
+  if(step===3){assert.match(ui.get('mission').textContent,/Thank you, kind shark/);assert.match(ui.get('mission').querySelector('.missionScene img').src,/kind-shark-homecoming/);assert.equal(A.campaignComplete(ui.state(),'lost-lights'),true);}
+ }
+ console.log('PASS kind shark chapter four scenes and riddles, saved reload and forest finale');
+}
