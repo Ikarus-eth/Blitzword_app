@@ -94,16 +94,24 @@
           number(7),number(10),number(12)],'10','Count the three groups of four. Then take away the two crossed-out marks.','Three groups of four makes twelve. Twelve minus two is ten.','The safe paths are on the map.'),
         order('mapmaker-finish','Finish the map',['Draw the river before you draw the bridge.','Draw the path after you draw the bridge.'],['Draw path','Draw river','Draw bridge'],[1,2,0],'The river comes first. The path comes last.','River, bridge, then path. Now the map can guide a friend.','The chest opens. The gold light seed is yours.')
       ]},
-    {id:'oak-heart',campaign:'lost-lights',name:'The Heart of the Oak',place:'The Oldest Oak',area:'chapter-3-place-5',requires:['owl-watch','mimic-vault'],families:['moss-golem','bramble-boar'],
-      goal:'Find the last seed. Light up the woods.',item:'Ruby light seed',symbol:'sun',finale:true,
-      intro:'One seed is still lost. Find it by the big tree. Then light up the woods.',
-      ending:'You found all six seeds! The big tree lights up. Now go to the river.',
+    {id:'oak-heart',campaign:'lost-lights',name:'The Ship and the Kind Shark',place:'The Forest Harbour',area:'chapter-3-place-5',requires:['owl-watch','mimic-vault'],families:['moss-golem','bramble-boar'],
+      goal:'Help the kind shark bring the last seed home.',item:'Ruby light seed',symbol:'sun',finale:true,
+      intro:'A kind shark swims by the ship. He knows where the last seed is! Sail with him to find it.',
+      ending:'The shark guides the ship home. All six seeds shine in the oak! Thank you, kind shark. The river is next.',
+      art:'assets/adventures/kind-shark-departure.webp',artAlt:'A kind blue-grey shark swims beneath a wooden sailing ship as it leaves a wooded bay.',
+      endingArt:'assets/adventures/kind-shark-homecoming.webp',endingArtAlt:'The ship rests by the forest harbour. The kind shark swims nearby as the old oak glows with light.',
+      scenes:[
+        {art:'assets/adventures/kind-shark-departure.webp',alt:'The wooden ship sets sail with its kind shark guide in the clear blue sea.',intro:'The shark knows a safe way. Help the ship follow his clues.'},
+        {art:'assets/adventures/kind-shark-passage.webp',alt:'The kind shark guides the ship through a clear channel towards a great stone arch.',intro:'The shark leads the ship past the rocks. Count the flags to mark the safe way home.'},
+        {art:'assets/adventures/kind-shark-treasure.webp',alt:'Below the waiting ship, the kind shark finds a moon-marked chest beside a rope basket.',intro:'The shark dives under the ship. He finds a chest! Help him choose the right mark.'},
+        {art:'assets/adventures/kind-shark-homecoming.webp',alt:'The ship and kind shark return to a forest harbour beside the glowing old oak.',intro:'The shark helps lift the chest in a basket. The ship sails home. Put the seeds in the ring to light the woods.'}
+      ],
       riddles:[
-        pick('oak-trail','The boar’s tracks',['The boar crossed no bridge.','It went past a pond, then under an arch.'],'Which trail did it take?',[
-          choice('bridge','Pond → bridge','map'),choice('arch','Pond → arch','map'),choice('reverse','Arch → pond','map')],'arch','The places matter, and so does their order.','Pond then arch matches both parts of the clue.','You reach the roots of the oak.'),
-        pick('oak-seeds','The seed ring',['The ring has six spaces.','You have five seeds. The golem has the last one.','Two of your seeds are already in the ring.'],'How many more seeds must go in?',[number(3),number(4),number(6)],'4','Six spaces minus the two already filled. Count the golem’s seed too.','Four spaces remain: three of yours and the golem’s last seed.','You know how to fill the ring.'),
-        pick('oak-mark','The last seed',['Three pots show a moon, a leaf and a sun.','The last seed is not under the leaf.','The golem says, “Its mark gives light, but is not the sun.”'],'Lift the right pot.',[chest('moon'),chest('leaf'),chest('sun')],'moon','Rule out leaf, then rule out sun.','The moon is the only mark left.','The ruby seed is found.'),
-        order('oak-wake','Wake the forest',['Put every seed in before you close the ring.','Close the ring before you ring the bell.'],['Ring bell','Close ring','Put seeds in'],[2,1,0],'The seeds must be safely inside first.','Seeds in, ring closed, bell rung. Six colours light the forest.','The forest lights are back!')
+        pick('shark-route','The shark’s safe route',['The shark says, “Stay away from the rocks.”','“Sail past the bay, then through the arch.”'],'Which route should the ship take?',[
+          choice('rocks','Bay → rocks','map'),choice('arch','Bay → arch','map'),choice('reverse','Arch → bay','map')],'arch','Check both the places and their order.','Bay then arch follows the shark’s clues and avoids the rocks.','The ship follows its kind guide.'),
+        pick('shark-flags','Flags for the way home',['The ship needs six flags to mark the route.','Two flags are already tied in place.','The rest are on the ship.'],'How many more flags must you tie?',[number(3),number(4),number(6)],'4','Take the two flags already tied away from six.','Six minus two leaves four flags to tie.','The safe route is marked.'),
+        pick('shark-chest','The shark’s treasure clue',['The chest marks are a moon, a leaf and a sun.','The shark says, “The seed is not in the leaf chest.”','“Its mark lights the night, but is not the sun.”'],'Which chest holds the seed?',[chest('moon'),chest('leaf'),chest('sun')],'moon','Rule out the leaf, then rule out the sun.','The moon is the only mark that fits both clues.','The shark finds the ruby light seed.'),
+        order('shark-home','Bring the light home',['Put every seed in before you close the ring.','Close the ring before you ring the ship’s bell.'],['Ring bell','Close ring','Put seeds in'],[2,1,0],'Keep the seeds safely inside before ringing the bell.','Seeds in, ring closed, bell rung. The shark watches the forest shine.','The kind shark helped bring the forest lights back!')
       ]},
     {id:'reed-message',campaign:'river-song',name:'The Message in the Reeds',place:'River Path',area:'chapter-2-place-3',requires:[],families:['reed-serpent','bog-toad'],
       goal:'Find the first river bell.',item:'Reed bell',symbol:'bell',
@@ -185,6 +193,15 @@
 
   ];
   legacyPuzzles.forEach((r,i)=>{r.family=i%2?'snail-knight':'chest-mimic';r.number=i+1;});
+  const legacyOakPuzzles=[
+        pick('oak-trail','The boar’s tracks',['The boar crossed no bridge.','It went past a pond, then under an arch.'],'Which trail did it take?',[
+          choice('bridge','Pond → bridge','map'),choice('arch','Pond → arch','map'),choice('reverse','Arch → pond','map')],'arch','The places matter, and so does their order.','Pond then arch matches both parts of the clue.','You reach the roots of the oak.'),
+        pick('oak-seeds','The seed ring',['The ring has six spaces.','You have five seeds. The golem has the last one.','Two of your seeds are already in the ring.'],'How many more seeds must go in?',[number(3),number(4),number(6)],'4','Six spaces minus the two already filled. Count the golem’s seed too.','Four spaces remain: three of yours and the golem’s last seed.','You know how to fill the ring.'),
+        pick('oak-mark','The last seed',['Three pots show a moon, a leaf and a sun.','The last seed is not under the leaf.','The golem says, “Its mark gives light, but is not the sun.”'],'Lift the right pot.',[chest('moon'),chest('leaf'),chest('sun')],'moon','Rule out leaf, then rule out sun.','The moon is the only mark left.','The ruby seed is found.'),
+        order('oak-wake','Wake the forest',['Put every seed in before you close the ring.','Close the ring before you ring the bell.'],['Ring bell','Close ring','Put seeds in'],[2,1,0],'The seeds must be safely inside first.','Seeds in, ring closed, bell rung. Six colours light the forest.','The forest lights are back!')
+  ];
+  legacyOakPuzzles.forEach((r,i)=>{r.family=i%2?'bramble-boar':'moss-golem';r.number=i+1;});
+  legacyPuzzles.push(...legacyOakPuzzles);
   const lore={
     'thornling':['Find me on the Lantern Trail.','A Thornling grows a new leaf whenever it makes a friend.'],
     'bark-beetle':['Look inside a hollow log.','Bark Beetles tap secret messages on old wood.'],
@@ -196,8 +213,8 @@
     'briar-bat':['Follow the owl’s night watch.','Briar Bats fold their wings like little forest umbrellas.'],
     'chest-mimic':['Visit the boy with the map book.','A Chest Mimic keeps its best jokes beneath its lid.'],
     'snail-knight':['Find the bridge on the boy’s map.','Snail Knights polish their shells with soft moss.'],
-    'moss-golem':['Climb to the oldest oak.','Moss Golems keep warm seeds safe in their stone hands.'],
-    'bramble-boar':['Follow tracks to the old oak.','Bramble Boars use their tusks to lift fallen branches.'],
+    'moss-golem':['Visit the oak by the forest harbour.','Moss Golems keep warm seeds safe in their stone hands.'],
+    'bramble-boar':['Follow tracks to the forest harbour.','Bramble Boars use their tusks to lift fallen branches.'],
     'reed-serpent':['Look beside the river reeds.','Reed Serpents can tie a knot without using any hands.'],
     'bog-toad':['Find the message in the reeds.','Bog Toads practise new songs in puddles.'],
     'crystal-crab':['Look for the ferry by the pool.','Crystal Crabs collect pebbles that sparkle underwater.'],
