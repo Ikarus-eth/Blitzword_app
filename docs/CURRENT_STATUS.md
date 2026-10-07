@@ -1,3 +1,9 @@
+## Riddle timing and XP — 7 October 2026
+
+Implemented; local regression verification is in progress. Deployment has not yet been verified for build `riddle-rewards-20261007-r1`.
+
+Campaign riddles now count foreground thinking time up to three minutes per riddle per quest. The cap survives hints, retries, pause and reload; background tabs and suspended timers are excluded. Reading, multiplication and campaign-riddle time jointly unlock the ten-minute daily reward, returning-day bonus and existing 1.75× boost. First solved riddles award 50 XP (88 boosted), including hints/listening, but answer reveals and replays award none. Parents has a gated **Add 1,000 XP** button, with exact unboosted awards recorded separately from learning evidence. No automatic compensation or reconstructed historical time is applied. The independent Story adventures pilot retains its own timing/save rules.
+
 ## More imaginative boy-and-wizard chapter — 6 October 2026
 
 **Deployed and verified.** [PR #135](https://github.com/Ikarus-eth/Blitzword_app/pull/135) merged as `fea12a8eb5891620fcb43a61339ce1f74853c905`; [Pages run 37430733004](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37430733004) succeeded. All six changed live runtime/art files match the tested source. Four distinct painted scenes take the boy from a living map in a tree library, across a ravine, to a star-lit hill and a sunrise unicorn ride. The original teaching wizard joins him. Chapter 5 story transitions match the new journey; existing riddle answers and saves remain compatible. [Artwork and verification](adventures/WIZARD_MAP_RELEASE.md).

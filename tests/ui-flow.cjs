@@ -1133,7 +1133,7 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
 {
  const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;
  Core.startMission(s,'first-spark',now);Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s,()=>.5);
- let ui=boot(s,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));ui.elapse(45000);
+ let ui=boot(s,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));ui.elapse(45000,true);
  ui.click(ui.get('mission').querySelector('[data-choice="red"]'));assert.equal(A.report(ui.state()).riddleMs,45000);
  ui.click(missionButton(ui,'Try it'));assert.equal(ui.state().expedition.current.puzzle.first.correct,false);const order=ui.state().expedition.current.puzzle.order;
  ui.click(missionButton(ui,'Listen'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));
@@ -1211,3 +1211,28 @@ for(const chosen of ['made','wade'])for(const options of [['made','wade','have',
  const count=ui.state().campaign.battleRecords.length;b.onclick();assert.equal(ui.state().campaign.battleRecords.length,count);
 }
 console.log('PASS made and wade preserve the displayed selection, saved evidence, spoken and written correction across positions');
+
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;
+ Core.startMission(s,'first-spark',now);Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s);
+ Core.recordTime(s,480000,'practice',now);
+ let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));ui.advance(150000);ui.click(missionButton(ui,'A clue, please'));
+ assert.equal(A.report(ui.state()).riddleMs,150000);assert.equal(Core.bonusProgress(ui.state(),now).active,true);
+ ui.click(ui.get('pauseBtn'));ui.advance(300000);assert.equal(A.report(ui.state()).riddleMs,150000);
+ ui.click(ui.get('pauseResume'));ui.advance(10000);ui.visibility(true);ui.advance(300000);ui.visibility(false);ui.click(ui.get('pauseResume'));
+ ui.advance(120000,true);ui.click(missionButton(ui,'A clue, please'));assert.equal(A.report(ui.state()).riddleMs,160000,'sleep is excluded');
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));ui.advance(60000);ui.click(missionButton(ui,'A clue, please'));
+ assert.equal(A.report(ui.state()).riddleMs,180000);assert.equal(ui.get('pausePanel').hidden,true);
+ ui.click(ui.get('mission').querySelector('[data-choice="blue"]'));ui.click(missionButton(ui,'Try it'));
+ assert.equal(ui.state().expedition.current.puzzle.xpEarned,88);assert.match(ui.get('mission').textContent,/\+88 XP/);
+ console.log('PASS long thinking, cap, pause, background, sleep, reload and boosted riddle reward');
+}
+{
+ const ui=boot(impactSave());ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ const before=ui.state();ui.click(ui.get('parentAddXP'));assert.equal(ui.state().dragon.xp,before.dragon.xp+1000);
+ assert.deepEqual(ui.state().learning,before.learning);assert.match(ui.get('parentXPStatus').textContent,/Added 1,000 XP/);
+ ui.click(ui.get('parentAddXP'));assert.equal(ui.state().dragon.xp,before.dragon.xp+2000);
+ const reloaded=boot(ui.state());assert.equal(reloaded.state().dragon.xp,before.dragon.xp+2000);
+ ui.setFailWrites(true);ui.click(ui.get('parentAddXP'));assert.equal(ui.state().dragon.xp,before.dragon.xp+2000);assert.equal(ui.get('saveNotice').hidden,false);
+ console.log('PASS parent XP button saves exact repeatable awards and blocks on storage failure');
+}
