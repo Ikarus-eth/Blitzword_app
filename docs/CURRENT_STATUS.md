@@ -4,6 +4,10 @@
 
 **Implemented and tested; deployment pending.** Build `required-answers-20261009-r1` counts question-mark responses per word within each reading fight. After two, the word returns after two other responses and requires a choice; its question mark is unavailable for the remainder of the fight. Pending required attempts keep the enemy at one health until answered. Wrong choices retain ordinary correction and damage. Save/reopen retains the counts and obligations; new fights reset them. Both creature quests and Word trails use the rule, with demo/assessment unchanged. No learner-save reset or artwork change. All 325 unit tests and 111 UI flow groups pass, including repeat-help rejection, spacing, multiple required words, wrong-choice correction, old-save recovery and reopening the hidden-help UI.
 
+# Lightning answer feedback — 9 October 2026
+
+Implemented: a 600 ms gold lightning pulse over the answered word when the existing Quick rule qualifies the accepted answer. Reduced motion uses a stationary symbol; feedback timing, XP and learner saves are unchanged. Tested: all 320 unit tests and 110 existing UI flow groups pass, plus eight focused lightning cases (eligibility boundaries, support/interruption exclusions, cleanup, reduced motion and reload). Chrome at 1180×844 and 390×844 verifies appearance and automatic removal. Not yet deployed.
+
 # BlitzWord current status — 7 October 2026
 
 ## Riddle timing and XP — 7 October 2026
