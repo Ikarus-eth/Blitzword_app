@@ -1,3 +1,7 @@
+# Lightning answer feedback — 9 October 2026
+
+Implemented: a 600 ms gold lightning pulse over the answered word when the existing Quick rule qualifies the accepted answer. Reduced motion uses a stationary symbol; feedback timing, XP and learner saves are unchanged. Tested: all 320 unit tests and 110 existing UI flow groups pass, plus eight focused lightning cases (eligibility boundaries, support/interruption exclusions, cleanup, reduced motion and reload). Chrome at 1180×844 and 390×844 verifies appearance and automatic removal. Not yet deployed.
+
 # BlitzWord current status — 7 October 2026
 
 ## Riddle timing and XP — 7 October 2026

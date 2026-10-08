@@ -608,3 +608,11 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 /* 2 October 2026: two result cards never push past the result panel on narrow phones. */
 .opponents:not(.single){grid-template-columns:repeat(2,minmax(0,1fr))}.opponentCard{min-width:0}.opponentCard .creatureName{overflow-wrap:anywhere}
 .parentStats .parentStatNote{margin-top:6px;font-size:14px}
+
+/* One brief earned-lightning pulse, only after a qualifying answer is locked. */
+#battleScroll{position:relative}
+.quickWordReward{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:2;animation:quickWordFlash 600ms ease-out both}
+.quickWordReward svg{width:58px;height:78px;fill:#ffdf62;stroke:#fff7d3;stroke-width:2.5;stroke-linejoin:round;filter:drop-shadow(0 0 9px #eaaa32)}
+@keyframes quickWordFlash{0%{opacity:0;transform:scale(.75)}18%,50%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.12)}}
+@media(prefers-reduced-motion:reduce){.quickWordReward{animation-name:quickWordQuiet}.quickWordReward svg{filter:none}}
+@keyframes quickWordQuiet{0%,80%{opacity:1}100%{opacity:0}}

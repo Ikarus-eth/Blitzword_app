@@ -51,6 +51,29 @@ function impactSave(enemy='moss-golem'){
  for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
  Core.startBattle(s,now,{strength:4,enemyId:enemy});s.battle.introPending=false;Core.prepareBattle(s,now);return s;
 }
+
+// Earned lightning uses the saved Quick rule, without replaying after resume.
+for(const test of [
+ {ms:1200,exposure:950,earned:true}, {ms:1500,exposure:950},
+ {ms:1200,exposure:1200}, {ms:0,exposure:950},
+ {ms:1200,exposure:950,support:'help-request'},
+ {ms:1200,exposure:950,support:'interrupted-exposure'},
+ {ms:1200,exposure:950,wrong:true},
+ {ms:1200,exposure:950,earned:true,reducedMotion:true}
+]){
+ const s=impactSave();s.battle.question.exposureMs=test.exposure;
+ if(test.support)s.battle.question.supportReasons.push(test.support);
+ const ui=boot(s,{heldNarration:true,reducedMotion:test.reducedMotion});ui.resume();ui.ready();ui.elapse(test.ms);
+ const q=ui.state().battle.question;
+ ui.click([...ui.get('battleAnswers').children].find(b=>test.wrong?b.textContent!==q.target:b.textContent===q.target));
+ const reward=ui.document.querySelector('.quickWordReward');assert.equal(!!reward,!!test.earned,JSON.stringify(test));
+ if(reward){
+  assert.equal(ui.get('battleScroll').textContent,q.target);
+  reward.dispatchEvent(new ui.window.Event('animationend'));assert.equal(ui.document.querySelector('.quickWordReward'),null);
+  const restored=boot(ui.state(),{heldNarration:true});restored.resume();assert.equal(restored.document.querySelector('.quickWordReward'),null);
+ }
+}
+
 {
  const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;Core.chooseSpeed(s,'walk');
  for(const word of [...Content.areas[0].words,...Content.areas[1].words.slice(0,3)]){
