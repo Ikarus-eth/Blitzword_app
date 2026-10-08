@@ -1276,3 +1276,13 @@ console.log('PASS made and wade preserve the displayed selection, saved evidence
  }
  console.log('PASS kind shark chapter four scenes and riddles, saved reload and forest finale');
 }
+{
+ const s=impactSave(),target=s.battle.question.target;
+ s.battle.helpCounts={[target]:2};s.battle.requiredAnswers=[target];
+ let ui=boot(s);ui.resume();ui.ready();assert.equal(ui.get('battleUnsure').hidden,true);
+ ui.get('battleUnsure').onclick();assert.equal(ui.state().battle.question.answeredAt,null);
+ ui=boot(ui.state());ui.resume();ui.ready();assert.equal(ui.get('battleUnsure').hidden,true);
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===target));
+ assert.deepEqual(ui.state().battle.requiredAnswers,[]);
+ console.log('PASS twice-skipped word requires a choice after reopen and rejects hidden help callbacks');
+}

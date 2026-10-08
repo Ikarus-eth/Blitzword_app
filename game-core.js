@@ -772,7 +772,7 @@
     const heroMaxHealth=demo?3:mission?Adventure.of(s).current.maxHearts:Math.max(3,Math.ceil(health/4)+2);
     s.battle={id:id(s,'battle'),demo,heroHealth:heroMaxHealth,heroMaxHealth,enemyHealth:health,maxHealth:health,
       enemyId:chosen,introPending:!demo,fromAssessment,finalEncounter,chapterId:chapter.id,areaId:story.areas.find(a=>a.status==='current')?.id||story.areas.at(-1).id,xpStart:s.dragon.xp,
-      firstMistakeFree:demo,turn:0,question:null,resolved:false,xpEarned:0};
+      firstMistakeFree:demo,turn:0,question:null,resolved:false,xpEarned:0,helpCounts:{},requiredAnswers:[]};
     if(mission){
       s.battle.heroHealth=Adventure.of(s).current.hearts;
       s.battle.missionId=mission.missionId;s.battle.missionStep=mission.step;s.battle.champion=mission.champion;
@@ -800,13 +800,34 @@
     const plan=Adventure.fight(s);c.phase='battle';
     startBattle(s,now,{strength:plan.health,enemyId:plan.family,mission:plan});return true;
   }
+  // Battle-local obligations survive saves independently of compacted answer history.
+  function battleHelpState(s) {
+    const b=s.battle;
+    if(!b || b.demo)return;
+    if(!b.helpCounts || !Array.isArray(b.requiredAnswers)){
+      b.helpCounts={};b.requiredAnswers=[];
+      for(const r of s.campaign.battleRecords.filter(r=>r.battleId===b.id)){
+        if(r.firstResponse==='?'){
+          b.helpCounts[r.target]=Math.min(2,(b.helpCounts[r.target]||0)+1);
+          if(b.helpCounts[r.target]===2&&!b.requiredAnswers.includes(r.target))b.requiredAnswers.push(r.target);
+        }else b.requiredAnswers=b.requiredAnswers.filter(word=>word!==r.target);
+      }
+    }
+    return b;
+  }
+  function canRequestBattleHelp(s) {
+    const b=battleHelpState(s);
+    return !b || (b.helpCounts[b.question?.target]||0)<2;
+  }
   function prepareBattle(s,now,random=Math.random) {
     const b=s.battle;
     if (!b || b.resolved) return;
     if (b.question && !b.question.answeredAt) return b.question;
     if (b.question) b.question.phase='done';
     if (b.heroHealth<=0 || b.enemyHealth<=0) { resolveBattle(s,now); return; }
-    const selection=b.demo ? {item:byWord[Content.demoWords[b.turn % Content.demoWords.length]]} : selectPracticeWord(s,now);
+    battleHelpState(s);
+    const required=b.requiredAnswers?.find(target=>s.learning.sequence>=s.learning.words[target].eligibleAfter&&!s.learning.recent.slice(-2).includes(target));
+    const selection=required ? {item:byWord[required],practiceKind:'required-answer',challengeMode:adaptiveChallenge(s).mode} : b.demo ? {item:byWord[Content.demoWords[b.turn % Content.demoWords.length]]} : selectPracticeWord(s,now);
     const {item,practiceKind,challengeMode}=selection;
     const word=s.learning.words[item.w];
     const isNew=!word.introducedAt;
@@ -846,6 +867,14 @@
   function answerBattle(s,opt,now) {
     const b=s.battle,q=b?.question;
     if (!q || q.answeredAt || q.phase!=='choices' || (opt!=='?'&&!q.options.includes(opt))) return null;
+    if(opt==='?'&&!canRequestBattleHelp(s))return null;
+    if(!b.demo){
+      battleHelpState(s);
+      if(opt==='?'){
+        b.helpCounts[q.target]=Math.min(2,(b.helpCounts[q.target]||0)+1);
+        if(b.helpCounts[q.target]===2&&!b.requiredAnswers.includes(q.target))b.requiredAnswers.push(q.target);
+      }else b.requiredAnswers=b.requiredAnswers.filter(target=>target!==q.target);
+    }
     if(opt==='?'&&!q.supportReasons.includes('help-request'))q.supportReasons.push('help-request');
     const rec=observation(s,q,opt,now,b.demo?'demoBattle':'battle');
     if(!b.demo)recordSpeedPractice(s,rec);
@@ -855,7 +884,7 @@
     q.correct=rec.correct; q.firstResponse=opt; q.answeredAt=rec.at; q.phase=rec.correct?'feedback':'correction';
     q.freeMistake=!rec.correct && !rec.supported && b.firstMistakeFree;
     if (!rec.supported) {
-      if (rec.correct) b.enemyHealth--;
+      if (rec.correct) b.enemyHealth=Math.max(b.requiredAnswers?.length?1:0,b.enemyHealth-1);
       else if (b.firstMistakeFree) b.firstMistakeFree=false;
       else if(b.missionId&&(q.companionSaved=Adventure.protect(s))){q.shieldUsed=true;rec.shieldUsed=true;rec.companionSaved=q.companionSaved;}
       else if(!b.demo&&s.rewards.shield){s.rewards.shield=false;q.shieldUsed=true;rec.shieldUsed=true;}
@@ -1083,7 +1112,7 @@
     }
   }
   return {Adventure,recordRiddleTime,checkRiddle,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
-    getQuestion,startBattle,prepareBattle,answerBattle,startTeaching,leaveTeaching,noteSupport,resolveBattle,
+    getQuestion,startBattle,prepareBattle,answerBattle,canRequestBattleHelp,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,speedSuggestion,respondSpeedSuggestion,wordSpeeds,quickAnswer,

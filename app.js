@@ -641,7 +641,7 @@ function drawChoices() {
   const q=Core.getQuestion(state),[scroll,answers]=stageElements();
   scroll.innerHTML=galaxyMask();answers.replaceChildren();
   q.options.forEach(option=>{const button=document.createElement('button');button.className='answer';button.textContent=option;button.dataset.questionId=q.id;button.dataset.answer=option;button.onclick=()=>{if(button.isConnected)answer(option,q.id);};answers.append(button);});
-  $('#assessmentUnsure').hidden=state.activity!=='assessment';$('#battleUnsure').hidden=state.activity!=='battle';lastTick=performance.now();
+  $('#assessmentUnsure').hidden=state.activity!=='assessment';$('#battleUnsure').hidden=state.activity!=='battle'||!Core.canRequestBattleHelp(state);lastTick=performance.now();
 }
 function answer(option,questionId=Core.getQuestion(state)?.id) {
   if(paused||blocked||!['battle','assessment'].includes(state.activity)||Core.getQuestion(state)?.id!==questionId)return;
