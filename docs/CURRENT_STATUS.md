@@ -6,7 +6,7 @@
 
 # Lightning answer feedback — 9 October 2026
 
-Implemented: a 600 ms gold lightning pulse over the answered word when the existing Quick rule qualifies the accepted answer. Reduced motion uses a stationary symbol; feedback timing, XP and learner saves are unchanged. Tested: all 320 unit tests and 110 existing UI flow groups pass, plus eight focused lightning cases (eligibility boundaries, support/interruption exclusions, cleanup, reduced motion and reload). Chrome at 1180×844 and 390×844 verifies appearance and automatic removal. Not yet deployed.
+Implemented: a 600 ms gold lightning pulse over the answered word when the existing Quick rule qualifies the accepted answer. Reduced motion uses a stationary symbol; feedback timing, XP and learner saves are unchanged. Tested: all 320 unit tests and 110 existing UI flow groups pass, plus eight focused lightning cases (eligibility boundaries, support/interruption exclusions, cleanup, reduced motion and reload). **Deployed and verified:** [PR #143](https://github.com/Ikarus-eth/Blitzword_app/pull/143), [successful Pages run 37862222367](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37862222367). The live index.html, app.js and styles.css matched the tested release byte-for-byte. Isolated live Chrome sessions at 1180×844 and 390×844 verified appearance and automatic removal; local mid-pulse screenshots were visually inspected. Physical iPad testing remains unverified. The later required-answer build retains this feedback.
 
 # BlitzWord current status — 7 October 2026
 
