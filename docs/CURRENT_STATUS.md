@@ -1,3 +1,9 @@
+# BlitzWord current status — 9 October 2026
+
+## Twice-skipped words require an answer
+
+**Implemented and tested; deployment pending.** Build `required-answers-20261009-r1` counts question-mark responses per word within each reading fight. After two, the word returns after two other responses and requires a choice; its question mark is unavailable for the remainder of the fight. Pending required attempts keep the enemy at one health until answered. Wrong choices retain ordinary correction and damage. Save/reopen retains the counts and obligations; new fights reset them. Both creature quests and Word trails use the rule, with demo/assessment unchanged. No learner-save reset or artwork change. All 325 unit tests and 111 UI flow groups pass, including repeat-help rejection, spacing, multiple required words, wrong-choice correction, old-save recovery and reopening the hidden-help UI.
+
 # BlitzWord current status — 7 October 2026
 
 ## Riddle timing and XP — 7 October 2026
