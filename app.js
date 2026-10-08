@@ -204,7 +204,7 @@ function clearCombat(){
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
   $('#battleCompanion').classList.remove('protecting');
 }
-function cancelWork(){adventures.stopTiming();clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
+function cancelWork(){$('.quickWordReward')?.remove();adventures.stopTiming();clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
 function activityCategory(){
   if(!state||paused||blocked||!playing||state.screen==='evolution')return null;
@@ -653,7 +653,7 @@ function answer(option,questionId=Core.getQuestion(state)?.id) {
   if(!save())return;
   if(assessment)assessmentFeedback();else{
     if(rec.healthChanged||rec.shieldUsed)pendingHealth={questionId:state.battle.question.id,heroHealth:rec.heroHealthBefore,enemyHealth:rec.enemyHealthBefore,shield:shieldBefore};
-    renderHud();if(rec.correct)correctFeedback();else correction(true);
+    renderHud();if(rec.correct)correctFeedback(rec);else correction(true);
   }
 }
 function assessmentFeedback() {
@@ -661,12 +661,19 @@ function assessmentFeedback() {
   $('#assessmentScroll').textContent=q.correct?'✓':'•';
   later(()=>{Core.prepareAssessment(state,Date.now());if(save())renderActivity();},430);
 }
-function correctFeedback() {
+function correctFeedback(record=null) {
   const q=state.battle.question;
   $('#battleScroll').textContent=q.target;$('#battleAnswers').replaceChildren();
   const supported=q.supportReasons.length>0;
   $('#feedback').textContent=supported?'Practice':'';$('#feedback').classList.toggle('show',supported);
   $('#battleScroll').classList.add('wordSuccess');
+  if(record&&Core.quickAnswer(record)){
+    const reward=document.createElement('span');reward.className='quickWordReward';
+    reward.setAttribute('role','status');reward.setAttribute('aria-label','Quick answer! Lightning earned.');
+    reward.innerHTML='<svg viewBox="0 0 48 64" aria-hidden="true"><path d="M28 3L7 35H23L18 61L43 25H27Z"/></svg>';
+    reward.addEventListener('animationend',()=>reward.remove(),{once:true});
+    $('#battleScroll').append(reward);
+  }
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
   speak(q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
