@@ -9,3 +9,7 @@
 The workbook is curriculum source material. The playable reviewed targets, sentences and distractors are in [content.js](../content.js). Changing this workbook alone does not change the deployed game. Document and review any later curriculum changes, update the runtime content explicitly, and run the content/progression checks. Do not overwrite approved in-game sentence or distractor improvements during an import.
 
 The import changes no workbook cells, gameplay, learner records or narration. See [current status](../docs/CURRENT_STATUS.md) for implementation and remaining work.
+
+## Current 1,000-word implementation
+
+The workbook above remains the original reference. The accepted 9 October expansion is in [NEXT800_FIRST_BOOKS.json](NEXT800_FIRST_BOOKS.json); its 800 additions have [authored sentences](next800-sentences.txt) and [compiled content](next800-content.json). See [research](../docs/NEXT800_FIRST_BOOKS_RESEARCH.md) and [implementation/verification](../docs/NEXT800_RELEASE.md). The original Core 200 is retained.
