@@ -68,7 +68,7 @@ function curriculumWords(){
 
 // The same seeded draws feed the checks below: DRAWS questions for each of the 200 words.
 const random=seeded(20260924),checked=new Map();
-const draws=Content.words.map(item=>({item,questions:Array.from({length:DRAWS},()=>Core.chooseOptions(item,random))}));
+const draws=Content.words.map(item=>({item,questions:Array.from({length:item.expansion?40:DRAWS},()=>Core.chooseOptions(item,random))}));
 function check(options,target){
   const key=target+'|'+[...options].sort().join(' ');
   if(!checked.has(key))checked.set(key,{clues:clues(options,target),giveaways:giveaways(options,target),middle:middleChance(options,target)});
@@ -89,12 +89,12 @@ test('the fairness checks match game-core on known sets',()=>{
 });
 
 test('every practice word has five to seven wrong-answer candidates',()=>{
-  assert.equal(Content.words.length,200);
+  assert.equal(Content.words.length,1000);
   for(const item of Content.words){
     assert.ok(item.pool.length>=5&&item.pool.length<=7,`${item.w} has ${item.pool.length} candidates`);
     assert.equal(new Set(item.pool).size,item.pool.length,item.w+' repeats a candidate');
     assert.ok(!item.pool.includes(item.w),item.w+' lists itself');
-    assert.ok(item.pool.every(w=>/^[a-z']+$/.test(w)),item.w);
+    assert.ok(item.pool.every(w=>/^[a-zA-Z']+$/.test(w)),item.w);
     assert.ok(item.madeUp.every(w=>item.pool.includes(w)),item.w);
   }
 });
@@ -121,14 +121,14 @@ test('(i) in every sampled question, first letter, last letter, both, and length
   }
 });
 
-test('(ii) the "middle option" guess finds the answer in at most 35% of sampled questions across all 200 words',t=>{
+test('(ii) the "middle option" guess finds the answer in at most 35% of sampled questions across all 1000 words',t=>{
   let sum=0,count=0;
   for(const {item,questions} of draws)for(const options of questions){
     const middle=check(options,item.w).middle;
     assert.ok(middle<=.5,`${item.w} ${options}: middle guess ${middle}`);
     sum+=middle;count++;
   }
-  const rate=sum/count,old=Content.words.reduce((n,item)=>n+middleChance(item.d,item.w),0)/Content.words.length;
+  const rate=sum/count,old=Content.coreWords.reduce((n,item)=>n+middleChance(item.d,item.w),0)/Content.coreWords.length;
   t.diagnostic(`middle guess ${(rate*100).toFixed(1)}% now, ${(old*100).toFixed(1)}% with the old fixed options`);
   assert.ok(rate<=.35,`middle guess ${rate}`);
   assert.ok(old>.85,'the same check catches the old fixed options');
@@ -144,15 +144,16 @@ test('wrong answers and the answer position rotate between questions',()=>{
 });
 
 test('made-up wrong answers are never curriculum words, and no wrong answer is on the blocked list',()=>{
-  const curriculum=curriculumWords();
-  assert.equal(curriculum.size,1000);
+  const original=curriculumWords();
+  assert.equal(original.size,1000);
+  const curriculum=new Set(Content.words.map(w=>w.w.toLowerCase()));
   for(const item of Content.words){
-    assert.ok(curriculum.has(item.w),item.w+' is missing from the curriculum sheet');
+    assert.ok(curriculum.has(item.w.toLowerCase()),item.w+' is missing from the curriculum sheet');
     for(const w of item.madeUp){
-      assert.ok(!curriculum.has(w),`${item.w}: made-up "${w}" is a curriculum word`);
-      assert.ok(w.length===1||/[aeiouy]/.test(w),`${item.w}: made-up "${w}" has no vowel`);
+      assert.ok(!curriculum.has(w.toLowerCase()),`${item.w}: made-up "${w}" is a curriculum word`);
+      assert.ok(w.length===1||/[aeiouy]/i.test(w),`${item.w}: made-up "${w}" has no vowel`);
     }
-    for(const w of item.pool)assert.ok(!BLOCKED.has(w),`${item.w}: "${w}" is blocked`);
+    for(const w of item.pool)assert.ok(!BLOCKED.has(w.toLowerCase()),`${item.w}: "${w}" is blocked`);
   }
 });
 

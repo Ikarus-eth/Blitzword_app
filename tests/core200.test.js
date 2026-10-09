@@ -2,21 +2,21 @@ const test=require('node:test'),assert=require('node:assert/strict');
 const C=require('../content'),Core=require('../game-core');
 const now=Date.UTC(2026,8,22),fresh=()=>Core.migrate(Core.fresh());
 test('reviewed practice alternatives require more than first-letter or length guessing',()=>{
- for(const {w,d} of C.words){
+ for(const {w,d} of C.coreWords){
   assert.equal(new Set(d).size,4,w);assert.equal(d.filter(x=>x===w).length,1,w);
   const wrong=d.filter(x=>x!==w);assert.ok(wrong.some(x=>x.length===w.length),'same-length alternative: '+w);
   if(w.length>1)assert.ok(wrong.filter(x=>x[0]===w[0]).length>=2,'same-initial alternatives: '+w);
  }
- assert.deepEqual(C.words.find(x=>x.w==='treasure').d,['treasure','traesure','trasure','treason']);
+ assert.deepEqual(C.coreWords.find(x=>x.w==='treasure').d,['treasure','traesure','trasure','treason']);
  // An in-flight old question retains its exact choices on reload.
  const s=fresh();Core.startBattle(s,now);const q=Core.prepareBattle(s,now);q.options=['on','in','an','no'];assert.deepEqual(Core.migrate(s).battle.question.options,q.options);
 });
 test('the full approved Core 200 is allocated exactly once across seven playable chapters',()=>{
- assert.equal(C.words.length,200);assert.equal(new Set(C.words.map(x=>x.w)).size,200);assert.equal(C.chapters.length,7);assert.equal(C.areas.length,35);
+ assert.equal(C.coreWords.length,200);assert.equal(new Set(C.coreWords.map(x=>x.w)).size,200);assert.equal(C.chapters.length,7);assert.equal(C.areas.length,35);
  assert.deepEqual(C.chapters.map(c=>c.words.length),[30,30,30,30,30,30,20]);
- assert.deepEqual(C.areas.flatMap(a=>a.words),C.words.map(w=>w.w));
- assert.ok(C.areas.every(a=>a.available));assert.ok(C.words.every(w=>new Set(w.d).size===4&&w.d.filter(d=>d===w.w).length===1));
- for(const item of C.words)assert.ok(new RegExp('\\b'+item.w+'\\b','i').test(item.sentence),'Whole target in sentence: '+item.w);
+ assert.deepEqual(C.areas.flatMap(a=>a.words),C.coreWords.map(w=>w.w));
+ assert.ok(C.areas.every(a=>a.available));assert.ok(C.coreWords.every(w=>new Set(w.d).size===4&&w.d.filter(d=>d===w.w).length===1));
+ for(const item of C.coreWords)assert.ok(new RegExp('\\b'+item.w+'\\b','i').test(item.sentence),'Whole target in sentence: '+item.w);
 });
 test('curated variants match selected HP; legacy encounters above 32 HP remain readable',()=>{
  const s=fresh();let last=null;

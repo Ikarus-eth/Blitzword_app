@@ -21,10 +21,10 @@
     save(state){
       try{
         if(this.storage.getItem(KEY)!==this.expected)throw problem('Another tab updated this adventure. Reload to use its saved progress.','conflict');
-        const next={...state,revision:state.revision+1},payload=JSON.stringify(next),previous=this.expected,recovered=this.recovered;
+        const next={...state,revision:state.revision+1},payload=JSON.stringify(Core.packSave(next)),previous=this.expected,recovered=this.recovered;
         if(previous){
           if(recovered)this.storage.setItem(KEY+'_unreadable_backup',previous);
-          else if(JSON.parse(previous).schemaVersion!==2&&!this.storage.getItem(KEY+'_legacy_backup'))this.storage.setItem(KEY+'_legacy_backup',previous);
+          else if(![2,3].includes(JSON.parse(previous).schemaVersion)&&!this.storage.getItem(KEY+'_legacy_backup'))this.storage.setItem(KEY+'_legacy_backup',previous);
         }
         this.storage.setItem(KEY,payload);this.expected=payload;this.recovered=false;state.revision=next.revision;
         // Write the new save before the backup copy, so a smaller (compacted) save frees space first.
@@ -42,7 +42,7 @@
       catch(e){throw problem('This browser is not allowing progress to be saved.','storage');}
       if(current!==this.expected)throw problem('Another tab updated this adventure. Reload to use its saved progress.','conflict');
       if(this.recovered)throw problem('Progress could not be saved. Keep this tab open and try saving again.','storage');
-      const payload=JSON.stringify({...state,revision:Math.max(Number(state.revision)||0,Number(currentRevision)||0)+1});
+      const payload=JSON.stringify(Core.packSave({...state,revision:Math.max(Number(state.revision)||0,Number(currentRevision)||0)+1}));
       try{if(current!==null)this.storage.setItem(KEY+'_before_restore',current);}
       catch(e){throw problem('There is not enough space on this device to keep a copy of the current progress. Nothing was changed.','space');}
       try{this.storage.setItem(KEY,payload);}
@@ -73,7 +73,7 @@
       saved=data.state;if(typeof data.exportedAt==='string'&&Number.isFinite(Date.parse(data.exportedAt)))exportedAt=data.exportedAt;
     }
     if(!isRecord(saved)||!isRecord(saved.profile)||!['assessment','learning','campaign'].some(key=>isRecord(saved[key])))throw refuse('This file is not a BlitzWord backup.');
-    if(saved.schemaVersion!==undefined&&saved.schemaVersion!==1&&saved.schemaVersion!==2){
+    if((saved.schemaVersion===3&&!saved.wordTables)||(saved.schemaVersion!==undefined&&saved.schemaVersion!==1&&saved.schemaVersion!==2&&saved.schemaVersion!==3)){
       throw refuse(Number(saved.schemaVersion)>2?'This backup was made by a newer version of BlitzWord.':'This file is not a BlitzWord backup.');
     }
     try{return {state:Core.migrate(saved),exportedAt};}catch(e){throw refuse('This backup could not be read.');}

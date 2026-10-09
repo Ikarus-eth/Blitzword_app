@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="blitzword-soundscape" content="continuous-battle-20260924-r1" />
 <meta name="blitzword-scenery" content="35-chapters-20260923-r1" />
-<meta name="blitzword-build" content="required-answers-20261009-r1" />
+<meta name="blitzword-build" content="next800-20261009-r1" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -12,9 +12,9 @@
 <meta name="apple-mobile-web-app-title" content="BlitzWord" />
 <meta name="theme-color" content="#173d2f" />
 <title>Pip · BlitzWord</title>
-<link rel="stylesheet" href="styles.css?v=lightning-feedback-20261009-r1" />
+<link rel="stylesheet" href="styles.css?v=next800-20261009-r1-lightning-feedback-20261009-r1" />
 <link rel="stylesheet" href="enemy-art.css?v=enemy-groups-20260925-r2" />
-<link rel="stylesheet" href="adventures.css?v=required-answers-20261009-r1" />
+<link rel="stylesheet" href="adventures.css?v=next800-20261009-r1" />
 <link rel="stylesheet" href="assets/battle-motion/runtime.css?v=enemy-motion-20260930-r1" />
 </head>
 <body><main class="app" id="app">
@@ -90,7 +90,7 @@
 </section>
 
 <section id="teaching" class="screen">
-  <div class="teachCard parchment"><div id="teachSentence" class="teachSentence"></div><div class="teachArt"><img id="teachIllustration" class="teachIllustration" alt=""/><svg id="teachAtlas" class="teachIllustration" role="img" hidden preserveAspectRatio="xMidYMid meet" viewBox="0 0 768 512"><image href="assets/teaching/chapter-teaching.png" width="1536" height="1024"/></svg></div><p id="lessonStatus" class="lessonStatus" aria-live="polite"></p><div class="teachControls"><button id="teachReplay" class="replay" aria-label="Replay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg></button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
+  <div class="teachCard parchment"><div id="teachSentence" class="teachSentence"></div><div id="teachWordLesson" class="teachWordLesson" hidden><div class="teachWordLine"><strong id="teachWordLabel"></strong><span id="teachSymbol" hidden></span></div><div id="teachCounters" class="teachCounters" role="img" hidden></div><p id="teachHint"></p></div><div class="teachArt"><img id="teachIllustration" class="teachIllustration" alt=""/><svg id="teachAtlas" class="teachIllustration" role="img" hidden preserveAspectRatio="xMidYMid meet" viewBox="0 0 768 512"><image href="assets/teaching/chapter-teaching.png" width="1536" height="1024"/></svg></div><p id="lessonStatus" class="lessonStatus" aria-live="polite"></p><div class="teachControls"><button class="secondaryButton" id="teachWordListen" hidden>Hear word</button><button class="secondaryButton" id="teachHintListen" hidden>Hear tip</button><button id="teachReplay" class="replay" aria-label="Hear sentence again"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg></button><button id="teachContinue" class="roundButton" aria-label="Continue">→</button></div></div>
 </section>
 
 <section id="assessment" class="screen playfield">
@@ -231,18 +231,18 @@
 </section>
 <div id="parentGate" class="parentGate" role="dialog" aria-modal="true" aria-labelledby="parentGateTitle" hidden><div class="parchment"><h2 id="parentGateTitle">For a grown-up</h2><label id="parentQuestion" for="parentAnswer"></label><input id="parentAnswer" type="text" inputmode="numeric" autocomplete="off"/><p id="parentGateMessage" aria-live="polite"></p><button id="parentUnlock" class="greenButton">Open dashboard</button><button id="parentCancel" class="textButton">Back</button></div></div>
 </main>
-<script src="content.js?v=creature-campaigns-20261003-r1"></script>
+<script src="content.js?v=next800-20261009-r1-creature-campaigns-20261003-r1"></script>
 <script src="enemy-art-data.js?v=thornling-tail-20260925-r1"></script>
 <script src="enemy-art.js?v=enemy-groups-20260925-r2"></script>
-<script src="missions.js?v=required-answers-20261009-r1"></script>
-<script src="adventure-core.js?v=required-answers-20261009-r1"></script>
-<script src="game-core.js?v=required-answers-20261009-r1"></script>
-<script src="adventure-ui.js?v=required-answers-20261009-r1"></script>
-<script src="storage.js?v=compact-save-20260924-r1"></script>
+<script src="missions.js?v=next800-20261009-r1"></script>
+<script src="adventure-core.js?v=next800-20261009-r1"></script>
+<script src="game-core.js?v=next800-20261009-r1"></script>
+<script src="adventure-ui.js?v=next800-20261009-r1"></script>
+<script src="storage.js?v=next800-20261009-r1"></script>
 <script src="soundscape.js?v=continuous-battle-20260924-r1"></script>
 <script src="narration.js?v=story-riddle-narration-20261004-r1"></script>
 <script src="audio.js?v=story-riddle-narration-20261004-r1"></script>
 <script src="engagement.js?v=core200-20260922-r1"></script>
 <script src="assets/battle-motion/manifest.js?v=creature-campaigns-20261003-r1"></script>
 <script src="assets/battle-motion/runtime.js?v=creature-campaigns-20261003-r1"></script>
-<script src="app.js?v=required-answers-20261009-r1"></script></body></html>
+<script src="app.js?v=next800-20261009-r1"></script></body></html>

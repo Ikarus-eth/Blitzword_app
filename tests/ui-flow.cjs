@@ -27,7 +27,7 @@ function boot(saved,options={}){
  }
  vm.runInNewContext(fs.readFileSync(root+'adventure-ui.js','utf8'),ctx);
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
- const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
+ const state=()=>Core.unpackSave(JSON.parse(memory.get(Storage.KEY))),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
  function elapse(ms,awake=false){if(awake){for(let elapsed=0;elapsed<ms;elapsed+=1000){elapse(Math.min(1000,ms-elapsed));heartbeat();}return;}const target=now+ms;while([...jobs.values()].some(job=>job.time<=target))tick();now=target;}
  function tick(){const next=[...jobs.entries()].sort((a,b)=>a[1].time-b[1].time)[0];assert.ok(next,'no scheduled progress');jobs.delete(next[0]);now=next[1].time;next[1].fn();}
@@ -644,7 +644,7 @@ function fakeFiles(ui){
  assert.equal(ui.reloads(),1);assert.equal(ui.get('backupStatus').textContent,'Backup restored. Reloading…');
  // Nothing can write the replaced progress back before the reload finishes.
  ui.click(ui.get('parentHome'));assert.equal(ui.state().profile.name,'Éva');assert.equal(JSON.parse(ui.memory.get(Storage.KEY+'_before_restore')).profile.name,'Reader');
- const again=boot(ui.state());openParents(again);assert.match(again.get('parentLearning').textContent,/^40 \/ 200 words introduced/);assert.match(again.get('parentGrowth').textContent,/2400 XP/);
+ const again=boot(ui.state());openParents(again);assert.match(again.get('parentLearning').textContent,/^40 \/ 1000 words introduced/);assert.match(again.get('parentGrowth').textContent,/2400 XP/);
  console.log('PASS restore checks the file, asks the parent, keeps the current save, survives a full device and reloads into the backup');
 }
 {
@@ -807,7 +807,7 @@ console.log('PASS accepting a suggestion uses the existing save-failure protecti
  const s=impactSave(),q=s.battle.question;q.exposureMs=950;q.phase='choices';q.responseMs=1200;Core.answerBattle(s,q.target,Date.UTC(2026,8,22));
  const ui=boot(s);openParents(ui);const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];
  const quick=words.find(button=>button.dataset.word===q.target);assert.equal(quick.dataset.quick,'true');assert.match(quick.getAttribute('aria-label'),/quick answer recorded/);ui.click(quick);assert.match(ui.get('parentWordSummary').textContent,/1 quick answer\b/);
- assert.match(ui.get('parentQuickSummary').textContent,/^1 \/ 200/);assert.ok(words.some(button=>button.dataset.quick==='false'));
+ assert.match(ui.get('parentQuickSummary').textContent,/^1 \/ 1000/);assert.ok(words.some(button=>button.dataset.quick==='false'));
  const reopened=boot(ui.state());openParents(reopened);assert.equal(reopened.get('parentQuickSummary').textContent,ui.get('parentQuickSummary').textContent);
 }
 console.log('PASS Parents shows per-word quick evidence separately from words still in review and preserves it on reopen');
@@ -831,17 +831,17 @@ function parentLearningSave(){
  const ui=boot(parentLearningSave());assert.equal(ui.get('parentGate').hidden,true);ui.click(ui.get('mapParents'));assert.equal(ui.get('parentGate').hidden,false);
  ui.get('parentAnswer').value='0';ui.click(ui.get('parentUnlock'));assert.equal(ui.get('parentDashboard').classList.contains('active'),false);
  ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
- const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];assert.equal(words.length,200);assert.equal(new Set(words.map(w=>w.dataset.word)).size,200);
+ const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];assert.equal(words.length,1000);assert.equal(new Set(words.map(w=>w.dataset.word)).size,1000);
  for(const [word,status] of [['on','learning'],['rock','secured'],['fox','kept7'],['cave','kept30'],['water','new']])assert.equal(words.find(b=>b.dataset.word===word).dataset.status,status);
  const articles=[...ui.get('parentDashboard').children];assert.equal(articles[1].id,'parentLearningOverview');assert.ok(articles.indexOf(ui.get('parentRetention'))<articles.findIndex(el=>el.querySelector('.soundSettings')));assert.equal(articles.at(-2).querySelector('.soundSettings')!==null,true);
  assert.equal(ui.get('parentWeeks').children[0].children[1].textContent,'2 / 3');assert.equal(ui.get('parentWeeks').children[0].children[2].textContent,'67%');assert.match(ui.get('parentMixups').textContent,/on → own/);assert.match(ui.get('parentSlow').textContent,/1.2 s|2.1 s/);
 }
-console.log('PASS gated Parents shows the 200-word map, five evidence states, retention and tricky words before sound settings');
+console.log('PASS gated Parents shows the 1000-word map, five evidence states, retention and tricky words before sound settings');
 {
- const ui=boot(parentLearningSave());openParents(ui);ui.get('parentWordSearch').value='  FOX ';ui.get('parentWordSearch').oninput();assert.equal(ui.get('parentWordMap').querySelectorAll('.parentWord').length,1);assert.match(ui.get('parentWordCount').textContent,/^1 \/ 200/);
+ const ui=boot(parentLearningSave());openParents(ui);ui.get('parentWordSearch').value='  FOX ';ui.get('parentWordSearch').oninput();assert.equal(ui.get('parentWordMap').querySelectorAll('.parentWord').length,1);assert.match(ui.get('parentWordCount').textContent,/^1 \/ 1000/);
  ui.get('parentWordSearch').value='';ui.get('parentWordFilter').value='kept30';ui.get('parentWordFilter').onchange();assert.equal(ui.get('parentWordMap').querySelector('.parentWord').dataset.word,'cave');
  ui.get('parentWordFilter').value='quick';ui.get('parentWordFilter').onchange();assert.equal(ui.get('parentWordMap').querySelectorAll('.parentWord').length,3);
- ui.get('parentWordSearch').value='<script>';ui.get('parentWordSearch').oninput();assert.match(ui.get('parentWordCount').textContent,/^0 \/ 200/);assert.equal(ui.get('parentWordMap').children.length,0);
+ ui.get('parentWordSearch').value='<script>';ui.get('parentWordSearch').oninput();assert.match(ui.get('parentWordCount').textContent,/^0 \/ 1000/);assert.equal(ui.get('parentWordMap').children.length,0);
 }
 console.log('PASS word search and status/quick filters show exact matches, with a clear empty state');
 {
@@ -859,7 +859,7 @@ console.log('PASS tapping a word opens saved first-response history without chan
 console.log('PASS older compacted saves retain totals while unavailable weekly detail and missing individual events are explicit');
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;const ui=boot(s);openParents(ui);
- assert.equal(ui.get('parentWordMap').querySelectorAll('[data-status="new"]').length,200);assert.match(ui.get('parentMixupsEmpty').textContent,/No unaided/);assert.match(ui.get('parentSlowEmpty').textContent,/No valid/);
+ assert.equal(ui.get('parentWordMap').querySelectorAll('[data-status="new"]').length,1000);assert.match(ui.get('parentMixupsEmpty').textContent,/No unaided/);assert.match(ui.get('parentSlowEmpty').textContent,/No valid/);
  assert.ok([...ui.get('parentWeeks').children].every(row=>row.children[1].textContent==='No checks'&&row.children[2].textContent==='—'));
  ui.click(ui.get('parentWordMap').querySelector('[data-word="on"]'));assert.match(ui.get('parentWordHistoryEmpty').textContent,/No individual/);
 }
@@ -1286,3 +1286,19 @@ console.log('PASS made and wade preserve the displayed selection, saved evidence
  assert.deepEqual(ui.state().battle.requiredAnswers,[]);
  console.log('PASS twice-skipped word requires a choice after reopen and rejects hidden help callbacks');
 }
+
+// Expansion teaching is usable even when no image or recording is available.
+for(const word of ['has','zero','eight','fifteen','thousand','second',"can't","I'll",'Wednesday','live','sat']){
+ const s=impactSave(),item=Core.byWord[word];s.battle.question={...s.battle.question,target:word,options:item.d,phase:'feedback',answeredAt:new Date().toISOString(),correct:false,needsTeaching:true};
+ Core.startTeaching(s,word,'battle',Date.UTC(2026,9,9));
+ let ui=boot(s,{heldNarration:true,pendingImages:true});ui.resume();
+ assert.equal(ui.get('teachWordLesson').hidden,false);assert.equal(ui.get('teachWordLabel').textContent,word);
+ assert.equal(ui.get('teachContinue').disabled,false);assert.equal(ui.get('teachIllustration').hidden,true);
+ assert.equal(ui.get('teachSentence').querySelector('.targetWord').textContent.toLowerCase(),word.toLowerCase());
+ if(['zero','eight','fifteen'].includes(word))assert.equal(ui.get('teachCounters').querySelectorAll('.numberCounter').length,Number(item.teaching.symbol));
+ ui.click(ui.get('teachWordListen'));assert.equal(ui.speechTexts.at(-1),item.spoken||item.w);
+ ui.click(ui.get('teachHintListen'));assert.equal(ui.speechTexts.at(-1),item.teaching.tip);
+ ui=boot(ui.state(),{heldNarration:true,pendingImages:true});ui.resume();assert.equal(ui.get('teachWordLabel').textContent,word);
+ ui.click(ui.get('teachContinue'));assert.equal(ui.state().activity,'battle');
+}
+console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat and reload without images');

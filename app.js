@@ -316,12 +316,14 @@ function renderParentLearning(){
 function renderParentWordMap(){
   if(!parentReport)return;
   const search=$('#parentWordSearch').value.trim().toLowerCase(),filter=$('#parentWordFilter').value;
-  const words=parentReport.words.filter(w=>w.word.includes(search)&&(filter==='all'||filter==='quick'&&w.quick||w.status===filter));
+  const words=parentReport.words.filter(w=>w.word.toLowerCase().includes(search)&&(filter==='all'||filter==='quick'&&w.quick||w.status===filter));
   $('#parentWordCount').textContent=words.length+' / '+Content.words.length+' words shown. Tap a word for its history.';
   const map=$('#parentWordMap');map.replaceChildren();
-  for(const [index,chapter] of Content.chapters.entries()){
+  const groups=Content.chapters.map((c,i)=>({...c,label:'Campaign '+(i+1)+' · '+dragonText(c.name)}));
+  for(let batch=1;batch<=8;batch++)groups.push({label:'More words · '+batch,words:Content.words.filter(w=>w.batch===batch).map(w=>w.w)});
+  for(const chapter of groups){
     const groupWords=words.filter(w=>chapter.words.includes(w.word));if(!groupWords.length)continue;
-    const group=document.createElement('section'),heading=document.createElement('h3'),grid=document.createElement('div');group.className='wordMapGroup';grid.className='wordMapGrid';heading.textContent='Campaign '+(index+1)+' · '+dragonText(chapter.name);
+    const group=document.createElement('section'),heading=document.createElement('h3'),grid=document.createElement('div');group.className='wordMapGroup';grid.className='wordMapGrid';heading.textContent=chapter.label;
     for(const word of groupWords){
       const button=document.createElement('button'),name=document.createElement('span'),status=document.createElement('small');
       button.className='parentWord wordStatus '+word.status;button.dataset.word=word.word;button.dataset.status=word.status;button.dataset.quick=String(word.quick);
@@ -389,7 +391,7 @@ function restoreBackup(text){
   if(blocked||!save()){backupStatus('Progress could not be saved, so the backup was not restored.');return;}
   let payload;try{payload=store.restore(backup.state,state.revision);}catch(e){if(e.code==='space')backupStatus(e.message);else storageProblem(e);return;}
   // Never save the replaced progress again; reload from the restored save.
-  state=JSON.parse(payload);blocked=true;backupStatus('Backup restored. Reloading…');location.reload();
+  state=Core.unpackSave(JSON.parse(payload));blocked=true;backupStatus('Backup restored. Reloading…');location.reload();
 }
 function storageProblem(error) {
   blocked=true;paused=true;cancelWork();
@@ -675,7 +677,7 @@ function correctFeedback(record=null) {
     $('#battleScroll').append(reward);
   }
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
-  speak(q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
+  speak(Core.byWord[q.target]?.spoken||q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
 function combatGeometry(effects){
   const box=effects.getBoundingClientRect?.();
@@ -896,10 +898,29 @@ function renderTeaching() {
   const pattern=new RegExp('\\b'+item.w+'\\b','i'),match=pattern.exec(item.sentence),start=match.index;
   sentence.append(document.createTextNode(item.sentence.slice(0,start)));
   const target=document.createElement('span');target.className='targetWord';target.textContent=match[0];sentence.append(target,document.createTextNode(item.sentence.slice(start+match[0].length)));
+  $('#teaching .teachCard').classList.toggle('expandedLesson',!!item.expansion);
+  $('#teaching .teachArt').hidden=!!item.expansion;
+  const lesson=$('#teachWordLesson');lesson.hidden=!item.expansion;
+  $('#teachWordListen').hidden=!item.expansion;
+  $('#teachHintListen').hidden=!item.expansion;
+  if(item.expansion){
+    $('#teachWordLabel').textContent=item.w;
+    $('#teachHint').textContent=item.teaching.tip;
+    const symbol=$('#teachSymbol');symbol.textContent=item.teaching.symbol||'';symbol.hidden=!item.teaching.symbol;
+    const counters=$('#teachCounters');counters.replaceChildren();
+    const number=Number(item.teaching.symbol);
+    counters.hidden=!item.teaching.symbol||!Number.isInteger(number)||number<0||number>20;
+    if(!counters.hidden){
+      counters.setAttribute('aria-label',number+' counters');
+      for(let i=0;i<number;i++){const dot=document.createElement('span');dot.className='numberCounter';dot.setAttribute('aria-hidden','true');counters.append(dot);}
+      if(number===0)counters.textContent='None left';
+    }
+  }
   const illustration=$('#teachIllustration'),token=epoch;
   $('#lessonStatus').textContent='';$('#teachContinue').disabled=true;
   let ready=false;
   const pictureReady=()=>{if(ready||token!==epoch)return;ready=true;$('#teachContinue').disabled=false;if(!paused&&!blocked)narrateTeaching();};
+  if(item.expansion){illustration.hidden=true;$('#teachAtlas').hidden=true;illustration.onload=null;illustration.onerror=null;pictureReady();return;}
   illustration.onload=pictureReady;
   illustration.onerror=()=>{if(token!==epoch)return;$('#lessonStatus').textContent='The picture could not load. You can listen or continue.';pictureReady();};
   illustration.hidden=!!item.crop;$('#teachAtlas').toggleAttribute('hidden',!item.crop);
@@ -1199,6 +1220,8 @@ $('#handoffNext').onclick=()=>{Core.leaveHandoff(state,Date.now());if(save())ent
 $('#voiceChoice').onchange=()=>{state.settings.voiceURI=$('#voiceChoice').value;save();};
 $('#previewVoice').onclick=()=>speak('Pip is on the rock.');
 window.speechSynthesis?.addEventListener('voiceschanged',()=>{if(!$('#pausePanel').hidden)populateVoices();});
+$('#teachWordListen').onclick=()=>{if(!confirmActivity()||!state.teaching)return;const item=Core.byWord[state.teaching.target];if(item?.expansion)speak(item.spoken||item.w);};
+$('#teachHintListen').onclick=()=>{if(!confirmActivity()||!state.teaching)return;const item=Core.byWord[state.teaching.target];if(item?.expansion)speak(item.teaching.tip);};
 $('#teachReplay').onclick=()=>{if(!confirmActivity())return;const teaching=state.teaching;Core.startTeaching(state,teaching.target,teaching.returnTo,Date.now(),{replay:true});if(save())narrateTeaching();};
 $('#teachContinue').onclick=()=>{if(!confirmActivity())return;Core.leaveTeaching(state,Date.now());if(save())advanceBattle();};
 $('#resultNext').onclick=home;

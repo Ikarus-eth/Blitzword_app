@@ -34,7 +34,7 @@ function play(days,minutes,{answerMs=6000,save=null}={}){
       }
     }
     // Each day ends with a reload, as on the iPad.
-    const text=JSON.stringify(s);sizes.push(text.length);if(save)save(text,day);
+    const text=JSON.stringify(Core.packSave(s));sizes.push(text.length);if(save)save(text,day);
     s=Core.migrate(JSON.parse(text));
   }
   return {s,sizes,attempts:attempt,mathAttempts:mathAttempt};
@@ -87,7 +87,7 @@ test('compacting an old full-history save keeps progress, rewards, settings and 
   assert.equal(a.sessions.count,original.sessions.length-50);
   // Loading again changes nothing.
   assert.deepEqual(Core.migrate(JSON.parse(JSON.stringify(compact))),compact);
-  assert.ok(JSON.stringify(compact).length<JSON.stringify(original).length/3);
+  assert.ok(JSON.stringify(Core.packSave(compact)).length<JSON.stringify(original).length/3);
 });
 
 test('archived answers keep review results, retention gaps, letter positions and response times',()=>{
