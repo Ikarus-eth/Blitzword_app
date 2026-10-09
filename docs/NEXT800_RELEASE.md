@@ -1,6 +1,6 @@
 # Next 800 words — 9 October 2026
 
-Build: `next800-20261009-r1`. Implemented and locally tested; deployment is recorded separately in CURRENT_STATUS.md.
+Build: `next800-20261009-r1`. Deployed and verified: [PR #148](https://github.com/Ikarus-eth/Blitzword_app/pull/148), [successful Pages run](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37869725442). Six live files match the tested release byte-for-byte ([verification record](NEXT800_DEPLOYMENT.json)). A live isolated Chrome teaching/reload/Continue check also passed at 1180×820.
 
 ## Scope
 
