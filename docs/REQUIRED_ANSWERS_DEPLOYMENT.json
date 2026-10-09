@@ -1,0 +1,27 @@
+{
+  "build": "required-answers-20261009-r1",
+  "commit": "d650a0fb6791fc507953d865667addb36bcccea4",
+  "workflow": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37862354784",
+  "checks": [
+    {
+      "file": "index.html",
+      "sha256": "a6e610f0d46c15385470996915921bc1ef410b18adac2b5af480cddbcb06cfba",
+      "matches": true
+    },
+    {
+      "file": "game-core.js",
+      "sha256": "4dc51c2c13df9db8c88bb7b3456a478f63321237a134c0f1193395a949bb8cdc",
+      "matches": true
+    },
+    {
+      "file": "app.js",
+      "sha256": "c95a7e195428c534e99284cd8fcccbaced57661300bdf97d2e849176d1a09fad",
+      "matches": true
+    },
+    {
+      "file": "styles.css",
+      "sha256": "3ae38ed11331af62315e95d6e9f5d1a98d4c6c89760dfa0df8e93905ad392294",
+      "matches": true
+    }
+  ]
+}
