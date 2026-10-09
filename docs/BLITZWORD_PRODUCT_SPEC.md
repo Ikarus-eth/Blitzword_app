@@ -1,3 +1,9 @@
+## Accepted curriculum expansion — 9 October 2026
+
+The parent approved 800 additional written forms for broad beginner-book reading, prioritising everyday vocabulary and including written numbers. This supersedes the historical future-expansion and fantasy-filter limits below. The playable pool is now 1,000: the unchanged Core 200 allocation plus the accepted [800-word pool](../curriculum/NEXT800_FIRST_BOOKS.json). Adaptive practice opens them using existing success/review rules, independently of story completion; no purchase gate is added. Stories are separate work.
+
+Each new word has a contextual sentence, rotating fair-choice pool, short spelling/meaning/word-family tip and pronunciation through existing audio fallback. New cards use text and number symbols/counters; new generated artwork and paid narration are not part of this release. Context-sensitive pronunciations use their example sentence. Parent reporting includes all 1,000 and preserves case for names and contractions. Existing learner evidence, pending questions, XP and story progress remain intact. Local save encoding is losslessly compacted; exported backups remain readable ordinary JSON. See [release details](NEXT800_RELEASE.md).
+
 ## Riddle timing and XP — 7 October 2026
 
 ## Twice-skipped words — 9 October 2026

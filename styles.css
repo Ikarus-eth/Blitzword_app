@@ -616,3 +616,21 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 @keyframes quickWordFlash{0%{opacity:0;transform:scale(.75)}18%,50%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.12)}}
 @media(prefers-reduced-motion:reduce){.quickWordReward{animation-name:quickWordQuiet}.quickWordReward svg{filter:none}}
 @keyframes quickWordQuiet{0%,80%{opacity:1}100%{opacity:0}}
+/* Expansion lessons use readable type and exact counters, with no generated art. */
+.teachWordLesson{margin:12px auto;max-width:720px;padding:20px;background:#fff7e6;border:2px solid #b78d47;border-radius:18px;color:#302519}
+.teachWordLine{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+#teachWordLabel{font-size:clamp(30px,6vw,60px);overflow-wrap:anywhere}
+#teachSymbol{font-size:clamp(32px,7vw,64px);font-weight:700;color:#695026}
+#teachHint{font-size:clamp(18px,2.4vw,23px);line-height:1.45;margin:12px 0 0;text-align:center}
+.teachCounters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:252px;margin:14px auto}
+.numberCounter{width:18px;height:18px;border-radius:50%;background:#7d5321;border:1px solid #4c321b}
+.teachControls{flex-wrap:wrap;gap:12px}
+#teachWordListen,#teachHintListen{min-height:52px;padding:10px 16px;font-size:18px}
+.teachWordLesson[hidden],.teachCounters[hidden],#teachSymbol[hidden]{display:none}
+
+.teachCard.expandedLesson{display:flex;flex-direction:column;overflow-y:auto;justify-content:flex-start}
+.expandedLesson .teachWordLesson{width:min(100%,720px);box-sizing:border-box}
+.expandedLesson .teachControls{flex-direction:row;align-self:center;margin-top:auto;flex-shrink:0}
+.expandedLesson .teachControls button{width:auto;min-width:60px;min-height:60px;height:auto}
+.expandedLesson .teachArt{display:none}
+@media(max-height:500px){.expandedLesson .teachSentence{font-size:22px}.expandedLesson .teachWordLesson{padding:12px;margin:4px auto}#teachWordLabel{font-size:32px}.expandedLesson #teachHint{font-size:18px}}

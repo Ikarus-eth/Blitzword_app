@@ -14,6 +14,8 @@ For ChatGPT project setup, use the [project maintenance guide](docs/PROJECT_DESC
 
 ## Current gameplay
 
+The reading pool now contains **1,000 words**: the original 200 plus 800 everyday and beginner-book words, including written numbers. The additions have contextual sentences, short teaching tips and device speech. Existing story maps stay at their original allocation; adaptive practice can continue through the expanded pool. See [curriculum expansion and verification](docs/NEXT800_RELEASE.md).
+
 **Two creature campaigns are the new default:** The Lost Forest Lights and The River That Lost Its Song. Twelve missions combine short reading fights, 48 light deduction/ordering/number riddles, branch choices and treasures. The Creature Book has all 20 current enemy families, **Met / Clue / Star** stamps, location clues and a chosen teammate. New quests start with four hearts carried through all four fights; at zero hearts, the hero and Pip retreat, and retry resumes two tracker steps earlier with four hearts while preserving earned learning evidence. A collected animal can join the hero and block one hit per quest. Short introductions and an eight-step tracker make the next task and treasure endpoint clear. See [the playtest follow-up](docs/adventures/QUEST_CLARITY_RELEASE.md). Plan for roughly two hours across both campaigns, with saved progress and natural breaks; actual child pacing has not yet been measured. See [campaign rules and verification](docs/adventures/RELEASE.md).
 
 Chapter 5 of Forest Lights is **The Boy and the Map**, with four varied boy-and-wizard adventure scenes and linked map riddles. [Latest artwork](docs/adventures/WIZARD_MAP_RELEASE.md); [defeat rules and verification](docs/adventures/MAPMAKER_RELEASE.md).

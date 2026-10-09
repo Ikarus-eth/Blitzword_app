@@ -1,0 +1,5645 @@
+{
+  "status": "Research proposal; not implemented or deployed",
+  "date": "2026-10-09",
+  "counting": "Distinct written forms; case-insensitive; contractions count as one; number combinations are practice, not extra targets",
+  "checks": {
+    "existing": 200,
+    "additions": 800,
+    "combined_unique": 1000,
+    "new_to_original_workbook": 343,
+    "retained_from_original_expansion": 457,
+    "groups": [
+      [
+        "Sentence building and common verbs",
+        108
+      ],
+      [
+        "Written numbers and quantity",
+        49
+      ],
+      [
+        "Everyday story essentials",
+        272
+      ],
+      [
+        "Home, family, food and school",
+        131
+      ],
+      [
+        "Actions and word families",
+        89
+      ],
+      [
+        "Descriptions, feelings and story connections",
+        66
+      ],
+      [
+        "Nature, places, adventure and reading",
+        85
+      ]
+    ],
+    "new_number_words": 37
+  },
+  "words": [
+    {
+      "id": "next800-001",
+      "word": "am",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 255
+    },
+    {
+      "id": "next800-002",
+      "word": "has",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 211
+    },
+    {
+      "id": "next800-003",
+      "word": "been",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 212
+    },
+    {
+      "id": "next800-004",
+      "word": "does",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 224
+    },
+    {
+      "id": "next800-005",
+      "word": "us",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 229
+    },
+    {
+      "id": "next800-006",
+      "word": "its",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 995
+    },
+    {
+      "id": "next800-007",
+      "word": "which",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 209
+    },
+    {
+      "id": "next800-008",
+      "word": "these",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 210
+    },
+    {
+      "id": "next800-009",
+      "word": "those",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 234
+    },
+    {
+      "id": "next800-010",
+      "word": "where",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 219
+    },
+    {
+      "id": "next800-011",
+      "word": "why",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 227
+    },
+    {
+      "id": "next800-012",
+      "word": "much",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 220
+    },
+    {
+      "id": "next800-013",
+      "word": "must",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 226
+    },
+    {
+      "id": "next800-014",
+      "word": "may",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 215
+    },
+    {
+      "id": "next800-015",
+      "word": "should",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 413
+    },
+    {
+      "id": "next800-016",
+      "word": "never",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 232
+    },
+    {
+      "id": "next800-017",
+      "word": "once",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 239
+    },
+    {
+      "id": "next800-018",
+      "word": "soon",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 242
+    },
+    {
+      "id": "next800-019",
+      "word": "today",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 243
+    },
+    {
+      "id": "next800-020",
+      "word": "well",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 225
+    },
+    {
+      "id": "next800-021",
+      "word": "than",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 349
+    },
+    {
+      "id": "next800-022",
+      "word": "other",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 342
+    },
+    {
+      "id": "next800-023",
+      "word": "each",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 338
+    },
+    {
+      "id": "next800-024",
+      "word": "also",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 386
+    },
+    {
+      "id": "next800-025",
+      "word": "even",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 392
+    },
+    {
+      "id": "next800-026",
+      "word": "such",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 393
+    },
+    {
+      "id": "next800-027",
+      "word": "same",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 383
+    },
+    {
+      "id": "next800-028",
+      "word": "another",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 389
+    },
+    {
+      "id": "next800-029",
+      "word": "most",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 375
+    },
+    {
+      "id": "next800-030",
+      "word": "few",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 429
+    },
+    {
+      "id": "next800-031",
+      "word": "enough",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 462
+    },
+    {
+      "id": "next800-032",
+      "word": "almost",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 466
+    },
+    {
+      "id": "next800-033",
+      "word": "sometimes",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 468
+    },
+    {
+      "id": "next800-034",
+      "word": "still",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 411
+    },
+    {
+      "id": "next800-035",
+      "word": "already",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 805
+    },
+    {
+      "id": "next800-036",
+      "word": "yet",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 603
+    },
+    {
+      "id": "next800-037",
+      "word": "perhaps",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 627
+    },
+    {
+      "id": "next800-038",
+      "word": "maybe",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 916
+    },
+    {
+      "id": "next800-039",
+      "word": "together",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 235
+    },
+    {
+      "id": "next800-040",
+      "word": "under",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 233
+    },
+    {
+      "id": "next800-041",
+      "word": "through",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 380
+    },
+    {
+      "id": "next800-042",
+      "word": "between",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 418
+    },
+    {
+      "id": "next800-043",
+      "word": "below",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 419
+    },
+    {
+      "id": "next800-044",
+      "word": "above",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 467
+    },
+    {
+      "id": "next800-045",
+      "word": "across",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 504
+    },
+    {
+      "id": "next800-046",
+      "word": "along",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 431
+    },
+    {
+      "id": "next800-047",
+      "word": "behind",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 590
+    },
+    {
+      "id": "next800-048",
+      "word": "beside",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 776
+    },
+    {
+      "id": "next800-049",
+      "word": "inside",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 579
+    },
+    {
+      "id": "next800-050",
+      "word": "outside",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 802
+    },
+    {
+      "id": "next800-051",
+      "word": "without",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 458
+    },
+    {
+      "id": "next800-052",
+      "word": "until",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 449
+    },
+    {
+      "id": "next800-053",
+      "word": "while",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 430
+    },
+    {
+      "id": "next800-054",
+      "word": "during",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 505
+    },
+    {
+      "id": "next800-055",
+      "word": "against",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 529
+    },
+    {
+      "id": "next800-056",
+      "word": "towards",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-057",
+      "word": "home",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 272
+    },
+    {
+      "id": "next800-058",
+      "word": "help",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 201
+    },
+    {
+      "id": "next800-059",
+      "word": "give",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 217
+    },
+    {
+      "id": "next800-060",
+      "word": "say",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 218
+    },
+    {
+      "id": "next800-061",
+      "word": "came",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 221
+    },
+    {
+      "id": "next800-062",
+      "word": "put",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 223
+    },
+    {
+      "id": "next800-063",
+      "word": "went",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 228
+    },
+    {
+      "id": "next800-064",
+      "word": "got",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 236
+    },
+    {
+      "id": "next800-065",
+      "word": "let",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 241
+    },
+    {
+      "id": "next800-066",
+      "word": "done",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 250
+    },
+    {
+      "id": "next800-067",
+      "word": "ran",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 252
+    },
+    {
+      "id": "next800-068",
+      "word": "eat",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 204
+    },
+    {
+      "id": "next800-069",
+      "word": "ate",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 1000
+    },
+    {
+      "id": "next800-070",
+      "word": "play",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 231
+    },
+    {
+      "id": "next800-071",
+      "word": "fly",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 202
+    },
+    {
+      "id": "next800-072",
+      "word": "sing",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 206
+    },
+    {
+      "id": "next800-073",
+      "word": "use",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 208
+    },
+    {
+      "id": "next800-074",
+      "word": "live",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 216
+    },
+    {
+      "id": "next800-075",
+      "word": "try",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 230
+    },
+    {
+      "id": "next800-076",
+      "word": "grow",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 237
+    },
+    {
+      "id": "next800-077",
+      "word": "draw",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 247
+    },
+    {
+      "id": "next800-078",
+      "word": "fall",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 248
+    },
+    {
+      "id": "next800-079",
+      "word": "ride",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 258
+    },
+    {
+      "id": "next800-080",
+      "word": "buy",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 259
+    },
+    {
+      "id": "next800-081",
+      "word": "please",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 262
+    },
+    {
+      "id": "next800-082",
+      "word": "wash",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 265
+    },
+    {
+      "id": "next800-083",
+      "word": "going",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 997
+    },
+    {
+      "id": "next800-084",
+      "word": "goes",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 998
+    },
+    {
+      "id": "next800-085",
+      "word": "can't",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 625
+    },
+    {
+      "id": "next800-086",
+      "word": "didn't",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 493
+    },
+    {
+      "id": "next800-087",
+      "word": "couldn't",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 851
+    },
+    {
+      "id": "next800-088",
+      "word": "won't",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 929
+    },
+    {
+      "id": "next800-089",
+      "word": "wasn't",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 933
+    },
+    {
+      "id": "next800-090",
+      "word": "isn't",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 980
+    },
+    {
+      "id": "next800-091",
+      "word": "you're",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 882
+    },
+    {
+      "id": "next800-092",
+      "word": "I'll",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 545
+    },
+    {
+      "id": "next800-093",
+      "word": "let's",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 845
+    },
+    {
+      "id": "next800-094",
+      "word": "we'll",
+      "group": "Sentence building and common verbs",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 977
+    },
+    {
+      "id": "next800-095",
+      "word": "that's",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-096",
+      "word": "there's",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-097",
+      "word": "he's",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-098",
+      "word": "she's",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-099",
+      "word": "we're",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-100",
+      "word": "they're",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-101",
+      "word": "I've",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-102",
+      "word": "you've",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-103",
+      "word": "we've",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-104",
+      "word": "doesn't",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-105",
+      "word": "haven't",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-106",
+      "word": "hadn't",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-107",
+      "word": "aren't",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-108",
+      "word": "weren't",
+      "group": "Sentence building and common verbs",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-109",
+      "word": "zero",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-110",
+      "word": "three",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 222
+    },
+    {
+      "id": "next800-111",
+      "word": "four",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 238
+    },
+    {
+      "id": "next800-112",
+      "word": "five",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 246
+    },
+    {
+      "id": "next800-113",
+      "word": "six",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 256
+    },
+    {
+      "id": "next800-114",
+      "word": "seven",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 263
+    },
+    {
+      "id": "next800-115",
+      "word": "eight",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 264
+    },
+    {
+      "id": "next800-116",
+      "word": "nine",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-117",
+      "word": "ten",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 251
+    },
+    {
+      "id": "next800-118",
+      "word": "eleven",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-119",
+      "word": "twelve",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-120",
+      "word": "thirteen",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-121",
+      "word": "fourteen",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-122",
+      "word": "fifteen",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-123",
+      "word": "sixteen",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-124",
+      "word": "seventeen",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-125",
+      "word": "eighteen",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-126",
+      "word": "nineteen",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-127",
+      "word": "twenty",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-128",
+      "word": "thirty",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-129",
+      "word": "forty",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-130",
+      "word": "fifty",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-131",
+      "word": "sixty",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-132",
+      "word": "seventy",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-133",
+      "word": "eighty",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-134",
+      "word": "ninety",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-135",
+      "word": "hundred",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 528
+    },
+    {
+      "id": "next800-136",
+      "word": "thousand",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-137",
+      "word": "second",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 459
+    },
+    {
+      "id": "next800-138",
+      "word": "third",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 783
+    },
+    {
+      "id": "next800-139",
+      "word": "fourth",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-140",
+      "word": "fifth",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-141",
+      "word": "sixth",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-142",
+      "word": "seventh",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-143",
+      "word": "eighth",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-144",
+      "word": "ninth",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-145",
+      "word": "tenth",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-146",
+      "word": "half",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 552
+    },
+    {
+      "id": "next800-147",
+      "word": "quarter",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-148",
+      "word": "double",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-149",
+      "word": "pair",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 621
+    },
+    {
+      "id": "next800-150",
+      "word": "count",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 835
+    },
+    {
+      "id": "next800-151",
+      "word": "number",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 346
+    },
+    {
+      "id": "next800-152",
+      "word": "less",
+      "group": "Written numbers and quantity",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 585
+    },
+    {
+      "id": "next800-153",
+      "word": "fewer",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-154",
+      "word": "total",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-155",
+      "word": "plus",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-156",
+      "word": "minus",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-157",
+      "word": "equal",
+      "group": "Written numbers and quantity",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-158",
+      "word": "old",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 203
+    },
+    {
+      "id": "next800-159",
+      "word": "cold",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 205
+    },
+    {
+      "id": "next800-160",
+      "word": "full",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 207
+    },
+    {
+      "id": "next800-161",
+      "word": "blue",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 214
+    },
+    {
+      "id": "next800-162",
+      "word": "better",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 244
+    },
+    {
+      "id": "next800-163",
+      "word": "black",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 245
+    },
+    {
+      "id": "next800-164",
+      "word": "round",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 253
+    },
+    {
+      "id": "next800-165",
+      "word": "warm",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 254
+    },
+    {
+      "id": "next800-166",
+      "word": "brown",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 260
+    },
+    {
+      "id": "next800-167",
+      "word": "clean",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 261
+    },
+    {
+      "id": "next800-168",
+      "word": "sun",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 266
+    },
+    {
+      "id": "next800-169",
+      "word": "door",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 267
+    },
+    {
+      "id": "next800-170",
+      "word": "pretty",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 268
+    },
+    {
+      "id": "next800-171",
+      "word": "king",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 269
+    },
+    {
+      "id": "next800-172",
+      "word": "town",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 270
+    },
+    {
+      "id": "next800-173",
+      "word": "drink",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 271
+    },
+    {
+      "id": "next800-174",
+      "word": "river",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 273
+    },
+    {
+      "id": "next800-175",
+      "word": "key",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 274
+    },
+    {
+      "id": "next800-176",
+      "word": "cloud",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 275
+    },
+    {
+      "id": "next800-177",
+      "word": "mountain",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 276
+    },
+    {
+      "id": "next800-178",
+      "word": "friend",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 687
+    },
+    {
+      "id": "next800-179",
+      "word": "friends",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 277
+    },
+    {
+      "id": "next800-180",
+      "word": "food",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 278
+    },
+    {
+      "id": "next800-181",
+      "word": "fish",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 281
+    },
+    {
+      "id": "next800-182",
+      "word": "horse",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 282
+    },
+    {
+      "id": "next800-183",
+      "word": "dark",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 283
+    },
+    {
+      "id": "next800-184",
+      "word": "morning",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 284
+    },
+    {
+      "id": "next800-185",
+      "word": "farm",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 285
+    },
+    {
+      "id": "next800-186",
+      "word": "egg",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 357
+    },
+    {
+      "id": "next800-187",
+      "word": "ground",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 287
+    },
+    {
+      "id": "next800-188",
+      "word": "field",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 288
+    },
+    {
+      "id": "next800-189",
+      "word": "road",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 289
+    },
+    {
+      "id": "next800-190",
+      "word": "happy",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 290
+    },
+    {
+      "id": "next800-191",
+      "word": "sky",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 291
+    },
+    {
+      "id": "next800-192",
+      "word": "boat",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 293
+    },
+    {
+      "id": "next800-193",
+      "word": "village",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 294
+    },
+    {
+      "id": "next800-194",
+      "word": "snow",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 295
+    },
+    {
+      "id": "next800-195",
+      "word": "hill",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 296
+    },
+    {
+      "id": "next800-196",
+      "word": "boy",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 298
+    },
+    {
+      "id": "next800-197",
+      "word": "lake",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 299
+    },
+    {
+      "id": "next800-198",
+      "word": "set",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 300
+    },
+    {
+      "id": "next800-199",
+      "word": "stone",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 301
+    },
+    {
+      "id": "next800-200",
+      "word": "men",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 302
+    },
+    {
+      "id": "next800-201",
+      "word": "hand",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 303
+    },
+    {
+      "id": "next800-202",
+      "word": "mother",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 304
+    },
+    {
+      "id": "next800-203",
+      "word": "father",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 305
+    },
+    {
+      "id": "next800-204",
+      "word": "feet",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 307
+    },
+    {
+      "id": "next800-205",
+      "word": "girl",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 311
+    },
+    {
+      "id": "next800-206",
+      "word": "dog",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 313
+    },
+    {
+      "id": "next800-207",
+      "word": "milk",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 315
+    },
+    {
+      "id": "next800-208",
+      "word": "tail",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 316
+    },
+    {
+      "id": "next800-209",
+      "word": "safe",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 317
+    },
+    {
+      "id": "next800-210",
+      "word": "bear",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 318
+    },
+    {
+      "id": "next800-211",
+      "word": "low",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 320
+    },
+    {
+      "id": "next800-212",
+      "word": "sea",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 325
+    },
+    {
+      "id": "next800-213",
+      "word": "table",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 326
+    },
+    {
+      "id": "next800-214",
+      "word": "box",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 328
+    },
+    {
+      "id": "next800-215",
+      "word": "room",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 330
+    },
+    {
+      "id": "next800-216",
+      "word": "strong",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 331
+    },
+    {
+      "id": "next800-217",
+      "word": "wind",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 332
+    },
+    {
+      "id": "next800-218",
+      "word": "school",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 333
+    },
+    {
+      "id": "next800-219",
+      "word": "rope",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 337
+    },
+    {
+      "id": "next800-220",
+      "word": "wood",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 339
+    },
+    {
+      "id": "next800-221",
+      "word": "fruit",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 344
+    },
+    {
+      "id": "next800-222",
+      "word": "people",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 347
+    },
+    {
+      "id": "next800-223",
+      "word": "window",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 350
+    },
+    {
+      "id": "next800-224",
+      "word": "bridge",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 353
+    },
+    {
+      "id": "next800-225",
+      "word": "camp",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 354
+    },
+    {
+      "id": "next800-226",
+      "word": "sad",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 366
+    },
+    {
+      "id": "next800-227",
+      "word": "star",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 368
+    },
+    {
+      "id": "next800-228",
+      "word": "sound",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 371
+    },
+    {
+      "id": "next800-229",
+      "word": "place",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 372
+    },
+    {
+      "id": "next800-230",
+      "word": "year",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 373
+    },
+    {
+      "id": "next800-231",
+      "word": "brother",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 374
+    },
+    {
+      "id": "next800-232",
+      "word": "thing",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 376
+    },
+    {
+      "id": "next800-233",
+      "word": "name",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 377
+    },
+    {
+      "id": "next800-234",
+      "word": "great",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 379
+    },
+    {
+      "id": "next800-235",
+      "word": "end",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 388
+    },
+    {
+      "id": "next800-236",
+      "word": "large",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 390
+    },
+    {
+      "id": "next800-237",
+      "word": "need",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 395
+    },
+    {
+      "id": "next800-238",
+      "word": "baby",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 396
+    },
+    {
+      "id": "next800-239",
+      "word": "land",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 397
+    },
+    {
+      "id": "next800-240",
+      "word": "different",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 398
+    },
+    {
+      "id": "next800-241",
+      "word": "move",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 399
+    },
+    {
+      "id": "next800-242",
+      "word": "picture",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 400
+    },
+    {
+      "id": "next800-243",
+      "word": "change",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 401
+    },
+    {
+      "id": "next800-244",
+      "word": "apple",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 402
+    },
+    {
+      "id": "next800-245",
+      "word": "air",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 403
+    },
+    {
+      "id": "next800-246",
+      "word": "animal",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 405
+    },
+    {
+      "id": "next800-247",
+      "word": "page",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 407
+    },
+    {
+      "id": "next800-248",
+      "word": "letter",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 408
+    },
+    {
+      "id": "next800-249",
+      "word": "answer",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 409
+    },
+    {
+      "id": "next800-250",
+      "word": "learn",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 412
+    },
+    {
+      "id": "next800-251",
+      "word": "world",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 414
+    },
+    {
+      "id": "next800-252",
+      "word": "high",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 415
+    },
+    {
+      "id": "next800-253",
+      "word": "near",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 416
+    },
+    {
+      "id": "next800-254",
+      "word": "plant",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 421
+    },
+    {
+      "id": "next800-255",
+      "word": "last",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 422
+    },
+    {
+      "id": "next800-256",
+      "word": "eye",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 424
+    },
+    {
+      "id": "next800-257",
+      "word": "thought",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 425
+    },
+    {
+      "id": "next800-258",
+      "word": "head",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 426
+    },
+    {
+      "id": "next800-259",
+      "word": "wild",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 427
+    },
+    {
+      "id": "next800-260",
+      "word": "story",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 428
+    },
+    {
+      "id": "next800-261",
+      "word": "next",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 437
+    },
+    {
+      "id": "next800-262",
+      "word": "hard",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 438
+    },
+    {
+      "id": "next800-263",
+      "word": "begin",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 440
+    },
+    {
+      "id": "next800-264",
+      "word": "life",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 441
+    },
+    {
+      "id": "next800-265",
+      "word": "paper",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 442
+    },
+    {
+      "id": "next800-266",
+      "word": "dress",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 446
+    },
+    {
+      "id": "next800-267",
+      "word": "children",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 450
+    },
+    {
+      "id": "next800-268",
+      "word": "side",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 451
+    },
+    {
+      "id": "next800-269",
+      "word": "began",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 452
+    },
+    {
+      "id": "next800-270",
+      "word": "took",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 453
+    },
+    {
+      "id": "next800-271",
+      "word": "foot",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 454
+    },
+    {
+      "id": "next800-272",
+      "word": "hear",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 457
+    },
+    {
+      "id": "next800-273",
+      "word": "late",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 460
+    },
+    {
+      "id": "next800-274",
+      "word": "face",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 463
+    },
+    {
+      "id": "next800-275",
+      "word": "bed",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 464
+    },
+    {
+      "id": "next800-276",
+      "word": "young",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 469
+    },
+    {
+      "id": "next800-277",
+      "word": "talk",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 470
+    },
+    {
+      "id": "next800-278",
+      "word": "song",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 471
+    },
+    {
+      "id": "next800-279",
+      "word": "leave",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 473
+    },
+    {
+      "id": "next800-280",
+      "word": "mouth",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 474
+    },
+    {
+      "id": "next800-281",
+      "word": "family",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 475
+    },
+    {
+      "id": "next800-282",
+      "word": "afternoon",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 477
+    },
+    {
+      "id": "next800-283",
+      "word": "body",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 478
+    },
+    {
+      "id": "next800-284",
+      "word": "stand",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 480
+    },
+    {
+      "id": "next800-285",
+      "word": "stick",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 482
+    },
+    {
+      "id": "next800-286",
+      "word": "knew",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 486
+    },
+    {
+      "id": "next800-287",
+      "word": "ever",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 488
+    },
+    {
+      "id": "next800-288",
+      "word": "piece",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 489
+    },
+    {
+      "id": "next800-289",
+      "word": "told",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 490
+    },
+    {
+      "id": "next800-290",
+      "word": "easy",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 494
+    },
+    {
+      "id": "next800-291",
+      "word": "heard",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 495
+    },
+    {
+      "id": "next800-292",
+      "word": "caught",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 498
+    },
+    {
+      "id": "next800-293",
+      "word": "fell",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 499
+    },
+    {
+      "id": "next800-294",
+      "word": "sure",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 500
+    },
+    {
+      "id": "next800-295",
+      "word": "become",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 501
+    },
+    {
+      "id": "next800-296",
+      "word": "top",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 502
+    },
+    {
+      "id": "next800-297",
+      "word": "short",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 507
+    },
+    {
+      "id": "next800-298",
+      "word": "fight",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 509
+    },
+    {
+      "id": "next800-299",
+      "word": "whole",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 512
+    },
+    {
+      "id": "next800-300",
+      "word": "remember",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 513
+    },
+    {
+      "id": "next800-301",
+      "word": "early",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 514
+    },
+    {
+      "id": "next800-302",
+      "word": "listen",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 517
+    },
+    {
+      "id": "next800-303",
+      "word": "hit",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 520
+    },
+    {
+      "id": "next800-304",
+      "word": "himself",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 521
+    },
+    {
+      "id": "next800-305",
+      "word": "step",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 523
+    },
+    {
+      "id": "next800-306",
+      "word": "cook",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 524
+    },
+    {
+      "id": "next800-307",
+      "word": "true",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 527
+    },
+    {
+      "id": "next800-308",
+      "word": "grass",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 531
+    },
+    {
+      "id": "next800-309",
+      "word": "slowly",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 535
+    },
+    {
+      "id": "next800-310",
+      "word": "pulled",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 536
+    },
+    {
+      "id": "next800-311",
+      "word": "voice",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 537
+    },
+    {
+      "id": "next800-312",
+      "word": "seen",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 538
+    },
+    {
+      "id": "next800-313",
+      "word": "lost",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 539
+    },
+    {
+      "id": "next800-314",
+      "word": "cried",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 540
+    },
+    {
+      "id": "next800-315",
+      "word": "wait",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 554
+    },
+    {
+      "id": "next800-316",
+      "word": "quickly",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 555
+    },
+    {
+      "id": "next800-317",
+      "word": "person",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 556
+    },
+    {
+      "id": "next800-318",
+      "word": "became",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 557
+    },
+    {
+      "id": "next800-319",
+      "word": "feel",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 562
+    },
+    {
+      "id": "next800-320",
+      "word": "garden",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 564
+    },
+    {
+      "id": "next800-321",
+      "word": "street",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 565
+    },
+    {
+      "id": "next800-322",
+      "word": "meat",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 572
+    },
+    {
+      "id": "next800-323",
+      "word": "nothing",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 575
+    },
+    {
+      "id": "next800-324",
+      "word": "hat",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 576
+    },
+    {
+      "id": "next800-325",
+      "word": "rest",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 577
+    },
+    {
+      "id": "next800-326",
+      "word": "stay",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 581
+    },
+    {
+      "id": "next800-327",
+      "word": "week",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 584
+    },
+    {
+      "id": "next800-328",
+      "word": "ago",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 588
+    },
+    {
+      "id": "next800-329",
+      "word": "stood",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 589
+    },
+    {
+      "id": "next800-330",
+      "word": "brought",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 593
+    },
+    {
+      "id": "next800-331",
+      "word": "understand",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 594
+    },
+    {
+      "id": "next800-332",
+      "word": "dry",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 597
+    },
+    {
+      "id": "next800-333",
+      "word": "deep",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 600
+    },
+    {
+      "id": "next800-334",
+      "word": "clear",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 602
+    },
+    {
+      "id": "next800-335",
+      "word": "nose",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 616
+    },
+    {
+      "id": "next800-336",
+      "word": "heavy",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 618
+    },
+    {
+      "id": "next800-337",
+      "word": "sugar",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 620
+    },
+    {
+      "id": "next800-338",
+      "word": "built",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 623
+    },
+    {
+      "id": "next800-339",
+      "word": "huge",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 624
+    },
+    {
+      "id": "next800-340",
+      "word": "felt",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 628
+    },
+    {
+      "id": "next800-341",
+      "word": "suddenly",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 629
+    },
+    {
+      "id": "next800-342",
+      "word": "ready",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 633
+    },
+    {
+      "id": "next800-343",
+      "word": "anything",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 634
+    },
+    {
+      "id": "next800-344",
+      "word": "swim",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 645
+    },
+    {
+      "id": "next800-345",
+      "word": "wall",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 653
+    },
+    {
+      "id": "next800-346",
+      "word": "legs",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 655
+    },
+    {
+      "id": "next800-347",
+      "word": "angry",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 658
+    },
+    {
+      "id": "next800-348",
+      "word": "branch",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 663
+    },
+    {
+      "id": "next800-349",
+      "word": "brave",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 664
+    },
+    {
+      "id": "next800-350",
+      "word": "leaf",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 361
+    },
+    {
+      "id": "next800-351",
+      "word": "mud",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 711
+    },
+    {
+      "id": "next800-352",
+      "word": "path",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 713
+    },
+    {
+      "id": "next800-353",
+      "word": "rescue",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 722
+    },
+    {
+      "id": "next800-354",
+      "word": "scared",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 727
+    },
+    {
+      "id": "next800-355",
+      "word": "sat",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 755
+    },
+    {
+      "id": "next800-356",
+      "word": "winter",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 757
+    },
+    {
+      "id": "next800-357",
+      "word": "kept",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 762
+    },
+    {
+      "id": "next800-358",
+      "word": "beautiful",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 767
+    },
+    {
+      "id": "next800-359",
+      "word": "sign",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 772
+    },
+    {
+      "id": "next800-360",
+      "word": "finished",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 774
+    },
+    {
+      "id": "next800-361",
+      "word": "gone",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 777
+    },
+    {
+      "id": "next800-362",
+      "word": "glass",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 778
+    },
+    {
+      "id": "next800-363",
+      "word": "weather",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 781
+    },
+    {
+      "id": "next800-364",
+      "word": "meet",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 782
+    },
+    {
+      "id": "next800-365",
+      "word": "soft",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 786
+    },
+    {
+      "id": "next800-366",
+      "word": "held",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 788
+    },
+    {
+      "id": "next800-367",
+      "word": "speak",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 792
+    },
+    {
+      "id": "next800-368",
+      "word": "son",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 795
+    },
+    {
+      "id": "next800-369",
+      "word": "ice",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 797
+    },
+    {
+      "id": "next800-370",
+      "word": "jumped",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 798
+    },
+    {
+      "id": "next800-371",
+      "word": "care",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 799
+    },
+    {
+      "id": "next800-372",
+      "word": "floor",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 800
+    },
+    {
+      "id": "next800-373",
+      "word": "pushed",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 801
+    },
+    {
+      "id": "next800-374",
+      "word": "everything",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 803
+    },
+    {
+      "id": "next800-375",
+      "word": "tall",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 804
+    },
+    {
+      "id": "next800-376",
+      "word": "evening",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 809
+    },
+    {
+      "id": "next800-377",
+      "word": "hope",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 811
+    },
+    {
+      "id": "next800-378",
+      "word": "spring",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 812
+    },
+    {
+      "id": "next800-379",
+      "word": "laughed",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 814
+    },
+    {
+      "id": "next800-380",
+      "word": "bright",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 817
+    },
+    {
+      "id": "next800-381",
+      "word": "everyone",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 819
+    },
+    {
+      "id": "next800-382",
+      "word": "hair",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 821
+    },
+    {
+      "id": "next800-383",
+      "word": "broken",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 824
+    },
+    {
+      "id": "next800-384",
+      "word": "moment",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 825
+    },
+    {
+      "id": "next800-385",
+      "word": "tiny",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 826
+    },
+    {
+      "id": "next800-386",
+      "word": "quiet",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 828
+    },
+    {
+      "id": "next800-387",
+      "word": "lot",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 830
+    },
+    {
+      "id": "next800-388",
+      "word": "middle",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 833
+    },
+    {
+      "id": "next800-389",
+      "word": "someone",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 836
+    },
+    {
+      "id": "next800-390",
+      "word": "wonder",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 838
+    },
+    {
+      "id": "next800-391",
+      "word": "smiled",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 839
+    },
+    {
+      "id": "next800-392",
+      "word": "trip",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 842
+    },
+    {
+      "id": "next800-393",
+      "word": "hole",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 843
+    },
+    {
+      "id": "next800-394",
+      "word": "surprise",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 846
+    },
+    {
+      "id": "next800-395",
+      "word": "cake",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 857
+    },
+    {
+      "id": "next800-396",
+      "word": "deer",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 859
+    },
+    {
+      "id": "next800-397",
+      "word": "flower",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 860
+    },
+    {
+      "id": "next800-398",
+      "word": "frog",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 861
+    },
+    {
+      "id": "next800-399",
+      "word": "rabbit",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 865
+    },
+    {
+      "id": "next800-400",
+      "word": "wolf",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 867
+    },
+    {
+      "id": "next800-401",
+      "word": "catch",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 869
+    },
+    {
+      "id": "next800-402",
+      "word": "climbed",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 870
+    },
+    {
+      "id": "next800-403",
+      "word": "wrote",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 871
+    },
+    {
+      "id": "next800-404",
+      "word": "shouted",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 872
+    },
+    {
+      "id": "next800-405",
+      "word": "else",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 875
+    },
+    {
+      "id": "next800-406",
+      "word": "ears",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 881
+    },
+    {
+      "id": "next800-407",
+      "word": "grew",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 883
+    },
+    {
+      "id": "next800-408",
+      "word": "cool",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 886
+    },
+    {
+      "id": "next800-409",
+      "word": "sent",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 887
+    },
+    {
+      "id": "next800-410",
+      "word": "wear",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 889
+    },
+    {
+      "id": "next800-411",
+      "word": "bad",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 890
+    },
+    {
+      "id": "next800-412",
+      "word": "alone",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 891
+    },
+    {
+      "id": "next800-413",
+      "word": "drawing",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 892
+    },
+    {
+      "id": "next800-414",
+      "word": "touch",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 896
+    },
+    {
+      "id": "next800-415",
+      "word": "party",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 902
+    },
+    {
+      "id": "next800-416",
+      "word": "woman",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 905
+    },
+    {
+      "id": "next800-417",
+      "word": "choose",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 909
+    },
+    {
+      "id": "next800-418",
+      "word": "sand",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 927
+    },
+    {
+      "id": "next800-419",
+      "word": "guess",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 935
+    },
+    {
+      "id": "next800-420",
+      "word": "crowd",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 938
+    },
+    {
+      "id": "next800-421",
+      "word": "poem",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 939
+    },
+    {
+      "id": "next800-422",
+      "word": "enjoy",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 940
+    },
+    {
+      "id": "next800-423",
+      "word": "fun",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 955
+    },
+    {
+      "id": "next800-424",
+      "word": "send",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 963
+    },
+    {
+      "id": "next800-425",
+      "word": "sister",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 991
+    },
+    {
+      "id": "next800-426",
+      "word": "pick",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 992
+    },
+    {
+      "id": "next800-427",
+      "word": "laugh",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 994
+    },
+    {
+      "id": "next800-428",
+      "word": "hurt",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 996
+    },
+    {
+      "id": "next800-429",
+      "word": "funny",
+      "group": "Everyday story essentials",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 999
+    },
+    {
+      "id": "next800-430",
+      "word": "mum",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-431",
+      "word": "parents",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-432",
+      "word": "grandma",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-433",
+      "word": "grandpa",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-434",
+      "word": "aunt",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-435",
+      "word": "cousin",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-436",
+      "word": "teacher",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-437",
+      "word": "classroom",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-438",
+      "word": "lesson",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-439",
+      "word": "homework",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-440",
+      "word": "pencil",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-441",
+      "word": "pen",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-442",
+      "word": "ruler",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-443",
+      "word": "bag",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-444",
+      "word": "lunch",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-445",
+      "word": "breakfast",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-446",
+      "word": "dinner",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-447",
+      "word": "snack",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-448",
+      "word": "bread",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-449",
+      "word": "butter",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-450",
+      "word": "cheese",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-451",
+      "word": "sandwich",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-452",
+      "word": "soup",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-453",
+      "word": "rice",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-454",
+      "word": "potato",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-455",
+      "word": "tomato",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-456",
+      "word": "carrot",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-457",
+      "word": "bean",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-458",
+      "word": "banana",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-459",
+      "word": "orange",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-460",
+      "word": "lemon",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-461",
+      "word": "pear",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-462",
+      "word": "chocolate",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-463",
+      "word": "biscuit",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-464",
+      "word": "cookie",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-465",
+      "word": "sweet",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-466",
+      "word": "honey",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-467",
+      "word": "salt",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-468",
+      "word": "juice",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-469",
+      "word": "cup",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-470",
+      "word": "plate",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-471",
+      "word": "bowl",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-472",
+      "word": "spoon",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-473",
+      "word": "fork",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-474",
+      "word": "knife",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-475",
+      "word": "bottle",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-476",
+      "word": "kitchen",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-477",
+      "word": "bedroom",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-478",
+      "word": "bathroom",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-479",
+      "word": "toilet",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-480",
+      "word": "bath",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-481",
+      "word": "shower",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-482",
+      "word": "towel",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-483",
+      "word": "soap",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-484",
+      "word": "brush",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-485",
+      "word": "tooth",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-486",
+      "word": "teeth",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-487",
+      "word": "shirt",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-488",
+      "word": "coat",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-489",
+      "word": "jacket",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-490",
+      "word": "trousers",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-491",
+      "word": "skirt",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-492",
+      "word": "sock",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-493",
+      "word": "shoe",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-494",
+      "word": "boot",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-495",
+      "word": "pocket",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-496",
+      "word": "toy",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-497",
+      "word": "doll",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-498",
+      "word": "teddy",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-499",
+      "word": "puzzle",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-500",
+      "word": "present",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 766
+    },
+    {
+      "id": "next800-501",
+      "word": "birthday",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-502",
+      "word": "balloon",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-503",
+      "word": "candle",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 858
+    },
+    {
+      "id": "next800-504",
+      "word": "picnic",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-505",
+      "word": "beach",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-506",
+      "word": "holiday",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-507",
+      "word": "zoo",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-508",
+      "word": "park",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 970
+    },
+    {
+      "id": "next800-509",
+      "word": "playground",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-510",
+      "word": "swing",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-511",
+      "word": "slide",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-512",
+      "word": "football",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-513",
+      "word": "swimming",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-514",
+      "word": "bicycle",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-515",
+      "word": "bike",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-516",
+      "word": "bus",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 951
+    },
+    {
+      "id": "next800-517",
+      "word": "train",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 319
+    },
+    {
+      "id": "next800-518",
+      "word": "truck",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-519",
+      "word": "plane",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-520",
+      "word": "driver",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-521",
+      "word": "station",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-522",
+      "word": "ticket",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-523",
+      "word": "wheel",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-524",
+      "word": "engine",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-525",
+      "word": "hospital",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-526",
+      "word": "doctor",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 391
+    },
+    {
+      "id": "next800-527",
+      "word": "nurse",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-528",
+      "word": "shop",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 614
+    },
+    {
+      "id": "next800-529",
+      "word": "money",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-530",
+      "word": "price",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-531",
+      "word": "pay",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 894
+    },
+    {
+      "id": "next800-532",
+      "word": "bought",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-533",
+      "word": "sell",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 971
+    },
+    {
+      "id": "next800-534",
+      "word": "farmer",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-535",
+      "word": "hen",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-536",
+      "word": "duck",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-537",
+      "word": "sheep",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-538",
+      "word": "cow",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-539",
+      "word": "goat",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-540",
+      "word": "pony",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-541",
+      "word": "mouse",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-542",
+      "word": "mice",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-543",
+      "word": "kitten",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-544",
+      "word": "puppy",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-545",
+      "word": "pet",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-546",
+      "word": "elephant",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-547",
+      "word": "monkey",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-548",
+      "word": "tiger",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-549",
+      "word": "whale",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-550",
+      "word": "spider",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-551",
+      "word": "ant",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-552",
+      "word": "bee",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-553",
+      "word": "butterfly",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-554",
+      "word": "snail",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-555",
+      "word": "worm",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-556",
+      "word": "squirrel",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-557",
+      "word": "nest",
+      "group": "Home, family, food and school",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 363
+    },
+    {
+      "id": "next800-558",
+      "word": "chick",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-559",
+      "word": "lamb",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-560",
+      "word": "cub",
+      "group": "Home, family, food and school",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-561",
+      "word": "asked",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-562",
+      "word": "says",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-563",
+      "word": "talking",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-564",
+      "word": "call",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 213
+    },
+    {
+      "id": "next800-565",
+      "word": "called",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-566",
+      "word": "looked",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-567",
+      "word": "looking",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-568",
+      "word": "watch",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 310
+    },
+    {
+      "id": "next800-569",
+      "word": "search",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-570",
+      "word": "hide",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-571",
+      "word": "hid",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-572",
+      "word": "hidden",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-573",
+      "word": "coming",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-574",
+      "word": "running",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-575",
+      "word": "walked",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-576",
+      "word": "walking",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-577",
+      "word": "jumping",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-578",
+      "word": "hop",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-579",
+      "word": "skip",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-580",
+      "word": "climb",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-581",
+      "word": "stopped",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-582",
+      "word": "sitting",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-583",
+      "word": "lie",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 953
+    },
+    {
+      "id": "next800-584",
+      "word": "lay",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 780
+    },
+    {
+      "id": "next800-585",
+      "word": "sleeping",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-586",
+      "word": "slept",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-587",
+      "word": "wake",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-588",
+      "word": "woke",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-589",
+      "word": "awake",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-590",
+      "word": "drank",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-591",
+      "word": "taken",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-592",
+      "word": "given",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-593",
+      "word": "making",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-594",
+      "word": "doing",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-595",
+      "word": "getting",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-596",
+      "word": "carrying",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-597",
+      "word": "turn",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 394
+    },
+    {
+      "id": "next800-598",
+      "word": "turned",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-599",
+      "word": "push",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-600",
+      "word": "opened",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-601",
+      "word": "close",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 433
+    },
+    {
+      "id": "next800-602",
+      "word": "closed",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-603",
+      "word": "smile",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-604",
+      "word": "cry",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-605",
+      "word": "shout",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-606",
+      "word": "whisper",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-607",
+      "word": "whispered",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-608",
+      "word": "listening",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-609",
+      "word": "wanted",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-610",
+      "word": "played",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-611",
+      "word": "playing",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-612",
+      "word": "finish",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-613",
+      "word": "tried",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-614",
+      "word": "bake",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-615",
+      "word": "drew",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-616",
+      "word": "writing",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-617",
+      "word": "reading",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-618",
+      "word": "build",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 832
+    },
+    {
+      "id": "next800-619",
+      "word": "break",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 918
+    },
+    {
+      "id": "next800-620",
+      "word": "broke",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-621",
+      "word": "fallen",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-622",
+      "word": "flew",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-623",
+      "word": "flying",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-624",
+      "word": "swam",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-625",
+      "word": "rode",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-626",
+      "word": "drive",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 790
+    },
+    {
+      "id": "next800-627",
+      "word": "drove",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-628",
+      "word": "throw",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-629",
+      "word": "threw",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-630",
+      "word": "kick",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-631",
+      "word": "follow",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 384
+    },
+    {
+      "id": "next800-632",
+      "word": "followed",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-633",
+      "word": "lead",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 818
+    },
+    {
+      "id": "next800-634",
+      "word": "led",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-635",
+      "word": "met",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-636",
+      "word": "win",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-637",
+      "word": "won",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-638",
+      "word": "lose",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-639",
+      "word": "thinking",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-640",
+      "word": "known",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 582
+    },
+    {
+      "id": "next800-641",
+      "word": "feeling",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 923
+    },
+    {
+      "id": "next800-642",
+      "word": "forget",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-643",
+      "word": "forgot",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-644",
+      "word": "believe",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 638
+    },
+    {
+      "id": "next800-645",
+      "word": "seem",
+      "group": "Actions and word families",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 435
+    },
+    {
+      "id": "next800-646",
+      "word": "seemed",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-647",
+      "word": "join",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-648",
+      "word": "share",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-649",
+      "word": "shared",
+      "group": "Actions and word families",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-650",
+      "word": "bigger",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-651",
+      "word": "biggest",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-652",
+      "word": "worse",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-653",
+      "word": "worst",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-654",
+      "word": "afraid",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-655",
+      "word": "worried",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-656",
+      "word": "lonely",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-657",
+      "word": "excited",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-658",
+      "word": "tired",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-659",
+      "word": "sleepy",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-660",
+      "word": "hungry",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-661",
+      "word": "thirsty",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-662",
+      "word": "ill",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-663",
+      "word": "sick",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-664",
+      "word": "shy",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-665",
+      "word": "proud",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-666",
+      "word": "silly",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-667",
+      "word": "friendly",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-668",
+      "word": "gentle",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-669",
+      "word": "careful",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-670",
+      "word": "lovely",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-671",
+      "word": "dirty",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-672",
+      "word": "messy",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-673",
+      "word": "tidy",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-674",
+      "word": "noisy",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-675",
+      "word": "rough",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-676",
+      "word": "smooth",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-677",
+      "word": "empty",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-678",
+      "word": "weak",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-679",
+      "word": "fresh",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-680",
+      "word": "square",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 341
+    },
+    {
+      "id": "next800-681",
+      "word": "silver",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-682",
+      "word": "pink",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-683",
+      "word": "purple",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-684",
+      "word": "grey",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-685",
+      "word": "everybody",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-686",
+      "word": "nobody",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-687",
+      "word": "somebody",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-688",
+      "word": "anyone",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-689",
+      "word": "something",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 434
+    },
+    {
+      "id": "next800-690",
+      "word": "somewhere",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-691",
+      "word": "anywhere",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-692",
+      "word": "everywhere",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-693",
+      "word": "lots",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-694",
+      "word": "really",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-695",
+      "word": "nearly",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-696",
+      "word": "often",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 447
+    },
+    {
+      "id": "next800-697",
+      "word": "usually",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 492
+    },
+    {
+      "id": "next800-698",
+      "word": "finally",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 553
+    },
+    {
+      "id": "next800-699",
+      "word": "later",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-700",
+      "word": "yesterday",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-701",
+      "word": "tomorrow",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-702",
+      "word": "tonight",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-703",
+      "word": "midnight",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-704",
+      "word": "weekend",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-705",
+      "word": "month",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-706",
+      "word": "season",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-707",
+      "word": "summer",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 652
+    },
+    {
+      "id": "next800-708",
+      "word": "autumn",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-709",
+      "word": "Monday",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-710",
+      "word": "Tuesday",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-711",
+      "word": "Wednesday",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-712",
+      "word": "Thursday",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-713",
+      "word": "Friday",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-714",
+      "word": "Saturday",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-715",
+      "word": "Sunday",
+      "group": "Descriptions, feelings and story connections",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-716",
+      "word": "rainy",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-717",
+      "word": "sunny",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-718",
+      "word": "windy",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-719",
+      "word": "fog",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-720",
+      "word": "thunder",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-721",
+      "word": "lightning",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-722",
+      "word": "rainbow",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-723",
+      "word": "space",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-724",
+      "word": "ocean",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 348
+    },
+    {
+      "id": "next800-725",
+      "word": "pond",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 364
+    },
+    {
+      "id": "next800-726",
+      "word": "stream",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 327
+    },
+    {
+      "id": "next800-727",
+      "word": "waterfall",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 750
+    },
+    {
+      "id": "next800-728",
+      "word": "wave",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-729",
+      "word": "island",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 351
+    },
+    {
+      "id": "next800-730",
+      "word": "dirt",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-731",
+      "word": "leaves",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 704
+    },
+    {
+      "id": "next800-732",
+      "word": "root",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 436
+    },
+    {
+      "id": "next800-733",
+      "word": "trunk",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-734",
+      "word": "bark",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-735",
+      "word": "seed",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-736",
+      "word": "bush",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 856
+    },
+    {
+      "id": "next800-737",
+      "word": "woods",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 754
+    },
+    {
+      "id": "next800-738",
+      "word": "city",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 423
+    },
+    {
+      "id": "next800-739",
+      "word": "country",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 420
+    },
+    {
+      "id": "next800-740",
+      "word": "yard",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 476
+    },
+    {
+      "id": "next800-741",
+      "word": "fence",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-742",
+      "word": "roof",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-743",
+      "word": "stair",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-744",
+      "word": "tent",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 369
+    },
+    {
+      "id": "next800-745",
+      "word": "barn",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 854
+    },
+    {
+      "id": "next800-746",
+      "word": "tunnel",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-747",
+      "word": "net",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-748",
+      "word": "torch",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 742
+    },
+    {
+      "id": "next800-749",
+      "word": "flame",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 684
+    },
+    {
+      "id": "next800-750",
+      "word": "smoke",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-751",
+      "word": "den",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 356
+    },
+    {
+      "id": "next800-752",
+      "word": "fur",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 688
+    },
+    {
+      "id": "next800-753",
+      "word": "shell",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 367
+    },
+    {
+      "id": "next800-754",
+      "word": "creature",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 674
+    },
+    {
+      "id": "next800-755",
+      "word": "monster",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 708
+    },
+    {
+      "id": "next800-756",
+      "word": "giant",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 690
+    },
+    {
+      "id": "next800-757",
+      "word": "witch",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 370
+    },
+    {
+      "id": "next800-758",
+      "word": "fairy",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 358
+    },
+    {
+      "id": "next800-759",
+      "word": "knight",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 701
+    },
+    {
+      "id": "next800-760",
+      "word": "prince",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 718
+    },
+    {
+      "id": "next800-761",
+      "word": "princess",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 719
+    },
+    {
+      "id": "next800-762",
+      "word": "hero",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 696
+    },
+    {
+      "id": "next800-763",
+      "word": "crown",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 355
+    },
+    {
+      "id": "next800-764",
+      "word": "gold",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 314
+    },
+    {
+      "id": "next800-765",
+      "word": "adventure",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-766",
+      "word": "journey",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-767",
+      "word": "problem",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 484
+    },
+    {
+      "id": "next800-768",
+      "word": "plan",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 541
+    },
+    {
+      "id": "next800-769",
+      "word": "idea",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 461
+    },
+    {
+      "id": "next800-770",
+      "word": "clue",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-771",
+      "word": "secret",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-772",
+      "word": "mistake",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-773",
+      "word": "trouble",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 885
+    },
+    {
+      "id": "next800-774",
+      "word": "trap",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-775",
+      "word": "trick",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-776",
+      "word": "escape",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-777",
+      "word": "enemy",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 681
+    },
+    {
+      "id": "next800-778",
+      "word": "group",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 445
+    },
+    {
+      "id": "next800-779",
+      "word": "women",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-780",
+      "word": "word",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 336
+    },
+    {
+      "id": "next800-781",
+      "word": "sentence",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 378
+    },
+    {
+      "id": "next800-782",
+      "word": "cover",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-783",
+      "word": "title",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-784",
+      "word": "music",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 312
+    },
+    {
+      "id": "next800-785",
+      "word": "question",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-786",
+      "word": "meaning",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-787",
+      "word": "beginning",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-788",
+      "word": "ending",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-789",
+      "word": "chapter",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-790",
+      "word": "fact",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 563
+    },
+    {
+      "id": "next800-791",
+      "word": "false",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-792",
+      "word": "real",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 465
+    },
+    {
+      "id": "next800-793",
+      "word": "pretend",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-794",
+      "word": "dream",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-795",
+      "word": "reason",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 761
+    },
+    {
+      "id": "next800-796",
+      "word": "although",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 823
+    },
+    {
+      "id": "next800-797",
+      "word": "however",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 508
+    },
+    {
+      "id": "next800-798",
+      "word": "unless",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Editorial addition for beginner books or written numbers",
+      "original_workbook_rank": null
+    },
+    {
+      "id": "next800-799",
+      "word": "whether",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 787
+    },
+    {
+      "id": "next800-800",
+      "word": "whose",
+      "group": "Nature, places, adventure and reading",
+      "selection": "Retained from original 1000",
+      "original_workbook_rank": 911
+    }
+  ]
+}

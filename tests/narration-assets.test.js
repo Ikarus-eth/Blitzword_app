@@ -22,8 +22,8 @@ test('recovered runtime covers all current approved words, teaching and correcti
   if(fallbackOnly.has(text))assert.equal(manifest.clips[text],undefined,text);
   else assert.ok(manifest.clips[text],text);
  };
- for(const item of [...C.words,...C.legacyWords,...C.assessmentPools.flat()])presentOrFallback(item.w);
- for(const item of [...C.words,...C.legacyWords]){
+ for(const item of [...C.coreWords,...C.legacyWords,...C.assessmentPools.flat()])presentOrFallback(item.w);
+ for(const item of [...C.coreWords,...C.legacyWords]){
   presentOrFallback(item.sentence);presentOrFallback('Practice turn. You keep your heart. '+item.sentence);
   presentOrFallback('The word was '+item.w+'.');presentOrFallback('Practice turn. You keep your heart. The word was '+item.w+'.');
  }

@@ -83,7 +83,7 @@ test('learning ahead does not waive the ten-minute minimum, learning objectives 
 
 test('post-story review remains available without previewing beyond the curriculum',()=>{
   const s=field(34);s.story.clearedAreas=Content.areas.map(a=>a.id);s.story.completedChapters=Content.chapters.map(c=>c.id);
-  s.learning.words.on.dueAt=NOW-1;Core.startBattle(s,NOW,{strength:300});
+  s.learning.words.on.dueAt=NOW-1;s.learning.sequence=2;Core.startBattle(s,NOW,{strength:300});
   assert.equal(next(s).target,'on');assert.equal(next(s).practiceKind,'review');
 });
 
@@ -162,6 +162,7 @@ test('adaptation preserves pending questions, chosen speeds, locked modes and th
 });
 test('all-known curriculum offers bounded review without throwing or silently accelerating',()=>{
   const s=field(34);history(s,20);const before=Core.copy(s.settings);
+  for(const item of Content.words)Object.assign(s.learning.words[item.w],{introducedAt:new Date(NOW).toISOString(),practiceSuccesses:2,dueAt:NOW+DAY});
   for(let i=0;i<20;i++){const q=answer(s,NOW+i*8000);assert.equal(q.practiceKind,'comfort');assert.ok(Content.words.some(w=>w.w===q.target));}
   assert.deepEqual(s.settings,before);
 });

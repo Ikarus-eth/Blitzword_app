@@ -11,7 +11,7 @@
   // Raw history kept in the save. Older entries roll into s.archive totals so the save stays small.
   const HISTORY_LIMITS = {answers:500,teaching:200,support:200,sessions:50,duels:30};
   const GAP_DAYS = [1,3,7,14,30];
-  const byWord = Object.fromEntries([...Content.words,...Content.legacyWords].map(item => [item.w,item]));
+  const byWord = Object.fromEntries([...Content.legacyWords,...Content.words].map(item => [item.w,item]));
   const iso = now => new Date(now).toISOString();
   const copy = value => JSON.parse(JSON.stringify(value));
   function fresh() {
@@ -27,7 +27,50 @@
       settings:{selfPaced:false,speed:null,soundscape:true}, activity:'route', screen:'setup', battle:null,
       teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false, archive:archiveBase()};
   }
+  // Lossless row tables store repeated per-word field names once. In-memory
+  // state and exported backups remain ordinary schema-2 objects.
+  function packSave(state){
+    const result=copy(unpackSave(state)),schemas=[],schemaIds=new Map();
+    for(const [container,key] of [[result.learning,'words'],[result.learning,'dailyPractice'],[result.archive,'words']]){
+      if(!container?.[key])continue;
+      const rows={};
+      for(const [word,record] of Object.entries(container[key])){
+        const keys=Object.keys(record),signature=JSON.stringify(keys);
+        if(!schemaIds.has(signature)){schemaIds.set(signature,schemas.length);schemas.push(keys);}
+        rows[word]=[schemaIds.get(signature),...keys.map(k=>record[k])];
+      }
+      container[key]=rows;
+    }
+    const arrays=[];
+    for(const [parent,key] of [['campaign','battleRecords'],['learning','teaching'],['learning','supportExposures']]){
+      const records=result[parent]?.[key];if(!Array.isArray(records)||!records.every(r=>r&&typeof r==='object'&&!Array.isArray(r)))continue;
+      result[parent][key]=records.map(record=>{const keys=Object.keys(record),signature=JSON.stringify(keys);if(!schemaIds.has(signature)){schemaIds.set(signature,schemas.length);schemas.push(keys);}return [schemaIds.get(signature),...keys.map(k=>record[k])];});arrays.push([parent,key]);
+    }
+    result.schemaVersion=3;result.wordTables={version:1,schemas,arrays};return result;
+  }
+  function unpackSave(saved){
+    if(!saved?.wordTables){if(saved?.schemaVersion>2)throw new Error('Unsupported save version');return saved;}
+    if(saved.schemaVersion!==3||saved.wordTables.version!==1||!Array.isArray(saved.wordTables.schemas))throw new Error('Unsupported word tables');
+    const result=copy(saved),schemas=result.wordTables.schemas;
+    for(const [container,key] of [[result.learning,'words'],[result.learning,'dailyPractice'],[result.archive,'words']]){
+      if(!container?.[key])continue;
+      const words={};
+      for(const [word,row] of Object.entries(container[key])){
+        const keys=Array.isArray(row)&&schemas[row[0]];
+        if(!Array.isArray(keys)||row.length!==keys.length+1||keys.some(k=>typeof k!=='string'||['__proto__','constructor','prototype'].includes(k)))throw new Error('Invalid word table');
+        Object.defineProperty(words,word,{value:Object.fromEntries(keys.map((k,i)=>[k,row[i+1]])),enumerable:true,writable:true,configurable:true});
+      }
+      container[key]=words;
+    }
+    for(const path of result.wordTables.arrays||[]){
+      if(!Array.isArray(path)||path.length!==2||!['campaign.battleRecords','learning.teaching','learning.supportExposures'].includes(path.join('.')))throw new Error('Invalid event table');
+      const [parent,key]=path;if(!Array.isArray(result[parent]?.[key]))throw new Error('Invalid event table');
+      result[parent][key]=result[parent][key].map(row=>{const keys=Array.isArray(row)&&schemas[row[0]];if(!Array.isArray(keys)||row.length!==keys.length+1||keys.some(k=>typeof k!=='string'||['__proto__','constructor','prototype'].includes(k)))throw new Error('Invalid event row');return Object.fromEntries(keys.map((k,i)=>[k,row[i+1]]));});
+    }
+    delete result.wordTables;result.schemaVersion=2;return result;
+  }
   function migrate(old) {
+    old=unpackSave(old);
     if (!old || typeof old !== 'object' || Array.isArray(old)) throw new Error('Invalid saved adventure');
     const base = fresh();
     const s = {...base,...copy(old)};
@@ -1111,7 +1154,7 @@
       q.phase='ready';
     }
   }
-  return {Adventure,recordRiddleTime,checkRiddle,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
+  return {packSave,unpackSave,Adventure,recordRiddleTime,checkRiddle,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,canRequestBattleHelp,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
