@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": "Snow Owl",
+    "description": "White feathered owl with amber eyes and subtle frosted wing tips",
+    "sheet": 1,
+    "slot": 0,
+    "shortlist": true,
+    "overlap": "Requested white owl; closest existing family: Hollow Owl."
+  },
+  {
+    "id": 2,
+    "name": "Bramble Badger",
+    "description": "Stocky badger with thorn shoulder mantle",
+    "sheet": 1,
+    "slot": 1,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 3,
+    "name": "Ember Fox",
+    "description": "Russet fox with glowing tail tip",
+    "sheet": 1,
+    "slot": 2,
+    "shortlist": false,
+    "overlap": "Canine silhouette overlaps Fern Wolf; not shortlisted."
+  },
+  {
+    "id": 4,
+    "name": "Rowan Stag",
+    "description": "Stag with berry laden branch antlers",
+    "sheet": 1,
+    "slot": 3,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 5,
+    "name": "Thistle Hedgehog",
+    "description": "Hedgehog with thistle spines",
+    "sheet": 1,
+    "slot": 4,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 6,
+    "name": "Pine Marten",
+    "description": "Marten with pine cone neck ruff",
+    "sheet": 1,
+    "slot": 5,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 7,
+    "name": "Hazel Hare",
+    "description": "Long eared hare in hazel leaf cape",
+    "sheet": 1,
+    "slot": 6,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 8,
+    "name": "Cloak Raccoon",
+    "description": "Raccoon with bark buckler",
+    "sheet": 1,
+    "slot": 7,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 9,
+    "name": "Chestnut Squirrel",
+    "description": "Squirrel with huge curled leaf tail",
+    "sheet": 1,
+    "slot": 8,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 10,
+    "name": "Moss Bear",
+    "description": "Bear with moss shoulders",
+    "sheet": 1,
+    "slot": 9,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 11,
+    "name": "Lily Otter",
+    "description": "Otter with lily leaf collar",
+    "sheet": 2,
+    "slot": 0,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 12,
+    "name": "Dam Beaver",
+    "description": "Beaver with driftwood armour",
+    "sheet": 2,
+    "slot": 1,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 13,
+    "name": "Amber Newt",
+    "description": "Newt with warm glowing spotted skin",
+    "sheet": 2,
+    "slot": 2,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 14,
+    "name": "Cattail Heron",
+    "description": "Tall heron with reed plumage",
+    "sheet": 2,
+    "slot": 3,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 15,
+    "name": "Brook Turtle",
+    "description": "Turtle with river stone shell",
+    "sheet": 2,
+    "slot": 4,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 16,
+    "name": "Willow Kingfisher",
+    "description": "Blue kingfisher with willow crown",
+    "sheet": 2,
+    "slot": 5,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 17,
+    "name": "Silver Pike",
+    "description": "Floating magical pike with silver fins",
+    "sheet": 2,
+    "slot": 6,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 18,
+    "name": "Ripple Salamander",
+    "description": "Blue salamander with water ribbon tail",
+    "sheet": 2,
+    "slot": 7,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 19,
+    "name": "Shell Lobster",
+    "description": "Freshwater lobster wearing old shells",
+    "sheet": 2,
+    "slot": 8,
+    "shortlist": false,
+    "overlap": "Clawed shell creature overlaps Crystal Crab; not shortlisted."
+  },
+  {
+    "id": 20,
+    "name": "Marsh Crane",
+    "description": "Crane with purple marsh flower crest",
+    "sheet": 2,
+    "slot": 9,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 21,
+    "name": "Coal Salamander",
+    "description": "Black salamander with orange cracks",
+    "sheet": 3,
+    "slot": 0,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 22,
+    "name": "Quartz Mole",
+    "description": "Mole with quartz digging claws",
+    "sheet": 3,
+    "slot": 1,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 23,
+    "name": "Copper Scorpion",
+    "description": "Rounded scorpion with copper armour",
+    "sheet": 3,
+    "slot": 2,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 24,
+    "name": "Lantern Gecko",
+    "description": "Gecko with golden glowing throat",
+    "sheet": 3,
+    "slot": 3,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 25,
+    "name": "Slate Pangolin",
+    "description": "Pangolin with overlapping slate scales",
+    "sheet": 3,
+    "slot": 4,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 26,
+    "name": "Cinder Porcupine",
+    "description": "Porcupine with ember tipped quills",
+    "sheet": 3,
+    "slot": 5,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 27,
+    "name": "Gem Spider",
+    "description": "Eight legged spider with small jewel abdomen",
+    "sheet": 3,
+    "slot": 6,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 28,
+    "name": "Echo Lizard",
+    "description": "Cave lizard with fan shaped ears",
+    "sheet": 3,
+    "slot": 7,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 29,
+    "name": "Flint Armadillo",
+    "description": "Armadillo with flint plated shell",
+    "sheet": 3,
+    "slot": 8,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 30,
+    "name": "Ore Ant",
+    "description": "Large ant with iron mineral carapace",
+    "sheet": 3,
+    "slot": 9,
+    "shortlist": false,
+    "overlap": "Armoured insect overlaps Bark Beetle; not shortlisted."
+  },
+  {
+    "id": 31,
+    "name": "Frost Lynx",
+    "description": "Lynx with frosted ear tufts",
+    "sheet": 4,
+    "slot": 0,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 32,
+    "name": "Aurora Elk",
+    "description": "Elk with faint aurora flowing between antlers",
+    "sheet": 4,
+    "slot": 1,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 33,
+    "name": "Snow Hare",
+    "description": "White hare with crystal whiskers",
+    "sheet": 4,
+    "slot": 2,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 34,
+    "name": "Cloud Yak",
+    "description": "Yak with soft cloudlike wool",
+    "sheet": 4,
+    "slot": 3,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 35,
+    "name": "Pinecone Marmot",
+    "description": "Marmot with pinecone shoulder armour",
+    "sheet": 4,
+    "slot": 4,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 36,
+    "name": "Gale Falcon",
+    "description": "Falcon with wind swept silver feathers",
+    "sheet": 4,
+    "slot": 5,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 37,
+    "name": "Lichen Ibex",
+    "description": "Ibex with lichen encrusted curved horns",
+    "sheet": 4,
+    "slot": 6,
+    "shortlist": false,
+    "overlap": "Horned mountain creature overlaps Stone Ram; not shortlisted."
+  },
+  {
+    "id": 38,
+    "name": "Hail Wolverine",
+    "description": "Wolverine with icy back plates",
+    "sheet": 4,
+    "slot": 7,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 39,
+    "name": "Mist Leopard",
+    "description": "Clouded leopard with mist edged tail",
+    "sheet": 4,
+    "slot": 8,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 40,
+    "name": "Glacier Seal",
+    "description": "Seal with smooth pale blue ice mantle",
+    "sheet": 4,
+    "slot": 9,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 41,
+    "name": "Ink Raven",
+    "description": "Raven with ink tipped wings and scroll charm",
+    "sheet": 5,
+    "slot": 0,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 42,
+    "name": "Bramble Peacock",
+    "description": "Peacock with leafy eye pattern tail",
+    "sheet": 5,
+    "slot": 1,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 43,
+    "name": "Bell Tortoise",
+    "description": "Tortoise with old bronze bell shell",
+    "sheet": 5,
+    "slot": 2,
+    "shortlist": false,
+    "overlap": "Shell-armour idea overlaps Snail Knight; not shortlisted."
+  },
+  {
+    "id": 44,
+    "name": "Honey Wasp",
+    "description": "Wasp with amber honey armour",
+    "sheet": 5,
+    "slot": 3,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 45,
+    "name": "Velvet Shrew",
+    "description": "Shrew with oversized ears and velvet seedpod cape",
+    "sheet": 5,
+    "slot": 4,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 46,
+    "name": "Dusk Firefly",
+    "description": "Large firefly with golden lantern abdomen",
+    "sheet": 5,
+    "slot": 5,
+    "shortlist": false,
+    "overlap": "Glowing insect partly overlaps Moon Moth / Lantern Wisp; not shortlisted."
+  },
+  {
+    "id": 47,
+    "name": "Maple Mantis",
+    "description": "Mantis with autumn maple leaf arms",
+    "sheet": 5,
+    "slot": 6,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 48,
+    "name": "Petal Chameleon",
+    "description": "Chameleon with flower petal crest",
+    "sheet": 5,
+    "slot": 7,
+    "shortlist": true,
+    "overlap": ""
+  },
+  {
+    "id": 49,
+    "name": "Seedpod Cricket",
+    "description": "Cricket with seedpod armour and long legs",
+    "sheet": 5,
+    "slot": 8,
+    "shortlist": false,
+    "overlap": ""
+  },
+  {
+    "id": 50,
+    "name": "Moon Hare Knight",
+    "description": "Upright brown hare with wooden shield and crescent clasp",
+    "sheet": 5,
+    "slot": 9,
+    "shortlist": false,
+    "overlap": ""
+  }
+]

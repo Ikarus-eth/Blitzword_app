@@ -1,3 +1,7 @@
+## New enemy concept voting — 9 October 2026
+
+A separate review page at `assets/enemy-vote/` contains five draft sheets with ten candidates each, a suggested 20, per-creature For/Against/Unsure voting, style notes and browser-local export/restore. All five sheets were generated in one built-in ImageGen pass each, referenced to approved Owl C and Wolf D artwork. These are proposals only: no new enemy is approved or integrated. User direction is to avoid overlap with existing families; near-neighbours are flagged and excluded from the shortlist, except the explicitly requested white owl. Gameplay and learner saves are untouched. Page voting persistence and the 20-item shortlist were checked in the browser. Publication follows the existing Pages workflow; this entry alone is not live-deployment verification. Exact prompts and candidate metadata are beside the page.
+
 # BlitzWord current status — 9 October 2026
 
 ## Twice-skipped words require an answer
