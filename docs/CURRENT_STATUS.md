@@ -1,3 +1,7 @@
+# First-book vocabulary expansion research — 9 October 2026
+
+**Proposed; not implemented or deployed.** The parent has reached all 200 words and requested research into the next 800, including written numbers. They selected broad beginner books and everyday-life vocabulary rather than a strict fantasy-only filter. [Research, decisions and complete word list](NEXT800_FIRST_BOOKS_RESEARCH.md); [machine-readable pool](../curriculum/NEXT800_FIRST_BOOKS.json). The proposed pool contains exactly 800 unique additions with no overlap with current playable targets, yielding 1,000 combined forms. It preserves the original 200, retains 457 original expansion candidates and adds 343 editorial selections. All number words from zero to twenty, tens to ninety, hundred/thousand and first to tenth are covered across the combined pool. These count checks are complete; child reading transfer, exact teaching order, sentences, distractors, narration, progression and deployment are not yet validated. The full CPB dataset download was blocked by HTTP 403; no complete modern corpus ranking or book-coverage percentage is claimed. The original workbook, runtime content and learner saves remain unchanged. The research recommends phonics-aligned introductions and short-book reading alongside vocabulary practice.
+
 # BlitzWord current status — 9 October 2026
 
 ## Twice-skipped words require an answer
