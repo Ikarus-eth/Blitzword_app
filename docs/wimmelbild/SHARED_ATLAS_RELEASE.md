@@ -15,3 +15,6 @@ Pinch, drag, wheel, keyboard, zoom buttons and big-picture view use the existing
 Validation: four focused unit tests cover all fifteen answers, life loss, duplicate/stale submission rejection, retry/reload, corrupt saves and isolated entry. Browser checks complete all five maps at 1180×820 and 390×844, including life loss, zero-life retry, zoom, image dimensions, picture taps, reload and completion. A main-save sentinel is unchanged; no main runtime is requested and no links lead to the main game. See `shared-browser-checks.json`. Physical iPad speech/gestures remain untested.
 
 Deployed via [PR #156](https://github.com/Ikarus-eth/Blitzword_app/pull/156) and successful [Pages run 38039340347](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38039340347). All twelve entry/shared-art runtime files match the release ([hashes](SHARED_DEPLOYMENT.json)); all five maps pass on the live page at desktop and phone sizes ([checks](shared-live-checks.json)). All 355 unit tests and 114 UI flow groups pass.
+
+
+Current standalone update (10 October 2026): the Hidden Atlas now shares the four continuous 4096×2731 River Song maps and their twelve varied questions, with temporary German translations and no voice. Crystal Ferry is unchanged. See [release notes](SHARED_CONTINUOUS_RELEASE.md).

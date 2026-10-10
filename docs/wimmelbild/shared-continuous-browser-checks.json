@@ -1,0 +1,226 @@
+{
+  "url": "http://127.0.0.1:8765/assets/map-quest/",
+  "checks": [
+    {
+      "id": "crab-ferry",
+      "lang": "en",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "stone-dam",
+      "lang": "en",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "mist-lamps",
+      "lang": "en",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "high-nest",
+      "lang": "en",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "river-heart",
+      "lang": "en",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "crab-ferry",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "stone-dam",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "mist-lamps",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "high-nest",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "river-heart",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "crab-ferry",
+      "lang": "de",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "stone-dam",
+      "lang": "de",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "mist-lamps",
+      "lang": "de",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "high-nest",
+      "lang": "de",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "river-heart",
+      "lang": "de",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "crab-ferry",
+      "lang": "de",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "stone-dam",
+      "lang": "de",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "mist-lamps",
+      "lang": "de",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "high-nest",
+      "lang": "de",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "river-heart",
+      "lang": "de",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    }
+  ],
+  "errors": []
+}

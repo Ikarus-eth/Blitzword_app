@@ -44,3 +44,6 @@ Counts refer to depicted objects, not intended prompt counts. Optional hints may
 ### Local validation
 
 All 361 unit tests and 116 UI-flow groups pass. Fifteen isolated Chrome journeys complete all five maps at 1180×820, 390×844 and 844×390, checking actual image dimensions, written-only selection, one-life penalties, reload and completion. Real two-finger events, expanded view and retained zoom also pass. Tablet overview and phone zoom screenshots were visually inspected. [Browser evidence](river-search-browser-checks.json). Physical iPad/Safari remain untested. Deployment is verified: [PR #160](https://github.com/Ikarus-eth/Blitzword_app/pull/160), merge `1120d87d2851802f757542ba0ce4c27b0d529a17`, [successful Pages run](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38045792789). All seven runtime/art files returned HTTP 200 and match the tested source byte-for-byte ([hash evidence](RIVER_SEARCH_DEPLOYMENT.json)). The same fifteen map journeys pass on the live site in isolated profiles ([live evidence](river-search-live-checks.json)).
+
+
+Current standalone update (10 October 2026): the Hidden Atlas now shares the four continuous 4096×2731 River Song maps and their twelve varied questions, with temporary German translations and no voice. Crystal Ferry is unchanged. See [release notes](SHARED_CONTINUOUS_RELEASE.md).

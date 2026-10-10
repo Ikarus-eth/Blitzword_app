@@ -2,7 +2,7 @@
 const C=AtlasCore,root=document.querySelector('#app'),warning=document.querySelector('#saveWarning');let state=C.fresh(),raw=null,blocked=false,viewer=null,active=null;
 const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const button=(text,cls,fn)=>{const b=el('button',cls,text);b.type='button';b.onclick=()=>{if(b.isConnected)fn();};return b;};
-const title=id=>C.Maps[id].title.split(' — ')[0],picture=id=>'../wimmelbild/maps/'+id+'.webp';
+const title=id=>C.Maps[id].title.split(' — ')[0],picture=id=>'../../'+C.Maps[id].image;
 function fail(message){blocked=true;warning.hidden=false;warning.replaceChildren(el('p','',message),button('Reload','textButton',()=>location.reload()));}
 try{raw=localStorage.getItem(C.KEY);if(raw!==null)state=C.restore(JSON.parse(raw));}catch(e){fail('Your map progress could not be opened. It has been left untouched.');}
 function commit(fn){if(blocked)return false;try{if(localStorage.getItem(C.KEY)!==raw){fail('Map progress changed in another tab. Reload to use the latest progress.');return false;}const next=C.restore(state);if(fn(next)===false)return false;const nextRaw=JSON.stringify(next);localStorage.setItem(C.KEY,nextRaw);raw=nextRaw;state=next;return true;}catch(e){fail('Progress could not be saved. Free some device space, then reload to try again.');return false;}}

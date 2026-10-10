@@ -1,3 +1,7 @@
+## Bilingual standalone continuous maps — 10 October 2026
+
+Implemented; deployment verification pending. The standalone Hidden Atlas now reuses the four continuous 4096×2731 maps and twelve varied questions, with German clues, options and hints. Crystal Ferry retains its existing map. German remains temporary and there is no voice. Existing progress and lives survive the content update; obsolete pending answers are cleared. See [release notes](wimmelbild/SHARED_CONTINUOUS_RELEASE.md).
+
 ## Target-word recordings — 10 October 2026
 
 **Deployed and verified.** The user approved the existing recordings and prioritized recorded pronunciation for all 1,000 curriculum words. The authorized fal.ai batch contains 669 missing standalone words and six existing pronunciation-context sentences: 675 clips, 4,471 characters, estimated $0.4471 at the published Multilingual v2 rate (not an invoice). It uses voice `onwK4e9ZLuTAKqWW03F9` at 0.88 speed, matching the approved replacement recordings. Reuse 330 existing standalone recordings and the capitalization alias `I'll` → `i'll`. All 2,416 existing manifest entries are retained. Optional teaching sentences, tips, distractors and lore remain deferred; custom text and unavailable audio keep device speech. [Exact authorized request](NARRATION_WORDS_FAL_REQUEST.json).
