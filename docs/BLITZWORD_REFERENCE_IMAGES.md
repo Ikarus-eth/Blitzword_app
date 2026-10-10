@@ -1,3 +1,7 @@
+## New enemy final-look proposals — 10 October 2026
+
+The 46 retained concepts have four proposed looks each in `assets/enemy-finals/`: original A plus three new variants. Stronger colours and elemental accents follow the first-round notes; the requested Snow Owl stays white. Built-in ImageGen produced 23 sheets (two creatures × three looks), preserving the painted storybook references. These are unapproved review assets, not production replacements. [Prompts](../assets/enemy-finals/prompts.json), [manifest](../assets/enemy-finals/artwork-manifest.json), [review rules](enemies/FINAL_LOOK_REVIEW.md).
+
 ## Dragon path Wimmelbild scenes — 10 October 2026
 
 The user selected the map-reading mockup 3 and authorized its standalone mini-game with increasingly detailed scenes, zoom, and a many-dragon search. Four new built-in ImageGen illustrations in `assets/wimmelbild/scenes/` depict the harbour map, tree village, dragon valley and castle treasury. These are new environments and incidental creatures; no established hero or Pip asset is replaced. Clue evidence was visually checked in the final images: three red doors; contrasting dragon markings/tails; three green chests with different emblems/book states. Runtime hotspots use measured normalized coordinates. [Exact prompts, output dimensions and hashes](wimmelbild/art-prompts.json). Native images are 1536×1024, delivered as high-quality WebP; zoom does not invent higher-resolution detail.

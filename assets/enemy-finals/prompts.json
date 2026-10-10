@@ -1,0 +1,256 @@
+[
+  {
+    "pair": 1,
+    "creatures": [
+      1,
+      2
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Snow Owl. BOTTOM ROW = three alternatives of Bramble Badger. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Frost Sentinel|pure white owl, swept crystalline wing tips, sapphire eyes, proud tall stance; C Moon Watcher|white barn owl heart-shaped face, golden eyes, silver crescent collar, rounded folded wings; D Aurora Seer|white snowy owl, long layered feathers, turquoise-violet aurora edging, spreading wings. BOTTOM left to right: B Briar Digger|lean striped badger, crimson bramble shoulders, broad digging claws; C Oak Defender|stocky badger with carved oak chest armour and teal cloth sash; D Amber Burrower|dark badger with amber crystal ridges and warm golden paws. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-1.png"
+    ]
+  },
+  {
+    "pair": 2,
+    "creatures": [
+      3,
+      4
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Ember Fox. BOTTOM ROW = three alternatives of Rowan Stag. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Cinder Runner|slender fox, long sharp muzzle, sleek russet coat, one sweeping flame tail, no leaf armour; C Moon Fox|silver-red fox with enormous crescent tail and deep blue ear tips; D Sunflare Trickster|golden fox with black legs and vivid ember mane, light agile stance. BOTTOM left to right: B Ruby Branchkeeper|graceful stag with branching red berry antlers and emerald mantle; C Sunwood Monarch|large golden stag with broad luminous amber antlers and cream chest; D Wild Verdant|dark stag with vibrant green antlers, sparse vine markings and powerful long legs. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-1.png"
+    ]
+  },
+  {
+    "pair": 3,
+    "creatures": [
+      6,
+      7
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Pine Marten. BOTTOM ROW = three alternatives of Hazel Hare. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Pine Scout|slim pine marten with dark brown coat, vivid emerald neck ruff and golden throat; C Storm Marten|long marten with teal back markings, swept ears and sparking tail tip; D Cone Ranger|upright marten in russet leaf cape with pinecone shoulder clasps. BOTTOM left to right: B Hazel Sprinter|lean long-legged hare with long ears, emerald waistcoat and hazel staff; C Autumn Jumper|russet hare with small leaf shoulder plates, flame shaped cream ear markings; D Windfoot|cream hare with flowing blue-green scarf and pale wind ribbons around long feet. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-1.png"
+    ]
+  },
+  {
+    "pair": 4,
+    "creatures": [
+      8,
+      9
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Cloak Raccoon. BOTTOM ROW = three alternatives of Chestnut Squirrel. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Oakshield Scout|upright raccoon with clear black mask, round wooden shield, crimson short cloak; C River Bandit|slim raccoon, cobalt coat, rope belt and small smooth pebble armour; D Briar Sentry|four-legged raccoon, emerald thorn shoulders, bushy strongly striped tail. BOTTOM left to right: B Autumn Acrobat|bright rust squirrel, huge curled orange leaf tail, slender agile body; C Ember Collector|deep red squirrel with golden glowing tail spiral and cream belly; D Jade Treetopper|brown squirrel with emerald tail fronds, turquoise chest charm and high ears. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-1.png"
+    ]
+  },
+  {
+    "pair": 5,
+    "creatures": [
+      10,
+      11
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Moss Bear. BOTTOM ROW = three alternatives of Lily Otter. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Forest Guardian|brown bear on all fours, deep emerald moss mane, sturdy natural bear silhouette; C Sun Bear|dark sleek bear, brilliant golden chest crescent and amber shoulder fur; D Briar Champion|upright russet bear, layered bark armguards, red berries and strong broad shoulders. BOTTOM left to right: B Lily Skimmer|slender brown otter, teal water ribbon tail, vivid white lily collar; C River Duelist|upright otter, cobalt reed cape and smooth river pebble shield; D Pearl Diver|silver-brown otter, pearlescent whiskers, jade water droplets and curled flowing tail. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-1.png",
+      "assets/enemy-vote/sheet-2.png"
+    ]
+  },
+  {
+    "pair": 6,
+    "creatures": [
+      12,
+      13
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Dam Beaver. BOTTOM ROW = three alternatives of Amber Newt. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Dam Builder|strong beaver with broad flat tail and fitted dark driftwood armour; C Copper Carpenter|russet beaver with copper-edged log buckler and blue sash; D River Warden|dark beaver, turquoise stream patterns on broad paddle tail, reeds at shoulders. BOTTOM left to right: B Amber Glow|slim orange newt, glasslike amber spots, four clear legs and long finless tail; C Citrine Crest|golden newt with translucent yellow dorsal crest and dark sapphire markings; D Ruby Ember|red newt, cream belly, jewel-like red back spots and tiny warm sparks. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-2.png"
+    ]
+  },
+  {
+    "pair": 7,
+    "creatures": [
+      14,
+      15
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Cattail Heron. BOTTOM ROW = three alternatives of Brook Turtle. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Reed Spear|tall slender heron, emerald reed plumage, golden beak, long visible legs; C Storm Heron|blue-grey heron with sweeping silver crest, vivid cobalt shoulders; D Sunset Fisher|rust and cream heron, long neck, coral wing tips and cattail collar. BOTTOM left to right: B Riverstone Shell|low quadruped turtle, jade riverstone mosaic shell with blue water seams; C Waterfall Keeper|green turtle with smooth turquoise shell plates and flowing miniature water ribbons; D Sunlit Terrapin|amber-brown turtle with geometric golden shell markings and bright teal eyes. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-2.png"
+    ]
+  },
+  {
+    "pair": 8,
+    "creatures": [
+      16,
+      18
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Willow Kingfisher. BOTTOM ROW = three alternatives of Ripple Salamander. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Sapphire Arrow|small vivid cobalt kingfisher, orange breast, long beak, swept sleek plumage; C River Jewel|turquoise kingfisher, iridescent emerald wings, white throat and tiny water gems; D Storm Flash|deep blue kingfisher with brilliant copper chest, lightning-shaped feather crest. BOTTOM left to right: B Ripple Crest|cobalt salamander with turquoise water ribbon tail and long elegant body; C Tide Dancer|bright teal salamander with translucent dorsal water fins and cream belly; D Deepwater Spark|indigo salamander with luminous cyan ring markings and curling wave tail. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-2.png"
+    ]
+  },
+  {
+    "pair": 9,
+    "creatures": [
+      19,
+      20
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Shell Lobster. BOTTOM ROW = three alternatives of Marsh Crane. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B River Lobster|long-bodied red lobster, segmented tail, asymmetric pincers, smooth blue river stones; C Tide Armour|cobalt lobster, elongated narrow body, copper shell edges and broad fan tail; D Coral Claw|crimson lobster with orange coral claw ridges and cream shell inlays, long silhouette unlike round crab. BOTTOM left to right: B Lotus Crane|tall white crane, plum-purple lotus crest, black wing tips and long red legs; C Dusk Crane|violet-grey crane with amber crown and long elegant neck; D Marsh Dancer|cream crane with emerald layered wings, coral floral accents and raised wing pose. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-2.png"
+    ]
+  },
+  {
+    "pair": 10,
+    "creatures": [
+      21,
+      22
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Coal Salamander. BOTTOM ROW = three alternatives of Quartz Mole. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Lava Runner|sleek coal-black salamander, fiery orange cracks and low long body; C Obsidian Blaze|black salamander with red glass dorsal fins and bright molten yellow belly; D Coalheart|charcoal salamander with glowing ruby chest stone and ember spots, broad flat head. BOTTOM left to right: B Crystal Digger|small dark mole, huge pale quartz digging claws, violet shoulder crystals; C Amethyst Miner|brown mole with vivid purple crystal gauntlets and round pink nose; D Golden Delver|velvet black mole with gold stone claws and amber crystal back ridge. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-3.png"
+    ]
+  },
+  {
+    "pair": 11,
+    "creatures": [
+      23,
+      24
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Copper Scorpion. BOTTOM ROW = three alternatives of Lantern Gecko. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Copper Stinger|copper scorpion with long curved tail, small amber stinger and turquoise joints; C Verdigris Sentinel|teal patinated scorpion with broad copper pincers, low eight-legged stance; D Furnace Scorpion|dark bronze scorpion with orange seam glow and angular compact tail. BOTTOM left to right: B Golden Lantern|slim emerald gecko with gold glowing throat sac and broad toe pads; C Sunspot Gecko|bright orange gecko with turquoise spots and amber dorsal gems; D Moonlamp Gecko|indigo gecko with pale luminous throat and curling crescent tail. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-3.png"
+    ]
+  },
+  {
+    "pair": 12,
+    "creatures": [
+      25,
+      26
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Slate Pangolin. BOTTOM ROW = three alternatives of Cinder Porcupine. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Slate Sentinel|long-nosed pangolin, large overlapping dark slate scales edged bright cyan; C Copper Scale|bronze pangolin with golden plate edges and long curling heavy tail; D Jade Roller|emerald mineral pangolin, rounded overlapping scales and cream face, four visible legs. BOTTOM left to right: B Ember Quills|slender dark porcupine with swept orange quills and cream muzzle; C Ruby Spines|russet porcupine with deep crimson crystal quills, angular long silhouette; D Sunburst|golden-brown porcupine with radiating yellow-tipped quills and dark paws. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-3.png"
+    ]
+  },
+  {
+    "pair": 13,
+    "creatures": [
+      27,
+      28
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Gem Spider. BOTTOM ROW = three alternatives of Echo Lizard. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Ruby Weaver|round jewel-backed spider, exactly eight legs, vivid ruby abdomen and friendly alert eyes; C Amethyst Spinner|purple spider with silver web markings and eight slender violet legs; D Emerald Watcher|dark spider, faceted green abdomen, copper joints, exactly eight legs. BOTTOM left to right: B Echo Fan|slender cave lizard, large turquoise fan ears, amber eyes and long banded tail; C Cavern Listener|violet lizard with broad translucent purple cheek fins and four splayed feet; D Sunstone Echo|orange lizard with golden fan crest and cyan throat, upright curious pose. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-3.png"
+    ]
+  },
+  {
+    "pair": 14,
+    "creatures": [
+      29,
+      30
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Flint Armadillo. BOTTOM ROW = three alternatives of Ore Ant. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Flint Shield|low armadillo with segmented angular grey stone shell and copper seams; C Citrine Roller|gold plated armadillo with banded domed shell, short ears, long tail; D Basalt Guardian|black armadillo with fiery red cracks across shell bands and sturdy digging feet. BOTTOM left to right: B Iron Worker|six-legged ant, narrow waist, huge angular mandibles, charcoal ore abdomen; C Copper Soldier|vivid copper ant with long thin antennae and turquoise mineral shoulder plates; D Ruby Queen|large crimson ant with sleek segmented abdomen, six legs, no wings, tall narrow stance. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-3.png"
+    ]
+  },
+  {
+    "pair": 15,
+    "creatures": [
+      31,
+      32
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Frost Lynx. BOTTOM ROW = three alternatives of Aurora Elk. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Ice Tuft|athletic lynx, short bobtail, long frost ear tufts, blue-white shoulder fur; C Sapphire Prowler|cream lynx with bold cobalt spots and silver ice collar; D Aurora Hunter|grey lynx, teal-violet tail and ear tips, large paws and clear dark face markings. BOTTOM left to right: B Aurora Crown|large elk with wide antlers bearing teal and violet light ribbons; C Polar Monarch|cream elk, enormous silver-blue antlers and deep blue mane; D Emerald Sky|dark brown elk with luminous emerald branching antlers, gold flecked chest. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-4.png"
+    ]
+  },
+  {
+    "pair": 16,
+    "creatures": [
+      33,
+      34
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Snow Hare. BOTTOM ROW = three alternatives of Cloud Yak. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Snow Sprinter|slender white hare, very long legs and ears, subtle blue crystal whiskers; C Frost Dancer|white hare with sapphire ear tips and flowing icy neck ruff; D Moon Snow|cream-white hare with violet eyes, silver crescent brow marking and soft teal scarf. BOTTOM left to right: B Cloud Guardian|dark yak with enormous white cloud mane, broad horns and teal tassels; C Thunder Yak|blue-black yak with cream wool shoulders and golden lightning markings on horns; D Suncloud|golden yak with swirling white wool and dark curved horns, imposing quadruped. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-4.png"
+    ]
+  },
+  {
+    "pair": 17,
+    "creatures": [
+      35,
+      36
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Pinecone Marmot. BOTTOM ROW = three alternatives of Gale Falcon. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Cone Scout|upright golden marmot with emerald pinecone shoulder plates; C Mountain Lookout|russet marmot with slate blue short cloak, bright orange neck ruff; D Amber Forager|dark marmot with amber cone back armour and cream face. BOTTOM left to right: B Gale Blade|sleek falcon, swept silver feathers, deep cobalt wings and golden eyes; C Sunwind|rust-gold falcon with cream breast and long sharp orange-edged wings; D Stormwing|charcoal falcon with vivid turquoise flight feathers and subtle lightning markings. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-4.png"
+    ]
+  },
+  {
+    "pair": 18,
+    "creatures": [
+      37,
+      38
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Lichen Ibex. BOTTOM ROW = three alternatives of Hail Wolverine. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Cliff Climber|slender ibex, long backward swept horns, jade lichen patches, long agile legs, no curled ram horns; C Copper Peak|cream ibex with long ridged copper horns, blue mantle and slim goat beard; D Emerald Crag|brown ibex with immense swept green mineral horns and dark narrow hooves. BOTTOM left to right: B Hail Striker|powerful low wolverine with silver-blue back plates and dark brown fur; C Frostfang|lean wolverine with white face stripes and cobalt ice shoulder ridges; D Storm Pelt|black wolverine with vivid violet-blue streaked mane and orange eyes. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-4.png"
+    ]
+  },
+  {
+    "pair": 19,
+    "creatures": [
+      39,
+      40
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Mist Leopard. BOTTOM ROW = three alternatives of Glacier Seal. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Mist Stalker|long-tailed clouded leopard, cream rosettes, pale teal mist curling off tail; C Moon Panther|dark violet leopard with silver rosettes and long flowing mist tail; D Golden Mirage|golden spotted leopard with sapphire eyes and blue vapour mane. BOTTOM left to right: B Glacier Diver|sleek white seal with sapphire ice mantle and two clear front flippers; C Aurora Seal|silver seal with violet-teal patterned flippers and gentle long neck; D Crystal Tide|pale blue seal with smooth crystal back plates and dark expressive eyes. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-4.png"
+    ]
+  },
+  {
+    "pair": 20,
+    "creatures": [
+      41,
+      42
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Ink Raven. BOTTOM ROW = three alternatives of Bramble Peacock. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Ink Scribe|black raven, violet sheen, cream scroll band on leg and gold eyes; C Rune Raven|deep blue raven with silver geometric wing markings and swept crest; D Crimson Quill|charcoal raven with vivid crimson feather tips, slim beak and copper collar. BOTTOM left to right: B Jade Fan|brilliant blue peacock with emerald eye-pattern fan tail, spread within cell; C Autumn Crown|copper peacock, orange-red eye-pattern tail, long elegant neck; D Moon Peacock|indigo peacock, turquoise and silver tail eyes, restrained purple crest. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-5.png"
+    ]
+  },
+  {
+    "pair": 21,
+    "creatures": [
+      43,
+      44
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Bell Tortoise. BOTTOM ROW = three alternatives of Honey Wasp. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Bronze Bell|tortoise with recognisable aged bronze bell shell and vivid teal patina, no knight gear; C Sun Chime|golden tortoise with rounded embossed bell shell and crimson hanging tassels; D Moonbell|blue-grey tortoise with silver bell shell and deep cobalt inlay. BOTTOM left to right: B Honey Knight|slender black-gold wasp with amber translucent wings, narrow waist and six legs; C Amber Sting|orange wasp with jewel honey abdomen and dark copper shoulder plates; D Cobalt Wasp|deep cobalt and golden striped wasp with broad amber wings, sharp readable insect silhouette. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-5.png"
+    ]
+  },
+  {
+    "pair": 22,
+    "creatures": [
+      45,
+      46
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Velvet Shrew. BOTTOM ROW = three alternatives of Dusk Firefly. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Seed Scout|tiny slender shrew with pointed snout, huge ears and crimson seedpod cape; C Velvet Ranger|brown shrew in emerald cape with golden seed clasp, long thin tail; D Moon Shrew|grey shrew with violet ear interiors and soft silver-blue petal collar. BOTTOM left to right: B Golden Beacon|firefly with oval bright gold abdomen, black shell and two open translucent wings; C Emerald Lantern|firefly with vivid emerald luminous abdomen and copper wing cases; D Violet Spark|indigo firefly with purple-gold glowing abdomen, six delicate legs, visible beetle wing cases. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-5.png"
+    ]
+  },
+  {
+    "pair": 23,
+    "creatures": [
+      48,
+      50
+    ],
+    "prompt": "Use case: stylized-concept. Asset: BlitzWord final-look review, a landscape 3:2 image, STRICT THREE columns by TWO rows, SIX equal SQUARE cells. Exactly six separate full-body creature portraits, one per cell, all feet/wings/tails inside their own cell with 8% empty margin. Clean warm ivory background, no scenery, thin separators at one-third/two-thirds width and halfway height. Small labels B C D under creatures in each row. TOP ROW = three alternative designs of Petal Chameleon. BOTTOM ROW = three alternatives of Moon Hare Knight. Do not swap rows. Each row is same species with genuinely different silhouettes, head shapes, materials and markings, not merely recolours. Painterly premium children's fantasy storybook art matching the attached concept references; rich strong colours and deliberate elemental details, detailed natural fur/feathers/scales, expressive confident eyes, adventurous not babyish, beautiful hand-painted textures. Reduce generic leaves covering every body. Practical natural ornaments, no gore, no huge weaponry, no cartoon outlines, no photorealism. References show original species and painting language, not a layout to copy. TOP left to right: B Petal Crown|emerald chameleon with vivid coral-pink petal crest and tightly curled tail; C Sunflower Sneak|yellow-green chameleon, orange fan crest and turquoise flank dots; D Orchid Shifter|violet chameleon with teal limbs and magenta orchid petal head frill. BOTTOM left to right: B Moonshield|slender upright brown hare knight, silver crescent shield, cobalt cape, no weapon; C Moonwood|cream hare knight with carved crescent wooden shield, emerald cloak and copper light armour; D Star Sentry|grey hare knight with violet short cape, golden crescent chest clasp and blue moon shield. Anatomically readable, no extra limbs, no duplicate creature in a cell. Preserve an owl's WHITE identity if present. Full body is essential.",
+    "references": [
+      "assets/enemy-vote/sheet-5.png"
+    ]
+  }
+]
