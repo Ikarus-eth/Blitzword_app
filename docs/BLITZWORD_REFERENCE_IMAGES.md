@@ -200,3 +200,6 @@ The user requested varied adventures using the original boy picture’s painted 
 ## Artus’s 45 approved additions — 10 October 2026
 
 The user authorized integration after Artus’s final-look vote. `docs/enemies/APPROVED_SELECTIONS.json` identifies each winning source cell; `ARTUS_FINAL_RATINGS.json` preserves all 184 ratings. Ore Ant is excluded. Production derivatives are nine transparent 1536×1024 atlases in `assets/enemies/approved-20261010/`, with per-creature crop metadata in `roster.js`. Built-in ImageGen generated nine sheets and one layout repair; exact prompts and final hashes are in `docs/enemies/APPROVED_ART_PROMPTS.json`. Old 20-family artwork is unchanged. [Release, verification and limits](enemies/APPROVED_RELEASE.md).
+
+
+Current standalone update (10 October 2026): the Hidden Atlas now shares the four continuous 4096×2731 River Song maps and their twelve varied questions, with temporary German translations and no voice. Crystal Ferry is unchanged. See [release notes](wimmelbild/SHARED_CONTINUOUS_RELEASE.md).

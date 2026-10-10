@@ -1,6 +1,6 @@
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./quest-data.js'));else root.BlitzMapQuests=factory(root.BlitzMapQuests);})(typeof globalThis!=='undefined'?globalThis:this,function(original){
 'use strict';
-// Main-game revision. The temporary bilingual sharing page retains its matching art and clues.
+// Continuous scenes shared by the main game and the temporary bilingual sharing page.
 function q(id,text,prompt,answer,labels,hint){return {id,region:'Explore the whole picture',text,prompt,answer:answer.toLowerCase(),options:labels.map(label=>({id:label.toLowerCase(),label})),hint};}
 function scene(id,questions){return {...original[id],revision:'continuous-20261010-r1',image:'assets/wimmelbild/maps/'+id+'-continuous.webp',width:4096,height:2731,questions};}
 return {...original,

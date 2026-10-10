@@ -81,3 +81,6 @@ Prerecorded narration now contains **2,275 exact-text segments**, preserving all
 Personalized dragon-name text stays on local device speech. Missing/failed downloads and unknown older saved choices retain the complete device-speech fallback. Physical iPad listening and synchronized teaching-word highlighting remain unverified. The earlier [draft PR #80](https://github.com/Ikarus-eth/Blitzword_app/pull/80) retains historical alignment work; its paid narration is reused, and it must not be merged wholesale over newer main.
 
 Twenty selected enemies use whole-frame attack, recoil, defeat and celebration artwork. Sixty variants retain their approved HP ranges and groups of two/three/five; younger creatures reuse the motion at smaller uniform sizes. Nineteen champion forms at 26–32 HP (2 October 2026) put all twenty families at the 32-HP ceiling. Story-adventure reading-riddle time appears separately in Parents. See [animation scope and cost](docs/enemies/ALL_ENEMY_MOTION_RELEASE.md) and [group rules](docs/enemies/GROUP_ENCOUNTERS_RELEASE.md).
+
+
+Current standalone update (10 October 2026): the Hidden Atlas now shares the four continuous 4096×2731 River Song maps and their twelve varied questions, with temporary German translations and no voice. Crystal Ferry is unchanged. See [release notes](docs/wimmelbild/SHARED_CONTINUOUS_RELEASE.md).
