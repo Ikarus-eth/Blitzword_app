@@ -1,3 +1,7 @@
+## Shareable maps-only page — 10 October 2026
+
+The user requested a separate sub-page for sharing the five map searches without the rest of the game. `assets/map-quest/` offers all five immediately, reusing the approved images, clues and zoom viewer. It loads no main-game runtime and contains no links into the main game. Its own local save never reads or writes learner progress. Each map starts with four lives; a wrong submission costs one. At zero, explicit retry restores four lives on the current clue, retaining solved clues. Completed maps can be replayed individually. This is navigation separation, not access control over the publicly hosted main game.
+
 ## Large ninth-task maps — accepted update, 10 October 2026
 
 The Crystal Ferry and the following four River Song chapters each add one large search map as task nine, with three questions on the same map. Five new 3072×2048 maps are assembled from four native detailed sections each, explicitly authorized by the user. The image is for zoom/pan only. Answers must be selected from written choices below; remove picture answer selection in the earlier standalone journey too. Each wrong submission costs one shared life. The existing two-step retreat applies at zero, retaining solved questions and earned progress. Previously completed quests stay complete; replay uses nine tasks. Other quests keep eight. [Implementation rules and evidence](wimmelbild/NINTH_TASK_RELEASE.md).
