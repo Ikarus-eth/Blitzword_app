@@ -1,0 +1,93 @@
+{
+  "verifiedAt": "2026-10-10T08:31:45.954598+00:00",
+  "commit": "38494aed97922043ba1a679c833678aa8509cfd7",
+  "pullRequest": 154,
+  "pagesRun": 38038030658,
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "c64b36061c7274ac6712ed83ab0311239544733f7dafde42c4751201fed10c35",
+      "bytes": 39475,
+      "matches": true
+    },
+    {
+      "file": "adventure-core.js",
+      "sha256": "0b77f11cc7a35fd4a1363257146b7f49bd69c70fe1155e42a188d85257512c39",
+      "bytes": 13249,
+      "matches": true
+    },
+    {
+      "file": "adventure-ui.js",
+      "sha256": "0f7534e8e5bc2fe5424f52ba1b3690c4accd6eae32656d65d5fdbd282c072acc",
+      "bytes": 25389,
+      "matches": true
+    },
+    {
+      "file": "game-core.js",
+      "sha256": "07fd3c718a13707b0a5df9573524ccb0d91b06589eeb3791309daa6daba93a30",
+      "bytes": 82862,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/quest-data.js",
+      "sha256": "fb9484a05e22ee0698b97589a256fc833003f34d92aef615d7e8e9bb06d20ec3",
+      "bytes": 4120,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/viewer.js",
+      "sha256": "913853b61ca2cf11ace328beb47a85115f8ac51d25b21f635eec962cd80ddd78",
+      "bytes": 4964,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/quest.css",
+      "sha256": "f27edaf57016947936bd1ce64c1b2227e730cceb0c9b3132a0d1c88db4c49445",
+      "bytes": 2966,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/app.js",
+      "sha256": "772c945cf849f8032f2b6d5b73cd14ae1e9a5bb5b8c57624be048703be336ece",
+      "bytes": 10901,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/index.html",
+      "sha256": "fde58c201428cdf1f0073c43253c8e131c6a6bdc403061e25268f0b701fda501",
+      "bytes": 3513,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/crab-ferry.webp",
+      "sha256": "d394f87758b05128947adba68ce26ff4c070be771669c83c0b8702f9f844e9fd",
+      "bytes": 3669452,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/high-nest.webp",
+      "sha256": "68e2d598b8fd61cd43ebebb218fb35faef8e87236efeca81e564d146290e70d5",
+      "bytes": 3770676,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/mist-lamps.webp",
+      "sha256": "85f5a81c42c21d79c57941ca5286f8951244e395a924c398198f16007721ba83",
+      "bytes": 3539878,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/river-heart.webp",
+      "sha256": "5a69b43c6f93341595fb0db86ddf2dc40f44f219a401300f7eeb060503a21ae3",
+      "bytes": 3727990,
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/stone-dam.webp",
+      "sha256": "723469c9fcab7ff1e7d1f7cc5f7e9fd22b04c24e9be2daa8ac17b0e2cda33e62",
+      "bytes": 3954202,
+      "matches": true
+    }
+  ]
+}
