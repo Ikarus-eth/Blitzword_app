@@ -1,0 +1,52 @@
+{
+  "commit": "aaed37f714f959126898fb62f06a4815767592d9",
+  "run": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38094166255",
+  "checks": [
+    {
+      "path": "index.html",
+      "matches": true,
+      "sha256": "a498145922e6dc6934eb0152fe87d743ce25d318f12bf7f56332aed41c06296c"
+    },
+    {
+      "path": "adventure-ui.js",
+      "matches": true,
+      "sha256": "e0d4a3077825d18b2191f8f0e2c46c4f4b435945994b5cceae695e5a593a6292"
+    },
+    {
+      "path": "assets/wimmelbild/viewer.js",
+      "matches": true,
+      "sha256": "f947977e21da8c1e39880800a73597a13375d427816c516ee72770b5ddc437a3"
+    },
+    {
+      "path": "assets/wimmelbild/quest.css",
+      "matches": true,
+      "sha256": "806657f355e72267b488b5a2704e78990e9dff69e70db534ccbde376e4f25ea6"
+    },
+    {
+      "path": "assets/map-quest/index.html",
+      "matches": true,
+      "sha256": "0da28ca0ea3c6cbe359edf44201604e66a635e2e4aa187e83d8e5fb8d0e6ab5e"
+    },
+    {
+      "path": "assets/map-quest/app.js",
+      "matches": true,
+      "sha256": "0ce9464a6b27be2ad4f68b3a00508c4fe2c52ab026a7727565a8e635fdc6b8be"
+    },
+    {
+      "path": "assets/map-quest/style.css",
+      "matches": true,
+      "sha256": "55bf1ac222f885736923f7208349128cf651f4a522469ba0b77f13717d6237dd"
+    },
+    {
+      "path": "assets/map-quest/german.js",
+      "matches": true,
+      "sha256": "86f2e50762efb6639b47f241f95305f8aa7c21bd1b6b6a7661eceae52c6b9a1f"
+    },
+    {
+      "path": "tests/review-scenarios.js",
+      "matches": true,
+      "sha256": "9a5a34e7add0ed577c57e0ebf73a5fbfbbdd7277c3c39bc65239f074e14b7d70"
+    }
+  ],
+  "physicalIPad": "not tested"
+}
