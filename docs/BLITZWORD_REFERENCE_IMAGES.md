@@ -1,3 +1,7 @@
+## Continuous ninth-task scenes — 10 October 2026
+
+The user accepted the detailed seamless Crystal Ferry review as the direction and requested four new main-game scenes. Four-panel composites are superseded for Sleeping Waterwheel, Lamps in the Mist, Nest Above the Falls and River Sings Again. Each replacement is one connected landscape at 4096×2731, assembled from overlapping detail passes anchored to a single base composition. [Provenance and checks](wimmelbild/RIVER_SEARCH_RELEASE.md). This does not approve new recurring hero or Pip designs.
+
 ## Large chapter search maps — 10 October 2026
 
 Five new maps in `assets/wimmelbild/maps/` serve the ninth task in Crystal Ferry and the following four chapters. Each is a native-detail 3072×2048 composite of four separate 1536×1024 generated sections, assembled with explicit user authorization; source pixels were not enlarged. Twenty sections and all fifteen answer targets were visually audited. Fine atlas dividers separate regions. [Exact prompts/source hashes](wimmelbild/ninth-art-prompts.json), [final dimensions/hashes](wimmelbild/ninth-art-manifest.json), [answer evidence](wimmelbild/NINTH_TASK_RELEASE.md). Approved heroes, Pip and earlier assets are unchanged. Picture hit regions are no longer used for answers.

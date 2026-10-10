@@ -1,0 +1,242 @@
+[
+  {
+    "id": "stone-dam",
+    "file": "assets/wimmelbild/maps/stone-dam-continuous.webp",
+    "width": 4096,
+    "height": 2731,
+    "bytes": 5385534,
+    "sha256": "1701c9e79a371e36d4fd6a4930f5b6b61791b62df06a8458f52723470d0cf584",
+    "sources": [
+      {
+        "role": "base",
+        "filename": "base.png",
+        "sha256": "25218b77b758915567681803eabeb122c9afc1e70a8bbccd14279f4412671e1f"
+      },
+      {
+        "role": "detail-0",
+        "filename": "exec-b9e98f4c-1b04-4f72-b35f-efee6e06cf58.png",
+        "sha256": "c2ffdfff1c50645ae6c79c03b8ce4df7bc0c54e8a008575c583037831de0f6e6"
+      },
+      {
+        "role": "detail-1",
+        "filename": "exec-07cfa2fa-a45d-491f-b72a-64694bd768dd.png",
+        "sha256": "96d5bca0030096865201188174d216d7c001c7ef039b04b3a4f2487a18ef1e22"
+      },
+      {
+        "role": "detail-2",
+        "filename": "exec-56ac4a0d-681f-4a8a-8aa1-397b7b083c9d.png",
+        "sha256": "a3d08f8cc3ea14a17230265894f6a246e617b498b29df5e9553d1feaac72815e"
+      },
+      {
+        "role": "detail-3",
+        "filename": "exec-2bfe126c-0e63-4ff4-a06d-c369cd2c67ed.png",
+        "sha256": "1736fdc7bb45d7380a6db02d9df9764aca0060dfdb0e145db6b20ff826fcebce"
+      },
+      {
+        "role": "detail-4",
+        "filename": "exec-c6cb231c-8880-44d9-985c-a5d797bb6cf6.png",
+        "sha256": "fcd1f40f7a54bb8e05d2cc947125491b3e4ef744f8aafb422127750950a2b968"
+      },
+      {
+        "role": "detail-5",
+        "filename": "exec-8d881ed4-781d-4027-8075-6e231b5bd8ab.png",
+        "sha256": "69d837f355f5ed025f7f4a3fac641423e0068bfdbdcd036a43c02c59d66aef8f"
+      },
+      {
+        "role": "detail-6",
+        "filename": "exec-13c759cd-dce0-4ba4-b443-13fa2f286751.png",
+        "sha256": "8c4c8e78133af6d24204fcfe9f9ad2bdfac88b9937eda31b1c763df7f6f29bcb"
+      },
+      {
+        "role": "detail-7",
+        "filename": "exec-63e40534-c182-46d5-adc0-734d10e32ece.png",
+        "sha256": "31c8e44fec3ef24785188820e692f507c4d99610a11c4ff32e91594e2a006783"
+      },
+      {
+        "role": "detail-8",
+        "filename": "exec-64e5cad6-fc4c-4160-be54-7cf53392d2e7.png",
+        "sha256": "f3496f47fb2b57ab72b8b6eb9987ac720c0b12cea190b1cfeabe61d27d669813"
+      }
+    ]
+  },
+  {
+    "id": "mist-lamps",
+    "file": "assets/wimmelbild/maps/mist-lamps-continuous.webp",
+    "width": 4096,
+    "height": 2731,
+    "bytes": 5566878,
+    "sha256": "bcd84b7b61e94d45e7a9786a1d474cbd36842e3d709befc2d5b26ca0dc3b5f18",
+    "sources": [
+      {
+        "role": "base",
+        "filename": "base.png",
+        "sha256": "3ebfef784d558279f8fe98557c7c6b87d2dca27b3da1ed9b3ac3fae9a245f221"
+      },
+      {
+        "role": "detail-0",
+        "filename": "exec-79170f1a-1c92-49e2-986a-beaed5dfaa72.png",
+        "sha256": "9fd413d6991652df6226b9cda4ec30e5888da88e63611e36029b1cf15a6f1837"
+      },
+      {
+        "role": "detail-1",
+        "filename": "exec-0d75f0ba-3bd1-4ba7-9757-a19a79adaf90.png",
+        "sha256": "7640d3cf0687c053b90c840e8ff39955f613c0437e09b80159427b36086b8734"
+      },
+      {
+        "role": "detail-2",
+        "filename": "exec-a090aada-4de3-4ac2-800f-59a29b4efaf9.png",
+        "sha256": "112329751d218dd70e1d3facaf8c62af71c17c773ae671569412b799d87e0e71"
+      },
+      {
+        "role": "detail-3",
+        "filename": "exec-32ba0701-778f-4f73-a201-4a552ec167c9.png",
+        "sha256": "96a3d85395d70859d8454bcafcb89091baeb31acc6ed068078cc7314beb2208a"
+      },
+      {
+        "role": "detail-4",
+        "filename": "exec-755e6b1c-c37c-4a2e-b96b-c72bee432373.png",
+        "sha256": "ada051672e17abeb401daa87dc4a0f3409e3c0e2d5a00451093792253588c75a"
+      },
+      {
+        "role": "detail-5",
+        "filename": "exec-5088e39e-ab84-418a-ab38-7bc5d0918767.png",
+        "sha256": "72309a80793fc0f00d61afefd60ce4a4f89a97502516c531b32e51eb901bc060"
+      },
+      {
+        "role": "detail-6",
+        "filename": "exec-8fdd878f-5998-4a0d-8c87-ca42c13a7269.png",
+        "sha256": "7edabf7446b248d691bea804889a8390b373e245dc85ddd904826f88c956619c"
+      },
+      {
+        "role": "detail-7",
+        "filename": "exec-a193066a-16cf-4e49-a634-c54918e8581b.png",
+        "sha256": "2f8bf4a9e26abb6c0e59dcf2affd82f467df114d4705d07db0382dfb14fdaabc"
+      },
+      {
+        "role": "detail-8",
+        "filename": "exec-e7846dff-c3a9-4a4d-8150-c68515670701.png",
+        "sha256": "e7a022432c2d356b5ed7a63cca47a275af71ce415867c8c5182e6982127e71b4"
+      }
+    ]
+  },
+  {
+    "id": "high-nest",
+    "file": "assets/wimmelbild/maps/high-nest-continuous.webp",
+    "width": 4096,
+    "height": 2731,
+    "bytes": 5629734,
+    "sha256": "006f1bc4fee6dad85c5f8deaf621d2bc00f9c2c9ee3ef894b6709445b664f41b",
+    "sources": [
+      {
+        "role": "base",
+        "filename": "base.png",
+        "sha256": "945484c85ff75f73125db8ef2917e5fd0327fffa13650dc381ebe5d36f45ce23"
+      },
+      {
+        "role": "detail-0",
+        "filename": "exec-76abedde-4a70-4b9c-8a87-33a6fd608f84.png",
+        "sha256": "0f4d2e2882d60bda327ef8c300b02728c5ad8981ce6e388f959725f35c6c5adf"
+      },
+      {
+        "role": "detail-1",
+        "filename": "exec-b0fb189a-8a2e-432e-8798-323cc8c7bfc6.png",
+        "sha256": "926e87d7f1b57d1d4b55fe3eb9769d0f1dd90e3265a492488aa41f5b03af3422"
+      },
+      {
+        "role": "detail-2",
+        "filename": "exec-928a7523-ed43-4d60-ba4c-bd487e1242f7.png",
+        "sha256": "68cd3c05497e750d60446eaa3bbb599e5a2274492e127df159000a322929c5be"
+      },
+      {
+        "role": "detail-3",
+        "filename": "exec-1bf226a0-c193-4dd6-95c7-f4fc63ac23e7.png",
+        "sha256": "9b09d95c99de85332f18a0e89b25305a8373f19ad8ac69c7c902b19e1d3c5116"
+      },
+      {
+        "role": "detail-4",
+        "filename": "exec-89fb53b4-4e33-47b3-bebd-e7231e834605.png",
+        "sha256": "87b5038a9f012d514cefe47502da67be3986eff7ca8ff529016b90924d6633dd"
+      },
+      {
+        "role": "detail-5",
+        "filename": "exec-4154bef6-99df-4454-832a-abf982790d06.png",
+        "sha256": "f85c4d1017b279532f0f2d24beb996b555111e07f275998f5c39a3b196adad0c"
+      },
+      {
+        "role": "detail-6",
+        "filename": "exec-ca90da57-56d3-444c-a2bb-c5362b9c6b86.png",
+        "sha256": "f989712b39e7f473b07c5615ddeb7728fe4b921704ed56529e50c3fdbb452257"
+      },
+      {
+        "role": "detail-7",
+        "filename": "exec-c9458b55-796c-4732-b0a5-b80a287e9388.png",
+        "sha256": "53f283f87e75c746d3f478d9775d716091c3d1d8ed6f082204ba006c3c3f8959"
+      },
+      {
+        "role": "detail-8",
+        "filename": "exec-0721303c-abf7-4f27-9563-e992b374d464.png",
+        "sha256": "7bf1acd34b84fe7dd838d13926463b852f7b2c08e2ec7e15f8d26f8cf9e3b38c"
+      }
+    ]
+  },
+  {
+    "id": "river-heart",
+    "file": "assets/wimmelbild/maps/river-heart-continuous.webp",
+    "width": 4096,
+    "height": 2731,
+    "bytes": 4946950,
+    "sha256": "03144d1876f6b11d3394ed127881b352c8815665276d638ede254a227b5cad15",
+    "sources": [
+      {
+        "role": "base",
+        "filename": "base.png",
+        "sha256": "18b992da85ce48115726af957dc7fe361a6a703070b4218cd7ed895fa98a629d"
+      },
+      {
+        "role": "detail-0",
+        "filename": "exec-1a799886-f2e8-4ad8-b4b8-5122bf74ed41.png",
+        "sha256": "fd8aba630b2760dc736f57a4a0814ea5860c0b2155ee6c67d7f6b25aaef680d0"
+      },
+      {
+        "role": "detail-1",
+        "filename": "exec-9682bd5e-aa52-44bd-b7bd-5c578425a733.png",
+        "sha256": "beaf2b145ff55decbd43599bf0690ecb1ac242ffa0425ac7604976224cb674af"
+      },
+      {
+        "role": "detail-2",
+        "filename": "exec-6488fd1d-1237-4bbe-8414-8e09e565eab8.png",
+        "sha256": "de19ca7e94e3e9e8fe2d3e68148d8f4fab3fbc309b4a32f3019c6b0ef9545f3a"
+      },
+      {
+        "role": "detail-3",
+        "filename": "exec-0591237e-0ca7-4e98-b3fd-7be4008e4bdc.png",
+        "sha256": "1ce83965727e1a7e19cc32a4e58ae37841974b4a74c270d41fbfa84c903a3571"
+      },
+      {
+        "role": "detail-4",
+        "filename": "exec-d0a83eb7-93bb-499b-8a57-1747cce14136.png",
+        "sha256": "07feafe06472790fa0bd11ab0d3de8f5c86a9523266cdc4058e751ccfa173c31"
+      },
+      {
+        "role": "detail-5",
+        "filename": "exec-edb273a2-d2c6-4aa7-8e5d-90261164014c.png",
+        "sha256": "eca115b7a39364e71657b5e7de4687ef4e57a0f5058894bf3dfd0d2895219202"
+      },
+      {
+        "role": "detail-6",
+        "filename": "exec-ab4ac152-4410-4e8a-a6f0-182b63910b13.png",
+        "sha256": "606fa624666bb9e074349e2b48450b7d81d12b2a1ed9f08a5d17d89097274a8d"
+      },
+      {
+        "role": "detail-7",
+        "filename": "exec-8c83f122-8ae7-4598-9931-7e2cda60aafb.png",
+        "sha256": "2290eeb5ab4ccb1477834b1b85686d63166dc0af8495ce40589f4aa62fdf98c1"
+      },
+      {
+        "role": "detail-8",
+        "filename": "exec-4b16f46d-5efc-4209-9711-2721085c74b4.png",
+        "sha256": "0b6b6ead3626af1cdf294501e40fa76baa8cecd829822f83b0b6140aa0163f72"
+      }
+    ]
+  }
+]

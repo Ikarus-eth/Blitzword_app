@@ -8,7 +8,7 @@ function ready(id='crab-ferry'){
 function solve(s){const q=A.mapQuestion(s);assert.ok(A.chooseMap(s,q.answer,q.id));return C.checkMap(s,NOW,q.id);}
 test('exactly five river quests add a ninth step with three questions and native composite maps',()=>{
  assert.deepEqual(Object.keys(A.Maps),['crab-ferry','stone-dam','mist-lamps','high-nest','river-heart']);
- for(const map of Object.values(A.Maps)){assert.equal(map.questions.length,3);assert.ok(fs.existsSync(map.image));assert.deepEqual([map.width,map.height],[3072,2048]);const s=ready(map.id);assert.deepEqual(A.progress(s),{done:8,left:1,total:9,next:'Map search'});for(let i=0;i<3;i++){assert.equal(s.expedition.current.search.index,i);assert.ok(solve(s).correct);}assert.equal(s.expedition.current.phase,'complete');assert.equal(A.progress(s).done,9);assert.ok(A.stats(s).completedAt);assert.equal(A.next(s,NOW),false);}
+ for(const map of Object.values(A.Maps)){assert.equal(map.questions.length,3);assert.ok(fs.existsSync(map.image));assert.deepEqual([map.width,map.height],map.id==='crab-ferry'?[3072,2048]:[4096,2731]);const s=ready(map.id);assert.deepEqual(A.progress(s),{done:8,left:1,total:9,next:'Map search'});for(let i=0;i<3;i++){assert.equal(s.expedition.current.search.index,i);assert.ok(solve(s).correct);}assert.equal(s.expedition.current.phase,'complete');assert.equal(A.progress(s).done,9);assert.ok(A.stats(s).completedAt);assert.equal(A.next(s,NOW),false);}
 });
 test('wrong submission costs exactly one life; duplicate and stale submissions are rejected',()=>{
  const s=ready(),q=A.mapQuestion(s);assert.equal(C.checkMap(s,NOW,q.id),false);assert.equal(A.chooseMap(s,'unknown',q.id),false);assert.ok(A.chooseMap(s,q.options.find(o=>o.id!==q.answer).id,q.id));assert.equal(C.checkMap(s,NOW,q.id).correct,false);assert.equal(s.expedition.current.hearts,3);assert.equal(C.checkMap(s,NOW,q.id),false);assert.equal(s.expedition.current.hearts,3);solve(s);assert.equal(A.chooseMap(s,q.answer,q.id),false);assert.equal(C.checkMap(s,NOW,q.id),false);assert.equal(s.expedition.current.search.index,1);
@@ -21,4 +21,13 @@ test('reload, parked legacy play and old completed quests preserve learner evide
 });
 test('map first solves award riddle XP once and foreground thinking shares the per-question cap',()=>{
  const s=ready();const xp=s.dragon.xp;A.recordRiddleTime(s,240000,NOW);assert.equal(A.report(s).riddleMs,180000);solve(s);assert.equal(s.dragon.xp-xp,50);A.recordRiddleTime(s,1000,NOW);assert.equal(A.report(s).riddleMs,181000);solve(s);solve(s);const after=s.dragon.xp;s.expedition.current.phase='search';s.expedition.current.search={index:0,answers:[],selection:null};assert.equal(solve(s).firstSolve,false);assert.equal(s.dragon.xp,after);
+});
+
+test('replacement scenes clear obsolete pending choices but preserve solved slots and earned records',()=>{
+ for(const id of ['stone-dam','mist-lamps','high-nest','river-heart']){
+  let s=ready(id);solve(s);const c=s.expedition.current;c.search.selection='blue';c.search.wrong=true;delete c.search.revision;c.hearts=2;const records=JSON.stringify(A.stats(s).mapQuestions),xp=s.dragon.xp;
+  A.switchTo(s,'legacy');s=C.migrate(JSON.parse(JSON.stringify(s)));
+  assert.equal(s.expedition.current.search.index,1);assert.equal(s.expedition.current.search.selection,null);assert.equal(s.expedition.current.search.wrong,false);assert.equal(s.expedition.current.hearts,2);assert.equal(s.dragon.xp,xp);assert.equal(JSON.stringify(A.stats(s).mapQuestions),records);
+  C.startMission(s,id,NOW);const q=A.mapQuestion(s);A.chooseMap(s,q.answer,q.id);s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(s.expedition.current.search.selection,q.answer);
+ }
 });

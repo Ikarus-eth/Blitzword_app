@@ -1,3 +1,7 @@
+## Continuous scene replacement — accepted 10 October 2026
+
+The latest user request replaces the four main-game ninth-task maps starting with The Sleeping Waterwheel with continuous high-detail scenes, following the accepted 4096×2731 ferry review. Three questions share each map and should require whole-picture exploration: distributed counting, behaviour, relationships and visual connections rather than repeated arrays of near-identical objects. Earlier four-panel artwork instructions are superseded for these four main-game tasks. Keep written-only answers, one life per wrong answer, pinch/zoom and saved progress. [Implementation scope](wimmelbild/RIVER_SEARCH_RELEASE.md).
+
 ## Shareable maps-only page — 10 October 2026
 
 The user requested a separate sub-page for sharing the five map searches without the rest of the game. `assets/map-quest/` offers all five immediately, reusing the approved images, clues and zoom viewer. It loads no main-game runtime and contains no links into the main game. Its own local save never reads or writes learner progress. Each map starts with four lives; a wrong submission costs one. At zero, explicit retry restores four lives on the current clue, retaining solved clues. Completed maps can be replayed individually. This is navigation separation, not access control over the publicly hosted main game.
