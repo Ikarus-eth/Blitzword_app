@@ -1,0 +1,835 @@
+{
+  "source": "Visible saved final-look review",
+  "reviewer": "Artus",
+  "capturedAt": "2026-10-10T08:46:00.802Z",
+  "rounds": [
+    {
+      "id": "01",
+      "name": "Snow Owl",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 3 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 3,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "02",
+      "name": "Bramble Badger",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 3 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 3,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "03",
+      "name": "Ember Fox",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 3 out of 5",
+        "Artus: option B, 2 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 3,
+        "b": 2,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "04",
+      "name": "Rowan Stag",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "06",
+      "name": "Pine Marten",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 3 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 3 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 3,
+        "c": 5,
+        "d": 3
+      },
+      "selected": "c"
+    },
+    {
+      "id": "07",
+      "name": "Hazel Hare",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 3 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 3,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "08",
+      "name": "Cloak Raccoon",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 5 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 5,
+        "c": 4,
+        "d": 4
+      },
+      "selected": "b"
+    },
+    {
+      "id": "09",
+      "name": "Chestnut Squirrel",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "10",
+      "name": "Moss Bear",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "11",
+      "name": "Lily Otter",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "12",
+      "name": "Dam Beaver",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "13",
+      "name": "Amber Newt",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "14",
+      "name": "Cattail Heron",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 2 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 2 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 2,
+        "c": 4,
+        "d": 2
+      },
+      "selected": "c"
+    },
+    {
+      "id": "15",
+      "name": "Brook Turtle",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "16",
+      "name": "Willow Kingfisher",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 5 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 5,
+        "c": 4,
+        "d": 4
+      },
+      "selected": "b"
+    },
+    {
+      "id": "18",
+      "name": "Ripple Salamander",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 3 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 3 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 3,
+        "b": 4,
+        "c": 3,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "19",
+      "name": "Shell Lobster",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 2 out of 5",
+        "Artus: option C, 3 out of 5",
+        "Artus: option D, 2 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 2,
+        "c": 3,
+        "d": 2
+      },
+      "selected": "c"
+    },
+    {
+      "id": "20",
+      "name": "Marsh Crane",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 2 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 2 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 2,
+        "c": 4,
+        "d": 2
+      },
+      "selected": "c"
+    },
+    {
+      "id": "21",
+      "name": "Coal Salamander",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 2 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 2
+      },
+      "selected": "c"
+    },
+    {
+      "id": "22",
+      "name": "Quartz Mole",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "23",
+      "name": "Copper Scorpion",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "24",
+      "name": "Lantern Gecko",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 3 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 3,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "25",
+      "name": "Slate Pangolin",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 5 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 5,
+        "c": 4,
+        "d": 4
+      },
+      "selected": "b"
+    },
+    {
+      "id": "26",
+      "name": "Cinder Porcupine",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 2 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 2 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 2,
+        "c": 5,
+        "d": 2
+      },
+      "selected": "c"
+    },
+    {
+      "id": "27",
+      "name": "Gem Spider",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 3 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 3 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 3,
+        "b": 4,
+        "c": 3,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "28",
+      "name": "Echo Lizard",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "29",
+      "name": "Flint Armadillo",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 2 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 2,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "30",
+      "name": "Ore Ant",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 1 out of 5",
+        "Artus: option B, 1 out of 5",
+        "Artus: option C, 1 out of 5",
+        "Artus: option D, 1 out of 5"
+      ],
+      "scores": {
+        "a": 1,
+        "b": 1,
+        "c": 1,
+        "d": 1
+      },
+      "selected": null
+    },
+    {
+      "id": "31",
+      "name": "Frost Lynx",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "32",
+      "name": "Aurora Elk",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 3 out of 5",
+        "Artus: option B, 5 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 3 out of 5"
+      ],
+      "scores": {
+        "a": 3,
+        "b": 5,
+        "c": 4,
+        "d": 3
+      },
+      "selected": "b"
+    },
+    {
+      "id": "33",
+      "name": "Snow Hare",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 1 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 2 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 1,
+        "c": 5,
+        "d": 2
+      },
+      "selected": "c"
+    },
+    {
+      "id": "34",
+      "name": "Cloud Yak",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "35",
+      "name": "Pinecone Marmot",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "36",
+      "name": "Gale Falcon",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "37",
+      "name": "Lichen Ibex",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "38",
+      "name": "Hail Wolverine",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 3 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 3,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "39",
+      "name": "Mist Leopard",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 3 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 3,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "40",
+      "name": "Glacier Seal",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "41",
+      "name": "Ink Raven",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 5 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 5,
+        "c": 4,
+        "d": 4
+      },
+      "selected": "b"
+    },
+    {
+      "id": "42",
+      "name": "Bramble Peacock",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "43",
+      "name": "Bell Tortoise",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 2 out of 5",
+        "Artus: option B, 3 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 2,
+        "b": 3,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "44",
+      "name": "Honey Wasp",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 1 out of 5",
+        "Artus: option B, 2 out of 5",
+        "Artus: option C, 2 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 1,
+        "b": 2,
+        "c": 2,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "45",
+      "name": "Velvet Shrew",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 5 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 5,
+        "c": 4,
+        "d": 4
+      },
+      "selected": "b"
+    },
+    {
+      "id": "46",
+      "name": "Dusk Firefly",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 5 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 5,
+        "d": 4
+      },
+      "selected": "c"
+    },
+    {
+      "id": "48",
+      "name": "Petal Chameleon",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 4 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 5 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 4,
+        "c": 4,
+        "d": 5
+      },
+      "selected": "d"
+    },
+    {
+      "id": "50",
+      "name": "Moon Hare Knight",
+      "note": "",
+      "ratings": [
+        "Artus: option A, 4 out of 5",
+        "Artus: option B, 5 out of 5",
+        "Artus: option C, 4 out of 5",
+        "Artus: option D, 4 out of 5"
+      ],
+      "scores": {
+        "a": 4,
+        "b": 5,
+        "c": 4,
+        "d": 4
+      },
+      "selected": "b"
+    }
+  ]
+}

@@ -1,0 +1,794 @@
+{
+  "version": 1,
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "maxCharacters": 7000,
+  "characters": 5430,
+  "segmentCount": 141,
+  "batches": [
+    {
+      "id": "approved-enemies-001",
+      "text": "Snow Owl\n\nIts white wings shine with the colours of the northern lights.\n\nA Snow Owl is on the path. Ready to battle?\n\nBramble Badger\n\nIt digs safe tunnels with its strong golden claws.\n\nA Bramble Badger is on the path. Ready to battle?\n\nEmber Fox\n\nIts bright tail keeps lost travellers warm.\n\nAn Ember Fox is on the path. Ready to battle?\n\nRowan Stag\n\nNew green leaves grow on its branching antlers.\n\nA Rowan Stag is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Snow Owl",
+          "text": "Snow Owl",
+          "kind": "name"
+        },
+        {
+          "key": "Its white wings shine with the colours of the northern lights.",
+          "text": "Its white wings shine with the colours of the northern lights.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Snow Owl is on the path. Ready to battle?",
+          "text": "A Snow Owl is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Bramble Badger",
+          "text": "Bramble Badger",
+          "kind": "name"
+        },
+        {
+          "key": "It digs safe tunnels with its strong golden claws.",
+          "text": "It digs safe tunnels with its strong golden claws.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Bramble Badger is on the path. Ready to battle?",
+          "text": "A Bramble Badger is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Ember Fox",
+          "text": "Ember Fox",
+          "kind": "name"
+        },
+        {
+          "key": "Its bright tail keeps lost travellers warm.",
+          "text": "Its bright tail keeps lost travellers warm.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Ember Fox is on the path. Ready to battle?",
+          "text": "An Ember Fox is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Rowan Stag",
+          "text": "Rowan Stag",
+          "kind": "name"
+        },
+        {
+          "key": "New green leaves grow on its branching antlers.",
+          "text": "New green leaves grow on its branching antlers.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Rowan Stag is on the path. Ready to battle?",
+          "text": "A Rowan Stag is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-002",
+      "text": "Pine Marten\n\nBlue sparks race along its tail before a storm.\n\nA Pine Marten is on the path. Ready to battle?\n\nHazel Hare\n\nIts blue cloak rides the wind as it leaps.\n\nA Hazel Hare is on the path. Ready to battle?\n\nCloak Raccoon\n\nIt shares its wooden shield with smaller friends.\n\nA Cloak Raccoon is on the path. Ready to battle?\n\nChestnut Squirrel\n\nIt keeps one warm acorn inside its fiery tail.\n\nA Chestnut Squirrel is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Pine Marten",
+          "text": "Pine Marten",
+          "kind": "name"
+        },
+        {
+          "key": "Blue sparks race along its tail before a storm.",
+          "text": "Blue sparks race along its tail before a storm.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Pine Marten is on the path. Ready to battle?",
+          "text": "A Pine Marten is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Hazel Hare",
+          "text": "Hazel Hare",
+          "kind": "name"
+        },
+        {
+          "key": "Its blue cloak rides the wind as it leaps.",
+          "text": "Its blue cloak rides the wind as it leaps.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Hazel Hare is on the path. Ready to battle?",
+          "text": "A Hazel Hare is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Cloak Raccoon",
+          "text": "Cloak Raccoon",
+          "kind": "name"
+        },
+        {
+          "key": "It shares its wooden shield with smaller friends.",
+          "text": "It shares its wooden shield with smaller friends.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Cloak Raccoon is on the path. Ready to battle?",
+          "text": "A Cloak Raccoon is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Chestnut Squirrel",
+          "text": "Chestnut Squirrel",
+          "kind": "name"
+        },
+        {
+          "key": "It keeps one warm acorn inside its fiery tail.",
+          "text": "It keeps one warm acorn inside its fiery tail.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Chestnut Squirrel is on the path. Ready to battle?",
+          "text": "A Chestnut Squirrel is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-003",
+      "text": "Moss Bear\n\nIts golden collar glows when the sun comes out.\n\nA Moss Bear is on the path. Ready to battle?\n\nLily Otter\n\nIts round shield turns river stones into a safe path.\n\nA Lily Otter is on the path. Ready to battle?\n\nDam Beaver\n\nIt builds strong dams and carries tools beside its shield.\n\nA Dam Beaver is on the path. Ready to battle?\n\nAmber Newt\n\nIts golden crest catches the last light of day.\n\nAn Amber Newt is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Moss Bear",
+          "text": "Moss Bear",
+          "kind": "name"
+        },
+        {
+          "key": "Its golden collar glows when the sun comes out.",
+          "text": "Its golden collar glows when the sun comes out.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Moss Bear is on the path. Ready to battle?",
+          "text": "A Moss Bear is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Lily Otter",
+          "text": "Lily Otter",
+          "kind": "name"
+        },
+        {
+          "key": "Its round shield turns river stones into a safe path.",
+          "text": "Its round shield turns river stones into a safe path.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Lily Otter is on the path. Ready to battle?",
+          "text": "A Lily Otter is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Dam Beaver",
+          "text": "Dam Beaver",
+          "kind": "name"
+        },
+        {
+          "key": "It builds strong dams and carries tools beside its shield.",
+          "text": "It builds strong dams and carries tools beside its shield.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Dam Beaver is on the path. Ready to battle?",
+          "text": "A Dam Beaver is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Amber Newt",
+          "text": "Amber Newt",
+          "kind": "name"
+        },
+        {
+          "key": "Its golden crest catches the last light of day.",
+          "text": "Its golden crest catches the last light of day.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Amber Newt is on the path. Ready to battle?",
+          "text": "An Amber Newt is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-004",
+      "text": "Cattail Heron\n\nIts long blue feathers ripple before the rain.\n\nA Cattail Heron is on the path. Ready to battle?\n\nBrook Turtle\n\nA tiny waterfall runs over its shining blue shell.\n\nA Brook Turtle is on the path. Ready to battle?\n\nWillow Kingfisher\n\nIt watches the water from a branch before a swift dive.\n\nA Willow Kingfisher is on the path. Ready to battle?\n\nRipple Salamander\n\nBlue rings on its skin glow deep below the water.\n\nA Ripple Salamander is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Cattail Heron",
+          "text": "Cattail Heron",
+          "kind": "name"
+        },
+        {
+          "key": "Its long blue feathers ripple before the rain.",
+          "text": "Its long blue feathers ripple before the rain.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Cattail Heron is on the path. Ready to battle?",
+          "text": "A Cattail Heron is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Brook Turtle",
+          "text": "Brook Turtle",
+          "kind": "name"
+        },
+        {
+          "key": "A tiny waterfall runs over its shining blue shell.",
+          "text": "A tiny waterfall runs over its shining blue shell.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Brook Turtle is on the path. Ready to battle?",
+          "text": "A Brook Turtle is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Willow Kingfisher",
+          "text": "Willow Kingfisher",
+          "kind": "name"
+        },
+        {
+          "key": "It watches the water from a branch before a swift dive.",
+          "text": "It watches the water from a branch before a swift dive.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Willow Kingfisher is on the path. Ready to battle?",
+          "text": "A Willow Kingfisher is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Ripple Salamander",
+          "text": "Ripple Salamander",
+          "kind": "name"
+        },
+        {
+          "key": "Blue rings on its skin glow deep below the water.",
+          "text": "Blue rings on its skin glow deep below the water.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Ripple Salamander is on the path. Ready to battle?",
+          "text": "A Ripple Salamander is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-005",
+      "text": "Shell Lobster\n\nIts smooth pearl armour hides a gentle river friend.\n\nA Shell Lobster is on the path. Ready to battle?\n\nMarsh Crane\n\nIt steps quietly through the mist on long thin legs.\n\nA Marsh Crane is on the path. Ready to battle?\n\nCoal Salamander\n\nIts dark scales hold a warm light from deep in the earth.\n\nA Coal Salamander is on the path. Ready to battle?\n\nQuartz Mole\n\nIt finds hidden gems with its strong digging paws.\n\nA Quartz Mole is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Shell Lobster",
+          "text": "Shell Lobster",
+          "kind": "name"
+        },
+        {
+          "key": "Its smooth pearl armour hides a gentle river friend.",
+          "text": "Its smooth pearl armour hides a gentle river friend.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Shell Lobster is on the path. Ready to battle?",
+          "text": "A Shell Lobster is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Marsh Crane",
+          "text": "Marsh Crane",
+          "kind": "name"
+        },
+        {
+          "key": "It steps quietly through the mist on long thin legs.",
+          "text": "It steps quietly through the mist on long thin legs.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Marsh Crane is on the path. Ready to battle?",
+          "text": "A Marsh Crane is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Coal Salamander",
+          "text": "Coal Salamander",
+          "kind": "name"
+        },
+        {
+          "key": "Its dark scales hold a warm light from deep in the earth.",
+          "text": "Its dark scales hold a warm light from deep in the earth.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Coal Salamander is on the path. Ready to battle?",
+          "text": "A Coal Salamander is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Quartz Mole",
+          "text": "Quartz Mole",
+          "kind": "name"
+        },
+        {
+          "key": "It finds hidden gems with its strong digging paws.",
+          "text": "It finds hidden gems with its strong digging paws.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Quartz Mole is on the path. Ready to battle?",
+          "text": "A Quartz Mole is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-006",
+      "text": "Copper Scorpion\n\nIts shining tail curls above its copper armour.\n\nA Copper Scorpion is on the path. Ready to battle?\n\nLantern Gecko\n\nIts soft light helps friends find their way through caves.\n\nA Lantern Gecko is on the path. Ready to battle?\n\nSlate Pangolin\n\nIts stone scales fold into a safe round shield.\n\nA Slate Pangolin is on the path. Ready to battle?\n\nCinder Porcupine\n\nIts bright quills glow like warm coals in the dark.\n\nA Cinder Porcupine is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Copper Scorpion",
+          "text": "Copper Scorpion",
+          "kind": "name"
+        },
+        {
+          "key": "Its shining tail curls above its copper armour.",
+          "text": "Its shining tail curls above its copper armour.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Copper Scorpion is on the path. Ready to battle?",
+          "text": "A Copper Scorpion is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Lantern Gecko",
+          "text": "Lantern Gecko",
+          "kind": "name"
+        },
+        {
+          "key": "Its soft light helps friends find their way through caves.",
+          "text": "Its soft light helps friends find their way through caves.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Lantern Gecko is on the path. Ready to battle?",
+          "text": "A Lantern Gecko is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Slate Pangolin",
+          "text": "Slate Pangolin",
+          "kind": "name"
+        },
+        {
+          "key": "Its stone scales fold into a safe round shield.",
+          "text": "Its stone scales fold into a safe round shield.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Slate Pangolin is on the path. Ready to battle?",
+          "text": "A Slate Pangolin is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Cinder Porcupine",
+          "text": "Cinder Porcupine",
+          "kind": "name"
+        },
+        {
+          "key": "Its bright quills glow like warm coals in the dark.",
+          "text": "Its bright quills glow like warm coals in the dark.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Cinder Porcupine is on the path. Ready to battle?",
+          "text": "A Cinder Porcupine is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-007",
+      "text": "Gem Spider\n\nIt spins fine threads that sparkle like tiny jewels.\n\nA Gem Spider is on the path. Ready to battle?\n\nEcho Lizard\n\nIts bright markings flash when a sound echoes nearby.\n\nAn Echo Lizard is on the path. Ready to battle?\n\nFlint Armadillo\n\nIts smooth armour rolls into a hard protective ball.\n\nA Flint Armadillo is on the path. Ready to battle?\n\nFrost Lynx\n\nIt walks softly through snow on wide furry paws.\n\nA Frost Lynx is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Gem Spider",
+          "text": "Gem Spider",
+          "kind": "name"
+        },
+        {
+          "key": "It spins fine threads that sparkle like tiny jewels.",
+          "text": "It spins fine threads that sparkle like tiny jewels.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Gem Spider is on the path. Ready to battle?",
+          "text": "A Gem Spider is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Echo Lizard",
+          "text": "Echo Lizard",
+          "kind": "name"
+        },
+        {
+          "key": "Its bright markings flash when a sound echoes nearby.",
+          "text": "Its bright markings flash when a sound echoes nearby.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Echo Lizard is on the path. Ready to battle?",
+          "text": "An Echo Lizard is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Flint Armadillo",
+          "text": "Flint Armadillo",
+          "kind": "name"
+        },
+        {
+          "key": "Its smooth armour rolls into a hard protective ball.",
+          "text": "Its smooth armour rolls into a hard protective ball.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Flint Armadillo is on the path. Ready to battle?",
+          "text": "A Flint Armadillo is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Frost Lynx",
+          "text": "Frost Lynx",
+          "kind": "name"
+        },
+        {
+          "key": "It walks softly through snow on wide furry paws.",
+          "text": "It walks softly through snow on wide furry paws.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Frost Lynx is on the path. Ready to battle?",
+          "text": "A Frost Lynx is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-008",
+      "text": "Aurora Elk\n\nIts antlers shine with colours from the night sky.\n\nAn Aurora Elk is on the path. Ready to battle?\n\nSnow Hare\n\nIts bright cloak leaves a soft trail across the snow.\n\nA Snow Hare is on the path. Ready to battle?\n\nCloud Yak\n\nIts thick coat keeps smaller friends warm in the wind.\n\nA Cloud Yak is on the path. Ready to battle?\n\nPinecone Marmot\n\nIt stores food under the snow for the long winter.\n\nA Pinecone Marmot is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Aurora Elk",
+          "text": "Aurora Elk",
+          "kind": "name"
+        },
+        {
+          "key": "Its antlers shine with colours from the night sky.",
+          "text": "Its antlers shine with colours from the night sky.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Aurora Elk is on the path. Ready to battle?",
+          "text": "An Aurora Elk is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Snow Hare",
+          "text": "Snow Hare",
+          "kind": "name"
+        },
+        {
+          "key": "Its bright cloak leaves a soft trail across the snow.",
+          "text": "Its bright cloak leaves a soft trail across the snow.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Snow Hare is on the path. Ready to battle?",
+          "text": "A Snow Hare is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Cloud Yak",
+          "text": "Cloud Yak",
+          "kind": "name"
+        },
+        {
+          "key": "Its thick coat keeps smaller friends warm in the wind.",
+          "text": "Its thick coat keeps smaller friends warm in the wind.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Cloud Yak is on the path. Ready to battle?",
+          "text": "A Cloud Yak is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Pinecone Marmot",
+          "text": "Pinecone Marmot",
+          "kind": "name"
+        },
+        {
+          "key": "It stores food under the snow for the long winter.",
+          "text": "It stores food under the snow for the long winter.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Pinecone Marmot is on the path. Ready to battle?",
+          "text": "A Pinecone Marmot is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-009",
+      "text": "Gale Falcon\n\nIt rides high winds above the tallest cliffs.\n\nA Gale Falcon is on the path. Ready to battle?\n\nLichen Ibex\n\nIts strong hooves grip the narrow mountain paths.\n\nA Lichen Ibex is on the path. Ready to battle?\n\nHail Wolverine\n\nIts thick winter coat keeps out the sharpest cold.\n\nA Hail Wolverine is on the path. Ready to battle?\n\nMist Leopard\n\nIt moves like a quiet shadow through the mountain mist.\n\nA Mist Leopard is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Gale Falcon",
+          "text": "Gale Falcon",
+          "kind": "name"
+        },
+        {
+          "key": "It rides high winds above the tallest cliffs.",
+          "text": "It rides high winds above the tallest cliffs.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Gale Falcon is on the path. Ready to battle?",
+          "text": "A Gale Falcon is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Lichen Ibex",
+          "text": "Lichen Ibex",
+          "kind": "name"
+        },
+        {
+          "key": "Its strong hooves grip the narrow mountain paths.",
+          "text": "Its strong hooves grip the narrow mountain paths.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Lichen Ibex is on the path. Ready to battle?",
+          "text": "A Lichen Ibex is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Hail Wolverine",
+          "text": "Hail Wolverine",
+          "kind": "name"
+        },
+        {
+          "key": "Its thick winter coat keeps out the sharpest cold.",
+          "text": "Its thick winter coat keeps out the sharpest cold.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Hail Wolverine is on the path. Ready to battle?",
+          "text": "A Hail Wolverine is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Mist Leopard",
+          "text": "Mist Leopard",
+          "kind": "name"
+        },
+        {
+          "key": "It moves like a quiet shadow through the mountain mist.",
+          "text": "It moves like a quiet shadow through the mountain mist.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Mist Leopard is on the path. Ready to battle?",
+          "text": "A Mist Leopard is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-010",
+      "text": "Glacier Seal\n\nIt glides under the ice and rests beside clear blue pools.\n\nA Glacier Seal is on the path. Ready to battle?\n\nInk Raven\n\nIt carries little messages beneath its dark wings.\n\nAn Ink Raven is on the path. Ready to battle?\n\nBramble Peacock\n\nIts wide tail opens like a bright fan of jewels.\n\nA Bramble Peacock is on the path. Ready to battle?\n\nBell Tortoise\n\nIts shell rings softly when a friend needs help.\n\nA Bell Tortoise is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Glacier Seal",
+          "text": "Glacier Seal",
+          "kind": "name"
+        },
+        {
+          "key": "It glides under the ice and rests beside clear blue pools.",
+          "text": "It glides under the ice and rests beside clear blue pools.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Glacier Seal is on the path. Ready to battle?",
+          "text": "A Glacier Seal is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Ink Raven",
+          "text": "Ink Raven",
+          "kind": "name"
+        },
+        {
+          "key": "It carries little messages beneath its dark wings.",
+          "text": "It carries little messages beneath its dark wings.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Ink Raven is on the path. Ready to battle?",
+          "text": "An Ink Raven is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Bramble Peacock",
+          "text": "Bramble Peacock",
+          "kind": "name"
+        },
+        {
+          "key": "Its wide tail opens like a bright fan of jewels.",
+          "text": "Its wide tail opens like a bright fan of jewels.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Bramble Peacock is on the path. Ready to battle?",
+          "text": "A Bramble Peacock is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Bell Tortoise",
+          "text": "Bell Tortoise",
+          "kind": "name"
+        },
+        {
+          "key": "Its shell rings softly when a friend needs help.",
+          "text": "Its shell rings softly when a friend needs help.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Bell Tortoise is on the path. Ready to battle?",
+          "text": "A Bell Tortoise is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-011",
+      "text": "Honey Wasp\n\nIt guards the sweet flowers in the sunny garden.\n\nA Honey Wasp is on the path. Ready to battle?\n\nVelvet Shrew\n\nIt follows tiny sounds with its pointed nose.\n\nA Velvet Shrew is on the path. Ready to battle?\n\nDusk Firefly\n\nIts gentle glow marks a safe path after sunset.\n\nA Dusk Firefly is on the path. Ready to battle?\n\nPetal Chameleon\n\nIts colours change as it moves between the flowers.\n\nA Petal Chameleon is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Honey Wasp",
+          "text": "Honey Wasp",
+          "kind": "name"
+        },
+        {
+          "key": "It guards the sweet flowers in the sunny garden.",
+          "text": "It guards the sweet flowers in the sunny garden.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Honey Wasp is on the path. Ready to battle?",
+          "text": "A Honey Wasp is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Velvet Shrew",
+          "text": "Velvet Shrew",
+          "kind": "name"
+        },
+        {
+          "key": "It follows tiny sounds with its pointed nose.",
+          "text": "It follows tiny sounds with its pointed nose.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Velvet Shrew is on the path. Ready to battle?",
+          "text": "A Velvet Shrew is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Dusk Firefly",
+          "text": "Dusk Firefly",
+          "kind": "name"
+        },
+        {
+          "key": "Its gentle glow marks a safe path after sunset.",
+          "text": "Its gentle glow marks a safe path after sunset.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Dusk Firefly is on the path. Ready to battle?",
+          "text": "A Dusk Firefly is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Petal Chameleon",
+          "text": "Petal Chameleon",
+          "kind": "name"
+        },
+        {
+          "key": "Its colours change as it moves between the flowers.",
+          "text": "Its colours change as it moves between the flowers.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Petal Chameleon is on the path. Ready to battle?",
+          "text": "A Petal Chameleon is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-012",
+      "text": "Moon Hare Knight\n\nIt raises its moon shield to protect a smaller friend.\n\nA Moon Hare Knight is on the path. Ready to battle?\n\nThis friend lives in the deep forest.\n\nThis friend lives beside the river.\n\nThis friend lives near the glowing caves.\n\nThis friend lives among snowy peaks.\n\nThis friend lives in the hidden garden.\n\nA future chapter will reveal this friend.",
+      "segments": [
+        {
+          "key": "Moon Hare Knight",
+          "text": "Moon Hare Knight",
+          "kind": "name"
+        },
+        {
+          "key": "It raises its moon shield to protect a smaller friend.",
+          "text": "It raises its moon shield to protect a smaller friend.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Moon Hare Knight is on the path. Ready to battle?",
+          "text": "A Moon Hare Knight is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "This friend lives in the deep forest.",
+          "text": "This friend lives in the deep forest.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "This friend lives beside the river.",
+          "text": "This friend lives beside the river.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "This friend lives near the glowing caves.",
+          "text": "This friend lives near the glowing caves.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "This friend lives among snowy peaks.",
+          "text": "This friend lives among snowy peaks.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "This friend lives in the hidden garden.",
+          "text": "This friend lives in the hidden garden.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "A future chapter will reveal this friend.",
+          "text": "A future chapter will reveal this friend.",
+          "kind": "book-hint"
+        }
+      ]
+    }
+  ]
+}
