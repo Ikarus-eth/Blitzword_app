@@ -20,7 +20,7 @@ let storyControls=null;
 let parentReport=null,parentWordReturn=null;
 const adventures=window.BlitzAdventureUI.create({Core,Content,state:()=>state,save,show,home,enter,cancelWork,
   paintEnemy,paintPip,paintHero,heroIndex,dragonText:text=>dragonText(text),speak,growth:()=>openGrowth(),
-  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,
+  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,wimmelbild:openWimmelbild,
   suspend:suspendAdventureUI,active:()=>!paused&&!blocked&&playing});
 function suspendAdventureUI(){
   if(playing&&!paused)confirmActivity();account();Core.interruptQuestion(state);cancelWork();paused=true;playing=false;
@@ -34,6 +34,10 @@ function launchMission(id){
     if(state.activity==='summary'||state.activity==='route')state.activity=c.phase==='battle'?(state.teaching?'teaching':'battle'):['spoils','retry'].includes(c.phase)?'result':'mission';
     if(save())enter();
   }
+}
+function openWimmelbild(){
+  if(blocked||!suspendAdventureUI())return;
+  location.assign('assets/wimmelbild/');
 }
 function legacyAdventure(){
   if(blocked)return;adventures.timeTap();if(!suspendAdventureUI())return;Core.Adventure.switchTo(state,'legacy');
@@ -1199,6 +1203,7 @@ function continueMap(){
   continueAdventure();
 }
 $('#mapTraveller').onclick=()=>{renderHeroes();show('hero');save();};
+$('#mapWimmelbild').onclick=openWimmelbild;
 $('#mapStoryPilot').onclick=()=>{if(blocked||state.screen!=='campaignMap'||!save())return;cancelWork();location.assign('assets/story-pilot/');};
 $('#mapNewAdventures').onclick=()=>{Core.Adventure.of(state).preferLegacy=false;home();};
 $('#mapParents').onclick=openParentGate;$('#routeParents').onclick=openParentGate;

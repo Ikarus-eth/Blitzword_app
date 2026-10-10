@@ -1,0 +1,50 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-10-10",
+  "images": [
+    {
+      "slug": "harbour",
+      "prompt": "Create a high resolution landscape 3:2 detailed Wimmelbild game illustration, as sharp and large as possible, ideally 3072px wide or larger, suitable for pinch zoom. Rich hand-painted fantasy storybook environment, sophisticated and inviting, warm natural light, beautiful fine details everywhere, tiny interesting discoveries, consistent perspective. Full-bleed artwork ONLY, absolutely NO text, letters, numbers, interface, labels, borders, arrows or logos. No protagonist or Pip dragon. Puzzle evidence must be clearly drawn and anatomically coherent, spaced apart and visible. A believable busy world, no giant foreground subject taking most of image. Bird's-eye adventure map from harbour at bottom through countryside up to distant castle. A cream-sailed wooden ship moored at bottom, a single huge spreading oak tree containing a village near centre LEFT, large dark cave mouth in rocks centre RIGHT, castle at TOP. Paths link these landmarks across bridges. Add mills, orchards, waterfall, tiny travellers, fishing boats, stone walls, sheep, birds, cottage gardens, laundry, carved gates, ruins, small waterfalls, bridges. Four large landmarks unmistakable, gentle increasing sense of adventure, same visual quality as ornate fantasy atlas. No route numbers.",
+      "generation_file": "exec-9b4ecc65-fef2-44ce-9884-3688d2cbea13.png",
+      "file": "assets/wimmelbild/scenes/harbour.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "7678ae6eec9b4afdf2b8ab51c7d08b2521f46d3ef2e3f7233270a21e5c145375"
+    },
+    {
+      "slug": "village",
+      "prompt": "Create a high resolution landscape 3:2 detailed Wimmelbild game illustration, as sharp and large as possible, ideally 3072px wide or larger, suitable for pinch zoom. Rich hand-painted fantasy storybook environment, sophisticated and inviting, warm natural light, beautiful fine details everywhere, tiny interesting discoveries, consistent perspective. Full-bleed artwork ONLY, absolutely NO text, letters, numbers, interface, labels, borders, arrows or logos. No protagonist or Pip dragon. Puzzle evidence must be clearly drawn and anatomically coherent, spaced apart and visible. A believable busy world, no giant foreground subject taking most of image. A sprawling ancient oak TREE VILLAGE with platforms, ladders, bridges, cottage doors, market stalls, tiny people and animals. Exactly THREE clear red wooden doors at different distant positions, each fully visible: one at upper LEFT has a WHITE OWL perched directly over it and a SMALL GOLD BELL hanging right beside its doorframe; second at lower CENTRE has a WHITE OWL over it but a red lantern beside doorframe and absolutely NO bell; third at middle RIGHT has a GOLD BELL beside its doorframe and a black raven over it, NO owl. Make bells readable at zoom. Tiny flowers, hanging pots, rope bridges, squirrels, acorns, books, cakes, tools, basket weaving, laundry, hidden windows, many other GREEN or BLUE doors. The three red doors roughly same size, each occupies 8 percent image height. No signs or writing.",
+      "generation_file": "exec-543f927f-bb19-4228-b57a-62a0e82e3641.png",
+      "file": "assets/wimmelbild/scenes/village.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "07e2b4c59c987c3f256d537a8daf060706822e47e660b230fdd911ae8916e171"
+    },
+    {
+      "slug": "dragons",
+      "prompt": "Create a high resolution landscape 3:2 detailed Wimmelbild game illustration, as sharp and large as possible, ideally 3072px wide or larger, suitable for pinch zoom. Rich hand-painted fantasy storybook environment, sophisticated and inviting, warm natural light, beautiful fine details everywhere, tiny interesting discoveries, consistent perspective. Full-bleed artwork ONLY, absolutely NO text, letters, numbers, interface, labels, borders, arrows or logos. No protagonist or Pip dragon. Puzzle evidence must be clearly drawn and anatomically coherent, spaced apart and visible. A believable busy world, no giant foreground subject taking most of image. Dragon valley festival with TWELVE distinct full-body dragons scattered naturally across terraced grassy landscape, stream, ruins, little bridges, flowers, market awnings, caves, nests and fruit trees. Rich dense many little details, but all dragon bodies and tails separable. CRITICAL unique target: exactly ONE dragon has RED AND PINK scales, very LONG CURLING TAIL, BLACK TIGER STRIPES across body and tail. Put target at middle RIGHT near a stone arch, fully visible about 15 percent image width. Other near-matches: red/pink dragon with WHITE SPOTS and long tail on lower left; red/pink dragon with black stripes but SHORT STUBBY TAIL on upper left; BLUE dragon with black stripes long tail near river; purple, emerald, orange, cream, gold dragons with other patterns populate rest. NO other dragon matches all target traits. No creature cropped by image edges. Lively varied activities: resting, eating apples, playing, stretching wings. Fantasy dragons with coherent limbs and wings, NOT dinosaurs, friendly but not babyish. No text or numbered markers.",
+      "generation_file": "exec-4a4f2c8b-4fc0-4116-938e-192b356244e4.png",
+      "file": "assets/wimmelbild/scenes/dragons.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "f213981bf4ed079eb23c71b2b17b4b9886683f1e24ae2efeeffca6445faa22c1"
+    },
+    {
+      "slug": "treasure",
+      "prompt": "Create a high resolution landscape 3:2 detailed Wimmelbild game illustration, as sharp and large as possible, ideally 3072px wide or larger, suitable for pinch zoom. Rich hand-painted fantasy storybook environment, sophisticated and inviting, warm natural light, beautiful fine details everywhere, tiny interesting discoveries, consistent perspective. Full-bleed artwork ONLY, absolutely NO text, letters, numbers, interface, labels, borders, arrows or logos. No protagonist or Pip dragon. Puzzle evidence must be clearly drawn and anatomically coherent, spaced apart and visible. A believable busy world, no giant foreground subject taking most of image. A vast castle treasury and magical library cross-section, three levels with winding stairs, arches, balconies, moonlit windows, carpets, plants, treasure, clocks, astrolabes, tiny mice, owls, stacks of books and interesting details. Exactly THREE fully visible prominent GREEN treasure chests of comparable size spread across the image. Target chest at MIDDLE RIGHT: green wooden chest with GOLD CRESCENT MOON emblem, an OPEN RED BOOK on a small table directly next to it, and a WHITE CAT curled beneath that table. Distractor chest LOWER LEFT: green with GOLD CRESCENT MOON emblem and CLOSED RED BOOK next to it, no cat. Distractor chest UPPER CENTRE: green with GOLD STAR emblem, OPEN RED BOOK and WHITE CAT next to it. All three emblem and book-state distinctions visible upon zoom. Many other background objects but no additional green chests. Keep targets smaller than previous village scene: each chest about 7 percent image width. Inviting satisfying mysterious finale, no writing on any book.",
+      "generation_file": "exec-0da7b02b-e82f-4171-83f2-dc5778a711e2.png",
+      "file": "assets/wimmelbild/scenes/treasure.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "87b4c72a078de2c2c7fff6a9abc010d38e6d76e32aaf4e30fe0d4497a921eb2a"
+    }
+  ]
+}

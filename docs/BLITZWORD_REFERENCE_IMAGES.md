@@ -1,3 +1,7 @@
+## Dragon path Wimmelbild scenes — 10 October 2026
+
+The user selected the map-reading mockup 3 and authorized its standalone mini-game with increasingly detailed scenes, zoom, and a many-dragon search. Four new built-in ImageGen illustrations in `assets/wimmelbild/scenes/` depict the harbour map, tree village, dragon valley and castle treasury. These are new environments and incidental creatures; no established hero or Pip asset is replaced. Clue evidence was visually checked in the final images: three red doors; contrasting dragon markings/tails; three green chests with different emblems/book states. Runtime hotspots use measured normalized coordinates. [Exact prompts, output dimensions and hashes](wimmelbild/art-prompts.json). Native images are 1536×1024, delivered as high-quality WebP; zoom does not invent higher-resolution detail.
+
 # BlitzWord — Reference Image Plan
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.

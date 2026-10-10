@@ -1302,3 +1302,11 @@ for(const word of ['has','zero','eight','fifteen','thousand','second',"can't","I
  ui.click(ui.get('teachContinue'));assert.equal(ui.state().activity,'battle');
 }
 console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat and reload without images');
+
+// Both chapter-selection homes launch the isolated mini-game after saving.
+{
+ const legacy=boot(impactSave());legacy.click(legacy.get('mapWimmelbild'));assert.equal(legacy.destinations.at(-1),'assets/wimmelbild/');
+ const hub=boot(impactSave(),{adventures:true});const launch=[...hub.document.querySelectorAll('button')].find(b=>b.textContent==='⌕ Dragon path');hub.click(launch);assert.equal(hub.destinations.at(-1),'assets/wimmelbild/');
+ const denied=boot(impactSave(),{failWrites:true});denied.get('mapWimmelbild').onclick();assert.equal(denied.destinations.length,0);
+ console.log('PASS standalone Wimmelbild launch from both chapter homes and failed-save guard');
+}

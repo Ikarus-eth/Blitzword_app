@@ -1,3 +1,9 @@
+## Standalone Dragon path — 10 October 2026
+
+The user selected map mockup 3 and requested a standalone mini-game launched from the chapter-selection home, with successive increasingly detailed Wimmelbild scenes and pinch-to-zoom. One scene must identify a dragon from multiple attributes, including red/pink scales, a long tail and black stripes.
+
+Implemented direction: four linked scenes (harbour, tree village, dragon valley, castle treasury), untimed clues and written answer choices, picture selection with explicit confirmation, correct answers opening the next scene, and non-punitive clue-specific feedback. Both the creature-campaign and Word-trails homes expose **Dragon path**. Independent local progress, completion and replay never mutate the main learner save, curriculum, XP or health. Separate mini-game saves are not included in the main backup. Read-word audio, clue listening, optional hints, pinch/drag/wheel/keyboard zoom and a big-picture view support independent play. [Scope and checks](wimmelbild/RELEASE.md).
+
 ## Accepted curriculum expansion — 9 October 2026
 
 The parent approved 800 additional written forms for broad beginner-book reading, prioritising everyday vocabulary and including written numbers. This supersedes the historical future-expansion and fantasy-filter limits below. The playable pool is now 1,000: the unchanged Core 200 allocation plus the accepted [800-word pool](../curriculum/NEXT800_FIRST_BOOKS.json). Adaptive practice opens them using existing success/review rules, independently of story completion; no purchase gate is added. Stories are separate work.
