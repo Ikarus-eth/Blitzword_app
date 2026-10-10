@@ -1,5 +1,5 @@
 (function(root,factory){
-  if(typeof module==='object'&&module.exports)module.exports=factory(require('./missions.js'),require('./content.js'),require('./assets/wimmelbild/quest-data.js'));
+  if(typeof module==='object'&&module.exports)module.exports=factory(require('./missions.js'),require('./content.js'),require('./assets/wimmelbild/river-search-data.js'));
   else root.BlitzAdventure=factory(root.BlitzMissions,root.BlitzContent,root.BlitzMapQuests);
 })(typeof globalThis!=='undefined'?globalThis:this,function(Data,Content,Maps){
   'use strict';
@@ -21,6 +21,7 @@
       if(!Number.isFinite(c.hearts))c.hearts=matching?b.heroHealth:c.maxHearts;
       c.companionHelpUsed=!!c.companionHelpUsed;
       if(c.ninthRequired===undefined)c.ninthRequired=!!Maps?.[c.missionId]&&c.phase!=='complete';
+      syncMapRevision(c);
     }
     // The old record proves an encounter, not a win or a completed creature quest.
     if(!old){
@@ -140,9 +141,16 @@
     if(target%2){c.phase='spoils';startPuzzle(s);}else c.phase='intro';
     return true;
   }
+  function syncMapRevision(c){
+    const revision=Maps?.[c.missionId]?.revision;
+    if(c.search&&revision&&c.search.revision!==revision){
+      // Retain solved slots, hearts and reward records; discard only the obsolete pending choice.
+      c.search.selection=null;c.search.wrong=false;c.search.hint=false;c.search.listened=false;c.search.revision=revision;
+    }
+  }
   function next(s,now){
     const c=of(s).current,m=current(s);if(!c||!m||c.phase!=='puzzle'||!c.puzzle?.solved)return false;
-    if(c.step===3){if(c.ninthRequired){c.search ||= {index:0,selection:null,wrong:false,answers:[]};c.phase='search';s.activity='mission';}else complete(s,now);}
+    if(c.step===3){if(c.ninthRequired){c.search ||= {index:0,selection:null,wrong:false,answers:[]};syncMapRevision(c);c.phase='search';s.activity='mission';}else complete(s,now);}
     else {c.step++;c.phase='intro';c.puzzle=null;s.activity='mission';}
     return true;
   }

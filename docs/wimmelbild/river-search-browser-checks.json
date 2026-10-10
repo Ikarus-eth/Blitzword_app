@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-10T10:39:17.925Z",
+  "url": "http://127.0.0.1:8765/",
+  "checks": [
+    {
+      "id": "crab-ferry",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "stone-dam",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "mist-lamps",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "high-nest",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "river-heart",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "crab-ferry",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "stone-dam",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "mist-lamps",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "high-nest",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "river-heart",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "crab-ferry",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "stone-dam",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "mist-lamps",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "high-nest",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "river-heart",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    }
+  ],
+  "realTwoFingerEvents": "pass",
+  "physicalIPad": "not tested",
+  "errors": []
+}
