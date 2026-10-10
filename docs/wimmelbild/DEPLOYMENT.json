@@ -1,0 +1,92 @@
+{
+  "build": "wimmelbild-20261010-r1",
+  "merge": "7f6903ac69501737d644d7f9a7b7c9e76e7ab7d9",
+  "pr": 150,
+  "workflow": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38033694209",
+  "checks": [
+    {
+      "file": "index.html",
+      "expected": "8d241fa31140a08259705e37fab1ffab1832b3b2be674cda0dc2cb7db7c70f76",
+      "live": "8d241fa31140a08259705e37fab1ffab1832b3b2be674cda0dc2cb7db7c70f76",
+      "matches": true
+    },
+    {
+      "file": "app.js",
+      "expected": "b10067471dbecbe51edd3c3b5ee2453634a4b60011723f29995de96ffc165049",
+      "live": "b10067471dbecbe51edd3c3b5ee2453634a4b60011723f29995de96ffc165049",
+      "matches": true
+    },
+    {
+      "file": "adventure-ui.js",
+      "expected": "b8c4865949f7edc17c489b7932d93acec05c315ccffc98c2a5cc6475e30d8a9f",
+      "live": "b8c4865949f7edc17c489b7932d93acec05c315ccffc98c2a5cc6475e30d8a9f",
+      "matches": true
+    },
+    {
+      "file": "adventures.css",
+      "expected": "341af8400e979b61f40b4a4a73f904680513776986632e5b701a68a3df033e22",
+      "live": "341af8400e979b61f40b4a4a73f904680513776986632e5b701a68a3df033e22",
+      "matches": true
+    },
+    {
+      "file": "styles.css",
+      "expected": "426e20a8230e885544876559669ba3fb139f36a1ae5ee15987d66c1e8d9cb31e",
+      "live": "426e20a8230e885544876559669ba3fb139f36a1ae5ee15987d66c1e8d9cb31e",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/index.html",
+      "expected": "92927c7334b6b33a77d9b40a149a7a82fb474c27bebdfe28ac4210e84b4cfe92",
+      "live": "92927c7334b6b33a77d9b40a149a7a82fb474c27bebdfe28ac4210e84b4cfe92",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/core.js",
+      "expected": "6a5721fbc26e1f763db9faa7e8e4b3f2847f7bc2aff387087d8d0ca9f11d4024",
+      "live": "6a5721fbc26e1f763db9faa7e8e4b3f2847f7bc2aff387087d8d0ca9f11d4024",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/data.js",
+      "expected": "3bc8bf2128f89f8b73da98e688312dc43ba06432c365249d85aa2abef7b117e4",
+      "live": "3bc8bf2128f89f8b73da98e688312dc43ba06432c365249d85aa2abef7b117e4",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/style.css",
+      "expected": "b74dc231fbb2699e8b92f80c603a38b478ed6017f33d9f7ebfa865f9ad24befb",
+      "live": "b74dc231fbb2699e8b92f80c603a38b478ed6017f33d9f7ebfa865f9ad24befb",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/app.js",
+      "expected": "8b4acb918fc26d78c5c3e47164102825aef285d090932ea03965a7691d1cd9f1",
+      "live": "8b4acb918fc26d78c5c3e47164102825aef285d090932ea03965a7691d1cd9f1",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/scenes/village.webp",
+      "expected": "07e2b4c59c987c3f256d537a8daf060706822e47e660b230fdd911ae8916e171",
+      "live": "07e2b4c59c987c3f256d537a8daf060706822e47e660b230fdd911ae8916e171",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/scenes/harbour.webp",
+      "expected": "7678ae6eec9b4afdf2b8ab51c7d08b2521f46d3ef2e3f7233270a21e5c145375",
+      "live": "7678ae6eec9b4afdf2b8ab51c7d08b2521f46d3ef2e3f7233270a21e5c145375",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/scenes/treasure.webp",
+      "expected": "87b4c72a078de2c2c7fff6a9abc010d38e6d76e32aaf4e30fe0d4497a921eb2a",
+      "live": "87b4c72a078de2c2c7fff6a9abc010d38e6d76e32aaf4e30fe0d4497a921eb2a",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/scenes/dragons.webp",
+      "expected": "f213981bf4ed079eb23c71b2b17b4b9886683f1e24ae2efeeffca6445faa22c1",
+      "live": "f213981bf4ed079eb23c71b2b17b4b9886683f1e24ae2efeeffca6445faa22c1",
+      "matches": true
+    }
+  ]
+}
