@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-10T10:45:49.754348+00:00",
+  "commit": "1120d87d2851802f757542ba0ce4c27b0d529a17",
+  "pr": "https://github.com/Ikarus-eth/Blitzword_app/pull/160",
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "9d9499d169f97e77cc2bdd571ee567671d0f9f7eff61078695f795e0b4bbf6e8",
+      "matches": true
+    },
+    {
+      "file": "adventure-core.js",
+      "status": 200,
+      "sha256": "4bb94822bfca8a52b40b80bade4e472d72ff508ce0b4d307c28615a05e58c7f2",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/river-search-data.js",
+      "status": 200,
+      "sha256": "05bf7aef1549f0076ab1a9d300883fe358f21385678c22e23f86895c766d69a3",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/stone-dam-continuous.webp",
+      "status": 200,
+      "sha256": "1701c9e79a371e36d4fd6a4930f5b6b61791b62df06a8458f52723470d0cf584",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/mist-lamps-continuous.webp",
+      "status": 200,
+      "sha256": "bcd84b7b61e94d45e7a9786a1d474cbd36842e3d709befc2d5b26ca0dc3b5f18",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/high-nest-continuous.webp",
+      "status": 200,
+      "sha256": "006f1bc4fee6dad85c5f8deaf621d2bc00f9c2c9ee3ef894b6709445b664f41b",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/maps/river-heart-continuous.webp",
+      "status": 200,
+      "sha256": "03144d1876f6b11d3394ed127881b352c8815665276d638ede254a227b5cad15",
+      "matches": true
+    }
+  ],
+  "run": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38045792789",
+  "conclusion": "success"
+}
