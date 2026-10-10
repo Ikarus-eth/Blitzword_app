@@ -1,0 +1,165 @@
+{
+  "verifiedAt": "2026-10-10T08:18:58.785664+00:00",
+  "commit": "23bfe01c77fdb8331dd4685bf91d668fa75b04c7",
+  "pullRequest": 152,
+  "workflowRun": 38037241705,
+  "files": [
+    {
+      "path": "assets/enemy-finals/review.css",
+      "sha256": "2a68a4cc27e4e66c09896f38abee10d541c3d913afb1ae1e8c81de0dd8808d16",
+      "bytes": 6495
+    },
+    {
+      "path": "assets/enemy-finals/review.js",
+      "sha256": "b3721d78174c5f11cba0f6be9845c1432c1bfcef595ff5cc31149892faad754f",
+      "bytes": 12515
+    },
+    {
+      "path": "assets/enemy-finals/index.html",
+      "sha256": "fa169e452f81a2244a5f05aadf5a79d07c44cfb3f0fbecdc8263cb1e023e2636",
+      "bytes": 3884
+    },
+    {
+      "path": "assets/enemy-finals/artwork-manifest.json",
+      "sha256": "25c0edc3963d3ee0e0043aee055ef9b4f22919af194fe36cb5489ccb174ae07d",
+      "bytes": 5049
+    },
+    {
+      "path": "assets/enemy-finals/concept-vote-snapshot.json",
+      "sha256": "468195c7a4b9e8cc7231e58d86e2debd92ff74bde491a5a62b9c0044f9cbd2e3",
+      "bytes": 817
+    },
+    {
+      "path": "assets/enemy-finals/selection.js",
+      "sha256": "2df058baafa498acdca6bd10947176748ebb7e08994b839187a5d15ddc1a23c9",
+      "bytes": 3039
+    },
+    {
+      "path": "assets/enemy-finals/prompts.json",
+      "sha256": "adc239988e237e416acd24f2443b2cea11af1da7bccf73e93ac4369cc2739e93",
+      "bytes": 46746
+    },
+    {
+      "path": "assets/enemy-finals/catalog.json",
+      "sha256": "dad0412e331cd3e99d18bd20febec155e8b5f6d05259a9a7807f1a7aaa7975d3",
+      "bytes": 90655
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-06.png",
+      "sha256": "b74c5e4e55c7ccca7ee0ea6817107b80556da52b0d81346a042b160bc5216aca",
+      "bytes": 2623472
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-12.png",
+      "sha256": "54fe595654a564c9d69d6f567d71c6ba099d73c9b8afa6aa507c69a9614f013c",
+      "bytes": 2795455
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-13.png",
+      "sha256": "6a683fcb83bf7976fa421a6bfcb6d67456a06067dcc09a2906a09b9141ed930f",
+      "bytes": 2434575
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-07.png",
+      "sha256": "80061ef64e10d0c0825ace8806e3651c20d7d6ab83338be14eb5b9c246a8c14a",
+      "bytes": 2664748
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-11.png",
+      "sha256": "21e4bc403aa1b5b848623a95de9ac577af639dacce82a3db8a0ec5617a0ce9f1",
+      "bytes": 2525708
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-05.png",
+      "sha256": "45c6237e5d26b9e7ccbe7c3d964644c0d33d2c7ec0d1a157310f6886b4d19a8e",
+      "bytes": 2633818
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-04.png",
+      "sha256": "14543d45b4d3633fad533af3cad1cd7c00e115d0116cc61fa502809d2aecae72",
+      "bytes": 2711608
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-10.png",
+      "sha256": "31ad622bca55c04fb67e884b69bf013905e9cd236e186084661781c3d682b966",
+      "bytes": 2633858
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-14.png",
+      "sha256": "e0d1cbc14738e4e4e10f0d0e95ab649b078de63de187f499b19587d0501b4e0a",
+      "bytes": 2621041
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-01.png",
+      "sha256": "adcece125a7e8ea1d4bcf541d5de959083772446945f30d7b18c8f107e4544bb",
+      "bytes": 2744257
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-15.png",
+      "sha256": "d7fc9d12751aedfa2b968e39ef8e0dd74a71bfa1d04474f48bbcf73ebc283cfe",
+      "bytes": 2531291
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-03.png",
+      "sha256": "b0cfd65d406a8a7b0241a96add4796a8c24ab79bc371c0d9b52b9f13186cc014",
+      "bytes": 2460397
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-17.png",
+      "sha256": "281bf44dfdd929372c420cd7d4f46178e0cec1ab5aa965a15bf866ad2b3b4fea",
+      "bytes": 2620189
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-16.png",
+      "sha256": "7716f494dc9dccfb7b8008a49fcb1015459fa3da4860e8da1433931fca246a89",
+      "bytes": 2476478
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-02.png",
+      "sha256": "362b638f1a2588a389332be992c1283732ca294280d2e53f66001ffbf912ff9c",
+      "bytes": 2383722
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-18.png",
+      "sha256": "8620ca8ec53906d69e5e4859dd53ff43d9b159490365d4c32187d741bd2b793a",
+      "bytes": 2620256
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-19.png",
+      "sha256": "faf9288b6a03ef5092257d9ea1668bc2d9bbd81ec1d95929f4cb865f8bbe9567",
+      "bytes": 2597668
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-21.png",
+      "sha256": "cd188384a94e990b2046295a0a645c9f9a82e942cbbbfd7af7e55735b4ce56ff",
+      "bytes": 2523951
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-09.png",
+      "sha256": "924c81c2f00ba900b5092b7ee523bef7bcb17d5251e20762054ca991baeaddfd",
+      "bytes": 2459792
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-08.png",
+      "sha256": "15acdf91f1ba2668bec01e1a2790b47cbe59f8b95bea0d2ae1f52478da308c24",
+      "bytes": 2492387
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-20.png",
+      "sha256": "af3fc3cd8adc06af2190577faea764281fc632489633e237c0f50c12aeeffd84",
+      "bytes": 2718691
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-22.png",
+      "sha256": "e921b84346bf5a7ae32c4a0f23ce15db52f2a513024efde629d6ecc2ad0f83ef",
+      "bytes": 2484566
+    },
+    {
+      "path": "assets/enemy-finals/sheets/pair-23.png",
+      "sha256": "c62c69946e589922babf2c2d9eb295eb0fa829963f47b2e8225db43d2470de9c",
+      "bytes": 2543902
+    }
+  ],
+  "unitTests": 346,
+  "uiFlowGroups": 113
+}
