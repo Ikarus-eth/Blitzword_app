@@ -1,0 +1,55 @@
+{
+  "run": 38054403500,
+  "files": [
+    {
+      "path": "assets/map-quest/index.html",
+      "sha256": "89cf52766f159799d52f6f70aad83062aecece292799750c2f38fb63ec0de319",
+      "matches": true
+    },
+    {
+      "path": "assets/map-quest/app.js",
+      "sha256": "3a4d0aa76a6f8d9a3437bd394348294ea448c92b710b27ce5bb847de015cb771",
+      "matches": true
+    },
+    {
+      "path": "assets/map-quest/core.js",
+      "sha256": "14a85304b5e3bfbb4fd98398e4b7d3c8ce15e656c4fba8de146a0a856fcf8d83",
+      "matches": true
+    },
+    {
+      "path": "assets/map-quest/german.js",
+      "sha256": "d0bb646008489aed0d1f833131db26771a72186c639f54a8bb13c8f459a0640e",
+      "matches": true
+    },
+    {
+      "path": "assets/map-quest/german-river.js",
+      "sha256": "243a9178d0cf9e9f17cae5c1e23ff518e5a6927e348437f70d98acb146535542",
+      "matches": true
+    },
+    {
+      "path": "assets/wimmelbild/river-search-data.js",
+      "sha256": "36855d15cdf30c1db22bf10012a4c726cb765f258e578ed247d9ca2022d2c9f8",
+      "matches": true
+    },
+    {
+      "path": "assets/wimmelbild/maps/stone-dam-continuous.webp",
+      "sha256": "1701c9e79a371e36d4fd6a4930f5b6b61791b62df06a8458f52723470d0cf584",
+      "matches": true
+    },
+    {
+      "path": "assets/wimmelbild/maps/mist-lamps-continuous.webp",
+      "sha256": "bcd84b7b61e94d45e7a9786a1d474cbd36842e3d709befc2d5b26ca0dc3b5f18",
+      "matches": true
+    },
+    {
+      "path": "assets/wimmelbild/maps/high-nest-continuous.webp",
+      "sha256": "006f1bc4fee6dad85c5f8deaf621d2bc00f9c2c9ee3ef894b6709445b664f41b",
+      "matches": true
+    },
+    {
+      "path": "assets/wimmelbild/maps/river-heart-continuous.webp",
+      "sha256": "03144d1876f6b11d3394ed127881b352c8815665276d638ede254a227b5cad15",
+      "matches": true
+    }
+  ]
+}

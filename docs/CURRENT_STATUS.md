@@ -1,6 +1,6 @@
 ## Bilingual standalone continuous maps — 10 October 2026
 
-Implemented; deployment verification pending. The standalone Hidden Atlas now reuses the four continuous 4096×2731 maps and twelve varied questions, with German clues, options and hints. Crystal Ferry retains its existing map. German remains temporary and there is no voice. Existing progress and lives survive the content update; obsolete pending answers are cleared. See [release notes](wimmelbild/SHARED_CONTINUOUS_RELEASE.md).
+**Deployed and verified.** The standalone Hidden Atlas now reuses the four continuous 4096×2731 maps and twelve varied questions, with German clues, options and hints. Crystal Ferry retains its existing map. German remains temporary and there is no voice. Existing progress and lives survive the content update; obsolete pending answers are cleared. 367 unit tests, 116 UI-flow groups and twenty live bilingual map journeys pass. [PR #164](https://github.com/Ikarus-eth/Blitzword_app/pull/164) and Pages run 38054403500 succeeded; ten live runtime/image hashes match. See [release notes](wimmelbild/SHARED_CONTINUOUS_RELEASE.md).
 
 ## Target-word recordings — 10 October 2026
 
