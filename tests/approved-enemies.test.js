@@ -4,7 +4,7 @@ require('../assets/battle-motion/manifest');const M=require('../assets/battle-mo
 const ratings=require('../docs/enemies/ARTUS_FINAL_RATINGS.json'),plan=require('../docs/NARRATION_APPROVED_ENEMIES_REQUEST.json');
 test('only Artus winners rated at least three become the 45 future families',()=>{
  const accepted=ratings.rounds.filter(r=>Math.max(...Object.values(r.scores))>=3);assert.equal(accepted.length,45);assert.equal(R.entries.length,45);assert.equal(C.creatures.length,65);assert.equal(C.enemies.length,20);
- for(const r of accepted){const e=R.entries.find(e=>e.conceptId===Number(r.id));assert.equal(e.option,r.selected);assert.equal(e.score,Math.max(...Object.values(r.scores)));assert.equal(e.availability,'future-chapter');assert.ok(A.Data.lore[e.id]);assert.equal(A.findMission(e.id),undefined);}
+ for(const r of accepted){const e=R.entries.find(e=>e.conceptId===Number(r.id));assert.equal(e.option,r.selected);assert.equal(e.score,Math.max(...Object.values(r.scores)));assert.equal(e.availability,'future-chapter');assert.ok(A.Data.lore[e.id]);assert.equal(!!A.findMission(e.id),require('../assets/adventures/star-trail/campaign').missions.some(m=>m.families[0]===e.id));}
  assert.ok(!R.entries.some(e=>e.name==='Ore Ant'));assert.equal(R.byId['snow-owl'].option,'d');
 });
 test('new encounters retain identity through saves, without entering existing random pools',()=>{

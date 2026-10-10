@@ -1,3 +1,7 @@
+## Sky Stars mountain scenes — 10 October 2026
+
+Eight new continuous 1536×1024 paintings in `assets/adventures/star-trail/` illustrate the third creature adventure and its eight ninth-task searches. Each is one native-resolution scene, with no composites or enlargement. All 24 final answers were visually checked; the clues include distributed counting, following a kite string, object contents and spatial relationships. The approved eight creature designs remain the existing atlas cutouts; no hero, Pip or enemy identity is regenerated. [Exact built-in ImageGen prompts, dimensions and hashes](adventures/star-trail/art-prompts.json), [answer audit and release](adventures/star-trail/RELEASE.md).
+
 ## Continuous ninth-task scenes — 10 October 2026
 
 The user accepted the detailed seamless Crystal Ferry review as the direction and requested four new main-game scenes. Four-panel composites are superseded for Sleeping Waterwheel, Lamps in the Mist, Nest Above the Falls and River Sings Again. Each replacement is one connected landscape at 4096×2731, assembled from overlapping detail passes anchored to a single base composition. [Provenance and checks](wimmelbild/RIVER_SEARCH_RELEASE.md). This does not approve new recurring hero or Pip designs.

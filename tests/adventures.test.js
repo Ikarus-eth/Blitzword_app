@@ -8,20 +8,20 @@ function win(s,now=NOW){
   C.prepareBattle(s,now);assert.equal(s.result.victory,true);return now;
 }
 function solve(s,now=NOW){assert.equal(A.startPuzzle(s,()=>0.4),true);const q=D.puzzles[s.expedition.current.puzzle.id];for(const id of [q.answer].flat())A.choose(s,id);assert.equal(A.check(s,now).correct,true);A.next(s,now);}
-test('two acyclic campaigns contain 48 unique solvable puzzles and all 20 creatures',()=>{
-  assert.equal(D.campaigns.length,2);assert.equal(D.missions.length,12);assert.equal(D.missions.flatMap(m=>m.riddles).length,48);assert.equal(D.legacyPuzzles.length,8);
-  assert.deepEqual([...new Set(D.missions.flatMap(m=>m.families))].sort(),Content.enemies.map(e=>e.id).sort());
-  const seen=new Set();for(const m of D.missions){assert.equal(m.riddles.length,4);for(const id of m.requires)assert.ok(seen.has(id));seen.add(m.id);
+test('the original two campaigns retain 48 puzzles, all 20 creatures and original pacing',()=>{
+  assert.equal(D.campaigns.length,3);assert.equal(D.missions.length,20);assert.equal(D.missions.slice(0,12).flatMap(m=>m.riddles).length,48);assert.equal(D.legacyPuzzles.length,8);
+  assert.deepEqual([...new Set(D.missions.slice(0,12).flatMap(m=>m.families))].sort(),Content.enemies.map(e=>e.id).sort());
+  const seen=new Set();for(const m of D.missions.slice(0,12)){assert.equal(m.riddles.length,4);for(const id of m.requires)assert.ok(seen.has(id));seen.add(m.id);
     assert.ok(Content.chapterBackgrounds[m.area]);
     assert.ok(fs.existsSync(path.join(__dirname,'..',m.art)),m.art);
     for(const q of m.riddles){assert.ok(q.options.length>=3);assert.equal(new Set(q.options.map(o=>o.id)).size,q.options.length);for(const id of [q.answer].flat())assert.ok(q.options.some(o=>o.id===id));assert.ok(q.hint&&q.explanation&&q.reward);}
   }
-  assert.equal(D.missions.reduce((n,m)=>n+m.health.reduce((a,b)=>a+b,0),0),468);
+  assert.equal(D.missions.slice(0,12).reduce((n,m)=>n+m.health.reduce((a,b)=>a+b,0),0),468);
 });
 test('full playthrough unlocks both campaigns, awards every stamp and preserves legacy curriculum progress',()=>{
   let s=fresh(),now=NOW;const story=C.copy(s.story),wins=s.campaign.wins;
   assert.equal(A.unlocked(s,'reed-message'),false);assert.equal(C.startMission(s,'owl-watch',now),false);
-  for(const m of D.missions){assert.equal(C.startMission(s,m.id,now),true);
+  for(const m of D.missions.slice(0,12)){assert.equal(C.startMission(s,m.id,now),true);
     for(let step=0;step<4;step++){
       now=win(s,now);assert.equal(A.stats(s).wins,step+1);assert.equal(s.activity,'result');
       assert.deepEqual(s.story.scenes,story.scenes);solve(s,now+=45000);

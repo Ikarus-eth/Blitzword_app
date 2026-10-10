@@ -9,9 +9,9 @@ test('the final narration request stays below 6000 characters and reuses every p
 });
 test('previously recorded chapter and riddle text remains; new mapmaker and shark text uses speech fallback',()=>{
  for(const a of C.areas.slice(1))assert.ok(recordedParts(C.chapterStories[a.id].sentence,N.clips),a.id);
- assert.equal(Object.values(M.puzzles).length,56);
+ assert.equal(Object.values(M.puzzles).length,88);
  for(const q of Object.values(M.puzzles)){
-  const text=q.text.join(' ')+' '+q.prompt,parts=recordedParts(text,N.clips);if(/^(mapmaker|shark)-/.test(q.id)){assert.equal(parts,null);continue;}assert.ok(parts,text);
+  const text=q.text.join(' ')+' '+q.prompt,parts=recordedParts(text,N.clips);if(/^(mapmaker|shark|sky)-/.test(q.id)){assert.equal(parts,null);continue;}assert.ok(parts,text);
   assert.equal(parts.join(' '),text);
   assert.equal(parts.length,q.type==='order'?2:1);
  }

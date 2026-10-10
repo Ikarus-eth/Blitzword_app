@@ -279,7 +279,7 @@ function renderParent(){
   }
   let riddleText=null;try{riddleText=window.localStorage.getItem(Core.RIDDLE_KEY);}catch{}
   const riddles=Core.riddleTime(riddleText,Date.now()),missions=Core.Adventure.report(state);
-  $('#parentMissions').textContent=missions.completed+' / 12 missions complete · '+missions.seen+' / 20 creatures discovered · '+missions.studied+' secrets learned · '+missions.champions+' guardian stamps. '+missions.correct+' / '+missions.firsts+' first riddle answers correct; '+missions.helped+' first answers used a clue or listening.';
+  $('#parentMissions').textContent=missions.completed+' / '+Core.Adventure.Data.missions.length+' missions complete · '+missions.seen+' / '+Content.creatures.length+' creatures discovered · '+missions.studied+' secrets learned · '+missions.champions+' guardian stamps. '+missions.correct+' / '+missions.firsts+' first riddle answers correct; '+missions.helped+' first answers used a clue or listening.';
   riddles.totalMs+=missions.riddleMs;riddles.todayMs+=missions.days[Core.dayKey(Date.now())]||0;
   for(const [day,ms] of Object.entries(missions.days))riddles.days[day]=(riddles.days[day]||0)+ms;
   $('#parentRiddles').textContent=riddles.unreadable?'Unreadable':formatTime(riddles.totalMs);

@@ -1,0 +1,109 @@
+{
+  "provider": "Built-in ImageGen",
+  "scenes": [
+    {
+      "id": "star-post",
+      "scene": "a bustling high mountain village post office at dusk, winding paths, snowy pines, rope bridge, tiny cottages, carts, parcels, lanterns, distant purple peaks",
+      "details": "a WHITE CAT asleep INSIDE A BLUE WHEELBARROW near the lower right; a RED SCARF hanging on a clothesline near the upper left; a small wooden BOAT carrying YELLOW FLOWERS in the central stream",
+      "prompt": "Use case: illustration-story. Create ONE full-bleed continuous richly detailed children's storybook search-map painting for BlitzWord, landscape 3:2, highest available native detail. Scene: a bustling high mountain village post office at dusk, winding paths, snowy pines, rope bridge, tiny cottages, carts, parcels, lanterns, distant purple peaks. Hand-painted watercolor and gouache, warm amber light, jewel accents, fine ink detail, inviting adventure, coherent elevated three-quarter perspective. Fill the whole scene with many individually readable small activities and scenic details, but no panels, dividers, captions, letters, numbers, interface or watermarks. Critical search targets distributed around the picture: a WHITE CAT asleep INSIDE A BLUE WHEELBARROW near the lower right; a RED SCARF hanging on a clothesline near the upper left; a small wooden BOAT carrying YELLOW FLOWERS in the central stream. Make these exact target objects unambiguous and clearly visible on zoom. Keep their colours saturated. Other incidental objects may appear, but don't duplicate the specified target combination. No named heroes, no dragon companion, no fantasy enemy redesigns. One connected landscape, not a collage.",
+      "source": "exec-c7ce7955-8ec4-4d71-86f3-5bda37c98a2f.png",
+      "destination": "assets/adventures/star-trail/star-post.png",
+      "sha256": "5c91ffb50c7bf9d22b0cd7fe2699e1798d560b37f2500103101dbfb45246153d",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "crystal-pass",
+      "scene": "a sunlit alpine crystal gorge, winding turquoise river, stone bridges, tiny gem workshops, rope lift, pine terraces, walkers carrying supplies",
+      "details": "a small BROWN DOG standing ON TOP OF A WOODEN BARREL beside a workshop on the lower left; a GREEN UMBRELLA sheltering a basket of APPLES near the upper right; a RED BOAT resting UNDER A STONE BRIDGE at centre",
+      "prompt": "Use case: illustration-story. Create ONE full-bleed continuous richly detailed children's storybook search-map painting for BlitzWord, landscape 3:2, highest available native detail. Scene: a sunlit alpine crystal gorge, winding turquoise river, stone bridges, tiny gem workshops, rope lift, pine terraces, walkers carrying supplies. Hand-painted watercolor and gouache, warm amber light, jewel accents, fine ink detail, inviting adventure, coherent elevated three-quarter perspective. Fill the whole scene with many individually readable small activities and scenic details, but no panels, dividers, captions, letters, numbers, interface or watermarks. Critical search targets distributed around the picture: a small BROWN DOG standing ON TOP OF A WOODEN BARREL beside a workshop on the lower left; a GREEN UMBRELLA sheltering a basket of APPLES near the upper right; a RED BOAT resting UNDER A STONE BRIDGE at centre. Make these exact target objects unambiguous and clearly visible on zoom. Keep their colours saturated. Other incidental objects may appear, but don't duplicate the specified target combination. No named heroes, no dragon companion, no fantasy enemy redesigns. One connected landscape, not a collage.",
+      "source": "exec-5eaa4a08-62a8-4491-b75a-7f645919c86e.png",
+      "destination": "assets/adventures/star-trail/crystal-pass.png",
+      "sha256": "4edf95add6bf9f2d172c218829c421ec99f578d2cb5ac5ce9d7c1c38c3e643ad",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "snow-garden",
+      "scene": "a terraced snowy mountain vegetable garden with glasshouses, gardeners, snowmen, stone stairways, little streams, baskets, birds, cottages",
+      "details": "a SNOWMAN wearing a PURPLE HAT beside a greenhouse at upper left; a BLACK CAT sleeping ON A YELLOW BENCH near lower right; a RED WHEELBARROW filled with CARROTS on the middle terrace",
+      "prompt": "Use case: illustration-story. Create ONE full-bleed continuous richly detailed children's storybook search-map painting for BlitzWord, landscape 3:2, highest available native detail. Scene: a terraced snowy mountain vegetable garden with glasshouses, gardeners, snowmen, stone stairways, little streams, baskets, birds, cottages. Hand-painted watercolor and gouache, warm amber light, jewel accents, fine ink detail, inviting adventure, coherent elevated three-quarter perspective. Fill the whole scene with many individually readable small activities and scenic details, but no panels, dividers, captions, letters, numbers, interface or watermarks. Critical search targets distributed around the picture: a SNOWMAN wearing a PURPLE HAT beside a greenhouse at upper left; a BLACK CAT sleeping ON A YELLOW BENCH near lower right; a RED WHEELBARROW filled with CARROTS on the middle terrace. Make these exact target objects unambiguous and clearly visible on zoom. Keep their colours saturated. Other incidental objects may appear, but don't duplicate the specified target combination. No named heroes, no dragon companion, no fantasy enemy redesigns. One connected landscape, not a collage.",
+      "source": "exec-842224d8-3274-4d26-aca1-76bfd9ed3038.png",
+      "destination": "assets/adventures/star-trail/snow-garden.png",
+      "sha256": "1146177adb858cde5d30a5192bed3b78042f47422e91a9016916d636b17cda53",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "cloud-lift",
+      "scene": "a magnificent mountain rope lift station over a deep cloud valley with working cable baskets, timber platforms, repair shed, winding steps, villages, friendly human workers",
+      "details": "a WHITE GOAT standing ON THE ROOF OF A SHED on the lower left; a YELLOW KITE tangled IN A PINE TREE high on the right; a BLUE CART carrying RED APPLES beside the main lift station",
+      "prompt": "Use case: illustration-story. Create ONE full-bleed continuous richly detailed children's storybook search-map painting for BlitzWord, landscape 3:2, highest available native detail. Scene: a magnificent mountain rope lift station over a deep cloud valley with working cable baskets, timber platforms, repair shed, winding steps, villages, friendly human workers. Hand-painted watercolor and gouache, warm amber light, jewel accents, fine ink detail, inviting adventure, coherent elevated three-quarter perspective. Fill the whole scene with many individually readable small activities and scenic details, but no panels, dividers, captions, letters, numbers, interface or watermarks. Critical search targets distributed around the picture: a WHITE GOAT standing ON THE ROOF OF A SHED on the lower left; a YELLOW KITE tangled IN A PINE TREE high on the right; a BLUE CART carrying RED APPLES beside the main lift station. Make these exact target objects unambiguous and clearly visible on zoom. Keep their colours saturated. Other incidental objects may appear, but don't duplicate the specified target combination. No named heroes, no dragon companion, no fantasy enemy redesigns. One connected landscape, not a collage.",
+      "source": "exec-6a7ab746-1d74-4aaf-9b37-470d4e84f382.png",
+      "destination": "assets/adventures/star-trail/cloud-lift.png",
+      "sha256": "a7063dd7876439ea1f2e9e1331f17ceb14f88b95a4d3cf40a536dd89f3117fcc",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "pine-store",
+      "scene": "an intricate autumn-to-winter mountain pine village with a huge hollow-tree storehouse, little bakeries, bridges, ladders, woodpiles, baskets and villagers storing food",
+      "details": "a RED SQUIRREL holding a BLUE RIBBON high on the hollow tree; a WHITE CAT curled INSIDE A GREEN BASKET near bottom left; a wooden CART carrying PUMPKINS beside a small bridge on the right",
+      "prompt": "Use case: illustration-story. Create ONE full-bleed continuous richly detailed children's storybook search-map painting for BlitzWord, landscape 3:2, highest available native detail. Scene: an intricate autumn-to-winter mountain pine village with a huge hollow-tree storehouse, little bakeries, bridges, ladders, woodpiles, baskets and villagers storing food. Hand-painted watercolor and gouache, warm amber light, jewel accents, fine ink detail, inviting adventure, coherent elevated three-quarter perspective. Fill the whole scene with many individually readable small activities and scenic details, but no panels, dividers, captions, letters, numbers, interface or watermarks. Critical search targets distributed around the picture: a RED SQUIRREL holding a BLUE RIBBON high on the hollow tree; a WHITE CAT curled INSIDE A GREEN BASKET near bottom left; a wooden CART carrying PUMPKINS beside a small bridge on the right. Make these exact target objects unambiguous and clearly visible on zoom. Keep their colours saturated. Other incidental objects may appear, but don't duplicate the specified target combination. No named heroes, no dragon companion, no fantasy enemy redesigns. One connected landscape, not a collage.",
+      "source": "exec-eeb748fe-35fd-41c4-91b6-5bb07e0230cf.png",
+      "destination": "assets/adventures/star-trail/pine-store.png",
+      "sha256": "7fa95f619dc1644287b007c12f6397368ca5a54b14b817714cb88df56f457df1",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "wind-tower",
+      "scene": "a winding mountain ridge town with a tall stone weather tower, flags, weather vanes, kites, tiny houses, bridges and people preparing a festival in a clear windy sky",
+      "details": "a RED KITE with a clear continuous string held by a GIRL IN A YELLOW COAT near bottom right; a BLUE BIRD perched ON A GOLD BELL high on the tower; a BROWN DOG curled UNDER A WOODEN BENCH at lower left",
+      "prompt": "Use case: illustration-story. Create ONE full-bleed continuous richly detailed children's storybook search-map painting for BlitzWord, landscape 3:2, highest available native detail. Scene: a winding mountain ridge town with a tall stone weather tower, flags, weather vanes, kites, tiny houses, bridges and people preparing a festival in a clear windy sky. Hand-painted watercolor and gouache, warm amber light, jewel accents, fine ink detail, inviting adventure, coherent elevated three-quarter perspective. Fill the whole scene with many individually readable small activities and scenic details, but no panels, dividers, captions, letters, numbers, interface or watermarks. Critical search targets distributed around the picture: a RED KITE with a clear continuous string held by a GIRL IN A YELLOW COAT near bottom right; a BLUE BIRD perched ON A GOLD BELL high on the tower; a BROWN DOG curled UNDER A WOODEN BENCH at lower left. Make these exact target objects unambiguous and clearly visible on zoom. Keep their colours saturated. Other incidental objects may appear, but don't duplicate the specified target combination. No named heroes, no dragon companion, no fantasy enemy redesigns. One connected landscape, not a collage.",
+      "source": "exec-15707cff-b7d5-44de-9c28-da964515ec13.png",
+      "destination": "assets/adventures/star-trail/wind-tower.png",
+      "sha256": "1e0156f7d0d49971bf2bcc21ced29a71d1b51614d828bc16f114a2972bc3bb45",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "moon-steps",
+      "scene": "a magical alpine stone staircase winding among moonlit cliffs, small observatory huts, waterfalls, warm lanterns, arch bridges, wildflowers and human travellers",
+      "details": "a WHITE RABBIT sitting INSIDE A RED BOAT near the lower left; a GREEN LANTERN hanging UNDER A STONE ARCH at mid-right; a YELLOW BACKPACK resting ON A WOODEN BENCH on an upper terrace",
+      "prompt": "Use case: illustration-story. Create ONE full-bleed continuous richly detailed children's storybook search-map painting for BlitzWord, landscape 3:2, highest available native detail. Scene: a magical alpine stone staircase winding among moonlit cliffs, small observatory huts, waterfalls, warm lanterns, arch bridges, wildflowers and human travellers. Hand-painted watercolor and gouache, warm amber light, jewel accents, fine ink detail, inviting adventure, coherent elevated three-quarter perspective. Fill the whole scene with many individually readable small activities and scenic details, but no panels, dividers, captions, letters, numbers, interface or watermarks. Critical search targets distributed around the picture: a WHITE RABBIT sitting INSIDE A RED BOAT near the lower left; a GREEN LANTERN hanging UNDER A STONE ARCH at mid-right; a YELLOW BACKPACK resting ON A WOODEN BENCH on an upper terrace. Make these exact target objects unambiguous and clearly visible on zoom. Keep their colours saturated. Other incidental objects may appear, but don't duplicate the specified target combination. No named heroes, no dragon companion, no fantasy enemy redesigns. One connected landscape, not a collage.",
+      "source": "exec-6001881a-e836-4aa9-90b4-115498cf8707.png",
+      "destination": "assets/adventures/star-trail/moon-steps.png",
+      "sha256": "5266b1f7aa57a50f1d0ecf22fe1d102352b881fe59a98b49ef4f1020dcfeaccb",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "aurora-crown",
+      "scene": "a grand mountaintop observatory garden beneath turquoise violet northern lights, round domes, winding paths, star mosaics, tiny festival stalls, ponds, bridges and people celebrating",
+      "details": "a WHITE CAT sleeping ON A RED CUSHION outside a dome at upper right; a BLUE WHEELBARROW filled with YELLOW FLOWERS at lower left; a BROWN DOG carrying a GREEN SCARF beside the central pond",
+      "prompt": "Use case: illustration-story. Create ONE full-bleed continuous richly detailed children's storybook search-map painting for BlitzWord, landscape 3:2, highest available native detail. Scene: a grand mountaintop observatory garden beneath turquoise violet northern lights, round domes, winding paths, star mosaics, tiny festival stalls, ponds, bridges and people celebrating. Hand-painted watercolor and gouache, warm amber light, jewel accents, fine ink detail, inviting adventure, coherent elevated three-quarter perspective. Fill the whole scene with many individually readable small activities and scenic details, but no panels, dividers, captions, letters, numbers, interface or watermarks. Critical search targets distributed around the picture: a WHITE CAT sleeping ON A RED CUSHION outside a dome at upper right; a BLUE WHEELBARROW filled with YELLOW FLOWERS at lower left; a BROWN DOG carrying a GREEN SCARF beside the central pond. Make these exact target objects unambiguous and clearly visible on zoom. Keep their colours saturated. Other incidental objects may appear, but don't duplicate the specified target combination. No named heroes, no dragon companion, no fantasy enemy redesigns. One connected landscape, not a collage.",
+      "source": "exec-f07f638f-344e-4eab-9cbf-9455105d852e.png",
+      "destination": "assets/adventures/star-trail/aurora-crown.png",
+      "sha256": "cd263e1300e5a213f380adb4455508c39db643f0169f18681aed4deeda515b4d",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}

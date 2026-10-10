@@ -1,0 +1,297 @@
+{
+  "date": "2026-10-10T13:14:21.320Z",
+  "url": "http://127.0.0.1:8879/",
+  "checks": [
+    {
+      "id": "star-post",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "crystal-pass",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "snow-garden",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "cloud-lift",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "pine-store",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "wind-tower",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "moon-steps",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "aurora-crown",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "star-post",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "crystal-pass",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "snow-garden",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "cloud-lift",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "pine-store",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "wind-tower",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "moon-steps",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "aurora-crown",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "star-post",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "crystal-pass",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "snow-garden",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "cloud-lift",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "pine-store",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "wind-tower",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "moon-steps",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "id": "aurora-crown",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "threeQuestions": "pass",
+      "pictureTapNeverAnswers": "pass",
+      "wrongCostsOneLife": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    }
+  ],
+  "realTwoFingerEvents": "pass",
+  "physicalIPad": "not tested",
+  "errors": []
+}

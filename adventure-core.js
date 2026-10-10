@@ -1,6 +1,6 @@
 (function(root,factory){
-  if(typeof module==='object'&&module.exports)module.exports=factory(require('./missions.js'),require('./content.js'),require('./assets/wimmelbild/river-search-data.js'));
-  else root.BlitzAdventure=factory(root.BlitzMissions,root.BlitzContent,root.BlitzMapQuests);
+  if(typeof module==='object'&&module.exports)module.exports=factory(require('./missions.js'),require('./content.js'),{...require('./assets/wimmelbild/river-search-data.js'),...require('./assets/adventures/star-trail/search.js')});
+  else root.BlitzAdventure=factory(root.BlitzMissions,root.BlitzContent,{...root.BlitzMapQuests,...root.BlitzStarMaps});
 })(typeof globalThis!=='undefined'?globalThis:this,function(Data,Content,Maps){
   'use strict';
   const copy=v=>v==null?null:JSON.parse(JSON.stringify(v)),date=now=>new Date(now).toISOString();
@@ -41,7 +41,8 @@
   function campaignComplete(s,id){return Data.campaigns.find(c=>c.id===id)?.missions.every(id=>of(s).missions[id]?.completedAt)||false;}
   function unlocked(s,id){
     const m=Data.byId[id];if(!m)return false;
-    return (m.campaign==='lost-lights'||campaignComplete(s,'lost-lights'))&&m.requires.every(id=>of(s).missions[id]?.completedAt);
+    const index=Data.campaigns.findIndex(c=>c.id===m.campaign);
+    return index>=0&&Data.campaigns.slice(0,index).every(c=>campaignComplete(s,c.id))&&m.requires.every(id=>of(s).missions[id]?.completedAt);
   }
   function snapshot(s){return copy({battle:s.battle,result:s.result,teaching:s.teaching,handoff:s.handoff,round:s.math.round,scene:s.story.scene,mapPending:s.story.mapPending,activity:s.activity,session:s.session});}
   function restore(s,r){

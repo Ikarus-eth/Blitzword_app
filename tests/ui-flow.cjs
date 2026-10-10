@@ -1329,12 +1329,12 @@ console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat an
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
  let ui=boot(s,{adventures:true});ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));
  assert.equal(ui.get('creatureBook').querySelectorAll('.creatureTile').length,65);
- for(const e of Content.newEnemies){ui.click(ui.get('creatureBook').querySelector('[data-family="'+e.id+'"]'));assert.match(ui.get('creatureDetail').textContent,/A future chapter/);assert.ok(![...ui.get('creatureDetail').querySelectorAll('button')].some(b=>b.textContent==='Find this path'||b.textContent==='Choose for my team'));}
+ for(const e of Content.newEnemies.filter(e=>!Core.Adventure.findMission(e.id))){ui.click(ui.get('creatureBook').querySelector('[data-family="'+e.id+'"]'));assert.match(ui.get('creatureDetail').textContent,/A future chapter/);assert.ok(![...ui.get('creatureDetail').querySelectorAll('button')].some(b=>b.textContent==='Find this path'||b.textContent==='Choose for my team'));}
  Core.Adventure.reveal(s,'snow-owl',0);s.expedition.book['snow-owl'].studied=true;
  ui=boot(s,{adventures:true,heldNarration:true});ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="snow-owl"]'));
  ui.click([...ui.get('creatureDetail').querySelectorAll('button')].find(b=>b.textContent==='Listen'));assert.equal(ui.speechTexts.at(-1),Core.Adventure.Data.lore['snow-owl'][1]);ui.finishSpeech();
  ui.click([...ui.get('creatureDetail').querySelectorAll('button')].find(b=>b.textContent==='Choose for my team'));assert.equal(ui.state().expedition.favourite,'snow-owl');
- console.log('PASS all 45 future Creature Book entries are safe and locked; revealed names, lore and companion selection work');
+ console.log('PASS all 37 future Creature Book entries are safe and locked; revealed names, lore and companion selection work');
 }
 for(const e of Content.newEnemies){
  const ui=boot(impactSave(e.id),{motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();
@@ -1344,3 +1344,22 @@ for(const e of Content.newEnemies){
  ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);assert.equal(ui.state().campaign.battleRecords.length,1);
 }
 console.log('PASS all 45 new enemies render through real battle feedback, score once and cancel on Home');
+
+{
+ const A=Core.Adventure,s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
+ let ui=boot(s,{adventures:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,3);assert.ok(tabs[2].disabled);
+ ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="snow-owl"]'));
+ assert.match(ui.get('creatureDetail').textContent,/The Letter from the Snow Owl/);ui.click([...ui.get('creatureDetail').querySelectorAll('button')].find(b=>b.textContent==='Find this path'));
+ assert.equal(ui.get('adventureHub').querySelectorAll('.missionCard').length,8);assert.ok([...ui.get('adventureHub').querySelectorAll('.missionCard')].every(b=>b.disabled));
+ for(const m of A.Data.missions.slice(0,12))A.stats(s,m.id).completedAt=new Date().toISOString();s.expedition.selectedCampaign='star-trail';
+ ui=boot(s,{adventures:true});assert.match(ui.get('adventureHub').textContent,/0\/8 treasures/);assert.ok(!ui.get('adventureHub').querySelectorAll('.campaignTab')[2].disabled);
+ ui.click(ui.get('adventureHub').querySelector('[data-mission="star-post"]'));assert.equal(ui.get('mission').querySelector('[role="progressbar"]').getAttribute('aria-valuemax'),'9');
+ assert.match(ui.get('mission').textContent,/The Letter from the Snow Owl/);assert.equal(ui.state().expedition.current.missionId,'star-post');
+ console.log('PASS third campaign lock, eight-card hub, new Creature Book path and nine-task introduction');
+}
+{
+ const A=Core.Adventure,s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
+ for(const m of A.Data.missions)A.stats(s,m.id).completedAt=new Date().toISOString();s.expedition.selectedCampaign='star-trail';
+ const ui=boot(s,{adventures:true});assert.match(ui.get('adventureHub').textContent,/8\/8 treasures/);assert.match(ui.get('adventureHub').textContent,/All eight pieces shine/);
+ console.log('PASS eight-treasure campaign ending replaces the old six-treasure assumption');
+}

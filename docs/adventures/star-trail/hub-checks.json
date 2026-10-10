@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8879/",
+  "checks": [
+    {
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "hub": "pass",
+      "eightChapters": "pass",
+      "nineTasks": "pass",
+      "approvedSnowOwlBattle": "pass"
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "hub": "pass",
+      "eightChapters": "pass",
+      "nineTasks": "pass",
+      "approvedSnowOwlBattle": "pass"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "hub": "pass",
+      "eightChapters": "pass",
+      "nineTasks": "pass",
+      "approvedSnowOwlBattle": "pass"
+    }
+  ],
+  "errors": []
+}

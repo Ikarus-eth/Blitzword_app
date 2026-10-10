@@ -1,7 +1,7 @@
 (function(root,factory){
-  if(typeof module==='object'&&module.exports)module.exports=factory(require('./assets/enemies/approved-20261010/roster.js'));
-  else root.BlitzMissions=factory(root.BlitzApprovedEnemies);
-})(typeof globalThis!=='undefined'?globalThis:this,function(Approved){
+  if(typeof module==='object'&&module.exports)module.exports=factory(require('./assets/enemies/approved-20261010/roster.js'),require('./assets/adventures/star-trail/campaign.js'));
+  else root.BlitzMissions=factory(root.BlitzApprovedEnemies,root.BlitzStarCampaign);
+})(typeof globalThis!=='undefined'?globalThis:this,function(Approved,Stars){
   'use strict';
   const choice=(id,label,icon='mark',colour=null)=>({id,label,icon,colour});
   const pick=(id,title,text,prompt,labels,answer,hint,explanation,reward,extra={})=>({
@@ -183,6 +183,8 @@
           choice('fire-wave','Wave · by fire','water'),choice('bell-leaf','Leaf · by bell','leaf'),choice('bell-wave','Wave · by bell','water')],'bell-wave','Use both the mark and its position.','The wave lever beside the bell matches both clues.','The river sings again!')
       ]}
   ];
+  campaigns.push(Stars.campaign);
+  missions.push(...Stars.missions);
   const legacyPuzzles=[
         pick('vault-tool','The ticklish lock',['Use something soft with no sharp teeth.','It must brush dust from a tiny lock.'],'Which tool should you take?',[
           choice('saw','Saw','tool'),choice('brush','Soft brush','tool'),choice('comb','Hard comb','tool')],'brush','Think about both the soft bristles and the job.','A soft brush can clear the lock without scratching it.','The dusty lock is clean.'),
@@ -225,6 +227,7 @@
     'storm-griffin':['Climb above the waterfall.','Storm Griffins spread their wings to shelter smaller friends.']
   };
   for(const e of Approved?.entries||[])lore[e.id]=e.lore;
+  for(const m of Stars.missions)lore[m.families[0]]=['Find me at '+m.place+'.',lore[m.families[0]][1]];
   for(const m of missions){
     m.art ||= 'assets/adventures/'+m.id+'.webp';
     m.artAlt ||= 'The young mage and small Pip meet '+m.families[0].replace(/-/g,' ')+' at '+m.place+'.';
