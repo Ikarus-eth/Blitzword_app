@@ -10,6 +10,7 @@ function boot(saved,options={}){
  const schedule=(fn,ms)=>(jobs.set(++uid,{fn,time:now+ms}),uid);
  window.localStorage=storage;
  window.BlitzEnemyArt=require(root+'enemy-art');
+ window.BlitzApprovedEnemies=require(root+'assets/enemies/approved-20261010/roster');
  window.matchMedia=()=>({matches:!!options.reducedMotion,addEventListener(){},removeEventListener(){}});
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.removeAttribute('selected');[...this.querySelectorAll('option')].find(option=>option.value===value)?.setAttribute('selected','');}});
@@ -1323,3 +1324,23 @@ console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat an
  ui.setFailWrites(true);ui.click(ui.get('mission').querySelector('[data-map-choice="blue"]'));assert.equal(ui.state().expedition.current.search.selection,null);
  console.log('PASS ninth-task map UI, written choices, life loss, save/reload and failed-save guard');
 }
+
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
+ let ui=boot(s,{adventures:true});ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));
+ assert.equal(ui.get('creatureBook').querySelectorAll('.creatureTile').length,65);
+ for(const e of Content.newEnemies){ui.click(ui.get('creatureBook').querySelector('[data-family="'+e.id+'"]'));assert.match(ui.get('creatureDetail').textContent,/A future chapter/);assert.ok(![...ui.get('creatureDetail').querySelectorAll('button')].some(b=>b.textContent==='Find this path'||b.textContent==='Choose for my team'));}
+ Core.Adventure.reveal(s,'snow-owl',0);s.expedition.book['snow-owl'].studied=true;
+ ui=boot(s,{adventures:true,heldNarration:true});ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="snow-owl"]'));
+ ui.click([...ui.get('creatureDetail').querySelectorAll('button')].find(b=>b.textContent==='Listen'));assert.equal(ui.speechTexts.at(-1),Core.Adventure.Data.lore['snow-owl'][1]);ui.finishSpeech();
+ ui.click([...ui.get('creatureDetail').querySelectorAll('button')].find(b=>b.textContent==='Choose for my team'));assert.equal(ui.state().expedition.favourite,'snow-owl');
+ console.log('PASS all 45 future Creature Book entries are safe and locked; revealed names, lore and companion selection work');
+}
+for(const e of Content.newEnemies){
+ const ui=boot(impactSave(e.id),{motion:true,geometry:true,heldNarration:true});ui.resume();ui.ready();
+ assert.equal(ui.get('enemyFace').dataset.motionActor,e.id);assert.equal(ui.document.querySelector('.motionOverlay'),null);
+ const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));ui.finishSpeech();ui.elapse(700);
+ assert.ok(ui.motionDraws.includes(e.art.source),e.id);assert.equal(ui.state().battle.enemyHealth,3);
+ ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);assert.equal(ui.state().campaign.battleRecords.length,1);
+}
+console.log('PASS all 45 new enemies render through real battle feedback, score once and cancel on Home');

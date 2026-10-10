@@ -809,7 +809,7 @@ function renderEncounter(){
   paintEnemy($('#encounterEnemy'),b.enemyId,b.maxHealth);healthSymbols($('#encounterHearts'),b.maxHealth);
   $('#encounterLearning').textContent=(b.heroMaxHealth||3)>3?'A longer battle: you have '+b.heroMaxHealth+' hearts.':'New words and practice adjust as you play.';
   const name=Content.enemyAt(enemy.family).name;
-  const intro=(enemy.count||1)>1?enemy.name+' are on the path. Ready to battle?':(/^Acorn/.test(name)?'An ':'A ')+name+' is on the path. Ready to battle?';
+  const intro=(enemy.count||1)>1?enemy.name+' are on the path. Ready to battle?':(/^[AEIOU]/.test(name)?'An ':'A ')+name+' is on the path. Ready to battle?';
   speak((b.fromAssessment?'Reading check complete. Now your first chapter begins. ':'')+intro);save();
 }
 function renderChapterStory(){

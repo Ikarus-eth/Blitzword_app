@@ -1,0 +1,66 @@
+{
+  "method": "ffmpeg decode, timestamp bounds and non-silent segment RMS; not human pronunciation approval",
+  "segments": 141,
+  "batches": [
+    {
+      "batch": "approved-enemies-001",
+      "decodedSeconds": 34.226,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-002",
+      "decodedSeconds": 35.852,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-003",
+      "decodedSeconds": 34.783,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-004",
+      "decodedSeconds": 37.245,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-005",
+      "decodedSeconds": 37.663,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-006",
+      "decodedSeconds": 37.756,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-007",
+      "decodedSeconds": 37.988,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-008",
+      "decodedSeconds": 35.062,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-009",
+      "decodedSeconds": 36.084,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-010",
+      "decodedSeconds": 35.898,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-011",
+      "decodedSeconds": 36.27,
+      "segments": 12
+    },
+    {
+      "batch": "approved-enemies-012",
+      "decodedSeconds": 24.334,
+      "segments": 9
+    }
+  ]
+}

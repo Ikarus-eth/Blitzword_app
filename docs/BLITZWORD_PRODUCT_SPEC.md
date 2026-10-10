@@ -1079,3 +1079,9 @@ On a reading defeat show a persistent loss screen with the hero and Pip retreati
 ## Earned lightning feedback — 9 October 2026
 
 Show one brief gold lightning bolt over the answered word immediately after a correct answer qualifies for the existing Quick marker (Core.quickAnswer). The pulse lasts 600 ms, runs alongside existing feedback without delaying the next question, and never previews an answer. Reduced motion uses a stationary brief symbol. Slow, helped, interrupted, incorrect, demo and assessment answers do not earn it; resumed feedback does not replay the reward. No scoring or save rules change.
+
+## Approved creature expansion — 10 October 2026
+
+The user authorized implementing Artus’s final-look ratings, graphics, voice-overs and Creature Book entries, with low compute. This supersedes the earlier review-only restriction for these selections. Artus rated all 184 options: 45 families have a unique highest rating of at least 3/5; Ore Ant is excluded (all four 1/5), with no tie requiring Juna. Preserve the exact selection evidence in `enemies/ARTUS_FINAL_RATINGS.json`.
+
+Register the 45 families, including the white Snow Owl, and prepare four single-creature strength variants each. The Creature Book has 65 entries with existing Met/Clue/Star and companion rules. New entries remain undiscovered and unavailable as teammates until earned in future chapters. Keep the existing 20-family encounter pools, chapters, saves and reward rules unchanged. Use transparent painted atlas cutouts and brief whole-image attack/hit/retreat/celebration movement; no motion during reading. Reuse recorded narration clauses and the approved George voice for new names, lore and encounter lines. New chapter stories, scenes, riddles, placement and unlock/balance work are deferred.

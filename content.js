@@ -1,8 +1,8 @@
 (function(root, factory) {
-  const content = factory();
+  const content = factory(typeof module==='object'&&module.exports?require('./assets/enemies/approved-20261010/roster.js'):root.BlitzApprovedEnemies);
   if (typeof module === 'object' && module.exports) module.exports = content;
   else root.BlitzContent = content;
-})(typeof globalThis !== 'undefined' ? globalThis : this, function() {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function(Approved) {
   'use strict';
   // Full approved Core 200. Existing first-chapter order and saved targets are preserved.
   // Artwork teaches meaning only; it is never displayed with answer choices.
@@ -2663,11 +2663,18 @@
     const base=enemies.find(e=>e.id===family);
     return {...base,id:family+'--training',stage:'baby',count:1,minHealth:3,maxHealth:3,name:'Tiny '+base.name};
   });
+  // Registered now; future missions explicitly name these families to unlock them.
+  // Keep the existing random encounter pools and their saved order unchanged.
+  const newEnemies=Approved?.entries||[];
+  const creatures=[...enemies,...newEnemies];
+  const newEnemyVariants=newEnemies.flatMap(base=>[
+    ['Young',6,11,'young'],['Adult',12,19,'adult'],['Strong',20,25,'adult'],['Mighty',26,32,'adult']
+  ].map(([label,minHealth,maxHealth,stage],i)=>({...base,id:base.id+'--'+(i+1),name:label+' '+base.name,minHealth,maxHealth,stage,champion:i===3})));
   function enemyAt(id){
-    const variant=enemyVariants.find(e=>e.id===id)||trainingEnemies.find(e=>e.id===id);if(variant)return variant;
-    const direct=enemies.find(enemy=>enemy.id===id);if(direct)return direct;
+    const variant=enemyVariants.find(e=>e.id===id)||trainingEnemies.find(e=>e.id===id)||newEnemyVariants.find(e=>e.id===id);if(variant)return variant;
+    const direct=creatures.find(enemy=>enemy.id===id);if(direct)return direct;
     const match=/^(.*)-tier-(\d+)$/.exec(id||'');if(!match)return enemies[0];
-    const base=enemies.find(enemy=>enemy.id===match[1]),tier=Number(match[2]);if(!base||tier<1||!Number.isSafeInteger(tier))return enemies[0];
+    const base=creatures.find(enemy=>enemy.id===match[1]),tier=Number(match[2]);if(!base||tier<1||!Number.isSafeInteger(tier))return enemies[0];
     const title=['','Woodland','Great','Ancient','Elder'][tier]||'Elder '+tier;
     return {...base,id,name:title+' '+base.name,tier,minHealth:3+tier*3,maxHealth:5+tier*3};
   }
@@ -3193,5 +3200,5 @@
   const evolution={intro:"Look! Your dragon is glowing. Let's see what happens.",
     frames:[0,1,2,3].map(stage=>'assets/evolution/pip-stage-'+stage+'.webp'),
     lines:[null,['I am big.','I can help.'],['My wings are big.','I can help you.'],['Hop on my back.','We can go far.']]};
-  return {teachingSource, coreWords, words, legacyWords, assessmentPools, demoWords, enemies, enemyVariants, enemyAt, enemiesForHealth, enemyMembers, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, campaignBackgrounds, dragonStages, evolution, chapterWordGoal:30};
+  return {teachingSource, coreWords, words, legacyWords, assessmentPools, demoWords, enemies, creatures, newEnemies, newEnemyVariants, enemyVariants, enemyAt, enemiesForHealth, enemyMembers, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, campaignBackgrounds, dragonStages, evolution, chapterWordGoal:30};
 });

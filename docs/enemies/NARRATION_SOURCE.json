@@ -1,0 +1,12 @@
+{
+  "branch": "codex/story-riddle-narration-20261004",
+  "commit": "5806e9c012aa75e809333924df26c373e5f96416",
+  "characters": 5430,
+  "provider": "ElevenLabs",
+  "voice": "George",
+  "workflow": "narration-story-riddle.yml",
+  "note": "Generation-only commit using existing workflow. Do not merge this branch; import verified audio into the feature branch.",
+  "runId": 38039791891,
+  "artifactId": 11664644224,
+  "status": "success"
+}

@@ -2,9 +2,13 @@
 (function(root){
 'use strict';
 const data=typeof module!=='undefined'&&module.exports?require('./enemy-art-data'):root.BlitzEnemyArtData;
+const approved=typeof module!=='undefined'&&module.exports?require('./assets/enemies/approved-20261010/roster.js'):root.BlitzApprovedEnemies;
 let clipSequence=0;
 function render(id,{stage='adult',prefix=''}={}){
-  const key=String(id||'').replace(/--(?:\d+|training)$/,'').replace(/-tier-\d+$/,''),art=data[key];if(!art)return null;
+  const key=String(id||'').replace(/--(?:\d+|training)$/,'').replace(/-tier-\d+$/,''),art=data[key];
+  const fresh=approved?.byId[key];
+  if(fresh){const a=fresh.art,[x,y,w,h]=a.view,scale=stage==='baby'?.72:stage==='young'?.86:1,cx=x+w/2,b=y+h;return `<svg class="approvedCreature" data-family="${key}" viewBox="${a.view.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="overflow:hidden"><g transform="translate(${cx} ${b}) scale(${scale}) translate(${-cx} ${-b})"><svg x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${a.view.join(' ')}" overflow="hidden"><image href="${prefix+a.source}" width="${a.width}" height="${a.height}"/></svg></g></svg>`;}
+  if(!art)return null;
   const juvenile=stage==='baby'?0:stage==='young'?1:2;
   // Scale at each anatomical pivot, inside the animated bone. Young forms have
   // larger heads, shorter limbs and smaller wings; they are not uniform miniatures.

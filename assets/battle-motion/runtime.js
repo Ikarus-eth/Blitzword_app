@@ -5,7 +5,13 @@ const DURATION=1200,IMPACT=660,active=new Set(),cache=new Map();
 let filterSerial=0;
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 const smooth=v=>{v=clamp(v);return v*v*(3-2*v);};
-const data=()=>root.BlitzMotionAssets||{};
+const approved=typeof module==='object'&&module.exports?require('../enemies/approved-20261010/roster.js'):root.BlitzApprovedEnemies;
+const approvedMotion=Object.fromEntries((approved?.entries||[]).map(e=>{
+  const a=e.art,[x,y,w,h]=a.view;
+  const clips=Object.fromEntries(['attack','hit','defeat','victory'].map(action=>[action,{frames:1,cols:1,perSheet:1,tileW:w,tileH:h,crop:a.view,sheets:[a.source]}]));
+  return [e.id,{view:a.view,still:a.source,width:a.width,height:a.height,cutout:true,attackMode:e.attackMode,target:[x+w*.5,y+h*.5],front:[x+w*.18,y+h*.6],clips}];
+}));
+const data=()=>({...root.BlitzMotionAssets,...approvedMotion});
 function asset(key){return data()[key];}
 function enemyKey(enemy){const family=enemy.family||enemy.id,key=({'moss-golem':'golem','bark-beetle':'beetle'}[family]||family);return asset(key)?.clips?.attack?key:null;}
 function stageScale(stage){return stage==='baby'?.72:stage==='young'?.86:1;}
@@ -28,7 +34,7 @@ function render(key,{stage='adult'}={}){
   // sRGB matches the canvas key. Multiply the key by the existing alpha;
   // never replace transparency or let hidden blue RGB become visible.
   const filter=key==='mage'?`<defs><filter id="${id}" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 3.984375 3.984375 -7.96875 0 1.25"/><feComposite in="SourceGraphic" operator="in"/></filter></defs>`:'';
-  return `<svg class="motionStill" viewBox="${a.view.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true">${filter}<g transform="translate(${cx} ${bottom}) scale(${scale}) translate(${-cx} ${-bottom})"><image href="${a.still}" width="512" height="512"${key==='mage'?` filter="url(#${id})"`:''}/></g></svg>`;
+  return `<svg class="motionStill" viewBox="${a.view.join(' ')}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="overflow:hidden">${filter}<g transform="translate(${cx} ${bottom}) scale(${scale}) translate(${-cx} ${-bottom})">${a.cutout?`<svg x="${a.view[0]}" y="${a.view[1]}" width="${a.view[2]}" height="${a.view[3]}" viewBox="${a.view.join(' ')}" overflow="hidden">`: ""}<image href="${a.still}" width="${a.width||512}" height="${a.height||512}"${key==='mage'?` filter="url(#${id})"`:''}/>${a.cutout?'</svg>':''}</g></svg>`;
 }
 function load(url){
   if(cache.has(url))return cache.get(url).promise;
@@ -53,6 +59,16 @@ function spellPoint(rect,assist=false){const a=asset('mage');return point('mage'
 function frameIndex(clip,progress){return Math.min(clip.frames-1,Math.floor(clamp(progress)*clip.frames));}
 function drawActor(ctx,images,key,clipName,progress,rect,dx=0,opacity=1,dy=0){
   const a=asset(key),c=a?.clips[clipName];if(!c)return;
+  if(a.cutout){
+    const sheet=images[a.still];if(!sheet)return;
+    const [x,y,w,h]=a.view,f=fit(a.view,rect),p=clamp(progress),wave=Math.sin(Math.PI*p);
+    // Animate the intact painting only: no generated frames, warped limbs or seams.
+    const lift=clipName==='victory'?-10*Math.sin(Math.PI*p*2)**2:clipName==='attack'?-5*wave:0;
+    const tilt=clipName==='hit'?.035*wave:clipName==='victory'?.025*Math.sin(Math.PI*p*2):0;
+    const cx=f.x+(x+w/2)*f.scale+dx,cy=f.y+(y+h)*f.scale+dy+lift;
+    ctx.save();ctx.globalAlpha=opacity*(clipName==='defeat'?1-.8*smooth(p):1);ctx.translate(cx,cy);ctx.rotate(tilt);
+    ctx.drawImage(sheet,x,y,w,h,-w*f.scale/2,-h*f.scale,w*f.scale,h*f.scale);ctx.restore();return;
+  }
   const frame=c.sequence?.[frameIndex(c,progress)]??frameIndex(c,progress),sheet=images[c.sheets[Math.floor(frame/c.perSheet)]],i=frame%c.perSheet;if(!sheet)return;
   const f=fit(a.view,rect),crop=c.crop;
   ctx.save();ctx.globalAlpha=opacity;ctx.drawImage(sheet,(i%c.cols)*c.tileW,Math.floor(i/c.cols)*c.tileH,c.tileW,c.tileH,f.x+crop[0]*f.scale+dx,f.y+crop[1]*f.scale+dy,crop[2]*f.scale,crop[3]*f.scale);ctx.restore();

@@ -1,7 +1,7 @@
 (function(root,factory){
-  if(typeof module==='object'&&module.exports)module.exports=factory();
-  else root.BlitzMissions=factory();
-})(typeof globalThis!=='undefined'?globalThis:this,function(){
+  if(typeof module==='object'&&module.exports)module.exports=factory(require('./assets/enemies/approved-20261010/roster.js'));
+  else root.BlitzMissions=factory(root.BlitzApprovedEnemies);
+})(typeof globalThis!=='undefined'?globalThis:this,function(Approved){
   'use strict';
   const choice=(id,label,icon='mark',colour=null)=>({id,label,icon,colour});
   const pick=(id,title,text,prompt,labels,answer,hint,explanation,reward,extra={})=>({
@@ -224,6 +224,7 @@
     'fern-wolf':['Follow the lights through the mist.','Fern Wolves make soft beds for their pups from fallen leaves.'],
     'storm-griffin':['Climb above the waterfall.','Storm Griffins spread their wings to shelter smaller friends.']
   };
+  for(const e of Approved?.entries||[])lore[e.id]=e.lore;
   for(const m of missions){
     m.art ||= 'assets/adventures/'+m.id+'.webp';
     m.artAlt ||= 'The young mage and small Pip meet '+m.families[0].replace(/-/g,' ')+' at '+m.place+'.';
