@@ -1,0 +1,972 @@
+{
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "charactersRequested": 5430,
+  "before": {
+    "character_count": 81841,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  },
+  "batches": [
+    {
+      "id": "approved-enemies-001",
+      "duration": 34.272653,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9",
+      "requestId": "BWThY0WbLdKjVIASy0UV",
+      "characters": 447,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-002",
+      "duration": 35.892245,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547",
+      "requestId": "F91zNbQS7qdsRCVDoFOb",
+      "characters": 448,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-003",
+      "duration": 34.821224,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd",
+      "requestId": "7lIBlW29nNlpxF8AtgiI",
+      "characters": 446,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-004",
+      "duration": 37.276735,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3",
+      "requestId": "1YWlfG7ExYFcxzxYdeiI",
+      "characters": 480,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-005",
+      "duration": 37.694694,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096",
+      "requestId": "unzYaVW2hBbLPPAhQwQE",
+      "characters": 473,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-006",
+      "duration": 37.799184,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1",
+      "requestId": "epoAI1Z4vzHuXNnoKBI5",
+      "characters": 481,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-007",
+      "duration": 38.034286,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8",
+      "requestId": "iwXdyY21UtkseTXaYON1",
+      "characters": 460,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-008",
+      "duration": 35.108571,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473",
+      "requestId": "9Piw1eiR1fRbzaVBSgVi",
+      "characters": 456,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-009",
+      "duration": 36.127347,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592",
+      "requestId": "I8pZ4usd4vdat5d4YyCy",
+      "characters": 457,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-010",
+      "duration": 35.94449,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda",
+      "requestId": "udZujKMBFNyuMMGccD4E",
+      "characters": 465,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-011",
+      "duration": 36.310204,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848",
+      "requestId": "gwKivwp0MWtfh7h9DoMJ",
+      "characters": 451,
+      "segments": 12
+    },
+    {
+      "id": "approved-enemies-012",
+      "duration": 24.372245,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01",
+      "requestId": "j0547tRBRd85sxvfj7O4",
+      "characters": 366,
+      "segments": 9
+    }
+  ],
+  "clips": {
+    "Snow Owl": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 0,
+      "duration": 0.981,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "Its white wings shine with the colours of the northern lights.": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 0.981,
+      "duration": 3.7095,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "A Snow Owl is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 4.6905,
+      "duration": 3.837,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "Bramble Badger": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 8.5275,
+      "duration": 1.527,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "It digs safe tunnels with its strong golden claws.": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 10.0545,
+      "duration": 3.6975,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "A Bramble Badger is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 13.752,
+      "duration": 4.151,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "Ember Fox": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 17.903,
+      "duration": 1.3985,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "Its bright tail keeps lost travellers warm.": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 19.3015,
+      "duration": 2.9955,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "An Ember Fox is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 22.297,
+      "duration": 3.3785,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "Rowan Stag": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 25.6755,
+      "duration": 1.277,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "New green leaves grow on its branching antlers.": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 26.9525,
+      "duration": 3.553,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "A Rowan Stag is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-001.mp3",
+      "offset": 30.5055,
+      "duration": 3.7672,
+      "sha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9"
+    },
+    "Pine Marten": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 0,
+      "duration": 0.865,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "Blue sparks race along its tail before a storm.": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 0.865,
+      "duration": 3.4945,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "A Pine Marten is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 4.3595,
+      "duration": 4.3245,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "Hazel Hare": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 8.684,
+      "duration": 1.341,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "Its blue cloak rides the wind as it leaps.": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 10.025,
+      "duration": 2.8915,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "A Hazel Hare is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 12.9165,
+      "duration": 4.011,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "Cloak Raccoon": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 16.9275,
+      "duration": 1.7065,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "It shares its wooden shield with smaller friends.": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 18.634,
+      "duration": 3.5295,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "A Cloak Raccoon is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 22.1635,
+      "duration": 4.1395,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "Chestnut Squirrel": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 26.303,
+      "duration": 1.695,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "It keeps one warm acorn inside its fiery tail.": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 27.998,
+      "duration": 3.9295,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "A Chestnut Squirrel is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-002.mp3",
+      "offset": 31.9275,
+      "duration": 3.9647,
+      "sha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547"
+    },
+    "Moss Bear": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 0,
+      "duration": 1.0565,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "Its golden collar glows when the sun comes out.": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 1.0565,
+      "duration": 3.181,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "A Moss Bear is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 4.2375,
+      "duration": 3.431,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "Lily Otter": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 7.6685,
+      "duration": 1.335,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "Its round shield turns river stones into a safe path.": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 9.0035,
+      "duration": 3.8775,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "A Lily Otter is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 12.881,
+      "duration": 3.675,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "Dam Beaver": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 16.556,
+      "duration": 1.277,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "It builds strong dams and carries tools beside its shield.": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 17.833,
+      "duration": 4.295,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "A Dam Beaver is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 22.128,
+      "duration": 3.849,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "Amber Newt": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 25.977,
+      "duration": 1.248,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "Its golden crest catches the last light of day.": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 27.225,
+      "duration": 3.5815,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "An Amber Newt is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-003.mp3",
+      "offset": 30.8065,
+      "duration": 4.0147,
+      "sha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd"
+    },
+    "Cattail Heron": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 0,
+      "duration": 1.277,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "Its long blue feathers ripple before the rain.": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 1.277,
+      "duration": 3.077,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "A Cattail Heron is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 4.354,
+      "duration": 4.0055,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "Brook Turtle": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 8.3595,
+      "duration": 1.3585,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "A tiny waterfall runs over its shining blue shell.": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 9.718,
+      "duration": 3.7205,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "A Brook Turtle is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 13.4385,
+      "duration": 3.6805,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "Willow Kingfisher": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 17.119,
+      "duration": 1.5965,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "It watches the water from a branch before a swift dive.": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 18.7155,
+      "duration": 4.075,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "A Willow Kingfisher is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 22.7905,
+      "duration": 4.644,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "Ripple Salamander": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 27.4345,
+      "duration": 1.5445,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "Blue rings on its skin glow deep below the water.": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 28.979,
+      "duration": 4.017,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "A Ripple Salamander is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-004.mp3",
+      "offset": 32.996,
+      "duration": 4.2807,
+      "sha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3"
+    },
+    "Shell Lobster": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 0,
+      "duration": 1.19,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "Its smooth pearl armour hides a gentle river friend.": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 1.19,
+      "duration": 3.738,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "A Shell Lobster is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 4.928,
+      "duration": 4.244,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "Marsh Crane": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 9.172,
+      "duration": 1.515,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "It steps quietly through the mist on long thin legs.": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 10.687,
+      "duration": 3.7905,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "A Marsh Crane is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 14.4775,
+      "duration": 3.9185,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "Coal Salamander": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 18.396,
+      "duration": 1.643,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "Its dark scales hold a warm light from deep in the earth.": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 20.039,
+      "duration": 3.9765,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "A Coal Salamander is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 24.0155,
+      "duration": 4.545,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "Quartz Mole": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 28.5605,
+      "duration": 1.5385,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "It finds hidden gems with its strong digging paws.": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 30.099,
+      "duration": 3.6745,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "A Quartz Mole is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-005.mp3",
+      "offset": 33.7735,
+      "duration": 3.9212,
+      "sha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096"
+    },
+    "Copper Scorpion": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 0,
+      "duration": 1.289,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "Its shining tail curls above its copper armour.": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 1.289,
+      "duration": 3.378,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "A Copper Scorpion is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 4.667,
+      "duration": 3.6055,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "Lantern Gecko": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 8.2725,
+      "duration": 1.3985,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "Its soft light helps friends find their way through caves.": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 9.671,
+      "duration": 3.9885,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "A Lantern Gecko is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 13.6595,
+      "duration": 3.9295,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "Slate Pangolin": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 17.589,
+      "duration": 1.5385,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "Its stone scales fold into a safe round shield.": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 19.1275,
+      "duration": 4.2255,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "A Slate Pangolin is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 23.353,
+      "duration": 4.284,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "Cinder Porcupine": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 27.637,
+      "duration": 1.6605,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "Its bright quills glow like warm coals in the dark.": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 29.2975,
+      "duration": 4.133,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "A Cinder Porcupine is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-006.mp3",
+      "offset": 33.4305,
+      "duration": 4.3687,
+      "sha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1"
+    },
+    "Gem Spider": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 0,
+      "duration": 0.917,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "It spins fine threads that sparkle like tiny jewels.": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 0.917,
+      "duration": 3.9185,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "A Gem Spider is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 4.8355,
+      "duration": 4.104,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "Echo Lizard": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 8.9395,
+      "duration": 1.353,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "Its bright markings flash when a sound echoes nearby.": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 10.2925,
+      "duration": 3.924,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "An Echo Lizard is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 14.2165,
+      "duration": 4.034,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "Flint Armadillo": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 18.2505,
+      "duration": 1.608,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "Its smooth armour rolls into a hard protective ball.": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 19.8585,
+      "duration": 4.0695,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "A Flint Armadillo is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 23.928,
+      "duration": 4.1445,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "Frost Lynx": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 28.0725,
+      "duration": 1.3875,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "It walks softly through snow on wide furry paws.": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 29.46,
+      "duration": 4.4465,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "A Frost Lynx is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-007.mp3",
+      "offset": 33.9065,
+      "duration": 4.1278,
+      "sha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8"
+    },
+    "Aurora Elk": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 0,
+      "duration": 1.1665,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "Its antlers shine with colours from the night sky.": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 1.1665,
+      "duration": 3.5005,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "An Aurora Elk is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 4.667,
+      "duration": 4.319,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "Snow Hare": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 8.986,
+      "duration": 1.068,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "Its bright cloak leaves a soft trail across the snow.": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 10.054,
+      "duration": 3.495,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "A Snow Hare is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 13.549,
+      "duration": 3.8835,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "Cloud Yak": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 17.4325,
+      "duration": 1.161,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "Its thick coat keeps smaller friends warm in the wind.": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 18.5935,
+      "duration": 3.448,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "A Cloud Yak is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 22.0415,
+      "duration": 3.512,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "Pinecone Marmot": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 25.5535,
+      "duration": 1.6605,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "It stores food under the snow for the long winter.": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 27.214,
+      "duration": 3.6395,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "A Pinecone Marmot is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-008.mp3",
+      "offset": 30.8535,
+      "duration": 4.2551,
+      "sha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473"
+    },
+    "Gale Falcon": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 0,
+      "duration": 1.1085,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "It rides high winds above the tallest cliffs.": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 1.1085,
+      "duration": 2.862,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "A Gale Falcon is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 3.9705,
+      "duration": 3.6165,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "Lichen Ibex": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 7.587,
+      "duration": 1.515,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "Its strong hooves grip the narrow mountain paths.": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 9.102,
+      "duration": 3.5935,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "A Lichen Ibex is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 12.6955,
+      "duration": 3.837,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "Hail Wolverine": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 16.5325,
+      "duration": 1.7705,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "Its thick winter coat keeps out the sharpest cold.": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 18.303,
+      "duration": 3.988,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "A Hail Wolverine is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 22.291,
+      "duration": 4.6265,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "Mist Leopard": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 26.9175,
+      "duration": 1.6255,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "It moves like a quiet shadow through the mountain mist.": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 28.543,
+      "duration": 3.837,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "A Mist Leopard is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-009.mp3",
+      "offset": 32.38,
+      "duration": 3.7473,
+      "sha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592"
+    },
+    "Glacier Seal": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 0,
+      "duration": 1.213,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "It glides under the ice and rests beside clear blue pools.": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 1.213,
+      "duration": 3.791,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "A Glacier Seal is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 5.004,
+      "duration": 3.843,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "Ink Raven": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 8.847,
+      "duration": 1.4915,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "It carries little messages beneath its dark wings.": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 10.3385,
+      "duration": 3.344,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "An Ink Raven is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 13.6825,
+      "duration": 3.8485,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "Bramble Peacock": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 17.531,
+      "duration": 1.6195,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "Its wide tail opens like a bright fan of jewels.": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 19.1505,
+      "duration": 3.878,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "A Bramble Peacock is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 23.0285,
+      "duration": 3.924,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "Bell Tortoise": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 26.9525,
+      "duration": 1.527,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "Its shell rings softly when a friend needs help.": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 28.4795,
+      "duration": 3.6045,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "A Bell Tortoise is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-010.mp3",
+      "offset": 32.084,
+      "duration": 3.8605,
+      "sha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda"
+    },
+    "Honey Wasp": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 0,
+      "duration": 1.231,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "It guards the sweet flowers in the sunny garden.": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 1.231,
+      "duration": 3.181,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "A Honey Wasp is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 4.412,
+      "duration": 3.384,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "Velvet Shrew": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 7.796,
+      "duration": 1.3235,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "It follows tiny sounds with its pointed nose.": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 9.1195,
+      "duration": 3.3725,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "A Velvet Shrew is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 12.492,
+      "duration": 3.7445,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "Dusk Firefly": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 16.2365,
+      "duration": 1.5155,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "Its gentle glow marks a safe path after sunset.": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 17.752,
+      "duration": 4.1215,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "A Dusk Firefly is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 21.8735,
+      "duration": 4.6965,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "Petal Chameleon": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 26.57,
+      "duration": 1.8515,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "Its colours change as it moves between the flowers.": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 28.4215,
+      "duration": 3.6865,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "A Petal Chameleon is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-011.mp3",
+      "offset": 32.108,
+      "duration": 4.2022,
+      "sha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848"
+    },
+    "Moon Hare Knight": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 0,
+      "duration": 1.254,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "It raises its moon shield to protect a smaller friend.": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 1.254,
+      "duration": 3.837,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "A Moon Hare Knight is on the path. Ready to battle?": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 5.091,
+      "duration": 3.628,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "This friend lives in the deep forest.": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 8.719,
+      "duration": 2.5485,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "This friend lives beside the river.": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 11.2675,
+      "duration": 2.357,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "This friend lives near the glowing caves.": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 13.6245,
+      "duration": 2.6585,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "This friend lives among snowy peaks.": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 16.283,
+      "duration": 2.444,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "This friend lives in the hidden garden.": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 18.727,
+      "duration": 2.5425,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "A future chapter will reveal this friend.": {
+      "file": "assets/narration/approved-enemies-012.mp3",
+      "offset": 21.2695,
+      "duration": 3.1027,
+      "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    }
+  },
+  "status": "complete",
+  "after": {
+    "character_count": 83666,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  },
+  "reusedStories": 0,
+  "totalTextCharacters": 5430,
+  "listeningReview": "Decode and playback checks are recorded separately; no claim of human pronunciation approval or physical iPad testing."
+}

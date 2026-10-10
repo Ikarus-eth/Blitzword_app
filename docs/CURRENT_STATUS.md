@@ -1,3 +1,7 @@
+## Artus’s 45 approved creatures — 10 October 2026
+
+**Implemented and locally tested; deployment pending.** Artus’s 45 winning designs (including white Snow Owl) are registered with transparent artwork, brief battle motions and 141 recorded voice segments. Ore Ant is excluded. The Creature Book has 65 families; the new 45 await future chapter unlocks. Existing encounters, chapters and saves are preserved. Nine ImageGen atlases plus one layout repair; 5,430 narration characters, with shared phrases reused. [Scope, evidence and remaining chapter work](enemies/APPROVED_RELEASE.md).
+
 ## Temporary German option — 10 October 2026
 
 Temporary, standalone-page-only German toggle for The Hidden Atlas: translates the five maps’ clues, answer options and interface. English remains available; language choice is local and does not change progress. Voice controls are removed on this page. Main-game content and language are unchanged. Focused checks cover all fifteen translated questions, answer selection, saved language, English switching and absence of voice controls.

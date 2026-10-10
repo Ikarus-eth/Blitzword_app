@@ -192,3 +192,7 @@ The user accepted the corrected mage direction and authorized expanding and depl
 ### 6 October: imaginative boy and wizard scenes
 
 The user requested varied adventures using the original boy picture’s painted style, and explicitly likes the wizard from the other teaching moment. Chapter 5 now pairs the boy with that blue-robed, white-bearded wizard and white unicorn across four different settings and actions. The original teaching atlas remains the visual reference. [Final assets and prompts](adventures/WIZARD_MAP_RELEASE.md).
+
+## Artus’s 45 approved additions — 10 October 2026
+
+The user authorized integration after Artus’s final-look vote. `docs/enemies/APPROVED_SELECTIONS.json` identifies each winning source cell; `ARTUS_FINAL_RATINGS.json` preserves all 184 ratings. Ore Ant is excluded. Production derivatives are nine transparent 1536×1024 atlases in `assets/enemies/approved-20261010/`, with per-creature crop metadata in `roster.js`. Built-in ImageGen generated nine sheets and one layout repair; exact prompts and final hashes are in `docs/enemies/APPROVED_ART_PROMPTS.json`. Old 20-family artwork is unchanged. [Release, verification and limits](enemies/APPROVED_RELEASE.md).

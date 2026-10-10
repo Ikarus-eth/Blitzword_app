@@ -4,7 +4,7 @@ No retries and no account/plan changes. Successful paid outputs survive errors.
 import base64, hashlib, json, os, pathlib, shutil, subprocess, sys, urllib.request, urllib.error
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 MODE=sys.argv[1] if len(sys.argv)>1 else 'budget'
-CONFIG={'budget':('NARRATION_BUDGET_REQUEST.json','narration-budget',8000),'story-riddle':('NARRATION_STORY_RIDDLE_REQUEST.json','narration-story-riddle',6000)}
+CONFIG={'budget':('NARRATION_BUDGET_REQUEST.json','narration-budget',8000),'story-riddle':('NARRATION_STORY_RIDDLE_REQUEST.json','narration-story-riddle',6000),'approved-enemies':('NARRATION_APPROVED_ENEMIES_REQUEST.json','narration-approved-enemies',7000)}
 assert MODE in CONFIG,'Unknown narration scope'
 request_file,folder,cap=CONFIG[MODE]
 PLAN=json.loads((ROOT/'docs'/request_file).read_text())

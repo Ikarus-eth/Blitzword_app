@@ -1,0 +1,500 @@
+{
+  "method": "RGBA dimensions, alpha crop edges, plus browser review of all 45 sprites on dark background and Snow Owl on light; one atlas layout repaired",
+  "creatures": [
+    {
+      "id": "snow-owl",
+      "view": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 45.3
+    },
+    {
+      "id": "bramble-badger",
+      "view": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 49.2
+    },
+    {
+      "id": "ember-fox",
+      "view": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 50.1
+    },
+    {
+      "id": "rowan-stag",
+      "view": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 67.2
+    },
+    {
+      "id": "pine-marten",
+      "view": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 54.2
+    },
+    {
+      "id": "hazel-hare",
+      "view": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 67.5
+    },
+    {
+      "id": "cloak-raccoon",
+      "view": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 64.1
+    },
+    {
+      "id": "chestnut-squirrel",
+      "view": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 63.9
+    },
+    {
+      "id": "moss-bear",
+      "view": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 62.9
+    },
+    {
+      "id": "lily-otter",
+      "view": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 65.6
+    },
+    {
+      "id": "dam-beaver",
+      "view": [
+        0,
+        0,
+        534,
+        520
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 45.8
+    },
+    {
+      "id": "amber-newt",
+      "view": [
+        534,
+        0,
+        490,
+        520
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 58.0
+    },
+    {
+      "id": "cattail-heron",
+      "view": [
+        1024,
+        0,
+        512,
+        535
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 58.5
+    },
+    {
+      "id": "brook-turtle",
+      "view": [
+        0,
+        535,
+        532,
+        489
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 49.6
+    },
+    {
+      "id": "willow-kingfisher",
+      "view": [
+        532,
+        520,
+        492,
+        504
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 62.6
+    },
+    {
+      "id": "ripple-salamander",
+      "view": [
+        0,
+        0,
+        512,
+        520
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 66.7
+    },
+    {
+      "id": "shell-lobster",
+      "view": [
+        512,
+        0,
+        536,
+        520
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 67.8
+    },
+    {
+      "id": "marsh-crane",
+      "view": [
+        1048,
+        0,
+        488,
+        520
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 73.2
+    },
+    {
+      "id": "coal-salamander",
+      "view": [
+        0,
+        520,
+        512,
+        504
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 63.0
+    },
+    {
+      "id": "quartz-mole",
+      "view": [
+        512,
+        520,
+        548,
+        504
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 61.2
+    },
+    {
+      "id": "copper-scorpion",
+      "view": [
+        0,
+        0,
+        528,
+        530
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 66.9
+    },
+    {
+      "id": "lantern-gecko",
+      "view": [
+        528,
+        0,
+        496,
+        530
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 65.7
+    },
+    {
+      "id": "slate-pangolin",
+      "view": [
+        1024,
+        0,
+        512,
+        530
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 59.1
+    },
+    {
+      "id": "cinder-porcupine",
+      "view": [
+        0,
+        530,
+        512,
+        494
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 51.5
+    },
+    {
+      "id": "gem-spider",
+      "view": [
+        512,
+        530,
+        550,
+        494
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 63.8
+    },
+    {
+      "id": "echo-lizard",
+      "view": [
+        0,
+        0,
+        512,
+        490
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 61.8
+    },
+    {
+      "id": "flint-armadillo",
+      "view": [
+        512,
+        0,
+        512,
+        490
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 53.1
+    },
+    {
+      "id": "frost-lynx",
+      "view": [
+        1024,
+        0,
+        512,
+        490
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 53.3
+    },
+    {
+      "id": "aurora-elk",
+      "view": [
+        0,
+        490,
+        512,
+        534
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 61.9
+    },
+    {
+      "id": "snow-hare",
+      "view": [
+        512,
+        490,
+        512,
+        534
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 66.2
+    },
+    {
+      "id": "cloud-yak",
+      "view": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 49.5
+    },
+    {
+      "id": "pinecone-marmot",
+      "view": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 58.4
+    },
+    {
+      "id": "gale-falcon",
+      "view": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 63.2
+    },
+    {
+      "id": "lichen-ibex",
+      "view": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 63.1
+    },
+    {
+      "id": "hail-wolverine",
+      "view": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 52.6
+    },
+    {
+      "id": "mist-leopard",
+      "view": [
+        0,
+        0,
+        522,
+        510
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 46.2
+    },
+    {
+      "id": "glacier-seal",
+      "view": [
+        522,
+        0,
+        502,
+        510
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 61.8
+    },
+    {
+      "id": "ink-raven",
+      "view": [
+        1024,
+        0,
+        512,
+        510
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 63.0
+    },
+    {
+      "id": "bramble-peacock",
+      "view": [
+        0,
+        510,
+        520,
+        514
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 52.9
+    },
+    {
+      "id": "bell-tortoise",
+      "view": [
+        520,
+        510,
+        504,
+        514
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 53.0
+    },
+    {
+      "id": "honey-wasp",
+      "view": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 68.6
+    },
+    {
+      "id": "velvet-shrew",
+      "view": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 67.8
+    },
+    {
+      "id": "dusk-firefly",
+      "view": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 67.5
+    },
+    {
+      "id": "petal-chameleon",
+      "view": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 58.8
+    },
+    {
+      "id": "moon-hare-knight",
+      "view": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "solidPixelsAtCropEdge": 0,
+      "transparentPercent": 65.5
+    }
+  ]
+}

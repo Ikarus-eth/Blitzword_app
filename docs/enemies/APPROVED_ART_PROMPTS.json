@@ -1,0 +1,187 @@
+[
+  {
+    "atlas": 1,
+    "references": [
+      "assets/enemy-finals/sheets/pair-01.png",
+      "assets/enemy-finals/sheets/pair-02.png",
+      "assets/enemy-finals/sheets/pair-03.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Snow Owl, Aurora Seer, EXACT design in reference image 1, TOP row, column 3 (option D). Cell 2 (top middle): Bramble Badger, Amber Burrower, EXACT design in reference image 1, BOTTOM row, column 3 (option D). Cell 3 (top right): Ember Fox, Sunflare Trickster, EXACT design in reference image 2, TOP row, column 3 (option D). Cell 4 (bottom left): Rowan Stag, Wild Verdant, EXACT design in reference image 2, BOTTOM row, column 3 (option D). Cell 5 (bottom middle): Pine Marten, Storm Marten, EXACT design in reference image 3, TOP row, column 2 (option C). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential.",
+    "creatures": [
+      "snow-owl",
+      "bramble-badger",
+      "ember-fox",
+      "rowan-stag",
+      "pine-marten"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-01.png",
+    "sha256": "d0558ba2fead21095c76a0ea958a686eadcaab34113fc9c2140861f1c5700107"
+  },
+  {
+    "atlas": 2,
+    "references": [
+      "assets/enemy-finals/sheets/pair-03.png",
+      "assets/enemy-finals/sheets/pair-04.png",
+      "assets/enemy-finals/sheets/pair-05.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Hazel Hare, Windfoot, EXACT design in reference image 1, BOTTOM row, column 3 (option D). Cell 2 (top middle): Cloak Raccoon, Oakshield Scout, EXACT design in reference image 2, TOP row, column 1 (option B). Cell 3 (top right): Chestnut Squirrel, Ember Collector, EXACT design in reference image 2, BOTTOM row, column 2 (option C). Cell 4 (bottom left): Moss Bear, Sun Bear, EXACT design in reference image 3, TOP row, column 2 (option C). Cell 5 (bottom middle): Lily Otter, River Duelist, EXACT design in reference image 3, BOTTOM row, column 2 (option C). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential.",
+    "creatures": [
+      "hazel-hare",
+      "cloak-raccoon",
+      "chestnut-squirrel",
+      "moss-bear",
+      "lily-otter"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-02.png",
+    "sha256": "a6da9a91756bf8b93f955d8f775b20d77c625e8fb4f03aff27df93e25af2a7ef",
+    "layoutRepair": {
+      "prompt": "Edit this transparent production atlas. Preserve the five creature designs exactly. ONLY fix their layout: shrink each intact creature to 80% of its present size, keeping centred inside its own 512 by 512 cell. Canvas 1536x1024. Top row Hazel Hare, Cloak Raccoon, Chestnut Squirrel. Bottom row Moss Bear, Lily Otter, EMPTY. Each full creature must have at least 35 pixels of clear transparent margin inside its cell. No neighbouring body parts crossing cell edges. No text, borders, backgrounds, floor or shadows. Keep full anatomy, colours, fur, accessories and transparency unchanged.",
+      "source": "exec-4f0537c0-94bf-4055-b0c4-07e424b2baca.png"
+    }
+  },
+  {
+    "atlas": 3,
+    "references": [
+      "assets/enemy-finals/sheets/pair-06.png",
+      "assets/enemy-finals/sheets/pair-07.png",
+      "assets/enemy-finals/sheets/pair-08.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Dam Beaver, Copper Carpenter, EXACT design in reference image 1, TOP row, column 2 (option C). Cell 2 (top middle): Amber Newt, Citrine Crest, EXACT design in reference image 1, BOTTOM row, column 2 (option C). Cell 3 (top right): Cattail Heron, Storm Heron, EXACT design in reference image 2, TOP row, column 2 (option C). Cell 4 (bottom left): Brook Turtle, Waterfall Keeper, EXACT design in reference image 2, BOTTOM row, column 2 (option C). Cell 5 (bottom middle): Willow Kingfisher, Sapphire Arrow, EXACT design in reference image 3, TOP row, column 1 (option B). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential.",
+    "creatures": [
+      "dam-beaver",
+      "amber-newt",
+      "cattail-heron",
+      "brook-turtle",
+      "willow-kingfisher"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-03.png",
+    "sha256": "24841b9d87868df037a5f69d6fac7dffc53bb4b52739cde45eb0d81e0caa30fc"
+  },
+  {
+    "atlas": 4,
+    "references": [
+      "assets/enemy-finals/sheets/pair-08.png",
+      "assets/enemy-finals/sheets/pair-09.png",
+      "assets/enemy-finals/sheets/pair-10.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Ripple Salamander, Deepwater Spark, EXACT design in reference image 1, BOTTOM row, column 3 (option D). Cell 2 (top middle): Shell Lobster, Tide Armour, EXACT design in reference image 2, TOP row, column 2 (option C). Cell 3 (top right): Marsh Crane, Dusk Crane, EXACT design in reference image 2, BOTTOM row, column 2 (option C). Cell 4 (bottom left): Coal Salamander, Obsidian Blaze, EXACT design in reference image 3, TOP row, column 2 (option C). Cell 5 (bottom middle): Quartz Mole, Golden Delver, EXACT design in reference image 3, BOTTOM row, column 3 (option D). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential. IMPORTANT: creatures must occupy at most 75% of each cell width and height, with large completely empty margins. No colour haze or glow outside creature silhouette.",
+    "creatures": [
+      "ripple-salamander",
+      "shell-lobster",
+      "marsh-crane",
+      "coal-salamander",
+      "quartz-mole"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-04.png",
+    "sha256": "6fb60fe168c8f9c869fb266c595e9b493267f7fab4acc9a8c5aae9dbbf9355c5"
+  },
+  {
+    "atlas": 5,
+    "references": [
+      "assets/enemy-finals/sheets/pair-11.png",
+      "assets/enemy-finals/sheets/pair-12.png",
+      "assets/enemy-finals/sheets/pair-13.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Copper Scorpion, Furnace Scorpion, EXACT design in reference image 1, TOP row, column 3 (option D). Cell 2 (top middle): Lantern Gecko, Sunspot Gecko, EXACT design in reference image 1, BOTTOM row, column 2 (option C). Cell 3 (top right): Slate Pangolin, Slate Sentinel, EXACT design in reference image 2, TOP row, column 1 (option B). Cell 4 (bottom left): Cinder Porcupine, Ruby Spines, EXACT design in reference image 2, BOTTOM row, column 2 (option C). Cell 5 (bottom middle): Gem Spider, Emerald Watcher, EXACT design in reference image 3, TOP row, column 3 (option D). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential. IMPORTANT: creatures must occupy at most 75% of each cell width and height, with large completely empty margins. No colour haze or glow outside creature silhouette.",
+    "creatures": [
+      "copper-scorpion",
+      "lantern-gecko",
+      "slate-pangolin",
+      "cinder-porcupine",
+      "gem-spider"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-05.png",
+    "sha256": "166174cf0d96aa132e586de04d0a7cb1da866ac121d8925ce7e13c8dff8e9b90"
+  },
+  {
+    "atlas": 6,
+    "references": [
+      "assets/enemy-finals/sheets/pair-13.png",
+      "assets/enemy-finals/sheets/pair-14.png",
+      "assets/enemy-finals/sheets/pair-15.png",
+      "assets/enemy-finals/sheets/pair-16.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Echo Lizard, Sunstone Echo, EXACT design in reference image 1, BOTTOM row, column 3 (option D). Cell 2 (top middle): Flint Armadillo, Citrine Roller, EXACT design in reference image 2, TOP row, column 2 (option C). Cell 3 (top right): Frost Lynx, Aurora Hunter, EXACT design in reference image 3, TOP row, column 3 (option D). Cell 4 (bottom left): Aurora Elk, Aurora Crown, EXACT design in reference image 3, BOTTOM row, column 1 (option B). Cell 5 (bottom middle): Snow Hare, Frost Dancer, EXACT design in reference image 4, TOP row, column 2 (option C). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential. IMPORTANT: creatures must occupy at most 75% of each cell width and height, with large completely empty margins. No colour haze or glow outside creature silhouette.",
+    "creatures": [
+      "echo-lizard",
+      "flint-armadillo",
+      "frost-lynx",
+      "aurora-elk",
+      "snow-hare"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-06.png",
+    "sha256": "565c215a8c8d1d5fdc1706863073f0078ddf8de2067df4409353fdae954eaf34"
+  },
+  {
+    "atlas": 7,
+    "references": [
+      "assets/enemy-finals/sheets/pair-16.png",
+      "assets/enemy-finals/sheets/pair-17.png",
+      "assets/enemy-finals/sheets/pair-18.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Cloud Yak, Thunder Yak, EXACT design in reference image 1, BOTTOM row, column 2 (option C). Cell 2 (top middle): Pinecone Marmot, Mountain Lookout, EXACT design in reference image 2, TOP row, column 2 (option C). Cell 3 (top right): Gale Falcon, Sunwind, EXACT design in reference image 2, BOTTOM row, column 2 (option C). Cell 4 (bottom left): Lichen Ibex, Emerald Crag, EXACT design in reference image 3, TOP row, column 3 (option D). Cell 5 (bottom middle): Hail Wolverine, Storm Pelt, EXACT design in reference image 3, BOTTOM row, column 3 (option D). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential. IMPORTANT: creatures must occupy at most 75% of each cell width and height, with large completely empty margins. No colour haze or glow outside creature silhouette.",
+    "creatures": [
+      "cloud-yak",
+      "pinecone-marmot",
+      "gale-falcon",
+      "lichen-ibex",
+      "hail-wolverine"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-07.png",
+    "sha256": "2ba21c5b79596f5f52743f4703ac66a6420687b4a8f306c6e841e5e923eea729"
+  },
+  {
+    "atlas": 8,
+    "references": [
+      "assets/enemy-finals/sheets/pair-19.png",
+      "assets/enemy-finals/sheets/pair-20.png",
+      "assets/enemy-finals/sheets/pair-21.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Mist Leopard, Moon Panther, EXACT design in reference image 1, TOP row, column 2 (option C). Cell 2 (top middle): Glacier Seal, Aurora Seal, EXACT design in reference image 1, BOTTOM row, column 2 (option C). Cell 3 (top right): Ink Raven, Ink Scribe, EXACT design in reference image 2, TOP row, column 1 (option B). Cell 4 (bottom left): Bramble Peacock, Autumn Crown, EXACT design in reference image 2, BOTTOM row, column 2 (option C). Cell 5 (bottom middle): Bell Tortoise, Sun Chime, EXACT design in reference image 3, TOP row, column 2 (option C). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential. IMPORTANT: creatures must occupy at most 75% of each cell width and height, with large completely empty margins. No colour haze or glow outside creature silhouette.",
+    "creatures": [
+      "mist-leopard",
+      "glacier-seal",
+      "ink-raven",
+      "bramble-peacock",
+      "bell-tortoise"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-08.png",
+    "sha256": "5b0e409037888bde3e6528083c66b5fbcfeb23797d534c63caa5edce803cf810"
+  },
+  {
+    "atlas": 9,
+    "references": [
+      "assets/enemy-finals/sheets/pair-21.png",
+      "assets/enemy-finals/sheets/pair-22.png",
+      "assets/enemy-finals/sheets/pair-23.png"
+    ],
+    "prompt": "Use case: background-extraction and identity-preserve. Create ONE production game atlas with FIVE approved full-body creatures on a genuinely transparent background. 1536x1024 landscape, strict three equal columns by two equal rows. Bottom-right sixth cell remains COMPLETELY EMPTY transparent. Each creature entirely inside its own cell with 10 percent clear margin on every edge. No text, labels, borders, shadows, floor, scenery or stray marks. Inputs are reference sheets, not layout to copy. Extract ONLY these selected identities and preserve exact face, species, colours, natural anatomy, ornaments, silhouette and painterly textures. Do not blend designs or invent new props. Cell 1 (top left): Honey Wasp, Cobalt Wasp, EXACT design in reference image 1, BOTTOM row, column 3 (option D). Cell 2 (top middle): Velvet Shrew, Seed Scout, EXACT design in reference image 2, TOP row, column 1 (option B). Cell 3 (top right): Dusk Firefly, Emerald Lantern, EXACT design in reference image 2, BOTTOM row, column 2 (option C). Cell 4 (bottom left): Petal Chameleon, Orchid Shifter, EXACT design in reference image 3, TOP row, column 3 (option D). Cell 5 (bottom middle): Moon Hare Knight, Moonshield, EXACT design in reference image 3, BOTTOM row, column 1 (option B). All five must be fully visible: include complete ears, antlers, wings, feet, tails. Clean natural anatomy: no extra limbs, fused toes, broken wings, duplicate eyes or detached fragments. Preserve opaque white fur and feathers while removing the cream background. Neutral alert standing pose. Keep original orientation. Do not generate action variants. Transparent alpha is essential. IMPORTANT: creatures must occupy at most 75% of each cell width and height, with large completely empty margins. No colour haze or glow outside creature silhouette.",
+    "creatures": [
+      "honey-wasp",
+      "velvet-shrew",
+      "dusk-firefly",
+      "petal-chameleon",
+      "moon-hare-knight"
+    ],
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "output": "assets/enemies/approved-20261010/atlas-09.png",
+    "sha256": "e3f8d370f64a0fe96936f9cc337682dcf5f96d5f6025f7d5c77976259496639a"
+  }
+]

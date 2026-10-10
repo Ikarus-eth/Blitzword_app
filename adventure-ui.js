@@ -70,7 +70,7 @@
       screen.style.backgroundImage='linear-gradient(180deg,#10282088,#10282044 40%,#102820bb),url("'+c.scene+'")';
       const top=el('div','adventureTop'),tabs=el('nav','campaignTabs');tabs.setAttribute('aria-label','Choose a campaign');
       D.campaigns.forEach((campaign,i)=>{const open=i===0||A.campaignComplete(s,D.campaigns[i-1].id);const b=button((i+1)+'. '+campaign.shortName,'campaignTab'+(c.id===campaign.id?' selected':''),()=>{e.selectedCampaign=campaign.id;if(ctx.save())renderHub();});b.disabled=!open;b.setAttribute('aria-pressed',String(c.id===campaign.id));if(!open)b.title='Finish Forest lights to open this campaign.';tabs.append(b);});
-      const book=button('Creature Book · '+report.seen+'/20','bookLauncher',()=>openBook());book.insertAdjacentHTML('afterbegin',icon('leaf'));top.append(tabs,book);screen.append(top);
+      const book=button('Creature Book · '+report.seen+'/'+Content.creatures.length,'bookLauncher',()=>openBook());book.insertAdjacentHTML('afterbegin',icon('leaf'));top.append(tabs,book);screen.append(top);
       const done=c.missions.filter(id=>e.missions[id]?.completedAt).length;
       screen.append(heading('Adventure '+(D.campaigns.indexOf(c)+1)+' · '+done+'/6 treasures',c.name,done===6?c.ending:c.intro));
       if(e.current&&e.current.phase!=='complete'){
@@ -177,23 +177,27 @@
     }
     function renderBook(){
       const s=ctx.state(),e=A.of(s),report=A.report(s);ctx.show('creatureBook');const screen=$('#creatureBook');screen.replaceChildren();
-      const top=el('div','bookTop');top.append(button('← '+(bookReturn==='mission'?'Back to mission':'Back to camp'),'secondaryButton',()=>bookReturn==='mission'?ctx.enter():ctx.home()),el('span','bookCount',report.seen+' / 20 discovered'));screen.append(top);
+      const top=el('div','bookTop');top.append(button('← '+(bookReturn==='mission'?'Back to mission':'Back to camp'),'secondaryButton',()=>bookReturn==='mission'?ctx.enter():ctx.home()),el('span','bookCount',report.seen+' / '+Content.creatures.length+' discovered'));screen.append(top);
       screen.append(heading('Your animal friends','Creature Book','Choose a friend to join you in fights. It can stop one hit each quest.'));
       const legend=el('div','bookLegend');for(const text of ['◆ Met: meet this friend','✦ Clue: solve its clue','★ Star: win its big fight'])legend.append(el('span','',text));screen.append(legend);
+      const upcoming=Content.newEnemies.filter(enemy=>!A.findMission(enemy.id)).length;
+      if(upcoming)screen.append(el('p','bookHint',upcoming+' more friends are waiting for future chapters.'));
       const layout=el('div','bookLayout'),grid=el('div','creatureGrid');
-      Content.enemies.forEach((enemy,i)=>{const entry=e.book[enemy.id],b=button('','creatureTile'+(!entry?.seen?' unseen':'')+(selectedCreature===enemy.id?' selected':''),()=>{selectedCreature=enemy.id;renderBook();$('#creatureDetail').scrollIntoView?.({block:'nearest'});});b.dataset.family=enemy.id;b.setAttribute('aria-label',entry?.seen?enemy.name:'Unknown creature '+(i+1));
+      Content.creatures.forEach((enemy,i)=>{const entry=e.book[enemy.id],b=button('','creatureTile'+(!entry?.seen?' unseen':'')+(selectedCreature===enemy.id?' selected':''),()=>{selectedCreature=enemy.id;renderBook();$('#creatureDetail').scrollIntoView?.({block:'nearest'});});b.dataset.family=enemy.id;b.setAttribute('aria-label',entry?.seen?enemy.name:'Unknown creature '+(i+1));
         const art=el('span','sceneSprite');ctx.paintEnemy(art,enemy.id,8);art.setAttribute('aria-hidden','true');b.append(el('small','creatureNumber',String(i+1).padStart(2,'0')),art,el('strong','',entry?.seen?enemy.name:'???'));
         const stamps=el('span','creatureStamps');for(const [field,label,symbol] of [['seen','Met','◆'],['studied','Clue','✦'],['champion','Star','★']]){const stamp=el('span',entry?.[field]?'earned':'',symbol+' '+label);stamp.setAttribute('aria-label',label+(entry?.[field]?': earned':': not yet'));stamps.append(stamp);}b.append(stamps);grid.append(b);
       });layout.append(grid);
       const detail=el('aside','creatureDetail parchment');detail.id='creatureDetail';
       if(selectedCreature){const enemy=Content.enemyAt(selectedCreature),entry=e.book[selectedCreature],m=A.findMission(selectedCreature),lore=D.lore[selectedCreature];
         const art=el('div','detailCreature sceneSprite'+(!entry?.seen?' undiscovered':''));ctx.paintEnemy(art,selectedCreature,8);detail.append(art,el('h2','',entry?.seen?enemy.name:'Who is hiding here?'),el('p','',entry?.studied?lore[1]:lore[0]));
-        detail.append(el('p','creatureWhere','Find this friend: '+m.name));
+        detail.append(el('p','creatureWhere',m?'Find this friend: '+m.name:'A future chapter will reveal this friend.'));
+        detail.append(button('Listen','textButton',()=>ctx.speak(entry?.studied?lore[1]:lore[0])));
+        if(entry?.seen)detail.append(button('Hear name','textButton',()=>ctx.speak(enemy.name)));
         const stamps=el('ul','bookStampList');for(const [field,label] of [['seen','Met this friend'],['studied','Solved its clue'],['champion','Won its big fight']])stamps.append(el('li',entry?.[field]?'earned':'',(entry?.[field]?'✓ ':'○ ')+label));detail.append(stamps);
         if(!entry?.studied)detail.append(el('p','bookHint','Finish a clue with this creature to learn its secret.'));
         if(!entry?.champion)detail.append(el('p','bookHint','Win its big fight to earn the star.'));
         if(entry?.seen){const favourite=button(e.favourite===selectedCreature?'On your team ✓':'Choose for my team','secondaryButton',()=>{if(A.selectCompanion(s,selectedCreature)&&ctx.save())renderBook();});detail.append(favourite);}
-        detail.append(button('Find this path','textButton',()=>{e.selectedCampaign=m.campaign;if(!ctx.save())return;ctx.home();const card=$('#adventureHub [data-mission="'+m.id+'"]');card?.classList.add('creatureTarget');card?.scrollIntoView?.({block:'center'});}));
+        if(m)detail.append(button('Find this path','textButton',()=>{e.selectedCampaign=m.campaign;if(!ctx.save())return;ctx.home();const card=$('#adventureHub [data-mission="'+m.id+'"]');card?.classList.add('creatureTarget');card?.scrollIntoView?.({block:'center'});}));
       }else {detail.append(el('h2','','Every friend has a secret'),el('p','','Tap a page to see its clues. A dark shape means there is someone new to find.'));}
       layout.append(detail);screen.append(layout);
     }

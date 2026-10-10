@@ -816,7 +816,8 @@
     // Explicit legacy base IDs remain valid for old integrations; normal choices use variants.
     const chosen=demo?'thornling':available.find(enemy=>enemy.id===enemyId)?.id||
       Content.enemiesForHealth(health).find(enemy=>enemy.id===enemyId)?.id||
-      Content.enemies.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
+      Content.creatures.find(enemy=>enemy.id===enemyId)?.id||
+      Content.newEnemyVariants.find(enemy=>enemy.id===enemyId)?.id||available[0].id;
     const heroMaxHealth=demo?3:mission?Adventure.of(s).current.maxHearts:Math.max(3,Math.ceil(health/4)+2);
     s.battle={id:id(s,'battle'),demo,heroHealth:heroMaxHealth,heroMaxHealth,enemyHealth:health,maxHealth:health,
       enemyId:chosen,introPending:!demo,fromAssessment,finalEncounter,chapterId:chapter.id,areaId:story.areas.find(a=>a.status==='current')?.id||story.areas.at(-1).id,xpStart:s.dragon.xp,
