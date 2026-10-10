@@ -1,6 +1,6 @@
 # Artus’s approved creature expansion
 
-Implemented 10 October 2026. Deployment status is recorded in CURRENT_STATUS.md and APPROVED_DEPLOYMENT.json after verification.
+Deployed and verified 10 October 2026 through PR #158 and Pages run 38041317787. All 32 checked live runtime/art/audio files match the tested release; see APPROVED_DEPLOYMENT.json.
 
 ## Scope
 
@@ -31,3 +31,5 @@ The standalone preview at `assets/enemies/approved-20261010/` exposes all select
 ## Remaining work
 
 New chapters still need story/scenery, reading and riddle sequences, encounter placement, unlock prerequisites, difficulty/playtime tuning and chapter-specific narration. Bespoke creature abilities or full frame-by-frame animations are optional future enhancements. These additions use the existing combat mechanics.
+
+Live browser evidence: [gallery](approved-live-preview.jpg) and [Creature Book](approved-live-book.jpg).
