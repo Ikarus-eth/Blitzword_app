@@ -25,7 +25,7 @@ const root=process.cwd(),C=require(root+'/assets/wimmelbild/core'),D=require(roo
    await page.locator('#reset').click();
    // Tap the real top-left door, using rendered image geometry.
    const s=await page.locator('#surface').boundingBox(),o=D.scenes[1].options.find(x=>x.id==='high');
-   await page.mouse.click(s.x+(o.box[0]+o.box[2]/2)*s.width,s.y+(o.box[1]+o.box[3]/2)*s.height);assert.equal(await page.locator('[data-choice=high]').getAttribute('aria-pressed'),'true');
+   await page.mouse.click(s.x+(o.box[0]+o.box[2]/2)*s.width,s.y+(o.box[1]+o.box[3]/2)*s.height);assert.equal(await page.locator('[data-choice=high]').getAttribute('aria-pressed'),'false');assert.ok(await page.locator('#go').isDisabled());await page.locator('[data-choice=high]').click();
    await page.screenshot({path:root+'/docs/wimmelbild/tablet-village.png'});
   }else await page.locator('[data-choice=high]').click();
   await page.locator('#go').click();await page.waitForFunction(()=>document.querySelector('#image-status').hidden);assert.equal(await page.locator('#title').textContent(),'Find the dragon guide');assert.equal(await page.locator('#reading').evaluate(e=>e.scrollTop),0);
@@ -43,5 +43,5 @@ const root=process.cwd(),C=require(root+'/assets/wimmelbild/core'),D=require(roo
  await page.evaluate(()=>{const s=BlitzCore.fresh();s.profile={name:'Review',age:7,gender:'boy',heroClass:'Mage',heroIndex:0};s.assessment.done=true;localStorage.setItem(BlitzStorage.KEY,JSON.stringify(s));});await page.reload();
  await page.getByRole('button',{name:'⌕ Dragon path',exact:true}).click();await page.waitForURL('**/assets/wimmelbild/');await page.locator('#home').click();await page.waitForURL('http://127.0.0.1:8765/');
  await page.getByRole('button',{name:'Word trails',exact:true}).click();await page.locator('#mapWimmelbild').click();await page.waitForURL('**/assets/wimmelbild/');outputs.push({launchBothHomes:'pass'});
- assert.deepEqual(errors,[]);fs.writeFileSync(root+'/docs/wimmelbild/browser-checks.json',JSON.stringify({date:'2026-10-10',browser:'Playwright Chromium',checks:outputs,realTwoFingerEvents:'pass',panDoesNotAnswer:'pass',pictureTap:'pass',errors,physicalIPad:'not tested'},null,2));await browser.close();console.log(JSON.stringify(outputs));
+ assert.deepEqual(errors,[]);fs.writeFileSync(root+'/docs/wimmelbild/browser-checks.json',JSON.stringify({date:'2026-10-10',browser:'Playwright Chromium',checks:outputs,realTwoFingerEvents:'pass',panDoesNotAnswer:'pass',pictureTapNeverAnswers:'pass',errors,physicalIPad:'not tested'},null,2));await browser.close();console.log(JSON.stringify(outputs));
 })().catch(e=>{console.error(e);process.exit(1)});

@@ -34,9 +34,9 @@ function point(e){const r=$('viewport').getBoundingClientRect();return {x:e.clie
 function marker(option){if(!option){$('marker').hidden=true;return;}const [x,y,w,h]=option.box;$('marker').style.left=((x+w/2)*100)+'%';$('marker').style.top=((y+h/2)*100)+'%';$('marker').hidden=false;}
 function select(id,fromCard=false){
  if(blocked||!ready)return;const scene=D.scenes[state.scene],option=scene.options.find(o=>o.id===id);if(!option)return;
- selected=id;marker(option);for(const b of $('choices').children)b.setAttribute('aria-pressed',String(b.dataset.choice===id));
+ selected=id;for(const b of $('choices').children)b.setAttribute('aria-pressed',String(b.dataset.choice===id));
  $('feedback').textContent='Chosen: '+option.label+'. Read the clue once more, then '+scene.action.toLowerCase()+'.';$('go').disabled=false;$('go').textContent=scene.action;
- if(fromCard&&view.scale>1){const [x,y,w,h]=option.box;view.x=view.w/2-(x+w/2)*view.bw*view.scale;view.y=view.h/2-(y+h/2)*view.bh*view.scale;C.bound(view);paintView();}
+
 }
 function renderJourney(){
  $('journey').replaceChildren();D.scenes.forEach((scene,i)=>{const b=document.createElement('button');b.disabled=blocked||i>state.solved.length;b.innerHTML='<span class="dot"></span><span class="place-name"></span>';b.firstElementChild.textContent=state.solved.includes(scene.id)?'✓':String(i+1);b.lastElementChild.textContent=['Harbour','Tree village','Dragons','Castle'][i];if(i===state.scene)b.setAttribute('aria-current','step');b.onclick=()=>{stopSpeech();state.scene=i;if(persist())render();};$('journey').append(b);});
@@ -90,7 +90,7 @@ viewport.addEventListener('pointermove',e=>{
 function release(e,cancelled=false){
  if(!points.has(e.pointerId))return;const p=point(e),tap=!cancelled&&!multi&&gesture&&!gesture.moved&&Math.hypot(p.x-gesture.start.x,p.y-gesture.start.y)<=6;
  points.delete(e.pointerId);if(viewport.hasPointerCapture?.(e.pointerId))viewport.releasePointerCapture(e.pointerId);
- if(tap){const x=(p.x-view.x)/(view.bw*view.scale),y=(p.y-view.y)/(view.bh*view.scale),option=C.hit(D.scenes[state.scene],x,y);if(option)select(option.id);else $('feedback').textContent='Look closely, then tap a place from the clue or choose its written answer.';}
+
  if(!points.size){gesture=null;multi=false;viewport.classList.remove('dragging');}else if(gesture)gesture.moved=true;
 }
 viewport.addEventListener('pointerup',e=>release(e));viewport.addEventListener('pointercancel',e=>release(e,true));viewport.addEventListener('lostpointercapture',e=>{if(points.has(e.pointerId))release(e,true);});

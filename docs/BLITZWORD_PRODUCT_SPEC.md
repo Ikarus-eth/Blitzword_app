@@ -1,8 +1,12 @@
+## Large ninth-task maps — accepted update, 10 October 2026
+
+The Crystal Ferry and the following four River Song chapters each add one large search map as task nine, with three questions on the same map. Five new 3072×2048 maps are assembled from four native detailed sections each, explicitly authorized by the user. The image is for zoom/pan only. Answers must be selected from written choices below; remove picture answer selection in the earlier standalone journey too. Each wrong submission costs one shared life. The existing two-step retreat applies at zero, retaining solved questions and earned progress. Previously completed quests stay complete; replay uses nine tasks. Other quests keep eight. [Implementation rules and evidence](wimmelbild/NINTH_TASK_RELEASE.md).
+
 ## Standalone Dragon path — 10 October 2026
 
 The user selected map mockup 3 and requested a standalone mini-game launched from the chapter-selection home, with successive increasingly detailed Wimmelbild scenes and pinch-to-zoom. One scene must identify a dragon from multiple attributes, including red/pink scales, a long tail and black stripes.
 
-Implemented direction: four linked scenes (harbour, tree village, dragon valley, castle treasury), untimed clues and written answer choices, picture selection with explicit confirmation, correct answers opening the next scene, and non-punitive clue-specific feedback. Both the creature-campaign and Word-trails homes expose **Dragon path**. Independent local progress, completion and replay never mutate the main learner save, curriculum, XP or health. Separate mini-game saves are not included in the main backup. Read-word audio, clue listening, optional hints, pinch/drag/wheel/keyboard zoom and a big-picture view support independent play. [Scope and checks](wimmelbild/RELEASE.md).
+Implemented direction: four linked scenes (harbour, tree village, dragon valley, castle treasury), untimed clues and written answer choices, written-only selection with explicit confirmation, correct answers opening the next scene, and non-punitive clue-specific feedback. Both the creature-campaign and Word-trails homes expose **Dragon path**. Independent local progress, completion and replay never mutate the main learner save, curriculum, XP or health. Separate mini-game saves are not included in the main backup. Read-word audio, clue listening, optional hints, pinch/drag/wheel/keyboard zoom and a big-picture view support independent play. [Scope and checks](wimmelbild/RELEASE.md).
 
 ## Accepted curriculum expansion — 9 October 2026
 
