@@ -1,3 +1,7 @@
+## Temporary German option — 10 October 2026
+
+Temporary, standalone-page-only German toggle for The Hidden Atlas: translates the five maps’ clues, answer options and interface. English remains available; language choice is local and does not change progress. Voice controls are removed on this page. Main-game content and language are unchanged. Focused checks cover all fifteen translated questions, answer selection, saved language, English switching and absence of voice controls.
+
 # The Hidden Atlas — shareable maps-only edition
 
 The user requested a separate link for the five large search maps, without access through the page to the whole game. Share `https://ikarus-eth.github.io/Blitzword_app/assets/map-quest/`.
