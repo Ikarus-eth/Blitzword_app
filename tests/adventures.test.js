@@ -25,8 +25,9 @@ test('full playthrough unlocks both campaigns, awards every stamp and preserves 
     for(let step=0;step<4;step++){
       now=win(s,now);assert.equal(A.stats(s).wins,step+1);assert.equal(s.activity,'result');
       assert.deepEqual(s.story.scenes,story.scenes);solve(s,now+=45000);
-      s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(s.expedition.current.phase,step===3?'complete':'intro');
+      s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(s.expedition.current.phase,step===3?(A.Maps[m.id]?'search':'complete'):'intro');
     }
+    while(A.mapQuestion(s)){const q=A.mapQuestion(s);A.chooseMap(s,q.answer,q.id);assert.equal(C.checkMap(s,now,q.id).correct,true);}
     assert.ok(A.stats(s).completedAt);assert.equal(C.startMissionBattle(s,now),false);
   }
   assert.equal(A.campaignComplete(s,'river-song'),true);const report=A.report(s);

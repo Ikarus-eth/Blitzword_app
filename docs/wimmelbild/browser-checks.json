@@ -44,7 +44,7 @@
   ],
   "realTwoFingerEvents": "pass",
   "panDoesNotAnswer": "pass",
-  "pictureTap": "pass",
+  "pictureTapNeverAnswers": "pass",
   "errors": [],
   "physicalIPad": "not tested"
 }

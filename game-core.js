@@ -378,6 +378,11 @@
     }
     return result;
   }
+  function checkMap(s,now=Date.now(),expected){
+    const result=Adventure.checkMap(s,now,expected);
+    if(result?.correct&&result.firstSolve){awardDaily(s,now);const earned=awardXP(s,50,'riddles',now,{boost:true,trackBattle:false});Adventure.stats(s).mapQuestions[result.id].xpEarned=earned;syncProgress(s,now);}
+    return result;
+  }
   function grantParentXP(s,now=Date.now()){
     if(s.screen!=='parentDashboard')return 0;
     const amount=awardXP(s,1000,'parent',now,{trackBattle:false});syncProgress(s,now);return amount;
@@ -1154,7 +1159,7 @@
       q.phase='ready';
     }
   }
-  return {packSave,unpackSave,Adventure,recordRiddleTime,checkRiddle,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
+  return {packSave,unpackSave,Adventure,recordRiddleTime,checkRiddle,checkMap,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,canRequestBattleHelp,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,

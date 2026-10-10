@@ -25,6 +25,7 @@ function boot(saved,options={}){
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/manifest.js','utf8'),motionContext);
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/runtime.js','utf8'),motionContext);
  }
+ vm.runInNewContext(fs.readFileSync(root+'assets/wimmelbild/viewer.js','utf8'),ctx);
  vm.runInNewContext(fs.readFileSync(root+'adventure-ui.js','utf8'),ctx);
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
  const state=()=>Core.unpackSave(JSON.parse(memory.get(Storage.KEY))),get=id=>document.getElementById(id);
@@ -1309,4 +1310,16 @@ console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat an
  const hub=boot(impactSave(),{adventures:true});const launch=[...hub.document.querySelectorAll('button')].find(b=>b.textContent==='⌕ Dragon path');hub.click(launch);assert.equal(hub.destinations.at(-1),'assets/wimmelbild/');
  const denied=boot(impactSave(),{failWrites:true});denied.get('mapWimmelbild').onclick();assert.equal(denied.destinations.length,0);
  console.log('PASS standalone Wimmelbild launch from both chapter homes and failed-save guard');
+}
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,9,10);s.profile.name='Reader';s.assessment.done=true;
+ for(const m of A.Data.missions)if(m.id!=='crab-ferry')A.stats(s,m.id).completedAt=new Date(now).toISOString();
+ Core.startMission(s,'crab-ferry',now);const c=s.expedition.current;c.step=3;c.phase='puzzle';c.puzzle={id:A.current(s).riddles[3].id,solved:true,selection:[],order:[]};
+ let ui=boot(s,{adventures:true,geometry:true});ui.click(ui.get('missionResume'));ui.click(missionButton(ui,'Open the search map'));
+ assert.equal(ui.get('mission').querySelector('[role="progressbar"]').getAttribute('aria-valuemax'),'9');
+ const q=A.mapQuestion(ui.state());ui.click(ui.get('mission').querySelector('[data-map-choice="red"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.state().expedition.current.hearts,3);assert.equal(missionButton(ui,'Check my answer').disabled,true);
+ ui.click(ui.get('mission').querySelector('[data-map-choice="'+q.answer+'"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.state().expedition.current.search.index,1);
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true,geometry:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').querySelector('.searchHead').textContent,/question 2 of 3/);
+ ui.setFailWrites(true);ui.click(ui.get('mission').querySelector('[data-map-choice="blue"]'));assert.equal(ui.state().expedition.current.search.selection,null);
+ console.log('PASS ninth-task map UI, written choices, life loss, save/reload and failed-save guard');
 }
