@@ -6,7 +6,7 @@ Generation runs directly with a user-supplied fal.ai key held in process memory.
 
 ## Continuous River Song search maps — 10 October 2026
 
-Implemented and locally tested: four seamless 4096×2731 main-game maps replace the ninth tasks from The Sleeping Waterwheel through The River Sings Again. Twelve varied clues explore the whole scene; saved progress and first-solve rewards are retained. The temporary bilingual standalone edition keeps its matching original content. [Scope, artwork and verification](wimmelbild/RIVER_SEARCH_RELEASE.md). 361 unit tests, 116 UI-flow groups and 15 browser map journeys across tablet/phone sizes pass. Deployment is not yet verified.
+**Deployed and verified.** Four seamless 4096×2731 main-game maps replace the ninth tasks from The Sleeping Waterwheel through The River Sings Again. Twelve varied clues explore the whole scene; saved progress and first-solve rewards are retained. The temporary bilingual standalone edition keeps its matching original content. [Scope, artwork and verification](wimmelbild/RIVER_SEARCH_RELEASE.md). 361 unit tests, 116 UI-flow groups and 15 browser map journeys across tablet/phone sizes pass. [PR #160](https://github.com/Ikarus-eth/Blitzword_app/pull/160) merged as `1120d87d2851802f757542ba0ce4c27b0d529a17`; [Pages run 38045792789](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38045792789) succeeded. All seven changed runtime/art files match live ([hashes](wimmelbild/RIVER_SEARCH_DEPLOYMENT.json)), and all fifteen live browser journeys pass ([evidence](wimmelbild/river-search-live-checks.json)). Physical iPad/Safari remain untested.
 
 ## Artus’s 45 approved creatures — 10 October 2026
 
