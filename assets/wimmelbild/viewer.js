@@ -6,6 +6,7 @@
     surface.className='mapZoomImage';surface.alt=alt;surface.draggable=false;view.append(surface);bar.className='mapZoomBar';
     const message=document.createElement('span');message.textContent='Pinch to zoom · Drag to explore';bar.append(message);
     const controls=document.createElement('div');bar.append(controls);const out=document.createElement('output');
+    const clue=document.createElement('div');clue.className='mapPinnedClue';clue.hidden=true;let answerPanel=null;
     let v={scale:1,x:0,y:0,w:1,h:1,bw:1,bh:1},points=new Map(),dead=false,loaded=false;
     const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
     function bound(){const w=v.bw*v.scale,h=v.bh*v.scale;v.x=w<=v.w?(v.w-w)/2:clamp(v.x,v.w-w,0);v.y=h<=v.h?(v.h-h)/2:clamp(v.y,v.h-h,0);}
@@ -15,8 +16,11 @@
     function zoom(f,x=v.w/2,y=v.h/2){const next=clamp(v.scale*f,1,8),r=next/v.scale;v.x=x-(x-v.x)*r;v.y=y-(y-v.y)*r;v.scale=next;bound();paint();}
     function button(label,aria,fn){const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-label',aria);b.onclick=fn;controls.append(b);return b;}
     const minus=button('−','Zoom out',()=>zoom(1/1.5));controls.append(out);const plus=button('+','Zoom in',()=>zoom(1.5));button('Whole map','Show the whole map',()=>fit());
-    const expand=button('Big picture','Expand the map',()=>{host.classList.toggle('mapZoomExpanded');expand.textContent=host.classList.contains('mapZoomExpanded')?'Back to question':'Big picture';fit(snapshot());});
-    const status=document.createElement('p');status.className='mapImageStatus';status.textContent='Opening the large map…';view.append(status);host.append(view,bar);
+    function setExpanded(expanded){const camera=snapshot();host.classList.toggle('mapZoomExpanded',expanded);expand.textContent=expanded?'Back to question':'Big picture';expand.setAttribute('aria-label',expanded?'Back to question':'Expand the map');expand.setAttribute('aria-expanded',String(expanded));fit(camera);}
+    const expand=button('Big picture','Expand the map',()=>setExpanded(!host.classList.contains('mapZoomExpanded')));expand.setAttribute('aria-expanded','false');
+    const answers=button('Answers','Answers',()=>{setExpanded(false);answerPanel?.scrollIntoView?.({block:'start'});answerPanel?.focus?.({preventScroll:true});});answers.hidden=true;answers.removeAttribute('aria-label');
+    function setClue(lines,prompt,panel){answerPanel=panel;clue.replaceChildren();for(const line of lines){const span=document.createElement('span');span.textContent=line;clue.append(span,document.createTextNode(' '));}const question=document.createElement('strong');question.textContent=prompt;clue.append(question);clue.hidden=false;answers.hidden=!panel;host.classList.add('hasMapClue');}
+    const status=document.createElement('p');status.className='mapImageStatus';status.textContent='Opening the large map…';view.append(status);host.append(clue,view,bar);
     surface.onload=()=>{if(dead)return;loaded=true;status.hidden=true;fit(prior);};surface.onerror=()=>{if(dead)return;status.textContent='The map did not load. ';const retry=document.createElement('button');retry.textContent='Try again';retry.onclick=()=>surface.src=url+'?retry='+Date.now();status.append(retry);};surface.src=url;if(surface.complete&&surface.naturalWidth)surface.onload();
     const pos=e=>{const r=view.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top};};
     view.addEventListener('pointerdown',e=>{if(!loaded||e.button>0||e.target.closest('button'))return;e.preventDefault();points.set(e.pointerId,pos(e));view.setPointerCapture?.(e.pointerId);});
@@ -26,7 +30,7 @@
     view.addEventListener('keydown',e=>{if(['+','=','-','0','ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();if(e.key==='+'||e.key==='=')zoom(1.5);else if(e.key==='-')zoom(1/1.5);else if(e.key==='0')fit();else{v.x+=e.key==='ArrowLeft'?70:e.key==='ArrowRight'?-70:0;v.y+=e.key==='ArrowUp'?70:e.key==='ArrowDown'?-70:0;bound();paint();}}});
     const esc=e=>{if(e.key==='Escape'&&host.classList.contains('mapZoomExpanded'))expand.click();};document.addEventListener('keydown',esc);
     const observer=typeof ResizeObserver==='function'?new ResizeObserver(()=>{points.clear();fit(snapshot());}):null;observer?.observe(view);fit(prior);
-    return {snapshot,destroy(){dead=true;observer?.disconnect();document.removeEventListener('keydown',esc);points.clear();host.classList.remove('mapZoomExpanded');},ready:()=>loaded};
+    return {snapshot,setClue,destroy(){dead=true;observer?.disconnect();document.removeEventListener('keydown',esc);points.clear();host.classList.remove('mapZoomExpanded');},ready:()=>loaded};
   }
   root.BlitzMapViewer={mount};
 })(typeof window==='object'?window:globalThis);

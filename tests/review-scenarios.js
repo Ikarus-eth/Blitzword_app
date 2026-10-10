@@ -13,6 +13,12 @@ window.makeReviewSave=function(scenario){
   if(scenario.startsWith('mission-')){
     const A=C.Adventure;s.settings.soundscape=false;
     if(scenario==='mission-hub')return s;
+    if(scenario==='mission-search'){
+      for(const m of A.Data.missions)if(m.id!=='stone-dam')A.stats(s,m.id).completedAt=new Date(now).toISOString();
+      C.startMission(s,'stone-dam',now);const c=s.expedition.current;c.step=3;c.phase='puzzle';
+      c.puzzle={id:A.current(s).riddles[3].id,solved:true,selection:[],order:[]};A.next(s,now);return s;
+    }
+
     if(scenario==='mission-river'){
       for(const id of A.Data.campaigns[0].missions)A.stats(s,id).completedAt=new Date(now).toISOString();
       s.expedition.selectedCampaign='river-song';return s;
