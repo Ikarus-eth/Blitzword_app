@@ -47,7 +47,7 @@
       element.classList.add('questProgress');element.classList.toggle('compactQuest',compact);
       if(!p||!m)return;
       element.append(el('strong','questProgressTitle',compact?'Quest':m.name),el('span','questProgressCount',p.done+' of '+p.total+' steps done · '+p.left+' left'));
-      const track=el('div','questSteps');track.setAttribute('role','progressbar');track.setAttribute('aria-label',p.total===9?'Quest: four fights, four clues and a map search':'Quest: four fights and four clues');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.done));
+      const track=el('div','questSteps');track.style.gridTemplateColumns='repeat('+p.total+',minmax(0,1fr))';track.setAttribute('role','progressbar');track.setAttribute('aria-label',p.total===9?'Quest: four fights, four clues and a map search':'Quest: four fights and four clues');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.done));
       for(let i=0;i<p.total;i++){const step=el('span','questStep'+(i<p.done?' done':i===p.done?' current':''),compact?'':(i===8?'Map':i%2?'Clue':'Fight'));step.setAttribute('aria-hidden','true');track.append(step);}element.append(track);
       if(!compact)element.append(el('small','questNext',p.left?'Next: '+p.next.toLowerCase()+' · Treasure after step '+p.total:'All done! Your treasure is ready.'));
     }

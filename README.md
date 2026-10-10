@@ -1,5 +1,7 @@
 # BlitzWord
 
+[New enemy final-look review](https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/): four looks for 46 creatures. Artus decides; Juna breaks ties. Artwork review only.
+
 [Final character artwork](docs/artwork/README.md): all 20 enemies, six heroes and four Pip stages in one document. The selected male mage and all 20 enemies now have whole-frame battle animation; other hero choices are temporarily disabled. See [the animation release](docs/enemies/ALL_ENEMY_MOTION_RELEASE.md).
 
 [Family art review](https://ikarus-eth.github.io/Blitzword_app/assets/family-review/): 156 images across 20 enemies and six heroes, four separate reviewers, shared comments and export/restore. Every round has the current design and five alternatives. See the [complete gallery release](docs/FAMILY_REVIEW_FINAL_RELEASE.md).

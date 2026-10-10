@@ -2,6 +2,10 @@
 
 The Crystal Ferry and the following four River Song chapters each add one large search map as task nine, with three questions on the same map. Five new 3072×2048 maps are assembled from four native detailed sections each, explicitly authorized by the user. The image is for zoom/pan only. Answers must be selected from written choices below; remove picture answer selection in the earlier standalone journey too. Each wrong submission costs one shared life. The existing two-step retreat applies at zero, retaining solved questions and earned progress. Previously completed quests stay complete; replay uses nine tasks. Other quests keep eight. [Implementation rules and evidence](wimmelbild/NINTH_TASK_RELEASE.md).
 
+## New enemy artwork decisions — 10 October 2026
+
+The user requested four looks for each of 46 retained enemy concepts, with only Artus and Juna voting. Artus determines selection; tied highest scores express uncertainty and Juna chooses among those tied looks. If all four Artus scores are below 3/5, exclude that enemy. Missing scores or unresolved ties remain pending. This phase decides final appearance only: no game integration is authorized. [Review rules and scope](enemies/FINAL_LOOK_REVIEW.md).
+
 ## Standalone Dragon path — 10 October 2026
 
 The user selected map mockup 3 and requested a standalone mini-game launched from the chapter-selection home, with successive increasingly detailed Wimmelbild scenes and pinch-to-zoom. One scene must identify a dragon from multiple attributes, including red/pink scales, a long tail and black stripes.

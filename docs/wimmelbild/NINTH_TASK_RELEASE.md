@@ -36,6 +36,6 @@ Wrong submissions deduct exactly one life; the submitted wrong choice is locked 
 
 ## Validation
 
-Automated checks cover the complete campaign, all five three-question maps, wrong/duplicate/stale submissions, zero-life retreat, backup/reload, legacy switching, older completion migration, first-solve XP, thinking-time caps, and UI save failures. Browser checks use isolated test learners, all five maps at tablet, phone portrait and phone landscape sizes, genuine two-touch events, picture taps, written choices, reload and completion. [Browser evidence](ninth-browser-checks.json).
+All 351 unit tests and 114 UI flow groups pass on the combined branch. Automated checks cover the complete campaign, all five three-question maps, wrong/duplicate/stale submissions, zero-life retreat, backup/reload, legacy switching, older completion migration, first-solve XP, thinking-time caps, and UI save failures. Browser checks use isolated test learners, all five maps at tablet, phone portrait and phone landscape sizes, genuine two-touch events, picture taps, written choices, reload and completion. [Browser evidence](ninth-browser-checks.json).
 
 Physical iPad interaction and child difficulty/enjoyment have not been tested. Production deployment evidence is recorded separately after publication.

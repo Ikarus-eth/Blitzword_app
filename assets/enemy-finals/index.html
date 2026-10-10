@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#183e32"><meta name="blitzword-art-review" content="enemy-finals-20261010-r1">
+<title>BlitzWord · Artus &amp; Juna’s creature studio</title>
+<link rel="stylesheet" href="review.css">
+<script src="selection.js" defer></script><script src="review.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="../enemy-vote/">BlitzWord<span>CREATURE ART STUDIO</span></a><div class="tools"><button id="download" disabled>Download review ↓</button><label class="upload">Restore review<input id="restore" type="file" accept=".json,application/json" disabled></label></div></header>
+<main>
+<section class="intro"><div><p class="eyebrow">46 CREATURES · FOUR OPTIONS · TWO VOICES</p><h1>Choose their final look.</h1><p class="lead">Artus chooses. Juna breaks the tie.<br>Keep a favorite or discover something new.</p></div><div class="progress-box"><strong id="total-count">0 / 368</strong><span>ratings completed</span><progress id="progress" max="368" value="0"></progress></div></section>
+<details class="rules"><summary>How your choices decide</summary><ol><li>Artus rates all four options from 1 to 5. His highest rating wins.</li><li>If Artus gives two or more options the same highest rating, Juna’s highest rating among those options decides. If she also ties, the choice stays open.</li><li>If Artus rates all four below 3/5, the creature is excluded—even if Juna likes it.</li><li>Unrated options are not zero. Finish Artus’s four ratings before a result is shown.</li></ol><p>Artwork review only. A selected design will not enter the game until you ask for implementation.</p></details>
+<section class="people-bar" aria-label="Choose who is rating"><div><p class="eyebrow">WHO’S RATING?</p><div id="people"><button disabled>Artus</button><button disabled>Juna</button></div></div><p id="save-status" role="status">Opening your review…</p></section>
+<section class="round-heading"><div><p class="eyebrow" id="round-number">ROUND 1 OF 46</p><h2 id="round-title">Loading creatures…</h2><p id="round-description"></p></div><div class="navigation"><label for="jump">Choose creature</label><select id="jump" disabled></select><div><button id="previous" aria-label="Previous creature" disabled>← Previous</button><button id="next-top" aria-label="Next creature" disabled>Next →</button></div></div></section>
+<p class="guide"><b>1</b> Not for me · <b>3</b> It’s okay · <b>5</b> Love it <span>Tap artwork to enlarge ↗</span></p>
+<p id="decision" class="decision" aria-live="polite">Artus: rate all four options.</p>
+<section id="cards" class="cards" aria-label="Four artwork options"></section>
+<section class="notes"><label id="note-label" for="comment">Artus’s notes</label><textarea id="comment" maxlength="10000" rows="3" placeholder="What do you love? What should change?" disabled></textarea><p id="other-note"></p></section>
+<div class="round-footer"><span id="round-progress"></span><button id="next" class="primary" disabled>Next creature →</button></div>
+<details class="summary"><summary id="summary-title">Review progress · 46 creatures</summary><p>Selected means a preferred design, not a change to the game.</p><div id="results"></div></details>
+<p class="footnote">Ratings and notes stay in this browser on this device. Download your review to back it up or share it. Restore replaces this page’s review only. Your original concept votes and learner saves are separate.</p>
+</main>
+<dialog id="image-dialog"><button id="close-image" aria-label="Close enlarged artwork">Close ×</button><p class="eyebrow" id="large-label"></p><h2 id="large-title"></h2><div id="large-art"></div></dialog>
+<noscript>Please enable JavaScript to rate the artwork.</noscript>
+</body></html>
