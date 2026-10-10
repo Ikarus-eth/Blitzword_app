@@ -1,6 +1,6 @@
 (function(root){
 const narration={
-  "version": "approved-enemies-20261010-r1",
+  "version": "target-words-fal-20261010-r1",
   "voice": "Mixed approved British male recordings",
   "voices": [
     {
@@ -15,8 +15,8 @@ const narration={
   ],
   "language": "en-GB",
   "recoveredClipCount": 994,
-  "recordedClipCount": 2416,
-  "runtimeClipCount": 2416,
+  "recordedClipCount": 3092,
+  "runtimeClipCount": 3092,
   "fallbackOnly": [],
   "clips": {
     "on": {
@@ -22381,6 +22381,3387 @@ const narration={
       "offset": 21.2695,
       "duration": 3.1027,
       "sha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01"
+    },
+    "been": {
+      "file": "assets/narration/word-fal-0001.mp3",
+      "duration": 0.9665,
+      "sha256": "2fbfd74402421a758bec27601db4f7a5c36903a55d90a52d2620142cbafecfdf"
+    },
+    "us": {
+      "file": "assets/narration/word-fal-0002.mp3",
+      "duration": 0.835875,
+      "sha256": "4731f5429075f2c6d8d0e6a8fa4b5d9bbfc52c4a7f199840075b91059bf94056"
+    },
+    "does": {
+      "file": "assets/narration/word-fal-0003.mp3",
+      "duration": 0.9665,
+      "sha256": "32a2a0213490be26916c4a9692e628b16897f81231b14099452149bd3cb6f0aa"
+    },
+    "which": {
+      "file": "assets/narration/word-fal-0004.mp3",
+      "duration": 0.862,
+      "sha256": "534cff077d5535a239a228e7450441d420f575caa21a99db8dc1b9d708ad4ecf"
+    },
+    "should": {
+      "file": "assets/narration/word-fal-0005.mp3",
+      "duration": 0.91425,
+      "sha256": "7322af2253110c25d9abd7e844a97e1f5ff56b37fc720fed1a11db2a8b08f96b"
+    },
+    "wind": {
+      "file": "assets/narration/word-fal-0006.mp3",
+      "duration": 1.01875,
+      "sha256": "e93a61ef98411ae571d4ca30257659bf44f14dfc375a7adaa1c7779788ff90d2"
+    },
+    "present": {
+      "file": "assets/narration/word-fal-0007.mp3",
+      "duration": 1.01875,
+      "sha256": "73f3d649c8df83b133288042deb2d2a369c516366b784e17140865754a59d2ff"
+    },
+    "close": {
+      "file": "assets/narration/word-fal-0008.mp3",
+      "duration": 1.071,
+      "sha256": "c9c693d6ea91e597209489a63147518cc69371847c58304c3dd10cbb33ef1d6f"
+    },
+    "those": {
+      "file": "assets/narration/word-fal-0009.mp3",
+      "duration": 1.01875,
+      "sha256": "58f9010cff14fa0323057e14e20961892814f43c69a03c56b672b3ebbe462974"
+    },
+    "under": {
+      "file": "assets/narration/word-fal-0010.mp3",
+      "duration": 0.91425,
+      "sha256": "ec95af9bedba86dd2ed04301fd84c205d723b6b26bf5871518085508a3fa55b1"
+    },
+    "came": {
+      "file": "assets/narration/word-fal-0011.mp3",
+      "duration": 1.01875,
+      "sha256": "682b959aff6ed96912facec1355663fb3e295e9c61a5666e2b0ad9c1f8b5df5b"
+    },
+    "eat": {
+      "file": "assets/narration/word-fal-0012.mp3",
+      "duration": 0.783625,
+      "sha256": "c48ba8ab301c4213a31a2af1166774fc56dcad139cf904c4739408113a2bcc4e"
+    },
+    "ate": {
+      "file": "assets/narration/word-fal-0013.mp3",
+      "duration": 0.783625,
+      "sha256": "a7077955b22ab4b8500b9bbb07f85a0753c7874d994974706888f4c8af029af5"
+    },
+    "play": {
+      "file": "assets/narration/word-fal-0014.mp3",
+      "duration": 0.91425,
+      "sha256": "1d3ee95e46d19bc86646d3f3d28ecd00bd896caec3b80c415ca5a037132242d0"
+    },
+    "going": {
+      "file": "assets/narration/word-fal-0015.mp3",
+      "duration": 0.9665,
+      "sha256": "bfb8f39b85e2edf9d2f684529479187d9769a69abbb1599c8ef28cfa9890d36a"
+    },
+    "goes": {
+      "file": "assets/narration/word-fal-0016.mp3",
+      "duration": 1.01875,
+      "sha256": "f2e786ee3fa6d5194166973987e53aa78f98c2843a7e0548e9db4563b6485a32"
+    },
+    "didn't": {
+      "file": "assets/narration/word-fal-0017.mp3",
+      "duration": 0.862,
+      "sha256": "dd59315360a4a070a3ccdbbe5e6bce1fff60067899e1ce4279589e1edd7f4e5f"
+    },
+    "three": {
+      "file": "assets/narration/word-fal-0018.mp3",
+      "duration": 0.9665,
+      "sha256": "b80b1f59af3a826cf61b1d09b9eb3f248e2da5a10245a5ea78eafcc629bfb5cf"
+    },
+    "five": {
+      "file": "assets/narration/word-fal-0019.mp3",
+      "duration": 0.9665,
+      "sha256": "4c7548e7013d2a4248611c6365abb1121927c6c8f507d3f115ae1151d8d8775d"
+    },
+    "seven": {
+      "file": "assets/narration/word-fal-0020.mp3",
+      "duration": 0.862,
+      "sha256": "a9cd6aefb6fd293faecdc394b6a9e0620dc0735648b3005023bb457417ad6fa4"
+    },
+    "eight": {
+      "file": "assets/narration/word-fal-0021.mp3",
+      "duration": 0.783625,
+      "sha256": "e49bdf725db0a64435e5778d1fbbba7067fa7344b3ea58a2f0c74d77359ac05b"
+    },
+    "nine": {
+      "file": "assets/narration/word-fal-0022.mp3",
+      "duration": 1.01875,
+      "sha256": "462db3c243da8734262702167e9252264fa0e14cec6211f53ade1d338862290b"
+    },
+    "ten": {
+      "file": "assets/narration/word-fal-0023.mp3",
+      "duration": 0.91425,
+      "sha256": "ae307c93bb2862326daa5fc528a60d5ef7fe61d0be95451d023c458efa3cb729"
+    },
+    "zero": {
+      "file": "assets/narration/word-fal-0024.mp3",
+      "duration": 1.01875,
+      "sha256": "3eb5c983bef733cc7a91f1eb9f424fc4c2fd4b5b8c0cea6cfa0d469c4cde3f20"
+    },
+    "friend": {
+      "file": "assets/narration/word-fal-0025.mp3",
+      "duration": 1.01875,
+      "sha256": "1fed4917f2885b0ed1268e38102654b35837af2db25b0d07fe0f8d0469850bfa"
+    },
+    "school": {
+      "file": "assets/narration/word-fal-0026.mp3",
+      "duration": 1.071,
+      "sha256": "0254ee5fcacc00cded3eed1a137b3b1420d448cd12f372183e8504b268407b74"
+    },
+    "happy": {
+      "file": "assets/narration/word-fal-0027.mp3",
+      "duration": 0.835875,
+      "sha256": "e47037bb32a40dcbcdfd2ab26df929d368509bbc01c1bb3c6958866fd287617c"
+    },
+    "much": {
+      "file": "assets/narration/word-fal-0028.mp3",
+      "duration": 0.9665,
+      "sha256": "fac9a1dbb42c84b5557a3ed21b35dc86c19b4c4623a28074a830ee6f13a49d1a"
+    },
+    "old": {
+      "file": "assets/narration/word-fal-0029.mp3",
+      "duration": 0.835875,
+      "sha256": "4c2be302d8e1c7476442ec8d35e678cb4fe8c604a7b590e4dc8fd902ea75a852"
+    },
+    "parents": {
+      "file": "assets/narration/word-fal-0030.mp3",
+      "duration": 1.097125,
+      "sha256": "284c71f48fe5f05bacc125b93eaf5687d9d0cf4c452ba0a088ac13be7c2cfc67"
+    },
+    "asked": {
+      "file": "assets/narration/word-fal-0031.mp3",
+      "duration": 0.91425,
+      "sha256": "a126364ad1fff16ce9061eeeba9daace77cd7f2df558988440c3ef0043a77ae6"
+    },
+    "bigger": {
+      "file": "assets/narration/word-fal-0032.mp3",
+      "duration": 0.91425,
+      "sha256": "46a495fb6e2439226ee5fe3e03ac0ed256b254c71e62d1f2a0e0cf948d5453d7"
+    },
+    "rainy": {
+      "file": "assets/narration/word-fal-0033.mp3",
+      "duration": 1.01875,
+      "sha256": "a8f9e8a694d50ae7525624ec32db8655f0d230da36f81fabc78ec22b36131564"
+    },
+    "eleven": {
+      "file": "assets/narration/word-fal-0034.mp3",
+      "duration": 1.01875,
+      "sha256": "97a26b9013f8379fd81db3f94878561cfed26eaa1598c84703999b836955ff43"
+    },
+    "never": {
+      "file": "assets/narration/word-fal-0035.mp3",
+      "duration": 0.862,
+      "sha256": "6a556a87d1b742b020ccd0edfe51a6b5eab9ff6955ca2d9bc22038d074c208c9"
+    },
+    "blue": {
+      "file": "assets/narration/word-fal-0036.mp3",
+      "duration": 0.91425,
+      "sha256": "68d1d8ba275ac044705963d19b449466ba4efcd84a44d9361e92a7825ebf8be0"
+    },
+    "grandma": {
+      "file": "assets/narration/word-fal-0037.mp3",
+      "duration": 1.01875,
+      "sha256": "ef713ce6aacf80dcc8456a456631b772d6c03f454202f556b43fa7dac12803c0"
+    },
+    "grandpa": {
+      "file": "assets/narration/word-fal-0038.mp3",
+      "duration": 1.097125,
+      "sha256": "f8e57f91fcaf82ec73c8da37f93ed48342480205e1d1379915396f6e614f1b04"
+    },
+    "says": {
+      "file": "assets/narration/word-fal-0039.mp3",
+      "duration": 0.862,
+      "sha256": "d1498fa3360be4d80fc70b2c8144a68f75439a40198792a4aca75e6ee91f5e06"
+    },
+    "biggest": {
+      "file": "assets/narration/word-fal-0040.mp3",
+      "duration": 1.01875,
+      "sha256": "e594fac981c701ead49d3f8a90c9a88b37ea82acea1a866b6e4f402baf7ed536"
+    },
+    "sunny": {
+      "file": "assets/narration/word-fal-0041.mp3",
+      "duration": 0.862,
+      "sha256": "fdb47d703e7969f858a7aebeb95d3c6e266bc9de39ca74d2bd17eae7289a1faa"
+    },
+    "twelve": {
+      "file": "assets/narration/word-fal-0042.mp3",
+      "duration": 1.01875,
+      "sha256": "e83985ed5f95bef13b772b134cc92ad5ee4510f5ac8a6e6b0739a5358a8c42b5"
+    },
+    "soon": {
+      "file": "assets/narration/word-fal-0043.mp3",
+      "duration": 0.9665,
+      "sha256": "7dbb5bb6045b20a1abf60253fee6643a88f9b8da9073830acbb2f107985e5c8f"
+    },
+    "better": {
+      "file": "assets/narration/word-fal-0044.mp3",
+      "duration": 0.9665,
+      "sha256": "10a4578a2ac08cb075117d6c970b517b336567f01afd267607869836d3a6d13f"
+    },
+    "black": {
+      "file": "assets/narration/word-fal-0045.mp3",
+      "duration": 0.91425,
+      "sha256": "56d347255976605e709a41bba58a1666c2f729e3ffcb1ead06c615d13dad7b84"
+    },
+    "aunt": {
+      "file": "assets/narration/word-fal-0046.mp3",
+      "duration": 0.783625,
+      "sha256": "0a9b00e7ad515a4d19496d7ba880d6d88f709949d535888afa6f805266701889"
+    },
+    "cousin": {
+      "file": "assets/narration/word-fal-0047.mp3",
+      "duration": 0.9665,
+      "sha256": "3966950729600f4bc9e81cf478fd70334d6aeca76e52460bed41eb5f36de5877"
+    },
+    "talking": {
+      "file": "assets/narration/word-fal-0048.mp3",
+      "duration": 1.097125,
+      "sha256": "54ac35b37fe3b187ccf36fbf7bd13390ef65332a10d0984328b277293502949d"
+    },
+    "worse": {
+      "file": "assets/narration/word-fal-0049.mp3",
+      "duration": 1.01875,
+      "sha256": "7882f98d7c53c588a39793959234a9d68bdfb0078e937b8985c6aae7a159ceed"
+    },
+    "windy": {
+      "file": "assets/narration/word-fal-0050.mp3",
+      "duration": 1.071,
+      "sha256": "a461f385d0fa1902b5953a7b45c6a2a656460cda17836f2a12bab261b73ff606"
+    },
+    "thirteen": {
+      "file": "assets/narration/word-fal-0051.mp3",
+      "duration": 1.149375,
+      "sha256": "b019b5b36ba5500a9879faa540ba7b592c8950c81a1fde73eee8b925cb8256dc"
+    },
+    "today": {
+      "file": "assets/narration/word-fal-0052.mp3",
+      "duration": 1.071,
+      "sha256": "82f97acf3c26de6c648c0740405547789aa77580d9c2f36b02a489e5e501b179"
+    },
+    "round": {
+      "file": "assets/narration/word-fal-0053.mp3",
+      "duration": 0.9665,
+      "sha256": "3db2113f347cbde83f211e22d88aca6d459b91d2d9ba14cfa19a4dbd6cce5f01"
+    },
+    "warm": {
+      "file": "assets/narration/word-fal-0054.mp3",
+      "duration": 1.01875,
+      "sha256": "de20f552c13ccf9b0d1cde4bfbf76ba6b05def5bdc5bf11480ef8f1ad0463616"
+    },
+    "teacher": {
+      "file": "assets/narration/word-fal-0055.mp3",
+      "duration": 1.01875,
+      "sha256": "d50bf20398a468da4be175eb97ad6387e01f0e1e2ffb050cbce29055ec7ea65a"
+    },
+    "classroom": {
+      "file": "assets/narration/word-fal-0056.mp3",
+      "duration": 1.28,
+      "sha256": "08209eb8a0a87f79d2d482f83433a9acbb97035f98b08ffea936f6331d20d431"
+    },
+    "call": {
+      "file": "assets/narration/word-fal-0057.mp3",
+      "duration": 1.01875,
+      "sha256": "03f559bb0d395288a0aafd29b63d425fca7e7834bc0d0e4a42d2c0add2441fc2"
+    },
+    "worst": {
+      "file": "assets/narration/word-fal-0058.mp3",
+      "duration": 1.071,
+      "sha256": "8b9d74ce365804ddcc292695de32ecd210ce060406bddc7a5d852f96ac5e0d1c"
+    },
+    "fog": {
+      "file": "assets/narration/word-fal-0059.mp3",
+      "duration": 0.91425,
+      "sha256": "500a7a13c5d407e841bc7a9c97b8fb18e0e37eac391d49a47e250b4ebd1e02c6"
+    },
+    "fourteen": {
+      "file": "assets/narration/word-fal-0060.mp3",
+      "duration": 1.149375,
+      "sha256": "d672461da5520bd40e967ac610e57da2c70225f750850ba8192bf52cbc50f2bd"
+    },
+    "other": {
+      "file": "assets/narration/word-fal-0061.mp3",
+      "duration": 0.862,
+      "sha256": "2ed0bf54094d5cfff7afb938c74174837d2a95b7cea98e9620ee5b3d1115342d"
+    },
+    "brown": {
+      "file": "assets/narration/word-fal-0062.mp3",
+      "duration": 1.01875,
+      "sha256": "751221ac5cac9eab4da6622761b89c2961379059e75b5dc27238652a760a487b"
+    },
+    "clean": {
+      "file": "assets/narration/word-fal-0063.mp3",
+      "duration": 1.01875,
+      "sha256": "b4182a7145d09ba6486e61476f5cfaea55b429c49973ff53129af11acb505101"
+    },
+    "lesson": {
+      "file": "assets/narration/word-fal-0064.mp3",
+      "duration": 1.01875,
+      "sha256": "73492be0a8d4d6aec0a085edb08b15d40d871e191aec8ec23722220c41c064f6"
+    },
+    "homework": {
+      "file": "assets/narration/word-fal-0065.mp3",
+      "duration": 1.253875,
+      "sha256": "2bcfd3334ec4ef28fd691141dae8ce71c796b81219b943ca23e30aced237b7a0"
+    },
+    "called": {
+      "file": "assets/narration/word-fal-0066.mp3",
+      "duration": 0.9665,
+      "sha256": "4cd3cee1adff580043a24c278f571d3c814be5c17b681846c2e68e1d900c6289"
+    },
+    "afraid": {
+      "file": "assets/narration/word-fal-0067.mp3",
+      "duration": 1.097125,
+      "sha256": "83a7949437c26cfca65fa5cd333c9f01789f12b292de77afe6033c8d6e2d5ca9"
+    },
+    "thunder": {
+      "file": "assets/narration/word-fal-0068.mp3",
+      "duration": 0.9665,
+      "sha256": "33642041ece0f828d0462900f8e5ca076a3a3b45c9a5a299dbfb821ec03d852c"
+    },
+    "fifteen": {
+      "file": "assets/narration/word-fal-0069.mp3",
+      "duration": 1.149375,
+      "sha256": "c2ea40faf7761c45cc6cb2dccc02210616cb805e74cc33a46eff45fbc4cbb963"
+    },
+    "each": {
+      "file": "assets/narration/word-fal-0070.mp3",
+      "duration": 0.862,
+      "sha256": "c75fd0b0a9c1972c8836468774479cde711d854462e534349fba37bb392140c6"
+    },
+    "also": {
+      "file": "assets/narration/word-fal-0071.mp3",
+      "duration": 1.01875,
+      "sha256": "e4d1da015648f3c820a5f53487e1c074a7341a2344eaa84220dd6a28d5d5b8a8"
+    },
+    "sun": {
+      "file": "assets/narration/word-fal-0072.mp3",
+      "duration": 0.862,
+      "sha256": "4707bb7f4c206d8c3aceec3d4e4ca160eba0c3746d6fd3b7cc082184c35a2f02"
+    },
+    "door": {
+      "file": "assets/narration/word-fal-0073.mp3",
+      "duration": 0.862,
+      "sha256": "8c0ae1917ea7af56a81449cd1d697d1aa95d76fa10816f10e89296bf904e10c5"
+    },
+    "pencil": {
+      "file": "assets/narration/word-fal-0074.mp3",
+      "duration": 1.097125,
+      "sha256": "69c5b78b82739e031263d79afaf75c9e3708a53f376430018e50f10ebf19d0d4"
+    },
+    "looked": {
+      "file": "assets/narration/word-fal-0075.mp3",
+      "duration": 0.91425,
+      "sha256": "a6936b60dc41093a7d480d4bdd1d55888e06c4cc99aa0a2085bb8a1e2a0f054d"
+    },
+    "worried": {
+      "file": "assets/narration/word-fal-0076.mp3",
+      "duration": 0.9665,
+      "sha256": "1cdb5b8be6c6c126204e8eddab0b42712ec1fd00819a4bd69718abdfdf337eb0"
+    },
+    "lightning": {
+      "file": "assets/narration/word-fal-0077.mp3",
+      "duration": 1.071,
+      "sha256": "9f1a536da9d4dd919d0c79bc1df5fc38c30b274e418bc753acc59c5e42f5047e"
+    },
+    "sixteen": {
+      "file": "assets/narration/word-fal-0078.mp3",
+      "duration": 1.201625,
+      "sha256": "6a41e5cfe58e281b9fe0753a3bcdc17b3633970279baf470542bb022e90d0317"
+    },
+    "even": {
+      "file": "assets/narration/word-fal-0079.mp3",
+      "duration": 0.862,
+      "sha256": "3bebc909da17f0f78373f6335570697602f7e65871bd82529fffd1f43cf35bdb"
+    },
+    "such": {
+      "file": "assets/narration/word-fal-0080.mp3",
+      "duration": 0.91425,
+      "sha256": "3be0a16e80dd18c5490c409fdfb3cfbc01d4ab02dc43d517fccbae68621f1280"
+    },
+    "pretty": {
+      "file": "assets/narration/word-fal-0081.mp3",
+      "duration": 0.91425,
+      "sha256": "e26d51b60740adf3089028ff3eda389ab3b358ccc949d2ff9d234ccd6075c15b"
+    },
+    "ruler": {
+      "file": "assets/narration/word-fal-0082.mp3",
+      "duration": 0.91425,
+      "sha256": "d024aad8ee7289d362bc0f57ca50a189d1d43e5826a25e651c40c813b988a42a"
+    },
+    "bag": {
+      "file": "assets/narration/word-fal-0083.mp3",
+      "duration": 0.91425,
+      "sha256": "d4876700386acacb67123c37ac6061d2800087101fb2df8f7befb5ca99aa972e"
+    },
+    "looking": {
+      "file": "assets/narration/word-fal-0084.mp3",
+      "duration": 1.071,
+      "sha256": "039a0b42130d50aaf515c2851b5c6b99dd5ae9efd993abf7a278ff2fbe17410f"
+    },
+    "lonely": {
+      "file": "assets/narration/word-fal-0085.mp3",
+      "duration": 1.071,
+      "sha256": "f5833bf67bc92d4200401db4ac08e2b7d4234dda99c2511305f6dcb6769ba983"
+    },
+    "rainbow": {
+      "file": "assets/narration/word-fal-0086.mp3",
+      "duration": 1.149375,
+      "sha256": "9f1192ca858ab4a973bbd728d417ae18b3bd6fbf831c308f266e2e445274f1ab"
+    },
+    "seventeen": {
+      "file": "assets/narration/word-fal-0087.mp3",
+      "duration": 1.332188,
+      "sha256": "f5e0b3c80555e331cd3d845620e79d53a4e874c43cea16ea02dd9750aa64140a"
+    },
+    "same": {
+      "file": "assets/narration/word-fal-0088.mp3",
+      "duration": 0.9665,
+      "sha256": "269e10bb956d641939303982f7565c0b0ff3bd36def5db93ca2bccc2896684c3"
+    },
+    "another": {
+      "file": "assets/narration/word-fal-0089.mp3",
+      "duration": 1.01875,
+      "sha256": "c3041785aa65b804a9d477fcee40482d48ebebd3e4797878735c0778e91b501e"
+    },
+    "drink": {
+      "file": "assets/narration/word-fal-0090.mp3",
+      "duration": 0.91425,
+      "sha256": "ae8a2af3bb9e06caf77ffe6b1bcfe50ce8e411f3a047607be3e1b736b6ef6068"
+    },
+    "lunch": {
+      "file": "assets/narration/word-fal-0091.mp3",
+      "duration": 0.91425,
+      "sha256": "bf132db7596fc1186b266f219c552cc696a062ba77c648af9d536157080a6109"
+    },
+    "breakfast": {
+      "file": "assets/narration/word-fal-0092.mp3",
+      "duration": 1.097125,
+      "sha256": "2beb996f1c763a87b2d6b3eeabe2405d481eae40303ccd8bd92669dab318329a"
+    },
+    "watch": {
+      "file": "assets/narration/word-fal-0093.mp3",
+      "duration": 0.9665,
+      "sha256": "7c478a7d986126f546d1d55627918ddcc286886d8c9c3230883fec75720b5762"
+    },
+    "excited": {
+      "file": "assets/narration/word-fal-0094.mp3",
+      "duration": 1.149375,
+      "sha256": "9bbae8e1c3e4178088ed7e9d12efc5b4a123681f3e08c81876f190463244fb1b"
+    },
+    "space": {
+      "file": "assets/narration/word-fal-0095.mp3",
+      "duration": 1.097125,
+      "sha256": "c9ee59ed5ae2b6e09b78da6e6209a30aba0de4b01c1bb4f6d882e5ac9624554f"
+    },
+    "eighteen": {
+      "file": "assets/narration/word-fal-0096.mp3",
+      "duration": 1.097125,
+      "sha256": "877ae1fc6e1ecf8619cdeae1dcaccfa80410ec887895df047f0a22b62a38e139"
+    },
+    "most": {
+      "file": "assets/narration/word-fal-0097.mp3",
+      "duration": 0.91425,
+      "sha256": "d97588f8e88a48f6589fef2bd8ed7b6bd54c624040cba387c83635c1bfd65f07"
+    },
+    "few": {
+      "file": "assets/narration/word-fal-0098.mp3",
+      "duration": 0.862,
+      "sha256": "9ba5f514614d122faff5665939d3e40d8005048ce5763ab8c11d8a34a5c522d7"
+    },
+    "river": {
+      "file": "assets/narration/word-fal-0099.mp3",
+      "duration": 0.862,
+      "sha256": "89ff10df773d1640b8ca7cfa99670258353440a83c4aae2d00e67e3f49a97f56"
+    },
+    "key": {
+      "file": "assets/narration/word-fal-0100.mp3",
+      "duration": 0.862,
+      "sha256": "12c415a3a278f4cc7d80d85b71a4ff4db34537e7971f778ef3e5e4108ed400a9"
+    },
+    "dinner": {
+      "file": "assets/narration/word-fal-0101.mp3",
+      "duration": 0.862,
+      "sha256": "e53a3062fc907a8f433f5678a961897aa696eb22abb646310e012fe71499ce58"
+    },
+    "snack": {
+      "file": "assets/narration/word-fal-0102.mp3",
+      "duration": 0.9665,
+      "sha256": "f0dcfcf772c8d0cd4b60be6220afab2c1b99f26e28f2424350fb0628adb5d6bc"
+    },
+    "search": {
+      "file": "assets/narration/word-fal-0103.mp3",
+      "duration": 1.01875,
+      "sha256": "a2e932ea783e4a17746c9d27d4319d03fb631d7aefe87117c895bcd9cec056d4"
+    },
+    "tired": {
+      "file": "assets/narration/word-fal-0104.mp3",
+      "duration": 0.9665,
+      "sha256": "c4a3ee6f45e3ffbc7802899ea87e6ff5c8e12a07682fae54d813e5a42168c9e5"
+    },
+    "ocean": {
+      "file": "assets/narration/word-fal-0105.mp3",
+      "duration": 0.91425,
+      "sha256": "f326240154227d1ab2af46fb40c3b28339b563facf2ffa489d8faaa99f918631"
+    },
+    "nineteen": {
+      "file": "assets/narration/word-fal-0106.mp3",
+      "duration": 1.201625,
+      "sha256": "e4790300fd00d6c0254f700238ce564cfa4662587724b95a21ca74d80927c677"
+    },
+    "enough": {
+      "file": "assets/narration/word-fal-0107.mp3",
+      "duration": 1.071,
+      "sha256": "247c545954ab733a2e6abc49a77bae9180d1a1bfbc9ab653dbf720368cf10a37"
+    },
+    "almost": {
+      "file": "assets/narration/word-fal-0108.mp3",
+      "duration": 1.071,
+      "sha256": "c32661758cd24f7f1574927cbf5f6a6cc51e5f08ba8159310ec87c64850400a7"
+    },
+    "cloud": {
+      "file": "assets/narration/word-fal-0109.mp3",
+      "duration": 1.071,
+      "sha256": "4b87e940d28cfd400792f32511695695be83a937efa8bd9b786fdce8ebbac6f6"
+    },
+    "mountain": {
+      "file": "assets/narration/word-fal-0110.mp3",
+      "duration": 1.149375,
+      "sha256": "6fa4388d1ad9c4587291b651eeece0cd060e8ab940b8808bb180507031e032b6"
+    },
+    "bread": {
+      "file": "assets/narration/word-fal-0111.mp3",
+      "duration": 0.862,
+      "sha256": "60d5321e765051c623f7f5b175f06b886df7b03f7597d98fbe7ddaecf55ce5e9"
+    },
+    "butter": {
+      "file": "assets/narration/word-fal-0112.mp3",
+      "duration": 0.9665,
+      "sha256": "eed80c41c5d0fa153d96033e0ba118e1162c3c0d101ace6c00dcae0c83df4e88"
+    },
+    "hide": {
+      "file": "assets/narration/word-fal-0113.mp3",
+      "duration": 0.862,
+      "sha256": "48343465d534ec19d745b13426b8466b4e6dcd7252fa90acc3af76698051c4ce"
+    },
+    "sleepy": {
+      "file": "assets/narration/word-fal-0114.mp3",
+      "duration": 1.071,
+      "sha256": "5d25cbd48de72016c8d7d2a02ce07e28822f48611b0a0abbd6a44d8f31cdd8cd"
+    },
+    "twenty": {
+      "file": "assets/narration/word-fal-0115.mp3",
+      "duration": 0.9665,
+      "sha256": "c4830f7c176bd383ab5d42f7466e58f63347522a21a464fdaa6fb5e7c27edc83"
+    },
+    "sometimes": {
+      "file": "assets/narration/word-fal-0116.mp3",
+      "duration": 1.384438,
+      "sha256": "628f5a1c01ca92292e02fb5a34ad816b275674d4eacf14e443853abc2bdae102"
+    },
+    "still": {
+      "file": "assets/narration/word-fal-0117.mp3",
+      "duration": 0.9665,
+      "sha256": "0afb020514196490ff16c84ac2bb3dcbe371c5f008f595b57d269b2b67c1e133"
+    },
+    "friends": {
+      "file": "assets/narration/word-fal-0118.mp3",
+      "duration": 1.149375,
+      "sha256": "8b77d8470292038a268d6b370cfd0908cd5baf32e9cbd6eff098de037b860247"
+    },
+    "cheese": {
+      "file": "assets/narration/word-fal-0119.mp3",
+      "duration": 1.071,
+      "sha256": "5dd117075659bc46c2d805c6fe01ec8912f639688f37079295381ceb2be41fac"
+    },
+    "sandwich": {
+      "file": "assets/narration/word-fal-0120.mp3",
+      "duration": 1.071,
+      "sha256": "41b0a42705f34d7d93910f048cc0281530bed3d926181a0dbeda18a8f27bbfa3"
+    },
+    "hungry": {
+      "file": "assets/narration/word-fal-0121.mp3",
+      "duration": 0.9665,
+      "sha256": "6589735b9e3caed80dafd1fb22da4ea6b94c574744822ef73b0869f5b0de7f0e"
+    },
+    "stream": {
+      "file": "assets/narration/word-fal-0122.mp3",
+      "duration": 1.071,
+      "sha256": "9b9f9320347460faf0b94a337d3781b89c404dea273214f2af1b4664ecfbafc8"
+    },
+    "thirty": {
+      "file": "assets/narration/word-fal-0123.mp3",
+      "duration": 1.01875,
+      "sha256": "4b091d0c00c94d752949fe821d5621e507ae5436fe468f1d8da4b986c38b952f"
+    },
+    "already": {
+      "file": "assets/narration/word-fal-0124.mp3",
+      "duration": 1.071,
+      "sha256": "faec15dce6d84819af721550d05f7fd6095bb9d1f2298d1149f4251a98b4868d"
+    },
+    "soup": {
+      "file": "assets/narration/word-fal-0125.mp3",
+      "duration": 0.91425,
+      "sha256": "3716b70e343b1199ba38b9e14402b9793ad066073e54706eb3e1d3627e235aea"
+    },
+    "rice": {
+      "file": "assets/narration/word-fal-0126.mp3",
+      "duration": 0.9665,
+      "sha256": "f688691eb39720b19e6bde2f18fb9fcf7dfbf174ec5bcb9b6a932ad67b597ccc"
+    },
+    "hidden": {
+      "file": "assets/narration/word-fal-0127.mp3",
+      "duration": 0.91425,
+      "sha256": "2269d48b8105377154da7d1672eda9faae58003a57a794985becfab3a850181b"
+    },
+    "thirsty": {
+      "file": "assets/narration/word-fal-0128.mp3",
+      "duration": 1.097125,
+      "sha256": "53d8ab82d1e77fcdcc60c09ce3af5c9b3d5ee625bcac4d5209b76c54c0fab348"
+    },
+    "waterfall": {
+      "file": "assets/narration/word-fal-0129.mp3",
+      "duration": 1.253875,
+      "sha256": "fff8f17e637686f57ded8cfbb3258c4be67bc744191fd712c9c6849446f83d3d"
+    },
+    "forty": {
+      "file": "assets/narration/word-fal-0130.mp3",
+      "duration": 0.91425,
+      "sha256": "59d05300c2f353f54023f2bd1b6e4384b62d07920acda99d00b67babad68b76f"
+    },
+    "perhaps": {
+      "file": "assets/narration/word-fal-0131.mp3",
+      "duration": 1.01875,
+      "sha256": "3fe4f86f76997fa2d1bd545655f0f658f798cb1a4e3ad3d2bbe83482280c97b6"
+    },
+    "maybe": {
+      "file": "assets/narration/word-fal-0132.mp3",
+      "duration": 1.01875,
+      "sha256": "34f9a77c0735ab3d92ce676a9a9566e4fc66618781e1088d031f547556b225c0"
+    },
+    "dark": {
+      "file": "assets/narration/word-fal-0133.mp3",
+      "duration": 0.91425,
+      "sha256": "c0d07fa6b3d6c99dd5828676af0189b67ca98d88c00f328e965481a75c89c35f"
+    },
+    "morning": {
+      "file": "assets/narration/word-fal-0134.mp3",
+      "duration": 1.071,
+      "sha256": "0ceba65419dffe2e59c3e2e2f16b20511553dd26586aefa95c22facb710e581d"
+    },
+    "potato": {
+      "file": "assets/narration/word-fal-0135.mp3",
+      "duration": 1.253875,
+      "sha256": "b75be7815ab92a79dcb53e688e3c91e20756bce1d6d4c2cf97b8481209f45d20"
+    },
+    "tomato": {
+      "file": "assets/narration/word-fal-0136.mp3",
+      "duration": 1.149375,
+      "sha256": "edb622f0bf2dab876326bc1958e483f712ae0f3befbb31db5bebafa1333ef8d3"
+    },
+    "coming": {
+      "file": "assets/narration/word-fal-0137.mp3",
+      "duration": 1.01875,
+      "sha256": "ee14f6df48eaa4362d796c930d201c6755bd1665b6fe096ad316a3191d6f049b"
+    },
+    "wave": {
+      "file": "assets/narration/word-fal-0138.mp3",
+      "duration": 0.9665,
+      "sha256": "818038d5efecc89deeb87e4429c908a2857d43950b5ccee31a051279e4f27344"
+    },
+    "fifty": {
+      "file": "assets/narration/word-fal-0139.mp3",
+      "duration": 0.9665,
+      "sha256": "0ff84edc439d0cfa5f64a29b334ff7c76a7ff753e2d2f3d52e91e40a3e3948b4"
+    },
+    "together": {
+      "file": "assets/narration/word-fal-0140.mp3",
+      "duration": 1.071,
+      "sha256": "b4e32d766d3be5dedcaac819300ddea12513d7d7151dfdf4a842e23f8c654a44"
+    },
+    "through": {
+      "file": "assets/narration/word-fal-0141.mp3",
+      "duration": 0.9665,
+      "sha256": "46d7dcb181aa06881ccbca9cb724e9b0a6989c51b182b2f9dba26b75a4560566"
+    },
+    "farm": {
+      "file": "assets/narration/word-fal-0142.mp3",
+      "duration": 1.071,
+      "sha256": "53f453fe374f8ea0450aef2088f3749a488d0e813fcd52d23cf3ab0c2b01e0d3"
+    },
+    "egg": {
+      "file": "assets/narration/word-fal-0143.mp3",
+      "duration": 0.783625,
+      "sha256": "91dd9d3431fc5809efdb2e783e2fc2e102243cb18ee8b81f76036682bbc54aca"
+    },
+    "carrot": {
+      "file": "assets/narration/word-fal-0144.mp3",
+      "duration": 1.071,
+      "sha256": "eeab71461c0994a110e1b85e4c2a9d85f3200f7a762c2bc927c2650314a915d6"
+    },
+    "bean": {
+      "file": "assets/narration/word-fal-0145.mp3",
+      "duration": 0.91425,
+      "sha256": "d5a4550466995bf7b2bc72116455a18c8cdc0c25acea18d289312a1b2f18e2e4"
+    },
+    "running": {
+      "file": "assets/narration/word-fal-0146.mp3",
+      "duration": 0.9665,
+      "sha256": "0a5205d3565e293dd7efcd374493081afb46c95f5f7e8644043bb914bf9b8a5f"
+    },
+    "sick": {
+      "file": "assets/narration/word-fal-0147.mp3",
+      "duration": 0.835875,
+      "sha256": "574088d1b6f71db56fbe751b2336a21074c9203bf69cade5898afdf8a812fe1e"
+    },
+    "island": {
+      "file": "assets/narration/word-fal-0148.mp3",
+      "duration": 1.071,
+      "sha256": "7a5e7f357e873fe125f38b187ae2d81550472c066fa3b4b9e12b866bf6633d69"
+    },
+    "sixty": {
+      "file": "assets/narration/word-fal-0149.mp3",
+      "duration": 0.9665,
+      "sha256": "251ca5a84df2409b6467b4240a736a54d7de43b38fb21edd0e409f236ca4f3e5"
+    },
+    "between": {
+      "file": "assets/narration/word-fal-0150.mp3",
+      "duration": 1.149375,
+      "sha256": "2db33e1bdd6f4c97421cbe4a655e1fef7316767b568115acb8ca60ac1e5c5d8c"
+    },
+    "below": {
+      "file": "assets/narration/word-fal-0151.mp3",
+      "duration": 1.071,
+      "sha256": "4097f8c64980a78ef2c6b79f11b427ccacc08f5ff6a27bb2a668ad4b48d1addf"
+    },
+    "field": {
+      "file": "assets/narration/word-fal-0152.mp3",
+      "duration": 1.01875,
+      "sha256": "68ef2c052b15bf2c0157d6904b7e77d13f38ea65843b918255cf1c2f68bec10e"
+    },
+    "banana": {
+      "file": "assets/narration/word-fal-0153.mp3",
+      "duration": 1.097125,
+      "sha256": "ccfdc0bed899fbff6cacb5e90b2f23682d8055db3c9143c4a3e75b9ca3353839"
+    },
+    "orange": {
+      "file": "assets/narration/word-fal-0154.mp3",
+      "duration": 1.01875,
+      "sha256": "dcf0a68a8ad935b97171e4c2173922ed9594ea64648cadae66d2bc2f3a1755b2"
+    },
+    "walked": {
+      "file": "assets/narration/word-fal-0155.mp3",
+      "duration": 1.01875,
+      "sha256": "23761b793549d469d2c2648521eb400b1b0d7f343c6bc167535054c1553e5a2a"
+    },
+    "dirt": {
+      "file": "assets/narration/word-fal-0156.mp3",
+      "duration": 0.862,
+      "sha256": "2f2f5e2a31b0420cd00ae6531a1737d2bc554447b475bdb981875d5247ba3808"
+    },
+    "seventy": {
+      "file": "assets/narration/word-fal-0157.mp3",
+      "duration": 1.071,
+      "sha256": "30f8bbfa7b4070f89a15fd65ac5134aa4f89dc6f4d8fa9feb12c0e9b6e47fce8"
+    },
+    "above": {
+      "file": "assets/narration/word-fal-0158.mp3",
+      "duration": 1.01875,
+      "sha256": "4c85be9d72af85f9ccbe8bc7b51f5858b8150869359658b0ff6c8ec224565577"
+    },
+    "across": {
+      "file": "assets/narration/word-fal-0159.mp3",
+      "duration": 1.097125,
+      "sha256": "8a0daf862bfaf13e390d13628552aaed8dede558d12a8b0ccf0723405ba580bb"
+    },
+    "sky": {
+      "file": "assets/narration/word-fal-0160.mp3",
+      "duration": 1.097125,
+      "sha256": "beb9aaab9b14f40d4093ff4a46c79102612a4cef2298aabf9ded140643a15575"
+    },
+    "lemon": {
+      "file": "assets/narration/word-fal-0161.mp3",
+      "duration": 0.91425,
+      "sha256": "58d874bdddc3608d977567b76defc37a4078d69163d4de9770ae99a7cb51d51a"
+    },
+    "walking": {
+      "file": "assets/narration/word-fal-0162.mp3",
+      "duration": 1.097125,
+      "sha256": "5781ae3570439dfe54904071895f5f91f49cbeb483708c1ddbd779d4e70f0b66"
+    },
+    "proud": {
+      "file": "assets/narration/word-fal-0163.mp3",
+      "duration": 1.071,
+      "sha256": "3792ab78dfbe841f74610aac64b7572e8a9284bb3a0ed6c07e5e983e6d1eaac9"
+    },
+    "leaves": {
+      "file": "assets/narration/word-fal-0164.mp3",
+      "duration": 1.01875,
+      "sha256": "6c69395954cabab18fb3acc4b7ff4668be73d11714faeb70e339ae972858c836"
+    },
+    "eighty": {
+      "file": "assets/narration/word-fal-0165.mp3",
+      "duration": 0.862,
+      "sha256": "96f7e0c770fed38a57dcacd00092fbea93a335909fcc8384feeffc897c02e12d"
+    },
+    "along": {
+      "file": "assets/narration/word-fal-0166.mp3",
+      "duration": 1.01875,
+      "sha256": "92317eaec393f3256c1496c516e8ee369fa147450d5d6ea92ad536add58d5368"
+    },
+    "behind": {
+      "file": "assets/narration/word-fal-0167.mp3",
+      "duration": 1.071,
+      "sha256": "db7cb218da744646ba65c64edf0d27a4f7a59362d11bdac915eba2e2273eb399"
+    },
+    "boat": {
+      "file": "assets/narration/word-fal-0168.mp3",
+      "duration": 0.835875,
+      "sha256": "93f2383077082e03b332324f332062866f39e6b2580055ddd869aa8b83944996"
+    },
+    "village": {
+      "file": "assets/narration/word-fal-0169.mp3",
+      "duration": 1.097125,
+      "sha256": "639142681cb2426407d33ce5edf4f60faa59ee12ad68f2d8990f4c4bd10ac6e4"
+    },
+    "chocolate": {
+      "file": "assets/narration/word-fal-0170.mp3",
+      "duration": 1.071,
+      "sha256": "94e4410c23ba99b61ccbb6f91b3d2561a735ec028fd8713d0c37d410f5d0cb03"
+    },
+    "biscuit": {
+      "file": "assets/narration/word-fal-0171.mp3",
+      "duration": 1.071,
+      "sha256": "37ba46103c3ff0b0f23e7953067d0353c9d104799dd43016ca3061ea55f7f611"
+    },
+    "jumping": {
+      "file": "assets/narration/word-fal-0172.mp3",
+      "duration": 0.9665,
+      "sha256": "7816030f215d2f61c7edde03fb5994b2d907cf612b621377fdb96a1469ce18b9"
+    },
+    "silly": {
+      "file": "assets/narration/word-fal-0173.mp3",
+      "duration": 0.862,
+      "sha256": "27f0d95095c1ec5b8df65b252bbfc0fa7167cfb48c310762d0fcf90392b2ac48"
+    },
+    "root": {
+      "file": "assets/narration/word-fal-0174.mp3",
+      "duration": 0.91425,
+      "sha256": "b944eb7d61c556de0382d805b984196ca744e328a062cefabb64fdab0b5ad625"
+    },
+    "ninety": {
+      "file": "assets/narration/word-fal-0175.mp3",
+      "duration": 0.9665,
+      "sha256": "9a40fec57d5f06ea3afda9c47623c91bf173c81bbcdfdc2e1b7a401f139cb3df"
+    },
+    "beside": {
+      "file": "assets/narration/word-fal-0176.mp3",
+      "duration": 1.149375,
+      "sha256": "a48dab41ff1add408c7381a4cad6180693d810c89867438f96ef137a6a735161"
+    },
+    "inside": {
+      "file": "assets/narration/word-fal-0177.mp3",
+      "duration": 1.201625,
+      "sha256": "1581328e328e583ced3c4c05e87bdd00859298b8544d3607d104df9544ba4364"
+    },
+    "snow": {
+      "file": "assets/narration/word-fal-0178.mp3",
+      "duration": 0.9665,
+      "sha256": "373d154d18f279cc4a2a68430f9681e60ccb685e0cdad171db36257f82026157"
+    },
+    "cookie": {
+      "file": "assets/narration/word-fal-0179.mp3",
+      "duration": 0.9665,
+      "sha256": "1083382c6bccb8dd4a89ccdbdf93aef12926d772421ba97ec2d5dcd79d4af3f6"
+    },
+    "hop": {
+      "file": "assets/narration/word-fal-0180.mp3",
+      "duration": 0.835875,
+      "sha256": "4372c124adaa8daccd4f28abfdac6ad56a64e5c39d22efe442b5a83ab8e4dc09"
+    },
+    "friendly": {
+      "file": "assets/narration/word-fal-0181.mp3",
+      "duration": 1.01875,
+      "sha256": "607f8bc0e9e76f05d176a1deb9e8c467f8014185b3a458533f961951ed93640f"
+    },
+    "trunk": {
+      "file": "assets/narration/word-fal-0182.mp3",
+      "duration": 0.91425,
+      "sha256": "69153483cc509210946dcd01c042f26050d1b93943dae2ffe9c299faeb43f3f0"
+    },
+    "hundred": {
+      "file": "assets/narration/word-fal-0183.mp3",
+      "duration": 0.9665,
+      "sha256": "99617c0de6a8fe1865d9de976be28e503eb6ce3d14e0767420385533a4d6c1df"
+    },
+    "outside": {
+      "file": "assets/narration/word-fal-0184.mp3",
+      "duration": 1.201625,
+      "sha256": "aa88b5e215b9949eef15705725f7688e5af6f70835ca3884456b68c26a19196d"
+    },
+    "without": {
+      "file": "assets/narration/word-fal-0185.mp3",
+      "duration": 1.071,
+      "sha256": "3f1f4cf0b6fc1db08849abbd65ebf3f19fddfdc5833227ec0c110741933c32e4"
+    },
+    "honey": {
+      "file": "assets/narration/word-fal-0186.mp3",
+      "duration": 0.862,
+      "sha256": "f09338a98acef1ee151b4ee690013c11fd1bdbad74b827a853ead80e822fa4c6"
+    },
+    "salt": {
+      "file": "assets/narration/word-fal-0187.mp3",
+      "duration": 0.91425,
+      "sha256": "673ca0059070bd0ef8e287072f6d7f1dfce2923e1d07993803a0df8afdef8206"
+    },
+    "gentle": {
+      "file": "assets/narration/word-fal-0188.mp3",
+      "duration": 0.9665,
+      "sha256": "a2cf98b0e271a4d44ed8a3acea3c9dcb8b5937050494f7baa8d7431638263e98"
+    },
+    "thousand": {
+      "file": "assets/narration/word-fal-0189.mp3",
+      "duration": 1.097125,
+      "sha256": "9ad9d28115b3a5f9951a945523619a967657913cdf98c3089f01395d9b809772"
+    },
+    "until": {
+      "file": "assets/narration/word-fal-0190.mp3",
+      "duration": 1.01875,
+      "sha256": "9471d73c5c562cedc35498fc42bfc9bd60915e1ebdb70ae0076577880b4b97b1"
+    },
+    "juice": {
+      "file": "assets/narration/word-fal-0191.mp3",
+      "duration": 0.862,
+      "sha256": "54f578b8c0b5bcba42d9a0b09bbea99a9f7a95d2c937abd691ea7a5a86c0c3d1"
+    },
+    "climb": {
+      "file": "assets/narration/word-fal-0192.mp3",
+      "duration": 1.071,
+      "sha256": "1140177cc78c1880cb678977789b2a75903b6d6e976d8353851db3ead5f541f0"
+    },
+    "careful": {
+      "file": "assets/narration/word-fal-0193.mp3",
+      "duration": 0.9665,
+      "sha256": "3a95b2bf98321dba76c87f21d6c5986b8fdc43711a6eaff20929ac3c9f13f480"
+    },
+    "second": {
+      "file": "assets/narration/word-fal-0194.mp3",
+      "duration": 0.9665,
+      "sha256": "61432822719628b654793c7be2abfdac79263dc4f768d404d71cfce108f9aa6d"
+    },
+    "during": {
+      "file": "assets/narration/word-fal-0195.mp3",
+      "duration": 1.01875,
+      "sha256": "301598d9077f1d6aff14da42d26902b5eb96825785281519514faf0081bc18c7"
+    },
+    "against": {
+      "file": "assets/narration/word-fal-0196.mp3",
+      "duration": 1.149375,
+      "sha256": "bacefa31be926ba44be35efc333127092763c92ff090c8d03c902764b582ca43"
+    },
+    "plate": {
+      "file": "assets/narration/word-fal-0197.mp3",
+      "duration": 0.9665,
+      "sha256": "8752b2d0b148ace18e10431e672a1ce12701d1cd858ea71f98e7fdbb14887754"
+    },
+    "bowl": {
+      "file": "assets/narration/word-fal-0198.mp3",
+      "duration": 1.01875,
+      "sha256": "f3c613f5c35755df588565924f1481dd16915a3f82f89f9a1810910ca67e1c37"
+    },
+    "stopped": {
+      "file": "assets/narration/word-fal-0199.mp3",
+      "duration": 1.01875,
+      "sha256": "01e8c7162f936869d6d7765c6f5088ada8cb9c4550a2e2c8cfa144257415fbe4"
+    },
+    "lovely": {
+      "file": "assets/narration/word-fal-0200.mp3",
+      "duration": 0.91425,
+      "sha256": "3136440193808c9ac6afcadf42f93e6dbbf349f578c758e456f0fdce1653ff80"
+    },
+    "bush": {
+      "file": "assets/narration/word-fal-0201.mp3",
+      "duration": 0.862,
+      "sha256": "565cec196fb9843427e97992501ca5c5c90435976b9ec01900b07b82555769e6"
+    },
+    "third": {
+      "file": "assets/narration/word-fal-0202.mp3",
+      "duration": 0.9665,
+      "sha256": "1595d915aa8779e2c4d7c1dfaa24790c4c59117ff53bc47e6aa478878af9ce3a"
+    },
+    "towards": {
+      "file": "assets/narration/word-fal-0203.mp3",
+      "duration": 1.253875,
+      "sha256": "5f2044631442081b819cb415fe32ffcdb7ea3b309efe50f4941c276f311ea5f1"
+    },
+    "mother": {
+      "file": "assets/narration/word-fal-0204.mp3",
+      "duration": 0.862,
+      "sha256": "5c9a12cfe5eb75d0315f5ca51b4880763a7b16f3689c32e48f20fa85b5f949dd"
+    },
+    "father": {
+      "file": "assets/narration/word-fal-0205.mp3",
+      "duration": 0.835875,
+      "sha256": "844607ff47539c6be5ec936e887ef67ca3d28c24fbae7300d68e5d6b90c728e6"
+    },
+    "spoon": {
+      "file": "assets/narration/word-fal-0206.mp3",
+      "duration": 1.071,
+      "sha256": "75e4a605fc33d1b05ea2b4d0a8529d7f50bc4d15868630b06aa404bb42704071"
+    },
+    "sitting": {
+      "file": "assets/narration/word-fal-0207.mp3",
+      "duration": 1.01875,
+      "sha256": "deba001c0f922078f81ea46c759ab7d52222d9c483451c3db27f786c604b2f0f"
+    },
+    "dirty": {
+      "file": "assets/narration/word-fal-0208.mp3",
+      "duration": 0.9665,
+      "sha256": "a6350b254ac4edaeb2683e351ebe35afaf08ce3ecb61009ce699c9c73202022d"
+    },
+    "woods": {
+      "file": "assets/narration/word-fal-0209.mp3",
+      "duration": 1.01875,
+      "sha256": "7befba78ff124814975ef0091b1522e6073a7d78621427602f9a48ebbd4610d3"
+    },
+    "fourth": {
+      "file": "assets/narration/word-fal-0210.mp3",
+      "duration": 1.01875,
+      "sha256": "68e89de3888a34ac2b1378eed6340a7a89a597b0c377afab416a0b6a7780b5ff"
+    },
+    "feet": {
+      "file": "assets/narration/word-fal-0211.mp3",
+      "duration": 0.862,
+      "sha256": "892398118450cae794c82ad6fbace89f629539cbdc6a3dcee149529d9c413f92"
+    },
+    "girl": {
+      "file": "assets/narration/word-fal-0212.mp3",
+      "duration": 0.862,
+      "sha256": "b2a4344154c1d2d8aba97f451830fc765a8b395bc92ddd374f5240630c0d602e"
+    },
+    "knife": {
+      "file": "assets/narration/word-fal-0213.mp3",
+      "duration": 1.01875,
+      "sha256": "6da716141e8dd6450b2928b7861952dccf7a2fb8d8f547e994bd5f270e1e9ba5"
+    },
+    "bottle": {
+      "file": "assets/narration/word-fal-0214.mp3",
+      "duration": 1.01875,
+      "sha256": "dac6a050f9ebb3342d2dd322a85d92f8d72a5217b44d1a615048dbc160a50647"
+    },
+    "messy": {
+      "file": "assets/narration/word-fal-0215.mp3",
+      "duration": 1.01875,
+      "sha256": "e4126a8458b56fe85679a9407f87016050043f653cb9a9405f3842daf7945b9f"
+    },
+    "city": {
+      "file": "assets/narration/word-fal-0216.mp3",
+      "duration": 0.862,
+      "sha256": "dc3406bbc85a3e7b31f4747b12131a72c72b482645736ac3967177903a078b9a"
+    },
+    "fifth": {
+      "file": "assets/narration/word-fal-0217.mp3",
+      "duration": 0.835875,
+      "sha256": "3cdb741ad4bb877545d5a01edfb26394f4379fd99b9c03c5e2d01f64f421da25"
+    },
+    "fly": {
+      "file": "assets/narration/word-fal-0218.mp3",
+      "duration": 0.9665,
+      "sha256": "0b613c3e47935eb473baa508e352640e030489de067b5084b030775baf4dd26e"
+    },
+    "dog": {
+      "file": "assets/narration/word-fal-0219.mp3",
+      "duration": 0.862,
+      "sha256": "a42cc60dc5f6b370482685a85b670cba29c60f7740dd6dd9979e497b421bd7b7"
+    },
+    "milk": {
+      "file": "assets/narration/word-fal-0220.mp3",
+      "duration": 0.862,
+      "sha256": "85df3504ee93d253d9ca61525a1dc6a89aef8abec3d1aa655345f265307c1d9b"
+    },
+    "kitchen": {
+      "file": "assets/narration/word-fal-0221.mp3",
+      "duration": 1.097125,
+      "sha256": "b4d41a3821fe6f4755533acd3d34c2e4eae5542f3327b9472472653217eb1ad5"
+    },
+    "bedroom": {
+      "file": "assets/narration/word-fal-0222.mp3",
+      "duration": 1.201625,
+      "sha256": "a333186326b9ea05dc872e74325036558eb4fd74b45407b3aa429f6fb6a55ecf"
+    },
+    "lay": {
+      "file": "assets/narration/word-fal-0223.mp3",
+      "duration": 0.835875,
+      "sha256": "f693c9b4e9f657a64f8580b19d5e4607e168606748c6148eae146616d48d2739"
+    },
+    "tidy": {
+      "file": "assets/narration/word-fal-0224.mp3",
+      "duration": 0.9665,
+      "sha256": "f1b6de8b513415b01f843074c350bb7faa3b8f4302be45d51ac58691b89b2922"
+    },
+    "country": {
+      "file": "assets/narration/word-fal-0225.mp3",
+      "duration": 1.01875,
+      "sha256": "6c323c85e30aa11e9ed776d16a1a1792f92cfcc67dd9c05ef99e22e9666a01d9"
+    },
+    "sixth": {
+      "file": "assets/narration/word-fal-0226.mp3",
+      "duration": 0.9665,
+      "sha256": "b88d185b93fbd7c98e427c26242d468012ea14ec3a3e2137ddf4acbe6deb2392"
+    },
+    "use": {
+      "file": "assets/narration/word-fal-0227.mp3",
+      "duration": 0.862,
+      "sha256": "946f1b155f448a832e313bbbb5bfdb7b11889e87bd562b273a56c7a5ad18e256"
+    },
+    "tail": {
+      "file": "assets/narration/word-fal-0228.mp3",
+      "duration": 1.01875,
+      "sha256": "74693a50a6c2d64b34fa7b1407ca543a74bc145936f837a0f160a44b2f8348c5"
+    },
+    "safe": {
+      "file": "assets/narration/word-fal-0229.mp3",
+      "duration": 0.862,
+      "sha256": "a2d987b94af47b497a7354e53a62aa56e66d1bcc65eba5c66ea65294427582a6"
+    },
+    "bathroom": {
+      "file": "assets/narration/word-fal-0230.mp3",
+      "duration": 1.201625,
+      "sha256": "3014a85d620deeb6b4aa9a915d2100745ac9bedd4ab8f48d50ca887adb298962"
+    },
+    "toilet": {
+      "file": "assets/narration/word-fal-0231.mp3",
+      "duration": 1.097125,
+      "sha256": "0b58c81146333c47a7b82e73b8564b5761abe9f7bbcaa3dd592e15da82a7679c"
+    },
+    "sleeping": {
+      "file": "assets/narration/word-fal-0232.mp3",
+      "duration": 1.149375,
+      "sha256": "706be869e71e179a34609ccd6e394de3215e11584fae834f8e03442300754c64"
+    },
+    "noisy": {
+      "file": "assets/narration/word-fal-0233.mp3",
+      "duration": 1.097125,
+      "sha256": "a1526936e5a4487bf42a6ea5b15b33e1e3b985cfcbef45312b8fff663718456d"
+    },
+    "yard": {
+      "file": "assets/narration/word-fal-0234.mp3",
+      "duration": 1.01875,
+      "sha256": "ca0c036c962c6b620939723d2128e5419e9e24ac5c0ed5398a723008287a9909"
+    },
+    "seventh": {
+      "file": "assets/narration/word-fal-0235.mp3",
+      "duration": 1.01875,
+      "sha256": "5edce8bec2398009b1359b8006288a2f105f7641b58e6af688a8dd5152483bfb"
+    },
+    "try": {
+      "file": "assets/narration/word-fal-0236.mp3",
+      "duration": 0.91425,
+      "sha256": "ab4f4c3307252852162590a84316707f1ca20883f919728fc30fe2edb76a7cd3"
+    },
+    "grow": {
+      "file": "assets/narration/word-fal-0237.mp3",
+      "duration": 1.01875,
+      "sha256": "43306d3af30d5a361e2ed37633dc5ddec7564024d15f07abc0915298c07f4744"
+    },
+    "shower": {
+      "file": "assets/narration/word-fal-0238.mp3",
+      "duration": 0.9665,
+      "sha256": "2e8a3a4b9c648f1be3b16148e91840a5afa1139fda3967eaad082ab8b49a13ff"
+    },
+    "slept": {
+      "file": "assets/narration/word-fal-0239.mp3",
+      "duration": 0.9665,
+      "sha256": "8910120d66144bb2ead3a1538cd123ca0e563a7ad26a39d0a3418fecfcc187bb"
+    },
+    "rough": {
+      "file": "assets/narration/word-fal-0240.mp3",
+      "duration": 0.91425,
+      "sha256": "47d5467bf01f228542180cf05a0119ca72fd072a7869ebe9b562e28267857567"
+    },
+    "fence": {
+      "file": "assets/narration/word-fal-0241.mp3",
+      "duration": 0.91425,
+      "sha256": "535fba1a69eb5b0ce26321a6d1a83b9cd6c3758dcf61318e214e238cd0d9dcf1"
+    },
+    "eighth": {
+      "file": "assets/narration/word-fal-0242.mp3",
+      "duration": 0.835875,
+      "sha256": "834023f492cd3cf732601c63d5a62e8024bad39859592208bab274b86667ee7b"
+    },
+    "draw": {
+      "file": "assets/narration/word-fal-0243.mp3",
+      "duration": 0.862,
+      "sha256": "a689c3760441e8d62c8813aa3a43990ddadbc9b7e4dbac45a4555be0eaa74f2e"
+    },
+    "table": {
+      "file": "assets/narration/word-fal-0244.mp3",
+      "duration": 1.01875,
+      "sha256": "41e14739dafef5051738316a6951a2980c0acc997a746000997bf9e1228c1cc7"
+    },
+    "towel": {
+      "file": "assets/narration/word-fal-0245.mp3",
+      "duration": 0.9665,
+      "sha256": "01b037575cfa4e2a5a5f769fd9fbfc927264234888938e229431dc24942618dd"
+    },
+    "soap": {
+      "file": "assets/narration/word-fal-0246.mp3",
+      "duration": 0.862,
+      "sha256": "edf7837920ff4a11fcfd422eacd41692ed9a9513c0c8ac6b4a24ccc20ebe327f"
+    },
+    "smooth": {
+      "file": "assets/narration/word-fal-0247.mp3",
+      "duration": 1.071,
+      "sha256": "1dcea014a65bff581dc8afff814dbd7a65b4a68a7907feceaca99c5f1f3ea2bc"
+    },
+    "roof": {
+      "file": "assets/narration/word-fal-0248.mp3",
+      "duration": 0.91425,
+      "sha256": "48c9121a01e19dabeea03867e088d630831b3352b5e9710e81251783568f290a"
+    },
+    "ninth": {
+      "file": "assets/narration/word-fal-0249.mp3",
+      "duration": 0.91425,
+      "sha256": "8c7e652e7fc333a2a07007b927bda040561b6a157bbc221f58b802d980ea973f"
+    },
+    "ride": {
+      "file": "assets/narration/word-fal-0250.mp3",
+      "duration": 1.01875,
+      "sha256": "a1c1d27101a4b2da3c8e119943d4b02fecd22e5a39436ec43bde47712f0e93e8"
+    },
+    "box": {
+      "file": "assets/narration/word-fal-0251.mp3",
+      "duration": 0.91425,
+      "sha256": "93d4db853dfbbfec5a47ba07ed1989080ff74df6cb7e50d98f124362569abea4"
+    },
+    "room": {
+      "file": "assets/narration/word-fal-0252.mp3",
+      "duration": 0.91425,
+      "sha256": "503a0a1114a168d0838ecd9e8b77c5d813bd107e41d0a68220e3bb1d2a677d3d"
+    },
+    "brush": {
+      "file": "assets/narration/word-fal-0253.mp3",
+      "duration": 0.91425,
+      "sha256": "da35556d4259b98ba6346ef5404a87571246c116ac0b4943057b5282bebd9aea"
+    },
+    "tooth": {
+      "file": "assets/narration/word-fal-0254.mp3",
+      "duration": 0.9665,
+      "sha256": "d32afc22cd76ed90d0665299c2b5a79ed1cbb4d40a8b197d95c742aca07ab897"
+    },
+    "woke": {
+      "file": "assets/narration/word-fal-0255.mp3",
+      "duration": 0.91425,
+      "sha256": "feb99f970bfe1e055829b20eb53c72b5c5e7d0c784633efabdc17775f2492e07"
+    },
+    "empty": {
+      "file": "assets/narration/word-fal-0256.mp3",
+      "duration": 0.91425,
+      "sha256": "455fec84c9c68a7924a3f0effdc813af103ca461241b5a2f2cae6d61b91813ef"
+    },
+    "stair": {
+      "file": "assets/narration/word-fal-0257.mp3",
+      "duration": 0.9665,
+      "sha256": "8ea83986da22a1334b85eb236698a82708de8979339b52f090e8702aef244f40"
+    },
+    "tenth": {
+      "file": "assets/narration/word-fal-0258.mp3",
+      "duration": 0.91425,
+      "sha256": "1ff5387519dff7784fb15e9ac64fee468791fe3566d3a3f39d3185f831665bb9"
+    },
+    "please": {
+      "file": "assets/narration/word-fal-0259.mp3",
+      "duration": 0.9665,
+      "sha256": "9af2c43126ef7b28b9e483067a16073dcce72ce4adc47b1b1dcfc7cc344f0f6b"
+    },
+    "strong": {
+      "file": "assets/narration/word-fal-0260.mp3",
+      "duration": 1.071,
+      "sha256": "a34b549e99d528b30a60ff6bd1a5b6b74994c2f2b29c1f7164089ee175cc7fb0"
+    },
+    "teeth": {
+      "file": "assets/narration/word-fal-0261.mp3",
+      "duration": 0.9665,
+      "sha256": "9527c72a5f6ead5bbf6f35e8ea85dfa6042b2294f6ac239389a01d5604bed45d"
+    },
+    "shirt": {
+      "file": "assets/narration/word-fal-0262.mp3",
+      "duration": 0.91425,
+      "sha256": "00024015e1bee8e87147a92747bfc307cb7579217105a29f4227d8ccf498e3fc"
+    },
+    "awake": {
+      "file": "assets/narration/word-fal-0263.mp3",
+      "duration": 1.01875,
+      "sha256": "9f57aa68d37ad85553ae9f0fc8c9cd3f9c79552a42cd98569842ca8afbe04f52"
+    },
+    "weak": {
+      "file": "assets/narration/word-fal-0264.mp3",
+      "duration": 0.862,
+      "sha256": "2e279ea51fa91d4de9eed01f9211073060599f5a0d2a5b42617bba7c84834039"
+    },
+    "half": {
+      "file": "assets/narration/word-fal-0265.mp3",
+      "duration": 0.9665,
+      "sha256": "afdc54eff149fe0206d42719d52c48d9e515c97981d077da2adc53e73b2ad00e"
+    },
+    "couldn't": {
+      "file": "assets/narration/word-fal-0266.mp3",
+      "duration": 1.01875,
+      "sha256": "b2d3429cf079d95af0196932b70e4fa0225a532f77918b54dbb5dea4f6ada308"
+    },
+    "rope": {
+      "file": "assets/narration/word-fal-0267.mp3",
+      "duration": 0.862,
+      "sha256": "48b70e13b9f0475a4b47246b24b4a1184c9e54d89457c2706997ae270f000c3a"
+    },
+    "wood": {
+      "file": "assets/narration/word-fal-0268.mp3",
+      "duration": 0.862,
+      "sha256": "6fa9fdd3d301d36d02ae0a3be82b9f1c7a376615cdffe3141cdc71c957f51eee"
+    },
+    "coat": {
+      "file": "assets/narration/word-fal-0269.mp3",
+      "duration": 0.91425,
+      "sha256": "a23a7888b1b7d927cc8efcb8a03d91cab0ba596268018418863333515d9128cc"
+    },
+    "jacket": {
+      "file": "assets/narration/word-fal-0270.mp3",
+      "duration": 0.9665,
+      "sha256": "26294566a35d4352f4f3629de163149c01f05e41af084d0b2219524a136f9e15"
+    },
+    "drank": {
+      "file": "assets/narration/word-fal-0271.mp3",
+      "duration": 1.01875,
+      "sha256": "f79d5d13a9b34e6c24080e39677478f447433786b978c6411ca781203d84d57e"
+    },
+    "fresh": {
+      "file": "assets/narration/word-fal-0272.mp3",
+      "duration": 0.91425,
+      "sha256": "e27978a53fcecfb6e958d0a9e81c33adc8516af4438f9b00fee80969b2c86ed5"
+    },
+    "barn": {
+      "file": "assets/narration/word-fal-0273.mp3",
+      "duration": 1.01875,
+      "sha256": "d606d6c5cdc0aa6af728e183725d7db91f9dfb9b6d11f4942428b839d53ebc90"
+    },
+    "quarter": {
+      "file": "assets/narration/word-fal-0274.mp3",
+      "duration": 1.071,
+      "sha256": "2b721efaf7a88ab355179f084bcf868362acc879389e0702de0863c66164e7d0"
+    },
+    "wasn't": {
+      "file": "assets/narration/word-fal-0275.mp3",
+      "duration": 1.01875,
+      "sha256": "e04f41269ad84fa67cbed2d47c525b052ebb2a69c98c1583c8d16e951430cc0f"
+    },
+    "isn't": {
+      "file": "assets/narration/word-fal-0276.mp3",
+      "duration": 0.862,
+      "sha256": "b974033782a2bce25a575c6a8da5c8592e5010b3c93164502705df428736289d"
+    },
+    "fruit": {
+      "file": "assets/narration/word-fal-0277.mp3",
+      "duration": 0.9665,
+      "sha256": "1ff6a8126fb1270a4b1ebbbae57bc71e8976dc62297c629362d9b0d125168f0e"
+    },
+    "people": {
+      "file": "assets/narration/word-fal-0278.mp3",
+      "duration": 1.01875,
+      "sha256": "c33489a6ffce776e8d52c876e19e3e9a63e5b190cbf8d4bb61bb53348d0ef9d8"
+    },
+    "trousers": {
+      "file": "assets/narration/word-fal-0279.mp3",
+      "duration": 1.149375,
+      "sha256": "6c056893527ceaa892ace3f7db5c3f4bf61cc54911d7663b86e11438ab34f8d7"
+    },
+    "skirt": {
+      "file": "assets/narration/word-fal-0280.mp3",
+      "duration": 1.01875,
+      "sha256": "039dbb05940bb98f36b3c169e02150b75975311260bc20924daa6e477103a3ba"
+    },
+    "taken": {
+      "file": "assets/narration/word-fal-0281.mp3",
+      "duration": 1.01875,
+      "sha256": "7a262f1733c85084912abe7e76c0e63642be659254186c1e4045e1f4b77521a7"
+    },
+    "square": {
+      "file": "assets/narration/word-fal-0282.mp3",
+      "duration": 1.01875,
+      "sha256": "8f6aaf56c7ce25584704ae37e75760885e40d4611d6a1ff01dccf2b8b15c1750"
+    },
+    "tunnel": {
+      "file": "assets/narration/word-fal-0283.mp3",
+      "duration": 1.071,
+      "sha256": "4cc19f46cb778c98e87d734f12e106fdef4d01f6efa0ba5a9e30e594aeefc0dd"
+    },
+    "double": {
+      "file": "assets/narration/word-fal-0284.mp3",
+      "duration": 0.91425,
+      "sha256": "5b1889b73aadcfeb9daf61d934a3f89fb6feef0f5084a5a1d1f96b35b43e4bc1"
+    },
+    "you're": {
+      "file": "assets/narration/word-fal-0285.mp3",
+      "duration": 0.862,
+      "sha256": "530835de83b771ee72f770917d2cc5fda694ff4f52a810a99a8cfc28eec17d2b"
+    },
+    "window": {
+      "file": "assets/narration/word-fal-0286.mp3",
+      "duration": 1.071,
+      "sha256": "4889e656383ba2acd2a3da5234c5b60dce83c978a2e77226d0f5dc4e6b430b64"
+    },
+    "bridge": {
+      "file": "assets/narration/word-fal-0287.mp3",
+      "duration": 0.91425,
+      "sha256": "d68eb49de98e86d6cf505c7ecbce17a0faef961f9dbd7d3ad4424885f708e62c"
+    },
+    "sock": {
+      "file": "assets/narration/word-fal-0288.mp3",
+      "duration": 0.91425,
+      "sha256": "929a7005de64e89566748613dbb600037bbf52e3d67baa0091f1806fccc5851c"
+    },
+    "shoe": {
+      "file": "assets/narration/word-fal-0289.mp3",
+      "duration": 0.9665,
+      "sha256": "8fba09630f881602734279087b36cc17e198bc6bdffa64fb7805e0f609dcbf05"
+    },
+    "given": {
+      "file": "assets/narration/word-fal-0290.mp3",
+      "duration": 1.01875,
+      "sha256": "4777daafc969234a2d0e6811ee544c3a5edb21515a6693e2d90324241f83e2f1"
+    },
+    "pair": {
+      "file": "assets/narration/word-fal-0291.mp3",
+      "duration": 0.862,
+      "sha256": "9be4d47c0523fb0726157a26851553dff04f8111e4ea4b7e58a7cd4d784e0fbc"
+    },
+    "let's": {
+      "file": "assets/narration/word-fal-0292.mp3",
+      "duration": 0.862,
+      "sha256": "baab895ce5fea8420007f743cc1e614489cb45156d2253caeadf1f7631f12449"
+    },
+    "we'll": {
+      "file": "assets/narration/word-fal-0293.mp3",
+      "duration": 0.862,
+      "sha256": "5e6ef94ca37b8aa8f0c59f7e1e7522aa3119834313e5df1be06eb374d2c940bd"
+    },
+    "camp": {
+      "file": "assets/narration/word-fal-0294.mp3",
+      "duration": 0.835875,
+      "sha256": "8716a9af107a4c66db7b912ede07a6e78f91d1451c1df24add94295216c9c7d3"
+    },
+    "boot": {
+      "file": "assets/narration/word-fal-0295.mp3",
+      "duration": 0.783625,
+      "sha256": "c3ed44d77cd7353d5a8403e3ddeeba2f7c4ce490f54ddec6a96cbfbc0a82efd0"
+    },
+    "pocket": {
+      "file": "assets/narration/word-fal-0296.mp3",
+      "duration": 1.01875,
+      "sha256": "c725ba9c70bc802cb7e000063743f98dc1848e5c406e8e2d32eaa5b9d3f6d9d3"
+    },
+    "making": {
+      "file": "assets/narration/word-fal-0297.mp3",
+      "duration": 1.071,
+      "sha256": "fac13736e1124578491a665e5354f28cc1eb276d4bf150a48acb0b89c08cb68e"
+    },
+    "pink": {
+      "file": "assets/narration/word-fal-0298.mp3",
+      "duration": 0.91425,
+      "sha256": "2e7344de4784a3ef74c15ec361425b3595bca6873175f5b71b326815ef55cdbd"
+    },
+    "torch": {
+      "file": "assets/narration/word-fal-0299.mp3",
+      "duration": 0.9665,
+      "sha256": "dbdc38421cb044dfccf4a32db125eaa1370ddfdb203293d51cb9d06a2aedfb99"
+    },
+    "count": {
+      "file": "assets/narration/word-fal-0300.mp3",
+      "duration": 0.91425,
+      "sha256": "b1310df609a869e3a5db64ca7eb8cfb1dc7a090de760004bc82726fdb7468780"
+    },
+    "that's": {
+      "file": "assets/narration/word-fal-0301.mp3",
+      "duration": 0.91425,
+      "sha256": "428d6e46b6e7bc70d1470d85afc52e04055ae0edd2ecb932318a86a808a0fd06"
+    },
+    "there's": {
+      "file": "assets/narration/word-fal-0302.mp3",
+      "duration": 0.835875,
+      "sha256": "523b2bd564f533f44554f7abd1f6f6ed4c782451d1e9ed5db93faeca68c3db88"
+    },
+    "sound": {
+      "file": "assets/narration/word-fal-0303.mp3",
+      "duration": 1.071,
+      "sha256": "8f27d3562becbcb856239454a3d97dc2dfb22637ad84058705cd3a8a6b7f99aa"
+    },
+    "toy": {
+      "file": "assets/narration/word-fal-0304.mp3",
+      "duration": 0.91425,
+      "sha256": "5d7cf99aceda5ecb1259c4ea9b9b4ad25a95b706d2ba77fe728df564baf7902c"
+    },
+    "doll": {
+      "file": "assets/narration/word-fal-0305.mp3",
+      "duration": 0.835875,
+      "sha256": "6cff1cccb09294a1f48912c3def61ea1e967f5b523556753421d2020645fb0f7"
+    },
+    "doing": {
+      "file": "assets/narration/word-fal-0306.mp3",
+      "duration": 0.91425,
+      "sha256": "687b2baf4adf0daea2dcd22dc4749c25a6c1fc44a372735dfd85a39033a6a1c8"
+    },
+    "purple": {
+      "file": "assets/narration/word-fal-0307.mp3",
+      "duration": 1.071,
+      "sha256": "a5f09f85d07439184081b0502d4c0f6705818e5a2ffbad9ea7bce63ecb20d148"
+    },
+    "flame": {
+      "file": "assets/narration/word-fal-0308.mp3",
+      "duration": 1.01875,
+      "sha256": "49765d32db2ea5f4758c63efbb97ccce6bbf699bd7672821d84a3777042da20d"
+    },
+    "number": {
+      "file": "assets/narration/word-fal-0309.mp3",
+      "duration": 1.01875,
+      "sha256": "8c5175ac8f4fdd4993c1b8f834a25d0f9a4acacca18ee10c482d019b0c8b1c38"
+    },
+    "he's": {
+      "file": "assets/narration/word-fal-0310.mp3",
+      "duration": 0.835875,
+      "sha256": "6d78cd235f783ffe181ba3557af61f7a30f40a3f603eab667aed0fcc942ad0ef"
+    },
+    "she's": {
+      "file": "assets/narration/word-fal-0311.mp3",
+      "duration": 0.91425,
+      "sha256": "f9375857b25d0a8601938153cf7979702aba12598f9365171761beba91d09902"
+    },
+    "place": {
+      "file": "assets/narration/word-fal-0312.mp3",
+      "duration": 1.01875,
+      "sha256": "ae352d3d187a0c0a10a6220ddb132c8e866f72745788a39b31562be0fec9b095"
+    },
+    "year": {
+      "file": "assets/narration/word-fal-0313.mp3",
+      "duration": 0.862,
+      "sha256": "d109f6548d8b93ae93fc6e9f049967d4136c3d4d2df20c1e34b2191f3726ba18"
+    },
+    "teddy": {
+      "file": "assets/narration/word-fal-0314.mp3",
+      "duration": 0.862,
+      "sha256": "cf87fb53b56b55e5ffa1768a690616a2d190b68aff02cae93811719415dbac8d"
+    },
+    "puzzle": {
+      "file": "assets/narration/word-fal-0315.mp3",
+      "duration": 1.01875,
+      "sha256": "d32b30ffac133bbfe79861085b86894941e45abba0a8051db4b86e6beb408f00"
+    },
+    "getting": {
+      "file": "assets/narration/word-fal-0316.mp3",
+      "duration": 1.01875,
+      "sha256": "979e5d6f05684dc7083b7b42f51b8ede980773a8ff6c8c36b9d0cedd9491f06f"
+    },
+    "grey": {
+      "file": "assets/narration/word-fal-0317.mp3",
+      "duration": 0.91425,
+      "sha256": "7c23fee72ed978db0eb4cb18bf9858df53071776d5e60191724323f77a9f3814"
+    },
+    "smoke": {
+      "file": "assets/narration/word-fal-0318.mp3",
+      "duration": 1.071,
+      "sha256": "e6c7d600b4226215643f4cc874ee89080e0092b9dd9e3b5b2a1e13fe6061c0db"
+    },
+    "less": {
+      "file": "assets/narration/word-fal-0319.mp3",
+      "duration": 0.862,
+      "sha256": "1555a1586647caaca62615e20356b936ae0831b8714e1e1be4d9d1d8ba803d05"
+    },
+    "we're": {
+      "file": "assets/narration/word-fal-0320.mp3",
+      "duration": 0.862,
+      "sha256": "139b7adcd364813b361b4bdf1a3858db261821b9aedbb9f1c99e8932fe5685f1"
+    },
+    "they're": {
+      "file": "assets/narration/word-fal-0321.mp3",
+      "duration": 0.91425,
+      "sha256": "66f4ffe32306d80b3735cc282544e3b3dfa2a5801d5140da223ee8fba36fd01e"
+    },
+    "brother": {
+      "file": "assets/narration/word-fal-0322.mp3",
+      "duration": 0.835875,
+      "sha256": "73622db263b6294d4b72d4128b1a3e687bc338eb5eff9c962ef70eccc42dad8b"
+    },
+    "birthday": {
+      "file": "assets/narration/word-fal-0323.mp3",
+      "duration": 1.097125,
+      "sha256": "877bccec8846f52efc39d58259baf27900a62ed06251908a4f4e38d0ce0521ef"
+    },
+    "carrying": {
+      "file": "assets/narration/word-fal-0324.mp3",
+      "duration": 1.201625,
+      "sha256": "85a4998138839dad856642190f2aaffbc440f6da8a7c3a883efaad7ea4680e63"
+    },
+    "everybody": {
+      "file": "assets/narration/word-fal-0325.mp3",
+      "duration": 1.097125,
+      "sha256": "9e9dea2a5064ec3a64222daec93248b2221fa4c16c9c30a12f5f0563ac6048ad"
+    },
+    "den": {
+      "file": "assets/narration/word-fal-0326.mp3",
+      "duration": 0.862,
+      "sha256": "c9c4eee9d566bbbd939e4cc93489a711c1c5fe8d6de74ee36c365c3947bad379"
+    },
+    "fewer": {
+      "file": "assets/narration/word-fal-0327.mp3",
+      "duration": 0.862,
+      "sha256": "9eed334626e8be1d3e7a3c89872b9f3717b7c912f9d27abcd1122f5763ccb73e"
+    },
+    "I've": {
+      "file": "assets/narration/word-fal-0328.mp3",
+      "duration": 0.835875,
+      "sha256": "84a482bc38f61024f8de65cb2db7e99cefbc5915a888905e0e9e9e9d75848065"
+    },
+    "you've": {
+      "file": "assets/narration/word-fal-0329.mp3",
+      "duration": 0.91425,
+      "sha256": "aaa9d13ae13109475a46e41fb4b47d4543f08e628281ef9c3da8de64eef0f9bc"
+    },
+    "name": {
+      "file": "assets/narration/word-fal-0330.mp3",
+      "duration": 0.91425,
+      "sha256": "e7c3a45f33411b9b9e3743c058215c4db4159e6a6b520707064aa4ca16a6ad71"
+    },
+    "great": {
+      "file": "assets/narration/word-fal-0331.mp3",
+      "duration": 0.91425,
+      "sha256": "6ef046a54959b8b7834c0178eea3ae4939af790ef0050c8e7f85f2f412afcd13"
+    },
+    "balloon": {
+      "file": "assets/narration/word-fal-0332.mp3",
+      "duration": 1.097125,
+      "sha256": "8fd57a70f924fc78945a3582ca9a8d0b965c27091d78a56a9e483dbd865c0d13"
+    },
+    "candle": {
+      "file": "assets/narration/word-fal-0333.mp3",
+      "duration": 1.149375,
+      "sha256": "2ae3f2350dc5d965d92a83f7c7b10475cabd6ffa098d1448b98cf3d87e4d6958"
+    },
+    "turn": {
+      "file": "assets/narration/word-fal-0334.mp3",
+      "duration": 0.9665,
+      "sha256": "015ee82813b46055ff84d62961e4efaa295a513393983f9c98dfef170ced71e9"
+    },
+    "nobody": {
+      "file": "assets/narration/word-fal-0335.mp3",
+      "duration": 1.01875,
+      "sha256": "25ae56e5898628103fad444121ef86723fe906ae8dae2ec5e56bb1220c70dd7f"
+    },
+    "total": {
+      "file": "assets/narration/word-fal-0336.mp3",
+      "duration": 1.149375,
+      "sha256": "06d45edbb7c382ae7d5615e50bdd0964adae5c264cdfdb52226dca40e332122e"
+    },
+    "we've": {
+      "file": "assets/narration/word-fal-0337.mp3",
+      "duration": 0.862,
+      "sha256": "848724edbf787b48b4f6bd992ffe89b438677bc5b7f8a335e427eaf735d9ab33"
+    },
+    "doesn't": {
+      "file": "assets/narration/word-fal-0338.mp3",
+      "duration": 0.9665,
+      "sha256": "6249d96c5ab53dbce0c10928a5d39fb490ceb28f98206abb7cda0f888253201d"
+    },
+    "end": {
+      "file": "assets/narration/word-fal-0339.mp3",
+      "duration": 0.783625,
+      "sha256": "2a491c912872f75cab05771b14e921fe5a8bd630f7a0e3b4fdef7215afafd063"
+    },
+    "large": {
+      "file": "assets/narration/word-fal-0340.mp3",
+      "duration": 1.01875,
+      "sha256": "6650f6ddc0175b2c40114b723f10d5b6e912d9ee5740a1dbc7fb877d1a3c6500"
+    },
+    "picnic": {
+      "file": "assets/narration/word-fal-0341.mp3",
+      "duration": 1.01875,
+      "sha256": "be0b818b153ac2d18b410080c8d8b716f8123b264ed23c8fc0a284b067fb748e"
+    },
+    "beach": {
+      "file": "assets/narration/word-fal-0342.mp3",
+      "duration": 0.9665,
+      "sha256": "6a5b366018df609888503c6f51f9c24854156524600d45a77f1157e16e7f0ca5"
+    },
+    "turned": {
+      "file": "assets/narration/word-fal-0343.mp3",
+      "duration": 1.01875,
+      "sha256": "9cab9061715f6aac4f5488e3abf71ffb2c05b51f6c3d7f52992b88ef26a225f3"
+    },
+    "somebody": {
+      "file": "assets/narration/word-fal-0344.mp3",
+      "duration": 1.071,
+      "sha256": "28e5405dcd014b7b95ea2b1aae154e69fe6c690011e3bb411bca07be2a8a9330"
+    },
+    "shell": {
+      "file": "assets/narration/word-fal-0345.mp3",
+      "duration": 0.862,
+      "sha256": "a73f286be26694eca073ac95653a01bdeb0c03853768ed2916edbc9bd219fd4d"
+    },
+    "plus": {
+      "file": "assets/narration/word-fal-0346.mp3",
+      "duration": 0.9665,
+      "sha256": "6b9810ebf29137e3e85981c168449a6d60da91ab1c70dafa958fb7a4822844f1"
+    },
+    "haven't": {
+      "file": "assets/narration/word-fal-0347.mp3",
+      "duration": 0.862,
+      "sha256": "f3e3f16344c6720616617bcf4a0c86ef022458bffe4ead2cce36cf34c781fb09"
+    },
+    "hadn't": {
+      "file": "assets/narration/word-fal-0348.mp3",
+      "duration": 0.9665,
+      "sha256": "c854ce9b9228fe50a302dbe27988726c7d5d562f4921af2117445ef94cd50ea0"
+    },
+    "need": {
+      "file": "assets/narration/word-fal-0349.mp3",
+      "duration": 0.91425,
+      "sha256": "0cdfdf9b5bcc86c146e95ec595f9fb603053b7f87a7e20d0b7b382e06d39d520"
+    },
+    "baby": {
+      "file": "assets/narration/word-fal-0350.mp3",
+      "duration": 0.91425,
+      "sha256": "7706d9551a1dd19164cf88b628584b620f5d9a35277fe262a55d3fb662ade52b"
+    },
+    "holiday": {
+      "file": "assets/narration/word-fal-0351.mp3",
+      "duration": 1.097125,
+      "sha256": "351a86b2a0269eefa2c2f1b3103788e0de387c99c78496042ea892a5f4da190a"
+    },
+    "push": {
+      "file": "assets/narration/word-fal-0352.mp3",
+      "duration": 0.862,
+      "sha256": "c0edca7f2cb00f564e255f961093fafce90b2cfbf9578421ba07e28380ff885a"
+    },
+    "anyone": {
+      "file": "assets/narration/word-fal-0353.mp3",
+      "duration": 1.071,
+      "sha256": "ad67f14789b7ed8348bc6f7d554e05b5a8bf8dba1c7543bf71795131dfa75923"
+    },
+    "minus": {
+      "file": "assets/narration/word-fal-0354.mp3",
+      "duration": 1.097125,
+      "sha256": "d3ee94c65fded698dbd4e96c4cb1b90c45e42fb45179f2aea89c10c6ae444457"
+    },
+    "aren't": {
+      "file": "assets/narration/word-fal-0355.mp3",
+      "duration": 0.835875,
+      "sha256": "1703a754ddc69e48fa2cbb3c582d4083498c429c768fbf32ba6774cfa81486e5"
+    },
+    "weren't": {
+      "file": "assets/narration/word-fal-0356.mp3",
+      "duration": 1.01875,
+      "sha256": "c29b17a8b0b0e876313cbb3e15deb55e60d6a7a74ab0d8d6fb567e5d57131176"
+    },
+    "land": {
+      "file": "assets/narration/word-fal-0357.mp3",
+      "duration": 0.9665,
+      "sha256": "fb74c765b52e08cc74b8f46f3006db82e360c87bf2bbb4812eef74d01b325a4e"
+    },
+    "different": {
+      "file": "assets/narration/word-fal-0358.mp3",
+      "duration": 1.01875,
+      "sha256": "b6bcfb8205fe52d09bb7ba4073e52e00e050945d84273d42e1d077e1cf9b06ad"
+    },
+    "playground": {
+      "file": "assets/narration/word-fal-0359.mp3",
+      "duration": 1.28,
+      "sha256": "ae8dae1c9aea5aba2eb5b1d94ba562d40cbeda17acf2d0d93d71a4f1e80694fb"
+    },
+    "opened": {
+      "file": "assets/narration/word-fal-0360.mp3",
+      "duration": 0.91425,
+      "sha256": "a82cb2c8026bd45e0657e27c3a72b47419825576d639a1e6e718e73fe3e87f8c"
+    },
+    "something": {
+      "file": "assets/narration/word-fal-0361.mp3",
+      "duration": 1.071,
+      "sha256": "730c055704bd72b3b91b7e4bce47f608f490b386115e742bdc8e812d96b8014e"
+    },
+    "monster": {
+      "file": "assets/narration/word-fal-0362.mp3",
+      "duration": 1.097125,
+      "sha256": "539dc1f633400c54a511fb6f12618145490f2d516b17fc7d33522cf17ced1ee7"
+    },
+    "equal": {
+      "file": "assets/narration/word-fal-0363.mp3",
+      "duration": 0.9665,
+      "sha256": "876d5c4aff5de70ba863a0f015b26f011e4e00c684925e8d1b8a51a88a3afbd6"
+    },
+    "picture": {
+      "file": "assets/narration/word-fal-0364.mp3",
+      "duration": 1.01875,
+      "sha256": "7f2618c63e1adfcf718a18544a0f573c9151170aca12bd7f55ed3e944428c0f4"
+    },
+    "swing": {
+      "file": "assets/narration/word-fal-0365.mp3",
+      "duration": 1.01875,
+      "sha256": "cdd11d2b66822b14c1b9e9f2ec9eb5ff7e53ab6daf3547c3cdb45b92175df6e8"
+    },
+    "slide": {
+      "file": "assets/narration/word-fal-0366.mp3",
+      "duration": 1.071,
+      "sha256": "633691dd077b7557c4532c589b63a53c8e55554b9523235b43730a77d907cb06"
+    },
+    "somewhere": {
+      "file": "assets/narration/word-fal-0367.mp3",
+      "duration": 1.149375,
+      "sha256": "9ca60323d6d53e29a45194b00d61366396567ed7aa05c913ccf8276a4cb1f80b"
+    },
+    "giant": {
+      "file": "assets/narration/word-fal-0368.mp3",
+      "duration": 0.9665,
+      "sha256": "8d591384ec6a59c174a7a4c9ee9b271ebbbb803b9a9f8abec03eb5e89373a959"
+    },
+    "change": {
+      "file": "assets/narration/word-fal-0369.mp3",
+      "duration": 1.071,
+      "sha256": "8dba113700d6acc6fc7ed52c15c4c552049f9641597bbec26712b604cbb4ce0d"
+    },
+    "apple": {
+      "file": "assets/narration/word-fal-0370.mp3",
+      "duration": 0.9665,
+      "sha256": "d0b76531ba16640a75d3d3fc30f2bd509f49c1ca7bcc074d411f418ee8ab8cd0"
+    },
+    "football": {
+      "file": "assets/narration/word-fal-0371.mp3",
+      "duration": 1.071,
+      "sha256": "c9bfd813e9ae6cfecb4105ab34beff6cbd18b95463185fac6fc3e95281a2b4fd"
+    },
+    "swimming": {
+      "file": "assets/narration/word-fal-0372.mp3",
+      "duration": 0.9665,
+      "sha256": "2e2d213a33dfbefb1d17b6915f01e1865dd21f917be951a4e57573dd60ccd947"
+    },
+    "closed": {
+      "file": "assets/narration/word-fal-0373.mp3",
+      "duration": 1.097125,
+      "sha256": "cfe3b3ea1323537b37cf7238616e891200bcb1bcdd4d2fd307f514159964d019"
+    },
+    "anywhere": {
+      "file": "assets/narration/word-fal-0374.mp3",
+      "duration": 1.071,
+      "sha256": "0a501370194ab4ed6e334aba76cf95ff1126a0fedf56b4acc5a7e75f6cfac34c"
+    },
+    "air": {
+      "file": "assets/narration/word-fal-0375.mp3",
+      "duration": 0.783625,
+      "sha256": "a36dcdd0fc412d50ab2f011ffcac3189c519a2b2851e51e2c61b11fd10cdcd64"
+    },
+    "animal": {
+      "file": "assets/narration/word-fal-0376.mp3",
+      "duration": 0.9665,
+      "sha256": "f10f703788372b98d216990ff60baae660040ddd68dbff816fd49bdf080d2948"
+    },
+    "bicycle": {
+      "file": "assets/narration/word-fal-0377.mp3",
+      "duration": 1.201625,
+      "sha256": "acb6b6e696bad7a9aa82b4b9413e485ed915ad4b8e088e8f6f245abe118b1900"
+    },
+    "bike": {
+      "file": "assets/narration/word-fal-0378.mp3",
+      "duration": 0.9665,
+      "sha256": "c256904521310eef80678d734785dd45fda271eee006f9b05618cb30e5d126cf"
+    },
+    "smile": {
+      "file": "assets/narration/word-fal-0379.mp3",
+      "duration": 1.071,
+      "sha256": "ae4bc4364fe29d02d727d3cfa27dce3c6667754c834bd37f086b6ec459bd0369"
+    },
+    "everywhere": {
+      "file": "assets/narration/word-fal-0380.mp3",
+      "duration": 1.201625,
+      "sha256": "977a8b14d37eaff21c07fe1b0da8d86e8a86b8a120ddd0ecd78eaca722952811"
+    },
+    "fairy": {
+      "file": "assets/narration/word-fal-0381.mp3",
+      "duration": 0.9665,
+      "sha256": "a97e56bc33e3a3134ffb37b07bbc778aac8dc8634fcb0385ff5f2b936bda40cf"
+    },
+    "page": {
+      "file": "assets/narration/word-fal-0382.mp3",
+      "duration": 1.01875,
+      "sha256": "16a193b5f7ec772b34872cb120b14648e73f9b29c094422babbeac8d40a87a56"
+    },
+    "letter": {
+      "file": "assets/narration/word-fal-0383.mp3",
+      "duration": 0.91425,
+      "sha256": "c59cac3690cc48b23d100c833d5b4f09dbcafcf9515c6e7000cb670c1e1c0983"
+    },
+    "bus": {
+      "file": "assets/narration/word-fal-0384.mp3",
+      "duration": 0.91425,
+      "sha256": "736880c45a3b975c2100b18eaecee6985e757ef56961b03bd7c5ad6cc7c64335"
+    },
+    "train": {
+      "file": "assets/narration/word-fal-0385.mp3",
+      "duration": 0.91425,
+      "sha256": "6ca1c0fd200807ca7753ac6a2937687fa4059f68966c138aa5ba798768a833f1"
+    },
+    "cry": {
+      "file": "assets/narration/word-fal-0386.mp3",
+      "duration": 0.91425,
+      "sha256": "5e45b9dd568c4f1c5dbd7271d2bf39409426c496880294797a4045095dc3f8fe"
+    },
+    "lots": {
+      "file": "assets/narration/word-fal-0387.mp3",
+      "duration": 0.91425,
+      "sha256": "b83ce5b6f487bf73a011832c2e4211b8a80ca79051e9a674cc65166c2d489fc8"
+    },
+    "knight": {
+      "file": "assets/narration/word-fal-0388.mp3",
+      "duration": 0.862,
+      "sha256": "f4eace4f160424c923736ee7411474e7f779981ac2d77571301b8dea3c78a4c2"
+    },
+    "answer": {
+      "file": "assets/narration/word-fal-0389.mp3",
+      "duration": 0.862,
+      "sha256": "0e0cbb1cfaa73957ebf35e15befa3fd78e5e75d49a1bec089d8e49940bf3340c"
+    },
+    "learn": {
+      "file": "assets/narration/word-fal-0390.mp3",
+      "duration": 1.01875,
+      "sha256": "b5a5b951c99cd84a8714726cb774da0fa86cd161f3aa303d044ba73fbc07508b"
+    },
+    "truck": {
+      "file": "assets/narration/word-fal-0391.mp3",
+      "duration": 0.91425,
+      "sha256": "d7cbf650749f7665b47222639e406949e11aeb1057b8703a4143859deb247bb9"
+    },
+    "plane": {
+      "file": "assets/narration/word-fal-0392.mp3",
+      "duration": 0.9665,
+      "sha256": "3d53c6b4e19ba5521daab131e3ce686a8914e2ed1f772b7e75971a656c6d1705"
+    },
+    "shout": {
+      "file": "assets/narration/word-fal-0393.mp3",
+      "duration": 0.91425,
+      "sha256": "648cb5199f3a745e1b737c8648c3c4e9a3ba18563610f1fbc53b9562ca629da8"
+    },
+    "really": {
+      "file": "assets/narration/word-fal-0394.mp3",
+      "duration": 0.91425,
+      "sha256": "5dd6aad1f9e1f9c82d769eaf95491b9d4497edd74091c63e2a87ac51a7ec0d0d"
+    },
+    "prince": {
+      "file": "assets/narration/word-fal-0395.mp3",
+      "duration": 0.9665,
+      "sha256": "69d2077911c7319f96c707c795def946d89203aa458147eef76130a647a18220"
+    },
+    "world": {
+      "file": "assets/narration/word-fal-0396.mp3",
+      "duration": 0.9665,
+      "sha256": "9605319b4302fc96c005c3f176e8f33847d1eea9612a325670695fdaf4cffeea"
+    },
+    "high": {
+      "file": "assets/narration/word-fal-0397.mp3",
+      "duration": 0.9665,
+      "sha256": "a8b77293dee513e4c23fcb5d0c1d33bdcb6e1fc04c3214bc193b32cc7b74070e"
+    },
+    "driver": {
+      "file": "assets/narration/word-fal-0398.mp3",
+      "duration": 1.01875,
+      "sha256": "a3e2d97096e3cdd2ef75868e49e9be90e930504952daa6b5120c1db908a9acc2"
+    },
+    "station": {
+      "file": "assets/narration/word-fal-0399.mp3",
+      "duration": 1.149375,
+      "sha256": "f886c475d6d8fa5ed10290b9ff89ced2a4773ae6ff246dfce596348999639297"
+    },
+    "nearly": {
+      "file": "assets/narration/word-fal-0400.mp3",
+      "duration": 0.9665,
+      "sha256": "e6da71c3770dab3d191430b1468903aff1794ad0dedf99b138d555b07ba8d25d"
+    },
+    "princess": {
+      "file": "assets/narration/word-fal-0401.mp3",
+      "duration": 1.149375,
+      "sha256": "a43552d8b1d9857a5c2c31216d0effc390900355eb781fc20f9d44681497e231"
+    },
+    "near": {
+      "file": "assets/narration/word-fal-0402.mp3",
+      "duration": 0.835875,
+      "sha256": "b66c2f58f97bd8163650bbb6ed7fabae2fd6cb6a612765b36ea64b316d7e2615"
+    },
+    "plant": {
+      "file": "assets/narration/word-fal-0403.mp3",
+      "duration": 0.9665,
+      "sha256": "89c276830e0ee3520d7aae5e123a87009454a86fbbd1e17fb24416af50a2e1ed"
+    },
+    "ticket": {
+      "file": "assets/narration/word-fal-0404.mp3",
+      "duration": 0.9665,
+      "sha256": "c976aa07b897fdbbd1aeedf8781db99a9cf8d6cae7073be1954a8cd625829027"
+    },
+    "wheel": {
+      "file": "assets/narration/word-fal-0405.mp3",
+      "duration": 0.9665,
+      "sha256": "0ffe1c265f7c9d62818567853f00647732ecdb1751d3c1c317b660bf63acddb3"
+    },
+    "whispered": {
+      "file": "assets/narration/word-fal-0406.mp3",
+      "duration": 1.071,
+      "sha256": "230dd3533e3a7a7369016650d678885776575939ddcd831b23997452c9982b78"
+    },
+    "often": {
+      "file": "assets/narration/word-fal-0407.mp3",
+      "duration": 0.91425,
+      "sha256": "4ea6f3c469303378b34d2416d54e453bd86881bcaa21077efe8857e6990a4421"
+    },
+    "hero": {
+      "file": "assets/narration/word-fal-0408.mp3",
+      "duration": 1.01875,
+      "sha256": "a8936e3f390e9d5a7552de05f30c453494215bfbfc5a91897fceabe81f72c2bf"
+    },
+    "eye": {
+      "file": "assets/narration/word-fal-0409.mp3",
+      "duration": 0.731375,
+      "sha256": "0bf70f0ad453e1b9bdc7e9827f687c9a22fedc388255a2bb8682c27d00c88d43"
+    },
+    "engine": {
+      "file": "assets/narration/word-fal-0410.mp3",
+      "duration": 0.9665,
+      "sha256": "5eba820f1c3d1df04856802ec084f05100b82206f507aa0b4af2be197fec10db"
+    },
+    "hospital": {
+      "file": "assets/narration/word-fal-0411.mp3",
+      "duration": 1.28,
+      "sha256": "1f6907f8b29d8e2a02d0ab61093f11fb9fa8248d5ba4e3ce03efe047b14f8730"
+    },
+    "listening": {
+      "file": "assets/narration/word-fal-0412.mp3",
+      "duration": 1.097125,
+      "sha256": "ee617b43999fd1cfe9ec4e561b575d11d4c522434cfc60a8aa5108660d826966"
+    },
+    "usually": {
+      "file": "assets/narration/word-fal-0413.mp3",
+      "duration": 1.097125,
+      "sha256": "6439d1b681f0a1516853ad75893ae8f027e45a75184f62a0ad134eaae52f34ae"
+    },
+    "crown": {
+      "file": "assets/narration/word-fal-0414.mp3",
+      "duration": 1.01875,
+      "sha256": "f82cef920c53951c119142f3e52b11a5e7f5aac9d4c59fd55a869ee2580a7f43"
+    },
+    "thought": {
+      "file": "assets/narration/word-fal-0415.mp3",
+      "duration": 0.862,
+      "sha256": "dbfc6012ab06bbedfb3c1e0d09eab80027194303d327eec48f1eaf8a2ab6813e"
+    },
+    "head": {
+      "file": "assets/narration/word-fal-0416.mp3",
+      "duration": 0.862,
+      "sha256": "0b8d81daada6b3dcdc12d274199f114ce436c51c7af5d7d63fa6cec3451cc475"
+    },
+    "doctor": {
+      "file": "assets/narration/word-fal-0417.mp3",
+      "duration": 0.9665,
+      "sha256": "c6485a3ee4d0691c92b9178184f47080db8c36271249fa4761ffce65efe2b977"
+    },
+    "nurse": {
+      "file": "assets/narration/word-fal-0418.mp3",
+      "duration": 0.9665,
+      "sha256": "8be404b0611c85488e633599a2828cbf2b5d3f922ba180f97167200e9c7093ae"
+    },
+    "wanted": {
+      "file": "assets/narration/word-fal-0419.mp3",
+      "duration": 0.9665,
+      "sha256": "1ab2747262ff89e53a2514f43cb7404506ead7f65ec6bb587917278f45127fcd"
+    },
+    "finally": {
+      "file": "assets/narration/word-fal-0420.mp3",
+      "duration": 1.071,
+      "sha256": "abf39e053b9eb31d27c4527fabfa02f64b2fe3ee7936bf35e58c7f945c900c1c"
+    },
+    "wild": {
+      "file": "assets/narration/word-fal-0421.mp3",
+      "duration": 1.01875,
+      "sha256": "1bf762557d2d3989c8734db6815d15446ed3bcffaaddc9b6e5678ca576eb16e8"
+    },
+    "story": {
+      "file": "assets/narration/word-fal-0422.mp3",
+      "duration": 1.071,
+      "sha256": "372482ce1bb1da5ef9129ca81665576b5710040d1062bc263bf76c9955d7b2f3"
+    },
+    "money": {
+      "file": "assets/narration/word-fal-0423.mp3",
+      "duration": 0.862,
+      "sha256": "696ea68b70a257814bc66f070bbec2f72349a6cadc56729181655881a0f8e8f9"
+    },
+    "played": {
+      "file": "assets/narration/word-fal-0424.mp3",
+      "duration": 1.01875,
+      "sha256": "309fe2e9bc861fca31a1ea53d43bafe2366ed8675039b6aed3b118178d579fb7"
+    },
+    "later": {
+      "file": "assets/narration/word-fal-0425.mp3",
+      "duration": 0.9665,
+      "sha256": "a5adb5b52c73aced7fcc2dec525125a049ac1ed8383bead16fbe8ce57a60a055"
+    },
+    "adventure": {
+      "file": "assets/narration/word-fal-0426.mp3",
+      "duration": 1.253875,
+      "sha256": "4c3d73e1ee1a229672ba2f44965a887c01e03adbd5a293b512c3176ec590d9bf"
+    },
+    "next": {
+      "file": "assets/narration/word-fal-0427.mp3",
+      "duration": 0.9665,
+      "sha256": "9449e744d353d1f56f2a3f42245829073a61e9d98cb281b5408d04fdf17b2830"
+    },
+    "hard": {
+      "file": "assets/narration/word-fal-0428.mp3",
+      "duration": 0.9665,
+      "sha256": "eb557dfb131e4ede41dd8d686a9a88e1afba61e4da51950be0bcaaa5349c50da"
+    },
+    "price": {
+      "file": "assets/narration/word-fal-0429.mp3",
+      "duration": 1.071,
+      "sha256": "b9c484ded766c171b7f5f71092a72f7d58fde72c56b03c5c091583cd8db8421f"
+    },
+    "pay": {
+      "file": "assets/narration/word-fal-0430.mp3",
+      "duration": 0.835875,
+      "sha256": "360438dba909ef89ef439dc4262fea801c7a22e73303b7be91cd1035210b034d"
+    },
+    "playing": {
+      "file": "assets/narration/word-fal-0431.mp3",
+      "duration": 1.097125,
+      "sha256": "567e5da75d7482c3f9c93cfd6a045b44e1ffda99d21d2984f8175f1e09f10b24"
+    },
+    "yesterday": {
+      "file": "assets/narration/word-fal-0432.mp3",
+      "duration": 1.201625,
+      "sha256": "0c2f178904452ee18e6ec3ef3ea845d98e670d18bd333446ce4c72f596a735f4"
+    },
+    "begin": {
+      "file": "assets/narration/word-fal-0433.mp3",
+      "duration": 1.071,
+      "sha256": "2ad6d9e11043be3efc8a32979b1e6c303a7d75a0a22ad99d3de7fd2c0f535256"
+    },
+    "life": {
+      "file": "assets/narration/word-fal-0434.mp3",
+      "duration": 0.91425,
+      "sha256": "e78fc95a1487dfe45e55108f1d5b490d1120ea2b7c147a32694d755d2475d281"
+    },
+    "bought": {
+      "file": "assets/narration/word-fal-0435.mp3",
+      "duration": 0.9665,
+      "sha256": "fd44341de8c3c32e700a61f8fa791473eda0c37828bb571c4adb179d9d738d36"
+    },
+    "sell": {
+      "file": "assets/narration/word-fal-0436.mp3",
+      "duration": 0.862,
+      "sha256": "c27c387b0bf5f827378c9c74e739486d4791d61a8f9e61e0eb05a5baed2ab341"
+    },
+    "finish": {
+      "file": "assets/narration/word-fal-0437.mp3",
+      "duration": 0.91425,
+      "sha256": "5b25a2526763c75b3842eb3af02d02f249da41739cc3f13c6217c4be70169fb9"
+    },
+    "tomorrow": {
+      "file": "assets/narration/word-fal-0438.mp3",
+      "duration": 1.149375,
+      "sha256": "e5c6f1baf0f5e36c480ccdf4e5bdd330e3d8d57e44b749495471c034bb795b72"
+    },
+    "problem": {
+      "file": "assets/narration/word-fal-0439.mp3",
+      "duration": 1.071,
+      "sha256": "c92f7fdf50bd54f440e57a14fe347447c131493a354e1ee57705e3fa656abd74"
+    },
+    "paper": {
+      "file": "assets/narration/word-fal-0440.mp3",
+      "duration": 0.91425,
+      "sha256": "5d4fee58a6c347c6ff558fb06797ce292078fb79dc582ed0308ebaafdc9261c1"
+    },
+    "dress": {
+      "file": "assets/narration/word-fal-0441.mp3",
+      "duration": 0.9665,
+      "sha256": "91785f02df5d2b963dbd1b2ab4f63d60301a90b3b571908a642754a6dabf3656"
+    },
+    "farmer": {
+      "file": "assets/narration/word-fal-0442.mp3",
+      "duration": 0.9665,
+      "sha256": "a359f26774823f77238786eaac0c2476762de75cb23ceb1b5442cbc614715f31"
+    },
+    "tried": {
+      "file": "assets/narration/word-fal-0443.mp3",
+      "duration": 1.071,
+      "sha256": "1a1042cbfd3093c39baf1581513fce4b23150f703d6320e8ebfcfe19509720f3"
+    },
+    "tonight": {
+      "file": "assets/narration/word-fal-0444.mp3",
+      "duration": 1.097125,
+      "sha256": "269f1f092cfc8998d98c5683c1c189ded1e227a51f3ce9cbdfc951cb04b86ace"
+    },
+    "plan": {
+      "file": "assets/narration/word-fal-0445.mp3",
+      "duration": 1.01875,
+      "sha256": "7124d1bcb30d02f13090cbf5874d4d197e0881d13d77e1dd667a3bbc2d13f936"
+    },
+    "children": {
+      "file": "assets/narration/word-fal-0446.mp3",
+      "duration": 1.071,
+      "sha256": "d0976f6c3c3ca9ad73ee73038c4a9a1c6901facf32de284312c4c7f182494ffb"
+    },
+    "side": {
+      "file": "assets/narration/word-fal-0447.mp3",
+      "duration": 0.9665,
+      "sha256": "47454d7fa8f14a7556d93d8941bfaed6f2f71b3936c6971f13191d0d53c83b85"
+    },
+    "duck": {
+      "file": "assets/narration/word-fal-0448.mp3",
+      "duration": 0.835875,
+      "sha256": "9cb86a7f3d073a95bd69fcfd33b0023064a8e13e6c3e07ea53a1f4b0eb082a66"
+    },
+    "bake": {
+      "file": "assets/narration/word-fal-0449.mp3",
+      "duration": 0.862,
+      "sha256": "284dc304059e504b56824d1ff2d299b84575f56aa382c08a38ec5e03cbc4d742"
+    },
+    "midnight": {
+      "file": "assets/narration/word-fal-0450.mp3",
+      "duration": 1.097125,
+      "sha256": "e7e236f5f348d10c4fed245acdaa546451974c98e625322490a9eeaaa7485203"
+    },
+    "idea": {
+      "file": "assets/narration/word-fal-0451.mp3",
+      "duration": 0.9665,
+      "sha256": "62b01203448a6a4cb3aac1224c5e9de7ec9dc7c4ccf628eca4856449cce64216"
+    },
+    "began": {
+      "file": "assets/narration/word-fal-0452.mp3",
+      "duration": 1.071,
+      "sha256": "5208d221b0adc26317c4828c2ccb3cd577d525729dd86ff5a2af821e132b0c0a"
+    },
+    "cow": {
+      "file": "assets/narration/word-fal-0453.mp3",
+      "duration": 0.862,
+      "sha256": "4d9221758ba85c50e9a0b45edfb5886dd616372ebea30654594a1798fa54bc85"
+    },
+    "goat": {
+      "file": "assets/narration/word-fal-0454.mp3",
+      "duration": 0.835875,
+      "sha256": "29a82f141a07b25a6a5863b951d6ab7ee15369cfa5389a0d11c56a5a670e06a2"
+    },
+    "drew": {
+      "file": "assets/narration/word-fal-0455.mp3",
+      "duration": 0.91425,
+      "sha256": "3fdb8a7eace673040d383b5813e50dc00baeb8a5ed72ddbb4112fe1d6b2b5edf"
+    },
+    "weekend": {
+      "file": "assets/narration/word-fal-0456.mp3",
+      "duration": 1.253875,
+      "sha256": "af194ceed961c0c4ab30d499a13f5604f3c8f58a99750b8cc3e8529891d61568"
+    },
+    "clue": {
+      "file": "assets/narration/word-fal-0457.mp3",
+      "duration": 0.9665,
+      "sha256": "b82e067686da40903c4319b9ede1118a13633e0262ce4128dd6bf1ded229eb1f"
+    },
+    "foot": {
+      "file": "assets/narration/word-fal-0458.mp3",
+      "duration": 0.862,
+      "sha256": "f688aad9a3c2027f423fbfe065158e8296f9cc4cecd7d87553a0970794309a0b"
+    },
+    "pony": {
+      "file": "assets/narration/word-fal-0459.mp3",
+      "duration": 1.01875,
+      "sha256": "048995e5d3be8e130ca9d9fa10e5cae64c1b879e4a9efacdf9e580e6906a8e55"
+    },
+    "mouse": {
+      "file": "assets/narration/word-fal-0460.mp3",
+      "duration": 1.01875,
+      "sha256": "8eb882c1475bd398a01c1834b990bd87d52826df8e6aff95ea9d5fdc45b953b0"
+    },
+    "writing": {
+      "file": "assets/narration/word-fal-0461.mp3",
+      "duration": 1.097125,
+      "sha256": "eaf4a7b20bd0fbe834ece70e2768605e9e73a3f631974237dca900a47a21452a"
+    },
+    "secret": {
+      "file": "assets/narration/word-fal-0462.mp3",
+      "duration": 0.9665,
+      "sha256": "1c4c76aacf8fd3812dfb733834bb96d7abdf9dda5a682d657d9f7ce5ecc809c6"
+    },
+    "late": {
+      "file": "assets/narration/word-fal-0463.mp3",
+      "duration": 0.862,
+      "sha256": "84603318d465d78666d6e4f5aa581325878143601200e1a7ff86409067d56032"
+    },
+    "face": {
+      "file": "assets/narration/word-fal-0464.mp3",
+      "duration": 0.9665,
+      "sha256": "92a7c3d526bed5631a28e2616dc8a69ac91c943e2236e9a17f165c0d959413a7"
+    },
+    "mice": {
+      "file": "assets/narration/word-fal-0465.mp3",
+      "duration": 0.91425,
+      "sha256": "34120bb51668f8b15bdc8b2ce8bf8366d77f9e0d01451759950409574a8f35ca"
+    },
+    "kitten": {
+      "file": "assets/narration/word-fal-0466.mp3",
+      "duration": 0.9665,
+      "sha256": "329bd33120b245ce42f5a2cbe71fb83e55514994766cfd08da647393ac07ab4d"
+    },
+    "reading": {
+      "file": "assets/narration/word-fal-0467.mp3",
+      "duration": 0.9665,
+      "sha256": "1b89034d9d575529c46d6de5e7af7bd08da82ea2f7d367c00ecf3f127dad2b8b"
+    },
+    "season": {
+      "file": "assets/narration/word-fal-0468.mp3",
+      "duration": 0.9665,
+      "sha256": "08afe3e54044ea6b31edfd4e9eebc882fbf6460ac1111d4035090671189c484a"
+    },
+    "mistake": {
+      "file": "assets/narration/word-fal-0469.mp3",
+      "duration": 1.097125,
+      "sha256": "4520da1f0f1a21bd01b559f64134eda90bf56f512dade0260f0510f6e982a9b9"
+    },
+    "bed": {
+      "file": "assets/narration/word-fal-0470.mp3",
+      "duration": 0.862,
+      "sha256": "08df44f61dad7b919e78350c63330c02f57a8683368a18ab863c38610692d444"
+    },
+    "young": {
+      "file": "assets/narration/word-fal-0471.mp3",
+      "duration": 1.01875,
+      "sha256": "503f51337d23b3d730cb2a7bdbfdd54d9b017168269a47a0739739a0602d29e2"
+    },
+    "puppy": {
+      "file": "assets/narration/word-fal-0472.mp3",
+      "duration": 0.9665,
+      "sha256": "8c43d506167e14adfa9807aeb24521d62d61e73ac5057fd52cd126b1cdfa42f7"
+    },
+    "pet": {
+      "file": "assets/narration/word-fal-0473.mp3",
+      "duration": 0.91425,
+      "sha256": "adf7ab90debca9848e4ed2bdf920deb86d77ee569cb1747bcbc25cf4f31d762f"
+    },
+    "build": {
+      "file": "assets/narration/word-fal-0474.mp3",
+      "duration": 0.9665,
+      "sha256": "288b0e3fc002c278965270aae53aac4c27a115679931933483cbe80595e19f7c"
+    },
+    "summer": {
+      "file": "assets/narration/word-fal-0475.mp3",
+      "duration": 0.91425,
+      "sha256": "ff3938fa05c0981a3ab43a1c98c918094b517e2282277463ea4a3ad5bae23882"
+    },
+    "trouble": {
+      "file": "assets/narration/word-fal-0476.mp3",
+      "duration": 1.01875,
+      "sha256": "a2e615726e28783e46ca6e424f3862fb0a351287c466f27372ed15550233dfc7"
+    },
+    "elephant": {
+      "file": "assets/narration/word-fal-0477.mp3",
+      "duration": 1.071,
+      "sha256": "02da14e650045fc44f0c070a17ab2e2bfb47dd15631ff341c6f1d58727c2c48d"
+    },
+    "monkey": {
+      "file": "assets/narration/word-fal-0478.mp3",
+      "duration": 1.01875,
+      "sha256": "5257a65d23512f5d6653651fcc1ae16b396383a168e0a8b7ded5acf6c64c667b"
+    },
+    "break": {
+      "file": "assets/narration/word-fal-0479.mp3",
+      "duration": 0.91425,
+      "sha256": "c3ecb7038c910d57be54bbb1a6c095e23e505886de492819fcdb024cded08c73"
+    },
+    "autumn": {
+      "file": "assets/narration/word-fal-0480.mp3",
+      "duration": 0.91425,
+      "sha256": "e09fee121af751baf7efa2a585358d23595897fafdf927fbf4134b9bdbcb2f01"
+    },
+    "trap": {
+      "file": "assets/narration/word-fal-0481.mp3",
+      "duration": 0.91425,
+      "sha256": "4658afc5a988816a75586ab3368c8adf2780263b5cbad273d46ffe03561d8b9f"
+    },
+    "leave": {
+      "file": "assets/narration/word-fal-0482.mp3",
+      "duration": 0.9665,
+      "sha256": "b81ef1d0449099496c107fcd71de5ae3ca287f25f1d3868a19ec788997603918"
+    },
+    "mouth": {
+      "file": "assets/narration/word-fal-0483.mp3",
+      "duration": 0.91425,
+      "sha256": "7fd452d594a09fca1d609eb2286045572194085edb908c8e209c1bf7a33742a4"
+    },
+    "tiger": {
+      "file": "assets/narration/word-fal-0484.mp3",
+      "duration": 1.01875,
+      "sha256": "aab17a09ee303ec15fbbdd2ec0ca0851c2d590327121c08dccb21e22a8d65d94"
+    },
+    "broke": {
+      "file": "assets/narration/word-fal-0485.mp3",
+      "duration": 1.01875,
+      "sha256": "8f2d45c7c4e5000b169a5443fb06e52fb996f7b9826fe91f2c2bdafa1b35d6dd"
+    },
+    "Monday": {
+      "file": "assets/narration/word-fal-0486.mp3",
+      "duration": 0.9665,
+      "sha256": "88a7b5b8416d53c75e9f4281de723d5617886d983e7106d2189da3e9ec386d06"
+    },
+    "trick": {
+      "file": "assets/narration/word-fal-0487.mp3",
+      "duration": 0.862,
+      "sha256": "40644568842c1c0cf2cb22271e577b89b2cc79887ca8c7893a49a197d13d1dcb"
+    },
+    "family": {
+      "file": "assets/narration/word-fal-0488.mp3",
+      "duration": 1.01875,
+      "sha256": "f2eb994a89bffec99623e79485adff9c6f62730ee2813c7c8ddddad79972abb3"
+    },
+    "afternoon": {
+      "file": "assets/narration/word-fal-0489.mp3",
+      "duration": 1.149375,
+      "sha256": "ed2553c3c7658071db078bbcffcc6ef4504a79553d0620fffb374b86b68d050f"
+    },
+    "spider": {
+      "file": "assets/narration/word-fal-0490.mp3",
+      "duration": 1.01875,
+      "sha256": "a07dd8f9238934280e9a2b89c7358eaf675dfd5c0db7cd52533522975a873d11"
+    },
+    "ant": {
+      "file": "assets/narration/word-fal-0491.mp3",
+      "duration": 0.783625,
+      "sha256": "25f6fcd3935f451ed7d0196cf3098337283eeb65d329cd2ea8d86b88cddf6797"
+    },
+    "fallen": {
+      "file": "assets/narration/word-fal-0492.mp3",
+      "duration": 0.9665,
+      "sha256": "1fcb8b904bbf0c4441a6249dbba19535cd5b40c649998636e5b5c51c386fbc2a"
+    },
+    "Tuesday": {
+      "file": "assets/narration/word-fal-0493.mp3",
+      "duration": 1.149375,
+      "sha256": "f929138a8ad217b4d48ebdca5aa3c17ccacc323607b73c6bfc33ca9f30070636"
+    },
+    "escape": {
+      "file": "assets/narration/word-fal-0494.mp3",
+      "duration": 1.097125,
+      "sha256": "2342bb37b7645cfae228c17aad03e04a450f6377c6b3c00a2c474711c0e56b9f"
+    },
+    "body": {
+      "file": "assets/narration/word-fal-0495.mp3",
+      "duration": 0.91425,
+      "sha256": "7f5e808876070a8367eec023f97e7f623435ab0862586db21a032c7a4775c4a9"
+    },
+    "stand": {
+      "file": "assets/narration/word-fal-0496.mp3",
+      "duration": 1.071,
+      "sha256": "7dee29c2bf103e0040b2bbc6b1ad87d7a0827ae837390804734d393683fcaa03"
+    },
+    "butterfly": {
+      "file": "assets/narration/word-fal-0497.mp3",
+      "duration": 1.201625,
+      "sha256": "b947bcb0b255c9614ff32b4d0bbaa19e975f721d8ad3e235b01e6a9148c2be29"
+    },
+    "flew": {
+      "file": "assets/narration/word-fal-0498.mp3",
+      "duration": 0.9665,
+      "sha256": "709860f4a50c72e2f012512bc56ccb40030c9a5dd1a3ede281bff5ee9706f0f3"
+    },
+    "Wednesday": {
+      "file": "assets/narration/word-fal-0499.mp3",
+      "duration": 1.201625,
+      "sha256": "cfa73d27b5167d28cec8b03d70df12cba16da18a6108ccd9a92bce21f50c0361"
+    },
+    "enemy": {
+      "file": "assets/narration/word-fal-0500.mp3",
+      "duration": 0.91425,
+      "sha256": "7d4951ce89b4db23d7f093cebd096e53575222318fba16e30d1fe99570d86b34"
+    },
+    "stick": {
+      "file": "assets/narration/word-fal-0501.mp3",
+      "duration": 0.862,
+      "sha256": "ecc01c3f1634a438fccbfd5b51efaf0e58d999fc6bdc1e18f6751f999e24c2bf"
+    },
+    "snail": {
+      "file": "assets/narration/word-fal-0502.mp3",
+      "duration": 1.071,
+      "sha256": "c8e070faca12848e626aa92b83a130521b9abcafa60fa23781b387b535a05802"
+    },
+    "flying": {
+      "file": "assets/narration/word-fal-0503.mp3",
+      "duration": 1.097125,
+      "sha256": "3f0ec5ffcac25090510bd13a3e2c55334f816024e7788af689a206872145a762"
+    },
+    "Thursday": {
+      "file": "assets/narration/word-fal-0504.mp3",
+      "duration": 1.097125,
+      "sha256": "dd445882bfff0e242ff9a0d843bc5af573ffdff96748f80c9b6c4753c4fa93a7"
+    },
+    "group": {
+      "file": "assets/narration/word-fal-0505.mp3",
+      "duration": 0.91425,
+      "sha256": "db01150a0ae4029523fdd76b763272d4a7fe9e7abb3391f20711b4efc6b95137"
+    },
+    "ever": {
+      "file": "assets/narration/word-fal-0506.mp3",
+      "duration": 0.783625,
+      "sha256": "0a3fb097e5f97b6860d805bc3a5c6ccac93dc320e6086b67bd26314e112dfebc"
+    },
+    "piece": {
+      "file": "assets/narration/word-fal-0507.mp3",
+      "duration": 0.9665,
+      "sha256": "61f6b04811ed6eef81c81e1561948723763fdb935c653fdb89382a253cc3c897"
+    },
+    "squirrel": {
+      "file": "assets/narration/word-fal-0508.mp3",
+      "duration": 1.071,
+      "sha256": "1b0516e8f68f1fe84187061274e51fa4263d571a4d09b71529c8fa8864c21f3e"
+    },
+    "nest": {
+      "file": "assets/narration/word-fal-0509.mp3",
+      "duration": 0.9665,
+      "sha256": "0bcdc78c79580e208cd4e9d8b79d35ac40de4c1d3ed16d58f8d4bb0e5cbec2f3"
+    },
+    "swam": {
+      "file": "assets/narration/word-fal-0510.mp3",
+      "duration": 1.01875,
+      "sha256": "956bf6c399dd5383c4bb5c482b67fa2ca762d50260a52a7c7380fff7b1567a84"
+    },
+    "Friday": {
+      "file": "assets/narration/word-fal-0511.mp3",
+      "duration": 1.071,
+      "sha256": "26fe3de59017937586e06929c77381288d96785eec46ad577ddccff052821e57"
+    },
+    "women": {
+      "file": "assets/narration/word-fal-0512.mp3",
+      "duration": 0.91425,
+      "sha256": "b27a5c320d5179ea4ae1fe0ab16eb83c9eeea2bb6ec2cd0f4b76de16fcb9fce2"
+    },
+    "easy": {
+      "file": "assets/narration/word-fal-0513.mp3",
+      "duration": 0.862,
+      "sha256": "73aa2f862924e52787a5334b3bbaaf51c460ee5d16a00c0eabbf28830b1aeccb"
+    },
+    "chick": {
+      "file": "assets/narration/word-fal-0514.mp3",
+      "duration": 0.835875,
+      "sha256": "db6522bd072622da6984e8c0f6702e2d694b72f073b76fd9a8d8a0e8401d454c"
+    },
+    "lamb": {
+      "file": "assets/narration/word-fal-0515.mp3",
+      "duration": 0.9665,
+      "sha256": "ddfef357a37a2bf83d7264d2c15e58e0ad95cb8f61d18202f0522c04f8c9d8e1"
+    },
+    "rode": {
+      "file": "assets/narration/word-fal-0516.mp3",
+      "duration": 1.071,
+      "sha256": "9ba2a55eb27882ee8980b2df0c7bd395c9396345281151575043423eb1da48a4"
+    },
+    "Saturday": {
+      "file": "assets/narration/word-fal-0517.mp3",
+      "duration": 1.097125,
+      "sha256": "c2592d5ae32b96f40ad84fdb1fdd9dd973e6f978cba9a6b7e2707ac9d34e2b31"
+    },
+    "heard": {
+      "file": "assets/narration/word-fal-0518.mp3",
+      "duration": 0.91425,
+      "sha256": "1d2ac789b5e61d24bd39c854dac8a10a39ee4018f0b0a119f9e077f55311bb83"
+    },
+    "caught": {
+      "file": "assets/narration/word-fal-0519.mp3",
+      "duration": 0.862,
+      "sha256": "e1ac9858bd9b6a495e41e1dffb6562651bbbfb893f59b6f31ea9a73950513e3e"
+    },
+    "cub": {
+      "file": "assets/narration/word-fal-0520.mp3",
+      "duration": 0.862,
+      "sha256": "6fedbbbab7ca0f753655cadb837ba9088f584f2f39f6b862abbd67b4eda31741"
+    },
+    "drive": {
+      "file": "assets/narration/word-fal-0521.mp3",
+      "duration": 1.071,
+      "sha256": "a1de7c0a4572156e4b4439e3d15b0a65eefa80ad2bc8829010c6179d62ce0430"
+    },
+    "Sunday": {
+      "file": "assets/narration/word-fal-0522.mp3",
+      "duration": 1.071,
+      "sha256": "9ca4f6a3de2885fe78153063b7d1c86356510505382721b7a17dea076e04d91e"
+    },
+    "sentence": {
+      "file": "assets/narration/word-fal-0523.mp3",
+      "duration": 1.097125,
+      "sha256": "51d4f7c0ea59576134cfa4098c140f48c2f05e6b3a96dafe61b3a3c3fe0d9a80"
+    },
+    "sure": {
+      "file": "assets/narration/word-fal-0524.mp3",
+      "duration": 0.862,
+      "sha256": "e2d95dde83335ce7624b1d9f6fb1ef793e13f664b9c2f3b154d9ec77303233d1"
+    },
+    "drove": {
+      "file": "assets/narration/word-fal-0525.mp3",
+      "duration": 1.01875,
+      "sha256": "1dc9877cf8f116e4a2856da48a8dbb039903c306d3ab6ff991f51b2976896a00"
+    },
+    "cover": {
+      "file": "assets/narration/word-fal-0526.mp3",
+      "duration": 0.835875,
+      "sha256": "6705cc19533e9286956392cb49ff8f6a69d9fbec780364b9aeb27b828d8c27e5"
+    },
+    "throw": {
+      "file": "assets/narration/word-fal-0527.mp3",
+      "duration": 0.91425,
+      "sha256": "05db4c02b511c880f5b122e8c2270acfb75de5de9ca5c974ade3c3a8b768b25b"
+    },
+    "title": {
+      "file": "assets/narration/word-fal-0528.mp3",
+      "duration": 1.01875,
+      "sha256": "3524256b0b92c585bc1c9846e71897eaadac46d3f00329209c835854bf92e22a"
+    },
+    "short": {
+      "file": "assets/narration/word-fal-0529.mp3",
+      "duration": 0.9665,
+      "sha256": "a276b859fab339ae6c79685d90e255356d869eebec29bd66cf83d5a27d369303"
+    },
+    "fight": {
+      "file": "assets/narration/word-fal-0530.mp3",
+      "duration": 0.862,
+      "sha256": "bcf12395426ee72b85284a56b848cf2d4f3bd2616c2c291954ab5834280ab54a"
+    },
+    "threw": {
+      "file": "assets/narration/word-fal-0531.mp3",
+      "duration": 0.862,
+      "sha256": "1de96816006851036b809854871ade288f473be1d9a7cb847bdfcae127d58484"
+    },
+    "music": {
+      "file": "assets/narration/word-fal-0532.mp3",
+      "duration": 0.9665,
+      "sha256": "26a994ce8597b3d78518c549ded38205408322652ef139e24207f9ff22878742"
+    },
+    "remember": {
+      "file": "assets/narration/word-fal-0533.mp3",
+      "duration": 1.097125,
+      "sha256": "c80201dd4cafda863d739697eef0189b2ddb08283915e77054a752f9073aa4ac"
+    },
+    "kick": {
+      "file": "assets/narration/word-fal-0534.mp3",
+      "duration": 0.862,
+      "sha256": "b26d2a474476415c75dfc50a06f8d5ead180efb7b65c00201c10aff9c4a8c544"
+    },
+    "question": {
+      "file": "assets/narration/word-fal-0535.mp3",
+      "duration": 1.071,
+      "sha256": "1bcf93cb50ce10b4319c5e61d67d4e1cd6dfec61e5ac489477fd7382d2f252b7"
+    },
+    "early": {
+      "file": "assets/narration/word-fal-0536.mp3",
+      "duration": 0.862,
+      "sha256": "66ce2520cd97596112c0f35f3e11e9b8336240e34c5dcab67892147d71a1783d"
+    },
+    "listen": {
+      "file": "assets/narration/word-fal-0537.mp3",
+      "duration": 0.9665,
+      "sha256": "72f70f40965d52b54db76fc3dd856fee3e4d3a455c71deb5cc710d00fd7bd4eb"
+    },
+    "follow": {
+      "file": "assets/narration/word-fal-0538.mp3",
+      "duration": 1.071,
+      "sha256": "bd9c285a9642bf989537327d7f95d2e1e6da6241ae40017d78164b65f7427713"
+    },
+    "meaning": {
+      "file": "assets/narration/word-fal-0539.mp3",
+      "duration": 0.9665,
+      "sha256": "75db21fdd0f9980f569454bfbe2c6788228046ae4e1bf483161e5b7e0dffa839"
+    },
+    "himself": {
+      "file": "assets/narration/word-fal-0540.mp3",
+      "duration": 1.201625,
+      "sha256": "61e064e62928a8bf1d05d3c0ad8d6ca875fa9c7c23bcdeed37fc14ee6564df6c"
+    },
+    "followed": {
+      "file": "assets/narration/word-fal-0541.mp3",
+      "duration": 1.071,
+      "sha256": "a66d7b65e5a95fabbfd16a3aaf599fd490beda07bb1d8febd586769292084321"
+    },
+    "beginning": {
+      "file": "assets/narration/word-fal-0542.mp3",
+      "duration": 1.149375,
+      "sha256": "0cab4c250719a054efd69d3ac07287d3a45bfe7a8cf5f6cd8ba1583c58e8d4f6"
+    },
+    "cook": {
+      "file": "assets/narration/word-fal-0543.mp3",
+      "duration": 0.91425,
+      "sha256": "0e96758796857bc5fd5f71b8d15290fa133c2464dac83ebc6e779e920e78dff9"
+    },
+    "ending": {
+      "file": "assets/narration/word-fal-0544.mp3",
+      "duration": 0.91425,
+      "sha256": "5171ab78f1b288ca46f64aa03e45f98eb4ec986d0718abed108216793292aaed"
+    },
+    "true": {
+      "file": "assets/narration/word-fal-0545.mp3",
+      "duration": 0.9665,
+      "sha256": "cde5233c9ab962b706c94dd2ac91cb3dc446cd6c6ec19218f07fd8372e8327e5"
+    },
+    "grass": {
+      "file": "assets/narration/word-fal-0546.mp3",
+      "duration": 1.097125,
+      "sha256": "96aeca1837e6ff49124c4f8b2461b9c0a5dc9da68eb01315c8f91491818086a1"
+    },
+    "led": {
+      "file": "assets/narration/word-fal-0547.mp3",
+      "duration": 0.91425,
+      "sha256": "de50b8a7564b1f05e771fb57c160ad2072e2150fb11fbf51a39f38cd28662c1c"
+    },
+    "chapter": {
+      "file": "assets/narration/word-fal-0548.mp3",
+      "duration": 0.9665,
+      "sha256": "32f8992ac30ce9d13ffd330c7152ced18f9775e8676edcffbe66d5762b39608e"
+    },
+    "slowly": {
+      "file": "assets/narration/word-fal-0549.mp3",
+      "duration": 1.01875,
+      "sha256": "5b60e124d1dcd73c4cb658559adf2296c031a9c2d7eb6b675033c51bc57eea18"
+    },
+    "pulled": {
+      "file": "assets/narration/word-fal-0550.mp3",
+      "duration": 0.9665,
+      "sha256": "8fc72955fae03dbc21c33e73c603bd1502fb777a50288363a749a139db21a7c6"
+    },
+    "voice": {
+      "file": "assets/narration/word-fal-0551.mp3",
+      "duration": 0.91425,
+      "sha256": "015f28f4d9595842081de90450b34b25ec7c3931ed2e88d34c6f5f62668d364b"
+    },
+    "seen": {
+      "file": "assets/narration/word-fal-0552.mp3",
+      "duration": 0.91425,
+      "sha256": "b805194421d09703968d2956331c5f62e1d39823c392c8b3e811db006fb20e6c"
+    },
+    "win": {
+      "file": "assets/narration/word-fal-0553.mp3",
+      "duration": 0.835875,
+      "sha256": "e94b1fd8bfd487711aedf349f79797da2ab56b1164de8bbc4b807e7f4a1627fe"
+    },
+    "false": {
+      "file": "assets/narration/word-fal-0554.mp3",
+      "duration": 0.9665,
+      "sha256": "62862854024dea67fae74cc2a7a6bf1665d51a6e75e287af69b55435572a00a9"
+    },
+    "lost": {
+      "file": "assets/narration/word-fal-0555.mp3",
+      "duration": 0.9665,
+      "sha256": "b320a71b1e3d2176ae5e94f0f48f2eab98e0bd5bf9bca335808ebbaee90f11c3"
+    },
+    "cried": {
+      "file": "assets/narration/word-fal-0556.mp3",
+      "duration": 0.91425,
+      "sha256": "b5c2f64bca48b57409100164ef46dd8c6fac70cbcb51dbeef708816be7fd6f76"
+    },
+    "won": {
+      "file": "assets/narration/word-fal-0557.mp3",
+      "duration": 0.862,
+      "sha256": "822eec19781a28c930973aeea0b8316e10a2e62c7a7ee818b8251f6b4ef7129a"
+    },
+    "wait": {
+      "file": "assets/narration/word-fal-0558.mp3",
+      "duration": 0.783625,
+      "sha256": "15b971bb5a21426cdf5770cbff380ac703ba710fb0f8b8b3d12d6b1c079c7e74"
+    },
+    "quickly": {
+      "file": "assets/narration/word-fal-0559.mp3",
+      "duration": 1.01875,
+      "sha256": "28669998c232cfb361de5275d065dd743a38af2edb84fdb28b10a2f207c4ef68"
+    },
+    "pretend": {
+      "file": "assets/narration/word-fal-0560.mp3",
+      "duration": 1.149375,
+      "sha256": "fd2da18c53bcefb26f4ad8b0f4f0dad19051abae613790e751f04c0cde77cf06"
+    },
+    "person": {
+      "file": "assets/narration/word-fal-0561.mp3",
+      "duration": 1.149375,
+      "sha256": "d8dae2d950da89fbad4f29ab1cfe7eb4d7d3b353b200217a06567a6509e27898"
+    },
+    "thinking": {
+      "file": "assets/narration/word-fal-0562.mp3",
+      "duration": 1.071,
+      "sha256": "287a0589b985bd5eff9eca535fc7b3b56cdf8f2055b3ec1e084140f274c36d92"
+    },
+    "dream": {
+      "file": "assets/narration/word-fal-0563.mp3",
+      "duration": 0.9665,
+      "sha256": "911b2afd083f6e352e9df2dd7047f956b8dffc115b361f4d09fb188bef980043"
+    },
+    "feel": {
+      "file": "assets/narration/word-fal-0564.mp3",
+      "duration": 0.91425,
+      "sha256": "43cac6ba10fc881e607e55ec8d0de0f50941e90c10a06adcf7f440876347d832"
+    },
+    "garden": {
+      "file": "assets/narration/word-fal-0565.mp3",
+      "duration": 1.071,
+      "sha256": "35fd985b3b874b8d7bf4b5871c96bff4aee948937b6961e40903adc1a4886672"
+    },
+    "reason": {
+      "file": "assets/narration/word-fal-0566.mp3",
+      "duration": 0.9665,
+      "sha256": "b274c04e73994e4bec89c1d509e8825623b218286e25b7730939fea802bcac41"
+    },
+    "street": {
+      "file": "assets/narration/word-fal-0567.mp3",
+      "duration": 0.91425,
+      "sha256": "ac58a280cd601ace17d86d5c6c5d2e5b8dcb27dfad835ea334b19d2541cedf88"
+    },
+    "meat": {
+      "file": "assets/narration/word-fal-0568.mp3",
+      "duration": 0.835875,
+      "sha256": "ce628092700cecc3d1754d5c206a36784faf4995254809494cb01f448f325c1c"
+    },
+    "feeling": {
+      "file": "assets/narration/word-fal-0569.mp3",
+      "duration": 1.01875,
+      "sha256": "19b618a65a76fa5e0f715b381337895400cd2ee3187e82e688a98905fa4db9c7"
+    },
+    "although": {
+      "file": "assets/narration/word-fal-0570.mp3",
+      "duration": 1.071,
+      "sha256": "6b63abb3158a2efe9304c23504b7c1ae6105b042041739c0d8dea8af9981d8ec"
+    },
+    "nothing": {
+      "file": "assets/narration/word-fal-0571.mp3",
+      "duration": 0.9665,
+      "sha256": "66864d0f2b03fd942de95650f90babc697661a8f10102a842852ddabe1b76a46"
+    },
+    "forget": {
+      "file": "assets/narration/word-fal-0572.mp3",
+      "duration": 1.01875,
+      "sha256": "e516b6e041d3d3438a33269bf9d07888736a46b0ab1ba98d20bd52e2db8089e6"
+    },
+    "however": {
+      "file": "assets/narration/word-fal-0573.mp3",
+      "duration": 1.01875,
+      "sha256": "daf15f650d30ba205fbb0faff36abeb131cc8d8dba2e853b9edcce6119a01487"
+    },
+    "forgot": {
+      "file": "assets/narration/word-fal-0574.mp3",
+      "duration": 1.01875,
+      "sha256": "2ec0b4d4eb1e810c1cb2994fc5da874ec96a36b6793e47b601ed77d9386deecb"
+    },
+    "unless": {
+      "file": "assets/narration/word-fal-0575.mp3",
+      "duration": 0.9665,
+      "sha256": "243abc94d8986ab05390923eaa2ffcffeaabb314228f393ef15eb19d53063fab"
+    },
+    "week": {
+      "file": "assets/narration/word-fal-0576.mp3",
+      "duration": 0.91425,
+      "sha256": "87c3fae084a1903bf77f03609cf4a4a15bb64957db7751f17380136b526c79d1"
+    },
+    "ago": {
+      "file": "assets/narration/word-fal-0577.mp3",
+      "duration": 0.862,
+      "sha256": "d874796475a1038559e034470095eecb85253828b89858c5523248896a76945e"
+    },
+    "believe": {
+      "file": "assets/narration/word-fal-0578.mp3",
+      "duration": 1.201625,
+      "sha256": "75c6698b3b16830cf082bbd8bf4faa54b82c9b469cde8d3320d6aff04a776871"
+    },
+    "whether": {
+      "file": "assets/narration/word-fal-0579.mp3",
+      "duration": 0.862,
+      "sha256": "4f472990fe147a6cace238e7ade10367deda809daaceb8695c7dd4e8abf62896"
+    },
+    "stood": {
+      "file": "assets/narration/word-fal-0580.mp3",
+      "duration": 0.91425,
+      "sha256": "abbc3bf96f19bbd5ef4c4ec43b778b663a24a6795e07e336ba61b02df70aaeb3"
+    },
+    "brought": {
+      "file": "assets/narration/word-fal-0581.mp3",
+      "duration": 0.9665,
+      "sha256": "f0a199ff79804b06fe642bd90aaeae14e492f9542fe15874b277579b8161e2f0"
+    },
+    "seem": {
+      "file": "assets/narration/word-fal-0582.mp3",
+      "duration": 1.01875,
+      "sha256": "329f664dec7aa5ca28dc22fb0daab254d07d348fbeedd03ce16255771d146305"
+    },
+    "whose": {
+      "file": "assets/narration/word-fal-0583.mp3",
+      "duration": 0.9665,
+      "sha256": "4fbce651f7fd9d5fa9c58b9f44687c97ecb5167a8c592d084cf1e49586ad3795"
+    },
+    "understand": {
+      "file": "assets/narration/word-fal-0584.mp3",
+      "duration": 1.436688,
+      "sha256": "ff375f607406ac0fa829fe77a0922013a62499c937ec55aa1113d45cefb7afa4"
+    },
+    "seemed": {
+      "file": "assets/narration/word-fal-0585.mp3",
+      "duration": 1.071,
+      "sha256": "e02cdb93e0b69b5e5d6b6ae275ea49fa7e8f22138a67d4a497feb67f108b2e62"
+    },
+    "deep": {
+      "file": "assets/narration/word-fal-0586.mp3",
+      "duration": 0.862,
+      "sha256": "6e7f6e23052b14073817bcb003c121dc874ac3e6527128e861d45ddbd3f74d7e"
+    },
+    "clear": {
+      "file": "assets/narration/word-fal-0587.mp3",
+      "duration": 1.01875,
+      "sha256": "01b8e86447cc1f5c003a7667e9b9f61504d92a0995d3d8787a49eec7e24abc08"
+    },
+    "join": {
+      "file": "assets/narration/word-fal-0588.mp3",
+      "duration": 0.9665,
+      "sha256": "436eb44032212b39fec5b717cbe7e20e903410309ef042c4684bc4ebdfbae20b"
+    },
+    "heavy": {
+      "file": "assets/narration/word-fal-0589.mp3",
+      "duration": 0.91425,
+      "sha256": "6b1315384bed686211b4fb38bc4bef76ca058cd2a09b716f5161d95d6a6fa902"
+    },
+    "sugar": {
+      "file": "assets/narration/word-fal-0590.mp3",
+      "duration": 0.862,
+      "sha256": "5fbaa2b13975f70acbda871be221384f5feb5fbcdc1f25efe66b5e3129123f76"
+    },
+    "built": {
+      "file": "assets/narration/word-fal-0591.mp3",
+      "duration": 0.862,
+      "sha256": "54fd3a11461b8ebe0acedbce963b72d903a68f4a9dcec708e741ebf64a22cfd4"
+    },
+    "shared": {
+      "file": "assets/narration/word-fal-0592.mp3",
+      "duration": 0.9665,
+      "sha256": "b8245546b775bc21bfe47148a59f6a8fb699b9aef555ed9ca8b3341311e4f03a"
+    },
+    "huge": {
+      "file": "assets/narration/word-fal-0593.mp3",
+      "duration": 0.9665,
+      "sha256": "ecbed245006498b4bda0067d8b5ed0a0abbfd6f3abb8f07212559991d3f434b0"
+    },
+    "felt": {
+      "file": "assets/narration/word-fal-0594.mp3",
+      "duration": 0.862,
+      "sha256": "9afa3fbf93ed12946f9d993153adf9a3df3e1d5740e71db4945dd70213a9b9d2"
+    },
+    "suddenly": {
+      "file": "assets/narration/word-fal-0595.mp3",
+      "duration": 1.071,
+      "sha256": "103340081dc2e5441c91fe168125b334716ed6a93221baef40012d2ea980b6e4"
+    },
+    "ready": {
+      "file": "assets/narration/word-fal-0596.mp3",
+      "duration": 0.862,
+      "sha256": "8e694bd6581f24b8615c3f9458f21f07c9c59834c9db3116f205f42e4e27b783"
+    },
+    "anything": {
+      "file": "assets/narration/word-fal-0597.mp3",
+      "duration": 1.071,
+      "sha256": "42d49bf78327e16de7f942897cf886e3af23c837450708d01576693183e77ab8"
+    },
+    "swim": {
+      "file": "assets/narration/word-fal-0598.mp3",
+      "duration": 1.01875,
+      "sha256": "eb47f07bb43f3e88ad1c56fc84756d72c5c43b6635c994e255778496227eb081"
+    },
+    "legs": {
+      "file": "assets/narration/word-fal-0599.mp3",
+      "duration": 1.01875,
+      "sha256": "165dba7637aa518a9fb8819b7463fd89ba33a7a39cbac913953097c319d667ee"
+    },
+    "angry": {
+      "file": "assets/narration/word-fal-0600.mp3",
+      "duration": 0.91425,
+      "sha256": "a680952e4a28b7038a294ce874710d2234534f6c4b12726887e766ce85b8a10e"
+    },
+    "branch": {
+      "file": "assets/narration/word-fal-0601.mp3",
+      "duration": 1.01875,
+      "sha256": "9a7d286a27c2bafbd82820b47545822b736783f0ecad0b5fc111ad9b82878c3c"
+    },
+    "brave": {
+      "file": "assets/narration/word-fal-0602.mp3",
+      "duration": 1.071,
+      "sha256": "ae80593248bd40f61d6e58d13b5ce67a6ec3b85e5871e74528b8413c54e1d72c"
+    },
+    "leaf": {
+      "file": "assets/narration/word-fal-0603.mp3",
+      "duration": 0.862,
+      "sha256": "dfc8e5345ec2ab9e4a37c0f01fe35ca6cfd7f558f852da7ab697913a22b3b2b5"
+    },
+    "mud": {
+      "file": "assets/narration/word-fal-0604.mp3",
+      "duration": 0.783625,
+      "sha256": "9909bc712e2a02796ea7f4cc7cbfbbc3f076ecea2ce79a7f1a5d29ae4ced060f"
+    },
+    "path": {
+      "file": "assets/narration/word-fal-0605.mp3",
+      "duration": 0.91425,
+      "sha256": "b3ac4bf3129258c40f968b10b7656c519ee32be41d0a1612cf0be972d699e094"
+    },
+    "rescue": {
+      "file": "assets/narration/word-fal-0606.mp3",
+      "duration": 1.071,
+      "sha256": "f00eb0e5769d3073b3539153a4982f34c1a695ab8157f2af8273b8795410e2ba"
+    },
+    "scared": {
+      "file": "assets/narration/word-fal-0607.mp3",
+      "duration": 1.071,
+      "sha256": "e05576b4aee2a4957cec8055a4f48d113800c9d7fc53f94666e0a1db718d2495"
+    },
+    "winter": {
+      "file": "assets/narration/word-fal-0608.mp3",
+      "duration": 0.91425,
+      "sha256": "d69befd49d6e50ce9941e337bf4891f733578a5272d8302efccbafb10351063e"
+    },
+    "kept": {
+      "file": "assets/narration/word-fal-0609.mp3",
+      "duration": 0.862,
+      "sha256": "55a3e90ecd2fde86b9e8effb8ecaa55f94feb4fbb1a19bf427e89bcd9f32161f"
+    },
+    "beautiful": {
+      "file": "assets/narration/word-fal-0610.mp3",
+      "duration": 1.201625,
+      "sha256": "7236c7e61a9691c244e993879fa0507894f11418ba30040b345dc78b217eb70d"
+    },
+    "sign": {
+      "file": "assets/narration/word-fal-0611.mp3",
+      "duration": 0.9665,
+      "sha256": "451ab97553245936bf04d58a94dcbbc4da56a525a2401426043a2d2221c5190d"
+    },
+    "finished": {
+      "file": "assets/narration/word-fal-0612.mp3",
+      "duration": 1.01875,
+      "sha256": "ebd47af83f5dea99f7fe7a61420020dec4a1b57db1f504d1792c8eeb5af33c22"
+    },
+    "gone": {
+      "file": "assets/narration/word-fal-0613.mp3",
+      "duration": 0.91425,
+      "sha256": "02875d78a1bf1578f2ddeb54d233e8a8ebc750df5bd716df0a7bd7fb18097605"
+    },
+    "glass": {
+      "file": "assets/narration/word-fal-0614.mp3",
+      "duration": 1.097125,
+      "sha256": "eefd2f36c25c1583de1f652174bcfa230c801ed8079d1ac448f4e7e8d891dc9f"
+    },
+    "weather": {
+      "file": "assets/narration/word-fal-0615.mp3",
+      "duration": 0.862,
+      "sha256": "c577a3ed88cfac19f8002b998c31ab867c5ee148a5851580b5146c3d7f7694e6"
+    },
+    "meet": {
+      "file": "assets/narration/word-fal-0616.mp3",
+      "duration": 0.835875,
+      "sha256": "c100b3c21a9a4226ced588991ca06a6b539babc9a5729ec4b21af79d9ea31f87"
+    },
+    "soft": {
+      "file": "assets/narration/word-fal-0617.mp3",
+      "duration": 0.862,
+      "sha256": "771055742b32cee2ac13dcf6152e28e7396de2b948db9d502ef6d144475f9c2a"
+    },
+    "speak": {
+      "file": "assets/narration/word-fal-0618.mp3",
+      "duration": 0.9665,
+      "sha256": "0bda42f6b915fc1c5311dde8631d9c33d265e402e4bc739053d3a78ca0ca1f0c"
+    },
+    "ice": {
+      "file": "assets/narration/word-fal-0619.mp3",
+      "duration": 0.783625,
+      "sha256": "34d6385fed175daafe7c3d811df235bb2587b93cdf3e698608eae32c08d906be"
+    },
+    "jumped": {
+      "file": "assets/narration/word-fal-0620.mp3",
+      "duration": 0.91425,
+      "sha256": "382e2bdab569c19ec1b64df4e2f7d5f8a89e50289813ba8d4242e19134714c71"
+    },
+    "care": {
+      "file": "assets/narration/word-fal-0621.mp3",
+      "duration": 0.9665,
+      "sha256": "eb2ac1e92660fdb548885868651b8b9c068a21f133115a5fd82773d01da291e4"
+    },
+    "floor": {
+      "file": "assets/narration/word-fal-0622.mp3",
+      "duration": 0.9665,
+      "sha256": "c844f4b4d353cd27aee98751b40441001efd2ceafdfa0761054b8e701e28ddab"
+    },
+    "pushed": {
+      "file": "assets/narration/word-fal-0623.mp3",
+      "duration": 0.9665,
+      "sha256": "2ec12cffa3019a3c5db1342583048d2e61d42236a5973e8a3f2e81cb36f82638"
+    },
+    "everything": {
+      "file": "assets/narration/word-fal-0624.mp3",
+      "duration": 1.201625,
+      "sha256": "0383bea7fd7a626f58fa4875fccc5c159ae2fc1ed85c0f9f2232f2ea0a4e1661"
+    },
+    "evening": {
+      "file": "assets/narration/word-fal-0625.mp3",
+      "duration": 1.071,
+      "sha256": "4adde791eadf0c41786a36a50fe4eba629f572f55d512ddf43b8e082bf764c09"
+    },
+    "spring": {
+      "file": "assets/narration/word-fal-0626.mp3",
+      "duration": 1.01875,
+      "sha256": "98235dcb48124a14c55314d2018858a3bdbac887edb96535dcd9103f702d4f1d"
+    },
+    "laughed": {
+      "file": "assets/narration/word-fal-0627.mp3",
+      "duration": 1.01875,
+      "sha256": "60b95b2897017c3b4ad159cf1ece1cdca1565e2caba85e11ef0bf8dc87f885b5"
+    },
+    "everyone": {
+      "file": "assets/narration/word-fal-0628.mp3",
+      "duration": 1.071,
+      "sha256": "c5c645a3a00e5c1cace5f9a45e1cbde911d6dbebba113224c1fdf121af888878"
+    },
+    "hair": {
+      "file": "assets/narration/word-fal-0629.mp3",
+      "duration": 0.862,
+      "sha256": "6395acb88164926bb58c4344b35ad8cc7d91f41c0d1a0aefca55436ba590fdd3"
+    },
+    "broken": {
+      "file": "assets/narration/word-fal-0630.mp3",
+      "duration": 1.071,
+      "sha256": "6e7ae945227e4e47ab94fd3cb0ea924ad76c175a0711f4d6aeff4f2d8dd03a73"
+    },
+    "moment": {
+      "file": "assets/narration/word-fal-0631.mp3",
+      "duration": 1.071,
+      "sha256": "1addb2199195692a10b8d7957323e3592fbe8c4b34a4cd13f01701f756f3f45c"
+    },
+    "tiny": {
+      "file": "assets/narration/word-fal-0632.mp3",
+      "duration": 0.91425,
+      "sha256": "9cf3f49579077262eea9366aa89d46ba3a5044116537581b21d3310e973d1dbf"
+    },
+    "quiet": {
+      "file": "assets/narration/word-fal-0633.mp3",
+      "duration": 1.01875,
+      "sha256": "3d3ab53aa8979a470a1e7e0620156131bc0dfb9da2fdd6763acd44500e6de1f2"
+    },
+    "middle": {
+      "file": "assets/narration/word-fal-0634.mp3",
+      "duration": 0.9665,
+      "sha256": "7a1df256be49f42812d72cc7b04c69b23bb3a0100d45f21a593280f92ff93e10"
+    },
+    "someone": {
+      "file": "assets/narration/word-fal-0635.mp3",
+      "duration": 1.097125,
+      "sha256": "f18bc77a638027d926da7a51ccca75a4c6982c35a57a2bde50528bd3246f7974"
+    },
+    "wonder": {
+      "file": "assets/narration/word-fal-0636.mp3",
+      "duration": 1.01875,
+      "sha256": "d9861efd918280658418d41cb64e7319049ed7d1d03b95a440f8476edfd28f1e"
+    },
+    "smiled": {
+      "file": "assets/narration/word-fal-0637.mp3",
+      "duration": 1.097125,
+      "sha256": "aa06c2c8b1de0952a6462d63b05feadc056031583c446bae72442a3370955714"
+    },
+    "trip": {
+      "file": "assets/narration/word-fal-0638.mp3",
+      "duration": 0.835875,
+      "sha256": "55cff164f94918ba302263a12f4d8025b8935996cbfa3a0ba77d95eba249230d"
+    },
+    "surprise": {
+      "file": "assets/narration/word-fal-0639.mp3",
+      "duration": 1.149375,
+      "sha256": "c2fdfeab9f57f5d3aece092519b92496419248134fbecdb87d91b39f0550bbef"
+    },
+    "deer": {
+      "file": "assets/narration/word-fal-0640.mp3",
+      "duration": 0.835875,
+      "sha256": "e61198cf62879d61eafced3ec8704a7c8e6abd676a537aec761a99f7e8ffdc1a"
+    },
+    "flower": {
+      "file": "assets/narration/word-fal-0641.mp3",
+      "duration": 0.9665,
+      "sha256": "9d06dd46856652678c65a44248f011be185c42f620bcd2c0e7634ec763b95ff1"
+    },
+    "rabbit": {
+      "file": "assets/narration/word-fal-0642.mp3",
+      "duration": 0.9665,
+      "sha256": "af83dc63ecd73c55b65d30c41ca01d3d9c2617984137c113e30d487a71404212"
+    },
+    "wolf": {
+      "file": "assets/narration/word-fal-0643.mp3",
+      "duration": 0.9665,
+      "sha256": "c3a8431aafb88c97cd6885ccf70fdf192bb7f01036349b8e87814cf9b787ab8e"
+    },
+    "catch": {
+      "file": "assets/narration/word-fal-0644.mp3",
+      "duration": 1.071,
+      "sha256": "65f462f8c0818b1953fc7a0185e1e27164dfecac9c887724a243befb9d0d82d4"
+    },
+    "climbed": {
+      "file": "assets/narration/word-fal-0645.mp3",
+      "duration": 1.149375,
+      "sha256": "05d3b6a64e97682acfd60ca42da2034aa40abbc4073c856526f3dfbf0866dd6b"
+    },
+    "shouted": {
+      "file": "assets/narration/word-fal-0646.mp3",
+      "duration": 1.071,
+      "sha256": "213ce27ccff3e345558d309797084cd176cbe3a4c8288bd7b84c667bf0a79016"
+    },
+    "else": {
+      "file": "assets/narration/word-fal-0647.mp3",
+      "duration": 0.835875,
+      "sha256": "3d05554af1872d336af8417ca28a0c5146a7c7a3a72a487ca4d5279a81c6e8b9"
+    },
+    "ears": {
+      "file": "assets/narration/word-fal-0648.mp3",
+      "duration": 0.91425,
+      "sha256": "14df824a891f91d9bc6c2c9d8563e8941752b37bd1569148b9a74f4b04748e0e"
+    },
+    "grew": {
+      "file": "assets/narration/word-fal-0649.mp3",
+      "duration": 0.91425,
+      "sha256": "5f6501feb4828a84d9cafd8e670d71aa73bdc1f5a564979cc0084e423f85715b"
+    },
+    "cool": {
+      "file": "assets/narration/word-fal-0650.mp3",
+      "duration": 0.91425,
+      "sha256": "73caa4e86ffcc94dcc93f3dbc490e20e9b1b29045837df3cbaa828b0eb70d790"
+    },
+    "sent": {
+      "file": "assets/narration/word-fal-0651.mp3",
+      "duration": 0.862,
+      "sha256": "a599c9ea391b88d3fbc194e45a0d46316246ea3dd12c236bc98040807cbcce4b"
+    },
+    "wear": {
+      "file": "assets/narration/word-fal-0652.mp3",
+      "duration": 0.91425,
+      "sha256": "1147861870104b84dc83b26fdf08612892dc6fab3d806790f35af85a86848cba"
+    },
+    "bad": {
+      "file": "assets/narration/word-fal-0653.mp3",
+      "duration": 0.9665,
+      "sha256": "5fa4b65ffd1970f2f20a76e294dd37ec8877c63301bf61a5873b62659c4c78bf"
+    },
+    "alone": {
+      "file": "assets/narration/word-fal-0654.mp3",
+      "duration": 1.071,
+      "sha256": "0df3a9365220027ee02b370a7641fd9a10b394fa34740d80d1a582ba9cf31bb1"
+    },
+    "drawing": {
+      "file": "assets/narration/word-fal-0655.mp3",
+      "duration": 1.097125,
+      "sha256": "25a312f730dad7b5624339c5d7e5a82ba30669096df238459309eec1b2af6855"
+    },
+    "touch": {
+      "file": "assets/narration/word-fal-0656.mp3",
+      "duration": 0.91425,
+      "sha256": "b0bccf88a6f18711d3461b800e28d636dd01327c95c66aaa51c06fab3c9007bc"
+    },
+    "party": {
+      "file": "assets/narration/word-fal-0657.mp3",
+      "duration": 1.097125,
+      "sha256": "2c71e9e9ca0911aeb0692e9dcc8783e3050318bd8c2d767b44e45898ec72f5e0"
+    },
+    "woman": {
+      "file": "assets/narration/word-fal-0658.mp3",
+      "duration": 0.91425,
+      "sha256": "6b335c9aee7f8f67820aa183e25ab02a022c876d2688ea17ed4c842f6492f6b2"
+    },
+    "choose": {
+      "file": "assets/narration/word-fal-0659.mp3",
+      "duration": 1.097125,
+      "sha256": "8e155cfccebb8bf422745bf7d4aa10cdbaffef7ad73f770467c27956a47e5d0a"
+    },
+    "guess": {
+      "file": "assets/narration/word-fal-0660.mp3",
+      "duration": 0.9665,
+      "sha256": "edd3c09eacd61f5056b4cdea73e6bf0a63c10323ba767af58812b729458fa5b5"
+    },
+    "crowd": {
+      "file": "assets/narration/word-fal-0661.mp3",
+      "duration": 1.071,
+      "sha256": "5ad2f9214866f3343fa5fe871f5d006a17b524e7bfaa66876af50a2db4f1a0f6"
+    },
+    "poem": {
+      "file": "assets/narration/word-fal-0662.mp3",
+      "duration": 1.01875,
+      "sha256": "ce050a119b352a5018bf4fee0b9ff611e9043361575a19f93facbd7155df1686"
+    },
+    "enjoy": {
+      "file": "assets/narration/word-fal-0663.mp3",
+      "duration": 1.097125,
+      "sha256": "35df51dfae086e53d158e29856a3ec843ec21dd819ea14e3c4014639dbd5ee0b"
+    },
+    "send": {
+      "file": "assets/narration/word-fal-0664.mp3",
+      "duration": 0.9665,
+      "sha256": "a780274b3a7196a4c9121171848ac608f736106c82fca995af4b9b6d0699201a"
+    },
+    "sister": {
+      "file": "assets/narration/word-fal-0665.mp3",
+      "duration": 1.01875,
+      "sha256": "50dc13bede3d7cb6aaa888123cd4140769d6bd4d3ec4f4a38fde37b0939725df"
+    },
+    "pick": {
+      "file": "assets/narration/word-fal-0666.mp3",
+      "duration": 0.862,
+      "sha256": "af624e9780d547c0dbcba7c39d714f1142b7d135d487d726d6dfac6e8e73fb78"
+    },
+    "laugh": {
+      "file": "assets/narration/word-fal-0667.mp3",
+      "duration": 1.01875,
+      "sha256": "aea104eb09a84a05f834ab7c089f8f87f9b19b8899ed155dbf915a6107cf27d7"
+    },
+    "hurt": {
+      "file": "assets/narration/word-fal-0668.mp3",
+      "duration": 0.862,
+      "sha256": "a2ecdedc549587dcea9df8ff6d1136b4897bb2911e4f4703f740f39315f6de94"
+    },
+    "funny": {
+      "file": "assets/narration/word-fal-0669.mp3",
+      "duration": 0.862,
+      "sha256": "71ae394da4f5cb3df8d14a60b545bc236ae770280c1f13c3c12fff88990d7540"
+    },
+    "We live in a small house.": {
+      "file": "assets/narration/word-fal-0670.mp3",
+      "duration": 1.933063,
+      "sha256": "ef330cc467af29ef4c84093823565accd9eb2fee7bde005adfa4fb34f753f122"
+    },
+    "The wind blows the leaves.": {
+      "file": "assets/narration/word-fal-0671.mp3",
+      "duration": 2.168125,
+      "sha256": "470f04d03b3e14dbe4d2dd4f1263852eed091601718cb629cfacb8644970ab0b"
+    },
+    "I open my birthday present.": {
+      "file": "assets/narration/word-fal-0672.mp3",
+      "duration": 2.08975,
+      "sha256": "0cd89752dafe366a8a2522993015a17e843ab3bf6067d1fcb33ae282c4b4a3cb"
+    },
+    "Please close the door.": {
+      "file": "assets/narration/word-fal-0673.mp3",
+      "duration": 1.802438,
+      "sha256": "d62faf32c1233bb57015d9022997593743430696ef0059df36ee9bcf7bb5cccf"
+    },
+    "We are reading a book together.": {
+      "file": "assets/narration/word-fal-0674.mp3",
+      "duration": 2.0375,
+      "sha256": "45d5e675ee4b16d4a891ff72804e038e67d4d18fea766b28b82602c1e1e4a31a"
+    },
+    "I can lead the way home.": {
+      "file": "assets/narration/word-fal-0675.mp3",
+      "duration": 1.98525,
+      "sha256": "ff45c90ff1d6b336fde4828cdf3822bceacfbf49cd3b4aaf516355b49aa1ad26"
+    },
+    "I'll": {
+      "file": "assets/narration/budget-031.mp3",
+      "offset": 0.6385,
+      "duration": 0.4065,
+      "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
     }
   }
 };

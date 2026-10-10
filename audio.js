@@ -21,13 +21,29 @@
   // Never splice letters or phonemes. An unknown saved choice stays local.
   function recordedParts(text,clips) {
     if(clips[text])return [text];
+    // Tap-to-hear labels can include capitals and trailing punctuation. Only
+    // normalize single words, never arbitrary sentences or personalized text.
+    const token=/^([A-Za-z]+(?:['’\-][A-Za-z]+)*|[0-9]+)[.,!?;:]?$/.exec(text);
+    if(token){
+      const key=token[1].replace(/’/g,"'");
+      if(clips[key])return [key];
+      if(clips[key.toLowerCase()])return [key.toLowerCase()];
+    }
+    const practice='Practice turn. You keep your heart.';
+    if(text.startsWith(practice+' ')&&clips[practice]){
+      const rest=recordedParts(text.slice(practice.length+1),clips);
+      if(rest)return [practice,...rest];
+    }
     // Legacy distractors can intentionally put an apostrophe in the wrong place.
-    const match=/^(Practice turn\. You keep your heart\. )?You chose ([a-z']+)\. The word is ([a-z']+)\.$/.exec(text);
+    const match=/^(Practice turn\. You keep your heart\. )?You chose ([A-Za-z0-9'’\-]+)\. The word is ([A-Za-z0-9'’\-]+)\.$/.exec(text);
     if(match){
       const chosen='You chose '+match[2]+'.',target='The word is '+match[3]+'.';
+      const chosenWord=clips[chosen]?[chosen]:recordedParts(match[2],clips);
+      const targetWord=clips[target]?[target]:recordedParts(match[3],clips);
+      if(!chosenWord||!targetWord)return null;
       const parts=[...(match[1]?['Practice turn. You keep your heart.']:[]),
-        ...(clips[chosen]?[chosen]:['You chose.',match[2]]),
-        ...(clips[target]?[target]:['The word is.',match[3]])];
+        ...(clips[chosen]?chosenWord:['You chose.',...chosenWord]),
+        ...(clips[target]?targetWord:['The word is.',...targetWord])];
       return parts.every(part=>clips[part])?parts:null;
     }
     const first='Reading check complete. Now your first chapter begins.';

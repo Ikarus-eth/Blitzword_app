@@ -1,3 +1,7 @@
+## Target-word recording priority — 10 October 2026
+
+The user approved the existing recordings and prioritized all 1,000 curriculum words over optional sentences. Generate the missing 669 standalone words and the six existing pronunciation-context sentences with fal.ai Multilingual v2, retaining the approved voice and existing recordings. Reuse the `I'll` capitalization variant. Other teaching sentences, tips, distractors and lore are deferred. Keep local speech for unavailable recordings and custom text. This decision supersedes the earlier all-content generation proposal; it does not authorize that larger batch. See [current status](CURRENT_STATUS.md) for verified implementation and deployment.
+
 ## Continuous scene replacement — accepted 10 October 2026
 
 The latest user request replaces the four main-game ninth-task maps starting with The Sleeping Waterwheel with continuous high-detail scenes, following the accepted 4096×2731 ferry review. Three questions share each map and should require whole-picture exploration: distributed counting, behaviour, relationships and visual connections rather than repeated arrays of near-identical objects. Earlier four-panel artwork instructions are superseded for these four main-game tasks. Keep written-only answers, one life per wrong answer, pinch/zoom and saved progress. [Implementation scope](wimmelbild/RIVER_SEARCH_RELEASE.md).

@@ -1,0 +1,13 @@
+# Recorded pronunciation for all 1,000 target words
+
+The user approved existing recordings and prioritized target words over optional sentences. This release adds 669 missing standalone words, including “been” and “us”, plus the six existing context-sensitive pronunciation sentences for live, wind, present, close, reading and lead. The capitalization variant `I'll` reuses the approved `i'll` recording. All 2,416 existing manifest entries remain unchanged; the runtime now contains 3,092 entries.
+
+The bounded fal.ai Multilingual v2 batch used 675 unique request IDs and 4,471 characters. The estimate is $0.4471 at $0.10 per 1,000 characters, not an account invoice. Voice `onwK4e9ZLuTAKqWW03F9`, speed 0.88, matches the approved replacement recordings. [Exact request](NARRATION_WORDS_FAL_REQUEST.json), [sanitized generation receipts and checksums](NARRATION_WORDS_FAL_GENERATION.json), [provider pricing](https://fal.ai/models/fal-ai/elevenlabs/tts/multilingual-v2).
+
+Generation used a direct user-supplied key from process memory; no key is in source or deployed assets. Request IDs and downloaded outputs were retained before polling/validation, including across one controlled restart that increased parallelism. No completed or pending request was submitted twice. The generator stops on errors and refuses to resubmit uncertain requests.
+
+Every new MP3 passed full decode, duration, format, returned-text and SHA-256 checks before installation. Tests verify actual local files for every curriculum word and all six spoken contexts, retained recordings, receipt integrity, correction composition and fallback for optional sentences and unknown saved text. Audio lookup reuses standalone recordings for capitalized/punctuated words and contractions in correction phrases. Optional teaching sentences, tips, unrecorded distractors and lore still use local device speech. Failed audio downloads retain the existing fallback. Curriculum, saves, progression and battle rules are unchanged.
+
+The [listening page](https://ikarus-eth.github.io/Blitzword_app/assets/word-audio-review/) starts with 50 words, including the originally reported “been” and “us”. It also offers all 669 new standalone words, all 1,000 target words, search, local flags and a JSON download. The six ambiguous words play their existing context sentence, matching the game. Review flags have their own storage key. Browser checks verified search, flag/reload/clear, both full-list counts and playback completion for “been” and “us”; the wind context played successfully. These checks do not imply human pronunciation approval of every new clip or physical iPad testing.
+
+Validation: all 365 unit tests and 116 UI-flow groups pass. Deployment verification is pending.

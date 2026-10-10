@@ -1,3 +1,5 @@
 node_modules/
 node_modules
 _site/
+narration-words-fal-output/
+scripts/__pycache__/
