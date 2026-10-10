@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-10",
+  "browser": "Playwright Chromium",
+  "checks": [
+    {
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "journey": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "journey": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "journey": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "journey": "pass",
+      "reload": "pass",
+      "completion": "pass"
+    },
+    {
+      "launchBothHomes": "pass"
+    }
+  ],
+  "realTwoFingerEvents": "pass",
+  "panDoesNotAnswer": "pass",
+  "pictureTap": "pass",
+  "errors": [],
+  "physicalIPad": "not tested"
+}

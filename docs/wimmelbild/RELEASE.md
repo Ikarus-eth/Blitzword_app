@@ -37,4 +37,4 @@ Four built-in ImageGen scenes, native 1536×1024, WebP quality 94 (about 3.7 MB 
 - Screenshots inspected for tablet and phone. The reading pane resets to the top on scene changes, and confirmation stays accessible.
 - No physical iPad/Safari or human playtest claim. Puzzle enjoyment and duration are not yet measured.
 
-Deployment uses the existing main → GitHub Pages workflow; all `assets/` content is already included. See CURRENT_STATUS for publication state.
+Deployed through the unchanged main → GitHub Pages workflow in PR #150. Pages run 38033694209 succeeded. All 14 live runtime/art files match tested source; `DEPLOYMENT.json` records hashes. `live-browser-checks.json` records the successful live repetition of all four viewport journeys, two-finger zoom and both launchers.
