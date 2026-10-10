@@ -16,7 +16,9 @@ For ChatGPT project setup, use the [project maintenance guide](docs/PROJECT_DESC
 
 ## Current gameplay
 
-**Dragon path** opens a standalone four-scene Wimmelbild adventure from either chapter-selection home. Read the route, find the tree-village door, identify a dragon from its colours/stripes/tail, and find the moon treasure. Pinch or use zoom buttons, drag to explore, and choose written answers or tap the picture. Optional word listening, hints and separate device-local progress. See [rules and verification](docs/wimmelbild/RELEASE.md).
+**[The Hidden Atlas](https://ikarus-eth.github.io/Blitzword_app/assets/map-quest/)** is the shareable, maps-only edition: all five large maps, fifteen clues, four lives per map and independent progress. It has no navigation into the main game.
+
+**Dragon path** opens a standalone four-scene Wimmelbild adventure from either chapter-selection home. Read the route, find the tree-village door, identify a dragon from its colours/stripes/tail, and find the moon treasure. Pinch or use zoom buttons, drag to explore, and choose written answers below the picture. Optional word listening, hints and separate device-local progress. See [rules and verification](docs/wimmelbild/RELEASE.md).
 
 The reading pool now contains **1,000 words**: the original 200 plus 800 everyday and beginner-book words, including written numbers. The additions have contextual sentences, short teaching tips and device speech. Existing story maps stay at their original allocation; adaptive practice can continue through the expanded pool. See [curriculum expansion and verification](docs/NEXT800_RELEASE.md).
 
