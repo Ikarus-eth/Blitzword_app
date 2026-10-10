@@ -3,7 +3,8 @@ const root=path.join(__dirname,'..'),manifest=require('../narration'),corpus=req
 const fallbackOnly=new Set(corpus.runtimeFallbackOnly||[]);
 test('every recovered narration clip has a verified local MP3 and runtime lookup matches approval state',()=>{
  // 990 recovered clips, four Pip evolution recordings, 34 stable story introductions and one shield prefix.
- const newCount=Object.keys(require('../docs/NARRATION_BUDGET_REUSE.json').clips).length+require('../docs/NARRATION_BUDGET_REQUEST.json').segmentCount+20+Object.keys(require('../docs/NARRATION_STORY_RIDDLE_REUSE.json').clips).length+require('../docs/NARRATION_STORY_RIDDLE_REQUEST.json').segmentCount+require('../docs/NARRATION_APPROVED_ENEMIES_REQUEST.json').segmentCount;
+ const words=require('../docs/NARRATION_WORDS_FAL_REQUEST.json');
+ const newCount=Object.keys(require('../docs/NARRATION_BUDGET_REUSE.json').clips).length+require('../docs/NARRATION_BUDGET_REQUEST.json').segmentCount+20+Object.keys(require('../docs/NARRATION_STORY_RIDDLE_REUSE.json').clips).length+require('../docs/NARRATION_STORY_RIDDLE_REQUEST.json').segmentCount+require('../docs/NARRATION_APPROVED_ENEMIES_REQUEST.json').segmentCount+words.items.length+Object.keys(words.aliases).length;
  assert.equal(corpus.clips.length,1029);assert.equal(manifest.recoveredClipCount,994);assert.equal(manifest.recordedClipCount,1029+newCount);
  assert.equal(Object.keys(manifest.clips).length,corpus.runtimeClipCount+newCount);assert.equal(manifest.runtimeClipCount,corpus.runtimeClipCount+newCount);
  assert.deepEqual(new Set(manifest.fallbackOnly||[]),fallbackOnly);

@@ -1,0 +1,4075 @@
+{
+  "version": 1,
+  "scope": "669 missing target words and six required pronunciation contexts; no optional sentence/hint/distractor batch",
+  "provider": "fal.ai",
+  "model": "fal-ai/elevenlabs/tts/multilingual-v2",
+  "voice": "onwK4e9ZLuTAKqWW03F9",
+  "voiceLabel": "Tom (approved Runway preset; same underlying voice ID)",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "speed": 0.88,
+    "language_code": "en",
+    "apply_text_normalization": "auto"
+  },
+  "characters": 4471,
+  "maxCharacters": 4471,
+  "estimatedUSD": 0.4471,
+  "pricingURL": "https://fal.ai/models/fal-ai/elevenlabs/tts/multilingual-v2",
+  "aliases": {
+    "I'll": "i'll"
+  },
+  "items": [
+    {
+      "key": "been",
+      "text": "been.",
+      "kind": "target-word",
+      "id": "word-fal-0001"
+    },
+    {
+      "key": "us",
+      "text": "us.",
+      "kind": "target-word",
+      "id": "word-fal-0002"
+    },
+    {
+      "key": "does",
+      "text": "does.",
+      "kind": "target-word",
+      "id": "word-fal-0003"
+    },
+    {
+      "key": "which",
+      "text": "which.",
+      "kind": "target-word",
+      "id": "word-fal-0004"
+    },
+    {
+      "key": "should",
+      "text": "should.",
+      "kind": "target-word",
+      "id": "word-fal-0005"
+    },
+    {
+      "key": "wind",
+      "text": "wind.",
+      "kind": "target-word",
+      "id": "word-fal-0006"
+    },
+    {
+      "key": "present",
+      "text": "present.",
+      "kind": "target-word",
+      "id": "word-fal-0007"
+    },
+    {
+      "key": "close",
+      "text": "close.",
+      "kind": "target-word",
+      "id": "word-fal-0008"
+    },
+    {
+      "key": "those",
+      "text": "those.",
+      "kind": "target-word",
+      "id": "word-fal-0009"
+    },
+    {
+      "key": "under",
+      "text": "under.",
+      "kind": "target-word",
+      "id": "word-fal-0010"
+    },
+    {
+      "key": "came",
+      "text": "came.",
+      "kind": "target-word",
+      "id": "word-fal-0011"
+    },
+    {
+      "key": "eat",
+      "text": "eat.",
+      "kind": "target-word",
+      "id": "word-fal-0012"
+    },
+    {
+      "key": "ate",
+      "text": "ate.",
+      "kind": "target-word",
+      "id": "word-fal-0013"
+    },
+    {
+      "key": "play",
+      "text": "play.",
+      "kind": "target-word",
+      "id": "word-fal-0014"
+    },
+    {
+      "key": "going",
+      "text": "going.",
+      "kind": "target-word",
+      "id": "word-fal-0015"
+    },
+    {
+      "key": "goes",
+      "text": "goes.",
+      "kind": "target-word",
+      "id": "word-fal-0016"
+    },
+    {
+      "key": "didn't",
+      "text": "didn't.",
+      "kind": "target-word",
+      "id": "word-fal-0017"
+    },
+    {
+      "key": "three",
+      "text": "three.",
+      "kind": "target-word",
+      "id": "word-fal-0018"
+    },
+    {
+      "key": "five",
+      "text": "five.",
+      "kind": "target-word",
+      "id": "word-fal-0019"
+    },
+    {
+      "key": "seven",
+      "text": "seven.",
+      "kind": "target-word",
+      "id": "word-fal-0020"
+    },
+    {
+      "key": "eight",
+      "text": "eight.",
+      "kind": "target-word",
+      "id": "word-fal-0021"
+    },
+    {
+      "key": "nine",
+      "text": "nine.",
+      "kind": "target-word",
+      "id": "word-fal-0022"
+    },
+    {
+      "key": "ten",
+      "text": "ten.",
+      "kind": "target-word",
+      "id": "word-fal-0023"
+    },
+    {
+      "key": "zero",
+      "text": "zero.",
+      "kind": "target-word",
+      "id": "word-fal-0024"
+    },
+    {
+      "key": "friend",
+      "text": "friend.",
+      "kind": "target-word",
+      "id": "word-fal-0025"
+    },
+    {
+      "key": "school",
+      "text": "school.",
+      "kind": "target-word",
+      "id": "word-fal-0026"
+    },
+    {
+      "key": "happy",
+      "text": "happy.",
+      "kind": "target-word",
+      "id": "word-fal-0027"
+    },
+    {
+      "key": "much",
+      "text": "much.",
+      "kind": "target-word",
+      "id": "word-fal-0028"
+    },
+    {
+      "key": "old",
+      "text": "old.",
+      "kind": "target-word",
+      "id": "word-fal-0029"
+    },
+    {
+      "key": "parents",
+      "text": "parents.",
+      "kind": "target-word",
+      "id": "word-fal-0030"
+    },
+    {
+      "key": "asked",
+      "text": "asked.",
+      "kind": "target-word",
+      "id": "word-fal-0031"
+    },
+    {
+      "key": "bigger",
+      "text": "bigger.",
+      "kind": "target-word",
+      "id": "word-fal-0032"
+    },
+    {
+      "key": "rainy",
+      "text": "rainy.",
+      "kind": "target-word",
+      "id": "word-fal-0033"
+    },
+    {
+      "key": "eleven",
+      "text": "eleven.",
+      "kind": "target-word",
+      "id": "word-fal-0034"
+    },
+    {
+      "key": "never",
+      "text": "never.",
+      "kind": "target-word",
+      "id": "word-fal-0035"
+    },
+    {
+      "key": "blue",
+      "text": "blue.",
+      "kind": "target-word",
+      "id": "word-fal-0036"
+    },
+    {
+      "key": "grandma",
+      "text": "grandma.",
+      "kind": "target-word",
+      "id": "word-fal-0037"
+    },
+    {
+      "key": "grandpa",
+      "text": "grandpa.",
+      "kind": "target-word",
+      "id": "word-fal-0038"
+    },
+    {
+      "key": "says",
+      "text": "says.",
+      "kind": "target-word",
+      "id": "word-fal-0039"
+    },
+    {
+      "key": "biggest",
+      "text": "biggest.",
+      "kind": "target-word",
+      "id": "word-fal-0040"
+    },
+    {
+      "key": "sunny",
+      "text": "sunny.",
+      "kind": "target-word",
+      "id": "word-fal-0041"
+    },
+    {
+      "key": "twelve",
+      "text": "twelve.",
+      "kind": "target-word",
+      "id": "word-fal-0042"
+    },
+    {
+      "key": "soon",
+      "text": "soon.",
+      "kind": "target-word",
+      "id": "word-fal-0043"
+    },
+    {
+      "key": "better",
+      "text": "better.",
+      "kind": "target-word",
+      "id": "word-fal-0044"
+    },
+    {
+      "key": "black",
+      "text": "black.",
+      "kind": "target-word",
+      "id": "word-fal-0045"
+    },
+    {
+      "key": "aunt",
+      "text": "aunt.",
+      "kind": "target-word",
+      "id": "word-fal-0046"
+    },
+    {
+      "key": "cousin",
+      "text": "cousin.",
+      "kind": "target-word",
+      "id": "word-fal-0047"
+    },
+    {
+      "key": "talking",
+      "text": "talking.",
+      "kind": "target-word",
+      "id": "word-fal-0048"
+    },
+    {
+      "key": "worse",
+      "text": "worse.",
+      "kind": "target-word",
+      "id": "word-fal-0049"
+    },
+    {
+      "key": "windy",
+      "text": "windy.",
+      "kind": "target-word",
+      "id": "word-fal-0050"
+    },
+    {
+      "key": "thirteen",
+      "text": "thirteen.",
+      "kind": "target-word",
+      "id": "word-fal-0051"
+    },
+    {
+      "key": "today",
+      "text": "today.",
+      "kind": "target-word",
+      "id": "word-fal-0052"
+    },
+    {
+      "key": "round",
+      "text": "round.",
+      "kind": "target-word",
+      "id": "word-fal-0053"
+    },
+    {
+      "key": "warm",
+      "text": "warm.",
+      "kind": "target-word",
+      "id": "word-fal-0054"
+    },
+    {
+      "key": "teacher",
+      "text": "teacher.",
+      "kind": "target-word",
+      "id": "word-fal-0055"
+    },
+    {
+      "key": "classroom",
+      "text": "classroom.",
+      "kind": "target-word",
+      "id": "word-fal-0056"
+    },
+    {
+      "key": "call",
+      "text": "call.",
+      "kind": "target-word",
+      "id": "word-fal-0057"
+    },
+    {
+      "key": "worst",
+      "text": "worst.",
+      "kind": "target-word",
+      "id": "word-fal-0058"
+    },
+    {
+      "key": "fog",
+      "text": "fog.",
+      "kind": "target-word",
+      "id": "word-fal-0059"
+    },
+    {
+      "key": "fourteen",
+      "text": "fourteen.",
+      "kind": "target-word",
+      "id": "word-fal-0060"
+    },
+    {
+      "key": "other",
+      "text": "other.",
+      "kind": "target-word",
+      "id": "word-fal-0061"
+    },
+    {
+      "key": "brown",
+      "text": "brown.",
+      "kind": "target-word",
+      "id": "word-fal-0062"
+    },
+    {
+      "key": "clean",
+      "text": "clean.",
+      "kind": "target-word",
+      "id": "word-fal-0063"
+    },
+    {
+      "key": "lesson",
+      "text": "lesson.",
+      "kind": "target-word",
+      "id": "word-fal-0064"
+    },
+    {
+      "key": "homework",
+      "text": "homework.",
+      "kind": "target-word",
+      "id": "word-fal-0065"
+    },
+    {
+      "key": "called",
+      "text": "called.",
+      "kind": "target-word",
+      "id": "word-fal-0066"
+    },
+    {
+      "key": "afraid",
+      "text": "afraid.",
+      "kind": "target-word",
+      "id": "word-fal-0067"
+    },
+    {
+      "key": "thunder",
+      "text": "thunder.",
+      "kind": "target-word",
+      "id": "word-fal-0068"
+    },
+    {
+      "key": "fifteen",
+      "text": "fifteen.",
+      "kind": "target-word",
+      "id": "word-fal-0069"
+    },
+    {
+      "key": "each",
+      "text": "each.",
+      "kind": "target-word",
+      "id": "word-fal-0070"
+    },
+    {
+      "key": "also",
+      "text": "also.",
+      "kind": "target-word",
+      "id": "word-fal-0071"
+    },
+    {
+      "key": "sun",
+      "text": "sun.",
+      "kind": "target-word",
+      "id": "word-fal-0072"
+    },
+    {
+      "key": "door",
+      "text": "door.",
+      "kind": "target-word",
+      "id": "word-fal-0073"
+    },
+    {
+      "key": "pencil",
+      "text": "pencil.",
+      "kind": "target-word",
+      "id": "word-fal-0074"
+    },
+    {
+      "key": "looked",
+      "text": "looked.",
+      "kind": "target-word",
+      "id": "word-fal-0075"
+    },
+    {
+      "key": "worried",
+      "text": "worried.",
+      "kind": "target-word",
+      "id": "word-fal-0076"
+    },
+    {
+      "key": "lightning",
+      "text": "lightning.",
+      "kind": "target-word",
+      "id": "word-fal-0077"
+    },
+    {
+      "key": "sixteen",
+      "text": "sixteen.",
+      "kind": "target-word",
+      "id": "word-fal-0078"
+    },
+    {
+      "key": "even",
+      "text": "even.",
+      "kind": "target-word",
+      "id": "word-fal-0079"
+    },
+    {
+      "key": "such",
+      "text": "such.",
+      "kind": "target-word",
+      "id": "word-fal-0080"
+    },
+    {
+      "key": "pretty",
+      "text": "pretty.",
+      "kind": "target-word",
+      "id": "word-fal-0081"
+    },
+    {
+      "key": "ruler",
+      "text": "ruler.",
+      "kind": "target-word",
+      "id": "word-fal-0082"
+    },
+    {
+      "key": "bag",
+      "text": "bag.",
+      "kind": "target-word",
+      "id": "word-fal-0083"
+    },
+    {
+      "key": "looking",
+      "text": "looking.",
+      "kind": "target-word",
+      "id": "word-fal-0084"
+    },
+    {
+      "key": "lonely",
+      "text": "lonely.",
+      "kind": "target-word",
+      "id": "word-fal-0085"
+    },
+    {
+      "key": "rainbow",
+      "text": "rainbow.",
+      "kind": "target-word",
+      "id": "word-fal-0086"
+    },
+    {
+      "key": "seventeen",
+      "text": "seventeen.",
+      "kind": "target-word",
+      "id": "word-fal-0087"
+    },
+    {
+      "key": "same",
+      "text": "same.",
+      "kind": "target-word",
+      "id": "word-fal-0088"
+    },
+    {
+      "key": "another",
+      "text": "another.",
+      "kind": "target-word",
+      "id": "word-fal-0089"
+    },
+    {
+      "key": "drink",
+      "text": "drink.",
+      "kind": "target-word",
+      "id": "word-fal-0090"
+    },
+    {
+      "key": "lunch",
+      "text": "lunch.",
+      "kind": "target-word",
+      "id": "word-fal-0091"
+    },
+    {
+      "key": "breakfast",
+      "text": "breakfast.",
+      "kind": "target-word",
+      "id": "word-fal-0092"
+    },
+    {
+      "key": "watch",
+      "text": "watch.",
+      "kind": "target-word",
+      "id": "word-fal-0093"
+    },
+    {
+      "key": "excited",
+      "text": "excited.",
+      "kind": "target-word",
+      "id": "word-fal-0094"
+    },
+    {
+      "key": "space",
+      "text": "space.",
+      "kind": "target-word",
+      "id": "word-fal-0095"
+    },
+    {
+      "key": "eighteen",
+      "text": "eighteen.",
+      "kind": "target-word",
+      "id": "word-fal-0096"
+    },
+    {
+      "key": "most",
+      "text": "most.",
+      "kind": "target-word",
+      "id": "word-fal-0097"
+    },
+    {
+      "key": "few",
+      "text": "few.",
+      "kind": "target-word",
+      "id": "word-fal-0098"
+    },
+    {
+      "key": "river",
+      "text": "river.",
+      "kind": "target-word",
+      "id": "word-fal-0099"
+    },
+    {
+      "key": "key",
+      "text": "key.",
+      "kind": "target-word",
+      "id": "word-fal-0100"
+    },
+    {
+      "key": "dinner",
+      "text": "dinner.",
+      "kind": "target-word",
+      "id": "word-fal-0101"
+    },
+    {
+      "key": "snack",
+      "text": "snack.",
+      "kind": "target-word",
+      "id": "word-fal-0102"
+    },
+    {
+      "key": "search",
+      "text": "search.",
+      "kind": "target-word",
+      "id": "word-fal-0103"
+    },
+    {
+      "key": "tired",
+      "text": "tired.",
+      "kind": "target-word",
+      "id": "word-fal-0104"
+    },
+    {
+      "key": "ocean",
+      "text": "ocean.",
+      "kind": "target-word",
+      "id": "word-fal-0105"
+    },
+    {
+      "key": "nineteen",
+      "text": "nineteen.",
+      "kind": "target-word",
+      "id": "word-fal-0106"
+    },
+    {
+      "key": "enough",
+      "text": "enough.",
+      "kind": "target-word",
+      "id": "word-fal-0107"
+    },
+    {
+      "key": "almost",
+      "text": "almost.",
+      "kind": "target-word",
+      "id": "word-fal-0108"
+    },
+    {
+      "key": "cloud",
+      "text": "cloud.",
+      "kind": "target-word",
+      "id": "word-fal-0109"
+    },
+    {
+      "key": "mountain",
+      "text": "mountain.",
+      "kind": "target-word",
+      "id": "word-fal-0110"
+    },
+    {
+      "key": "bread",
+      "text": "bread.",
+      "kind": "target-word",
+      "id": "word-fal-0111"
+    },
+    {
+      "key": "butter",
+      "text": "butter.",
+      "kind": "target-word",
+      "id": "word-fal-0112"
+    },
+    {
+      "key": "hide",
+      "text": "hide.",
+      "kind": "target-word",
+      "id": "word-fal-0113"
+    },
+    {
+      "key": "sleepy",
+      "text": "sleepy.",
+      "kind": "target-word",
+      "id": "word-fal-0114"
+    },
+    {
+      "key": "twenty",
+      "text": "twenty.",
+      "kind": "target-word",
+      "id": "word-fal-0115"
+    },
+    {
+      "key": "sometimes",
+      "text": "sometimes.",
+      "kind": "target-word",
+      "id": "word-fal-0116"
+    },
+    {
+      "key": "still",
+      "text": "still.",
+      "kind": "target-word",
+      "id": "word-fal-0117"
+    },
+    {
+      "key": "friends",
+      "text": "friends.",
+      "kind": "target-word",
+      "id": "word-fal-0118"
+    },
+    {
+      "key": "cheese",
+      "text": "cheese.",
+      "kind": "target-word",
+      "id": "word-fal-0119"
+    },
+    {
+      "key": "sandwich",
+      "text": "sandwich.",
+      "kind": "target-word",
+      "id": "word-fal-0120"
+    },
+    {
+      "key": "hungry",
+      "text": "hungry.",
+      "kind": "target-word",
+      "id": "word-fal-0121"
+    },
+    {
+      "key": "stream",
+      "text": "stream.",
+      "kind": "target-word",
+      "id": "word-fal-0122"
+    },
+    {
+      "key": "thirty",
+      "text": "thirty.",
+      "kind": "target-word",
+      "id": "word-fal-0123"
+    },
+    {
+      "key": "already",
+      "text": "already.",
+      "kind": "target-word",
+      "id": "word-fal-0124"
+    },
+    {
+      "key": "soup",
+      "text": "soup.",
+      "kind": "target-word",
+      "id": "word-fal-0125"
+    },
+    {
+      "key": "rice",
+      "text": "rice.",
+      "kind": "target-word",
+      "id": "word-fal-0126"
+    },
+    {
+      "key": "hidden",
+      "text": "hidden.",
+      "kind": "target-word",
+      "id": "word-fal-0127"
+    },
+    {
+      "key": "thirsty",
+      "text": "thirsty.",
+      "kind": "target-word",
+      "id": "word-fal-0128"
+    },
+    {
+      "key": "waterfall",
+      "text": "waterfall.",
+      "kind": "target-word",
+      "id": "word-fal-0129"
+    },
+    {
+      "key": "forty",
+      "text": "forty.",
+      "kind": "target-word",
+      "id": "word-fal-0130"
+    },
+    {
+      "key": "perhaps",
+      "text": "perhaps.",
+      "kind": "target-word",
+      "id": "word-fal-0131"
+    },
+    {
+      "key": "maybe",
+      "text": "maybe.",
+      "kind": "target-word",
+      "id": "word-fal-0132"
+    },
+    {
+      "key": "dark",
+      "text": "dark.",
+      "kind": "target-word",
+      "id": "word-fal-0133"
+    },
+    {
+      "key": "morning",
+      "text": "morning.",
+      "kind": "target-word",
+      "id": "word-fal-0134"
+    },
+    {
+      "key": "potato",
+      "text": "potato.",
+      "kind": "target-word",
+      "id": "word-fal-0135"
+    },
+    {
+      "key": "tomato",
+      "text": "tomato.",
+      "kind": "target-word",
+      "id": "word-fal-0136"
+    },
+    {
+      "key": "coming",
+      "text": "coming.",
+      "kind": "target-word",
+      "id": "word-fal-0137"
+    },
+    {
+      "key": "wave",
+      "text": "wave.",
+      "kind": "target-word",
+      "id": "word-fal-0138"
+    },
+    {
+      "key": "fifty",
+      "text": "fifty.",
+      "kind": "target-word",
+      "id": "word-fal-0139"
+    },
+    {
+      "key": "together",
+      "text": "together.",
+      "kind": "target-word",
+      "id": "word-fal-0140"
+    },
+    {
+      "key": "through",
+      "text": "through.",
+      "kind": "target-word",
+      "id": "word-fal-0141"
+    },
+    {
+      "key": "farm",
+      "text": "farm.",
+      "kind": "target-word",
+      "id": "word-fal-0142"
+    },
+    {
+      "key": "egg",
+      "text": "egg.",
+      "kind": "target-word",
+      "id": "word-fal-0143"
+    },
+    {
+      "key": "carrot",
+      "text": "carrot.",
+      "kind": "target-word",
+      "id": "word-fal-0144"
+    },
+    {
+      "key": "bean",
+      "text": "bean.",
+      "kind": "target-word",
+      "id": "word-fal-0145"
+    },
+    {
+      "key": "running",
+      "text": "running.",
+      "kind": "target-word",
+      "id": "word-fal-0146"
+    },
+    {
+      "key": "sick",
+      "text": "sick.",
+      "kind": "target-word",
+      "id": "word-fal-0147"
+    },
+    {
+      "key": "island",
+      "text": "island.",
+      "kind": "target-word",
+      "id": "word-fal-0148"
+    },
+    {
+      "key": "sixty",
+      "text": "sixty.",
+      "kind": "target-word",
+      "id": "word-fal-0149"
+    },
+    {
+      "key": "between",
+      "text": "between.",
+      "kind": "target-word",
+      "id": "word-fal-0150"
+    },
+    {
+      "key": "below",
+      "text": "below.",
+      "kind": "target-word",
+      "id": "word-fal-0151"
+    },
+    {
+      "key": "field",
+      "text": "field.",
+      "kind": "target-word",
+      "id": "word-fal-0152"
+    },
+    {
+      "key": "banana",
+      "text": "banana.",
+      "kind": "target-word",
+      "id": "word-fal-0153"
+    },
+    {
+      "key": "orange",
+      "text": "orange.",
+      "kind": "target-word",
+      "id": "word-fal-0154"
+    },
+    {
+      "key": "walked",
+      "text": "walked.",
+      "kind": "target-word",
+      "id": "word-fal-0155"
+    },
+    {
+      "key": "dirt",
+      "text": "dirt.",
+      "kind": "target-word",
+      "id": "word-fal-0156"
+    },
+    {
+      "key": "seventy",
+      "text": "seventy.",
+      "kind": "target-word",
+      "id": "word-fal-0157"
+    },
+    {
+      "key": "above",
+      "text": "above.",
+      "kind": "target-word",
+      "id": "word-fal-0158"
+    },
+    {
+      "key": "across",
+      "text": "across.",
+      "kind": "target-word",
+      "id": "word-fal-0159"
+    },
+    {
+      "key": "sky",
+      "text": "sky.",
+      "kind": "target-word",
+      "id": "word-fal-0160"
+    },
+    {
+      "key": "lemon",
+      "text": "lemon.",
+      "kind": "target-word",
+      "id": "word-fal-0161"
+    },
+    {
+      "key": "walking",
+      "text": "walking.",
+      "kind": "target-word",
+      "id": "word-fal-0162"
+    },
+    {
+      "key": "proud",
+      "text": "proud.",
+      "kind": "target-word",
+      "id": "word-fal-0163"
+    },
+    {
+      "key": "leaves",
+      "text": "leaves.",
+      "kind": "target-word",
+      "id": "word-fal-0164"
+    },
+    {
+      "key": "eighty",
+      "text": "eighty.",
+      "kind": "target-word",
+      "id": "word-fal-0165"
+    },
+    {
+      "key": "along",
+      "text": "along.",
+      "kind": "target-word",
+      "id": "word-fal-0166"
+    },
+    {
+      "key": "behind",
+      "text": "behind.",
+      "kind": "target-word",
+      "id": "word-fal-0167"
+    },
+    {
+      "key": "boat",
+      "text": "boat.",
+      "kind": "target-word",
+      "id": "word-fal-0168"
+    },
+    {
+      "key": "village",
+      "text": "village.",
+      "kind": "target-word",
+      "id": "word-fal-0169"
+    },
+    {
+      "key": "chocolate",
+      "text": "chocolate.",
+      "kind": "target-word",
+      "id": "word-fal-0170"
+    },
+    {
+      "key": "biscuit",
+      "text": "biscuit.",
+      "kind": "target-word",
+      "id": "word-fal-0171"
+    },
+    {
+      "key": "jumping",
+      "text": "jumping.",
+      "kind": "target-word",
+      "id": "word-fal-0172"
+    },
+    {
+      "key": "silly",
+      "text": "silly.",
+      "kind": "target-word",
+      "id": "word-fal-0173"
+    },
+    {
+      "key": "root",
+      "text": "root.",
+      "kind": "target-word",
+      "id": "word-fal-0174"
+    },
+    {
+      "key": "ninety",
+      "text": "ninety.",
+      "kind": "target-word",
+      "id": "word-fal-0175"
+    },
+    {
+      "key": "beside",
+      "text": "beside.",
+      "kind": "target-word",
+      "id": "word-fal-0176"
+    },
+    {
+      "key": "inside",
+      "text": "inside.",
+      "kind": "target-word",
+      "id": "word-fal-0177"
+    },
+    {
+      "key": "snow",
+      "text": "snow.",
+      "kind": "target-word",
+      "id": "word-fal-0178"
+    },
+    {
+      "key": "cookie",
+      "text": "cookie.",
+      "kind": "target-word",
+      "id": "word-fal-0179"
+    },
+    {
+      "key": "hop",
+      "text": "hop.",
+      "kind": "target-word",
+      "id": "word-fal-0180"
+    },
+    {
+      "key": "friendly",
+      "text": "friendly.",
+      "kind": "target-word",
+      "id": "word-fal-0181"
+    },
+    {
+      "key": "trunk",
+      "text": "trunk.",
+      "kind": "target-word",
+      "id": "word-fal-0182"
+    },
+    {
+      "key": "hundred",
+      "text": "hundred.",
+      "kind": "target-word",
+      "id": "word-fal-0183"
+    },
+    {
+      "key": "outside",
+      "text": "outside.",
+      "kind": "target-word",
+      "id": "word-fal-0184"
+    },
+    {
+      "key": "without",
+      "text": "without.",
+      "kind": "target-word",
+      "id": "word-fal-0185"
+    },
+    {
+      "key": "honey",
+      "text": "honey.",
+      "kind": "target-word",
+      "id": "word-fal-0186"
+    },
+    {
+      "key": "salt",
+      "text": "salt.",
+      "kind": "target-word",
+      "id": "word-fal-0187"
+    },
+    {
+      "key": "gentle",
+      "text": "gentle.",
+      "kind": "target-word",
+      "id": "word-fal-0188"
+    },
+    {
+      "key": "thousand",
+      "text": "thousand.",
+      "kind": "target-word",
+      "id": "word-fal-0189"
+    },
+    {
+      "key": "until",
+      "text": "until.",
+      "kind": "target-word",
+      "id": "word-fal-0190"
+    },
+    {
+      "key": "juice",
+      "text": "juice.",
+      "kind": "target-word",
+      "id": "word-fal-0191"
+    },
+    {
+      "key": "climb",
+      "text": "climb.",
+      "kind": "target-word",
+      "id": "word-fal-0192"
+    },
+    {
+      "key": "careful",
+      "text": "careful.",
+      "kind": "target-word",
+      "id": "word-fal-0193"
+    },
+    {
+      "key": "second",
+      "text": "second.",
+      "kind": "target-word",
+      "id": "word-fal-0194"
+    },
+    {
+      "key": "during",
+      "text": "during.",
+      "kind": "target-word",
+      "id": "word-fal-0195"
+    },
+    {
+      "key": "against",
+      "text": "against.",
+      "kind": "target-word",
+      "id": "word-fal-0196"
+    },
+    {
+      "key": "plate",
+      "text": "plate.",
+      "kind": "target-word",
+      "id": "word-fal-0197"
+    },
+    {
+      "key": "bowl",
+      "text": "bowl.",
+      "kind": "target-word",
+      "id": "word-fal-0198"
+    },
+    {
+      "key": "stopped",
+      "text": "stopped.",
+      "kind": "target-word",
+      "id": "word-fal-0199"
+    },
+    {
+      "key": "lovely",
+      "text": "lovely.",
+      "kind": "target-word",
+      "id": "word-fal-0200"
+    },
+    {
+      "key": "bush",
+      "text": "bush.",
+      "kind": "target-word",
+      "id": "word-fal-0201"
+    },
+    {
+      "key": "third",
+      "text": "third.",
+      "kind": "target-word",
+      "id": "word-fal-0202"
+    },
+    {
+      "key": "towards",
+      "text": "towards.",
+      "kind": "target-word",
+      "id": "word-fal-0203"
+    },
+    {
+      "key": "mother",
+      "text": "mother.",
+      "kind": "target-word",
+      "id": "word-fal-0204"
+    },
+    {
+      "key": "father",
+      "text": "father.",
+      "kind": "target-word",
+      "id": "word-fal-0205"
+    },
+    {
+      "key": "spoon",
+      "text": "spoon.",
+      "kind": "target-word",
+      "id": "word-fal-0206"
+    },
+    {
+      "key": "sitting",
+      "text": "sitting.",
+      "kind": "target-word",
+      "id": "word-fal-0207"
+    },
+    {
+      "key": "dirty",
+      "text": "dirty.",
+      "kind": "target-word",
+      "id": "word-fal-0208"
+    },
+    {
+      "key": "woods",
+      "text": "woods.",
+      "kind": "target-word",
+      "id": "word-fal-0209"
+    },
+    {
+      "key": "fourth",
+      "text": "fourth.",
+      "kind": "target-word",
+      "id": "word-fal-0210"
+    },
+    {
+      "key": "feet",
+      "text": "feet.",
+      "kind": "target-word",
+      "id": "word-fal-0211"
+    },
+    {
+      "key": "girl",
+      "text": "girl.",
+      "kind": "target-word",
+      "id": "word-fal-0212"
+    },
+    {
+      "key": "knife",
+      "text": "knife.",
+      "kind": "target-word",
+      "id": "word-fal-0213"
+    },
+    {
+      "key": "bottle",
+      "text": "bottle.",
+      "kind": "target-word",
+      "id": "word-fal-0214"
+    },
+    {
+      "key": "messy",
+      "text": "messy.",
+      "kind": "target-word",
+      "id": "word-fal-0215"
+    },
+    {
+      "key": "city",
+      "text": "city.",
+      "kind": "target-word",
+      "id": "word-fal-0216"
+    },
+    {
+      "key": "fifth",
+      "text": "fifth.",
+      "kind": "target-word",
+      "id": "word-fal-0217"
+    },
+    {
+      "key": "fly",
+      "text": "fly.",
+      "kind": "target-word",
+      "id": "word-fal-0218"
+    },
+    {
+      "key": "dog",
+      "text": "dog.",
+      "kind": "target-word",
+      "id": "word-fal-0219"
+    },
+    {
+      "key": "milk",
+      "text": "milk.",
+      "kind": "target-word",
+      "id": "word-fal-0220"
+    },
+    {
+      "key": "kitchen",
+      "text": "kitchen.",
+      "kind": "target-word",
+      "id": "word-fal-0221"
+    },
+    {
+      "key": "bedroom",
+      "text": "bedroom.",
+      "kind": "target-word",
+      "id": "word-fal-0222"
+    },
+    {
+      "key": "lay",
+      "text": "lay.",
+      "kind": "target-word",
+      "id": "word-fal-0223"
+    },
+    {
+      "key": "tidy",
+      "text": "tidy.",
+      "kind": "target-word",
+      "id": "word-fal-0224"
+    },
+    {
+      "key": "country",
+      "text": "country.",
+      "kind": "target-word",
+      "id": "word-fal-0225"
+    },
+    {
+      "key": "sixth",
+      "text": "sixth.",
+      "kind": "target-word",
+      "id": "word-fal-0226"
+    },
+    {
+      "key": "use",
+      "text": "use.",
+      "kind": "target-word",
+      "id": "word-fal-0227"
+    },
+    {
+      "key": "tail",
+      "text": "tail.",
+      "kind": "target-word",
+      "id": "word-fal-0228"
+    },
+    {
+      "key": "safe",
+      "text": "safe.",
+      "kind": "target-word",
+      "id": "word-fal-0229"
+    },
+    {
+      "key": "bathroom",
+      "text": "bathroom.",
+      "kind": "target-word",
+      "id": "word-fal-0230"
+    },
+    {
+      "key": "toilet",
+      "text": "toilet.",
+      "kind": "target-word",
+      "id": "word-fal-0231"
+    },
+    {
+      "key": "sleeping",
+      "text": "sleeping.",
+      "kind": "target-word",
+      "id": "word-fal-0232"
+    },
+    {
+      "key": "noisy",
+      "text": "noisy.",
+      "kind": "target-word",
+      "id": "word-fal-0233"
+    },
+    {
+      "key": "yard",
+      "text": "yard.",
+      "kind": "target-word",
+      "id": "word-fal-0234"
+    },
+    {
+      "key": "seventh",
+      "text": "seventh.",
+      "kind": "target-word",
+      "id": "word-fal-0235"
+    },
+    {
+      "key": "try",
+      "text": "try.",
+      "kind": "target-word",
+      "id": "word-fal-0236"
+    },
+    {
+      "key": "grow",
+      "text": "grow.",
+      "kind": "target-word",
+      "id": "word-fal-0237"
+    },
+    {
+      "key": "shower",
+      "text": "shower.",
+      "kind": "target-word",
+      "id": "word-fal-0238"
+    },
+    {
+      "key": "slept",
+      "text": "slept.",
+      "kind": "target-word",
+      "id": "word-fal-0239"
+    },
+    {
+      "key": "rough",
+      "text": "rough.",
+      "kind": "target-word",
+      "id": "word-fal-0240"
+    },
+    {
+      "key": "fence",
+      "text": "fence.",
+      "kind": "target-word",
+      "id": "word-fal-0241"
+    },
+    {
+      "key": "eighth",
+      "text": "eighth.",
+      "kind": "target-word",
+      "id": "word-fal-0242"
+    },
+    {
+      "key": "draw",
+      "text": "draw.",
+      "kind": "target-word",
+      "id": "word-fal-0243"
+    },
+    {
+      "key": "table",
+      "text": "table.",
+      "kind": "target-word",
+      "id": "word-fal-0244"
+    },
+    {
+      "key": "towel",
+      "text": "towel.",
+      "kind": "target-word",
+      "id": "word-fal-0245"
+    },
+    {
+      "key": "soap",
+      "text": "soap.",
+      "kind": "target-word",
+      "id": "word-fal-0246"
+    },
+    {
+      "key": "smooth",
+      "text": "smooth.",
+      "kind": "target-word",
+      "id": "word-fal-0247"
+    },
+    {
+      "key": "roof",
+      "text": "roof.",
+      "kind": "target-word",
+      "id": "word-fal-0248"
+    },
+    {
+      "key": "ninth",
+      "text": "ninth.",
+      "kind": "target-word",
+      "id": "word-fal-0249"
+    },
+    {
+      "key": "ride",
+      "text": "ride.",
+      "kind": "target-word",
+      "id": "word-fal-0250"
+    },
+    {
+      "key": "box",
+      "text": "box.",
+      "kind": "target-word",
+      "id": "word-fal-0251"
+    },
+    {
+      "key": "room",
+      "text": "room.",
+      "kind": "target-word",
+      "id": "word-fal-0252"
+    },
+    {
+      "key": "brush",
+      "text": "brush.",
+      "kind": "target-word",
+      "id": "word-fal-0253"
+    },
+    {
+      "key": "tooth",
+      "text": "tooth.",
+      "kind": "target-word",
+      "id": "word-fal-0254"
+    },
+    {
+      "key": "woke",
+      "text": "woke.",
+      "kind": "target-word",
+      "id": "word-fal-0255"
+    },
+    {
+      "key": "empty",
+      "text": "empty.",
+      "kind": "target-word",
+      "id": "word-fal-0256"
+    },
+    {
+      "key": "stair",
+      "text": "stair.",
+      "kind": "target-word",
+      "id": "word-fal-0257"
+    },
+    {
+      "key": "tenth",
+      "text": "tenth.",
+      "kind": "target-word",
+      "id": "word-fal-0258"
+    },
+    {
+      "key": "please",
+      "text": "please.",
+      "kind": "target-word",
+      "id": "word-fal-0259"
+    },
+    {
+      "key": "strong",
+      "text": "strong.",
+      "kind": "target-word",
+      "id": "word-fal-0260"
+    },
+    {
+      "key": "teeth",
+      "text": "teeth.",
+      "kind": "target-word",
+      "id": "word-fal-0261"
+    },
+    {
+      "key": "shirt",
+      "text": "shirt.",
+      "kind": "target-word",
+      "id": "word-fal-0262"
+    },
+    {
+      "key": "awake",
+      "text": "awake.",
+      "kind": "target-word",
+      "id": "word-fal-0263"
+    },
+    {
+      "key": "weak",
+      "text": "weak.",
+      "kind": "target-word",
+      "id": "word-fal-0264"
+    },
+    {
+      "key": "half",
+      "text": "half.",
+      "kind": "target-word",
+      "id": "word-fal-0265"
+    },
+    {
+      "key": "couldn't",
+      "text": "couldn't.",
+      "kind": "target-word",
+      "id": "word-fal-0266"
+    },
+    {
+      "key": "rope",
+      "text": "rope.",
+      "kind": "target-word",
+      "id": "word-fal-0267"
+    },
+    {
+      "key": "wood",
+      "text": "wood.",
+      "kind": "target-word",
+      "id": "word-fal-0268"
+    },
+    {
+      "key": "coat",
+      "text": "coat.",
+      "kind": "target-word",
+      "id": "word-fal-0269"
+    },
+    {
+      "key": "jacket",
+      "text": "jacket.",
+      "kind": "target-word",
+      "id": "word-fal-0270"
+    },
+    {
+      "key": "drank",
+      "text": "drank.",
+      "kind": "target-word",
+      "id": "word-fal-0271"
+    },
+    {
+      "key": "fresh",
+      "text": "fresh.",
+      "kind": "target-word",
+      "id": "word-fal-0272"
+    },
+    {
+      "key": "barn",
+      "text": "barn.",
+      "kind": "target-word",
+      "id": "word-fal-0273"
+    },
+    {
+      "key": "quarter",
+      "text": "quarter.",
+      "kind": "target-word",
+      "id": "word-fal-0274"
+    },
+    {
+      "key": "wasn't",
+      "text": "wasn't.",
+      "kind": "target-word",
+      "id": "word-fal-0275"
+    },
+    {
+      "key": "isn't",
+      "text": "isn't.",
+      "kind": "target-word",
+      "id": "word-fal-0276"
+    },
+    {
+      "key": "fruit",
+      "text": "fruit.",
+      "kind": "target-word",
+      "id": "word-fal-0277"
+    },
+    {
+      "key": "people",
+      "text": "people.",
+      "kind": "target-word",
+      "id": "word-fal-0278"
+    },
+    {
+      "key": "trousers",
+      "text": "trousers.",
+      "kind": "target-word",
+      "id": "word-fal-0279"
+    },
+    {
+      "key": "skirt",
+      "text": "skirt.",
+      "kind": "target-word",
+      "id": "word-fal-0280"
+    },
+    {
+      "key": "taken",
+      "text": "taken.",
+      "kind": "target-word",
+      "id": "word-fal-0281"
+    },
+    {
+      "key": "square",
+      "text": "square.",
+      "kind": "target-word",
+      "id": "word-fal-0282"
+    },
+    {
+      "key": "tunnel",
+      "text": "tunnel.",
+      "kind": "target-word",
+      "id": "word-fal-0283"
+    },
+    {
+      "key": "double",
+      "text": "double.",
+      "kind": "target-word",
+      "id": "word-fal-0284"
+    },
+    {
+      "key": "you're",
+      "text": "you're.",
+      "kind": "target-word",
+      "id": "word-fal-0285"
+    },
+    {
+      "key": "window",
+      "text": "window.",
+      "kind": "target-word",
+      "id": "word-fal-0286"
+    },
+    {
+      "key": "bridge",
+      "text": "bridge.",
+      "kind": "target-word",
+      "id": "word-fal-0287"
+    },
+    {
+      "key": "sock",
+      "text": "sock.",
+      "kind": "target-word",
+      "id": "word-fal-0288"
+    },
+    {
+      "key": "shoe",
+      "text": "shoe.",
+      "kind": "target-word",
+      "id": "word-fal-0289"
+    },
+    {
+      "key": "given",
+      "text": "given.",
+      "kind": "target-word",
+      "id": "word-fal-0290"
+    },
+    {
+      "key": "pair",
+      "text": "pair.",
+      "kind": "target-word",
+      "id": "word-fal-0291"
+    },
+    {
+      "key": "let's",
+      "text": "let's.",
+      "kind": "target-word",
+      "id": "word-fal-0292"
+    },
+    {
+      "key": "we'll",
+      "text": "we'll.",
+      "kind": "target-word",
+      "id": "word-fal-0293"
+    },
+    {
+      "key": "camp",
+      "text": "camp.",
+      "kind": "target-word",
+      "id": "word-fal-0294"
+    },
+    {
+      "key": "boot",
+      "text": "boot.",
+      "kind": "target-word",
+      "id": "word-fal-0295"
+    },
+    {
+      "key": "pocket",
+      "text": "pocket.",
+      "kind": "target-word",
+      "id": "word-fal-0296"
+    },
+    {
+      "key": "making",
+      "text": "making.",
+      "kind": "target-word",
+      "id": "word-fal-0297"
+    },
+    {
+      "key": "pink",
+      "text": "pink.",
+      "kind": "target-word",
+      "id": "word-fal-0298"
+    },
+    {
+      "key": "torch",
+      "text": "torch.",
+      "kind": "target-word",
+      "id": "word-fal-0299"
+    },
+    {
+      "key": "count",
+      "text": "count.",
+      "kind": "target-word",
+      "id": "word-fal-0300"
+    },
+    {
+      "key": "that's",
+      "text": "that's.",
+      "kind": "target-word",
+      "id": "word-fal-0301"
+    },
+    {
+      "key": "there's",
+      "text": "there's.",
+      "kind": "target-word",
+      "id": "word-fal-0302"
+    },
+    {
+      "key": "sound",
+      "text": "sound.",
+      "kind": "target-word",
+      "id": "word-fal-0303"
+    },
+    {
+      "key": "toy",
+      "text": "toy.",
+      "kind": "target-word",
+      "id": "word-fal-0304"
+    },
+    {
+      "key": "doll",
+      "text": "doll.",
+      "kind": "target-word",
+      "id": "word-fal-0305"
+    },
+    {
+      "key": "doing",
+      "text": "doing.",
+      "kind": "target-word",
+      "id": "word-fal-0306"
+    },
+    {
+      "key": "purple",
+      "text": "purple.",
+      "kind": "target-word",
+      "id": "word-fal-0307"
+    },
+    {
+      "key": "flame",
+      "text": "flame.",
+      "kind": "target-word",
+      "id": "word-fal-0308"
+    },
+    {
+      "key": "number",
+      "text": "number.",
+      "kind": "target-word",
+      "id": "word-fal-0309"
+    },
+    {
+      "key": "he's",
+      "text": "he's.",
+      "kind": "target-word",
+      "id": "word-fal-0310"
+    },
+    {
+      "key": "she's",
+      "text": "she's.",
+      "kind": "target-word",
+      "id": "word-fal-0311"
+    },
+    {
+      "key": "place",
+      "text": "place.",
+      "kind": "target-word",
+      "id": "word-fal-0312"
+    },
+    {
+      "key": "year",
+      "text": "year.",
+      "kind": "target-word",
+      "id": "word-fal-0313"
+    },
+    {
+      "key": "teddy",
+      "text": "teddy.",
+      "kind": "target-word",
+      "id": "word-fal-0314"
+    },
+    {
+      "key": "puzzle",
+      "text": "puzzle.",
+      "kind": "target-word",
+      "id": "word-fal-0315"
+    },
+    {
+      "key": "getting",
+      "text": "getting.",
+      "kind": "target-word",
+      "id": "word-fal-0316"
+    },
+    {
+      "key": "grey",
+      "text": "grey.",
+      "kind": "target-word",
+      "id": "word-fal-0317"
+    },
+    {
+      "key": "smoke",
+      "text": "smoke.",
+      "kind": "target-word",
+      "id": "word-fal-0318"
+    },
+    {
+      "key": "less",
+      "text": "less.",
+      "kind": "target-word",
+      "id": "word-fal-0319"
+    },
+    {
+      "key": "we're",
+      "text": "we're.",
+      "kind": "target-word",
+      "id": "word-fal-0320"
+    },
+    {
+      "key": "they're",
+      "text": "they're.",
+      "kind": "target-word",
+      "id": "word-fal-0321"
+    },
+    {
+      "key": "brother",
+      "text": "brother.",
+      "kind": "target-word",
+      "id": "word-fal-0322"
+    },
+    {
+      "key": "birthday",
+      "text": "birthday.",
+      "kind": "target-word",
+      "id": "word-fal-0323"
+    },
+    {
+      "key": "carrying",
+      "text": "carrying.",
+      "kind": "target-word",
+      "id": "word-fal-0324"
+    },
+    {
+      "key": "everybody",
+      "text": "everybody.",
+      "kind": "target-word",
+      "id": "word-fal-0325"
+    },
+    {
+      "key": "den",
+      "text": "den.",
+      "kind": "target-word",
+      "id": "word-fal-0326"
+    },
+    {
+      "key": "fewer",
+      "text": "fewer.",
+      "kind": "target-word",
+      "id": "word-fal-0327"
+    },
+    {
+      "key": "I've",
+      "text": "I've.",
+      "kind": "target-word",
+      "id": "word-fal-0328"
+    },
+    {
+      "key": "you've",
+      "text": "you've.",
+      "kind": "target-word",
+      "id": "word-fal-0329"
+    },
+    {
+      "key": "name",
+      "text": "name.",
+      "kind": "target-word",
+      "id": "word-fal-0330"
+    },
+    {
+      "key": "great",
+      "text": "great.",
+      "kind": "target-word",
+      "id": "word-fal-0331"
+    },
+    {
+      "key": "balloon",
+      "text": "balloon.",
+      "kind": "target-word",
+      "id": "word-fal-0332"
+    },
+    {
+      "key": "candle",
+      "text": "candle.",
+      "kind": "target-word",
+      "id": "word-fal-0333"
+    },
+    {
+      "key": "turn",
+      "text": "turn.",
+      "kind": "target-word",
+      "id": "word-fal-0334"
+    },
+    {
+      "key": "nobody",
+      "text": "nobody.",
+      "kind": "target-word",
+      "id": "word-fal-0335"
+    },
+    {
+      "key": "total",
+      "text": "total.",
+      "kind": "target-word",
+      "id": "word-fal-0336"
+    },
+    {
+      "key": "we've",
+      "text": "we've.",
+      "kind": "target-word",
+      "id": "word-fal-0337"
+    },
+    {
+      "key": "doesn't",
+      "text": "doesn't.",
+      "kind": "target-word",
+      "id": "word-fal-0338"
+    },
+    {
+      "key": "end",
+      "text": "end.",
+      "kind": "target-word",
+      "id": "word-fal-0339"
+    },
+    {
+      "key": "large",
+      "text": "large.",
+      "kind": "target-word",
+      "id": "word-fal-0340"
+    },
+    {
+      "key": "picnic",
+      "text": "picnic.",
+      "kind": "target-word",
+      "id": "word-fal-0341"
+    },
+    {
+      "key": "beach",
+      "text": "beach.",
+      "kind": "target-word",
+      "id": "word-fal-0342"
+    },
+    {
+      "key": "turned",
+      "text": "turned.",
+      "kind": "target-word",
+      "id": "word-fal-0343"
+    },
+    {
+      "key": "somebody",
+      "text": "somebody.",
+      "kind": "target-word",
+      "id": "word-fal-0344"
+    },
+    {
+      "key": "shell",
+      "text": "shell.",
+      "kind": "target-word",
+      "id": "word-fal-0345"
+    },
+    {
+      "key": "plus",
+      "text": "plus.",
+      "kind": "target-word",
+      "id": "word-fal-0346"
+    },
+    {
+      "key": "haven't",
+      "text": "haven't.",
+      "kind": "target-word",
+      "id": "word-fal-0347"
+    },
+    {
+      "key": "hadn't",
+      "text": "hadn't.",
+      "kind": "target-word",
+      "id": "word-fal-0348"
+    },
+    {
+      "key": "need",
+      "text": "need.",
+      "kind": "target-word",
+      "id": "word-fal-0349"
+    },
+    {
+      "key": "baby",
+      "text": "baby.",
+      "kind": "target-word",
+      "id": "word-fal-0350"
+    },
+    {
+      "key": "holiday",
+      "text": "holiday.",
+      "kind": "target-word",
+      "id": "word-fal-0351"
+    },
+    {
+      "key": "push",
+      "text": "push.",
+      "kind": "target-word",
+      "id": "word-fal-0352"
+    },
+    {
+      "key": "anyone",
+      "text": "anyone.",
+      "kind": "target-word",
+      "id": "word-fal-0353"
+    },
+    {
+      "key": "minus",
+      "text": "minus.",
+      "kind": "target-word",
+      "id": "word-fal-0354"
+    },
+    {
+      "key": "aren't",
+      "text": "aren't.",
+      "kind": "target-word",
+      "id": "word-fal-0355"
+    },
+    {
+      "key": "weren't",
+      "text": "weren't.",
+      "kind": "target-word",
+      "id": "word-fal-0356"
+    },
+    {
+      "key": "land",
+      "text": "land.",
+      "kind": "target-word",
+      "id": "word-fal-0357"
+    },
+    {
+      "key": "different",
+      "text": "different.",
+      "kind": "target-word",
+      "id": "word-fal-0358"
+    },
+    {
+      "key": "playground",
+      "text": "playground.",
+      "kind": "target-word",
+      "id": "word-fal-0359"
+    },
+    {
+      "key": "opened",
+      "text": "opened.",
+      "kind": "target-word",
+      "id": "word-fal-0360"
+    },
+    {
+      "key": "something",
+      "text": "something.",
+      "kind": "target-word",
+      "id": "word-fal-0361"
+    },
+    {
+      "key": "monster",
+      "text": "monster.",
+      "kind": "target-word",
+      "id": "word-fal-0362"
+    },
+    {
+      "key": "equal",
+      "text": "equal.",
+      "kind": "target-word",
+      "id": "word-fal-0363"
+    },
+    {
+      "key": "picture",
+      "text": "picture.",
+      "kind": "target-word",
+      "id": "word-fal-0364"
+    },
+    {
+      "key": "swing",
+      "text": "swing.",
+      "kind": "target-word",
+      "id": "word-fal-0365"
+    },
+    {
+      "key": "slide",
+      "text": "slide.",
+      "kind": "target-word",
+      "id": "word-fal-0366"
+    },
+    {
+      "key": "somewhere",
+      "text": "somewhere.",
+      "kind": "target-word",
+      "id": "word-fal-0367"
+    },
+    {
+      "key": "giant",
+      "text": "giant.",
+      "kind": "target-word",
+      "id": "word-fal-0368"
+    },
+    {
+      "key": "change",
+      "text": "change.",
+      "kind": "target-word",
+      "id": "word-fal-0369"
+    },
+    {
+      "key": "apple",
+      "text": "apple.",
+      "kind": "target-word",
+      "id": "word-fal-0370"
+    },
+    {
+      "key": "football",
+      "text": "football.",
+      "kind": "target-word",
+      "id": "word-fal-0371"
+    },
+    {
+      "key": "swimming",
+      "text": "swimming.",
+      "kind": "target-word",
+      "id": "word-fal-0372"
+    },
+    {
+      "key": "closed",
+      "text": "closed.",
+      "kind": "target-word",
+      "id": "word-fal-0373"
+    },
+    {
+      "key": "anywhere",
+      "text": "anywhere.",
+      "kind": "target-word",
+      "id": "word-fal-0374"
+    },
+    {
+      "key": "air",
+      "text": "air.",
+      "kind": "target-word",
+      "id": "word-fal-0375"
+    },
+    {
+      "key": "animal",
+      "text": "animal.",
+      "kind": "target-word",
+      "id": "word-fal-0376"
+    },
+    {
+      "key": "bicycle",
+      "text": "bicycle.",
+      "kind": "target-word",
+      "id": "word-fal-0377"
+    },
+    {
+      "key": "bike",
+      "text": "bike.",
+      "kind": "target-word",
+      "id": "word-fal-0378"
+    },
+    {
+      "key": "smile",
+      "text": "smile.",
+      "kind": "target-word",
+      "id": "word-fal-0379"
+    },
+    {
+      "key": "everywhere",
+      "text": "everywhere.",
+      "kind": "target-word",
+      "id": "word-fal-0380"
+    },
+    {
+      "key": "fairy",
+      "text": "fairy.",
+      "kind": "target-word",
+      "id": "word-fal-0381"
+    },
+    {
+      "key": "page",
+      "text": "page.",
+      "kind": "target-word",
+      "id": "word-fal-0382"
+    },
+    {
+      "key": "letter",
+      "text": "letter.",
+      "kind": "target-word",
+      "id": "word-fal-0383"
+    },
+    {
+      "key": "bus",
+      "text": "bus.",
+      "kind": "target-word",
+      "id": "word-fal-0384"
+    },
+    {
+      "key": "train",
+      "text": "train.",
+      "kind": "target-word",
+      "id": "word-fal-0385"
+    },
+    {
+      "key": "cry",
+      "text": "cry.",
+      "kind": "target-word",
+      "id": "word-fal-0386"
+    },
+    {
+      "key": "lots",
+      "text": "lots.",
+      "kind": "target-word",
+      "id": "word-fal-0387"
+    },
+    {
+      "key": "knight",
+      "text": "knight.",
+      "kind": "target-word",
+      "id": "word-fal-0388"
+    },
+    {
+      "key": "answer",
+      "text": "answer.",
+      "kind": "target-word",
+      "id": "word-fal-0389"
+    },
+    {
+      "key": "learn",
+      "text": "learn.",
+      "kind": "target-word",
+      "id": "word-fal-0390"
+    },
+    {
+      "key": "truck",
+      "text": "truck.",
+      "kind": "target-word",
+      "id": "word-fal-0391"
+    },
+    {
+      "key": "plane",
+      "text": "plane.",
+      "kind": "target-word",
+      "id": "word-fal-0392"
+    },
+    {
+      "key": "shout",
+      "text": "shout.",
+      "kind": "target-word",
+      "id": "word-fal-0393"
+    },
+    {
+      "key": "really",
+      "text": "really.",
+      "kind": "target-word",
+      "id": "word-fal-0394"
+    },
+    {
+      "key": "prince",
+      "text": "prince.",
+      "kind": "target-word",
+      "id": "word-fal-0395"
+    },
+    {
+      "key": "world",
+      "text": "world.",
+      "kind": "target-word",
+      "id": "word-fal-0396"
+    },
+    {
+      "key": "high",
+      "text": "high.",
+      "kind": "target-word",
+      "id": "word-fal-0397"
+    },
+    {
+      "key": "driver",
+      "text": "driver.",
+      "kind": "target-word",
+      "id": "word-fal-0398"
+    },
+    {
+      "key": "station",
+      "text": "station.",
+      "kind": "target-word",
+      "id": "word-fal-0399"
+    },
+    {
+      "key": "nearly",
+      "text": "nearly.",
+      "kind": "target-word",
+      "id": "word-fal-0400"
+    },
+    {
+      "key": "princess",
+      "text": "princess.",
+      "kind": "target-word",
+      "id": "word-fal-0401"
+    },
+    {
+      "key": "near",
+      "text": "near.",
+      "kind": "target-word",
+      "id": "word-fal-0402"
+    },
+    {
+      "key": "plant",
+      "text": "plant.",
+      "kind": "target-word",
+      "id": "word-fal-0403"
+    },
+    {
+      "key": "ticket",
+      "text": "ticket.",
+      "kind": "target-word",
+      "id": "word-fal-0404"
+    },
+    {
+      "key": "wheel",
+      "text": "wheel.",
+      "kind": "target-word",
+      "id": "word-fal-0405"
+    },
+    {
+      "key": "whispered",
+      "text": "whispered.",
+      "kind": "target-word",
+      "id": "word-fal-0406"
+    },
+    {
+      "key": "often",
+      "text": "often.",
+      "kind": "target-word",
+      "id": "word-fal-0407"
+    },
+    {
+      "key": "hero",
+      "text": "hero.",
+      "kind": "target-word",
+      "id": "word-fal-0408"
+    },
+    {
+      "key": "eye",
+      "text": "eye.",
+      "kind": "target-word",
+      "id": "word-fal-0409"
+    },
+    {
+      "key": "engine",
+      "text": "engine.",
+      "kind": "target-word",
+      "id": "word-fal-0410"
+    },
+    {
+      "key": "hospital",
+      "text": "hospital.",
+      "kind": "target-word",
+      "id": "word-fal-0411"
+    },
+    {
+      "key": "listening",
+      "text": "listening.",
+      "kind": "target-word",
+      "id": "word-fal-0412"
+    },
+    {
+      "key": "usually",
+      "text": "usually.",
+      "kind": "target-word",
+      "id": "word-fal-0413"
+    },
+    {
+      "key": "crown",
+      "text": "crown.",
+      "kind": "target-word",
+      "id": "word-fal-0414"
+    },
+    {
+      "key": "thought",
+      "text": "thought.",
+      "kind": "target-word",
+      "id": "word-fal-0415"
+    },
+    {
+      "key": "head",
+      "text": "head.",
+      "kind": "target-word",
+      "id": "word-fal-0416"
+    },
+    {
+      "key": "doctor",
+      "text": "doctor.",
+      "kind": "target-word",
+      "id": "word-fal-0417"
+    },
+    {
+      "key": "nurse",
+      "text": "nurse.",
+      "kind": "target-word",
+      "id": "word-fal-0418"
+    },
+    {
+      "key": "wanted",
+      "text": "wanted.",
+      "kind": "target-word",
+      "id": "word-fal-0419"
+    },
+    {
+      "key": "finally",
+      "text": "finally.",
+      "kind": "target-word",
+      "id": "word-fal-0420"
+    },
+    {
+      "key": "wild",
+      "text": "wild.",
+      "kind": "target-word",
+      "id": "word-fal-0421"
+    },
+    {
+      "key": "story",
+      "text": "story.",
+      "kind": "target-word",
+      "id": "word-fal-0422"
+    },
+    {
+      "key": "money",
+      "text": "money.",
+      "kind": "target-word",
+      "id": "word-fal-0423"
+    },
+    {
+      "key": "played",
+      "text": "played.",
+      "kind": "target-word",
+      "id": "word-fal-0424"
+    },
+    {
+      "key": "later",
+      "text": "later.",
+      "kind": "target-word",
+      "id": "word-fal-0425"
+    },
+    {
+      "key": "adventure",
+      "text": "adventure.",
+      "kind": "target-word",
+      "id": "word-fal-0426"
+    },
+    {
+      "key": "next",
+      "text": "next.",
+      "kind": "target-word",
+      "id": "word-fal-0427"
+    },
+    {
+      "key": "hard",
+      "text": "hard.",
+      "kind": "target-word",
+      "id": "word-fal-0428"
+    },
+    {
+      "key": "price",
+      "text": "price.",
+      "kind": "target-word",
+      "id": "word-fal-0429"
+    },
+    {
+      "key": "pay",
+      "text": "pay.",
+      "kind": "target-word",
+      "id": "word-fal-0430"
+    },
+    {
+      "key": "playing",
+      "text": "playing.",
+      "kind": "target-word",
+      "id": "word-fal-0431"
+    },
+    {
+      "key": "yesterday",
+      "text": "yesterday.",
+      "kind": "target-word",
+      "id": "word-fal-0432"
+    },
+    {
+      "key": "begin",
+      "text": "begin.",
+      "kind": "target-word",
+      "id": "word-fal-0433"
+    },
+    {
+      "key": "life",
+      "text": "life.",
+      "kind": "target-word",
+      "id": "word-fal-0434"
+    },
+    {
+      "key": "bought",
+      "text": "bought.",
+      "kind": "target-word",
+      "id": "word-fal-0435"
+    },
+    {
+      "key": "sell",
+      "text": "sell.",
+      "kind": "target-word",
+      "id": "word-fal-0436"
+    },
+    {
+      "key": "finish",
+      "text": "finish.",
+      "kind": "target-word",
+      "id": "word-fal-0437"
+    },
+    {
+      "key": "tomorrow",
+      "text": "tomorrow.",
+      "kind": "target-word",
+      "id": "word-fal-0438"
+    },
+    {
+      "key": "problem",
+      "text": "problem.",
+      "kind": "target-word",
+      "id": "word-fal-0439"
+    },
+    {
+      "key": "paper",
+      "text": "paper.",
+      "kind": "target-word",
+      "id": "word-fal-0440"
+    },
+    {
+      "key": "dress",
+      "text": "dress.",
+      "kind": "target-word",
+      "id": "word-fal-0441"
+    },
+    {
+      "key": "farmer",
+      "text": "farmer.",
+      "kind": "target-word",
+      "id": "word-fal-0442"
+    },
+    {
+      "key": "tried",
+      "text": "tried.",
+      "kind": "target-word",
+      "id": "word-fal-0443"
+    },
+    {
+      "key": "tonight",
+      "text": "tonight.",
+      "kind": "target-word",
+      "id": "word-fal-0444"
+    },
+    {
+      "key": "plan",
+      "text": "plan.",
+      "kind": "target-word",
+      "id": "word-fal-0445"
+    },
+    {
+      "key": "children",
+      "text": "children.",
+      "kind": "target-word",
+      "id": "word-fal-0446"
+    },
+    {
+      "key": "side",
+      "text": "side.",
+      "kind": "target-word",
+      "id": "word-fal-0447"
+    },
+    {
+      "key": "duck",
+      "text": "duck.",
+      "kind": "target-word",
+      "id": "word-fal-0448"
+    },
+    {
+      "key": "bake",
+      "text": "bake.",
+      "kind": "target-word",
+      "id": "word-fal-0449"
+    },
+    {
+      "key": "midnight",
+      "text": "midnight.",
+      "kind": "target-word",
+      "id": "word-fal-0450"
+    },
+    {
+      "key": "idea",
+      "text": "idea.",
+      "kind": "target-word",
+      "id": "word-fal-0451"
+    },
+    {
+      "key": "began",
+      "text": "began.",
+      "kind": "target-word",
+      "id": "word-fal-0452"
+    },
+    {
+      "key": "cow",
+      "text": "cow.",
+      "kind": "target-word",
+      "id": "word-fal-0453"
+    },
+    {
+      "key": "goat",
+      "text": "goat.",
+      "kind": "target-word",
+      "id": "word-fal-0454"
+    },
+    {
+      "key": "drew",
+      "text": "drew.",
+      "kind": "target-word",
+      "id": "word-fal-0455"
+    },
+    {
+      "key": "weekend",
+      "text": "weekend.",
+      "kind": "target-word",
+      "id": "word-fal-0456"
+    },
+    {
+      "key": "clue",
+      "text": "clue.",
+      "kind": "target-word",
+      "id": "word-fal-0457"
+    },
+    {
+      "key": "foot",
+      "text": "foot.",
+      "kind": "target-word",
+      "id": "word-fal-0458"
+    },
+    {
+      "key": "pony",
+      "text": "pony.",
+      "kind": "target-word",
+      "id": "word-fal-0459"
+    },
+    {
+      "key": "mouse",
+      "text": "mouse.",
+      "kind": "target-word",
+      "id": "word-fal-0460"
+    },
+    {
+      "key": "writing",
+      "text": "writing.",
+      "kind": "target-word",
+      "id": "word-fal-0461"
+    },
+    {
+      "key": "secret",
+      "text": "secret.",
+      "kind": "target-word",
+      "id": "word-fal-0462"
+    },
+    {
+      "key": "late",
+      "text": "late.",
+      "kind": "target-word",
+      "id": "word-fal-0463"
+    },
+    {
+      "key": "face",
+      "text": "face.",
+      "kind": "target-word",
+      "id": "word-fal-0464"
+    },
+    {
+      "key": "mice",
+      "text": "mice.",
+      "kind": "target-word",
+      "id": "word-fal-0465"
+    },
+    {
+      "key": "kitten",
+      "text": "kitten.",
+      "kind": "target-word",
+      "id": "word-fal-0466"
+    },
+    {
+      "key": "reading",
+      "text": "reading.",
+      "kind": "target-word",
+      "id": "word-fal-0467"
+    },
+    {
+      "key": "season",
+      "text": "season.",
+      "kind": "target-word",
+      "id": "word-fal-0468"
+    },
+    {
+      "key": "mistake",
+      "text": "mistake.",
+      "kind": "target-word",
+      "id": "word-fal-0469"
+    },
+    {
+      "key": "bed",
+      "text": "bed.",
+      "kind": "target-word",
+      "id": "word-fal-0470"
+    },
+    {
+      "key": "young",
+      "text": "young.",
+      "kind": "target-word",
+      "id": "word-fal-0471"
+    },
+    {
+      "key": "puppy",
+      "text": "puppy.",
+      "kind": "target-word",
+      "id": "word-fal-0472"
+    },
+    {
+      "key": "pet",
+      "text": "pet.",
+      "kind": "target-word",
+      "id": "word-fal-0473"
+    },
+    {
+      "key": "build",
+      "text": "build.",
+      "kind": "target-word",
+      "id": "word-fal-0474"
+    },
+    {
+      "key": "summer",
+      "text": "summer.",
+      "kind": "target-word",
+      "id": "word-fal-0475"
+    },
+    {
+      "key": "trouble",
+      "text": "trouble.",
+      "kind": "target-word",
+      "id": "word-fal-0476"
+    },
+    {
+      "key": "elephant",
+      "text": "elephant.",
+      "kind": "target-word",
+      "id": "word-fal-0477"
+    },
+    {
+      "key": "monkey",
+      "text": "monkey.",
+      "kind": "target-word",
+      "id": "word-fal-0478"
+    },
+    {
+      "key": "break",
+      "text": "break.",
+      "kind": "target-word",
+      "id": "word-fal-0479"
+    },
+    {
+      "key": "autumn",
+      "text": "autumn.",
+      "kind": "target-word",
+      "id": "word-fal-0480"
+    },
+    {
+      "key": "trap",
+      "text": "trap.",
+      "kind": "target-word",
+      "id": "word-fal-0481"
+    },
+    {
+      "key": "leave",
+      "text": "leave.",
+      "kind": "target-word",
+      "id": "word-fal-0482"
+    },
+    {
+      "key": "mouth",
+      "text": "mouth.",
+      "kind": "target-word",
+      "id": "word-fal-0483"
+    },
+    {
+      "key": "tiger",
+      "text": "tiger.",
+      "kind": "target-word",
+      "id": "word-fal-0484"
+    },
+    {
+      "key": "broke",
+      "text": "broke.",
+      "kind": "target-word",
+      "id": "word-fal-0485"
+    },
+    {
+      "key": "Monday",
+      "text": "Monday.",
+      "kind": "target-word",
+      "id": "word-fal-0486"
+    },
+    {
+      "key": "trick",
+      "text": "trick.",
+      "kind": "target-word",
+      "id": "word-fal-0487"
+    },
+    {
+      "key": "family",
+      "text": "family.",
+      "kind": "target-word",
+      "id": "word-fal-0488"
+    },
+    {
+      "key": "afternoon",
+      "text": "afternoon.",
+      "kind": "target-word",
+      "id": "word-fal-0489"
+    },
+    {
+      "key": "spider",
+      "text": "spider.",
+      "kind": "target-word",
+      "id": "word-fal-0490"
+    },
+    {
+      "key": "ant",
+      "text": "ant.",
+      "kind": "target-word",
+      "id": "word-fal-0491"
+    },
+    {
+      "key": "fallen",
+      "text": "fallen.",
+      "kind": "target-word",
+      "id": "word-fal-0492"
+    },
+    {
+      "key": "Tuesday",
+      "text": "Tuesday.",
+      "kind": "target-word",
+      "id": "word-fal-0493"
+    },
+    {
+      "key": "escape",
+      "text": "escape.",
+      "kind": "target-word",
+      "id": "word-fal-0494"
+    },
+    {
+      "key": "body",
+      "text": "body.",
+      "kind": "target-word",
+      "id": "word-fal-0495"
+    },
+    {
+      "key": "stand",
+      "text": "stand.",
+      "kind": "target-word",
+      "id": "word-fal-0496"
+    },
+    {
+      "key": "butterfly",
+      "text": "butterfly.",
+      "kind": "target-word",
+      "id": "word-fal-0497"
+    },
+    {
+      "key": "flew",
+      "text": "flew.",
+      "kind": "target-word",
+      "id": "word-fal-0498"
+    },
+    {
+      "key": "Wednesday",
+      "text": "Wednesday.",
+      "kind": "target-word",
+      "id": "word-fal-0499"
+    },
+    {
+      "key": "enemy",
+      "text": "enemy.",
+      "kind": "target-word",
+      "id": "word-fal-0500"
+    },
+    {
+      "key": "stick",
+      "text": "stick.",
+      "kind": "target-word",
+      "id": "word-fal-0501"
+    },
+    {
+      "key": "snail",
+      "text": "snail.",
+      "kind": "target-word",
+      "id": "word-fal-0502"
+    },
+    {
+      "key": "flying",
+      "text": "flying.",
+      "kind": "target-word",
+      "id": "word-fal-0503"
+    },
+    {
+      "key": "Thursday",
+      "text": "Thursday.",
+      "kind": "target-word",
+      "id": "word-fal-0504"
+    },
+    {
+      "key": "group",
+      "text": "group.",
+      "kind": "target-word",
+      "id": "word-fal-0505"
+    },
+    {
+      "key": "ever",
+      "text": "ever.",
+      "kind": "target-word",
+      "id": "word-fal-0506"
+    },
+    {
+      "key": "piece",
+      "text": "piece.",
+      "kind": "target-word",
+      "id": "word-fal-0507"
+    },
+    {
+      "key": "squirrel",
+      "text": "squirrel.",
+      "kind": "target-word",
+      "id": "word-fal-0508"
+    },
+    {
+      "key": "nest",
+      "text": "nest.",
+      "kind": "target-word",
+      "id": "word-fal-0509"
+    },
+    {
+      "key": "swam",
+      "text": "swam.",
+      "kind": "target-word",
+      "id": "word-fal-0510"
+    },
+    {
+      "key": "Friday",
+      "text": "Friday.",
+      "kind": "target-word",
+      "id": "word-fal-0511"
+    },
+    {
+      "key": "women",
+      "text": "women.",
+      "kind": "target-word",
+      "id": "word-fal-0512"
+    },
+    {
+      "key": "easy",
+      "text": "easy.",
+      "kind": "target-word",
+      "id": "word-fal-0513"
+    },
+    {
+      "key": "chick",
+      "text": "chick.",
+      "kind": "target-word",
+      "id": "word-fal-0514"
+    },
+    {
+      "key": "lamb",
+      "text": "lamb.",
+      "kind": "target-word",
+      "id": "word-fal-0515"
+    },
+    {
+      "key": "rode",
+      "text": "rode.",
+      "kind": "target-word",
+      "id": "word-fal-0516"
+    },
+    {
+      "key": "Saturday",
+      "text": "Saturday.",
+      "kind": "target-word",
+      "id": "word-fal-0517"
+    },
+    {
+      "key": "heard",
+      "text": "heard.",
+      "kind": "target-word",
+      "id": "word-fal-0518"
+    },
+    {
+      "key": "caught",
+      "text": "caught.",
+      "kind": "target-word",
+      "id": "word-fal-0519"
+    },
+    {
+      "key": "cub",
+      "text": "cub.",
+      "kind": "target-word",
+      "id": "word-fal-0520"
+    },
+    {
+      "key": "drive",
+      "text": "drive.",
+      "kind": "target-word",
+      "id": "word-fal-0521"
+    },
+    {
+      "key": "Sunday",
+      "text": "Sunday.",
+      "kind": "target-word",
+      "id": "word-fal-0522"
+    },
+    {
+      "key": "sentence",
+      "text": "sentence.",
+      "kind": "target-word",
+      "id": "word-fal-0523"
+    },
+    {
+      "key": "sure",
+      "text": "sure.",
+      "kind": "target-word",
+      "id": "word-fal-0524"
+    },
+    {
+      "key": "drove",
+      "text": "drove.",
+      "kind": "target-word",
+      "id": "word-fal-0525"
+    },
+    {
+      "key": "cover",
+      "text": "cover.",
+      "kind": "target-word",
+      "id": "word-fal-0526"
+    },
+    {
+      "key": "throw",
+      "text": "throw.",
+      "kind": "target-word",
+      "id": "word-fal-0527"
+    },
+    {
+      "key": "title",
+      "text": "title.",
+      "kind": "target-word",
+      "id": "word-fal-0528"
+    },
+    {
+      "key": "short",
+      "text": "short.",
+      "kind": "target-word",
+      "id": "word-fal-0529"
+    },
+    {
+      "key": "fight",
+      "text": "fight.",
+      "kind": "target-word",
+      "id": "word-fal-0530"
+    },
+    {
+      "key": "threw",
+      "text": "threw.",
+      "kind": "target-word",
+      "id": "word-fal-0531"
+    },
+    {
+      "key": "music",
+      "text": "music.",
+      "kind": "target-word",
+      "id": "word-fal-0532"
+    },
+    {
+      "key": "remember",
+      "text": "remember.",
+      "kind": "target-word",
+      "id": "word-fal-0533"
+    },
+    {
+      "key": "kick",
+      "text": "kick.",
+      "kind": "target-word",
+      "id": "word-fal-0534"
+    },
+    {
+      "key": "question",
+      "text": "question.",
+      "kind": "target-word",
+      "id": "word-fal-0535"
+    },
+    {
+      "key": "early",
+      "text": "early.",
+      "kind": "target-word",
+      "id": "word-fal-0536"
+    },
+    {
+      "key": "listen",
+      "text": "listen.",
+      "kind": "target-word",
+      "id": "word-fal-0537"
+    },
+    {
+      "key": "follow",
+      "text": "follow.",
+      "kind": "target-word",
+      "id": "word-fal-0538"
+    },
+    {
+      "key": "meaning",
+      "text": "meaning.",
+      "kind": "target-word",
+      "id": "word-fal-0539"
+    },
+    {
+      "key": "himself",
+      "text": "himself.",
+      "kind": "target-word",
+      "id": "word-fal-0540"
+    },
+    {
+      "key": "followed",
+      "text": "followed.",
+      "kind": "target-word",
+      "id": "word-fal-0541"
+    },
+    {
+      "key": "beginning",
+      "text": "beginning.",
+      "kind": "target-word",
+      "id": "word-fal-0542"
+    },
+    {
+      "key": "cook",
+      "text": "cook.",
+      "kind": "target-word",
+      "id": "word-fal-0543"
+    },
+    {
+      "key": "ending",
+      "text": "ending.",
+      "kind": "target-word",
+      "id": "word-fal-0544"
+    },
+    {
+      "key": "true",
+      "text": "true.",
+      "kind": "target-word",
+      "id": "word-fal-0545"
+    },
+    {
+      "key": "grass",
+      "text": "grass.",
+      "kind": "target-word",
+      "id": "word-fal-0546"
+    },
+    {
+      "key": "led",
+      "text": "led.",
+      "kind": "target-word",
+      "id": "word-fal-0547"
+    },
+    {
+      "key": "chapter",
+      "text": "chapter.",
+      "kind": "target-word",
+      "id": "word-fal-0548"
+    },
+    {
+      "key": "slowly",
+      "text": "slowly.",
+      "kind": "target-word",
+      "id": "word-fal-0549"
+    },
+    {
+      "key": "pulled",
+      "text": "pulled.",
+      "kind": "target-word",
+      "id": "word-fal-0550"
+    },
+    {
+      "key": "voice",
+      "text": "voice.",
+      "kind": "target-word",
+      "id": "word-fal-0551"
+    },
+    {
+      "key": "seen",
+      "text": "seen.",
+      "kind": "target-word",
+      "id": "word-fal-0552"
+    },
+    {
+      "key": "win",
+      "text": "win.",
+      "kind": "target-word",
+      "id": "word-fal-0553"
+    },
+    {
+      "key": "false",
+      "text": "false.",
+      "kind": "target-word",
+      "id": "word-fal-0554"
+    },
+    {
+      "key": "lost",
+      "text": "lost.",
+      "kind": "target-word",
+      "id": "word-fal-0555"
+    },
+    {
+      "key": "cried",
+      "text": "cried.",
+      "kind": "target-word",
+      "id": "word-fal-0556"
+    },
+    {
+      "key": "won",
+      "text": "won.",
+      "kind": "target-word",
+      "id": "word-fal-0557"
+    },
+    {
+      "key": "wait",
+      "text": "wait.",
+      "kind": "target-word",
+      "id": "word-fal-0558"
+    },
+    {
+      "key": "quickly",
+      "text": "quickly.",
+      "kind": "target-word",
+      "id": "word-fal-0559"
+    },
+    {
+      "key": "pretend",
+      "text": "pretend.",
+      "kind": "target-word",
+      "id": "word-fal-0560"
+    },
+    {
+      "key": "person",
+      "text": "person.",
+      "kind": "target-word",
+      "id": "word-fal-0561"
+    },
+    {
+      "key": "thinking",
+      "text": "thinking.",
+      "kind": "target-word",
+      "id": "word-fal-0562"
+    },
+    {
+      "key": "dream",
+      "text": "dream.",
+      "kind": "target-word",
+      "id": "word-fal-0563"
+    },
+    {
+      "key": "feel",
+      "text": "feel.",
+      "kind": "target-word",
+      "id": "word-fal-0564"
+    },
+    {
+      "key": "garden",
+      "text": "garden.",
+      "kind": "target-word",
+      "id": "word-fal-0565"
+    },
+    {
+      "key": "reason",
+      "text": "reason.",
+      "kind": "target-word",
+      "id": "word-fal-0566"
+    },
+    {
+      "key": "street",
+      "text": "street.",
+      "kind": "target-word",
+      "id": "word-fal-0567"
+    },
+    {
+      "key": "meat",
+      "text": "meat.",
+      "kind": "target-word",
+      "id": "word-fal-0568"
+    },
+    {
+      "key": "feeling",
+      "text": "feeling.",
+      "kind": "target-word",
+      "id": "word-fal-0569"
+    },
+    {
+      "key": "although",
+      "text": "although.",
+      "kind": "target-word",
+      "id": "word-fal-0570"
+    },
+    {
+      "key": "nothing",
+      "text": "nothing.",
+      "kind": "target-word",
+      "id": "word-fal-0571"
+    },
+    {
+      "key": "forget",
+      "text": "forget.",
+      "kind": "target-word",
+      "id": "word-fal-0572"
+    },
+    {
+      "key": "however",
+      "text": "however.",
+      "kind": "target-word",
+      "id": "word-fal-0573"
+    },
+    {
+      "key": "forgot",
+      "text": "forgot.",
+      "kind": "target-word",
+      "id": "word-fal-0574"
+    },
+    {
+      "key": "unless",
+      "text": "unless.",
+      "kind": "target-word",
+      "id": "word-fal-0575"
+    },
+    {
+      "key": "week",
+      "text": "week.",
+      "kind": "target-word",
+      "id": "word-fal-0576"
+    },
+    {
+      "key": "ago",
+      "text": "ago.",
+      "kind": "target-word",
+      "id": "word-fal-0577"
+    },
+    {
+      "key": "believe",
+      "text": "believe.",
+      "kind": "target-word",
+      "id": "word-fal-0578"
+    },
+    {
+      "key": "whether",
+      "text": "whether.",
+      "kind": "target-word",
+      "id": "word-fal-0579"
+    },
+    {
+      "key": "stood",
+      "text": "stood.",
+      "kind": "target-word",
+      "id": "word-fal-0580"
+    },
+    {
+      "key": "brought",
+      "text": "brought.",
+      "kind": "target-word",
+      "id": "word-fal-0581"
+    },
+    {
+      "key": "seem",
+      "text": "seem.",
+      "kind": "target-word",
+      "id": "word-fal-0582"
+    },
+    {
+      "key": "whose",
+      "text": "whose.",
+      "kind": "target-word",
+      "id": "word-fal-0583"
+    },
+    {
+      "key": "understand",
+      "text": "understand.",
+      "kind": "target-word",
+      "id": "word-fal-0584"
+    },
+    {
+      "key": "seemed",
+      "text": "seemed.",
+      "kind": "target-word",
+      "id": "word-fal-0585"
+    },
+    {
+      "key": "deep",
+      "text": "deep.",
+      "kind": "target-word",
+      "id": "word-fal-0586"
+    },
+    {
+      "key": "clear",
+      "text": "clear.",
+      "kind": "target-word",
+      "id": "word-fal-0587"
+    },
+    {
+      "key": "join",
+      "text": "join.",
+      "kind": "target-word",
+      "id": "word-fal-0588"
+    },
+    {
+      "key": "heavy",
+      "text": "heavy.",
+      "kind": "target-word",
+      "id": "word-fal-0589"
+    },
+    {
+      "key": "sugar",
+      "text": "sugar.",
+      "kind": "target-word",
+      "id": "word-fal-0590"
+    },
+    {
+      "key": "built",
+      "text": "built.",
+      "kind": "target-word",
+      "id": "word-fal-0591"
+    },
+    {
+      "key": "shared",
+      "text": "shared.",
+      "kind": "target-word",
+      "id": "word-fal-0592"
+    },
+    {
+      "key": "huge",
+      "text": "huge.",
+      "kind": "target-word",
+      "id": "word-fal-0593"
+    },
+    {
+      "key": "felt",
+      "text": "felt.",
+      "kind": "target-word",
+      "id": "word-fal-0594"
+    },
+    {
+      "key": "suddenly",
+      "text": "suddenly.",
+      "kind": "target-word",
+      "id": "word-fal-0595"
+    },
+    {
+      "key": "ready",
+      "text": "ready.",
+      "kind": "target-word",
+      "id": "word-fal-0596"
+    },
+    {
+      "key": "anything",
+      "text": "anything.",
+      "kind": "target-word",
+      "id": "word-fal-0597"
+    },
+    {
+      "key": "swim",
+      "text": "swim.",
+      "kind": "target-word",
+      "id": "word-fal-0598"
+    },
+    {
+      "key": "legs",
+      "text": "legs.",
+      "kind": "target-word",
+      "id": "word-fal-0599"
+    },
+    {
+      "key": "angry",
+      "text": "angry.",
+      "kind": "target-word",
+      "id": "word-fal-0600"
+    },
+    {
+      "key": "branch",
+      "text": "branch.",
+      "kind": "target-word",
+      "id": "word-fal-0601"
+    },
+    {
+      "key": "brave",
+      "text": "brave.",
+      "kind": "target-word",
+      "id": "word-fal-0602"
+    },
+    {
+      "key": "leaf",
+      "text": "leaf.",
+      "kind": "target-word",
+      "id": "word-fal-0603"
+    },
+    {
+      "key": "mud",
+      "text": "mud.",
+      "kind": "target-word",
+      "id": "word-fal-0604"
+    },
+    {
+      "key": "path",
+      "text": "path.",
+      "kind": "target-word",
+      "id": "word-fal-0605"
+    },
+    {
+      "key": "rescue",
+      "text": "rescue.",
+      "kind": "target-word",
+      "id": "word-fal-0606"
+    },
+    {
+      "key": "scared",
+      "text": "scared.",
+      "kind": "target-word",
+      "id": "word-fal-0607"
+    },
+    {
+      "key": "winter",
+      "text": "winter.",
+      "kind": "target-word",
+      "id": "word-fal-0608"
+    },
+    {
+      "key": "kept",
+      "text": "kept.",
+      "kind": "target-word",
+      "id": "word-fal-0609"
+    },
+    {
+      "key": "beautiful",
+      "text": "beautiful.",
+      "kind": "target-word",
+      "id": "word-fal-0610"
+    },
+    {
+      "key": "sign",
+      "text": "sign.",
+      "kind": "target-word",
+      "id": "word-fal-0611"
+    },
+    {
+      "key": "finished",
+      "text": "finished.",
+      "kind": "target-word",
+      "id": "word-fal-0612"
+    },
+    {
+      "key": "gone",
+      "text": "gone.",
+      "kind": "target-word",
+      "id": "word-fal-0613"
+    },
+    {
+      "key": "glass",
+      "text": "glass.",
+      "kind": "target-word",
+      "id": "word-fal-0614"
+    },
+    {
+      "key": "weather",
+      "text": "weather.",
+      "kind": "target-word",
+      "id": "word-fal-0615"
+    },
+    {
+      "key": "meet",
+      "text": "meet.",
+      "kind": "target-word",
+      "id": "word-fal-0616"
+    },
+    {
+      "key": "soft",
+      "text": "soft.",
+      "kind": "target-word",
+      "id": "word-fal-0617"
+    },
+    {
+      "key": "speak",
+      "text": "speak.",
+      "kind": "target-word",
+      "id": "word-fal-0618"
+    },
+    {
+      "key": "ice",
+      "text": "ice.",
+      "kind": "target-word",
+      "id": "word-fal-0619"
+    },
+    {
+      "key": "jumped",
+      "text": "jumped.",
+      "kind": "target-word",
+      "id": "word-fal-0620"
+    },
+    {
+      "key": "care",
+      "text": "care.",
+      "kind": "target-word",
+      "id": "word-fal-0621"
+    },
+    {
+      "key": "floor",
+      "text": "floor.",
+      "kind": "target-word",
+      "id": "word-fal-0622"
+    },
+    {
+      "key": "pushed",
+      "text": "pushed.",
+      "kind": "target-word",
+      "id": "word-fal-0623"
+    },
+    {
+      "key": "everything",
+      "text": "everything.",
+      "kind": "target-word",
+      "id": "word-fal-0624"
+    },
+    {
+      "key": "evening",
+      "text": "evening.",
+      "kind": "target-word",
+      "id": "word-fal-0625"
+    },
+    {
+      "key": "spring",
+      "text": "spring.",
+      "kind": "target-word",
+      "id": "word-fal-0626"
+    },
+    {
+      "key": "laughed",
+      "text": "laughed.",
+      "kind": "target-word",
+      "id": "word-fal-0627"
+    },
+    {
+      "key": "everyone",
+      "text": "everyone.",
+      "kind": "target-word",
+      "id": "word-fal-0628"
+    },
+    {
+      "key": "hair",
+      "text": "hair.",
+      "kind": "target-word",
+      "id": "word-fal-0629"
+    },
+    {
+      "key": "broken",
+      "text": "broken.",
+      "kind": "target-word",
+      "id": "word-fal-0630"
+    },
+    {
+      "key": "moment",
+      "text": "moment.",
+      "kind": "target-word",
+      "id": "word-fal-0631"
+    },
+    {
+      "key": "tiny",
+      "text": "tiny.",
+      "kind": "target-word",
+      "id": "word-fal-0632"
+    },
+    {
+      "key": "quiet",
+      "text": "quiet.",
+      "kind": "target-word",
+      "id": "word-fal-0633"
+    },
+    {
+      "key": "middle",
+      "text": "middle.",
+      "kind": "target-word",
+      "id": "word-fal-0634"
+    },
+    {
+      "key": "someone",
+      "text": "someone.",
+      "kind": "target-word",
+      "id": "word-fal-0635"
+    },
+    {
+      "key": "wonder",
+      "text": "wonder.",
+      "kind": "target-word",
+      "id": "word-fal-0636"
+    },
+    {
+      "key": "smiled",
+      "text": "smiled.",
+      "kind": "target-word",
+      "id": "word-fal-0637"
+    },
+    {
+      "key": "trip",
+      "text": "trip.",
+      "kind": "target-word",
+      "id": "word-fal-0638"
+    },
+    {
+      "key": "surprise",
+      "text": "surprise.",
+      "kind": "target-word",
+      "id": "word-fal-0639"
+    },
+    {
+      "key": "deer",
+      "text": "deer.",
+      "kind": "target-word",
+      "id": "word-fal-0640"
+    },
+    {
+      "key": "flower",
+      "text": "flower.",
+      "kind": "target-word",
+      "id": "word-fal-0641"
+    },
+    {
+      "key": "rabbit",
+      "text": "rabbit.",
+      "kind": "target-word",
+      "id": "word-fal-0642"
+    },
+    {
+      "key": "wolf",
+      "text": "wolf.",
+      "kind": "target-word",
+      "id": "word-fal-0643"
+    },
+    {
+      "key": "catch",
+      "text": "catch.",
+      "kind": "target-word",
+      "id": "word-fal-0644"
+    },
+    {
+      "key": "climbed",
+      "text": "climbed.",
+      "kind": "target-word",
+      "id": "word-fal-0645"
+    },
+    {
+      "key": "shouted",
+      "text": "shouted.",
+      "kind": "target-word",
+      "id": "word-fal-0646"
+    },
+    {
+      "key": "else",
+      "text": "else.",
+      "kind": "target-word",
+      "id": "word-fal-0647"
+    },
+    {
+      "key": "ears",
+      "text": "ears.",
+      "kind": "target-word",
+      "id": "word-fal-0648"
+    },
+    {
+      "key": "grew",
+      "text": "grew.",
+      "kind": "target-word",
+      "id": "word-fal-0649"
+    },
+    {
+      "key": "cool",
+      "text": "cool.",
+      "kind": "target-word",
+      "id": "word-fal-0650"
+    },
+    {
+      "key": "sent",
+      "text": "sent.",
+      "kind": "target-word",
+      "id": "word-fal-0651"
+    },
+    {
+      "key": "wear",
+      "text": "wear.",
+      "kind": "target-word",
+      "id": "word-fal-0652"
+    },
+    {
+      "key": "bad",
+      "text": "bad.",
+      "kind": "target-word",
+      "id": "word-fal-0653"
+    },
+    {
+      "key": "alone",
+      "text": "alone.",
+      "kind": "target-word",
+      "id": "word-fal-0654"
+    },
+    {
+      "key": "drawing",
+      "text": "drawing.",
+      "kind": "target-word",
+      "id": "word-fal-0655"
+    },
+    {
+      "key": "touch",
+      "text": "touch.",
+      "kind": "target-word",
+      "id": "word-fal-0656"
+    },
+    {
+      "key": "party",
+      "text": "party.",
+      "kind": "target-word",
+      "id": "word-fal-0657"
+    },
+    {
+      "key": "woman",
+      "text": "woman.",
+      "kind": "target-word",
+      "id": "word-fal-0658"
+    },
+    {
+      "key": "choose",
+      "text": "choose.",
+      "kind": "target-word",
+      "id": "word-fal-0659"
+    },
+    {
+      "key": "guess",
+      "text": "guess.",
+      "kind": "target-word",
+      "id": "word-fal-0660"
+    },
+    {
+      "key": "crowd",
+      "text": "crowd.",
+      "kind": "target-word",
+      "id": "word-fal-0661"
+    },
+    {
+      "key": "poem",
+      "text": "poem.",
+      "kind": "target-word",
+      "id": "word-fal-0662"
+    },
+    {
+      "key": "enjoy",
+      "text": "enjoy.",
+      "kind": "target-word",
+      "id": "word-fal-0663"
+    },
+    {
+      "key": "send",
+      "text": "send.",
+      "kind": "target-word",
+      "id": "word-fal-0664"
+    },
+    {
+      "key": "sister",
+      "text": "sister.",
+      "kind": "target-word",
+      "id": "word-fal-0665"
+    },
+    {
+      "key": "pick",
+      "text": "pick.",
+      "kind": "target-word",
+      "id": "word-fal-0666"
+    },
+    {
+      "key": "laugh",
+      "text": "laugh.",
+      "kind": "target-word",
+      "id": "word-fal-0667"
+    },
+    {
+      "key": "hurt",
+      "text": "hurt.",
+      "kind": "target-word",
+      "id": "word-fal-0668"
+    },
+    {
+      "key": "funny",
+      "text": "funny.",
+      "kind": "target-word",
+      "id": "word-fal-0669"
+    },
+    {
+      "key": "We live in a small house.",
+      "text": "We live in a small house.",
+      "kind": "pronunciation-context",
+      "id": "word-fal-0670"
+    },
+    {
+      "key": "The wind blows the leaves.",
+      "text": "The wind blows the leaves.",
+      "kind": "pronunciation-context",
+      "id": "word-fal-0671"
+    },
+    {
+      "key": "I open my birthday present.",
+      "text": "I open my birthday present.",
+      "kind": "pronunciation-context",
+      "id": "word-fal-0672"
+    },
+    {
+      "key": "Please close the door.",
+      "text": "Please close the door.",
+      "kind": "pronunciation-context",
+      "id": "word-fal-0673"
+    },
+    {
+      "key": "We are reading a book together.",
+      "text": "We are reading a book together.",
+      "kind": "pronunciation-context",
+      "id": "word-fal-0674"
+    },
+    {
+      "key": "I can lead the way home.",
+      "text": "I can lead the way home.",
+      "kind": "pronunciation-context",
+      "id": "word-fal-0675"
+    }
+  ]
+}
