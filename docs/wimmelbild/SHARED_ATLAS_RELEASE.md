@@ -1,3 +1,7 @@
+## Temporary German option — 10 October 2026
+
+Temporary, standalone-page-only German toggle for The Hidden Atlas: translates the five maps’ clues, answer options and interface. English remains available; language choice is local and does not change progress. Voice controls are removed on this page. Main-game content and language are unchanged. Focused checks cover all fifteen translated questions, answer selection, saved language, English switching and absence of voice controls.
+
 # The Hidden Atlas — shareable maps-only edition
 
 The user requested a separate link for the five large search maps, without access through the page to the whole game. Share `https://ikarus-eth.github.io/Blitzword_app/assets/map-quest/`.
@@ -10,4 +14,4 @@ Pinch, drag, wheel, keyboard, zoom buttons and big-picture view use the existing
 
 Validation: four focused unit tests cover all fifteen answers, life loss, duplicate/stale submission rejection, retry/reload, corrupt saves and isolated entry. Browser checks complete all five maps at 1180×820 and 390×844, including life loss, zero-life retry, zoom, image dimensions, picture taps, reload and completion. A main-save sentinel is unchanged; no main runtime is requested and no links lead to the main game. See `shared-browser-checks.json`. Physical iPad speech/gestures remain untested.
 
-Deployment verification will be recorded after publication.
+Deployed via [PR #156](https://github.com/Ikarus-eth/Blitzword_app/pull/156) and successful [Pages run 38039340347](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38039340347). All twelve entry/shared-art runtime files match the release ([hashes](SHARED_DEPLOYMENT.json)); all five maps pass on the live page at desktop and phone sizes ([checks](shared-live-checks.json)). All 355 unit tests and 114 UI flow groups pass.

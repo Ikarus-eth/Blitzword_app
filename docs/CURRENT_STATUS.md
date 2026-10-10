@@ -1,6 +1,10 @@
+## Temporary German option — 10 October 2026
+
+Temporary, standalone-page-only German toggle for The Hidden Atlas: translates the five maps’ clues, answer options and interface. English remains available; language choice is local and does not change progress. Voice controls are removed on this page. Main-game content and language are unchanged. Focused checks cover all fifteen translated questions, answer selection, saved language, English switching and absence of voice controls.
+
 ## Shareable Hidden Atlas — 10 October 2026
 
-**Implemented; publication verification pending.** The separate `assets/map-quest/` page offers all five large maps and fifteen clues without setup, battles, unlock requirements or links into the main game. It uses independent local progress, four lives per map, written-only answers and the existing zoom viewer. [Release notes](wimmelbild/SHARED_ATLAS_RELEASE.md).
+**Deployed and verified.** [PR #156](https://github.com/Ikarus-eth/Blitzword_app/pull/156) merged as `a009c2b90a7da85d10b274630f3b53dce8163009`. [Pages run 38039340347](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38039340347) succeeded; all twelve standalone/shared-art runtime files match the tested release ([hash evidence](wimmelbild/SHARED_DEPLOYMENT.json)). The live desktop and phone journeys complete every map ([live checks](wimmelbild/shared-live-checks.json)); all 355 unit tests and 114 UI flow groups pass. The separate `assets/map-quest/` page offers all five large maps and fifteen clues without setup, battles, unlock requirements or links into the main game. It uses independent local progress, four lives per map, written-only answers and the existing zoom viewer. [Release notes](wimmelbild/SHARED_ATLAS_RELEASE.md).
 
 ## Five large ninth-task search maps — 10 October 2026
 
