@@ -152,16 +152,16 @@
       const top=el('div','missionTop');renderProgress(top);screen.append(top);
       const wrap=el('div','questSearch'),head=el('header','searchHead');
       head.append(el('div','',m.name+' · Map question '+(p.index+1)+' of 3'),el('strong','questHearts','♥ '+c.hearts+' / '+c.maxHearts+' lives'));wrap.append(head);
-      const host=el('div','questMapViewer');wrap.append(host);
-      const panel=el('section','searchReading parchment');panel.append(el('p','searchRegion',q.region),el('h1','',q.prompt));
+      const layout=el('div','mapPlayLayout'),host=el('div','questMapViewer');layout.append(host);wrap.append(layout);
+      const panel=el('section','searchReading parchment');panel.tabIndex=-1;panel.append(el('p','searchRegion',q.region),el('h1','',q.prompt));
       const lines=el('div','searchClue');q.text.forEach(line=>{const row=el('p','');line.split(/(\s+)/).forEach(word=>{if(/^\s+$/.test(word)){row.append(document.createTextNode(word));return;}const b=button(word,'searchWord',()=>{if(!ctx.active())return;p.listened=true;if(ctx.save())ctx.speak(word);});b.setAttribute('aria-label','Hear '+word);row.append(b);});lines.append(row);});panel.append(lines);
       const choices=el('div','searchAnswers');choices.setAttribute('role','group');choices.setAttribute('aria-label',q.prompt);
       q.options.forEach(option=>{const b=button(option.label,'searchAnswer'+(p.selection===option.id?' selected':''),()=>{if(!b.isConnected||!ctx.active())return;act(()=>A.chooseMap(s,option.id,q.id));});b.dataset.mapChoice=option.id;b.setAttribute('aria-pressed',String(p.selection===option.id));choices.append(b);});panel.append(choices);
       const feedback=el('p','searchFeedback',p.wrong?'Not quite. −1 life. Check every part of the clue before trying again.':p.index?'Good searching! Keep using this map for the next clue.':'Zoom in to check the small details. Choose only from the written answers.');feedback.setAttribute('role','status');panel.append(feedback);
       if(p.hint)panel.append(el('p','searchHint',q.hint));
       const actions=el('div','searchActions'),submit=button('Check my answer','greenButton',()=>{if(!submit.isConnected||!ctx.active()||!mapViewer?.ready())return;act(()=>Core.checkMap(s,Date.now(),q.id));});submit.disabled=!p.selection||p.wrong;
-      actions.append(submit,button('A clue, please','textButton',()=>act(()=>{p.hint=true;})),button('Listen','textButton',()=>{if(!ctx.active())return;timeTap();p.listened=true;if(ctx.save())ctx.speak(q.text.join(' ')+' '+q.prompt);}),button('Back to camp','textButton',ctx.home));panel.append(actions);wrap.append(panel);screen.append(wrap);
-      mapViewer=window.BlitzMapViewer.mount(host,map.image,map.title,mapCameraId===m.id?mapCamera:null);mapCameraId=m.id;
+      actions.append(submit,button('A clue, please','textButton',()=>act(()=>{p.hint=true;})),button('Listen','textButton',()=>{if(!ctx.active())return;timeTap();p.listened=true;if(ctx.save())ctx.speak(q.text.join(' ')+' '+q.prompt);}),button('Back to camp','textButton',ctx.home));panel.append(actions);layout.append(panel);screen.append(wrap);
+      mapViewer=window.BlitzMapViewer.mount(host,map.image,map.title,mapCameraId===m.id?mapCamera:null);mapCameraId=m.id;mapViewer.setClue(q.text,q.prompt,panel);
       stamp=performance.now();
     }
     function renderResult(){

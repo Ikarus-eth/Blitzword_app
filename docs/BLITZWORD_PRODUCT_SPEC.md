@@ -1,3 +1,9 @@
+## Review follow-up and map layout — 11 October 2026
+
+Keep the current challenge and retreat: the parent reports frustration, voluntary retries and strong satisfaction after winning. Earned support for accurate/fast reading is the next design direction; exact mechanics remain proposed. Varied mission rhythm and visible endings are accepted directions for a proposed fourth major adventure after Sky Stars. Collection-count changes and learning-summary/reward presentation are not priorities. [Accepted scope and proposals](adventures/REVIEW_FOLLOWUP_20261011.md).
+
+The authorized map-search layout collapses the standalone masthead during play, puts the picture beside written answers on larger screens, retains the clue in narrow/expanded views and offers direct answer navigation with preserved zoom. Gameplay and saves remain unchanged. [Implementation](wimmelbild/MAP_READING_LAYOUT_RELEASE.md).
+
 ## Third creature adventure — accepted 10 October 2026
 
 Add a third major adventure in the current format: eight subchapters, nine tasks per subchapter and eight newly approved enemies. The first two adventures remain intact. The implementation is **The Sky That Lost Its Stars**, unlocked after Forest Lights and River Song. Every new subchapter contains four reading fights alternating with four riddles, followed by one continuous-picture search with three questions: 72 tracker tasks altogether.

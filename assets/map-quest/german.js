@@ -1,6 +1,7 @@
 // Temporary German translation for this standalone page only. No speech.
 (()=>{'use strict';
 const pairs=[
+['Answers','Antworten'],
 ['LOOK CLOSELY · READ THE CLUES','SCHAU GENAU HIN · LIES DIE HINWEISE'],['The Hidden Atlas','Der verborgene Atlas'],['Five places. Fifteen secrets. Where will you look first?','Fünf Orte. Fünfzehn Geheimnisse. Wo schaust du zuerst?'],['Choose a map','Wähle eine Karte'],['← Choose a map','← Karte wählen'],['Read three clues on the same picture. Pinch to find tiny details, then choose an answer below. Each map starts with four lives. A wrong answer costs one.','Lies drei Hinweise zum selben Bild. Vergrößere es mit zwei Fingern und suche die kleinen Details. Wähle dann unten eine Antwort. Jede Karte beginnt mit vier Leben. Eine falsche Antwort kostet ein Leben.'],['Start exploring','Suche starten'],['✓ All three secrets found','✓ Alle drei Geheimnisse gefunden'],['Progress stays on this device.','Dein Fortschritt bleibt auf diesem Gerät.'],
 ['The Crystal Ferry','Die Kristallfähre'],['The Sleeping Waterwheel','Das schlafende Wasserrad'],['The Lamps in the Mist','Die Lampen im Nebel'],['The Nest Above the Falls','Das Nest über den Wasserfällen'],['The River Sings Again','Der Fluss singt wieder'],
 ['Red','Rot'],['Blue','Blau'],['Green','Grün'],['Yellow','Gelb'],['One','Eins'],['Two','Zwei'],['Three','Drei'],['Four','Vier'],

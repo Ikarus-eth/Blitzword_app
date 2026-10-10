@@ -1318,8 +1318,12 @@ console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat an
  Core.startMission(s,'crab-ferry',now);const c=s.expedition.current;c.step=3;c.phase='puzzle';c.puzzle={id:A.current(s).riddles[3].id,solved:true,selection:[],order:[]};
  let ui=boot(s,{adventures:true,geometry:true});ui.click(ui.get('missionResume'));ui.click(missionButton(ui,'Open the search map'));
  assert.equal(ui.get('mission').querySelector('[role="progressbar"]').getAttribute('aria-valuemax'),'9');
+ const before=JSON.stringify(ui.state()),clue=ui.get('mission').querySelector('.mapPinnedClue');
+ assert.match(clue.textContent,/chest/i);ui.click(missionButton(ui,'Big picture'));assert.ok(ui.get('mission').querySelector('.mapZoomExpanded'));
+ ui.click(ui.get('mission').querySelector('[aria-label="Zoom in"]'));const zoom=ui.get('mission').querySelector('.mapZoomBar output').value;
+ ui.click(missionButton(ui,'Answers'));assert.equal(ui.get('mission').querySelector('.mapZoomExpanded'),null);assert.equal(ui.get('mission').querySelector('.mapZoomBar output').value,zoom);assert.equal(JSON.stringify(ui.state()),before);
  const q=A.mapQuestion(ui.state());ui.click(ui.get('mission').querySelector('[data-map-choice="red"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.state().expedition.current.hearts,3);assert.equal(missionButton(ui,'Check my answer').disabled,true);
- ui.click(ui.get('mission').querySelector('[data-map-choice="'+q.answer+'"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.state().expedition.current.search.index,1);
+ ui.click(ui.get('mission').querySelector('[data-map-choice="'+q.answer+'"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.state().expedition.current.search.index,1);assert.ok(ui.get('mission').querySelector('.mapPinnedClue').textContent.includes(A.mapQuestion(ui.state()).prompt));
  ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true,geometry:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').querySelector('.searchHead').textContent,/question 2 of 3/);
  ui.setFailWrites(true);ui.click(ui.get('mission').querySelector('[data-map-choice="blue"]'));assert.equal(ui.state().expedition.current.search.selection,null);
  console.log('PASS ninth-task map UI, written choices, life loss, save/reload and failed-save guard');
