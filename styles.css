@@ -634,3 +634,8 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 .expandedLesson .teachControls button{width:auto;min-width:60px;min-height:60px;height:auto}
 .expandedLesson .teachArt{display:none}
 @media(max-height:500px){.expandedLesson .teachSentence{font-size:22px}.expandedLesson .teachWordLesson{padding:12px;margin:4px auto}#teachWordLabel{font-size:32px}.expandedLesson #teachHint{font-size:18px}}
+
+/* Standalone search adventure, beside the existing story launcher. */
+#campaignMap #mapWimmelbild{left:calc(var(--map-left) + 250px);bottom:var(--map-bottom);width:auto;min-height:44px;height:44px;padding:8px 14px;border-radius:14px;font-size:16px;white-space:nowrap}
+@media(max-width:700px) and (orientation:portrait){#campaignMap #mapWimmelbild{left:calc(var(--map-left) + 176px);bottom:calc(var(--map-bottom) + 58px);font-size:14px;padding:8px 10px}}
+@media(max-width:380px) and (orientation:portrait){#campaignMap #mapWimmelbild{left:var(--map-left);bottom:calc(var(--map-bottom) + 144px)}}
