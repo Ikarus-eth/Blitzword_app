@@ -17,6 +17,16 @@ window.makeReviewSave=function(scenario){
       for(const id of A.Data.campaigns[0].missions)A.stats(s,id).completedAt=new Date(now).toISOString();
       s.expedition.selectedCampaign='river-song';return s;
     }
+    if(scenario.startsWith('mission-mapmaker')){
+      for(const id of ['first-spark','moth-post','root-workshop'])A.stats(s,id).completedAt=new Date(now).toISOString();
+      C.startMission(s,'mimic-vault',now);s.expedition.current.step=Number(scenario.split('-').at(-1))||0;
+      if(scenario.includes('loss'))s.expedition.current.step=2;
+      C.startMissionBattle(s,now);s.battle.introPending=false;
+      if(scenario==='mission-mapmaker-loss'){s.battle.heroHealth=0;C.resolveBattle(s,now);return s;}
+      s.battle.enemyHealth=0;C.resolveBattle(s,now);A.startPuzzle(s);
+      if(scenario==='mission-mapmaker-riddle-loss'){s.expedition.current.hearts=1;A.choose(s,'7');A.check(s,now);}
+      return s;
+    }
     C.startMission(s,'first-spark',now);
     if(scenario.startsWith('mission-team')){
       A.reveal(s,'moon-moth',now);A.selectCompanion(s,'moon-moth');

@@ -11,7 +11,7 @@ test('bounded generation reuses paid clauses and keeps George model and voice se
 });
 test('every current and legacy wrong-choice correction resolves to complete recordings, including contractions and practice turns',()=>{
  let count=0;
- for(const item of [...C.words,...C.legacyWords,...C.assessmentPools.flat()]){
+ for(const item of [...C.coreWords,...C.legacyWords,...C.assessmentPools.flat()]){
   for(const word of new Set([...(item.pool||[]),...item.d.filter(w=>w!==item.w)])){
    for(const prefix of ['', 'Practice turn. You keep your heart. ']){
     const text=prefix+'You chose '+word+'. The word is '+item.w+'.';

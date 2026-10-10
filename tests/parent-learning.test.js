@@ -4,9 +4,9 @@ const fresh=()=>C.migrate(C.fresh());
 function rec(word,days,correct=true,extra={}){return {id:word+'-'+days,task:'battle',target:word,at:at(days),correct,supported:false,timingValid:true,firstResponse:correct?word:C.byWord[word].d.find(x=>x!==word),exposureMs:950,responseMs:1200,lastHelpAt:null,...extra};}
 const metric=(s,word)=>C.parentLearning(s,NOW).words.find(w=>w.word===word);
 function archiveAll(s){const limit=C.HISTORY_LIMITS.answers;C.HISTORY_LIMITS.answers=0;try{C.compactHistory(s);}finally{C.HISTORY_LIMITS.answers=limit;}}
-test('all 200 curriculum words start New, with no fabricated retention or timing, and reporting is read-only',()=>{
- const s=fresh(),before=C.copy(s),p=C.parentLearning(s,NOW);assert.equal(p.words.length,200);assert.deepEqual(p.words.map(w=>w.word),Content.words.map(w=>w.w));
- assert.deepEqual(p.counts,{new:200,learning:0,secured:0,kept7:0,kept30:0});assert.equal(p.weeks.length,12);assert.ok(p.weeks.every(w=>w.rate===null&&w.words===0&&!w.unknown));assert.deepEqual(p.mixups,[]);assert.deepEqual(p.slowest,[]);assert.deepEqual(s,before);
+test('all 1000 curriculum words start New, with no fabricated retention or timing, and reporting is read-only',()=>{
+ const s=fresh(),before=C.copy(s),p=C.parentLearning(s,NOW);assert.equal(p.words.length,1000);assert.deepEqual(p.words.map(w=>w.word),Content.words.map(w=>w.w));
+ assert.deepEqual(p.counts,{new:1000,learning:0,secured:0,kept7:0,kept30:0});assert.equal(p.weeks.length,12);assert.ok(p.weeks.every(w=>w.rate===null&&w.words===0&&!w.unknown));assert.deepEqual(p.mixups,[]);assert.deepEqual(p.slowest,[]);assert.deepEqual(s,before);
 });
 test('map distinguishes introduction, assessment, teaching, secured milestone and actual 7/30-day evidence',()=>{
  const s=fresh();s.learning.words.on.introducedAt=at(-2);s.assessment.records.push(rec('rock',-2));s.learning.teaching.push({target:'tree',at:at(-1)});

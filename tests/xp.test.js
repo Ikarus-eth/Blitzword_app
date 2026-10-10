@@ -82,10 +82,10 @@ test('old saved result retains its combined reading and multiplication reward di
 });
 test('adaptive reference play keeps whole XP and rewards while delayed word milestones shift daily payouts',()=>{
  const {simulate}=require('../scripts/calibrate-xp.cjs'),normal=simulate(30,7),short=simulate(15,1),long=simulate(45,1),slow=simulate(30,1,{readingSeconds:10}),quick=simulate(30,1,{readingSeconds:6}),inaccurate=simulate(30,1,{accuracy:.8}),accurate=simulate(30,1,{accuracy:1}),run=simulate(30,7,{speed:'run'});
- // 2 October 2026: the 75–85% band opens words sooner, so in this fixed-90% model word milestones
- // bunch on day 5 (about 1,500 XP). The seven-day total stays within 2% of the 80–90% release (7,870).
+ // With 1,000 words, introductions spread the same milestone rewards over more words.
+ // The fixed-90% seven-day model now earns about 7,382 XP; award rules are unchanged.
  assert.ok(normal.daily.every(day=>Number.isInteger(day.earned)&&day.earned>=700&&day.earned<=1600),JSON.stringify(normal.daily));
- const week=normal.daily.reduce((n,day)=>n+day.earned,0);assert.ok(week>=7700&&week<=8030,String(week));
+ const week=normal.daily.reduce((n,day)=>n+day.earned,0);assert.ok(week>=7300&&week<=7500,String(week));
  assert.ok(short.totalXP<normal.daily[0].earned&&long.totalXP>normal.daily[0].earned);
  assert.ok(quick.totalXP>slow.totalXP);assert.ok(accurate.totalXP>inaccurate.totalXP);assert.ok(run.totalXP>normal.totalXP);
  assert.equal(normal.daily[0].returning,0);assert.equal(normal.daily[5].returning,50);assert.equal(normal.daily[6].returning,50);

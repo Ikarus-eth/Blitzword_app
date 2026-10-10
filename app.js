@@ -20,7 +20,7 @@ let storyControls=null;
 let parentReport=null,parentWordReturn=null;
 const adventures=window.BlitzAdventureUI.create({Core,Content,state:()=>state,save,show,home,enter,cancelWork,
   paintEnemy,paintPip,paintHero,heroIndex,dragonText:text=>dragonText(text),speak,growth:()=>openGrowth(),
-  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,
+  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,wimmelbild:openWimmelbild,
   suspend:suspendAdventureUI,active:()=>!paused&&!blocked&&playing});
 function suspendAdventureUI(){
   if(playing&&!paused)confirmActivity();account();Core.interruptQuestion(state);cancelWork();paused=true;playing=false;
@@ -34,6 +34,10 @@ function launchMission(id){
     if(state.activity==='summary'||state.activity==='route')state.activity=c.phase==='battle'?(state.teaching?'teaching':'battle'):['spoils','retry'].includes(c.phase)?'result':'mission';
     if(save())enter();
   }
+}
+function openWimmelbild(){
+  if(blocked||!suspendAdventureUI())return;
+  location.assign('assets/wimmelbild/');
 }
 function legacyAdventure(){
   if(blocked)return;adventures.timeTap();if(!suspendAdventureUI())return;Core.Adventure.switchTo(state,'legacy');
@@ -119,7 +123,7 @@ function updateDragonLabels(){
 }
 function updateDailyXP(){
   if(!state)return;const p=Core.bonusProgress(state,Date.now()),label='XP boost';
-  const badge=$('#xpBonusBadge');badge.textContent=label;badge.hidden=!p.active||!['battle','result','mathIntro','mathChallenge','mathResult','summary'].includes(state.screen);
+  const badge=$('#xpBonusBadge');badge.textContent=label;badge.hidden=!p.active||!['battle','result','mathIntro','mathChallenge','mathResult','summary','mission'].includes(state.screen);
   badge.setAttribute('aria-label','Extra XP on correct answers for the rest of today');
   $('#mapDailyGoal').textContent='Chapter finished today ✓';$('#mapDailyGoal').hidden=!p.chapters;
   $('#mapDailySummary').hidden=!(p.chapters||p.active||p.consistencyEarned);
@@ -193,6 +197,7 @@ function clearCombat(){
   window.BlitzMotion?.cancelAll();
   clearTimeout(impactTimer);impactTimer=null;
   if(pendingHealth){pendingHealth=null;if(state?.battle)renderHealth();}
+  $('#resultRetreat').classList.remove('retreatMoving');
   $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
   $('#heroHearts').classList.remove('shieldBlocked');
   $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();
@@ -203,7 +208,7 @@ function clearCombat(){
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
   $('#battleCompanion').classList.remove('protecting');
 }
-function cancelWork(){adventures.stopTiming();clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
+function cancelWork(){$('.quickWordReward')?.remove();adventures.stopTiming();clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
 function activityCategory(){
   if(!state||paused||blocked||!playing||state.screen==='evolution')return null;
@@ -216,6 +221,7 @@ function activityCategory(){
 function drainExcluded(){const ms=playClock.takeExcluded();if(state&&ms)Core.recordTime(state,ms,'idle',Date.now());}
 function account(){
   syncSound();
+  if(state){adventures.timeTap();if(state.screen==='mission')updateDailyXP();}
   const now=performance.now();lastTick=now;if(!state)return;
   const category=activityCategory(),delta=playClock.sample({mono:now,wall:Date.now(),category,visible:!document.hidden,focused:windowFocused});
   drainExcluded();
@@ -228,7 +234,9 @@ function account(){
   if((category||state.activity==='chapterStory')&&playClock.expired&&!document.hidden&&windowFocused)pause('idle');
 }
 function confirmActivity(){
-  account();if(paused||blocked||playClock.expired)return false;
+  account();if(paused||blocked)return false;
+  if(state.screen==='mission'){playClock.reset(performance.now());updateDailyXP();return true;}
+  if(playClock.expired)return false;
   for(const part of playClock.confirm(performance.now()))Core.recordTime(state,part.ms,part.category,part.end);
   drainExcluded();updateDailyXP();return true;
 }
@@ -247,8 +255,8 @@ function openParentGate(){
 }
 function renderParent(){
   const p=Core.parentProgress(state,Date.now()),g=Core.dragonProgress(state);show('parentDashboard');
-  $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo);
-  $('#parentTotal').textContent=formatTime(p.activeMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math);
+  $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo+(state.expedition?.riddleDays?.[Core.dayKey(Date.now())]||0));
+  $('#parentTotal').textContent=formatTime(p.activeMs+Core.Adventure.report(state).riddleMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math+Core.Adventure.report(state).riddleMs);
   $('#parentMath').textContent=formatTime(p.totals.math)+' multiplication · PR: '+(state.math.best===null?'not set':state.math.best+' points in 60 seconds')+'.';
   $('#parentIdle').textContent=formatTime(p.totals.idle);$('#parentLegacy').textContent=formatTime(p.legacyMs);
   $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
@@ -312,12 +320,14 @@ function renderParentLearning(){
 function renderParentWordMap(){
   if(!parentReport)return;
   const search=$('#parentWordSearch').value.trim().toLowerCase(),filter=$('#parentWordFilter').value;
-  const words=parentReport.words.filter(w=>w.word.includes(search)&&(filter==='all'||filter==='quick'&&w.quick||w.status===filter));
+  const words=parentReport.words.filter(w=>w.word.toLowerCase().includes(search)&&(filter==='all'||filter==='quick'&&w.quick||w.status===filter));
   $('#parentWordCount').textContent=words.length+' / '+Content.words.length+' words shown. Tap a word for its history.';
   const map=$('#parentWordMap');map.replaceChildren();
-  for(const [index,chapter] of Content.chapters.entries()){
+  const groups=Content.chapters.map((c,i)=>({...c,label:'Campaign '+(i+1)+' · '+dragonText(c.name)}));
+  for(let batch=1;batch<=8;batch++)groups.push({label:'More words · '+batch,words:Content.words.filter(w=>w.batch===batch).map(w=>w.w)});
+  for(const chapter of groups){
     const groupWords=words.filter(w=>chapter.words.includes(w.word));if(!groupWords.length)continue;
-    const group=document.createElement('section'),heading=document.createElement('h3'),grid=document.createElement('div');group.className='wordMapGroup';grid.className='wordMapGrid';heading.textContent='Campaign '+(index+1)+' · '+dragonText(chapter.name);
+    const group=document.createElement('section'),heading=document.createElement('h3'),grid=document.createElement('div');group.className='wordMapGroup';grid.className='wordMapGrid';heading.textContent=chapter.label;
     for(const word of groupWords){
       const button=document.createElement('button'),name=document.createElement('span'),status=document.createElement('small');
       button.className='parentWord wordStatus '+word.status;button.dataset.word=word.word;button.dataset.status=word.status;button.dataset.quick=String(word.quick);
@@ -385,7 +395,7 @@ function restoreBackup(text){
   if(blocked||!save()){backupStatus('Progress could not be saved, so the backup was not restored.');return;}
   let payload;try{payload=store.restore(backup.state,state.revision);}catch(e){if(e.code==='space')backupStatus(e.message);else storageProblem(e);return;}
   // Never save the replaced progress again; reload from the restored save.
-  state=JSON.parse(payload);blocked=true;backupStatus('Backup restored. Reloading…');location.reload();
+  state=Core.unpackSave(JSON.parse(payload));blocked=true;backupStatus('Backup restored. Reloading…');location.reload();
 }
 function storageProblem(error) {
   blocked=true;paused=true;cancelWork();
@@ -636,11 +646,11 @@ function hideWord() {
 function drawChoices() {
   const q=Core.getQuestion(state),[scroll,answers]=stageElements();
   scroll.innerHTML=galaxyMask();answers.replaceChildren();
-  q.options.forEach(option=>{const button=document.createElement('button');button.className='answer';button.textContent=option;button.onclick=()=>answer(option);answers.append(button);});
-  $('#assessmentUnsure').hidden=state.activity!=='assessment';$('#battleUnsure').hidden=state.activity!=='battle';lastTick=performance.now();
+  q.options.forEach(option=>{const button=document.createElement('button');button.className='answer';button.textContent=option;button.dataset.questionId=q.id;button.dataset.answer=option;button.onclick=()=>{if(button.isConnected)answer(option,q.id);};answers.append(button);});
+  $('#assessmentUnsure').hidden=state.activity!=='assessment';$('#battleUnsure').hidden=state.activity!=='battle'||!Core.canRequestBattleHelp(state);lastTick=performance.now();
 }
-function answer(option) {
-  if(paused||blocked)return;
+function answer(option,questionId=Core.getQuestion(state)?.id) {
+  if(paused||blocked||!['battle','assessment'].includes(state.activity)||Core.getQuestion(state)?.id!==questionId)return;
   if(!confirmActivity())return;const assessment=state.activity==='assessment';
   const shieldBefore=!!state.rewards.shield;
   const rec=assessment?Core.answerAssessment(state,option,Date.now()):Core.answerBattle(state,option,Date.now());
@@ -649,7 +659,7 @@ function answer(option) {
   if(!save())return;
   if(assessment)assessmentFeedback();else{
     if(rec.healthChanged||rec.shieldUsed)pendingHealth={questionId:state.battle.question.id,heroHealth:rec.heroHealthBefore,enemyHealth:rec.enemyHealthBefore,shield:shieldBefore};
-    renderHud();if(rec.correct)correctFeedback();else correction(true);
+    renderHud();if(rec.correct)correctFeedback(rec);else correction(true);
   }
 }
 function assessmentFeedback() {
@@ -657,14 +667,21 @@ function assessmentFeedback() {
   $('#assessmentScroll').textContent=q.correct?'✓':'•';
   later(()=>{Core.prepareAssessment(state,Date.now());if(save())renderActivity();},430);
 }
-function correctFeedback() {
+function correctFeedback(record=null) {
   const q=state.battle.question;
   $('#battleScroll').textContent=q.target;$('#battleAnswers').replaceChildren();
   const supported=q.supportReasons.length>0;
   $('#feedback').textContent=supported?'Practice':'';$('#feedback').classList.toggle('show',supported);
   $('#battleScroll').classList.add('wordSuccess');
+  if(record&&Core.quickAnswer(record)){
+    const reward=document.createElement('span');reward.className='quickWordReward';
+    reward.setAttribute('role','status');reward.setAttribute('aria-label','Quick answer! Lightning earned.');
+    reward.innerHTML='<svg viewBox="0 0 48 64" aria-hidden="true"><path d="M28 3L7 35H23L18 61L43 25H27Z"/></svg>';
+    reward.addEventListener('animationend',()=>reward.remove(),{once:true});
+    $('#battleScroll').append(reward);
+  }
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
-  speak(q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
+  speak(Core.byWord[q.target]?.spoken||q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
 function combatGeometry(effects){
   const box=effects.getBoundingClientRect?.();
@@ -885,10 +902,29 @@ function renderTeaching() {
   const pattern=new RegExp('\\b'+item.w+'\\b','i'),match=pattern.exec(item.sentence),start=match.index;
   sentence.append(document.createTextNode(item.sentence.slice(0,start)));
   const target=document.createElement('span');target.className='targetWord';target.textContent=match[0];sentence.append(target,document.createTextNode(item.sentence.slice(start+match[0].length)));
+  $('#teaching .teachCard').classList.toggle('expandedLesson',!!item.expansion);
+  $('#teaching .teachArt').hidden=!!item.expansion;
+  const lesson=$('#teachWordLesson');lesson.hidden=!item.expansion;
+  $('#teachWordListen').hidden=!item.expansion;
+  $('#teachHintListen').hidden=!item.expansion;
+  if(item.expansion){
+    $('#teachWordLabel').textContent=item.w;
+    $('#teachHint').textContent=item.teaching.tip;
+    const symbol=$('#teachSymbol');symbol.textContent=item.teaching.symbol||'';symbol.hidden=!item.teaching.symbol;
+    const counters=$('#teachCounters');counters.replaceChildren();
+    const number=Number(item.teaching.symbol);
+    counters.hidden=!item.teaching.symbol||!Number.isInteger(number)||number<0||number>20;
+    if(!counters.hidden){
+      counters.setAttribute('aria-label',number+' counters');
+      for(let i=0;i<number;i++){const dot=document.createElement('span');dot.className='numberCounter';dot.setAttribute('aria-hidden','true');counters.append(dot);}
+      if(number===0)counters.textContent='None left';
+    }
+  }
   const illustration=$('#teachIllustration'),token=epoch;
   $('#lessonStatus').textContent='';$('#teachContinue').disabled=true;
   let ready=false;
   const pictureReady=()=>{if(ready||token!==epoch)return;ready=true;$('#teachContinue').disabled=false;if(!paused&&!blocked)narrateTeaching();};
+  if(item.expansion){illustration.hidden=true;$('#teachAtlas').hidden=true;illustration.onload=null;illustration.onerror=null;pictureReady();return;}
   illustration.onload=pictureReady;
   illustration.onerror=()=>{if(token!==epoch)return;$('#lessonStatus').textContent='The picture could not load. You can listen or continue.';pictureReady();};
   illustration.hidden=!!item.crop;$('#teachAtlas').toggleAttribute('hidden',!item.crop);
@@ -911,7 +947,8 @@ function renderResult() {
   show('result');const result=state.result;if(!result){home();return;}
   $('#resultNext').textContent='Map';$('#opponents').classList.remove('missionResultActions');
   paintHero($('#resultHero'),heroIndex());
-  $('#resultTitle').textContent=result.victory?'You did it!':'Let’s try again';
+  $('#result').classList.toggle('lostBattle',!result.victory);$('#resultRetreat').hidden=result.victory;
+  $('#resultTitle').textContent=result.victory?'You did it!':'You lost this round';
   const chapter=Core.activeChapterState(state);
   $('#resultMessage').textContent=result.chapterJustComplete?'New campaign!':result.fieldJustComplete||result.reviewJustComplete?'Chapter complete!':result.victory&&chapter?.duels&&chapter.activeMs<Core.TARGET_MS?'One more battle!':'';renderChapter($('#resultChapter'));
   const growth=Core.dragonProgress(state);
@@ -920,7 +957,7 @@ function renderResult() {
   $('#resultGrowthFill').style.width=(growth.fraction*100)+'%';$('#resultGrowthBar').setAttribute('aria-valuenow',String(Math.round(growth.fraction*100)));
   $('#resultGrowthNote').textContent=growthStepCaption(growth)+' · Tap to see';$('#resultGrowthBar').classList.add('steppedGrowth');$('#resultGrowthBar').setAttribute('aria-valuetext',growthStepCaption(growth));
   $('#resultShield').hidden=!state.rewards.shield;$('#resultShield').innerHTML=shieldIcon+'<span>1 shield</span>';
-  if(result.missionId){$('#speedSuggestion').hidden=true;adventures.renderResult();resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));else defeatReaction(result,result.enemyId,result.strength);maybeOfferName();return;}
+  if(result.missionId){$('#speedSuggestion').hidden=true;adventures.renderResult();resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));else retreatReaction(result);maybeOfferName();return;}
   const progress=Core.chapterProgress(state);
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');
   const enemies=Core.enemyChoices(state,result.strength);
@@ -941,7 +978,7 @@ function renderResult() {
       state.campaign.enemyStrength=choice.hp;Core.startBattle(state,Date.now(),{strength:choice.hp,enemyId:choice.enemy.id});if(save())renderActivity();};box.append(button);
   });box.classList.toggle('single',choices.length===1);
   renderSpeedSuggestion(result);
-  resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));if(!result.victory)defeatReaction(result,result.enemyId,result.strength);else maybeOfferName();
+  resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));if(!result.victory)retreatReaction(result);else maybeOfferName();
 }
 function renderSpeedSuggestion(result){
   const offer=result.speedSuggestion,box=$('#speedSuggestion');
@@ -955,6 +992,12 @@ function renderSpeedSuggestion(result){
 function resultSound(result,victory){
   if(result.audioCuePlayed||paused||blocked)return;
   result.audioCuePlayed=true;if(save())sound.cue(victory?'victory':'defeat');
+}
+function retreatReaction(result){
+  if(result.defeatShown||paused||blocked)return;
+  result.defeatShown=true;if(!save())return;
+  const scene=$('#resultRetreat');scene.classList.add('retreatMoving');
+  later(()=>scene.classList.remove('retreatMoving'),2200);
 }
 function defeatReaction(result,enemyId,strength){
   if(result.defeatShown||paused||blocked)return;
@@ -1160,6 +1203,7 @@ function continueMap(){
   continueAdventure();
 }
 $('#mapTraveller').onclick=()=>{renderHeroes();show('hero');save();};
+$('#mapWimmelbild').onclick=openWimmelbild;
 $('#mapStoryPilot').onclick=()=>{if(blocked||state.screen!=='campaignMap'||!save())return;cancelWork();location.assign('assets/story-pilot/');};
 $('#mapNewAdventures').onclick=()=>{Core.Adventure.of(state).preferLegacy=false;home();};
 $('#mapParents').onclick=openParentGate;$('#routeParents').onclick=openParentGate;
@@ -1181,11 +1225,18 @@ $('#handoffNext').onclick=()=>{Core.leaveHandoff(state,Date.now());if(save())ent
 $('#voiceChoice').onchange=()=>{state.settings.voiceURI=$('#voiceChoice').value;save();};
 $('#previewVoice').onclick=()=>speak('Pip is on the rock.');
 window.speechSynthesis?.addEventListener('voiceschanged',()=>{if(!$('#pausePanel').hidden)populateVoices();});
+$('#teachWordListen').onclick=()=>{if(!confirmActivity()||!state.teaching)return;const item=Core.byWord[state.teaching.target];if(item?.expansion)speak(item.spoken||item.w);};
+$('#teachHintListen').onclick=()=>{if(!confirmActivity()||!state.teaching)return;const item=Core.byWord[state.teaching.target];if(item?.expansion)speak(item.teaching.tip);};
 $('#teachReplay').onclick=()=>{if(!confirmActivity())return;const teaching=state.teaching;Core.startTeaching(state,teaching.target,teaching.returnTo,Date.now(),{replay:true});if(save())narrateTeaching();};
 $('#teachContinue').onclick=()=>{if(!confirmActivity())return;Core.leaveTeaching(state,Date.now());if(save())advanceBattle();};
 $('#resultNext').onclick=home;
 $('#anotherChallenge').onclick=continueAdventure;$('#doneToday').onclick=home;
 $('#retrySave').onclick=()=>{try{store.save(state);blocked=false;$('#saveNotice').hidden=true;if(playing)showPausePanel();else if(state.screen==='route')home();else show(state.screen);}catch(e){storageProblem(e);}};
+$('#parentAddXP').onclick=()=>{
+  if(blocked||state.screen!=='parentDashboard')return;
+  Core.grantParentXP(state,Date.now());
+  if(save()){renderParent();$('#parentXPStatus').textContent='Added 1,000 XP. Total: '+xpText(state.dragon.xp)+' XP.';}
+};
 $('#resetBtn').onclick=()=>{if(confirm('Erase the profile and all saved reading progress on this device? This cannot be undone.')){
   // Explicit existing reset action only. Never reset during deployment or migration.
   for(const suffix of ['','_backup','_legacy_backup','_unreadable_backup','_before_restore'])localStorage.removeItem(KEY+suffix);location.reload();

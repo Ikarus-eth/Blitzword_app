@@ -1,0 +1,3604 @@
+{
+  "version": 1,
+  "reviewId": "enemy-finals-20261010",
+  "names": [
+    "Artus",
+    "Juna"
+  ],
+  "excluded": [
+    5,
+    17,
+    47,
+    49
+  ],
+  "entities": [
+    {
+      "id": "01",
+      "name": "Snow Owl",
+      "description": "White feathered owl with amber eyes and subtle frosted wing tips",
+      "sheet": 1,
+      "slot": 0,
+      "shortlist": true,
+      "overlap": "Requested white owl; closest existing family: Hollow Owl.",
+      "conceptId": 1,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "White feathered owl with amber eyes and subtle frosted wing tips",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Frost Sentinel",
+          "description": "pure white owl, swept crystalline wing tips, sapphire eyes, proud tall stance",
+          "src": "sheets/pair-01.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Moon Watcher",
+          "description": "white barn owl heart-shaped face, golden eyes, silver crescent collar, rounded folded wings",
+          "src": "sheets/pair-01.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Aurora Seer",
+          "description": "white snowy owl, long layered feathers, turquoise-violet aurora edging, spreading wings",
+          "src": "sheets/pair-01.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Bramble Badger",
+      "description": "Stocky badger with thorn shoulder mantle",
+      "sheet": 1,
+      "slot": 1,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 2,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Stocky badger with thorn shoulder mantle",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Briar Digger",
+          "description": "lean striped badger, crimson bramble shoulders, broad digging claws",
+          "src": "sheets/pair-01.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Oak Defender",
+          "description": "stocky badger with carved oak chest armour and teal cloth sash",
+          "src": "sheets/pair-01.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Amber Burrower",
+          "description": "dark badger with amber crystal ridges and warm golden paws",
+          "src": "sheets/pair-01.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            512,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "name": "Ember Fox",
+      "description": "Russet fox with glowing tail tip",
+      "sheet": 1,
+      "slot": 2,
+      "shortlist": false,
+      "overlap": "Canine silhouette overlaps Fern Wolf; not shortlisted.",
+      "conceptId": 3,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Russet fox with glowing tail tip",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Cinder Runner",
+          "description": "slender fox, long sharp muzzle, sleek russet coat, one sweeping flame tail, no leaf armour",
+          "src": "sheets/pair-02.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            480
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Moon Fox",
+          "description": "silver-red fox with enormous crescent tail and deep blue ear tips",
+          "src": "sheets/pair-02.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            480
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Sunflare Trickster",
+          "description": "golden fox with black legs and vivid ember mane, light agile stance",
+          "src": "sheets/pair-02.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            480
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "name": "Rowan Stag",
+      "description": "Stag with berry laden branch antlers",
+      "sheet": 1,
+      "slot": 3,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 4,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Stag with berry laden branch antlers",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Ruby Branchkeeper",
+          "description": "graceful stag with branching red berry antlers and emerald mantle",
+          "src": "sheets/pair-02.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            480,
+            512.0,
+            544
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Sunwood Monarch",
+          "description": "large golden stag with broad luminous amber antlers and cream chest",
+          "src": "sheets/pair-02.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            480,
+            512.0,
+            544
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Wild Verdant",
+          "description": "dark stag with vibrant green antlers, sparse vine markings and powerful long legs",
+          "src": "sheets/pair-02.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            480,
+            512.0,
+            544
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "name": "Pine Marten",
+      "description": "Marten with pine cone neck ruff",
+      "sheet": 1,
+      "slot": 5,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 6,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Marten with pine cone neck ruff",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Pine Scout",
+          "description": "slim pine marten with dark brown coat, vivid emerald neck ruff and golden throat",
+          "src": "sheets/pair-03.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            494
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Storm Marten",
+          "description": "long marten with teal back markings, swept ears and sparking tail tip",
+          "src": "sheets/pair-03.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            494
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Cone Ranger",
+          "description": "upright marten in russet leaf cape with pinecone shoulder clasps",
+          "src": "sheets/pair-03.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            494
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "name": "Hazel Hare",
+      "description": "Long eared hare in hazel leaf cape",
+      "sheet": 1,
+      "slot": 6,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 7,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Long eared hare in hazel leaf cape",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Hazel Sprinter",
+          "description": "lean long-legged hare with long ears, emerald waistcoat and hazel staff",
+          "src": "sheets/pair-03.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            494,
+            512.0,
+            530
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Autumn Jumper",
+          "description": "russet hare with small leaf shoulder plates, flame shaped cream ear markings",
+          "src": "sheets/pair-03.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            494,
+            512.0,
+            530
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Windfoot",
+          "description": "cream hare with flowing blue-green scarf and pale wind ribbons around long feet",
+          "src": "sheets/pair-03.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            494,
+            512.0,
+            530
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "name": "Cloak Raccoon",
+      "description": "Raccoon with bark buckler",
+      "sheet": 1,
+      "slot": 7,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 8,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Raccoon with bark buckler",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Oakshield Scout",
+          "description": "upright raccoon with clear black mask, round wooden shield, crimson short cloak",
+          "src": "sheets/pair-04.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            494
+          ]
+        },
+        {
+          "id": "c",
+          "title": "River Bandit",
+          "description": "slim raccoon, cobalt coat, rope belt and small smooth pebble armour",
+          "src": "sheets/pair-04.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            494
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Briar Sentry",
+          "description": "four-legged raccoon, emerald thorn shoulders, bushy strongly striped tail",
+          "src": "sheets/pair-04.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            494
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "name": "Chestnut Squirrel",
+      "description": "Squirrel with huge curled leaf tail",
+      "sheet": 1,
+      "slot": 8,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 9,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Squirrel with huge curled leaf tail",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Autumn Acrobat",
+          "description": "bright rust squirrel, huge curled orange leaf tail, slender agile body",
+          "src": "sheets/pair-04.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            494,
+            512.0,
+            530
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Ember Collector",
+          "description": "deep red squirrel with golden glowing tail spiral and cream belly",
+          "src": "sheets/pair-04.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            494,
+            512.0,
+            530
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Jade Treetopper",
+          "description": "brown squirrel with emerald tail fronds, turquoise chest charm and high ears",
+          "src": "sheets/pair-04.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            494,
+            512.0,
+            530
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Moss Bear",
+      "description": "Bear with moss shoulders",
+      "sheet": 1,
+      "slot": 9,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 10,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Bear with moss shoulders",
+          "src": "../enemy-vote/sheet-1.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Forest Guardian",
+          "description": "brown bear on all fours, deep emerald moss mane, sturdy natural bear silhouette",
+          "src": "sheets/pair-05.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Sun Bear",
+          "description": "dark sleek bear, brilliant golden chest crescent and amber shoulder fur",
+          "src": "sheets/pair-05.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Briar Champion",
+          "description": "upright russet bear, layered bark armguards, red berries and strong broad shoulders",
+          "src": "sheets/pair-05.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Lily Otter",
+      "description": "Otter with lily leaf collar",
+      "sheet": 2,
+      "slot": 0,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 11,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Otter with lily leaf collar",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Lily Skimmer",
+          "description": "slender brown otter, teal water ribbon tail, vivid white lily collar",
+          "src": "sheets/pair-05.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "River Duelist",
+          "description": "upright otter, cobalt reed cape and smooth river pebble shield",
+          "src": "sheets/pair-05.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Pearl Diver",
+          "description": "silver-brown otter, pearlescent whiskers, jade water droplets and curled flowing tail",
+          "src": "sheets/pair-05.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            512,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Dam Beaver",
+      "description": "Beaver with driftwood armour",
+      "sheet": 2,
+      "slot": 1,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 12,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Beaver with driftwood armour",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Dam Builder",
+          "description": "strong beaver with broad flat tail and fitted dark driftwood armour",
+          "src": "sheets/pair-06.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            538
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Copper Carpenter",
+          "description": "russet beaver with copper-edged log buckler and blue sash",
+          "src": "sheets/pair-06.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            538
+          ]
+        },
+        {
+          "id": "d",
+          "title": "River Warden",
+          "description": "dark beaver, turquoise stream patterns on broad paddle tail, reeds at shoulders",
+          "src": "sheets/pair-06.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            538
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Amber Newt",
+      "description": "Newt with warm glowing spotted skin",
+      "sheet": 2,
+      "slot": 2,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 13,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Newt with warm glowing spotted skin",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Amber Glow",
+          "description": "slim orange newt, glasslike amber spots, four clear legs and long finless tail",
+          "src": "sheets/pair-06.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            538,
+            512.0,
+            486
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Citrine Crest",
+          "description": "golden newt with translucent yellow dorsal crest and dark sapphire markings",
+          "src": "sheets/pair-06.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            538,
+            512.0,
+            486
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Ruby Ember",
+          "description": "red newt, cream belly, jewel-like red back spots and tiny warm sparks",
+          "src": "sheets/pair-06.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            538,
+            512.0,
+            486
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Cattail Heron",
+      "description": "Tall heron with reed plumage",
+      "sheet": 2,
+      "slot": 3,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 14,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Tall heron with reed plumage",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Reed Spear",
+          "description": "tall slender heron, emerald reed plumage, golden beak, long visible legs",
+          "src": "sheets/pair-07.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            577
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Storm Heron",
+          "description": "blue-grey heron with sweeping silver crest, vivid cobalt shoulders",
+          "src": "sheets/pair-07.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            577
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Sunset Fisher",
+          "description": "rust and cream heron, long neck, coral wing tips and cattail collar",
+          "src": "sheets/pair-07.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            577
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Brook Turtle",
+      "description": "Turtle with river stone shell",
+      "sheet": 2,
+      "slot": 4,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 15,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Turtle with river stone shell",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Riverstone Shell",
+          "description": "low quadruped turtle, jade riverstone mosaic shell with blue water seams",
+          "src": "sheets/pair-07.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            577,
+            512.0,
+            447
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Waterfall Keeper",
+          "description": "green turtle with smooth turquoise shell plates and flowing miniature water ribbons",
+          "src": "sheets/pair-07.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            577,
+            512.0,
+            447
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Sunlit Terrapin",
+          "description": "amber-brown turtle with geometric golden shell markings and bright teal eyes",
+          "src": "sheets/pair-07.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            577,
+            512.0,
+            447
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Willow Kingfisher",
+      "description": "Blue kingfisher with willow crown",
+      "sheet": 2,
+      "slot": 5,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 16,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Blue kingfisher with willow crown",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Sapphire Arrow",
+          "description": "small vivid cobalt kingfisher, orange breast, long beak, swept sleek plumage",
+          "src": "sheets/pair-08.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "River Jewel",
+          "description": "turquoise kingfisher, iridescent emerald wings, white throat and tiny water gems",
+          "src": "sheets/pair-08.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Storm Flash",
+          "description": "deep blue kingfisher with brilliant copper chest, lightning-shaped feather crest",
+          "src": "sheets/pair-08.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Ripple Salamander",
+      "description": "Blue salamander with water ribbon tail",
+      "sheet": 2,
+      "slot": 7,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 18,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Blue salamander with water ribbon tail",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Ripple Crest",
+          "description": "cobalt salamander with turquoise water ribbon tail and long elegant body",
+          "src": "sheets/pair-08.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Tide Dancer",
+          "description": "bright teal salamander with translucent dorsal water fins and cream belly",
+          "src": "sheets/pair-08.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Deepwater Spark",
+          "description": "indigo salamander with luminous cyan ring markings and curling wave tail",
+          "src": "sheets/pair-08.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            512,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Shell Lobster",
+      "description": "Freshwater lobster wearing old shells",
+      "sheet": 2,
+      "slot": 8,
+      "shortlist": false,
+      "overlap": "Clawed shell creature overlaps Crystal Crab; not shortlisted.",
+      "conceptId": 19,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Freshwater lobster wearing old shells",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "River Lobster",
+          "description": "long-bodied red lobster, segmented tail, asymmetric pincers, smooth blue river stones",
+          "src": "sheets/pair-09.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            469
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Tide Armour",
+          "description": "cobalt lobster, elongated narrow body, copper shell edges and broad fan tail",
+          "src": "sheets/pair-09.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            469
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Coral Claw",
+          "description": "crimson lobster with orange coral claw ridges and cream shell inlays, long silhouette unlike round crab",
+          "src": "sheets/pair-09.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            469
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Marsh Crane",
+      "description": "Crane with purple marsh flower crest",
+      "sheet": 2,
+      "slot": 9,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 20,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Crane with purple marsh flower crest",
+          "src": "../enemy-vote/sheet-2.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Lotus Crane",
+          "description": "tall white crane, plum-purple lotus crest, black wing tips and long red legs",
+          "src": "sheets/pair-09.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            469,
+            512.0,
+            555
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Dusk Crane",
+          "description": "violet-grey crane with amber crown and long elegant neck",
+          "src": "sheets/pair-09.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            469,
+            512.0,
+            555
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Marsh Dancer",
+          "description": "cream crane with emerald layered wings, coral floral accents and raised wing pose",
+          "src": "sheets/pair-09.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            469,
+            512.0,
+            555
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Coal Salamander",
+      "description": "Black salamander with orange cracks",
+      "sheet": 3,
+      "slot": 0,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 21,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Black salamander with orange cracks",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Lava Runner",
+          "description": "sleek coal-black salamander, fiery orange cracks and low long body",
+          "src": "sheets/pair-10.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            506
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Obsidian Blaze",
+          "description": "black salamander with red glass dorsal fins and bright molten yellow belly",
+          "src": "sheets/pair-10.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            506
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Coalheart",
+          "description": "charcoal salamander with glowing ruby chest stone and ember spots, broad flat head",
+          "src": "sheets/pair-10.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            506
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Quartz Mole",
+      "description": "Mole with quartz digging claws",
+      "sheet": 3,
+      "slot": 1,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 22,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Mole with quartz digging claws",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Crystal Digger",
+          "description": "small dark mole, huge pale quartz digging claws, violet shoulder crystals",
+          "src": "sheets/pair-10.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            506,
+            512.0,
+            518
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Amethyst Miner",
+          "description": "brown mole with vivid purple crystal gauntlets and round pink nose",
+          "src": "sheets/pair-10.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            506,
+            512.0,
+            518
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Golden Delver",
+          "description": "velvet black mole with gold stone claws and amber crystal back ridge",
+          "src": "sheets/pair-10.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            506,
+            512.0,
+            518
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Copper Scorpion",
+      "description": "Rounded scorpion with copper armour",
+      "sheet": 3,
+      "slot": 2,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 23,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Rounded scorpion with copper armour",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Copper Stinger",
+          "description": "copper scorpion with long curved tail, small amber stinger and turquoise joints",
+          "src": "sheets/pair-11.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Verdigris Sentinel",
+          "description": "teal patinated scorpion with broad copper pincers, low eight-legged stance",
+          "src": "sheets/pair-11.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Furnace Scorpion",
+          "description": "dark bronze scorpion with orange seam glow and angular compact tail",
+          "src": "sheets/pair-11.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Lantern Gecko",
+      "description": "Gecko with golden glowing throat",
+      "sheet": 3,
+      "slot": 3,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 24,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Gecko with golden glowing throat",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Golden Lantern",
+          "description": "slim emerald gecko with gold glowing throat sac and broad toe pads",
+          "src": "sheets/pair-11.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Sunspot Gecko",
+          "description": "bright orange gecko with turquoise spots and amber dorsal gems",
+          "src": "sheets/pair-11.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Moonlamp Gecko",
+          "description": "indigo gecko with pale luminous throat and curling crescent tail",
+          "src": "sheets/pair-11.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            512,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Slate Pangolin",
+      "description": "Pangolin with overlapping slate scales",
+      "sheet": 3,
+      "slot": 4,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 25,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Pangolin with overlapping slate scales",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Slate Sentinel",
+          "description": "long-nosed pangolin, large overlapping dark slate scales edged bright cyan",
+          "src": "sheets/pair-12.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            509
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Copper Scale",
+          "description": "bronze pangolin with golden plate edges and long curling heavy tail",
+          "src": "sheets/pair-12.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            509
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Jade Roller",
+          "description": "emerald mineral pangolin, rounded overlapping scales and cream face, four visible legs",
+          "src": "sheets/pair-12.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            509
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Cinder Porcupine",
+      "description": "Porcupine with ember tipped quills",
+      "sheet": 3,
+      "slot": 5,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 26,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Porcupine with ember tipped quills",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Ember Quills",
+          "description": "slender dark porcupine with swept orange quills and cream muzzle",
+          "src": "sheets/pair-12.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            509,
+            512.0,
+            515
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Ruby Spines",
+          "description": "russet porcupine with deep crimson crystal quills, angular long silhouette",
+          "src": "sheets/pair-12.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            509,
+            512.0,
+            515
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Sunburst",
+          "description": "golden-brown porcupine with radiating yellow-tipped quills and dark paws",
+          "src": "sheets/pair-12.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            509,
+            512.0,
+            515
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Gem Spider",
+      "description": "Eight legged spider with small jewel abdomen",
+      "sheet": 3,
+      "slot": 6,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 27,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Eight legged spider with small jewel abdomen",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Ruby Weaver",
+          "description": "round jewel-backed spider, exactly eight legs, vivid ruby abdomen and friendly alert eyes",
+          "src": "sheets/pair-13.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            495
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Amethyst Spinner",
+          "description": "purple spider with silver web markings and eight slender violet legs",
+          "src": "sheets/pair-13.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            495
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Emerald Watcher",
+          "description": "dark spider, faceted green abdomen, copper joints, exactly eight legs",
+          "src": "sheets/pair-13.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            495
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "name": "Echo Lizard",
+      "description": "Cave lizard with fan shaped ears",
+      "sheet": 3,
+      "slot": 7,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 28,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Cave lizard with fan shaped ears",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Echo Fan",
+          "description": "slender cave lizard, large turquoise fan ears, amber eyes and long banded tail",
+          "src": "sheets/pair-13.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            495,
+            512.0,
+            529
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Cavern Listener",
+          "description": "violet lizard with broad translucent purple cheek fins and four splayed feet",
+          "src": "sheets/pair-13.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            495,
+            512.0,
+            529
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Sunstone Echo",
+          "description": "orange lizard with golden fan crest and cyan throat, upright curious pose",
+          "src": "sheets/pair-13.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            495,
+            512.0,
+            529
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Flint Armadillo",
+      "description": "Armadillo with flint plated shell",
+      "sheet": 3,
+      "slot": 8,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 29,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Armadillo with flint plated shell",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Flint Shield",
+          "description": "low armadillo with segmented angular grey stone shell and copper seams",
+          "src": "sheets/pair-14.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            500
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Citrine Roller",
+          "description": "gold plated armadillo with banded domed shell, short ears, long tail",
+          "src": "sheets/pair-14.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            500
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Basalt Guardian",
+          "description": "black armadillo with fiery red cracks across shell bands and sturdy digging feet",
+          "src": "sheets/pair-14.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Ore Ant",
+      "description": "Large ant with iron mineral carapace",
+      "sheet": 3,
+      "slot": 9,
+      "shortlist": false,
+      "overlap": "Armoured insect overlaps Bark Beetle; not shortlisted.",
+      "conceptId": 30,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Large ant with iron mineral carapace",
+          "src": "../enemy-vote/sheet-3.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Iron Worker",
+          "description": "six-legged ant, narrow waist, huge angular mandibles, charcoal ore abdomen",
+          "src": "sheets/pair-14.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            500,
+            512.0,
+            524
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Copper Soldier",
+          "description": "vivid copper ant with long thin antennae and turquoise mineral shoulder plates",
+          "src": "sheets/pair-14.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            500,
+            512.0,
+            524
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Ruby Queen",
+          "description": "large crimson ant with sleek segmented abdomen, six legs, no wings, tall narrow stance",
+          "src": "sheets/pair-14.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            500,
+            512.0,
+            524
+          ]
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Frost Lynx",
+      "description": "Lynx with frosted ear tufts",
+      "sheet": 4,
+      "slot": 0,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 31,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Lynx with frosted ear tufts",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Ice Tuft",
+          "description": "athletic lynx, short bobtail, long frost ear tufts, blue-white shoulder fur",
+          "src": "sheets/pair-15.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            503
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Sapphire Prowler",
+          "description": "cream lynx with bold cobalt spots and silver ice collar",
+          "src": "sheets/pair-15.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            503
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Aurora Hunter",
+          "description": "grey lynx, teal-violet tail and ear tips, large paws and clear dark face markings",
+          "src": "sheets/pair-15.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            503
+          ]
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Aurora Elk",
+      "description": "Elk with faint aurora flowing between antlers",
+      "sheet": 4,
+      "slot": 1,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 32,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Elk with faint aurora flowing between antlers",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Aurora Crown",
+          "description": "large elk with wide antlers bearing teal and violet light ribbons",
+          "src": "sheets/pair-15.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            503,
+            512.0,
+            521
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Polar Monarch",
+          "description": "cream elk, enormous silver-blue antlers and deep blue mane",
+          "src": "sheets/pair-15.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            503,
+            512.0,
+            521
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Emerald Sky",
+          "description": "dark brown elk with luminous emerald branching antlers, gold flecked chest",
+          "src": "sheets/pair-15.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            503,
+            512.0,
+            521
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "name": "Snow Hare",
+      "description": "White hare with crystal whiskers",
+      "sheet": 4,
+      "slot": 2,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 33,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "White hare with crystal whiskers",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Snow Sprinter",
+          "description": "slender white hare, very long legs and ears, subtle blue crystal whiskers",
+          "src": "sheets/pair-16.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            507
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Frost Dancer",
+          "description": "white hare with sapphire ear tips and flowing icy neck ruff",
+          "src": "sheets/pair-16.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            507
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Moon Snow",
+          "description": "cream-white hare with violet eyes, silver crescent brow marking and soft teal scarf",
+          "src": "sheets/pair-16.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            507
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "name": "Cloud Yak",
+      "description": "Yak with soft cloudlike wool",
+      "sheet": 4,
+      "slot": 3,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 34,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Yak with soft cloudlike wool",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Cloud Guardian",
+          "description": "dark yak with enormous white cloud mane, broad horns and teal tassels",
+          "src": "sheets/pair-16.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            507,
+            512.0,
+            517
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Thunder Yak",
+          "description": "blue-black yak with cream wool shoulders and golden lightning markings on horns",
+          "src": "sheets/pair-16.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            507,
+            512.0,
+            517
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Suncloud",
+          "description": "golden yak with swirling white wool and dark curved horns, imposing quadruped",
+          "src": "sheets/pair-16.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            507,
+            512.0,
+            517
+          ]
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "name": "Pinecone Marmot",
+      "description": "Marmot with pinecone shoulder armour",
+      "sheet": 4,
+      "slot": 4,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 35,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Marmot with pinecone shoulder armour",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Cone Scout",
+          "description": "upright golden marmot with emerald pinecone shoulder plates",
+          "src": "sheets/pair-17.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Mountain Lookout",
+          "description": "russet marmot with slate blue short cloak, bright orange neck ruff",
+          "src": "sheets/pair-17.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Amber Forager",
+          "description": "dark marmot with amber cone back armour and cream face",
+          "src": "sheets/pair-17.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "name": "Gale Falcon",
+      "description": "Falcon with wind swept silver feathers",
+      "sheet": 4,
+      "slot": 5,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 36,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Falcon with wind swept silver feathers",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Gale Blade",
+          "description": "sleek falcon, swept silver feathers, deep cobalt wings and golden eyes",
+          "src": "sheets/pair-17.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Sunwind",
+          "description": "rust-gold falcon with cream breast and long sharp orange-edged wings",
+          "src": "sheets/pair-17.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Stormwing",
+          "description": "charcoal falcon with vivid turquoise flight feathers and subtle lightning markings",
+          "src": "sheets/pair-17.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            512,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "name": "Lichen Ibex",
+      "description": "Ibex with lichen encrusted curved horns",
+      "sheet": 4,
+      "slot": 6,
+      "shortlist": false,
+      "overlap": "Horned mountain creature overlaps Stone Ram; not shortlisted.",
+      "conceptId": 37,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Ibex with lichen encrusted curved horns",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Cliff Climber",
+          "description": "slender ibex, long backward swept horns, jade lichen patches, long agile legs, no curled ram horns",
+          "src": "sheets/pair-18.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            536
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Copper Peak",
+          "description": "cream ibex with long ridged copper horns, blue mantle and slim goat beard",
+          "src": "sheets/pair-18.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            536
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Emerald Crag",
+          "description": "brown ibex with immense swept green mineral horns and dark narrow hooves",
+          "src": "sheets/pair-18.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            536
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "name": "Hail Wolverine",
+      "description": "Wolverine with icy back plates",
+      "sheet": 4,
+      "slot": 7,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 38,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Wolverine with icy back plates",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Hail Striker",
+          "description": "powerful low wolverine with silver-blue back plates and dark brown fur",
+          "src": "sheets/pair-18.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            536,
+            512.0,
+            488
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Frostfang",
+          "description": "lean wolverine with white face stripes and cobalt ice shoulder ridges",
+          "src": "sheets/pair-18.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            536,
+            512.0,
+            488
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Storm Pelt",
+          "description": "black wolverine with vivid violet-blue streaked mane and orange eyes",
+          "src": "sheets/pair-18.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            536,
+            512.0,
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "name": "Mist Leopard",
+      "description": "Clouded leopard with mist edged tail",
+      "sheet": 4,
+      "slot": 8,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 39,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Clouded leopard with mist edged tail",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Mist Stalker",
+          "description": "long-tailed clouded leopard, cream rosettes, pale teal mist curling off tail",
+          "src": "sheets/pair-19.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            514
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Moon Panther",
+          "description": "dark violet leopard with silver rosettes and long flowing mist tail",
+          "src": "sheets/pair-19.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            514
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Golden Mirage",
+          "description": "golden spotted leopard with sapphire eyes and blue vapour mane",
+          "src": "sheets/pair-19.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            514
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "name": "Glacier Seal",
+      "description": "Seal with smooth pale blue ice mantle",
+      "sheet": 4,
+      "slot": 9,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 40,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Seal with smooth pale blue ice mantle",
+          "src": "../enemy-vote/sheet-4.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Glacier Diver",
+          "description": "sleek white seal with sapphire ice mantle and two clear front flippers",
+          "src": "sheets/pair-19.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            514,
+            512.0,
+            510
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Aurora Seal",
+          "description": "silver seal with violet-teal patterned flippers and gentle long neck",
+          "src": "sheets/pair-19.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            514,
+            512.0,
+            510
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Crystal Tide",
+          "description": "pale blue seal with smooth crystal back plates and dark expressive eyes",
+          "src": "sheets/pair-19.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            514,
+            512.0,
+            510
+          ]
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "name": "Ink Raven",
+      "description": "Raven with ink tipped wings and scroll charm",
+      "sheet": 5,
+      "slot": 0,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 41,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Raven with ink tipped wings and scroll charm",
+          "src": "../enemy-vote/sheet-5.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Ink Scribe",
+          "description": "black raven, violet sheen, cream scroll band on leg and gold eyes",
+          "src": "sheets/pair-20.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Rune Raven",
+          "description": "deep blue raven with silver geometric wing markings and swept crest",
+          "src": "sheets/pair-20.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Crimson Quill",
+          "description": "charcoal raven with vivid crimson feather tips, slim beak and copper collar",
+          "src": "sheets/pair-20.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "name": "Bramble Peacock",
+      "description": "Peacock with leafy eye pattern tail",
+      "sheet": 5,
+      "slot": 1,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 42,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Peacock with leafy eye pattern tail",
+          "src": "../enemy-vote/sheet-5.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Jade Fan",
+          "description": "brilliant blue peacock with emerald eye-pattern fan tail, spread within cell",
+          "src": "sheets/pair-20.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Autumn Crown",
+          "description": "copper peacock, orange-red eye-pattern tail, long elegant neck",
+          "src": "sheets/pair-20.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            512,
+            512.0,
+            512
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Moon Peacock",
+          "description": "indigo peacock, turquoise and silver tail eyes, restrained purple crest",
+          "src": "sheets/pair-20.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            512,
+            512.0,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "name": "Bell Tortoise",
+      "description": "Tortoise with old bronze bell shell",
+      "sheet": 5,
+      "slot": 2,
+      "shortlist": false,
+      "overlap": "Shell-armour idea overlaps Snail Knight; not shortlisted.",
+      "conceptId": 43,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Tortoise with old bronze bell shell",
+          "src": "../enemy-vote/sheet-5.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Bronze Bell",
+          "description": "tortoise with recognisable aged bronze bell shell and vivid teal patina, no knight gear",
+          "src": "sheets/pair-21.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            497
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Sun Chime",
+          "description": "golden tortoise with rounded embossed bell shell and crimson hanging tassels",
+          "src": "sheets/pair-21.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            497
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Moonbell",
+          "description": "blue-grey tortoise with silver bell shell and deep cobalt inlay",
+          "src": "sheets/pair-21.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            497
+          ]
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "name": "Honey Wasp",
+      "description": "Wasp with amber honey armour",
+      "sheet": 5,
+      "slot": 3,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 44,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Wasp with amber honey armour",
+          "src": "../enemy-vote/sheet-5.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 3,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Honey Knight",
+          "description": "slender black-gold wasp with amber translucent wings, narrow waist and six legs",
+          "src": "sheets/pair-21.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            497,
+            512.0,
+            527
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Amber Sting",
+          "description": "orange wasp with jewel honey abdomen and dark copper shoulder plates",
+          "src": "sheets/pair-21.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            497,
+            512.0,
+            527
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Cobalt Wasp",
+          "description": "deep cobalt and golden striped wasp with broad amber wings, sharp readable insect silhouette",
+          "src": "sheets/pair-21.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            497,
+            512.0,
+            527
+          ]
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "name": "Velvet Shrew",
+      "description": "Shrew with oversized ears and velvet seedpod cape",
+      "sheet": 5,
+      "slot": 4,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 45,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Shrew with oversized ears and velvet seedpod cape",
+          "src": "../enemy-vote/sheet-5.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 0,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Seed Scout",
+          "description": "tiny slender shrew with pointed snout, huge ears and crimson seedpod cape",
+          "src": "sheets/pair-22.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            505
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Velvet Ranger",
+          "description": "brown shrew in emerald cape with golden seed clasp, long thin tail",
+          "src": "sheets/pair-22.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            505
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Moon Shrew",
+          "description": "grey shrew with violet ear interiors and soft silver-blue petal collar",
+          "src": "sheets/pair-22.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            505
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "name": "Dusk Firefly",
+      "description": "Large firefly with golden lantern abdomen",
+      "sheet": 5,
+      "slot": 5,
+      "shortlist": false,
+      "overlap": "Glowing insect partly overlaps Moon Moth / Lantern Wisp; not shortlisted.",
+      "conceptId": 46,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Large firefly with golden lantern abdomen",
+          "src": "../enemy-vote/sheet-5.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Golden Beacon",
+          "description": "firefly with oval bright gold abdomen, black shell and two open translucent wings",
+          "src": "sheets/pair-22.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            505,
+            512.0,
+            519
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Emerald Lantern",
+          "description": "firefly with vivid emerald luminous abdomen and copper wing cases",
+          "src": "sheets/pair-22.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            505,
+            512.0,
+            519
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Violet Spark",
+          "description": "indigo firefly with purple-gold glowing abdomen, six delicate legs, visible beetle wing cases",
+          "src": "sheets/pair-22.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            505,
+            512.0,
+            519
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "name": "Petal Chameleon",
+      "description": "Chameleon with flower petal crest",
+      "sheet": 5,
+      "slot": 7,
+      "shortlist": true,
+      "overlap": "",
+      "conceptId": 48,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Chameleon with flower petal crest",
+          "src": "../enemy-vote/sheet-5.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Petal Crown",
+          "description": "emerald chameleon with vivid coral-pink petal crest and tightly curled tail",
+          "src": "sheets/pair-23.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            0,
+            512.0,
+            478
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Sunflower Sneak",
+          "description": "yellow-green chameleon, orange fan crest and turquoise flank dots",
+          "src": "sheets/pair-23.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            0,
+            512.0,
+            478
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Orchid Shifter",
+          "description": "violet chameleon with teal limbs and magenta orchid petal head frill",
+          "src": "sheets/pair-23.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 0,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            0,
+            512.0,
+            478
+          ]
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "name": "Moon Hare Knight",
+      "description": "Upright brown hare with wooden shield and crescent clasp",
+      "sheet": 5,
+      "slot": 9,
+      "shortlist": false,
+      "overlap": "",
+      "conceptId": 50,
+      "options": [
+        {
+          "id": "a",
+          "title": "Original concept",
+          "description": "Upright brown hare with wooden shield and crescent clasp",
+          "src": "../enemy-vote/sheet-5.png",
+          "columns": 5,
+          "rows": 2,
+          "column": 4,
+          "row": 1,
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "id": "b",
+          "title": "Moonshield",
+          "description": "slender upright brown hare knight, silver crescent shield, cobalt cape, no weapon",
+          "src": "sheets/pair-23.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 0,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            0.0,
+            478,
+            512.0,
+            546
+          ]
+        },
+        {
+          "id": "c",
+          "title": "Moonwood",
+          "description": "cream hare knight with carved crescent wooden shield, emerald cloak and copper light armour",
+          "src": "sheets/pair-23.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 1,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            512.0,
+            478,
+            512.0,
+            546
+          ]
+        },
+        {
+          "id": "d",
+          "title": "Star Sentry",
+          "description": "grey hare knight with violet short cape, golden crescent chest clasp and blue moon shield",
+          "src": "sheets/pair-23.png",
+          "columns": 3,
+          "rows": 2,
+          "column": 2,
+          "row": 1,
+          "width": 1536,
+          "height": 1024,
+          "crop": [
+            1024.0,
+            478,
+            512.0,
+            546
+          ]
+        }
+      ]
+    }
+  ]
+}

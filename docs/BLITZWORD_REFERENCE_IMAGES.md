@@ -1,6 +1,26 @@
+## Large chapter search maps — 10 October 2026
+
+Five new maps in `assets/wimmelbild/maps/` serve the ninth task in Crystal Ferry and the following four chapters. Each is a native-detail 3072×2048 composite of four separate 1536×1024 generated sections, assembled with explicit user authorization; source pixels were not enlarged. Twenty sections and all fifteen answer targets were visually audited. Fine atlas dividers separate regions. [Exact prompts/source hashes](wimmelbild/ninth-art-prompts.json), [final dimensions/hashes](wimmelbild/ninth-art-manifest.json), [answer evidence](wimmelbild/NINTH_TASK_RELEASE.md). Approved heroes, Pip and earlier assets are unchanged. Picture hit regions are no longer used for answers.
+
+## New enemy final-look proposals — 10 October 2026
+
+The 46 retained concepts have four proposed looks each in `assets/enemy-finals/`: original A plus three new variants. Stronger colours and elemental accents follow the first-round notes; the requested Snow Owl stays white. Built-in ImageGen produced 23 sheets (two creatures × three looks), preserving the painted storybook references. These are unapproved review assets, not production replacements. [Prompts](../assets/enemy-finals/prompts.json), [manifest](../assets/enemy-finals/artwork-manifest.json), [review rules](enemies/FINAL_LOOK_REVIEW.md).
+
+## Dragon path Wimmelbild scenes — 10 October 2026
+
+The user selected the map-reading mockup 3 and authorized its standalone mini-game with increasingly detailed scenes, zoom, and a many-dragon search. Four new built-in ImageGen illustrations in `assets/wimmelbild/scenes/` depict the harbour map, tree village, dragon valley and castle treasury. These are new environments and incidental creatures; no established hero or Pip asset is replaced. Clue evidence was visually checked in the final images: three red doors; contrasting dragon markings/tails; three green chests with different emblems/book states. Earlier hotspot coordinates are retained as reference data; picture taps no longer select answers. [Exact prompts, output dimensions and hashes](wimmelbild/art-prompts.json). Native images are 1536×1024, delivered as high-quality WebP; zoom does not invent higher-resolution detail.
+
 # BlitzWord — Reference Image Plan
 
 Use images for visual direction, composition, atmosphere, and state transitions. Do not use an image as the only source of behavioral truth. Written product rules belong in `BLITZWORD_PRODUCT_SPEC.md`. Current production assets and approved art decisions are maintained in this repository; no ChatGPT project attachments are required.
+
+### Ship and kind shark — 7 October 2026
+
+The user selected the ship/shark teaching moment and specified that the shark is kind. The source is the first tile of the second row in `assets/teaching/core-teaching.webp`, shared by the `ship` and `shark` entries in `content.js`. The [reference crop](adventures/references/ship-shark-teaching.png) preserves the wooden cream-sailed ship and blue-grey shark. Four built-in ImageGen scenes keep their painted storybook identities, with a calm closed-mouth shark helping the ship. These are chapter-six narrative illustrations; the teaching atlas remains unchanged. [Scenes and exact prompts](adventures/KIND_SHARK_RELEASE.md).
+
+### Boy and map book — 6 October 2026
+
+The user explicitly selected the bottom-right scene in `assets/teaching/core-teaching.webp`: a brown-haired boy in a cream shirt and green waistcoat drawing in an open map book. It is the identity and painted-style reference for the fifth Forest Lights adventure. Four built-in ImageGen paintings retain the boy, book, feather pen and warm rural storybook style; [gallery and exact prompts](adventures/MAPMAKER_RELEASE.md). These replace that mission's narrative art, not the battle hero. The approved mage and small Pip also receive a reference-based paired sad retreat illustration for the defeat screen; their existing battle assets remain unchanged.
 
 ### Creature mission illustrations — 3 October 2026
 
@@ -168,3 +188,7 @@ The user's latest explicit direction is that the mage points his staff at the en
 ## All-enemy motion selection — 30 September 2026
 
 The user accepted the corrected mage direction and authorized expanding and deploying it. The earlier three-enemy/deferred-replacement gate is superseded for Male Mage E and all 20 selected enemies. Every enemy uses derivatives of its recorded selection in `artwork/character-selections.json`; groups share those frames, and younger forms use uniform scale. Five other heroes are temporarily unavailable, with saved preferences preserved. Pip's existing stage artwork is retained; Small Pip's fire joins the assisted cast. [Current scope, costs and visual-check limits](enemies/ALL_ENEMY_MOTION_RELEASE.md).
+
+### 6 October: imaginative boy and wizard scenes
+
+The user requested varied adventures using the original boy picture’s painted style, and explicitly likes the wizard from the other teaching moment. Chapter 5 now pairs the boy with that blue-robed, white-bearded wizard and white unicorn across four different settings and actions. The original teaching atlas remains the visual reference. [Final assets and prompts](adventures/WIZARD_MAP_RELEASE.md).

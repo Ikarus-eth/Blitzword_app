@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-10-09T01:28:43.529329+00:00",
+  "commit": "3a4b4c50914c07070094aede7cb10046cca40b67",
+  "build": "next800-20261009-r1",
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "9ca18b319d2318268ae455ae1086ae37f410025ebca482a1d637486501528350",
+      "matches": true
+    },
+    {
+      "file": "app.js",
+      "sha256": "dca739af7e7bfa1a8c729ec5949e4141c45ae0dd5d231b79c5d2f77a7f593387",
+      "matches": true
+    },
+    {
+      "file": "content.js",
+      "sha256": "c4334d40b9b8a64d97c598ab30b1195f689fa844773d2044c898a555825c79b9",
+      "matches": true
+    },
+    {
+      "file": "game-core.js",
+      "sha256": "1347492ab11112a11a7c0dd6e5e107ae08736f78de7eb20b38c8374a49fdef56",
+      "matches": true
+    },
+    {
+      "file": "storage.js",
+      "sha256": "11577ab6f9ffdddd60757365a860ce4cc1e701c277a066633ea5297a2f44b1d3",
+      "matches": true
+    },
+    {
+      "file": "styles.css",
+      "sha256": "ddffdceced5207d3c32c04c9038622e3b8c513007f5c83eba619cf11c52ddad7",
+      "matches": true
+    }
+  ]
+}

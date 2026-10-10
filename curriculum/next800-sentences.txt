@@ -1,0 +1,800 @@
+am|I am glad to see you.
+has|The dog has a red ball.
+been|We have been to the park.
+does|What does the little dog want?
+us|Come and sit with us.
+its|The cat licks its paw.
+which|Tell me which book you want.
+these|All these apples are red.
+those|Look at those birds in the tree.
+where|Tell me where the cat is.
+why|Tell me why you are sad.
+much|There is too much water in the cup.
+must|We must look before we cross.
+may|You may have an apple.
+should|We should help our friend.
+never|I never put my hand in a fire.
+once|I saw a whale once.
+soon|We will be home soon.
+today|We will go to the park today.
+well|You can read that word well.
+than|The tree is taller than the house.
+other|Put your other shoe on.
+each|Give each child an apple.
+also|I like cats and I also like dogs.
+even|The bag is heavy, even for Dad.
+such|It is such a hot day!
+same|We are reading the same book.
+another|May I have another apple?
+most|The big tree has the most leaves.
+few|There are a few cakes left.
+enough|We have enough food for everyone.
+almost|The cup is almost full.
+sometimes|We sometimes walk to school.
+still|The baby is still sleeping.
+already|I have already put my coat on.
+yet|The cake is not ready yet.
+perhaps|The cat is perhaps under the bed.
+maybe|We can maybe go after lunch.
+together|We can build a house together.
+under|The cat is under the table.
+through|We walk through the open gate.
+between|The ball is between my feet.
+below|The fish swims below the boat.
+above|A bird flies above the tree.
+across|We walk across the bridge.
+along|The dog runs along the path.
+behind|The boy hides behind the tree.
+beside|Come and sit beside me.
+inside|The toy is inside the box.
+outside|The children play outside the house.
+without|I cannot see without my glasses.
+until|We wait until the rain stops.
+while|I read while the baby sleeps.
+during|The sun came out during our walk.
+against|The bike rests against the wall.
+towards|The puppy runs towards me.
+home|We walk home after school.
+help|Please help me lift the box.
+give|Please give the book to me.
+say|What did you say?
+came|My friend came to play.
+put|Please put the cup on the table.
+went|We went to the park.
+got|I got a book for my birthday.
+let|Please let me have a turn.
+done|I have done all my work.
+ran|The rabbit ran into its hole.
+eat|We eat our lunch together.
+ate|The horse ate the apple.
+play|Come and play with me.
+fly|A bird can fly over the tree.
+sing|We sing a song together.
+use|You can use my pencil.
+live|We live in a small house.
+try|I will try to read this word.
+grow|Plants need water to grow.
+draw|I can draw a cat.
+fall|Do not let the cup fall.
+ride|I can ride my bike.
+buy|We buy bread at the shop.
+please|Can you help me, please?
+wash|We wash our hands before lunch.
+going|We are going to the beach.
+goes|My sister goes to school.
+can't|I can't reach the top shelf.
+didn't|I didn't hear the bell.
+couldn't|The little dog couldn't reach the ball.
+won't|The door won't open.
+wasn't|The box wasn't empty.
+isn't|The cake isn't ready.
+you're|I am glad you're here.
+I'll|I'll help you carry the bag.
+let's|Now let's go to the park.
+we'll|After lunch, we'll read a book.
+that's|Look, that's my dog!
+there's|Look, there's a bird in the tree.
+he's|My brother says he's hungry.
+she's|My sister says she's tired.
+we're|Come in, we're ready to play.
+they're|Look at the birds; they're flying home.
+I've|I've found your missing shoe.
+you've|Look, you've made a tall tower!
+we've|Look, we've finished the puzzle!
+doesn't|The cat doesn't like rain.
+haven't|We haven't had lunch yet.
+hadn't|I hadn't seen that bird before.
+aren't|Those shoes aren't mine.
+weren't|We weren't at home yesterday.
+zero|There are zero cakes left on the plate.
+three|There are three eggs in the nest.
+four|The cat has four paws.
+five|I have five fingers on one hand.
+six|There are six apples in the bag.
+seven|There are seven days in a week.
+eight|A spider has eight legs.
+nine|There are nine shells in the box.
+ten|I can count to ten.
+eleven|There are eleven players on the team.
+twelve|There are twelve eggs in the box.
+thirteen|We count thirteen leaves on the branch.
+fourteen|There are fourteen beads on the string.
+fifteen|There are fifteen children on the bus.
+sixteen|We count sixteen seeds in the packet.
+seventeen|There are seventeen books on the shelf.
+eighteen|There are eighteen flowers in the garden.
+nineteen|We count nineteen shells on the sand.
+twenty|There are twenty pencils in the box.
+thirty|There are thirty children in the class.
+forty|We count forty steps to the gate.
+fifty|There are fifty pages in the book.
+sixty|There are sixty seconds in a minute.
+seventy|The bus has seventy seats.
+eighty|The farmer has eighty sheep.
+ninety|The puzzle has ninety pieces.
+hundred|There are one hundred beads in the jar.
+thousand|The big puzzle has one thousand pieces.
+second|I came second in the race.
+third|Open the book at the third page.
+fourth|The fourth duck is the smallest.
+fifth|The fifth candle is blue.
+sixth|The sixth house has a red door.
+seventh|The seventh day is our rest day.
+eighth|The eighth shell is pink.
+ninth|The ninth step is broken.
+tenth|The tenth runner crosses the line.
+half|We cut the apple in half.
+quarter|A quarter of the cake is one of four equal pieces.
+double|I have double your number of apples.
+pair|I have a pair of red shoes.
+count|We count the ducks on the pond.
+number|Tell me the number on the door.
+less|My cup has less water than yours.
+fewer|I have fewer apples than you.
+total|There are five apples in total.
+plus|Two plus three is five.
+minus|Five minus two is three.
+equal|We cut the cake into equal pieces.
+old|The old tree has a thick trunk.
+cold|The snow feels cold on my hands.
+full|My cup is full of water.
+blue|The sky is blue today.
+better|I feel better after a rest.
+black|The black cat sits on the wall.
+round|The ball is round.
+warm|My coat keeps me warm.
+brown|The horse has a brown tail.
+clean|My hands are clean now.
+sun|The sun shines in the sky.
+door|Please close the door.
+pretty|The flower is pretty and pink.
+king|The king wears a gold crown.
+town|There are many shops in the town.
+drink|I drink water when I am thirsty.
+river|The river flows under the bridge.
+key|This key opens the door.
+cloud|A white cloud floats across the sky.
+mountain|There is snow on the mountain.
+friend|My friend likes to play with me.
+friends|My friends came to my party.
+food|We put food in the dog's bowl.
+fish|A fish swims in the pond.
+horse|The horse runs across the field.
+dark|It is dark outside at night.
+morning|We eat breakfast in the morning.
+farm|The sheep live on a farm.
+egg|A chick comes out of an egg.
+ground|The ball falls to the ground.
+field|The cows eat grass in the field.
+road|We look both ways before crossing the road.
+happy|I feel happy when we play together.
+sky|Birds fly high in the sky.
+boat|The boat floats on the lake.
+village|The village has a few houses and a shop.
+snow|White snow covers the ground.
+hill|We walk up the little hill.
+boy|The boy is reading a book.
+lake|The lake is full of clear water.
+set|Please set the cup on the table.
+stone|I found a smooth stone on the beach.
+men|Two men carry the heavy box.
+hand|Hold my hand as we cross the road.
+mother|My mother reads with me.
+father|My father helps me ride my bike.
+feet|I put shoes on my feet.
+girl|The girl kicks the ball.
+dog|The dog wags its tail.
+milk|We pour milk into the cup.
+tail|The fox has a long tail.
+safe|We keep the baby safe.
+bear|The bear catches a fish.
+low|The low branch is easy to reach.
+sea|The ship sails across the sea.
+table|We eat our lunch at the table.
+box|Put the toys in the box.
+room|My bed is in my room.
+strong|The strong horse pulls the cart.
+wind|The wind blows the leaves.
+school|We learn to read at school.
+rope|The boat is tied with a rope.
+wood|The little chair is made of wood.
+fruit|An apple is a kind of fruit.
+people|There are many people in the park.
+window|I can see the garden through the window.
+bridge|The bridge goes over the river.
+camp|We sleep in tents at camp.
+sad|I feel sad when my friend leaves.
+star|A bright star shines at night.
+sound|I hear the sound of a bell.
+place|This is a good place to sit.
+year|My birthday comes once each year.
+brother|My brother shares his toys with me.
+thing|What is that little thing in the box?
+name|Please tell me your name.
+great|We had a great day at the beach.
+end|We have reached the end of the story.
+large|The elephant is a large animal.
+need|Plants need water and light.
+baby|The baby sleeps in a cot.
+land|The boat comes back to land.
+different|These two socks are different colours.
+move|Please move the chair beside the table.
+picture|I drew a picture of my dog.
+change|I need to change my wet socks.
+apple|I eat a red apple.
+air|A bird flies through the air.
+animal|A rabbit is a small animal.
+page|Turn the page to read more.
+letter|The first letter of cat is c.
+answer|I know the answer to your question.
+learn|We learn something new at school.
+world|People live all around the world.
+high|The bird flies high above the tree.
+near|Sit near me so you can see the book.
+plant|We water the little plant.
+last|I ate the last apple.
+eye|I have something in my eye.
+thought|I thought the box was empty.
+head|I put a hat on my head.
+wild|The wild rabbit lives in the woods.
+story|Please read me a story.
+next|We will read the next page.
+hard|The stone feels hard.
+begin|We can begin the game now.
+life|A butterfly starts its life as an egg.
+paper|I draw on a sheet of paper.
+dress|My sister wears a yellow dress.
+children|The children play in the park.
+side|The dog walks by my side.
+began|The rain began after lunch.
+took|I took my book to school.
+foot|I have a sock on one foot.
+hear|I can hear a bird singing.
+late|We are late for school.
+face|Wash your face with warm water.
+bed|I sleep in my bed.
+young|The young puppy is very small.
+talk|We talk about our day.
+song|We sing a happy song.
+leave|We will leave after breakfast.
+mouth|Open your mouth to take a bite.
+family|My family eats dinner together.
+afternoon|We go to the park in the afternoon.
+body|My arms and legs are parts of my body.
+stand|Please stand beside the door.
+stick|The dog carries a stick.
+knew|I knew where the missing toy was.
+ever|Have you ever seen a whale?
+piece|May I have a piece of cake?
+told|My sister told me a story.
+easy|This puzzle is easy for me.
+heard|We heard the school bell.
+caught|I caught the ball with both hands.
+fell|The apple fell from the tree.
+sure|I am sure this is my coat.
+become|A little seed can become a tall tree.
+top|The bird sits at the top of the tree.
+short|The pencil is very short now.
+fight|The knights fight in the story.
+whole|The whole family came to the party.
+remember|I remember where I put my shoes.
+early|We got up early to see the sun rise.
+listen|Please listen to the song.
+hit|The ball hit the wall.
+himself|The boy put his coat on by himself.
+step|Take one step towards me.
+cook|We cook soup in a pot.
+true|It is true that birds have feathers.
+grass|The rabbit eats green grass.
+slowly|The snail moves slowly.
+pulled|The horse pulled the cart.
+voice|I know my mother's voice.
+seen|Have you seen my red hat?
+lost|I have lost one of my shoes.
+cried|The baby cried when she was hungry.
+wait|Please wait for me.
+quickly|The rabbit runs quickly.
+person|One person is waiting at the door.
+became|The sky became dark before the storm.
+feel|I feel the warm sun on my face.
+garden|Flowers grow in our garden.
+street|Our house is on this street.
+meat|The lion eats meat.
+nothing|There is nothing in the empty box.
+hat|I wear a hat in the sun.
+rest|We sit down for a rest.
+stay|Please stay beside me.
+week|There are seven days in a week.
+ago|We went to the beach a week ago.
+stood|The horse stood under the tree.
+brought|My friend brought a book to share.
+understand|I understand what you mean.
+dry|My socks are dry now.
+deep|The well is very deep.
+clear|We can see fish in the clear water.
+nose|The dog has a wet nose.
+heavy|This box is too heavy for me.
+sugar|We put sugar in the cake.
+built|We built a house from blocks.
+huge|The whale is huge.
+felt|The blanket felt soft.
+suddenly|The door suddenly flew open.
+ready|I am ready to play.
+anything|I cannot see anything in the dark.
+swim|Fish swim in water.
+wall|The picture hangs on the wall.
+legs|A dog has four legs.
+angry|I felt angry when my tower fell.
+branch|The bird sits on a branch.
+brave|The brave child asks for help.
+leaf|A green leaf falls from the tree.
+mud|My boots are covered in mud.
+path|We follow the path through the woods.
+rescue|We help rescue the lost kitten.
+scared|The loud noise made me feel scared.
+sat|The cat sat on the mat.
+winter|It can be very cold in winter.
+kept|I kept the shell in a little box.
+beautiful|The rainbow is beautiful.
+sign|The sign tells us where to go.
+finished|I have finished my lunch.
+gone|The bird has gone back to its nest.
+glass|I drink water from a glass.
+weather|The weather is warm and sunny.
+meet|We will meet our friends at the park.
+soft|The rabbit has soft fur.
+held|I held the baby carefully.
+speak|Please speak so I can hear you.
+son|The father reads to his son.
+ice|Water turns to ice when it freezes.
+jumped|The frog jumped into the pond.
+care|We take care of our pets.
+floor|The rug is on the floor.
+pushed|I pushed the door open.
+everything|We put everything back in the box.
+tall|The tall tree reaches above the house.
+evening|We eat dinner in the evening.
+hope|I hope my friend can come.
+spring|New leaves grow in spring.
+laughed|We laughed at the funny story.
+bright|The sun is very bright.
+everyone|There is a seat for everyone.
+hair|I brush my hair in the morning.
+broken|We cannot use the broken cup.
+moment|Please wait a moment.
+tiny|The ant is tiny.
+quiet|Please be quiet while the baby sleeps.
+lot|There is a lot of sand on the beach.
+middle|The jam is in the middle of the sandwich.
+someone|There is someone at the door.
+wonder|I wonder where the bird is going.
+smiled|My friend smiled when she saw me.
+trip|We went on a trip to the zoo.
+hole|The rabbit runs into a hole.
+surprise|The present was a lovely surprise.
+cake|We share a birthday cake.
+deer|The deer runs through the woods.
+flower|A bee lands on the flower.
+frog|The frog jumps into the water.
+rabbit|The rabbit has long ears.
+wolf|The wolf howls at night.
+catch|Can you catch the ball?
+climbed|The cat climbed the tree.
+wrote|I wrote my name on the page.
+shouted|We shouted so our friend could hear us.
+else|Who else wants to play?
+ears|I hear sounds with my ears.
+grew|The seed grew into a plant.
+cool|The water feels cool on my feet.
+sent|We sent Grandma a birthday card.
+wear|I wear a coat when it is cold.
+bad|The bad weather kept us inside.
+alone|The little bird is alone in the nest.
+drawing|I am drawing a house.
+touch|The kitten lets me touch its soft fur.
+party|My friends came to my birthday party.
+woman|The woman carries a bag.
+choose|You can choose which book we read.
+sand|We build a castle in the sand.
+guess|Can you guess what is in the box?
+crowd|A crowd of people waits for the bus.
+poem|We read a short poem together.
+enjoy|I enjoy playing with my friends.
+fun|We have fun at the park.
+send|We can send a card to Grandpa.
+sister|My sister helps me with the puzzle.
+pick|You can pick an apple from the tree.
+laugh|The funny story makes me laugh.
+hurt|I hurt my knee when I fell.
+funny|That funny dog makes us smile.
+mum|My mum reads a book with me.
+parents|My parents help me learn.
+grandma|My grandma tells wonderful stories.
+grandpa|My grandpa grows flowers.
+aunt|My aunt is my mother's sister.
+cousin|My cousin is my aunt's child.
+teacher|Our teacher helps us learn to read.
+classroom|We read together in our classroom.
+lesson|We learn something new in the lesson.
+homework|I put my homework in my bag.
+pencil|I write with a pencil.
+pen|The pen makes a blue line.
+ruler|I use a ruler to draw a straight line.
+bag|My books are in my bag.
+lunch|We eat lunch in the middle of the day.
+breakfast|I eat breakfast when I get up.
+dinner|We have dinner in the evening.
+snack|I have an apple for a snack.
+bread|We cut a slice of bread.
+butter|I spread butter on my bread.
+cheese|I put cheese in my sandwich.
+sandwich|My sandwich has two slices of bread.
+soup|The warm soup is in a bowl.
+rice|We eat rice with our dinner.
+potato|We cook a potato for lunch.
+tomato|The tomato is red and round.
+carrot|The rabbit eats a carrot.
+bean|A bean can grow into a plant.
+banana|I peel a yellow banana.
+orange|The orange has a thick peel.
+lemon|The yellow lemon tastes sour.
+pear|I eat a soft, sweet pear.
+chocolate|The cake has chocolate on top.
+biscuit|May I have a biscuit with my milk?
+cookie|I put a cookie on my plate.
+sweet|The honey tastes sweet.
+honey|Bees make honey.
+salt|We put a little salt in the soup.
+juice|I drink orange juice.
+cup|My cup is full of milk.
+plate|The sandwich is on my plate.
+bowl|I eat soup from a bowl.
+spoon|I use a spoon to eat soup.
+fork|I pick up food with my fork.
+knife|An adult uses a knife to cut the bread.
+bottle|My bottle is full of water.
+kitchen|We cook food in the kitchen.
+bedroom|My bed is in my bedroom.
+bathroom|We wash our hands in the bathroom.
+toilet|I wash my hands after using the toilet.
+bath|The baby has a warm bath.
+shower|Water falls from the shower.
+towel|I dry my hands with a towel.
+soap|I wash my hands with soap.
+brush|I use a brush on my hair.
+tooth|My first tooth has fallen out.
+teeth|I brush my teeth every day.
+shirt|My shirt has blue buttons.
+coat|I put on my coat to go outside.
+jacket|My jacket keeps the wind out.
+trousers|My trousers cover both my legs.
+skirt|She wears a red skirt.
+sock|I put a sock on my foot.
+shoe|There is a stone in my shoe.
+boot|My boot keeps my foot dry.
+pocket|I keep a shell in my pocket.
+toy|My favourite toy is a little car.
+doll|The doll has a little dress.
+teddy|I take my teddy to bed.
+puzzle|We put the pieces of the puzzle together.
+present|I open my birthday present.
+birthday|We celebrate my birthday with a cake.
+balloon|The red balloon floats in the air.
+candle|I blow out the candle on my cake.
+picnic|We eat our picnic under a tree.
+beach|We play on the sand at the beach.
+holiday|We go to the sea on holiday.
+zoo|We see an elephant at the zoo.
+park|We play in the park.
+playground|The playground has a swing and a slide.
+swing|I go back and forth on the swing.
+slide|I go down the slide.
+football|We kick a football in the park.
+swimming|The ducks are swimming in the pond.
+bicycle|My bicycle has two wheels.
+bike|I wear a helmet when I ride my bike.
+bus|The bus takes us to school.
+train|The train stops at the station.
+truck|The truck carries a heavy load.
+plane|The plane flies high in the sky.
+driver|The driver stops the bus.
+station|We wait for the train at the station.
+ticket|We show our ticket to get on the train.
+wheel|The wheel goes round and round.
+engine|The engine helps the train move.
+hospital|The hospital cares for sick people.
+doctor|The doctor helps me feel better.
+nurse|The nurse puts a bandage on my knee.
+shop|We buy bread at the shop.
+money|We use money to pay for food.
+price|The price tells us how much the toy costs.
+pay|We pay for the apples at the shop.
+bought|We bought milk and bread.
+sell|They sell fruit at the market.
+farmer|The farmer looks after the sheep.
+hen|The hen lays an egg.
+duck|The duck swims on the pond.
+sheep|The sheep has a woolly coat.
+cow|The cow eats grass.
+goat|The goat climbs on a rock.
+pony|The pony is smaller than the horse.
+mouse|The little mouse eats a seed.
+mice|Two mice hide under the floor.
+kitten|The kitten is a young cat.
+puppy|The puppy is a young dog.
+pet|We take good care of our pet.
+elephant|The elephant has a long trunk.
+monkey|The monkey climbs a tree.
+tiger|The tiger has dark stripes.
+whale|The whale swims in the ocean.
+spider|A spider has eight legs.
+ant|The tiny ant carries a crumb.
+bee|A bee flies from flower to flower.
+butterfly|The butterfly has colourful wings.
+snail|The snail carries its shell.
+worm|A worm lives in the soil.
+squirrel|The squirrel climbs the tree.
+nest|The bird builds a nest.
+chick|The chick comes out of its egg.
+lamb|A lamb is a young sheep.
+cub|The fox cub stays near its mother.
+asked|I asked my friend to play.
+says|The sign says to stop.
+talking|We are talking about the story.
+call|I call my dog to come home.
+called|My friend called my name.
+looked|We looked inside the box.
+looking|I am looking for my hat.
+watch|We watch the birds in the garden.
+search|We search for the missing key.
+hide|I hide behind the tree.
+hid|The mouse hid in a hole.
+hidden|The key is hidden in the box.
+coming|My friend is coming to play.
+running|The dog is running across the field.
+walked|We walked home together.
+walking|We are walking to school.
+jumping|The frog is jumping over a stone.
+hop|A rabbit can hop.
+skip|I can skip along the path.
+climb|The cat can climb the tree.
+stopped|The bus stopped at the gate.
+sitting|The girl is sitting on a chair.
+lie|I lie down on the soft grass.
+lay|The dog lay down beside me.
+sleeping|The baby is sleeping in bed.
+slept|I slept well last night.
+wake|We wake when the sun comes up.
+woke|I woke up early today.
+awake|The baby is awake now.
+drank|I drank a glass of water.
+taken|The dog has taken my shoe.
+given|Grandma has given me a book.
+making|We are making a cake.
+doing|What are you doing with that box?
+getting|The sky is getting dark.
+carrying|I am carrying a heavy bag.
+turn|Please turn the page.
+turned|The dog turned to look at me.
+push|I push the toy car along the floor.
+opened|I opened the box carefully.
+close|Please close the door.
+closed|The shop is closed today.
+smile|Your smile makes me happy.
+cry|The baby starts to cry.
+shout|We shout to be heard across the field.
+whisper|I whisper so the baby can sleep.
+whispered|She whispered a secret to me.
+listening|We are listening to a story.
+wanted|I wanted to play outside.
+played|We played in the garden.
+playing|The children are playing together.
+finish|We will finish the puzzle together.
+tried|I tried to reach the apple.
+bake|We bake bread in the oven.
+drew|I drew a picture of a dog.
+writing|I am writing my name.
+reading|We are reading a book together.
+build|We build a tower with blocks.
+break|Do not let the cup break.
+broke|The stick broke in half.
+fallen|A leaf has fallen from the tree.
+flew|The bird flew over the house.
+flying|The plane is flying above the clouds.
+swam|The duck swam across the pond.
+rode|I rode my bike to the park.
+drive|An adult can drive a car.
+drove|Dad drove us home.
+throw|Please throw the ball to me.
+threw|I threw the ball to my friend.
+kick|I kick the ball into the goal.
+follow|We follow the path to the river.
+followed|The ducklings followed their mother.
+lead|I can lead the way home.
+led|The path led us to the lake.
+met|We met our friends at the park.
+win|We try to win the game.
+won|Our team won the game.
+lose|I do not want to lose my key.
+thinking|I am thinking about the answer.
+known|I have known my friend for a long time.
+feeling|I am feeling happy today.
+forget|Do not forget your coat.
+forgot|I forgot where I put my bag.
+believe|I believe what you told me.
+seem|You seem happy today.
+seemed|The bag seemed very heavy.
+join|Come and join our game.
+share|We share our toys with each other.
+shared|We shared the last piece of cake.
+bigger|This box is bigger than that one.
+biggest|The elephant is the biggest animal here.
+worse|The rain is worse than it was before.
+worst|This is the worst weather of the week.
+afraid|The little puppy is afraid of the thunder.
+worried|I felt worried when I lost my bag.
+lonely|I felt lonely until my friend came.
+excited|I am excited about my birthday.
+tired|I feel tired after a long walk.
+sleepy|The sleepy baby closes her eyes.
+hungry|I am hungry and ready for lunch.
+thirsty|I am thirsty and need some water.
+ill|I stay in bed when I am ill.
+sick|The doctor helps the sick child.
+shy|The shy child smiles at a new friend.
+proud|I feel proud of the book I read.
+silly|The clown makes a silly face.
+friendly|The friendly dog wags its tail.
+gentle|Be gentle when you hold the kitten.
+careful|Be careful with the full cup.
+lovely|We had a lovely day together.
+dirty|My boots are dirty after our walk.
+messy|The toys make my room messy.
+tidy|I put my toys away to make my room tidy.
+noisy|The noisy truck wakes me up.
+rough|The tree has rough bark.
+smooth|The stone feels smooth in my hand.
+empty|There is nothing in the empty box.
+weak|The weak branch cannot hold the heavy swing.
+fresh|The bread is fresh from the oven.
+square|A square has four equal sides.
+silver|The silver ring shines in the light.
+pink|The flower is pink.
+purple|I draw with a purple pencil.
+grey|The grey cloud covers the sun.
+everybody|There is enough cake for everybody.
+nobody|There is nobody in the empty room.
+somebody|I hear somebody at the door.
+anyone|Does anyone know where my hat is?
+something|There is something in my pocket.
+somewhere|My hat is somewhere in this room.
+anywhere|I cannot find my shoe anywhere.
+everywhere|There are flowers everywhere in the garden.
+lots|There are lots of books on the shelf.
+really|I really like this story.
+nearly|We are nearly home.
+often|We often read before bed.
+usually|I usually walk to school.
+finally|We finally found the missing key.
+later|We will play outside later.
+yesterday|We went to the park yesterday.
+tomorrow|We will visit Grandma tomorrow.
+tonight|We will look at the stars tonight.
+midnight|We are usually asleep at midnight.
+weekend|We visit our friends at the weekend.
+month|My birthday is next month.
+season|Spring is the season after winter.
+summer|We play outside in summer.
+autumn|Some trees lose their leaves in autumn.
+Monday|Monday comes after Sunday.
+Tuesday|Tuesday comes after Monday.
+Wednesday|Wednesday comes after Tuesday.
+Thursday|Thursday comes after Wednesday.
+Friday|Friday comes after Thursday.
+Saturday|Saturday comes after Friday.
+Sunday|Sunday comes after Saturday.
+rainy|We wear boots on a rainy day.
+sunny|It is a warm, sunny day.
+windy|We fly a kite on a windy day.
+fog|The thick fog makes it hard to see.
+thunder|We hear thunder during the storm.
+lightning|A flash of lightning lights up the sky.
+rainbow|We see a rainbow after the rain.
+space|The moon is out in space.
+ocean|A whale swims in the ocean.
+pond|Ducks swim on the pond.
+stream|The little stream flows over stones.
+waterfall|Water falls over the rocks in a waterfall.
+wave|A wave rolls onto the beach.
+island|Water is all around the island.
+dirt|We wash the dirt off our hands.
+leaves|Green leaves grow on the tree.
+root|The root takes water from the soil.
+trunk|The tree has a thick trunk.
+bark|The bark covers the tree's trunk.
+seed|We plant a seed in the ground.
+bush|The bird hides in the bush.
+woods|We walk among the trees in the woods.
+city|The city has many buildings and streets.
+country|We live in a country with many towns.
+yard|The dog plays in the yard.
+fence|The fence keeps the sheep in the field.
+roof|The roof keeps rain out of the house.
+stair|I put my foot on the first stair.
+tent|We sleep in a tent at camp.
+barn|The farmer keeps hay in the barn.
+tunnel|The train goes through the tunnel.
+net|The ball lands in the net.
+torch|We use a torch to see in the dark.
+flame|A small flame burns on the candle.
+smoke|We see smoke rising from the fire.
+den|The fox rests in its den.
+fur|The rabbit has soft fur.
+shell|The snail has a shell on its back.
+creature|A tiny creature moves under the leaf.
+monster|The monster in our story is friendly.
+giant|The giant in the story is taller than a house.
+witch|The witch makes a spell in the story.
+fairy|The fairy has tiny wings.
+knight|The knight rides a horse.
+prince|The prince lives in the castle.
+princess|The princess helps the lost dragon.
+hero|The hero helps everyone get home.
+crown|The queen wears a crown.
+gold|The ring is made of gold.
+adventure|Our adventure begins in the forest.
+journey|We pack a bag for the long journey.
+problem|We work together to solve the problem.
+plan|Our plan is to cross the river by boat.
+idea|I have an idea for a new game.
+clue|The footprint is a clue to where the dog went.
+secret|The story has a secret door.
+mistake|It is all right to make a mistake.
+trouble|The stuck kitten is in trouble.
+trap|The story's hero opens the trap to free the fox.
+trick|The magician shows us a trick.
+escape|The mouse can escape through the little hole.
+enemy|The enemy blocks the hero's path in the story.
+group|A group of children plays together.
+women|Two women carry the box together.
+word|I can read this word.
+sentence|A sentence can tell us something.
+cover|The book has a red cover.
+title|The title tells us the name of the book.
+music|We listen to music and dance.
+question|I have a question about the story.
+meaning|Tell me the meaning of this word.
+beginning|The beginning is the first part of the story.
+ending|The story has a happy ending.
+chapter|We read one chapter of the book.
+fact|A fact is something that is true.
+false|It is false that a cat has six legs.
+real|This is a real horse, not a toy.
+pretend|We pretend the box is a boat.
+dream|I had a dream about a flying dragon.
+reason|Rain is the reason we are staying inside.
+although|We went out although it was raining.
+however|I wanted to play; however, it was time for bed.
+unless|We will play outside unless it rains.
+whether|I do not know whether it will rain.
+whose|Can you tell me whose coat this is?

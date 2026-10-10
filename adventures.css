@@ -22,10 +22,55 @@
 #resultChapter.questProgress,#encounterChapter.questProgress{position:static;width:100%;margin:12px 0;padding:10px 12px;border-radius:10px;background:#ede5cd;color:#294531}.resultCard #resultChapter.questProgress{max-width:470px;margin:12px auto}.resultCard .questProgressTitle{font-size:15px}.resultCard .questNext{display:none}
 .missionTop.questProgress{grid-template-columns:minmax(0,1fr) auto;padding-right:174px;margin-bottom:22px;gap:6px 18px}.missionTop .questSteps,.missionTop .questNext{grid-column:1/-1}.missionTop .questProgressCount{font-size:14px}.missionPicture{min-width:0;position:sticky;top:0}.missionPicture .missionScene{position:relative}.questHearts{margin:0 0 19px;border-radius:10px;background:#f0e5cf;padding:10px 12px;color:#673e36;font:15px/1.5 var(--reading-font)}
 .questTeam{display:flex;align-items:center;gap:14px;border:1px solid #c7c8a6;border-radius:16px;background:#f4f1dc;color:#2e4836;padding:12px 15px;margin-top:15px}.questTeam>.sceneSprite{width:86px;height:100px;flex-shrink:0}.questTeamCopy{min-width:0}.questTeam strong{font:700 16px/1.4 var(--reading-font)}.questTeam p{font:14px/1.5 var(--reading-font);margin:6px 0}.questTeam .textButton{font-size:15px;min-height:44px;padding:6px 0;color:#315c3c;text-decoration:underline}
-.battleCompanion{position:absolute;left:24%;bottom:122px;width:17%;height:29%;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:end;pointer-events:none;filter:drop-shadow(0 3px 3px #20362744)}.battleCompanion[hidden]{display:none}.battleCompanion>.sceneSprite{width:100%;min-height:0;flex:1;transform:scaleX(-1)}.battleCompanion>strong,.battleCompanion>span:not(.sceneSprite){font:12px/1.3 var(--reading-font);text-align:center;color:#233e2c;background:#fff6e2ed;padding:3px 7px;max-width:100%}.battleCompanion>strong{font-weight:700;border-radius:6px 6px 0 0}.battleCompanion>span:last-child{border-radius:0 0 6px 6px;font-size:11px}.battleCompanion>.teamSideLabel{border-radius:20px;font-weight:700}#battle.hasQuestCompanion .battlePip{left:41%;width:15%;height:25%}.battleCompanion.protecting{filter:drop-shadow(0 0 18px #ffe99a)}
+/* Each ally owns a separate lane; motion overlays stay inside the hero lane. */
+#battle.hasQuestCompanion .battleHero{left:2%;width:28%}
+.battleCompanion{position:absolute;left:31%;bottom:124px;width:14%;height:29%;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:end;pointer-events:none;filter:drop-shadow(0 3px 3px #20362744)}.battleCompanion[hidden]{display:none}.battleCompanion>.sceneSprite{width:100%;min-height:0;flex:1;transform:scaleX(-1)}.battleCompanion>strong{font:700 12px/1.3 var(--reading-font);text-align:center;color:#233e2c;background:#fff6e2ed;padding:3px 7px;max-width:100%;border-radius:6px}#battle.hasQuestCompanion .battlePip{left:46%;width:12%;height:25%}.battleCompanion.protecting{filter:drop-shadow(0 0 18px #ffe99a)}
+.riddleOption.correct{position:relative;border:3px solid #287044;background:#def0cf;box-shadow:0 0 0 3px #28704422}.riddleAnswerMark{position:absolute;top:-10px;right:-6px;width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#287044;color:white;font:bold 22px/1 var(--reading-font)}.riddleSequence.solved span{border:2px solid #287044;background:#def0cf}.riddleFeedback.solved{border:3px solid #287044;background:#e4f2d7;padding:20px;text-align:center;box-shadow:0 4px 16px #244b2522;scroll-margin:18px}.riddleSuccessMark{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 8px;border-radius:50%;background:#287044;color:#fff;font:700 44px/1 var(--reading-font)}.riddleSuccessTitle{display:block;font:700 clamp(28px,4vw,38px)/1.2 var(--reading-font);margin:0 0 12px}.riddleFeedback.solved>strong:not(.riddleSuccessTitle){display:block}
+
 .resultCompanions #resultCompanion{width:95px;height:95px;transform:scaleX(-1)}.resultCompanions #resultCompanion[hidden]{display:none}.resultCompanions>.sceneSprite:nth-child(2){width:100px;height:105px}
 .bookLegend{display:flex;gap:10px 22px;flex-wrap:wrap;margin:-6px 0 22px;padding:14px 18px;border:1px solid #d4c4a0;border-radius:12px;background:#fff7e6;font:15px/1.5 var(--reading-font)}.creatureStamps{flex-wrap:wrap;justify-content:center;gap:4px 8px;color:#6b6e65;font:11px/1.4 var(--reading-font)}.creatureStamps>span{white-space:nowrap;padding:2px 4px;border-radius:4px;background:#efede5}.creatureStamps .earned{color:#5d4515;background:#f5e0a6;font-weight:700}.bookStampList{list-style:none;padding:0;font:15px/1.8 var(--reading-font);color:#666b59}.bookStampList .earned{color:#315b37;font-weight:700}
-@media(orientation:portrait){.battleCompanion{left:24%;width:21%;bottom:218px;height:24%}#battle.hasQuestCompanion .battlePip{left:44%;width:17%;height:20%}}
+@media(orientation:portrait){#battle.hasQuestCompanion .battleHero{left:1%;width:31%}.battleCompanion{left:33%;width:15%;bottom:220px;height:24%}#battle.hasQuestCompanion .battlePip{left:49%;width:12%;height:20%}}
 @media(max-width:700px){.missionTop.questProgress{padding-right:0;grid-template-columns:1fr;gap:6px}.missionTop.questProgress>span{max-width:none}.missionPicture{position:relative}.missionTop .questProgressTitle{font-size:19px}.questStep{font-size:10px}.creatureGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.creatureTile strong{font-size:14px}.creatureTile .sceneSprite{height:85px}.creatureStamps{font-size:10px}.bookLegend{font-size:14px;gap:7px}.bookLegend>span{width:100%}#battleChapter.questProgress{top:77px;left:10px;width:185px;padding:7px 10px;gap:4px}.battleCompanion>strong,.battleCompanion>span:not(.sceneSprite){font-size:10px;padding:3px 4px}.battleCompanion>span:last-child{font-size:9px}.questTeam>.sceneSprite{width:76px;height:90px}}
-@media(max-height:580px) and (orientation:landscape){#battleChapter.questProgress{top:62px;width:200px;padding:5px 9px;gap:3px}.battleCompanion{height:31%;bottom:108px}.battleCompanion>.teamSideLabel{display:none}}
+@media(max-height:580px) and (orientation:landscape){#battleChapter.questProgress{top:62px;width:200px;padding:5px 9px;gap:3px}.battleCompanion{height:31%;bottom:102px}.battleCompanion>.teamSideLabel{display:none}}
 @media(orientation:portrait){#battleChapter.questProgress{top:-10px;padding:7px 10px;gap:4px}}
+
+@media(max-width:700px) and (orientation:portrait){.battleCompanion{bottom:202px}}
+@media(orientation:portrait){#battle.hasQuestCompanion .battleEnemy{right:1%;max-width:37vw}}
+@media(max-height:580px) and (orientation:landscape){#battle.hasQuestCompanion .battleHero{height:40%}}
+
+/* Companion is visually between the hero and Pip, without a battle caption. */
+#battle.hasQuestCompanion .battleHero{left:0;width:27%}
+#battle.hasQuestCompanion .battleCompanion{left:28%;width:24%;height:42%}
+#battle.hasQuestCompanion .battlePip{left:53%;width:12%;height:25%}
+#battle.hasQuestCompanion .battleEnemy{right:1%;max-width:33vw}
+@media(orientation:portrait){#battle.hasQuestCompanion .battleHero{left:0;width:28%}#battle.hasQuestCompanion .battleCompanion{left:29%;width:23%;height:32%}#battle.hasQuestCompanion .battlePip{left:53%;width:12%;height:20%}}
+@media(max-height:580px) and (orientation:landscape){#battle.hasQuestCompanion .battleCompanion{height:32%}}
+.riddleNumber{font:700 34px/1.2 var(--reading-font)}
+.riddleActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.riddleActions button.greenButton,.riddleActions button.textButton{width:100%;min-height:60px;padding:13px 16px;font:700 19px/1.3 var(--reading-font);border-radius:12px}
+.riddleActions .textButton{border:2px solid #bbaa83;background:#fff8e9;color:#294932}
+.riddleActions .greenButton{grid-column:1/-1}
+.riddleFeedback.wrong{border:2px solid #a95335;background:#fff0dc}
+.riddleSolved>.riddleText,.riddleSolved>.riddlePrompt,.riddleSolved>.riddleDiagram,.riddleSolved>.riddleChoices,.riddleSolved>.riddleSequence{display:none}
+.riddleSolved .riddleFeedback.solved{margin-top:0;padding:16px;scroll-margin:12px}
+.riddleSolved .riddleSuccessMark{width:48px;height:48px;font-size:34px}
+.riddleSolved .riddleSuccessTitle{font-size:30px;margin-bottom:8px}
+.riddleSolved .riddleActions{margin:14px 0}
+.riddleSolvedAnswer{font-weight:700;font-size:22px}
+
+.resultRetreat[hidden]{display:none}.resultRetreat{height:clamp(140px,27vh,250px);overflow:hidden;margin:0 auto 10px;width:100%;border-radius:16px;background:radial-gradient(ellipse at center,#dfd2b6,#eee5d0 70%)}.resultRetreat img{display:block;width:100%;height:100%;object-fit:contain;transform:translateX(-3%)}.retreatMoving img{animation:sadRetreat 2.2s ease-out both}.lostBattle .resultCompanions,.lostBattle #resultGrowth,.lostBattle #resultShield,.lostBattle #checkpoint{display:none}.lostBattle .resultTitle{color:#663f32}.lostBattle .resultCard{border-color:#9d8565}.lostBattle .resultMessage{font:19px/1.5 var(--reading-font)}.lostBattle #opponents button{min-height:60px}.lostBattle #resultNext{min-height:50px}@keyframes sadRetreat{from{transform:translateX(13%);opacity:.65}to{transform:translateX(-3%);opacity:1}}
+@media(max-height:580px) and (orientation:landscape){.lostBattle .resultCard{grid-template-columns:minmax(150px,.8fr) minmax(0,1.2fr)}.resultRetreat{grid-column:1;grid-row:1/8;height:210px;align-self:center}.lostBattle #resultChapter,.lostBattle #opponents,.lostBattle #resultNext{grid-column:2}}
+@media(prefers-reduced-motion:reduce){.retreatMoving img{animation:none}}
+/* Defeat has a dedicated layout, independent of the victory reward grid. */
+.lostBattle .resultCard{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:12px 24px;width:min(940px,94vw);align-items:center;padding:24px}
+.lostBattle .resultRetreat{grid-column:1;grid-row:1/6;height:clamp(240px,42vh,380px);margin:0}
+.lostBattle .resultRetreat img{width:86%;margin:auto}
+.lostBattle #resultTitle,.lostBattle #resultMessage,.lostBattle #resultChapter,.lostBattle #opponents,.lostBattle #resultNext{grid-column:2;margin:0}
+.lostBattle #resultChapter{width:100%;max-width:none}
+.lostBattle #opponents{justify-content:stretch}.lostBattle #opponents>button{width:100%}
+.lostBattle #resultTitle{font-size:32px}.lostBattle #resultNext{justify-self:center}
+@keyframes sadRetreat{from{transform:translateX(7%);opacity:.65}to{transform:translateX(-3%);opacity:1}}
+@media(orientation:portrait){.lostBattle .resultCard{display:flex;flex-direction:column;gap:14px;padding:20px}.lostBattle .resultRetreat{height:25vh;min-height:160px;max-height:250px}.lostBattle #opponents{width:100%}.lostBattle #resultTitle{font-size:28px}.lostBattle .resultMessage{font-size:18px}}
+@media(max-height:580px) and (orientation:landscape){#result.lostBattle{padding-top:64px;padding-bottom:10px}.lostBattle .resultCard{padding:14px 20px;gap:7px 18px}.lostBattle .resultRetreat{height:180px}.lostBattle #resultTitle{font-size:25px}.lostBattle .resultMessage{font-size:16px}.lostBattle #resultChapter{padding:7px 10px}.lostBattle #opponents button{min-height:48px;font-size:19px}.lostBattle #resultNext{min-height:44px;font-size:17px}.lostBattle #resultChapter .questProgressTitle{display:none}}
+
+.campControls{flex-wrap:wrap}

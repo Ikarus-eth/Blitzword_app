@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#143c32"><meta name="blitzword-wimmelbild" content="wimmelbild-20261010-r1">
+<title>The secret dragon path · BlitzWord</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23143c32'/%3E%3Ctext x='7' y='31' font-size='32' fill='%23d5ae60'%3E☾%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=1">
+<script src="data.js?v=1" defer></script><script src="core.js?v=1" defer></script><script src="app.js?v=ninth-maps-20261010-r1" defer></script>
+</head>
+<body>
+<header class="top"><a href="../../" id="home">‹ Chapters</a><div class="brand">BlitzWord <span>The secret dragon path</span></div><button id="sound" aria-label="Read the clue aloud">Listen ♫</button></header>
+<nav id="journey" aria-label="Your journey"></nav>
+<div id="save-warning" class="warning" role="alert" hidden><span id="save-message"></span><button id="reload">Reload saved journey</button></div>
+<main id="game">
+ <section class="picture" aria-label="Search the picture">
+  <div class="picture-top"><span id="place"></span><button id="expand" aria-pressed="false">Big picture ⛶</button></div>
+  <div id="viewport" tabindex="0" role="group" aria-label="Zoomable search picture. Use plus and minus to zoom, arrow keys to move, or pinch and drag." aria-describedby="gesture-tip">
+   <div id="surface"><img id="scene" alt="" draggable="false" width="1536" height="1024"><span id="marker" hidden aria-hidden="true"></span></div>
+   <div id="image-status" role="status">Opening the picture…</div>
+  </div>
+  <div class="picture-bottom"><span id="gesture-tip">Pinch to zoom · Drag to look · Choose an answer below</span><div class="zoom-controls"><button id="minus" aria-label="Zoom out">−</button><output id="zoom">1×</output><button id="plus" aria-label="Zoom in">+</button><button id="reset" aria-label="Show the whole picture">All</button></div></div>
+ </section>
+ <aside class="reading" id="reading">
+  <p class="eyebrow" id="step"></p><h1 id="title" tabindex="-1"></h1><p class="intro" id="intro"></p>
+  <div id="clues" aria-label="Read the clue"></div><p class="word-tip">Tap a word to hear it.</p>
+  <div id="word-help" role="status" hidden></div>
+  <div class="question-row"><h2 id="question"></h2><button id="hint" aria-label="Give me a clue" aria-expanded="false">?</button></div>
+  <p id="hint-text" hidden></p><div id="choices" role="group" aria-labelledby="question"></div>
+  <p id="feedback" role="status" aria-live="polite"></p>
+  <button id="go" class="primary" disabled>Choose a place</button>
+ </aside>
+</main>
+<section id="ending" hidden aria-labelledby="end-title"><div class="end-card"><span class="seal" aria-hidden="true">☾</span><p class="eyebrow">Four places · One secret path</p><h1 id="end-title" tabindex="-1">You found the moon treasure!</h1><p>You read the map, found the door and chose the dragon guide. The treasure is yours.</p><div class="ending-actions"><button id="explore" class="primary">Look around the castle</button><button id="again">Play again</button><a href="../../">Back to chapters</a></div></div></section>
+<noscript>This adventure needs JavaScript. Please enable it and reload.</noscript>
+<script>/* No main-game storage is read or written on this page. */</script>
+</body></html>

@@ -126,7 +126,7 @@ test('a stale tab cannot overwrite another tab’s saved answers',()=>{
 });
 test('every practice target has four distinct choices, a reviewed illustration and its sentence',()=>{
   const fs=require('node:fs'),path=require('node:path');
-  for(const item of Content.words){assert.equal(new Set(item.d).size,4);assert.ok(item.d.includes(item.w));assert.match(item.sentence,new RegExp('\\b'+item.w+'\\b','i'));assert.ok(fs.statSync(path.join(__dirname,'..',Content.teachingSource(item))).size>1000);}
+  for(const item of Content.words){assert.equal(new Set(item.d).size,4);assert.ok(item.d.includes(item.w));assert.match(item.sentence,new RegExp('\\b'+item.w+'\\b','i'));if(!item.expansion)assert.ok(fs.statSync(path.join(__dirname,'..',Content.teachingSource(item))).size>1000);else assert.ok(item.teaching.tip);}
 });
 
 
@@ -174,7 +174,7 @@ test('stronger choices visibly grow while health and reading exposure remain sep
   Core.startBattle(s,START,{strength:12});assert.equal(s.battle.maxHealth,12);assert.equal(s.assessment.exposure,exposure);
 });
 test('new practice uses the reviewed Core 200 slice while legacy sat questions and evidence survive',()=>{
-  const s=campaign();assert.ok(Content.words.some(item=>item.w==='on'));assert.ok(!Content.words.some(item=>item.w==='sat'));assert.ok(!Content.demoWords.includes('sat'));
+  const s=campaign();assert.ok(Content.words.some(item=>item.w==='on'));assert.ok(!Content.coreWords.some(item=>item.w==='sat'));assert.ok(!Content.demoWords.includes('sat'));
   const q=present(s);q.target='sat';q.options=['sat','set','sap','sad'];s.learning.words.sat.independentCorrect=4;
   const saved=roundtrip(s);assert.equal(saved.battle.question.target,'sat');assert.equal(saved.learning.words.sat.independentCorrect,4);
   Core.answerBattle(saved,'set',START);Core.startTeaching(saved,'sat','battle',START);Core.leaveTeaching(saved,START+1000);

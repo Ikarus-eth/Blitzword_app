@@ -1,6 +1,6 @@
 # Story and riddle narration completion — 4 October 2026
 
-Build: `story-riddle-narration-20261004-r1`. Implemented and tested; deployment pending.
+Build: `story-riddle-narration-20261004-r1`. Implemented, tested, deployed and verified.
 
 The user authorized finishing the remaining 31 chapter reading sentences and 48 creature-riddle Listen passages within the estimated 6,000-credit generation budget, followed by deployment.
 
@@ -26,4 +26,6 @@ Clean dependency installation and all **311 unit tests and 104 UI flow groups pa
 
 An isolated Chrome session decoded all **11 referenced MP3s**, checked all **80 added/reused segments** against decoded duration and non-silence, and played a reused story, a full riddle, an ordering riddle with its shared prompt, and the final generated passage. No device-speech fallback or page errors occurred. Cancelling an ordering passage stopped the remaining instruction and completion callback. [Browser evidence](NARRATION_STORY_RIDDLE_BROWSER.json). Unit tests also verify complete-text fallback when the shared instruction cannot download and local speech for custom dragon names.
 
-Live deployment verification is pending. Technical tests do not substitute for human listening or physical iPad/Safari testing.
+[PR #127](https://github.com/Ikarus-eth/Blitzword_app/pull/127) merged as `e69dbf561f1e4f86c37294d73d6299fa93f11c5a`. [Pages run 37172174610](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/37172174610) passed its regression checks, upload and deployment. All **21 checked live files** match the tested source byte for byte: all eleven added/reused audio files and ten runtime files, including the build marker, narration manifest and playback code. [Live hashes](NARRATION_STORY_RIDDLE_DEPLOYMENT.json).
+
+Technical tests do not substitute for human listening or physical iPad/Safari testing.

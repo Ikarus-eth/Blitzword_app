@@ -1,4 +1,39 @@
+## Large ninth-task maps — accepted update, 10 October 2026
+
+The Crystal Ferry and the following four River Song chapters each add one large search map as task nine, with three questions on the same map. Five new 3072×2048 maps are assembled from four native detailed sections each, explicitly authorized by the user. The image is for zoom/pan only. Answers must be selected from written choices below; remove picture answer selection in the earlier standalone journey too. Each wrong submission costs one shared life. The existing two-step retreat applies at zero, retaining solved questions and earned progress. Previously completed quests stay complete; replay uses nine tasks. Other quests keep eight. [Implementation rules and evidence](wimmelbild/NINTH_TASK_RELEASE.md).
+
+## New enemy artwork decisions — 10 October 2026
+
+The user requested four looks for each of 46 retained enemy concepts, with only Artus and Juna voting. Artus determines selection; tied highest scores express uncertainty and Juna chooses among those tied looks. If all four Artus scores are below 3/5, exclude that enemy. Missing scores or unresolved ties remain pending. This phase decides final appearance only: no game integration is authorized. [Review rules and scope](enemies/FINAL_LOOK_REVIEW.md).
+
+## Standalone Dragon path — 10 October 2026
+
+The user selected map mockup 3 and requested a standalone mini-game launched from the chapter-selection home, with successive increasingly detailed Wimmelbild scenes and pinch-to-zoom. One scene must identify a dragon from multiple attributes, including red/pink scales, a long tail and black stripes.
+
+Implemented direction: four linked scenes (harbour, tree village, dragon valley, castle treasury), untimed clues and written answer choices, written-only selection with explicit confirmation, correct answers opening the next scene, and non-punitive clue-specific feedback. Both the creature-campaign and Word-trails homes expose **Dragon path**. Independent local progress, completion and replay never mutate the main learner save, curriculum, XP or health. Separate mini-game saves are not included in the main backup. Read-word audio, clue listening, optional hints, pinch/drag/wheel/keyboard zoom and a big-picture view support independent play. [Scope and checks](wimmelbild/RELEASE.md).
+
+## Accepted curriculum expansion — 9 October 2026
+
+The parent approved 800 additional written forms for broad beginner-book reading, prioritising everyday vocabulary and including written numbers. This supersedes the historical future-expansion and fantasy-filter limits below. The playable pool is now 1,000: the unchanged Core 200 allocation plus the accepted [800-word pool](../curriculum/NEXT800_FIRST_BOOKS.json). Adaptive practice opens them using existing success/review rules, independently of story completion; no purchase gate is added. Stories are separate work.
+
+Each new word has a contextual sentence, rotating fair-choice pool, short spelling/meaning/word-family tip and pronunciation through existing audio fallback. New cards use text and number symbols/counters; new generated artwork and paid narration are not part of this release. Context-sensitive pronunciations use their example sentence. Parent reporting includes all 1,000 and preserves case for names and contractions. Existing learner evidence, pending questions, XP and story progress remain intact. Local save encoding is losslessly compacted; exported backups remain readable ordinary JSON. See [release details](NEXT800_RELEASE.md).
+
+## Riddle timing and XP — 7 October 2026
+
+## Twice-skipped words — 9 October 2026
+
+In each reading fight, track question-mark help separately for each word. After its second question-mark response, that word must return after at least two other word responses, ahead of ordinary practice selection. Hide its question mark for the rest of that fight and reject further help submissions in the game logic. The learner must choose an answer; an incorrect choice uses normal damage and correction/teaching and satisfies this required attempt. Keep the enemy at a minimum of one health while any required attempts remain, so other words cannot finish the fight first. Defeat still works normally. Counts and pending attempts survive pause, Home, reload and backup, and reset with a new fight. Apply to both creature-quest and Word trails reading fights; guided demo and assessment retain their help rules. Existing learning history and earned progress are preserved.
+
+Accepted request: credit longer riddle thinking, increase riddle XP, base fight/riddle boosts on total eligible time and add a parent-controlled 1,000 XP adjustment. The 50 XP amount and once-per-riddle reward are implementation defaults. This supersedes the historical separate/non-rewarding campaign-riddle rules below.
+
+Campaign riddles now count foreground thinking time up to three minutes per riddle per quest. The cap survives hints, retries, pause and reload; background tabs and suspended timers are excluded. Reading, multiplication and campaign-riddle time jointly unlock the ten-minute daily reward, returning-day bonus and existing 1.75× boost. First solved riddles award 50 XP (88 boosted), including hints/listening, but answer reveals and replays award none. Parents has a gated **Add 1,000 XP** button, with exact unboosted awards recorded separately from learning evidence. No automatic compensation or reconstructed historical time is applied. The independent Story adventures pilot retains its own timing/save rules.
+
 # BlitzWord — Current Product Spec
+
+## Ship and kind shark chapter — 7 October 2026
+
+The user requested that chapter six centre on the ship and shark from the ship/shark teaching moment, explicitly specifying a kind shark. Forest Lights chapter 6 becomes **The Ship and the Kind Shark**: a helpful sea guide leads the wooden ship through a safe passage, finds the ruby seed and returns it to the forest harbour. Four linked riddles cover route order, subtraction, elimination and action sequencing. The shark is a narrative friend, never a battle opponent. Keep the existing four forest-creature reading encounters, health and learning rules, mission ID `oak-heart`, prerequisites, earned records and river unlock. Old pending oak riddles remain resolvable after reload/backup; new clues use distinct IDs. New Listen passages use device speech fallback. [Implementation and art](adventures/KIND_SHARK_RELEASE.md).
+
 
 ## Finish chapter and riddle narration — 4 October 2026
 
@@ -12,7 +47,7 @@ The user requested a cheaper solution, then explicitly authorized creation and d
 
 The parent’s playtest feedback asks for easier introductions while keeping the challenges, fewer lives carried into later story steps, a clear remaining-step count, explained book symbols, and choosing collected animals to stand on the child’s side.
 
-Implementation defaults: new creature quests start with **four shared hearts** across four fights and four clues. Clues do not cost hearts. At zero hearts the current fight can be retried with four hearts; solved clues and discoveries stay. New quests refill the pool. Existing pending quests inherit their saved battle health and maximum, including a quest parked in Word trails; no saved heart is removed during migration. Word trails retains its existing proportional-health rules.
+Implementation defaults: new creature quests start with **four shared hearts** across four fights and four clues. Superseded on 6 October: each wrong riddle submission costs one shared heart. At zero hearts the current fight can be retried with four hearts; solved clues and discoveries stay. New quests refill the pool. Existing pending quests inherit their saved battle health and maximum, including a quest parked in Word trails; no saved heart is removed during migration. Word trails retains its existing proportional-health rules.
 
 Show all **eight steps** (Fight / Clue repeated four times), completed count, steps left and the treasure endpoint on quest screens, encounters and results, with compact progress during fights. Book stamps have plain labels and a legend: **◆ Met**, **✦ Clue**, **★ Star**. Preserve existing stamp records.
 
@@ -1019,3 +1054,24 @@ The hero must have clean transparent edges without a blue keying fringe, both at
 ## Pip B and still-image resolution — 3 October 2026
 
 The user selected mouth/chin alternative B (Natural dragon jaw) for small Pip's friendly resting battle face. Keep his existing attack and return-to-neutral behavior. Audit still-image source dimensions and improve the visibly soft campaign imagery while preserving the established scene subjects, map controls and saves. Seven standalone map files replace full-screen atlas enlargement; six enhanced scenes also replace the same low-resolution images in chapter presentations.
+
+
+## Fight companion and riddle feedback — approved 5 October 2026
+
+Keep the collected animal visibly separate from the hero and Pip during battles, including landscape. Remove the persistent “On your side” and shield-explanation captions beneath it; retain the name and the existing protection event. Correct creature-riddle submissions show a persistent large checkmark, “Correct!” and checked answer cards; ordering answers also highlight the completed sequence. Bring the feedback into view and keep the explicit Continue action. Assisted reveals say “Answer revealed”, preserving first-answer and help evidence. Existing saves, artwork, combat and reward rules remain.
+
+
+## Companion size and riddle usability — approved 6 October 2026
+
+The battle animal must be sized between Pip and the hero, with no visible title/caption underneath. Keep separate character lanes. Number answer options display their label once. Wrong submitted riddles lose one shared quest heart; incomplete answers, hints/listening and worked reveals do not. Duplicate submission without a new selection does not charge again. At zero hearts, explicitly rest and retry the same riddle with the saved maximum hearts, keeping earlier solved clues, first-answer evidence and spent companion protection. Correct answers and revealed solutions put a large next-step button directly in compact success feedback; the old clue/choice section is hidden in this completed view. Retry, help and ordering controls have large touch targets.
+
+
+## Boy-and-book chapter and defeat setback — approved 6 October 2026
+
+The user identified the bottom-right panel of `assets/teaching/core-teaching.webp` as the boy and map-book reference, then explicitly chose replacement of the fifth Forest Lights adventure. Replace The Laughing Vault with The Boy and the Map, using that boy, book and warm painted style in four story scenes. Retain the stable mission ID and old pending puzzle definitions; preserve previous learning and unlocked chapters. Other chapter images are not replaced by this release.
+
+On a reading defeat show a persistent loss screen with the hero and Pip retreating sadly. Creature-quest defeat in either a fight or riddle returns two steps on the eight-step tracker, clamped at the first step. This implementation interprets two parts as one fight plus one riddle (not two pairs). Apply it once on explicit retry, restore four hearts and preserve XP, collection stamps, first-answer evidence and spent companion help. This supersedes same-fight/same-riddle retries. Word trails retains its separate checkpoint rules. New chapter voice lines use the established speech fallback until recorded narration is separately requested.
+
+## Earned lightning feedback — 9 October 2026
+
+Show one brief gold lightning bolt over the answered word immediately after a correct answer qualifies for the existing Quick marker (Core.quickAnswer). The pulse lasts 600 ms, runs alongside existing feedback without delaying the next question, and never previews an answer. Reduced motion uses a stationary brief symbol. Slow, helped, interrupted, incorrect, demo and assessment answers do not earn it; resumed feedback does not replay the reward. No scoring or save rules change.

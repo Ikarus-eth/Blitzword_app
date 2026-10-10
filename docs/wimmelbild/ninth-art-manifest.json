@@ -1,0 +1,52 @@
+[
+  {
+    "id": "crab-ferry",
+    "file": "assets/wimmelbild/maps/crab-ferry.webp",
+    "size": [
+      3072,
+      2048
+    ],
+    "bytes": 3669452,
+    "sha256": "d394f87758b05128947adba68ce26ff4c070be771669c83c0b8702f9f844e9fd"
+  },
+  {
+    "id": "stone-dam",
+    "file": "assets/wimmelbild/maps/stone-dam.webp",
+    "size": [
+      3072,
+      2048
+    ],
+    "bytes": 3954202,
+    "sha256": "723469c9fcab7ff1e7d1f7cc5f7e9fd22b04c24e9be2daa8ac17b0e2cda33e62"
+  },
+  {
+    "id": "mist-lamps",
+    "file": "assets/wimmelbild/maps/mist-lamps.webp",
+    "size": [
+      3072,
+      2048
+    ],
+    "bytes": 3539878,
+    "sha256": "85f5a81c42c21d79c57941ca5286f8951244e395a924c398198f16007721ba83"
+  },
+  {
+    "id": "high-nest",
+    "file": "assets/wimmelbild/maps/high-nest.webp",
+    "size": [
+      3072,
+      2048
+    ],
+    "bytes": 3770676,
+    "sha256": "68e2d598b8fd61cd43ebebb218fb35faef8e87236efeca81e564d146290e70d5"
+  },
+  {
+    "id": "river-heart",
+    "file": "assets/wimmelbild/maps/river-heart.webp",
+    "size": [
+      3072,
+      2048
+    ],
+    "bytes": 3727990,
+    "sha256": "5a69b43c6f93341595fb0db86ddf2dc40f44f219a401300f7eeb060503a21ae3"
+  }
+]

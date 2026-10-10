@@ -1,0 +1,222 @@
+[
+  {
+    "id": "crab-ferry",
+    "tile": 0,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: CRYSTAL FERRY port beside a blue lake, medieval wooden docks and faceted blue crystal decorations. REGION: Harbour docks. Four small wooden ferries with cream sails, distinct tiny gold sail symbols and clearly coloured deck chests. Boat A has a CRESCENT MOON on sail, TWO RED pennants, and GREEN deck chest. Boat B moon, ONE red pennant, BLUE chest. Boat C gold STAR, TWO red pennants, RED chest. Boat D moon, TWO BLUE pennants, YELLOW chest. Keep all four sails, pennants and chests visible. Surround with fishermen, cargo, ropes, seagulls, shops, tiny boats and dock detail.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "3ca068bfae1db8c41f15047b8832cfd27ebcbb9678bc8c67bde23a6620b7e690",
+    "sourceFile": "exec-006b3a18-b563-4d6c-9722-24587a1dae47.png"
+  },
+  {
+    "id": "crab-ferry",
+    "tile": 1,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: CRYSTAL FERRY port beside a blue lake, medieval wooden docks and faceted blue crystal decorations. REGION: Ferry market. Four small shop booths, each a coloured awning and an owl, hanging object. A GREEN awning booth has a WHITE OWL, a hanging GOLD BELL and basket of RED APPLES. BLUE awning booth has white owl, gold bell, basket of YELLOW PEARS. RED awning booth has BLACK RAVEN, gold bell, red apples. YELLOW awning booth has white owl, RED LANTERN, red apples. Draw birds and bells clearly. Add many other ordinary stalls, tiny shoppers, tools, flowers, bridges and terraces.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "03adc2aed1381262cea15c443af55c9fb30e37bb4bcdf599ef00da8ae7b2220e",
+    "sourceFile": "exec-30a458df-725f-4480-b5b7-1cc715db46bb.png"
+  },
+  {
+    "id": "crab-ferry",
+    "tile": 2,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: CRYSTAL FERRY port beside a blue lake, medieval wooden docks and faceted blue crystal decorations. REGION: Boatyard and rope workshops. Four GREEN closed wooden storage chests on different benches. A chest marked GOLD MOON has a coil of RED ROPE and a BLUE BOTTLE right beside it. Another moon chest has BLUE ROPE and GREEN BOTTLE. A STAR chest has red rope and YELLOW BOTTLE. Another moon chest has red rope and RED BOTTLE but its lid is wide OPEN. Keep rope colours, bottle colours and lid states clear; no extra bottles adjacent to these four benches. Surround with richly busy boatbuilding yard.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "5c914658706006c88e27240f1de15cd79328671dca899263500578750d8bb230",
+    "sourceFile": "exec-d3d972dc-bbbb-4cae-8d7e-27bfb3cbd254.png"
+  },
+  {
+    "id": "crab-ferry",
+    "tile": 3,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: CRYSTAL FERRY port beside a blue lake, medieval wooden docks and faceted blue crystal decorations. REGION: Glass gardens and ferry town, varied terraced cottages, greenhouses, tiny bridges, boatbuilders, bathers, chickens, fountains, crystal sculptures, fruit trees and secret nooks. Pure detailed atmospheric environment, no puzzle symbols required.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "a7929d8c80501b386786360c1777b1045a8cfe1afd5ee7e59e93529c0677847c",
+    "sourceFile": "exec-61b2c532-d262-4129-b180-a3856b6bc319.png"
+  },
+  {
+    "id": "stone-dam",
+    "tile": 0,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE SLEEPING WATERWHEEL, a beautiful river-mill town full of wooden wheels, channels and workshops. REGION: Four small separate watermill huts with wheels. Hut A GREEN DOOR, GOLD MOON above door, TWO RED flowerpots and BLUE roof. Hut B green door, moon, ONE red pot, RED roof. Hut C green door, GOLD STAR, two red pots, YELLOW roof. Hut D BLUE door, moon, two red pots, GREEN roof. All these huts similar size, grouped naturally among working water channels, cranes and tiny people. Doors, symbols, pots and roofs clear and unobscured.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "8c1faef7dca777397a70a7294055622d1fba0475c6ad68a0c2fa10f42d9b2699",
+    "sourceFile": "exec-5f78884c-059e-4b74-a1ee-48b54d0fffdc.png"
+  },
+  {
+    "id": "stone-dam",
+    "tile": 1,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE SLEEPING WATERWHEEL, a beautiful river-mill town full of wooden wheels, channels and workshops. REGION: Busy open-air tool workshop. Four separate small work tables: A has an OPEN RED BOOK, a GOLD BELL, and a GREEN JUG. B has CLOSED red book, gold bell, BLUE jug. C open BLUE book, gold bell, RED jug. D open red book, RED LANTERN, YELLOW jug. Each book/bell/jug grouping clearly belongs to same table. Other dense workshop details: tools, wheels, gears, ladders, apprentices, cats and ropes, but no extra jugs on these four tables.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "13cf9ad4fe8e4d17f7ae777c87b5fdd3a02ac9352193517eaf6c6c3777e2e9ed",
+    "sourceFile": "exec-fb5be22e-c0e2-466a-8ae5-66b55d3d2ca1.png"
+  },
+  {
+    "id": "stone-dam",
+    "tile": 2,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE SLEEPING WATERWHEEL, a beautiful river-mill town full of wooden wheels, channels and workshops. REGION: Four tiny arched water gates in stone channels. A has GOLD MOON emblem, WHITE CAT beside it and TWO BLUE FLAGS. B moon emblem, BLACK CAT and THREE blue flags. C GOLD STAR, white cat and ONE blue flag. D moon, white cat and FOUR RED FLAGS. All four exact groups clearly readable at zoom. Add canals, wheel buildings, small gardens, fish, ducks, barrows, sacks, vines and stepping stones.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "c11f295041882ff977e37223d87dc9f1a2eb2be8b638d053006763bb4f96a0e1",
+    "sourceFile": "exec-769f57b2-662d-48df-a9cb-54bb9b86ca35.png"
+  },
+  {
+    "id": "stone-dam",
+    "tile": 3,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE SLEEPING WATERWHEEL, a beautiful river-mill town full of wooden wheels, channels and workshops. REGION: Mill hillside village and reservoir gardens, many farm cottages, distant windmills, orchard rows, stone bridges, small pulley systems, market stalls, wildlife and hundreds of tiny interesting details. No puzzle-critical groups required.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "eba17b0ee85583ca512bfe7dea38ffb6791716689f4fd0c1216a286c07daaf54",
+    "sourceFile": "exec-7034ac91-178c-45e4-be0b-35ef4e01a774.png"
+  },
+  {
+    "id": "mist-lamps",
+    "tile": 0,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE LAMPS IN THE MIST, enchanted riverside woodland with lantern-lit tree houses, clear readable details and only light atmospheric mist in distant gaps. REGION: Four little woodland huts among branches. A RED DOOR with WHITE OWL over it, GOLD BELL beside it and GREEN ROOF. B red door, white owl, RED LANTERN, BLUE roof. C red door, BLACK RAVEN, gold bell, YELLOW roof. D BLUE DOOR, white owl, gold bell, RED roof. Each hut only 8-12 percent section width, surrounded by many tiny forest bridges, little travellers, baskets, glowing mushrooms and carvings.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "ef2ec4f7d94c991f18591193498465afd3bdf289eb67b7daa5f691531356c903",
+    "sourceFile": "exec-84c7e8a3-b329-485e-afba-5580c06fe368.png"
+  },
+  {
+    "id": "mist-lamps",
+    "tile": 1,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE LAMPS IN THE MIST, enchanted riverside woodland with lantern-lit tree houses, clear readable details and only light atmospheric mist in distant gaps. REGION: Four small safe-looking wooden landing docks. A TWO GOLD BELLS hanging from arch, WHITE CAT seated below, BLUE BOAT moored. B ONE gold bell, white cat, RED boat. C two gold bells, BLACK CAT, GREEN boat. D two RED LANTERNS, white cat, YELLOW boat. Group related details precisely on each dock, no extra boats near them. Enchanted dense river settlement with reeds, frogs, fish, paths and many other tiny decorations.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "e1d53746b0303adde41f51e7cb0434611907ba543dfe177a301d71c97d42cc8d",
+    "sourceFile": "exec-5c530432-494e-495d-a040-63d33baaf822.png"
+  },
+  {
+    "id": "mist-lamps",
+    "tile": 2,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE LAMPS IN THE MIST, enchanted riverside woodland with lantern-lit tree houses, clear readable details and only light atmospheric mist in distant gaps. REGION: Four little lantern stands in a woodland clearing. A stand with GOLD MOON emblem has a CLOSED RED BOOK and GREEN LANTERN. B gold moon, OPEN RED BOOK, BLUE lantern. C GOLD STAR, closed red book, RED lantern. D gold moon, closed BLUE book, YELLOW lantern. Crisp tiny details on separated stands, lantern housing colours unmistakable even though all emit warm light. Add tents, hanging ropes, cats, foxes and densely detailed woodland life.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "82537b9f89aeee7adab18163fb69b49247185a101b3c8100a54259d27d1fbc65",
+    "sourceFile": "exec-03c404ea-8062-48bc-a374-c8d5b3f702d2.png"
+  },
+  {
+    "id": "mist-lamps",
+    "tile": 3,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE LAMPS IN THE MIST, enchanted riverside woodland with lantern-lit tree houses, clear readable details and only light atmospheric mist in distant gaps. REGION: Moonlit wetland tree village, fireflies, great tree roots, little riverside paths, lantern bridges, boats, birds, curled foxes and warm windows, small busy figures. Rich intricate magical atmosphere with readable objects, no dense fog obscuring detail.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "18a1b9dc227dbf6202ebd06986f8b210b8a75d62e76424a03cf81dab23934193",
+    "sourceFile": "exec-10a86fbe-229c-4552-93c2-d75e1f87d596.png"
+  },
+  {
+    "id": "high-nest",
+    "tile": 0,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE NEST ABOVE THE FALLS, mountain cliff village above waterfalls with airy stone arches, rope walkways and many visiting dragons. REGION: Dragon terraces with TEN full-body dragons among ledges, ruins, apple trees and little stalls. Four key dragons: A RED and PINK body, BLACK TIGER STRIPES, LONG CURLING TAIL, GREEN crystal on a small stone pedestal beside it. B red and pink, black stripes, SHORT tail, BLUE crystal pedestal. C red and pink, WHITE SPOTS, long tail, RED crystal pedestal. D BLUE body, black stripes, long tail, YELLOW crystal pedestal. Target A is not larger than others. All four full tails and pedestal colours clear, candidates each about 10 percent of section width; other dragons green, gold, purple, silver, no duplicate full trait combination.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "b92d93b585190e72f7813f523b6e5bdb53d9d78d0e3e70a154c835a3961e7564",
+    "sourceFile": "exec-4c95c73e-1a7c-4998-a68e-93fc6bc4ec28.png"
+  },
+  {
+    "id": "high-nest",
+    "tile": 1,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE NEST ABOVE THE FALLS, mountain cliff village above waterfalls with airy stone arches, rope walkways and many visiting dragons. REGION: Four small bird nests on cliff ledges, each beside a tiny shelter: A WHITE BIRD in nest, TWO BLUE eggs, RED FLAG by nest. B white bird, ONE blue egg, GREEN flag. C BLACK BIRD, two blue eggs, YELLOW flag. D white bird, TWO RED eggs, BLUE flag. Eggs completely visible and separated, birds not sitting on them. Add ladders, little platforms, baskets, tiny flowers, butterflies, waterfalls and many miniature details.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "ce959d8bc30cd791d32b1093e7be0498f140e44be8f661d1cbc54c5adcffe47f",
+    "sourceFile": "exec-b8318745-9dbe-4984-90dc-06ce667ea18c.png"
+  },
+  {
+    "id": "high-nest",
+    "tile": 2,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE NEST ABOVE THE FALLS, mountain cliff village above waterfalls with airy stone arches, rope walkways and many visiting dragons. REGION: Four hanging baskets at distinct rope stations. A basket below GOLD MOON plaque, RED ROPE and GREEN BOOK inside. B moon plaque, BLUE rope and RED book inside. C GOLD STAR plaque, red rope and BLUE book. D moon plaque, red rope and YELLOW book but basket has a big broken hole in its side. Target A basket intact. Each book cover visible, no writing. Dense cliffside lift workshops with bells, tools, people, goats and mountain flowers.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "1776610e02f05bbb7a1c863a77a79bb25be5aade75c0cff3f4d0d0352d8422b1",
+    "sourceFile": "exec-aa403d22-5270-4dc7-b9b7-bb2393651a00.png"
+  },
+  {
+    "id": "high-nest",
+    "tile": 3,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE NEST ABOVE THE FALLS, mountain cliff village above waterfalls with airy stone arches, rope walkways and many visiting dragons. REGION: Wide mountain sanctuary with many dragon nesting alcoves, tiny bridges, buildings carved into rock, waterfalls, small terraces, ladders, rope lifts, goats, birds, plants and many fine details. No large foreground dragon, no protagonist, all environment explorable.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "ea1c9e73f11ae0debf2beca1656f074f8561fce48ebe41b7ab190bd5e2612c4f",
+    "sourceFile": "exec-5c83c307-0c8e-417a-a6b9-dc99169d3a48.png"
+  },
+  {
+    "id": "river-heart",
+    "tile": 0,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE RIVER SINGS AGAIN, grand river-gate city with ornate stone terraces, bell towers, aqueducts and festival preparations. REGION: Four small ornate river gate controls at separate arches. A GOLD WAVE symbol on arch, TWO GOLD BELLS beside arch, GREEN LEVER handle. B wave symbol, ONE gold bell, RED lever. C GOLD LEAF symbol, two gold bells, BLUE lever. D wave symbol, TWO RED LANTERNS, YELLOW lever. Lever handle colours clearly visible and equally small. Surround with richly crowded canal town, bridges, boats, flags, plants and little festival people.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "d856f7e92b5ddd28a8f02229c1624705c348e300a28ebb595b8ecb5d54d39deb",
+    "sourceFile": "exec-d45d2623-79de-46d6-9ba2-da7a06cf41b4.png"
+  },
+  {
+    "id": "river-heart",
+    "tile": 1,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE RIVER SINGS AGAIN, grand river-gate city with ornate stone terraces, bell towers, aqueducts and festival preparations. REGION: Four small green treasure chests on terraces. A GOLD MOON on chest, OPEN RED BOOK beside chest and WHITE CAT below book; a BLUE FLAG above the chest. B moon, CLOSED red book, white cat, GREEN flag. C GOLD STAR, open red book, white cat, RED flag. D moon, open red book, BLACK CAT, YELLOW flag. Keep chest groups equal scale about 9 percent width, books cats and flags clear but small. Rich castle river-bank environment with markets and instruments.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "f619392ea18a30e2e15f23038bb13e0e0c5027eedf87cbbc84a237225f46bba4",
+    "sourceFile": "exec-901b5a14-eaf0-4594-8ea0-1524aa0e3061.png"
+  },
+  {
+    "id": "river-heart",
+    "tile": 2,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE RIVER SINGS AGAIN, grand river-gate city with ornate stone terraces, bell towers, aqueducts and festival preparations. REGION: Four miniature bell-tower balconies. A tower has GOLD MOON emblem, TWO BLUE FLAGS and THREE GOLD BELLS in a row. B moon, ONE blue flag and TWO gold bells. C GOLD STAR, two blue flags, FOUR gold bells. D moon, TWO RED FLAGS, ONE gold bell. Exact bells and flags completely visible, no extra hanging gold bells nearby. Many other buildings and festive details, small boats, stone animals, clocks, gardens and tiny inhabitants.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "917df171fa66224314a595f96e539375ba25e30e0a6eb5cdc68503670b1338fa",
+    "sourceFile": "exec-003ae53e-9b10-4d3c-8ffc-82bfb2df3344.png"
+  },
+  {
+    "id": "river-heart",
+    "tile": 3,
+    "prompt": "Use case: illustration-story. A native 1536x1024 landscape section of a large painted fantasy Wimmelbild atlas, viewed from high oblique bird's-eye perspective. Extremely rich tiny story details, finely painted architecture, plants, tools and little creatures. Warm readable light, sharp throughout, no depth-of-field blur. Four distinct similar puzzle candidates embedded naturally with equal prominence; no spotlight on correct candidate. Candidates are SMALL, about 8-12 percent of section width, their distinguishing symbols/details just 1-2 percent of width and crisp when zoomed. No text, letters, digits, logos, UI or border. Keep all essential objects away from outer 5 percent. At edges allow dense foliage, water or stone for assembling separate atlas regions. No established BlitzWord hero or Pip. SETTING: THE RIVER SINGS AGAIN, grand river-gate city with ornate stone terraces, bell towers, aqueducts and festival preparations. REGION: Grand river festival panorama, open locks, dozens of small boats, gardens, bridges, fountains, musicians, market stalls, dragons flying far away, treasure caravans and cheerful but sophisticated fantasy city detail. No text, no protagonist, no puzzle-specific groups needed.",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSha256": "014960ffac2876da4af556e8fb47f6bee34afbee0eae345df1551907b1ebcf97",
+    "sourceFile": "exec-8f4199b4-2aae-473f-bfa6-0701952a4232.png"
+  }
+]

@@ -1,6 +1,5 @@
 {
   "version": 1,
-  "base": "7107bf5f9105fd5a916c1b549be6c7483b4be3d0",
   "voiceId": "JBFqnCBsd6RMkjVDRZzb",
   "model": "eleven_multilingual_v2",
   "settings": {
@@ -10,294 +9,784 @@
     "use_speaker_boost": true,
     "speed": 0.9
   },
-  "maxCharacters": 6000,
-  "characters": 5348,
-  "segmentCount": 49,
+  "maxCharacters": 7000,
+  "characters": 5430,
+  "segmentCount": 141,
   "batches": [
     {
-      "id": "story-riddle-001",
-      "text": "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?\n\nThe Thornling says, “Take a dry path.” “Keep away from the cave too.” Which trail fits both clues?\n\nPut the seed cup down before you add the oil. Add the oil before you light the lamp.\n\nTap the actions in the right order.\n\nThree boxes have leaf, sun and moon marks. The seed is not in the leaf box. Its mark lights and warms the day. Open the seed box.\n\nThe moth’s parcel is small. It has a star on it, not a leaf. Which parcel belongs to the moth?\n\nThe imp has seven letters. Two go to the owl. Three go to the moth. How many letters are left?\n\nClose the bag before you cross. Cross before you hand the bag to the moth.",
+      "id": "approved-enemies-001",
+      "text": "Snow Owl\n\nIts white wings shine with the colours of the northern lights.\n\nA Snow Owl is on the path. Ready to battle?\n\nBramble Badger\n\nIt digs safe tunnels with its strong golden claws.\n\nA Bramble Badger is on the path. Ready to battle?\n\nEmber Fox\n\nIts bright tail keeps lost travellers warm.\n\nAn Ember Fox is on the path. Ready to battle?\n\nRowan Stag\n\nNew green leaves grow on its branching antlers.\n\nA Rowan Stag is on the path. Ready to battle?",
       "segments": [
         {
-          "key": "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?",
-          "text": "Pip puts a key in the red bag. He moves it to the blue bag. The beetle takes the empty red bag. Which bag holds the key?",
-          "kind": "riddle"
+          "key": "Snow Owl",
+          "text": "Snow Owl",
+          "kind": "name"
         },
         {
-          "key": "The Thornling says, “Take a dry path.” “Keep away from the cave too.” Which trail fits both clues?",
-          "text": "The Thornling says, “Take a dry path.” “Keep away from the cave too.” Which trail fits both clues?",
-          "kind": "riddle"
+          "key": "Its white wings shine with the colours of the northern lights.",
+          "text": "Its white wings shine with the colours of the northern lights.",
+          "kind": "lore"
         },
         {
-          "key": "Put the seed cup down before you add the oil. Add the oil before you light the lamp.",
-          "text": "Put the seed cup down before you add the oil. Add the oil before you light the lamp.",
-          "kind": "ordering-riddle"
+          "key": "A Snow Owl is on the path. Ready to battle?",
+          "text": "A Snow Owl is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "Tap the actions in the right order.",
-          "text": "Tap the actions in the right order.",
-          "kind": "ordering-prompt"
+          "key": "Bramble Badger",
+          "text": "Bramble Badger",
+          "kind": "name"
         },
         {
-          "key": "Three boxes have leaf, sun and moon marks. The seed is not in the leaf box. Its mark lights and warms the day. Open the seed box.",
-          "text": "Three boxes have leaf, sun and moon marks. The seed is not in the leaf box. Its mark lights and warms the day. Open the seed box.",
-          "kind": "riddle"
+          "key": "It digs safe tunnels with its strong golden claws.",
+          "text": "It digs safe tunnels with its strong golden claws.",
+          "kind": "lore"
         },
         {
-          "key": "The moth’s parcel is small. It has a star on it, not a leaf. Which parcel belongs to the moth?",
-          "text": "The moth’s parcel is small. It has a star on it, not a leaf. Which parcel belongs to the moth?",
-          "kind": "riddle"
+          "key": "A Bramble Badger is on the path. Ready to battle?",
+          "text": "A Bramble Badger is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "The imp has seven letters. Two go to the owl. Three go to the moth. How many letters are left?",
-          "text": "The imp has seven letters. Two go to the owl. Three go to the moth. How many letters are left?",
-          "kind": "riddle"
+          "key": "Ember Fox",
+          "text": "Ember Fox",
+          "kind": "name"
         },
         {
-          "key": "Close the bag before you cross. Cross before you hand the bag to the moth.",
-          "text": "Close the bag before you cross. Cross before you hand the bag to the moth.",
-          "kind": "ordering-riddle"
+          "key": "Its bright tail keeps lost travellers warm.",
+          "text": "Its bright tail keeps lost travellers warm.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Ember Fox is on the path. Ready to battle?",
+          "text": "An Ember Fox is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Rowan Stag",
+          "text": "Rowan Stag",
+          "kind": "name"
+        },
+        {
+          "key": "New green leaves grow on its branching antlers.",
+          "text": "New green leaves grow on its branching antlers.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Rowan Stag is on the path. Ready to battle?",
+          "text": "A Rowan Stag is on the path. Ready to battle?",
+          "kind": "trail"
         }
       ]
     },
     {
-      "id": "story-riddle-002",
-      "text": "The pocket opens with an even number. It is more than four and less than eight. Which number opens it?\n\nThe lift needs a long rope. A wet rope will slip. Choose the rope.\n\nThere are nine pegs in the tray. Three are bent. Pip brings two more good pegs. How many good pegs can you use?\n\nThe guard takes a gear from the green box. She puts it under the blue box. The green box goes on a shelf. Where is the gear now?\n\nFit the gear before you pull the rope. Put the seed in the lift before you fit the gear.\n\nThree trees stand in a row: oak, pine, birch. The chick is not at either end. Which tree should you search?\n\nThe owl flew past before the bat. The moth flew past after the bat. Who flew past last?\n\nThe ladder needs eight rungs. Six rungs are already fixed in place. Pip has three spare rungs. How many spare rungs will be left after the repair?",
+      "id": "approved-enemies-002",
+      "text": "Pine Marten\n\nBlue sparks race along its tail before a storm.\n\nA Pine Marten is on the path. Ready to battle?\n\nHazel Hare\n\nIts blue cloak rides the wind as it leaps.\n\nA Hazel Hare is on the path. Ready to battle?\n\nCloak Raccoon\n\nIt shares its wooden shield with smaller friends.\n\nA Cloak Raccoon is on the path. Ready to battle?\n\nChestnut Squirrel\n\nIt keeps one warm acorn inside its fiery tail.\n\nA Chestnut Squirrel is on the path. Ready to battle?",
       "segments": [
         {
-          "key": "The pocket opens with an even number. It is more than four and less than eight. Which number opens it?",
-          "text": "The pocket opens with an even number. It is more than four and less than eight. Which number opens it?",
-          "kind": "riddle"
+          "key": "Pine Marten",
+          "text": "Pine Marten",
+          "kind": "name"
         },
         {
-          "key": "The lift needs a long rope. A wet rope will slip. Choose the rope.",
-          "text": "The lift needs a long rope. A wet rope will slip. Choose the rope.",
-          "kind": "riddle"
+          "key": "Blue sparks race along its tail before a storm.",
+          "text": "Blue sparks race along its tail before a storm.",
+          "kind": "lore"
         },
         {
-          "key": "There are nine pegs in the tray. Three are bent. Pip brings two more good pegs. How many good pegs can you use?",
-          "text": "There are nine pegs in the tray. Three are bent. Pip brings two more good pegs. How many good pegs can you use?",
-          "kind": "riddle"
+          "key": "A Pine Marten is on the path. Ready to battle?",
+          "text": "A Pine Marten is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "The guard takes a gear from the green box. She puts it under the blue box. The green box goes on a shelf. Where is the gear now?",
-          "text": "The guard takes a gear from the green box. She puts it under the blue box. The green box goes on a shelf. Where is the gear now?",
-          "kind": "riddle"
+          "key": "Hazel Hare",
+          "text": "Hazel Hare",
+          "kind": "name"
         },
         {
-          "key": "Fit the gear before you pull the rope. Put the seed in the lift before you fit the gear.",
-          "text": "Fit the gear before you pull the rope. Put the seed in the lift before you fit the gear.",
-          "kind": "ordering-riddle"
+          "key": "Its blue cloak rides the wind as it leaps.",
+          "text": "Its blue cloak rides the wind as it leaps.",
+          "kind": "lore"
         },
         {
-          "key": "Three trees stand in a row: oak, pine, birch. The chick is not at either end. Which tree should you search?",
-          "text": "Three trees stand in a row: oak, pine, birch. The chick is not at either end. Which tree should you search?",
-          "kind": "riddle"
+          "key": "A Hazel Hare is on the path. Ready to battle?",
+          "text": "A Hazel Hare is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "The owl flew past before the bat. The moth flew past after the bat. Who flew past last?",
-          "text": "The owl flew past before the bat. The moth flew past after the bat. Who flew past last?",
-          "kind": "riddle"
+          "key": "Cloak Raccoon",
+          "text": "Cloak Raccoon",
+          "kind": "name"
         },
         {
-          "key": "The ladder needs eight rungs. Six rungs are already fixed in place. Pip has three spare rungs. How many spare rungs will be left after the repair?",
-          "text": "The ladder needs eight rungs. Six rungs are already fixed in place. Pip has three spare rungs. How many spare rungs will be left after the repair?",
-          "kind": "riddle"
+          "key": "It shares its wooden shield with smaller friends.",
+          "text": "It shares its wooden shield with smaller friends.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Cloak Raccoon is on the path. Ready to battle?",
+          "text": "A Cloak Raccoon is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Chestnut Squirrel",
+          "text": "Chestnut Squirrel",
+          "kind": "name"
+        },
+        {
+          "key": "It keeps one warm acorn inside its fiery tail.",
+          "text": "It keeps one warm acorn inside its fiery tail.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Chestnut Squirrel is on the path. Ready to battle?",
+          "text": "A Chestnut Squirrel is on the path. Ready to battle?",
+          "kind": "trail"
         }
       ]
     },
     {
-      "id": "story-riddle-003",
-      "text": "The chick needs a basket with a lid. It must have no hole in the bottom. Choose its basket.\n\nUse something soft with no sharp teeth. It must brush dust from a tiny lock. Which tool should you take?\n\nThe knight has a round key and a square key. The round key opens the gate. The other key opens the vault. Which key opens the vault?\n\nThe vault has three rows of bells. There are four bells in each row. Two bells make no sound. How many bells can ring?\n\nKnock before you turn the key. Step back after you turn the key.\n\nThe boar crossed no bridge. It went past a pond, then under an arch. Which trail did it take?\n\nThe ring has six spaces. You have five seeds. The golem has the last one. Two of your seeds are already in the ring. How many more seeds must go in?\n\nThree pots show a moon, a leaf and a sun. The last seed is not under the leaf. The golem says, “Its mark gives light, but is not the sun.” Lift the right pot.",
+      "id": "approved-enemies-003",
+      "text": "Moss Bear\n\nIts golden collar glows when the sun comes out.\n\nA Moss Bear is on the path. Ready to battle?\n\nLily Otter\n\nIts round shield turns river stones into a safe path.\n\nA Lily Otter is on the path. Ready to battle?\n\nDam Beaver\n\nIt builds strong dams and carries tools beside its shield.\n\nA Dam Beaver is on the path. Ready to battle?\n\nAmber Newt\n\nIts golden crest catches the last light of day.\n\nAn Amber Newt is on the path. Ready to battle?",
       "segments": [
         {
-          "key": "The chick needs a basket with a lid. It must have no hole in the bottom. Choose its basket.",
-          "text": "The chick needs a basket with a lid. It must have no hole in the bottom. Choose its basket.",
-          "kind": "riddle"
+          "key": "Moss Bear",
+          "text": "Moss Bear",
+          "kind": "name"
         },
         {
-          "key": "Use something soft with no sharp teeth. It must brush dust from a tiny lock. Which tool should you take?",
-          "text": "Use something soft with no sharp teeth. It must brush dust from a tiny lock. Which tool should you take?",
-          "kind": "riddle"
+          "key": "Its golden collar glows when the sun comes out.",
+          "text": "Its golden collar glows when the sun comes out.",
+          "kind": "lore"
         },
         {
-          "key": "The knight has a round key and a square key. The round key opens the gate. The other key opens the vault. Which key opens the vault?",
-          "text": "The knight has a round key and a square key. The round key opens the gate. The other key opens the vault. Which key opens the vault?",
-          "kind": "riddle"
+          "key": "A Moss Bear is on the path. Ready to battle?",
+          "text": "A Moss Bear is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "The vault has three rows of bells. There are four bells in each row. Two bells make no sound. How many bells can ring?",
-          "text": "The vault has three rows of bells. There are four bells in each row. Two bells make no sound. How many bells can ring?",
-          "kind": "riddle"
+          "key": "Lily Otter",
+          "text": "Lily Otter",
+          "kind": "name"
         },
         {
-          "key": "Knock before you turn the key. Step back after you turn the key.",
-          "text": "Knock before you turn the key. Step back after you turn the key.",
-          "kind": "ordering-riddle"
+          "key": "Its round shield turns river stones into a safe path.",
+          "text": "Its round shield turns river stones into a safe path.",
+          "kind": "lore"
         },
         {
-          "key": "The boar crossed no bridge. It went past a pond, then under an arch. Which trail did it take?",
-          "text": "The boar crossed no bridge. It went past a pond, then under an arch. Which trail did it take?",
-          "kind": "riddle"
+          "key": "A Lily Otter is on the path. Ready to battle?",
+          "text": "A Lily Otter is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "The ring has six spaces. You have five seeds. The golem has the last one. Two of your seeds are already in the ring. How many more seeds must go in?",
-          "text": "The ring has six spaces. You have five seeds. The golem has the last one. Two of your seeds are already in the ring. How many more seeds must go in?",
-          "kind": "riddle"
+          "key": "Dam Beaver",
+          "text": "Dam Beaver",
+          "kind": "name"
         },
         {
-          "key": "Three pots show a moon, a leaf and a sun. The last seed is not under the leaf. The golem says, “Its mark gives light, but is not the sun.” Lift the right pot.",
-          "text": "Three pots show a moon, a leaf and a sun. The last seed is not under the leaf. The golem says, “Its mark gives light, but is not the sun.” Lift the right pot.",
-          "kind": "riddle"
+          "key": "It builds strong dams and carries tools beside its shield.",
+          "text": "It builds strong dams and carries tools beside its shield.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Dam Beaver is on the path. Ready to battle?",
+          "text": "A Dam Beaver is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Amber Newt",
+          "text": "Amber Newt",
+          "kind": "name"
+        },
+        {
+          "key": "Its golden crest catches the last light of day.",
+          "text": "Its golden crest catches the last light of day.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Amber Newt is on the path. Ready to battle?",
+          "text": "An Amber Newt is on the path. Ready to battle?",
+          "kind": "trail"
         }
       ]
     },
     {
-      "id": "story-riddle-004",
-      "text": "Put every seed in before you close the ring. Close the ring before you ring the bell.\n\nThe serpent puts the bottle beside a rock. The toad moves it behind a tall reed. Pip lifts the rock, but finds nothing. Where is the bottle?\n\nThe toad needs a path with four stones. None of the stones may be under water. Choose its path.\n\nThe toad carries two small notes on each trip. There are eight notes to deliver. How many trips does it need?\n\nLift the bell after you untie the reed. Ring the bell after you lift it clear of the mud.\n\nThe bell weighs four stones. The boat can carry six stones in all. Choose one extra load that fills it exactly. Which load goes with the bell?\n\nThe hole is wide. Use a wide board with no crack. Choose a board.\n\nCoils sit in four boxes: sun, leaf, moon, star. Take a box between sun and star. Do not take the leaf box. Which box has your rope?",
+      "id": "approved-enemies-004",
+      "text": "Cattail Heron\n\nIts long blue feathers ripple before the rain.\n\nA Cattail Heron is on the path. Ready to battle?\n\nBrook Turtle\n\nA tiny waterfall runs over its shining blue shell.\n\nA Brook Turtle is on the path. Ready to battle?\n\nWillow Kingfisher\n\nIt watches the water from a branch before a swift dive.\n\nA Willow Kingfisher is on the path. Ready to battle?\n\nRipple Salamander\n\nBlue rings on its skin glow deep below the water.\n\nA Ripple Salamander is on the path. Ready to battle?",
       "segments": [
         {
-          "key": "Put every seed in before you close the ring. Close the ring before you ring the bell.",
-          "text": "Put every seed in before you close the ring. Close the ring before you ring the bell.",
-          "kind": "ordering-riddle"
+          "key": "Cattail Heron",
+          "text": "Cattail Heron",
+          "kind": "name"
         },
         {
-          "key": "The serpent puts the bottle beside a rock. The toad moves it behind a tall reed. Pip lifts the rock, but finds nothing. Where is the bottle?",
-          "text": "The serpent puts the bottle beside a rock. The toad moves it behind a tall reed. Pip lifts the rock, but finds nothing. Where is the bottle?",
-          "kind": "riddle"
+          "key": "Its long blue feathers ripple before the rain.",
+          "text": "Its long blue feathers ripple before the rain.",
+          "kind": "lore"
         },
         {
-          "key": "The toad needs a path with four stones. None of the stones may be under water. Choose its path.",
-          "text": "The toad needs a path with four stones. None of the stones may be under water. Choose its path.",
-          "kind": "riddle"
+          "key": "A Cattail Heron is on the path. Ready to battle?",
+          "text": "A Cattail Heron is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "The toad carries two small notes on each trip. There are eight notes to deliver. How many trips does it need?",
-          "text": "The toad carries two small notes on each trip. There are eight notes to deliver. How many trips does it need?",
-          "kind": "riddle"
+          "key": "Brook Turtle",
+          "text": "Brook Turtle",
+          "kind": "name"
         },
         {
-          "key": "Lift the bell after you untie the reed. Ring the bell after you lift it clear of the mud.",
-          "text": "Lift the bell after you untie the reed. Ring the bell after you lift it clear of the mud.",
-          "kind": "ordering-riddle"
+          "key": "A tiny waterfall runs over its shining blue shell.",
+          "text": "A tiny waterfall runs over its shining blue shell.",
+          "kind": "lore"
         },
         {
-          "key": "The bell weighs four stones. The boat can carry six stones in all. Choose one extra load that fills it exactly. Which load goes with the bell?",
-          "text": "The bell weighs four stones. The boat can carry six stones in all. Choose one extra load that fills it exactly. Which load goes with the bell?",
-          "kind": "riddle"
+          "key": "A Brook Turtle is on the path. Ready to battle?",
+          "text": "A Brook Turtle is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "The hole is wide. Use a wide board with no crack. Choose a board.",
-          "text": "The hole is wide. Use a wide board with no crack. Choose a board.",
-          "kind": "riddle"
+          "key": "Willow Kingfisher",
+          "text": "Willow Kingfisher",
+          "kind": "name"
         },
         {
-          "key": "Coils sit in four boxes: sun, leaf, moon, star. Take a box between sun and star. Do not take the leaf box. Which box has your rope?",
-          "text": "Coils sit in four boxes: sun, leaf, moon, star. Take a box between sun and star. Do not take the leaf box. Which box has your rope?",
-          "kind": "riddle"
+          "key": "It watches the water from a branch before a swift dive.",
+          "text": "It watches the water from a branch before a swift dive.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Willow Kingfisher is on the path. Ready to battle?",
+          "text": "A Willow Kingfisher is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Ripple Salamander",
+          "text": "Ripple Salamander",
+          "kind": "name"
+        },
+        {
+          "key": "Blue rings on its skin glow deep below the water.",
+          "text": "Blue rings on its skin glow deep below the water.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Ripple Salamander is on the path. Ready to battle?",
+          "text": "A Ripple Salamander is on the path. Ready to battle?",
+          "kind": "trail"
         }
       ]
     },
     {
-      "id": "story-riddle-005",
-      "text": "Tie the boat before you lift the bell out. Lift the bell out before you untie the boat.\n\nThe guard gives the wrench to the troll. The troll lends it to Pip. Pip puts it on the flat stone. Where should you look for it?\n\nThere are four cups on the wheel. Each good cup lifts three scoops of water. One cup has a hole and lifts no water. How many scoops can one turn lift?\n\nStop the wheel before you change the cup. Open the gate after you change the cup.\n\nThe pool needs twelve scoops. The mended wheel lifts four cups of three scoops each turn. How many full turns fill the empty pool?\n\nA safe lamp blinks twice, then stays on. A lamp that goes dark marks deep water. Which signal should the wolves follow?\n\nEvery sign tells the truth. The left sign says, “This bank is wet.” The middle sign says, “The right bank is dry.” Which bank is definitely dry?\n\nThe wolf and two pups each need two blankets. There are eight blankets in the boat. How many blankets will be left?",
+      "id": "approved-enemies-005",
+      "text": "Shell Lobster\n\nIts smooth pearl armour hides a gentle river friend.\n\nA Shell Lobster is on the path. Ready to battle?\n\nMarsh Crane\n\nIt steps quietly through the mist on long thin legs.\n\nA Marsh Crane is on the path. Ready to battle?\n\nCoal Salamander\n\nIts dark scales hold a warm light from deep in the earth.\n\nA Coal Salamander is on the path. Ready to battle?\n\nQuartz Mole\n\nIt finds hidden gems with its strong digging paws.\n\nA Quartz Mole is on the path. Ready to battle?",
       "segments": [
         {
-          "key": "Tie the boat before you lift the bell out. Lift the bell out before you untie the boat.",
-          "text": "Tie the boat before you lift the bell out. Lift the bell out before you untie the boat.",
-          "kind": "ordering-riddle"
+          "key": "Shell Lobster",
+          "text": "Shell Lobster",
+          "kind": "name"
         },
         {
-          "key": "The guard gives the wrench to the troll. The troll lends it to Pip. Pip puts it on the flat stone. Where should you look for it?",
-          "text": "The guard gives the wrench to the troll. The troll lends it to Pip. Pip puts it on the flat stone. Where should you look for it?",
-          "kind": "riddle"
+          "key": "Its smooth pearl armour hides a gentle river friend.",
+          "text": "Its smooth pearl armour hides a gentle river friend.",
+          "kind": "lore"
         },
         {
-          "key": "There are four cups on the wheel. Each good cup lifts three scoops of water. One cup has a hole and lifts no water. How many scoops can one turn lift?",
-          "text": "There are four cups on the wheel. Each good cup lifts three scoops of water. One cup has a hole and lifts no water. How many scoops can one turn lift?",
-          "kind": "riddle"
+          "key": "A Shell Lobster is on the path. Ready to battle?",
+          "text": "A Shell Lobster is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "Stop the wheel before you change the cup. Open the gate after you change the cup.",
-          "text": "Stop the wheel before you change the cup. Open the gate after you change the cup.",
-          "kind": "ordering-riddle"
+          "key": "Marsh Crane",
+          "text": "Marsh Crane",
+          "kind": "name"
         },
         {
-          "key": "The pool needs twelve scoops. The mended wheel lifts four cups of three scoops each turn. How many full turns fill the empty pool?",
-          "text": "The pool needs twelve scoops. The mended wheel lifts four cups of three scoops each turn. How many full turns fill the empty pool?",
-          "kind": "riddle"
+          "key": "It steps quietly through the mist on long thin legs.",
+          "text": "It steps quietly through the mist on long thin legs.",
+          "kind": "lore"
         },
         {
-          "key": "A safe lamp blinks twice, then stays on. A lamp that goes dark marks deep water. Which signal should the wolves follow?",
-          "text": "A safe lamp blinks twice, then stays on. A lamp that goes dark marks deep water. Which signal should the wolves follow?",
-          "kind": "riddle"
+          "key": "A Marsh Crane is on the path. Ready to battle?",
+          "text": "A Marsh Crane is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "Every sign tells the truth. The left sign says, “This bank is wet.” The middle sign says, “The right bank is dry.” Which bank is definitely dry?",
-          "text": "Every sign tells the truth. The left sign says, “This bank is wet.” The middle sign says, “The right bank is dry.” Which bank is definitely dry?",
-          "kind": "riddle"
+          "key": "Coal Salamander",
+          "text": "Coal Salamander",
+          "kind": "name"
         },
         {
-          "key": "The wolf and two pups each need two blankets. There are eight blankets in the boat. How many blankets will be left?",
-          "text": "The wolf and two pups each need two blankets. There are eight blankets in the boat. How many blankets will be left?",
-          "kind": "riddle"
+          "key": "Its dark scales hold a warm light from deep in the earth.",
+          "text": "Its dark scales hold a warm light from deep in the earth.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Coal Salamander is on the path. Ready to battle?",
+          "text": "A Coal Salamander is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Quartz Mole",
+          "text": "Quartz Mole",
+          "kind": "name"
+        },
+        {
+          "key": "It finds hidden gems with its strong digging paws.",
+          "text": "It finds hidden gems with its strong digging paws.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Quartz Mole is on the path. Ready to battle?",
+          "text": "A Quartz Mole is on the path. Ready to battle?",
+          "kind": "trail"
         }
       ]
     },
     {
-      "id": "story-riddle-006",
-      "text": "Push the thorns aside before you reach for the bell. Put on gloves before you push the thorns.\n\nUse a route that passes the pine. Do not cross a bridge. Choose the safe route.\n\nThere are fifteen steps to the nest. You climb six, then four more. How many steps are left?\n\nThe lock uses a number in the three times table. It is greater than ten and less than fifteen. Choose the number.\n\nTie the rope to the bell before you lower it. Test the knot after you tie it, but before you lower it.\n\nThe three chests are red, blue and green. All three clues are true: the bell is not in red; blue holds rope; each chest holds just one thing. Which chest holds the bell?\n\nThere are six gates. Two friends must stand at each gate. Eight friends are in place. How many more friends do you need?\n\nRing the small bell before the big bell. Raise the flag after the small bell, but before the big bell.",
+      "id": "approved-enemies-006",
+      "text": "Copper Scorpion\n\nIts shining tail curls above its copper armour.\n\nA Copper Scorpion is on the path. Ready to battle?\n\nLantern Gecko\n\nIts soft light helps friends find their way through caves.\n\nA Lantern Gecko is on the path. Ready to battle?\n\nSlate Pangolin\n\nIts stone scales fold into a safe round shield.\n\nA Slate Pangolin is on the path. Ready to battle?\n\nCinder Porcupine\n\nIts bright quills glow like warm coals in the dark.\n\nA Cinder Porcupine is on the path. Ready to battle?",
       "segments": [
         {
-          "key": "Push the thorns aside before you reach for the bell. Put on gloves before you push the thorns.",
-          "text": "Push the thorns aside before you reach for the bell. Put on gloves before you push the thorns.",
-          "kind": "ordering-riddle"
+          "key": "Copper Scorpion",
+          "text": "Copper Scorpion",
+          "kind": "name"
         },
         {
-          "key": "Use a route that passes the pine. Do not cross a bridge. Choose the safe route.",
-          "text": "Use a route that passes the pine. Do not cross a bridge. Choose the safe route.",
-          "kind": "riddle"
+          "key": "Its shining tail curls above its copper armour.",
+          "text": "Its shining tail curls above its copper armour.",
+          "kind": "lore"
         },
         {
-          "key": "There are fifteen steps to the nest. You climb six, then four more. How many steps are left?",
-          "text": "There are fifteen steps to the nest. You climb six, then four more. How many steps are left?",
-          "kind": "riddle"
+          "key": "A Copper Scorpion is on the path. Ready to battle?",
+          "text": "A Copper Scorpion is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "The lock uses a number in the three times table. It is greater than ten and less than fifteen. Choose the number.",
-          "text": "The lock uses a number in the three times table. It is greater than ten and less than fifteen. Choose the number.",
-          "kind": "riddle"
+          "key": "Lantern Gecko",
+          "text": "Lantern Gecko",
+          "kind": "name"
         },
         {
-          "key": "Tie the rope to the bell before you lower it. Test the knot after you tie it, but before you lower it.",
-          "text": "Tie the rope to the bell before you lower it. Test the knot after you tie it, but before you lower it.",
-          "kind": "ordering-riddle"
+          "key": "Its soft light helps friends find their way through caves.",
+          "text": "Its soft light helps friends find their way through caves.",
+          "kind": "lore"
         },
         {
-          "key": "The three chests are red, blue and green. All three clues are true: the bell is not in red; blue holds rope; each chest holds just one thing. Which chest holds the bell?",
-          "text": "The three chests are red, blue and green. All three clues are true: the bell is not in red; blue holds rope; each chest holds just one thing. Which chest holds the bell?",
-          "kind": "riddle"
+          "key": "A Lantern Gecko is on the path. Ready to battle?",
+          "text": "A Lantern Gecko is on the path. Ready to battle?",
+          "kind": "trail"
         },
         {
-          "key": "There are six gates. Two friends must stand at each gate. Eight friends are in place. How many more friends do you need?",
-          "text": "There are six gates. Two friends must stand at each gate. Eight friends are in place. How many more friends do you need?",
-          "kind": "riddle"
+          "key": "Slate Pangolin",
+          "text": "Slate Pangolin",
+          "kind": "name"
         },
         {
-          "key": "Ring the small bell before the big bell. Raise the flag after the small bell, but before the big bell.",
-          "text": "Ring the small bell before the big bell. Raise the flag after the small bell, but before the big bell.",
-          "kind": "ordering-riddle"
+          "key": "Its stone scales fold into a safe round shield.",
+          "text": "Its stone scales fold into a safe round shield.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Slate Pangolin is on the path. Ready to battle?",
+          "text": "A Slate Pangolin is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Cinder Porcupine",
+          "text": "Cinder Porcupine",
+          "kind": "name"
+        },
+        {
+          "key": "Its bright quills glow like warm coals in the dark.",
+          "text": "Its bright quills glow like warm coals in the dark.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Cinder Porcupine is on the path. Ready to battle?",
+          "text": "A Cinder Porcupine is on the path. Ready to battle?",
+          "kind": "trail"
         }
       ]
     },
     {
-      "id": "story-riddle-007",
-      "text": "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?",
+      "id": "approved-enemies-007",
+      "text": "Gem Spider\n\nIt spins fine threads that sparkle like tiny jewels.\n\nA Gem Spider is on the path. Ready to battle?\n\nEcho Lizard\n\nIts bright markings flash when a sound echoes nearby.\n\nAn Echo Lizard is on the path. Ready to battle?\n\nFlint Armadillo\n\nIts smooth armour rolls into a hard protective ball.\n\nA Flint Armadillo is on the path. Ready to battle?\n\nFrost Lynx\n\nIt walks softly through snow on wide furry paws.\n\nA Frost Lynx is on the path. Ready to battle?",
       "segments": [
         {
-          "key": "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?",
-          "text": "Pull a lever marked with a wave. It must be next to the bell, not next to the fire. Which lever opens the river?",
-          "kind": "riddle"
+          "key": "Gem Spider",
+          "text": "Gem Spider",
+          "kind": "name"
+        },
+        {
+          "key": "It spins fine threads that sparkle like tiny jewels.",
+          "text": "It spins fine threads that sparkle like tiny jewels.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Gem Spider is on the path. Ready to battle?",
+          "text": "A Gem Spider is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Echo Lizard",
+          "text": "Echo Lizard",
+          "kind": "name"
+        },
+        {
+          "key": "Its bright markings flash when a sound echoes nearby.",
+          "text": "Its bright markings flash when a sound echoes nearby.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Echo Lizard is on the path. Ready to battle?",
+          "text": "An Echo Lizard is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Flint Armadillo",
+          "text": "Flint Armadillo",
+          "kind": "name"
+        },
+        {
+          "key": "Its smooth armour rolls into a hard protective ball.",
+          "text": "Its smooth armour rolls into a hard protective ball.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Flint Armadillo is on the path. Ready to battle?",
+          "text": "A Flint Armadillo is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Frost Lynx",
+          "text": "Frost Lynx",
+          "kind": "name"
+        },
+        {
+          "key": "It walks softly through snow on wide furry paws.",
+          "text": "It walks softly through snow on wide furry paws.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Frost Lynx is on the path. Ready to battle?",
+          "text": "A Frost Lynx is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-008",
+      "text": "Aurora Elk\n\nIts antlers shine with colours from the night sky.\n\nAn Aurora Elk is on the path. Ready to battle?\n\nSnow Hare\n\nIts bright cloak leaves a soft trail across the snow.\n\nA Snow Hare is on the path. Ready to battle?\n\nCloud Yak\n\nIts thick coat keeps smaller friends warm in the wind.\n\nA Cloud Yak is on the path. Ready to battle?\n\nPinecone Marmot\n\nIt stores food under the snow for the long winter.\n\nA Pinecone Marmot is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Aurora Elk",
+          "text": "Aurora Elk",
+          "kind": "name"
+        },
+        {
+          "key": "Its antlers shine with colours from the night sky.",
+          "text": "Its antlers shine with colours from the night sky.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Aurora Elk is on the path. Ready to battle?",
+          "text": "An Aurora Elk is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Snow Hare",
+          "text": "Snow Hare",
+          "kind": "name"
+        },
+        {
+          "key": "Its bright cloak leaves a soft trail across the snow.",
+          "text": "Its bright cloak leaves a soft trail across the snow.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Snow Hare is on the path. Ready to battle?",
+          "text": "A Snow Hare is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Cloud Yak",
+          "text": "Cloud Yak",
+          "kind": "name"
+        },
+        {
+          "key": "Its thick coat keeps smaller friends warm in the wind.",
+          "text": "Its thick coat keeps smaller friends warm in the wind.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Cloud Yak is on the path. Ready to battle?",
+          "text": "A Cloud Yak is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Pinecone Marmot",
+          "text": "Pinecone Marmot",
+          "kind": "name"
+        },
+        {
+          "key": "It stores food under the snow for the long winter.",
+          "text": "It stores food under the snow for the long winter.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Pinecone Marmot is on the path. Ready to battle?",
+          "text": "A Pinecone Marmot is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-009",
+      "text": "Gale Falcon\n\nIt rides high winds above the tallest cliffs.\n\nA Gale Falcon is on the path. Ready to battle?\n\nLichen Ibex\n\nIts strong hooves grip the narrow mountain paths.\n\nA Lichen Ibex is on the path. Ready to battle?\n\nHail Wolverine\n\nIts thick winter coat keeps out the sharpest cold.\n\nA Hail Wolverine is on the path. Ready to battle?\n\nMist Leopard\n\nIt moves like a quiet shadow through the mountain mist.\n\nA Mist Leopard is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Gale Falcon",
+          "text": "Gale Falcon",
+          "kind": "name"
+        },
+        {
+          "key": "It rides high winds above the tallest cliffs.",
+          "text": "It rides high winds above the tallest cliffs.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Gale Falcon is on the path. Ready to battle?",
+          "text": "A Gale Falcon is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Lichen Ibex",
+          "text": "Lichen Ibex",
+          "kind": "name"
+        },
+        {
+          "key": "Its strong hooves grip the narrow mountain paths.",
+          "text": "Its strong hooves grip the narrow mountain paths.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Lichen Ibex is on the path. Ready to battle?",
+          "text": "A Lichen Ibex is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Hail Wolverine",
+          "text": "Hail Wolverine",
+          "kind": "name"
+        },
+        {
+          "key": "Its thick winter coat keeps out the sharpest cold.",
+          "text": "Its thick winter coat keeps out the sharpest cold.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Hail Wolverine is on the path. Ready to battle?",
+          "text": "A Hail Wolverine is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Mist Leopard",
+          "text": "Mist Leopard",
+          "kind": "name"
+        },
+        {
+          "key": "It moves like a quiet shadow through the mountain mist.",
+          "text": "It moves like a quiet shadow through the mountain mist.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Mist Leopard is on the path. Ready to battle?",
+          "text": "A Mist Leopard is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-010",
+      "text": "Glacier Seal\n\nIt glides under the ice and rests beside clear blue pools.\n\nA Glacier Seal is on the path. Ready to battle?\n\nInk Raven\n\nIt carries little messages beneath its dark wings.\n\nAn Ink Raven is on the path. Ready to battle?\n\nBramble Peacock\n\nIts wide tail opens like a bright fan of jewels.\n\nA Bramble Peacock is on the path. Ready to battle?\n\nBell Tortoise\n\nIts shell rings softly when a friend needs help.\n\nA Bell Tortoise is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Glacier Seal",
+          "text": "Glacier Seal",
+          "kind": "name"
+        },
+        {
+          "key": "It glides under the ice and rests beside clear blue pools.",
+          "text": "It glides under the ice and rests beside clear blue pools.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Glacier Seal is on the path. Ready to battle?",
+          "text": "A Glacier Seal is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Ink Raven",
+          "text": "Ink Raven",
+          "kind": "name"
+        },
+        {
+          "key": "It carries little messages beneath its dark wings.",
+          "text": "It carries little messages beneath its dark wings.",
+          "kind": "lore"
+        },
+        {
+          "key": "An Ink Raven is on the path. Ready to battle?",
+          "text": "An Ink Raven is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Bramble Peacock",
+          "text": "Bramble Peacock",
+          "kind": "name"
+        },
+        {
+          "key": "Its wide tail opens like a bright fan of jewels.",
+          "text": "Its wide tail opens like a bright fan of jewels.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Bramble Peacock is on the path. Ready to battle?",
+          "text": "A Bramble Peacock is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Bell Tortoise",
+          "text": "Bell Tortoise",
+          "kind": "name"
+        },
+        {
+          "key": "Its shell rings softly when a friend needs help.",
+          "text": "Its shell rings softly when a friend needs help.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Bell Tortoise is on the path. Ready to battle?",
+          "text": "A Bell Tortoise is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-011",
+      "text": "Honey Wasp\n\nIt guards the sweet flowers in the sunny garden.\n\nA Honey Wasp is on the path. Ready to battle?\n\nVelvet Shrew\n\nIt follows tiny sounds with its pointed nose.\n\nA Velvet Shrew is on the path. Ready to battle?\n\nDusk Firefly\n\nIts gentle glow marks a safe path after sunset.\n\nA Dusk Firefly is on the path. Ready to battle?\n\nPetal Chameleon\n\nIts colours change as it moves between the flowers.\n\nA Petal Chameleon is on the path. Ready to battle?",
+      "segments": [
+        {
+          "key": "Honey Wasp",
+          "text": "Honey Wasp",
+          "kind": "name"
+        },
+        {
+          "key": "It guards the sweet flowers in the sunny garden.",
+          "text": "It guards the sweet flowers in the sunny garden.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Honey Wasp is on the path. Ready to battle?",
+          "text": "A Honey Wasp is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Velvet Shrew",
+          "text": "Velvet Shrew",
+          "kind": "name"
+        },
+        {
+          "key": "It follows tiny sounds with its pointed nose.",
+          "text": "It follows tiny sounds with its pointed nose.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Velvet Shrew is on the path. Ready to battle?",
+          "text": "A Velvet Shrew is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Dusk Firefly",
+          "text": "Dusk Firefly",
+          "kind": "name"
+        },
+        {
+          "key": "Its gentle glow marks a safe path after sunset.",
+          "text": "Its gentle glow marks a safe path after sunset.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Dusk Firefly is on the path. Ready to battle?",
+          "text": "A Dusk Firefly is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "Petal Chameleon",
+          "text": "Petal Chameleon",
+          "kind": "name"
+        },
+        {
+          "key": "Its colours change as it moves between the flowers.",
+          "text": "Its colours change as it moves between the flowers.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Petal Chameleon is on the path. Ready to battle?",
+          "text": "A Petal Chameleon is on the path. Ready to battle?",
+          "kind": "trail"
+        }
+      ]
+    },
+    {
+      "id": "approved-enemies-012",
+      "text": "Moon Hare Knight\n\nIt raises its moon shield to protect a smaller friend.\n\nA Moon Hare Knight is on the path. Ready to battle?\n\nThis friend lives in the deep forest.\n\nThis friend lives beside the river.\n\nThis friend lives near the glowing caves.\n\nThis friend lives among snowy peaks.\n\nThis friend lives in the hidden garden.\n\nA future chapter will reveal this friend.",
+      "segments": [
+        {
+          "key": "Moon Hare Knight",
+          "text": "Moon Hare Knight",
+          "kind": "name"
+        },
+        {
+          "key": "It raises its moon shield to protect a smaller friend.",
+          "text": "It raises its moon shield to protect a smaller friend.",
+          "kind": "lore"
+        },
+        {
+          "key": "A Moon Hare Knight is on the path. Ready to battle?",
+          "text": "A Moon Hare Knight is on the path. Ready to battle?",
+          "kind": "trail"
+        },
+        {
+          "key": "This friend lives in the deep forest.",
+          "text": "This friend lives in the deep forest.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "This friend lives beside the river.",
+          "text": "This friend lives beside the river.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "This friend lives near the glowing caves.",
+          "text": "This friend lives near the glowing caves.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "This friend lives among snowy peaks.",
+          "text": "This friend lives among snowy peaks.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "This friend lives in the hidden garden.",
+          "text": "This friend lives in the hidden garden.",
+          "kind": "book-hint"
+        },
+        {
+          "key": "A future chapter will reveal this friend.",
+          "text": "A future chapter will reveal this friend.",
+          "kind": "book-hint"
         }
       ]
     }

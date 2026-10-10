@@ -4,7 +4,7 @@ const root=require('node:path').join(__dirname,'../'),Core=require(root+'game-co
 function boot(saved,options={}){
  if(saved&&!options.adventures){saved=Core.copy(saved);Core.Adventure.of(saved).preferLegacy=true;}
  const {window,document}=parseHTML(fs.readFileSync(root+'index.html','utf8'));
- let now=Date.UTC(2026,8,22),uid=0;const jobs=new Map(),memory=new Map(saved?[[Storage.KEY,JSON.stringify(saved)]]:[]);
+ let now=options.now??Date.UTC(2026,8,22),uid=0;const jobs=new Map(),memory=new Map(saved?[[Storage.KEY,JSON.stringify(saved)]]:[]);
  let failWrites=options.failWrites||false,heartbeat=()=>{},reloads=0;const destinations=[];
  const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failWrites===true||typeof failWrites==='function'&&failWrites(k,v))throw new Error('Storage full');memory.set(k,v)},removeItem:k=>memory.delete(k)};
  const schedule=(fn,ms)=>(jobs.set(++uid,{fn,time:now+ms}),uid);
@@ -25,9 +25,10 @@ function boot(saved,options={}){
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/manifest.js','utf8'),motionContext);
    vm.runInNewContext(fs.readFileSync(root+'assets/battle-motion/runtime.js','utf8'),motionContext);
  }
+ vm.runInNewContext(fs.readFileSync(root+'assets/wimmelbild/viewer.js','utf8'),ctx);
  vm.runInNewContext(fs.readFileSync(root+'adventure-ui.js','utf8'),ctx);
  vm.runInNewContext(fs.readFileSync(root+'app.js','utf8'),ctx);
- const state=()=>JSON.parse(memory.get(Storage.KEY)),get=id=>document.getElementById(id);
+ const state=()=>Core.unpackSave(JSON.parse(memory.get(Storage.KEY))),get=id=>document.getElementById(id);
  function click(el){assert.ok(el,'missing element');assert.ok(!el.disabled,'disabled control');assert.ok(!el.hidden,'hidden control');el.onclick?.({});}
  function elapse(ms,awake=false){if(awake){for(let elapsed=0;elapsed<ms;elapsed+=1000){elapse(Math.min(1000,ms-elapsed));heartbeat();}return;}const target=now+ms;while([...jobs.values()].some(job=>job.time<=target))tick();now=target;}
  function tick(){const next=[...jobs.entries()].sort((a,b)=>a[1].time-b[1].time)[0];assert.ok(next,'no scheduled progress');jobs.delete(next[0]);now=next[1].time;next[1].fn();}
@@ -51,6 +52,29 @@ function impactSave(enemy='moss-golem'){
  for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();}
  Core.startBattle(s,now,{strength:4,enemyId:enemy});s.battle.introPending=false;Core.prepareBattle(s,now);return s;
 }
+
+// Earned lightning uses the saved Quick rule, without replaying after resume.
+for(const test of [
+ {ms:1200,exposure:950,earned:true}, {ms:1500,exposure:950},
+ {ms:1200,exposure:1200}, {ms:0,exposure:950},
+ {ms:1200,exposure:950,support:'help-request'},
+ {ms:1200,exposure:950,support:'interrupted-exposure'},
+ {ms:1200,exposure:950,wrong:true},
+ {ms:1200,exposure:950,earned:true,reducedMotion:true}
+]){
+ const s=impactSave();s.battle.question.exposureMs=test.exposure;
+ if(test.support)s.battle.question.supportReasons.push(test.support);
+ const ui=boot(s,{heldNarration:true,reducedMotion:test.reducedMotion});ui.resume();ui.ready();ui.elapse(test.ms);
+ const q=ui.state().battle.question;
+ ui.click([...ui.get('battleAnswers').children].find(b=>test.wrong?b.textContent!==q.target:b.textContent===q.target));
+ const reward=ui.document.querySelector('.quickWordReward');assert.equal(!!reward,!!test.earned,JSON.stringify(test));
+ if(reward){
+  assert.equal(ui.get('battleScroll').textContent,q.target);
+  reward.dispatchEvent(new ui.window.Event('animationend'));assert.equal(ui.document.querySelector('.quickWordReward'),null);
+  const restored=boot(ui.state(),{heldNarration:true});restored.resume();assert.equal(restored.document.querySelector('.quickWordReward'),null);
+ }
+}
+
 {
  const s=Core.migrate(Core.fresh()),now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;Core.chooseSpeed(s,'walk');
  for(const word of [...Content.areas[0].words,...Content.areas[1].words.slice(0,3)]){
@@ -380,7 +404,7 @@ for(const victory of [true,false]){
 }
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());s.battle.heroHealth=0;Core.resolveBattle(s,Date.now());
- let ui=boot(s);ui.resume();assert.equal(ui.get('defeatScene').hidden,false);assert.equal(ui.state().result.defeatShown,true);ui.click(ui.get('pauseBtn'));assert.equal(ui.get('defeatScene').hidden,true);ui.click(ui.get('pauseResume'));assert.equal(ui.get('defeatScene').hidden,true);
+ let ui=boot(s);ui.resume();assert.equal(ui.get('resultRetreat').hidden,false);assert.equal(ui.get('resultTitle').textContent,'You lost this round');assert.equal(ui.state().result.defeatShown,true);ui.click(ui.get('pauseBtn'));assert.equal(ui.get('defeatScene').hidden,true);ui.click(ui.get('pauseResume'));assert.equal(ui.get('defeatScene').hidden,true);
  ui=boot(ui.state());ui.resume();assert.equal(ui.get('defeatScene').hidden,true);assert.equal(ui.get('opponents').children.length,2);
  console.log('PASS defeat reaction cancels on pause and cannot replay after reload');
 }
@@ -621,7 +645,7 @@ function fakeFiles(ui){
  assert.equal(ui.reloads(),1);assert.equal(ui.get('backupStatus').textContent,'Backup restored. Reloading…');
  // Nothing can write the replaced progress back before the reload finishes.
  ui.click(ui.get('parentHome'));assert.equal(ui.state().profile.name,'Éva');assert.equal(JSON.parse(ui.memory.get(Storage.KEY+'_before_restore')).profile.name,'Reader');
- const again=boot(ui.state());openParents(again);assert.match(again.get('parentLearning').textContent,/^40 \/ 200 words introduced/);assert.match(again.get('parentGrowth').textContent,/2400 XP/);
+ const again=boot(ui.state());openParents(again);assert.match(again.get('parentLearning').textContent,/^40 \/ 1000 words introduced/);assert.match(again.get('parentGrowth').textContent,/2400 XP/);
  console.log('PASS restore checks the file, asks the parent, keeps the current save, survives a full device and reloads into the backup');
 }
 {
@@ -784,7 +808,7 @@ console.log('PASS accepting a suggestion uses the existing save-failure protecti
  const s=impactSave(),q=s.battle.question;q.exposureMs=950;q.phase='choices';q.responseMs=1200;Core.answerBattle(s,q.target,Date.UTC(2026,8,22));
  const ui=boot(s);openParents(ui);const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];
  const quick=words.find(button=>button.dataset.word===q.target);assert.equal(quick.dataset.quick,'true');assert.match(quick.getAttribute('aria-label'),/quick answer recorded/);ui.click(quick);assert.match(ui.get('parentWordSummary').textContent,/1 quick answer\b/);
- assert.match(ui.get('parentQuickSummary').textContent,/^1 \/ 200/);assert.ok(words.some(button=>button.dataset.quick==='false'));
+ assert.match(ui.get('parentQuickSummary').textContent,/^1 \/ 1000/);assert.ok(words.some(button=>button.dataset.quick==='false'));
  const reopened=boot(ui.state());openParents(reopened);assert.equal(reopened.get('parentQuickSummary').textContent,ui.get('parentQuickSummary').textContent);
 }
 console.log('PASS Parents shows per-word quick evidence separately from words still in review and preserves it on reopen');
@@ -808,17 +832,17 @@ function parentLearningSave(){
  const ui=boot(parentLearningSave());assert.equal(ui.get('parentGate').hidden,true);ui.click(ui.get('mapParents'));assert.equal(ui.get('parentGate').hidden,false);
  ui.get('parentAnswer').value='0';ui.click(ui.get('parentUnlock'));assert.equal(ui.get('parentDashboard').classList.contains('active'),false);
  ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
- const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];assert.equal(words.length,200);assert.equal(new Set(words.map(w=>w.dataset.word)).size,200);
+ const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];assert.equal(words.length,1000);assert.equal(new Set(words.map(w=>w.dataset.word)).size,1000);
  for(const [word,status] of [['on','learning'],['rock','secured'],['fox','kept7'],['cave','kept30'],['water','new']])assert.equal(words.find(b=>b.dataset.word===word).dataset.status,status);
  const articles=[...ui.get('parentDashboard').children];assert.equal(articles[1].id,'parentLearningOverview');assert.ok(articles.indexOf(ui.get('parentRetention'))<articles.findIndex(el=>el.querySelector('.soundSettings')));assert.equal(articles.at(-2).querySelector('.soundSettings')!==null,true);
  assert.equal(ui.get('parentWeeks').children[0].children[1].textContent,'2 / 3');assert.equal(ui.get('parentWeeks').children[0].children[2].textContent,'67%');assert.match(ui.get('parentMixups').textContent,/on → own/);assert.match(ui.get('parentSlow').textContent,/1.2 s|2.1 s/);
 }
-console.log('PASS gated Parents shows the 200-word map, five evidence states, retention and tricky words before sound settings');
+console.log('PASS gated Parents shows the 1000-word map, five evidence states, retention and tricky words before sound settings');
 {
- const ui=boot(parentLearningSave());openParents(ui);ui.get('parentWordSearch').value='  FOX ';ui.get('parentWordSearch').oninput();assert.equal(ui.get('parentWordMap').querySelectorAll('.parentWord').length,1);assert.match(ui.get('parentWordCount').textContent,/^1 \/ 200/);
+ const ui=boot(parentLearningSave());openParents(ui);ui.get('parentWordSearch').value='  FOX ';ui.get('parentWordSearch').oninput();assert.equal(ui.get('parentWordMap').querySelectorAll('.parentWord').length,1);assert.match(ui.get('parentWordCount').textContent,/^1 \/ 1000/);
  ui.get('parentWordSearch').value='';ui.get('parentWordFilter').value='kept30';ui.get('parentWordFilter').onchange();assert.equal(ui.get('parentWordMap').querySelector('.parentWord').dataset.word,'cave');
  ui.get('parentWordFilter').value='quick';ui.get('parentWordFilter').onchange();assert.equal(ui.get('parentWordMap').querySelectorAll('.parentWord').length,3);
- ui.get('parentWordSearch').value='<script>';ui.get('parentWordSearch').oninput();assert.match(ui.get('parentWordCount').textContent,/^0 \/ 200/);assert.equal(ui.get('parentWordMap').children.length,0);
+ ui.get('parentWordSearch').value='<script>';ui.get('parentWordSearch').oninput();assert.match(ui.get('parentWordCount').textContent,/^0 \/ 1000/);assert.equal(ui.get('parentWordMap').children.length,0);
 }
 console.log('PASS word search and status/quick filters show exact matches, with a clear empty state');
 {
@@ -836,7 +860,7 @@ console.log('PASS tapping a word opens saved first-response history without chan
 console.log('PASS older compacted saves retain totals while unavailable weekly detail and missing individual events are explicit');
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;const ui=boot(s);openParents(ui);
- assert.equal(ui.get('parentWordMap').querySelectorAll('[data-status="new"]').length,200);assert.match(ui.get('parentMixupsEmpty').textContent,/No unaided/);assert.match(ui.get('parentSlowEmpty').textContent,/No valid/);
+ assert.equal(ui.get('parentWordMap').querySelectorAll('[data-status="new"]').length,1000);assert.match(ui.get('parentMixupsEmpty').textContent,/No unaided/);assert.match(ui.get('parentSlowEmpty').textContent,/No valid/);
  assert.ok([...ui.get('parentWeeks').children].every(row=>row.children[1].textContent==='No checks'&&row.children[2].textContent==='—'));
  ui.click(ui.get('parentWordMap').querySelector('[data-word="on"]'));assert.match(ui.get('parentWordHistoryEmpty').textContent,/No individual/);
 }
@@ -1003,9 +1027,7 @@ console.log('PASS last group member resolves exactly once, including reduced mot
 {
  const s=impactSave();Object.assign(s.battle,{enemyId:'bark-beetle--3',maxHealth:25,enemyHealth:5,heroHealth:0});
  Core.resolveBattle(s,Date.UTC(2026,8,25));const ui=boot(s);ui.resume();
- assert.equal(ui.get('defeatScene').hidden,false);
- assert.equal(ui.get('defeatEnemy').querySelectorAll('.enemyMember:not(.retired)').length,1);
- assert.equal(ui.get('defeatEnemy').querySelectorAll('.enemyMember.retired').length,4);
+ assert.equal(ui.get('resultRetreat').hidden,false);assert.equal(ui.get('defeatScene').hidden,true);assert.equal(ui.state().battle.enemyHealth,5);
  console.log('PASS defeat escape shows surviving group members without reviving retired creatures');
 }
 
@@ -1135,12 +1157,12 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
 {
  const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,8,22);s.profile.name='Reader';s.assessment.done=true;
  Core.startMission(s,'first-spark',now);Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s,()=>.5);
- let ui=boot(s,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));ui.elapse(45000);
+ let ui=boot(s,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));ui.elapse(45000,true);
  ui.click(ui.get('mission').querySelector('[data-choice="red"]'));assert.equal(A.report(ui.state()).riddleMs,45000);
  ui.click(missionButton(ui,'Try it'));assert.equal(ui.state().expedition.current.puzzle.first.correct,false);const order=ui.state().expedition.current.puzzle.order;
  ui.click(missionButton(ui,'Listen'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));
  assert.deepEqual(ui.state().expedition.current.puzzle.order,order);assert.equal(ui.state().expedition.current.puzzle.listened,true);
- ui.click(missionButton(ui,'Show me how'));assert.equal(ui.state().expedition.current.puzzle.assisted,true);assert.equal(ui.state().expedition.book.thornling.studied,true);
+ ui.click(missionButton(ui,'Show me how'));assert.equal(ui.state().expedition.current.puzzle.assisted,true);assert.equal(ui.get('mission').querySelector('.riddleSuccessTitle').textContent,'Answer revealed');assert.ok(ui.get('mission').querySelector('.riddleOption.correct .riddleAnswerMark'));assert.equal(ui.state().expedition.book.thornling.studied,true);
  ui.click(missionButton(ui,'Follow the trail'));assert.equal(ui.state().expedition.current.step,1);ui.click(ui.get('homeBtn'));
  ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="thornling"]'));
  ui.click([...ui.get('creatureBook').querySelectorAll('button')].find(b=>b.textContent==='Choose for my team'));assert.equal(ui.state().expedition.favourite,'thornling');
@@ -1152,7 +1174,7 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  Core.startMission(s,'first-spark',now);s.expedition.current.step=2;Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s);
  let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));const answer=A.Data.puzzles[ui.state().expedition.current.puzzle.id].answer;
  ui.click(ui.get('mission').querySelector('[data-choice="'+answer[0]+'"]'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.state().expedition.current.puzzle.selection.length,1);
- for(const id of answer.slice(1))ui.click(ui.get('mission').querySelector('[data-choice="'+id+'"]'));ui.click(missionButton(ui,'Try it'));ui.click(missionButton(ui,'Follow the trail'));
+ for(const id of answer.slice(1))ui.click(ui.get('mission').querySelector('[data-choice="'+id+'"]'));ui.click(missionButton(ui,'Try it'));assert.equal(ui.get('mission').querySelector('.riddleSuccessTitle').textContent,'Correct!');assert.equal(ui.get('mission').querySelectorAll('.riddleOption.correct').length,answer.length);assert.ok(ui.get('mission').querySelector('.riddleSequence.solved'));ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.get('mission').querySelector('.riddleSuccessTitle').textContent,'Correct!');ui.click(missionButton(ui,'Follow the trail'));
  const last=ui.state();Core.startMissionBattle(last,now);last.battle.enemyHealth=0;Core.resolveBattle(last,now);A.startPuzzle(last);ui=boot(last,{adventures:true});ui.click(ui.get('missionResume'));ui.click(ui.get('mission').querySelector('[data-choice="sun"]'));ui.click(missionButton(ui,'Try it'));ui.click(missionButton(ui,'Claim the treasure'));
  assert.equal(ui.state().expedition.current.phase,'complete');assert.ok(A.unlocked(ui.state(),'moth-post'));assert.ok(A.unlocked(ui.state(),'root-workshop'));
  ui.click(missionButton(ui,'Choose another mission'));assert.ok(ui.get('adventureHub').classList.contains('active'));
@@ -1172,14 +1194,132 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  assert.match(ui.get('mission').textContent,/0 of 8 steps done · 8 left/);assert.match(ui.get('mission').textContent,/4 \/ 4 hearts/);assert.match(ui.get('mission').textContent,/On your side: Moon Moth/);
  ui.click(missionButton(ui,'Change animal'));assert.match(ui.get('creatureBook').textContent,/◆ Met: meet this friend/);assert.match(ui.get('creatureBook').textContent,/✦ Clue: solve its clue/);assert.match(ui.get('creatureBook').textContent,/★ Star: win its big fight/);
  ui.click([...ui.get('creatureBook').querySelectorAll('button')].find(b=>b.textContent==='← Back to mission'));ui.click(missionButton(ui,'Let’s go'));ui.ready();
- assert.equal(ui.get('battleCompanion').hidden,false);assert.equal(ui.get('battleCompanionName').textContent,'Moon Moth');assert.match(ui.get('battleChapter').textContent,/0 of 8/);
+ assert.equal(ui.get('battleCompanion').hidden,false);assert.equal(ui.get('battleCompanionName'),null);assert.equal(ui.get('battleCompanion').getAttribute('aria-label'),'Moon Moth companion');assert.match(ui.get('battleChapter').textContent,/0 of 8/);
  const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==q.target));
- assert.equal(ui.get('feedback').textContent,'Moon Moth saved a heart!');assert.equal(ui.get('battleCompanionHelp').textContent,'Saved a heart ✓');assert.equal(ui.state().battle.heroHealth,4);
+ assert.equal(ui.get('feedback').textContent,'Moon Moth saved a heart!');assert.equal(ui.get('battleCompanionHelp'),null);assert.equal(ui.state().battle.heroHealth,4);
  assert.equal(ui.speechTexts.at(-1),'Moon Moth stopped the hit.');ui.finishSpeech();ui.finishSpeech();assert.ok(ui.get('battleCompanion').classList.contains('protecting'));
- ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.get('battleCompanionHelp').textContent,'Saved a heart ✓');assert.equal(ui.get('battleCompanion').classList.contains('protecting'),false);
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.get('battleCompanionHelp'),null);assert.equal(ui.get('battleCompanion').classList.contains('protecting'),false);
  assert.equal(ui.state().campaign.battleRecords.length,1);
  const loss=ui.state();loss.battle.heroHealth=0;Core.resolveBattle(loss,now);ui=boot(loss,{adventures:true});ui.click(ui.get('missionResume'));
- assert.match(ui.get('resultMessage').textContent,/Your clues stay solved/);assert.match(ui.get('resultChapter').textContent,/8 left/);
- ui.click([...ui.get('opponents').children].find(b=>b.textContent==='Rest and retry · 4 hearts'));assert.equal(ui.state().battle.heroHealth,4);assert.equal(ui.state().expedition.current.companionHelpUsed,true);
+ assert.match(ui.get('resultMessage').textContent,/Try the first step again/);assert.match(ui.get('resultChapter').textContent,/8 left/);
+ ui.click([...ui.get('opponents').children].find(b=>b.textContent==='Try again · 4 hearts'));assert.equal(ui.state().battle.heroHealth,4);assert.equal(ui.state().expedition.current.companionHelpUsed,true);
  console.log('PASS visible eight-step quest, heart pool, book legend, chosen battle ally, protection feedback and saved retry');
+}
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,9,6);s.profile.name='Reader';s.assessment.done=true;
+ Core.startMission(s,'first-spark',now);Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s);
+ s.expedition.current.puzzle={...s.expedition.current.puzzle,id:'post-code',order:['4','6','7','8']};s.expedition.current.hearts=1;
+ let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
+ for(const b of ui.get('mission').querySelectorAll('.numberOption'))assert.equal(b.textContent,b.dataset.choice);
+ ui.click(ui.get('mission').querySelector('[data-choice="4"]'));ui.click(missionButton(ui,'Try it'));
+ assert.equal(ui.state().expedition.current.hearts,0);assert.match(ui.get('resultMessage').textContent,/No hearts left/);assert.equal(ui.get('resultRetreat').hidden,false);
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));assert.equal(ui.state().expedition.current.hearts,0);
+ ui.click([...ui.get('opponents').children].find(b=>b.textContent==='Try again · 4 hearts'));assert.equal(ui.state().expedition.current.hearts,4);assert.equal(ui.state().expedition.missions['first-spark'].riddles['post-code'].first.correct,false);assert.equal(ui.state().activity,'battle');
+ console.log('PASS single number labels, saved zero-heart rest and Continue inside success feedback');
+}
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,9,6);s.profile.name='Reader';s.assessment.done=true;
+ for(const id of ['first-spark','moth-post','root-workshop'])A.stats(s,id).completedAt=new Date(now).toISOString();
+ Core.startMission(s,'mimic-vault',now);
+ let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
+ assert.match(ui.get('mission').textContent,/The Boy and the Map/);assert.match(ui.get('mission').querySelector('.missionScene img').src,/wizard-map-awakens/);
+ const next=ui.state();next.expedition.current.step=1;ui=boot(next,{adventures:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').querySelector('.missionScene img').src,/wizard-map-crossing/);assert.match(ui.get('mission').textContent,/takes his book to the stream/);
+ const final=ui.state();final.expedition.current.phase='complete';final.expedition.missions['mimic-vault'].completedAt=new Date(now).toISOString();ui=boot(final,{adventures:true});ui.click(ui.get('adventureHub').querySelector('[data-mission="mimic-vault"]'));
+ assert.match(ui.get('mission').querySelector('.missionScene img').src,/wizard-map-awakens/);
+ console.log('PASS mapmaker cover and step-specific scene/text, completed mission replay keeps chapter identity');
+}
+for(const chosen of ['made','wade'])for(const options of [['made','wade','have','hide'],['hide','have','wade','made']]){
+ const s=impactSave(),q=s.battle.question;q.target='have';q.options=options;q.isNew=false;q.supportReasons=[];q.phase='choices';s.learning.words.have.introducedAt=new Date().toISOString();s.learning.words.have.independentCorrect=3;
+ const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const b=[...ui.get('battleAnswers').children].find(b=>b.textContent===chosen);ui.click(b);
+ assert.equal(ui.state().battle.question.firstResponse,chosen);assert.equal(ui.state().campaign.battleRecords.at(-1).firstResponse,chosen);assert.equal(ui.get('battleScroll').querySelector('.selectedWord .correctionLetters').textContent,chosen);assert.ok(ui.speechTexts.some(t=>t.includes('You chose '+chosen+'.')));
+ const count=ui.state().campaign.battleRecords.length;b.onclick();assert.equal(ui.state().campaign.battleRecords.length,count);
+}
+console.log('PASS made and wade preserve the displayed selection, saved evidence, spoken and written correction across positions');
+
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,8,22,12);s.profile.name='Reader';s.assessment.done=true;
+ Core.startMission(s,'first-spark',now);Core.startMissionBattle(s,now);s.battle.enemyHealth=0;Core.resolveBattle(s,now);A.startPuzzle(s);
+ Core.recordTime(s,480000,'practice',now);
+ let ui=boot(s,{adventures:true,now});ui.click(ui.get('missionResume'));ui.advance(150000);ui.click(missionButton(ui,'A clue, please'));
+ assert.equal(A.report(ui.state()).riddleMs,150000);assert.equal(Core.bonusProgress(ui.state(),now).active,true);
+ ui.click(ui.get('pauseBtn'));ui.advance(300000);assert.equal(A.report(ui.state()).riddleMs,150000);
+ ui.click(ui.get('pauseResume'));ui.advance(10000);ui.visibility(true);ui.advance(300000);ui.visibility(false);ui.click(ui.get('pauseResume'));
+ ui.advance(120000,true);ui.click(missionButton(ui,'A clue, please'));assert.equal(A.report(ui.state()).riddleMs,160000,'sleep is excluded');
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true,now});ui.click(ui.get('missionResume'));ui.advance(60000);ui.click(missionButton(ui,'A clue, please'));
+ assert.equal(A.report(ui.state()).riddleMs,180000);assert.equal(ui.get('pausePanel').hidden,true);
+ ui.click(ui.get('mission').querySelector('[data-choice="blue"]'));ui.click(missionButton(ui,'Try it'));
+ assert.equal(ui.state().expedition.current.puzzle.xpEarned,88);assert.match(ui.get('mission').textContent,/\+88 XP/);
+ console.log('PASS long thinking, cap, pause, background, sleep, reload and boosted riddle reward');
+}
+{
+ const ui=boot(impactSave());ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ const before=ui.state();ui.click(ui.get('parentAddXP'));assert.equal(ui.state().dragon.xp,before.dragon.xp+1000);
+ assert.deepEqual(ui.state().learning,before.learning);assert.match(ui.get('parentXPStatus').textContent,/Added 1,000 XP/);
+ ui.click(ui.get('parentAddXP'));assert.equal(ui.state().dragon.xp,before.dragon.xp+2000);
+ const reloaded=boot(ui.state());assert.equal(reloaded.state().dragon.xp,before.dragon.xp+2000);
+ ui.setFailWrites(true);ui.click(ui.get('parentAddXP'));assert.equal(ui.state().dragon.xp,before.dragon.xp+2000);assert.equal(ui.get('saveNotice').hidden,false);
+ console.log('PASS parent XP button saves exact repeatable awards and blocks on storage failure');
+}
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,9,7);s.profile.name='Reader';s.assessment.done=true;
+ for(const id of A.Data.campaigns[0].missions.slice(0,5))A.stats(s,id).completedAt=new Date(now).toISOString();
+ Core.startMission(s,'oak-heart',now);
+ for(const [step,name] of ['departure','passage','treasure','homecoming'].entries()){
+  s.expedition.current.step=step;s.expedition.current.phase='intro';
+  let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
+  assert.match(ui.get('mission').querySelector('.missionScene img').src,new RegExp('kind-shark-'+name));assert.match(ui.get('mission').textContent,/shark/i);
+  const next=ui.state();Core.startMissionBattle(next,now);next.battle.enemyHealth=0;Core.resolveBattle(next,now);A.startPuzzle(next);
+  ui=boot(next,{adventures:true});ui.click(ui.get('missionResume'));const q=A.Data.byId['oak-heart'].riddles[step];
+  for(const id of [q.answer].flat())ui.click(ui.get('mission').querySelector('[data-choice="'+id+'"]'));
+  ui.click(missionButton(ui,'Try it'));assert.equal(ui.state().expedition.current.puzzle.solved,true);
+  ui.click(missionButton(ui,step===3?'Claim the treasure':'Follow the trail'));
+  if(step===3){assert.match(ui.get('mission').textContent,/Thank you, kind shark/);assert.match(ui.get('mission').querySelector('.missionScene img').src,/kind-shark-homecoming/);assert.equal(A.campaignComplete(ui.state(),'lost-lights'),true);}
+ }
+ console.log('PASS kind shark chapter four scenes and riddles, saved reload and forest finale');
+}
+{
+ const s=impactSave(),target=s.battle.question.target;
+ s.battle.helpCounts={[target]:2};s.battle.requiredAnswers=[target];
+ let ui=boot(s);ui.resume();ui.ready();assert.equal(ui.get('battleUnsure').hidden,true);
+ ui.get('battleUnsure').onclick();assert.equal(ui.state().battle.question.answeredAt,null);
+ ui=boot(ui.state());ui.resume();ui.ready();assert.equal(ui.get('battleUnsure').hidden,true);
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===target));
+ assert.deepEqual(ui.state().battle.requiredAnswers,[]);
+ console.log('PASS twice-skipped word requires a choice after reopen and rejects hidden help callbacks');
+}
+
+// Expansion teaching is usable even when no image or recording is available.
+for(const word of ['has','zero','eight','fifteen','thousand','second',"can't","I'll",'Wednesday','live','sat']){
+ const s=impactSave(),item=Core.byWord[word];s.battle.question={...s.battle.question,target:word,options:item.d,phase:'feedback',answeredAt:new Date().toISOString(),correct:false,needsTeaching:true};
+ Core.startTeaching(s,word,'battle',Date.UTC(2026,9,9));
+ let ui=boot(s,{heldNarration:true,pendingImages:true});ui.resume();
+ assert.equal(ui.get('teachWordLesson').hidden,false);assert.equal(ui.get('teachWordLabel').textContent,word);
+ assert.equal(ui.get('teachContinue').disabled,false);assert.equal(ui.get('teachIllustration').hidden,true);
+ assert.equal(ui.get('teachSentence').querySelector('.targetWord').textContent.toLowerCase(),word.toLowerCase());
+ if(['zero','eight','fifteen'].includes(word))assert.equal(ui.get('teachCounters').querySelectorAll('.numberCounter').length,Number(item.teaching.symbol));
+ ui.click(ui.get('teachWordListen'));assert.equal(ui.speechTexts.at(-1),item.spoken||item.w);
+ ui.click(ui.get('teachHintListen'));assert.equal(ui.speechTexts.at(-1),item.teaching.tip);
+ ui=boot(ui.state(),{heldNarration:true,pendingImages:true});ui.resume();assert.equal(ui.get('teachWordLabel').textContent,word);
+ ui.click(ui.get('teachContinue'));assert.equal(ui.state().activity,'battle');
+}
+console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat and reload without images');
+
+// Both chapter-selection homes launch the isolated mini-game after saving.
+{
+ const legacy=boot(impactSave());legacy.click(legacy.get('mapWimmelbild'));assert.equal(legacy.destinations.at(-1),'assets/wimmelbild/');
+ const hub=boot(impactSave(),{adventures:true});const launch=[...hub.document.querySelectorAll('button')].find(b=>b.textContent==='⌕ Dragon path');hub.click(launch);assert.equal(hub.destinations.at(-1),'assets/wimmelbild/');
+ const denied=boot(impactSave(),{failWrites:true});denied.get('mapWimmelbild').onclick();assert.equal(denied.destinations.length,0);
+ console.log('PASS standalone Wimmelbild launch from both chapter homes and failed-save guard');
+}
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,9,10);s.profile.name='Reader';s.assessment.done=true;
+ for(const m of A.Data.missions)if(m.id!=='crab-ferry')A.stats(s,m.id).completedAt=new Date(now).toISOString();
+ Core.startMission(s,'crab-ferry',now);const c=s.expedition.current;c.step=3;c.phase='puzzle';c.puzzle={id:A.current(s).riddles[3].id,solved:true,selection:[],order:[]};
+ let ui=boot(s,{adventures:true,geometry:true});ui.click(ui.get('missionResume'));ui.click(missionButton(ui,'Open the search map'));
+ assert.equal(ui.get('mission').querySelector('[role="progressbar"]').getAttribute('aria-valuemax'),'9');
+ const q=A.mapQuestion(ui.state());ui.click(ui.get('mission').querySelector('[data-map-choice="red"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.state().expedition.current.hearts,3);assert.equal(missionButton(ui,'Check my answer').disabled,true);
+ ui.click(ui.get('mission').querySelector('[data-map-choice="'+q.answer+'"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.state().expedition.current.search.index,1);
+ ui.click(ui.get('homeBtn'));ui=boot(ui.state(),{adventures:true,geometry:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').querySelector('.searchHead').textContent,/question 2 of 3/);
+ ui.setFailWrites(true);ui.click(ui.get('mission').querySelector('[data-map-choice="blue"]'));assert.equal(ui.state().expedition.current.search.selection,null);
+ console.log('PASS ninth-task map UI, written choices, life loss, save/reload and failed-save guard');
 }
