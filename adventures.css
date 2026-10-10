@@ -74,3 +74,6 @@
 @media(max-height:580px) and (orientation:landscape){#result.lostBattle{padding-top:64px;padding-bottom:10px}.lostBattle .resultCard{padding:14px 20px;gap:7px 18px}.lostBattle .resultRetreat{height:180px}.lostBattle #resultTitle{font-size:25px}.lostBattle .resultMessage{font-size:16px}.lostBattle #resultChapter{padding:7px 10px}.lostBattle #opponents button{min-height:48px;font-size:19px}.lostBattle #resultNext{min-height:44px;font-size:17px}.lostBattle #resultChapter .questProgressTitle{display:none}}
 
 .campControls{flex-wrap:wrap}
+
+/* Keep the nine-task header above long chapter content on small screens. */
+.missionScreen>.missionTop{flex-shrink:0}

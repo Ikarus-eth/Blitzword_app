@@ -69,10 +69,10 @@
       const c=D.campaigns.find(c=>c.id===e.selectedCampaign)||D.campaigns[0];
       screen.style.backgroundImage='linear-gradient(180deg,#10282088,#10282044 40%,#102820bb),url("'+c.scene+'")';
       const top=el('div','adventureTop'),tabs=el('nav','campaignTabs');tabs.setAttribute('aria-label','Choose a campaign');
-      D.campaigns.forEach((campaign,i)=>{const open=i===0||A.campaignComplete(s,D.campaigns[i-1].id);const b=button((i+1)+'. '+campaign.shortName,'campaignTab'+(c.id===campaign.id?' selected':''),()=>{e.selectedCampaign=campaign.id;if(ctx.save())renderHub();});b.disabled=!open;b.setAttribute('aria-pressed',String(c.id===campaign.id));if(!open)b.title='Finish Forest lights to open this campaign.';tabs.append(b);});
+      D.campaigns.forEach((campaign,i)=>{const open=D.campaigns.slice(0,i).every(prior=>A.campaignComplete(s,prior.id));const b=button((i+1)+'. '+campaign.shortName,'campaignTab'+(c.id===campaign.id?' selected':''),()=>{e.selectedCampaign=campaign.id;if(ctx.save())renderHub();});b.disabled=!open;b.setAttribute('aria-pressed',String(c.id===campaign.id));if(!open)b.title='Finish '+D.campaigns[i-1].shortName+' to open this campaign.';tabs.append(b);});
       const book=button('Creature Book · '+report.seen+'/'+Content.creatures.length,'bookLauncher',()=>openBook());book.insertAdjacentHTML('afterbegin',icon('leaf'));top.append(tabs,book);screen.append(top);
       const done=c.missions.filter(id=>e.missions[id]?.completedAt).length;
-      screen.append(heading('Adventure '+(D.campaigns.indexOf(c)+1)+' · '+done+'/6 treasures',c.name,done===6?c.ending:c.intro));
+      screen.append(heading('Adventure '+(D.campaigns.indexOf(c)+1)+' · '+done+'/'+c.missions.length+' treasures',c.name,done===c.missions.length?c.ending:c.intro));
       if(e.current&&e.current.phase!=='complete'){
         const current=D.byId[e.current.missionId],resume=button('Continue '+current.name+' · '+A.progress(s).left+' steps left','greenButton missionResume',()=>ctx.launch(current.id));resume.id='missionResume';screen.append(resume);
       }
@@ -113,7 +113,8 @@
         panel.append(heading(all?'Campaign complete!':'Mission complete!',all?campaign.prize:m.item,ctx.dragonText(m.ending)));
         const badge=el('div','treasureBadge');badge.innerHTML=icon(m.symbol);panel.append(badge);
         const friends=el('div','missionFriends');for(const family of m.families){const b=button('','friendReward',()=>openBook(family));const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);b.append(art,el('strong','',Content.enemyAt(family).name),el('small','','Clue stamp earned'));friends.append(b);}panel.append(friends);
-        panel.append(button(all&&m.campaign==='lost-lights'?'Explore the river':'Choose another mission','greenButton',()=>{if(all&&m.campaign==='lost-lights')e.selectedCampaign='river-song';ctx.save();ctx.home();}),button('Rest here','textButton',ctx.home));
+        const nextCampaign=all?D.campaigns[D.campaigns.indexOf(campaign)+1]:null;
+        panel.append(button(nextCampaign?'Explore '+nextCampaign.shortName:'Choose another mission','greenButton',()=>{if(nextCampaign)e.selectedCampaign=nextCampaign.id;if(ctx.save())ctx.home();}),button('Rest here','textButton',ctx.home));
       }else if(!solving){
         const family=m.encounters[c.step],first=c.step===0;
         panel.append(heading(first?'A new quest':c.step>=2?'Big fight':'Next fight',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:m.scenes?.[c.step]?.intro||'Win this fight. Get the next clue.')));

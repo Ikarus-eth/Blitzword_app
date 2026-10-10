@@ -1,3 +1,9 @@
+## Third creature adventure — accepted 10 October 2026
+
+Add a third major adventure in the current format: eight subchapters, nine tasks per subchapter and eight newly approved enemies. The first two adventures remain intact. The implementation is **The Sky That Lost Its Stars**, unlocked after Forest Lights and River Song. Every new subchapter contains four reading fights alternating with four riddles, followed by one continuous-picture search with three questions: 72 tracker tasks altogether.
+
+Introduce Snow Owl, Frost Lynx, Snow Hare, Cloud Yak, Pinecone Marmot, Gale Falcon, Lichen Ibex and Aurora Elk using their already-approved artwork, battle movement and recorded names. Earn their existing Met/Clue/Star stamps and companion eligibility through normal play. Preserve four shared hearts, retreat, rewards, adaptive reading, prior campaign progress and pending saves. Eight distinct continuous mountain landscapes also serve as chapter scenes. New story and clue listening uses device speech; no paid narration batch is authorized by this addition. [Implementation, chapter plan and verification](adventures/star-trail/RELEASE.md).
+
 ## Target-word recording priority — 10 October 2026
 
 The user approved the existing recordings and prioritized all 1,000 curriculum words over optional sentences. Generate the missing 669 standalone words and the six existing pronunciation-context sentences with fal.ai Multilingual v2, retaining the approved voice and existing recordings. Reuse the `I'll` capitalization variant. Other teaching sentences, tips, distractors and lore are deferred. Keep local speech for unavailable recordings and custom text. This decision supersedes the earlier all-content generation proposal; it does not authorize that larger batch. See [current status](CURRENT_STATUS.md) for verified implementation and deployment.
