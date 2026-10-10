@@ -1,6 +1,6 @@
 # The Sky That Lost Its Stars
 
-Implemented and locally verified, 10 October 2026. Deployment is recorded separately after the Pages workflow and live-file checks.
+Deployed and verified, 10 October 2026. [PR #166](https://github.com/Ikarus-eth/Blitzword_app/pull/166) merged as `9b0414d62d12d10ff442fc6fec4f43afc0699825`. [Pages run 38055599634](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38055599634) succeeded. All sixteen changed runtime/art files, including all eight new scenes, match the tested source byte for byte. [Live hashes](DEPLOYMENT.json). All eight maps also pass the three-size browser journey on the live site: [24 live checks](live-browser-checks.json).
 
 The user requested a third major adventure, eight subchapters with nine tasks each, and eight additional enemies. The original Forest Lights and River Song adventures retain their IDs, stories, allocation and saved progress. The third adventure opens only after both earlier adventures are complete.
 

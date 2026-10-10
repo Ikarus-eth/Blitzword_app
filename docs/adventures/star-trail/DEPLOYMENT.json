@@ -1,0 +1,105 @@
+{
+  "verifiedAt": "2026-10-10T13:27:42.452728+00:00",
+  "commit": "9b0414d62d12d10ff442fc6fec4f43afc0699825",
+  "pullRequest": "https://github.com/Ikarus-eth/Blitzword_app/pull/166",
+  "workflow": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38055599634",
+  "build": "sky-stars-20261010-r1",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 39810,
+      "sha256": "5268e785b2881d18132b328545b8bef61b4a2d85575beb3ff098ef1d1d612486",
+      "matches": true
+    },
+    {
+      "path": "app.js",
+      "bytes": 112584,
+      "sha256": "bc32b560ca23b46dacf0fe953672f02021adc0332b852308130cde953c2f0356",
+      "matches": true
+    },
+    {
+      "path": "adventures.css",
+      "bytes": 23485,
+      "sha256": "e700dff057cd581c97fde513fc2507e434ad093fda9df01c1f03539026f09245",
+      "matches": true
+    },
+    {
+      "path": "missions.js",
+      "bytes": 35507,
+      "sha256": "6a95068956513e2fc62cfab837a653cf68414f2c49a86d43c4204b73447a384d",
+      "matches": true
+    },
+    {
+      "path": "adventure-core.js",
+      "bytes": 13834,
+      "sha256": "1f65b029bf9225bb95922ff30d3cfb5d3f49da243401ae4ec772fc85b26c01b6",
+      "matches": true
+    },
+    {
+      "path": "adventure-ui.js",
+      "bytes": 26024,
+      "sha256": "e32bcc02feaabc06097a954f5873a8710be25cca64affb0cf085c20ebc963ed1",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/aurora-crown.png",
+      "bytes": 3874990,
+      "sha256": "cd263e1300e5a213f380adb4455508c39db643f0169f18681aed4deeda515b4d",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/campaign.js",
+      "bytes": 16646,
+      "sha256": "4c8774a4b5c22499495735e703a6550407e71dc9cc1fb3931158022ae67d3d60",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/cloud-lift.png",
+      "bytes": 4014886,
+      "sha256": "a7063dd7876439ea1f2e9e1331f17ceb14f88b95a4d3cf40a536dd89f3117fcc",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/crystal-pass.png",
+      "bytes": 4160520,
+      "sha256": "4edf95add6bf9f2d172c218829c421ec99f578d2cb5ac5ce9d7c1c38c3e643ad",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/moon-steps.png",
+      "bytes": 3828155,
+      "sha256": "5266b1f7aa57a50f1d0ecf22fe1d102352b881fe59a98b49ef4f1020dcfeaccb",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/pine-store.png",
+      "bytes": 4034214,
+      "sha256": "7fa95f619dc1644287b007c12f6397368ca5a54b14b817714cb88df56f457df1",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/search.js",
+      "bytes": 6564,
+      "sha256": "a7d33369722c649177bff75720212b2156a500a0fb7982669b1860e4815f8e36",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/snow-garden.png",
+      "bytes": 4004705,
+      "sha256": "1146177adb858cde5d30a5192bed3b78042f47422e91a9016916d636b17cda53",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/star-post.png",
+      "bytes": 3851815,
+      "sha256": "5c91ffb50c7bf9d22b0cd7fe2699e1798d560b37f2500103101dbfb45246153d",
+      "matches": true
+    },
+    {
+      "path": "assets/adventures/star-trail/wind-tower.png",
+      "bytes": 3693339,
+      "sha256": "1e0156f7d0d49971bf2bcc21ced29a71d1b51614d828bc16f114a2972bc3bb45",
+      "matches": true
+    }
+  ]
+}
