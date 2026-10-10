@@ -1,0 +1,232 @@
+{
+  "verifiedAt": "2026-10-10T09:29:43.114332+00:00",
+  "commit": "93a22323be5dcdaff4e3ed44915cd8a3c498640d",
+  "pullRequest": 158,
+  "pagesRun": 38041317787,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 39580,
+      "localSha256": "eb83bd215cf0a8c670991925083e05b84817ee61fa85af42a9df1ee5a3b3e637",
+      "liveSha256": "eb83bd215cf0a8c670991925083e05b84817ee61fa85af42a9df1ee5a3b3e637",
+      "matches": true
+    },
+    {
+      "path": "content.js",
+      "bytes": 403771,
+      "localSha256": "907586f45a0b8a9bec7268772cdbb62e0714e81bf55afa3f95316e7bb2d4d743",
+      "liveSha256": "907586f45a0b8a9bec7268772cdbb62e0714e81bf55afa3f95316e7bb2d4d743",
+      "matches": true
+    },
+    {
+      "path": "game-core.js",
+      "bytes": 82933,
+      "localSha256": "ab1cf5ab23b0eda05e3f12c7e31d7fe52040671534180a4e93d47fd78debf24c",
+      "liveSha256": "ab1cf5ab23b0eda05e3f12c7e31d7fe52040671534180a4e93d47fd78debf24c",
+      "matches": true
+    },
+    {
+      "path": "app.js",
+      "bytes": 112521,
+      "localSha256": "fa8ca81c314bed11b0662be8f03405ce43db592bba1296accf7e8bb21fc10723",
+      "liveSha256": "fa8ca81c314bed11b0662be8f03405ce43db592bba1296accf7e8bb21fc10723",
+      "matches": true
+    },
+    {
+      "path": "adventure-ui.js",
+      "bytes": 25888,
+      "localSha256": "71a90e0970f40c545b7908b8129a43683c65eebe90740c73f49439d0fd3adfed",
+      "liveSha256": "71a90e0970f40c545b7908b8129a43683c65eebe90740c73f49439d0fd3adfed",
+      "matches": true
+    },
+    {
+      "path": "missions.js",
+      "bytes": 35250,
+      "localSha256": "273f7a0cd118ee4b3ff1b42706fb1225cd84c76efcddb8ed816b4c21917db17e",
+      "liveSha256": "273f7a0cd118ee4b3ff1b42706fb1225cd84c76efcddb8ed816b4c21917db17e",
+      "matches": true
+    },
+    {
+      "path": "enemy-art.js",
+      "bytes": 8008,
+      "localSha256": "061796f15caedd13eb3ca63774c3a5653d473737ea202932ecdfebe839b81ab8",
+      "liveSha256": "061796f15caedd13eb3ca63774c3a5653d473737ea202932ecdfebe839b81ab8",
+      "matches": true
+    },
+    {
+      "path": "narration.js",
+      "bytes": 700189,
+      "localSha256": "b42a36336f5ada3f7ec1cc2b0fb6ca0136f2a34180659f90f7da5c8cb0d818c4",
+      "liveSha256": "b42a36336f5ada3f7ec1cc2b0fb6ca0136f2a34180659f90f7da5c8cb0d818c4",
+      "matches": true
+    },
+    {
+      "path": "assets/battle-motion/runtime.js",
+      "bytes": 15839,
+      "localSha256": "a07e6107906f52f552aad0688f8ddfc78614bf255ab71c5bfeb98df4d31db8ca",
+      "liveSha256": "a07e6107906f52f552aad0688f8ddfc78614bf255ab71c5bfeb98df4d31db8ca",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-06.png",
+      "bytes": 2395259,
+      "localSha256": "565c215a8c8d1d5fdc1706863073f0078ddf8de2067df4409353fdae954eaf34",
+      "liveSha256": "565c215a8c8d1d5fdc1706863073f0078ddf8de2067df4409353fdae954eaf34",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-07.png",
+      "bytes": 2508999,
+      "localSha256": "2ba21c5b79596f5f52743f4703ac66a6420687b4a8f306c6e841e5e923eea729",
+      "liveSha256": "2ba21c5b79596f5f52743f4703ac66a6420687b4a8f306c6e841e5e923eea729",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-05.png",
+      "bytes": 2399718,
+      "localSha256": "166174cf0d96aa132e586de04d0a7cb1da866ac121d8925ce7e13c8dff8e9b90",
+      "liveSha256": "166174cf0d96aa132e586de04d0a7cb1da866ac121d8925ce7e13c8dff8e9b90",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-04.png",
+      "bytes": 2312681,
+      "localSha256": "6fb60fe168c8f9c869fb266c595e9b493267f7fab4acc9a8c5aae9dbbf9355c5",
+      "liveSha256": "6fb60fe168c8f9c869fb266c595e9b493267f7fab4acc9a8c5aae9dbbf9355c5",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/index.html",
+      "bytes": 4943,
+      "localSha256": "8f9fe5f2975f2301f498742dab9f9ba01bdfe33fc73150c3b47ac8ec8346d463",
+      "liveSha256": "8f9fe5f2975f2301f498742dab9f9ba01bdfe33fc73150c3b47ac8ec8346d463",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-01.png",
+      "bytes": 2518268,
+      "localSha256": "d0558ba2fead21095c76a0ea958a686eadcaab34113fc9c2140861f1c5700107",
+      "liveSha256": "d0558ba2fead21095c76a0ea958a686eadcaab34113fc9c2140861f1c5700107",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-03.png",
+      "bytes": 2509640,
+      "localSha256": "24841b9d87868df037a5f69d6fac7dffc53bb4b52739cde45eb0d81e0caa30fc",
+      "liveSha256": "24841b9d87868df037a5f69d6fac7dffc53bb4b52739cde45eb0d81e0caa30fc",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-02.png",
+      "bytes": 2167116,
+      "localSha256": "a6da9a91756bf8b93f955d8f775b20d77c625e8fb4f03aff27df93e25af2a7ef",
+      "liveSha256": "a6da9a91756bf8b93f955d8f775b20d77c625e8fb4f03aff27df93e25af2a7ef",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/roster.js",
+      "bytes": 40646,
+      "localSha256": "b9d438b1be090721dd21ae0e55d19d8bdb20ccdb48c42b959fdbb4457922b452",
+      "liveSha256": "b9d438b1be090721dd21ae0e55d19d8bdb20ccdb48c42b959fdbb4457922b452",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-09.png",
+      "bytes": 2290653,
+      "localSha256": "e3f8d370f64a0fe96936f9cc337682dcf5f96d5f6025f7d5c77976259496639a",
+      "liveSha256": "e3f8d370f64a0fe96936f9cc337682dcf5f96d5f6025f7d5c77976259496639a",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/approved-20261010/atlas-08.png",
+      "bytes": 2471288,
+      "localSha256": "5b0e409037888bde3e6528083c66b5fbcfeb23797d534c63caa5edce803cf810",
+      "liveSha256": "5b0e409037888bde3e6528083c66b5fbcfeb23797d534c63caa5edce803cf810",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-001.mp3",
+      "bytes": 548824,
+      "localSha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9",
+      "liveSha256": "08954f093a39df5207676ec466d0eec7e75525198a5eb147db0b5a4955a177b9",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-002.mp3",
+      "bytes": 574737,
+      "localSha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547",
+      "liveSha256": "f9a488990f4aa29e3b8c4ead4c44eab691fcc8d69088605b26909211bd7d9547",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-003.mp3",
+      "bytes": 557601,
+      "localSha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd",
+      "liveSha256": "c7d70da7d2315eebbf074f5a8195b4ec07f2d0c93af0f941c73f86e3283d35dd",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-004.mp3",
+      "bytes": 596889,
+      "localSha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3",
+      "liveSha256": "50f5bf08c9ac5b8836b57c0b65c254f862f649abf3f00a5a6719631c664d15a3",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-005.mp3",
+      "bytes": 603577,
+      "localSha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096",
+      "liveSha256": "2b8b35457b3cfd9b3e760718fbd31ebc2fad02a28cd8a12df9ee268a0c5cf096",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-006.mp3",
+      "bytes": 605248,
+      "localSha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1",
+      "liveSha256": "4b412b66f488c971153601c37462e5afe85ddd87754832de42c5f8b8cb5ee0b1",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-007.mp3",
+      "bytes": 609010,
+      "localSha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8",
+      "liveSha256": "44c5ad9284ce6d2824fb418a5782d9f3d9acb47bb20385b4b8f76c0717f029f8",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-008.mp3",
+      "bytes": 562199,
+      "localSha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473",
+      "liveSha256": "481d1b76479bebe19da81fb1df0cb843815f9d0cdb08549b6c9f07a449ec9473",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-009.mp3",
+      "bytes": 578499,
+      "localSha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592",
+      "liveSha256": "8d5114a1e5982f765271d0dc653a95aa6aabe06e821d53599c4ce4d64f409592",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-010.mp3",
+      "bytes": 575573,
+      "localSha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda",
+      "liveSha256": "4b0a18943303770d7043b27c9b00a91abfb5b69b8f13685f4e3c6be5c4b58dda",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-011.mp3",
+      "bytes": 581425,
+      "localSha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848",
+      "liveSha256": "e029f274a6d0edd929ccb39b12f8dd76bf4aba4a7b8b761a27642aaf0bbf4848",
+      "matches": true
+    },
+    {
+      "path": "assets/narration/approved-enemies-012.mp3",
+      "bytes": 390417,
+      "localSha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01",
+      "liveSha256": "77ceb3ca9834aa777ea464fcf82bfce1a876fbd35c5db9352b08041dbccb1c01",
+      "matches": true
+    }
+  ]
+}
