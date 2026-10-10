@@ -1,0 +1,106 @@
+{
+  "url": "http://127.0.0.1:8765/assets/map-quest/",
+  "checks": [
+    {
+      "id": "crab-ferry",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "stone-dam",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "mist-lamps",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "high-nest",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "river-heart",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "crab-ferry",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "stone-dam",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "mist-lamps",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "high-nest",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    },
+    {
+      "id": "river-heart",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completion": true,
+      "reload": true,
+      "lifeLoss": true
+    }
+  ],
+  "errors": []
+}
