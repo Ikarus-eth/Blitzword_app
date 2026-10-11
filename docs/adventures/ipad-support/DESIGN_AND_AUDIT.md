@@ -1,3 +1,5 @@
+> **Latest decision:** chapter four must wait for the learner export from midway through chapter three. Teaching production now prioritizes words 200–400 independently. See [the checkpoint and exact scope](CHAPTER4_AND_TEACHING_CHECKPOINT.md); older proposals below are subject to that decision.
+
 # Landscape iPad follow-up — 11 October 2026
 
 ## Accepted and implemented in this release
