@@ -1,3 +1,7 @@
+## Teaching visuals and recorded audio 200–400 — accepted 11 October 2026
+
+The user authorized generating the missing teaching visuals with ChatGPT and audio through fal.ai, keeping compute down. Cover one-based playable positions 200–400 inclusively; reuse existing assets and recordings. Meaningful shared scenes are allowed when each target is clear in context. Number quantities must be accurate. Display the new art on expansion teaching cards; preserve curriculum wording/order, learner saves, listening and local fallback. This supersedes the earlier deferral for these 201 words only; later words and chapter-four work remain separate. [Implementation, generation budget and verification](teaching-200-400/RELEASE.md).
+
 ## Automatic iPad progress sharing — 11 October 2026
 
 **Deployed and verified; activation pending.** Frontend build `progress-sync-20261011-r2` is live after PRs #173/#174 and successful Pages run 38110487818; all four checked runtime/review files match tested source. The private backend is deployed and live-tested with synthetic data. The game adds one-time pairing, automatic foreground uploads, offline recovery, and Parents controls. Learning reports omit profile names/age and never overwrite the local save. Endpoint audience approval and one-time iPad pairing are still required; no learner is connected. 388 game tests, 120 UI groups and five backend tests pass. [Status and verification](progress-sync/RELEASE.md).

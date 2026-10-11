@@ -1,0 +1,10 @@
+Use case: illustration-story. Production teaching atlas in the same warm painted storybook style as the reference. A STRICT 3 columns by 3 rows grid of NINE equal square scenes, square canvas 1536x1536. Straight boundaries at exactly one-third and two-thirds of each edge. No labels or writing. All objects contained within their cell with margins. New everyday children, not game heroes. Fix semantic clarity with these exact scenes, row-major:
+1. Extreme clear still-life on cream paper: one unmistakable BLUE FOUNTAIN PEN WITH A METAL SPLIT NIB, its separate blue cap with clip, a curved blue ink stroke coming from the metal nib. No pencil, no wooden point, no graphite, no ruler.
+2. A square cell split vertically in TWO temporal stages: LEFT a sad lonely child alone on a bench; RIGHT same child smiling because a friend has arrived and sits beside them. Clearly distinct before and after, no writing.
+3. A child has just finished lunch at a table; above their head a thought bubble shows a possible picnic outing under uncertain clouds. Parent gives a thoughtful considering gesture. Meaning MAYBE we can go after lunch, no cat or bed.
+4. Two children actively SEARCH for a tiny KEY underneath a table and chair, one kneeling and peering; key partly visible by a chair leg.
+5. A child LOOKING for a HAT checks under a bench and behind a cushion; the hat is partially visible beneath the bench. No key or bag.
+6. A WORRIED child at a school cloakroom looks upset at an empty bag hook, one hand on cheek. Other hooks hold bags but their own hook is empty.
+7. A HUNGRY child looks eagerly at a prepared lunch plate, hand resting on rumbling tummy, waiting to eat, no dog.
+8. Two glasses filled with CLEAR PALE BLUE WATER on a neutral surface: LEFT glass completely FULL TO THE BRIM; RIGHT glass ALMOST full with a small clearly visible air gap. Both solid continuous water-filled interiors; unmistakable water level contrast.
+9. A friend calls out with cupped hands to another child, and the other child turns their head towards the caller. No dog. Natural friendly outdoor schoolyard.

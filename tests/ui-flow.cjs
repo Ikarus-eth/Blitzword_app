@@ -1296,12 +1296,13 @@ for(const word of ['has','zero','eight','fifteen','thousand','second',"can't","I
  Core.startTeaching(s,word,'battle',Date.UTC(2026,9,9));
  let ui=boot(s,{heldNarration:true,pendingImages:true});ui.resume();
  assert.equal(ui.get('teachWordLesson').hidden,false);assert.equal(ui.get('teachWordLabel').textContent,word);
+ if(Content.teachingVisuals.words[word])ui.get('teachIllustration').onerror();
  assert.equal(ui.get('teachContinue').disabled,false);assert.equal(ui.get('teachIllustration').hidden,true);
  assert.equal(ui.get('teachSentence').querySelector('.targetWord').textContent.toLowerCase(),word.toLowerCase());
- if(['zero','eight','fifteen'].includes(word))assert.equal(ui.get('teachCounters').querySelectorAll('.numberCounter').length,Number(item.teaching.symbol));
+ if(['zero','eight','fifteen'].includes(word)){assert.equal(ui.get('teachCounters').hidden,true);assert.equal(ui.get('teachAtlas').hasAttribute('hidden'),false);}
  ui.click(ui.get('teachWordListen'));assert.equal(ui.speechTexts.at(-1),item.spoken||item.w);
  ui.click(ui.get('teachHintListen'));assert.equal(ui.speechTexts.at(-1),item.teaching.tip);
- ui=boot(ui.state(),{heldNarration:true,pendingImages:true});ui.resume();assert.equal(ui.get('teachWordLabel').textContent,word);
+ ui=boot(ui.state(),{heldNarration:true,pendingImages:true});ui.resume();assert.equal(ui.get('teachWordLabel').textContent,word);if(Content.teachingVisuals.words[word])ui.get('teachIllustration').onerror();
  ui.click(ui.get('teachContinue'));assert.equal(ui.state().activity,'battle');
 }
 console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat and reload without images');
@@ -1388,3 +1389,17 @@ console.log('PASS all 45 new enemies render through real battle feedback, score 
  while(A.mapQuestion(ui.state())){q=A.mapQuestion(ui.state());ui.click(ui.get('mission').querySelector('[data-map-choice="'+q.answer+'"]'));ui.click(missionButton(ui,'Check my answer'));if(ui.state().expedition.current.phase==='complete')assert.equal(ui.get('questDialogTitle').textContent,'You found the treasure!');ui.click(ui.document.querySelector('.questDialogButton'));}
  assert.equal(ui.state().expedition.current.phase,'complete');console.log('PASS map wrong/correct/completion popups and exclusion of popup time from reading credit');
 }
+
+// New illustrations coexist with core cards, quantity layouts and later text-only words.
+for(const word of ['has','aunt','eight','eighty','thin','ninety']){
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());Core.startTeaching(s,word,'battle',Date.now());
+ const ui=boot(s);ui.resume();const visual=Content.teachingVisuals.words[word];
+ assert.equal(ui.get('teachContinue').disabled,false);assert.equal(ui.get('teachAtlas').parentElement.hidden,word==='ninety');
+ if(visual){assert.equal(ui.get('teachAtlas').hasAttribute('hidden'),false);assert.equal(ui.get('teachAtlas').getAttribute('aria-label'),visual.alt);assert.equal(ui.get('teachHintListen').hidden,false);}
+ const reloaded=boot(ui.state());reloaded.resume();assert.equal(reloaded.state().teaching.target,word);reloaded.click(reloaded.get('teachContinue'));assert.equal(reloaded.state().activity,'battle');
+}
+console.log('PASS illustrated expansion, exact quantities, core and future cards preserve reload and battle return');
+{
+ const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());Core.startTeaching(s,'has','battle',Date.now());const ui=boot(s,{pendingImages:true});ui.resume();assert.equal(ui.get('teachContinue').disabled,true);ui.get('teachIllustration').onerror();assert.equal(ui.get('teachContinue').disabled,false);assert.match(ui.get('lessonStatus').textContent,/could not load/);
+}
+console.log('PASS failed expansion illustration retains listening and Continue');

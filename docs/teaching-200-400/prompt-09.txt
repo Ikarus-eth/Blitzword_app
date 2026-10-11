@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: A narrow shallow stream flows visibly over smooth stones between grassy banks.
+Cell 2: A child has finished putting on their coat while a friend is still reaching for theirs.
+Cell 3: A child waits outside a closed oven where an unfinished cake is visibly baking, adult supervises.
+Cell 4: A steaming bowl of warm soup with spoon, cosy kitchen table.
+Cell 5: Water cascades over high rocks into a pool, clear downward flowing water.
+Cell 6: A child wondering where a cat could be looks toward a bed, a thought bubble imagines a cat underneath; uncertainty visibly suggested, no actual cat in room.
+Cell 7: A quiet garden at night with deep dark sky and dim moonlight.
+Cell 8: A cooked potato cut open on a plate beside one fresh red round tomato in a kitchen.
+Cell 9: A kind doctor tends a child resting ill in bed, parent nearby, calm reassuring atmosphere.
+Cell 10: One curling ocean wave rolls onto a sandy beach.
+Cell 11: Two children build a small house from wooden blocks together, each contributes one piece.
+Cell 12: Children walk through a wide open garden gate, one halfway through the opening.

@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: Three children each receive one apple from an adult, one apple clearly in each child's hands.
+Cell 2: A happy child strokes both a cat and a dog, showing equal affection.
+Cell 3: A hand turns a large key in the lock of a wooden door, clear lock and key interaction.
+Cell 4: On a clean desk a hand draws a straight line using a wooden ruler and pencil; beside them a blue pen with a blue ink line. No markings or writing.
+Cell 5: An open wooden box reveals a small key inside; a child peers inside with curiosity.
+Cell 6: A concerned child searches beneath a chair and around a table for a misplaced hat, bag and key; make the search action dominant.
+Cell 7: A bright lightning bolt illuminates a distant dark storm sky; viewed safely from inside a window.
+Cell 8: A strong adult father struggles to lift an obviously heavy filled bag, bent knees and effort in his face.
+Cell 9: A child fans their warm face on an intensely hot sunny day, strong sun and heat haze.
+Cell 10: A beautiful pink flower shown prominently in a simple garden close-up.
+Cell 11: A kindly adult king wears a clearly visible gold crown and simple royal cloak in a castle courtyard.
+Cell 12: Two stages: a child sits alone looking sad, then a friend arrives and sits beside them, child brightens.

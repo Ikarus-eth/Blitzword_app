@@ -1,6 +1,6 @@
 (function(root){
 const narration={
-  "version": "target-words-fal-20261010-r1",
+  "version": "teaching-200-400-20261011-r1",
   "voice": "Mixed approved British male recordings",
   "voices": [
     {
@@ -15,8 +15,8 @@ const narration={
   ],
   "language": "en-GB",
   "recoveredClipCount": 994,
-  "recordedClipCount": 3092,
-  "runtimeClipCount": 3092,
+  "recordedClipCount": 3489,
+  "runtimeClipCount": 3489,
   "fallbackOnly": [],
   "clips": {
     "on": {
@@ -25762,6 +25762,1991 @@ const narration={
       "offset": 0.6385,
       "duration": 0.4065,
       "sha256": "f44f5253e0caea37c6e42766fcaa66ac4b6a00a50b769e76f27f3ad1581a7da6"
+    },
+    "The dog has a red ball.": {
+      "file": "assets/narration/teach-200-400-001.mp3",
+      "duration": 1.750188,
+      "sha256": "7b1027e15299b7358d84bb623b28c71d557a7c7586540d7a9a2d5b1bf461833e"
+    },
+    "Look at every letter in has. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-002.mp3",
+      "duration": 6.112625,
+      "sha256": "1a1a8646559f8350f0e1568b6c586ff3a6866bd3a406c48983b732e480ff82e9"
+    },
+    "We have been to the park.": {
+      "file": "assets/narration/teach-200-400-003.mp3",
+      "duration": 1.802438,
+      "sha256": "a53f4f255474e29c559cb5351038fb2e4bb7a2db089cd33cc74eac374b30c2ba"
+    },
+    "Word family: be → been. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-004.mp3",
+      "duration": 5.668563,
+      "sha256": "9d271a9a97ba887e7dc16b8ddf02ddce7db17a3cf31eae95f68c6f7fb3f353ef"
+    },
+    "What does the little dog want?": {
+      "file": "assets/narration/teach-200-400-005.mp3",
+      "duration": 2.0375,
+      "sha256": "3c0acf947ef1fee975c3f997ef0966316f24c530594fb989c608537a19df9453"
+    },
+    "Word family: do → does. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-006.mp3",
+      "duration": 5.433438,
+      "sha256": "f62713cb9fa6d08f479c104bbddd202c0e9ff713cf2635e52c8eaacc9d9c0095"
+    },
+    "Come and sit with us.": {
+      "file": "assets/narration/teach-200-400-007.mp3",
+      "duration": 1.567313,
+      "sha256": "d90fea72b953f26783f8d85af6fa31095776cfc7ed5a9f3281683f1e06fff46d"
+    },
+    "Look at every letter in us. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-008.mp3",
+      "duration": 6.269375,
+      "sha256": "00fd44d73a6ab078b514e6f635f64733a2b60dc8eb23d608e939a47b105ada10"
+    },
+    "The cat licks its paw.": {
+      "file": "assets/narration/teach-200-400-009.mp3",
+      "duration": 1.854688,
+      "sha256": "7790c0cc03a60d8f5dfb7d0e78ed1f1d3e2eb1105e86cba02e4b0b667bd70346"
+    },
+    "Its means belonging to it. There is no apostrophe.": {
+      "file": "assets/narration/teach-200-400-010.mp3",
+      "duration": 4.310188,
+      "sha256": "942fed46a0ff74913de22ee8126d33fe07b3184f19691fa57d38fe6812e22dc0"
+    },
+    "Tell me which book you want.": {
+      "file": "assets/narration/teach-200-400-011.mp3",
+      "duration": 1.750188,
+      "sha256": "b655555ecbaa2db11a722bf4259ab37e140f426a972ee18cb38477c73ed37c26"
+    },
+    "Look carefully at “ch” in which. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-012.mp3",
+      "duration": 6.269375,
+      "sha256": "eed97c861f07c00e713fa3bd631bb84fc9d0cf8ef7966b24a3eab489371589cb"
+    },
+    "All these apples are red.": {
+      "file": "assets/narration/teach-200-400-013.mp3",
+      "duration": 1.802438,
+      "sha256": "191363ac4ae4f45ec2a32289fcf027840b6f0b70fe2be189ea495d4654a6f8f3"
+    },
+    "Look carefully at “th” in these. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-014.mp3",
+      "duration": 6.687313,
+      "sha256": "c21d9f0b151ad2e7223a03c186bf71d472e740a8c8cea3d2b20519809b7e8bad"
+    },
+    "Look at those birds in the tree.": {
+      "file": "assets/narration/teach-200-400-015.mp3",
+      "duration": 2.168125,
+      "sha256": "11d2148aad1de69ad5b8305e236e75fa7218dab661775b5209b2ff53a797ead2"
+    },
+    "Look carefully at “th” in those. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-016.mp3",
+      "duration": 6.34775,
+      "sha256": "5bdf420786a319ec6891f1d8cfaf6eb00a8f95c187bc43885f5fe23c881023c2"
+    },
+    "Tell me where the cat is.": {
+      "file": "assets/narration/teach-200-400-017.mp3",
+      "duration": 1.697938,
+      "sha256": "5e3f0786b5c7efc940445b17f354778281c2ce73502e94ef1eedb33ea596f296"
+    },
+    "Look carefully at “er” in where. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-018.mp3",
+      "duration": 6.452188,
+      "sha256": "bb26a0b503fe454584155d176479afe79fe036b639897d42acce879f621fd733"
+    },
+    "Tell me why you are sad.": {
+      "file": "assets/narration/teach-200-400-019.mp3",
+      "duration": 1.933063,
+      "sha256": "6108d09a27ca86cd3de8e6c8e63ab0bedb348b31bf55e922d3f6fb01d18709e9"
+    },
+    "Look at every letter in why. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-020.mp3",
+      "duration": 6.164875,
+      "sha256": "0b32a677b57d0e64d35c533e1f40f3b2c4d4aca4b9ab428082c9d236b29338e9"
+    },
+    "We must look before we cross.": {
+      "file": "assets/narration/teach-200-400-021.mp3",
+      "duration": 2.351,
+      "sha256": "dd26cdc7098b1b63d1f032b58172cdecb06a1ee787329919804a9e03880c72c9"
+    },
+    "Look at every letter in must. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-022.mp3",
+      "duration": 6.635063,
+      "sha256": "90e29cab4eb3085956ec0299dafc4b9ad8a22b95234343ddb359482788857ac8"
+    },
+    "We should help our friend.": {
+      "file": "assets/narration/teach-200-400-023.mp3",
+      "duration": 1.802438,
+      "sha256": "8ae0b880e147e7970504cb2bed031369e6ca11836665a9da8beb721f2152659f"
+    },
+    "Look carefully at “sh” in should. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-024.mp3",
+      "duration": 6.922438,
+      "sha256": "23825ae75c3f9b93fe51f5a70110c1f94643ad43f7e07cffabc638e83131809e"
+    },
+    "The cat is under the table.": {
+      "file": "assets/narration/teach-200-400-025.mp3",
+      "duration": 1.933063,
+      "sha256": "344f7799e97d2a4b5d5e81399ad548edf9dbcb1c7e945404d576bd09071547bb"
+    },
+    "Look carefully at “er” in under. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-026.mp3",
+      "duration": 6.03425,
+      "sha256": "81b5a51936f9a314c9339ec3bb25f6233a474d103b3276967c1854641d9655f8"
+    },
+    "We walk home after school.": {
+      "file": "assets/narration/teach-200-400-027.mp3",
+      "duration": 2.324875,
+      "sha256": "149883fbc924ea93bbafa14c9428582be50fdb0ba2d4ddcbc093cf1ff1a82939"
+    },
+    "Look at every letter in home. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-028.mp3",
+      "duration": 6.635063,
+      "sha256": "c10c3d755d08ed6eafd2fd3be39c9507fd8e96cf0d4fa46739958f4c46b911f8"
+    },
+    "Please help me lift the box.": {
+      "file": "assets/narration/teach-200-400-029.mp3",
+      "duration": 2.115875,
+      "sha256": "e6d17b0811dbf866fc5d873defbcc6fda32a5fdb26f21046be2d473f44a40f46"
+    },
+    "Look at every letter in help. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-030.mp3",
+      "duration": 6.112625,
+      "sha256": "22c99c18537ff0c568a70f3164e38f964415281dd35f4f94763fde3e46db021d"
+    },
+    "Please give the book to me.": {
+      "file": "assets/narration/teach-200-400-031.mp3",
+      "duration": 1.933063,
+      "sha256": "b590c4fe77c5482064610174d49463e0a06262556583422827e0a1e503029655"
+    },
+    "Look at every letter in give. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-032.mp3",
+      "duration": 6.34775,
+      "sha256": "e77b064f61fc868acc7e338990ce7cd152fb16c72bc567a155f786e5dfd2d4ed"
+    },
+    "What did you say?": {
+      "file": "assets/narration/teach-200-400-033.mp3",
+      "duration": 1.619563,
+      "sha256": "af39fe8b436def47f644dd061c0e386afde7cefb38cc54ad4f29590a8146f000"
+    },
+    "Look carefully at “ay” in say. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-034.mp3",
+      "duration": 6.4,
+      "sha256": "7ff0ca5675eae84a3f7ae53fd9be43f3db9ca7d32f69d47a9e9ee85d8d2c722b"
+    },
+    "My friend came to play.": {
+      "file": "assets/narration/teach-200-400-035.mp3",
+      "duration": 1.854688,
+      "sha256": "bff9b9b6f1cf009261e52436dfde1d2a9715f62934bb32b36e7bb85bc002f87d"
+    },
+    "Word family: come → came. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-036.mp3",
+      "duration": 5.851375,
+      "sha256": "f6e86e9593f076ae80d00147985ccedda38753ca74dc9e9b23f46b342b69e3f5"
+    },
+    "Please put the cup on the table.": {
+      "file": "assets/narration/teach-200-400-037.mp3",
+      "duration": 2.586063,
+      "sha256": "f490fd2525c7784c631e3f3cdec8d9bb001ea6f6a66fc14a23d480c21654b0f3"
+    },
+    "Look at every letter in put. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-038.mp3",
+      "duration": 6.217125,
+      "sha256": "0cb7198122d2a6d2841e2eb654f237060ea85f74ec07522d3cb8e94dc23c1dad"
+    },
+    "We went to the park.": {
+      "file": "assets/narration/teach-200-400-039.mp3",
+      "duration": 1.567313,
+      "sha256": "7883ad8b7bdba7cc76da1543440d348adb480b7a21e089242507f1891a2be41a"
+    },
+    "Word family: go → went. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-040.mp3",
+      "duration": 5.616313,
+      "sha256": "fe0bb1be89de21dda1d42447e1707b6991026a77c975e8c12d6dae49d346960b"
+    },
+    "I got a book for my birthday.": {
+      "file": "assets/narration/teach-200-400-041.mp3",
+      "duration": 2.115875,
+      "sha256": "2f1b2144c72517812e152f7741f81dfddbb2a2f1a44f734350afc57a5754fc02"
+    },
+    "Word family: get → got. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-042.mp3",
+      "duration": 5.198313,
+      "sha256": "e41ed8db3d8491de1d10b1e6c5422b8abd82abf5ca0b506da5639f3197dab00d"
+    },
+    "We eat our lunch together.": {
+      "file": "assets/narration/teach-200-400-043.mp3",
+      "duration": 1.906938,
+      "sha256": "9c75194153c8d72743328213986f7b25b2598b6cb808b507588cf314193a59b5"
+    },
+    "Look carefully at “ea” in eat. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-044.mp3",
+      "duration": 6.635063,
+      "sha256": "2a1c1c8d2676d05227bdd982479b48681209a4c6af4429ed5b8662dc176c6e7a"
+    },
+    "The horse ate the apple.": {
+      "file": "assets/narration/teach-200-400-045.mp3",
+      "duration": 1.802438,
+      "sha256": "b3874d044fc2540613c760d885e7ae8cf174f17daa50d42da22bf6a257a7e1d9"
+    },
+    "Word family: eat → ate. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-046.mp3",
+      "duration": 5.328938,
+      "sha256": "aab59c10ebf9e0a3c15c67fe6d817a372d9aaa504ad2864d622fe1bec577ffde"
+    },
+    "Come and play with me.": {
+      "file": "assets/narration/teach-200-400-047.mp3",
+      "duration": 1.750188,
+      "sha256": "8524e8b1bf0cced3d58526c59cdd86a3d85f0b53bd151b50cab15eba1beb6fa0"
+    },
+    "Look carefully at “ay” in play. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-048.mp3",
+      "duration": 6.870188,
+      "sha256": "9210e4b93434d636b4b35b1fecdb6f24b4792e1506c156672b285bd5cd2db820"
+    },
+    "We are going to the beach.": {
+      "file": "assets/narration/teach-200-400-049.mp3",
+      "duration": 1.98525,
+      "sha256": "100901b250ee77fb68421672e84f382a6845f082b7824df2436d8732230ec656"
+    },
+    "Word family: go → going. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-050.mp3",
+      "duration": 5.746938,
+      "sha256": "cb04592aacc9c746591d283e45e0fb4da8cb9051f9e8b686e4ade7291df7b35a"
+    },
+    "My sister goes to school.": {
+      "file": "assets/narration/teach-200-400-051.mp3",
+      "duration": 1.933063,
+      "sha256": "a8435ad8f47b0431b719b36194f83fed14377f983e4ab118fa9d13f3465821c8"
+    },
+    "Word family: go → goes. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-052.mp3",
+      "duration": 6.687313,
+      "sha256": "436e6c18f2e08c0abb8f0d9c466db6280a7061fa277b24c329f8333fcd3dbb3a"
+    },
+    "I can't reach the top shelf.": {
+      "file": "assets/narration/teach-200-400-053.mp3",
+      "duration": 2.115875,
+      "sha256": "34807dac642ddcb9b9bbdf4d0c94d6eaaee659b32bf926172885bdfc52bd10ad"
+    },
+    "can't means cannot. The apostrophe takes the place of missing letters.": {
+      "file": "assets/narration/teach-200-400-054.mp3",
+      "duration": 5.799125,
+      "sha256": "f9b6125fe014adf752febeaf516d479a269d94c63276df3a1d8b9eba18ad0580"
+    },
+    "I didn't hear the bell.": {
+      "file": "assets/narration/teach-200-400-055.mp3",
+      "duration": 1.697938,
+      "sha256": "05a9d66466219c3f680f189ef961e33bc98d5cbbb76828fc7cbd7146bd77e0eb"
+    },
+    "didn't means did not. The apostrophe takes the place of missing letters.": {
+      "file": "assets/narration/teach-200-400-056.mp3",
+      "duration": 6.582813,
+      "sha256": "f7e8cae8dffddced95cc24f58bc72eb55bfc2903c7546cb95c05f896d232b468"
+    },
+    "There are three eggs in the nest.": {
+      "file": "assets/narration/teach-200-400-057.mp3",
+      "duration": 2.638313,
+      "sha256": "f593b5b9aaaf4f7b440d1d9a4f86e8d4c352196f281f08635a2992169b5dc0e0"
+    },
+    "three is 3. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-058.mp3",
+      "duration": 4.5975,
+      "sha256": "a6e5d50552a96aeac7369a1658afd3491fe59d7f77c90c5c78781587d920f17d"
+    },
+    "The cat has four paws.": {
+      "file": "assets/narration/teach-200-400-059.mp3",
+      "duration": 2.08975,
+      "sha256": "4968b18083eaceb049d9967e61a3fd5a19ca47dfab4ae40a6dd4762d1006ab95"
+    },
+    "four is 4. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-060.mp3",
+      "duration": 5.041625,
+      "sha256": "5acef6152420d573bc5abb2c3ad8d8eafd124255d8972be0f6752c533f2f06b6"
+    },
+    "I have five fingers on one hand.": {
+      "file": "assets/narration/teach-200-400-061.mp3",
+      "duration": 2.821188,
+      "sha256": "ed4800083eb7a3bc4fdb98daeca954ac2ab4121a41c2241060e2ccf4d0261eb0"
+    },
+    "five is 5. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-062.mp3",
+      "duration": 4.728125,
+      "sha256": "3379634a6ddbe7dec35ee8400aa57d0ba17624bc2178fb2e180f71ca8780fa5d"
+    },
+    "There are six apples in the bag.": {
+      "file": "assets/narration/teach-200-400-063.mp3",
+      "duration": 2.351,
+      "sha256": "7e0e24064abe4d4c85492bad4688470e0a1f6b9e49ff508ed353b0af26201451"
+    },
+    "six is 6. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-064.mp3",
+      "duration": 4.728125,
+      "sha256": "84266beef364a15b546981c285d81d573065bcd74ecb565fbd66a6935fdb2f99"
+    },
+    "There are seven days in a week.": {
+      "file": "assets/narration/teach-200-400-065.mp3",
+      "duration": 2.40325,
+      "sha256": "16791ebee691e59f89d527f38e29b0b75e4c36587f04997e48f9c6ba9559c66d"
+    },
+    "seven is 7. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-066.mp3",
+      "duration": 5.198313,
+      "sha256": "3bf1403e39fac191f5a8cf31f05ff5f9c16daacaf8bb5281421dc0e5980aacf0"
+    },
+    "A spider has eight legs.": {
+      "file": "assets/narration/teach-200-400-067.mp3",
+      "duration": 1.98525,
+      "sha256": "3f4464f24cd202956c7b110396d5e73336858f7030868579004e9c7a4da6a969"
+    },
+    "Eight sounds like ate.": {
+      "file": "assets/narration/teach-200-400-068.mp3",
+      "duration": 1.906938,
+      "sha256": "49d2da18324cedcf00d8def1714c5e5fcec8784f56d22cce109ea2825d6336f6"
+    },
+    "There are nine shells in the box.": {
+      "file": "assets/narration/teach-200-400-069.mp3",
+      "duration": 2.4555,
+      "sha256": "8f3814ffcf4506753f09e4fbb1a27033594e9ac9c2bc037422a9928fa63db266"
+    },
+    "nine is 9. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-070.mp3",
+      "duration": 4.623625,
+      "sha256": "78f97a7f7051329698bb5c53eb71d9588c7fc8a8b37c74e3dbae17619d2097be"
+    },
+    "I can count to ten.": {
+      "file": "assets/narration/teach-200-400-071.mp3",
+      "duration": 1.671813,
+      "sha256": "e08a069ed3c7df05db1278eb25667a977dc087eb9f5e82757d85bff048f38b8f"
+    },
+    "ten is 10. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-072.mp3",
+      "duration": 4.493063,
+      "sha256": "c12007ba9bdf6280c83627f5b3c7a8b5256b294be07210c1e0b03210aab476fa"
+    },
+    "There are zero cakes left on the plate.": {
+      "file": "assets/narration/teach-200-400-073.mp3",
+      "duration": 2.690563,
+      "sha256": "c3b922a5bce0addb7368db7692d943331dc85957796644bd341c957f8b5e3660"
+    },
+    "zero is 0. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-074.mp3",
+      "duration": 4.911,
+      "sha256": "b9147840c22774176e441481137f962ffb6c56fa30df2247de5583b063b4a1cb"
+    },
+    "My friend likes to play with me.": {
+      "file": "assets/narration/teach-200-400-075.mp3",
+      "duration": 2.220375,
+      "sha256": "0a58333f0ed9e3795244783ac43d56e65ea43d925342b3db6fa5255b379c9276"
+    },
+    "Look at every letter in friend. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-076.mp3",
+      "duration": 6.870188,
+      "sha256": "ce8ca53cff0d35765c48df337769ef030721a8bb4d4d83c42f0efe2906e54eb1"
+    },
+    "We learn to read at school.": {
+      "file": "assets/narration/teach-200-400-077.mp3",
+      "duration": 2.0375,
+      "sha256": "afe59a91e2e0aed7dd232a100eebbead52b697101447c7598ae10fd30761c5d9"
+    },
+    "In school, ch sounds like k.": {
+      "file": "assets/narration/teach-200-400-078.mp3",
+      "duration": 2.925688,
+      "sha256": "b36b62b19ea4182a5566431f02eac155b3a3321a6d61eb647053ae613dd888f7"
+    },
+    "I feel happy when we play together.": {
+      "file": "assets/narration/teach-200-400-079.mp3",
+      "duration": 2.638313,
+      "sha256": "e4cd0c8e05f931d5a7c0f3d9a844d4f25389935d3462d65f3340ad3a6efc61e2"
+    },
+    "Look at every letter in happy. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-080.mp3",
+      "duration": 6.687313,
+      "sha256": "b3a51996714cc0dbd0c5bafebd900218b9cca9e2952721fc5765b2f5be924281"
+    },
+    "I am glad to see you.": {
+      "file": "assets/narration/teach-200-400-081.mp3",
+      "duration": 1.750188,
+      "sha256": "3adf36e10168a1886244fbbb763391723ed90a7e7f2cf828fc7ab29a1ec96670"
+    },
+    "Look at every letter in am. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-082.mp3",
+      "duration": 6.217125,
+      "sha256": "92a86099eaed1f519dbdc57190a92afa5a99728ede67c27147cfb3007de886e7"
+    },
+    "There is too much water in the cup.": {
+      "file": "assets/narration/teach-200-400-083.mp3",
+      "duration": 2.324875,
+      "sha256": "fbe154daab81fcf20d588247041e13751dbdbf800b9cae37cf461cc8b0704fd3"
+    },
+    "Look carefully at “ch” in much. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-084.mp3",
+      "duration": 6.112625,
+      "sha256": "f180a6640b7b8178b0b515bd14c2ff517350167d23afe83fc9182a4cf7413fd6"
+    },
+    "The old tree has a thick trunk.": {
+      "file": "assets/narration/teach-200-400-085.mp3",
+      "duration": 2.742813,
+      "sha256": "29f841eaaeda36a96e8fe7add9c4f0593b7124cc58b559ed84388a776f9a1b31"
+    },
+    "Look at every letter in old. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-086.mp3",
+      "duration": 6.817938,
+      "sha256": "f3cf95bf23987d6ac06fdee4993d3c640684e8a2f1c99c18f7cc2027273d8457"
+    },
+    "The snow feels cold on my hands.": {
+      "file": "assets/narration/teach-200-400-087.mp3",
+      "duration": 2.742813,
+      "sha256": "99f0b65d2cbea34ce3f007d802a765ce401c21e958eb2cd86d61f0ccdc4326f3"
+    },
+    "Look at every letter in cold. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-088.mp3",
+      "duration": 6.530563,
+      "sha256": "35976fd9fb0668d7decd4b786214bbdc3221b2da17d0b0277e15c4c05a049fd7"
+    },
+    "My mum reads a book with me.": {
+      "file": "assets/narration/teach-200-400-089.mp3",
+      "duration": 2.0375,
+      "sha256": "d18635fce1144b4ec10a8f64be6b3f774296f2967697abea048edd00fc35d667"
+    },
+    "Look at every letter in mum. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-090.mp3",
+      "duration": 6.03425,
+      "sha256": "3945c25990394d4441ccf0a8a0c552f9a7149c80ea3099cd7b2ce99f73c022f0"
+    },
+    "My parents help me learn.": {
+      "file": "assets/narration/teach-200-400-091.mp3",
+      "duration": 2.115875,
+      "sha256": "151037d7a910de4cc859985ccacc6262e79b104c5bc1ceb836f5d1baffa69b0d"
+    },
+    "Look carefully at “ar” in parents. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-092.mp3",
+      "duration": 6.112625,
+      "sha256": "eca85c02b3f5936fcad089b0367ad3f89b18e98ee4d6dba309347b2df5b1e07f"
+    },
+    "I asked my friend to play.": {
+      "file": "assets/narration/teach-200-400-093.mp3",
+      "duration": 2.0375,
+      "sha256": "ff960947f2ab952aecc0ec0431bd3e31116908564662661617236d6c228391b0"
+    },
+    "Word family: ask → asked. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-094.mp3",
+      "duration": 7.131375,
+      "sha256": "4d5150ec102d1dba371c8e82079c95e7e81fbf7bec826ec183a2ee01589028bd"
+    },
+    "This box is bigger than that one.": {
+      "file": "assets/narration/teach-200-400-095.mp3",
+      "duration": 2.4555,
+      "sha256": "9bb46360776e774f33e5c1212430dea080fd5a6801d99ec7ae1e82ae8445d663"
+    },
+    "Word family: big → bigger. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-096.mp3",
+      "duration": 6.0865,
+      "sha256": "8e61ca3c6dd10f813cf49c61fd81e41cdbb73a541cc3c9a64e437cd926ace250"
+    },
+    "We wear boots on a rainy day.": {
+      "file": "assets/narration/teach-200-400-097.mp3",
+      "duration": 2.40325,
+      "sha256": "52885db7e38c39ba9e9e2b080361489ea8ac13c47821911e6b8a6f31bdfca93d"
+    },
+    "Word family: rain → rainy. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-098.mp3",
+      "duration": 6.870188,
+      "sha256": "86cae4f902f7843813549aa4f72e2ec2090e415603007ce1c72b8d34bef57e3d"
+    },
+    "There are eleven players on the team.": {
+      "file": "assets/narration/teach-200-400-099.mp3",
+      "duration": 2.533875,
+      "sha256": "176f02c959e0a69ed9fa0ccb35d3ba3c4f96417fda86d6fcc6ef8b9dd9e79b8a"
+    },
+    "eleven is 11. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-100.mp3",
+      "duration": 5.0155,
+      "sha256": "a8593ec099d38b677403abf14a8968a5dbd45c2a2aef5dfe8e608f1049794828"
+    },
+    "You may have an apple.": {
+      "file": "assets/narration/teach-200-400-101.mp3",
+      "duration": 1.750188,
+      "sha256": "bebef46ed93d2e7287ec54d7defdf2aabca540f23edbe9c88674b19c3daff79f"
+    },
+    "Look carefully at “ay” in may. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-102.mp3",
+      "duration": 6.217125,
+      "sha256": "3d06dd740ab082f6419e957e9f2c183c9679eee962395e94c56487733deeebea"
+    },
+    "I never put my hand in a fire.": {
+      "file": "assets/narration/teach-200-400-103.mp3",
+      "duration": 2.272625,
+      "sha256": "bbaf0a6f77e86db5aa7b331edf7e5cca467733a81d6a9efa2bacf5a386bc83e5"
+    },
+    "Look carefully at “er” in never. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-104.mp3",
+      "duration": 6.112625,
+      "sha256": "adcb84e991c20d14e0b698703aacc471612f2d6e378896593ccd200bd5779087"
+    },
+    "My cup is full of water.": {
+      "file": "assets/narration/teach-200-400-105.mp3",
+      "duration": 1.98525,
+      "sha256": "5dc437e46c20f1fb9bd6a0bdfc3013a632b3224163b3de9d467388d747b811ed"
+    },
+    "Look at every letter in full. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-106.mp3",
+      "duration": 6.452188,
+      "sha256": "743b0515d8d1817f0ed674a02085b023df48a5ebf24bcdb811e682eeb5924008"
+    },
+    "The sky is blue today.": {
+      "file": "assets/narration/teach-200-400-107.mp3",
+      "duration": 1.933063,
+      "sha256": "f273c7de697e90f6b304e1b1590038979c6db49167412b3a6a89d80884dd9b11"
+    },
+    "Look at every letter in blue. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-108.mp3",
+      "duration": 6.452188,
+      "sha256": "f842f1c450e033866680f7c8e891f0852287b68e89968bca05055ebcd091377e"
+    },
+    "My grandma tells wonderful stories.": {
+      "file": "assets/narration/teach-200-400-109.mp3",
+      "duration": 2.873438,
+      "sha256": "3410682e41f556530e527b4368ac1e3aadd91721a410d91323398355b495a33e"
+    },
+    "Look at every letter in grandma. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-110.mp3",
+      "duration": 6.817938,
+      "sha256": "be1c62bcd9da633a554088c811ac049747f02cd5247f551fdd1cd80c6c4eaa33"
+    },
+    "My grandpa grows flowers.": {
+      "file": "assets/narration/teach-200-400-111.mp3",
+      "duration": 2.0375,
+      "sha256": "9aeb9ef0c98873c65cefa57a1c25d91e77e22f156715f70a2dde047724bd05a3"
+    },
+    "Look at every letter in grandpa. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-112.mp3",
+      "duration": 6.817938,
+      "sha256": "c5ab8bbdccb258a824b00985f72e57dada5ed6dca7ea91391a4c9c83d7a77050"
+    },
+    "The sign says to stop.": {
+      "file": "assets/narration/teach-200-400-113.mp3",
+      "duration": 1.906938,
+      "sha256": "0c83b6fe0db29f033f1f44b55488f154998428f06d2722a8f07cb67ed0117cdf"
+    },
+    "Word family: say → says. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-114.mp3",
+      "duration": 5.982,
+      "sha256": "c3c248d14834613772f87328c89aa41d0c0597f437b2329210d9ca8df867d1fc"
+    },
+    "The elephant is the biggest animal here.": {
+      "file": "assets/narration/teach-200-400-115.mp3",
+      "duration": 2.951813,
+      "sha256": "f40e3f551ed9ce8915d44d4e0193c5d5a3ddf376cf794cfc2f04eb71bdb808fe"
+    },
+    "Word family: big → biggest. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-116.mp3",
+      "duration": 6.922438,
+      "sha256": "815d1278e79c0a6994061fd1eacceffc0ae1345ad110067aceb21a11ce5a9a5d"
+    },
+    "It is a warm, sunny day.": {
+      "file": "assets/narration/teach-200-400-117.mp3",
+      "duration": 2.220375,
+      "sha256": "aa126fe32f3bf7eab7ce97e2e95f34601b1407fa146b36a24ee5d66a0ca287fd"
+    },
+    "Word family: sun → sunny. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-118.mp3",
+      "duration": 6.504438,
+      "sha256": "187a323c33e7569eb84c07f362a3f8b35331d725d046a045ec97559b8e6fd4e0"
+    },
+    "There are twelve eggs in the box.": {
+      "file": "assets/narration/teach-200-400-119.mp3",
+      "duration": 2.4555,
+      "sha256": "274167dfcfccf6153fb940237e27fe86c1eaf7c3a084cf8023c1f67e35c32e12"
+    },
+    "twelve is 12. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-120.mp3",
+      "duration": 5.276688,
+      "sha256": "d535e87fff7e696aebaf59cee197f28ce509d647ba7601cb11f698a7e57b2c3e"
+    },
+    "I saw a whale once.": {
+      "file": "assets/narration/teach-200-400-121.mp3",
+      "duration": 1.750188,
+      "sha256": "46b3eb8cd3611c7d383f5e423b9aba48a196fdc955153891ac45ad2776782bec"
+    },
+    "Look at every letter in once. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-122.mp3",
+      "duration": 6.269375,
+      "sha256": "1540a0a68184768241fd71486c779c26efdab09b589bab2dc0be7230af5bf5b2"
+    },
+    "We will be home soon.": {
+      "file": "assets/narration/teach-200-400-123.mp3",
+      "duration": 1.98525,
+      "sha256": "ee795e40ea8543f42f635105812701dd7bec48f5d1be7294fd4cb8d4128ac6b4"
+    },
+    "Look carefully at “oo” in soon. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-124.mp3",
+      "duration": 6.217125,
+      "sha256": "d54739d2a5dcaeef24c9eb39261b8886226e0d4e2ad068718dd23742ffb11aae"
+    },
+    "I feel better after a rest.": {
+      "file": "assets/narration/teach-200-400-125.mp3",
+      "duration": 2.272625,
+      "sha256": "b880b24b38ff77f04db3a55813feaf0c34fcacbb085b4f8630b1a72a9479ff3b"
+    },
+    "Look carefully at “er” in better. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-126.mp3",
+      "duration": 5.92975,
+      "sha256": "d6269844bc1354007f34b66b16bb77c4edfe0d91d66566b77d9938bb543a759b"
+    },
+    "The black cat sits on the wall.": {
+      "file": "assets/narration/teach-200-400-127.mp3",
+      "duration": 2.351,
+      "sha256": "06f9702089b578778e3084b9501e1e9f2307d00b57ab89b7369ff422645639e5"
+    },
+    "Look at every letter in black. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-128.mp3",
+      "duration": 7.000813,
+      "sha256": "d0dec3a5904feff6212ad2e3846b2b1e430c734914d362b662d8f04bd3ad08a8"
+    },
+    "My aunt is my mother's sister.": {
+      "file": "assets/narration/teach-200-400-129.mp3",
+      "duration": 2.742813,
+      "sha256": "fd18d39810693746822684610bc0ddcacf1b556b39f949e18beccd2c49c26bf2"
+    },
+    "Look at every letter in aunt. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-130.mp3",
+      "duration": 6.164875,
+      "sha256": "477468526bd0c4664485d16b4ab9e070d061fa923dd78e5e831e96494e19a81d"
+    },
+    "My cousin is my aunt's child.": {
+      "file": "assets/narration/teach-200-400-131.mp3",
+      "duration": 2.533875,
+      "sha256": "e0fc8bcc5fed57d46be354c22daad77545e6fbaf1fc0297ce4c2d7995c218200"
+    },
+    "Look carefully at “ou” in cousin. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-132.mp3",
+      "duration": 5.982,
+      "sha256": "30017a0ac51f7ab8bb080dae094c85ec075002a9e5c553ddb63870e67baf3447"
+    },
+    "We are talking about the story.": {
+      "file": "assets/narration/teach-200-400-133.mp3",
+      "duration": 2.742813,
+      "sha256": "a9885d506d86fe6a14df5348c3709997a344c479bbc7ab8c6579fde0ead5ec88"
+    },
+    "Word family: talk → talking. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-134.mp3",
+      "duration": 6.34775,
+      "sha256": "7db6261468d6079d9eeb8c9ab79f13bc382fd312fdf9fee31d473215802c553c"
+    },
+    "The rain is worse than it was before.": {
+      "file": "assets/narration/teach-200-400-135.mp3",
+      "duration": 2.951813,
+      "sha256": "ceaa992590b7ed7d9bcf065995059e1ae2647843246bd21c1b545de975cb4db2"
+    },
+    "Look carefully at “or” in worse. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-136.mp3",
+      "duration": 7.000813,
+      "sha256": "9c68e3940a895a93d032c6637b95e4b931b7635d1135d2a389240f32ab703919"
+    },
+    "We fly a kite on a windy day.": {
+      "file": "assets/narration/teach-200-400-137.mp3",
+      "duration": 2.690563,
+      "sha256": "f1b959800ed269fe2d4274132bfdc1795912f8a5c59d8b5449fce95cbd76c55c"
+    },
+    "Word family: wind → windy. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-138.mp3",
+      "duration": 7.601625,
+      "sha256": "746e3f5bf7d0c3d9a92f88b85f69ad872ccc7d19e07a278a89f4d0f1ce8866ae"
+    },
+    "We count thirteen leaves on the branch.": {
+      "file": "assets/narration/teach-200-400-139.mp3",
+      "duration": 2.925688,
+      "sha256": "b5ae72176f1e4cfd3f10431d357b5b606eedef1b86eec3e121e8a8bd513b976f"
+    },
+    "Compare three, thirteen and thirty.": {
+      "file": "assets/narration/teach-200-400-140.mp3",
+      "duration": 3.47425,
+      "sha256": "fa6f2fda89b2e134f02bf86dafa8d7a63e99aa1e1fbc1a75feced978f559e562"
+    },
+    "We will go to the park today.": {
+      "file": "assets/narration/teach-200-400-141.mp3",
+      "duration": 2.0375,
+      "sha256": "4a33a85f6798ef9a23ad91d30d024e6a6fa049ab442f96c323e9b28cf38d225e"
+    },
+    "A day of the week. Its name starts with a capital letter.": {
+      "file": "assets/narration/teach-200-400-142.mp3",
+      "duration": 4.493063,
+      "sha256": "11bcdf0c2441f9866b3878a272c4537d3bf7206fd2516a04bde9690d8d1f57d7"
+    },
+    "You can read that word well.": {
+      "file": "assets/narration/teach-200-400-143.mp3",
+      "duration": 2.0375,
+      "sha256": "473b99de2a85787975a8e8fefe415319db69fa0b520234f4b3d7881921161263"
+    },
+    "Look at every letter in well. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-144.mp3",
+      "duration": 6.582813,
+      "sha256": "8116c73a947a0b7dd60214d1973a117eb5630cd7dbb59c186e06b1a435efd47a"
+    },
+    "The ball is round.": {
+      "file": "assets/narration/teach-200-400-145.mp3",
+      "duration": 1.750188,
+      "sha256": "3058cf0e75b17caaadf0b591ec6d947fb253f566fadebe50287eee7a5662e276"
+    },
+    "Look carefully at “ou” in round. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-146.mp3",
+      "duration": 5.851375,
+      "sha256": "73c70adf25665dfe24b84e8d12da61d38c2912017efdab1ee6864d6fcea07bbf"
+    },
+    "My coat keeps me warm.": {
+      "file": "assets/narration/teach-200-400-147.mp3",
+      "duration": 2.0375,
+      "sha256": "b8771fffee7b274d88e6972dc85652362c2f6622c5acc2c8677799c19884ebae"
+    },
+    "Look carefully at “ar” in warm. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-148.mp3",
+      "duration": 6.452188,
+      "sha256": "633e7806d2bb0ffd7218e0c6e6a4029f8b3bbd8b86c3bbfe179161d56e898b61"
+    },
+    "Our teacher helps us learn to read.": {
+      "file": "assets/narration/teach-200-400-149.mp3",
+      "duration": 2.951813,
+      "sha256": "7f9cf38e81be0113c968fef56b4620d85a6cedb10fce0b1422e6f7a07cfe2584"
+    },
+    "Look carefully at “ch” in teacher. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-150.mp3",
+      "duration": 6.530563,
+      "sha256": "7340dffef8884604560795f14015d836554cabee109cad6bbde51d20b65de55c"
+    },
+    "We read together in our classroom.": {
+      "file": "assets/narration/teach-200-400-151.mp3",
+      "duration": 2.690563,
+      "sha256": "8fc472ca24bd83992edc1187e13f95a18f474e5f994e3c1a595b3570b7367349"
+    },
+    "Look carefully at “oo” in classroom. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-152.mp3",
+      "duration": 6.817938,
+      "sha256": "32ad580993b4413da67a6d8917b0d0706d607c0c1320f545b00cbcef19afcb10"
+    },
+    "I call my dog to come home.": {
+      "file": "assets/narration/teach-200-400-153.mp3",
+      "duration": 2.220375,
+      "sha256": "5a48095546b362ee89e006eb2cc3fa773a8a68a4e9e0ca893c58cdb00448f9a3"
+    },
+    "Look at every letter in call. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-154.mp3",
+      "duration": 6.4,
+      "sha256": "47dd44ce5d1315b1819d4ee06c43091cc01b3a047d76e28572426e0abe0d16fa"
+    },
+    "This is the worst weather of the week.": {
+      "file": "assets/narration/teach-200-400-155.mp3",
+      "duration": 2.690563,
+      "sha256": "f496269f6b1d81ad09e3e5e6eba3d6633067d27dbd10b53e158fc383c2a1cd1f"
+    },
+    "Look carefully at “or” in worst. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-156.mp3",
+      "duration": 6.713438,
+      "sha256": "7c419d332654c410922cbc237f2c10f8e2d7f8cd12d8e81017b6080cb7d0729a"
+    },
+    "The thick fog makes it hard to see.": {
+      "file": "assets/narration/teach-200-400-157.mp3",
+      "duration": 2.638313,
+      "sha256": "e976e22664b294353932a114957e5df75e3a6cd8bbd6b393eff93dd007dd11fe"
+    },
+    "Look at every letter in fog. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-158.mp3",
+      "duration": 6.948563,
+      "sha256": "48aa07035a3de80093f5e5ed391c7c9e9ed15874bb1d137b2ebce69f62f92fc5"
+    },
+    "There are fourteen beads on the string.": {
+      "file": "assets/narration/teach-200-400-159.mp3",
+      "duration": 2.821188,
+      "sha256": "2c219391ed79059fd1a7c2b581127d05cd76ca8b561ca58bc6a7e1f6430d30af"
+    },
+    "Compare four, fourteen and forty.": {
+      "file": "assets/narration/teach-200-400-160.mp3",
+      "duration": 3.36975,
+      "sha256": "b1838ac511ab3abb30bb0ff27761b5568074723fd8c723efc30bda6e1acacde9"
+    },
+    "The tree is taller than the house.": {
+      "file": "assets/narration/teach-200-400-161.mp3",
+      "duration": 2.4555,
+      "sha256": "119916c7f1e27b21e540d36debf5ee683553e4271717a07dbb9dc2f7ded19a1f"
+    },
+    "Look carefully at “th” in than. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-162.mp3",
+      "duration": 6.03425,
+      "sha256": "c2f625bfa54088e1dc5790d422da654bff23cd1692543be3cb036092a34527e8"
+    },
+    "Put your other shoe on.": {
+      "file": "assets/narration/teach-200-400-163.mp3",
+      "duration": 1.750188,
+      "sha256": "ad34bb9974efa95f106eb0e8f5740ef4d562f60f18859cffcb681701a979e2aa"
+    },
+    "Look carefully at “th” in other. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-164.mp3",
+      "duration": 6.870188,
+      "sha256": "8c2dfcf388dae2e7285dee28a334a4ce28d24d8949a7bceed7ecb714c5c5ea2d"
+    },
+    "The horse has a brown tail.": {
+      "file": "assets/narration/teach-200-400-165.mp3",
+      "duration": 2.168125,
+      "sha256": "3bdcc9f9dbf3aa72561830b7636c176cea03db2be4d6dc3b9a59ae77cb3c411f"
+    },
+    "Look carefully at “ow” in brown. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-166.mp3",
+      "duration": 6.582813,
+      "sha256": "ef434e041c66399db5ad69673763b6b26df68d93f288947d8f265415412cf06a"
+    },
+    "My hands are clean now.": {
+      "file": "assets/narration/teach-200-400-167.mp3",
+      "duration": 1.854688,
+      "sha256": "1db0f335178e83c146595ece6233e0b7c16af178f8eed3744f90b1729357eabd"
+    },
+    "Look carefully at “ea” in clean. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-168.mp3",
+      "duration": 6.112625,
+      "sha256": "d56e2f5e88b11f805e1d60bf0aaedacb51c6d28b1174f07a3acb7d1fd0d769b9"
+    },
+    "We learn something new in the lesson.": {
+      "file": "assets/narration/teach-200-400-169.mp3",
+      "duration": 2.768938,
+      "sha256": "a89433067824c65703762e4c1089a7e7c727e5f763f493d9cf2f023c5a6ba7a6"
+    },
+    "Look at every letter in lesson. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-170.mp3",
+      "duration": 6.269375,
+      "sha256": "696e6640fb8a44ffd046e77dcb84d2b70043de265af35930e16d27fd065d6e66"
+    },
+    "I put my homework in my bag.": {
+      "file": "assets/narration/teach-200-400-171.mp3",
+      "duration": 1.98525,
+      "sha256": "8a17f518d0b3f73fecf2b96dd2a17dc3029808a87034fe258c9c57f5c357e92f"
+    },
+    "Look carefully at “or” in homework. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-172.mp3",
+      "duration": 7.053063,
+      "sha256": "4a97da38a00f44c57e3580ff224592bffd4fd13fe1b692d15dc83ef7eeea1804"
+    },
+    "My friend called my name.": {
+      "file": "assets/narration/teach-200-400-173.mp3",
+      "duration": 1.906938,
+      "sha256": "8d4ce7a00ef3aeed7652649b86f7dae229bdf259ebfba8e5029bc020bdccd0fe"
+    },
+    "Word family: call → called. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-174.mp3",
+      "duration": 6.922438,
+      "sha256": "77ee751a30a9ee25a4aa749508f798efa5b7a4233e21b19f08cf46cb1f2df60d"
+    },
+    "The little puppy is afraid of the thunder.": {
+      "file": "assets/narration/teach-200-400-175.mp3",
+      "duration": 2.821188,
+      "sha256": "05b750b18012ac6b53bd7770097b812aa4c99b005c8ae0f4b75741f7a2b3c459"
+    },
+    "Look carefully at “ai” in afraid. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-176.mp3",
+      "duration": 6.452188,
+      "sha256": "5c39186436bac5494755942363849531513195c550424e3436ca37abc4efe2ce"
+    },
+    "We hear thunder during the storm.": {
+      "file": "assets/narration/teach-200-400-177.mp3",
+      "duration": 2.742813,
+      "sha256": "8c25b5a56cd944ff2fe7a284e4a7717380d0b4e2aa19def53cce2a43ffbe9fe0"
+    },
+    "Look carefully at “th” in thunder. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-178.mp3",
+      "duration": 6.817938,
+      "sha256": "afcbdd4200e6ec26a50eff86d06b8bbba1688ab4bbcc6f0bf078ca48aff6ef4e"
+    },
+    "There are fifteen children on the bus.": {
+      "file": "assets/narration/teach-200-400-179.mp3",
+      "duration": 2.690563,
+      "sha256": "9c58360b4c18e107cb384bfff4b2fa5db64921ea6d750fd74b5ce9dab57ee53a"
+    },
+    "Compare five, fifteen and fifty.": {
+      "file": "assets/narration/teach-200-400-180.mp3",
+      "duration": 3.239125,
+      "sha256": "d945470a1d8a5ccc51870d58fff462d211e66e1a0a8a85d8c1fda1e30104c5da"
+    },
+    "Give each child an apple.": {
+      "file": "assets/narration/teach-200-400-181.mp3",
+      "duration": 1.933063,
+      "sha256": "bd65b3f88cffe5666dea16b05251b26b01f02ea5d57be71d62ed78ed24da0c9e"
+    },
+    "Look carefully at “ch” in each. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-182.mp3",
+      "duration": 6.164875,
+      "sha256": "df12cf0bd37ad8a4212142071a470aba46e1f0632f15bd4038b4729a7fb7fb50"
+    },
+    "I like cats and I also like dogs.": {
+      "file": "assets/narration/teach-200-400-183.mp3",
+      "duration": 3.343625,
+      "sha256": "500ddab70369d4789e606d88e94cc255c37545718324f965f00fc638cea20ca4"
+    },
+    "Look at every letter in also. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-184.mp3",
+      "duration": 6.03425,
+      "sha256": "031dc8f295a1f650a1d17188e106aaf631dc19e6aa83bef3c25520e7c94ac0c6"
+    },
+    "The sun shines in the sky.": {
+      "file": "assets/narration/teach-200-400-185.mp3",
+      "duration": 2.220375,
+      "sha256": "e15774e93986310d351c1d6f695896142941263246256a13b75baa1236e531ef"
+    },
+    "Look at every letter in sun. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-186.mp3",
+      "duration": 6.635063,
+      "sha256": "a7012550c2dc05f09e760abfcc991add442f93fa3eed0306a6e835266c3ea19c"
+    },
+    "Look carefully at “oo” in door. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-187.mp3",
+      "duration": 6.269375,
+      "sha256": "8774e755f4cc3d3d358507ae45896f4dd474a926671f29562e70a5cb47d15a49"
+    },
+    "I write with a pencil.": {
+      "file": "assets/narration/teach-200-400-188.mp3",
+      "duration": 1.671813,
+      "sha256": "85bf5c3c137225b49b42d9a1b10e0328a9e514eff933f569812884528bf984e7"
+    },
+    "Look at every letter in pencil. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-189.mp3",
+      "duration": 6.635063,
+      "sha256": "a954006ec3d55bd1505bb2f3f7ea7ee55a4ca608a4515f484694b6f90d616514"
+    },
+    "The pen makes a blue line.": {
+      "file": "assets/narration/teach-200-400-190.mp3",
+      "duration": 2.0375,
+      "sha256": "acb44953712d528f11deca8e2ee89ceb3dfef22a919ab662f107f9d720d68f02"
+    },
+    "Look at every letter in pen. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-191.mp3",
+      "duration": 6.713438,
+      "sha256": "9b3a3098c003386d74d79e68cd03cc133a74c0ea3c7b38e916e14b481b28f82d"
+    },
+    "We looked inside the box.": {
+      "file": "assets/narration/teach-200-400-192.mp3",
+      "duration": 2.0375,
+      "sha256": "9d7b93d7b4d86664f0dd9702ffa03a3f938d3d2599574a9e07c49b6ed8a408e9"
+    },
+    "Word family: look → looked. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-193.mp3",
+      "duration": 7.000813,
+      "sha256": "c037c6f355e2f1552e733e340c180167bbb72399341e3cf27e3b594ed914c60f"
+    },
+    "I felt worried when I lost my bag.": {
+      "file": "assets/narration/teach-200-400-194.mp3",
+      "duration": 2.586063,
+      "sha256": "0fcb3a5ebf56619c1013c12a10339dc256a8c9b78b5386e62bd87d8eda4d9249"
+    },
+    "Look carefully at “or” in worried. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-195.mp3",
+      "duration": 7.183625,
+      "sha256": "81378889eabf90929c7279b8ca5742dbc15f80ab00294e6b23eeba02f2ecbf97"
+    },
+    "A flash of lightning lights up the sky.": {
+      "file": "assets/narration/teach-200-400-196.mp3",
+      "duration": 2.742813,
+      "sha256": "d2a4cf2c39c867cf12a78f7fca019ecb450fb24094fbdfa5fa4e7f6fb3f41708"
+    },
+    "Look carefully at “igh” in lightning. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-197.mp3",
+      "duration": 6.765688,
+      "sha256": "fe9f7ae6cb91c49ec4c0a0fb663428694826a60804abafd1ca3c967e7e2ae0cc"
+    },
+    "We count sixteen seeds in the packet.": {
+      "file": "assets/narration/teach-200-400-198.mp3",
+      "duration": 2.821188,
+      "sha256": "a56620319afb71901cc0b60cd8e8dcc8f5d69d4f6bcebdb1dd1e68c5ccf60c33"
+    },
+    "sixteen is 16. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-199.mp3",
+      "duration": 5.564063,
+      "sha256": "1ac287d603e3add22c5ec924009e2604c196dc3f2b816e61254c9e72593725a3"
+    },
+    "The bag is heavy, even for Dad.": {
+      "file": "assets/narration/teach-200-400-200.mp3",
+      "duration": 2.533875,
+      "sha256": "efaa97b29da6d2e5fd1fc166119a1304740f5336540f9ab15755834cbcb444c3"
+    },
+    "Look at every letter in even. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-201.mp3",
+      "duration": 6.635063,
+      "sha256": "487fd2508eb321476905c3f9ff7bbe03fed34a48ecc658921932614c2f569379"
+    },
+    "It is such a hot day!": {
+      "file": "assets/narration/teach-200-400-202.mp3",
+      "duration": 1.933063,
+      "sha256": "17ca98754b62647a3f09e47f9412d7061ad711b15a25e8c036505057108a02db"
+    },
+    "Look carefully at “ch” in such. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-203.mp3",
+      "duration": 6.922438,
+      "sha256": "d36bdf641ae47faf6eb0c2cb576a0918728ddb519389ed6158a18e0cd8c5baa9"
+    },
+    "The flower is pretty and pink.": {
+      "file": "assets/narration/teach-200-400-204.mp3",
+      "duration": 2.168125,
+      "sha256": "55fc7afd47dfe9259d9c75e38b538417601b16eb227ebe97b287269e1e79f8b6"
+    },
+    "Look at every letter in pretty. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-205.mp3",
+      "duration": 6.687313,
+      "sha256": "c1c949fe4588f7fe1bd657589f7d63dac2fb052415d47d8420f72ccd7fb64c01"
+    },
+    "The king wears a gold crown.": {
+      "file": "assets/narration/teach-200-400-206.mp3",
+      "duration": 2.272625,
+      "sha256": "0157d1d90aded09f5df0de6802f0d57aa0c2c2895d37c14f7f3ea170eed96561"
+    },
+    "Look carefully at “ng” in king. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-207.mp3",
+      "duration": 6.34775,
+      "sha256": "4f18d47403fff068721c802f2e8527dc61d9106d890e39c981bb316040d310c0"
+    },
+    "I use a ruler to draw a straight line.": {
+      "file": "assets/narration/teach-200-400-208.mp3",
+      "duration": 2.951813,
+      "sha256": "36a5268a4ce48bf280f963fc9ffe6f37682080d828a2fd16cf2c898bf6424535"
+    },
+    "Look carefully at “er” in ruler. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-209.mp3",
+      "duration": 6.713438,
+      "sha256": "52c0417f3698ab4cbf02e92eac652bf18d7244db2d9913552cd14a109160783b"
+    },
+    "My books are in my bag.": {
+      "file": "assets/narration/teach-200-400-210.mp3",
+      "duration": 1.906938,
+      "sha256": "c3eb070e346ae699ee6baf3a5ce084348bc84e99274df98e6e2b404faceb18de"
+    },
+    "Look at every letter in bag. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-211.mp3",
+      "duration": 6.4,
+      "sha256": "7d4d7f9dc162d5b41b59269d9971d437abad8a86b8a40405f20da8f3c5683420"
+    },
+    "I am looking for my hat.": {
+      "file": "assets/narration/teach-200-400-212.mp3",
+      "duration": 1.906938,
+      "sha256": "f178a4d71fab8b0602b4ca0fe0740199bf2e9b04c6ccea2df7f534ebca9c6144"
+    },
+    "Word family: look → looking. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-213.mp3",
+      "duration": 6.452188,
+      "sha256": "30edb9a3dcc640876e43f5f6d4012daff5bd5838157976d7372af13b2912f1f7"
+    },
+    "I felt lonely until my friend came.": {
+      "file": "assets/narration/teach-200-400-214.mp3",
+      "duration": 2.925688,
+      "sha256": "5690d346e39c286aff543f849c30959d4b86ff157abb8f6de46e3eedfb486a2e"
+    },
+    "Look at every letter in lonely. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-215.mp3",
+      "duration": 6.713438,
+      "sha256": "4e59a2497eb1dfff4bb8cc7d70cec877ca0e0aaef95db6db00c9b83e3025a9ce"
+    },
+    "We see a rainbow after the rain.": {
+      "file": "assets/narration/teach-200-400-216.mp3",
+      "duration": 2.873438,
+      "sha256": "f3340cc4dd110dc9e2fa0b351e1bf3ef4f6c2d6976f1b2c8f7ba2c2c18fac68e"
+    },
+    "Look carefully at “ai” in rainbow. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-217.mp3",
+      "duration": 6.217125,
+      "sha256": "1d15ef931496a3a1c1075adc1cbd1b1dd0ea68b3316d60b9ee84291f2f89a17f"
+    },
+    "There are seventeen books on the shelf.": {
+      "file": "assets/narration/teach-200-400-218.mp3",
+      "duration": 2.768938,
+      "sha256": "15d8dab585449c0118f9139abd37ad0d66a4bde93c6925eb34e48b36b31868d2"
+    },
+    "seventeen is 17. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-219.mp3",
+      "duration": 4.911,
+      "sha256": "7dcfa09e74304ba7c1a66a0ca318bc7d93d47b417e677b46a9a31a7cbcac8a02"
+    },
+    "We are reading the same book.": {
+      "file": "assets/narration/teach-200-400-220.mp3",
+      "duration": 2.40325,
+      "sha256": "921411e95979ed62f47e56db1dea97d66edc466fa9c7a7185098809923415395"
+    },
+    "Look at every letter in same. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-221.mp3",
+      "duration": 6.530563,
+      "sha256": "ef29f81f38e84214426eb18a0be09f78a66848bdeddbca69ecd92ca1544a2ba4"
+    },
+    "May I have another apple?": {
+      "file": "assets/narration/teach-200-400-222.mp3",
+      "duration": 1.750188,
+      "sha256": "d46217058c735a8293faf022d9fcf618445354cfee641f0296149bd3f51f97c5"
+    },
+    "Look carefully at “th” in another. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-223.mp3",
+      "duration": 6.765688,
+      "sha256": "7de8041ebb8c1ff7660b1c1a271b9bb47fb28bbec38208e7db54d8b752d2bfe1"
+    },
+    "There are many shops in the town.": {
+      "file": "assets/narration/teach-200-400-224.mp3",
+      "duration": 2.586063,
+      "sha256": "5e5f3988ad86be8901dc4cf655955cc19b9a4405e51ca458019c8b82b606fd11"
+    },
+    "Look carefully at “ow” in town. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-225.mp3",
+      "duration": 6.687313,
+      "sha256": "fb9133217a6133c4e783e31e5d3e2b9ab6ab59f8479036c1cacfd80b554a5c93"
+    },
+    "I drink water when I am thirsty.": {
+      "file": "assets/narration/teach-200-400-226.mp3",
+      "duration": 2.925688,
+      "sha256": "c2ecb37ba5c9b8b2b3ed59b007b2f1e5f9f4043c538f9a1204096558873dd606"
+    },
+    "Look at every letter in drink. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-227.mp3",
+      "duration": 6.269375,
+      "sha256": "3a315d42b1499951c268f73c0c08202d737bde21922ca3d4162f5d7d05e32e58"
+    },
+    "We eat lunch in the middle of the day.": {
+      "file": "assets/narration/teach-200-400-228.mp3",
+      "duration": 2.768938,
+      "sha256": "46d9ea2f90d9ca68704697534dc48b07508e1e15fa883d1ffc96cac16eda86e0"
+    },
+    "Look carefully at “ch” in lunch. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-229.mp3",
+      "duration": 6.530563,
+      "sha256": "288da802423d4369c3fb44f5e3fc48eec924b899fac3b0f875e5febc955cf246"
+    },
+    "I eat breakfast when I get up.": {
+      "file": "assets/narration/teach-200-400-230.mp3",
+      "duration": 2.351,
+      "sha256": "f8f89cfac06bbc0e2f11ea3aae4005165c81efc7612cc1cea3e089f8980246e7"
+    },
+    "Look carefully at “ea” in breakfast. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-231.mp3",
+      "duration": 6.452188,
+      "sha256": "41e5f1d4a78ee81a44fddec8e3e45d224625c6541e8ccb7753e3aadf4a98e5a3"
+    },
+    "We watch the birds in the garden.": {
+      "file": "assets/narration/teach-200-400-232.mp3",
+      "duration": 2.40325,
+      "sha256": "200594af8e286c898149948e66f2acb17b2954f36b56ee757ea60828b9d9c48e"
+    },
+    "Look carefully at “ch” in watch. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-233.mp3",
+      "duration": 7.131375,
+      "sha256": "8cdfdd17a84bb41fb0bf6ae2d1a2ef2d9f0721cfee16ed9c5b2a6998b7566ea3"
+    },
+    "I am excited about my birthday.": {
+      "file": "assets/narration/teach-200-400-234.mp3",
+      "duration": 2.533875,
+      "sha256": "16065b3efc01fdebf219bf502cc4cae806d383196e632c0eddd60cfc7f0bc6e4"
+    },
+    "Look at every letter in excited. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-235.mp3",
+      "duration": 6.504438,
+      "sha256": "ef4a0447e8c5f7bc45fec72b6afb737654f7073e7e4bc974da2a57f835a7bfe3"
+    },
+    "The moon is out in space.": {
+      "file": "assets/narration/teach-200-400-236.mp3",
+      "duration": 1.933063,
+      "sha256": "cf431e87a655de00668f4c1b60b1edac5b615d84bfcba5682a05f6ebad482601"
+    },
+    "Look at every letter in space. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-237.mp3",
+      "duration": 7.3665,
+      "sha256": "627845f8f7ddc9811eedec4bbebc95d68321aaac72f8146637cd682d85758397"
+    },
+    "There are eighteen flowers in the garden.": {
+      "file": "assets/narration/teach-200-400-238.mp3",
+      "duration": 2.873438,
+      "sha256": "62a38a26664ac511f3d36c7d27642951df4f27b0ba5bb379575975a273ec669b"
+    },
+    "Eighteen has one t. Compare eight and eighty.": {
+      "file": "assets/narration/teach-200-400-239.mp3",
+      "duration": 4.205688,
+      "sha256": "9c2513cb0bf00de5c0bc15868aa9021fe454dc65b93d207adad13b8c2bb4eda0"
+    },
+    "The big tree has the most leaves.": {
+      "file": "assets/narration/teach-200-400-240.mp3",
+      "duration": 2.690563,
+      "sha256": "ddf8a3011bf438edaf49739b7a9ae5a9251462eac956e5e8ef516cbe864abfa3"
+    },
+    "Look at every letter in most. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-241.mp3",
+      "duration": 6.4,
+      "sha256": "33bfe619043e0e8cea4a7df815a397386c209560c1e67e20d1914852d0a6d183"
+    },
+    "There are a few cakes left.": {
+      "file": "assets/narration/teach-200-400-242.mp3",
+      "duration": 1.98525,
+      "sha256": "4c8a57eb3960a3038e972a817cd74f96f47859df93414b356f375ffafa2ff42a"
+    },
+    "Look at every letter in few. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-243.mp3",
+      "duration": 6.870188,
+      "sha256": "3ab6cb4c069524e307e5c06cdfe0d1327b350da61cbab17028cf896c09874072"
+    },
+    "The river flows under the bridge.": {
+      "file": "assets/narration/teach-200-400-244.mp3",
+      "duration": 2.40325,
+      "sha256": "85c2adf55ced63428f956132e5f4d2457085617c8e0ccb199b290dd0fb37a9ce"
+    },
+    "Look carefully at “er” in river. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-245.mp3",
+      "duration": 5.982,
+      "sha256": "cad0bacdd2a7241057b48803490bda10c9bedbc0a017b738408a358b0b6f3047"
+    },
+    "This key opens the door.": {
+      "file": "assets/narration/teach-200-400-246.mp3",
+      "duration": 2.0375,
+      "sha256": "e5d7affbc5b51209c78da4670152a5945a91aa0ff56bd3ece066daa9c69fab91"
+    },
+    "Look at every letter in key. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-247.mp3",
+      "duration": 6.635063,
+      "sha256": "2b0258bd721416387649cb948e5e38faaff3effaa18ea57207e6956fa34436c3"
+    },
+    "We have dinner in the evening.": {
+      "file": "assets/narration/teach-200-400-248.mp3",
+      "duration": 2.272625,
+      "sha256": "2d8e2f0bb7e1ef2d778904f390b7bd7af1196f023e332e5f8b44fa253a801a6a"
+    },
+    "Look carefully at “er” in dinner. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-249.mp3",
+      "duration": 5.982,
+      "sha256": "56be00821b012ce0f50d1d6d996c4ea62cfc80a749c33670ebec82b92d0b2ccb"
+    },
+    "I have an apple for a snack.": {
+      "file": "assets/narration/teach-200-400-250.mp3",
+      "duration": 1.802438,
+      "sha256": "e6b84181497a103e3172b4d3b7c0f7c78158dbc56ab39f998123cdd424586c06"
+    },
+    "Look at every letter in snack. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-251.mp3",
+      "duration": 6.452188,
+      "sha256": "2017f37cc88226296d4da87be61e9352b99aa0d81e4f2b0fbee73b808f1c6ea4"
+    },
+    "We search for the missing key.": {
+      "file": "assets/narration/teach-200-400-252.mp3",
+      "duration": 2.168125,
+      "sha256": "2832400e338cd0b4773d5cf1bb3776f6fd3deac62390d2790996fee1faf536b4"
+    },
+    "Look carefully at “ch” in search. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-253.mp3",
+      "duration": 6.4,
+      "sha256": "966ffe12fec9b5bb4c183f5d402d9788fc13ba47c45adc87544dcc2a035ae490"
+    },
+    "I feel tired after a long walk.": {
+      "file": "assets/narration/teach-200-400-254.mp3",
+      "duration": 2.586063,
+      "sha256": "2a222bdd75a24a463fa2e76657083f3cc0aadd5e8a86a16b257bce7f2b9e22c1"
+    },
+    "Look carefully at “ir” in tired. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-255.mp3",
+      "duration": 6.530563,
+      "sha256": "6d3882e5f95286ec5484396a59da3ed1435dd165745122f6d7eb7f09d2df7ed7"
+    },
+    "A whale swims in the ocean.": {
+      "file": "assets/narration/teach-200-400-256.mp3",
+      "duration": 2.08975,
+      "sha256": "02adf94dd129b6a9fedcf73e75c9c39c92de81e6c89c4d3a01e1dc48dd77d1f8"
+    },
+    "Look carefully at “ea” in ocean. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-257.mp3",
+      "duration": 6.713438,
+      "sha256": "a62d30a3d08a519f15f6b84ef23980ad12621c09eef0db59ee236240c0409840"
+    },
+    "We count nineteen shells on the sand.": {
+      "file": "assets/narration/teach-200-400-258.mp3",
+      "duration": 3.004063,
+      "sha256": "317b7d64499e0c610bd1e28fe40b3a6e83a2561c1d44905a159dc0c73d465004"
+    },
+    "nineteen is 19. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-259.mp3",
+      "duration": 5.198313,
+      "sha256": "4705410418811537d1c7dd4f65ea60f85626489e0a883b483245daea679e791b"
+    },
+    "We have enough food for everyone.": {
+      "file": "assets/narration/teach-200-400-260.mp3",
+      "duration": 2.533875,
+      "sha256": "ccfbd773656c97e8e2c18878bdaeff221f2e050ba64b9e14fcd9522431a2b7b1"
+    },
+    "Look carefully at “ou” in enough. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-261.mp3",
+      "duration": 6.582813,
+      "sha256": "7f1798c4405c71105c74a506787aa7962b1dbfa1be309ef65b474f0a6ed4944b"
+    },
+    "The cup is almost full.": {
+      "file": "assets/narration/teach-200-400-262.mp3",
+      "duration": 2.0375,
+      "sha256": "7a39bac4422cc2db6ea3314f1e6975963ddc969926ad7c2f69d3e5565babf751"
+    },
+    "Look at every letter in almost. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-263.mp3",
+      "duration": 6.452188,
+      "sha256": "ca910d8c8858c93e4e7033b1e5524d46340df7ed1e290020996d4563c0bac889"
+    },
+    "A white cloud floats across the sky.": {
+      "file": "assets/narration/teach-200-400-264.mp3",
+      "duration": 3.004063,
+      "sha256": "a6a8a913f6bd67759e25c396fa7082ea34e7e4691c34bbf933d77ea3af0fd7da"
+    },
+    "Look carefully at “ou” in cloud. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-265.mp3",
+      "duration": 6.452188,
+      "sha256": "8a3b72d440f0a43f7de7c03f751512d3af46aa10f23fee2a429071abfa171f70"
+    },
+    "There is snow on the mountain.": {
+      "file": "assets/narration/teach-200-400-266.mp3",
+      "duration": 2.08975,
+      "sha256": "5dac216ffdc8dc9c6f317d0097177976b76a88096bce2cd19a14860f2fee7189"
+    },
+    "Look carefully at “ai” in mountain. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-267.mp3",
+      "duration": 6.713438,
+      "sha256": "b1bbb79effe3887e3ac10c7913d3a795228659bfedacf7e8170633f52859610c"
+    },
+    "We cut a slice of bread.": {
+      "file": "assets/narration/teach-200-400-268.mp3",
+      "duration": 1.854688,
+      "sha256": "1e47999ee5b04f1146302b51ad866946512f3e17b64d4284fab77a004620c488"
+    },
+    "Look carefully at “ea” in bread. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-269.mp3",
+      "duration": 7.549375,
+      "sha256": "dcd892c750146090f9f9067e026d40c3df272243c9eff9194f8018a4379c0b3e"
+    },
+    "I spread butter on my bread.": {
+      "file": "assets/narration/teach-200-400-270.mp3",
+      "duration": 2.220375,
+      "sha256": "018db15b13558767cb370309ef066529318e4194b7398a6d3daf13b40a2ba3ac"
+    },
+    "Look carefully at “er” in butter. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-271.mp3",
+      "duration": 6.03425,
+      "sha256": "0b6dc89ed1376faea107daaf37888f40e642b8c46f6a01ef12b55a9f9eaed1a9"
+    },
+    "I hide behind the tree.": {
+      "file": "assets/narration/teach-200-400-272.mp3",
+      "duration": 1.802438,
+      "sha256": "04e004198695d8a2157bbfa852647ce8c1cce3463f26e5b822bf26b2bedab07c"
+    },
+    "Look at every letter in hide. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-273.mp3",
+      "duration": 6.504438,
+      "sha256": "a57606d998a51ec7d3001660d882708e1cdddf172cec6247b99d16c4530384b0"
+    },
+    "The sleepy baby closes her eyes.": {
+      "file": "assets/narration/teach-200-400-274.mp3",
+      "duration": 2.873438,
+      "sha256": "6f9a34ae0cf506f1e8d9f9b67b07855889cd2e22dc5fc22f3a8b065534ffe997"
+    },
+    "Look carefully at “ee” in sleepy. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-275.mp3",
+      "duration": 6.4,
+      "sha256": "075080d47e2d44214fd9ad1404ddaaea67b11bb9bdadec54e3d770a6a25a41e1"
+    },
+    "Ducks swim on the pond.": {
+      "file": "assets/narration/teach-200-400-276.mp3",
+      "duration": 2.272625,
+      "sha256": "b655c7d4ce7e3732777ca975426f54ac44027f77e33ba09d199d196e69c931b4"
+    },
+    "Look at every letter in pond. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-277.mp3",
+      "duration": 6.765688,
+      "sha256": "8de40e909f087da2d97a4b298bffed8924b901a474a5aab1f163d7a28e68c287"
+    },
+    "There are twenty pencils in the box.": {
+      "file": "assets/narration/teach-200-400-278.mp3",
+      "duration": 2.586063,
+      "sha256": "b5ef74c266bcd4e82303c2ad08f7941b8cf0726277d1b4c96d97d617d2f64405"
+    },
+    "twenty is 20. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-279.mp3",
+      "duration": 5.381188,
+      "sha256": "ef3d80e4f42aea40ab35858ccd1cf5e8e56b1f551194e2aceb6726007928d22c"
+    },
+    "We sometimes walk to school.": {
+      "file": "assets/narration/teach-200-400-280.mp3",
+      "duration": 2.220375,
+      "sha256": "a31810db2e6dc6185ad98ba46d5faa20ad519e1c5720e83f84f8ac77b00e06dc"
+    },
+    "Look at every letter in sometimes. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-281.mp3",
+      "duration": 6.4,
+      "sha256": "924aa1a08760f59d54a33fffba7880550c06fa6fdca2dd2f819d776904efbb27"
+    },
+    "The baby is still sleeping.": {
+      "file": "assets/narration/teach-200-400-282.mp3",
+      "duration": 1.98525,
+      "sha256": "264f7f23f421b91b56dde4effd3b13fb02a1b9327976b9dffc90cc827e8fd50f"
+    },
+    "Look at every letter in still. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-283.mp3",
+      "duration": 6.452188,
+      "sha256": "321b9d11f0957f07a400519614b077b611ef5ad99d818b98202e82e03448d374"
+    },
+    "My friends came to my party.": {
+      "file": "assets/narration/teach-200-400-284.mp3",
+      "duration": 2.351,
+      "sha256": "aee814964d2f48e9b1d66e1b6ada80ba3d4d7e0b378953535a80065144bfe129"
+    },
+    "Look at every letter in friends. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-285.mp3",
+      "duration": 6.582813,
+      "sha256": "6f16a6ec546ee5d25cfd1147591fdb26993f437bc23e65ee114d2d9ce057614c"
+    },
+    "We put food in the dog's bowl.": {
+      "file": "assets/narration/teach-200-400-286.mp3",
+      "duration": 2.50775,
+      "sha256": "3804962642712b11fc0bbd50599eb6f87f6a428256aa1fd130a46806c00aecc0"
+    },
+    "Look carefully at “oo” in food. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-287.mp3",
+      "duration": 6.504438,
+      "sha256": "fee3d7efa5add19c4609406d354a1550eff8a4e61532492be0385ed7adeccbb0"
+    },
+    "I put cheese in my sandwich.": {
+      "file": "assets/narration/teach-200-400-288.mp3",
+      "duration": 2.220375,
+      "sha256": "677d33410a160cc9f4af775c18b7137867e7a4c998d8654e86c7ad9170425179"
+    },
+    "Look carefully at “ee” in cheese. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-289.mp3",
+      "duration": 6.504438,
+      "sha256": "e3b367491b5c691245e6f2020789fc37418d297ddbf06e127e52d530337373f0"
+    },
+    "My sandwich has two slices of bread.": {
+      "file": "assets/narration/teach-200-400-290.mp3",
+      "duration": 3.004063,
+      "sha256": "34488af9760a6e3d4cc38e105ca078775d9933f10b27b6f9616d1a2af1d5e28f"
+    },
+    "Look carefully at “ch” in sandwich. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-291.mp3",
+      "duration": 6.504438,
+      "sha256": "b450d9e2ea5bc41f5a3e0c5339a0642b23d22362366bd9601d317141b8a34f61"
+    },
+    "The mouse hid in a hole.": {
+      "file": "assets/narration/teach-200-400-292.mp3",
+      "duration": 2.0375,
+      "sha256": "1d979e8c84ff2a345457447f0d13b64a5baf916c3cce7f9a711865bbd0bdeba4"
+    },
+    "Word family: hide → hid. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-293.mp3",
+      "duration": 5.433438,
+      "sha256": "60fe592dd0af0ef0480fe653b96eafbc6cdb64340a00f34ffe649c66767fdb3a"
+    },
+    "I am hungry and ready for lunch.": {
+      "file": "assets/narration/teach-200-400-294.mp3",
+      "duration": 2.873438,
+      "sha256": "5a775cb1ed535fc67eeb16ba6acc746b47ca57a0577ddeaf5edc8b8107250c60"
+    },
+    "Look carefully at “ng” in hungry. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-295.mp3",
+      "duration": 6.112625,
+      "sha256": "57805df509b403746cbe7c989c69a0a276f09bea8bc6f8c17c866c300482078d"
+    },
+    "The little stream flows over stones.": {
+      "file": "assets/narration/teach-200-400-296.mp3",
+      "duration": 3.160813,
+      "sha256": "b4265ed3f0c41121fc20a4adc7916baa9c3c7030d1ad427ec4700b77361c8b4b"
+    },
+    "Look carefully at “ea” in stream. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-297.mp3",
+      "duration": 6.635063,
+      "sha256": "48770d40c3f1059bad8e49a9f0794b2438351d274eaf61927d1f119a67df394d"
+    },
+    "There are thirty children in the class.": {
+      "file": "assets/narration/teach-200-400-298.mp3",
+      "duration": 2.690563,
+      "sha256": "25b9e9ba79b5f0fbdeae01ab202d1d6b98e7da2efdfaead62dadc00039435925"
+    },
+    "I have already put my coat on.": {
+      "file": "assets/narration/teach-200-400-299.mp3",
+      "duration": 2.324875,
+      "sha256": "121e3dd499607f84724a09101fcfff878795e7a6cc14f1b79776846eaa3c3cef"
+    },
+    "Look carefully at “ea” in already. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-300.mp3",
+      "duration": 6.0865,
+      "sha256": "de7c1ebcdb7c83d4089235b90f57353244896a5785850e74f6376e1ed7e90082"
+    },
+    "The cake is not ready yet.": {
+      "file": "assets/narration/teach-200-400-301.mp3",
+      "duration": 1.98525,
+      "sha256": "eb6c0070e9229e8d5cb92e45951a7fced24be212a640dd60fcb57b8c1cdc7b48"
+    },
+    "Look at every letter in yet. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-302.mp3",
+      "duration": 6.112625,
+      "sha256": "47198bd0a6af7abd0a0d78be108991d3e388a16bbd43919836626085ae4538d2"
+    },
+    "A fish swims in the pond.": {
+      "file": "assets/narration/teach-200-400-303.mp3",
+      "duration": 2.324875,
+      "sha256": "9e3863ddb0c553b060460a53612e6b7fb9262f4b483974d29f8958d5f474734b"
+    },
+    "Look carefully at “sh” in fish. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-304.mp3",
+      "duration": 6.164875,
+      "sha256": "9c9e43ef5e0fc3d6e7b041f315e6330a63a484315972653f27ac8ac3ba4955bb"
+    },
+    "The horse runs across the field.": {
+      "file": "assets/narration/teach-200-400-305.mp3",
+      "duration": 2.690563,
+      "sha256": "3a8f69d8c5aeb61f70001675291b4ac948490800fc484bc05a9fb285dccccbec"
+    },
+    "Look carefully at “or” in horse. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-306.mp3",
+      "duration": 6.2955,
+      "sha256": "83aebd604e092952da7f191a830f561808526cf82f87dc84da856145a369aa73"
+    },
+    "The warm soup is in a bowl.": {
+      "file": "assets/narration/teach-200-400-307.mp3",
+      "duration": 2.324875,
+      "sha256": "998c747cfa31fc09da35d98761873951aa3a931f8fdb12b47bf0915c7827f92c"
+    },
+    "Look carefully at “ou” in soup. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-308.mp3",
+      "duration": 6.530563,
+      "sha256": "99dcc87e327f7f40a80cd5187631e11497a0af97efdad4b723aa8702ea1eb9a3"
+    },
+    "We eat rice with our dinner.": {
+      "file": "assets/narration/teach-200-400-309.mp3",
+      "duration": 1.98525,
+      "sha256": "ddc842a9469a5e2a1ac8fb452fa8c5632b47293965b76fa72fcf5e832b0d52d2"
+    },
+    "Look at every letter in rice. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-310.mp3",
+      "duration": 6.269375,
+      "sha256": "451ecfa02f53fb872edaf52fd7247f9b2e4cc63f468b9bbd40d7d1a184269b5c"
+    },
+    "The key is hidden in the box.": {
+      "file": "assets/narration/teach-200-400-311.mp3",
+      "duration": 2.40325,
+      "sha256": "0121c9ee08cebd349e97a033508df6b7475a97720604a1b193bc79d850f15449"
+    },
+    "Word family: hide → hidden. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-312.mp3",
+      "duration": 5.433438,
+      "sha256": "1ed059988369268f761019144a5747981041b6ed3b307ce1c2aad8e60c98dd10"
+    },
+    "I am thirsty and need some water.": {
+      "file": "assets/narration/teach-200-400-313.mp3",
+      "duration": 2.690563,
+      "sha256": "a2a78cf50650c7f5525d6f75855700b777869582c5c20f2c52cc45d3462314db"
+    },
+    "Look carefully at “th” in thirsty. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-314.mp3",
+      "duration": 6.2955,
+      "sha256": "4e205d2b2f2ed2f81267055a611502a83b51e46b8e4024a1afc6db4e862c149c"
+    },
+    "Water falls over the rocks in a waterfall.": {
+      "file": "assets/narration/teach-200-400-315.mp3",
+      "duration": 3.291375,
+      "sha256": "dc2ea75c0b145a482210267f24710bb6d945fd3961b89f82587be3cc8d43cf19"
+    },
+    "Look carefully at “er” in waterfall. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-316.mp3",
+      "duration": 6.922438,
+      "sha256": "3fa8651617cf6e51cf696f10a211c614b782abbc21ef0992e669632ca4d17c1b"
+    },
+    "We count forty steps to the gate.": {
+      "file": "assets/narration/teach-200-400-317.mp3",
+      "duration": 2.533875,
+      "sha256": "0065c6e5540a4464d15d07a0f374b14df68beb92e4e52c1761764832b8b88a5a"
+    },
+    "Forty has no u. Compare four, fourteen and forty.": {
+      "file": "assets/narration/teach-200-400-318.mp3",
+      "duration": 5.381188,
+      "sha256": "8e13c19ded22065374a5d1a2f6d8fb0a713557585eaae470b7562be887d28211"
+    },
+    "The cat is perhaps under the bed.": {
+      "file": "assets/narration/teach-200-400-319.mp3",
+      "duration": 2.925688,
+      "sha256": "6d2651ddfafb71648389f87d5889b177868700e82eceed9a2409e8b0cd633cd0"
+    },
+    "Look carefully at “er” in perhaps. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-320.mp3",
+      "duration": 6.452188,
+      "sha256": "1d9cbf644eb090a607dc432856c9c093255f3f5b601c8b9405c0e536a30ec636"
+    },
+    "We can maybe go after lunch.": {
+      "file": "assets/narration/teach-200-400-321.mp3",
+      "duration": 2.168125,
+      "sha256": "a3d93aff2e411daf42a882a23536516d66eef1cc215366cd2194258a8d07348e"
+    },
+    "Look carefully at “ay” in maybe. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-322.mp3",
+      "duration": 6.03425,
+      "sha256": "944aded502887455a018371a8833fcddbdfb3612606468f222b46e237ee88a91"
+    },
+    "It is dark outside at night.": {
+      "file": "assets/narration/teach-200-400-323.mp3",
+      "duration": 2.220375,
+      "sha256": "a177cc2ddc9065c27f7db408019343657a87adaec68f35636978c8b087f95872"
+    },
+    "Look carefully at “ar” in dark. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-324.mp3",
+      "duration": 6.112625,
+      "sha256": "fc334525be4656ddaddb16c21c96eb028ffcf5dc9c505d579b47b3cc7672d335"
+    },
+    "We eat breakfast in the morning.": {
+      "file": "assets/narration/teach-200-400-325.mp3",
+      "duration": 2.220375,
+      "sha256": "a0e2984626684a6b9e587a757a90fcf505b44d84908ccb0b153197e944dd6bbb"
+    },
+    "Look carefully at “ng” in morning. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-326.mp3",
+      "duration": 5.851375,
+      "sha256": "39f3ab5ea34c09b324bf7cccd93a8bb3f04cb40e6fb4b4447ff9445c43a56b1a"
+    },
+    "We cook a potato for lunch.": {
+      "file": "assets/narration/teach-200-400-327.mp3",
+      "duration": 2.115875,
+      "sha256": "a0b5e1d68d481e3c5ab290699371fc96f750cf8e2ee857128dc3ebc4ee14ba2a"
+    },
+    "Look at every letter in potato. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-328.mp3",
+      "duration": 6.4,
+      "sha256": "cbc6f515fdf076774b4c65ff8c1d302fc26eccd083af655f97d738ced65a5c20"
+    },
+    "The tomato is red and round.": {
+      "file": "assets/narration/teach-200-400-329.mp3",
+      "duration": 2.40325,
+      "sha256": "c75b6843aec6e9500800d84c2e30c53048d23f9e0e4c6b3f804f613aad7ec698"
+    },
+    "Look at every letter in tomato. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-330.mp3",
+      "duration": 7.10525,
+      "sha256": "c5333f368145eee31bd5306c52743a1190bbefca4730e8d4ea9db187fe15d82f"
+    },
+    "My friend is coming to play.": {
+      "file": "assets/narration/teach-200-400-331.mp3",
+      "duration": 1.98525,
+      "sha256": "58818410e0f08d09970e6cf73e9d3cedcc9adb35a9d6becb58efc25bc03ea50b"
+    },
+    "Word family: come → coming. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-332.mp3",
+      "duration": 7.183625,
+      "sha256": "64a9da694390438b93a545bbdad75645a9dd54def21e847b3dbb8733846affb8"
+    },
+    "I stay in bed when I am ill.": {
+      "file": "assets/narration/teach-200-400-333.mp3",
+      "duration": 2.40325,
+      "sha256": "6b3352fdbe0695b52c7f087e1c1c1e52dad9686b2bf25179ced6fa15e273bbbd"
+    },
+    "Look at every letter in ill. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-334.mp3",
+      "duration": 6.530563,
+      "sha256": "2ff5dcd9816400cd5d1361bc863c1a69102e03b3e7f2b4d120557d03a9d4f023"
+    },
+    "A wave rolls onto the beach.": {
+      "file": "assets/narration/teach-200-400-335.mp3",
+      "duration": 2.351,
+      "sha256": "79b0eb9bdbc6640fa2480a91fa244d71cb8c9df35410ed2d4fa8a4bcdd6a0c9c"
+    },
+    "Look at every letter in wave. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-336.mp3",
+      "duration": 6.504438,
+      "sha256": "f6dfc694c44fda6e104cdafc413cd4c6efeb319d02fc81b3747130de3d0e136c"
+    },
+    "There are fifty pages in the book.": {
+      "file": "assets/narration/teach-200-400-337.mp3",
+      "duration": 2.168125,
+      "sha256": "525003c8896e1e4233216f9b27668d05f5e80bcc8009341b45c01f3985b62637"
+    },
+    "We can build a house together.": {
+      "file": "assets/narration/teach-200-400-338.mp3",
+      "duration": 2.08975,
+      "sha256": "7621fe8c36cb3b4c5c3251191618ff607a9e1c249e0c9293671e85675a7e326d"
+    },
+    "Look carefully at “th” in together. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-339.mp3",
+      "duration": 6.4,
+      "sha256": "7c8b99640fcf990dc5f2dc51480cf11525eddb946a2baded0bc317be9c4becff"
+    },
+    "We walk through the open gate.": {
+      "file": "assets/narration/teach-200-400-340.mp3",
+      "duration": 2.272625,
+      "sha256": "2bbea85d9f475cfd4dc483e9d05f9426436284eb17e86a9e0015827abb9cca87"
+    },
+    "Look carefully at “th” in through. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-341.mp3",
+      "duration": 6.164875,
+      "sha256": "5f1a4c63b56b3143c46e1b4a085572b3ea1dbf06faed994f1392d8aa6f6f60ef"
+    },
+    "The sheep live on a farm.": {
+      "file": "assets/narration/teach-200-400-342.mp3",
+      "duration": 1.802438,
+      "sha256": "4be24b737538801a640f6d0b0db8cd05fdcb37017c752edbef14c6e71c2b3f7f"
+    },
+    "Look carefully at “ar” in farm. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-343.mp3",
+      "duration": 5.982,
+      "sha256": "35ec14281949e1be477cc97c93c35532b46a09ada29f36776bba9f60a39da1f1"
+    },
+    "A chick comes out of an egg.": {
+      "file": "assets/narration/teach-200-400-344.mp3",
+      "duration": 1.98525,
+      "sha256": "2caaf53bb7513ab7e735a413e36a88d5b96ec06ffcce0848a0dd31baa12fcb87"
+    },
+    "Look at every letter in egg. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-345.mp3",
+      "duration": 6.269375,
+      "sha256": "5676f81065ea2733b4287d1e1363f890c7d4525648661d9868dc304e119a17a0"
+    },
+    "The rabbit eats a carrot.": {
+      "file": "assets/narration/teach-200-400-346.mp3",
+      "duration": 1.802438,
+      "sha256": "3dd03e2bc6319357db4c6c9b897be90dd433605ee5530725fec2620f2967fbd5"
+    },
+    "Look carefully at “ar” in carrot. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-347.mp3",
+      "duration": 6.582813,
+      "sha256": "32988038ac1b407a6a3796cc8381fa8019d0db33165f5bfad5df845cff4dbc4f"
+    },
+    "A bean can grow into a plant.": {
+      "file": "assets/narration/teach-200-400-348.mp3",
+      "duration": 2.351,
+      "sha256": "582cfe54e2ef456e3c7aea4eeceaa6ae370105434b19ef35eabf69bf1688e6cf"
+    },
+    "Look carefully at “ea” in bean. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-349.mp3",
+      "duration": 6.504438,
+      "sha256": "383ecca3cb5436a77de2247e167d9a4c4a5baf3c1db07cc25035f116e290d51d"
+    },
+    "The dog is running across the field.": {
+      "file": "assets/narration/teach-200-400-350.mp3",
+      "duration": 2.690563,
+      "sha256": "4e6ba9a90b7d03ecf273726bd70a42029701b2d27fb070eaedf991dec98a4af7"
+    },
+    "Word family: run → running. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-351.mp3",
+      "duration": 7.131375,
+      "sha256": "a296759c652f8cc243a17d4ebb07cf081f04581511061b4accea5d84cc803c2f"
+    },
+    "The doctor helps the sick child.": {
+      "file": "assets/narration/teach-200-400-352.mp3",
+      "duration": 2.951813,
+      "sha256": "fe4c512d8a4043b7a213424fdd8fbefa7f117d0ee0f1f884a2b3d78fb3357dda"
+    },
+    "Look at every letter in sick. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-353.mp3",
+      "duration": 6.217125,
+      "sha256": "79373d4871f9ee3c173402871649722c638f584005d9edeb1d83e2ee8bf70f37"
+    },
+    "Water is all around the island.": {
+      "file": "assets/narration/teach-200-400-354.mp3",
+      "duration": 2.638313,
+      "sha256": "7f89b7382a117193389c4ab9d8dd6cb572f3995d691295439f7754387a54c1a5"
+    },
+    "The s is silent.": {
+      "file": "assets/narration/teach-200-400-355.mp3",
+      "duration": 1.750188,
+      "sha256": "6fd478c00807226683a207bfa527ea7995a44d926c350bd0ae9a86be39d80095"
+    },
+    "There are sixty seconds in a minute.": {
+      "file": "assets/narration/teach-200-400-356.mp3",
+      "duration": 2.50775,
+      "sha256": "16a8d5986fb2e2ab51d0cd226f9a5b49620ff1570e98cd6ebc606ea7712d2dda"
+    },
+    "sixty is 60. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-357.mp3",
+      "duration": 5.041625,
+      "sha256": "278e953f72e45e9634895e57813d357e0222a01d9f0702f974c61b9393be59b2"
+    },
+    "The ball is between my feet.": {
+      "file": "assets/narration/teach-200-400-358.mp3",
+      "duration": 1.98525,
+      "sha256": "c511f8b82032741269bdd533c2a71d0285c05d59cd33f633fb1c405d3881bbcf"
+    },
+    "Look carefully at “ee” in between. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-359.mp3",
+      "duration": 6.582813,
+      "sha256": "1d81cc20c9d3d93cb77b6fa4b114c3db24fdfe57e04e408455cd52d96f5c93cc"
+    },
+    "The fish swims below the boat.": {
+      "file": "assets/narration/teach-200-400-360.mp3",
+      "duration": 2.690563,
+      "sha256": "e31742405de2cd3810ef0fae3990c098bbc2a3c5851f88f762001988189bc30a"
+    },
+    "Look carefully at “ow” in below. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-361.mp3",
+      "duration": 7.10525,
+      "sha256": "604dbff33d8c69511438bccace08928ba44971fe9f5b721a1bf7731150fcfd7b"
+    },
+    "The ball falls to the ground.": {
+      "file": "assets/narration/teach-200-400-362.mp3",
+      "duration": 2.168125,
+      "sha256": "87beb140fabd2bd7ed98c2ca8af9d2e55155acafc8ef5a189972a05d51d5890f"
+    },
+    "Look carefully at “ou” in ground. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-363.mp3",
+      "duration": 5.92975,
+      "sha256": "22da412b3fab696ec7c2f7a8d38f02f971f48c7572c7aed9df0a7deae2056a42"
+    },
+    "The cows eat grass in the field.": {
+      "file": "assets/narration/teach-200-400-364.mp3",
+      "duration": 2.638313,
+      "sha256": "35b48af966483bb933c92a61c438e0075f9ce92384766ffd0a77a169b7a25c79"
+    },
+    "Look at every letter in field. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-365.mp3",
+      "duration": 5.851375,
+      "sha256": "b7cadd82b2aa54f87c3cf07f5a16c1ed62452b3fc9f3f3c8e669d3687765c4dc"
+    },
+    "I peel a yellow banana.": {
+      "file": "assets/narration/teach-200-400-366.mp3",
+      "duration": 2.08975,
+      "sha256": "8a4079fc1836c20d5fbf43aeea9aab53c89314f06b5106826bb71324400310d5"
+    },
+    "Look at every letter in banana. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-367.mp3",
+      "duration": 6.530563,
+      "sha256": "28ad22e67273342798c357b1bf763ed54247ea067686a1e79b39b0a9ce1d9b81"
+    },
+    "The orange has a thick peel.": {
+      "file": "assets/narration/teach-200-400-368.mp3",
+      "duration": 2.168125,
+      "sha256": "f001bb49cbb508efd7b9bc31b46b5b5ef6c2a56e487806ccf0203bf1b40233c7"
+    },
+    "Look carefully at “ng” in orange. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-369.mp3",
+      "duration": 5.851375,
+      "sha256": "6803b0f62d9f657e6778ceba332bcd0b05ae7bcca2c02a980105b808fe3a7d25"
+    },
+    "We walked home together.": {
+      "file": "assets/narration/teach-200-400-370.mp3",
+      "duration": 1.854688,
+      "sha256": "632acd2585fab69b591e582958cd4a34f91203cb2d112cdddfd844848695a5c9"
+    },
+    "Word family: walk → walked. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-371.mp3",
+      "duration": 6.530563,
+      "sha256": "335ae5266fe0047572c87e7216fca5c9239384c73bac20b78f5cb27d722474d0"
+    },
+    "The shy child smiles at a new friend.": {
+      "file": "assets/narration/teach-200-400-372.mp3",
+      "duration": 3.160813,
+      "sha256": "a1c247f05aed7d1acd400299528a4c8fffe809f1048e6cbc6b52ea6da9e79ae8"
+    },
+    "Look carefully at “sh” in shy. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-373.mp3",
+      "duration": 6.817938,
+      "sha256": "d7a0788becc93f75f063ae274e8aa46b6e920628bc6b7d6f6488a4c515de4c79"
+    },
+    "We wash the dirt off our hands.": {
+      "file": "assets/narration/teach-200-400-374.mp3",
+      "duration": 2.324875,
+      "sha256": "d0a74df0f6d82b2b6bf2e912e3f9d58a805f2b0ec10d9a051d393d3ed1bd1742"
+    },
+    "Look carefully at “ir” in dirt. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-375.mp3",
+      "duration": 6.713438,
+      "sha256": "adf36dfa89dd7b334684c575ef77cc21d43a2033512abb0aec4d1112a0dcc1af"
+    },
+    "The bus has seventy seats.": {
+      "file": "assets/narration/teach-200-400-376.mp3",
+      "duration": 1.98525,
+      "sha256": "0862755c13c44c971047f66c0b3c46536984037c8ae2d9930eba8e538cad1559"
+    },
+    "seventy is 70. Read the word, then say the number.": {
+      "file": "assets/narration/teach-200-400-377.mp3",
+      "duration": 4.310188,
+      "sha256": "baba5d215d0f265b19e1e6d75ebd6a392c4b4763cd7795a27d30de29829a2a0d"
+    },
+    "A bird flies above the tree.": {
+      "file": "assets/narration/teach-200-400-378.mp3",
+      "duration": 2.351,
+      "sha256": "c2737eb16a8c008511655caa8e430c4266203cbbd74ae176583f6252703d57d3"
+    },
+    "Look at every letter in above. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-379.mp3",
+      "duration": 6.4,
+      "sha256": "577ff2fdd4fce522cc2fc1366c54fbac963d2f6fa2f80b8d83d18ed77f35dbff"
+    },
+    "We walk across the bridge.": {
+      "file": "assets/narration/teach-200-400-380.mp3",
+      "duration": 1.933063,
+      "sha256": "4d8b3292eb43e4f5b39778d53b98c628ca857763f17fe710fbe64ef692a4f76e"
+    },
+    "Look at every letter in across. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-381.mp3",
+      "duration": 7.235875,
+      "sha256": "17990815f6fea56e36b97c58e0622d266117c3d4bcf2fbfc5e8f66c2e97510be"
+    },
+    "We look both ways before crossing the road.": {
+      "file": "assets/narration/teach-200-400-382.mp3",
+      "duration": 3.004063,
+      "sha256": "7c0d7451e81e3d16df4ee9d13201ba58535482eb70e7efe8231f96c482f9cff8"
+    },
+    "Look carefully at “oa” in road. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-383.mp3",
+      "duration": 6.948563,
+      "sha256": "d23215812d877befe0657c573fa7989737e5ccb1461bb9e534099c93e28fb79f"
+    },
+    "Birds fly high in the sky.": {
+      "file": "assets/narration/teach-200-400-384.mp3",
+      "duration": 2.533875,
+      "sha256": "db7e9f279c6d74dc17d00d68bce2acb98dee28f5d4d23a4480df136f0d949ae6"
+    },
+    "Look at every letter in sky. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-385.mp3",
+      "duration": 6.948563,
+      "sha256": "aed2cf30c88699b8046ccd6db003b6f29f56433a9a72e06cd6b96929441daf15"
+    },
+    "The yellow lemon tastes sour.": {
+      "file": "assets/narration/teach-200-400-386.mp3",
+      "duration": 2.08975,
+      "sha256": "704731ff3bc4500f3c0267cc92c84ce0d8f6ab40f34e84bca040fc7595f7349d"
+    },
+    "Look at every letter in lemon. Listen, say the word, then read the sentence.": {
+      "file": "assets/narration/teach-200-400-387.mp3",
+      "duration": 6.0865,
+      "sha256": "6ba611e2cfd5b91d12a189c37b5a168b7d55b20052b636bb346a555314c8643a"
+    },
+    "I eat a soft, sweet pear.": {
+      "file": "assets/narration/teach-200-400-388.mp3",
+      "duration": 2.220375,
+      "sha256": "ca8c1b4990de9d60751160b7a867e22a8d1d66b1cec0532a2ec900757c47003a"
+    },
+    "Look carefully at “ar” in pear. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-389.mp3",
+      "duration": 6.0865,
+      "sha256": "6b8fa26da7290818370cf98153da2dae31b7adc88c0321a8132e640ae0ddeb41"
+    },
+    "We are walking to school.": {
+      "file": "assets/narration/teach-200-400-390.mp3",
+      "duration": 1.854688,
+      "sha256": "541719a68710a9e61b308e9f2f7f28ee7e7e9bf719234900e150e11dd6a32b84"
+    },
+    "Word family: walk → walking. Read the whole word, including its ending.": {
+      "file": "assets/narration/teach-200-400-391.mp3",
+      "duration": 7.10525,
+      "sha256": "02d047b8d99a59490d7c9e85a9c14b8c25e25fcef94cf29396f860f24a03d980"
+    },
+    "I feel proud of the book I read.": {
+      "file": "assets/narration/teach-200-400-392.mp3",
+      "duration": 2.768938,
+      "sha256": "31984870eeea67823aa97a96801c250887aee7ad03d44bdc30d7bc09552e00ce"
+    },
+    "Look carefully at “ou” in proud. Listen, then read the whole sentence.": {
+      "file": "assets/narration/teach-200-400-393.mp3",
+      "duration": 6.635063,
+      "sha256": "c458d6fb228e73ba4c06014e96e4880b4b36dccae192cc87157cd6ce1a8721b4"
+    },
+    "Green leaves grow on the tree.": {
+      "file": "assets/narration/teach-200-400-394.mp3",
+      "duration": 2.586063,
+      "sha256": "4b7e672ce660d09d91d8815be4633f69fecc573218a67c1563072ce50aef2c23"
+    },
+    "Word family: leaf → leaves. Notice how the spelling changes.": {
+      "file": "assets/narration/teach-200-400-395.mp3",
+      "duration": 5.381188,
+      "sha256": "1b636fda64387f39fff205c238fb3a7ad2c1c385adae39b718925a4a04bbe547"
+    },
+    "The farmer has eighty sheep.": {
+      "file": "assets/narration/teach-200-400-396.mp3",
+      "duration": 2.08975,
+      "sha256": "c4af5f8b171d48421424379903f46be6d0a86ed5bce334cf85115594a3fe0640"
+    },
+    "Compare eight, eighteen and eighty.": {
+      "file": "assets/narration/teach-200-400-397.mp3",
+      "duration": 2.873438,
+      "sha256": "01c7f354d56941ec1ce071efa21a65dc65d6ac32e1a8dc8a4a1a73122ee3049d"
     }
   }
 };

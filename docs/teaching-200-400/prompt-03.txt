@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: A child wearing ear defenders reads while a distant handbell rings, visibly unaware of it.
+Cell 2: A child smiles warmly and points gently to their own chest while greeting a friend.
+Cell 3: A transparent cup overflows with water, puddle on the table, child stops pouring.
+Cell 4: An ancient tree with a very thick gnarled trunk, textured bark and broad canopy.
+Cell 5: A child in winter clothes touches snow with red chilly fingers and shivers gently.
+Cell 6: Mother and father help a child read an open book at a cosy table, mother beside child and father opposite.
+Cell 7: One child gestures invitingly with a ball to a friend, who responds with a happy nod.
+Cell 8: Two otherwise identical boxes side by side, one clearly larger; child points at the larger.
+Cell 9: A child wearing boots and a raincoat walks through puddles in falling rain.
+Cell 10: An adult warmly offers a bowl of apples; a child reaches with the adult's clear welcoming permission.
+Cell 11: A child stays safely behind a hearth guard, hands held close to their own body and well away from the fire.
+Cell 12: Two transparent cups side by side: left water reaches exactly the brim, right water stops a little below the brim. No spilling.

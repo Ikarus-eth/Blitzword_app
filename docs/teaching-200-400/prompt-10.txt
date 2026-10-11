@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: Sheep and cows graze in a green farm field beside a barn and fence.
+Cell 2: A chick emerges from a cracking eggshell in a nest, warm gentle close-up.
+Cell 3: A rabbit eats an orange carrot with green leaves.
+Cell 4: A simple three-stage natural illustration: bean seed, sprouting bean, young leafy bean plant.
+Cell 5: A dog runs joyfully across a green field, all limbs clear and sense of motion.
+Cell 6: A small green island entirely surrounded by blue water, aerial view with full coastline.
+Cell 7: A ball rests on the ground precisely between a child's two separated feet, close low view.
+Cell 8: Side cutaway of water: a fish swims directly below a small boat floating at the surface.
+Cell 9: Four separated close-up fruit still lifes in one cell: peeled yellow banana, orange with thick peel curling off, cut yellow lemon, soft green pear; each fruit distinct.
+Cell 10: A shy child gives a small tentative smile while meeting a friendly new child.
+Cell 11: Thick pale fog partly hides a nearby path and distant trees, close tree clear but distance obscured.
+Cell 12: A bird flies clearly above the top of a leafy tree, open sky separates bird and crown.

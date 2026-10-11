@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: A clear rainbow arches over wet green hills after rain, soft departing clouds.
+Cell 2: Two children hold identical books with matching red covers and the same simple gold tree emblem.
+Cell 3: A child who already has one apple receives one more from an adult.
+Cell 4: A small friendly town street with several distinct shopfronts, bakery, fruit shop and bookshop, no writing.
+Cell 5: A thirsty child after play eagerly drinks a clear glass of water.
+Cell 6: A child eats breakfast at a table beside a window with the sun low in the morning sky.
+Cell 7: A delighted child welcomes friends to a birthday party, balloons and wrapped gifts.
+Cell 8: The moon against deep outer space filled with distant stars, curved Earth below.
+Cell 9: Three trees side by side: one with many green leaves, one with a few leaves and one bare; leafy tree dominant.
+Cell 10: A large plate has just three small cakes left and many crumbs, plentiful empty space.
+Cell 11: Children walk across a wooden bridge spanning a wide flowing river, both banks visible.
+Cell 12: A family eats dinner in warm evening light, plates with rice and vegetables, darkening window.

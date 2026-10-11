@@ -934,12 +934,14 @@ function narrateChapterStory(word=null){
 }
 function renderTeaching() {
   show('teaching');$('#wordReady').hidden=true;
-  const item={...Core.byWord[state.teaching.target]};item.sentence=dragonText(item.sentence);const sentence=$('#teachSentence');sentence.replaceChildren();
+  const item={...Core.byWord[state.teaching.target],...Content.teachingVisuals.words[state.teaching.target]};item.sentence=dragonText(item.sentence);const sentence=$('#teachSentence');sentence.replaceChildren();
   const pattern=new RegExp('\\b'+item.w+'\\b','i'),match=pattern.exec(item.sentence),start=match.index;
   sentence.append(document.createTextNode(item.sentence.slice(0,start)));
   const target=document.createElement('span');target.className='targetWord';target.textContent=match[0];sentence.append(target,document.createTextNode(item.sentence.slice(start+match[0].length)));
   $('#teaching .teachCard').classList.toggle('expandedLesson',!!item.expansion);
-  $('#teaching .teachArt').hidden=!!item.expansion;
+  $('#teaching .teachCard').classList.toggle('illustratedLesson',!!item.source);
+  $('#teaching .teachArt').hidden=!!item.expansion&&!item.source;
+  $('#teachMeaning').textContent=item.caption||'';$('#teachMeaning').hidden=!item.caption;
   const lesson=$('#teachWordLesson');lesson.hidden=!item.expansion;
   $('#teachWordListen').hidden=!item.expansion;
   $('#teachHintListen').hidden=!item.expansion;
@@ -949,7 +951,7 @@ function renderTeaching() {
     const symbol=$('#teachSymbol');symbol.textContent=item.teaching.symbol||'';symbol.hidden=!item.teaching.symbol;
     const counters=$('#teachCounters');counters.replaceChildren();
     const number=Number(item.teaching.symbol);
-    counters.hidden=!item.teaching.symbol||!Number.isInteger(number)||number<0||number>20;
+    counters.hidden=!!item.quantity||!item.teaching.symbol||!Number.isInteger(number)||number<0||number>20;
     if(!counters.hidden){
       counters.setAttribute('aria-label',number+' counters');
       for(let i=0;i<number;i++){const dot=document.createElement('span');dot.className='numberCounter';dot.setAttribute('aria-hidden','true');counters.append(dot);}
@@ -960,11 +962,17 @@ function renderTeaching() {
   $('#lessonStatus').textContent='';$('#teachContinue').disabled=true;
   let ready=false;
   const pictureReady=()=>{if(ready||token!==epoch)return;ready=true;$('#teachContinue').disabled=false;if(!paused&&!blocked)narrateTeaching();};
-  if(item.expansion){illustration.hidden=true;$('#teachAtlas').hidden=true;illustration.onload=null;illustration.onerror=null;pictureReady();return;}
+  if(item.expansion&&!item.source){illustration.hidden=true;$('#teachAtlas').hidden=true;illustration.onload=null;illustration.onerror=null;pictureReady();return;}
   illustration.onload=pictureReady;
   illustration.onerror=()=>{if(token!==epoch)return;$('#lessonStatus').textContent='The picture could not load. You can listen or continue.';pictureReady();};
-  illustration.hidden=!!item.crop;$('#teachAtlas').toggleAttribute('hidden',!item.crop);
-  if(item.crop){const crop=item.crop;$('#teachAtlas').setAttribute('viewBox',crop.join(' '));$('#teachAtlas').setAttribute('aria-label',item.alt);const atlas=$('#teachAtlas image');atlas.setAttribute('href',Content.teachingSource(item));atlas.setAttribute('width','1536');atlas.setAttribute('height',item.image==='core-teaching'?'2048':'1024');$('#teachAtlas').querySelector('defs')?.remove();$('#teachAtlas').insertAdjacentHTML('afterbegin',`<defs><clipPath id="teachingCell" clipPathUnits="userSpaceOnUse"><rect x="${crop[0]}" y="${crop[1]}" width="${crop[2]}" height="${crop[3]}"/></clipPath></defs>`);atlas.setAttribute('clip-path','url(#teachingCell)');}
+  illustration.hidden=!!item.crop||!!item.quantity;$('#teachAtlas').toggleAttribute('hidden',!item.crop&&!item.quantity);
+  const atlasView=$('#teachAtlas');
+  if(item.quantity){atlasView.setAttribute('viewBox','0 0 600 480');atlasView.setAttribute('aria-label',item.alt);atlasView.innerHTML=Content.teachingVisuals.quantitySvg(item.quantity);}
+  else if(item.crop){
+    const crop=item.crop,size=item.atlasSize||[1536,item.image==='core-teaching'?2048:1024];
+    atlasView.setAttribute('viewBox',crop.join(' '));atlasView.setAttribute('aria-label',item.alt);
+    atlasView.innerHTML=`<defs><clipPath id="teachingCell" clipPathUnits="userSpaceOnUse"><rect x="${crop[0]}" y="${crop[1]}" width="${crop[2]}" height="${crop[3]}"/></clipPath></defs><image href="${Content.teachingSource(item)}" width="${size[0]}" height="${size[1]}" clip-path="url(#teachingCell)"/>`;
+  }
   illustration.src=Content.teachingSource(item);illustration.alt=item.alt;
   if(illustration.complete&&illustration.naturalWidth)pictureReady();
 }

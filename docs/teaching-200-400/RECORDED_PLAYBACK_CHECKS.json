@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "word": "has",
+      "audio": "hearWord",
+      "completed": true
+    },
+    {
+      "word": "has",
+      "audio": "hearSentence",
+      "completed": true
+    },
+    {
+      "word": "has",
+      "audio": "hearTip",
+      "completed": true
+    },
+    {
+      "word": "been",
+      "audio": "hearWord",
+      "completed": true
+    },
+    {
+      "word": "been",
+      "audio": "hearSentence",
+      "completed": true
+    },
+    {
+      "word": "been",
+      "audio": "hearTip",
+      "completed": true
+    },
+    {
+      "word": "eight",
+      "audio": "hearWord",
+      "completed": true
+    },
+    {
+      "word": "eight",
+      "audio": "hearSentence",
+      "completed": true
+    },
+    {
+      "word": "eight",
+      "audio": "hearTip",
+      "completed": true
+    },
+    {
+      "word": "eighty",
+      "audio": "hearWord",
+      "completed": true
+    },
+    {
+      "word": "eighty",
+      "audio": "hearSentence",
+      "completed": true
+    },
+    {
+      "word": "eighty",
+      "audio": "hearTip",
+      "completed": true
+    }
+  ],
+  "errors": []
+}
