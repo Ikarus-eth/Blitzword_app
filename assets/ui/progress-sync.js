@@ -4,6 +4,10 @@
   'use strict';
   const KEY='blitzword_progress_sync_v1',ENDPOINT='https://blitzword-progress.ikarus-janzenoa.chatgpt.site';
   const tokenOK=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
+  function pairingCode(value){
+    const text=String(value||'').trim();if(tokenOK(text))return text;
+    try{const url=new URL(text);if(url.origin!=='https://ikarus-eth.github.io'||url.pathname!=='/Blitzword_app/')return null;const code=new URLSearchParams(url.hash.slice(1)).get('sync');return tokenOK(code)?code:null;}catch{return null;}
+  }
   function project(s){
     // Deliberate allowlist: no name, age, voice choice, device fingerprint or custom dragon name.
     const p={};for(const key of ['assessment','learning','campaign','timing','archive','sessions','story','expedition'])if(s[key])p[key]=s[key];
@@ -18,7 +22,7 @@
     const write=m=>storage.setItem(KEY,JSON.stringify(m));
     const token=()=>Array.from(crypt.getRandomValues(new Uint8Array(32))).map(x=>x.toString(16).padStart(2,'0')).join('');
     const digest=async value=>Array.from(new Uint8Array(await crypt.subtle.digest('SHA-256',new TextEncoder().encode(value)))).map(x=>x.toString(16).padStart(2,'0')).join('');
-    function status(){try{const m=read();return {paired:!!m.deviceId,paused:!!m.paused,pendingPair:!!m.pairCode,lastSyncedAt:m.lastSyncedAt||null,message:m.message||'',deleting:!!m.deleting};}catch{return {paired:false,message:'Sharing settings cannot be read. Your game save is unchanged.'};}}
+    function status(){try{const m=read();return {paired:!!m.deviceId,paused:!!m.paused,pendingPair:!!m.pairCode,lastSyncedAt:m.lastSyncedAt||null,message:m.message||(m.pairCode?'Connecting this game…':''),deleting:!!m.deleting};}catch{return {paired:false,message:'Sharing settings cannot be read. Your game save is unchanged.'};}}
     function notify(){onStatus(status());}
     function change(update){const m=read();write({...m,...update});notify();}
     async function request(path,body,auth,method='POST'){
@@ -72,5 +76,5 @@
     function detach(){const m=read();if(m.deviceId)change({paused:true,message:'Sharing paused after the local profile was reset. The previously shared copy is still available.'});}
     return {status,flush,pair,pause,remove,detach};
   }
-  return {KEY,ENDPOINT,project,create};
+  return {KEY,ENDPOINT,project,pairingCode,create};
 });

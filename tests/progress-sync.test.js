@@ -34,3 +34,8 @@ test('profile reset pauses sharing instead of overwriting old learner data',asyn
 test('storage failure never changes the playable state',async()=>{
  const t=setup(),before=JSON.stringify(t.state);t.storage.setItem=()=>{throw new Error('full');};const sync=t.build();assert.throws(()=>sync.pair('a'.repeat(64)));assert.equal(t.requests.length,0);assert.equal(JSON.stringify(t.state),before);
 });
+
+test('Home Screen pairing accepts only personal game links or exact codes',()=>{
+ const code='a'.repeat(64);assert.equal(Sync.pairingCode('https://ikarus-eth.github.io/Blitzword_app/#sync='+code),code);
+ assert.equal(Sync.pairingCode(' '+code+' '),code);assert.equal(Sync.pairingCode('https://other.test/#sync='+code),null);assert.equal(Sync.pairingCode('javascript:alert(1)'),null);assert.equal(Sync.pairingCode('https://ikarus-eth.github.io/Blitzword_app/#sync=short'),null);
+});
