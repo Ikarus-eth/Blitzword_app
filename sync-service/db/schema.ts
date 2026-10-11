@@ -1,4 +1,15 @@
 import { sqliteTable, text, integer, primaryKey } from 'drizzle-orm/sqlite-core';
+export const oral_attempts = sqliteTable('oral_attempts', {
+ id: text('id').primaryKey(), deviceId: text('device_id').notNull(), createdAt: text('created_at').notNull(),
+ state: text('state').notNull(), metadata: text('metadata').notNull(), summary: text('summary'),
+});
+export const oral_parts = sqliteTable('oral_parts', {
+ deviceId: text('device_id').notNull(), assessmentId: text('assessment_id').notNull(),
+ part: integer('part').notNull(), parts: integer('parts').notNull(), data: text('data').notNull(),
+}, t=>[primaryKey({columns:[t.deviceId,t.assessmentId,t.part]})]);
+export const oral_quota = sqliteTable('oral_quota', {
+ deviceId: text('device_id').notNull(), day: text('day').notNull(), count: integer('count').notNull(),
+}, t=>[primaryKey({columns:[t.deviceId,t.day]})]);
 export const devices = sqliteTable('devices', {
   id: text('id').primaryKey(),
   pairHash: text('pair_hash').notNull().unique(),

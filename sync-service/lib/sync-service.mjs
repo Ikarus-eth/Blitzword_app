@@ -1,4 +1,5 @@
 import {TABLES,writeProjection,writeEvents} from './history.mjs';
+import {ORAL_TABLES,oralRoute} from './oral-service.mjs';
 export const GAME_ORIGIN='https://ikarus-eth.github.io';
 export const MAX_BYTES=1800000;
 const validToken=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
@@ -12,7 +13,8 @@ async function readJSON(request){
   const joined=new Uint8Array(bytes);let offset=0;for(const p of parts){joined.set(p,offset);offset+=p.length;}
   return JSON.parse(new TextDecoder().decode(joined));
 }
-export async function handle(request,{DB,ADMIN_KEY},now=Date.now()){
+export async function handle(request,env,now=Date.now(),send=fetch){
+  const {DB,ADMIN_KEY}=env;
   const origin=request.headers.get('origin'),path=new URL(request.url).pathname;
   const headers={'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Vary':'Origin'};
   if(origin===GAME_ORIGIN){headers['Access-Control-Allow-Origin']=origin;headers['Access-Control-Allow-Methods']='POST, DELETE, OPTIONS';headers['Access-Control-Allow-Headers']='Content-Type, Authorization';headers['Access-Control-Max-Age']='600';}
@@ -45,14 +47,15 @@ export async function handle(request,{DB,ADMIN_KEY},now=Date.now()){
       const details=await writeProjection(DB,row.id,JSON.parse(row.snapshot));
       return reply({indexed:true,...details});
     }
-    const match=path.match(/^\/api\/devices\/([0-9a-f-]{36})(\/(?:snapshot|events))?$/);
+    const match=path.match(/^\/api\/devices\/([0-9a-f-]{36})(\/(?:snapshot|events|oral\/(?:status|token|report)))?$/);
     if(!match||!['POST','DELETE'].includes(request.method))return reply({error:'Not found'},404);
     if(!validToken(bearer))return reply({error:'Unauthorized'},401);
     const tokenHash=await hash(bearer),id=match[1];
     const device=await DB.prepare('SELECT id, sequence FROM devices WHERE id = ? AND token_hash = ? AND revoked = 0').bind(id,tokenHash).first();
     if(!device)return reply({error:'Unauthorized'},401);
+    if(match[2]?.startsWith('/oral/'))return await oralRoute(request,env,id,match[2].slice(6),readJSON,reply,now,send);
     if(request.method==='DELETE'&&!match[2]){
-      await DB.batch([DB.prepare('UPDATE devices SET snapshot = NULL, summary = NULL, received_at = NULL, history_sequence = 0, token_hash = NULL, revoked = 1 WHERE id = ? AND token_hash = ?').bind(id,tokenHash),...TABLES.map(table=>DB.prepare(`DELETE FROM ${table} WHERE device_id=?`).bind(id))]);
+      await DB.batch([DB.prepare('UPDATE devices SET snapshot = NULL, summary = NULL, received_at = NULL, history_sequence = 0, token_hash = NULL, revoked = 1 WHERE id = ? AND token_hash = ?').bind(id,tokenHash),...[...TABLES,...ORAL_TABLES].map(table=>DB.prepare(`DELETE FROM ${table} WHERE device_id=?`).bind(id))]);
       return reply({deleted:true});
     }
     if(request.method==='POST'&&match[2]==='/events'){

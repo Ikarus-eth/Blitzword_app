@@ -4,10 +4,10 @@ import {DatabaseSync} from 'node:sqlite';
 import {readFileSync,readdirSync} from 'node:fs';
 import {handle,GAME_ORIGIN,MAX_BYTES} from '../lib/sync-service.mjs';
 const admin='a'.repeat(64),token='b'.repeat(64);
-function setup(){
+function setup(extraEnv={},send=fetch){
  const sql=new DatabaseSync(':memory:');for(const f of readdirSync(new URL('../drizzle/',import.meta.url)).filter(f=>f.endsWith('.sql')))sql.exec(readFileSync(new URL('../drizzle/'+f,import.meta.url),'utf8'));
- const DB={prepare(q){return {bind(...args){return {first:async()=>sql.prepare(q).get(...args),run:async()=>sql.prepare(q).run(...args)}}}},async batch(statements){sql.exec('BEGIN');try{const out=[];for(const s of statements)out.push(await s.run());sql.exec('COMMIT');return out;}catch(e){sql.exec('ROLLBACK');throw e;}}};
- const call=(path,body,auth,method='POST',origin=GAME_ORIGIN,now=1000)=>handle(new Request('https://service.test'+path,{method,headers:{Origin:origin,...(auth?{Authorization:'Bearer '+auth}:{}),'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)}),{DB,ADMIN_KEY:admin},now);
+ const DB={prepare(q){return {bind(...args){return {first:async()=>sql.prepare(q).get(...args),all:async()=>({results:sql.prepare(q).all(...args)}),run:async()=>sql.prepare(q).run(...args)}}}},async batch(statements){sql.exec('BEGIN');try{const out=[];for(const s of statements)out.push(await s.run());sql.exec('COMMIT');return out;}catch(e){sql.exec('ROLLBACK');throw e;}}};
+ const call=(path,body,auth,method='POST',origin=GAME_ORIGIN,now=1000)=>handle(new Request('https://service.test'+path,{method,headers:{Origin:origin,...(auth?{Authorization:'Bearer '+auth}:{}),'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)}),{DB,ADMIN_KEY:admin,...extraEnv},now,send);
  return {sql,call};
 }
 const payload=n=>({format:'blitzword-progress-v1',sequence:n,build:'test',capturedAt:new Date(1000).toISOString(),progress:{learning:{sequence:n}},summary:{xp:n}});
@@ -71,4 +71,29 @@ test('multipart event remains immutable when replay metadata grows across a part
  await call(path,{events:[event]},token);const original=sql.prepare('SELECT * FROM progress_events ORDER BY part').all();
  await call(path,{events:[{...event,build:'long'.repeat(100)}]},token);
  const after=sql.prepare('SELECT * FROM progress_events ORDER BY part').all();assert.deepEqual(after,original);assert.deepEqual(JSON.parse(after.map(r=>r.data).join('')),event);
+});
+
+const oralMeta=()=>({id:crypto.randomUUID(),title:'Test passage',passage:'The cat sat.',duration:10,locale:'en-GB',recordedOn:'2026-10-11',audioHash:'a'.repeat(64)});
+const oralPhrases=[{words:[{word:'the',offset:1,duration:.5,accuracy:95},{word:'cat',offset:2,duration:.5,accuracy:90},{word:'sat',offset:5,duration:.5,accuracy:95}]}];
+test('oral setup status and all oral routes require a paired device',async()=>{
+ const {call}=setup(),p=await paired(call),base='/api/devices/'+p.deviceId+'/oral/';
+ assert.equal((await call(base+'status',{})).status,401);assert.equal((await call(base+'token',{},token)).status,503);
+ assert.equal((await(await call(base+'status',{},token)).json()).ready,false);
+});
+test('oral token keeps key server-side; results are idempotent, private, readable and deleted with sharing',async()=>{
+ let requests=0;const {call,sql}=setup({AZURE_SPEECH_KEY:'private-key',AZURE_SPEECH_REGION:'southeastasia'},async(url,options)=>{requests++;assert.equal(url,'https://southeastasia.api.cognitive.microsoft.com/sts/v1.0/issueToken');assert.equal(options.headers['Ocp-Apim-Subscription-Key'],'private-key');return new Response('short-lived-token');});
+ const p=await paired(call),base='/api/devices/'+p.deviceId+'/oral/',meta=oralMeta();
+ const start=await call(base+'token',meta,token);assert.equal(start.status,200);assert.equal((await start.json()).token,'short-lived-token');
+ assert.equal((await call(base+'report',{id:crypto.randomUUID(),phrases:oralPhrases},token)).status,404);
+ const body={id:meta.id,phrases:oralPhrases};const r=await call(base+'report',body,token);assert.equal(r.status,200);assert.equal((await r.json()).saved,true);
+ const rows=sql.prepare('SELECT * FROM oral_parts ORDER BY part').all();assert.ok(rows.every(r=>r.data.length<=900));const report=JSON.parse(rows.map(r=>r.data).join(''));assert.equal(report.passage,meta.passage);assert.equal(report.summary.match,3);
+ await call(base+'report',{id:meta.id,phrases:[]},token);assert.deepEqual(sql.prepare('SELECT * FROM oral_parts ORDER BY part').all(),rows);assert.equal(requests,1);
+ assert.equal((await call(base+'status',{},'c'.repeat(64))).status,401);assert.equal((await(await call(base+'status',{},token)).json()).reports.length,1);
+ await call('/api/devices/'+p.deviceId,undefined,token,'DELETE');for(const t of ['oral_parts','oral_attempts','oral_quota'])assert.equal(sql.prepare('SELECT count(*) n FROM '+t).get().n,0);assert.equal((await call(base+'token',oralMeta(),token)).status,401);
+});
+test('oral daily start quota is enforced before Azure calls; failures never claim completion',async()=>{
+ let requests=0;const {call,sql}=setup({AZURE_SPEECH_KEY:'key',AZURE_SPEECH_REGION:'southeastasia'},async()=>{requests++;return new Response('unavailable',{status:429});});const p=await paired(call),base='/api/devices/'+p.deviceId+'/oral/';
+ assert.equal((await call(base+'token',{...oralMeta(),duration:181},token)).status,400);
+ for(let i=0;i<10;i++)assert.equal((await call(base+'token',oralMeta(),token)).status,502);
+ assert.equal((await call(base+'token',oralMeta(),token)).status,429);assert.equal(requests,10);assert.equal(sql.prepare('SELECT count(*) n FROM oral_attempts').get().n,0);
 });
