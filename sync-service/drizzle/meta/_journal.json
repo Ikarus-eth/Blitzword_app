@@ -15,6 +15,27 @@
       "when": 1791690841742,
       "tag": "0001_broad_ultimates",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791705769245,
+      "tag": "0002_flowery_hellfire_club",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791705930944,
+      "tag": "0003_rainy_chronomancer",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1791706083538,
+      "tag": "0004_stale_the_anarchist",
+      "breakpoints": true
     }
   ]
 }

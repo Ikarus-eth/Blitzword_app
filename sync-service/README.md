@@ -29,3 +29,7 @@ No scheduled review or notification automation was created. Automatic uploading 
 Use the Sites skill's existing-site workflow; retain project identity and access. Open the native source repository with a fresh scoped write credential, copy these maintained application/build/schema files into that checkout, and use the supported source helper for build, source push and packaging. Keep the hosting manifest's project ID and DB binding. Do not upload repository credentials or learner records. Database migrations are append-only.
 
 Tests: `node --test tests/service.test.mjs` (Node with `node:sqlite`). Build with the Sites `build-site.mjs` helper after dependency installation. Main-game tests are run from the repository root. The backend is separately deployed; the existing GitHub Pages workflow only publishes the frontend.
+
+## History v2
+
+The receiver additionally maintains bounded `progress_*` tables and accepts authenticated device `/events` batches. Read `devices.history_sequence` against `sequence` to check full projection completion. Reassemble row parts before analysis; no public read route exists. Owner-only `/api/admin/reindex` with `{deviceId}` backfills the current stored snapshot without changing the iPad save or token. See maintained `docs/progress-sync/HISTORY_RELEASE.md` for the review protocol, provenance and historical limits.

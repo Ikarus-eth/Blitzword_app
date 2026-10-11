@@ -1,3 +1,7 @@
+## Readable progress history — 11 October 2026
+
+**Implemented; deployment verification pending.** Preserve existing saves and pairing; add durable offline event uploads, bounded readable report rows, daily observations and owner-only backfill of existing snapshots. Earlier compacted events remain aggregate-only. This is reporting, not a claim of oral reading improvement. [Scope, review protocol and verification](progress-sync/HISTORY_RELEASE.md).
+
 ## Parent activity controls and readable dashboard — 11 October 2026
 
 **Deployed and verified.** [PR #179](https://github.com/Ikarus-eth/Blitzword_app/pull/179) merged as `824e8e3211ae39329bef9025ddb2f954dc46144b`; [Pages run 38121293781](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38121293781) succeeded. All eight changed live files match tested source ([hash evidence](parent-controls/DEPLOYMENT.json)). Stories (fox-cub rescue and Dragon path) and the original Word trails campaigns default off for new and existing saves. Parents → Activities & settings has independent switches to restore them. Main creature adventures remain available. Settings only change access: learning evidence, XP, saved battles, cleared chapters and each standalone save are retained. Disabled stories also redirect bookmarked entry points to the main game; the separate shareable Hidden Atlas is unchanged.

@@ -1,3 +1,7 @@
+## Full available progress visibility — approved 11 October 2026
+
+The parent authorized upgrading existing progress sharing so future reviews can read complete available history and compare progress over time. Preserve pairing, saves, privacy and current hosting. Retain acknowledged raw events outside the local rolling history; expose bounded authenticated reports and honest historical gaps. No new teaching activity, recording, scheduled review or public progress access is included. See [the history release](progress-sync/HISTORY_RELEASE.md).
+
 ## Teaching visuals and recorded audio 200–400 — accepted 11 October 2026
 
 The user authorized generating the missing teaching visuals with ChatGPT and audio through fal.ai, keeping compute down. Cover one-based playable positions 200–400 inclusively; reuse existing assets and recordings. Meaningful shared scenes are allowed when each target is clear in context. Number quantities must be accurate. Display the new art on expansion teaching cards; preserve curriculum wording/order, learner saves, listening and local fallback. This supersedes the earlier deferral for these 201 words only; later words and chapter-four work remain separate. [Implementation, generation budget and verification](teaching-200-400/RELEASE.md).

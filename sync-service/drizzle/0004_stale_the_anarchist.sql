@@ -1,0 +1,1 @@
+ALTER TABLE `devices` ADD `history_sequence` integer DEFAULT 0 NOT NULL;

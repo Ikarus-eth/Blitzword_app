@@ -39,3 +39,20 @@ test('Home Screen pairing accepts only personal game links or exact codes',()=>{
  const code='a'.repeat(64);assert.equal(Sync.pairingCode('https://ikarus-eth.github.io/Blitzword_app/#sync='+code),code);
  assert.equal(Sync.pairingCode(' '+code+' '),code);assert.equal(Sync.pairingCode('https://other.test/#sync='+code),null);assert.equal(Sync.pairingCode('javascript:alert(1)'),null);assert.equal(Sync.pairingCode('https://ikarus-eth.github.io/Blitzword_app/#sync=short'),null);
 });
+
+test('durable event queue survives reload, compaction and duplicate capture',async()=>{
+ const {IDBFactory}=require('fake-indexeddb'),History=require('../assets/ui/sync-history');const indexedDB=new IDBFactory();
+ let queue=History.create(indexedDB);const s=Core.migrate({});
+ s.campaign.battleRecords=[{id:'answer-1',at:'2026-10-11T01:00:00Z',target:'cat',correct:true,task:'battle'}];
+ await queue.capture('device',s,'test');await queue.capture('device',s,'test');assert.equal((await queue.pending('device')).length,1);
+ s.campaign.battleRecords=[];queue=History.create(indexedDB);const rows=await queue.pending('device');assert.equal(rows.length,1);
+ await queue.acknowledge(rows.map(r=>r.key));assert.equal((await queue.pending('device')).length,0);
+ s.campaign.battleRecords=[rows[0].data];await queue.capture('device',s,'test');assert.equal((await queue.pending('device')).length,0,'acknowledged events do not requeue');
+ await queue.capture('other',s,'test');assert.equal((await queue.pending('other')).length,1);await queue.clear('other');assert.equal((await queue.pending('other')).length,0);
+});
+test('event acknowledgements are required before clearing offline queue',async()=>{
+ const t=setup();let rows=[{key:'local',eventKey:'event',kind:'answer',at:'2026-10-11',data:{correct:true},build:'test'}],cleared=false,accept=false;
+ const history={capture:async()=>{},pending:async()=>rows,acknowledge:async()=>{cleared=true;rows=[];},clear:async()=>{}};
+ const sync=Sync.create({storage:t.storage,readState:()=>t.state,crypto:webcrypto,history,fetch:async(url,o)=>url.endsWith('/pair')?Response.json({deviceId:'12345678-1234-1234-1234-123456789abc'}):url.endsWith('/events')?Response.json({accepted:accept?['event']:[]}):Response.json({sequence:JSON.parse(o.body).sequence,receivedAt:new Date().toISOString(),historyVersion:2})});
+ sync.pair('a'.repeat(64));await t.tick();assert.equal(cleared,false);accept=true;await sync.flush(true);assert.equal(cleared,true);assert.equal(sync.status().pendingEvents,0);
+});
