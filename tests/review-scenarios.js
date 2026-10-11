@@ -13,10 +13,10 @@ window.makeReviewSave=function(scenario){
   if(scenario.startsWith('mission-')){
     const A=C.Adventure;s.settings.soundscape=false;
     if(scenario==='mission-hub')return s;
-    if(scenario==='mission-search'){
+    if(scenario.startsWith('mission-search')){
       for(const m of A.Data.missions)if(m.id!=='stone-dam')A.stats(s,m.id).completedAt=new Date(now).toISOString();
       C.startMission(s,'stone-dam',now);const c=s.expedition.current;c.step=3;c.phase='puzzle';
-      c.puzzle={id:A.current(s).riddles[3].id,solved:true,selection:[],order:[]};A.next(s,now);return s;
+      c.puzzle={id:A.current(s).riddles[3].id,solved:true,selection:[],order:[]};A.next(s,now);if(scenario==='mission-search-last')c.search.index=2;if(scenario==='mission-search-loss')c.hearts=1;return s;
     }
 
     if(scenario==='mission-river'){
@@ -40,6 +40,9 @@ window.makeReviewSave=function(scenario){
       if(scenario==='mission-team-intro')return s;
       for(const word of Object.values(s.learning.words)){word.familiar=true;word.introducedAt=new Date(now).toISOString();word.independentCorrect=2;}
       C.startMissionBattle(s,now);s.battle.introPending=false;C.prepareBattle(s,now);s.battle.question.phase='choices';
+      if(scenario.includes('support')){A.reveal(s,'moss-golem',now);Object.assign(s.rewards,{shield:true,earnedSupport:true,supportFamily:'moss-golem'});A.selectSupport(s,'moss-golem');s.expedition.current.companionHelpUsed=true;}
+      if(scenario==='mission-team-wide-support'){A.reveal(s,'storm-griffin',now);A.selectSupport(s,'storm-griffin');}
+      if(scenario==='mission-team-pick-support'){s.rewards.supportFamily=null;s.rewards.supportPending=true;}
       if(scenario==='mission-team-result'){s.battle.enemyHealth=0;C.resolveBattle(s,now);}
       if(scenario==='mission-team-retry'){s.battle.heroHealth=0;C.resolveBattle(s,now);}
       return s;

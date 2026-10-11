@@ -76,7 +76,33 @@
   function companion(s){const e=of(s);return e.book[e.favourite]?.seen&&Data.lore[e.favourite]?e.favourite:null;}
   function selectCompanion(s,family){
     if(!Data.lore[family]||!of(s).book[family]?.seen)return false;
-    of(s).favourite=family;return true;
+    const e=of(s),previous=e.favourite;e.favourite=family;
+    if(s.rewards?.earnedSupport&&s.rewards.supportFamily===family&&previous&&previous!==family)selectSupport(s,previous);
+    return true;
+  }
+  function supportChoices(s){
+    const e=of(s),friends=Content.creatures.filter(c=>e.book[c.id]?.seen).map(c=>c.id);
+    // A second individual of the same kind is possible until more friends are met.
+    return friends.length>1?friends.filter(id=>id!==companion(s)):friends;
+  }
+  function selectSupport(s,family){
+    if(!supportChoices(s).includes(family))return false;
+    of(s).supportFavourite=family;
+    if(s.rewards.shield&&s.rewards.earnedSupport){s.rewards.supportFamily=family;s.rewards.supportPending=false;}
+    return true;
+  }
+  function earnSupport(s,rec,quick){
+    const b=s.battle,c=of(s).current;
+    if(b?.demo||!b?.missionId||of(s).context!=='mission'||c?.missionId!==b.missionId)return false;
+    const meter=b.supportMeter ||= {accurate:0,quick:0,earned:false};
+    if(rec.supported)return false;
+    if(!rec.correct){meter.accurate=0;meter.quick=0;return false;}
+    meter.accurate=Math.min(8,meter.accurate+1);meter.quick=quick?Math.min(6,meter.quick+1):0;
+    if(meter.earned||(c.supportEarned||0)>=2||s.rewards.shield||meter.accurate<8&&meter.quick<6)return false;
+    meter.earned=true;c.supportEarned=(c.supportEarned||0)+1;
+    const preferred=of(s).supportFavourite,family=supportChoices(s).includes(preferred)?preferred:null;
+    Object.assign(s.rewards,{shield:true,earnedSupport:true,supportFamily:family,supportPending:!family});
+    b.question.supportEarned=true;rec.supportEarned=true;return true;
   }
   function protect(s){
     const e=of(s),c=e.current,friend=companion(s);
@@ -171,11 +197,12 @@
     const firstSolve=record.solves===1;if(p.index===3)complete(s,now);
     return {correct:true,firstSolve,id:q.id};
   }
-  const RIDDLE_CAP_MS=180000;
+  const RIDDLE_CAP_MS=180000,MAP_READING_CAP_MS=30000;
   function recordRiddleTime(s,ms,now){
     const c=of(s).current,p=c?.phase==='search'?{id:mapQuestion(s)?.id}:c?.puzzle;
     if(!Number.isFinite(ms)||ms<=0||!Number.isFinite(now)||of(s).context!=='mission'||!['puzzle','search'].includes(c?.phase)||!p?.id||p.solved)return [];
-    const used=c.riddleTimeById ||= {},credit=Math.min(ms,Math.max(0,RIDDLE_CAP_MS-(used[p.id]||0)));
+    const cap=c.phase==='search'?MAP_READING_CAP_MS:RIDDLE_CAP_MS;
+    const used=c.riddleTimeById ||= {},credit=Math.min(ms,Math.max(0,cap-(used[p.id]||0)));
     used[p.id]=(used[p.id]||0)+credit;
     const parts=[];let cursor=now-ms,finish=cursor+credit;
     while(cursor<finish){const d=new Date(cursor),end=Math.min(finish,new Date(d.getFullYear(),d.getMonth(),d.getDate()+1).getTime()),key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');of(s).riddleDays[key]=(of(s).riddleDays[key]||0)+end-cursor;parts.push({ms:end-cursor,end});cursor=end;}
@@ -190,5 +217,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress};
+  return {Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport};
 });

@@ -208,10 +208,10 @@ function clearCombat(){
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge','pipFinisher');
   $('#battleCompanion').classList.remove('protecting');
 }
-function cancelWork(){$('.quickWordReward')?.remove();adventures.stopTiming();clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
+function cancelWork(){window.BlitzFeedback.close();$('.quickWordReward')?.remove();adventures.stopTiming();clearTimeout(storyControls?.loadTimer);clearTimeout(timer);timer=null;epoch++;narrator.cancel();clearCombat();$('#evolution').classList.add('motionPaused');sound.configure({narrating:false});}
 function later(fn,ms){const token=epoch;clearTimeout(timer);timer=setTimeout(()=>{if(!paused&&!blocked&&token===epoch)fn();},ms);}
 function activityCategory(){
-  if(!state||paused||blocked||!playing||state.screen==='evolution')return null;
+  if(!state||paused||blocked||!playing||window.BlitzFeedback.isOpen()||state.screen==='evolution')return null;
   if(state.activity==='mathChallenge'&&state.screen==='mathChallenge'&&state.math.round?.status==='playing')return 'math';
   if(state.activity==='battle'&&state.screen==='battle'&&!state.battle.introPending&&state.battle.question)return state.battle.demo?'demo':'practice';
   if(state.activity==='teaching'&&state.screen==='teaching')return state.teaching?.returnTo==='demo'||state.battle?.demo?'demo':'practice';
@@ -680,6 +680,8 @@ function correctFeedback(record=null) {
     reward.addEventListener('animationend',()=>reward.remove(),{once:true});
     $('#battleScroll').append(reward);
   }
+  const meter=state.battle.supportMeter;if(!supported&&meter&&!meter.earned&&(state.expedition.current?.supportEarned||0)<2&&!state.rewards.shield){$('#feedback').textContent=meter.accurate+' / 8 accurate · '+meter.quick+' / 6 quick';$('#feedback').classList.add('show');}
+  if(q.supportEarned){$('#feedback').textContent='Shield earned! A friend can help.';$('#feedback').classList.add('show');}
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
   speak(Core.byWord[q.target]?.spoken||q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
@@ -760,15 +762,15 @@ function correction(animate=false) {
   const replay=document.createElement('button');replay.className='replay';replay.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zm13-2q6 5 0 10"/></svg>';replay.setAttribute('aria-label',contrast?'Replay both words':'Replay the correct word');
   replay.onclick=()=>{if(!current()||!confirmActivity())return;cancelWork();Core.noteSupport(state,q.target,'correction-replay',Date.now());if(save())speak(correction);};
   $('#battleAnswers').append(replay,next);
-  if(q.shieldUsed){$('#feedback').textContent=q.companionSaved?Content.enemyAt(q.companionSaved).name+' saved a heart!':'Shield saved a heart';$('#feedback').classList.add('show');}
+  if(q.shieldUsed){$('#feedback').textContent=q.companionSaved||q.supportSaved?Content.enemyAt(q.companionSaved||q.supportSaved).name+' saved a heart!':'Shield saved a heart';$('#feedback').classList.add('show');}
   const finishCorrection=()=>{if(animate&&!q.freeMistake&&q.supportReasons.length===0)combatReaction(false);};
   if(q.shieldUsed)speak(q.companionSaved?Content.enemyAt(q.companionSaved).name+' stopped the hit.':'Your shield stopped the hit.',{onEnd:()=>speak(correction,{onEnd:finishCorrection})});
   else speak((q.freeMistake?'Practice turn. You keep your heart. ':'')+correction,{onEnd:finishCorrection});
 }
 
-function advanceBattle(){account();cancelWork();Core.prepareBattle(state,Date.now());if(save())renderActivity();}
+function advanceBattle(){if(adventures.chooseSupport(()=>{playClock.reset(performance.now());advanceBattle();}))return;account();cancelWork();Core.prepareBattle(state,Date.now());if(save())renderActivity();}
 function renderHealth(animate=false) {
-  const b=state.battle;if(!b)return;
+  const b=state.battle;if(!b)return;adventures.renderBattleTeam(pendingHealth?b.question?.supportSaved:null);
   const shown=pendingHealth&&pendingHealth.questionId===b.question?.id?pendingHealth:b;
   const shieldHeld=shown===pendingHealth?shown.shield:state.rewards.shield;
   $('#heroHearts').replaceChildren();
@@ -790,7 +792,7 @@ function renderHealth(animate=false) {
   $('#enemyFace').setAttribute('aria-label',Content.enemyAt(b.enemyId).name+(members.length>1?`, ${members.filter(m=>m.health>0).length} remaining`:''));
 }
 function renderHud() {
-  const b=state.battle;adventures.renderBattleTeam();
+  const b=state.battle;adventures.renderBattleTeam(pendingHealth?b.question?.supportSaved:null);
   paintEnemy($('#enemyFace'),b.enemyId,b.maxHealth,pendingHealth?.enemyHealth??b.enemyHealth);renderHealth();
   $('#battleChapter').hidden=b.demo;if(!b.demo)renderChapter($('#battleChapter'),true);
 }
