@@ -1137,6 +1137,3 @@ Map time is capped at 30 seconds per clue, 90 seconds per map per quest, within 
 Stories (fox-cub rescue and Dragon path) and the original Word trails campaigns default off for new and existing saves. Parents → Activities & settings has independent switches to restore them. Main creature adventures remain available. Settings only change access: learning evidence, XP, saved battles, cleared chapters and each standalone save are retained. Disabled stories also redirect bookmarked entry points to the main game; the separate shareable Hidden Atlas is unchanged.
 
 The gated parent dashboard now has Overview, Learning details, and Activities & settings sections. Readable typography, narrower paragraphs, responsive cards and expandable rule explanations replace the single long page. All reports, sharing, backup, sound and XP controls remain available.
-
-
-

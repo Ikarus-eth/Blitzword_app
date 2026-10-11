@@ -1,0 +1,42 @@
+[
+  {
+    "file": "index.html",
+    "matches": true,
+    "sha256": "2f0771a3fd2dde266e1c486667cd3a654c0ec9cda8e44ebd433dcb271021828c"
+  },
+  {
+    "file": "app.js",
+    "matches": true,
+    "sha256": "d8abe209ac5731ee42694ce647de649ec43e1213184d027c5bbeb8cf80023eb5"
+  },
+  {
+    "file": "game-core.js",
+    "matches": true,
+    "sha256": "2bbad805d67df14eb12ab70ade0e14ad0e2a131cdd2b187a35f5f6fede866e6b"
+  },
+  {
+    "file": "adventure-ui.js",
+    "matches": true,
+    "sha256": "11dc7d2a3c9f89b9c6605b02c1a9568010223f617159a2a1f1f75d6d27ace3fd"
+  },
+  {
+    "file": "styles.css",
+    "matches": true,
+    "sha256": "7938194d9b9aaf8ef603d9b10916581f5305f566d8d9279afe507ac51038956f"
+  },
+  {
+    "file": "assets/activity-access.js",
+    "matches": true,
+    "sha256": "cecfd8b4476925060ed233b53fb4e1404ef8e793960c699a3d43acee1c5495f4"
+  },
+  {
+    "file": "assets/story-pilot/index.html",
+    "matches": true,
+    "sha256": "a89c3a26a89336897756b49551d2234f632ba3f44a0ee0f3304ec2267c9761ea"
+  },
+  {
+    "file": "assets/wimmelbild/index.html",
+    "matches": true,
+    "sha256": "d446cb8394a6647996de81955d5450352c1fc4d522775c207129129d6fe3ea30"
+  }
+]
