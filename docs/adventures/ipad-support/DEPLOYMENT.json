@@ -1,0 +1,88 @@
+{
+  "commit": "5772c9cb173bc09a4ee9a0142db106f2ea920d1a",
+  "checkedAt": "2026-10-11T03:26:53.863178+00:00",
+  "run": "https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38108172566",
+  "checks": [
+    {
+      "path": "index.html",
+      "matches": true,
+      "sha256": "e5d6b5e4cbb93ba9da40531906267921da8a337c5265e5e11d4f40c1c5513230"
+    },
+    {
+      "path": "styles.css",
+      "matches": true,
+      "sha256": "bfe15b2571e43b9ad6f901d3c4840a4ae51c72968c6ba81c654f12622df79aa8"
+    },
+    {
+      "path": "adventures.css",
+      "matches": true,
+      "sha256": "393ab5f5625d2775ec2f330810033460ce298cf8d4808365ea81272f1ba8ad80"
+    },
+    {
+      "path": "game-core.js",
+      "matches": true,
+      "sha256": "f0c216c5a3621f56e5d9d873b32b7499df99f753b7b0122b66a0f542fb829d04"
+    },
+    {
+      "path": "adventure-core.js",
+      "matches": true,
+      "sha256": "fae18b1d38f1502242c7fce083510a34543b48a7a1ea28d14d186752d7a24cc4"
+    },
+    {
+      "path": "adventure-ui.js",
+      "matches": true,
+      "sha256": "67d8a9ff9b4db9edad5635aefa3b240f44d58aeda2ce0bf5385ec17bea673036"
+    },
+    {
+      "path": "app.js",
+      "matches": true,
+      "sha256": "58f80f2e5f9fad96dd6cb61da9958e0b3dc0bc94044f2e03acd0de25801ce80c"
+    },
+    {
+      "path": "assets/ui/feedback.js",
+      "matches": true,
+      "sha256": "488eed76fee984973a64b3c6ba76b0ad908150671d07c021a526fa3d04c277cc"
+    },
+    {
+      "path": "assets/ui/feedback.css",
+      "matches": true,
+      "sha256": "d78031be1a51780b68d946c9c6a04e19d6c0a12b30da19d9ede470f91c7653d9"
+    },
+    {
+      "path": "assets/wimmelbild/quest.css",
+      "matches": true,
+      "sha256": "e4afda2511aa3facf6fa4089cd75625acd3aed5ec614bcac2034a7bd803cd46f"
+    },
+    {
+      "path": "assets/map-quest/index.html",
+      "matches": true,
+      "sha256": "98b1f9e5285947adc01b599ca4f4a8a7d9e09e2b16afa1558a95ebcbabd12527"
+    },
+    {
+      "path": "assets/map-quest/app.js",
+      "matches": true,
+      "sha256": "b53982ac51f4decb1bc926c38831b0cbba6f5ff1eeba477cdfaa08b25b150ea8"
+    },
+    {
+      "path": "assets/map-quest/style.css",
+      "matches": true,
+      "sha256": "d4c36399b75b8fc12f7aebaf03b9800e9aa32da0d1110251c6b1cbd809859253"
+    },
+    {
+      "path": "assets/map-quest/german.js",
+      "matches": true,
+      "sha256": "23fd99f875b0980ef59faf3c07da909727bf8bb44f75fbec13cc1cb085fa9b35"
+    },
+    {
+      "path": "tests/review-app.html",
+      "matches": true,
+      "sha256": "1413e72eab852387c82663b25ddfd54405fed23e9fc478de64328e2659ee0aa6"
+    },
+    {
+      "path": "tests/review-scenarios.js",
+      "matches": true,
+      "sha256": "c4b9cacfb73e21c8bb9af3c71cd9e4c9ba811c3a30126c1d4f94837169bfb1d2"
+    }
+  ],
+  "physicalIPad": "not tested"
+}
