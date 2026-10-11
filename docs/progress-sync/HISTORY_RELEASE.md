@@ -1,6 +1,6 @@
 # Readable sync history — 11 October 2026
 
-Implemented; deployment verification pending. The parent authorized complete available history and longitudinal visibility. This release changes sync/reporting only; a parent-assisted oral reading check remains a separate next phase.
+**Deployed and verified.** Game release PR #181 merged as `59a9183a1ee4a8bfa55396c3bb6ed8384b1148e1`; Pages run `38124005868` succeeded. Four live file hashes match tested source. Backend version 3 is deployed from source `60a215858e876f7c2b51af4681fff44e05d85978` with runtime environment revision 3. The parent authorized complete available history and longitudinal visibility. This release changes sync/reporting only; a parent-assisted oral reading check remains a separate next phase.
 
 ## Data and reliability
 
@@ -23,4 +23,4 @@ The receiver indexes legacy v1 snapshots too. Owner-authenticated `POST /api/adm
 
 ## Verification
 
-404 unit/backend tests and 123 UI-flow groups passed before final completion-marker addition. Focused backend tests cover exact snapshot reconstruction, duplicate/out-of-order handling, backfill, immutable event retention and deletion. Browser IndexedDB smoke checks verify persistence, deduplication, acknowledgement and cleanup with synthetic data in a separate database. Final checks/deployment evidence will be recorded after publication. Physical iPad upload verification requires the actual game to reopen.
+404 unit/backend tests and 123 UI-flow groups passed before final completion-marker addition. Focused backend tests cover exact snapshot reconstruction, duplicate/out-of-order handling, backfill, immutable event retention and deletion. Browser IndexedDB smoke checks verify persistence, deduplication, acknowledgement and cleanup with synthetic data in a separate database. Final focused backend tests (8) also pass, including immutable multipart retries when metadata length changes. Live checks verified snapshot indexing, explicit event acknowledgements, duplicate retries, no public read route, owner-only existing-snapshot backfill, synthetic deletion and revoked-write rejection. Native database reads returned complete, untruncated daily and overview rows; the stored history generation matches the latest uploaded generation. No learner record, identifier or credential is committed. See `HISTORY_DEPLOYMENT.json`. Physical iPad upload verification requires the actual game to reopen.

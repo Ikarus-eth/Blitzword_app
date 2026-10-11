@@ -1,6 +1,6 @@
 ## Readable progress history — 11 October 2026
 
-**Implemented; deployment verification pending.** Preserve existing saves and pairing; add durable offline event uploads, bounded readable report rows, daily observations and owner-only backfill of existing snapshots. Earlier compacted events remain aggregate-only. This is reporting, not a claim of oral reading improvement. [Scope, review protocol and verification](progress-sync/HISTORY_RELEASE.md).
+**Deployed and verified.** [PR #181](https://github.com/Ikarus-eth/Blitzword_app/pull/181) merged; [Pages run 38124005868](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38124005868) succeeded. All four changed live game files match tested source. Sites service version 3 is deployed and its live authentication, upload, retry, backfill and deletion checks passed. Preserve existing saves and pairing; add durable offline event uploads, bounded readable report rows, daily observations and owner-only backfill of existing snapshots. Earlier compacted events remain aggregate-only. This is reporting, not a claim of oral reading improvement. [Scope, review protocol and verification](progress-sync/HISTORY_RELEASE.md).
 
 ## Parent activity controls and readable dashboard — 11 October 2026
 
