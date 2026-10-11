@@ -1,3 +1,11 @@
+## Activation — 11 October 2026
+
+The parent explicitly approved making the entire BlitzWord progress Site internet-reachable while keeping learning data behind application authentication. Sites access revision 2 is now public. This exposes the informational home page and authenticated upload routes, not a public progress viewer. Administration still requires its private key; there is no public read API.
+
+Live checks without Sites sign-in passed: valid upload 200, unauthorised upload 401, stale upload retained the newer generation, deletion 200 and revoked upload 401. The synthetic report was deleted. Browser preflight returned 204 with the exact game origin and Content-Type/Authorization allowed. A fresh single-use 48-hour pairing link was issued privately in the conversation; no code or learner data is stored here. Actual iPad pairing remains pending.
+
+Backend saved version is unchanged. Runtime environment revision 2 was successfully applied by deployment `appgdep_6acb1fb1eebc8191a018327f16cc6d2f` before activation. Earlier pending-access statements below describe the initial release.
+
 # Automatic iPad progress sharing — 11 October 2026
 
 ## Implemented

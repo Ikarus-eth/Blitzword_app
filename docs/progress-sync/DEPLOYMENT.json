@@ -21,6 +21,9 @@
       "sha256": "efa6a165b51c9e4cfde9cf12eb6f29cf808fc1aa9bf82c98cf99663a047173b9"
     }
   ],
-  "backendAudience": "owner-private; activation approval pending",
-  "learnerPaired": false
+  "backendAudience": "public receiver with per-device application authentication; explicitly approved",
+  "learnerPaired": false,
+  "backendAccessRevision": 2,
+  "publicApiVerified": true,
+  "iPadPairing": "Personal link issued; first learner upload not yet verified"
 }

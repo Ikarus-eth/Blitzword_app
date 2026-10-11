@@ -10,7 +10,7 @@ Maintained source for the Sites-hosted private progress receiver. The game remai
 
 ## Access and pairing
 
-The site was deployed owner-private. Browser syncing requires the parent's explicit permission to make the endpoint internet-reachable. This is an audience change, not removal of application authentication: paired devices use a random upload-only key, no public progress-reading API exists, and administrators inspect records through authenticated Sites tools. Do not send a Sites sign-in bypass token to the iPad or bundle it in frontend code.
+The site was initially deployed owner-private. On 11 October 2026 the parent explicitly approved public reachability of the whole Site; access revision 2 is active and unauthenticated upload/read protection was live-tested. This is an audience change, not removal of application authentication: paired devices use a random upload-only key, no public progress-reading API exists, and administrators inspect records through authenticated Sites tools. Do not send a Sites sign-in bypass token to the iPad or bundle it in frontend code.
 
 Create a single-use 48-hour pairing code with `POST /api/admin/pair`, using the runtime ADMIN_KEY as the Authorization Bearer value. When owner-private, service callers additionally need the existing `OAI-Sites-Authorization` bearer returned by `get_site`. Handle credentials in memory, never command arguments or logs. If the original administrator key is unavailable in a later session, configure a fresh random ADMIN_KEY through the native Sites environment tool and deploy the same saved version to apply it. This does not change paired-device keys or learner data.
 
