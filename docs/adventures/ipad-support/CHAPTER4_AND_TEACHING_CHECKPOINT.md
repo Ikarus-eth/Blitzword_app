@@ -1,0 +1,21 @@
+# Chapter-four checkpoint and teaching priority — 11 October 2026
+
+## Required chapter-four checkpoint
+
+The parent will export the learner's current progress and provide it here when he is roughly midway through chapter three (Sky Stars, around four of eight subchapters). **When asked to design, build or continue chapter four, stop and request that progress import first if it has not been supplied.** Do not treat story position as evidence of vocabulary mastery. Once supplied, inspect independent accuracy, help use, delayed reviews, response timing, retreats and the actual introduced/secure vocabulary before adapting the fourth chapter's wording, teaching and challenge. Keep the existing fourth-chapter concept provisional until this review. This checkpoint does not block other maintenance or the teaching batch below. Do not commit the learner's export or identifying progress data to the public repository.
+
+## Accepted teaching priority: words 200–400
+
+Cover every target in this range with a meaningful teaching visual and recorded audio. Positions refer to the **one-based playable `content.words` order**, not spreadsheet row numbers or `sourceId` suffixes. Position 200 is `thin`, already illustrated; the 200 new targets are positions 201 (`has`) through 400 (`eighty`). Include position 200 in the coverage check. [Exact word-by-word manifest](TEACHING_200_400.json).
+
+Current audit: all 201 target words have recorded pronunciation. The 200 expansion targets lack illustrations; 25 have symbols, which do not by themselves satisfy this visual requirement. There are 199 distinct missing example-sentence recordings (5,816 characters) and 198 distinct missing teaching-tip recordings (13,385 characters). These are audited gaps, not generated or deployed assets. This is the next production batch, independent of chapter-four timing; no paid generation was performed for this note.
+
+Completion requires a reviewed visual teaching each word's meaning in context, recorded target pronunciation and example sentence, and recorded teaching-tip audio where a tip is offered. Reuse scenes only where each word remains unambiguous; function words may need relationships or short visual sequences, and numbers need readable quantity representations. Do not equate 200 words with 200 separately generated pictures. Storyboard the whole batch before fixing image count. Verify expansion-card rendering (currently hides illustration art), manifest/audio coverage, landscape iPad legibility, accessible listening and fallback before claiming completion. Retain existing assets and learner saves. Recover paid provider jobs rather than resubmitting blindly.
+
+The authored introduction order is fixed: `selectPracticeWord` chooses the first eligible unseen item in `Content.words`. The actual sequence of encounters is adaptive: repair, due reviews and unfinished practice interleave; accuracy changes the active-word limit and introduction frequency. Learning can advance independently of the story. Thus the manifest is stable production scope, not a promise that every child reaches word 400 in the same quest.
+
+## Optional automatic progress sharing — proposal only
+
+The current game saves locally in the iPad browser; no remote progress sync or monitoring service exists. GitHub Pages hosts static files. A separate private authenticated endpoint could receive one-way, versioned progress snapshots while the app is open (for example every 30–60 seconds when changed and after completed tasks), with offline queuing, acknowledgement and retries. Keep the local save authoritative; do not import analytics snapshots back over play or change existing manual backup/restore. A final send on page hiding is best effort, not a background-delivery guarantee.
+
+Use parent pairing and access control; send only the learning and session evidence needed for review, omit names where possible, and offer pause/delete controls. Keep all learner data outside the public repository. An authorized reviewer could inspect the latest snapshot on request; proactive periodic suggestions would require a separately configured review automation with private read access. This would not mean continuously watching the child or obtaining reliable updates while the app is closed. No endpoint, upload, account or automation is created by this proposal.

@@ -1,3 +1,7 @@
+## Parent checkpoint and teaching scope — 11 October 2026
+
+**Accepted; production pending.** Before chapter-four design/build work, request the learner's progress export from roughly midway through chapter three, unless already provided, and adapt the chapter to that evidence. The next teaching batch must cover words 200–400 with visuals and recorded audio. All target pronunciations exist; 200 illustration targets, 199 unique sentence recordings and 198 unique tip recordings remain. Word introductions follow curriculum order; practice/reviews adapt independently of story progress. Automatic private progress sharing is proposed, not implemented. [Checkpoint, exact scope and sync proposal](adventures/ipad-support/CHAPTER4_AND_TEACHING_CHECKPOINT.md). No runtime change or paid generation accompanies this note.
+
 ## Review follow-up and map layout — 11 October 2026
 
 Keep the current challenge and retreat: the parent reports frustration, voluntary retries and strong satisfaction after winning. Earned support for accurate/fast reading is the next design direction; exact mechanics remain proposed. Varied mission rhythm and visible endings are accepted directions for a proposed fourth major adventure after Sky Stars. Collection-count changes and learning-summary/reward presentation are not priorities. [Accepted scope and proposals](adventures/REVIEW_FOLLOWUP_20261011.md).

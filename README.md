@@ -1,3 +1,7 @@
+## Parent checkpoint and teaching scope — 11 October 2026
+
+**Accepted; production pending.** Before chapter-four design/build work, request the learner's progress export from roughly midway through chapter three, unless already provided, and adapt the chapter to that evidence. The next teaching batch must cover words 200–400 with visuals and recorded audio. All target pronunciations exist; 200 illustration targets, 199 unique sentence recordings and 198 unique tip recordings remain. Word introductions follow curriculum order; practice/reviews adapt independently of story progress. Automatic private progress sharing is proposed, not implemented. [Checkpoint, exact scope and sync proposal](docs/adventures/ipad-support/CHAPTER4_AND_TEACHING_CHECKPOINT.md). No runtime change or paid generation accompanies this note.
+
 # BlitzWord
 
 [45 approved new creatures](https://ikarus-eth.github.io/Blitzword_app/assets/enemies/approved-20261010/): Artus’s selected looks, recorded voices and battle previews. Added to the Creature Book; eight can now be earned in Sky Stars, and 37 await future chapters. [Implementation and checks](docs/enemies/APPROVED_RELEASE.md).
