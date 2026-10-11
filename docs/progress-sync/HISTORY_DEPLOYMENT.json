@@ -1,0 +1,33 @@
+{
+  "build": "sync-history-20261011-r1",
+  "gameMerge": "59a9183a1ee4a8bfa55396c3bb6ed8384b1148e1",
+  "pagesRun": 38124005868,
+  "backendSource": "60a215858e876f7c2b51af4681fff44e05d85978",
+  "backendVersion": "appgprj_6acb06fb7e2c8191abedb468be5f0812~appgver_2ed70f45aafc8191ba7fd3a6c8a73e80",
+  "backendDeployment": "appgdep_6acb45bba490819196c09511eef5fc63",
+  "status": "succeeded",
+  "liveFiles": [
+    {
+      "file": "index.html",
+      "sha256": "7b28bd2d0653e7309d9843526f9c46a9e81804bac777063dd8833168109b62f2"
+    },
+    {
+      "file": "app.js",
+      "sha256": "e6b1973b3086bf4b075ec94dc40e76edccff88f2fc858ab8ba2857010cecab2a"
+    },
+    {
+      "file": "assets/ui/progress-sync.js",
+      "sha256": "b17d9bf2f1b65d05b75cc8b3c4566759692c2a27c9f223008e0d0f00037a631f"
+    },
+    {
+      "file": "assets/ui/sync-history.js",
+      "sha256": "96db4f3fff268137ae3b456912d0a78de7620363beff70ee5c71f42f4be3cd5f"
+    }
+  ],
+  "unitBackendTests": 404,
+  "finalBackendTests": 8,
+  "uiFlowGroups": 123,
+  "browserQueueChecks": true,
+  "authenticatedBackfillVerified": true,
+  "physicalIPadUpgradeUpload": "Pending actual device reopen"
+}
