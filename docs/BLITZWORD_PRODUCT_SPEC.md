@@ -4,7 +4,7 @@ The user authorized generating the missing teaching visuals with ChatGPT and aud
 
 ## Automatic iPad progress sharing — 11 October 2026
 
-**Deployed and verified; activation pending.** Frontend build `progress-sync-20261011-r2` is live after PRs #173/#174 and successful Pages run 38110487818; all four checked runtime/review files match tested source. The private backend is deployed and live-tested with synthetic data. The game adds one-time pairing, automatic foreground uploads, offline recovery, and Parents controls. Learning reports omit profile names/age and never overwrite the local save. Endpoint audience approval and one-time iPad pairing are still required; no learner is connected. 388 game tests, 120 UI groups and five backend tests pass. [Status and verification](progress-sync/RELEASE.md).
+**Deployed, verified and enabled; iPad pairing pending.** Frontend build `progress-sync-20261011-r2` is live after PRs #173/#174 and successful Pages run 38110487818; all four checked runtime/review files match tested source. The protected backend is enabled after explicit whole-site audience approval and live-tested without ChatGPT sign-in. The game adds one-time pairing, automatic foreground uploads, offline recovery, and Parents controls. Learning reports omit profile names/age and never overwrite the local save. A single-use pairing link has been prepared; the parent must open it on the actual iPad play context. No learner connection is claimed before its first confirmed upload. 388 game tests, 120 UI groups and five backend tests pass. [Status and verification](progress-sync/RELEASE.md).
 
 ## Parent checkpoint and teaching scope — 11 October 2026
 
