@@ -19,8 +19,8 @@ test('zero lives retreats two steps and preserves solved map questions through r
 test('reload, parked legacy play and old completed quests preserve learner evidence',()=>{
  let s=ready();solve(s);const q=A.mapQuestion(s);A.chooseMap(s,q.answer,q.id);A.switchTo(s,'legacy');s=C.migrate(JSON.parse(JSON.stringify(s)));C.startMission(s,'crab-ferry',NOW);assert.equal(s.expedition.current.search.index,1);assert.equal(s.expedition.current.search.selection,q.answer);solve(s);solve(s);delete s.expedition.current.ninthRequired;s=C.migrate(s);assert.equal(s.expedition.current.phase,'complete');assert.equal(A.progress(s).total,8);assert.ok(A.stats(s).completedAt);C.startMission(s,'crab-ferry',NOW);assert.equal(A.progress(s).total,9);
 });
-test('map first solves award riddle XP once and foreground thinking shares the per-question cap',()=>{
- const s=ready();const xp=s.dragon.xp;A.recordRiddleTime(s,240000,NOW);assert.equal(A.report(s).riddleMs,180000);solve(s);assert.equal(s.dragon.xp-xp,50);A.recordRiddleTime(s,1000,NOW);assert.equal(A.report(s).riddleMs,181000);solve(s);solve(s);const after=s.dragon.xp;s.expedition.current.phase='search';s.expedition.current.search={index:0,answers:[],selection:null};assert.equal(solve(s).firstSolve,false);assert.equal(s.dragon.xp,after);
+test('map first solves award riddle XP once and foreground map reading has its own 30-second cap',()=>{
+ const s=ready();const xp=s.dragon.xp;A.recordRiddleTime(s,240000,NOW);assert.equal(A.report(s).riddleMs,30000);solve(s);assert.equal(s.dragon.xp-xp,50);A.recordRiddleTime(s,1000,NOW);assert.equal(A.report(s).riddleMs,31000);solve(s);solve(s);const after=s.dragon.xp;s.expedition.current.phase='search';s.expedition.current.search={index:0,answers:[],selection:null};assert.equal(solve(s).firstSolve,false);assert.equal(s.dragon.xp,after);
 });
 
 test('replacement scenes clear obsolete pending choices but preserve solved slots and earned records',()=>{
@@ -31,3 +31,11 @@ test('replacement scenes clear obsolete pending choices but preserve solved slot
   C.startMission(s,id,NOW);const q=A.mapQuestion(s);A.chooseMap(s,q.answer,q.id);s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(s.expedition.current.search.selection,q.answer);
  }
 });
+
+test('map reading is capped at 90 seconds across three clues and cannot be farmed by reload or retry',()=>{
+ let s=ready();C.recordRiddleTime(s,120000,NOW);s=C.migrate(C.copy(s));assert.equal(C.recordRiddleTime(s,20000,NOW),0);
+ const c=s.expedition.current,q=A.mapQuestion(s);c.hearts=1;A.chooseMap(s,q.options.find(o=>o.id!==q.answer).id,q.id);C.checkMap(s,NOW,q.id);A.retry(s);c.phase='search';assert.equal(C.recordRiddleTime(s,60000,NOW),0);
+ solve(s);C.recordRiddleTime(s,120000,NOW);solve(s);C.recordRiddleTime(s,120000,NOW);solve(s);assert.equal(A.report(s).riddleMs,90000);assert.equal(C.recordRiddleTime(s,60000,NOW),0);
+});
+test('saved time from before the smaller map cap is retained without allowing further credit',()=>{const s=ready(),id=A.mapQuestion(s).id;s.expedition.current.riddleTimeById={[id]:180000};s.expedition.riddleDays[C.dayKey(NOW)]=180000;const reopened=C.migrate(C.copy(s));assert.equal(C.recordRiddleTime(reopened,10000,NOW),0);assert.equal(A.report(reopened).riddleMs,180000);});
+test('hints and listening keep map solve XP, while wrong and duplicate answers give none',()=>{const s=ready(),p=s.expedition.current.search,q=A.mapQuestion(s);p.hint=true;p.listened=true;const xp=s.dragon.xp;A.chooseMap(s,q.options.find(o=>o.id!==q.answer).id,q.id);C.checkMap(s,NOW,q.id);assert.equal(s.dragon.xp,xp);const result=solve(s);assert.equal(result.xpEarned,50);assert.equal(s.dragon.xp,xp+50);assert.equal(C.checkMap(s,NOW,q.id),false);assert.equal(s.dragon.xp,xp+50);});

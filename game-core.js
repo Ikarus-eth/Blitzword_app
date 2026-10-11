@@ -380,7 +380,7 @@
   }
   function checkMap(s,now=Date.now(),expected){
     const result=Adventure.checkMap(s,now,expected);
-    if(result?.correct&&result.firstSolve){awardDaily(s,now);const earned=awardXP(s,50,'riddles',now,{boost:true,trackBattle:false});Adventure.stats(s).mapQuestions[result.id].xpEarned=earned;syncProgress(s,now);}
+    if(result?.correct&&result.firstSolve){awardDaily(s,now);const earned=awardXP(s,50,'riddles',now,{boost:true,trackBattle:false});Adventure.stats(s).mapQuestions[result.id].xpEarned=earned;result.xpEarned=earned;syncProgress(s,now);}
     return result;
   }
   function grantParentXP(s,now=Date.now()){
@@ -936,10 +936,10 @@
       if (rec.correct) b.enemyHealth=Math.max(b.requiredAnswers?.length?1:0,b.enemyHealth-1);
       else if (b.firstMistakeFree) b.firstMistakeFree=false;
       else if(b.missionId&&(q.companionSaved=Adventure.protect(s))){q.shieldUsed=true;rec.shieldUsed=true;rec.companionSaved=q.companionSaved;}
-      else if(!b.demo&&s.rewards.shield){s.rewards.shield=false;q.shieldUsed=true;rec.shieldUsed=true;}
+      else if(!b.demo&&s.rewards.shield){q.supportSaved=s.rewards.supportFamily||null;s.rewards.shield=false;s.rewards.earnedSupport=false;s.rewards.supportFamily=null;s.rewards.supportPending=false;q.shieldUsed=true;rec.shieldUsed=true;rec.supportSaved=q.supportSaved;}
       else b.heroHealth--;
     }
-    if(b.missionId)Adventure.syncHearts(s);
+    if(b.missionId){Adventure.syncHearts(s);Adventure.earnSupport(s,rec,quickAnswer(rec));}
     rec.healthChanged=!rec.supported && !q.freeMistake && !q.shieldUsed;
     s.campaign.battleRecords.push(rec);compactHistory(s);
     if(!b.demo&&rec.timingValid&&(!rec.supported||rec.supportReasons.includes('help-request')))updateChallengePace(s);

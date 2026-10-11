@@ -2,15 +2,15 @@
 
 ## Accepted direction
 
-The parent observed repeated defeats followed by voluntary retries and strong satisfaction on completion. Preserve the four-heart challenge and two-step retreat. Explore support earned through accurate and/or fast reading; do not infer that defeat itself requires easier gameplay. Exact shield thresholds remain a proposal.
+The parent observed repeated defeats followed by voluntary retries and strong satisfaction on completion. Preserve the four-heart challenge and two-step retreat. Explore support earned through accurate and/or fast reading; do not infer that defeat itself requires easier gameplay. The thresholds and a second chosen support animal were subsequently approved; see the iPad follow-up below.
 
 Connecting familiar words to meaningful story reading warrants a practical design. Varied mission rhythm and visible consequences are accepted directions; the fourth major adventure is requested as a proposal, following the now-deployed Sky Stars. Creature availability is not a priority because chapters are being built alongside the child's progress. New learning-summary/reward presentation is not a priority.
 
 The parent authorized the map layout improvement: reduce the masthead during play, keep clues available during exploration, and provide a direct route to written answers. No change to answers, lives, saves, rewards or art is part of that implementation.
 
-## Proposed earned protection — not implemented
+## Earned protection — implemented in the subsequent iPad follow-up
 
-Pilot one visible shield meter. Eight consecutive independent correct answers earn one shield; six consecutive answers that meet the existing reliable Quick evidence can earn it earlier. Help pauses the streak without adding charge; wrong answers reset it. Speed alone never qualifies. Use the existing Quick criteria rather than a new universal reaction-time cutoff, and count each saved answer once.
+See [the current implementation and audit](ipad-support/DESIGN_AND_AUDIT.md). The following was the original pilot proposal. One visible shield meter. Eight consecutive independent correct answers earn one shield; six consecutive answers that meet the existing Quick evidence can earn it earlier. Help pauses the streak without adding charge; wrong answers reset it. Speed alone never qualifies. Use the existing Quick criteria rather than a new universal reaction-time cutoff, and count each saved answer once.
 
 Start conservatively: at most one newly earned shield per fight, two per quest, and one earned shield held at a time. A held legacy duel shield also fills that slot. This meter should appear only after answers, never distract during word exposure. The existing companion retains its separate once-per-quest block. Damage absorbed still records a reading miss and gives no enemy damage or XP.
 

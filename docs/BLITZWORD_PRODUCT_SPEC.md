@@ -1108,3 +1108,14 @@ Register the 45 families, including the white Snow Owl, and prepare four single-
 
 
 Current standalone update (10 October 2026): the Hidden Atlas now shares the four continuous 4096×2731 River Song maps and their twelve varied questions, with temporary German translations and no voice. Crystal Ferry is unchanged. See [release notes](wimmelbild/SHARED_CONTINUOUS_RELEASE.md).
+
+
+## Earned shield animal, tablet feedback and capped map time — approved 11 October 2026
+
+Latest parent decisions supersede earlier green-check feedback and map-time rules. Implemented rule details, audio inventory and the proposed vocabulary-aware fourth adventure are in [the iPad follow-up](adventures/ipad-support/DESIGN_AND_AUDIT.md).
+
+Creature quests grant one held shield after eight consecutive independent correct answers, or six consecutive existing Quick answers; help pauses, misses reset. At most one grant per fight and two per quest, surviving retry/reload. Legacy duel shields occupy the held slot. A second chosen met animal represents the earned shield, joins when earned and leaves when consumed. Remember its choice; retain the original companion's separate once-per-quest block and the four-heart/two-step-retreat challenge. Keep separate landscape lanes for all creatures.
+
+Use forest-green, parchment and gold modal feedback after riddle/map answers, including wrong answers and completion. Provide readable next actions, focus containment and no reading-time credit while a popup is open. Raise small fixed UI type to at least 18 CSS px and use larger clue/answer text, assuming a landscape iPad.
+
+Map time is capped at 30 seconds per clue, 90 seconds per map per quest, within the existing riddle-time/daily-boost accounting. Retry/reload cannot refill a clue's cap; existing recorded time remains. Ordinary riddles keep their three-minute cap. Map first solves still earn 50 XP (88 boosted), even after hints/listening; misses/repeat solves grant none. The standalone Atlas has no learner XP/time integration. Fourth-campaign implementation and paid teaching generation remain proposals, not shipped content.

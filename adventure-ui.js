@@ -34,7 +34,7 @@
     function icon(name){return '<svg viewBox="0 0 40 42" aria-hidden="true"><path d="'+(paths[name]||paths.mark)+'"/></svg>';}
     function timeTap(){
       const s=ctx.state(),p=A.of(s).current?.phase==='search'?{solved:false}:A.of(s).current?.puzzle,now=performance.now();
-      const delta=stamp===null?0:Math.max(0,now-stamp);
+      const delta=stamp===null||window.BlitzFeedback.isOpen()?0:Math.max(0,now-stamp);
       if(s.screen==='mission'&&p&&!p.solved&&ctx.active()&&!document.hidden&&delta<=5000)Core.recordRiddleTime(s,delta,Date.now());
       stamp=now;
     }
@@ -57,8 +57,25 @@
       const copy=el('div','questTeamCopy');copy.append(el('strong','',family?'On your side: '+Content.enemyAt(family).name:'Choose an animal for your team'),el('p','',!family?'It can stop one hit each quest.':c?.companionHelpUsed?'Your friend has stopped a hit. It can help again next quest.':'Your friend can stop one hit this quest.'));
       copy.append(button(family?'Change animal':'Choose my animal','textButton',()=>openBook(family)));card.append(copy);return card;
     }
-    function renderBattleTeam(){
+    function chooseSupport(done=()=>{},force=false){
+      const s=ctx.state();if(!force&&(!s.rewards.shield||!s.rewards.supportPending))return false;
+      const choices=A.supportChoices(s);if(!choices.length)return false;
+      let selected=choices.includes(A.of(s).supportFavourite)?A.of(s).supportFavourite:choices[0];
+      const grid=el('div','supportChoices');
+      const card=window.BlitzFeedback.show({title:force?'Choose your shield friend':'You earned a shield!',message:'Your friend will stop one hit, then head home.',detail:'Eight accurate answers, or six quick accurate answers, can call a friend.',content:grid,actions:[{label:'Join my team',run:()=>{if(!ctx.active()||!A.selectSupport(s,selected)||!ctx.save())return false;return true;}}],onClose:()=>{renderBattleTeam();done();}});
+      choices.forEach(family=>{const b=button('','supportChoice',()=>{selected=family;for(const option of grid.children)option.setAttribute('aria-pressed',String(option===b));});b.setAttribute('aria-pressed',String(selected===family));const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);b.append(art,el('span','',Content.enemyAt(family).name));grid.append(b);});
+      card.querySelector('.supportChoice')?.focus?.();return true;
+    }
+    function puzzleFeedback(result,q,map=false){
+      if(!result)return;const s=ctx.state(),c=A.of(s).current,won=result.correct,ended=c.phase==='complete',lost=c.hearts===0,earned=map?result.xpEarned:c.puzzle?.xpEarned;
+      window.BlitzFeedback.show({kind:won?'success':'retry',title:won?(ended?'You found the treasure!':map?'You found it!':result.assisted?'Let’s learn this clue':'Clue solved!'):lost?'Time for a fresh start':'Take another look',message:won?((q.reward||'Every part of the clue fits.')+(earned?' +'+earned+' XP':'')):lost?'Return to step '+((c.retryTargetStep||0)+1)+' with four hearts. Your XP is safe.':'One heart used. You have '+c.hearts+' left.',detail:won?(ended?'All three secrets found. Your quest is complete.':q.explanation||'Look for the next secret in the same map.'):q.hint,actions:[{label:won?(ended?'See my treasure':map?'Next map clue':'Continue'):lost?'Try again':'Back to the clue'}],onClose:()=>{if(!ctx.active())return;if(lost){Core.startMissionBattle(s,Date.now());if(ctx.save())ctx.enter();}else if(won&&!map){act(()=>A.next(s,Date.now()));}else stamp=performance.now();}});
+      stamp=null;
+    }
+    function checkPuzzle(q,options={}){let result;act(()=>{result=Core.checkRiddle(ctx.state(),Date.now(),options);});if(!ctx.active())return;puzzleFeedback(result,q);}
+    function renderBattleTeam(heldAtImpact=null){
       const s=ctx.state(),family=s.battle?.missionId?A.companion(s):null,box=$('#battleCompanion');box.hidden=!family;$('#battle').classList.toggle('hasQuestCompanion',!!family);
+      const support=heldAtImpact||(s.rewards.shield?s.rewards.supportFamily:null),extra=$('#battleSupport');extra.hidden=!support;$('#battle').classList.toggle('hasShieldSupport',!!support);
+      if(support){const art=$('#battleSupportArt');if(art.dataset.family!==support){ctx.paintEnemy(art,support,8);art.dataset.family=support;}extra.setAttribute('role','img');extra.setAttribute('aria-label',Content.enemyAt(support).name+' shield friend');}
       if(!family)return;
       const art=$('#battleCompanionArt');if(art.dataset.family!==family){ctx.paintEnemy(art,family,8);art.dataset.family=family;}
       box.setAttribute('role','img');box.setAttribute('aria-label',Content.enemyAt(family).name+' companion');
@@ -139,10 +156,10 @@
         if(p.solved){actions.append(button(c.step===3?(c.ninthRequired?'Open the search map':'Claim the treasure'):'Follow the trail','greenButton',()=>act(()=>A.next(s,Date.now()))));}
         else if(c.hearts<=0){actions.append(button('Rest and retry · '+c.maxHearts+' hearts','greenButton',()=>act(()=>{A.retreat(s,true);A.retry(s);})));}
         else{
-          const ready=button('Try it','greenButton',()=>act(()=>Core.checkRiddle(s,Date.now())));ready.disabled=p.wrong||p.selection.length!==(Array.isArray(q.answer)?q.answer.length:1);actions.append(ready);
+          const ready=button('Try it','greenButton',()=>checkPuzzle(q));ready.disabled=p.wrong||p.selection.length!==(Array.isArray(q.answer)?q.answer.length:1);actions.append(ready);
           if(q.type==='order')actions.append(button('Start order again','textButton',()=>act(()=>{p.selection=[];p.wrong=false;})));
           actions.append(button('A clue, please','textButton',()=>act(()=>{p.hint=true;})),button('Listen','textButton',()=>{if(!ctx.active())return;timeTap();p.listened=true;if(ctx.save())ctx.speak(q.text.join(' ')+' '+q.prompt);}),);
-          if(p.attempts)actions.append(button('Show me how','textButton',()=>act(()=>Core.checkRiddle(s,Date.now(),{reveal:true}))));
+          if(p.attempts)actions.append(button('Show me how','textButton',()=>checkPuzzle(q,{reveal:true})));
         }if(p.solved){panel.classList.add('riddleSolved');const answer=el('p','riddleSolvedAnswer',[q.answer].flat().map(id=>q.options.find(o=>o.id===id).label).join(' → '));feedback.insertBefore(answer,feedback.querySelector('p'));feedback.insertBefore(actions,feedback.querySelector('p'));}else panel.append(actions);
       }
       const picture=el('div','missionPicture');picture.append(scene,teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;if(solving&&p.solved){const feedback=panel.querySelector('.riddleFeedback');feedback.focus?.({preventScroll:true});feedback.scrollIntoView?.({block:'start'});}stamp=solving&&!p.solved?performance.now():null;
@@ -159,7 +176,7 @@
       q.options.forEach(option=>{const b=button(option.label,'searchAnswer'+(p.selection===option.id?' selected':''),()=>{if(!b.isConnected||!ctx.active())return;act(()=>A.chooseMap(s,option.id,q.id));});b.dataset.mapChoice=option.id;b.setAttribute('aria-pressed',String(p.selection===option.id));choices.append(b);});panel.append(choices);
       const feedback=el('p','searchFeedback',p.wrong?'Not quite. −1 life. Check every part of the clue before trying again.':p.index?'Good searching! Keep using this map for the next clue.':'Zoom in to check the small details. Choose only from the written answers.');feedback.setAttribute('role','status');panel.append(feedback);
       if(p.hint)panel.append(el('p','searchHint',q.hint));
-      const actions=el('div','searchActions'),submit=button('Check my answer','greenButton',()=>{if(!submit.isConnected||!ctx.active()||!mapViewer?.ready())return;act(()=>Core.checkMap(s,Date.now(),q.id));});submit.disabled=!p.selection||p.wrong;
+      const actions=el('div','searchActions'),submit=button('Check my answer','greenButton',()=>{if(!submit.isConnected||!ctx.active()||!mapViewer?.ready())return;let result;act(()=>{result=Core.checkMap(s,Date.now(),q.id);});if(ctx.active())puzzleFeedback(result,q,true);});submit.disabled=!p.selection||p.wrong;
       actions.append(submit,button('A clue, please','textButton',()=>act(()=>{p.hint=true;})),button('Listen','textButton',()=>{if(!ctx.active())return;timeTap();p.listened=true;if(ctx.save())ctx.speak(q.text.join(' ')+' '+q.prompt);}),button('Back to camp','textButton',ctx.home));panel.append(actions);layout.append(panel);screen.append(wrap);
       mapViewer=window.BlitzMapViewer.mount(host,map.image,map.title,mapCameraId===m.id?mapCamera:null);mapCameraId=m.id;mapViewer.setClue(q.text,q.prompt,panel);
       stamp=performance.now();
@@ -179,7 +196,7 @@
     function renderBook(){
       const s=ctx.state(),e=A.of(s),report=A.report(s);ctx.show('creatureBook');const screen=$('#creatureBook');screen.replaceChildren();
       const top=el('div','bookTop');top.append(button('← '+(bookReturn==='mission'?'Back to mission':'Back to camp'),'secondaryButton',()=>bookReturn==='mission'?ctx.enter():ctx.home()),el('span','bookCount',report.seen+' / '+Content.creatures.length+' discovered'));screen.append(top);
-      screen.append(heading('Your animal friends','Creature Book','Choose a friend to join you in fights. It can stop one hit each quest.'));
+      screen.append(heading('Your animal friends','Creature Book','Your team friend stops one hit each quest. Accurate reading can call a shield friend, too.'));
       const legend=el('div','bookLegend');for(const text of ['◆ Met: meet this friend','✦ Clue: solve its clue','★ Star: win its big fight'])legend.append(el('span','',text));screen.append(legend);
       const upcoming=Content.newEnemies.filter(enemy=>!A.findMission(enemy.id)).length;
       if(upcoming)screen.append(el('p','bookHint',upcoming+' more friends are waiting for future chapters.'));
@@ -197,12 +214,13 @@
         const stamps=el('ul','bookStampList');for(const [field,label] of [['seen','Met this friend'],['studied','Solved its clue'],['champion','Won its big fight']])stamps.append(el('li',entry?.[field]?'earned':'',(entry?.[field]?'✓ ':'○ ')+label));detail.append(stamps);
         if(!entry?.studied)detail.append(el('p','bookHint','Finish a clue with this creature to learn its secret.'));
         if(!entry?.champion)detail.append(el('p','bookHint','Win its big fight to earn the star.'));
+        if(entry?.seen&&A.supportChoices(s).includes(selectedCreature))detail.append(button(e.supportFavourite===selectedCreature?'Shield friend ✓':'Choose as shield friend','secondaryButton',()=>{if(A.selectSupport(s,selectedCreature)&&ctx.save())renderBook();}));
         if(entry?.seen){const favourite=button(e.favourite===selectedCreature?'On your team ✓':'Choose for my team','secondaryButton',()=>{if(A.selectCompanion(s,selectedCreature)&&ctx.save())renderBook();});detail.append(favourite);}
         if(m)detail.append(button('Find this path','textButton',()=>{e.selectedCampaign=m.campaign;if(!ctx.save())return;ctx.home();const card=$('#adventureHub [data-mission="'+m.id+'"]');card?.classList.add('creatureTarget');card?.scrollIntoView?.({block:'center'});}));
       }else {detail.append(el('h2','','Every friend has a secret'),el('p','','Tap a page to see its clues. A dark shape means there is someone new to find.'));}
       layout.append(detail);screen.append(layout);
     }
-    return {renderHub,renderMission,renderResult,openBook,renderBook,timeTap,stopTiming,icon,renderProgress,renderBattleTeam};
+    return {renderHub,renderMission,renderResult,openBook,renderBook,timeTap,stopTiming,icon,renderProgress,renderBattleTeam,chooseSupport};
   }
   root.BlitzAdventureUI={create};
 })(typeof window==='object'?window:globalThis);
