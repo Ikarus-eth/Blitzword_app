@@ -6,6 +6,10 @@ One-time personal pairing (link or Parents input for Home Screen apps), device-o
 
 The backend is deployed and verified **owner-private** at https://blitzword-progress.ikarus-janzenoa.chatgpt.site. Site `appgprj_6acb06fb7e2c8191abedb468be5f0812`, deployment `appgdep_6acb08e8f3f881918b457bbf10da8667`, saved version `appgprj_6acb06fb7e2c8191abedb468be5f0812~appgver_532d427fc2008191ab6bc72015aeaa84`. It needs explicit audience-change approval before the GitHub Pages game can reach it without ChatGPT sign-in. Pairing on the actual iPad play context is then required; no learner device is connected yet.
 
+## Verified frontend deployment
+
+[PR #173](https://github.com/Ikarus-eth/Blitzword_app/pull/173) and [PR #174](https://github.com/Ikarus-eth/Blitzword_app/pull/174) are merged. Runtime commit `3bae8eef418f85367fa3b264e7909222d567e0b8`, build `progress-sync-20261011-r2`, [Pages run 38110487818](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38110487818) succeeded. All four checked public runtime/review files match tested source: [hash evidence](DEPLOYMENT.json). CI ran the complete 388 game tests, five backend tests and 120 UI groups successfully. Endpoint activation and actual iPad pairing remain pending.
+
 ## Verification
 
 - 388 main-game unit tests and 120 UI-flow groups pass.
