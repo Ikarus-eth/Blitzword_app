@@ -1,3 +1,4 @@
+import {TABLES,writeProjection,writeEvents} from './history.mjs';
 export const GAME_ORIGIN='https://ikarus-eth.github.io';
 export const MAX_BYTES=1800000;
 const validToken=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
@@ -18,7 +19,7 @@ export async function handle(request,{DB,ADMIN_KEY},now=Date.now()){
   const reply=(body,status=200)=>new Response(JSON.stringify(body),{status,headers});
   if(origin&&origin!==GAME_ORIGIN)return reply({error:'Origin not allowed'},403);
   if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
-  if(path==='/api/health'&&request.method==='GET')return reply({service:'BlitzWord progress',version:1});
+  if(path==='/api/health'&&request.method==='GET')return reply({service:'BlitzWord progress',version:2});
   const bearer=request.headers.get('authorization')?.replace(/^Bearer /,'');
   try{
     if(path==='/api/admin/pair'&&request.method==='POST'){
@@ -35,15 +36,30 @@ export async function handle(request,{DB,ADMIN_KEY},now=Date.now()){
       const row=await DB.prepare('UPDATE devices SET token_hash = ? WHERE pair_hash = ? AND pair_expires > ? AND revoked = 0 AND (token_hash IS NULL OR token_hash = ?) RETURNING id').bind(tokenHash,codeHash,now,tokenHash).first();
       return row?reply({deviceId:row.id}):reply({error:'Pairing link expired or already used'},401);
     }
-    const match=path.match(/^\/api\/devices\/([0-9a-f-]{36})(\/snapshot)?$/);
+    // Owner-only repair/backfill reads the stored snapshot internally; never exposes a read API.
+    if(path==='/api/admin/reindex'&&request.method==='POST'){
+      if(!validToken(ADMIN_KEY)||!validToken(bearer)||await hash(bearer)!==await hash(ADMIN_KEY))return reply({error:'Unauthorized'},401);
+      const b=await readJSON(request);
+      const row=await DB.prepare('SELECT id,snapshot FROM devices WHERE id=? AND revoked=0').bind(b.deviceId||'').first();
+      if(!row?.snapshot)return reply({error:'No saved report'},404);
+      const details=await writeProjection(DB,row.id,JSON.parse(row.snapshot));
+      return reply({indexed:true,...details});
+    }
+    const match=path.match(/^\/api\/devices\/([0-9a-f-]{36})(\/(?:snapshot|events))?$/);
     if(!match||!['POST','DELETE'].includes(request.method))return reply({error:'Not found'},404);
     if(!validToken(bearer))return reply({error:'Unauthorized'},401);
     const tokenHash=await hash(bearer),id=match[1];
     const device=await DB.prepare('SELECT id, sequence FROM devices WHERE id = ? AND token_hash = ? AND revoked = 0').bind(id,tokenHash).first();
     if(!device)return reply({error:'Unauthorized'},401);
     if(request.method==='DELETE'&&!match[2]){
-      await DB.prepare('UPDATE devices SET snapshot = NULL, summary = NULL, received_at = NULL, token_hash = NULL, revoked = 1 WHERE id = ? AND token_hash = ?').bind(id,tokenHash).run();
+      await DB.batch([DB.prepare('UPDATE devices SET snapshot = NULL, summary = NULL, received_at = NULL, history_sequence = 0, token_hash = NULL, revoked = 1 WHERE id = ? AND token_hash = ?').bind(id,tokenHash),...TABLES.map(table=>DB.prepare(`DELETE FROM ${table} WHERE device_id=?`).bind(id))]);
       return reply({deleted:true});
+    }
+    if(request.method==='POST'&&match[2]==='/events'){
+      const b=await readJSON(request);
+      if(!Array.isArray(b.events)||b.events.length>100||b.events.some(e=>!e||typeof e.key!=='string'||e.key.length>400||!['answer','assessment','teaching','support','session','duel'].includes(e.kind)||!e.data||typeof e.data!=='object'||JSON.stringify(e).length>50000))return reply({error:'Invalid events'},400);
+      await writeEvents(DB,id,b.events);
+      return reply({accepted:b.events.map(e=>e.key)});
     }
     if(request.method!=='POST'||!match[2])return reply({error:'Not found'},404);
     const b=await readJSON(request);
@@ -52,7 +68,9 @@ export async function handle(request,{DB,ADMIN_KEY},now=Date.now()){
     const receivedAt=new Date(now).toISOString();
     await DB.prepare('UPDATE devices SET sequence = ?, received_at = ?, snapshot = ?, summary = ? WHERE id = ? AND token_hash = ? AND revoked = 0 AND sequence < ?').bind(b.sequence,receivedAt,JSON.stringify(b),JSON.stringify(b.summary||{}),id,tokenHash,b.sequence).run();
     const ack=await DB.prepare('SELECT sequence, received_at FROM devices WHERE id = ? AND token_hash = ? AND revoked = 0').bind(id,tokenHash).first();
-    return ack?reply({sequence:ack.sequence,receivedAt:ack.received_at}):reply({error:'Unauthorized'},401);
+    let history={};
+    if(ack?.sequence===b.sequence)history=await writeProjection(DB,id,b);
+    return ack?reply({sequence:ack.sequence,receivedAt:ack.received_at,...history}):reply({error:'Unauthorized'},401);
   }catch(e){
     if(e instanceof SyntaxError||e.message==='body')return reply({error:'Invalid JSON'},400);
     if(e.message==='size')return reply({error:'Snapshot too large'},413);

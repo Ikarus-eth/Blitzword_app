@@ -361,6 +361,7 @@ function renderSyncStatus(info=progressSync?.status()){
   const el=$('#syncStatus');if(!el)return;
   info=info||{message:'Progress sharing is unavailable in this browser.'};
   el.textContent=info.message||(info.paired?(info.paused?'Sharing paused.':info.lastSyncedAt?'Last synced: '+new Date(info.lastSyncedAt).toLocaleString()+'. Updates send automatically while the game is open.':'Connected. Waiting for the first update.'):'Not connected. Open your personal pairing link on this iPad.');
+  if(info.paired){el.textContent+=' '+(info.historyError||('Events waiting: '+(info.pendingEvents||0)+'. '+(info.historyVersion===2?'Detailed reports available. ':'Detailed report upgrade pending. ')+(info.historySince?'Retained history starts '+new Date(info.historySince).toLocaleDateString()+'. ':'')+(info.archivedAnswers?info.archivedAnswers+' older answers were compacted locally; only their totals may be available.':'')));}
   for(const id of ['syncNow','syncPause','syncDelete']){const b=$('#'+id);b.hidden=!info.paired&&!info.pendingPair;b.disabled=!!info.deleting;}
   $('#syncPairForm').hidden=!!info.paired||!!info.pendingPair;
   $('#syncPause').textContent=info.paused?'Resume sharing':'Pause sharing';
@@ -368,7 +369,7 @@ function renderSyncStatus(info=progressSync?.status()){
 function startProgressSync(){
   if(!window.BlitzProgressSync||!window.crypto?.subtle||!window.fetch)return;
   try{
-    progressSync=BlitzProgressSync.create({storage:window.localStorage,readState:()=>{const raw=window.localStorage.getItem(KEY);return raw?Core.unpackSave(JSON.parse(raw)):null;},fetch:window.fetch.bind(window),crypto:window.crypto,locks:navigator.locks,pack:Core.packSave,summary:s=>{
+    progressSync=BlitzProgressSync.create({storage:window.localStorage,readState:()=>{const raw=window.localStorage.getItem(KEY);return raw?Core.unpackSave(JSON.parse(raw)):null;},fetch:window.fetch.bind(window),crypto:window.crypto,locks:navigator.locks,pack:Core.packSave,history:window.BlitzSyncHistory?.create(window.indexedDB),reports:s=>{const p=Core.parentLearning(s);return {words:p.words.filter(w=>w.status!=='new'),weeks:p.weeks};},summary:s=>{
       const p=Core.parentLearning(s),recent=s.campaign.battleRecords.filter(r=>r.task==='battle').slice(-50),independent=recent.filter(r=>!r.supported),missions=Core.Adventure.report(s);
       return {xp:s.dragon.xp,counts:p.counts,recent:{answers:recent.length,independent:independent.length,correct:independent.filter(r=>r.correct===true).length,helped:recent.filter(r=>r.supported).length},needsPractice:p.words.filter(w=>w.answers&&w.correct<w.independent).sort((a,b)=>(b.independent-b.correct)-(a.independent-a.correct)).slice(0,12).map(w=>({word:w.word,status:w.status,correct:w.correct,independent:w.independent,helped:w.helped})),missions:{completed:missions.completed,current:s.expedition?.current?.missionId||null,step:s.expedition?.current?.step??null},recentDays:Object.entries(s.timing.days).sort(([a],[b])=>b.localeCompare(a)).slice(0,7)};
     },build:$('meta[name="blitzword-build"]')?.content||'',onStatus:renderSyncStatus});
@@ -444,7 +445,7 @@ function storageProblem(error) {
 }
 // Meaningful events save at once; the play tick only saves the time ledger every SAVE_EVERY_MS.
 const SAVE_EVERY_MS=10000;let lastSaveAt=-Infinity;
-function save(){account();try{store.save(state);lastSaveAt=performance.now();return true;}catch(e){storageProblem(e);return false;}}
+function save(){account();try{store.save(state);void progressSync?.capture(state);lastSaveAt=performance.now();return true;}catch(e){storageProblem(e);return false;}}
 function show(id) {
   closeSpeed(false);
   $$('.screen').forEach(el=>el.classList.toggle('active',el.id===id));
