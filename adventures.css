@@ -99,3 +99,5 @@
 .missionCardStatus,.adventureEyebrow{text-transform:none;letter-spacing:.02em}.missionCardCopy h2{line-height:1.25}
 #battleChapter.questProgress{width:270px}.compactQuest .questProgressTitle,.compactQuest .questProgressCount{font-size:18px}
 .creatureGrid{grid-template-columns:repeat(4,minmax(0,1fr))}.creatureTile strong{font-size:20px}.creatureStamps{font-size:18px}.bookStampList{font-size:20px}
+
+.bookHint{font-size:18px;line-height:1.5}
