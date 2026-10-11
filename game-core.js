@@ -24,7 +24,7 @@
       timing:{version:1,days:{},firstPracticeAt:null},
       math:{best:null,winStreak:0,round:null,records:[]},
       rewards:{shield:false,readingWins:0,shieldEarnedAt:null,xpDays:{},speedHistory:{}},
-      settings:{selfPaced:false,speed:null,soundscape:true}, activity:'route', screen:'setup', battle:null,
+      settings:{storiesEnabled:false,legacyEnabled:false,selfPaced:false,speed:null,soundscape:true}, activity:'route', screen:'setup', battle:null,
       teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false, archive:archiveBase()};
   }
   // Lossless row tables store repeated per-word field names once. In-memory

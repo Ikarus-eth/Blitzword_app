@@ -650,3 +650,23 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 .illustratedLesson #teachHint{font-size:18px;line-height:1.4}
 @media(max-width:650px){.teachCard.illustratedLesson{display:flex;flex-direction:column;padding:14px;gap:10px}.illustratedLesson .teachSentence{font-size:25px}.expandedLesson.illustratedLesson .teachArt{min-height:280px;flex-shrink:0}.illustratedLesson .teachWordLesson{max-height:none;overflow:visible}.illustratedLesson .teachControls{position:sticky;bottom:0;background:#f5e7c6;padding:8px 0}.illustratedLesson .teachControls button{min-width:48px;min-height:48px}}
 @media(min-width:651px) and (max-height:600px){.teachCard.illustratedLesson{grid-template-rows:auto minmax(150px,1fr) auto;padding:8px 14px;gap:6px}.expandedLesson.illustratedLesson .teachArt{min-height:150px}.illustratedLesson .teachSentence{font-size:24px}.illustratedLesson .teachWordLesson{padding:8px}.illustratedLesson .teachControls button{min-height:44px;height:44px}#teachMeaning{font-size:18px}.illustratedLesson #teachWordLabel{font-size:30px}}
+
+/* Parent dashboard: readable sections, with the same saved evidence and controls. */
+.parentDashboard{font-family:Arial,sans-serif;align-items:stretch;gap:20px}
+.parentDashboard>*{width:100%;max-width:1120px;margin-left:auto;margin-right:auto;box-sizing:border-box}
+.parentNav{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+.parentNav button{min-height:48px;font:600 18px/1.4 Arial,sans-serif}
+.parentNav button[aria-pressed=true]{background:#264b39;color:#fff;border-color:#264b39}
+.parentPanel{display:flex;flex-direction:column;gap:22px;flex-shrink:0}
+.parentPanel[hidden]{display:none}
+.parentDashboard .parentInfo{padding:24px;background:#fffdf5;border-color:#c4cbb9}
+.parentDashboard .parentInfo p{max-width:80ch;line-height:1.65}
+.parentDashboard .parentStats{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.parentDashboard .parentStats strong{white-space:normal;font-size:24px}
+.parentDashboard details summary{cursor:pointer;font-size:20px;font-weight:600;min-height:44px;line-height:1.5}
+.activitySwitch{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-top:1px solid #d7ddcd;cursor:pointer}
+.activitySwitch input{width:26px;height:26px;flex-shrink:0;accent-color:#264b39}
+.activitySwitch strong,.activitySwitch small{display:block;font-size:18px;line-height:1.5}
+.activitySwitch small{font-weight:400;color:#465b49;margin-top:6px}
+.parentDashboard button:focus-visible,.activitySwitch input:focus-visible{outline:3px solid #98672d;outline-offset:3px}
+@media(max-width:600px){.parentDashboard .parentInfo{padding:18px}.parentNav button{flex:1 1 140px}.parentHeader{flex-wrap:wrap}.parentDashboard .parentStats{grid-template-columns:1fr 1fr}.parentStats article{padding:14px}}

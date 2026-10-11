@@ -2,6 +2,7 @@ const {parseHTML}=require('linkedom');
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=require('node:path').join(__dirname,'../'),Core=require(root+'game-core'),Content=require(root+'content'),Storage=require(root+'storage'),Audio=require(root+'audio');
 function boot(saved,options={}){
+ if(saved&&!options.activityDefaults){saved=Core.copy(saved);saved.settings.storiesEnabled=true;saved.settings.legacyEnabled=true;}
  if(saved&&!options.adventures){saved=Core.copy(saved);Core.Adventure.of(saved).preferLegacy=true;}
  const {window,document}=parseHTML(fs.readFileSync(root+'index.html','utf8'));
  let now=options.now??Date.UTC(2026,8,22),uid=0;const jobs=new Map(),memory=new Map(saved?[[Storage.KEY,JSON.stringify(saved)]]:[]);
@@ -836,7 +837,7 @@ function parentLearningSave(){
  ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
  const words=[...ui.get('parentWordMap').querySelectorAll('.parentWord')];assert.equal(words.length,1000);assert.equal(new Set(words.map(w=>w.dataset.word)).size,1000);
  for(const [word,status] of [['on','learning'],['rock','secured'],['fox','kept7'],['cave','kept30'],['water','new']])assert.equal(words.find(b=>b.dataset.word===word).dataset.status,status);
- const articles=[...ui.get('parentDashboard').children];assert.equal(articles[1].id,'parentLearningOverview');assert.ok(articles.indexOf(ui.get('parentRetention'))<articles.findIndex(el=>el.querySelector('.soundSettings')));assert.equal(articles.at(-2).querySelector('.soundSettings')!==null,true);
+ assert.equal(ui.get('parentLearningOverview').parentElement.id,'parentLearningPanel');assert.ok(ui.get('parentSettingsPanel').querySelector('.soundSettings'));
  assert.equal(ui.get('parentWeeks').children[0].children[1].textContent,'2 / 3');assert.equal(ui.get('parentWeeks').children[0].children[2].textContent,'67%');assert.match(ui.get('parentMixups').textContent,/on → own/);assert.match(ui.get('parentSlow').textContent,/1.2 s|2.1 s/);
 }
 console.log('PASS gated Parents shows the 1000-word map, five evidence states, retention and tricky words before sound settings');
@@ -1403,3 +1404,27 @@ console.log('PASS illustrated expansion, exact quantities, core and future cards
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());Core.startTeaching(s,'has','battle',Date.now());const ui=boot(s,{pendingImages:true});ui.resume();assert.equal(ui.get('teachContinue').disabled,true);ui.get('teachIllustration').onerror();assert.equal(ui.get('teachContinue').disabled,false);assert.match(ui.get('lessonStatus').textContent,/could not load/);
 }
 console.log('PASS failed expansion illustration retains listening and Continue');
+
+// Optional activity settings default off, survive reload and never erase progress.
+{
+ const original=impactSave();delete original.settings.storiesEnabled;delete original.settings.legacyEnabled;
+ let ui=boot(original,{activityDefaults:true});
+ assert.ok(ui.get('adventureHub').classList.contains('active'));
+ assert.ok(![...ui.document.querySelectorAll('.campControls button')].some(b=>/Word trails|Dragon path|Story adventures/.test(b.textContent)));
+ ui.get('mapStoryPilot').onclick();ui.get('mapWimmelbild').onclick();assert.equal(ui.destinations.length,0);
+ ui.click([...ui.document.querySelectorAll('.campControls button')].find(b=>b.textContent==='Parents'));
+ ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ ui.click(ui.document.querySelector('[data-parent-panel="parentSettingsPanel"]'));
+ assert.equal(ui.get('parentSettingsPanel').hidden,false);assert.equal(ui.get('parentOverviewPanel').hidden,true);
+ const before=ui.state();
+ for(const id of ['parentStoriesEnabled','parentLegacyEnabled']){ui.get(id).checked=true;ui.get(id).onchange();}
+ const after=ui.state();for(const key of ['learning','campaign','story','dragon','battle','expedition'])assert.deepEqual(after[key],before[key]);
+ ui=boot(after,{adventures:true,activityDefaults:true});assert.ok(ui.get('campaignMap').classList.contains('active'));
+ ui.click(ui.get('mapStoryPilot'));assert.equal(ui.destinations.at(-1),'assets/story-pilot/');
+ ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ for(const id of ['parentStoriesEnabled','parentLegacyEnabled']){ui.get(id).checked=false;ui.get(id).onchange();}
+ const disabled=ui.state();for(const key of ['learning','campaign','story','dragon','battle'])assert.deepEqual(disabled[key],after[key]);
+ ui=boot(disabled,{adventures:true,activityDefaults:true});assert.ok(ui.get('adventureHub').classList.contains('active'));
+ assert.equal(ui.state().settings.storiesEnabled,false);assert.equal(ui.state().settings.legacyEnabled,false);
+ console.log('PASS parent activity defaults, guarded launches, panel navigation, toggles, preserved progress and reload');
+}
