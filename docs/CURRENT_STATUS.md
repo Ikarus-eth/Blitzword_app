@@ -1,3 +1,7 @@
+## Oral reading recordings — 11 October 2026
+
+**Implemented and locally tested; deployment pending. Azure setup required.** Parents can submit a recording and passage, review estimated speed, word differences and pauses, and sync results privately for progress review. Audio is sent to Azure but not retained by BlitzWord. The parent has no Azure resource yet; real recognition remains unverified. 413 unit/backend tests, 123 UI groups and isolated browser recovery checks pass. [Setup, costs, limitations and verification](oral-reading/RELEASE.md).
+
 ## Readable progress history — 11 October 2026
 
 **Deployed and verified.** [PR #181](https://github.com/Ikarus-eth/Blitzword_app/pull/181) merged; [Pages run 38124005868](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38124005868) succeeded. All four changed live game files match tested source. Sites service version 3 is deployed and its live authentication, upload, retry, backfill and deletion checks passed. Preserve existing saves and pairing; add durable offline event uploads, bounded readable report rows, daily observations and owner-only backfill of existing snapshots. Earlier compacted events remain aggregate-only. This is reporting, not a claim of oral reading improvement. [Scope, review protocol and verification](progress-sync/HISTORY_RELEASE.md).
