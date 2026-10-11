@@ -2,7 +2,7 @@
   "name": "blitzword",
   "private": true,
   "scripts": {
-    "test": "node --test tests/*.test.js && node tests/ui-flow.cjs"
+    "test": "node --test tests/*.test.js sync-service/tests/*.test.mjs && node tests/ui-flow.cjs"
   },
   "devDependencies": {
     "fake-indexeddb": "6.2.5",

@@ -1,3 +1,7 @@
+## Automatic iPad progress sharing — 11 October 2026
+
+**Implemented and tested; activation pending.** The private backend is deployed and live-tested with synthetic data. The game adds one-time pairing, automatic foreground uploads, offline recovery, and Parents controls. Learning reports omit profile names/age and never overwrite the local save. Endpoint audience approval and one-time iPad pairing are still required; no learner is connected. 387 game tests, 120 UI groups and five backend tests pass. [Status and verification](docs/progress-sync/RELEASE.md).
+
 ## Parent checkpoint and teaching scope — 11 October 2026
 
 **Accepted; production pending.** Before chapter-four design/build work, request the learner's progress export from roughly midway through chapter three, unless already provided, and adapt the chapter to that evidence. The next teaching batch must cover words 200–400 with visuals and recorded audio. All target pronunciations exist; 200 illustration targets, 199 unique sentence recordings and 198 unique tip recordings remain. Word introductions follow curriculum order; practice/reviews adapt independently of story progress. Automatic private progress sharing is proposed, not implemented. [Checkpoint, exact scope and sync proposal](docs/adventures/ipad-support/CHAPTER4_AND_TEACHING_CHECKPOINT.md). No runtime change or paid generation accompanies this note.
