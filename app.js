@@ -12,6 +12,7 @@ const maleHeroSheet='assets/rowanfire-boys-2026-09-21.png';
 const heroAssets=[maleHeroSheet,maleHeroSheet,maleHeroSheet,'assets/hero4.webp','assets/hero5.webp','assets/hero6.webp'];
 const malePortraitCrops=[{x:183,y:145},{x:636,y:145},{x:1099,y:145}];
 const narrator=BlitzAudio.narrator({synth:window.speechSynthesis,Utterance:window.SpeechSynthesisUtterance,AudioContext:window.AudioContext||window.webkitAudioContext,fetchAudio:window.fetch?.bind(window),clips:window.BlitzNarration?.clips||{}});
+let progressSync=null;
 let store,state,paused=true,playing=false,blocked=false,lastTick=performance.now(),timer=null,epoch=0;
 const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:374,h:538},{x:1154,y:0,w:382,h:538},{x:0,y:538,w:384,h:486},{x:384,y:538,w:384,h:486},{x:768,y:630,w:384,h:370},{x:1152,y:650,w:384,h:350}];
 let spriteSerial=0;
@@ -290,7 +291,7 @@ function renderParent(){
     const d={practice:0,math:0,assessment:0,demo:0,idle:0,...(timing.get(date)||{})};
     const row=document.createElement('tr');for(const value of [date,formatTime(d.practice),formatTime(riddles.days[date]||0),formatTime(d.math||0),formatTime(d.assessment+d.demo),formatTime(d.idle)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);
   }
-  $('#parentEmpty').hidden=dates.length>0;populateSoundSettings();$('#backupStatus').textContent='';save();
+  $('#parentEmpty').hidden=dates.length>0;populateSoundSettings();$('#backupStatus').textContent='';renderSyncStatus();save();
 }
 function parentRow(body,values){
   const row=document.createElement('tr');for(const value of values){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);return row;
@@ -354,6 +355,32 @@ function openParentWord(word,button){
 }
 $('#parentWordSearch').oninput=$('#parentWordFilter').onchange=()=>{if(parentReport){$('#parentWordDetail').hidden=true;renderParentWordMap();}};
 $('#parentWordClose').onclick=()=>{$('#parentWordDetail').hidden=true;if(parentWordReturn?.isConnected){parentWordReturn.focus();parentWordReturn.scrollIntoView?.({block:'center'});}};
+function renderSyncStatus(info=progressSync?.status()){
+  const el=$('#syncStatus');if(!el)return;
+  info=info||{message:'Progress sharing is unavailable in this browser.'};
+  el.textContent=info.message||(info.paired?(info.paused?'Sharing paused.':info.lastSyncedAt?'Last synced: '+new Date(info.lastSyncedAt).toLocaleString()+'. Updates send automatically while the game is open.':'Connected. Waiting for the first update.'):'Not connected. Open your personal pairing link on this iPad.');
+  for(const id of ['syncNow','syncPause','syncDelete']){const b=$('#'+id);b.hidden=!info.paired&&!info.pendingPair;b.disabled=!!info.deleting;}
+  $('#syncPause').textContent=info.paused?'Resume sharing':'Pause sharing';
+}
+function startProgressSync(){
+  if(!window.BlitzProgressSync||!window.crypto?.subtle||!window.fetch)return;
+  try{
+    progressSync=BlitzProgressSync.create({storage:window.localStorage,readState:()=>{const raw=window.localStorage.getItem(KEY);return raw?Core.unpackSave(JSON.parse(raw)):null;},fetch:window.fetch.bind(window),crypto:window.crypto,locks:navigator.locks,pack:Core.packSave,summary:s=>{
+      const p=Core.parentLearning(s),recent=s.campaign.battleRecords.filter(r=>r.task==='battle').slice(-50),independent=recent.filter(r=>!r.supported),missions=Core.Adventure.report(s);
+      return {xp:s.dragon.xp,counts:p.counts,recent:{answers:recent.length,independent:independent.length,correct:independent.filter(r=>r.correct===true).length,helped:recent.filter(r=>r.supported).length},needsPractice:p.words.filter(w=>w.answers&&w.correct<w.independent).sort((a,b)=>(b.independent-b.correct)-(a.independent-a.correct)).slice(0,12).map(w=>({word:w.word,status:w.status,correct:w.correct,independent:w.independent,helped:w.helped})),missions:{completed:missions.completed,current:s.expedition?.current?.missionId||null,step:s.expedition?.current?.step??null},recentDays:Object.entries(s.timing.days).sort(([a],[b])=>b.localeCompare(a)).slice(0,7)};
+    },build:$('meta[name="blitzword-build"]')?.content||'',onStatus:renderSyncStatus});
+    const code=new URLSearchParams(location.hash.slice(1)).get('sync');
+    if(code){history.replaceState(null,'',location.pathname+location.search);progressSync.pair(code);}
+    $('#syncNow').onclick=()=>progressSync.flush(true);
+    $('#syncPause').onclick=()=>progressSync.pause(!progressSync.status().paused);
+    $('#syncDelete').onclick=()=>{if(confirm('Delete the shared progress copy and disconnect this iPad? The game and its local save will stay unchanged.'))progressSync.remove();};
+    setInterval(()=>{if(!document.hidden)void progressSync.flush();},30000);
+    window.addEventListener('online',()=>void progressSync.flush(true));
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)void progressSync.flush(true);});
+    void progressSync.flush(true);renderSyncStatus();
+  }catch{renderSyncStatus({message:'Progress sharing could not start. Your local game save is unchanged.'});}
+}
+
 function backupStatus(text,target='#backupStatus'){$(target).textContent=text;}
 function backupDate(at){const d=new Date(at),pad=n=>String(n).padStart(2,'0');return d.getDate()+' '+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]+' '+d.getFullYear()+', '+pad(d.getHours())+':'+pad(d.getMinutes());}
 function backupLine(label,p){return label+': '+p.name+' · '+p.xp+' XP · '+p.words+' words introduced · '+p.chapters+' chapters cleared';}
@@ -1241,10 +1268,11 @@ $('#parentAddXP').onclick=()=>{
 };
 $('#resetBtn').onclick=()=>{if(confirm('Erase the profile and all saved reading progress on this device? This cannot be undone.')){
   // Explicit existing reset action only. Never reset during deployment or migration.
+  progressSync?.detach();
   for(const suffix of ['','_backup','_legacy_backup','_unreadable_backup','_before_restore'])localStorage.removeItem(KEY+suffix);location.reload();
 }};
 document.addEventListener('visibilitychange',()=>{if(document.hidden){account();pause('away');narrator.cancel();}});
-window.addEventListener('pagehide',()=>{narrator.cancel();if(!blocked){account();pause('away');if(!playing)save();}});
+window.addEventListener('pagehide',()=>{narrator.cancel();if(!blocked){account();pause('away');if(!playing)save();void progressSync?.flush(true);}});
 window.addEventListener('blur',()=>{windowFocused=false;account();pause('away');narrator.cancel();});
 window.addEventListener('focus',()=>{windowFocused=true;});
 window.addEventListener('storage',event=>{
@@ -1263,4 +1291,5 @@ setInterval(()=>{
 Core.interruptQuestion(state);
 renderHeroes();paintHero($('#battleHeroImg'),heroIndex());
 if(state.profile.name){if(state.screen==='hero'){show('hero');save();}else home();}else{show('setup');save();}
+startProgressSync();
 })();

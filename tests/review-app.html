@@ -5,6 +5,7 @@ fetch('../index.html?review='+Date.now(),{cache:'no-store'}).then(r=>r.text()).t
  const safeScene=JSON.stringify(scene).replace(/</g,'\\u003c');
  const override=`<script src="tests/review-scenarios.js?v=ipad-support-20261011-r2"><\/script><script>
  window.reviewScene=${safeScene};
+ window.BlitzProgressSync=null; // Review pages never connect, upload or delete real shared progress.
  if(${holdImpact}||${holdEscape}){
    // Test-only held pose. Normal play and the Play animation button keep real timing.
    const nativeTimeout=window.setTimeout.bind(window);
