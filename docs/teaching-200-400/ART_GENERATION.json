@@ -1,0 +1,71 @@
+{
+  "provider": "ChatGPT built-in ImageGen",
+  "calls": 12,
+  "mainSheets": 10,
+  "countingSheets": 1,
+  "clarificationSheets": 1,
+  "sourceOriginals": "Local output/teaching-200-400-originals/; originals also retained in Codex generated_images.",
+  "packaging": "WebP quality 88; no upscaling. Runtime crops use measured native panel boundaries.",
+  "assets": [
+    {
+      "file": "assets/teaching/200-400/atlas-01.webp",
+      "bytes": 636714,
+      "sha256": "9e8bc508bf86c76699cf42e984535d917d03714e707af98a2fd650916a41c27c"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-02.webp",
+      "bytes": 588364,
+      "sha256": "1b087aa52ec208c9bbe67803b6f2891185dd5caa9a1dccb0a530ff3881f7cba8"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-03.webp",
+      "bytes": 581068,
+      "sha256": "990cc40fe320ac690adcbf306dbf576cace8cfaeb402fda7cdee6bf2159381ae"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-04.webp",
+      "bytes": 633234,
+      "sha256": "abc983ae2037e0ae9fd1aeb5e37a5ce283f528ded492930426dc52a63053ec82"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-05.webp",
+      "bytes": 534720,
+      "sha256": "5abef1ae27d470d3741a33e1a9cd0cc0fe283631dd2018fbeccf1c63d8e261af"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-06.webp",
+      "bytes": 548434,
+      "sha256": "919946782dd375312d2eee8ff4cc866e1cb4b5cb3b4e6b065be22cdd4b1103c4"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-07.webp",
+      "bytes": 624226,
+      "sha256": "59a18ae9cb8fb03cdb19a67a0729decdf166e08027366c62a952d4d63dca1bc2"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-08.webp",
+      "bytes": 591548,
+      "sha256": "029a94f1929e4270615e2e3884efbc5ea60a6c0ab595de65856537edbbb5354b"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-09.webp",
+      "bytes": 578792,
+      "sha256": "086b302a698c50ebc544b38f8d0be75f1fec6d2e03ab8ded9664460f4415ec4c"
+    },
+    {
+      "file": "assets/teaching/200-400/atlas-10.webp",
+      "bytes": 582304,
+      "sha256": "c8f6f9feeec2ea82a08f3159229c27a7f11662357bab86f25c25724d3b1d2c41"
+    },
+    {
+      "file": "assets/teaching/200-400/clarifications.webp",
+      "bytes": 513238,
+      "sha256": "ee269a7b7338bb81ecff2445fde5bb298b56269c6d207ef5b6aebd47c60448e8"
+    },
+    {
+      "file": "assets/teaching/200-400/tokens.webp",
+      "bytes": 209090,
+      "sha256": "8429e10d9f1bb45a7952b519b425bca867679840890a877fb3dc61822d0a7ff9"
+    }
+  ]
+}

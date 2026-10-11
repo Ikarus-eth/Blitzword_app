@@ -616,7 +616,7 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 @keyframes quickWordFlash{0%{opacity:0;transform:scale(.75)}18%,50%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.12)}}
 @media(prefers-reduced-motion:reduce){.quickWordReward{animation-name:quickWordQuiet}.quickWordReward svg{filter:none}}
 @keyframes quickWordQuiet{0%,80%{opacity:1}100%{opacity:0}}
-/* Expansion lessons use readable type and exact counters, with no generated art. */
+/* Expansion lesson text and fallback counters. Illustrated batches extend this below. */
 .teachWordLesson{margin:12px auto;max-width:720px;padding:20px;background:#fff7e6;border:2px solid #b78d47;border-radius:18px;color:#302519}
 .teachWordLine{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
 #teachWordLabel{font-size:clamp(30px,6vw,60px);overflow-wrap:anywhere}
@@ -639,3 +639,14 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 #campaignMap #mapWimmelbild{left:calc(var(--map-left) + 250px);bottom:var(--map-bottom);width:auto;min-height:44px;height:44px;padding:8px 14px;border-radius:14px;font-size:18px;white-space:nowrap}
 @media(max-width:700px) and (orientation:portrait){#campaignMap #mapWimmelbild{left:calc(var(--map-left) + 176px);bottom:calc(var(--map-bottom) + 58px);font-size:18px;padding:8px 10px}}
 @media(max-width:380px) and (orientation:portrait){#campaignMap #mapWimmelbild{left:var(--map-left);bottom:calc(var(--map-bottom) + 144px)}}
+/* Illustrated expansion lessons: meaningful art beside readable lesson text. */
+.teachCard.illustratedLesson{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,1fr);grid-template-rows:auto minmax(0,1fr) auto;overflow-y:auto;gap:12px;max-width:1100px}
+.illustratedLesson .teachSentence{grid-column:1/-1;font-size:clamp(25px,3.2vw,38px)}
+.expandedLesson.illustratedLesson .teachArt{display:block;grid-column:1;grid-row:2;min-height:240px}
+.illustratedLesson .teachWordLesson{grid-column:2;grid-row:2;align-self:center;margin:0;padding:18px;width:100%;max-height:100%;overflow-y:auto}
+.illustratedLesson .teachControls{grid-column:1/-1;grid-row:3;margin:0;justify-content:center}
+#teachMeaning{font-size:clamp(18px,2vw,22px);line-height:1.4;margin:12px 0 0;color:#3c492e}
+.illustratedLesson #teachWordLabel{font-size:clamp(30px,4vw,48px)}
+.illustratedLesson #teachHint{font-size:18px;line-height:1.4}
+@media(max-width:650px){.teachCard.illustratedLesson{display:flex;flex-direction:column;padding:14px;gap:10px}.illustratedLesson .teachSentence{font-size:25px}.expandedLesson.illustratedLesson .teachArt{min-height:280px;flex-shrink:0}.illustratedLesson .teachWordLesson{max-height:none;overflow:visible}.illustratedLesson .teachControls{position:sticky;bottom:0;background:#f5e7c6;padding:8px 0}.illustratedLesson .teachControls button{min-width:48px;min-height:48px}}
+@media(min-width:651px) and (max-height:600px){.teachCard.illustratedLesson{grid-template-rows:auto minmax(150px,1fr) auto;padding:8px 14px;gap:6px}.expandedLesson.illustratedLesson .teachArt{min-height:150px}.illustratedLesson .teachSentence{font-size:24px}.illustratedLesson .teachWordLesson{padding:8px}.illustratedLesson .teachControls button{min-height:44px;height:44px}#teachMeaning{font-size:18px}.illustratedLesson #teachWordLabel{font-size:30px}}

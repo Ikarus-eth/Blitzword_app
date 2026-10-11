@@ -1,8 +1,8 @@
 (function(root, factory) {
-  const content = factory(typeof module==='object'&&module.exports?require('./assets/enemies/approved-20261010/roster.js'):root.BlitzApprovedEnemies);
+  const content = factory(typeof module==='object'&&module.exports?require('./assets/enemies/approved-20261010/roster.js'):root.BlitzApprovedEnemies,typeof module==='object'&&module.exports?require('./assets/teaching/200-400/visuals.js'):root.BlitzTeachingVisuals);
   if (typeof module === 'object' && module.exports) module.exports = content;
   else root.BlitzContent = content;
-})(typeof globalThis !== 'undefined' ? globalThis : this, function(Approved) {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function(Approved, TeachingVisuals) {
   'use strict';
   // Full approved Core 200. Existing first-chapter order and saved targets are preserved.
   // Artwork teaches meaning only; it is never displayed with answer choices.
@@ -3196,9 +3196,9 @@
   const curriculumSet=new Set(words.map(item=>item.w.toLowerCase()));
   for(const item of coreWords)item.madeUp=item.madeUp.filter(w=>!curriculumSet.has(w.toLowerCase()));
   // END NEXT800
-  const teachingSource=item=>'assets/teaching/'+item.image+(item.image==='core-teaching'?'.webp':item.crop?'.png':'.webp');
+  const teachingSource=item=>item.source||'assets/teaching/'+item.image+(item.image==='core-teaching'?'.webp':item.crop?'.png':'.webp');
   const evolution={intro:"Look! Your dragon is glowing. Let's see what happens.",
     frames:[0,1,2,3].map(stage=>'assets/evolution/pip-stage-'+stage+'.webp'),
     lines:[null,['I am big.','I can help.'],['My wings are big.','I can help you.'],['Hop on my back.','We can go far.']]};
-  return {teachingSource, coreWords, words, legacyWords, assessmentPools, demoWords, enemies, creatures, newEnemies, newEnemyVariants, enemyVariants, enemyAt, enemiesForHealth, enemyMembers, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, campaignBackgrounds, dragonStages, evolution, chapterWordGoal:30};
+  return {teachingVisuals:TeachingVisuals, teachingSource, coreWords, words, legacyWords, assessmentPools, demoWords, enemies, creatures, newEnemies, newEnemyVariants, enemyVariants, enemyAt, enemiesForHealth, enemyMembers, areas, chapters, chapterStories, storyPictures, chapterBackgrounds, campaignBackgrounds, dragonStages, evolution, chapterWordGoal:30};
 });

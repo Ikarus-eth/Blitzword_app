@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: Children with school bags arrive at their welcoming cottage after school; school is far behind.
+Cell 2: One child passes a closed book into another child's outstretched hands.
+Cell 3: Two children face each other, one speaking and the other listening attentively, an open storybook between them.
+Cell 4: A child at an open front door welcomes a smiling friend arriving with a ball.
+Cell 5: A child deliberately places a cup onto a wooden table.
+Cell 6: A delighted child unwraps a birthday gift revealing a book, wrapping paper and ribbon nearby.
+Cell 7: Children eat their lunch together at a bright midday picnic table, sandwiches and fruit.
+Cell 8: Two inset stages: a horse is offered an apple, then the horse chews with only the apple core left.
+Cell 9: Two smiling friends play catch together in a garden, clear shared enjoyment.
+Cell 10: A family walks along a path toward a visibly nearby sandy beach, carrying towels and a bucket.
+Cell 11: Children carrying book bags walk towards an unmistakable welcoming school building.
+Cell 12: A small child stretches up toward a high shelf but cannot reach the book; feet remain safely on the floor.

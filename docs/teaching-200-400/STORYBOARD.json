@@ -1,0 +1,3591 @@
+{
+  "source": "ba2af8b49c407c10305924e4fd3584a04970b151",
+  "scope": "one-based content.words 200\u2013400 inclusive",
+  "provider": "ChatGPT built-in ImageGen",
+  "styleReference": "assets/teaching/core-teaching.webp",
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "width": 1536,
+    "height": 2048
+  },
+  "scenes": [
+    {
+      "id": "scene-001",
+      "words": [
+        "has"
+      ],
+      "scene": "A small dog proudly holds a red ball in its mouth.",
+      "sheet": 1,
+      "cell": 0
+    },
+    {
+      "id": "scene-002",
+      "words": [
+        "been",
+        "went"
+      ],
+      "scene": "Two small sequential pictures within the cell: children walk into a park, then return home with the park behind them; warm earlier-event vignette.",
+      "sheet": 1,
+      "cell": 1
+    },
+    {
+      "id": "scene-003",
+      "words": [
+        "does"
+      ],
+      "scene": "A little dog looks eagerly at a ball held up by a child, making its wish clear.",
+      "sheet": 1,
+      "cell": 2
+    },
+    {
+      "id": "scene-004",
+      "words": [
+        "us"
+      ],
+      "scene": "Two children seated on a bench warmly invite a third child to the empty space beside them.",
+      "sheet": 1,
+      "cell": 3
+    },
+    {
+      "id": "scene-005",
+      "words": [
+        "its"
+      ],
+      "scene": "A cat visibly licks its own raised front paw.",
+      "sheet": 1,
+      "cell": 4
+    },
+    {
+      "id": "scene-006",
+      "words": [
+        "which"
+      ],
+      "scene": "An adult offers a red book and a blue book; a child points decisively at one.",
+      "sheet": 1,
+      "cell": 5
+    },
+    {
+      "id": "scene-007",
+      "words": [
+        "these"
+      ],
+      "scene": "A child gestures towards a bowl of red apples held close in the foreground.",
+      "sheet": 1,
+      "cell": 6
+    },
+    {
+      "id": "scene-008",
+      "words": [
+        "those",
+        "watch"
+      ],
+      "scene": "Children in the foreground point and look at small birds high in a distant garden tree.",
+      "sheet": 1,
+      "cell": 7
+    },
+    {
+      "id": "scene-009",
+      "words": [
+        "where",
+        "under"
+      ],
+      "scene": "A child looks for a cat; the cat is fully visible underneath a table.",
+      "sheet": 1,
+      "cell": 8
+    },
+    {
+      "id": "scene-010",
+      "words": [
+        "why"
+      ],
+      "scene": "A sad child shows a broken toy to a kindly friend who listens and understands the cause.",
+      "sheet": 1,
+      "cell": 9
+    },
+    {
+      "id": "scene-011",
+      "words": [
+        "must",
+        "road"
+      ],
+      "scene": "At a pedestrian crossing two children with an adult stop safely on the pavement and look both ways before crossing.",
+      "sheet": 1,
+      "cell": 10
+    },
+    {
+      "id": "scene-012",
+      "words": [
+        "should",
+        "help"
+      ],
+      "scene": "Two children help each other lift a wooden box, one on each side.",
+      "sheet": 1,
+      "cell": 11
+    },
+    {
+      "id": "scene-013",
+      "words": [
+        "home",
+        "walked"
+      ],
+      "scene": "Children with school bags arrive at their welcoming cottage after school; school is far behind.",
+      "sheet": 2,
+      "cell": 0
+    },
+    {
+      "id": "scene-014",
+      "words": [
+        "give"
+      ],
+      "scene": "One child passes a closed book into another child's outstretched hands.",
+      "sheet": 2,
+      "cell": 1
+    },
+    {
+      "id": "scene-015",
+      "words": [
+        "say",
+        "talking"
+      ],
+      "scene": "Two children face each other, one speaking and the other listening attentively, an open storybook between them.",
+      "sheet": 2,
+      "cell": 2
+    },
+    {
+      "id": "scene-016",
+      "words": [
+        "came",
+        "coming"
+      ],
+      "scene": "A child at an open front door welcomes a smiling friend arriving with a ball.",
+      "sheet": 2,
+      "cell": 3
+    },
+    {
+      "id": "scene-017",
+      "words": [
+        "put"
+      ],
+      "scene": "A child deliberately places a cup onto a wooden table.",
+      "sheet": 2,
+      "cell": 4
+    },
+    {
+      "id": "scene-018",
+      "words": [
+        "got"
+      ],
+      "scene": "A delighted child unwraps a birthday gift revealing a book, wrapping paper and ribbon nearby.",
+      "sheet": 2,
+      "cell": 5
+    },
+    {
+      "id": "scene-019",
+      "words": [
+        "eat",
+        "lunch"
+      ],
+      "scene": "Children eat their lunch together at a bright midday picnic table, sandwiches and fruit.",
+      "sheet": 2,
+      "cell": 6
+    },
+    {
+      "id": "scene-020",
+      "words": [
+        "ate"
+      ],
+      "scene": "Two inset stages: a horse is offered an apple, then the horse chews with only the apple core left.",
+      "sheet": 2,
+      "cell": 7
+    },
+    {
+      "id": "scene-021",
+      "words": [
+        "play",
+        "friend",
+        "happy"
+      ],
+      "scene": "Two smiling friends play catch together in a garden, clear shared enjoyment.",
+      "sheet": 2,
+      "cell": 8
+    },
+    {
+      "id": "scene-022",
+      "words": [
+        "going"
+      ],
+      "scene": "A family walks along a path toward a visibly nearby sandy beach, carrying towels and a bucket.",
+      "sheet": 2,
+      "cell": 9
+    },
+    {
+      "id": "scene-023",
+      "words": [
+        "goes",
+        "school",
+        "walking"
+      ],
+      "scene": "Children carrying book bags walk towards an unmistakable welcoming school building.",
+      "sheet": 2,
+      "cell": 10
+    },
+    {
+      "id": "scene-024",
+      "words": [
+        "can't"
+      ],
+      "scene": "A small child stretches up toward a high shelf but cannot reach the book; feet remain safely on the floor.",
+      "sheet": 2,
+      "cell": 11
+    },
+    {
+      "id": "scene-025",
+      "words": [
+        "didn't"
+      ],
+      "scene": "A child wearing ear defenders reads while a distant handbell rings, visibly unaware of it.",
+      "sheet": 3,
+      "cell": 0
+    },
+    {
+      "id": "scene-026",
+      "words": [
+        "am"
+      ],
+      "scene": "A child smiles warmly and points gently to their own chest while greeting a friend.",
+      "sheet": 3,
+      "cell": 1
+    },
+    {
+      "id": "scene-027",
+      "words": [
+        "much"
+      ],
+      "scene": "A transparent cup overflows with water, puddle on the table, child stops pouring.",
+      "sheet": 3,
+      "cell": 2
+    },
+    {
+      "id": "scene-028",
+      "words": [
+        "old"
+      ],
+      "scene": "An ancient tree with a very thick gnarled trunk, textured bark and broad canopy.",
+      "sheet": 3,
+      "cell": 3
+    },
+    {
+      "id": "scene-029",
+      "words": [
+        "cold"
+      ],
+      "scene": "A child in winter clothes touches snow with red chilly fingers and shivers gently.",
+      "sheet": 3,
+      "cell": 4
+    },
+    {
+      "id": "scene-030",
+      "words": [
+        "mum",
+        "parents"
+      ],
+      "scene": "Mother and father help a child read an open book at a cosy table, mother beside child and father opposite.",
+      "sheet": 3,
+      "cell": 5
+    },
+    {
+      "id": "scene-031",
+      "words": [
+        "asked"
+      ],
+      "scene": "One child gestures invitingly with a ball to a friend, who responds with a happy nod.",
+      "sheet": 3,
+      "cell": 6
+    },
+    {
+      "id": "scene-032",
+      "words": [
+        "bigger"
+      ],
+      "scene": "Two otherwise identical boxes side by side, one clearly larger; child points at the larger.",
+      "sheet": 3,
+      "cell": 7
+    },
+    {
+      "id": "scene-033",
+      "words": [
+        "rainy"
+      ],
+      "scene": "A child wearing boots and a raincoat walks through puddles in falling rain.",
+      "sheet": 3,
+      "cell": 8
+    },
+    {
+      "id": "scene-034",
+      "words": [
+        "may"
+      ],
+      "scene": "An adult warmly offers a bowl of apples; a child reaches with the adult's clear welcoming permission.",
+      "sheet": 3,
+      "cell": 9
+    },
+    {
+      "id": "scene-035",
+      "words": [
+        "never"
+      ],
+      "scene": "A child stays safely behind a hearth guard, hands held close to their own body and well away from the fire.",
+      "sheet": 3,
+      "cell": 10
+    },
+    {
+      "id": "scene-036",
+      "words": [
+        "full",
+        "almost"
+      ],
+      "scene": "Two transparent cups side by side: left water reaches exactly the brim, right water stops a little below the brim. No spilling.",
+      "sheet": 3,
+      "cell": 11
+    },
+    {
+      "id": "scene-037",
+      "words": [
+        "blue",
+        "sun",
+        "sunny",
+        "sky"
+      ],
+      "scene": "A bright golden sun high in a clear blue daytime sky above a green meadow, a few birds high overhead.",
+      "sheet": 4,
+      "cell": 0
+    },
+    {
+      "id": "scene-038",
+      "words": [
+        "grandma"
+      ],
+      "scene": "A kindly elderly grandmother tells a story to attentive children in a cosy room.",
+      "sheet": 4,
+      "cell": 1
+    },
+    {
+      "id": "scene-039",
+      "words": [
+        "grandpa"
+      ],
+      "scene": "An elderly grandfather carefully plants and waters flowers in a garden.",
+      "sheet": 4,
+      "cell": 2
+    },
+    {
+      "id": "scene-040",
+      "words": [
+        "says"
+      ],
+      "scene": "A child and adult stop beside a red octagonal road sign bearing only the legible word STOP.",
+      "sheet": 4,
+      "cell": 3
+    },
+    {
+      "id": "scene-041",
+      "words": [
+        "biggest"
+      ],
+      "scene": "An elephant beside a horse and a small rabbit on the same ground plane, elephant clearly largest.",
+      "sheet": 4,
+      "cell": 4
+    },
+    {
+      "id": "scene-042",
+      "words": [
+        "once"
+      ],
+      "scene": "A child on a boat looks in wonder at one whale surfacing; a small memory-like vignette with soft edges.",
+      "sheet": 4,
+      "cell": 5
+    },
+    {
+      "id": "scene-043",
+      "words": [
+        "soon"
+      ],
+      "scene": "A family on a path is only a few steps from its cottage door, home immediately ahead.",
+      "sheet": 4,
+      "cell": 6
+    },
+    {
+      "id": "scene-044",
+      "words": [
+        "better"
+      ],
+      "scene": "Two stages within the cell: a tired child resting in bed, then the same child sitting up with a refreshed smile.",
+      "sheet": 4,
+      "cell": 7
+    },
+    {
+      "id": "scene-045",
+      "words": [
+        "black"
+      ],
+      "scene": "A clearly black cat sits on a low pale stone wall.",
+      "sheet": 4,
+      "cell": 8
+    },
+    {
+      "id": "scene-046",
+      "words": [
+        "aunt",
+        "cousin"
+      ],
+      "scene": "Family relationship portrait: a child with their mother, her sister and the sister's child. Two adult sisters beside each other, each beside their own child; leave generous space for external relationship labels.",
+      "sheet": 4,
+      "cell": 9
+    },
+    {
+      "id": "scene-047",
+      "words": [
+        "worse",
+        "worst"
+      ],
+      "scene": "Three equal weather views within one cell progress from light drizzle to heavy rain to a dark windy storm; same tree and cottage throughout.",
+      "sheet": 4,
+      "cell": 10
+    },
+    {
+      "id": "scene-048",
+      "words": [
+        "windy"
+      ],
+      "scene": "A child flies a kite; trees bend and a scarf streams in a clear breeze.",
+      "sheet": 4,
+      "cell": 11
+    },
+    {
+      "id": "scene-049",
+      "words": [
+        "today"
+      ],
+      "scene": "A child prepares for a park trip beside a simple calendar with one current day distinctly circled, no text or digits.",
+      "sheet": 5,
+      "cell": 0
+    },
+    {
+      "id": "scene-050",
+      "words": [
+        "well",
+        "proud"
+      ],
+      "scene": "A child confidently reads an open book to a smiling teacher and proudly shows the finished book.",
+      "sheet": 5,
+      "cell": 1
+    },
+    {
+      "id": "scene-051",
+      "words": [
+        "round"
+      ],
+      "scene": "One perfectly round ball prominent on a square mat, clear circular silhouette.",
+      "sheet": 5,
+      "cell": 2
+    },
+    {
+      "id": "scene-052",
+      "words": [
+        "warm"
+      ],
+      "scene": "A comfortable child in a thick winter coat smiles while snow lies outside.",
+      "sheet": 5,
+      "cell": 3
+    },
+    {
+      "id": "scene-053",
+      "words": [
+        "teacher",
+        "classroom",
+        "lesson"
+      ],
+      "scene": "A teacher helps a small group of children read at desks in a cosy classroom, open books, no writing.",
+      "sheet": 5,
+      "cell": 4
+    },
+    {
+      "id": "scene-054",
+      "words": [
+        "call",
+        "called"
+      ],
+      "scene": "A child calls with hand beside mouth while a dog runs toward them; another friend nearby turns toward the voice.",
+      "sheet": 5,
+      "cell": 5
+    },
+    {
+      "id": "scene-055",
+      "words": [
+        "than"
+      ],
+      "scene": "A tree beside a cottage, tree visibly twice as tall with aligned ground level.",
+      "sheet": 5,
+      "cell": 6
+    },
+    {
+      "id": "scene-056",
+      "words": [
+        "other"
+      ],
+      "scene": "A child with one shoe already on reaches for the matching other shoe.",
+      "sheet": 5,
+      "cell": 7
+    },
+    {
+      "id": "scene-057",
+      "words": [
+        "brown",
+        "horse"
+      ],
+      "scene": "A brown horse runs across a green field, its long brown tail prominently flowing.",
+      "sheet": 5,
+      "cell": 8
+    },
+    {
+      "id": "scene-058",
+      "words": [
+        "clean",
+        "dirt"
+      ],
+      "scene": "Two close-up stages of hands: muddy hands being washed under a tap, then clean hands held up.",
+      "sheet": 5,
+      "cell": 9
+    },
+    {
+      "id": "scene-059",
+      "words": [
+        "homework",
+        "bag"
+      ],
+      "scene": "A child puts homework sheets and schoolbooks into an open school bag.",
+      "sheet": 5,
+      "cell": 10
+    },
+    {
+      "id": "scene-060",
+      "words": [
+        "afraid",
+        "thunder"
+      ],
+      "scene": "A frightened puppy shelters safely beside its kind owner indoors while a storm rumbles outside the window.",
+      "sheet": 5,
+      "cell": 11
+    },
+    {
+      "id": "scene-061",
+      "words": [
+        "each"
+      ],
+      "scene": "Three children each receive one apple from an adult, one apple clearly in each child's hands.",
+      "sheet": 6,
+      "cell": 0
+    },
+    {
+      "id": "scene-062",
+      "words": [
+        "also"
+      ],
+      "scene": "A happy child strokes both a cat and a dog, showing equal affection.",
+      "sheet": 6,
+      "cell": 1
+    },
+    {
+      "id": "scene-063",
+      "words": [
+        "door",
+        "key"
+      ],
+      "scene": "A hand turns a large key in the lock of a wooden door, clear lock and key interaction.",
+      "sheet": 6,
+      "cell": 2
+    },
+    {
+      "id": "scene-064",
+      "words": [
+        "pencil",
+        "pen",
+        "ruler"
+      ],
+      "scene": "On a clean desk a hand draws a straight line using a wooden ruler and pencil; beside them a blue pen with a blue ink line. No markings or writing.",
+      "sheet": 6,
+      "cell": 3
+    },
+    {
+      "id": "scene-065",
+      "words": [
+        "looked",
+        "hidden"
+      ],
+      "scene": "An open wooden box reveals a small key inside; a child peers inside with curiosity.",
+      "sheet": 6,
+      "cell": 4
+    },
+    {
+      "id": "scene-066",
+      "words": [
+        "worried",
+        "search",
+        "looking"
+      ],
+      "scene": "A concerned child searches beneath a chair and around a table for a misplaced hat, bag and key; make the search action dominant.",
+      "sheet": 6,
+      "cell": 5
+    },
+    {
+      "id": "scene-067",
+      "words": [
+        "lightning"
+      ],
+      "scene": "A bright lightning bolt illuminates a distant dark storm sky; viewed safely from inside a window.",
+      "sheet": 6,
+      "cell": 6
+    },
+    {
+      "id": "scene-068",
+      "words": [
+        "even"
+      ],
+      "scene": "A strong adult father struggles to lift an obviously heavy filled bag, bent knees and effort in his face.",
+      "sheet": 6,
+      "cell": 7
+    },
+    {
+      "id": "scene-069",
+      "words": [
+        "such"
+      ],
+      "scene": "A child fans their warm face on an intensely hot sunny day, strong sun and heat haze.",
+      "sheet": 6,
+      "cell": 8
+    },
+    {
+      "id": "scene-070",
+      "words": [
+        "pretty"
+      ],
+      "scene": "A beautiful pink flower shown prominently in a simple garden close-up.",
+      "sheet": 6,
+      "cell": 9
+    },
+    {
+      "id": "scene-071",
+      "words": [
+        "king"
+      ],
+      "scene": "A kindly adult king wears a clearly visible gold crown and simple royal cloak in a castle courtyard.",
+      "sheet": 6,
+      "cell": 10
+    },
+    {
+      "id": "scene-072",
+      "words": [
+        "lonely"
+      ],
+      "scene": "Two stages: a child sits alone looking sad, then a friend arrives and sits beside them, child brightens.",
+      "sheet": 6,
+      "cell": 11
+    },
+    {
+      "id": "scene-073",
+      "words": [
+        "rainbow"
+      ],
+      "scene": "A clear rainbow arches over wet green hills after rain, soft departing clouds.",
+      "sheet": 7,
+      "cell": 0
+    },
+    {
+      "id": "scene-074",
+      "words": [
+        "same"
+      ],
+      "scene": "Two children hold identical books with matching red covers and the same simple gold tree emblem.",
+      "sheet": 7,
+      "cell": 1
+    },
+    {
+      "id": "scene-075",
+      "words": [
+        "another"
+      ],
+      "scene": "A child who already has one apple receives one more from an adult.",
+      "sheet": 7,
+      "cell": 2
+    },
+    {
+      "id": "scene-076",
+      "words": [
+        "town"
+      ],
+      "scene": "A small friendly town street with several distinct shopfronts, bakery, fruit shop and bookshop, no writing.",
+      "sheet": 7,
+      "cell": 3
+    },
+    {
+      "id": "scene-077",
+      "words": [
+        "drink",
+        "thirsty"
+      ],
+      "scene": "A thirsty child after play eagerly drinks a clear glass of water.",
+      "sheet": 7,
+      "cell": 4
+    },
+    {
+      "id": "scene-078",
+      "words": [
+        "breakfast",
+        "morning"
+      ],
+      "scene": "A child eats breakfast at a table beside a window with the sun low in the morning sky.",
+      "sheet": 7,
+      "cell": 5
+    },
+    {
+      "id": "scene-079",
+      "words": [
+        "excited",
+        "friends"
+      ],
+      "scene": "A delighted child welcomes friends to a birthday party, balloons and wrapped gifts.",
+      "sheet": 7,
+      "cell": 6
+    },
+    {
+      "id": "scene-080",
+      "words": [
+        "space"
+      ],
+      "scene": "The moon against deep outer space filled with distant stars, curved Earth below.",
+      "sheet": 7,
+      "cell": 7
+    },
+    {
+      "id": "scene-081",
+      "words": [
+        "most",
+        "leaves"
+      ],
+      "scene": "Three trees side by side: one with many green leaves, one with a few leaves and one bare; leafy tree dominant.",
+      "sheet": 7,
+      "cell": 8
+    },
+    {
+      "id": "scene-082",
+      "words": [
+        "few"
+      ],
+      "scene": "A large plate has just three small cakes left and many crumbs, plentiful empty space.",
+      "sheet": 7,
+      "cell": 9
+    },
+    {
+      "id": "scene-083",
+      "words": [
+        "river",
+        "across"
+      ],
+      "scene": "Children walk across a wooden bridge spanning a wide flowing river, both banks visible.",
+      "sheet": 7,
+      "cell": 10
+    },
+    {
+      "id": "scene-084",
+      "words": [
+        "dinner",
+        "rice"
+      ],
+      "scene": "A family eats dinner in warm evening light, plates with rice and vegetables, darkening window.",
+      "sheet": 7,
+      "cell": 11
+    },
+    {
+      "id": "scene-085",
+      "words": [
+        "snack"
+      ],
+      "scene": "A child eats a single apple during a short break outdoors, simple small snack.",
+      "sheet": 8,
+      "cell": 0
+    },
+    {
+      "id": "scene-086",
+      "words": [
+        "tired"
+      ],
+      "scene": "A child rests on a bench after a long walk, drooping shoulders, walking path stretching behind.",
+      "sheet": 8,
+      "cell": 1
+    },
+    {
+      "id": "scene-087",
+      "words": [
+        "ocean"
+      ],
+      "scene": "A whale swims in the vast blue ocean, wide water horizon and underwater depth visible.",
+      "sheet": 8,
+      "cell": 2
+    },
+    {
+      "id": "scene-088",
+      "words": [
+        "enough"
+      ],
+      "scene": "Four children at a table with four equally filled plates, everyone provided for and content.",
+      "sheet": 8,
+      "cell": 3
+    },
+    {
+      "id": "scene-089",
+      "words": [
+        "cloud"
+      ],
+      "scene": "One large white fluffy cloud floats in a blue sky above a meadow.",
+      "sheet": 8,
+      "cell": 4
+    },
+    {
+      "id": "scene-090",
+      "words": [
+        "mountain"
+      ],
+      "scene": "A tall mountain with a clearly snow-covered summit above forested slopes.",
+      "sheet": 8,
+      "cell": 5
+    },
+    {
+      "id": "scene-091",
+      "words": [
+        "bread",
+        "butter",
+        "cheese",
+        "sandwich"
+      ],
+      "scene": "Close-up sandwich making: two slices of bread, butter being spread, a slice of cheese and one finished cheese sandwich, simple clear ingredients.",
+      "sheet": 8,
+      "cell": 6
+    },
+    {
+      "id": "scene-092",
+      "words": [
+        "hide",
+        "hid"
+      ],
+      "scene": "A child hides behind a wide tree while a little mouse hides at a hole in the roots; both hiding places visible.",
+      "sheet": 8,
+      "cell": 7
+    },
+    {
+      "id": "scene-093",
+      "words": [
+        "sleepy",
+        "still"
+      ],
+      "scene": "A sleepy baby closes her eyes in a safe simple cot; a quiet caregiver watches without waking her.",
+      "sheet": 8,
+      "cell": 8
+    },
+    {
+      "id": "scene-094",
+      "words": [
+        "pond",
+        "fish"
+      ],
+      "scene": "A small still pond with ducks on the surface and a clearly visible fish underwater.",
+      "sheet": 8,
+      "cell": 9
+    },
+    {
+      "id": "scene-095",
+      "words": [
+        "sometimes"
+      ],
+      "scene": "Three small consecutive scenes in one cell: child walks to school, rides a bus, walks to school again; same school and child.",
+      "sheet": 8,
+      "cell": 10
+    },
+    {
+      "id": "scene-096",
+      "words": [
+        "food",
+        "hungry"
+      ],
+      "scene": "A hungry child readies lunch while placing dog food in the dog's own bowl below, separate foods unambiguous.",
+      "sheet": 8,
+      "cell": 11
+    },
+    {
+      "id": "scene-097",
+      "words": [
+        "stream"
+      ],
+      "scene": "A narrow shallow stream flows visibly over smooth stones between grassy banks.",
+      "sheet": 9,
+      "cell": 0
+    },
+    {
+      "id": "scene-098",
+      "words": [
+        "already"
+      ],
+      "scene": "A child has finished putting on their coat while a friend is still reaching for theirs.",
+      "sheet": 9,
+      "cell": 1
+    },
+    {
+      "id": "scene-099",
+      "words": [
+        "yet"
+      ],
+      "scene": "A child waits outside a closed oven where an unfinished cake is visibly baking, adult supervises.",
+      "sheet": 9,
+      "cell": 2
+    },
+    {
+      "id": "scene-100",
+      "words": [
+        "soup"
+      ],
+      "scene": "A steaming bowl of warm soup with spoon, cosy kitchen table.",
+      "sheet": 9,
+      "cell": 3
+    },
+    {
+      "id": "scene-101",
+      "words": [
+        "waterfall"
+      ],
+      "scene": "Water cascades over high rocks into a pool, clear downward flowing water.",
+      "sheet": 9,
+      "cell": 4
+    },
+    {
+      "id": "scene-102",
+      "words": [
+        "perhaps",
+        "maybe"
+      ],
+      "scene": "A child wondering where a cat could be looks toward a bed, a thought bubble imagines a cat underneath; uncertainty visibly suggested, no actual cat in room.",
+      "sheet": 9,
+      "cell": 5
+    },
+    {
+      "id": "scene-103",
+      "words": [
+        "dark"
+      ],
+      "scene": "A quiet garden at night with deep dark sky and dim moonlight.",
+      "sheet": 9,
+      "cell": 6
+    },
+    {
+      "id": "scene-104",
+      "words": [
+        "potato",
+        "tomato"
+      ],
+      "scene": "A cooked potato cut open on a plate beside one fresh red round tomato in a kitchen.",
+      "sheet": 9,
+      "cell": 7
+    },
+    {
+      "id": "scene-105",
+      "words": [
+        "ill",
+        "sick"
+      ],
+      "scene": "A kind doctor tends a child resting ill in bed, parent nearby, calm reassuring atmosphere.",
+      "sheet": 9,
+      "cell": 8
+    },
+    {
+      "id": "scene-106",
+      "words": [
+        "wave"
+      ],
+      "scene": "One curling ocean wave rolls onto a sandy beach.",
+      "sheet": 9,
+      "cell": 9
+    },
+    {
+      "id": "scene-107",
+      "words": [
+        "together"
+      ],
+      "scene": "Two children build a small house from wooden blocks together, each contributes one piece.",
+      "sheet": 9,
+      "cell": 10
+    },
+    {
+      "id": "scene-108",
+      "words": [
+        "through"
+      ],
+      "scene": "Children walk through a wide open garden gate, one halfway through the opening.",
+      "sheet": 9,
+      "cell": 11
+    },
+    {
+      "id": "scene-109",
+      "words": [
+        "farm",
+        "field"
+      ],
+      "scene": "Sheep and cows graze in a green farm field beside a barn and fence.",
+      "sheet": 10,
+      "cell": 0
+    },
+    {
+      "id": "scene-110",
+      "words": [
+        "egg"
+      ],
+      "scene": "A chick emerges from a cracking eggshell in a nest, warm gentle close-up.",
+      "sheet": 10,
+      "cell": 1
+    },
+    {
+      "id": "scene-111",
+      "words": [
+        "carrot"
+      ],
+      "scene": "A rabbit eats an orange carrot with green leaves.",
+      "sheet": 10,
+      "cell": 2
+    },
+    {
+      "id": "scene-112",
+      "words": [
+        "bean"
+      ],
+      "scene": "A simple three-stage natural illustration: bean seed, sprouting bean, young leafy bean plant.",
+      "sheet": 10,
+      "cell": 3
+    },
+    {
+      "id": "scene-113",
+      "words": [
+        "running"
+      ],
+      "scene": "A dog runs joyfully across a green field, all limbs clear and sense of motion.",
+      "sheet": 10,
+      "cell": 4
+    },
+    {
+      "id": "scene-114",
+      "words": [
+        "island"
+      ],
+      "scene": "A small green island entirely surrounded by blue water, aerial view with full coastline.",
+      "sheet": 10,
+      "cell": 5
+    },
+    {
+      "id": "scene-115",
+      "words": [
+        "between",
+        "ground"
+      ],
+      "scene": "A ball rests on the ground precisely between a child's two separated feet, close low view.",
+      "sheet": 10,
+      "cell": 6
+    },
+    {
+      "id": "scene-116",
+      "words": [
+        "below"
+      ],
+      "scene": "Side cutaway of water: a fish swims directly below a small boat floating at the surface.",
+      "sheet": 10,
+      "cell": 7
+    },
+    {
+      "id": "scene-117",
+      "words": [
+        "banana",
+        "orange",
+        "lemon",
+        "pear"
+      ],
+      "scene": "Four separated close-up fruit still lifes in one cell: peeled yellow banana, orange with thick peel curling off, cut yellow lemon, soft green pear; each fruit distinct.",
+      "sheet": 10,
+      "cell": 8
+    },
+    {
+      "id": "scene-118",
+      "words": [
+        "shy"
+      ],
+      "scene": "A shy child gives a small tentative smile while meeting a friendly new child.",
+      "sheet": 10,
+      "cell": 9
+    },
+    {
+      "id": "scene-119",
+      "words": [
+        "fog"
+      ],
+      "scene": "Thick pale fog partly hides a nearby path and distant trees, close tree clear but distance obscured.",
+      "sheet": 10,
+      "cell": 10
+    },
+    {
+      "id": "scene-120",
+      "words": [
+        "above"
+      ],
+      "scene": "A bird flies clearly above the top of a leafy tree, open sky separates bird and crown.",
+      "sheet": 10,
+      "cell": 11
+    }
+  ],
+  "numberWords": [
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+    "zero",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
+    "twenty",
+    "thirty",
+    "forty",
+    "fifty",
+    "sixty",
+    "seventy",
+    "eighty"
+  ],
+  "numbersPlan": "Generated illustrated quantity tokens with exact programmatically laid out counts, grouped in tens; retain target and original example sentence. No AI-invented counts.",
+  "words": [
+    {
+      "position": 200,
+      "word": "thin",
+      "sourceId": null,
+      "sentence": "The snake is thin.",
+      "tip": null,
+      "hasIllustration": true,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": true,
+      "tipRecorded": null
+    },
+    {
+      "position": 201,
+      "word": "has",
+      "sourceId": "next800-002",
+      "sentence": "The dog has a red ball.",
+      "tip": "Look at every letter in has. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 202,
+      "word": "been",
+      "sourceId": "next800-003",
+      "sentence": "We have been to the park.",
+      "tip": "Word family: be \u2192 been. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 203,
+      "word": "does",
+      "sourceId": "next800-004",
+      "sentence": "What does the little dog want?",
+      "tip": "Word family: do \u2192 does. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 204,
+      "word": "us",
+      "sourceId": "next800-005",
+      "sentence": "Come and sit with us.",
+      "tip": "Look at every letter in us. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 205,
+      "word": "its",
+      "sourceId": "next800-006",
+      "sentence": "The cat licks its paw.",
+      "tip": "Its means belonging to it. There is no apostrophe.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 206,
+      "word": "which",
+      "sourceId": "next800-007",
+      "sentence": "Tell me which book you want.",
+      "tip": "Look carefully at \u201cch\u201d in which. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 207,
+      "word": "these",
+      "sourceId": "next800-008",
+      "sentence": "All these apples are red.",
+      "tip": "Look carefully at \u201cth\u201d in these. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 208,
+      "word": "those",
+      "sourceId": "next800-009",
+      "sentence": "Look at those birds in the tree.",
+      "tip": "Look carefully at \u201cth\u201d in those. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 209,
+      "word": "where",
+      "sourceId": "next800-010",
+      "sentence": "Tell me where the cat is.",
+      "tip": "Look carefully at \u201cer\u201d in where. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 210,
+      "word": "why",
+      "sourceId": "next800-011",
+      "sentence": "Tell me why you are sad.",
+      "tip": "Look at every letter in why. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 211,
+      "word": "must",
+      "sourceId": "next800-013",
+      "sentence": "We must look before we cross.",
+      "tip": "Look at every letter in must. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 212,
+      "word": "should",
+      "sourceId": "next800-015",
+      "sentence": "We should help our friend.",
+      "tip": "Look carefully at \u201csh\u201d in should. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 213,
+      "word": "under",
+      "sourceId": "next800-040",
+      "sentence": "The cat is under the table.",
+      "tip": "Look carefully at \u201cer\u201d in under. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 214,
+      "word": "home",
+      "sourceId": "next800-057",
+      "sentence": "We walk home after school.",
+      "tip": "Look at every letter in home. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 215,
+      "word": "help",
+      "sourceId": "next800-058",
+      "sentence": "Please help me lift the box.",
+      "tip": "Look at every letter in help. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 216,
+      "word": "give",
+      "sourceId": "next800-059",
+      "sentence": "Please give the book to me.",
+      "tip": "Look at every letter in give. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 217,
+      "word": "say",
+      "sourceId": "next800-060",
+      "sentence": "What did you say?",
+      "tip": "Look carefully at \u201cay\u201d in say. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 218,
+      "word": "came",
+      "sourceId": "next800-061",
+      "sentence": "My friend came to play.",
+      "tip": "Word family: come \u2192 came. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 219,
+      "word": "put",
+      "sourceId": "next800-062",
+      "sentence": "Please put the cup on the table.",
+      "tip": "Look at every letter in put. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 220,
+      "word": "went",
+      "sourceId": "next800-063",
+      "sentence": "We went to the park.",
+      "tip": "Word family: go \u2192 went. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 221,
+      "word": "got",
+      "sourceId": "next800-064",
+      "sentence": "I got a book for my birthday.",
+      "tip": "Word family: get \u2192 got. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 222,
+      "word": "eat",
+      "sourceId": "next800-068",
+      "sentence": "We eat our lunch together.",
+      "tip": "Look carefully at \u201cea\u201d in eat. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 223,
+      "word": "ate",
+      "sourceId": "next800-069",
+      "sentence": "The horse ate the apple.",
+      "tip": "Word family: eat \u2192 ate. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 224,
+      "word": "play",
+      "sourceId": "next800-070",
+      "sentence": "Come and play with me.",
+      "tip": "Look carefully at \u201cay\u201d in play. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 225,
+      "word": "going",
+      "sourceId": "next800-083",
+      "sentence": "We are going to the beach.",
+      "tip": "Word family: go \u2192 going. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 226,
+      "word": "goes",
+      "sourceId": "next800-084",
+      "sentence": "My sister goes to school.",
+      "tip": "Word family: go \u2192 goes. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 227,
+      "word": "can't",
+      "sourceId": "next800-085",
+      "sentence": "I can't reach the top shelf.",
+      "tip": "can't means cannot. The apostrophe takes the place of missing letters.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 228,
+      "word": "didn't",
+      "sourceId": "next800-086",
+      "sentence": "I didn't hear the bell.",
+      "tip": "didn't means did not. The apostrophe takes the place of missing letters.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 229,
+      "word": "three",
+      "sourceId": "next800-110",
+      "sentence": "There are three eggs in the nest.",
+      "tip": "three is 3. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 230,
+      "word": "four",
+      "sourceId": "next800-111",
+      "sentence": "The cat has four paws.",
+      "tip": "four is 4. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 231,
+      "word": "five",
+      "sourceId": "next800-112",
+      "sentence": "I have five fingers on one hand.",
+      "tip": "five is 5. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 232,
+      "word": "six",
+      "sourceId": "next800-113",
+      "sentence": "There are six apples in the bag.",
+      "tip": "six is 6. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 233,
+      "word": "seven",
+      "sourceId": "next800-114",
+      "sentence": "There are seven days in a week.",
+      "tip": "seven is 7. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 234,
+      "word": "eight",
+      "sourceId": "next800-115",
+      "sentence": "A spider has eight legs.",
+      "tip": "Eight sounds like ate.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 235,
+      "word": "nine",
+      "sourceId": "next800-116",
+      "sentence": "There are nine shells in the box.",
+      "tip": "nine is 9. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 236,
+      "word": "ten",
+      "sourceId": "next800-117",
+      "sentence": "I can count to ten.",
+      "tip": "ten is 10. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 237,
+      "word": "zero",
+      "sourceId": "next800-109",
+      "sentence": "There are zero cakes left on the plate.",
+      "tip": "zero is 0. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 238,
+      "word": "friend",
+      "sourceId": "next800-178",
+      "sentence": "My friend likes to play with me.",
+      "tip": "Look at every letter in friend. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 239,
+      "word": "school",
+      "sourceId": "next800-218",
+      "sentence": "We learn to read at school.",
+      "tip": "In school, ch sounds like k.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 240,
+      "word": "happy",
+      "sourceId": "next800-190",
+      "sentence": "I feel happy when we play together.",
+      "tip": "Look at every letter in happy. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 241,
+      "word": "am",
+      "sourceId": "next800-001",
+      "sentence": "I am glad to see you.",
+      "tip": "Look at every letter in am. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 242,
+      "word": "much",
+      "sourceId": "next800-012",
+      "sentence": "There is too much water in the cup.",
+      "tip": "Look carefully at \u201cch\u201d in much. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 243,
+      "word": "old",
+      "sourceId": "next800-158",
+      "sentence": "The old tree has a thick trunk.",
+      "tip": "Look at every letter in old. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 244,
+      "word": "cold",
+      "sourceId": "next800-159",
+      "sentence": "The snow feels cold on my hands.",
+      "tip": "Look at every letter in cold. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 245,
+      "word": "mum",
+      "sourceId": "next800-430",
+      "sentence": "My mum reads a book with me.",
+      "tip": "Look at every letter in mum. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 246,
+      "word": "parents",
+      "sourceId": "next800-431",
+      "sentence": "My parents help me learn.",
+      "tip": "Look carefully at \u201car\u201d in parents. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 247,
+      "word": "asked",
+      "sourceId": "next800-561",
+      "sentence": "I asked my friend to play.",
+      "tip": "Word family: ask \u2192 asked. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 248,
+      "word": "bigger",
+      "sourceId": "next800-650",
+      "sentence": "This box is bigger than that one.",
+      "tip": "Word family: big \u2192 bigger. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 249,
+      "word": "rainy",
+      "sourceId": "next800-716",
+      "sentence": "We wear boots on a rainy day.",
+      "tip": "Word family: rain \u2192 rainy. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 250,
+      "word": "eleven",
+      "sourceId": "next800-118",
+      "sentence": "There are eleven players on the team.",
+      "tip": "eleven is 11. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 251,
+      "word": "may",
+      "sourceId": "next800-014",
+      "sentence": "You may have an apple.",
+      "tip": "Look carefully at \u201cay\u201d in may. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 252,
+      "word": "never",
+      "sourceId": "next800-016",
+      "sentence": "I never put my hand in a fire.",
+      "tip": "Look carefully at \u201cer\u201d in never. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 253,
+      "word": "full",
+      "sourceId": "next800-160",
+      "sentence": "My cup is full of water.",
+      "tip": "Look at every letter in full. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 254,
+      "word": "blue",
+      "sourceId": "next800-161",
+      "sentence": "The sky is blue today.",
+      "tip": "Look at every letter in blue. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 255,
+      "word": "grandma",
+      "sourceId": "next800-432",
+      "sentence": "My grandma tells wonderful stories.",
+      "tip": "Look at every letter in grandma. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 256,
+      "word": "grandpa",
+      "sourceId": "next800-433",
+      "sentence": "My grandpa grows flowers.",
+      "tip": "Look at every letter in grandpa. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 257,
+      "word": "says",
+      "sourceId": "next800-562",
+      "sentence": "The sign says to stop.",
+      "tip": "Word family: say \u2192 says. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 258,
+      "word": "biggest",
+      "sourceId": "next800-651",
+      "sentence": "The elephant is the biggest animal here.",
+      "tip": "Word family: big \u2192 biggest. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 259,
+      "word": "sunny",
+      "sourceId": "next800-717",
+      "sentence": "It is a warm, sunny day.",
+      "tip": "Word family: sun \u2192 sunny. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 260,
+      "word": "twelve",
+      "sourceId": "next800-119",
+      "sentence": "There are twelve eggs in the box.",
+      "tip": "twelve is 12. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 261,
+      "word": "once",
+      "sourceId": "next800-017",
+      "sentence": "I saw a whale once.",
+      "tip": "Look at every letter in once. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 262,
+      "word": "soon",
+      "sourceId": "next800-018",
+      "sentence": "We will be home soon.",
+      "tip": "Look carefully at \u201coo\u201d in soon. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 263,
+      "word": "better",
+      "sourceId": "next800-162",
+      "sentence": "I feel better after a rest.",
+      "tip": "Look carefully at \u201cer\u201d in better. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 264,
+      "word": "black",
+      "sourceId": "next800-163",
+      "sentence": "The black cat sits on the wall.",
+      "tip": "Look at every letter in black. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 265,
+      "word": "aunt",
+      "sourceId": "next800-434",
+      "sentence": "My aunt is my mother's sister.",
+      "tip": "Look at every letter in aunt. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 266,
+      "word": "cousin",
+      "sourceId": "next800-435",
+      "sentence": "My cousin is my aunt's child.",
+      "tip": "Look carefully at \u201cou\u201d in cousin. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 267,
+      "word": "talking",
+      "sourceId": "next800-563",
+      "sentence": "We are talking about the story.",
+      "tip": "Word family: talk \u2192 talking. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 268,
+      "word": "worse",
+      "sourceId": "next800-652",
+      "sentence": "The rain is worse than it was before.",
+      "tip": "Look carefully at \u201cor\u201d in worse. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 269,
+      "word": "windy",
+      "sourceId": "next800-718",
+      "sentence": "We fly a kite on a windy day.",
+      "tip": "Word family: wind \u2192 windy. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 270,
+      "word": "thirteen",
+      "sourceId": "next800-120",
+      "sentence": "We count thirteen leaves on the branch.",
+      "tip": "Compare three, thirteen and thirty.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 271,
+      "word": "today",
+      "sourceId": "next800-019",
+      "sentence": "We will go to the park today.",
+      "tip": "A day of the week. Its name starts with a capital letter.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 272,
+      "word": "well",
+      "sourceId": "next800-020",
+      "sentence": "You can read that word well.",
+      "tip": "Look at every letter in well. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 273,
+      "word": "round",
+      "sourceId": "next800-164",
+      "sentence": "The ball is round.",
+      "tip": "Look carefully at \u201cou\u201d in round. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 274,
+      "word": "warm",
+      "sourceId": "next800-165",
+      "sentence": "My coat keeps me warm.",
+      "tip": "Look carefully at \u201car\u201d in warm. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 275,
+      "word": "teacher",
+      "sourceId": "next800-436",
+      "sentence": "Our teacher helps us learn to read.",
+      "tip": "Look carefully at \u201cch\u201d in teacher. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 276,
+      "word": "classroom",
+      "sourceId": "next800-437",
+      "sentence": "We read together in our classroom.",
+      "tip": "Look carefully at \u201coo\u201d in classroom. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 277,
+      "word": "call",
+      "sourceId": "next800-564",
+      "sentence": "I call my dog to come home.",
+      "tip": "Look at every letter in call. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 278,
+      "word": "worst",
+      "sourceId": "next800-653",
+      "sentence": "This is the worst weather of the week.",
+      "tip": "Look carefully at \u201cor\u201d in worst. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 279,
+      "word": "fog",
+      "sourceId": "next800-719",
+      "sentence": "The thick fog makes it hard to see.",
+      "tip": "Look at every letter in fog. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 280,
+      "word": "fourteen",
+      "sourceId": "next800-121",
+      "sentence": "There are fourteen beads on the string.",
+      "tip": "Compare four, fourteen and forty.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 281,
+      "word": "than",
+      "sourceId": "next800-021",
+      "sentence": "The tree is taller than the house.",
+      "tip": "Look carefully at \u201cth\u201d in than. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 282,
+      "word": "other",
+      "sourceId": "next800-022",
+      "sentence": "Put your other shoe on.",
+      "tip": "Look carefully at \u201cth\u201d in other. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 283,
+      "word": "brown",
+      "sourceId": "next800-166",
+      "sentence": "The horse has a brown tail.",
+      "tip": "Look carefully at \u201cow\u201d in brown. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 284,
+      "word": "clean",
+      "sourceId": "next800-167",
+      "sentence": "My hands are clean now.",
+      "tip": "Look carefully at \u201cea\u201d in clean. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 285,
+      "word": "lesson",
+      "sourceId": "next800-438",
+      "sentence": "We learn something new in the lesson.",
+      "tip": "Look at every letter in lesson. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 286,
+      "word": "homework",
+      "sourceId": "next800-439",
+      "sentence": "I put my homework in my bag.",
+      "tip": "Look carefully at \u201cor\u201d in homework. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 287,
+      "word": "called",
+      "sourceId": "next800-565",
+      "sentence": "My friend called my name.",
+      "tip": "Word family: call \u2192 called. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 288,
+      "word": "afraid",
+      "sourceId": "next800-654",
+      "sentence": "The little puppy is afraid of the thunder.",
+      "tip": "Look carefully at \u201cai\u201d in afraid. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 289,
+      "word": "thunder",
+      "sourceId": "next800-720",
+      "sentence": "We hear thunder during the storm.",
+      "tip": "Look carefully at \u201cth\u201d in thunder. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 290,
+      "word": "fifteen",
+      "sourceId": "next800-122",
+      "sentence": "There are fifteen children on the bus.",
+      "tip": "Compare five, fifteen and fifty.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 291,
+      "word": "each",
+      "sourceId": "next800-023",
+      "sentence": "Give each child an apple.",
+      "tip": "Look carefully at \u201cch\u201d in each. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 292,
+      "word": "also",
+      "sourceId": "next800-024",
+      "sentence": "I like cats and I also like dogs.",
+      "tip": "Look at every letter in also. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 293,
+      "word": "sun",
+      "sourceId": "next800-168",
+      "sentence": "The sun shines in the sky.",
+      "tip": "Look at every letter in sun. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 294,
+      "word": "door",
+      "sourceId": "next800-169",
+      "sentence": "Please close the door.",
+      "tip": "Look carefully at \u201coo\u201d in door. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": true,
+      "tipRecorded": false
+    },
+    {
+      "position": 295,
+      "word": "pencil",
+      "sourceId": "next800-440",
+      "sentence": "I write with a pencil.",
+      "tip": "Look at every letter in pencil. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 296,
+      "word": "pen",
+      "sourceId": "next800-441",
+      "sentence": "The pen makes a blue line.",
+      "tip": "Look at every letter in pen. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 297,
+      "word": "looked",
+      "sourceId": "next800-566",
+      "sentence": "We looked inside the box.",
+      "tip": "Word family: look \u2192 looked. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 298,
+      "word": "worried",
+      "sourceId": "next800-655",
+      "sentence": "I felt worried when I lost my bag.",
+      "tip": "Look carefully at \u201cor\u201d in worried. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 299,
+      "word": "lightning",
+      "sourceId": "next800-721",
+      "sentence": "A flash of lightning lights up the sky.",
+      "tip": "Look carefully at \u201cigh\u201d in lightning. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 300,
+      "word": "sixteen",
+      "sourceId": "next800-123",
+      "sentence": "We count sixteen seeds in the packet.",
+      "tip": "sixteen is 16. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 301,
+      "word": "even",
+      "sourceId": "next800-025",
+      "sentence": "The bag is heavy, even for Dad.",
+      "tip": "Look at every letter in even. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 302,
+      "word": "such",
+      "sourceId": "next800-026",
+      "sentence": "It is such a hot day!",
+      "tip": "Look carefully at \u201cch\u201d in such. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 303,
+      "word": "pretty",
+      "sourceId": "next800-170",
+      "sentence": "The flower is pretty and pink.",
+      "tip": "Look at every letter in pretty. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 304,
+      "word": "king",
+      "sourceId": "next800-171",
+      "sentence": "The king wears a gold crown.",
+      "tip": "Look carefully at \u201cng\u201d in king. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 305,
+      "word": "ruler",
+      "sourceId": "next800-442",
+      "sentence": "I use a ruler to draw a straight line.",
+      "tip": "Look carefully at \u201cer\u201d in ruler. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 306,
+      "word": "bag",
+      "sourceId": "next800-443",
+      "sentence": "My books are in my bag.",
+      "tip": "Look at every letter in bag. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 307,
+      "word": "looking",
+      "sourceId": "next800-567",
+      "sentence": "I am looking for my hat.",
+      "tip": "Word family: look \u2192 looking. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 308,
+      "word": "lonely",
+      "sourceId": "next800-656",
+      "sentence": "I felt lonely until my friend came.",
+      "tip": "Look at every letter in lonely. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 309,
+      "word": "rainbow",
+      "sourceId": "next800-722",
+      "sentence": "We see a rainbow after the rain.",
+      "tip": "Look carefully at \u201cai\u201d in rainbow. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 310,
+      "word": "seventeen",
+      "sourceId": "next800-124",
+      "sentence": "There are seventeen books on the shelf.",
+      "tip": "seventeen is 17. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 311,
+      "word": "same",
+      "sourceId": "next800-027",
+      "sentence": "We are reading the same book.",
+      "tip": "Look at every letter in same. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 312,
+      "word": "another",
+      "sourceId": "next800-028",
+      "sentence": "May I have another apple?",
+      "tip": "Look carefully at \u201cth\u201d in another. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 313,
+      "word": "town",
+      "sourceId": "next800-172",
+      "sentence": "There are many shops in the town.",
+      "tip": "Look carefully at \u201cow\u201d in town. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 314,
+      "word": "drink",
+      "sourceId": "next800-173",
+      "sentence": "I drink water when I am thirsty.",
+      "tip": "Look at every letter in drink. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 315,
+      "word": "lunch",
+      "sourceId": "next800-444",
+      "sentence": "We eat lunch in the middle of the day.",
+      "tip": "Look carefully at \u201cch\u201d in lunch. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 316,
+      "word": "breakfast",
+      "sourceId": "next800-445",
+      "sentence": "I eat breakfast when I get up.",
+      "tip": "Look carefully at \u201cea\u201d in breakfast. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 317,
+      "word": "watch",
+      "sourceId": "next800-568",
+      "sentence": "We watch the birds in the garden.",
+      "tip": "Look carefully at \u201cch\u201d in watch. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 318,
+      "word": "excited",
+      "sourceId": "next800-657",
+      "sentence": "I am excited about my birthday.",
+      "tip": "Look at every letter in excited. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 319,
+      "word": "space",
+      "sourceId": "next800-723",
+      "sentence": "The moon is out in space.",
+      "tip": "Look at every letter in space. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 320,
+      "word": "eighteen",
+      "sourceId": "next800-125",
+      "sentence": "There are eighteen flowers in the garden.",
+      "tip": "Eighteen has one t. Compare eight and eighty.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 321,
+      "word": "most",
+      "sourceId": "next800-029",
+      "sentence": "The big tree has the most leaves.",
+      "tip": "Look at every letter in most. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 322,
+      "word": "few",
+      "sourceId": "next800-030",
+      "sentence": "There are a few cakes left.",
+      "tip": "Look at every letter in few. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 323,
+      "word": "river",
+      "sourceId": "next800-174",
+      "sentence": "The river flows under the bridge.",
+      "tip": "Look carefully at \u201cer\u201d in river. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 324,
+      "word": "key",
+      "sourceId": "next800-175",
+      "sentence": "This key opens the door.",
+      "tip": "Look at every letter in key. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 325,
+      "word": "dinner",
+      "sourceId": "next800-446",
+      "sentence": "We have dinner in the evening.",
+      "tip": "Look carefully at \u201cer\u201d in dinner. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 326,
+      "word": "snack",
+      "sourceId": "next800-447",
+      "sentence": "I have an apple for a snack.",
+      "tip": "Look at every letter in snack. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 327,
+      "word": "search",
+      "sourceId": "next800-569",
+      "sentence": "We search for the missing key.",
+      "tip": "Look carefully at \u201cch\u201d in search. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 328,
+      "word": "tired",
+      "sourceId": "next800-658",
+      "sentence": "I feel tired after a long walk.",
+      "tip": "Look carefully at \u201cir\u201d in tired. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 329,
+      "word": "ocean",
+      "sourceId": "next800-724",
+      "sentence": "A whale swims in the ocean.",
+      "tip": "Look carefully at \u201cea\u201d in ocean. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 330,
+      "word": "nineteen",
+      "sourceId": "next800-126",
+      "sentence": "We count nineteen shells on the sand.",
+      "tip": "nineteen is 19. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 331,
+      "word": "enough",
+      "sourceId": "next800-031",
+      "sentence": "We have enough food for everyone.",
+      "tip": "Look carefully at \u201cou\u201d in enough. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 332,
+      "word": "almost",
+      "sourceId": "next800-032",
+      "sentence": "The cup is almost full.",
+      "tip": "Look at every letter in almost. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 333,
+      "word": "cloud",
+      "sourceId": "next800-176",
+      "sentence": "A white cloud floats across the sky.",
+      "tip": "Look carefully at \u201cou\u201d in cloud. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 334,
+      "word": "mountain",
+      "sourceId": "next800-177",
+      "sentence": "There is snow on the mountain.",
+      "tip": "Look carefully at \u201cai\u201d in mountain. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 335,
+      "word": "bread",
+      "sourceId": "next800-448",
+      "sentence": "We cut a slice of bread.",
+      "tip": "Look carefully at \u201cea\u201d in bread. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 336,
+      "word": "butter",
+      "sourceId": "next800-449",
+      "sentence": "I spread butter on my bread.",
+      "tip": "Look carefully at \u201cer\u201d in butter. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 337,
+      "word": "hide",
+      "sourceId": "next800-570",
+      "sentence": "I hide behind the tree.",
+      "tip": "Look at every letter in hide. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 338,
+      "word": "sleepy",
+      "sourceId": "next800-659",
+      "sentence": "The sleepy baby closes her eyes.",
+      "tip": "Look carefully at \u201cee\u201d in sleepy. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 339,
+      "word": "pond",
+      "sourceId": "next800-725",
+      "sentence": "Ducks swim on the pond.",
+      "tip": "Look at every letter in pond. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 340,
+      "word": "twenty",
+      "sourceId": "next800-127",
+      "sentence": "There are twenty pencils in the box.",
+      "tip": "twenty is 20. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 341,
+      "word": "sometimes",
+      "sourceId": "next800-033",
+      "sentence": "We sometimes walk to school.",
+      "tip": "Look at every letter in sometimes. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 342,
+      "word": "still",
+      "sourceId": "next800-034",
+      "sentence": "The baby is still sleeping.",
+      "tip": "Look at every letter in still. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 343,
+      "word": "friends",
+      "sourceId": "next800-179",
+      "sentence": "My friends came to my party.",
+      "tip": "Look at every letter in friends. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 344,
+      "word": "food",
+      "sourceId": "next800-180",
+      "sentence": "We put food in the dog's bowl.",
+      "tip": "Look carefully at \u201coo\u201d in food. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 345,
+      "word": "cheese",
+      "sourceId": "next800-450",
+      "sentence": "I put cheese in my sandwich.",
+      "tip": "Look carefully at \u201cee\u201d in cheese. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 346,
+      "word": "sandwich",
+      "sourceId": "next800-451",
+      "sentence": "My sandwich has two slices of bread.",
+      "tip": "Look carefully at \u201cch\u201d in sandwich. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 347,
+      "word": "hid",
+      "sourceId": "next800-571",
+      "sentence": "The mouse hid in a hole.",
+      "tip": "Word family: hide \u2192 hid. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 348,
+      "word": "hungry",
+      "sourceId": "next800-660",
+      "sentence": "I am hungry and ready for lunch.",
+      "tip": "Look carefully at \u201cng\u201d in hungry. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 349,
+      "word": "stream",
+      "sourceId": "next800-726",
+      "sentence": "The little stream flows over stones.",
+      "tip": "Look carefully at \u201cea\u201d in stream. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 350,
+      "word": "thirty",
+      "sourceId": "next800-128",
+      "sentence": "There are thirty children in the class.",
+      "tip": "Compare three, thirteen and thirty.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 351,
+      "word": "already",
+      "sourceId": "next800-035",
+      "sentence": "I have already put my coat on.",
+      "tip": "Look carefully at \u201cea\u201d in already. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 352,
+      "word": "yet",
+      "sourceId": "next800-036",
+      "sentence": "The cake is not ready yet.",
+      "tip": "Look at every letter in yet. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 353,
+      "word": "fish",
+      "sourceId": "next800-181",
+      "sentence": "A fish swims in the pond.",
+      "tip": "Look carefully at \u201csh\u201d in fish. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 354,
+      "word": "horse",
+      "sourceId": "next800-182",
+      "sentence": "The horse runs across the field.",
+      "tip": "Look carefully at \u201cor\u201d in horse. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 355,
+      "word": "soup",
+      "sourceId": "next800-452",
+      "sentence": "The warm soup is in a bowl.",
+      "tip": "Look carefully at \u201cou\u201d in soup. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 356,
+      "word": "rice",
+      "sourceId": "next800-453",
+      "sentence": "We eat rice with our dinner.",
+      "tip": "Look at every letter in rice. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 357,
+      "word": "hidden",
+      "sourceId": "next800-572",
+      "sentence": "The key is hidden in the box.",
+      "tip": "Word family: hide \u2192 hidden. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 358,
+      "word": "thirsty",
+      "sourceId": "next800-661",
+      "sentence": "I am thirsty and need some water.",
+      "tip": "Look carefully at \u201cth\u201d in thirsty. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 359,
+      "word": "waterfall",
+      "sourceId": "next800-727",
+      "sentence": "Water falls over the rocks in a waterfall.",
+      "tip": "Look carefully at \u201cer\u201d in waterfall. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 360,
+      "word": "forty",
+      "sourceId": "next800-129",
+      "sentence": "We count forty steps to the gate.",
+      "tip": "Forty has no u. Compare four, fourteen and forty.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 361,
+      "word": "perhaps",
+      "sourceId": "next800-037",
+      "sentence": "The cat is perhaps under the bed.",
+      "tip": "Look carefully at \u201cer\u201d in perhaps. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 362,
+      "word": "maybe",
+      "sourceId": "next800-038",
+      "sentence": "We can maybe go after lunch.",
+      "tip": "Look carefully at \u201cay\u201d in maybe. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 363,
+      "word": "dark",
+      "sourceId": "next800-183",
+      "sentence": "It is dark outside at night.",
+      "tip": "Look carefully at \u201car\u201d in dark. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 364,
+      "word": "morning",
+      "sourceId": "next800-184",
+      "sentence": "We eat breakfast in the morning.",
+      "tip": "Look carefully at \u201cng\u201d in morning. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 365,
+      "word": "potato",
+      "sourceId": "next800-454",
+      "sentence": "We cook a potato for lunch.",
+      "tip": "Look at every letter in potato. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 366,
+      "word": "tomato",
+      "sourceId": "next800-455",
+      "sentence": "The tomato is red and round.",
+      "tip": "Look at every letter in tomato. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 367,
+      "word": "coming",
+      "sourceId": "next800-573",
+      "sentence": "My friend is coming to play.",
+      "tip": "Word family: come \u2192 coming. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 368,
+      "word": "ill",
+      "sourceId": "next800-662",
+      "sentence": "I stay in bed when I am ill.",
+      "tip": "Look at every letter in ill. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 369,
+      "word": "wave",
+      "sourceId": "next800-728",
+      "sentence": "A wave rolls onto the beach.",
+      "tip": "Look at every letter in wave. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 370,
+      "word": "fifty",
+      "sourceId": "next800-130",
+      "sentence": "There are fifty pages in the book.",
+      "tip": "Compare five, fifteen and fifty.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 371,
+      "word": "together",
+      "sourceId": "next800-039",
+      "sentence": "We can build a house together.",
+      "tip": "Look carefully at \u201cth\u201d in together. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 372,
+      "word": "through",
+      "sourceId": "next800-041",
+      "sentence": "We walk through the open gate.",
+      "tip": "Look carefully at \u201cth\u201d in through. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 373,
+      "word": "farm",
+      "sourceId": "next800-185",
+      "sentence": "The sheep live on a farm.",
+      "tip": "Look carefully at \u201car\u201d in farm. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 374,
+      "word": "egg",
+      "sourceId": "next800-186",
+      "sentence": "A chick comes out of an egg.",
+      "tip": "Look at every letter in egg. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 375,
+      "word": "carrot",
+      "sourceId": "next800-456",
+      "sentence": "The rabbit eats a carrot.",
+      "tip": "Look carefully at \u201car\u201d in carrot. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 376,
+      "word": "bean",
+      "sourceId": "next800-457",
+      "sentence": "A bean can grow into a plant.",
+      "tip": "Look carefully at \u201cea\u201d in bean. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 377,
+      "word": "running",
+      "sourceId": "next800-574",
+      "sentence": "The dog is running across the field.",
+      "tip": "Word family: run \u2192 running. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 378,
+      "word": "sick",
+      "sourceId": "next800-663",
+      "sentence": "The doctor helps the sick child.",
+      "tip": "Look at every letter in sick. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 379,
+      "word": "island",
+      "sourceId": "next800-729",
+      "sentence": "Water is all around the island.",
+      "tip": "The s is silent.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 380,
+      "word": "sixty",
+      "sourceId": "next800-131",
+      "sentence": "There are sixty seconds in a minute.",
+      "tip": "sixty is 60. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 381,
+      "word": "between",
+      "sourceId": "next800-042",
+      "sentence": "The ball is between my feet.",
+      "tip": "Look carefully at \u201cee\u201d in between. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 382,
+      "word": "below",
+      "sourceId": "next800-043",
+      "sentence": "The fish swims below the boat.",
+      "tip": "Look carefully at \u201cow\u201d in below. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 383,
+      "word": "ground",
+      "sourceId": "next800-187",
+      "sentence": "The ball falls to the ground.",
+      "tip": "Look carefully at \u201cou\u201d in ground. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 384,
+      "word": "field",
+      "sourceId": "next800-188",
+      "sentence": "The cows eat grass in the field.",
+      "tip": "Look at every letter in field. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 385,
+      "word": "banana",
+      "sourceId": "next800-458",
+      "sentence": "I peel a yellow banana.",
+      "tip": "Look at every letter in banana. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 386,
+      "word": "orange",
+      "sourceId": "next800-459",
+      "sentence": "The orange has a thick peel.",
+      "tip": "Look carefully at \u201cng\u201d in orange. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 387,
+      "word": "walked",
+      "sourceId": "next800-575",
+      "sentence": "We walked home together.",
+      "tip": "Word family: walk \u2192 walked. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 388,
+      "word": "shy",
+      "sourceId": "next800-664",
+      "sentence": "The shy child smiles at a new friend.",
+      "tip": "Look carefully at \u201csh\u201d in shy. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 389,
+      "word": "dirt",
+      "sourceId": "next800-730",
+      "sentence": "We wash the dirt off our hands.",
+      "tip": "Look carefully at \u201cir\u201d in dirt. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 390,
+      "word": "seventy",
+      "sourceId": "next800-132",
+      "sentence": "The bus has seventy seats.",
+      "tip": "seventy is 70. Read the word, then say the number.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 391,
+      "word": "above",
+      "sourceId": "next800-044",
+      "sentence": "A bird flies above the tree.",
+      "tip": "Look at every letter in above. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 392,
+      "word": "across",
+      "sourceId": "next800-045",
+      "sentence": "We walk across the bridge.",
+      "tip": "Look at every letter in across. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 393,
+      "word": "road",
+      "sourceId": "next800-189",
+      "sentence": "We look both ways before crossing the road.",
+      "tip": "Look carefully at \u201coa\u201d in road. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 394,
+      "word": "sky",
+      "sourceId": "next800-191",
+      "sentence": "Birds fly high in the sky.",
+      "tip": "Look at every letter in sky. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 395,
+      "word": "lemon",
+      "sourceId": "next800-460",
+      "sentence": "The yellow lemon tastes sour.",
+      "tip": "Look at every letter in lemon. Listen, say the word, then read the sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 396,
+      "word": "pear",
+      "sourceId": "next800-461",
+      "sentence": "I eat a soft, sweet pear.",
+      "tip": "Look carefully at \u201car\u201d in pear. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 397,
+      "word": "walking",
+      "sourceId": "next800-576",
+      "sentence": "We are walking to school.",
+      "tip": "Word family: walk \u2192 walking. Read the whole word, including its ending.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 398,
+      "word": "proud",
+      "sourceId": "next800-665",
+      "sentence": "I feel proud of the book I read.",
+      "tip": "Look carefully at \u201cou\u201d in proud. Listen, then read the whole sentence.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 399,
+      "word": "leaves",
+      "sourceId": "next800-731",
+      "sentence": "Green leaves grow on the tree.",
+      "tip": "Word family: leaf \u2192 leaves. Notice how the spelling changes.",
+      "hasIllustration": false,
+      "hasSymbol": false,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    },
+    {
+      "position": 400,
+      "word": "eighty",
+      "sourceId": "next800-133",
+      "sentence": "The farmer has eighty sheep.",
+      "tip": "Compare eight, eighteen and eighty.",
+      "hasIllustration": false,
+      "hasSymbol": true,
+      "wordRecorded": true,
+      "sentenceRecorded": false,
+      "tipRecorded": false
+    }
+  ]
+}

@@ -1,0 +1,542 @@
+[
+  {
+    "id": "teach-200-400-004",
+    "input": "Word family: be \u2192 been. Notice how the spelling changes.",
+    "returned": "Word family: be - been. Notice how the spelling changes."
+  },
+  {
+    "id": "teach-200-400-006",
+    "input": "Word family: do \u2192 does. Notice how the spelling changes.",
+    "returned": "Word family: do - does. Notice how the spelling changes."
+  },
+  {
+    "id": "teach-200-400-012",
+    "input": "Look carefully at \u201cch\u201d in which. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in which. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-014",
+    "input": "Look carefully at \u201cth\u201d in these. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in these. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-016",
+    "input": "Look carefully at \u201cth\u201d in those. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in those. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-018",
+    "input": "Look carefully at \u201cer\u201d in where. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in where. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-024",
+    "input": "Look carefully at \u201csh\u201d in should. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"sh\" in should. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-026",
+    "input": "Look carefully at \u201cer\u201d in under. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in under. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-034",
+    "input": "Look carefully at \u201cay\u201d in say. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ay\" in say. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-036",
+    "input": "Word family: come \u2192 came. Notice how the spelling changes.",
+    "returned": "Word family: come - came. Notice how the spelling changes."
+  },
+  {
+    "id": "teach-200-400-040",
+    "input": "Word family: go \u2192 went. Notice how the spelling changes.",
+    "returned": "Word family: go - went. Notice how the spelling changes."
+  },
+  {
+    "id": "teach-200-400-042",
+    "input": "Word family: get \u2192 got. Notice how the spelling changes.",
+    "returned": "Word family: get - got. Notice how the spelling changes."
+  },
+  {
+    "id": "teach-200-400-044",
+    "input": "Look carefully at \u201cea\u201d in eat. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ea\" in eat. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-046",
+    "input": "Word family: eat \u2192 ate. Notice how the spelling changes.",
+    "returned": "Word family: eat - ate. Notice how the spelling changes."
+  },
+  {
+    "id": "teach-200-400-048",
+    "input": "Look carefully at \u201cay\u201d in play. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ay\" in play. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-050",
+    "input": "Word family: go \u2192 going. Read the whole word, including its ending.",
+    "returned": "Word family: go - going. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-052",
+    "input": "Word family: go \u2192 goes. Read the whole word, including its ending.",
+    "returned": "Word family: go - goes. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-084",
+    "input": "Look carefully at \u201cch\u201d in much. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in much. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-092",
+    "input": "Look carefully at \u201car\u201d in parents. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ar\" in parents. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-094",
+    "input": "Word family: ask \u2192 asked. Read the whole word, including its ending.",
+    "returned": "Word family: ask - asked. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-096",
+    "input": "Word family: big \u2192 bigger. Read the whole word, including its ending.",
+    "returned": "Word family: big - bigger. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-098",
+    "input": "Word family: rain \u2192 rainy. Read the whole word, including its ending.",
+    "returned": "Word family: rain - rainy. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-102",
+    "input": "Look carefully at \u201cay\u201d in may. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ay\" in may. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-104",
+    "input": "Look carefully at \u201cer\u201d in never. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in never. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-114",
+    "input": "Word family: say \u2192 says. Read the whole word, including its ending.",
+    "returned": "Word family: say - says. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-116",
+    "input": "Word family: big \u2192 biggest. Read the whole word, including its ending.",
+    "returned": "Word family: big - biggest. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-118",
+    "input": "Word family: sun \u2192 sunny. Read the whole word, including its ending.",
+    "returned": "Word family: sun - sunny. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-124",
+    "input": "Look carefully at \u201coo\u201d in soon. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"oo\" in soon. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-126",
+    "input": "Look carefully at \u201cer\u201d in better. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in better. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-132",
+    "input": "Look carefully at \u201cou\u201d in cousin. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ou\" in cousin. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-134",
+    "input": "Word family: talk \u2192 talking. Read the whole word, including its ending.",
+    "returned": "Word family: talk - talking. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-136",
+    "input": "Look carefully at \u201cor\u201d in worse. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"or\" in worse. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-138",
+    "input": "Word family: wind \u2192 windy. Read the whole word, including its ending.",
+    "returned": "Word family: wind - windy. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-146",
+    "input": "Look carefully at \u201cou\u201d in round. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ou\" in round. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-148",
+    "input": "Look carefully at \u201car\u201d in warm. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ar\" in warm. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-150",
+    "input": "Look carefully at \u201cch\u201d in teacher. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in teacher. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-152",
+    "input": "Look carefully at \u201coo\u201d in classroom. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"oo\" in classroom. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-156",
+    "input": "Look carefully at \u201cor\u201d in worst. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"or\" in worst. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-162",
+    "input": "Look carefully at \u201cth\u201d in than. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in than. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-164",
+    "input": "Look carefully at \u201cth\u201d in other. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in other. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-166",
+    "input": "Look carefully at \u201cow\u201d in brown. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ow\" in brown. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-168",
+    "input": "Look carefully at \u201cea\u201d in clean. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ea\" in clean. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-172",
+    "input": "Look carefully at \u201cor\u201d in homework. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"or\" in homework. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-174",
+    "input": "Word family: call \u2192 called. Read the whole word, including its ending.",
+    "returned": "Word family: call - called. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-176",
+    "input": "Look carefully at \u201cai\u201d in afraid. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ai\" in afraid. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-178",
+    "input": "Look carefully at \u201cth\u201d in thunder. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in thunder. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-182",
+    "input": "Look carefully at \u201cch\u201d in each. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in each. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-187",
+    "input": "Look carefully at \u201coo\u201d in door. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"oo\" in door. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-193",
+    "input": "Word family: look \u2192 looked. Read the whole word, including its ending.",
+    "returned": "Word family: look - looked. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-195",
+    "input": "Look carefully at \u201cor\u201d in worried. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"or\" in worried. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-197",
+    "input": "Look carefully at \u201cigh\u201d in lightning. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"igh\" in lightning. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-203",
+    "input": "Look carefully at \u201cch\u201d in such. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in such. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-207",
+    "input": "Look carefully at \u201cng\u201d in king. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ng\" in king. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-209",
+    "input": "Look carefully at \u201cer\u201d in ruler. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in ruler. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-213",
+    "input": "Word family: look \u2192 looking. Read the whole word, including its ending.",
+    "returned": "Word family: look - looking. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-217",
+    "input": "Look carefully at \u201cai\u201d in rainbow. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ai\" in rainbow. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-223",
+    "input": "Look carefully at \u201cth\u201d in another. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in another. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-225",
+    "input": "Look carefully at \u201cow\u201d in town. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ow\" in town. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-229",
+    "input": "Look carefully at \u201cch\u201d in lunch. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in lunch. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-231",
+    "input": "Look carefully at \u201cea\u201d in breakfast. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ea\" in breakfast. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-233",
+    "input": "Look carefully at \u201cch\u201d in watch. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in watch. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-245",
+    "input": "Look carefully at \u201cer\u201d in river. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in river. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-249",
+    "input": "Look carefully at \u201cer\u201d in dinner. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in dinner. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-253",
+    "input": "Look carefully at \u201cch\u201d in search. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in search. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-255",
+    "input": "Look carefully at \u201cir\u201d in tired. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ir\" in tired. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-257",
+    "input": "Look carefully at \u201cea\u201d in ocean. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ea\" in ocean. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-261",
+    "input": "Look carefully at \u201cou\u201d in enough. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ou\" in enough. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-265",
+    "input": "Look carefully at \u201cou\u201d in cloud. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ou\" in cloud. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-267",
+    "input": "Look carefully at \u201cai\u201d in mountain. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ai\" in mountain. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-269",
+    "input": "Look carefully at \u201cea\u201d in bread. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ea\" in bread. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-271",
+    "input": "Look carefully at \u201cer\u201d in butter. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in butter. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-275",
+    "input": "Look carefully at \u201cee\u201d in sleepy. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ee\" in sleepy. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-287",
+    "input": "Look carefully at \u201coo\u201d in food. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"oo\" in food. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-289",
+    "input": "Look carefully at \u201cee\u201d in cheese. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ee\" in cheese. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-291",
+    "input": "Look carefully at \u201cch\u201d in sandwich. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ch\" in sandwich. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-293",
+    "input": "Word family: hide \u2192 hid. Notice how the spelling changes.",
+    "returned": "Word family: hide - hid. Notice how the spelling changes."
+  },
+  {
+    "id": "teach-200-400-295",
+    "input": "Look carefully at \u201cng\u201d in hungry. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ng\" in hungry. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-297",
+    "input": "Look carefully at \u201cea\u201d in stream. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ea\" in stream. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-300",
+    "input": "Look carefully at \u201cea\u201d in already. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ea\" in already. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-304",
+    "input": "Look carefully at \u201csh\u201d in fish. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"sh\" in fish. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-306",
+    "input": "Look carefully at \u201cor\u201d in horse. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"or\" in horse. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-308",
+    "input": "Look carefully at \u201cou\u201d in soup. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ou\" in soup. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-312",
+    "input": "Word family: hide \u2192 hidden. Notice how the spelling changes.",
+    "returned": "Word family: hide - hidden. Notice how the spelling changes."
+  },
+  {
+    "id": "teach-200-400-314",
+    "input": "Look carefully at \u201cth\u201d in thirsty. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in thirsty. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-316",
+    "input": "Look carefully at \u201cer\u201d in waterfall. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in waterfall. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-320",
+    "input": "Look carefully at \u201cer\u201d in perhaps. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"er\" in perhaps. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-322",
+    "input": "Look carefully at \u201cay\u201d in maybe. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ay\" in maybe. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-324",
+    "input": "Look carefully at \u201car\u201d in dark. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ar\" in dark. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-326",
+    "input": "Look carefully at \u201cng\u201d in morning. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ng\" in morning. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-332",
+    "input": "Word family: come \u2192 coming. Read the whole word, including its ending.",
+    "returned": "Word family: come - coming. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-339",
+    "input": "Look carefully at \u201cth\u201d in together. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in together. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-341",
+    "input": "Look carefully at \u201cth\u201d in through. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"th\" in through. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-343",
+    "input": "Look carefully at \u201car\u201d in farm. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ar\" in farm. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-347",
+    "input": "Look carefully at \u201car\u201d in carrot. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ar\" in carrot. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-349",
+    "input": "Look carefully at \u201cea\u201d in bean. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ea\" in bean. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-351",
+    "input": "Word family: run \u2192 running. Read the whole word, including its ending.",
+    "returned": "Word family: run - running. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-359",
+    "input": "Look carefully at \u201cee\u201d in between. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ee\" in between. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-361",
+    "input": "Look carefully at \u201cow\u201d in below. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ow\" in below. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-363",
+    "input": "Look carefully at \u201cou\u201d in ground. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ou\" in ground. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-369",
+    "input": "Look carefully at \u201cng\u201d in orange. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ng\" in orange. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-371",
+    "input": "Word family: walk \u2192 walked. Read the whole word, including its ending.",
+    "returned": "Word family: walk - walked. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-373",
+    "input": "Look carefully at \u201csh\u201d in shy. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"sh\" in shy. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-375",
+    "input": "Look carefully at \u201cir\u201d in dirt. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ir\" in dirt. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-383",
+    "input": "Look carefully at \u201coa\u201d in road. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"oa\" in road. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-389",
+    "input": "Look carefully at \u201car\u201d in pear. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ar\" in pear. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-391",
+    "input": "Word family: walk \u2192 walking. Read the whole word, including its ending.",
+    "returned": "Word family: walk - walking. Read the whole word, including its ending."
+  },
+  {
+    "id": "teach-200-400-393",
+    "input": "Look carefully at \u201cou\u201d in proud. Listen, then read the whole sentence.",
+    "returned": "Look carefully at \"ou\" in proud. Listen, then read the whole sentence."
+  },
+  {
+    "id": "teach-200-400-395",
+    "input": "Word family: leaf \u2192 leaves. Notice how the spelling changes.",
+    "returned": "Word family: leaf - leaves. Notice how the spelling changes."
+  }
+]

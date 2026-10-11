@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: A small dog proudly holds a red ball in its mouth.
+Cell 2: Two small sequential pictures within the cell: children walk into a park, then return home with the park behind them; warm earlier-event vignette.
+Cell 3: A little dog looks eagerly at a ball held up by a child, making its wish clear.
+Cell 4: Two children seated on a bench warmly invite a third child to the empty space beside them.
+Cell 5: A cat visibly licks its own raised front paw.
+Cell 6: An adult offers a red book and a blue book; a child points decisively at one.
+Cell 7: A child gestures towards a bowl of red apples held close in the foreground.
+Cell 8: Children in the foreground point and look at small birds high in a distant garden tree.
+Cell 9: A child looks for a cat; the cat is fully visible underneath a table.
+Cell 10: A sad child shows a broken toy to a kindly friend who listens and understands the cause.
+Cell 11: At a pedestrian crossing two children with an adult stop safely on the pavement and look both ways before crossing.
+Cell 12: Two children help each other lift a wooden box, one on each side.

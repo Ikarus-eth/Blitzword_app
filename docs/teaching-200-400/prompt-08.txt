@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: A child eats a single apple during a short break outdoors, simple small snack.
+Cell 2: A child rests on a bench after a long walk, drooping shoulders, walking path stretching behind.
+Cell 3: A whale swims in the vast blue ocean, wide water horizon and underwater depth visible.
+Cell 4: Four children at a table with four equally filled plates, everyone provided for and content.
+Cell 5: One large white fluffy cloud floats in a blue sky above a meadow.
+Cell 6: A tall mountain with a clearly snow-covered summit above forested slopes.
+Cell 7: Close-up sandwich making: two slices of bread, butter being spread, a slice of cheese and one finished cheese sandwich, simple clear ingredients.
+Cell 8: A child hides behind a wide tree while a little mouse hides at a hole in the roots; both hiding places visible.
+Cell 9: A sleepy baby closes her eyes in a safe simple cot; a quiet caregiver watches without waking her.
+Cell 10: A small still pond with ducks on the surface and a clearly visible fish underwater.
+Cell 11: Three small consecutive scenes in one cell: child walks to school, rides a bus, walks to school again; same school and child.
+Cell 12: A hungry child readies lunch while placing dog food in the dog's own bowl below, separate foods unambiguous.

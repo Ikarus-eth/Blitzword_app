@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: A child prepares for a park trip beside a simple calendar with one current day distinctly circled, no text or digits.
+Cell 2: A child confidently reads an open book to a smiling teacher and proudly shows the finished book.
+Cell 3: One perfectly round ball prominent on a square mat, clear circular silhouette.
+Cell 4: A comfortable child in a thick winter coat smiles while snow lies outside.
+Cell 5: A teacher helps a small group of children read at desks in a cosy classroom, open books, no writing.
+Cell 6: A child calls with hand beside mouth while a dog runs toward them; another friend nearby turns toward the voice.
+Cell 7: A tree beside a cottage, tree visibly twice as tall with aligned ground level.
+Cell 8: A child with one shoe already on reaches for the matching other shoe.
+Cell 9: A brown horse runs across a green field, its long brown tail prominently flowing.
+Cell 10: Two close-up stages of hands: muddy hands being washed under a tap, then clean hands held up.
+Cell 11: A child puts homework sheets and schoolbooks into an open school bag.
+Cell 12: A frightened puppy shelters safely beside its kind owner indoors while a storm rumbles outside the window.

@@ -1,0 +1,2403 @@
+{
+  "version": 1,
+  "scope": "Missing teaching sentences and tips for one-based words 200–400",
+  "provider": "fal.ai",
+  "model": "fal-ai/elevenlabs/tts/multilingual-v2",
+  "voice": "onwK4e9ZLuTAKqWW03F9",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "speed": 0.88,
+    "language_code": "en",
+    "apply_text_normalization": "auto"
+  },
+  "characters": 19201,
+  "maxCharacters": 19201,
+  "estimatedUSD": 1.9201000000000001,
+  "aliases": {},
+  "items": [
+    {
+      "id": "teach-200-400-001",
+      "key": "The dog has a red ball.",
+      "text": "The dog has a red ball.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-002",
+      "key": "Look at every letter in has. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in has. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-003",
+      "key": "We have been to the park.",
+      "text": "We have been to the park.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-004",
+      "key": "Word family: be → been. Notice how the spelling changes.",
+      "text": "Word family: be → been. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-005",
+      "key": "What does the little dog want?",
+      "text": "What does the little dog want?",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-006",
+      "key": "Word family: do → does. Notice how the spelling changes.",
+      "text": "Word family: do → does. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-007",
+      "key": "Come and sit with us.",
+      "text": "Come and sit with us.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-008",
+      "key": "Look at every letter in us. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in us. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-009",
+      "key": "The cat licks its paw.",
+      "text": "The cat licks its paw.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-010",
+      "key": "Its means belonging to it. There is no apostrophe.",
+      "text": "Its means belonging to it. There is no apostrophe.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-011",
+      "key": "Tell me which book you want.",
+      "text": "Tell me which book you want.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-012",
+      "key": "Look carefully at “ch” in which. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in which. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-013",
+      "key": "All these apples are red.",
+      "text": "All these apples are red.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-014",
+      "key": "Look carefully at “th” in these. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in these. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-015",
+      "key": "Look at those birds in the tree.",
+      "text": "Look at those birds in the tree.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-016",
+      "key": "Look carefully at “th” in those. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in those. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-017",
+      "key": "Tell me where the cat is.",
+      "text": "Tell me where the cat is.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-018",
+      "key": "Look carefully at “er” in where. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in where. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-019",
+      "key": "Tell me why you are sad.",
+      "text": "Tell me why you are sad.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-020",
+      "key": "Look at every letter in why. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in why. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-021",
+      "key": "We must look before we cross.",
+      "text": "We must look before we cross.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-022",
+      "key": "Look at every letter in must. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in must. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-023",
+      "key": "We should help our friend.",
+      "text": "We should help our friend.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-024",
+      "key": "Look carefully at “sh” in should. Listen, then read the whole sentence.",
+      "text": "Look carefully at “sh” in should. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-025",
+      "key": "The cat is under the table.",
+      "text": "The cat is under the table.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-026",
+      "key": "Look carefully at “er” in under. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in under. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-027",
+      "key": "We walk home after school.",
+      "text": "We walk home after school.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-028",
+      "key": "Look at every letter in home. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in home. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-029",
+      "key": "Please help me lift the box.",
+      "text": "Please help me lift the box.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-030",
+      "key": "Look at every letter in help. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in help. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-031",
+      "key": "Please give the book to me.",
+      "text": "Please give the book to me.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-032",
+      "key": "Look at every letter in give. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in give. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-033",
+      "key": "What did you say?",
+      "text": "What did you say?",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-034",
+      "key": "Look carefully at “ay” in say. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ay” in say. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-035",
+      "key": "My friend came to play.",
+      "text": "My friend came to play.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-036",
+      "key": "Word family: come → came. Notice how the spelling changes.",
+      "text": "Word family: come → came. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-037",
+      "key": "Please put the cup on the table.",
+      "text": "Please put the cup on the table.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-038",
+      "key": "Look at every letter in put. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in put. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-039",
+      "key": "We went to the park.",
+      "text": "We went to the park.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-040",
+      "key": "Word family: go → went. Notice how the spelling changes.",
+      "text": "Word family: go → went. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-041",
+      "key": "I got a book for my birthday.",
+      "text": "I got a book for my birthday.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-042",
+      "key": "Word family: get → got. Notice how the spelling changes.",
+      "text": "Word family: get → got. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-043",
+      "key": "We eat our lunch together.",
+      "text": "We eat our lunch together.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-044",
+      "key": "Look carefully at “ea” in eat. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ea” in eat. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-045",
+      "key": "The horse ate the apple.",
+      "text": "The horse ate the apple.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-046",
+      "key": "Word family: eat → ate. Notice how the spelling changes.",
+      "text": "Word family: eat → ate. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-047",
+      "key": "Come and play with me.",
+      "text": "Come and play with me.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-048",
+      "key": "Look carefully at “ay” in play. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ay” in play. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-049",
+      "key": "We are going to the beach.",
+      "text": "We are going to the beach.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-050",
+      "key": "Word family: go → going. Read the whole word, including its ending.",
+      "text": "Word family: go → going. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-051",
+      "key": "My sister goes to school.",
+      "text": "My sister goes to school.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-052",
+      "key": "Word family: go → goes. Read the whole word, including its ending.",
+      "text": "Word family: go → goes. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-053",
+      "key": "I can't reach the top shelf.",
+      "text": "I can't reach the top shelf.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-054",
+      "key": "can't means cannot. The apostrophe takes the place of missing letters.",
+      "text": "can't means cannot. The apostrophe takes the place of missing letters.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-055",
+      "key": "I didn't hear the bell.",
+      "text": "I didn't hear the bell.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-056",
+      "key": "didn't means did not. The apostrophe takes the place of missing letters.",
+      "text": "didn't means did not. The apostrophe takes the place of missing letters.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-057",
+      "key": "There are three eggs in the nest.",
+      "text": "There are three eggs in the nest.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-058",
+      "key": "three is 3. Read the word, then say the number.",
+      "text": "three is 3. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-059",
+      "key": "The cat has four paws.",
+      "text": "The cat has four paws.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-060",
+      "key": "four is 4. Read the word, then say the number.",
+      "text": "four is 4. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-061",
+      "key": "I have five fingers on one hand.",
+      "text": "I have five fingers on one hand.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-062",
+      "key": "five is 5. Read the word, then say the number.",
+      "text": "five is 5. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-063",
+      "key": "There are six apples in the bag.",
+      "text": "There are six apples in the bag.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-064",
+      "key": "six is 6. Read the word, then say the number.",
+      "text": "six is 6. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-065",
+      "key": "There are seven days in a week.",
+      "text": "There are seven days in a week.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-066",
+      "key": "seven is 7. Read the word, then say the number.",
+      "text": "seven is 7. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-067",
+      "key": "A spider has eight legs.",
+      "text": "A spider has eight legs.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-068",
+      "key": "Eight sounds like ate.",
+      "text": "Eight sounds like ate.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-069",
+      "key": "There are nine shells in the box.",
+      "text": "There are nine shells in the box.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-070",
+      "key": "nine is 9. Read the word, then say the number.",
+      "text": "nine is 9. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-071",
+      "key": "I can count to ten.",
+      "text": "I can count to ten.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-072",
+      "key": "ten is 10. Read the word, then say the number.",
+      "text": "ten is 10. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-073",
+      "key": "There are zero cakes left on the plate.",
+      "text": "There are zero cakes left on the plate.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-074",
+      "key": "zero is 0. Read the word, then say the number.",
+      "text": "zero is 0. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-075",
+      "key": "My friend likes to play with me.",
+      "text": "My friend likes to play with me.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-076",
+      "key": "Look at every letter in friend. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in friend. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-077",
+      "key": "We learn to read at school.",
+      "text": "We learn to read at school.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-078",
+      "key": "In school, ch sounds like k.",
+      "text": "In school, ch sounds like k.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-079",
+      "key": "I feel happy when we play together.",
+      "text": "I feel happy when we play together.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-080",
+      "key": "Look at every letter in happy. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in happy. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-081",
+      "key": "I am glad to see you.",
+      "text": "I am glad to see you.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-082",
+      "key": "Look at every letter in am. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in am. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-083",
+      "key": "There is too much water in the cup.",
+      "text": "There is too much water in the cup.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-084",
+      "key": "Look carefully at “ch” in much. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in much. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-085",
+      "key": "The old tree has a thick trunk.",
+      "text": "The old tree has a thick trunk.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-086",
+      "key": "Look at every letter in old. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in old. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-087",
+      "key": "The snow feels cold on my hands.",
+      "text": "The snow feels cold on my hands.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-088",
+      "key": "Look at every letter in cold. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in cold. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-089",
+      "key": "My mum reads a book with me.",
+      "text": "My mum reads a book with me.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-090",
+      "key": "Look at every letter in mum. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in mum. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-091",
+      "key": "My parents help me learn.",
+      "text": "My parents help me learn.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-092",
+      "key": "Look carefully at “ar” in parents. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ar” in parents. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-093",
+      "key": "I asked my friend to play.",
+      "text": "I asked my friend to play.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-094",
+      "key": "Word family: ask → asked. Read the whole word, including its ending.",
+      "text": "Word family: ask → asked. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-095",
+      "key": "This box is bigger than that one.",
+      "text": "This box is bigger than that one.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-096",
+      "key": "Word family: big → bigger. Read the whole word, including its ending.",
+      "text": "Word family: big → bigger. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-097",
+      "key": "We wear boots on a rainy day.",
+      "text": "We wear boots on a rainy day.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-098",
+      "key": "Word family: rain → rainy. Read the whole word, including its ending.",
+      "text": "Word family: rain → rainy. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-099",
+      "key": "There are eleven players on the team.",
+      "text": "There are eleven players on the team.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-100",
+      "key": "eleven is 11. Read the word, then say the number.",
+      "text": "eleven is 11. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-101",
+      "key": "You may have an apple.",
+      "text": "You may have an apple.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-102",
+      "key": "Look carefully at “ay” in may. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ay” in may. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-103",
+      "key": "I never put my hand in a fire.",
+      "text": "I never put my hand in a fire.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-104",
+      "key": "Look carefully at “er” in never. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in never. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-105",
+      "key": "My cup is full of water.",
+      "text": "My cup is full of water.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-106",
+      "key": "Look at every letter in full. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in full. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-107",
+      "key": "The sky is blue today.",
+      "text": "The sky is blue today.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-108",
+      "key": "Look at every letter in blue. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in blue. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-109",
+      "key": "My grandma tells wonderful stories.",
+      "text": "My grandma tells wonderful stories.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-110",
+      "key": "Look at every letter in grandma. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in grandma. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-111",
+      "key": "My grandpa grows flowers.",
+      "text": "My grandpa grows flowers.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-112",
+      "key": "Look at every letter in grandpa. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in grandpa. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-113",
+      "key": "The sign says to stop.",
+      "text": "The sign says to stop.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-114",
+      "key": "Word family: say → says. Read the whole word, including its ending.",
+      "text": "Word family: say → says. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-115",
+      "key": "The elephant is the biggest animal here.",
+      "text": "The elephant is the biggest animal here.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-116",
+      "key": "Word family: big → biggest. Read the whole word, including its ending.",
+      "text": "Word family: big → biggest. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-117",
+      "key": "It is a warm, sunny day.",
+      "text": "It is a warm, sunny day.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-118",
+      "key": "Word family: sun → sunny. Read the whole word, including its ending.",
+      "text": "Word family: sun → sunny. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-119",
+      "key": "There are twelve eggs in the box.",
+      "text": "There are twelve eggs in the box.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-120",
+      "key": "twelve is 12. Read the word, then say the number.",
+      "text": "twelve is 12. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-121",
+      "key": "I saw a whale once.",
+      "text": "I saw a whale once.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-122",
+      "key": "Look at every letter in once. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in once. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-123",
+      "key": "We will be home soon.",
+      "text": "We will be home soon.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-124",
+      "key": "Look carefully at “oo” in soon. Listen, then read the whole sentence.",
+      "text": "Look carefully at “oo” in soon. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-125",
+      "key": "I feel better after a rest.",
+      "text": "I feel better after a rest.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-126",
+      "key": "Look carefully at “er” in better. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in better. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-127",
+      "key": "The black cat sits on the wall.",
+      "text": "The black cat sits on the wall.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-128",
+      "key": "Look at every letter in black. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in black. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-129",
+      "key": "My aunt is my mother's sister.",
+      "text": "My aunt is my mother's sister.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-130",
+      "key": "Look at every letter in aunt. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in aunt. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-131",
+      "key": "My cousin is my aunt's child.",
+      "text": "My cousin is my aunt's child.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-132",
+      "key": "Look carefully at “ou” in cousin. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ou” in cousin. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-133",
+      "key": "We are talking about the story.",
+      "text": "We are talking about the story.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-134",
+      "key": "Word family: talk → talking. Read the whole word, including its ending.",
+      "text": "Word family: talk → talking. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-135",
+      "key": "The rain is worse than it was before.",
+      "text": "The rain is worse than it was before.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-136",
+      "key": "Look carefully at “or” in worse. Listen, then read the whole sentence.",
+      "text": "Look carefully at “or” in worse. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-137",
+      "key": "We fly a kite on a windy day.",
+      "text": "We fly a kite on a windy day.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-138",
+      "key": "Word family: wind → windy. Read the whole word, including its ending.",
+      "text": "Word family: wind → windy. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-139",
+      "key": "We count thirteen leaves on the branch.",
+      "text": "We count thirteen leaves on the branch.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-140",
+      "key": "Compare three, thirteen and thirty.",
+      "text": "Compare three, thirteen and thirty.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-141",
+      "key": "We will go to the park today.",
+      "text": "We will go to the park today.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-142",
+      "key": "A day of the week. Its name starts with a capital letter.",
+      "text": "A day of the week. Its name starts with a capital letter.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-143",
+      "key": "You can read that word well.",
+      "text": "You can read that word well.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-144",
+      "key": "Look at every letter in well. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in well. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-145",
+      "key": "The ball is round.",
+      "text": "The ball is round.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-146",
+      "key": "Look carefully at “ou” in round. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ou” in round. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-147",
+      "key": "My coat keeps me warm.",
+      "text": "My coat keeps me warm.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-148",
+      "key": "Look carefully at “ar” in warm. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ar” in warm. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-149",
+      "key": "Our teacher helps us learn to read.",
+      "text": "Our teacher helps us learn to read.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-150",
+      "key": "Look carefully at “ch” in teacher. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in teacher. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-151",
+      "key": "We read together in our classroom.",
+      "text": "We read together in our classroom.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-152",
+      "key": "Look carefully at “oo” in classroom. Listen, then read the whole sentence.",
+      "text": "Look carefully at “oo” in classroom. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-153",
+      "key": "I call my dog to come home.",
+      "text": "I call my dog to come home.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-154",
+      "key": "Look at every letter in call. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in call. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-155",
+      "key": "This is the worst weather of the week.",
+      "text": "This is the worst weather of the week.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-156",
+      "key": "Look carefully at “or” in worst. Listen, then read the whole sentence.",
+      "text": "Look carefully at “or” in worst. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-157",
+      "key": "The thick fog makes it hard to see.",
+      "text": "The thick fog makes it hard to see.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-158",
+      "key": "Look at every letter in fog. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in fog. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-159",
+      "key": "There are fourteen beads on the string.",
+      "text": "There are fourteen beads on the string.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-160",
+      "key": "Compare four, fourteen and forty.",
+      "text": "Compare four, fourteen and forty.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-161",
+      "key": "The tree is taller than the house.",
+      "text": "The tree is taller than the house.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-162",
+      "key": "Look carefully at “th” in than. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in than. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-163",
+      "key": "Put your other shoe on.",
+      "text": "Put your other shoe on.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-164",
+      "key": "Look carefully at “th” in other. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in other. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-165",
+      "key": "The horse has a brown tail.",
+      "text": "The horse has a brown tail.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-166",
+      "key": "Look carefully at “ow” in brown. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ow” in brown. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-167",
+      "key": "My hands are clean now.",
+      "text": "My hands are clean now.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-168",
+      "key": "Look carefully at “ea” in clean. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ea” in clean. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-169",
+      "key": "We learn something new in the lesson.",
+      "text": "We learn something new in the lesson.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-170",
+      "key": "Look at every letter in lesson. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in lesson. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-171",
+      "key": "I put my homework in my bag.",
+      "text": "I put my homework in my bag.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-172",
+      "key": "Look carefully at “or” in homework. Listen, then read the whole sentence.",
+      "text": "Look carefully at “or” in homework. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-173",
+      "key": "My friend called my name.",
+      "text": "My friend called my name.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-174",
+      "key": "Word family: call → called. Read the whole word, including its ending.",
+      "text": "Word family: call → called. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-175",
+      "key": "The little puppy is afraid of the thunder.",
+      "text": "The little puppy is afraid of the thunder.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-176",
+      "key": "Look carefully at “ai” in afraid. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ai” in afraid. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-177",
+      "key": "We hear thunder during the storm.",
+      "text": "We hear thunder during the storm.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-178",
+      "key": "Look carefully at “th” in thunder. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in thunder. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-179",
+      "key": "There are fifteen children on the bus.",
+      "text": "There are fifteen children on the bus.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-180",
+      "key": "Compare five, fifteen and fifty.",
+      "text": "Compare five, fifteen and fifty.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-181",
+      "key": "Give each child an apple.",
+      "text": "Give each child an apple.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-182",
+      "key": "Look carefully at “ch” in each. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in each. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-183",
+      "key": "I like cats and I also like dogs.",
+      "text": "I like cats and I also like dogs.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-184",
+      "key": "Look at every letter in also. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in also. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-185",
+      "key": "The sun shines in the sky.",
+      "text": "The sun shines in the sky.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-186",
+      "key": "Look at every letter in sun. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in sun. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-187",
+      "key": "Look carefully at “oo” in door. Listen, then read the whole sentence.",
+      "text": "Look carefully at “oo” in door. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-188",
+      "key": "I write with a pencil.",
+      "text": "I write with a pencil.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-189",
+      "key": "Look at every letter in pencil. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in pencil. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-190",
+      "key": "The pen makes a blue line.",
+      "text": "The pen makes a blue line.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-191",
+      "key": "Look at every letter in pen. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in pen. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-192",
+      "key": "We looked inside the box.",
+      "text": "We looked inside the box.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-193",
+      "key": "Word family: look → looked. Read the whole word, including its ending.",
+      "text": "Word family: look → looked. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-194",
+      "key": "I felt worried when I lost my bag.",
+      "text": "I felt worried when I lost my bag.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-195",
+      "key": "Look carefully at “or” in worried. Listen, then read the whole sentence.",
+      "text": "Look carefully at “or” in worried. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-196",
+      "key": "A flash of lightning lights up the sky.",
+      "text": "A flash of lightning lights up the sky.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-197",
+      "key": "Look carefully at “igh” in lightning. Listen, then read the whole sentence.",
+      "text": "Look carefully at “igh” in lightning. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-198",
+      "key": "We count sixteen seeds in the packet.",
+      "text": "We count sixteen seeds in the packet.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-199",
+      "key": "sixteen is 16. Read the word, then say the number.",
+      "text": "sixteen is 16. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-200",
+      "key": "The bag is heavy, even for Dad.",
+      "text": "The bag is heavy, even for Dad.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-201",
+      "key": "Look at every letter in even. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in even. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-202",
+      "key": "It is such a hot day!",
+      "text": "It is such a hot day!",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-203",
+      "key": "Look carefully at “ch” in such. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in such. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-204",
+      "key": "The flower is pretty and pink.",
+      "text": "The flower is pretty and pink.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-205",
+      "key": "Look at every letter in pretty. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in pretty. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-206",
+      "key": "The king wears a gold crown.",
+      "text": "The king wears a gold crown.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-207",
+      "key": "Look carefully at “ng” in king. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ng” in king. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-208",
+      "key": "I use a ruler to draw a straight line.",
+      "text": "I use a ruler to draw a straight line.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-209",
+      "key": "Look carefully at “er” in ruler. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in ruler. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-210",
+      "key": "My books are in my bag.",
+      "text": "My books are in my bag.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-211",
+      "key": "Look at every letter in bag. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in bag. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-212",
+      "key": "I am looking for my hat.",
+      "text": "I am looking for my hat.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-213",
+      "key": "Word family: look → looking. Read the whole word, including its ending.",
+      "text": "Word family: look → looking. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-214",
+      "key": "I felt lonely until my friend came.",
+      "text": "I felt lonely until my friend came.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-215",
+      "key": "Look at every letter in lonely. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in lonely. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-216",
+      "key": "We see a rainbow after the rain.",
+      "text": "We see a rainbow after the rain.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-217",
+      "key": "Look carefully at “ai” in rainbow. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ai” in rainbow. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-218",
+      "key": "There are seventeen books on the shelf.",
+      "text": "There are seventeen books on the shelf.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-219",
+      "key": "seventeen is 17. Read the word, then say the number.",
+      "text": "seventeen is 17. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-220",
+      "key": "We are reading the same book.",
+      "text": "We are reading the same book.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-221",
+      "key": "Look at every letter in same. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in same. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-222",
+      "key": "May I have another apple?",
+      "text": "May I have another apple?",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-223",
+      "key": "Look carefully at “th” in another. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in another. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-224",
+      "key": "There are many shops in the town.",
+      "text": "There are many shops in the town.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-225",
+      "key": "Look carefully at “ow” in town. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ow” in town. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-226",
+      "key": "I drink water when I am thirsty.",
+      "text": "I drink water when I am thirsty.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-227",
+      "key": "Look at every letter in drink. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in drink. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-228",
+      "key": "We eat lunch in the middle of the day.",
+      "text": "We eat lunch in the middle of the day.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-229",
+      "key": "Look carefully at “ch” in lunch. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in lunch. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-230",
+      "key": "I eat breakfast when I get up.",
+      "text": "I eat breakfast when I get up.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-231",
+      "key": "Look carefully at “ea” in breakfast. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ea” in breakfast. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-232",
+      "key": "We watch the birds in the garden.",
+      "text": "We watch the birds in the garden.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-233",
+      "key": "Look carefully at “ch” in watch. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in watch. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-234",
+      "key": "I am excited about my birthday.",
+      "text": "I am excited about my birthday.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-235",
+      "key": "Look at every letter in excited. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in excited. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-236",
+      "key": "The moon is out in space.",
+      "text": "The moon is out in space.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-237",
+      "key": "Look at every letter in space. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in space. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-238",
+      "key": "There are eighteen flowers in the garden.",
+      "text": "There are eighteen flowers in the garden.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-239",
+      "key": "Eighteen has one t. Compare eight and eighty.",
+      "text": "Eighteen has one t. Compare eight and eighty.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-240",
+      "key": "The big tree has the most leaves.",
+      "text": "The big tree has the most leaves.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-241",
+      "key": "Look at every letter in most. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in most. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-242",
+      "key": "There are a few cakes left.",
+      "text": "There are a few cakes left.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-243",
+      "key": "Look at every letter in few. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in few. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-244",
+      "key": "The river flows under the bridge.",
+      "text": "The river flows under the bridge.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-245",
+      "key": "Look carefully at “er” in river. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in river. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-246",
+      "key": "This key opens the door.",
+      "text": "This key opens the door.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-247",
+      "key": "Look at every letter in key. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in key. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-248",
+      "key": "We have dinner in the evening.",
+      "text": "We have dinner in the evening.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-249",
+      "key": "Look carefully at “er” in dinner. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in dinner. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-250",
+      "key": "I have an apple for a snack.",
+      "text": "I have an apple for a snack.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-251",
+      "key": "Look at every letter in snack. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in snack. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-252",
+      "key": "We search for the missing key.",
+      "text": "We search for the missing key.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-253",
+      "key": "Look carefully at “ch” in search. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in search. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-254",
+      "key": "I feel tired after a long walk.",
+      "text": "I feel tired after a long walk.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-255",
+      "key": "Look carefully at “ir” in tired. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ir” in tired. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-256",
+      "key": "A whale swims in the ocean.",
+      "text": "A whale swims in the ocean.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-257",
+      "key": "Look carefully at “ea” in ocean. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ea” in ocean. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-258",
+      "key": "We count nineteen shells on the sand.",
+      "text": "We count nineteen shells on the sand.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-259",
+      "key": "nineteen is 19. Read the word, then say the number.",
+      "text": "nineteen is 19. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-260",
+      "key": "We have enough food for everyone.",
+      "text": "We have enough food for everyone.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-261",
+      "key": "Look carefully at “ou” in enough. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ou” in enough. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-262",
+      "key": "The cup is almost full.",
+      "text": "The cup is almost full.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-263",
+      "key": "Look at every letter in almost. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in almost. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-264",
+      "key": "A white cloud floats across the sky.",
+      "text": "A white cloud floats across the sky.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-265",
+      "key": "Look carefully at “ou” in cloud. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ou” in cloud. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-266",
+      "key": "There is snow on the mountain.",
+      "text": "There is snow on the mountain.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-267",
+      "key": "Look carefully at “ai” in mountain. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ai” in mountain. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-268",
+      "key": "We cut a slice of bread.",
+      "text": "We cut a slice of bread.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-269",
+      "key": "Look carefully at “ea” in bread. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ea” in bread. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-270",
+      "key": "I spread butter on my bread.",
+      "text": "I spread butter on my bread.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-271",
+      "key": "Look carefully at “er” in butter. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in butter. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-272",
+      "key": "I hide behind the tree.",
+      "text": "I hide behind the tree.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-273",
+      "key": "Look at every letter in hide. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in hide. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-274",
+      "key": "The sleepy baby closes her eyes.",
+      "text": "The sleepy baby closes her eyes.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-275",
+      "key": "Look carefully at “ee” in sleepy. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ee” in sleepy. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-276",
+      "key": "Ducks swim on the pond.",
+      "text": "Ducks swim on the pond.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-277",
+      "key": "Look at every letter in pond. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in pond. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-278",
+      "key": "There are twenty pencils in the box.",
+      "text": "There are twenty pencils in the box.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-279",
+      "key": "twenty is 20. Read the word, then say the number.",
+      "text": "twenty is 20. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-280",
+      "key": "We sometimes walk to school.",
+      "text": "We sometimes walk to school.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-281",
+      "key": "Look at every letter in sometimes. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in sometimes. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-282",
+      "key": "The baby is still sleeping.",
+      "text": "The baby is still sleeping.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-283",
+      "key": "Look at every letter in still. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in still. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-284",
+      "key": "My friends came to my party.",
+      "text": "My friends came to my party.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-285",
+      "key": "Look at every letter in friends. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in friends. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-286",
+      "key": "We put food in the dog's bowl.",
+      "text": "We put food in the dog's bowl.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-287",
+      "key": "Look carefully at “oo” in food. Listen, then read the whole sentence.",
+      "text": "Look carefully at “oo” in food. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-288",
+      "key": "I put cheese in my sandwich.",
+      "text": "I put cheese in my sandwich.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-289",
+      "key": "Look carefully at “ee” in cheese. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ee” in cheese. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-290",
+      "key": "My sandwich has two slices of bread.",
+      "text": "My sandwich has two slices of bread.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-291",
+      "key": "Look carefully at “ch” in sandwich. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ch” in sandwich. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-292",
+      "key": "The mouse hid in a hole.",
+      "text": "The mouse hid in a hole.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-293",
+      "key": "Word family: hide → hid. Notice how the spelling changes.",
+      "text": "Word family: hide → hid. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-294",
+      "key": "I am hungry and ready for lunch.",
+      "text": "I am hungry and ready for lunch.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-295",
+      "key": "Look carefully at “ng” in hungry. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ng” in hungry. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-296",
+      "key": "The little stream flows over stones.",
+      "text": "The little stream flows over stones.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-297",
+      "key": "Look carefully at “ea” in stream. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ea” in stream. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-298",
+      "key": "There are thirty children in the class.",
+      "text": "There are thirty children in the class.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-299",
+      "key": "I have already put my coat on.",
+      "text": "I have already put my coat on.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-300",
+      "key": "Look carefully at “ea” in already. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ea” in already. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-301",
+      "key": "The cake is not ready yet.",
+      "text": "The cake is not ready yet.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-302",
+      "key": "Look at every letter in yet. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in yet. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-303",
+      "key": "A fish swims in the pond.",
+      "text": "A fish swims in the pond.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-304",
+      "key": "Look carefully at “sh” in fish. Listen, then read the whole sentence.",
+      "text": "Look carefully at “sh” in fish. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-305",
+      "key": "The horse runs across the field.",
+      "text": "The horse runs across the field.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-306",
+      "key": "Look carefully at “or” in horse. Listen, then read the whole sentence.",
+      "text": "Look carefully at “or” in horse. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-307",
+      "key": "The warm soup is in a bowl.",
+      "text": "The warm soup is in a bowl.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-308",
+      "key": "Look carefully at “ou” in soup. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ou” in soup. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-309",
+      "key": "We eat rice with our dinner.",
+      "text": "We eat rice with our dinner.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-310",
+      "key": "Look at every letter in rice. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in rice. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-311",
+      "key": "The key is hidden in the box.",
+      "text": "The key is hidden in the box.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-312",
+      "key": "Word family: hide → hidden. Notice how the spelling changes.",
+      "text": "Word family: hide → hidden. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-313",
+      "key": "I am thirsty and need some water.",
+      "text": "I am thirsty and need some water.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-314",
+      "key": "Look carefully at “th” in thirsty. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in thirsty. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-315",
+      "key": "Water falls over the rocks in a waterfall.",
+      "text": "Water falls over the rocks in a waterfall.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-316",
+      "key": "Look carefully at “er” in waterfall. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in waterfall. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-317",
+      "key": "We count forty steps to the gate.",
+      "text": "We count forty steps to the gate.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-318",
+      "key": "Forty has no u. Compare four, fourteen and forty.",
+      "text": "Forty has no u. Compare four, fourteen and forty.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-319",
+      "key": "The cat is perhaps under the bed.",
+      "text": "The cat is perhaps under the bed.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-320",
+      "key": "Look carefully at “er” in perhaps. Listen, then read the whole sentence.",
+      "text": "Look carefully at “er” in perhaps. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-321",
+      "key": "We can maybe go after lunch.",
+      "text": "We can maybe go after lunch.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-322",
+      "key": "Look carefully at “ay” in maybe. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ay” in maybe. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-323",
+      "key": "It is dark outside at night.",
+      "text": "It is dark outside at night.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-324",
+      "key": "Look carefully at “ar” in dark. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ar” in dark. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-325",
+      "key": "We eat breakfast in the morning.",
+      "text": "We eat breakfast in the morning.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-326",
+      "key": "Look carefully at “ng” in morning. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ng” in morning. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-327",
+      "key": "We cook a potato for lunch.",
+      "text": "We cook a potato for lunch.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-328",
+      "key": "Look at every letter in potato. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in potato. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-329",
+      "key": "The tomato is red and round.",
+      "text": "The tomato is red and round.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-330",
+      "key": "Look at every letter in tomato. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in tomato. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-331",
+      "key": "My friend is coming to play.",
+      "text": "My friend is coming to play.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-332",
+      "key": "Word family: come → coming. Read the whole word, including its ending.",
+      "text": "Word family: come → coming. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-333",
+      "key": "I stay in bed when I am ill.",
+      "text": "I stay in bed when I am ill.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-334",
+      "key": "Look at every letter in ill. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in ill. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-335",
+      "key": "A wave rolls onto the beach.",
+      "text": "A wave rolls onto the beach.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-336",
+      "key": "Look at every letter in wave. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in wave. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-337",
+      "key": "There are fifty pages in the book.",
+      "text": "There are fifty pages in the book.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-338",
+      "key": "We can build a house together.",
+      "text": "We can build a house together.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-339",
+      "key": "Look carefully at “th” in together. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in together. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-340",
+      "key": "We walk through the open gate.",
+      "text": "We walk through the open gate.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-341",
+      "key": "Look carefully at “th” in through. Listen, then read the whole sentence.",
+      "text": "Look carefully at “th” in through. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-342",
+      "key": "The sheep live on a farm.",
+      "text": "The sheep live on a farm.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-343",
+      "key": "Look carefully at “ar” in farm. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ar” in farm. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-344",
+      "key": "A chick comes out of an egg.",
+      "text": "A chick comes out of an egg.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-345",
+      "key": "Look at every letter in egg. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in egg. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-346",
+      "key": "The rabbit eats a carrot.",
+      "text": "The rabbit eats a carrot.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-347",
+      "key": "Look carefully at “ar” in carrot. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ar” in carrot. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-348",
+      "key": "A bean can grow into a plant.",
+      "text": "A bean can grow into a plant.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-349",
+      "key": "Look carefully at “ea” in bean. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ea” in bean. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-350",
+      "key": "The dog is running across the field.",
+      "text": "The dog is running across the field.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-351",
+      "key": "Word family: run → running. Read the whole word, including its ending.",
+      "text": "Word family: run → running. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-352",
+      "key": "The doctor helps the sick child.",
+      "text": "The doctor helps the sick child.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-353",
+      "key": "Look at every letter in sick. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in sick. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-354",
+      "key": "Water is all around the island.",
+      "text": "Water is all around the island.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-355",
+      "key": "The s is silent.",
+      "text": "The s is silent.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-356",
+      "key": "There are sixty seconds in a minute.",
+      "text": "There are sixty seconds in a minute.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-357",
+      "key": "sixty is 60. Read the word, then say the number.",
+      "text": "sixty is 60. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-358",
+      "key": "The ball is between my feet.",
+      "text": "The ball is between my feet.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-359",
+      "key": "Look carefully at “ee” in between. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ee” in between. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-360",
+      "key": "The fish swims below the boat.",
+      "text": "The fish swims below the boat.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-361",
+      "key": "Look carefully at “ow” in below. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ow” in below. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-362",
+      "key": "The ball falls to the ground.",
+      "text": "The ball falls to the ground.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-363",
+      "key": "Look carefully at “ou” in ground. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ou” in ground. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-364",
+      "key": "The cows eat grass in the field.",
+      "text": "The cows eat grass in the field.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-365",
+      "key": "Look at every letter in field. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in field. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-366",
+      "key": "I peel a yellow banana.",
+      "text": "I peel a yellow banana.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-367",
+      "key": "Look at every letter in banana. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in banana. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-368",
+      "key": "The orange has a thick peel.",
+      "text": "The orange has a thick peel.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-369",
+      "key": "Look carefully at “ng” in orange. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ng” in orange. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-370",
+      "key": "We walked home together.",
+      "text": "We walked home together.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-371",
+      "key": "Word family: walk → walked. Read the whole word, including its ending.",
+      "text": "Word family: walk → walked. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-372",
+      "key": "The shy child smiles at a new friend.",
+      "text": "The shy child smiles at a new friend.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-373",
+      "key": "Look carefully at “sh” in shy. Listen, then read the whole sentence.",
+      "text": "Look carefully at “sh” in shy. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-374",
+      "key": "We wash the dirt off our hands.",
+      "text": "We wash the dirt off our hands.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-375",
+      "key": "Look carefully at “ir” in dirt. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ir” in dirt. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-376",
+      "key": "The bus has seventy seats.",
+      "text": "The bus has seventy seats.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-377",
+      "key": "seventy is 70. Read the word, then say the number.",
+      "text": "seventy is 70. Read the word, then say the number.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-378",
+      "key": "A bird flies above the tree.",
+      "text": "A bird flies above the tree.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-379",
+      "key": "Look at every letter in above. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in above. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-380",
+      "key": "We walk across the bridge.",
+      "text": "We walk across the bridge.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-381",
+      "key": "Look at every letter in across. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in across. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-382",
+      "key": "We look both ways before crossing the road.",
+      "text": "We look both ways before crossing the road.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-383",
+      "key": "Look carefully at “oa” in road. Listen, then read the whole sentence.",
+      "text": "Look carefully at “oa” in road. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-384",
+      "key": "Birds fly high in the sky.",
+      "text": "Birds fly high in the sky.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-385",
+      "key": "Look at every letter in sky. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in sky. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-386",
+      "key": "The yellow lemon tastes sour.",
+      "text": "The yellow lemon tastes sour.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-387",
+      "key": "Look at every letter in lemon. Listen, say the word, then read the sentence.",
+      "text": "Look at every letter in lemon. Listen, say the word, then read the sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-388",
+      "key": "I eat a soft, sweet pear.",
+      "text": "I eat a soft, sweet pear.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-389",
+      "key": "Look carefully at “ar” in pear. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ar” in pear. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-390",
+      "key": "We are walking to school.",
+      "text": "We are walking to school.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-391",
+      "key": "Word family: walk → walking. Read the whole word, including its ending.",
+      "text": "Word family: walk → walking. Read the whole word, including its ending.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-392",
+      "key": "I feel proud of the book I read.",
+      "text": "I feel proud of the book I read.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-393",
+      "key": "Look carefully at “ou” in proud. Listen, then read the whole sentence.",
+      "text": "Look carefully at “ou” in proud. Listen, then read the whole sentence.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-394",
+      "key": "Green leaves grow on the tree.",
+      "text": "Green leaves grow on the tree.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-395",
+      "key": "Word family: leaf → leaves. Notice how the spelling changes.",
+      "text": "Word family: leaf → leaves. Notice how the spelling changes.",
+      "kind": "tip"
+    },
+    {
+      "id": "teach-200-400-396",
+      "key": "The farmer has eighty sheep.",
+      "text": "The farmer has eighty sheep.",
+      "kind": "sentence"
+    },
+    {
+      "id": "teach-200-400-397",
+      "key": "Compare eight, eighteen and eighty.",
+      "text": "Compare eight, eighteen and eighty.",
+      "kind": "tip"
+    }
+  ]
+}

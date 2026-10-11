@@ -3,3 +3,5 @@ node_modules
 _site/
 narration-words-fal-output/
 scripts/__pycache__/
+teaching-200-400-audio-output/
+output/teaching-200-400-originals/

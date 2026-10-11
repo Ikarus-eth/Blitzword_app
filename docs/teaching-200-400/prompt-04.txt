@@ -1,0 +1,13 @@
+Use case: illustration-story. Production teaching atlas for a child learning English. Match the reference image’s warm, richly painted storybook watercolor and gouache illustration style, clear natural anatomy and readable actions. NEW characters are ordinary schoolchildren and adults, not the recurring game heroes. One portrait image exactly 1536 by 2048 pixels, a strict 3-column by 4-row grid of 12 equally sized square panels. Each panel 512 by 512, thin straight boundaries at exact grid positions; no gutters, no labels, no words except explicitly requested STOP sign. Each scene fully contained in its own cell, important features inset from edges. Simple compositions, clear foreground teaching focus, enough environmental context, warm varied natural colors, no logos or watermarks. These are 12 separate scenes; NEVER merge cells. Read cell order LEFT TO RIGHT then TOP TO BOTTOM. 
+Cell 1: A bright golden sun high in a clear blue daytime sky above a green meadow, a few birds high overhead.
+Cell 2: A kindly elderly grandmother tells a story to attentive children in a cosy room.
+Cell 3: An elderly grandfather carefully plants and waters flowers in a garden.
+Cell 4: A child and adult stop beside a red octagonal road sign bearing only the legible word STOP.
+Cell 5: An elephant beside a horse and a small rabbit on the same ground plane, elephant clearly largest.
+Cell 6: A child on a boat looks in wonder at one whale surfacing; a small memory-like vignette with soft edges.
+Cell 7: A family on a path is only a few steps from its cottage door, home immediately ahead.
+Cell 8: Two stages within the cell: a tired child resting in bed, then the same child sitting up with a refreshed smile.
+Cell 9: A clearly black cat sits on a low pale stone wall.
+Cell 10: Family relationship portrait: a child with their mother, her sister and the sister's child. Two adult sisters beside each other, each beside their own child; leave generous space for external relationship labels.
+Cell 11: Three equal weather views within one cell progress from light drizzle to heavy rain to a dark windy storm; same tree and cottage throughout.
+Cell 12: A child flies a kite; trees bend and a scarf streams in a clear breeze.
