@@ -1,6 +1,6 @@
 ## Automatic iPad progress sharing — 11 October 2026
 
-**Implemented and tested; activation pending.** The private backend is deployed and live-tested with synthetic data. The game adds one-time pairing, automatic foreground uploads, offline recovery, and Parents controls. Learning reports omit profile names/age and never overwrite the local save. Endpoint audience approval and one-time iPad pairing are still required; no learner is connected. 388 game tests, 120 UI groups and five backend tests pass. [Status and verification](progress-sync/RELEASE.md).
+**Deployed and verified; activation pending.** Frontend build `progress-sync-20261011-r2` is live after PRs #173/#174 and successful Pages run 38110487818; all four checked runtime/review files match tested source. The private backend is deployed and live-tested with synthetic data. The game adds one-time pairing, automatic foreground uploads, offline recovery, and Parents controls. Learning reports omit profile names/age and never overwrite the local save. Endpoint audience approval and one-time iPad pairing are still required; no learner is connected. 388 game tests, 120 UI groups and five backend tests pass. [Status and verification](progress-sync/RELEASE.md).
 
 ## Parent checkpoint and teaching scope — 11 October 2026
 

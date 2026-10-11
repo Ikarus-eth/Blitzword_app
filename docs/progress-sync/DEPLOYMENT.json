@@ -1,0 +1,26 @@
+{
+  "build": "progress-sync-20261011-r2",
+  "runtimeCommit": "3bae8eef418f85367fa3b264e7909222d567e0b8",
+  "pagesRun": 38110487818,
+  "status": "Verified live files match tested source",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "b4797bb2913e69a4caad5e1e6a971085c5644ad894c9d684e7fe9bfdc3a127e5"
+    },
+    {
+      "path": "app.js",
+      "sha256": "28d719a8a0170c29bfd0156aa6318b66d59df039b232520ec581f5e03e7a1e8a"
+    },
+    {
+      "path": "assets/ui/progress-sync.js",
+      "sha256": "b28f1aad95478130ba1f8140011363c3b6c64b21e6b069c2e4c2c80b97c7ceb7"
+    },
+    {
+      "path": "tests/review-app.html",
+      "sha256": "efa6a165b51c9e4cfde9cf12eb6f29cf808fc1aa9bf82c98cf99663a047173b9"
+    }
+  ],
+  "backendAudience": "owner-private; activation approval pending",
+  "learnerPaired": false
+}
