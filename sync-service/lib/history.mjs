@@ -51,7 +51,13 @@ export async function writeProjection(DB,id,b){
  return {historyVersion:2,historySince:tail.map(e=>e.at).filter(Boolean).sort()[0]||null,archivedAnswers:unpack(b.progress).archive?.answers?.records||0};
 }
 export async function writeEvents(DB,id,events){
- const rows=events.flatMap(e=>{const parts=chunks(e);return parts.map((data,i)=>[e.key,i,parts.length,data]);});
- const statements=bulk(DB,'progress_events',id,rows,0,true);
+ const statements=[];
+ // Materialize existing event keys before inserting any parts. Preserve the first
+ // complete event even when a later import has different build metadata/length.
+ for(let i=0;i<events.length;i+=20){
+  const rows=events.slice(i,i+20).flatMap(e=>{const parts=chunks(e);return parts.map((data,n)=>[e.key,n,parts.length,data]);});
+  const json=JSON.stringify(rows);
+  statements.push(DB.prepare(`WITH existing AS MATERIALIZED (SELECT record_key FROM progress_events WHERE device_id=? AND record_key IN (SELECT json_extract(value,'$[0]') FROM json_each(?))) INSERT INTO progress_events (device_id,record_key,part,parts,sequence,data) SELECT ?,json_extract(value,'$[0]'),json_extract(value,'$[1]'),json_extract(value,'$[2]'),0,json_extract(value,'$[3]') FROM json_each(?) WHERE EXISTS (SELECT 1 FROM devices WHERE id=? AND revoked=0) AND NOT EXISTS (SELECT 1 FROM existing WHERE record_key=json_extract(value,'$[0]')) ON CONFLICT(device_id,record_key,part) DO NOTHING`).bind(id,json,id,json,id));
+ }
  for(let i=0;i<statements.length;i+=20)await DB.batch(statements.slice(i,i+20));
 }

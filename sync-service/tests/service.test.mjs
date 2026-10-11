@@ -64,3 +64,11 @@ test('new snapshot removes obsolete report rows but retains historical events; s
  await call(path,b,token);await call(path,{...payload(2),reports:{words:[{word:'dog',correct:1}]}},token);await call(path,b,token);
  assert.deepEqual(sql.prepare('SELECT record_key FROM progress_words').all().map(r=>r.record_key),['dog']);assert.equal(sql.prepare('SELECT COUNT(*) n FROM progress_events').get().n,1);
 });
+
+test('multipart event remains immutable when replay metadata grows across a part boundary',async()=>{
+ const {call,sql}=setup(),p=await paired(call),path='/api/devices/'+p.deviceId+'/events';
+ const event={key:'immutable',kind:'answer',at:'2026-10-11',build:'short',data:{target:'cat',padding:'x'.repeat(760)}};
+ await call(path,{events:[event]},token);const original=sql.prepare('SELECT * FROM progress_events ORDER BY part').all();
+ await call(path,{events:[{...event,build:'long'.repeat(100)}]},token);
+ const after=sql.prepare('SELECT * FROM progress_events ORDER BY part').all();assert.deepEqual(after,original);assert.deepEqual(JSON.parse(after.map(r=>r.data).join('')),event);
+});
