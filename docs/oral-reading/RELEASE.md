@@ -4,7 +4,7 @@
 
 The parent requested Azure integration to upload a recording plus its passage and retain results for progress assessment, including speed, errors and uncertainty indicators. The parent has no Azure Speech resource yet and requested setup instructions and pricing.
 
-Implemented and locally tested; deployment verification is recorded below when completed. Real Azure recognition and physical iPad audio decoding are unverified until credentials and a real recording are available. No paid assessment has been made.
+Deployed and verified: PR #183 merged as `821fdb18e66afbdd7e7c8e80e7639a5d370f5008`; Pages run `38142580448` succeeded. All six checked live frontend files match the tested source. Sites backend version 4 (source `6973f73e29e5c83d7a4d6463713a57b49f7d8000`, deployment `appgdep_6acb8c3cf71c81918b0197979b09f1b3`) succeeded. The live oral tables are visible through authenticated Sites tools, and unauthenticated oral access returns 401. See [deployment evidence](DEPLOYMENT.json). Real Azure recognition and physical iPad audio decoding are unverified until credentials and a real recording are available. No paid assessment has been made.
 
 ## Parent workflow
 

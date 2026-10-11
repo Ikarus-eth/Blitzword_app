@@ -1,0 +1,46 @@
+{
+  "pagesCommit": "821fdb18e66afbdd7e7c8e80e7639a5d370f5008",
+  "pagesRun": 38142580448,
+  "backendVersion": 4,
+  "backendDeployment": "appgdep_6acb8c3cf71c81918b0197979b09f1b3",
+  "azureConfigured": false,
+  "realSpeechVerified": false,
+  "liveFiles": [
+    {
+      "path": "index.html",
+      "sha256": "6624d2b1fa6810d3f8baefc61b4b2b0f46402d8ff27b88fb60b0d946142f2c10",
+      "matches": true
+    },
+    {
+      "path": "assets/oral-reading/index.html",
+      "sha256": "d5348c03df9cfa2d747c42ccf81c8481afc8d1eb9cb6c86460a1e4610d89615c",
+      "matches": true
+    },
+    {
+      "path": "assets/oral-reading/reading.mjs",
+      "sha256": "acd5b9890ab1af3ed8df49b8ad5332d0fe3c8df2ad99ead4ec6b2df82f230002",
+      "matches": true
+    },
+    {
+      "path": "assets/oral-reading/reading.css",
+      "sha256": "8aacdf53ccd407e6a0d48b4480886d1f27e59f06d698ef0ceea1b192c2766cef",
+      "matches": true
+    },
+    {
+      "path": "assets/oral-reading/analysis.mjs",
+      "sha256": "a33914438cc3bead34538d922768abeac840d84c88fdb37264b1d733ebc1d9b5",
+      "matches": true
+    },
+    {
+      "path": "assets/oral-reading/vendor/speech-sdk-1.52.0.js",
+      "sha256": "3e46efc886450f1940fd4da5caf35a362a8462995356e31b23c3c6ac58ba3aee",
+      "matches": true
+    }
+  ],
+  "unauthenticatedOralStatus": 401,
+  "oralTablesVerified": [
+    "oral_attempts",
+    "oral_parts",
+    "oral_quota"
+  ]
+}
