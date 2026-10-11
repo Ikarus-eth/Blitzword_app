@@ -360,6 +360,7 @@ function renderSyncStatus(info=progressSync?.status()){
   info=info||{message:'Progress sharing is unavailable in this browser.'};
   el.textContent=info.message||(info.paired?(info.paused?'Sharing paused.':info.lastSyncedAt?'Last synced: '+new Date(info.lastSyncedAt).toLocaleString()+'. Updates send automatically while the game is open.':'Connected. Waiting for the first update.'):'Not connected. Open your personal pairing link on this iPad.');
   for(const id of ['syncNow','syncPause','syncDelete']){const b=$('#'+id);b.hidden=!info.paired&&!info.pendingPair;b.disabled=!!info.deleting;}
+  $('#syncPairForm').hidden=!!info.paired||!!info.pendingPair;
   $('#syncPause').textContent=info.paused?'Resume sharing':'Pause sharing';
 }
 function startProgressSync(){
@@ -371,6 +372,12 @@ function startProgressSync(){
     },build:$('meta[name="blitzword-build"]')?.content||'',onStatus:renderSyncStatus});
     const code=new URLSearchParams(location.hash.slice(1)).get('sync');
     if(code){history.replaceState(null,'',location.pathname+location.search);progressSync.pair(code);}
+    $('#syncConnect').onclick=()=>{
+      const code=BlitzProgressSync.pairingCode($('#syncPairLink').value);
+      if(!code){$('#syncStatus').textContent='Please paste the complete personal pairing link.';return;}
+      try{progressSync.pair(code);$('#syncPairLink').value='';}catch{$('#syncStatus').textContent='Pairing could not be saved. Your game save is unchanged.';}
+    };
+    $('#syncPairLink').addEventListener('keydown',event=>{if(event.key==='Enter')$('#syncConnect').click();});
     $('#syncNow').onclick=()=>progressSync.flush(true);
     $('#syncPause').onclick=()=>progressSync.pause(!progressSync.status().paused);
     $('#syncDelete').onclick=()=>{if(confirm('Delete the shared progress copy and disconnect this iPad? The game and its local save will stay unchanged.'))progressSync.remove();};
