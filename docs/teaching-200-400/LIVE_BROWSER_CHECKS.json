@@ -1,0 +1,1270 @@
+{
+  "checks": [
+    {
+      "viewport": 1024,
+      "word": "thin",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "has",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "been",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "does",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "us",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "its",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "which",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "these",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "those",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "where",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "why",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "must",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "should",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "under",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "home",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "help",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "give",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "say",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "came",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "put",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "went",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "got",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "eat",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "ate",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "play",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "going",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "goes",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "can't",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "didn't",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "three",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "four",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "five",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "six",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "seven",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "eight",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "nine",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "ten",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "zero",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "friend",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "school",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "happy",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "am",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "much",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "old",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "cold",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "mum",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "parents",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "asked",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "bigger",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "rainy",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "eleven",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "may",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "never",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "full",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "blue",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "grandma",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "grandpa",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "says",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "biggest",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sunny",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "twelve",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "once",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "soon",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "better",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "black",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "aunt",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "cousin",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "talking",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "worse",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "windy",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "thirteen",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "today",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "well",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "round",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "warm",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "teacher",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "classroom",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "call",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "worst",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "fog",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "fourteen",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "than",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "other",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "brown",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "clean",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "lesson",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "homework",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "called",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "afraid",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "thunder",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "fifteen",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "each",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "also",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sun",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "door",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "pencil",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "pen",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "looked",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "worried",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "lightning",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sixteen",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "even",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "such",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "pretty",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "king",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "ruler",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "bag",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "looking",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "lonely",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "rainbow",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "seventeen",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "same",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "another",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "town",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "drink",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "lunch",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "breakfast",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "watch",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "excited",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "space",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "eighteen",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "most",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "few",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "river",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "key",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "dinner",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "snack",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "search",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "tired",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "ocean",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "nineteen",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "enough",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "almost",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "cloud",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "mountain",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "bread",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "butter",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "hide",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sleepy",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "pond",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "twenty",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sometimes",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "still",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "friends",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "food",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "cheese",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sandwich",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "hid",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "hungry",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "stream",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "thirty",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "already",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "yet",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "fish",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "horse",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "soup",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "rice",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "hidden",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "thirsty",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "waterfall",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "forty",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "perhaps",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "maybe",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "dark",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "morning",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "potato",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "tomato",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "coming",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "ill",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "wave",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "fifty",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "together",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "through",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "farm",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "egg",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "carrot",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "bean",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "running",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sick",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "island",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sixty",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "between",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "below",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "ground",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "field",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "banana",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "orange",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "walked",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "shy",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "dirt",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "seventy",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "above",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "across",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "road",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "sky",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "lemon",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "pear",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "walking",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "proud",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "leaves",
+      "layout": true
+    },
+    {
+      "viewport": 1024,
+      "word": "eighty",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "has",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "aunt",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "pen",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "three",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "eight",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "twenty",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "sixty",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "eighty",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "thin",
+      "layout": true
+    },
+    {
+      "viewport": 1194,
+      "word": "ninety",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "has",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "aunt",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "pen",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "three",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "eight",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "twenty",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "sixty",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "eighty",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "thin",
+      "layout": true
+    },
+    {
+      "viewport": 1366,
+      "word": "ninety",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "has",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "aunt",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "pen",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "three",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "eight",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "twenty",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "sixty",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "eighty",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "thin",
+      "layout": true
+    },
+    {
+      "viewport": 390,
+      "word": "ninety",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "has",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "aunt",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "pen",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "three",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "eight",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "twenty",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "sixty",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "eighty",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "thin",
+      "layout": true
+    },
+    {
+      "viewport": 844,
+      "word": "ninety",
+      "layout": true
+    },
+    {
+      "word": "has",
+      "audio": "hearWord",
+      "completed": true
+    },
+    {
+      "word": "has",
+      "audio": "hearSentence",
+      "completed": true
+    },
+    {
+      "word": "has",
+      "audio": "hearTip",
+      "completed": true
+    },
+    {
+      "word": "been",
+      "audio": "hearWord",
+      "completed": true
+    },
+    {
+      "word": "been",
+      "audio": "hearSentence",
+      "completed": true
+    },
+    {
+      "word": "been",
+      "audio": "hearTip",
+      "completed": true
+    },
+    {
+      "word": "eight",
+      "audio": "hearWord",
+      "completed": true
+    },
+    {
+      "word": "eight",
+      "audio": "hearSentence",
+      "completed": true
+    },
+    {
+      "word": "eight",
+      "audio": "hearTip",
+      "completed": true
+    },
+    {
+      "word": "eighty",
+      "audio": "hearWord",
+      "completed": true
+    },
+    {
+      "word": "eighty",
+      "audio": "hearSentence",
+      "completed": true
+    },
+    {
+      "word": "eighty",
+      "audio": "hearTip",
+      "completed": true
+    }
+  ],
+  "errors": []
+}
