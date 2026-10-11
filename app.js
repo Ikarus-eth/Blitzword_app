@@ -21,7 +21,7 @@ let storyControls=null;
 let parentReport=null,parentWordReturn=null;
 const adventures=window.BlitzAdventureUI.create({Core,Content,state:()=>state,save,show,home,enter,cancelWork,
   paintEnemy,paintPip,paintHero,heroIndex,dragonText:text=>dragonText(text),speak,growth:()=>openGrowth(),
-  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,wimmelbild:openWimmelbild,
+  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,wimmelbild:openWimmelbild,stories:()=>{if(!blocked&&state.settings.storiesEnabled===true&&suspendAdventureUI())location.assign('assets/story-pilot/');},
   suspend:suspendAdventureUI,active:()=>!paused&&!blocked&&playing});
 function suspendAdventureUI(){
   if(playing&&!paused)confirmActivity();account();Core.interruptQuestion(state);cancelWork();paused=true;playing=false;
@@ -37,11 +37,11 @@ function launchMission(id){
   }
 }
 function openWimmelbild(){
-  if(blocked||!suspendAdventureUI())return;
+  if(blocked||state.settings.storiesEnabled!==true||!suspendAdventureUI())return;
   location.assign('assets/wimmelbild/');
 }
 function legacyAdventure(){
-  if(blocked)return;adventures.timeTap();if(!suspendAdventureUI())return;Core.Adventure.switchTo(state,'legacy');
+  if(blocked||state.settings.legacyEnabled!==true)return;adventures.timeTap();if(!suspendAdventureUI())return;Core.Adventure.switchTo(state,'legacy');
   Core.Adventure.of(state).preferLegacy=true;if(save())home();
 }
 const COMBAT_MS=1200;
@@ -255,6 +255,8 @@ function openParentGate(){
   $('#parentAnswer').value='';$('#parentGateMessage').textContent='';$('#parentGate').hidden=false;$('#parentAnswer').focus();
 }
 function renderParent(){
+  $('#parentStoriesEnabled').checked=state.settings.storiesEnabled===true;
+  $('#parentLegacyEnabled').checked=state.settings.legacyEnabled===true;
   const p=Core.parentProgress(state,Date.now()),g=Core.dragonProgress(state);show('parentDashboard');
   $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo+(state.expedition?.riddleDays?.[Core.dayKey(Date.now())]||0));
   $('#parentTotal').textContent=formatTime(p.activeMs+Core.Adventure.report(state).riddleMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math+Core.Adventure.report(state).riddleMs);
@@ -502,7 +504,9 @@ function home() {
   if(playing&&!paused)confirmActivity();account();Core.interruptQuestion(state);cancelWork();paused=true;playing=false;playClock.discard();drainExcluded();
   $('#pausePanel').hidden=true;
   selectedMapArea=null;
-  if(state.assessment.done&&!Core.Adventure.of(state).preferLegacy){adventures.renderHub();save();if(!deferEvolution&&!maybeEvolution())maybeOfferName();return;}
+  $('#mapStoryPilot').hidden=state.settings.storiesEnabled!==true;
+  $('#mapWimmelbild').hidden=state.settings.storiesEnabled!==true;
+  if(state.assessment.done&&(!state.settings.legacyEnabled||!Core.Adventure.of(state).preferLegacy)){adventures.renderHub();save();if(!deferEvolution&&!maybeEvolution())maybeOfferName();return;}
   if(state.assessment.done){renderMap(deferEvolution);return;}
   paintHero($('#routeHeroImg'),heroIndex());
   $('#routeTitle').textContent='Hi, '+state.profile.name+'!';
@@ -1248,13 +1252,25 @@ function continueMap(){
 }
 $('#mapTraveller').onclick=()=>{renderHeroes();show('hero');save();};
 $('#mapWimmelbild').onclick=openWimmelbild;
-$('#mapStoryPilot').onclick=()=>{if(blocked||state.screen!=='campaignMap'||!save())return;cancelWork();location.assign('assets/story-pilot/');};
+$('#mapStoryPilot').onclick=()=>{if(blocked||state.settings.storiesEnabled!==true||state.screen!=='campaignMap'||!save())return;cancelWork();location.assign('assets/story-pilot/');};
 $('#mapNewAdventures').onclick=()=>{Core.Adventure.of(state).preferLegacy=false;home();};
 $('#mapParents').onclick=openParentGate;$('#routeParents').onclick=openParentGate;
 $('#parentCancel').onclick=()=>{$('#parentGate').hidden=true;parentAnswer=null;$(state.screen==='campaignMap'?'#mapParents':'#routeParents').focus?.();};
 $('#parentUnlock').onclick=()=>{if($('#parentGate').hidden||parentAnswer===null)return;const answer=$('#parentAnswer').value.trim();if(!/^\d+$/.test(answer)||Number(answer)!==parentAnswer){$('#parentGateMessage').textContent='Please try again.';return;}$('#parentGate').hidden=true;parentAnswer=null;renderParent();};
 $('#parentAnswer').addEventListener('keydown',e=>{if(e.key==='Enter')$('#parentUnlock').click();});
 $('#parentHome').onclick=home;
+for(const [id,key] of [['parentStoriesEnabled','storiesEnabled'],['parentLegacyEnabled','legacyEnabled']]){
+  $('#'+id).onchange=()=>{
+    if(blocked||state.screen!=='parentDashboard')return;
+    state.settings[key]=$('#'+id).checked;
+    if(save())$('#parentActivitiesStatus').textContent='Saved. All progress is kept. Changes apply when you return to the map.';
+  };
+}
+for(const button of $$('[data-parent-panel]'))button.onclick=()=>{
+  for(const tab of $$('[data-parent-panel]'))tab.setAttribute('aria-pressed',String(tab===button));
+  for(const panel of $$('.parentPanel'))panel.hidden=panel.id!==button.dataset.parentPanel;
+  $('#parentDashboard').scrollTop=0;
+};
 $('#backupSave').onclick=()=>saveBackupFile();$('#saveNoticeBackup').onclick=()=>saveBackupFile('#saveNoticeStatus');$('#backupRestore').onclick=chooseBackupFile;$('#backupFile').onchange=readBackupFile;
 $('#mathStart').onclick=()=>{if(Core.startMath(state,Date.now())){sound.resetCountdown();playClock.reset(performance.now());if(save())renderActivity();}};
 $('#mathSkip').onclick=$('#mathContinue').onclick=()=>{if(Core.leaveMath(state,Date.now())&&save())renderActivity();};

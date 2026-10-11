@@ -1131,3 +1131,12 @@ Creature quests grant one held shield after eight consecutive independent correc
 Use forest-green, parchment and gold modal feedback after riddle/map answers, including wrong answers and completion. Provide readable next actions, focus containment and no reading-time credit while a popup is open. Raise small fixed UI type to at least 18 CSS px and use larger clue/answer text, assuming a landscape iPad.
 
 Map time is capped at 30 seconds per clue, 90 seconds per map per quest, within the existing riddle-time/daily-boost accounting. Retry/reload cannot refill a clue's cap; existing recorded time remains. Ordinary riddles keep their three-minute cap. Map first solves still earn 50 XP (88 boosted), even after hints/listening; misses/repeat solves grant none. The standalone Atlas has no learner XP/time integration. Fourth-campaign implementation and paid teaching generation remain proposals, not shipped content.
+
+## Parent activity controls and readable dashboard — 11 October 2026
+
+Stories (fox-cub rescue and Dragon path) and the original Word trails campaigns default off for new and existing saves. Parents → Activities & settings has independent switches to restore them. Main creature adventures remain available. Settings only change access: learning evidence, XP, saved battles, cleared chapters and each standalone save are retained. Disabled stories also redirect bookmarked entry points to the main game; the separate shareable Hidden Atlas is unchanged.
+
+The gated parent dashboard now has Overview, Learning details, and Activities & settings sections. Readable typography, narrower paragraphs, responsive cards and expandable rule explanations replace the single long page. All reports, sharing, backup, sound and XP controls remain available.
+
+
+

@@ -107,7 +107,7 @@
       const camp=el('footer','adventureCamp'),pip=button('','campPip',ctx.growth);pip.setAttribute('aria-label','See Pip’s growth');const pipArt=el('span','sceneSprite');ctx.paintPip(pipArt);pip.append(pipArt,el('span','',ctx.dragonText('Pip')+' · '+Math.floor(s.dragon.xp||0)+' XP'));camp.append(pip);
       if(A.companion(s)){const friend=button('','campFriend',()=>openBook(e.favourite));const art=el('span','sceneSprite');ctx.paintEnemy(art,e.favourite,8);friend.append(art,el('span','','Your team · '+Content.enemyAt(e.favourite).name));camp.append(friend);}
       else camp.append(button('Choose my animal','bookLauncher',()=>openBook()));
-      const controls=el('div','campControls');controls.append(button('⌕ Dragon path','textButton',ctx.wimmelbild),button('Word trails','textButton',ctx.legacy),button('Speed','textButton',ctx.speed),button('Parents','textButton',ctx.parents));camp.append(controls);screen.append(camp);
+      const controls=el('div','campControls');if(s.settings.storiesEnabled===true)controls.append(button('⌕ Dragon path','textButton',ctx.wimmelbild),button('Story adventures','textButton',ctx.stories));if(s.settings.legacyEnabled===true)controls.append(button('Word trails','textButton',ctx.legacy));controls.append(button('Speed','textButton',ctx.speed),button('Parents','textButton',ctx.parents));camp.append(controls);screen.append(camp);
     }
     function renderMission(){
       const s=ctx.state(),e=A.of(s),c=e.current,m=A.current(s);if(!m||!c){ctx.home();return;}
