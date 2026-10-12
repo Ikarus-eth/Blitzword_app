@@ -34,7 +34,7 @@ export async function oralRoute(request,env,id,action,readJSON,reply,now,send=fe
    const bucket=new Date(now).toISOString().slice(0,10);
    const quota=await DB.prepare('INSERT INTO oral_quota (device_id,day,count) VALUES (?,?,1) ON CONFLICT(device_id,day) DO UPDATE SET count=count+1 WHERE count<10 RETURNING count').bind(id,bucket).first();
    if(!quota)return reply({error:'Daily limit reached (10 assessments). Try tomorrow.'},429);
-   const response=await send(`https://${env.AZURE_SPEECH_REGION}.api.cognitive.microsoft.com/sts/v1.0/issueToken`,{method:'POST',headers:{'Ocp-Apim-Subscription-Key':env.AZURE_SPEECH_KEY},signal:AbortSignal.timeout(12000),redirect:'error'});
+   const response=await send(`https://${env.AZURE_SPEECH_REGION}.api.cognitive.microsoft.com/sts/v1.0/issueToken`,{method:'POST',headers:{'Ocp-Apim-Subscription-Key':env.AZURE_SPEECH_KEY},signal:AbortSignal.timeout(12000),redirect:'manual'});
    if(!response.ok)return reply({error:'Azure could not start the assessment. Check the Speech resource, region and quota.'},502);
    const token=await response.text();
    const inserted=await DB.prepare('INSERT INTO oral_attempts (id,device_id,created_at,state,metadata) SELECT ?,?,?,?,? WHERE EXISTS (SELECT 1 FROM devices WHERE id=? AND revoked=0) RETURNING id').bind(meta.id,id,new Date(now).toISOString(),'started',JSON.stringify(meta),id).first();
