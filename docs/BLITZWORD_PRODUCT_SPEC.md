@@ -1,6 +1,6 @@
 ## Oral reading uploads — approved 11 October 2026
 
-Add a parent-only workflow for a supplied recording and passage, with Azure assessment and private progress-service results. Preserve gameplay, saves and pairing. Keep automated word matching, pronunciation flags and observed pauses distinct; do not claim human-verified reading accuracy, uncertainty or comprehension. Include assisted/reread context and recording date. Azure credentials stay server-side; recordings are sent to Azure but not retained by BlitzWord. Setup is pending because the parent has no Speech resource. [Scope and costs](oral-reading/RELEASE.md).
+Add a parent-only workflow for a supplied recording and passage, with Azure assessment and private progress-service results. Preserve gameplay, saves and pairing. Keep automated word matching, pronunciation flags and observed pauses distinct; do not claim human-verified reading accuracy, uncertainty or comprehension. Include assisted/reread context and recording date. Azure credentials stay server-side; recordings are sent to Azure but not retained by BlitzWord. Azure server credentials were activated on 12 October 2026; real-sample verification remains pending. [Scope and costs](oral-reading/RELEASE.md).
 
 ## Full available progress visibility — approved 11 October 2026
 

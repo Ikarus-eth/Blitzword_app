@@ -2,9 +2,9 @@
 
 ## Accepted scope and status
 
-The parent requested Azure integration to upload a recording plus its passage and retain results for progress assessment, including speed, errors and uncertainty indicators. The parent has no Azure Speech resource yet and requested setup instructions and pricing.
+The parent requested Azure integration to upload a recording plus its passage and retain results for progress assessment, including speed, errors and uncertainty indicators. The parent requested setup instructions and pricing, then created a Free-tier Southeast Asia Speech resource on 12 October 2026.
 
-Deployed and verified: PR #183 merged as `821fdb18e66afbdd7e7c8e80e7639a5d370f5008`; Pages run `38142580448` succeeded. All six checked live frontend files match the tested source. Sites backend version 4 (source `6973f73e29e5c83d7a4d6463713a57b49f7d8000`, deployment `appgdep_6acb8c3cf71c81918b0197979b09f1b3`) succeeded. The live oral tables are visible through authenticated Sites tools, and unauthenticated oral access returns 401. See [deployment evidence](DEPLOYMENT.json). Real Azure recognition and physical iPad audio decoding are unverified until credentials and a real recording are available. No paid assessment has been made.
+Deployed and verified: PR #183 merged as `821fdb18e66afbdd7e7c8e80e7639a5d370f5008`; Pages run `38142580448` succeeded. All six checked live frontend files match the tested source. Sites backend version 4 (source `6973f73e29e5c83d7a4d6463713a57b49f7d8000`, deployment `appgdep_6acb8c3cf71c81918b0197979b09f1b3`) succeeded. The live oral tables are visible through authenticated Sites tools, and unauthenticated oral access returns 401. See [deployment evidence](DEPLOYMENT.json). Azure credentials are now configured and authenticated; real recording recognition, end-to-end result sync and physical iPad audio decoding remain unverified. No recording assessment has been made.
 
 ## Parent workflow
 
@@ -56,3 +56,7 @@ Sources:
 Isolated Chrome tests passed at 1194×834 and 390×844: unpaired/configuration states, actual SDK configuration, mocked recognition through real WAV decoding, failed-save persistence across reload, retry without another Azure call, history display, no page exceptions and no page overflow. Screenshots were inspected. These are integration simulations, not evidence of Azure recognition accuracy or physical iPad compatibility.
 
 Backend source is maintained in `sync-service/`; append-only migration 0005 adds oral tables. Browser/server analysis copies must match (enforced by test). SDK MIT license is retained in `assets/oral-reading/vendor/LICENSE`; bundle source is the npm `microsoft-cognitiveservices-speech-sdk@1.52.0` package. Run the full repository tests before release.
+
+## Azure activation — 12 October 2026
+
+The parent supplied the Speech key for activation. It was stored as a Sites server secret; region is `southeastasia`. Existing environment entries were preserved. Saved backend version 4 was redeployed successfully as `appgdep_6acc263669b08191938a4ed585279afe`, applying environment revision 4. A direct Microsoft token exchange returned HTTP 200 and a nonempty token. Neither key nor token was written to this repository or a local file. No learner audio was submitted during activation. The next verification is a real sample through the paired game.
