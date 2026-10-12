@@ -4,7 +4,7 @@
 <body><h1>Word listening check</h1><p>Listen to a word, then flag it if the pronunciation sounds off. Your flags stay on this device. Download them when you’re ready to share.</p>
 <div class="tools"><select id="scope" aria-label="Words to show"><option value="sample">50-word check</option><option value="new">All new word recordings</option><option value="all">All 1,000 words</option><option value="flagged">Flagged words</option></select><input id="search" type="search" placeholder="Find a word" aria-label="Find a word"><button id="download">Download flags</button></div>
 <p id="count"></p><p id="status" role="status" aria-live="polite">Choose Listen to begin.</p><div id="list"></div>
-<script src="../../content.js?v=target-words-fal-20261010-r1"></script><script src="../../narration.js?v=target-words-fal-20261010-r1"></script>
+<script src="../../content.js?v=target-words-fal-20261010-r1"></script><script src="../../narration.js?v=visual-pronunciation-20261012-r1"></script>
 <script>
 (()=>{'use strict';const words=BlitzContent.words,clips=BlitzNarration.clips,key='blitzword-word-audio-flags-v1';let flags={};try{flags=JSON.parse(localStorage.getItem(key)||'{}');if(!flags||Array.isArray(flags)||typeof flags!=='object')flags={};}catch{}let playing=null;const list=document.querySelector('#list'),status=document.querySelector('#status'),scope=document.querySelector('#scope'),search=document.querySelector('#search');const sample=new Set(['been','us','does','which','should','live','wind','present','close','reading','lead',"I'll"]);for(let i=0;i<words.length&&sample.size<50;i++)sample.add(words[(i*29)%words.length].w);const isNew=w=>clips[w.w]?.file.includes('word-fal-');
 function stop(){if(playing){playing.pause();playing=null;}}

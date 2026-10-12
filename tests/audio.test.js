@@ -141,3 +141,13 @@ test('ordering riddles play their recorded passage and shared instruction in ord
  const failed=recordedHarness(clips,{fetcher:async file=>({ok:file!=='prompt.mp3',arrayBuffer:async()=>new ArrayBuffer(8)})});
  failed.speak(text);await flushAudio();assert.equal(failed.sources.length,0);assert.equal(failed.spoken[0].text,text);
 });
+
+test('ate uses the clear eight recording and standalone speech fallback without changing written text',()=>{
+ const N=require('../narration').clips,{recordedParts}=require('../audio');
+ assert.deepEqual(N.ate,N.eight);
+ for(const text of ['ate','Ate.','ATE!'])assert.deepEqual(recordedParts(text,N),['ate']);
+ assert.deepEqual(recordedParts('You chose ate. The word is eight.',N),['You chose.','ate','The word is.','eight']);
+ let spoken;const n=narrator({synth:{cancel(){},resume(){},getVoices(){return[]},speak(u){spoken=u.text}},Utterance:function(text){this.text=text},schedule:()=>1,unschedule(){}});
+ n.speak('Ate.');assert.equal(spoken,'eight.');
+ n.speak('The cat ate fish.');assert.equal(spoken,'The cat ate fish.');
+});

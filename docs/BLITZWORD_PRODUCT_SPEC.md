@@ -1,3 +1,7 @@
+## Visual and pronunciation correction — 12 October 2026
+
+The parent reported overflowing button/step text, a broken friend chooser, undersized allies when an extra friend joins, and an incorrect “ate” pronunciation. Keep complete labels inside their controls, wrap crowded quest steps, scroll friend choices without shrinking their art, and keep the battle team readable with the extra shield friend. Standalone “ate” should clearly sound like “eight” (/eɪt/); its written spelling remains unchanged. Preserve learner saves, gameplay rules and approved artwork.
+
 ## Sky Stars connected reading — approved 12 October 2026
 
 Add optional in-app recorded reading to all eight Sky Stars missions, targeting one 60–90-second sample daily with a two-minute microphone cap. Short complete passages, a comprehension question, explicit submission and private existing Azure report sync; separate first attempts, rereads and help. Preserve existing mission tasks, saves and rewards. Automatic scores never gate progress. [Implementation and limitations](oral-reading/SKY_READING.md).

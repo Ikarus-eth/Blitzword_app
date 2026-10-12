@@ -1,3 +1,7 @@
+## Reading controls, friend sizing and ate — 12 October 2026
+
+**Implemented; deployment verification pending.** Fix wrapped answer text, narrow quest-step labels and crowded friend selection. An extra shield friend now uses a larger staggered battle arrangement. “Ate” reuses the clear “eight” recording; text and learner saves are preserved. [Changes and checks](visual-fixes/RELEASE.md).
+
 ## Sky Stars daily recordings — 12 October 2026
 
 Deployed and verified: PRs #186/#187 merged; Pages run 38191819637 succeeded and all six changed live frontend files match tested source. 413 unit/backend tests and 123 UI groups pass. Eight short connected passages, in-app microphone capture/playback, one meaning question each, and existing Azure report sync. Target 60–90 seconds daily; microphone stops at two minutes. Game saves/tasks are preserved. Real iPad recording and Azure assessment still need the first sample. [Scope and checks](oral-reading/SKY_READING.md).

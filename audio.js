@@ -75,8 +75,9 @@
     function cancel(){generation++;unschedule(watchdog);watchdog=null;stopRecording();if(synth)synth.cancel();}
     function speak(text,{preferred='',onEnd=()=>{},onBoundary=()=>{}}={}) {
       cancel();const token=generation;let finished=false;
-      // The pronunciation helper preserves character positions for local speech.
-      const fallbackText=text.replace(/\bgate\b/gi,word=>word[0]==='G'?'Gait':'gait');
+      // Single-word ate uses its clear homophone; sentence spelling/boundaries stay intact.
+      // The gate helper preserves character positions for local sentence speech.
+      const fallbackText=/^ate[.,!?;:]?$/i.test(text)?text.replace(/ate/i,'eight'):text.replace(/\bgate\b/gi,word=>word[0]==='G'?'Gait':'gait');
       const current=()=>!finished&&token===generation;
       const finish=()=>{if(!current())return;finished=true;unschedule(watchdog);watchdog=null;stopRecording();onEnd();};
       if(volume===0){finish();return;}
