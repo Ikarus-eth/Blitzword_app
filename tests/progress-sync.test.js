@@ -1,5 +1,6 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),{webcrypto}=require('node:crypto');
 const Sync=require('../assets/ui/progress-sync'),Core=require('../game-core');
+const waitFor=async predicate=>{const deadline=Date.now()+5000;while(!predicate()){assert.ok(Date.now()<deadline,'sync acknowledgement timed out');await new Promise(resolve=>setTimeout(resolve,5));}};
 function setup(){
  const map=new Map(),storage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)};
  let state=Core.migrate({}),now=100000,offline=false,serverSeq=0;const requests=[];
@@ -11,7 +12,7 @@ function setup(){
 }
 test('unpaired device never sends progress',async()=>{const t=setup();await t.build().flush(true);assert.equal(t.requests.length,0);});
 test('pairing sends redacted, compact progress without modifying playable save',async()=>{
- const t=setup(),sync=t.build(),before=JSON.stringify(t.state);assert.equal(sync.pair('a'.repeat(64)),true);await t.tick();
+ const t=setup(),sync=t.build(),before=JSON.stringify(t.state);assert.equal(sync.pair('a'.repeat(64)),true);await waitFor(()=>sync.status().lastSyncedAt);
  const p=JSON.parse(t.requests.at(-1).options.body);assert.equal(p.format,'blitzword-progress-v1');assert.equal(p.progress.schemaVersion,3);assert.equal(JSON.stringify(p).includes('Private'),false);assert.equal(p.progress.profile,undefined);assert.equal(JSON.stringify(t.state),before);assert.ok(sync.status().lastSyncedAt);
  t.advance();await sync.flush();assert.equal(t.requests.length,2,'unchanged state is not uploaded again');
 });
@@ -21,7 +22,6 @@ test('offline updates survive reload and restore with lower game revision',async
  const p=JSON.parse(t.requests.at(-1).options.body);assert.ok(p.sequence>n);assert.equal(p.progress.dragon.xp,50);assert.ok(sync.status().lastSyncedAt);
 });
 test('pause prevents upload, resume catches up, delete does not change save',async()=>{
- const waitFor=async predicate=>{const deadline=Date.now()+5000;while(!predicate()){assert.ok(Date.now()<deadline,'sync acknowledgement timed out');await new Promise(resolve=>setTimeout(resolve,5));}};
  const t=setup(),sync=t.build();sync.pair('a'.repeat(64));await waitFor(()=>sync.status().lastSyncedAt);sync.pause(true);const n=t.requests.length,previousAck=sync.status().lastSyncedAt;t.state.dragon.xp=30;t.advance();await sync.flush(true);assert.equal(t.requests.length,n);
  sync.pause(false);await waitFor(()=>sync.status().lastSyncedAt!==previousAck);assert.equal(t.requests.length,n+1);const before=JSON.stringify(t.state);sync.remove();await waitFor(()=>t.storage.getItem(Sync.KEY)===null);assert.equal(t.storage.getItem(Sync.KEY),null);assert.equal(JSON.stringify(t.state),before);
 });
