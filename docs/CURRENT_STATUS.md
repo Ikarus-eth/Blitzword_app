@@ -1,6 +1,6 @@
 ## Automatic reading upload — 12 October 2026
 
-Implemented and tested; frontend deployment pending. Recordings are recovered locally and submitted automatically when the browser is paired. Inline connection, MP4/WebM upload, and post-upload assistance/comprehension updates are supported. 415 unit/backend tests and 123 UI groups pass. Backend version 5 is deployed. [Scope, limits and verification](oral-reading/AUTO_UPLOAD.md).
+Deployed and verified: PRs #191–#193 merged; Pages run 38212579531 succeeded and all three changed frontend files match tested source. Recordings are recovered locally and submitted automatically when the browser is paired. Inline connection, MP4/WebM upload, and post-upload assistance/comprehension updates are supported. 415 unit/backend tests and 123 UI groups pass. Backend version 6 is deployed. A real supplied recording passed Azure recognition, report sync and a subsequent context update; independent reading accuracy remains unverified. [Scope, limits and verification](oral-reading/AUTO_UPLOAD.md).
 
 ## Reading controls, friend sizing and ate — 12 October 2026
 

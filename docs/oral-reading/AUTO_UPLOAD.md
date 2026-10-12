@@ -9,3 +9,9 @@ Unpaired/offline recordings stay local until connection; completed reports retai
 Validation: 415 unit/backend tests and 123 UI groups pass. Browser tests cover actual MediaRecorder with synthetic audio, automatic submission, unpaired file recovery after reload, inline connection, failed-report retry without a second assessment, help/comprehension context updates, denied microphone and narrow layout. Backend tests check owner-only context changes, preserving word evidence, duplicate report retries and replacement of old multipart rows.
 
 Backend version 5 (source 408d23000e55b05f730a89e09525548ae853262a) is deployed as appgdep_6acc7ab259d48191aca4c7dd197ccd7f. Only the owner administrator secret was refreshed to prepare new browser pairing; existing device tokens, Azure secrets, data and public audience are preserved. Frontend publication and the supplied real sample are recorded below after verification.
+
+## Verified publication
+
+PRs #191–#193 merged. Pages run [38212579531](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38212579531) succeeded; the three changed frontend files match tested source. A real parent-supplied recording passed decoding, Azure authentication/recognition, report storage and a subsequent help-context update. This establishes transport and persistence, not human-verified reading accuracy. No private recording, transcript, report or connection credentials are committed.
+
+The real check exposed a pre-existing Worker incompatibility: redirect mode `error` throws before the Azure token request. Reproduced in Miniflare/workerd; `manual` plus existing non-2xx rejection fixes it without forwarding credentials on redirects. Backend version 6, source 27a8fc72fcb8d027a6d175b8f4ce3aa4ca60a37a, deployment appgdep_6acc7d023b6c81919233d24c9d1e051a, is deployed with environment revision 5. Inputs are disabled while a report awaits saving, protecting its recovery audio from replacement.
