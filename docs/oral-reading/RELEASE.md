@@ -1,3 +1,5 @@
+Latest addition: [Sky Stars in-app microphone reading](SKY_READING.md) supersedes the upload-only/no-microphone scope below.
+
 # Oral reading recordings — 11 October 2026
 
 ## Accepted scope and status
