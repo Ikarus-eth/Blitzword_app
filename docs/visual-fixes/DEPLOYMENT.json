@@ -1,0 +1,67 @@
+{
+  "url": "https://ikarus-eth.github.io/Blitzword_app/",
+  "merge": "c59b9bbf8c32f4ec2de4a7a77435d085c2d3cd52",
+  "run": 38205545392,
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "bb3a3b22190488f8f759169a0f0deaeacababc59dc83ca29291a6538686a864e",
+      "matches": true
+    },
+    {
+      "file": "styles.css",
+      "sha256": "b4862335ad1bbddceeb8c73d1aced7c428c7364034f71f7ca39c88895a08d595",
+      "matches": true
+    },
+    {
+      "file": "adventures.css",
+      "sha256": "8e0e30119ae3736160c2e701cbbf65fd044b70196b5a12b9e1eb36053e648e29",
+      "matches": true
+    },
+    {
+      "file": "adventure-ui.js",
+      "sha256": "786c40b3fe8cc45898819fcf43ddb4c22d6a5914ce85a1b00df5d12bdcc0352c",
+      "matches": true
+    },
+    {
+      "file": "assets/ui/feedback.css",
+      "sha256": "66a5ab355a3d84358122b7af997820b7523d8473eac4ed493a5b0761193fcf54",
+      "matches": true
+    },
+    {
+      "file": "assets/wimmelbild/quest.css",
+      "sha256": "76565235c7b7cdb997a97293d33cb7c8ec7b96eae26fd1d6623470dbbe781691",
+      "matches": true
+    },
+    {
+      "file": "assets/map-quest/index.html",
+      "sha256": "a6a48478abecdd4cd80c557b3fdf71006402052a34edd8def56d956d10fad799",
+      "matches": true
+    },
+    {
+      "file": "assets/teaching-review/index.html",
+      "sha256": "d5ba580448515ce62288983bf869c4bb233086dab06626ed0452194a2167e745",
+      "matches": true
+    },
+    {
+      "file": "assets/word-audio-review/index.html",
+      "sha256": "417ffde9bc2ae88f483cd1640744b10454b04c26178cd1fc1ce82afb9ef634b4",
+      "matches": true
+    },
+    {
+      "file": "narration.js",
+      "sha256": "b736ead60cdf717070f87a7929717136838c1e2b42f9a67c9f2c442cd1b5ec71",
+      "matches": true
+    },
+    {
+      "file": "audio.js",
+      "sha256": "18b3bb36618bf7b081403f3d213af785f7654b85c35d904a802462151e0a3c42",
+      "matches": true
+    },
+    {
+      "file": "assets/narration/word-fal-0021.mp3",
+      "sha256": "e49bdf725db0a64435e5778d1fbbba7067fa7344b3ea58a2f0c74d77359ac05b",
+      "matches": true
+    }
+  ]
+}

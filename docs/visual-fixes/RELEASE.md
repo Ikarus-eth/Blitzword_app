@@ -1,6 +1,8 @@
 # Reading controls, friends and ate — 12 October 2026
 
-Implemented and tested; deployment pending verification.
+Deployed and verified. [PR #188](https://github.com/Ikarus-eth/Blitzword_app/pull/188) and [test correction #189](https://github.com/Ikarus-eth/Blitzword_app/pull/189) merged. [Pages run 38205545392](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38205545392) succeeded. All 12 checked live files match the tested release ([hash evidence](DEPLOYMENT.json)). Live browser playback requested `word-fal-0021.mp3`, completed, and used no speech fallback.
+
+The initial Pages attempt stopped on an existing pairing test's fixed 20 ms wait. The follow-up changes only that test to await the sync acknowledgement with a bounded timeout; the complete CI suite then passed.
 
 414 unit/backend tests, 123 UI flow groups and all six browser viewport checks pass.
 

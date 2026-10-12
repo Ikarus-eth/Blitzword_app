@@ -1,6 +1,6 @@
 ## Reading controls, friend sizing and ate — 12 October 2026
 
-**Implemented; deployment verification pending.** Fix wrapped answer text, narrow quest-step labels and crowded friend selection. An extra shield friend now uses a larger staggered battle arrangement. “Ate” reuses the clear “eight” recording; text and learner saves are preserved. [Changes and checks](visual-fixes/RELEASE.md).
+**Deployed and verified.** PRs #188/#189 merged; [Pages run 38205545392](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38205545392) succeeded. All 12 checked live files match tested source and live “ate” playback completed without speech fallback. 414 unit/backend tests, 123 UI flow groups and six browser viewport checks pass. Fix wrapped answer text, narrow quest-step labels and crowded friend selection. An extra shield friend now uses a larger staggered battle arrangement. “Ate” reuses the clear “eight” recording; text and learner saves are preserved. [Changes and checks](visual-fixes/RELEASE.md).
 
 ## Sky Stars daily recordings — 12 October 2026
 
