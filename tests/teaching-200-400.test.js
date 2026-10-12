@@ -18,7 +18,10 @@ test('number lessons count exact quantities without asking image generation to c
 test('397 new files match retained paid receipts and every pre-existing recording remains',()=>{
  const g=require('../docs/TEACHING_200_400_AUDIO_GENERATION.json');assert.equal(g.newFiles,397);assert.equal(g.characters,19201);assert.equal(g.retainedEntries,3092);
  for(const r of g.receipts){const c=N.clips[r.key];assert.equal(c.sha256,r.sha256);assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,c.file))).digest('hex'),r.sha256);assert.ok(r.requestId);}
- const old=Object.entries(N.clips).filter(([k,c])=>!c.file.includes('teach-200-400-')).sort(([a],[b])=>a.localeCompare(b));assert.equal(old.length,3092);assert.equal(crypto.createHash('sha256').update(JSON.stringify(old)).digest('hex'),g.retainedManifestDigest);
+ // Compare the historical batch after restoring the explicitly superseded ate entry.
+ const historical={...N.clips,ate:require('../docs/NARRATION_WORDS_FAL_GENERATION.json').clips.ate};
+ assert.deepEqual(N.clips.ate,N.clips.eight);
+ const old=Object.entries(historical).filter(([k,c])=>!c.file.includes('teach-200-400-')).sort(([a],[b])=>a.localeCompare(b));assert.equal(old.length,3092);assert.equal(crypto.createHash('sha256').update(JSON.stringify(old)).digest('hex'),g.retainedManifestDigest);
 });
 test('Pages packages the new runtime and the review page never loads learner storage',()=>{
  assert.match(fs.readFileSync(path.join(root,'.github/workflows/pages.yml'),'utf8'),/cp -R assets _site\/assets/);

@@ -670,3 +670,6 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 .activitySwitch small{font-weight:400;color:#465b49;margin-top:6px}
 .parentDashboard button:focus-visible,.activitySwitch input:focus-visible{outline:3px solid #98672d;outline-offset:3px}
 @media(max-width:600px){.parentDashboard .parentInfo{padding:18px}.parentNav button{flex:1 1 140px}.parentHeader{flex-wrap:wrap}.parentDashboard .parentStats{grid-template-columns:1fr 1fr}.parentStats article{padding:14px}}
+
+/* Keep Safari rotation text sizing in step with the authored reading controls. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}

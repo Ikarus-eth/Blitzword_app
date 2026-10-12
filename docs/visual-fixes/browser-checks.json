@@ -1,0 +1,67 @@
+{
+  "url": "http://127.0.0.1:8893/",
+  "checks": [
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "mapButtons": "fit including 30px text",
+      "friendChooser": "scrollable full-size cards",
+      "battle": "four enlarged allies",
+      "nineSteps": "contained"
+    },
+    {
+      "viewport": {
+        "width": 1194,
+        "height": 834
+      },
+      "mapButtons": "fit including 30px text",
+      "friendChooser": "scrollable full-size cards",
+      "battle": "four enlarged allies",
+      "nineSteps": "contained"
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1024
+      },
+      "mapButtons": "fit including 30px text",
+      "friendChooser": "scrollable full-size cards",
+      "battle": "four enlarged allies",
+      "nineSteps": "contained"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "mapButtons": "fit including 30px text",
+      "friendChooser": "scrollable full-size cards",
+      "battle": "four enlarged allies",
+      "nineSteps": "contained"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "mapButtons": "fit including 30px text",
+      "friendChooser": "scrollable full-size cards",
+      "battle": "four enlarged allies",
+      "nineSteps": "contained"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "mapButtons": "fit including 30px text",
+      "friendChooser": "scrollable full-size cards",
+      "battle": "four enlarged allies",
+      "nineSteps": "contained"
+    }
+  ],
+  "errors": [],
+  "physicalIPad": "not tested"
+}

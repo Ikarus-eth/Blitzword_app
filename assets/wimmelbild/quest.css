@@ -26,3 +26,8 @@
 .searchFeedback,.searchHint{font-size:20px;line-height:1.5;color:#665c43}.searchHead{font-size:20px;line-height:1.4}.searchWord{border-bottom:1px dotted #bca873}
 .mapZoomBar{background:#f4e9d0;color:#344b37;border-color:#cbb585;gap:8px;padding:12px}.mapZoomBar button{min-width:52px;min-height:52px;border-radius:12px;background:#fff9eb;color:#2c4d35;border:1px solid #bca77a;font-size:20px}.mapPinnedClue{font-size:20px;line-height:1.5;background:#fff5dfed;color:#304835}
 @media(min-width:901px){.mapPlayLayout{grid-template-columns:minmax(0,1.15fr) minmax(380px,.85fr);gap:24px}}
+
+/* Fit the complete answer, including wrapped text in iPad Safari. */
+.searchAnswer{display:block;width:100%;height:auto;min-width:0;white-space:normal;overflow-wrap:anywhere;align-self:stretch}
+.mapPlayLayout .searchAnswers{grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr))}
+.searchActions button{height:auto;max-width:100%;white-space:normal;overflow-wrap:anywhere}
