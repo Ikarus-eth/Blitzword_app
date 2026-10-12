@@ -81,7 +81,7 @@ test('oral setup status and all oral routes require a paired device',async()=>{
  assert.equal((await(await call(base+'status',{},token)).json()).ready,false);
 });
 test('oral token keeps key server-side; results are idempotent, private, readable and deleted with sharing',async()=>{
- let requests=0;const {call,sql}=setup({AZURE_SPEECH_KEY:'private-key',AZURE_SPEECH_REGION:'southeastasia'},async(url,options)=>{requests++;assert.equal(url,'https://southeastasia.api.cognitive.microsoft.com/sts/v1.0/issueToken');assert.equal(options.headers['Ocp-Apim-Subscription-Key'],'private-key');return new Response('short-lived-token');});
+ let requests=0;const {call,sql}=setup({AZURE_SPEECH_KEY:'private-key',AZURE_SPEECH_REGION:'southeastasia'},async(url,options)=>{requests++;assert.equal(url,'https://southeastasia.api.cognitive.microsoft.com/sts/v1.0/issueToken');assert.equal(options.headers['Ocp-Apim-Subscription-Key'],'private-key');assert.equal(options.redirect,'manual','Worker runtime rejects error; never forward the key on redirects');return new Response('short-lived-token');});
  const p=await paired(call),base='/api/devices/'+p.deviceId+'/oral/',meta=oralMeta();
  const start=await call(base+'token',meta,token);assert.equal(start.status,200);assert.equal((await start.json()).token,'short-lived-token');
  assert.equal((await call(base+'report',{id:crypto.randomUUID(),phrases:oralPhrases},token)).status,404);
