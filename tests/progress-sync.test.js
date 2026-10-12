@@ -21,8 +21,9 @@ test('offline updates survive reload and restore with lower game revision',async
  const p=JSON.parse(t.requests.at(-1).options.body);assert.ok(p.sequence>n);assert.equal(p.progress.dragon.xp,50);assert.ok(sync.status().lastSyncedAt);
 });
 test('pause prevents upload, resume catches up, delete does not change save',async()=>{
- const t=setup(),sync=t.build();sync.pair('a'.repeat(64));await t.tick();sync.pause(true);const n=t.requests.length;t.state.dragon.xp=30;t.advance();await sync.flush(true);assert.equal(t.requests.length,n);
- sync.pause(false);await t.tick();assert.equal(t.requests.length,n+1);const before=JSON.stringify(t.state);sync.remove();await t.tick();assert.equal(t.storage.getItem(Sync.KEY),null);assert.equal(JSON.stringify(t.state),before);
+ const waitFor=async predicate=>{const deadline=Date.now()+5000;while(!predicate()){assert.ok(Date.now()<deadline,'sync acknowledgement timed out');await new Promise(resolve=>setTimeout(resolve,5));}};
+ const t=setup(),sync=t.build();sync.pair('a'.repeat(64));await waitFor(()=>sync.status().lastSyncedAt);sync.pause(true);const n=t.requests.length,previousAck=sync.status().lastSyncedAt;t.state.dragon.xp=30;t.advance();await sync.flush(true);assert.equal(t.requests.length,n);
+ sync.pause(false);await waitFor(()=>sync.status().lastSyncedAt!==previousAck);assert.equal(t.requests.length,n+1);const before=JSON.stringify(t.state);sync.remove();await waitFor(()=>t.storage.getItem(Sync.KEY)===null);assert.equal(t.storage.getItem(Sync.KEY),null);assert.equal(JSON.stringify(t.state),before);
 });
 test('delete request survives offline reload and blocks further uploads',async()=>{
  const t=setup(),sync=t.build();sync.pair('a'.repeat(64));await t.tick();t.offline(true);sync.remove();await t.tick();assert.equal(sync.status().deleting,true);
