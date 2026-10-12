@@ -1,3 +1,5 @@
+Latest: [automatic upload and help context](AUTO_UPLOAD.md) supersede the explicit Send-button and memory-only recovery behavior below.
+
 # Sky Stars daily reading — 12 October 2026
 
 Deployed and verified: PRs [#186](https://github.com/Ikarus-eth/Blitzword_app/pull/186) and [#187](https://github.com/Ikarus-eth/Blitzword_app/pull/187); [Pages run 38191819637](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38191819637) succeeded. All six changed live frontend files match tested source. The initial run failed on a pre-existing fixed-delay sync test; that test now waits for real acknowledgements with a bounded timeout. Production sync code is unchanged.
