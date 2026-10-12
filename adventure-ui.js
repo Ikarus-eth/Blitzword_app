@@ -90,6 +90,7 @@
       const book=button('Creature Book · '+report.seen+'/'+Content.creatures.length,'bookLauncher',()=>openBook());book.insertAdjacentHTML('afterbegin',icon('leaf'));top.append(tabs,book);screen.append(top);
       const done=c.missions.filter(id=>e.missions[id]?.completedAt).length;
       screen.append(heading('Adventure '+(D.campaigns.indexOf(c)+1)+' · '+done+'/'+c.missions.length+' treasures',c.name,done===c.missions.length?c.ending:c.intro));
+      if(c.id==='star-trail')screen.append(button('Read a star message · about 1 minute','greenButton',()=>{if(ctx.save())location.href='assets/oral-reading/?sky='+encodeURIComponent(e.current?.missionId&&c.missions.includes(e.current.missionId)?e.current.missionId:c.missions.find(id=>!e.missions[id]?.completedAt)||c.missions[0]);}));
       if(e.current&&e.current.phase!=='complete'){
         const current=D.byId[e.current.missionId],resume=button('Continue '+current.name+' · '+A.progress(s).left+' steps left','greenButton missionResume',()=>ctx.launch(current.id));resume.id='missionResume';screen.append(resume);
       }
@@ -135,6 +136,7 @@
       }else if(!solving){
         const family=m.encounters[c.step],first=c.step===0;
         panel.append(heading(first?'A new quest':c.step>=2?'Big fight':'Next fight',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:m.scenes?.[c.step]?.intro||'Win this fight. Get the next clue.')));
+        if(first&&m.campaign==='star-trail')panel.append(button('Read a star message','greenButton',()=>{if(ctx.save())location.href='assets/oral-reading/?sky='+encodeURIComponent(m.id);}));
         const actor=el('div','missionIntroEnemy sceneSprite');ctx.paintEnemy(actor,family,m.health[c.step]);panel.append(actor);
         panel.append(button(first?'Let’s go':'Start the fight','greenButton',()=>{if(!ctx.active())return;if(Core.startMissionBattle(s,Date.now())&&ctx.save())ctx.enter();}),button('Back to camp','textButton',ctx.home));
       }else{

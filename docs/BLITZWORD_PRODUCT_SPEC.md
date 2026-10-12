@@ -1,3 +1,7 @@
+## Sky Stars connected reading — approved 12 October 2026
+
+Add optional in-app recorded reading to all eight Sky Stars missions, targeting one 60–90-second sample daily with a two-minute microphone cap. Short complete passages, a comprehension question, explicit submission and private existing Azure report sync; separate first attempts, rereads and help. Preserve existing mission tasks, saves and rewards. Automatic scores never gate progress. [Implementation and limitations](oral-reading/SKY_READING.md).
+
 ## Oral reading uploads — approved 11 October 2026
 
 Add a parent-only workflow for a supplied recording and passage, with Azure assessment and private progress-service results. Preserve gameplay, saves and pairing. Keep automated word matching, pronunciation flags and observed pauses distinct; do not claim human-verified reading accuracy, uncertainty or comprehension. Include assisted/reread context and recording date. Azure credentials stay server-side; recordings are sent to Azure but not retained by BlitzWord. Azure server credentials were activated on 12 October 2026; real-sample verification remains pending. [Scope and costs](oral-reading/RELEASE.md).
