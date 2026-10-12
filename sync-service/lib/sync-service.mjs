@@ -47,7 +47,7 @@ export async function handle(request,env,now=Date.now(),send=fetch){
       const details=await writeProjection(DB,row.id,JSON.parse(row.snapshot));
       return reply({indexed:true,...details});
     }
-    const match=path.match(/^\/api\/devices\/([0-9a-f-]{36})(\/(?:snapshot|events|oral\/(?:status|token|report)))?$/);
+    const match=path.match(/^\/api\/devices\/([0-9a-f-]{36})(\/(?:snapshot|events|oral\/(?:status|token|report|context)))?$/);
     if(!match||!['POST','DELETE'].includes(request.method))return reply({error:'Not found'},404);
     if(!validToken(bearer))return reply({error:'Unauthorized'},401);
     const tokenHash=await hash(bearer),id=match[1];

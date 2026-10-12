@@ -1,3 +1,7 @@
+## Automatic reading submission — approved 12 October 2026
+
+Selecting a recording or stopping capture should submit automatically once connected. Preserve an unsent local recovery copy; explain pairing failures and offer connection on the reading page. Default to assisted practice, allow parent-supplied helped words and updates to comprehension/help context after upload without repeating speech assessment. Spoken parental help is not automatically separated by Azure; never interpret it as independent fluency. [Implementation](oral-reading/AUTO_UPLOAD.md). This supersedes the earlier explicit Send-button requirement.
+
 ## Visual and pronunciation correction — 12 October 2026
 
 The parent reported overflowing button/step text, a broken friend chooser, undersized allies when an extra friend joins, and an incorrect “ate” pronunciation. Keep complete labels inside their controls, wrap crowded quest steps, scroll friend choices without shrinking their art, and keep the battle team readable with the extra shield friend. Standalone “ate” should clearly sound like “eight” (/eɪt/); its written spelling remains unchanged. Preserve learner saves, gameplay rules and approved artwork.

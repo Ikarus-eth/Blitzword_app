@@ -9,6 +9,23 @@ export async function oralRoute(request,env,id,action,readJSON,reply,now,send=fe
    return reply({ready:configured(env),reports:(rows.results||[]).map(r=>({id:r.id,createdAt:r.created_at,...JSON.parse(r.summary)}))});
  }
  const b=await readJSON(request);
+ if(action==='context'){
+   if(typeof b.id!=='string'||typeof b.assisted!=='boolean'||typeof b.reread!=='boolean'||typeof b.notes!=='string'||b.notes.length>1000)return reply({error:'Invalid reading context'},400);
+   const row=await DB.prepare('SELECT state,metadata,summary FROM oral_attempts WHERE id=? AND device_id=?').bind(b.id,id).first();
+   if(!row)return reply({error:'Assessment not found'},404);
+   if(row.state!=='complete')return reply({error:'Wait for the reading result to finish saving'},409);
+   const parts=await DB.prepare('SELECT data FROM oral_parts WHERE device_id=? AND assessment_id=? ORDER BY part').bind(id,b.id).all();
+   const result=JSON.parse(parts.results.map(p=>p.data).join(''));
+   const context={assisted:b.assisted,reread:b.reread,notes:b.notes,contextUpdatedAt:new Date(now).toISOString()};
+   Object.assign(result,context);const meta={...JSON.parse(row.metadata),...context},summary={...JSON.parse(row.summary),assisted:b.assisted,reread:b.reread};
+   const serialized=JSON.stringify(result),chunks=[];for(let pos=0;pos<serialized.length;pos+=900)chunks.push(serialized.slice(pos,pos+900));
+   await DB.batch([
+    DB.prepare('DELETE FROM oral_parts WHERE device_id=? AND assessment_id=?').bind(id,b.id),
+    ...chunks.map((data,part)=>DB.prepare('INSERT INTO oral_parts (device_id,assessment_id,part,parts,data) SELECT ?,?,?,?,? WHERE EXISTS (SELECT 1 FROM oral_attempts WHERE id=? AND device_id=?)').bind(id,b.id,part,chunks.length,data,b.id,id)),
+    DB.prepare('UPDATE oral_attempts SET metadata=?,summary=? WHERE id=? AND device_id=?').bind(JSON.stringify(meta),JSON.stringify(summary),b.id,id)
+   ]);
+   return reply({saved:true,id:b.id});
+ }
  if(action==='token'){
    if(!configured(env))return reply({error:'Azure Speech is not configured yet. Follow the setup instructions below.',code:'azure_setup_required'},503);
    let meta;try{meta=metadata(b);}catch(e){return reply({error:e.message},400);}

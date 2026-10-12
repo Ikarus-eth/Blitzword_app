@@ -97,3 +97,17 @@ test('oral daily start quota is enforced before Azure calls; failures never clai
  for(let i=0;i<10;i++)assert.equal((await call(base+'token',oralMeta(),token)).status,502);
  assert.equal((await call(base+'token',oralMeta(),token)).status,429);assert.equal(requests,10);assert.equal(sql.prepare('SELECT count(*) n FROM oral_attempts').get().n,0);
 });
+test('parent context updates after auto-upload preserve speech evidence and require the owning device',async()=>{
+ const {call,sql}=setup({AZURE_SPEECH_KEY:'key',AZURE_SPEECH_REGION:'southeastasia'},async()=>new Response('token'));
+ const p=await paired(call),base='/api/devices/'+p.deviceId+'/oral/',meta=oralMeta(),context={id:meta.id,assisted:true,reread:false,notes:'Parent supplied found; comprehension correct.'};
+ await call(base+'token',meta,token);assert.equal((await call(base+'context',context,token)).status,409);
+ await call(base+'report',{id:meta.id,phrases:oralPhrases},token);
+ const read=()=>JSON.parse(sql.prepare('SELECT data FROM oral_parts ORDER BY part').all().map(p=>p.data).join(''));const before=read();
+ assert.equal((await call(base+'context',context,'c'.repeat(64))).status,401);
+ assert.equal((await call(base+'context',{...context,id:crypto.randomUUID()},token)).status,404);
+ assert.equal((await call(base+'context',{...context,notes:'x'.repeat(1001)},token)).status,400);
+ assert.equal((await call(base+'context',context,token)).status,200);const after=read();assert.deepEqual(after.words,before.words);assert.deepEqual(after.summary,before.summary);assert.equal(after.assisted,true);assert.equal(after.notes,context.notes);
+ const history=await(await call(base+'status',{},token)).json();assert.equal(history.reports[0].assisted,true);
+ await call(base+'report',{id:meta.id,phrases:[]},token);assert.deepEqual(read(),after,'report retries must preserve updated context');
+ await call(base+'context',{...context,notes:'Short'},token);assert.equal(read().notes,'Short','rewritten report parts have no trailing old chunks');
+});
