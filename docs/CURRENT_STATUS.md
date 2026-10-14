@@ -1,3 +1,7 @@
+## Huge standalone expert maps — 14 October 2026
+
+**Implemented; deployment pending.** The Hidden Atlas adds two 6144×4096 assembled maps, six expert riddles each, English/German text, small picker thumbnails and 24× zoom. Existing five maps, saved progress and four-life rules remain; completion now follows each map’s question count. 418 unit/backend tests and 123 UI-flow groups pass; sixteen bilingual browser journeys, expanded views, classic completion and final-image answer audits pass. [Scope, provenance and verification](wimmelbild/expert/RELEASE.md).
+
 ## Automatic reading upload — 12 October 2026
 
 Deployed and verified: PRs #191–#193 merged; Pages run 38212579531 succeeded and all three changed frontend files match tested source. Recordings are recovered locally and submitted automatically when the browser is paired. Inline connection, MP4/WebM upload, and post-upload assistance/comprehension updates are supported. 415 unit/backend tests and 123 UI groups pass. Backend version 6 is deployed. A real supplied recording passed Azure recognition, report sync and a subsequent context update; independent reading accuracy remains unverified. [Scope, limits and verification](oral-reading/AUTO_UPLOAD.md).

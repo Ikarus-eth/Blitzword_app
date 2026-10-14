@@ -1,6 +1,7 @@
 (function(root){
   'use strict';
-  function mount(host,url,alt,prior){
+  function mount(host,url,alt,prior,options={}){
+    const maxZoom=options.maxZoom||8;
     const view=document.createElement('div'),surface=document.createElement('img'),bar=document.createElement('div');
     view.className='mapZoomViewport';view.tabIndex=0;view.setAttribute('role','group');view.setAttribute('aria-label','Search map. Pinch or use zoom buttons; drag or use arrow keys. Picture taps never select answers.');
     surface.className='mapZoomImage';surface.alt=alt;surface.draggable=false;view.append(surface);bar.className='mapZoomBar';
@@ -10,10 +11,10 @@
     let v={scale:1,x:0,y:0,w:1,h:1,bw:1,bh:1},points=new Map(),dead=false,loaded=false;
     const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
     function bound(){const w=v.bw*v.scale,h=v.bh*v.scale;v.x=w<=v.w?(v.w-w)/2:clamp(v.x,v.w-w,0);v.y=h<=v.h?(v.h-h)/2:clamp(v.y,v.h-h,0);}
-    function paint(){surface.style.width=v.bw+'px';surface.style.height=v.bh+'px';surface.style.transform=`translate(${v.x}px,${v.y}px) scale(${v.scale})`;out.value=(Math.round(v.scale*10)/10)+'×';minus.disabled=v.scale<=1;plus.disabled=v.scale>=8;}
+    function paint(){surface.style.width=v.bw+'px';surface.style.height=v.bh+'px';surface.style.transform=`translate(${v.x}px,${v.y}px) scale(${v.scale})`;out.value=(Math.round(v.scale*10)/10)+'×';minus.disabled=v.scale<=1;plus.disabled=v.scale>=maxZoom;}
     function snapshot(){return {scale:v.scale,cx:(v.w/2-v.x)/(v.bw*v.scale),cy:(v.h/2-v.y)/(v.bh*v.scale)};}
     function fit(saved){const r=view.getBoundingClientRect();if(!r.width||!r.height)return;v.w=r.width;v.h=r.height;v.bw=Math.min(r.width,r.height*1.5);v.bh=v.bw/1.5;v.scale=saved?.scale||1;v.x=r.width/2-(saved?.cx??.5)*v.bw*v.scale;v.y=r.height/2-(saved?.cy??.5)*v.bh*v.scale;bound();paint();}
-    function zoom(f,x=v.w/2,y=v.h/2){const next=clamp(v.scale*f,1,8),r=next/v.scale;v.x=x-(x-v.x)*r;v.y=y-(y-v.y)*r;v.scale=next;bound();paint();}
+    function zoom(f,x=v.w/2,y=v.h/2){const next=clamp(v.scale*f,1,maxZoom),r=next/v.scale;v.x=x-(x-v.x)*r;v.y=y-(y-v.y)*r;v.scale=next;bound();paint();}
     function button(label,aria,fn){const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-label',aria);b.onclick=fn;controls.append(b);return b;}
     const minus=button('−','Zoom out',()=>zoom(1/1.5));controls.append(out);const plus=button('+','Zoom in',()=>zoom(1.5));button('Whole map','Show the whole map',()=>fit());
     function setExpanded(expanded){const camera=snapshot();host.classList.toggle('mapZoomExpanded',expanded);expand.textContent=expanded?'Back to question':'Big picture';expand.setAttribute('aria-label',expanded?'Back to question':'Expand the map');expand.setAttribute('aria-expanded',String(expanded));fit(camera);}
