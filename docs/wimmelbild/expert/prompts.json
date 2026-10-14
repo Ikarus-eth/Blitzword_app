@@ -1,0 +1,631 @@
+{
+  "mode": "built-in image_gen",
+  "status": "Assembled and visually audited; deployment tracked in RELEASE.md",
+  "maps": [
+    {
+      "id": "clockwork-harbour",
+      "prompt": "Use case: illustration-story. Create production artwork for an extremely difficult adult Wimmelbild hidden-object game. One HUGE continuous intricately illustrated panorama of a clockwork harbour city, highest possible native resolution, requested 6144x4096 landscape. Far overhead oblique view, no horizon, the city fills EVERY inch. Hundreds of tiny crisp individually drawn inhabitants, rooftops, canals, bridges, market stalls, cranes, boats, gardens, balconies, workshops and winding lanes. Exquisite fine ink outlines and jewel-toned watercolor, sophisticated European illustrated puzzle-book, readable sharp detail throughout, no depth blur. Many visually distinct connected districts, no panels or borders. Absolutely no text, numbers or labels. Full scene coherent and not repeated tiles. Hide these six unobtrusive but legible small story details spread far apart, mixed among dozens of similar distractions: upper left a green-domed clock tower whose clock has a crescent moon instead of clock hands; upper right a rooftop astronomer pointing a telescope into a chimney; middle left a small red-sailed boat carrying a single potted lemon tree with yellow fruit; middle right a tiny brass mechanical elephant carrying a blue bathtub on its back; lower left a fishmonger stall where a black cat sleeps inside a brass balance-scale pan; lower right a small fountain whose central statue is a snail wearing a gold crown. Also many normal clocks with hands, boats with ordinary cargo, other animals, ordinary fountains, market goods, hundreds of intriguing micro-stories. Targets not spotlighted or circled, much smaller than districts, search challenging even for adults. Whole rich city visible from edge to edge, all targets complete inside the image. No interface.",
+      "baseSha256": "160acb50e4f079f38ce10f2128df7c1c0b5f64f525e43e74b8ea88a1bc8da719",
+      "assembly": {
+        "size": [
+          6144,
+          4096
+        ],
+        "generatedTileSize": [
+          1536,
+          1024
+        ],
+        "placementTileSize": [
+          1728,
+          1152
+        ],
+        "note": "Sixteen generated overlapping detail passes, registered and fitted to a 6144x4096 canvas; not native single-pass 6K.",
+        "tiles": [
+          {
+            "tile": 0,
+            "matchedFeatures": 1153,
+            "affine": [
+              [
+                1.002082958753465,
+                4.592713356653447e-05,
+                -2.4798561820126253
+              ],
+              [
+                -4.592713356653447e-05,
+                1.002082958753465,
+                1.5706090731851299
+              ]
+            ],
+            "sourceSha256": "ede1bf4e0c74f2aeaff6b41c08eba31ac5f81a0d997ffe5cadad548b8c289154"
+          },
+          {
+            "tile": 1,
+            "matchedFeatures": 1036,
+            "affine": [
+              [
+                1.0001910845891224,
+                0.00024403744001658606,
+                -0.5534367992229109
+              ],
+              [
+                -0.00024403744001658606,
+                1.0001910845891224,
+                0.5168728714696518
+              ]
+            ],
+            "sourceSha256": "5de074c3ebab7626c26b9e3215c3a18d8642ab64fd838f69b0649985e210f817"
+          },
+          {
+            "tile": 2,
+            "matchedFeatures": 942,
+            "affine": [
+              [
+                0.9998183383463107,
+                4.354613986719707e-06,
+                -0.24605354688575443
+              ],
+              [
+                -4.354613986719707e-06,
+                0.9998183383463107,
+                -0.06917853711891978
+              ]
+            ],
+            "sourceSha256": "920d8d90852cffb242242c9df4c7e29c61301187ce7165d7fdb51c769138af5f"
+          },
+          {
+            "tile": 3,
+            "matchedFeatures": 880,
+            "affine": [
+              [
+                0.9998881280559809,
+                6.932921383448445e-05,
+                -0.3839415669631378
+              ],
+              [
+                -6.932921383448445e-05,
+                0.9998881280559809,
+                0.053247817375873974
+              ]
+            ],
+            "sourceSha256": "90dffa9512a33c19c488fcf10fecfb8d586beabce5ad318f240169081b0d2186"
+          },
+          {
+            "tile": 4,
+            "matchedFeatures": 1018,
+            "affine": [
+              [
+                1.000376182557991,
+                0.0002594747011184267,
+                -0.8425992486335946
+              ],
+              [
+                -0.0002594747011184267,
+                1.000376182557991,
+                0.5397602346274116
+              ]
+            ],
+            "sourceSha256": "dfe1cc2a14400282e1c931a1d4d1162f2d19458c61439d7065e8722a9c2951be"
+          },
+          {
+            "tile": 5,
+            "matchedFeatures": 992,
+            "affine": [
+              [
+                1.0000738656822783,
+                -0.0002429891801609442,
+                -0.14671494747495512
+              ],
+              [
+                0.0002429891801609442,
+                1.0000738656822783,
+                -0.24219699070878795
+              ]
+            ],
+            "sourceSha256": "9fd9a2c48d7d58f2f7782e8eb6862d5f8b74f8f3e22ffec5f610fe9766741ccb"
+          },
+          {
+            "tile": 6,
+            "matchedFeatures": 980,
+            "affine": [
+              [
+                1.0001443075649084,
+                5.979812258570436e-05,
+                -0.5223521210026784
+              ],
+              [
+                -5.979812258570436e-05,
+                1.0001443075649084,
+                0.06083712228155663
+              ]
+            ],
+            "sourceSha256": "07d834d3bb262533ed56f2e1ef7e4e60fd436b55803eb9d3b7aa262a1d1ebd90"
+          },
+          {
+            "tile": 7,
+            "matchedFeatures": 870,
+            "affine": [
+              [
+                1.0000306004225488,
+                -9.89402133480399e-05,
+                -0.3903969397702779
+              ],
+              [
+                9.89402133480399e-05,
+                1.0000306004225488,
+                0.01034822493011945
+              ]
+            ],
+            "sourceSha256": "74ee71fafc60219e58ae8638484228b8f6cf4b7a4c530812b8c21205f9787443"
+          },
+          {
+            "tile": 8,
+            "matchedFeatures": 922,
+            "affine": [
+              [
+                1.0000581608416745,
+                -8.63267146241258e-05,
+                -0.5062996800467264
+              ],
+              [
+                8.63267146241258e-05,
+                1.0000581608416745,
+                -0.1132278019526989
+              ]
+            ],
+            "sourceSha256": "d7823516c78fe3dbf63771f6918c928b47f70b01c2e2ee58895f468399003d26"
+          },
+          {
+            "tile": 9,
+            "matchedFeatures": 1022,
+            "affine": [
+              [
+                0.9998841896574475,
+                8.903545848387483e-05,
+                -0.12522444843265776
+              ],
+              [
+                -8.903545848387483e-05,
+                0.9998841896574475,
+                0.37609135185649434
+              ]
+            ],
+            "sourceSha256": "393344c006a79d7a70b8c7076aa090e41fb3bad3039305baad5ad2aae39939c1"
+          },
+          {
+            "tile": 10,
+            "matchedFeatures": 934,
+            "affine": [
+              [
+                1.002873250905212,
+                -0.0016216031526139615,
+                -2.4670099593488297
+              ],
+              [
+                0.0016216031526139615,
+                1.002873250905212,
+                1.351990254760863
+              ]
+            ],
+            "sourceSha256": "56016a3ac9b87bd0573ca5fdeabffb069bc0de7be275e039a3fb741ba0d00355"
+          },
+          {
+            "tile": 11,
+            "matchedFeatures": 904,
+            "affine": [
+              [
+                1.000476449089836,
+                3.235087685661425e-05,
+                -0.6856741127748076
+              ],
+              [
+                -3.235087685661425e-05,
+                1.000476449089836,
+                0.2608962298367418
+              ]
+            ],
+            "sourceSha256": "50f3cca1f6bdd8fd4290b4241d243ef94ded56ce055b169827daa8138889915b"
+          },
+          {
+            "tile": 12,
+            "matchedFeatures": 1059,
+            "affine": [
+              [
+                1.0005107709865635,
+                -0.0002717574963024923,
+                -0.6236260373800122
+              ],
+              [
+                0.0002717574963024923,
+                1.0005107709865635,
+                -0.7904667350245997
+              ]
+            ],
+            "sourceSha256": "3082ea488c609185e494dc1f245dda28bb7acfed4fc5c8a9231982e386efbc5c"
+          },
+          {
+            "tile": 13,
+            "matchedFeatures": 1046,
+            "affine": [
+              [
+                1.0003873339027742,
+                4.5924024947065655e-06,
+                -0.5563646938726734
+              ],
+              [
+                -4.5924024947065655e-06,
+                1.0003873339027742,
+                -0.35084934359967085
+              ]
+            ],
+            "sourceSha256": "fa53ae8013f02bd8f5df5e8be1b3d6984d2da7e5a83b1284b8b5d0ab52546748"
+          },
+          {
+            "tile": 14,
+            "matchedFeatures": 934,
+            "affine": [
+              [
+                1.0002042890248326,
+                5.43336538647062e-05,
+                -0.6681620030822149
+              ],
+              [
+                -5.43336538647062e-05,
+                1.0002042890248326,
+                -0.22844068407465826
+              ]
+            ],
+            "sourceSha256": "2f28b0f5ffe0138d0de35b9f0f56681db52bb57d7d58d4952413abde7f6972ac"
+          },
+          {
+            "tile": 15,
+            "matchedFeatures": 983,
+            "affine": [
+              [
+                1.0001539461679065,
+                7.022351828141443e-05,
+                -0.5196065460663261
+              ],
+              [
+                -7.022351828141443e-05,
+                1.0001539461679065,
+                0.30610015328005274
+              ]
+            ],
+            "sourceSha256": "0dd0d999505c2da60e2d63fed0a436b34652e74144f2fc48c386c66adf48ed0a"
+          }
+        ]
+      },
+      "finalSha256": "58c828b0254afdfebcd87cf4c540e8e361102d3462c93b84c9ec27b61a6107ac",
+      "finalBytes": 12114038
+    },
+    {
+      "id": "underground-archive",
+      "prompt": "Use case: illustration-story. Production illustration for extremely difficult adult Wimmelbild hidden-object puzzle. Create ONE immense continuous underground archive city, far overhead oblique cutaway of interconnected cavern halls, richly detailed European ink and jewel watercolor. Highest native resolution possible, requested 6144x4096. Hundreds of tiny figures, shelves, artifacts, bridges, spiral stairs, brass pipes, subterranean canal, botanical laboratory, mushroom gardens, fossil displays, cartographers, reading balconies, bookbinding worktables, clock mechanisms. Full image packed edge to edge, no empty sky, no panels, no labels or words. Fine crisp outlines, intricate tiny objects sharply rendered everywhere. Targets extremely small and incidental within a MUCH bigger panorama, not foreground focal subjects. Include all these tiny details far apart: in upper left a little white owl nesting in a brass diving helmet among shelves; upper right a tiny tortoise with a glass greenhouse on its shell; mid-left a pendulum clock with a fish hanging where the pendulum weight should be; mid-right a purple octopus operating a bookbinding press; lower left a tiny green rowboat containing a red armchair and a sleeping fox; lower right a miniature dragon using a steaming teacup as a bath. Many other owls, helmets, timepieces, chairs, boats, reptiles, presses, teacups and curious museum artifacts as fair distractions. No huge hero figures, all are tiny environmental micro-stories requiring exploration and zoom. Make a beautiful believable connected place, moody teal cavern with warm amber lamps, enormous architectural depth yet everything is clear. No UI, no borders.",
+      "baseSha256": "8682da26e01544c14fab8b1b81c24631bac9d6366f3af5da1c71ee7a6d4b78c6",
+      "assembly": {
+        "size": [
+          6144,
+          4096
+        ],
+        "generatedTileSize": [
+          1536,
+          1024
+        ],
+        "placementTileSize": [
+          1728,
+          1152
+        ],
+        "note": "Sixteen generated overlapping detail passes, registered and fitted to a 6144x4096 canvas; not native single-pass 6K.",
+        "tiles": [
+          {
+            "tile": 0,
+            "matchedFeatures": 981,
+            "affine": [
+              [
+                1.0000784815900503,
+                0.00012258713339298436,
+                -0.8638108976794093
+              ],
+              [
+                -0.00012258713339298436,
+                1.0000784815900503,
+                0.13269615698541798
+              ]
+            ],
+            "sourceSha256": "878c852dc98d2bd1eea9f44a803fcd977d4b584e89eca3bd6222e927b3e23b17"
+          },
+          {
+            "tile": 1,
+            "matchedFeatures": 748,
+            "affine": [
+              [
+                0.9998097230610997,
+                -9.054820003664388e-06,
+                -0.24028957749930618
+              ],
+              [
+                9.054820003664388e-06,
+                0.9998097230610997,
+                0.30061492115134025
+              ]
+            ],
+            "sourceSha256": "785ee05c75ffb71f1028752ed8efbd4752f8c2d07f940c35b07c1ad2237aec4b"
+          },
+          {
+            "tile": 2,
+            "matchedFeatures": 745,
+            "affine": [
+              [
+                1.0002330729252025,
+                0.00016923957710293858,
+                -0.7363612506321763
+              ],
+              [
+                -0.00016923957710293858,
+                1.0002330729252025,
+                0.08368465314501145
+              ]
+            ],
+            "sourceSha256": "a9f59dbeb557fb81e4e0286dba448f7b65b2bff89ced332820ca7ecbaafec2f4"
+          },
+          {
+            "tile": 3,
+            "matchedFeatures": 896,
+            "affine": [
+              [
+                1.0000982931434157,
+                -6.823158390586729e-05,
+                -0.5107612800792588
+              ],
+              [
+                6.823158390586729e-05,
+                1.0000982931434157,
+                -0.31608796136543194
+              ]
+            ],
+            "sourceSha256": "3e584a6a2ff3c5a168c66e7e58a4ff5f38f40bef9fab439c8f5d23f56558efc8"
+          },
+          {
+            "tile": 4,
+            "matchedFeatures": 800,
+            "affine": [
+              [
+                0.9998419469313832,
+                3.681532727551599e-05,
+                -0.4671794985227429
+              ],
+              [
+                -3.681532727551599e-05,
+                0.9998419469313832,
+                -0.16226023082024252
+              ]
+            ],
+            "sourceSha256": "0aa7c4675449f5c17be6bb937f5f9b06166c1ee780283ef4448374c6b0332be8"
+          },
+          {
+            "tile": 5,
+            "matchedFeatures": 971,
+            "affine": [
+              [
+                0.9995299751811866,
+                -3.278419942535525e-05,
+                -0.4745752490022713
+              ],
+              [
+                3.278419942535525e-05,
+                0.9995299751811866,
+                0.1394401540622353
+              ]
+            ],
+            "sourceSha256": "c3bd97ffcbf085c492b27eb366571cf0f4fec7cc31222301013ff5d776d9b72d"
+          },
+          {
+            "tile": 6,
+            "matchedFeatures": 976,
+            "affine": [
+              [
+                0.9999303625323206,
+                -2.9117958467937646e-05,
+                -0.4087750543810518
+              ],
+              [
+                2.9117958467937646e-05,
+                0.9999303625323206,
+                -0.003736024005039398
+              ]
+            ],
+            "sourceSha256": "7ffced59bfa080b2702e5abb336e55440d56ff99184420bc9af650b9952034c3"
+          },
+          {
+            "tile": 7,
+            "matchedFeatures": 922,
+            "affine": [
+              [
+                0.9997341420110213,
+                -0.00012119176224908838,
+                -0.49821574171421945
+              ],
+              [
+                0.00012119176224908838,
+                0.9997341420110213,
+                0.14756538466540628
+              ]
+            ],
+            "sourceSha256": "af8b22bad2cbae8120acc305285cbcd9fedd384131c41721f646c5c02d8063c0"
+          },
+          {
+            "tile": 8,
+            "matchedFeatures": 714,
+            "affine": [
+              [
+                0.999346096355972,
+                -5.192060818335561e-05,
+                -0.3467849728764931
+              ],
+              [
+                5.192060818335561e-05,
+                0.999346096355972,
+                0.33999657781623915
+              ]
+            ],
+            "sourceSha256": "24178f4bb3b5c539deaa3d6715c2a456219bfe7db91c05fe21a1ab1c40582ce0"
+          },
+          {
+            "tile": 9,
+            "matchedFeatures": 822,
+            "affine": [
+              [
+                1.000383698032565,
+                0.00023101310714889053,
+                -0.9290209336625813
+              ],
+              [
+                -0.00023101310714889053,
+                1.000383698032565,
+                -0.3212288887224901
+              ]
+            ],
+            "sourceSha256": "821c52269fa70a492db0d826cfd92818b5d541aa1bcddc3636cd6d28f8282953"
+          },
+          {
+            "tile": 10,
+            "matchedFeatures": 845,
+            "affine": [
+              [
+                0.9998218840662393,
+                7.914880048796824e-05,
+                -0.2630920323323401
+              ],
+              [
+                -7.914880048796824e-05,
+                0.9998218840662393,
+                -0.26803722478914904
+              ]
+            ],
+            "sourceSha256": "5cc845026387f8448bc571f9a040a61307dbbf4686f4c0693f92b1607c51f2b1"
+          },
+          {
+            "tile": 11,
+            "matchedFeatures": 700,
+            "affine": [
+              [
+                0.9998606742452926,
+                -0.00017149776742921458,
+                -0.2770602116066727
+              ],
+              [
+                0.00017149776742921458,
+                0.9998606742452926,
+                -0.21778162710087048
+              ]
+            ],
+            "sourceSha256": "429b5eddb16f879c2debf3a07e97e4dc927bdcb95126f0e9b18fd05b26eb55e3"
+          },
+          {
+            "tile": 12,
+            "matchedFeatures": 706,
+            "affine": [
+              [
+                1.0001530199785935,
+                -3.59358258565075e-05,
+                -0.7266568267545067
+              ],
+              [
+                3.59358258565075e-05,
+                1.0001530199785935,
+                -0.41155944064783273
+              ]
+            ],
+            "sourceSha256": "7ea013a15eaae13a193f87d68d83f2e96dbc642302b2e6a8c6fbc03b3d0e8409"
+          },
+          {
+            "tile": 13,
+            "matchedFeatures": 801,
+            "affine": [
+              [
+                1.0001823470969133,
+                -2.3007588820748106e-07,
+                -0.7316785292085511
+              ],
+              [
+                2.3007588820748106e-07,
+                1.0001823470969133,
+                -0.10486413001725098
+              ]
+            ],
+            "sourceSha256": "3b60039d7efd6f08694b988146112292778797455d9c4e12ac8d9ae03fb197ef"
+          },
+          {
+            "tile": 14,
+            "matchedFeatures": 929,
+            "affine": [
+              [
+                1.0002091549260332,
+                -0.0003428561385123765,
+                -0.5030083685574296
+              ],
+              [
+                0.0003428561385123765,
+                1.0002091549260332,
+                -0.26667869511608605
+              ]
+            ],
+            "sourceSha256": "fed30332deeba2aa85f7121bcfd9b781f54fd0943db74abd7352b473c37921ca"
+          },
+          {
+            "tile": 15,
+            "matchedFeatures": 772,
+            "affine": [
+              [
+                1.0008724009117669,
+                -7.823367179429999e-05,
+                -1.4497560004436332
+              ],
+              [
+                7.823367179429999e-05,
+                1.0008724009117669,
+                -0.44071118010632915
+              ]
+            ],
+            "sourceSha256": "a01417e681e9365bb0b16a71b7a7bd68a3c07e202e6b30574ed1b01362fd5875"
+          }
+        ]
+      },
+      "finalSha256": "def7757600d6e2fe874129e8067a38faa2eb351d5ece0f018d24d6c22e0e5689",
+      "finalBytes": 12225892
+    }
+  ],
+  "assemblyAuthorization": "User explicitly approved assembling huge detailed maps with image-processing tools on 14 October 2026.",
+  "detailPromptFirstFourHarbour": "Use case: precise-object-edit. This is one exact rectangular crop from a much larger Wimmelbild panorama. Re-render this SAME crop at 1536x1024 with extraordinary crisp fine ink and watercolor micro-detail for deep zoom. Keep ALL architecture, object positions, silhouettes, colours, counts, gestures and exact framing unchanged; do not zoom, shift perspective, add borders, crop or extend. Preserve the outer edges especially precisely so neighbouring crops align. Resolve blurry marks into believable tiny objects, fine masonry, clothes, leaves, ropes and metalwork. This is a faithful detailed restoration, not a new composition. No new focal subjects, no text. Preserve all unusual story details exactly. Fill the whole 3:2 output with the reference crop.",
+  "detailPromptRemaining": "Use case: precise-object-edit. Faithfully re-render this exact crop of an intricate Wimmelbild painting at 1536x1024. Sharpen and enrich all tiny architectural details, clothing, plants, metalwork and goods with fine ink and watercolor. Preserve ALL positions, silhouettes, object counts, colours and framing precisely, especially all four edges, so it aligns with neighbouring crops. Do NOT zoom, pan, crop, extend or recompose. All unusual story objects must stay. No new focal subjects, no text, no border. This is a high-detail restoration of the supplied crop, not a new scene.",
+  "generationCount": 34,
+  "baseDimensions": [
+    1536,
+    1024
+  ],
+  "cropDimensions": [
+    432,
+    288
+  ],
+  "xStarts": [
+    0,
+    368,
+    736,
+    1104
+  ],
+  "yStarts": [
+    0,
+    245,
+    491,
+    736
+  ],
+  "detailOutputDimensions": [
+    1536,
+    1024
+  ],
+  "finalDimensions": [
+    6144,
+    4096
+  ],
+  "note": "32 generated detail passes plus two bases. Each pass is registered and fitted to a 1728x1152 placement with overlapping edge alignment and feather blending. Not native single-pass 6K and not merely an enlarged base."
+}

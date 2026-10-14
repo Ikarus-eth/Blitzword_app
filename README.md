@@ -38,7 +38,7 @@ For ChatGPT project setup, use the [project maintenance guide](docs/PROJECT_DESC
 
 ## Current gameplay
 
-**[The Hidden Atlas](https://ikarus-eth.github.io/Blitzword_app/assets/map-quest/)** is the shareable, maps-only edition: all five large maps, fifteen clues, four lives per map and independent progress. It has no navigation into the main game.
+**[The Hidden Atlas](https://ikarus-eth.github.io/Blitzword_app/assets/map-quest/)** is the shareable, maps-only edition: five classic maps plus two huge 6144×4096 expert maps, 27 riddles in total, four lives per map and independent progress. It has no navigation into the main game.
 
 When enabled in Parents → Activities & settings, **Dragon path** opens a standalone four-scene Wimmelbild adventure from either chapter-selection home. Read the route, find the tree-village door, identify a dragon from its colours/stripes/tail, and find the moon treasure. Pinch or use zoom buttons, drag to explore, and choose written answers below the picture. Optional word listening, hints and separate device-local progress. See [rules and verification](docs/wimmelbild/RELEASE.md).
 

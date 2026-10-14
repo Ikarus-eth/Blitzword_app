@@ -1157,3 +1157,8 @@ Map time is capped at 30 seconds per clue, 90 seconds per map per quest, within 
 Stories (fox-cub rescue and Dragon path) and the original Word trails campaigns default off for new and existing saves. Parents → Activities & settings has independent switches to restore them. Main creature adventures remain available. Settings only change access: learning evidence, XP, saved battles, cleared chapters and each standalone save are retained. Disabled stories also redirect bookmarked entry points to the main game; the separate shareable Hidden Atlas is unchanged.
 
 The gated parent dashboard now has Overview, Learning details, and Activities & settings sections. Readable typography, narrower paragraphs, responsive cards and expandable rule explanations replace the single long page. All reports, sharing, backup, sound and XP controls remain available.
+
+
+## Huge standalone expert maps — 14 October 2026
+
+The user requested two huge, very difficult maps with six riddles each and explicitly approved assembling generated sections with image-processing tools. Add these to the standalone Hidden Atlas, retaining the original maps and independent saves. Use dense continuous scenes, cryptic multi-step observation, written answers, English/German coverage and deeper zoom. Keep four lives per map and retained solved riddles on retry. [Implementation and evidence](wimmelbild/expert/RELEASE.md).

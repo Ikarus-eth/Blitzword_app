@@ -6,3 +6,5 @@ body.mapPlaying .masthead>.eyebrow,body.mapPlaying .masthead>p{display:none}
 body.mapPlaying .masthead h1{font-size:24px;margin:0}body.mapPlaying #language{margin:0;font-size:18px;padding:8px 12px}
 body.mapPlaying main{padding-top:14px}body.mapPlaying .playTop{margin-bottom:12px}
 @media(max-width:480px){body.mapPlaying .masthead{padding:8px 16px}body.mapPlaying .masthead h1{font-size:21px}body.mapPlaying #language{max-width:145px}.mapPlayLayout .searchReading{padding:18px}}
+
+.expertBadge{display:block;margin-top:10px;color:#79501c;font:700 14px/1.5 system-ui;letter-spacing:.12em}
