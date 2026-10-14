@@ -1,6 +1,6 @@
 # Clear details and direct searches — 14 October 2026
 
-Implemented; deployment pending. This revision supersedes the original expert clue set and answer audit in ../RELEASE.md, following the user’s playtest correction.
+Deployed and verified. This revision supersedes the original expert clue set and answer audit in ../RELEASE.md, following the user’s playtest correction.
 
 All twelve questions now ask players to find a plainly described object and report a visible colour, object, count or displayed time. Location directions are optional hints. Remove metaphors, arithmetic, multi-location combinations and instrument identification. The maps remain 6144×4096 with six searches each and 24× zoom. Adult difficulty remains unmeasured.
 
@@ -28,3 +28,9 @@ Revision r2 preserves solved steps, completed maps and remaining lives. Only the
 ## Verification
 
 All ten standalone atlas unit tests pass, including migration of r1 saves with three, five and six solved searches. Sixteen bilingual browser journeys pass across desktop, phone portrait/landscape and tablet sizes: all answers, hints, image dimensions, zoom, wrong-answer handling, retry, replay, reload and preserved classic/main saves. [Local browser evidence](local-checks.json). Expanded-view navigation and classic three-question completion also pass at three widths. All twelve final answer crops were visually checked. Deployment verification follows.
+
+## Deployment
+
+[PR #196](https://github.com/Ikarus-eth/Blitzword_app/pull/196) merged as `859b989e6364976f788026e950910e3d69074858`. [Pages run 38570659339](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38570659339) passed the full regression suite and published successfully. All twelve checked public files returned HTTP 200 and exactly match merged-source SHA-256 hashes. [File evidence](DEPLOYMENT.json).
+
+All sixteen bilingual browser journeys passed against the public app after publication, covering every revised answer, four viewports, full-size images, 24× zoom, reload/retry/replay and preservation of old saves. [Live browser evidence](live-checks.json).
