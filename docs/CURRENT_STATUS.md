@@ -1,3 +1,7 @@
+## Expert maps: clear details and direct searches — 14 October 2026
+
+**Implemented and tested; deployment pending.** Ten standalone unit tests, sixteen bilingual browser journeys and expanded-view/classic-map checks pass. Rework all twelve expert clues into short visual searches, move location help into optional hints, remove instrument identification and arithmetic, and repair four malformed artwork areas. Preserve six searches per map, 6144×4096 dimensions, 24× zoom and earned progress. [Scope and evidence](wimmelbild/expert/clarity/RELEASE.md).
+
 ## Huge standalone expert maps — 14 October 2026
 
 **Deployed and verified.** [PR #194](https://github.com/Ikarus-eth/Blitzword_app/pull/194) merged; [Pages run 38555664622](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38555664622) succeeded. All sixteen bilingual live browser journeys passed. All twelve checked public files match the merged source ([hash evidence](wimmelbild/expert/DEPLOYMENT.json)). The Hidden Atlas adds two 6144×4096 assembled maps, six expert riddles each, English/German text, small picker thumbnails and 24× zoom. Existing five maps, saved progress and four-life rules remain; completion now follows each map’s question count. 418 unit/backend tests and 123 UI-flow groups pass; sixteen bilingual browser journeys, expanded views, classic completion and final-image answer audits pass. [Scope, provenance and verification](wimmelbild/expert/RELEASE.md).

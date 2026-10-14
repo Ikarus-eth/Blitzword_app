@@ -1,0 +1,25 @@
+{
+  "tool": "Built-in ImageGen",
+  "prompts": [
+    {
+      "target": "flute",
+      "prompt": "Precise object edit for a hidden-object game. Edit this crop only, preserving exact composition, every surrounding object and border. Repair the pink-dressed woman: she is clearly playing a straight silver transverse flute, held horizontally LEFT from her lips, with a visible continuous tube and small round keys. Two anatomically clear hands hold it correctly, no detached fingers, no bent or vanished instrument. Her face, hair, pink floral dress, position and scale stay same. Fine crisp ink-and-watercolour illustration matching input. Repair only her hands and flute; no extra objects, no text. Keep background fountain and people unchanged."
+    },
+    {
+      "target": "fish-market",
+      "prompt": "Precise repair of this illustrated hidden-object map crop. Keep composition, architecture, fish stalls, objects, colours, all border pixels and positions. Fix distorted human anatomy ONLY: the dark-blue-jacket person in center foreground facing right has an impossible doubled head/face and fused body: redraw as ONE normal adult with one head, one coherent face in right-facing profile, two arms, two hands, holding one red apple in his right hand, no extra head. The small child in purple outfit on right-hand path has a malformed torso/arms: redraw as a clear child in purple tunic, two normal arms, hands on hips, two legs. The foreground red-vest child and small white-shirt child should be two separate coherent people, not fused. Preserve their placement and surrounding stalls. Crisp detailed ink-and-watercolour same style, no blur. No labels. Do not change anything else."
+    },
+    {
+      "target": "archive-owl",
+      "prompt": "Precise object repair. This is an exact crop of a huge hidden object illustration. Replace ONLY the malformed tiny bird sitting on the golden railing near center-left with one clearly recognizable small barn owl. Oval pale heart-shaped facial disk, TWO symmetric dark eyes, small beak centered, coherent compact brown-and-cream feathered body, folded wings, two feet grasping railing. Owl must retain same small scale and position, not enlarged to dominate crop. Preserve the winding stairs, gold railing, dark turquoise stone wall, wall ornaments, perspective, original framing, every edge of image. Crisp ink-and-watercolour matching original, clear detailed anatomy. No text or new objects."
+    },
+    {
+      "target": "parrot",
+      "prompt": "Precise local repair of a hidden-object map crop. Preserve the entire composition, stone wall, books, surrounding objects, side chains, original framing and border pixels. Replace the distorted bird at top center with ONE anatomically correct red-and-blue macaw parrot: red feathered head and breast, white cheek patch, curved black beak, blue folded wings and long blue/red tail, two feet clearly gripping a short horizontal brass perch. NO hat, clothing, human face, arms or accessories. Immediately below its perch, replace the jumbled green/brass objects with ONE clearly recognizable ornate hanging lantern: brass frame, green glass sides, visible candle and small warm flame inside, suspended by a short chain from the perch. Keep bird and lantern at existing positions and similar scale. They must be clearly separated objects. Match crisp ink-and-watercolour illustration, no text, no additions elsewhere."
+    },
+    {
+      "target": "parrot-perch-followup",
+      "prompt": "Change ONLY the horizontal brass perch under the parrot's feet: extend it left and right until it is visibly attached to BOTH vertical gold chains on the sides, with small secure brass ring joints. The bar must be structurally supported, not floating. Keep the parrot, lantern, all anatomy and every other detail, original composition, border, colours and scale exactly unchanged. Same ink-and-watercolour style."
+    }
+  ]
+}

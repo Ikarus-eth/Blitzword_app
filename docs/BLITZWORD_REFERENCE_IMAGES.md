@@ -212,3 +212,5 @@ Current standalone update (10 October 2026): the Hidden Atlas now shares the fou
 ## Standalone expert map artwork — 14 October 2026
 
 Two new continuous 6144×4096 panoramas in `assets/map-quest/expert/`: Clockwork Harbour and Archive Beneath the World. The user explicitly approved computational assembly. Two built-in ImageGen bases and 32 overlapping detail edits were registered and blended; this is assembled resolution, not native single-pass 6K. Final-image clue evidence was visually audited. New incidental figures do not replace any approved recurring hero or creature. [Prompts, hashes and transforms](wimmelbild/expert/prompts.json) · [Answer audit](wimmelbild/expert/RELEASE.md).
+
+Expert-map clarity correction (14 October 2026): user reported malformed flute/market figures and instrument ambiguity. Four local built-in ImageGen repairs correct the flute and hands, market figures, small railing owl, and parrot/lantern. All twelve revised answer details must be inspected from final WebPs at native crop resolution; panorama size remains 6144×4096. [Prompts and evidence](wimmelbild/expert/clarity/RELEASE.md).

@@ -1162,3 +1162,7 @@ The gated parent dashboard now has Overview, Learning details, and Activities & 
 ## Huge standalone expert maps — 14 October 2026
 
 The user requested two huge, very difficult maps with six riddles each and explicitly approved assembling generated sections with image-processing tools. Add these to the standalone Hidden Atlas, retaining the original maps and independent saves. Use dense continuous scenes, cryptic multi-step observation, written answers, English/German coverage and deeper zoom. Keep four lives per map and retained solved riddles on retry. [Implementation and evidence](wimmelbild/expert/RELEASE.md).
+
+## Expert-map search clarity — 14 October 2026
+
+The user’s playtest correction supersedes cryptic expert riddles: difficulty should come from finding objects across the huge picture, not parsing metaphors, arithmetic or guessing malformed details. Each expert map retains six short, direct visual searches with location guidance in optional hints. Repair the flute, market figures and any ambiguous answer artwork. Do not ask players to distinguish cello from violin. Preserve earned progress and lives across clue revisions; clear only pending answer selections. [Revision record](wimmelbild/expert/clarity/RELEASE.md).
