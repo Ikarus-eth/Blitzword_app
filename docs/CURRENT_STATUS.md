@@ -1,6 +1,6 @@
 ## Expert maps: clear details and direct searches — 14 October 2026
 
-**Implemented and tested; deployment pending.** Ten standalone unit tests, sixteen bilingual browser journeys and expanded-view/classic-map checks pass. Rework all twelve expert clues into short visual searches, move location help into optional hints, remove instrument identification and arithmetic, and repair four malformed artwork areas. Preserve six searches per map, 6144×4096 dimensions, 24× zoom and earned progress. [Scope and evidence](wimmelbild/expert/clarity/RELEASE.md).
+**Deployed and verified.** [PR #196](https://github.com/Ikarus-eth/Blitzword_app/pull/196) merged; [Pages run 38570659339](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38570659339) succeeded, and all twelve checked public files match the merged source. All sixteen revised live browser journeys passed in English/German across four viewports. Ten standalone unit tests, sixteen bilingual browser journeys and expanded-view/classic-map checks pass. Rework all twelve expert clues into short visual searches, move location help into optional hints, remove instrument identification and arithmetic, and repair four malformed artwork areas. Preserve six searches per map, 6144×4096 dimensions, 24× zoom and earned progress. [Scope and evidence](wimmelbild/expert/clarity/RELEASE.md).
 
 ## Huge standalone expert maps — 14 October 2026
 
