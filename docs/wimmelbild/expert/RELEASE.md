@@ -1,6 +1,6 @@
 # Huge expert maps — 14 October 2026
 
-Implemented for the standalone [Hidden Atlas](https://ikarus-eth.github.io/Blitzword_app/assets/map-quest/). Deployment verification is recorded below when complete.
+Deployed and verified in the standalone [Hidden Atlas](https://ikarus-eth.github.io/Blitzword_app/assets/map-quest/).
 
 Two new 6144×4096 maps, **The Clockwork Harbour** and **The Archive Beneath the World**, each have six expert riddles with six written answer choices. They appear first in the picker, alongside all five existing maps. All twelve riddles, choices and optional hints have German translations. These are designed for substantially harder observation: cryptic landmark clues, multi-location comparison, constrained counting, ordered colours and a clock calculation. Difficulty has not been measured with adult players.
 
@@ -38,3 +38,9 @@ Coordinates below refer to the 1536×1024 overview; multiply by four for the pro
 ## Verification
 
 418 unit/backend tests and 123 UI-flow groups passed. New coverage verifies six-riddle save restoration, completion only after six, retry after five solved riddles, replay, German coverage, and preserved classic maps. Sixteen browser journeys passed across English/German and four viewports (1180×820, 390×844, 844×390 and 1024×768): all answers, final image dimensions, 24× zoom, one-life penalties, zero-life retry, reload after the third clue, replay, complete-save restoration, translations and preserved classic/main saves. [Browser evidence](browser-checks.json). Expanded-view/answer-navigation checks and classic three-clue completion also pass at 390, 844 and 1024 pixels; classic zoom remains capped at 8×. Long pinned clues remain scrollable so expanded maps retain usable space. Deployment verification follows below. Physical iPad/Safari and adult playtesting remain unverified.
+
+## Deployment
+
+With explicit user approval, [PR #194](https://github.com/Ikarus-eth/Blitzword_app/pull/194) merged as `616484d51d4ad963a0df67c15857d96585d92d40`. [Pages run 38555664622](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38555664622) succeeded. All twelve public runtime/art files returned HTTP 200 and SHA-256 hashes matching the merged source. [Deployment evidence](DEPLOYMENT.json).
+
+All sixteen expert browser journeys also passed against the public URL: both maps, both languages, four viewports, every riddle, 24× zoom, retry/replay and save preservation. [Live browser evidence](live-checks.json).
