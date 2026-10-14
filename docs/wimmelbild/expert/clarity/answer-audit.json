@@ -1,0 +1,90 @@
+{
+  "clockwork-harbour": [
+    [
+      1280,
+      820,
+      1450,
+      980,
+      "1 \u00b7 White scarf"
+    ],
+    [
+      510,
+      810,
+      650,
+      990,
+      "2 \u00b7 Yellow bag"
+    ],
+    [
+      70,
+      740,
+      210,
+      820,
+      "3 \u00b7 Black and white fur"
+    ],
+    [
+      780,
+      340,
+      835,
+      423,
+      "4 \u00b7 Winged dragon"
+    ],
+    [
+      1305,
+      70,
+      1430,
+      180,
+      "5 \u00b7 Brick chimney"
+    ],
+    [
+      510,
+      920,
+      555,
+      968,
+      "6 \u00b7 Bird on lid"
+    ]
+  ],
+  "underground-archive": [
+    [
+      1170,
+      100,
+      1275,
+      280,
+      "1 \u00b7 Three passengers"
+    ],
+    [
+      275,
+      275,
+      355,
+      370,
+      "2 \u00b7 Ten o\u2019clock"
+    ],
+    [
+      1210,
+      285,
+      1300,
+      415,
+      "3 \u00b7 Lantern below perch"
+    ],
+    [
+      125,
+      790,
+      285,
+      905,
+      "4 \u00b7 Four books"
+    ],
+    [
+      1035,
+      928,
+      1110,
+      1024,
+      "5 \u00b7 Yellow lower butterfly"
+    ],
+    [
+      960,
+      610,
+      1040,
+      685,
+      "6 \u00b7 Owl"
+    ]
+  ]
+}

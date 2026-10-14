@@ -30,3 +30,10 @@ test('expert retries retain five solved riddles and reject out-of-range saves',(
 });
 
 test('unknown map replay cannot create a phantom saved map',()=>{const s=C.fresh();assert.equal(C.replay(s,'unknown'),false);assert.deepEqual(s,C.fresh());});
+
+test('expert clarity revision preserves all earned steps and clears stale answer selections',()=>{
+ for(const id of ['clockwork-harbour','underground-archive'])for(const index of [0,3,5,6]){
+ const old={version:1,maps:{[id]:{revision:'expert-20261014-r1',index,lives:2,selection:'option-1',wrong:true}}};
+ const restored=C.restore(old);assert.equal(restored.maps[id].index,index);assert.equal(restored.maps[id].lives,2);assert.equal(restored.maps[id].selection,null);assert.equal(restored.maps[id].wrong,false);assert.equal(C.check(restored,id,index),false);
+ }
+});

@@ -1,5 +1,7 @@
 # Huge expert maps — 14 October 2026
 
+The original clue set and answer audit below are historical. The user’s subsequent clarity correction is recorded in [the direct-search revision](clarity/RELEASE.md).
+
 Deployed and verified in the standalone [Hidden Atlas](https://ikarus-eth.github.io/Blitzword_app/assets/map-quest/).
 
 Two new 6144×4096 maps, **The Clockwork Harbour** and **The Archive Beneath the World**, each have six expert riddles with six written answer choices. They appear first in the picker, alongside all five existing maps. All twelve riddles, choices and optional hints have German translations. These are designed for substantially harder observation: cryptic landmark clues, multi-location comparison, constrained counting, ordered colours and a clock calculation. Difficulty has not been measured with adult players.

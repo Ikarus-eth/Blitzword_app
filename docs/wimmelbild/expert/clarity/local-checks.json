@@ -1,0 +1,278 @@
+{
+  "url": "http://127.0.0.1:8768/assets/map-quest/",
+  "results": [
+    {
+      "id": "clockwork-harbour",
+      "lang": "en",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "underground-archive",
+      "lang": "en",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "clockwork-harbour",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "underground-archive",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "clockwork-harbour",
+      "lang": "en",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "underground-archive",
+      "lang": "en",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "clockwork-harbour",
+      "lang": "en",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "underground-archive",
+      "lang": "en",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "clockwork-harbour",
+      "lang": "de",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "underground-archive",
+      "lang": "de",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "clockwork-harbour",
+      "lang": "de",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "underground-archive",
+      "lang": "de",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "clockwork-harbour",
+      "lang": "de",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "underground-archive",
+      "lang": "de",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "clockwork-harbour",
+      "lang": "de",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    },
+    {
+      "id": "underground-archive",
+      "lang": "de",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "sixRiddles": true,
+      "reloadAfterThree": true,
+      "retryAfterFour": true,
+      "replay": true,
+      "nativeDimensions": [
+        6144,
+        4096
+      ],
+      "zoom": 24
+    }
+  ],
+  "errors": []
+}

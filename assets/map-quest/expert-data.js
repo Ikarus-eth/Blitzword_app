@@ -3,8 +3,8 @@
     "id": "clockwork-harbour",
     "title": "The Clockwork Harbour",
     "expert": true,
-    "revision": "expert-20261014-r1",
-    "image": "assets/map-quest/expert/clockwork-harbour.webp",
+    "revision": "expert-20261014-r2",
+    "image": "assets/map-quest/expert/clockwork-harbour.webp?v=clear-details-r2",
     "width": 6144,
     "height": 4096,
     "questions": [
@@ -12,129 +12,125 @@
         "id": "clockwork-harbour-1",
         "region": "Search the entire map",
         "text": [
-          "Find a living bird standing above a golden world. Below-left, a red-hatted musician plays on market steps.",
-          "Now find the crowned ruler of falling water. A woman in pink plays at the front-right edge of its pool."
+          "Find the woman in a pink floral dress playing a silver flute."
         ],
-        "prompt": "Which instruments do they play, in that order?",
+        "prompt": "What colour is the scarf on her shoulders?",
         "options": [
           {
             "id": "option-3",
-            "label": "Cello, then flute"
+            "label": "Blue"
           },
           {
             "id": "option-4",
-            "label": "Violin, then trumpet"
+            "label": "Green"
           },
           {
             "id": "option-5",
-            "label": "Lute, then violin"
+            "label": "Red"
           },
           {
             "id": "option-6",
-            "label": "Trumpet, then cello"
+            "label": "Black"
           },
           {
             "id": "option-1",
-            "label": "Violin, then flute"
+            "label": "White"
           },
           {
             "id": "option-2",
-            "label": "Flute, then violin"
+            "label": "Yellow"
           }
         ],
         "answer": "option-1",
-        "hint": "Start at the bird on the golden globe and the snail fountain. Zoom into the musicians’ hands."
+        "hint": "Look beside the snail fountain in the lower-right part of the harbour."
       },
       {
         "id": "clockwork-harbour-2",
         "region": "Search the entire map",
         "text": [
-          "A traveller with roots sails through the city. A traveller with a trunk carries a bath.",
-          "Find the little boat with two musicians below the bridge beside the bath-carrier. Inspect the standing musician."
+          "Find the musician wearing a wide red hat and a dark blue coat."
         ],
-        "prompt": "What kind of instrument is the standing musician holding?",
+        "prompt": "What colour is the bag hanging at the musician’s side?",
         "options": [
           {
             "id": "option-6",
-            "label": "A wooden lute"
+            "label": "Black"
           },
           {
             "id": "option-1",
-            "label": "A curved brass wind instrument"
+            "label": "Yellow"
           },
           {
             "id": "option-2",
-            "label": "A straight silver flute"
+            "label": "White"
           },
           {
             "id": "option-3",
-            "label": "A violin and bow"
+            "label": "Red"
           },
           {
             "id": "option-4",
-            "label": "A small harp"
+            "label": "Green"
           },
           {
             "id": "option-5",
-            "label": "A round drum"
+            "label": "Blue"
           }
         ],
         "answer": "option-1",
-        "hint": "Find the brass elephant, then look down-left into the canal. The seated musician is not the target."
+        "hint": "Search the steps beside the fish market in the lower half of the picture."
       },
       {
         "id": "clockwork-harbour-3",
         "region": "Search the entire map",
         "text": [
-          "A hunter of fish has made itself a weight. Above its resting place, birds watch the market.",
-          "Count only gulls perched on the wooden lifting beam or the striped market awnings above that scale. Ignore flying birds and the bird on a golden globe."
+          "Find the cat curled up in a brass weighing pan."
         ],
-        "prompt": "How many perched gulls fit all those rules?",
+        "prompt": "Which two colours can you see in its fur?",
         "options": [
           {
             "id": "option-2",
-            "label": "One"
+            "label": "Orange and white"
           },
           {
             "id": "option-3",
-            "label": "Two"
+            "label": "Grey and white"
           },
           {
             "id": "option-4",
-            "label": "Four"
+            "label": "Brown and black"
           },
           {
             "id": "option-5",
-            "label": "Five"
+            "label": "Only white"
           },
           {
             "id": "option-6",
-            "label": "Six"
+            "label": "Only orange"
           },
           {
             "id": "option-1",
-            "label": "Three"
+            "label": "Black and white"
           }
         ],
         "answer": "option-1",
-        "hint": "Find the cat in the brass scale. Check the beam and both neighbouring striped awnings carefully."
+        "hint": "Look among the fish stalls in the lower-left part of the harbour."
       },
       {
         "id": "clockwork-harbour-4",
         "region": "Search the entire map",
         "text": [
-          "Find the beast that carries a bath but can never become thirsty.",
-          "Above-left, a blue banner hangs beside a golden wheel and above a pink market canopy. Do not use the other blue banner farther back."
+          "Find the blue banner hanging next to a golden wheel."
         ],
-        "prompt": "Which creature is drawn in gold on the nearer banner?",
+        "prompt": "Which animal is shown on the banner?",
         "options": [
           {
             "id": "option-5",
-            "label": "A rearing horse"
+            "label": "A lion"
           },
           {
             "id": "option-6",
-            "label": "A coiled snake"
+            "label": "An eagle"
           },
           {
             "id": "option-1",
@@ -142,103 +138,101 @@
           },
           {
             "id": "option-2",
-            "label": "An antlered stag"
+            "label": "A horse"
           },
           {
             "id": "option-3",
-            "label": "A crowned lion"
+            "label": "A snake"
           },
           {
             "id": "option-4",
-            "label": "A two-headed eagle"
+            "label": "A stag"
           }
         ],
         "answer": "option-1",
-        "hint": "Trace from the elephant to the banner left of the blue-roofed building. Look for wings, feet and a curling tail."
+        "hint": "Look above the pink market canopy, to the left of the mechanical elephant."
       },
       {
         "id": "clockwork-harbour-5",
         "region": "Search the entire map",
         "text": [
-          "Find the seeker of stars whose view ends in a chimney.",
-          "On the neighbouring roof toward the right edge of the picture, a separate group of open terracotta chimney pots stands together. Count only that group, not the tall brick chimneys around the telescope."
+          "Find the person looking through a long brass telescope."
         ],
-        "prompt": "How many open pots stand in that group?",
+        "prompt": "What is directly in front of the telescope’s far end?",
         "options": [
           {
             "id": "option-1",
-            "label": "Three"
+            "label": "A brick chimney"
           },
           {
             "id": "option-2",
-            "label": "One"
+            "label": "A tree"
           },
           {
             "id": "option-3",
-            "label": "Two"
+            "label": "A ship’s sail"
           },
           {
             "id": "option-4",
-            "label": "Four"
+            "label": "A clock face"
           },
           {
             "id": "option-5",
-            "label": "Five"
+            "label": "A blue flag"
           },
           {
             "id": "option-6",
-            "label": "Six"
+            "label": "A stone statue"
           }
         ],
         "answer": "option-1",
-        "hint": "Look below-right of the astronomer for short reddish round pipes, rather than square brick towers."
+        "hint": "Search the rooftops in the upper-right corner."
       },
       {
         "id": "clockwork-harbour-6",
         "region": "Search the entire map",
         "text": [
-          "Find the tower where a living bird sits on a golden globe supported by a winged figure.",
-          "Below-left of it, a red-hatted fiddler stands on market steps. Beside the steps, inspect the tiny lid on the golden vessel above a basket."
+          "Find the small gold jug beside a basket of fish."
         ],
-        "prompt": "What shape is the ornament on that lid?",
+        "prompt": "What shape is the ornament on its lid?",
         "options": [
           {
             "id": "option-4",
-            "label": "A tiny crown"
+            "label": "A flower"
           },
           {
             "id": "option-5",
-            "label": "A curled fish"
+            "label": "A moon"
           },
           {
             "id": "option-6",
-            "label": "A small flower"
+            "label": "A star"
           },
           {
             "id": "option-1",
-            "label": "A little bird"
+            "label": "A bird"
           },
           {
             "id": "option-2",
-            "label": "A crescent moon"
+            "label": "A crown"
           },
           {
             "id": "option-3",
-            "label": "A five-pointed star"
+            "label": "A fish"
           }
         ],
         "answer": "option-1",
-        "hint": "Find the red-hatted violinist near the lower market. The gold vessel is beside the baskets to the left of the musician’s boots."
+        "hint": "Search near the feet of the red-hatted musician in the lower market."
       }
     ],
-    "thumbnail": "assets/map-quest/expert/clockwork-harbour-thumb.webp"
+    "thumbnail": "assets/map-quest/expert/clockwork-harbour-thumb.webp?v=clear-details-r2"
   },
   "underground-archive": {
     "id": "underground-archive",
     "title": "The Archive Beneath the World",
     "expert": true,
-    "revision": "expert-20261014-r1",
-    "image": "assets/map-quest/expert/underground-archive.webp",
+    "revision": "expert-20261014-r2",
+    "image": "assets/map-quest/expert/underground-archive.webp?v=clear-details-r2",
     "width": 6144,
     "height": 4096,
     "questions": [
@@ -246,121 +240,117 @@
         "id": "underground-archive-1",
         "region": "Search the entire map",
         "text": [
-          "A feathered reader has borrowed a diver’s house. Count the other owls on the same book-lined gallery, excluding the one inside the helmet.",
-          "Find the walking greenhouse. Add the people inside the hanging lift immediately to its left."
+          "Find the round golden lift hanging from a chain."
         ],
-        "prompt": "What is the combined total?",
+        "prompt": "How many people are inside it?",
         "options": [
           {
             "id": "option-3",
-            "label": "Four"
+            "label": "Two"
           },
           {
             "id": "option-4",
-            "label": "Six"
+            "label": "Four"
           },
           {
             "id": "option-5",
-            "label": "Seven"
-          },
-          {
-            "id": "option-6",
-            "label": "Eight"
-          },
-          {
-            "id": "option-1",
             "label": "Five"
           },
           {
-            "id": "option-2",
+            "id": "option-6",
+            "label": "Six"
+          },
+          {
+            "id": "option-1",
             "label": "Three"
+          },
+          {
+            "id": "option-2",
+            "label": "One"
           }
         ],
         "answer": "option-1",
-        "hint": "There are two separate places to inspect: the owl shelves and the round gold lift beside the tortoise. Count passengers inside, not people on the bridges."
+        "hint": "Search the upper-right part of the archive, beside the tortoise."
       },
       {
         "id": "underground-archive-2",
         "region": "Search the entire map",
         "text": [
-          "Find the swimmer who measures time without water. Read the two thick clock hands above it; ignore the thin second hand.",
-          "The curator arrived exactly two hours before the time shown."
+          "Find the tall clock with a fish hanging inside it."
         ],
-        "prompt": "At what time did the curator arrive?",
+        "prompt": "What time do the two thick hands show?",
         "options": [
           {
             "id": "option-6",
-            "label": "Twelve o’clock"
+            "label": "Two o’clock"
           },
           {
             "id": "option-1",
-            "label": "Eight o’clock"
+            "label": "Ten o’clock"
           },
           {
             "id": "option-2",
-            "label": "Six o’clock"
+            "label": "Eight o’clock"
           },
           {
             "id": "option-3",
-            "label": "Seven o’clock"
-          },
-          {
-            "id": "option-4",
             "label": "Nine o’clock"
           },
           {
+            "id": "option-4",
+            "label": "Eleven o’clock"
+          },
+          {
             "id": "option-5",
-            "label": "Ten o’clock"
+            "label": "Twelve o’clock"
           }
         ],
         "answer": "option-1",
-        "hint": "Find the fish hanging inside the tall clock. Read the hour and minute hands, then subtract two hours."
+        "hint": "Search the left half of the archive. Ignore the thin second hand."
       },
       {
         "id": "underground-archive-3",
         "region": "Search the entire map",
         "text": [
-          "The bookbinder with too many arms has a small colleague above-left, sitting on a perch suspended by chains.",
-          "A large model stands on the gallery just above that perch, beside a meeting table. Identify both."
+          "Find the red-and-blue parrot sitting on a suspended metal perch."
         ],
-        "prompt": "Which animal and which model are there?",
+        "prompt": "What hangs directly below the parrot’s perch?",
         "options": [
           {
             "id": "option-2",
-            "label": "An owl and a globe"
+            "label": "A key"
           },
           {
             "id": "option-3",
-            "label": "A parrot and a sailing ship"
+            "label": "A bell"
           },
           {
             "id": "option-4",
-            "label": "A raven and a clock"
+            "label": "A book"
           },
           {
             "id": "option-5",
-            "label": "An owl and a skeleton"
+            "label": "A basket"
           },
           {
             "id": "option-6",
-            "label": "A parrot and a telescope"
+            "label": "A cup"
           },
           {
             "id": "option-1",
-            "label": "A parrot and a globe"
+            "label": "A lantern"
           }
         ],
         "answer": "option-1",
-        "hint": "Start at the purple octopus and follow the chains above-left of its press. Then look up one gallery."
+        "hint": "Look above and to the left of the purple octopus."
       },
       {
         "id": "underground-archive-4",
         "region": "Search the entire map",
         "text": [
-          "Find the floating sitting room whose occupant has a bushy tail.",
-          "There are books on both sides of the red armchair. Count only the stack between the chair and the lit lantern at the front of the boat."
+          "Find the fox sitting in an armchair in a boat."
         ],
-        "prompt": "How many books are in that front stack?",
+        "prompt": "How many books are stacked beside the lantern?",
         "options": [
           {
             "id": "option-5",
@@ -388,65 +378,63 @@
           }
         ],
         "answer": "option-1",
-        "hint": "Find the fox in the green boat. Zoom into the book spines beside the lantern; exclude the books behind the chair."
+        "hint": "Search the water at the lower left. Count the front stack, not the books behind the chair."
       },
       {
         "id": "underground-archive-5",
         "region": "Search the entire map",
         "text": [
-          "One dragon enjoys a steaming bath. A much larger toothy creature nearby has been reduced to bones.",
-          "Below the great jaw is a lower workroom. At its right edge, a tall glass cylinder holds two butterflies. Read their colours from top to bottom."
+          "Find the narrow glass cylinder containing two butterflies."
         ],
-        "prompt": "Which colour order is correct?",
+        "prompt": "What colour is the lower butterfly?",
         "options": [
           {
             "id": "option-1",
-            "label": "Blue, then yellow"
+            "label": "Yellow"
           },
           {
             "id": "option-2",
-            "label": "Yellow, then blue"
+            "label": "Blue"
           },
           {
             "id": "option-3",
-            "label": "Blue, then red"
+            "label": "Red"
           },
           {
             "id": "option-4",
-            "label": "Green, then yellow"
+            "label": "Green"
           },
           {
             "id": "option-5",
-            "label": "Red, then blue"
+            "label": "Purple"
           },
           {
             "id": "option-6",
-            "label": "Yellow, then green"
+            "label": "White"
           }
         ],
         "answer": "option-1",
-        "hint": "Search below-left of the teacup room, beneath the lower dinosaur display. The butterflies are in a narrow cylinder on the workbench."
+        "hint": "Search the workbench near the bottom edge, below the large skeleton."
       },
       {
         "id": "underground-archive-6",
         "region": "Search the entire map",
         "text": [
-          "Find the stone figure holding a golden ring of stars above its head. Follow its bridge to the right.",
-          "Past the spiral stair, a tiny watcher sits directly on the railing, before the next wall lamp. A skeleton lies below."
+          "Find the small bird sitting on a bridge railing."
         ],
-        "prompt": "What is the tiny watcher?",
+        "prompt": "What kind of bird is it?",
         "options": [
           {
             "id": "option-4",
-            "label": "A mouse"
+            "label": "A pigeon"
           },
           {
             "id": "option-5",
-            "label": "A squirrel"
+            "label": "A duck"
           },
           {
             "id": "option-6",
-            "label": "A raven"
+            "label": "A gull"
           },
           {
             "id": "option-1",
@@ -454,17 +442,17 @@
           },
           {
             "id": "option-2",
-            "label": "A cat"
+            "label": "A parrot"
           },
           {
             "id": "option-3",
-            "label": "A parrot"
+            "label": "A raven"
           }
         ],
         "answer": "option-1",
-        "hint": "Follow the bridge above the lower dinosaur skeleton. Inspect the railing between the winding staircase and the wall lamp."
+        "hint": "Look above the lower skeleton, between the spiral staircase and the wall lamp."
       }
     ],
-    "thumbnail": "assets/map-quest/expert/underground-archive-thumb.webp"
+    "thumbnail": "assets/map-quest/expert/underground-archive-thumb.webp?v=clear-details-r2"
   }
 }));

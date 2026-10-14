@@ -1,0 +1,57 @@
+{
+  "tool": "Built-in ImageGen",
+  "patches": [
+    {
+      "map": "clockwork-harbour",
+      "name": "flute",
+      "overviewBox": [
+        1280,
+        820,
+        1450,
+        980
+      ],
+      "source": "exec-a3db28d4-0575-4bef-baf2-1e10c0cfdb0c.png",
+      "sourceSHA256": "21e5ab25e70b11be8dbb9d7b10c113b6b360fb4d40715f1db2ac4ba4713702d5",
+      "method": "Resize to original crop bounds; 12-pixel inset mask with 5-pixel edge feather."
+    },
+    {
+      "map": "clockwork-harbour",
+      "name": "fish-market",
+      "overviewBox": [
+        190,
+        740,
+        580,
+        1010
+      ],
+      "source": "exec-61c5c195-ded6-4ed8-9843-213313de2dbd.png",
+      "sourceSHA256": "2cd64cf4557a40e06c03a2c34d0bec474520f541cd4a6130078348cde260ed6d",
+      "method": "Resize to original crop bounds; 12-pixel inset mask with 5-pixel edge feather."
+    },
+    {
+      "map": "underground-archive",
+      "name": "archive-owl",
+      "overviewBox": [
+        960,
+        610,
+        1040,
+        685
+      ],
+      "source": "exec-b3259d04-771b-4754-9441-a5ef6e55440d.png",
+      "sourceSHA256": "7e5d36044c6c764a47d58056725b37fd07bf1c9d2988ff7d211e69fd15159b3d",
+      "method": "Resize to original crop bounds; 12-pixel inset mask with 5-pixel edge feather."
+    },
+    {
+      "map": "underground-archive",
+      "name": "parrot",
+      "overviewBox": [
+        1210,
+        285,
+        1300,
+        415
+      ],
+      "source": "exec-45692670-c773-43d9-b4c4-967d46dac1fe.png",
+      "sourceSHA256": "10f970e88df04e8a43d320f9a0bb0d107ff05a09d3fa9229f4b01a191cda2066",
+      "method": "Resize to original crop bounds; 12-pixel inset mask with 5-pixel edge feather."
+    }
+  ]
+}
