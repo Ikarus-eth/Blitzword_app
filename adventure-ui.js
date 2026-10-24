@@ -87,7 +87,10 @@
       screen.style.backgroundImage='linear-gradient(180deg,#10282088,#10282044 40%,#102820bb),url("'+c.scene+'")';
       const top=el('div','adventureTop'),tabs=el('nav','campaignTabs');tabs.setAttribute('aria-label','Choose a campaign');
       D.campaigns.forEach((campaign,i)=>{const open=D.campaigns.slice(0,i).every(prior=>A.campaignComplete(s,prior.id));const b=button((i+1)+'. '+campaign.shortName,'campaignTab'+(c.id===campaign.id?' selected':''),()=>{e.selectedCampaign=campaign.id;if(ctx.save())renderHub();});b.disabled=!open;b.setAttribute('aria-pressed',String(c.id===campaign.id));if(!open)b.title='Finish '+D.campaigns[i-1].shortName+' to open this campaign.';tabs.append(b);});
-      const book=button('Creature Book · '+report.seen+'/'+Content.creatures.length,'bookLauncher',()=>openBook());book.insertAdjacentHTML('afterbegin',icon('leaf'));top.append(tabs,book);screen.append(top);
+      const book=button('Creature Book · '+report.seen+'/'+Content.creatures.length,'bookLauncher',()=>openBook());book.insertAdjacentHTML('afterbegin',icon('leaf'));
+      // Turtle Race is always offered: a separate page with its own stats, never the learner save.
+      const race=button('Turtle race','raceLauncher',ctx.turtleRace);race.id='hubTurtleRace';race.setAttribute('aria-label','Open Turtle race: three reading races against the turtle');race.insertAdjacentHTML('afterbegin','<img src="assets/turtle-race/turtle.webp" alt="" aria-hidden="true">');
+      const launchers=el('div','hubLaunchers');launchers.append(race,book);top.append(tabs,launchers);screen.append(top);
       const done=c.missions.filter(id=>e.missions[id]?.completedAt).length;
       screen.append(heading('Adventure '+(D.campaigns.indexOf(c)+1)+' · '+done+'/'+c.missions.length+' treasures',c.name,done===c.missions.length?c.ending:c.intro));
       if(c.id==='star-trail')screen.append(button('Read a star message · about 1 minute','greenButton',()=>{if(ctx.save())location.href='assets/oral-reading/?sky='+encodeURIComponent(e.current?.missionId&&c.missions.includes(e.current.missionId)?e.current.missionId:c.missions.find(id=>!e.missions[id]?.completedAt)||c.missions[0]);}));
