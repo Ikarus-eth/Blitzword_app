@@ -36,3 +36,7 @@ Difficulty adapts per race so it stays close: a win adds one step (Dash races) o
 - 11 new unit tests (`tests/turtle-race.test.js`): item validity and recordings, one-word flash swaps, yes/no balance, each scoring rule, the 60-second turtle, adaptation and limits, stats and quits, deck coverage, voice receipts, and no access to the main save. Full suite: 430 unit/backend tests and all UI-flow groups pass.
 - Headless Chromium plays all three races to a result at 1194×834, 834×1194 and 390×844 with no page errors; separate runs cover the turtle winning an idle race, duel timeouts costing hearts, and leaving mid-race counting as "left early". All 53 audio files decode in the browser.
 - Not verified: physical iPad and Safari audio, touch feel, and whether the timings suit the child. Nobody has listened to the new George lines yet.
+
+## Deployment
+
+PR #198 merged as `c8649ce7700f904aeba371023d54727eeda0695f`. Pages run 40081466652 passed tests and deployed. Verification run 40081677005 (branch `claude/turtle-race-live-check`, not for merging) fetched all nine live turtle-race page, art and voice files and found each identical to the merged source.
