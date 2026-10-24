@@ -1,4 +1,4 @@
-name: Verify live turtle race files
+name: Verify live turtle race files and home button
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,12 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: c8649ce7700f904aeba371023d54727eeda0695f
-      - name: Compare every live turtle race file with merge c8649ce
+          ref: 857512d6485dfbe8e62eeb00c6a51cc19c63082f
+      - name: Compare every live turtle race file with merge 857512d
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           bad=0; n=0
-          for f in $(git ls-tree -r --name-only HEAD assets/turtle-race) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3; do
+          for f in index.html app.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
