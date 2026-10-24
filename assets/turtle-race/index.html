@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173d2f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Turtle Race">
+<meta name="turtle-race-build" content="turtle-race-20261024-r1">
+<title>Turtle Race · Pip</title>
+<link rel="stylesheet" href="style.css?v=turtle-race-20261024-r1">
+</head>
+<body>
+<main id="app" class="app">
+  <section id="pick" class="screen pick">
+    <header class="pickHeader">
+      <img class="pickPip" src="pip.webp" alt="">
+      <div><p class="eyebrow">Read fast · Beat the turtle</p><h1>Pip vs the Turtle</h1><p class="lead">Pick a race.</p></div>
+      <img class="pickTurtle" src="turtle.webp" alt="">
+    </header>
+    <div id="cards" class="cards"></div>
+    <details class="parents"><summary>For parents</summary><div id="parentStats"></div></details>
+  </section>
+
+  <section id="intro" class="screen intro" hidden>
+    <button class="backButton" data-back type="button" aria-label="Back to the races">← Races</button>
+    <div class="introCard">
+      <div id="introArt" class="introArt"></div>
+      <h2 id="introTitle"></h2>
+      <p id="introHow" class="introHow"></p>
+      <p id="introLevel" class="introLevel"></p>
+      <div class="introButtons"><button id="introListen" class="ghostButton" type="button" aria-label="Hear how to play">🔊 Hear it</button><button id="introStart" class="goButton" type="button">Start</button></div>
+    </div>
+  </section>
+
+  <section id="play" class="screen play" hidden>
+    <div class="hud">
+      <button class="backButton" data-back type="button" aria-label="Stop and go back to the races">✕</button>
+      <h2 id="playTitle"></h2>
+      <div id="clock" class="clock" role="timer" aria-label="Seconds left"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19"/><circle id="clockArc" cx="22" cy="22" r="19"/></svg><span id="clockText">60</span></div>
+    </div>
+    <div id="stage" class="stage"></div>
+    <div id="reader" class="reader" aria-live="polite">
+      <p id="sentence" class="sentence"></p>
+      <p id="prompt" class="prompt"></p>
+      <div id="duelTimer" class="duelTimer" hidden><span></span></div>
+      <div id="options" class="options"></div>
+    </div>
+    <div id="countdown" class="countdown" hidden></div>
+    <div id="callout" class="callout" aria-hidden="true"></div>
+  </section>
+
+  <section id="result" class="screen result" hidden>
+    <div class="resultCard">
+      <img id="resultArt" class="resultArt" src="pip.webp" alt="">
+      <h2 id="resultTitle"></h2>
+      <p id="resultLine" class="resultLine"></p>
+      <p id="resultStats" class="resultStats"></p>
+      <div class="introButtons"><button id="resultOther" class="ghostButton" type="button">Other races</button><button id="resultAgain" class="goButton" type="button">Play again</button></div>
+    </div>
+  </section>
+</main>
+<script src="race-core.js?v=turtle-race-20261024-r1"></script>
+<script src="items.js?v=turtle-race-20261024-r1"></script>
+<script src="app.js?v=turtle-race-20261024-r1"></script>
+</body>
+</html>
