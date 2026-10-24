@@ -1,0 +1,30 @@
+name: Generate turtle race narration
+on:
+  push:
+    branches: [claude/turtle-race-narration-20261024]
+    paths: [docs/turtle-race/NARRATION_REQUEST.json, .github/workflows/narration-turtle-race.yml]
+permissions:
+  contents: read
+concurrency:
+  group: turtle-race-narration
+  cancel-in-progress: false
+jobs:
+  generate:
+    if: github.repository == 'Ikarus-eth/Blitzword_app'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install audio validation tools
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Generate turtle race recordings
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/generate-budget-narration.py turtle-race
+      - name: Preserve paid outputs even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: narration-turtle-race
+          path: narration-turtle-race-output
+          retention-days: 14
