@@ -1,0 +1,151 @@
+{
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "charactersRequested": 638,
+  "before": {
+    "character_count": 84230,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  },
+  "batches": [
+    {
+      "id": "turtle-race-001",
+      "duration": 30.772245,
+      "sha256": "d209cf0a12bcc82003173549dc12b5a27ef4644f3c5570e0a408bc1dbb526995",
+      "requestId": "epLh9HxHPN8Jduyosnz3",
+      "characters": 406,
+      "segments": 7
+    },
+    {
+      "id": "turtle-race-002",
+      "duration": 18.390204,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da",
+      "requestId": "Mnnnw3xN9HBQsGkW9MC1",
+      "characters": 232,
+      "segments": 11
+    }
+  ],
+  "clips": {
+    "turtle-race:choose": {
+      "file": "assets/narration/turtle-race-001.mp3",
+      "offset": 0,
+      "duration": 2.9085,
+      "sha256": "d209cf0a12bcc82003173549dc12b5a27ef4644f3c5570e0a408bc1dbb526995"
+    },
+    "turtle-race:title-dash": {
+      "file": "assets/narration/turtle-race-001.mp3",
+      "offset": 2.9085,
+      "duration": 1.3175,
+      "sha256": "d209cf0a12bcc82003173549dc12b5a27ef4644f3c5570e0a408bc1dbb526995"
+    },
+    "turtle-race:title-flash": {
+      "file": "assets/narration/turtle-race-001.mp3",
+      "offset": 4.226,
+      "duration": 1.062,
+      "sha256": "d209cf0a12bcc82003173549dc12b5a27ef4644f3c5570e0a408bc1dbb526995"
+    },
+    "turtle-race:title-duel": {
+      "file": "assets/narration/turtle-race-001.mp3",
+      "offset": 5.288,
+      "duration": 1.318,
+      "sha256": "d209cf0a12bcc82003173549dc12b5a27ef4644f3c5570e0a408bc1dbb526995"
+    },
+    "turtle-race:how-dash": {
+      "file": "assets/narration/turtle-race-001.mp3",
+      "offset": 6.606,
+      "duration": 7.3955,
+      "sha256": "d209cf0a12bcc82003173549dc12b5a27ef4644f3c5570e0a408bc1dbb526995"
+    },
+    "turtle-race:how-flash": {
+      "file": "assets/narration/turtle-race-001.mp3",
+      "offset": 14.0015,
+      "duration": 6.926,
+      "sha256": "d209cf0a12bcc82003173549dc12b5a27ef4644f3c5570e0a408bc1dbb526995"
+    },
+    "turtle-race:how-duel": {
+      "file": "assets/narration/turtle-race-001.mp3",
+      "offset": 20.9275,
+      "duration": 9.8447,
+      "sha256": "d209cf0a12bcc82003173549dc12b5a27ef4644f3c5570e0a408bc1dbb526995"
+    },
+    "turtle-race:go": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 0,
+      "duration": 1.6775,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:boost": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 1.6775,
+      "duration": 1.196,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:great": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 2.8735,
+      "duration": 1.045,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:slow": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 3.9185,
+      "duration": 1.0565,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:oops": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 4.975,
+      "duration": 0.685,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:hit": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 5.66,
+      "duration": 1.7875,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:race-win": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 7.4475,
+      "duration": 2.177,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:race-lose": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 9.6245,
+      "duration": 2.589,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:duel-win": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 12.2135,
+      "duration": 2.479,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:duel-lose": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 14.6925,
+      "duration": 2.5425,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    },
+    "turtle-race:time": {
+      "file": "assets/narration/turtle-race-002.mp3",
+      "offset": 17.235,
+      "duration": 1.1552,
+      "sha256": "c1dae0283bd407325fc01d2486f68b01698392ded0c1e3a4639806368832d8da"
+    }
+  },
+  "status": "complete",
+  "after": {
+    "character_count": 84230,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  }
+}
