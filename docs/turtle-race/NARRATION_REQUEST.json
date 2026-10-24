@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "base": "29ff0611183c57ede7e0e5738cf376bcc4fc91d3",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "maxCharacters": 1000,
+  "characters": 638,
+  "segmentCount": 18,
+  "batches": [
+    {
+      "id": "turtle-race-001",
+      "text": "Pick a race. Can Pip beat the turtle?\n\nTurtle Dash!\n\nFlash Dash!\n\nShell Duel!\n\nRead the sentence. Then tap the answer. Right answers move Pip forward. Wrong answers move him back.\n\nThe sentence shows for a moment. Then tap the sentence you read. Fast answers give Pip a blitz boost.\n\nRead, then tap yes or no before the timer runs out. Fast right answers hit the turtle. Slow or wrong answers cost a heart.",
+      "segments": [
+        {
+          "key": "turtle-race:choose",
+          "text": "Pick a race. Can Pip beat the turtle?",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:title-dash",
+          "text": "Turtle Dash!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:title-flash",
+          "text": "Flash Dash!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:title-duel",
+          "text": "Shell Duel!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:how-dash",
+          "text": "Read the sentence. Then tap the answer. Right answers move Pip forward. Wrong answers move him back.",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:how-flash",
+          "text": "The sentence shows for a moment. Then tap the sentence you read. Fast answers give Pip a blitz boost.",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:how-duel",
+          "text": "Read, then tap yes or no before the timer runs out. Fast right answers hit the turtle. Slow or wrong answers cost a heart.",
+          "kind": "turtle-race"
+        }
+      ]
+    },
+    {
+      "id": "turtle-race-002",
+      "text": "Ready, steady, go!\n\nBlitz boost!\n\nGreat reading!\n\nToo slow!\n\nOops!\n\nSplash! Got it!\n\nPip wins the race! Hooray!\n\nThe turtle wins this time. Try again!\n\nPip wins the duel! Well done!\n\nThe turtle wins the duel. Try again!\n\nTime is up!",
+      "segments": [
+        {
+          "key": "turtle-race:go",
+          "text": "Ready, steady, go!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:boost",
+          "text": "Blitz boost!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:great",
+          "text": "Great reading!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:slow",
+          "text": "Too slow!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:oops",
+          "text": "Oops!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:hit",
+          "text": "Splash! Got it!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-win",
+          "text": "Pip wins the race! Hooray!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose",
+          "text": "The turtle wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:duel-win",
+          "text": "Pip wins the duel! Well done!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:duel-lose",
+          "text": "The turtle wins the duel. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:time",
+          "text": "Time is up!",
+          "kind": "turtle-race"
+        }
+      ]
+    }
+  ]
+}
