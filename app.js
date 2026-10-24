@@ -21,7 +21,7 @@ let storyControls=null;
 let parentReport=null,parentWordReturn=null;
 const adventures=window.BlitzAdventureUI.create({Core,Content,state:()=>state,save,show,home,enter,cancelWork,
   paintEnemy,paintPip,paintHero,heroIndex,dragonText:text=>dragonText(text),speak,growth:()=>openGrowth(),
-  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,wimmelbild:openWimmelbild,stories:()=>{if(!blocked&&state.settings.storiesEnabled===true&&suspendAdventureUI())location.assign('assets/story-pilot/');},
+  parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,wimmelbild:openWimmelbild,turtleRace:()=>{if(!blocked&&suspendAdventureUI())location.assign('assets/turtle-race/');},stories:()=>{if(!blocked&&state.settings.storiesEnabled===true&&suspendAdventureUI())location.assign('assets/story-pilot/');},
   suspend:suspendAdventureUI,active:()=>!paused&&!blocked&&playing});
 function suspendAdventureUI(){
   if(playing&&!paused)confirmActivity();account();Core.interruptQuestion(state);cancelWork();paused=true;playing=false;

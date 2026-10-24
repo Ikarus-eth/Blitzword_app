@@ -4,7 +4,7 @@ The user asked for a short reading race: Pip against a turtle, about 60 seconds,
 
 ## What it is
 
-A standalone page at `assets/turtle-race/` (live: https://ikarus-eth.github.io/Blitzword_app/assets/turtle-race/). Like the Hidden Atlas, it has no setup, no unlock requirement and no link into or out of the main game. It never reads or writes the learner save (`blitzword_state_v1`); its own stats live under `blitzword_turtle_race_v1`.
+A standalone page at `assets/turtle-race/` (live: https://ikarus-eth.github.io/Blitzword_app/assets/turtle-race/). It has no setup or unlock requirement. Since 24 October 2026 the game's home hub has a Turtle race button and the race picker has a Home link back. It never reads or writes the learner save (`blitzword_state_v1`); its own stats live under `blitzword_turtle_race_v1`.
 
 | Race | Quiz | Scoring | 60-second ending |
 |---|---|---|---|

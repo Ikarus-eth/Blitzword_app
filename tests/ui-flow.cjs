@@ -1405,6 +1405,19 @@ console.log('PASS illustrated expansion, exact quantities, core and future cards
 }
 console.log('PASS failed expansion illustration retains listening and Continue');
 
+// The home hub always offers Turtle Race; launching saves first and leaves learning state intact.
+{
+ const original=impactSave();delete original.settings.storiesEnabled;delete original.settings.legacyEnabled;
+ const ui=boot(original,{activityDefaults:true});
+ assert.ok(ui.get('adventureHub').classList.contains('active'));
+ const race=ui.get('hubTurtleRace');assert.ok(race);assert.match(race.textContent,/Turtle race/);
+ const before=ui.state();ui.click(race);assert.equal(ui.destinations.at(-1),'assets/turtle-race/');
+ const after=ui.state();for(const key of ['learning','campaign','story','dragon'])assert.deepEqual(after[key],before[key]);
+ const denied=boot(impactSave(),{failWrites:true,activityDefaults:true});
+ assert.ok(denied.get('hubTurtleRace'));denied.get('hubTurtleRace').onclick();assert.equal(denied.destinations.length,0);
+ console.log('PASS home hub Turtle race launcher is always shown, saves before leaving and is blocked when saving fails');
+}
+
 // Optional activity settings default off, survive reload and never erase progress.
 {
  const original=impactSave();delete original.settings.storiesEnabled;delete original.settings.legacyEnabled;
