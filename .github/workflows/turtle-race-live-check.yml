@@ -1,4 +1,4 @@
-name: Verify live race time on Parents dashboard
+name: Verify live turtle race expert tiers
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,14 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: c18374b2ed546e2b05d0b163d0a6e48e40c42b3a
-      - name: Compare every live turtle race file with merge c18374b
+          ref: 41015e749930f5573a8800191e609a6e1629b1ec
+      - name: Compare every live turtle race file with merge 41015e7
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 10 minutes) for Pages to publish the merge, then require every file to match.
           for attempt in $(seq 1 20); do
-            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
-            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
+            curl -s -o probe.js "$B/assets/turtle-race/race-core.js?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.js assets/turtle-race/race-core.js; then echo "live after attempt $attempt"; break; fi
             sleep 30
           done
           bad=0; n=0
