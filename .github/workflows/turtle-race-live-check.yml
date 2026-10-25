@@ -1,4 +1,4 @@
-name: Verify live turtle race files and home button
+name: Verify live turtle race levels
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 857512d6485dfbe8e62eeb00c6a51cc19c63082f
-      - name: Compare every live turtle race file with merge 857512d
+          ref: 32e923175d969ac600424567276c4f592730052a
+      - name: Compare every live turtle race file with merge 32e9231
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           bad=0; n=0
