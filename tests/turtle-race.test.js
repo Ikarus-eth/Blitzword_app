@@ -132,6 +132,17 @@ test('stats record starts, finishes, quits and accuracy under their own storage 
   assert.deepEqual(Core.normalizeProfile('broken'),Core.defaultProfile());
 });
 
+test('race time is kept per local day, capped, and backfilled from earlier race history',()=>{
+  const p=Core.defaultProfile(),t=new Date(2026,9,25,13,0).getTime();
+  Core.addTime(p,61234.4,t);Core.addTime(p,0,t);Core.addTime(p,-5,t);Core.addTime(p,1000,t);
+  assert.deepEqual(p.time.days,{'2026-10-25':62234});assert.equal(Core.totalTime(p),62234);
+  Core.addTime(p,9e7,t);assert.equal(p.time.days['2026-10-25'],86400000);
+  const old=Core.normalizeProfile({games:{},history:[{mode:'dash',at:new Date(2026,9,24,18,0).toISOString(),elapsed:41000},{mode:'duel',at:new Date(2026,9,24,19,0).toISOString(),elapsed:60000},{mode:'flash',at:'bad',elapsed:5}]});
+  assert.deepEqual(old.time.days,{'2026-10-24':101000});
+  const kept=Core.normalizeProfile({time:{days:{'2026-10-20':5000,'x':3,'2026-10-21':-1}},history:[{mode:'dash',at:new Date(2026,9,24).toISOString(),elapsed:41000}]});
+  assert.deepEqual(kept.time.days,{'2026-10-20':5000},'tracked time is not double-counted from history');
+});
+
 test('the deck repeats no sentence until every sentence has appeared',()=>{
   const deck=Core.createDeck(Data.items,Math.random),seen=new Set();
   for(let i=0;i<Data.items.length;i++)seen.add(deck.next().s);

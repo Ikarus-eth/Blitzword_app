@@ -421,6 +421,8 @@
   }
   // Story adventures (reading riddles) keep their own save. Parents reads its time, never writes it.
   const RIDDLE_KEY='blitzword_story_pilot_v2';
+  // Turtle Race keeps its own save; its time.days use the same shape as story riddle time.
+  const RACE_KEY='blitzword_turtle_race_v1';
   function riddleTime(text,now=Date.now()){
     const empty={available:false,days:{},totalMs:0,todayMs:0,idleMs:0,unreadable:false};
     if(text===null||text===undefined)return empty;
@@ -1167,5 +1169,5 @@
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,speedSuggestion,respondSpeedSuggestion,wordSpeeds,quickAnswer,
     HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions,
     WORD_STATUS,parentLearning,parentWordHistory,weekKey,ADAPTIVE_RULES,adaptiveChallenge,
-    CHALLENGE_PACE,challengeExposure,challengePaceSummary,RIDDLE_KEY,riddleTime};
+    CHALLENGE_PACE,challengeExposure,challengePaceSummary,RIDDLE_KEY,RACE_KEY,riddleTime};
 });
