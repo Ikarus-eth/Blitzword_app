@@ -67,12 +67,15 @@
     for(const mode of Core.MODES){
       const info=INFO[mode],g=profile.games[mode];
       const b=document.createElement('button');b.type='button';b.className='card card-'+mode;
-      b.innerHTML=`<span class="cardArt">${art(mode,true)}</span><span class="cardText"><strong>${info.title}</strong><small>${info.tag}</small></span><span class="cardWins" aria-label="${g.wins} wins">🏆 ${g.wins}</span>`;
+      const q=profile.progress[mode];
+      b.innerHTML=`<span class="cardArt">${art(mode,true)}</span><span class="cardText"><strong>${info.title}</strong><small>${info.tag}</small><span class="cardStars" aria-label="${stars(q)} of ${Core.LEVEL_COUNT} turtles beaten">${starRow(q)}</span></span>`;
       b.onclick=()=>{Sound.unlock();openIntro(mode);};
       cards.append(b);
     }
     renderParents();
   }
+  const stars=q=>q.wins.filter(w=>w>0).length;
+  const starRow=q=>q.wins.map(w=>`<i class="${w>0?'on':''}">★</i>`).join('');
   function art(mode,small){
     const cls=small?'mini':'';
     if(mode==='duel')return `<span class="artDuel ${cls}"><img src="pip.webp" alt=""><span class="artVs">${INFO.duel.icon}</span><img class="flip" src="turtle.webp" alt=""></span>`;
@@ -80,18 +83,30 @@
   }
   function renderParents(){
     const rows=Core.summary(profile).map(r=>`<tr><th>${INFO[r.mode].title}</th><td>${r.started}</td><td>${r.finished}</td><td>${r.quit}</td><td>${r.wins}</td><td>${r.accuracy==null?'–':r.accuracy+'%'}</td><td>${r.avgSeconds==null?'–':r.avgSeconds+' s'}</td><td>${r.lastPlayed?new Date(r.lastPlayed).toLocaleString([], {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'–'}</td></tr>`).join('');
-    const lv=profile.levels;
-    $('#parentStats').innerHTML=`<p>Which race does he pick and finish? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>Current difficulty: Turtle Dash ${lv.dash.goal} steps · Flash Dash ${lv.flash.goal} steps, sentence shown ${(lv.flash.flashMs/1000).toFixed(1)} s · Shell Duel ${lv.duel.shell} shells, ${(lv.duel.timerMs/1000).toFixed(1)} s per question. Each win makes the next race a little harder; each loss a little easier.</p>`;
+    const levels=Core.summary(profile).map(r=>`${INFO[r.mode].title}: level ${r.unlocked} of ${Core.LEVEL_COUNT} open · wins per level ${r.levelWins.join(' / ')} · races per level ${r.levelPlays.join(' / ')}`).join('<br>');
+    $('#parentStats').innerHTML=`<p>Which race does he pick and finish? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>Each race has five turtles. Winning against the hardest open turtle opens the next one; he chooses which open turtle to race. Levels 1–2 use sentences of up to five words, level 3 up to six, levels 4–5 all.</p>`;
   }
 
   let currentMode='dash';
   function openIntro(mode){
-    currentMode=mode;const info=INFO[mode],lv=profile.levels[mode];
+    currentMode=mode;const info=INFO[mode];
     $('#introTitle').textContent=info.title;$('#introHow').textContent=info.how;$('#introArt').innerHTML=art(mode);
-    $('#introLevel').textContent=mode==='duel'?`Turtle shell: ${lv.shell} · Hearts: 3`:`Finish line: ${lv.goal} steps`;
+    renderLevels();
     show('intro');
     Sound.preload(['go','boost','great','slow','hit','race-win','race-lose','duel-win','duel-lose','time']);
     Sound.line('title-'+mode).then(()=>{if(!$('#intro').hidden&&currentMode===mode)Sound.line('how-'+mode);});
+  }
+  function renderLevels(){
+    const mode=currentMode,q=profile.progress[mode],box=$('#levels');box.innerHTML='';
+    for(let n=1;n<=Core.LEVEL_COUNT;n++){
+      const open=n<=q.unlocked,won=q.wins[n-1]>0,b=document.createElement('button');
+      b.type='button';b.className='levelButton'+(n===q.selected?' selected':'')+(open?'':' locked')+(won?' won':'');b.disabled=!open;
+      b.setAttribute('aria-pressed',String(n===q.selected));b.dataset.level=n;
+      b.innerHTML=`<span class="levelNum">${open?n:'🔒'}</span><span class="levelText"><strong>${Core.NAMES[n-1]}</strong><small>${open?Core.describeLevel(mode,n):'Beat the '+Core.NAMES[n-2]+' to open'}</small></span><span class="levelStar" aria-label="${won?'beaten':'not beaten yet'}">${won?'★':''}</span>`;
+      b.onclick=()=>{Sound.unlock();if(Core.selectLevel(profile,mode,n)){store();renderLevels();Sound.tick();}};
+      box.append(b);
+    }
+    $('#introStart').textContent='Race the '+Core.NAMES[q.selected-1];
   }
   $('#introListen').onclick=()=>{Sound.unlock();Sound.line('how-'+currentMode);};
   $('#introStart').onclick=()=>{Sound.unlock();startRun(currentMode);};
@@ -105,9 +120,9 @@
 
   function startRun(mode){
     stopRun();const my=token;
-    currentMode=mode;run=Core.newRun(mode,profile);deck=Core.createDeck(items,Math.random);lastYes=[];lastCallout={};
+    currentMode=mode;run=Core.newRun(mode,profile);deck=Core.createDeck(Core.itemsForLevel(items,mode,run.level),Math.random);lastYes=[];lastCallout={};
     profile=Core.recordStart(profile,mode,new Date().toISOString());store();
-    $('#playTitle').textContent=INFO[mode].title;
+    $('#playTitle').textContent=INFO[mode].title+' · '+run.levelName;
     buildStage();clearReader();updateClock();show('play');
     const cd=$('#countdown');cd.hidden=false;
     const steps=['3','2','1','Go!'];let i=0;
@@ -236,7 +251,7 @@
     if(!run||phase==='end')return;
     phase='end';cancelAnimationFrame(raf);
     const r=run,my=token;
-    profile=Core.recordFinish(profile,r,new Date().toISOString());store();
+    const opened=Core.recordFinish(profile,r,new Date().toISOString());store();
     const duel=r.mode==='duel';
     const lineKey=r.won?(duel?'duel-win':'race-win'):(duel?'duel-lose':'race-lose');
     const finishLine=()=>{
@@ -247,10 +262,20 @@
       let line;
       if(duel)line=r.won?`The turtle's shell is empty. ${r.hearts} heart${r.hearts===1?'':'s'} left.`:(r.reason==='time'?`Time is up. The turtle had ${r.shell} shell${r.shell===1?'':'s'} left.`:`The turtle had ${r.shell} shell${r.shell===1?'':'s'} left.`);
       else line=r.won?`Pip crossed the line with ${Math.ceil((Core.GAME_MS-r.elapsed)/1000)} seconds to spare.`:`Pip got ${r.steps} of ${r.goal} steps.`;
-      $('#resultLine').textContent=line+(r.won?' Next time the turtle trains harder!':' Next time the turtle goes a bit slower.');
+      $('#resultLine').textContent=line;
+      const q=profile.progress[r.mode];
+      $('#resultUnlock').hidden=!opened;
+      if(opened)$('#resultUnlock').textContent=`New turtle unlocked: ${Core.NAMES[opened-1]}!`;
+      // Offer the next open turtle after a win, an easier one after a loss; he decides.
+      const next=r.won&&r.level<q.unlocked?r.level+1:null,easier=!r.won&&r.level>1?r.level-1:null,target=next||easier;
+      $('#resultNext').hidden=!target;
+      if(target){$('#resultNext').textContent=(next?'Try the ':'Race the ')+Core.NAMES[target-1];$('#resultNext').onclick=()=>{Sound.unlock();Core.selectLevel(profile,r.mode,target);store();startRun(r.mode);};}
+      $('#resultAgain').textContent=r.won?'Same turtle again':'Try again';
+      $('#resultAgain').className=target?'ghostButton':'goButton';
       $('#resultStats').textContent=`${r.correct} right of ${r.answers} · ${avg} s per answer · best streak ${r.bestStreak}`;
       show('result');
       Sound.line(lineKey);
+      if(opened)setTimeout(()=>Sound.tone([523,659,784,1047,1319],.12,'triangle',.14),300);
     };
     if(r.reason==='time'){callout('Time is up!','slow');Sound.line('time').then(()=>setTimeout(finishLine,200));}
     else setTimeout(finishLine,900);

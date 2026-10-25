@@ -7,42 +7,71 @@
   const GAME_MS=60000;
   const STORAGE_KEY='blitzword_turtle_race_v1';
   const MODES=['dash','flash','duel'];
-  // Each mode adapts between runs so the race stays winnable but close.
-  const LIMITS={
-    dashGoal:{min:5,max:16,start:8},
-    flashGoal:{min:6,max:22,start:11},
-    flashMs:{min:1200,max:6000,start:3000},
-    duelShell:{min:3,max:12,start:6},
-    duelMs:{min:3500,max:10000,start:7000}
+  // Five fixed turtles per race. Level 1 is meant to be won early; each win opens the next turtle.
+  const NAMES=['Sleepy Turtle','Little Turtle','Brave Turtle','Speedy Turtle','Champion Turtle'];
+  const LEVELS={
+    dash:[
+      {goal:4,backOnWrong:false,maxWords:5},
+      {goal:6,backOnWrong:false,maxWords:5},
+      {goal:8,backOnWrong:true,maxWords:6},
+      {goal:10,backOnWrong:true,maxWords:7},
+      {goal:12,backOnWrong:true,maxWords:7}
+    ],
+    flash:[
+      {goal:5,flashMs:5000,boostMs:5000,backOnWrong:false,maxWords:5},
+      {goal:7,flashMs:4000,boostMs:4000,backOnWrong:false,maxWords:5},
+      {goal:9,flashMs:3000,boostMs:3000,backOnWrong:true,maxWords:6},
+      {goal:11,flashMs:2500,boostMs:3000,backOnWrong:true,maxWords:7},
+      {goal:13,flashMs:2000,boostMs:2500,backOnWrong:true,maxWords:7}
+    ],
+    duel:[
+      {shell:3,timerMs:12000,hearts:5,maxWords:5},
+      {shell:4,timerMs:10000,hearts:4,maxWords:5},
+      {shell:5,timerMs:8000,hearts:3,maxWords:6},
+      {shell:7,timerMs:6500,hearts:3,maxWords:7},
+      {shell:9,timerMs:5000,hearts:3,maxWords:7}
+    ]
   };
+  const LEVEL_COUNT=NAMES.length;
   const BOOST_MS=3000;
-  const clamp=(v,{min,max})=>Math.max(min,Math.min(max,Math.round(v)));
-
-  function defaultLevels(){
-    return {dash:{goal:LIMITS.dashGoal.start},flash:{goal:LIMITS.flashGoal.start,flashMs:LIMITS.flashMs.start},duel:{shell:LIMITS.duelShell.start,timerMs:LIMITS.duelMs.start}};
+  const level=(mode,n)=>({...LEVELS[mode][n-1],level:n,name:NAMES[n-1]});
+  const words=s=>s.trim().split(/\s+/).length;
+  function itemsForLevel(items,mode,n){return items.filter(i=>words(i.s)<=LEVELS[mode][n-1].maxWords);}
+  function describeLevel(mode,n){
+    const L=LEVELS[mode][n-1],secs=ms=>(ms/1000).toFixed(ms%1000?1:0)+' s';
+    if(mode==='dash')return `${L.goal} steps to the finish`+(L.backOnWrong?'':' · no slipping back');
+    if(mode==='flash')return `${L.goal} steps · sentence shows ${secs(L.flashMs)}`+(L.backOnWrong?'':' · no slipping back');
+    return `${L.shell} shells · ${secs(L.timerMs)} per question · ${L.hearts} hearts`;
   }
+
+  function emptyProgress(){return {unlocked:1,selected:1,wins:Array(LEVEL_COUNT).fill(0),plays:Array(LEVEL_COUNT).fill(0)};}
   function emptyStats(){return {started:0,finished:0,wins:0,answers:0,correct:0,answerMs:0,lastPlayed:null};}
   function defaultProfile(){
-    const games={};for(const m of MODES)games[m]=emptyStats();
-    return {version:1,levels:defaultLevels(),games,history:[]};
+    const games={},progress={};for(const m of MODES){games[m]=emptyStats();progress[m]=emptyProgress();}
+    return {version:2,games,progress,history:[]};
   }
-  // Accept any stored shape; keep valid numbers, repair the rest.
+  // Accept any stored shape; keep valid values, repair the rest. Old automatic difficulty is dropped.
   function normalizeProfile(raw){
     const p=defaultProfile();
     if(!raw||typeof raw!=='object')return p;
-    const L=raw.levels||{},num=(v,lim)=>Number.isFinite(v)?clamp(v,lim):lim.start;
-    p.levels.dash.goal=num(L.dash?.goal,LIMITS.dashGoal);
-    p.levels.flash.goal=num(L.flash?.goal,LIMITS.flashGoal);
-    p.levels.flash.flashMs=num(L.flash?.flashMs,LIMITS.flashMs);
-    p.levels.duel.shell=num(L.duel?.shell,LIMITS.duelShell);
-    p.levels.duel.timerMs=num(L.duel?.timerMs,LIMITS.duelMs);
+    const count=(v)=>Number.isInteger(v)&&v>=0?v:0;
     for(const m of MODES){
       const g=raw.games?.[m]||{};
       for(const k of ['started','finished','wins','answers','correct','answerMs'])p.games[m][k]=Number.isFinite(g[k])&&g[k]>=0?g[k]:0;
       p.games[m].lastPlayed=typeof g.lastPlayed==='string'?g.lastPlayed:null;
+      const r=raw.progress?.[m]||{},q=p.progress[m];
+      for(let i=0;i<LEVEL_COUNT;i++){q.wins[i]=count(r.wins?.[i]);q.plays[i]=count(r.plays?.[i]);}
+      const won=q.wins.reduce((top,w,i)=>w>0?i+1:top,0);
+      q.unlocked=Math.min(LEVEL_COUNT,Math.max(1,Number.isInteger(r.unlocked)?r.unlocked:1,won+1));
+      q.selected=Number.isInteger(r.selected)&&r.selected>=1&&r.selected<=q.unlocked?r.selected:Math.min(q.unlocked,Math.max(1,won||1));
     }
     if(Array.isArray(raw.history))p.history=raw.history.filter(h=>h&&MODES.includes(h.mode)).slice(-60);
     return p;
+  }
+  function selectLevel(profile,mode,n){
+    const q=profile.progress[mode];
+    if(!Number.isInteger(n)||n<1||n>q.unlocked)return false;
+    q.selected=n;return true;
   }
 
   function wordSwap(sentence,from,to){
@@ -80,13 +109,15 @@
     return {next(){if(!pool.length)pool=shuffle(items,rand);return pool.pop();}};
   }
 
-  function newRun(mode,profile){
+  function newRun(mode,profile,n){
     if(!MODES.includes(mode))throw Error('Unknown mode');
-    const lv=profile.levels[mode];
-    const run={mode,elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[]};
-    if(mode==='duel')Object.assign(run,{hearts:3,maxHearts:3,shell:lv.shell,maxShell:lv.shell,timerMs:lv.timerMs});
-    else Object.assign(run,{steps:0,goal:lv.goal});
-    if(mode==='flash')run.flashMs=lv.flashMs;
+    const chosen=Number.isInteger(n)?n:profile.progress[mode].selected;
+    if(chosen<1||chosen>profile.progress[mode].unlocked)throw Error('Level locked');
+    const L=level(mode,chosen);
+    const run={mode,level:chosen,levelName:L.name,elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false};
+    if(mode==='duel')Object.assign(run,{hearts:L.hearts,maxHearts:L.hearts,shell:L.shell,maxShell:L.shell,timerMs:L.timerMs});
+    else Object.assign(run,{steps:0,goal:L.goal});
+    if(mode==='flash')Object.assign(run,{flashMs:L.flashMs,boostMs:L.boostMs});
     return run;
   }
   // Turtle position for races, 0..1; it crosses the line exactly at 60 seconds.
@@ -108,16 +139,16 @@
     run.answers++;run.answerMs+=Math.max(0,ms|0);
     const outcome={correct:!!correct,timedOut,delta:0,boost:false};
     if(correct){run.correct++;run.streak++;run.bestStreak=Math.max(run.bestStreak,run.streak);}else run.streak=0;
+    const back=()=>run.backOnWrong&&run.steps>0?-1:0;
     if(run.mode==='dash'){
-      outcome.delta=correct?1:(run.steps>0?-1:0);run.steps+=outcome.delta;
+      outcome.delta=correct?1:back();run.steps+=outcome.delta;
     }else if(run.mode==='flash'){
-      if(correct){outcome.boost=ms<=BOOST_MS;outcome.delta=outcome.boost?2:1;if(outcome.boost)run.fastCorrect++;}
-      else outcome.delta=run.steps>0?-1:0;
+      if(correct){outcome.boost=ms<=run.boostMs;outcome.delta=outcome.boost?2:1;if(outcome.boost)run.fastCorrect++;}
+      else outcome.delta=back();
       run.steps=Math.min(run.goal,run.steps+outcome.delta);
-      run.flashMs=clamp(run.flashMs+(correct?-150:400),LIMITS.flashMs);
     }else{
-      if(correct){run.shell--;run.fastCorrect++;outcome.delta=-1;run.timerMs=clamp(run.timerMs-300,LIMITS.duelMs);}
-      else{run.hearts--;run.timerMs=clamp(run.timerMs+(timedOut?1000:700),LIMITS.duelMs);}
+      if(correct){run.shell--;run.fastCorrect++;outcome.delta=-1;}
+      else run.hearts--;
     }
     run.history.push({correct:!!correct,timedOut,ms:ms|0});
     if(run.mode==='duel'){if(run.shell<=0)finish(run,true,'shell');else if(run.hearts<=0)finish(run,false,'hearts');}
@@ -125,38 +156,24 @@
     return outcome;
   }
 
-  // Next level after a finished run: one step harder after a win, easier after a loss.
-  function adaptLevels(levels,run){
-    const next=JSON.parse(JSON.stringify(levels));
-    if(run.mode==='dash'){
-      const far=run.steps/run.goal;
-      next.dash.goal=clamp(run.goal+(run.won?1:(far<.5?-2:-1)),LIMITS.dashGoal);
-    }else if(run.mode==='flash'){
-      const far=run.steps/run.goal;
-      next.flash.goal=clamp(run.goal+(run.won?1:(far<.5?-2:-1)),LIMITS.flashGoal);
-      next.flash.flashMs=clamp(run.flashMs,LIMITS.flashMs);
-    }else{
-      next.duel.shell=clamp(run.maxShell+(run.won?1:-1),LIMITS.duelShell);
-      next.duel.timerMs=clamp(run.timerMs,LIMITS.duelMs);
-    }
-    return next;
-  }
-
   function recordStart(profile,mode,now){const g=profile.games[mode];g.started++;g.lastPlayed=now;return profile;}
+  // Returns the newly opened level number, if this win opened one.
   function recordFinish(profile,run,now){
-    const g=profile.games[run.mode];
+    const g=profile.games[run.mode],q=profile.progress[run.mode];
     g.finished++;if(run.won)g.wins++;g.answers+=run.answers;g.correct+=run.correct;g.answerMs+=run.answerMs;g.lastPlayed=now;
-    profile.levels=adaptLevels(profile.levels,run);
-    profile.history.push({mode:run.mode,at:now,won:!!run.won,reason:run.reason,answers:run.answers,correct:run.correct,avgMs:run.answers?Math.round(run.answerMs/run.answers):0,elapsed:Math.round(run.elapsed)});
+    q.plays[run.level-1]++;
+    let unlockedNow=null;
+    if(run.won){q.wins[run.level-1]++;if(run.level===q.unlocked&&q.unlocked<LEVEL_COUNT){q.unlocked++;unlockedNow=q.unlocked;}}
+    profile.history.push({mode:run.mode,level:run.level,at:now,won:!!run.won,reason:run.reason,answers:run.answers,correct:run.correct,avgMs:run.answers?Math.round(run.answerMs/run.answers):0,elapsed:Math.round(run.elapsed)});
     profile.history=profile.history.slice(-60);
-    return profile;
+    return unlockedNow;
   }
   function summary(profile){
     return MODES.map(mode=>{
-      const g=profile.games[mode];
-      return {mode,started:g.started,finished:g.finished,wins:g.wins,quit:Math.max(0,g.started-g.finished),accuracy:g.answers?Math.round(100*g.correct/g.answers):null,avgSeconds:g.answers?Math.round(g.answerMs/g.answers/100)/10:null,lastPlayed:g.lastPlayed};
+      const g=profile.games[mode],q=profile.progress[mode];
+      return {mode,started:g.started,finished:g.finished,wins:g.wins,quit:Math.max(0,g.started-g.finished),accuracy:g.answers?Math.round(100*g.correct/g.answers):null,avgSeconds:g.answers?Math.round(g.answerMs/g.answers/100)/10:null,lastPlayed:g.lastPlayed,unlocked:q.unlocked,levelWins:q.wins.slice(),levelPlays:q.plays.slice()};
     });
   }
 
-  return {GAME_MS,STORAGE_KEY,MODES,LIMITS,BOOST_MS,defaultProfile,normalizeProfile,validateItem,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,adaptLevels,recordStart,recordFinish,summary};
+  return {GAME_MS,STORAGE_KEY,MODES,NAMES,LEVELS,LEVEL_COUNT,BOOST_MS,level,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,selectLevel,validateItem,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });

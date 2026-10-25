@@ -14,7 +14,7 @@ A standalone page at `assets/turtle-race/` (live: https://ikarus-eth.github.io/B
 
 After a wrong answer the correct choice is highlighted and the existing recording of the sentence plays once. The clock pauses when the page is hidden.
 
-Difficulty adapts per race so it stays close: a win adds one step (Dash races) or one shell (Duel); a loss removes one, or two if Pip got less than halfway. Within a run, Flash Dash shortens the flash by 0.15 s after a right answer and lengthens it by 0.4 s after a wrong one (1.2–6 s). The duel timer shortens by 0.3 s after a right answer and lengthens by 0.7 s (wrong) or 1 s (timeout), within 3.5–10 s.
+Difficulty: superseded on 25 October 2026 by five chosen turtles per race (below). The original automatic adaptation is removed.
 
 ## Content
 
@@ -22,7 +22,7 @@ Difficulty adapts per race so it stays close: a win adds one step (Dash races) o
 
 ## Parent view
 
-"For parents" on the race-picker page shows, per race: started, finished, left early, won, percent right, average answer time, last played, and the current difficulty. Started minus finished is the clearest disengagement signal. Stats stay on the device and are not part of progress sharing.
+"For parents" on the race-picker page shows, per race: started, finished, left early, won, percent right, average answer time, last played, and per race the open level plus wins and races per level. Started minus finished is the clearest disengagement signal. Stats stay on the device and are not part of progress sharing.
 
 ## Compute used
 
@@ -40,3 +40,19 @@ Difficulty adapts per race so it stays close: a win adds one step (Dash races) o
 ## Deployment
 
 PR #198 merged as `c8649ce7700f904aeba371023d54727eeda0695f`. Pages run 40081466652 passed tests and deployed. Verification run 40081677005 (branch `claude/turtle-race-live-check`, not for merging) fetched all nine live turtle-race page, art and voice files and found each identical to the merged source.
+
+## Five turtles per race — 25 October 2026
+
+The user asked for difficulty levels he can move up through slowly, so he gets some wins first, in all three games. Each race now has five fixed turtles: Sleepy, Little, Brave, Speedy and Champion. Only Sleepy is open at first. Beating the hardest open turtle opens the next one, with a "New turtle unlocked" banner and fanfare. The child chooses which open turtle to race on the intro screen; the game never moves him up by itself. After a win the result offers "Try the [next turtle]" next to "Same turtle again"; after a loss above level 1 it offers the easier turtle next to "Try again". The race picker shows one star per turtle beaten.
+
+| Level | Turtle Dash | Flash Dash | Shell Duel | Sentences |
+|---|---|---|---|---|
+| 1 Sleepy | 4 steps, no slipping back | 5 steps, 5 s flash, boost within 5 s, no slipping back | 3 shells, 12 s per question, 5 hearts | up to 5 words (28) |
+| 2 Little | 6 steps, no slipping back | 7 steps, 4 s flash, boost within 4 s, no slipping back | 4 shells, 10 s, 4 hearts | up to 5 words |
+| 3 Brave | 8 steps | 9 steps, 3 s flash, boost within 3 s | 5 shells, 8 s, 3 hearts | up to 6 words (47) |
+| 4 Speedy | 10 steps | 11 steps, 2.5 s flash, boost within 3 s | 7 shells, 6.5 s, 3 hearts | all 51 |
+| 5 Champion | 12 steps | 13 steps, 2 s flash, boost within 2.5 s | 9 shells, 5 s, 3 hearts | all 51 |
+
+Settings stay fixed within a run. Earlier stats are kept, but everyone starts at Sleepy Turtle because the old automatic difficulty does not map onto the new levels. No new images or recordings: turtle names are read, not narrated.
+
+Verification: 13 Turtle Race unit tests (level ordering, sentence pools, per-level scoring, unlock and choice rules, old-profile repair). Full suite: 432 unit/backend tests and 124 UI-flow groups pass. Headless Chromium loads a yesterday-format profile without errors. At 1194×834, 834×1194 and 390×844 it wins Sleepy, unlocks and races Little, and unlocks Brave in all three races. It also checks that a loss offers the easier turtle. The intro fits without scrolling at 1194×834, 1024×768 and 834×1194; phones scroll. Physical iPad is not verified.

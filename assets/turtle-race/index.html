@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#173d2f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Turtle Race">
-<meta name="turtle-race-build" content="turtle-race-20261024-r2">
+<meta name="turtle-race-build" content="turtle-race-levels-20261025-r1">
 <title>Turtle Race · Pip</title>
-<link rel="stylesheet" href="style.css?v=turtle-race-20261024-r2">
+<link rel="stylesheet" href="style.css?v=turtle-race-levels-20261025-r1">
 </head>
 <body>
 <main id="app" class="app">
@@ -29,7 +29,8 @@
       <div id="introArt" class="introArt"></div>
       <h2 id="introTitle"></h2>
       <p id="introHow" class="introHow"></p>
-      <p id="introLevel" class="introLevel"></p>
+      <p class="levelsLabel">Choose your turtle</p>
+      <div id="levels" class="levels" role="group" aria-label="Choose your turtle"></div>
       <div class="introButtons"><button id="introListen" class="ghostButton" type="button" aria-label="Hear how to play">🔊 Hear it</button><button id="introStart" class="goButton" type="button">Start</button></div>
     </div>
   </section>
@@ -56,13 +57,14 @@
       <img id="resultArt" class="resultArt" src="pip.webp" alt="">
       <h2 id="resultTitle"></h2>
       <p id="resultLine" class="resultLine"></p>
+      <p id="resultUnlock" class="resultUnlock" hidden></p>
       <p id="resultStats" class="resultStats"></p>
-      <div class="introButtons"><button id="resultOther" class="ghostButton" type="button">Other races</button><button id="resultAgain" class="goButton" type="button">Play again</button></div>
+      <div class="introButtons"><button id="resultOther" class="ghostButton" type="button">Other races</button><button id="resultAgain" class="ghostButton" type="button">Play again</button><button id="resultNext" class="goButton" type="button" hidden></button></div>
     </div>
   </section>
 </main>
-<script src="race-core.js?v=turtle-race-20261024-r1"></script>
+<script src="race-core.js?v=turtle-race-levels-20261025-r1"></script>
 <script src="items.js?v=turtle-race-20261024-r1"></script>
-<script src="app.js?v=turtle-race-20261024-r1"></script>
+<script src="app.js?v=turtle-race-levels-20261025-r1"></script>
 </body>
 </html>
