@@ -9,7 +9,7 @@
     flash:{title:'Flash Dash',tag:'Quick look, find the sentence',how:'The sentence shows for a moment. Then tap the sentence you read. Fast answers give Pip a blitz boost.',icon:'⚡'},
     duel:{title:'Shell Duel',tag:'Yes or no, beat the timer',how:'Read, then tap yes or no before the timer runs out. Fast right answers hit the turtle. Slow or wrong answers cost a heart.',icon:'🔥'}
   };
-  const items=Data.items.filter(Core.validateItem);
+  const items=Data.items.filter(i=>i.tier==='expert'?Core.validateExpert(i):Core.validateItem(i));
 
   // ---------- saved stats (own key only) ----------
   let profile=load();
@@ -85,7 +85,8 @@
     const rows=Core.summary(profile).map(r=>`<tr><th>${INFO[r.mode].title}</th><td>${r.started}</td><td>${r.finished}</td><td>${r.quit}</td><td>${r.wins}</td><td>${r.accuracy==null?'–':r.accuracy+'%'}</td><td>${r.avgSeconds==null?'–':r.avgSeconds+' s'}</td><td>${r.lastPlayed?new Date(r.lastPlayed).toLocaleString([], {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'–'}</td></tr>`).join('');
     const levels=Core.summary(profile).map(r=>`${INFO[r.mode].title}: level ${r.unlocked} of ${Core.LEVEL_COUNT} open · wins per level ${r.levelWins.join(' / ')} · races per level ${r.levelPlays.join(' / ')}`).join('<br>');
     const today=profile.time.days[Core.dayKey(Date.now())]||0,mins=ms=>Math.floor(ms/60000)+' min '+String(Math.floor(ms/1000)%60).padStart(2,'0')+' sec';
-    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}. It also counts in active play on the main Parents dashboard.</p><p>Which race does he pick and finish? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>Each race has five turtles. Winning against the hardest open turtle opens the next one; he chooses which open turtle to race. Levels 1–2 use sentences of up to five words, level 3 up to six, levels 4–5 all.</p>`;
+    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}. It also counts in active play on the main Parents dashboard.</p><p>Which race does he pick and finish? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>Each race has fifteen turtles: Easy 1–5 (same words), Hard 6–10 (answers in other words) and Expert 11–15 (long sentences, answers in other words). Winning against the hardest open turtle opens the next one; the child chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p><p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles (older player)</button> <span id="openAllNote"></span></p>`;
+    $('#openAll').onclick=()=>{Core.unlockAll(profile);store();renderPick();$('#parentStats').closest('details').open=true;$('#openAllNote').textContent='All 15 turtles are open in every race.';};
   }
 
   let currentMode='dash';
@@ -99,15 +100,24 @@
   }
   function renderLevels(){
     const mode=currentMode,q=profile.progress[mode],box=$('#levels');box.innerHTML='';
-    for(let n=1;n<=Core.LEVEL_COUNT;n++){
-      const open=n<=q.unlocked,won=q.wins[n-1]>0,b=document.createElement('button');
-      b.type='button';b.className='levelButton'+(n===q.selected?' selected':'')+(open?'':' locked')+(won?' won':'');b.disabled=!open;
-      b.setAttribute('aria-pressed',String(n===q.selected));b.dataset.level=n;
-      b.innerHTML=`<span class="levelNum">${open?n:'🔒'}</span><span class="levelText"><strong>${Core.NAMES[n-1]}</strong><small>${open?Core.describeLevel(mode,n):'Beat the '+Core.NAMES[n-2]+' to open'}</small></span><span class="levelStar" aria-label="${won?'beaten':'not beaten yet'}">${won?'★':''}</span>`;
-      b.onclick=()=>{Sound.unlock();if(Core.selectLevel(profile,mode,n)){store();renderLevels();Sound.tick();}};
-      box.append(b);
+    for(const tier of Core.TIERS){
+      const row=document.createElement('div');row.className='tierRow tier-'+tier.id;
+      row.innerHTML=`<span class="tierName">${tier.name}</span>`;
+      const tiles=document.createElement('div');tiles.className='tierTiles';
+      for(let n=tier.from;n<=tier.to;n++){
+        const open=n<=q.unlocked,won=q.wins[n-1]>0,b=document.createElement('button');
+        b.type='button';b.className='levelTile'+(n===q.selected?' selected':'')+(open?'':' locked')+(won?' won':'');b.disabled=!open;
+        b.dataset.level=n;b.setAttribute('aria-pressed',String(n===q.selected));
+        b.setAttribute('aria-label',`${Core.NAMES[n-1]}, level ${n}${open?'':', locked'}${won?', beaten':''}`);
+        b.innerHTML=`<span class="tileNum">${open?n:'🔒'}</span><span class="tileStar">${won?'★':''}</span>`;
+        b.onclick=()=>{Sound.unlock();if(Core.selectLevel(profile,mode,n)){store();renderLevels();Sound.tick();}};
+        tiles.append(b);
+      }
+      row.append(tiles);box.append(row);
     }
-    $('#introStart').textContent='Race the '+Core.NAMES[q.selected-1];
+    const n=q.selected,won=q.wins[n-1]>0,next=q.unlocked<Core.LEVEL_COUNT?Core.NAMES[q.unlocked]:null;
+    $('#levelDetail').innerHTML=`<strong>${n}. ${Core.NAMES[n-1]}${won?' <span class="detailStar">★</span>':''}</strong><small>${Core.describeLevel(mode,n)}</small>`+(next?`<small class="nextLock">🔒 Beat the ${Core.NAMES[q.unlocked-1]} to open the ${next}.</small>`:'');
+    $('#introStart').textContent='Race the '+Core.NAMES[n-1];
   }
   $('#introListen').onclick=()=>{Sound.unlock();Sound.line('how-'+currentMode);};
   $('#introStart').onclick=()=>{Sound.unlock();startRun(currentMode);};
@@ -126,6 +136,7 @@
     currentMode=mode;run=Core.newRun(mode,profile);deck=Core.createDeck(Core.itemsForLevel(items,mode,run.level),Math.random);lastYes=[];lastCallout={};
     profile=Core.recordStart(profile,mode,new Date().toISOString());store();
     $('#playTitle').textContent=INFO[mode].title+' · '+run.levelName;
+    $('#play').classList.toggle('expertPlay',run.pool==='expert');
     buildStage();clearReader();updateClock();show('play');
     const cd=$('#countdown');cd.hidden=false;
     const steps=['3','2','1','Go!'];let i=0;
@@ -138,6 +149,8 @@
   // The game clock advances only while frames run, so a hidden page pauses the race.
   function frame(now){
     if(!run)return;
+    // While a mistake is shown, the clock, turtle and duel timer all stand still.
+    if(phase==='review'){last=now;raf=requestAnimationFrame(frame);return;}
     const dt=Math.min(250,Math.max(0,now-last));last=now;
     const before=run.elapsed;Core.tick(run,run.elapsed+dt);
     if(Math.ceil((Core.GAME_MS-run.elapsed)/1000)<=5&&Math.ceil((Core.GAME_MS-before)/1000)!==Math.ceil((Core.GAME_MS-run.elapsed)/1000))Sound.tick();
@@ -160,11 +173,11 @@
     $('#clock').classList.toggle('low',left<=10000);
   }
 
-  function clearReader(){$('#sentence').textContent='';$('#prompt').textContent='';$('#options').innerHTML='';$('#duelTimer').hidden=true;$('#reader').className='reader';}
+  function clearReader(){$('#review').hidden=true;$('#sentence').textContent='';$('#prompt').textContent='';$('#options').innerHTML='';$('#duelTimer').hidden=true;$('#reader').className='reader';}
 
   function nextQuestion(){
     if(!run||run.over)return;
-    question=Core.buildQuestion(run.mode,deck.next(),Math.random,lastYes);
+    question=Core.buildQuestion(run.mode,deck.next(),Math.random,lastYes,run.paraphrase);
     if(question.mode==='duel')lastYes.push(question.yes);
     question.item=items.find(i=>i.s===question.sentence);
     clearReader();
@@ -202,16 +215,47 @@
       if(out.boost){Sound.boost();callout('Blitz boost!','boost');sayOnce('boost',3500);}
       else if(run.streak>0&&run.streak%3===0){callout('Great reading!','great');sayOnce('great',8000);}
       phaseEnd=run.elapsed+(run.over?900:650);
+      animate(out);
     }else{
       Sound.wrong();
       if(timedOut){callout('Too slow!','slow');sayOnce('slow',0);}
       else callout('Oops!','oops');
-      // Hear the sentence once as a quick correction (skipped for the "too slow" line).
-      if(!timedOut&&question.item)Sound.play(question.item.audio);
-      phaseEnd=run.elapsed+1600;
+      animate(out);
+      showReview(timedOut);
     }
-    animate(out);
   }
+  // A wrong or slow answer pauses the race and shows the mistake until he taps "Got it".
+  let reviewStarted=0;
+  const esc=t=>t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  function markKey(sentence,key){
+    if(!key)return esc(sentence);
+    const re=new RegExp('\\b('+key.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')\\b','i');
+    return esc(sentence).replace(re,'<mark>$1</mark>');
+  }
+  function showReview(timedOut){
+    phase='review';reviewStarted=performance.now();
+    const q=question,right=q.options[q.answer];
+    $('#reader').classList.remove('hiddenSentence','flashing');$('#reader').classList.add('reviewing');
+    $('#sentence').innerHTML=markKey(q.sentence,q.key);
+    let text;
+    if(q.meaning)text=`The sentence says <mark>${esc(q.key)}</mark>. In other words: <strong>${esc(q.meaning)}</strong>.`;
+    else if(q.mode==='duel')text=`The answer is <strong>${esc(right)}</strong>. Read the sentence again.`;
+    else if(q.mode==='flash')text=`Look at the word <mark>${esc(q.key)}</mark> in the sentence.`;
+    else text=`The sentence says <mark>${esc(q.key)}</mark>.`;
+    const heartLine=q.mode==='duel'&&run?`<span class="reviewHeart">💔 You lost a heart. ${run.hearts} ${run.hearts===1?'heart':'hearts'} left.</span>`:'';
+    $('#reviewText').innerHTML=heartLine+(timedOut?'Too slow! ':'')+text;
+    $('#review').hidden=false;
+    const go=$('#reviewGo');go.disabled=true;setTimeout(()=>{if(phase==='review')go.disabled=false;},1000);
+    if(q.item&&q.item.audio)Sound.play(q.item.audio);
+  }
+  $('#reviewGo').onclick=()=>{
+    if(phase!=='review'||!run)return;
+    // Reading the correction counts as reading time (up to a minute per mistake).
+    Core.addTime(profile,Math.min(60000,performance.now()-reviewStarted),Date.now());store();
+    Sound.stopVoice();$('#reader').classList.remove('reviewing');$('#review').hidden=true;
+    last=performance.now();
+    if(run.over){phase='feedback';endRun();}else nextQuestion();
+  };
   function sayOnce(key,gapMs){const now=performance.now();if(lastCallout[key]&&now-lastCallout[key]<gapMs)return;lastCallout[key]=now;Sound.line(key);}
   function callout(text,kind){const c=$('#callout');c.textContent=text;c.className='callout '+kind;void c.offsetWidth;c.classList.add('show');}
 
@@ -232,17 +276,27 @@
   function drawTurtle(){if(!run||run.mode==='duel')return;const t=$('#turtleSprite');if(t)t.style.setProperty('--p',Core.turtleProgress(run));}
   function drawDuel(r=run){
     if(!r||!$('#hearts'))return;
-    $('#hearts').innerHTML=Array.from({length:r.maxHearts},(_,i)=>`<span class="heart${i<r.hearts?'':' lost'}">♥</span>`).join('');
+    // Lost hearts stay on screen as broken hearts, with a plain count beside them.
+    $('#hearts').innerHTML=Array.from({length:r.maxHearts},(_,i)=>i<r.hearts?'<span class="heart">♥</span>':'<span class="heart lost" aria-hidden="true">💔</span>').join('')+`<span class="heartCount${r.hearts<=1?' danger':''}">${r.hearts} left</span>`;
+    $('#hearts').setAttribute('aria-label',`${r.hearts} of ${r.maxHearts} hearts left`);
     $('#shells').innerHTML=Array.from({length:r.maxShell},(_,i)=>`<span class="shell${i<r.shell?'':' lost'}"></span>`).join('');
+  }
+  // Make a lost heart impossible to miss: the heart breaks, the arena flashes red and "−1 ♥" floats up.
+  function loseHeart(){
+    const heart=document.querySelectorAll('#hearts .heart:not(.lost)');const last=heart[heart.length-1];
+    if(last){last.textContent='💔';last.classList.add('breaking');}
+    const arena=document.querySelector('.arena');bump(arena,'heartHit');
+    const pop=document.createElement('span');pop.className='heartPop';pop.textContent='−1 ♥';document.querySelector('.pipSide')?.append(pop);setTimeout(()=>pop.remove(),1600);
+    Sound.tone([392,262,196],.16,'square',.09);
   }
   function bump(el,cls){if(!el)return;el.classList.remove(cls);void el.offsetWidth;el.classList.add(cls);}
   function animate(out){
     if(run.mode==='duel'){
       const fx=$('#fx'),shot=document.createElement('span');
       if(out.correct){shot.className='fireball';bump($('#pipSprite'),'lunge');setTimeout(()=>{bump($('#turtleSprite'),'hurt');Sound.tone([180,120],.12,'square',.06);},380);}
-      else{shot.className='wave';bump($('#turtleSprite'),'lungeLeft');setTimeout(()=>bump($('#pipSprite'),'hurt'),380);}
+      else{shot.className='wave';bump($('#turtleSprite'),'lungeLeft');setTimeout(()=>{bump($('#pipSprite'),'hurt');loseHeart();},380);}
       fx.append(shot);setTimeout(()=>shot.remove(),900);
-      const r=run;setTimeout(()=>drawDuel(r),400);
+      const r=run;setTimeout(()=>drawDuel(r),out.correct?400:1100);
     }else{
       const p=$('#pipSprite');drawPip();
       if(out.delta>0)bump(p,out.boost?'zoom':'hop');else if(!out.correct)bump(p,'slip');

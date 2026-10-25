@@ -60,3 +60,27 @@ Verification: 13 Turtle Race unit tests (level ordering, sentence pools, per-lev
 ## Race time on the Parents dashboard — 25 October 2026
 
 The user asked for race time to count in active reading time on the main Parents dashboard. The race page now records active race time per local day under `time.days` in its own save. The clock runs only while a race is on screen; the countdown, results and hidden-page time are excluded. Time is credited as it happens, so leaving or closing mid-race still counts. Saves from before this change are backfilled from finished races in their history (at most 60). The main dashboard adds race time to "Active play today" and "Total active play". It also has a "Turtle race reading time" card and a "Turtle race" column under Recent days. Race time does not count towards the daily XP boost, and the dashboard only reads the race save. An unreadable race save shows "Unreadable" and is left unchanged. Main build `race-time-20261025-r1`. Tests: 433 unit/backend tests and 125 UI-flow groups pass; a headless browser journey covers backfill, a quit mid-race and the dashboard totals.
+
+## Mistake pause, 15 turtles and expert sentences — 25 October 2026
+
+The user asked for three things. First, a mistake should pause the race so the child sees it. Second, ten more levels, including expert levels tough for a 10-year-old, where harder levels answer in different words that describe the same thing. Third, during the work: make a lost heart clearly visible.
+
+Mistake pause: a wrong or slow answer stops the race clock, the turtle and the duel timer. The wrong choice turns red and the right one green. The key word in the sentence is highlighted, and a panel explains the answer; in Hard and Expert it gives "The sentence says X. In other words: Y." Recorded core sentences play once. The child taps "Got it ▶" (enabled after one second) to continue. Time spent reading the correction counts as race reading time, up to one minute per mistake.
+
+Visible heart loss (Shell Duel): the lost heart breaks with a large animation, the arena flashes red, "−1 ♥" floats up and a low sound plays. Lost hearts stay as 💔 beside a "N left" count, pinned top-left of the arena, and the pause panel says "You lost a heart. N hearts left."
+
+Fifteen turtles per race in three tiers (River, Forest, Mountain, Storm and Thunder for Hard; Crystal, Shadow, Fire, Ancient and Legend for Expert):
+
+| Tier | Sentences | Turtle Dash | Flash Dash | Shell Duel |
+|---|---|---|---|---|
+| Easy 1–5 | Core 200 (unchanged) | as before | as before | as before |
+| Hard 6–10 | the 51 core sentences, answers in other words | 6–10 steps | 7–11 steps, flash 4 → 2.2 s | 5–9 shells, 9 → 6 s, 3 hearts |
+| Expert 11–15 | 36 new 9–15-word sentences with harder vocabulary, answers in other words | 6–10 steps | 7–11 steps, flash 6 → 3.5 s | 5–9 shells, 12 → 8 s, 3 hearts |
+
+"Other words": Turtle Dash offers three descriptions, such as "on a big stone" for rock or "kept watch over it" for guarded. Flash Dash asks "Which one means the same?" across three reworded sentences. Shell Duel asks reworded yes/no questions. The build rejects any right answer, matching sentence or yes-question that reuses the key word. Content: `scripts/turtle-race-paraphrase.json` (51 core entries) and `scripts/turtle-race-expert.json` (36 expert sentences), merged by `scripts/build-turtle-race.cjs`. Expert sentences have no recordings; their pause panel is text only. No images or audio were generated.
+
+Unlocking still goes one win at a time; beating Champion opens River Turtle. Existing progress is kept. For an older player, "For parents" has an "Open all turtles" button. All races share one device-local profile, so two children on one iPad share stars and stats.
+
+Layout: a 5×3 tile picker with a detail line replaces the five-row list. Expert questions get a shorter track and smaller option text so all choices fit at 1194×834, 1024×768, 834×1194 and 390×844. Centred screens no longer hide their top when content is taller than the screen.
+
+Verification: 15 Turtle Race unit tests (tiers, pools, other-words rules and key-word rejection, unlock across tiers, open-all, profile repair). Full suite: 434 unit/backend tests and 125 UI-flow groups pass. Headless Chromium at three sizes covers the pause (the clock stays at 60 for three seconds, then resumes), duel timeouts and open-all. It also makes mistakes at Expert level 13 in all three races and shows the heart loss sequence. Physical iPad is not verified.

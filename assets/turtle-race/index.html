@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#173d2f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Turtle Race">
-<meta name="turtle-race-build" content="race-time-20261025-r1">
+<meta name="turtle-race-build" content="turtle-race-expert-20261025-r1">
 <title>Turtle Race · Pip</title>
-<link rel="stylesheet" href="style.css?v=turtle-race-levels-20261025-r1">
+<link rel="stylesheet" href="style.css?v=turtle-race-expert-20261025-r1">
 </head>
 <body>
 <main id="app" class="app">
@@ -31,6 +31,7 @@
       <p id="introHow" class="introHow"></p>
       <p class="levelsLabel">Choose your turtle</p>
       <div id="levels" class="levels" role="group" aria-label="Choose your turtle"></div>
+      <p id="levelDetail" class="levelDetail" aria-live="polite"></p>
       <div class="introButtons"><button id="introListen" class="ghostButton" type="button" aria-label="Hear how to play">🔊 Hear it</button><button id="introStart" class="goButton" type="button">Start</button></div>
     </div>
   </section>
@@ -47,6 +48,7 @@
       <p id="prompt" class="prompt"></p>
       <div id="duelTimer" class="duelTimer" hidden><span></span></div>
       <div id="options" class="options"></div>
+      <div id="review" class="review" hidden><p id="reviewText" class="reviewText"></p><button id="reviewGo" class="goButton" type="button">Got it ▶</button></div>
     </div>
     <div id="countdown" class="countdown" hidden></div>
     <div id="callout" class="callout" aria-hidden="true"></div>
@@ -63,8 +65,8 @@
     </div>
   </section>
 </main>
-<script src="race-core.js?v=race-time-20261025-r1"></script>
-<script src="items.js?v=turtle-race-20261024-r1"></script>
-<script src="app.js?v=race-time-20261025-r1"></script>
+<script src="race-core.js?v=turtle-race-expert-20261025-r1"></script>
+<script src="items.js?v=turtle-race-expert-20261025-r1"></script>
+<script src="app.js?v=turtle-race-expert-20261025-r1"></script>
 </body>
 </html>
