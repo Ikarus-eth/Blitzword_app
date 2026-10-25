@@ -1,4 +1,4 @@
-name: Verify live turtle race levels
+name: Verify live race time on Parents dashboard
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,12 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 32e923175d969ac600424567276c4f592730052a
-      - name: Compare every live turtle race file with merge 32e9231
+          ref: c18374b2ed546e2b05d0b163d0a6e48e40c42b3a
+      - name: Compare every live turtle race file with merge c18374b
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
+          # Wait (up to 10 minutes) for Pages to publish the merge, then require every file to match.
+          for attempt in $(seq 1 20); do
+            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
+            sleep 30
+          done
           bad=0; n=0
-          for f in index.html app.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3; do
+          for f in index.html app.js game-core.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
