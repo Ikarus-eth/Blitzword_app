@@ -32,14 +32,32 @@ test('yes/no answers never repeat three times in a row',()=>{
   assert.equal(q.yes,false);assert.equal(q.options[q.answer],'No');
 });
 
-test('turtle dash: right moves forward, wrong moves back but not below the start, finishing first wins',()=>{
-  const p=Core.defaultProfile();p.levels.dash.goal=5;
-  const run=Core.newRun('dash',p);
+const unlockAll=(p,mode,n)=>{p.progress[mode].unlocked=n;p.progress[mode].selected=n;return p;};
+
+test('five turtles per race get steadily harder',()=>{
+  assert.equal(Core.LEVEL_COUNT,5);
+  for(const mode of Core.MODES)assert.equal(Core.LEVELS[mode].length,5);
+  for(let i=1;i<5;i++){
+    const [a,b]=[Core.LEVELS.dash[i-1],Core.LEVELS.dash[i]];assert.ok(b.goal>a.goal);
+    const [f,g]=[Core.LEVELS.flash[i-1],Core.LEVELS.flash[i]];assert.ok(g.goal>f.goal&&g.flashMs<f.flashMs&&g.boostMs<=f.boostMs);
+    const [d,e]=[Core.LEVELS.duel[i-1],Core.LEVELS.duel[i]];assert.ok(e.shell>d.shell&&e.timerMs<d.timerMs&&e.hearts<=d.hearts);
+  }
+  for(const mode of Core.MODES)for(let n=1;n<=5;n++){
+    const pool=Core.itemsForLevel(Data.items,mode,n);assert.ok(pool.length>=25,mode+n);
+    assert.ok(pool.every(i=>i.s.split(/\s+/).length<=Core.LEVELS[mode][n-1].maxWords));
+  }
+  assert.equal(Core.itemsForLevel(Data.items,'dash',5).length,Data.items.length);
+});
+
+test('turtle dash level 1 never slips back; level 3 does, but not below the start',()=>{
+  const p=Core.defaultProfile(),easy=Core.newRun('dash',p);
+  assert.equal(easy.goal,4);assert.equal(easy.levelName,'Sleepy Turtle');
+  Core.answer(easy,true,900);assert.equal(Core.answer(easy,false,900).delta,0);assert.equal(easy.steps,1);
+  unlockAll(p,'dash',3);const run=Core.newRun('dash',p);assert.equal(run.goal,8);
   assert.equal(Core.answer(run,false,900).delta,0);
   Core.answer(run,true,900);Core.answer(run,false,900);assert.equal(run.steps,0);
-  Core.tick(run,20000);for(let i=0;i<5;i++)Core.answer(run,true,800);
+  Core.tick(run,20000);for(let i=0;i<8;i++)Core.answer(run,true,800);
   assert.equal(run.over,true);assert.equal(run.won,true);assert.equal(run.reason,'line');
-  const next=Core.adaptLevels(p.levels,run);assert.equal(next.dash.goal,6);
 });
 
 test('the turtle reaches the line at sixty seconds and wins when Pip is short',()=>{
@@ -47,40 +65,57 @@ test('the turtle reaches the line at sixty seconds and wins when Pip is short',(
   Core.answer(run,true,1000);Core.tick(run,59999);assert.equal(run.over,false);
   assert.ok(Core.turtleProgress(run)<1);
   Core.tick(run,60000);assert.equal(run.over,true);assert.equal(run.won,false);assert.equal(run.reason,'time');
-  const next=Core.adaptLevels(p.levels,run);assert.equal(next.dash.goal,p.levels.dash.goal-2);
 });
 
-test('flash dash: fast right answers boost two steps, slow ones one; flash time adapts',()=>{
-  const p=Core.defaultProfile(),run=Core.newRun('flash',p);
-  const start=run.flashMs;
-  assert.deepEqual(Core.answer(run,true,Core.BOOST_MS),{correct:true,timedOut:false,delta:2,boost:true});
-  assert.equal(Core.answer(run,true,Core.BOOST_MS+1).delta,1);
-  assert.equal(run.steps,3);assert.equal(run.flashMs,start-300);
-  assert.equal(Core.answer(run,false,500).delta,-1);assert.equal(run.flashMs,start+100);
+test('flash dash: right answers within the level boost window move two steps, slower ones one',()=>{
+  const p=Core.defaultProfile(),easy=Core.newRun('flash',p);
+  assert.equal(easy.flashMs,5000);assert.equal(easy.boostMs,5000);
+  assert.equal(Core.answer(easy,true,4900).delta,2);assert.equal(Core.answer(easy,false,500).delta,0);
+  unlockAll(p,'flash',5);const hard=Core.newRun('flash',p);
+  assert.equal(hard.flashMs,2000);
+  assert.deepEqual(Core.answer(hard,true,2500),{correct:true,timedOut:false,delta:2,boost:true});
+  assert.equal(Core.answer(hard,true,2501).delta,1);assert.equal(hard.steps,3);
+  assert.equal(Core.answer(hard,false,500).delta,-1);assert.equal(hard.flashMs,2000);
 });
 
-test('shell duel: fast right answers cost the turtle a shell, wrong or slow answers cost a heart',()=>{
-  const p=Core.defaultProfile();p.levels.duel.shell=2;
-  const run=Core.newRun('duel',p),timer=run.timerMs;
-  Core.answer(run,true,1000);assert.equal(run.shell,1);assert.equal(run.timerMs,timer-300);
-  const out=Core.answer(run,null,run.timerMs);assert.equal(out.timedOut,true);assert.equal(run.hearts,2);
-  Core.answer(run,false,800);assert.equal(run.hearts,1);
-  Core.answer(run,true,700);assert.equal(run.over,true);assert.equal(run.won,true);
-  const lose=Core.newRun('duel',p);for(let i=0;i<3;i++)Core.answer(lose,false,500);
+test('shell duel: fast right answers cost a shell, wrong or slow answers cost a heart; level 1 is forgiving',()=>{
+  const p=Core.defaultProfile(),easy=Core.newRun('duel',p);
+  assert.deepEqual([easy.shell,easy.hearts,easy.timerMs],[3,5,12000]);
+  Core.answer(easy,true,1000);assert.equal(easy.shell,2);assert.equal(easy.timerMs,12000);
+  assert.equal(Core.answer(easy,null,easy.timerMs).timedOut,true);assert.equal(easy.hearts,4);
+  Core.answer(easy,false,800);assert.equal(easy.hearts,3);
+  Core.answer(easy,true,700);Core.answer(easy,true,700);assert.equal(easy.over,true);assert.equal(easy.won,true);
+  unlockAll(p,'duel',5);const lose=Core.newRun('duel',p);assert.deepEqual([lose.shell,lose.hearts,lose.timerMs],[9,3,5000]);
+  for(let i=0;i<3;i++)Core.answer(lose,false,500);
   assert.equal(lose.won,false);assert.equal(lose.reason,'hearts');
-  assert.equal(Core.adaptLevels(p.levels,lose).duel.shell,Core.LIMITS.duelShell.min);
-  p.levels.duel.shell=6;const lose2=Core.newRun('duel',p);for(let i=0;i<3;i++)Core.answer(lose2,false,500);
-  assert.equal(Core.adaptLevels(p.levels,lose2).duel.shell,5);
 });
 
-test('difficulty stays inside its limits',()=>{
-  const p=Core.defaultProfile();p.levels.dash.goal=Core.LIMITS.dashGoal.max;
-  const run=Core.newRun('dash',p);run.steps=run.goal;run.won=true;run.over=true;
-  assert.equal(Core.adaptLevels(p.levels,run).dash.goal,Core.LIMITS.dashGoal.max);
-  const q=Core.normalizeProfile({levels:{flash:{flashMs:1},duel:{timerMs:99999,shell:'x'}}});
-  assert.equal(q.levels.flash.flashMs,Core.LIMITS.flashMs.min);
-  assert.equal(q.levels.duel.timerMs,Core.LIMITS.duelMs.max);
-  assert.equal(q.levels.duel.shell,Core.LIMITS.duelShell.start);
+test('winning the hardest open turtle opens the next; he chooses among open turtles only',()=>{
+  const p=Core.defaultProfile(),now='2026-10-25T05:00:00Z';
+  assert.throws(()=>Core.newRun('dash',p,2),/locked/);
+  assert.equal(Core.selectLevel(p,'dash',2),false);
+  const lose=Core.newRun('dash',p);Core.tick(lose,60000);assert.equal(Core.recordFinish(p,lose,now),null);
+  assert.equal(p.progress.dash.unlocked,1);
+  const win=Core.newRun('dash',p);for(let i=0;i<4;i++)Core.answer(win,true,500);
+  assert.equal(Core.recordFinish(p,win,now),2);assert.equal(p.progress.dash.unlocked,2);
+  assert.equal(p.progress.dash.selected,1,'the child picks the harder turtle himself');
+  const again=Core.newRun('dash',p);for(let i=0;i<4;i++)Core.answer(again,true,500);
+  assert.equal(Core.recordFinish(p,again,now),null,'replaying an easier turtle opens nothing new');
+  assert.deepEqual(p.progress.dash.wins,[2,0,0,0,0]);assert.deepEqual(p.progress.dash.plays,[3,0,0,0,0]);
+  assert.ok(Core.selectLevel(p,'dash',2));assert.equal(Core.newRun('dash',p).level,2);
+  assert.equal(p.progress.flash.unlocked,1,'each race unlocks separately');
+  p.progress.duel.unlocked=5;p.progress.duel.selected=5;const top=Core.newRun('duel',p);for(let i=0;i<9;i++)Core.answer(top,true,500);
+  assert.equal(Core.recordFinish(p,top,now),null);assert.equal(p.progress.duel.unlocked,5);
+});
+
+test('stored profiles are repaired and earlier automatic difficulty is dropped',()=>{
+  const old=Core.normalizeProfile({version:1,levels:{dash:{goal:14}},games:{dash:{started:3,finished:2,wins:1}}});
+  assert.equal(old.levels,undefined);assert.equal(old.games.dash.started,3);
+  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:[0,0,0,0,0],plays:[0,0,0,0,0]});
+  const q=Core.normalizeProfile({progress:{flash:{unlocked:1,selected:4,wins:[2,1,'x',-1,0]}}});
+  assert.equal(q.progress.flash.unlocked,3,'wins prove level 3 is open');
+  assert.equal(q.progress.flash.selected,2);assert.deepEqual(q.progress.flash.wins,[2,1,0,0,0]);
+  assert.equal(Core.normalizeProfile({progress:{duel:{unlocked:99}}}).progress.duel.unlocked,5);
 });
 
 test('stats record starts, finishes, quits and accuracy under their own storage key',()=>{
@@ -89,10 +124,10 @@ test('stats record starts, finishes, quits and accuracy under their own storage 
   let p=Core.defaultProfile();
   p=Core.recordStart(p,'flash','2026-10-24T08:00:00Z');p=Core.recordStart(p,'flash','2026-10-24T08:02:00Z');
   const run=Core.newRun('flash',p);Core.answer(run,true,1000);Core.answer(run,false,2000);Core.tick(run,60000);
-  p=Core.recordFinish(p,run,'2026-10-24T08:03:00Z');
+  Core.recordFinish(p,run,'2026-10-24T08:03:00Z');
   const row=Core.summary(p).find(r=>r.mode==='flash');
-  assert.deepEqual({started:row.started,finished:row.finished,quit:row.quit,wins:row.wins,accuracy:row.accuracy,avgSeconds:row.avgSeconds},{started:2,finished:1,quit:1,wins:0,accuracy:50,avgSeconds:1.5});
-  assert.equal(p.history.length,1);
+  assert.deepEqual({started:row.started,finished:row.finished,quit:row.quit,wins:row.wins,accuracy:row.accuracy,avgSeconds:row.avgSeconds,unlocked:row.unlocked},{started:2,finished:1,quit:1,wins:0,accuracy:50,avgSeconds:1.5,unlocked:1});
+  assert.equal(p.history.length,1);assert.equal(p.history[0].level,1);
   assert.deepEqual(Core.normalizeProfile(JSON.parse(JSON.stringify(p))),p);
   assert.deepEqual(Core.normalizeProfile('broken'),Core.defaultProfile());
 });

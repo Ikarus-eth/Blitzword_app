@@ -177,3 +177,34 @@ button{font-family:inherit;cursor:pointer;touch-action:manipulation}
   .artRace.mini,.artDuel.mini{height:56px}
   .cardText strong{font-size:24px}
 }
+
+/* Five turtles per race (25 October 2026) */
+.intro{overflow:auto;justify-content:flex-start;padding-top:max(70px,env(safe-area-inset-top))}
+.introCard{width:min(860px,100%);gap:8px;padding:18px 24px}
+.introArt .artRace,.introArt .artDuel{height:96px}
+.introHow{font-size:clamp(18px,2.2vw,22px)}
+.levelsLabel{margin:6px 0 0;font-size:20px;font-weight:700;color:#3d5a45}
+.levels{display:grid;gap:8px;width:100%}
+.levelButton{display:grid;grid-template-columns:46px 1fr 34px;align-items:center;gap:12px;min-height:58px;padding:6px 14px;border-radius:16px;border:3px solid #d8c79a;background:#fff;color:var(--ink);text-align:left}
+.levelButton.selected{border-color:#2f8a4f;background:#e9f7e4;box-shadow:0 0 0 3px #b7f0c4}
+.levelButton.locked{background:#eee6d2;color:#8b8672;border-style:dashed}
+.levelNum{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#f1d296;font-size:22px;font-weight:700}
+.levelButton.selected .levelNum{background:#5fbf6f;color:#fff}
+.levelButton.locked .levelNum{background:#ddd3bb;font-size:18px}
+.levelText{display:flex;flex-direction:column;min-width:0}
+.levelText strong{font-size:22px}
+.levelText small{font-size:16px;color:#5c6f5b}
+.levelButton.locked small{color:#8b8672}
+.levelStar{font-size:28px;color:#e2a81e;text-align:center}
+.cardStars{display:flex;gap:3px;justify-content:center;font-size:24px;margin-top:4px}
+.cardStars i{font-style:normal;color:#c9bd9c}
+.cardStars i.on{color:#e2a81e;text-shadow:0 1px 0 #8d6a10}
+.resultUnlock{margin:0;font-size:24px;font-weight:700;color:#7a5410;background:#fff1c2;border:2px solid #e2be75;border-radius:16px;padding:8px 16px;animation:pop .5s ease-out}
+@media (max-width:760px){.cardStars{justify-content:flex-start}.levelText strong{font-size:20px}.levelButton{grid-template-columns:40px 1fr 28px}}
+@media (orientation:landscape) and (min-width:900px){
+  .intro{justify-content:center;padding-top:max(16px,env(safe-area-inset-top))}
+  .introCard{width:min(1120px,100%);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);grid-template-areas:"art label" "title levels" "how levels" "buttons levels";column-gap:28px;row-gap:8px;align-items:center;text-align:center}
+  .introArt{grid-area:art}.introCard h2{grid-area:title}.introHow{grid-area:how}.introCard .introButtons{grid-area:buttons}
+  .levelsLabel{grid-area:label;align-self:end}.levels{grid-area:levels;align-self:start}
+  .introArt .artRace,.introArt .artDuel{height:120px}
+}
