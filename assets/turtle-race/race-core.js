@@ -7,41 +7,57 @@
   const GAME_MS=60000;
   const STORAGE_KEY='blitzword_turtle_race_v1';
   const MODES=['dash','flash','duel'];
-  // Five fixed turtles per race. Level 1 is meant to be won early; each win opens the next turtle.
-  const NAMES=['Sleepy Turtle','Little Turtle','Brave Turtle','Speedy Turtle','Champion Turtle'];
+  // Fifteen fixed turtles per race in three tiers. Level 1 is meant to be won early; each win opens the next turtle.
+  // Easy (1-5): short sentences, same words. Hard (6-10): answers in other words. Expert (11-15): long sentences, answers in other words.
+  const NAMES=['Sleepy Turtle','Little Turtle','Brave Turtle','Speedy Turtle','Champion Turtle',
+    'River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle',
+    'Crystal Turtle','Shadow Turtle','Fire Turtle','Ancient Turtle','Legend Turtle'];
+  const TIERS=[{id:'easy',name:'Easy',from:1,to:5},{id:'hard',name:'Hard · other words',from:6,to:10},{id:'expert',name:'Expert',from:11,to:15}];
+  const core=(o)=>({pool:'core',paraphrase:false,...o}),hard=(o)=>({pool:'core',paraphrase:true,backOnWrong:true,maxWords:7,...o}),expert=(o)=>({pool:'expert',paraphrase:true,backOnWrong:true,maxWords:99,...o});
   const LEVELS={
     dash:[
-      {goal:4,backOnWrong:false,maxWords:5},
-      {goal:6,backOnWrong:false,maxWords:5},
-      {goal:8,backOnWrong:true,maxWords:6},
-      {goal:10,backOnWrong:true,maxWords:7},
-      {goal:12,backOnWrong:true,maxWords:7}
+      core({goal:4,backOnWrong:false,maxWords:5}),
+      core({goal:6,backOnWrong:false,maxWords:5}),
+      core({goal:8,backOnWrong:true,maxWords:6}),
+      core({goal:10,backOnWrong:true,maxWords:7}),
+      core({goal:12,backOnWrong:true,maxWords:7}),
+      hard({goal:6}),hard({goal:7}),hard({goal:8}),hard({goal:9}),hard({goal:10}),
+      expert({goal:6}),expert({goal:7}),expert({goal:8}),expert({goal:9}),expert({goal:10})
     ],
     flash:[
-      {goal:5,flashMs:5000,boostMs:5000,backOnWrong:false,maxWords:5},
-      {goal:7,flashMs:4000,boostMs:4000,backOnWrong:false,maxWords:5},
-      {goal:9,flashMs:3000,boostMs:3000,backOnWrong:true,maxWords:6},
-      {goal:11,flashMs:2500,boostMs:3000,backOnWrong:true,maxWords:7},
-      {goal:13,flashMs:2000,boostMs:2500,backOnWrong:true,maxWords:7}
+      core({goal:5,flashMs:5000,boostMs:5000,backOnWrong:false,maxWords:5}),
+      core({goal:7,flashMs:4000,boostMs:4000,backOnWrong:false,maxWords:5}),
+      core({goal:9,flashMs:3000,boostMs:3000,backOnWrong:true,maxWords:6}),
+      core({goal:11,flashMs:2500,boostMs:3000,backOnWrong:true,maxWords:7}),
+      core({goal:13,flashMs:2000,boostMs:2500,backOnWrong:true,maxWords:7}),
+      hard({goal:7,flashMs:4000,boostMs:4000}),hard({goal:8,flashMs:3500,boostMs:3500}),hard({goal:9,flashMs:3000,boostMs:3000}),hard({goal:10,flashMs:2500,boostMs:3000}),hard({goal:11,flashMs:2200,boostMs:2500}),
+      expert({goal:7,flashMs:6000,boostMs:6000}),expert({goal:8,flashMs:5000,boostMs:5000}),expert({goal:9,flashMs:4500,boostMs:4500}),expert({goal:10,flashMs:4000,boostMs:4000}),expert({goal:11,flashMs:3500,boostMs:3500})
     ],
     duel:[
-      {shell:3,timerMs:12000,hearts:5,maxWords:5},
-      {shell:4,timerMs:10000,hearts:4,maxWords:5},
-      {shell:5,timerMs:8000,hearts:3,maxWords:6},
-      {shell:7,timerMs:6500,hearts:3,maxWords:7},
-      {shell:9,timerMs:5000,hearts:3,maxWords:7}
+      core({shell:3,timerMs:12000,hearts:5,maxWords:5}),
+      core({shell:4,timerMs:10000,hearts:4,maxWords:5}),
+      core({shell:5,timerMs:8000,hearts:3,maxWords:6}),
+      core({shell:7,timerMs:6500,hearts:3,maxWords:7}),
+      core({shell:9,timerMs:5000,hearts:3,maxWords:7}),
+      hard({shell:5,timerMs:9000,hearts:3}),hard({shell:6,timerMs:8000,hearts:3}),hard({shell:7,timerMs:7000,hearts:3}),hard({shell:8,timerMs:6500,hearts:3}),hard({shell:9,timerMs:6000,hearts:3}),
+      expert({shell:5,timerMs:12000,hearts:3}),expert({shell:6,timerMs:11000,hearts:3}),expert({shell:7,timerMs:10000,hearts:3}),expert({shell:8,timerMs:9000,hearts:3}),expert({shell:9,timerMs:8000,hearts:3})
     ]
   };
   const LEVEL_COUNT=NAMES.length;
   const BOOST_MS=3000;
   const level=(mode,n)=>({...LEVELS[mode][n-1],level:n,name:NAMES[n-1]});
+  const tierOf=n=>TIERS.find(t=>n>=t.from&&n<=t.to);
   const words=s=>s.trim().split(/\s+/).length;
-  function itemsForLevel(items,mode,n){return items.filter(i=>words(i.s)<=LEVELS[mode][n-1].maxWords);}
+  function itemsForLevel(items,mode,n){
+    const L=LEVELS[mode][n-1];
+    return items.filter(i=>(i.tier||'core')===L.pool&&words(i.s)<=L.maxWords&&(!L.paraphrase||hasParaphrase(i)));
+  }
   function describeLevel(mode,n){
     const L=LEVELS[mode][n-1],secs=ms=>(ms/1000).toFixed(ms%1000?1:0)+' s';
-    if(mode==='dash')return `${L.goal} steps to the finish`+(L.backOnWrong?'':' · no slipping back');
-    if(mode==='flash')return `${L.goal} steps · sentence shows ${secs(L.flashMs)}`+(L.backOnWrong?'':' · no slipping back');
-    return `${L.shell} shells · ${secs(L.timerMs)} per question · ${L.hearts} hearts`;
+    const extra=(L.pool==='expert'?' · long sentences':'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
+    if(mode==='dash')return `${L.goal} steps to the finish`+extra;
+    if(mode==='flash')return `${L.goal} steps · sentence shows ${secs(L.flashMs)}`+extra;
+    return `${L.shell} shells · ${secs(L.timerMs)} per question · ${L.hearts} hearts`+extra;
   }
 
   function emptyProgress(){return {unlocked:1,selected:1,wins:Array(LEVEL_COUNT).fill(0),plays:Array(LEVEL_COUNT).fill(0)};}
@@ -84,6 +100,8 @@
     }
     return p;
   }
+  // Parent option for an older player: open every turtle in every race.
+  function unlockAll(profile){for(const m of MODES)profile.progress[m].unlocked=LEVEL_COUNT;return profile;}
   function selectLevel(profile,mode,n){
     const q=profile.progress[mode];
     if(!Number.isInteger(n)||n<1||n>q.unlocked)return false;
@@ -102,22 +120,43 @@
     const options=[item.a,...item.w].map(x=>x.toLowerCase());
     return new Set(options).size===3;
   }
+  const hasWord=(text,word)=>new RegExp('\\b'+word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','i').test(text);
+  function hasParaphrase(item){
+    return !!item&&Array.isArray(item.g)&&item.g.length===3&&new Set(item.g).size===3&&typeof item.ps==='string'&&Array.isArray(item.px)&&item.px.length===2&&new Set([item.ps,...item.px]).size===3&&typeof item.pt==='string'&&typeof item.pf==='string';
+  }
+  // "Other words": the right answer, matching sentence and yes-question never reuse the key word.
+  function validateParaphrase(item){
+    if(!hasParaphrase(item)||typeof item.a!=='string'||!hasWord(item.s,item.a))return false;
+    return ![item.g[0],item.ps,item.pt].some(text=>hasWord(text,item.a));
+  }
+  function validateExpert(item){
+    return !!item&&item.tier==='expert'&&typeof item.s==='string'&&typeof item.q==='string'&&validateParaphrase(item);
+  }
   function shuffle(list,rand){const a=list.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
   // Builds one question in the chosen format. Options never include artwork.
-  function buildQuestion(mode,item,rand,lastYes){
+  function buildQuestion(mode,item,rand,lastYes,paraphrase){
+    const base={mode,sentence:item.s,key:item.a,meaning:paraphrase?item.g[0]:null};
+    let yesFirst=null;
+    if(mode==='duel'){
+      yesFirst=rand()<.5;
+      if(Array.isArray(lastYes)&&lastYes.length>=2&&lastYes.slice(-2).every(v=>v===yesFirst))yesFirst=!yesFirst;
+    }
+    if(paraphrase){
+      if(mode==='dash'){const options=shuffle(item.g,rand);return {...base,prompt:item.q,options,answer:options.indexOf(item.g[0])};}
+      if(mode==='flash'){const options=shuffle([item.ps,...item.px],rand);return {...base,prompt:'Which one means the same?',options,answer:options.indexOf(item.ps)};}
+      return {...base,prompt:yesFirst?item.pt:item.pf,options:['Yes','No'],answer:yesFirst?0:1,yes:yesFirst};
+    }
     if(mode==='dash'){
       const options=shuffle([item.a,...item.w],rand);
-      return {mode,sentence:item.s,prompt:item.q,options,answer:options.indexOf(item.a)};
+      return {...base,prompt:item.q,options,answer:options.indexOf(item.a)};
     }
     if(mode==='flash'){
       const options=shuffle([item.s,...item.w.map(w=>wordSwap(item.s,item.a,w))],rand);
-      return {mode,sentence:item.s,prompt:'Which one did you read?',options,answer:options.indexOf(item.s)};
+      return {...base,prompt:'Which one did you read?',options,answer:options.indexOf(item.s)};
     }
     // Yes/no: avoid three identical answers in a row.
-    let yes=rand()<.5;
-    if(Array.isArray(lastYes)&&lastYes.length>=2&&lastYes.slice(-2).every(v=>v===yes))yes=!yes;
-    return {mode,sentence:item.s,prompt:yes?item.t:item.f,options:['Yes','No'],answer:yes?0:1,yes};
+    return {...base,prompt:yesFirst?item.t:item.f,options:['Yes','No'],answer:yesFirst?0:1,yes:yesFirst};
   }
 
   function createDeck(items,rand){
@@ -130,7 +169,7 @@
     const chosen=Number.isInteger(n)?n:profile.progress[mode].selected;
     if(chosen<1||chosen>profile.progress[mode].unlocked)throw Error('Level locked');
     const L=level(mode,chosen);
-    const run={mode,level:chosen,levelName:L.name,elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false};
+    const run={mode,level:chosen,levelName:L.name,elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,pool:L.pool};
     if(mode==='duel')Object.assign(run,{hearts:L.hearts,maxHearts:L.hearts,shell:L.shell,maxShell:L.shell,timerMs:L.timerMs});
     else Object.assign(run,{steps:0,goal:L.goal});
     if(mode==='flash')Object.assign(run,{flashMs:L.flashMs,boostMs:L.boostMs});
@@ -191,5 +230,5 @@
     });
   }
 
-  return {dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,LEVELS,LEVEL_COUNT,BOOST_MS,level,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,selectLevel,validateItem,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
+  return {dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });
