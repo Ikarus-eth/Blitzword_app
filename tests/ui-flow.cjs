@@ -1139,9 +1139,9 @@ console.log('PASS all 79 variants animate counterattacks as the male mage while 
  assert.equal(ui.get('parentRiddles').textContent,'4 min 06 sec');assert.equal(ui.get('parentRiddlesToday').textContent,'Today: 3 min 05 sec');
  assert.match(ui.get('parentToday').textContent,/^11 min 0\d sec$/,'riddle time (3 min 05 sec) stays out of active play');
  const head=[...ui.document.querySelectorAll('#parentDays')[0].closest('table').querySelectorAll('th')].map(th=>th.textContent);
- assert.deepEqual(head,['Date on this device','Reading practice','Reading riddles','Multiplication','Reading check + demo','Idle excluded']);
+ assert.deepEqual(head,['Date on this device','Reading practice','Reading riddles','Turtle race','Multiplication','Reading check + demo','Idle excluded']);
  const rows=[...ui.get('parentDays').children].map(row=>[...row.children].map(cell=>cell.textContent));
- rows[0][1]=rows[0][1].replace(/^10 min 0\d sec$/,'10 min 00 sec');assert.deepEqual(rows,[[today,'10 min 00 sec','3 min 05 sec','1 min 00 sec','0 min 00 sec','0 min 00 sec'],['2026-09-20','0 min 00 sec','1 min 01 sec','0 min 00 sec','0 min 00 sec','0 min 00 sec']]);
+ rows[0][1]=rows[0][1].replace(/^10 min 0\d sec$/,'10 min 00 sec');assert.deepEqual(rows,[[today,'10 min 00 sec','3 min 05 sec','0 min 00 sec','1 min 00 sec','0 min 00 sec','0 min 00 sec'],['2026-09-20','0 min 00 sec','1 min 01 sec','0 min 00 sec','0 min 00 sec','0 min 00 sec','0 min 00 sec']]);
  assert.equal(ui.get('parentEmpty').hidden,true);assert.equal(ui.memory.get(Core.RIDDLE_KEY),pilotBefore,'Parents never writes the story save');
  ui.memory.set(Core.RIDDLE_KEY,'{broken');ui.click(ui.get('parentHome'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
  assert.equal(ui.get('parentRiddles').textContent,'Unreadable');assert.match(ui.get('parentRiddlesToday').textContent,/left unchanged/);assert.equal(ui.get('parentDays').children.length,1);assert.equal(ui.memory.get(Core.RIDDLE_KEY),'{broken');
@@ -1404,6 +1404,25 @@ console.log('PASS illustrated expansion, exact quantities, core and future cards
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.startBattle(s,Date.now());Core.startTeaching(s,'has','battle',Date.now());const ui=boot(s,{pendingImages:true});ui.resume();assert.equal(ui.get('teachContinue').disabled,true);ui.get('teachIllustration').onerror();assert.equal(ui.get('teachContinue').disabled,false);assert.match(ui.get('lessonStatus').textContent,/could not load/);
 }
 console.log('PASS failed expansion illustration retains listening and Continue');
+
+// Turtle Race time is added to active play (today and total) with its own card and column, but not to the daily boost.
+{
+ const s=impactSave(),today=Core.dayKey(Date.UTC(2026,8,22));s.timing.days={[today]:{practice:600000,math:0,assessment:0,demo:0,idle:0}};
+ const ui=boot(s,{heldNarration:true});
+ ui.memory.set(Core.RACE_KEY,JSON.stringify({version:2,games:{},progress:{},history:[],time:{days:{[today]:125000,'2026-09-18':60000,'nope':9}}}));
+ const raceBefore=ui.memory.get(Core.RACE_KEY);
+ ui.resume();ui.ready();ui.click(ui.get('homeBtn'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ assert.match(ui.get('parentToday').textContent,/^12 min 0\d sec$/,'10 min reading + 2 min 05 sec racing');
+ assert.match(ui.get('parentTotal').textContent,/^13 min 0\d sec$/,'plus the earlier 1 min race day');
+ assert.match(ui.get('parentPractice').textContent,/^10 min 0\d sec$/,'race time does not count towards the daily boost');
+ assert.equal(ui.get('parentRace').textContent,'3 min 05 sec');assert.equal(ui.get('parentRaceToday').textContent,'Today: 2 min 05 sec');
+ const rows=[...ui.get('parentDays').children].map(row=>[...row.children].map(cell=>cell.textContent));
+ assert.deepEqual(rows.map(r=>[r[0],r[3]]),[[today,'2 min 05 sec'],['2026-09-18','1 min 00 sec']]);
+ assert.equal(ui.memory.get(Core.RACE_KEY),raceBefore,'Parents never writes the race save');
+ ui.memory.set(Core.RACE_KEY,'{broken');ui.click(ui.get('parentHome'));ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ assert.equal(ui.get('parentRace').textContent,'Unreadable');assert.match(ui.get('parentRaceToday').textContent,/left unchanged/);assert.match(ui.get('parentToday').textContent,/^10 min 0\d sec$/);
+ console.log('PASS Turtle race time joins active play with its own card and column, excluded from the daily boost');
+}
 
 // The home hub always offers Turtle Race; launching saves first and leaves learning state intact.
 {

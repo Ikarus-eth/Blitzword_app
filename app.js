@@ -258,8 +258,13 @@ function renderParent(){
   $('#parentStoriesEnabled').checked=state.settings.storiesEnabled===true;
   $('#parentLegacyEnabled').checked=state.settings.legacyEnabled===true;
   const p=Core.parentProgress(state,Date.now()),g=Core.dragonProgress(state);show('parentDashboard');
-  $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo+(state.expedition?.riddleDays?.[Core.dayKey(Date.now())]||0));
-  $('#parentTotal').textContent=formatTime(p.activeMs+Core.Adventure.report(state).riddleMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math+Core.Adventure.report(state).riddleMs);
+  // Turtle Race reading time (its own device-local save) counts as active play; it never earns the daily boost.
+  let raceText=null;try{raceText=window.localStorage.getItem(Core.RACE_KEY);}catch{}
+  const race=Core.riddleTime(raceText,Date.now());
+  $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo+(state.expedition?.riddleDays?.[Core.dayKey(Date.now())]||0)+race.todayMs);
+  $('#parentTotal').textContent=formatTime(p.activeMs+Core.Adventure.report(state).riddleMs+race.totalMs);
+  $('#parentRace').textContent=race.unreadable?'Unreadable':formatTime(race.totalMs);
+  $('#parentRaceToday').textContent=race.unreadable?'The Turtle Race save could not be read; it was left unchanged.':'Today: '+formatTime(race.todayMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math+Core.Adventure.report(state).riddleMs);
   $('#parentMath').textContent=formatTime(p.totals.math)+' multiplication · PR: '+(state.math.best===null?'not set':state.math.best+' points in 60 seconds')+'.';
   $('#parentIdle').textContent=formatTime(p.totals.idle);$('#parentLegacy').textContent=formatTime(p.legacyMs);
   $('#parentGrowth').textContent=dragonText(g.current.name)+' · '+xpText(g.xp)+' XP. '+growthCaption(g)+'.';
@@ -287,11 +292,11 @@ function renderParent(){
   for(const [day,ms] of Object.entries(missions.days))riddles.days[day]=(riddles.days[day]||0)+ms;
   $('#parentRiddles').textContent=riddles.unreadable?'Unreadable':formatTime(riddles.totalMs);
   $('#parentRiddlesToday').textContent=riddles.unreadable?'The story save could not be read; it was left unchanged.':'Today: '+formatTime(riddles.todayMs);
-  const timing=new Map(p.days),dates=[...new Set([...timing.keys(),...Object.keys(riddles.days)])].sort((a,b)=>b.localeCompare(a));
+  const timing=new Map(p.days),dates=[...new Set([...timing.keys(),...Object.keys(riddles.days),...Object.keys(race.days)])].sort((a,b)=>b.localeCompare(a));
   const body=$('#parentDays');body.replaceChildren();
   for(const date of dates.slice(0,30)){
     const d={practice:0,math:0,assessment:0,demo:0,idle:0,...(timing.get(date)||{})};
-    const row=document.createElement('tr');for(const value of [date,formatTime(d.practice),formatTime(riddles.days[date]||0),formatTime(d.math||0),formatTime(d.assessment+d.demo),formatTime(d.idle)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);
+    const row=document.createElement('tr');for(const value of [date,formatTime(d.practice),formatTime(riddles.days[date]||0),formatTime(race.days[date]||0),formatTime(d.math||0),formatTime(d.assessment+d.demo),formatTime(d.idle)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}body.append(row);
   }
   $('#parentEmpty').hidden=dates.length>0;populateSoundSettings();$('#backupStatus').textContent='';renderSyncStatus();save();
 }

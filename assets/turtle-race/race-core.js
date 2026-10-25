@@ -48,8 +48,17 @@
   function emptyStats(){return {started:0,finished:0,wins:0,answers:0,correct:0,answerMs:0,lastPlayed:null};}
   function defaultProfile(){
     const games={},progress={};for(const m of MODES){games[m]=emptyStats();progress[m]=emptyProgress();}
-    return {version:2,games,progress,history:[]};
+    return {version:2,games,progress,history:[],time:{days:{}}};
   }
+  // Local calendar day, matching the main game's parent dashboard.
+  function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  const DAY_MS=86400000;
+  // Active race time only: the clock runs while questions are on screen and pauses when the page is hidden.
+  function addTime(profile,ms,now){
+    const add=Math.round(ms);if(!(add>0))return profile;
+    const key=dayKey(now);profile.time.days[key]=Math.min(DAY_MS,(profile.time.days[key]||0)+add);return profile;
+  }
+  function totalTime(profile){return Object.values(profile.time.days).reduce((a,b)=>a+b,0);}
   // Accept any stored shape; keep valid values, repair the rest. Old automatic difficulty is dropped.
   function normalizeProfile(raw){
     const p=defaultProfile();
@@ -66,6 +75,13 @@
       q.selected=Number.isInteger(r.selected)&&r.selected>=1&&r.selected<=q.unlocked?r.selected:Math.min(q.unlocked,Math.max(1,won||1));
     }
     if(Array.isArray(raw.history))p.history=raw.history.filter(h=>h&&MODES.includes(h.mode)).slice(-60);
+    const days=raw.time?.days;
+    if(days&&typeof days==='object'){
+      for(const [k,ms] of Object.entries(days))if(/^\d{4}-\d{2}-\d{2}$/.test(k)&&Number.isSafeInteger(ms)&&ms>0)p.time.days[k]=Math.min(DAY_MS,ms);
+    }else{
+      // Saves from before time tracking: credit finished races from their history.
+      for(const h of p.history){const at=Date.parse(h.at);if(Number.isFinite(at)&&Number.isFinite(h.elapsed)&&h.elapsed>0)addTime(p,Math.min(GAME_MS,h.elapsed),at);}
+    }
     return p;
   }
   function selectLevel(profile,mode,n){
@@ -175,5 +191,5 @@
     });
   }
 
-  return {GAME_MS,STORAGE_KEY,MODES,NAMES,LEVELS,LEVEL_COUNT,BOOST_MS,level,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,selectLevel,validateItem,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
+  return {dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,LEVELS,LEVEL_COUNT,BOOST_MS,level,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,selectLevel,validateItem,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });

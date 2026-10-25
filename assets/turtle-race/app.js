@@ -84,7 +84,8 @@
   function renderParents(){
     const rows=Core.summary(profile).map(r=>`<tr><th>${INFO[r.mode].title}</th><td>${r.started}</td><td>${r.finished}</td><td>${r.quit}</td><td>${r.wins}</td><td>${r.accuracy==null?'–':r.accuracy+'%'}</td><td>${r.avgSeconds==null?'–':r.avgSeconds+' s'}</td><td>${r.lastPlayed?new Date(r.lastPlayed).toLocaleString([], {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'–'}</td></tr>`).join('');
     const levels=Core.summary(profile).map(r=>`${INFO[r.mode].title}: level ${r.unlocked} of ${Core.LEVEL_COUNT} open · wins per level ${r.levelWins.join(' / ')} · races per level ${r.levelPlays.join(' / ')}`).join('<br>');
-    $('#parentStats').innerHTML=`<p>Which race does he pick and finish? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>Each race has five turtles. Winning against the hardest open turtle opens the next one; he chooses which open turtle to race. Levels 1–2 use sentences of up to five words, level 3 up to six, levels 4–5 all.</p>`;
+    const today=profile.time.days[Core.dayKey(Date.now())]||0,mins=ms=>Math.floor(ms/60000)+' min '+String(Math.floor(ms/1000)%60).padStart(2,'0')+' sec';
+    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}. It also counts in active play on the main Parents dashboard.</p><p>Which race does he pick and finish? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>Each race has five turtles. Winning against the hardest open turtle opens the next one; he chooses which open turtle to race. Levels 1–2 use sentences of up to five words, level 3 up to six, levels 4–5 all.</p>`;
   }
 
   let currentMode='dash';
@@ -116,7 +117,9 @@
 
   // ---------- run loop ----------
   let run=null,deck=null,question=null,phase='idle',shownAt=0,phaseEnd=0,raf=0,last=0,lastYes=[],lastCallout={},token=0;
-  function stopRun(){token++;cancelAnimationFrame(raf);raf=0;run=null;phase='idle';$('#countdown').hidden=true;}
+  // Credit race time as it happens, so leaving or closing mid-race still counts.
+  function flushTime(r=run){if(!r)return;const d=r.elapsed-(r.loggedMs||0);if(d>0){Core.addTime(profile,d,Date.now());r.loggedMs=r.elapsed;store();}}
+  function stopRun(){flushTime();token++;cancelAnimationFrame(raf);raf=0;run=null;phase='idle';$('#countdown').hidden=true;}
 
   function startRun(mode){
     stopRun();const my=token;
@@ -251,7 +254,7 @@
     if(!run||phase==='end')return;
     phase='end';cancelAnimationFrame(raf);
     const r=run,my=token;
-    const opened=Core.recordFinish(profile,r,new Date().toISOString());store();
+    flushTime(r);const opened=Core.recordFinish(profile,r,new Date().toISOString());store();
     const duel=r.mode==='duel';
     const lineKey=r.won?(duel?'duel-win':'race-win'):(duel?'duel-lose':'race-lose');
     const finishLine=()=>{
@@ -282,6 +285,7 @@
     run=null;
   }
 
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden)last=performance.now();});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)flushTime();else last=performance.now();});
+  window.addEventListener('pagehide',()=>flushTime());
   renderPick();show('pick');
 })();

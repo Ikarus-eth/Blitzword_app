@@ -1176,3 +1176,7 @@ The user then asked for an extra button on the Home Screen. The adventure hub sh
 ## Turtle Race levels — 25 October 2026
 
 The user asked for different difficulties in all three Turtle Race games, which the child chooses and moves up through slowly so he wins first. This supersedes the automatic between-race adaptation. Each race has five fixed turtles (Sleepy, Little, Brave, Speedy, Champion). Only level 1 starts open; beating the hardest open turtle opens the next. The child picks any open turtle, and the game suggests but never forces the next one. Levels 1–2 are forgiving: short sentences, no slipping back, and extra time and hearts. [Level table and checks](turtle-race/RELEASE.md).
+
+## Turtle Race time in active play — 25 October 2026
+
+The user asked for Turtle Race time to count in active reading time on the general Parents dashboard. Active race time (questions on screen only) is added to "Active play today" and "Total active play", with its own card and daily column. It does not count towards the daily XP boost, and story riddle time keeps its earlier separate treatment.
