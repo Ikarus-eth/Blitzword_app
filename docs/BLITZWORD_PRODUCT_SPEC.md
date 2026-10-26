@@ -1194,3 +1194,7 @@ The child mastered turtles 1–5, but other-words answers were far too hard. Thi
 ## Turtle Race: at least 60 minutes of masterable content — 26 October 2026
 
 The user asked for at least 60 minutes of race content the child can master, noting that he masters turtle 5 of a set after several attempts once he knows its words. The main race has four word sets of about 50 recorded sentences. Each set uses the same five-turtle rules, for twenty turtles per race; sets follow curriculum order. Per-set "sentences mastered" (two right answers, latest right) is shown to the child and parents. [Details and time estimate](turtle-race/RELEASE.md).
+
+## Turtle Race sentence milestones follow dashboard retention — 26 October 2026
+
+The user asked that race "mastered" follow the BlitzWord retention concept. Race sentences use the dashboard states New, Learning, Secured, Kept after 7 days and Kept after 30 days. Secured means three separated right answers across two races. Kept means a right answer at least 7 / 30 full days after the last answer. Due sentences return as checks mixed into later races, at most one in four questions. Milestones are never erased by a later miss. [Details](turtle-race/RELEASE.md).

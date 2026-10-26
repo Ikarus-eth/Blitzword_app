@@ -113,3 +113,20 @@ Estimated content (an inference, not observed). A finished race attempt takes ab
 Words mastered: the race now records answers per sentence. A sentence counts as mastered after two right answers with the latest one right. Each set row on the turtle picker shows "mastered / total", and "For parents" lists all sets. Existing saves keep their turtles; the expert race is unchanged apart from sharing the release.
 
 Verification: 18 Turtle Race unit tests (all four sets repeat the 1–5 rules, pools, no duplicate sentences, mastery rules, migration, both editions). Full suite: 437 unit/backend tests and 125 UI-flow groups pass. Headless Chromium plays turtle 16 at three sizes, checks the unlock of Coral Turtle and checks that the mastery counts update. Physical iPad is not verified.
+
+## Sentence milestones with 7- and 30-day retention — 26 October 2026
+
+The user asked that "mastered" follow the BlitzWord parent-dashboard concept of retention after 7 and 30 days. This replaces the earlier "two right answers, latest right" rule. Each race sentence now has the dashboard's word states:
+
+- New: never answered in a race.
+- Learning: answered, without a higher milestone.
+- Secured: three right answers at least three questions apart, across at least two different races. This mirrors the dashboard's "three separated independent successes across two battles".
+- Kept after 7 days / Kept after 30 days: a right answer at least 7 / 30 full days after that sentence was last answered.
+
+Each sentence shows its highest milestone, and a later miss never erases it. Race answers are unaided; the mistake panel comes after the answer.
+
+Retention checks: secured sentences that have not been answered for 7 days, and kept-7 sentences not answered for 30 days, come back mixed into any race in the same edition. They take at most one in four questions, oldest first, with a gold frame and "Remember this one?". Without this, earlier word sets would stop appearing once the child moves on.
+
+Display: each word-set row on the turtle picker shows "secured or better / total ✓" and the number kept after 7 days or more. "For parents" shows a New / Learning / Secured / Kept after 7 days / Kept after 30 days table per set and how many checks are due. Counts from the previous release are kept, but no milestones are invented from them; milestones start with today's answers.
+
+Verification: 18 Turtle Race unit tests, including the separation rule, the two-race requirement, the 7- and 30-day gaps measured from the latest answer, a miss resetting the clock without erasing milestones, review due dates and save repair. Full suite: 437 unit/backend tests and 125 UI-flow groups pass. Headless Chromium at 1194×834 and 390×844 seeds a sentence secured nine days ago. It confirms the sentence returns as the fourth question of a New words race, a right answer records "Kept after 7 days", and the picker and parent table update. Physical iPad is not verified.
