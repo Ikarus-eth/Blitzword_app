@@ -1,4 +1,4 @@
-name: Verify live turtle race word sets
+name: Verify live turtle race retention
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 6f5c642b0097ce5762119a930646ee5ae7472d7a
-      - name: Compare every live turtle race file with merge 6f5c642
+          ref: e39a9dcb811d9d8aeaa4507d95318641ddd5232a
+      - name: Compare every live turtle race file with merge e39a9dc
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 10 minutes) for Pages to publish the merge, then require every file to match.
