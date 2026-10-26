@@ -87,10 +87,11 @@
   }
   function renderParents(){
     const rows=Core.summary(profile).map(r=>`<tr><th>${INFO[r.mode].title}</th><td>${r.started}</td><td>${r.finished}</td><td>${r.quit}</td><td>${r.wins}</td><td>${r.accuracy==null?'–':r.accuracy+'%'}</td><td>${r.avgSeconds==null?'–':r.avgSeconds+' s'}</td><td>${r.lastPlayed?new Date(r.lastPlayed).toLocaleString([], {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'–'}</td></tr>`).join('');
-    const sets=Core.masteryByTier(profile,items).map(m=>`${m.name}: ${m.mastered} of ${m.total} sentences mastered`).join(' · ');
+    const due=Core.reviewDue(profile,reviewPool(),Date.now()).length;
+    const sets=`<div class="tableWrap"><table><thead><tr><th>Word set</th><th>New</th><th>Learning</th><th>Secured</th><th>Kept after 7 days</th><th>Kept after 30 days</th></tr></thead><tbody>${Core.masteryByTier(profile,items).map(m=>`<tr><th>${m.name}</th><td>${m.new}</td><td>${m.learning}</td><td>${m.secured}</td><td>${m.kept7}</td><td>${m.kept30}</td></tr>`).join('')}</tbody></table></div>`;
     const levels=Core.summary(profile).map(r=>`${INFO[r.mode].title}: level ${r.unlocked} of ${Core.LEVEL_COUNT} open · wins per level ${r.levelWins.join(' / ')} · races per level ${r.levelPlays.join(' / ')}`).join('<br>');
     const today=profile.time.days[Core.dayKey(Date.now())]||0,mins=ms=>Math.floor(ms/60000)+' min '+String(Math.floor(ms/1000)%60).padStart(2,'0')+' sec';
-    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}.${Core.EDITION.dashboardTime?' It also counts in active play on the main Parents dashboard.':' This race has its own save and does not count on the BlitzWord Parents dashboard.'}</p><p>Which race is picked and finished? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>${sets}. A sentence counts as mastered after two right answers with the latest one right.</p><p>${Core.EDITION.note} Winning against the hardest open turtle opens the next one; the player chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p>`+(Core.EDITION.openAll?`<p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles</button> <span id="openAllNote"></span></p>`:'');
+    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}.${Core.EDITION.dashboardTime?' It also counts in active play on the main Parents dashboard.':' This race has its own save and does not count on the BlitzWord Parents dashboard.'}</p><p>Which race is picked and finished? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><h3 class="parentsHeading">Sentences, using the BlitzWord word milestones</h3>${sets}<p>Secured: three separated right answers across at least two races. Kept after 7 / 30 days: a right answer at least 7 / 30 full days after the sentence was last answered; each sentence shows its highest milestone, and a later miss does not erase it. Secured sentences come back for a check after 7 days, and again after 30 days, mixed into any race (at most one in four questions). ${due?due+' sentence'+(due===1?' is':'s are')+' waiting for a check.':'No checks are due right now.'} The ✓ count on each word set shows secured or better.</p><p>${Core.EDITION.note} Winning against the hardest open turtle opens the next one; the player chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p>`+(Core.EDITION.openAll?`<p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles</button> <span id="openAllNote"></span></p>`:'');
     if(Core.EDITION.openAll)$('#openAll').onclick=()=>{Core.unlockAll(profile);store();renderPick();$('#parentStats').closest('details').open=true;$('#openAllNote').textContent=`All ${Core.LEVEL_COUNT} turtles are open in every race.`;};
   }
 
@@ -110,7 +111,7 @@
     for(const tier of Core.TIERS){
       const row=document.createElement('div');row.className='tierRow tier-'+tier.id;
       const m=mastery[tier.id];
-      row.innerHTML=`<span class="tierName">${tier.name}<small class="tierWords" aria-label="${m.mastered} of ${m.total} sentences mastered">${m.mastered}/${m.total} ✓</small></span>`;
+      row.innerHTML=`<span class="tierName">${tier.name}<small class="tierWords" aria-label="${m.mastered} of ${m.total} sentences secured, ${m.kept7plus} kept after 7 days">${m.mastered}/${m.total} ✓${m.kept7plus?` · ${m.kept7plus} kept`:''}</small></span>`;
       const tiles=document.createElement('div');tiles.className='tierTiles';
       for(let n=tier.from;n<=tier.to;n++){
         const open=n<=q.unlocked,won=q.wins[n-1]>0,b=document.createElement('button');
@@ -142,6 +143,8 @@
   function startRun(mode){
     stopRun();const my=token;
     currentMode=mode;run=Core.newRun(mode,profile);deck=Core.createDeck(Core.itemsForLevel(items,mode,run.level),Math.random);lastYes=[];lastCallout={};
+    run.id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);run.asked=0;run.reviews=0;
+    reviewQueue=Core.reviewDue(profile,reviewPool(),Date.now());
     profile=Core.recordStart(profile,mode,new Date().toISOString());store();
     $('#playTitle').textContent=INFO[mode].title+' · '+run.levelName;
     $('#play').classList.toggle('expertPlay',run.pool==='expert');
@@ -183,13 +186,23 @@
 
   function clearReader(){$('#review').hidden=true;$('#sentence').textContent='';$('#prompt').textContent='';$('#options').innerHTML='';$('#duelTimer').hidden=true;$('#reader').className='reader';}
 
+  // Sentences this race can ask: every word set of this edition (literal sets need wrong words; other-words sets need rewordings).
+  function reviewPool(){const pools=new Set(Core.TIERS.map(t=>t.pool));return items.filter(i=>pools.has(i.tier||'core')&&(Core.EDITION.id==='expert'?Core.hasParaphrase(i):Array.isArray(i.w)));}
+  let reviewQueue=[];
   function nextQuestion(){
     if(!run||run.over)return;
-    question=Core.buildQuestion(run.mode,deck.next(),Math.random,lastYes,run.paraphrase);
+    // Every fourth question is a due 7- or 30-day check, when one is waiting.
+    run.asked++;
+    const review=run.asked%4===0&&reviewQueue.length?reviewQueue.shift():null;
+    if(review)run.reviews++;
+    question=Core.buildQuestion(run.mode,review||deck.next(),Math.random,lastYes,run.paraphrase);
+    question.review=!!review;
     if(question.mode==='duel')lastYes.push(question.yes);
     question.item=items.find(i=>i.s===question.sentence);
     clearReader();
     $('#sentence').textContent=question.sentence;
+    $('#reader').classList.toggle('reviewCheck',question.review);
+    if(question.review)callout('Remember this one?','great');
     if(run.mode==='flash'){
       $('#reader').classList.add('flashing');phase='flash';phaseEnd=run.elapsed+run.flashMs;
       $('#prompt').textContent='Read it fast!';
@@ -214,7 +227,7 @@
     phase='feedback';
     const timedOut=i<0,correct=!timedOut&&i===question.answer,ms=run.elapsed-shownAt;
     const out=Core.answer(run,timedOut?null:correct,ms);
-    Core.recordAnswer(profile,question.sentence,correct);
+    Core.recordAnswer(profile,question.sentence,correct,Date.now(),run.id);
     const buttons=[...$('#options').children];
     buttons.forEach((b,j)=>{b.disabled=true;if(j===question.answer)b.classList.add('right');else if(j===i)b.classList.add('wrong');});
     if(run.mode==='flash'){$('#sentence').textContent=question.sentence;$('#reader').classList.remove('hiddenSentence');}

@@ -74,14 +74,28 @@ test('main race: twenty turtles, every word set repeats the rules of turtles 1-5
   assert.match(Core.describeLevel('dash',6),/^4 steps to the finish · new words/);assert.match(Core.describeLevel('duel',16),/super words/);
 });
 
-test('words mastered per set: two right answers with the latest one right',()=>{
-  const p=Core.defaultProfile(),items=Data.items,a=items.find(i=>i.tier==='core2'),b=items.find(i=>i.tier==='core2'&&i!==a);
-  Core.recordAnswer(p,a.s,true);let m=Core.masteryByTier(p,items).find(x=>x.tier==='new');assert.deepEqual([m.mastered,m.total],[0,50]);
-  Core.recordAnswer(p,a.s,true);Core.recordAnswer(p,b.s,true);Core.recordAnswer(p,b.s,true);Core.recordAnswer(p,b.s,false);
-  m=Core.masteryByTier(p,items).find(x=>x.tier==='new');assert.equal(m.mastered,1,'a wrong latest answer is not mastered');
+test('sentence milestones follow the BlitzWord dashboard: secured, kept after 7 days, kept after 30 days',()=>{
+  const day=86400000,t0=Date.UTC(2026,9,1),items=Data.items,a=items.find(i=>i.tier==='core2').s;
+  const p=Core.defaultProfile(),filler=(n,run,t)=>{for(let i=0;i<n;i++)Core.recordAnswer(p,'filler'+run+i,true,t,run);};
+  assert.equal(Core.sentenceStatus(p,a),'new');
+  Core.recordAnswer(p,a,true,t0,'r1');assert.equal(Core.sentenceStatus(p,a),'learning');
+  Core.recordAnswer(p,a,true,t0+1,'r1');assert.equal(p.words[a].trail.length,1,'answers must be at least three questions apart');
+  filler(3,'r1',t0);Core.recordAnswer(p,a,true,t0+2,'r1');filler(3,'r1',t0);Core.recordAnswer(p,a,true,t0+3,'r1');
+  assert.equal(Core.sentenceStatus(p,a),'learning','three right answers in one race are not enough');
+  filler(3,'r2',t0);Core.recordAnswer(p,a,true,t0+4,'r2');assert.equal(Core.sentenceStatus(p,a),'secured');
+  assert.equal(Core.reviewDue(p,items,t0+6*day).length,0);assert.deepEqual(Core.reviewDue(p,items,t0+7*day+4).map(i=>i.s),[a]);
+  Core.recordAnswer(p,a,false,t0+8*day,'r3');assert.equal(Core.sentenceStatus(p,a),'secured','a miss after a week earns nothing');
+  Core.recordAnswer(p,a,true,t0+14*day,'r4');assert.equal(Core.sentenceStatus(p,a),'secured','the gap counts from the latest answer');
+  Core.recordAnswer(p,a,true,t0+22*day+1,'r5');assert.equal(Core.sentenceStatus(p,a),'kept7');
+  assert.equal(Core.reviewDue(p,items,t0+40*day).length,0);
+  Core.recordAnswer(p,a,false,t0+53*day,'r6');Core.recordAnswer(p,a,true,t0+84*day,'r7');assert.equal(Core.sentenceStatus(p,a),'kept30');
+  Core.recordAnswer(p,a,false,t0+85*day,'r8');assert.equal(Core.sentenceStatus(p,a),'kept30','a later miss never erases a milestone');
+  const m=Core.masteryByTier(p,items).find(x=>x.tier==='new');
+  assert.deepEqual([m.kept30,m.mastered,m.kept7plus,m.new+m.learning+m.secured+m.kept7+m.kept30],[1,1,1,50]);
   assert.deepEqual(Core.masteryByTier(p,items).map(x=>x.total),[51,50,50,50]);
-  const back=Core.normalizeProfile(JSON.parse(JSON.stringify(p)));assert.deepEqual(back.words,p.words);
-  assert.deepEqual(Core.normalizeProfile({words:{'x':{right:-1,wrong:'a',last:'yes'}}}).words,{x:{right:0,wrong:0,last:false}});
+  const back=Core.normalizeProfile(JSON.parse(JSON.stringify(p)));assert.deepEqual(back.words,p.words);assert.equal(back.seq,p.seq);
+  const old=Core.normalizeProfile({words:{x:{right:3,wrong:'a',last:true}}}).words.x;
+  assert.deepEqual(old,{right:3,wrong:0,last:true,lastAt:null,trail:[],securedAt:null,kept7At:null,kept30At:null},'yesterday’s counts stay, without inventing milestones');
 });
 
 test('expert race: ten turtles of other-words and long sentences, each tier steadily harder, own save',()=>{

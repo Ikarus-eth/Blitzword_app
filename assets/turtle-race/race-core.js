@@ -65,7 +65,7 @@
   function emptyStats(){return {started:0,finished:0,wins:0,answers:0,correct:0,answerMs:0,lastPlayed:null};}
   function defaultProfile(){
     const games={},progress={};for(const m of MODES){games[m]=emptyStats();progress[m]=emptyProgress();}
-    return {version:E.version,games,progress,history:[],time:{days:{}},words:{}};
+    return {version:E.version,games,progress,history:[],time:{days:{}},words:{},seq:0};
   }
   // Local calendar day, matching the main game's parent dashboard.
   function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
@@ -94,9 +94,13 @@
       q.unlocked=Math.min(LEVEL_COUNT,Math.max(1,saved,won+1));
       q.selected=Number.isInteger(r.selected)&&r.selected>=1&&r.selected<=q.unlocked?r.selected:Math.min(q.unlocked,Math.max(1,won||1));
     }
-    // Per-sentence answers, for "words mastered" per word set.
+    // Per-sentence evidence, using the BlitzWord parent-dashboard milestones (secured, kept after 7 / 30 days).
+    p.seq=count(raw.seq);
+    const when=v=>Number.isSafeInteger(v)&&v>0?v:null;
     if(raw.words&&typeof raw.words==='object')for(const [k,v] of Object.entries(raw.words).slice(0,600)){
-      if(typeof k==='string'&&k.length<=200&&v&&typeof v==='object')p.words[k]={right:count(v.right),wrong:count(v.wrong),last:v.last===true};
+      if(typeof k!=='string'||k.length>200||!v||typeof v!=='object')continue;
+      const trail=Array.isArray(v.trail)?v.trail.filter(t=>t&&Number.isInteger(t.seq)&&typeof t.run==='string').slice(-3).map(t=>({seq:t.seq,run:t.run})):[];
+      p.words[k]={right:count(v.right),wrong:count(v.wrong),last:v.last===true,lastAt:when(v.lastAt),trail,securedAt:when(v.securedAt),kept7At:when(v.kept7At),kept30At:when(v.kept30At)};
     }
     if(Array.isArray(raw.history))p.history=raw.history.filter(h=>h&&MODES.includes(h.mode)).slice(-60);
     const days=raw.time?.days;
@@ -219,14 +223,46 @@
     return outcome;
   }
 
-  // A sentence counts as mastered after two right answers with the latest one right.
-  function recordAnswer(profile,sentence,correct){
-    const w=profile.words[sentence] ||= {right:0,wrong:0,last:false};
-    if(correct)w.right++;else w.wrong++;w.last=!!correct;return profile;
+  // Same milestones as the BlitzWord parent dashboard, applied to race sentences:
+  // Secured = three separated right answers (at least three other questions apart) across at least two races.
+  // Kept after 7 / 30 days = a right answer at least 7 / 30 full days after the sentence was last answered.
+  // A later miss stays visible in the counts but never erases a milestone.
+  const DAY=86400000,STATUS=['new','learning','secured','kept7','kept30'];
+  const STATUS_LABEL={new:'New',learning:'Learning',secured:'Secured',kept7:'Kept after 7 days',kept30:'Kept after 30 days'};
+  function recordAnswer(profile,sentence,correct,now=Date.now(),runId='run'){
+    const w=profile.words[sentence] ||= {right:0,wrong:0,last:false,lastAt:null,trail:[],securedAt:null,kept7At:null,kept30At:null};
+    profile.seq=(profile.seq||0)+1;
+    const gap=w.lastAt?now-w.lastAt:null;
+    if(correct){
+      w.right++;
+      if(!w.securedAt){
+        if(!w.trail.length||profile.seq-w.trail[w.trail.length-1].seq>=3)w.trail.push({seq:profile.seq,run:String(runId)});
+        if(w.trail.length>3)w.trail.shift();
+        if(w.trail.length===3&&new Set(w.trail.map(t=>t.run)).size>=2)w.securedAt=now;
+      }
+      if(gap!==null&&gap>=7*DAY&&!w.kept7At)w.kept7At=now;
+      if(gap!==null&&gap>=30*DAY&&!w.kept30At)w.kept30At=now;
+    }else w.wrong++;
+    w.last=!!correct;w.lastAt=now;return profile;
   }
-  const mastered=(profile,sentence)=>{const w=profile.words[sentence];return !!w&&w.right>=2&&w.last;};
+  function sentenceStatus(profile,sentence){
+    const w=profile.words[sentence];
+    if(!w)return 'new';
+    return w.kept30At?'kept30':w.kept7At?'kept7':w.securedAt?'secured':'learning';
+  }
+  // Counts per word set. "mastered" = secured or better, the dashboard's highest-evidence states.
   function masteryByTier(profile,items){
-    return TIERS.map(t=>{const pool=items.filter(i=>(i.tier||'core')===t.pool);return {tier:t.id,name:t.name,total:pool.length,mastered:pool.filter(i=>mastered(profile,i.s)).length};});
+    return TIERS.map(t=>{
+      const pool=items.filter(i=>(i.tier||'core')===t.pool),c={new:0,learning:0,secured:0,kept7:0,kept30:0};
+      for(const i of pool)c[sentenceStatus(profile,i.s)]++;
+      return {tier:t.id,name:t.name,total:pool.length,...c,mastered:c.secured+c.kept7+c.kept30,kept7plus:c.kept7+c.kept30};
+    });
+  }
+  // Sentences waiting for a retention check: secured ones not answered for 7 days, kept-7 ones not answered for 30 days.
+  function reviewDue(profile,items,now=Date.now()){
+    return items.filter(i=>{const w=profile.words[i.s];if(!w||!w.lastAt||!w.securedAt)return false;const gap=now-w.lastAt;
+      return (!w.kept7At&&gap>=7*DAY)||(w.kept7At&&!w.kept30At&&gap>=30*DAY);})
+      .sort((a,b)=>profile.words[a.s].lastAt-profile.words[b.s].lastAt);
   }
   function recordStart(profile,mode,now){const g=profile.games[mode];g.started++;g.lastPlayed=now;return profile;}
   // Returns the newly opened level number, if this win opened one.
@@ -247,5 +283,5 @@
     });
   }
 
-  return {recordAnswer,masteryByTier,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
+  return {recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });
