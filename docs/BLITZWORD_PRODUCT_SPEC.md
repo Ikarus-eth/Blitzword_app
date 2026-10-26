@@ -1186,3 +1186,7 @@ The user asked for Turtle Race time to count in active reading time on the gener
 The user asked that a mistake pause the race so the child sees it, and that a lost heart be clearly visible. A wrong or slow answer now freezes the race until "Got it". During the pause the key word is highlighted and the right answer explained.
 
 The user also asked for ten more levels, including expert levels tough for a 10-year-old, answering in different words without reusing the word. This supersedes the five-turtle limit: each race has fifteen turtles in three tiers. Easy 1–5 is unchanged. Hard 6–10 uses core sentences with answers in other words. Expert 11–15 uses new longer sentences with answers in other words. Turtles still open one win at a time, and a parent "Open all turtles" option serves an older player. [Details](turtle-race/RELEASE.md).
+
+## Turtle Race split into main and expert games — 26 October 2026
+
+The child mastered turtles 1–5, but other-words answers were far too hard. This supersedes the 15-turtle ladder in the main game. The BlitzWord Turtle Race has ten turtles: 1–5 as before, and 6–10 with the same rules and a second set of different words. The former levels 6–15 move to a standalone expert game at `assets/turtle-race-expert/` for an older reader, with its own save and no link into BlitzWord. [Details](turtle-race/RELEASE.md).

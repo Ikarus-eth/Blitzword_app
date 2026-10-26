@@ -4,11 +4,15 @@
   const Core=window.TurtleRaceCore,Data=window.TurtleRaceData;
   const $=s=>document.querySelector(s);
   const ROOT='../../';
+  // The expert page lives in its own folder and borrows these pictures.
+  const ASSET=window.TURTLE_RACE_ASSETS||'';
   const INFO={
     dash:{title:'Turtle Dash',tag:'Read and answer',how:'Read the sentence. Then tap the answer. Right answers move Pip forward. Wrong answers move him back.',icon:'🏁'},
     flash:{title:'Flash Dash',tag:'Quick look, find the sentence',how:'The sentence shows for a moment. Then tap the sentence you read. Fast answers give Pip a blitz boost.',icon:'⚡'},
     duel:{title:'Shell Duel',tag:'Yes or no, beat the timer',how:'Read, then tap yes or no before the timer runs out. Fast right answers hit the turtle. Slow or wrong answers cost a heart.',icon:'🔥'}
   };
+  // The expert race asks for the sentence that means the same, and is read rather than narrated.
+  if(Core.EDITION.id==='expert'){INFO.flash.how='The sentence shows for a moment. Then tap the sentence that means the same. Fast answers give Pip a blitz boost.';INFO.flash.tag='Quick look, same meaning';INFO.dash.tag='Answer in other words';}
   const items=Data.items.filter(i=>i.tier==='expert'?Core.validateExpert(i):Core.validateItem(i));
 
   // ---------- saved stats (own key only) ----------
@@ -78,15 +82,15 @@
   const starRow=q=>q.wins.map(w=>`<i class="${w>0?'on':''}">★</i>`).join('');
   function art(mode,small){
     const cls=small?'mini':'';
-    if(mode==='duel')return `<span class="artDuel ${cls}"><img src="pip.webp" alt=""><span class="artVs">${INFO.duel.icon}</span><img class="flip" src="turtle.webp" alt=""></span>`;
-    return `<span class="artRace ${cls}"><img src="pip.webp" alt=""><img src="turtle.webp" alt=""><span class="artFlag">${INFO[mode].icon}</span></span>`;
+    if(mode==='duel')return `<span class="artDuel ${cls}"><img src="${ASSET}pip.webp" alt=""><span class="artVs">${INFO.duel.icon}</span><img class="flip" src="${ASSET}turtle.webp" alt=""></span>`;
+    return `<span class="artRace ${cls}"><img src="${ASSET}pip.webp" alt=""><img src="${ASSET}turtle.webp" alt=""><span class="artFlag">${INFO[mode].icon}</span></span>`;
   }
   function renderParents(){
     const rows=Core.summary(profile).map(r=>`<tr><th>${INFO[r.mode].title}</th><td>${r.started}</td><td>${r.finished}</td><td>${r.quit}</td><td>${r.wins}</td><td>${r.accuracy==null?'–':r.accuracy+'%'}</td><td>${r.avgSeconds==null?'–':r.avgSeconds+' s'}</td><td>${r.lastPlayed?new Date(r.lastPlayed).toLocaleString([], {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'–'}</td></tr>`).join('');
     const levels=Core.summary(profile).map(r=>`${INFO[r.mode].title}: level ${r.unlocked} of ${Core.LEVEL_COUNT} open · wins per level ${r.levelWins.join(' / ')} · races per level ${r.levelPlays.join(' / ')}`).join('<br>');
     const today=profile.time.days[Core.dayKey(Date.now())]||0,mins=ms=>Math.floor(ms/60000)+' min '+String(Math.floor(ms/1000)%60).padStart(2,'0')+' sec';
-    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}. It also counts in active play on the main Parents dashboard.</p><p>Which race does he pick and finish? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>Each race has fifteen turtles: Easy 1–5 (same words), Hard 6–10 (answers in other words) and Expert 11–15 (long sentences, answers in other words). Winning against the hardest open turtle opens the next one; the child chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p><p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles (older player)</button> <span id="openAllNote"></span></p>`;
-    $('#openAll').onclick=()=>{Core.unlockAll(profile);store();renderPick();$('#parentStats').closest('details').open=true;$('#openAllNote').textContent='All 15 turtles are open in every race.';};
+    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}.${Core.EDITION.dashboardTime?' It also counts in active play on the main Parents dashboard.':' This race has its own save and does not count on the BlitzWord Parents dashboard.'}</p><p>Which race is picked and finished? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>${Core.EDITION.note} Winning against the hardest open turtle opens the next one; the player chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p>`+(Core.EDITION.openAll?`<p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles</button> <span id="openAllNote"></span></p>`:'');
+    if(Core.EDITION.openAll)$('#openAll').onclick=()=>{Core.unlockAll(profile);store();renderPick();$('#parentStats').closest('details').open=true;$('#openAllNote').textContent=`All ${Core.LEVEL_COUNT} turtles are open in every race.`;};
   }
 
   let currentMode='dash';
@@ -96,7 +100,8 @@
     renderLevels();
     show('intro');
     Sound.preload(['go','boost','great','slow','hit','race-win','race-lose','duel-win','duel-lose','time']);
-    Sound.line('title-'+mode).then(()=>{if(!$('#intro').hidden&&currentMode===mode)Sound.line('how-'+mode);});
+    Sound.line('title-'+mode).then(()=>{if(Core.EDITION.id!=='expert'&&!$('#intro').hidden&&currentMode===mode)Sound.line('how-'+mode);});
+    $('#introListen').hidden=Core.EDITION.id==='expert';
   }
   function renderLevels(){
     const mode=currentMode,q=profile.progress[mode],box=$('#levels');box.innerHTML='';
@@ -129,7 +134,7 @@
   let run=null,deck=null,question=null,phase='idle',shownAt=0,phaseEnd=0,raf=0,last=0,lastYes=[],lastCallout={},token=0;
   // Credit race time as it happens, so leaving or closing mid-race still counts.
   function flushTime(r=run){if(!r)return;const d=r.elapsed-(r.loggedMs||0);if(d>0){Core.addTime(profile,d,Date.now());r.loggedMs=r.elapsed;store();}}
-  function stopRun(){flushTime();token++;cancelAnimationFrame(raf);raf=0;run=null;phase='idle';$('#countdown').hidden=true;}
+  function stopRun(){flushTime();$('#play').classList.remove('reviewMode');token++;cancelAnimationFrame(raf);raf=0;run=null;phase='idle';$('#countdown').hidden=true;}
 
   function startRun(mode){
     stopRun();const my=token;
@@ -244,7 +249,8 @@
     else text=`The sentence says <mark>${esc(q.key)}</mark>.`;
     const heartLine=q.mode==='duel'&&run?`<span class="reviewHeart">💔 You lost a heart. ${run.hearts} ${run.hearts===1?'heart':'hearts'} left.</span>`:'';
     $('#reviewText').innerHTML=heartLine+(timedOut?'Too slow! ':'')+text;
-    $('#review').hidden=false;
+    $('#review').hidden=false;$('#play').classList.add('reviewMode');
+    requestAnimationFrame(()=>{try{$('#review').scrollIntoView({block:'nearest'});}catch(e){}});
     const go=$('#reviewGo');go.disabled=true;setTimeout(()=>{if(phase==='review')go.disabled=false;},1000);
     if(q.item&&q.item.audio)Sound.play(q.item.audio);
   }
@@ -252,7 +258,7 @@
     if(phase!=='review'||!run)return;
     // Reading the correction counts as reading time (up to a minute per mistake).
     Core.addTime(profile,Math.min(60000,performance.now()-reviewStarted),Date.now());store();
-    Sound.stopVoice();$('#reader').classList.remove('reviewing');$('#review').hidden=true;
+    Sound.stopVoice();$('#reader').classList.remove('reviewing');$('#play').classList.remove('reviewMode');$('#review').hidden=true;
     last=performance.now();
     if(run.over){phase='feedback';endRun();}else nextQuestion();
   };
@@ -263,11 +269,11 @@
   function buildStage(){
     const st=$('#stage');st.className='stage stage-'+run.mode;
     if(run.mode==='duel'){
-      st.innerHTML=`<div class="arena"><div class="fighter pipSide"><div id="hearts" class="hearts"></div><img id="pipSprite" class="sprite" src="pip.webp" alt="Pip"></div><div class="fighter turtleSide"><div id="shells" class="shells"></div><img id="turtleSprite" class="sprite flip" src="turtle.webp" alt="Turtle"></div><div id="fx" class="fx"></div></div>`;
+      st.innerHTML=`<div class="arena"><div class="fighter pipSide"><div id="hearts" class="hearts"></div><img id="pipSprite" class="sprite" src="${ASSET}pip.webp" alt="Pip"></div><div class="fighter turtleSide"><div id="shells" class="shells"></div><img id="turtleSprite" class="sprite flip" src="${ASSET}turtle.webp" alt="Turtle"></div><div id="fx" class="fx"></div></div>`;
       drawDuel();
     }else{
       const marks=Array.from({length:run.goal-1},(_,i)=>`<i style="left:calc(var(--start) + (100% - var(--start) - var(--lane-pad)) * ${(i+1)/run.goal})"></i>`).join('');
-      st.innerHTML=`<div class="track"><div class="startLine" aria-hidden="true"></div><div class="finish" aria-hidden="true"></div><div class="lane laneTop"><div class="marks">${marks}</div><img id="pipSprite" class="runner pipRunner" src="pip.webp" alt="Pip"></div><div class="lane laneBottom"><img id="turtleSprite" class="runner turtleRunner" src="turtle.webp" alt="Turtle"></div><div id="stepsLabel" class="stepsLabel"></div></div>`;
+      st.innerHTML=`<div class="track"><div class="startLine" aria-hidden="true"></div><div class="finish" aria-hidden="true"></div><div class="lane laneTop"><div class="marks">${marks}</div><img id="pipSprite" class="runner pipRunner" src="${ASSET}pip.webp" alt="Pip"></div><div class="lane laneBottom"><img id="turtleSprite" class="runner turtleRunner" src="${ASSET}turtle.webp" alt="Turtle"></div><div id="stepsLabel" class="stepsLabel"></div></div>`;
       drawPip();
     }
     drawTurtle();
@@ -314,7 +320,7 @@
     const finishLine=()=>{
       if(my!==token)return;
       $('#resultTitle').textContent=r.won?(duel?'Pip wins the duel!':'Pip wins the race!'):(duel?'The turtle wins the duel':'The turtle wins this time');
-      $('#resultArt').src=r.won?'pip.webp':'turtle.webp';$('#resultArt').className='resultArt'+(r.won?' happy':'');
+      $('#resultArt').src=ASSET+(r.won?'pip.webp':'turtle.webp');$('#resultArt').className='resultArt'+(r.won?' happy':'');
       const avg=r.answers?(r.answerMs/r.answers/1000).toFixed(1):'–';
       let line;
       if(duel)line=r.won?`The turtle's shell is empty. ${r.hearts} heart${r.hearts===1?'':'s'} left.`:(r.reason==='time'?`Time is up. The turtle had ${r.shell} shell${r.shell===1?'':'s'} left.`:`The turtle had ${r.shell} shell${r.shell===1?'':'s'} left.`);
