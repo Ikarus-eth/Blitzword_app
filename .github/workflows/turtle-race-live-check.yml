@@ -15,10 +15,10 @@ jobs:
       - name: Compare every live turtle race file with merge 524547c
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
-          # Wait (up to 10 minutes) for Pages to publish the merge, then require every file to match.
-          for attempt in $(seq 1 20); do
-            curl -s -o probe.js "$B/assets/turtle-race/race-core.js?cb=$GITHUB_RUN_ID-$attempt"
-            if cmp -s probe.js assets/turtle-race/race-core.js; then echo "live after attempt $attempt"; break; fi
+          # Wait (up to 15 minutes) for Pages to publish the merge, then require every file to match.
+          for attempt in $(seq 1 30); do
+            curl -s -o probe.html "$B/assets/turtle-race/index.html?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.html assets/turtle-race/index.html; then echo "live after attempt $attempt"; break; fi
             sleep 30
           done
           bad=0; n=0
