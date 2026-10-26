@@ -1198,3 +1198,7 @@ The user asked for at least 60 minutes of race content the child can master, not
 ## Turtle Race sentence milestones follow dashboard retention — 26 October 2026
 
 The user asked that race "mastered" follow the BlitzWord retention concept. Race sentences use the dashboard states New, Learning, Secured, Kept after 7 days and Kept after 30 days. Secured means three separated right answers across two races. Kept means a right answer at least 7 / 30 full days after the last answer. Due sentences return as checks mixed into later races, at most one in four questions. Milestones are never erased by a later miss. [Details](turtle-race/RELEASE.md).
+
+## Turtle Dash answers in other words — 27 October 2026
+
+The child had learned to scan for the one choice that appeared in the sentence. Main-race Turtle Dash now answers in other words at two levels per word set: simple other words for turtles 1–2 (one to four easy words) and short descriptions for turtles 3–5. A right answer never reuses a content word of its sentence. Flash Dash, Shell Duel and the expert race are unchanged. [Details](turtle-race/RELEASE.md).

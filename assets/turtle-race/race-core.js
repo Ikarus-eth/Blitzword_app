@@ -25,6 +25,9 @@
     duel:[{shell:5,timerMs:12000,hearts:3},{shell:6,timerMs:11000,hearts:3},{shell:7,timerMs:10000,hearts:3},{shell:8,timerMs:9000,hearts:3},{shell:9,timerMs:8000,hearts:3}]
   };
   const join=(...parts)=>{const out={};for(const m of MODES)out[m]=parts.flatMap(p=>p[m]);return out;};
+  // Turtle Dash answers in other words so the answer cannot be found by spotting a word from the sentence:
+  // simple other words for turtles 1-2 of each word set, slightly longer descriptions for turtles 3-5.
+  const dashOtherWords=levels=>{levels.dash=levels.dash.map((L,i)=>({...L,gloss:i%5<2?1:2}));return levels;};
   const EDITIONS={
     // Main race in BlitzWord: the same five-turtle rules, repeated with four sets of about 50 recorded sentences.
     // Each set is mastered by replaying it until its words are known; level 5 of a set usually takes several tries.
@@ -32,7 +35,7 @@
       names:['Sleepy Turtle','Little Turtle','Brave Turtle','Speedy Turtle','Champion Turtle','River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle',
         'Sand Turtle','Moss Turtle','Cloud Turtle','Comet Turtle','Star Turtle','Pearl Turtle','Coral Turtle','Wave Turtle','Tide Turtle','Ocean Turtle'],
       tiers:[{id:'easy',name:'First words',from:1,to:5,pool:'core'},{id:'new',name:'New words',from:6,to:10,pool:'core2'},{id:'more',name:'More words',from:11,to:15,pool:'core3'},{id:'super',name:'Super words',from:16,to:20,pool:'core4'}],
-      levels:join(ladder(easy(),'core',[5,5,6,7,7]),ladder(easy(),'core2',[6,6,7,8,8]),ladder(easy(),'core3',[6,6,7,7,7]),ladder(easy(),'core4',[7,7,8,8,8])),
+      levels:dashOtherWords(join(ladder(easy(),'core',[5,5,6,7,7]),ladder(easy(),'core2',[6,6,7,8,8]),ladder(easy(),'core3',[6,6,7,7,7]),ladder(easy(),'core4',[7,7,8,8,8]))),
       note:'Each race has twenty turtles in four word sets. Every set uses the same five rules with about 50 new recorded sentences, so the child can master a set by replaying it.'},
     // Standalone expert race for an older reader: answers in other words, then long sentences.
     expert:{id:'expert',storageKey:'blitzword_turtle_race_expert_v1',version:3,dashboardTime:false,openAll:true,
@@ -51,11 +54,11 @@
   const words=s=>s.trim().split(/\s+/).length;
   function itemsForLevel(items,mode,n){
     const L=LEVELS[mode][n-1];
-    return items.filter(i=>(i.tier||'core')===L.pool&&words(i.s)<=L.maxWords&&(!L.paraphrase||hasParaphrase(i)));
+    return items.filter(i=>(i.tier||'core')===L.pool&&words(i.s)<=L.maxWords&&(!L.paraphrase||hasParaphrase(i))&&(!L.gloss||hasGloss(i)));
   }
   function describeLevel(mode,n){
     const L=LEVELS[mode][n-1],secs=ms=>(ms/1000).toFixed(ms%1000?1:0)+' s';
-    const extra=({core2:' · new words',core3:' · more words',core4:' · super words'}[L.pool]||'')+(L.pool==='expert'?' · long sentences':'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
+    const extra=({core2:' · new words',core3:' · more words',core4:' · super words'}[L.pool]||'')+(L.gloss===1?' · answers in simple other words':L.gloss===2?' · answers in other words':'')+(L.pool==='expert'?' · long sentences':'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
     if(mode==='dash')return `${L.goal} steps to the finish`+extra;
     if(mode==='flash')return `${L.goal} steps · sentence shows ${secs(L.flashMs)}`+extra;
     return `${L.shell} shells · ${secs(L.timerMs)} per question · ${L.hearts} hearts`+extra;
@@ -133,6 +136,7 @@
     return new Set(options).size===3;
   }
   const hasWord=(text,word)=>new RegExp('\\b'+word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','i').test(text);
+  const hasGloss=item=>!!item&&[item.o1,item.o2].every(o=>Array.isArray(o)&&o.length===3&&new Set(o).size===3);
   function hasParaphrase(item){
     return !!item&&Array.isArray(item.g)&&item.g.length===3&&new Set(item.g).size===3&&typeof item.ps==='string'&&Array.isArray(item.px)&&item.px.length===2&&new Set([item.ps,...item.px]).size===3&&typeof item.pt==='string'&&typeof item.pf==='string';
   }
@@ -147,7 +151,11 @@
   function shuffle(list,rand){const a=list.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
   // Builds one question in the chosen format. Options never include artwork.
-  function buildQuestion(mode,item,rand,lastYes,paraphrase){
+  function buildQuestion(mode,item,rand,lastYes,paraphrase,gloss){
+    if(mode==='dash'&&(gloss===1||gloss===2)&&hasGloss(item)){
+      const set=gloss===1?item.o1:item.o2,options=shuffle(set,rand);
+      return {mode,sentence:item.s,key:item.a,meaning:set[0],prompt:item.q,options,answer:options.indexOf(set[0]),gloss};
+    }
     const base={mode,sentence:item.s,key:item.a,meaning:paraphrase?item.g[0]:null};
     let yesFirst=null;
     if(mode==='duel'){
@@ -181,7 +189,7 @@
     const chosen=Number.isInteger(n)?n:profile.progress[mode].selected;
     if(chosen<1||chosen>profile.progress[mode].unlocked)throw Error('Level locked');
     const L=level(mode,chosen);
-    const run={mode,level:chosen,levelName:L.name,elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,pool:L.pool};
+    const run={mode,level:chosen,levelName:L.name,elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,gloss:L.gloss||0,pool:L.pool};
     if(mode==='duel')Object.assign(run,{hearts:L.hearts,maxHearts:L.hearts,shell:L.shell,maxShell:L.shell,timerMs:L.timerMs});
     else Object.assign(run,{steps:0,goal:L.goal});
     if(mode==='flash')Object.assign(run,{flashMs:L.flashMs,boostMs:L.boostMs});
@@ -283,5 +291,5 @@
     });
   }
 
-  return {recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
+  return {hasGloss,recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });
