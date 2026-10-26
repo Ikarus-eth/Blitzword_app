@@ -290,3 +290,4 @@ button{font-family:inherit;cursor:pointer;touch-action:manipulation}
 .card .artRace,.card .artDuel{max-width:100%}
 .card .artRace img,.card .artDuel img{max-width:44%;object-fit:contain}
 .card .artVs{flex-shrink:0}
+.play.reviewMode .callout{top:7%}

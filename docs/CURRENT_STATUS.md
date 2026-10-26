@@ -1,3 +1,7 @@
+## Turtle Dash answers in other words — 27 October 2026
+
+**Implemented and tested; deployment pending.** Main-race Turtle Dash no longer has a choice that matches a word in the sentence. Turtles 1–2 of each word set use simple other words ("a stone", "a kitty", "2 + 2"); turtles 3–5 use short descriptions. A glossary covers all 197 answer words of the 201 sentences, and right answers never reuse a sentence word. Other races, unlocks and saves are unchanged. 439 unit/backend tests and 125 UI-flow groups pass; headless browser checks pass at three sizes. Physical iPad is not verified. [Details](turtle-race/RELEASE.md).
+
 ## Turtle Race card stars — 26 October 2026
 
 **Deployed and verified.** [PR #214](https://github.com/Ikarus-eth/Blitzword_app/pull/214) merged as `524547c661261f142b6d769d15c670fbe3cce7ec`; [Pages run 40296392913](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/40296392913) succeeded. All live files of both race pages match the merged source byte for byte ([verification run 40296653057](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/40296653057); an earlier check, run 40296414214, compared too early and failed); build `turtle-race-stars-20261026-r1`. Race cards no longer spill twenty stars across the screen. Each card shows five stars for the current word set, its name, and one dot per set; pictures stay inside narrow cards in portrait. 438 unit/backend tests and 125 UI-flow groups pass; layout checked at five sizes on both race pages. [Details](turtle-race/RELEASE.md).

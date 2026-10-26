@@ -134,3 +134,16 @@ Verification: 18 Turtle Race unit tests, including the separation rule, the two-
 ## Race card star layout — 26 October 2026
 
 The user reported that the stars on the race cards were messed up. With twenty turtles, each card tried to show twenty stars, which overflowed across neighbouring cards. Each card now shows five stars for the word set being played, the set's name, and one dot per word set: empty, half-filled once any turtle in the set is beaten, filled when all five are. Card pictures are also kept inside narrow cards in iPad portrait. Checked in headless Chromium at 1194×834, 834×1194, 1024×768, 768×1024 and 390×844 for both race pages, with every star, dot and picture inside its card. A new DOM unit test covers the star and dot logic. Full suite: 438 unit/backend tests and 125 UI-flow groups pass.
+
+## Turtle Dash answers in other words — 27 October 2026
+
+The user reported that the child had found the pattern in Turtle Dash: only one choice appeared in the sentence, so he scanned for it instead of reading. The user asked for simple paraphrasing that is not too hard, at two levels that start simple and get harder.
+
+Turtle Dash in the main race now answers in other words at two levels in every word set:
+
+- Turtles 1–2 (simple other words): one to four easy words. Examples: rock → "a stone", cat → "a kitty", four → "2 + 2", green → "like grass", pencil → "a drawing stick".
+- Turtles 3–5 (other words): short descriptions. Examples: rock → "a big hard piece of the ground", rice → "small white grains you cook", hole → "an empty space in the ground".
+
+The question stays the same ("Where is Pip?"), and all three choices are reworded, so none can be found by spotting a sentence word. The build rejects any right answer that reuses a content word of its sentence. A wrong choice may echo a sentence word ("not cold at all"), which catches scanning. The mistake panel shows "The sentence says X. In other words: Y." Flash Dash, Shell Duel, the expert race, unlocks and saves are unchanged. Content: `scripts/turtle-dash-glossary.json`, one [simple, harder] pair for each of the 197 answer and distractor words in the 201 main-race sentences. No audio or images were generated.
+
+Verification: 20 Turtle Race unit tests, including the level pattern, all 201 sentences, the no-reuse rule and the right answers for "Pip is on the rock." Full suite: 439 unit/backend tests and 125 UI-flow groups pass. Headless Chromium at three sizes plays turtles 6 and 8 and makes a mistake on each. It confirms no choice appears in the sentence and checks the explanation and that Flash Dash still uses the sentence words. Physical iPad is not verified.

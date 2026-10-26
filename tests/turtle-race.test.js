@@ -98,6 +98,27 @@ test('sentence milestones follow the BlitzWord dashboard: secured, kept after 7 
   assert.deepEqual(old,{right:3,wrong:0,last:true,lastAt:null,trail:[],securedAt:null,kept7At:null,kept30At:null},'yesterday’s counts stay, without inventing milestones');
 });
 
+test('Turtle Dash answers in other words: simple for turtles 1-2 of each set, harder for 3-5, never by spotting a sentence word',()=>{
+  assert.equal(Core.LEVELS.dash.map(L=>L.gloss).join(''),'11222112221122211222');
+  for(const mode of ['flash','duel'])assert.ok(Core.LEVELS[mode].every(L=>!L.gloss),mode+' keeps the sentence words');
+  assert.ok(Expert.LEVELS.dash.every(L=>!L.gloss),'the expert race keeps its own rewordings');
+  const STOP=new Set('a an the of to in on at by is are was it its and or for with my me i we you he she his her our your this that these those be can do does did not no all one two up out off from into over under as so very'.split(' '));
+  const content=t=>t.toLowerCase().replace(/[^a-z' ]/g,' ').split(/\s+/).filter(w=>w.length>=3&&!STOP.has(w));
+  const main=Data.items.filter(i=>/^core[234]?$/.test(i.tier));assert.equal(main.length,201);
+  for(const i of main){
+    assert.ok(Core.hasGloss(i),i.s);const words=new Set(content(i.s));
+    for(const o of [i.o1,i.o2]){assert.deepEqual(content(o[0]).filter(w=>words.has(w)),[],i.s+' → '+o[0]);assert.ok(!new RegExp('\\b'+i.a+'\\b','i').test(o[0]),i.s);}
+    assert.ok(i.o1[0].split(' ').length<=i.o2[0].split(' ').length||i.o1[0].length<=i.o2[0].length,'simple is not longer than harder: '+i.s);
+  }
+  const rock=Data.items.find(i=>i.s==='Pip is on the rock.');
+  const easy=Core.buildQuestion('dash',rock,()=>.4,[],false,1);assert.equal(easy.options[easy.answer],'a stone');assert.equal(easy.meaning,'a stone');assert.equal(easy.prompt,'Where is Pip?');
+  // A wrong answer may echo a sentence word ("not cold at all"), which catches scanning instead of helping it.
+  const hard=Core.buildQuestion('dash',rock,()=>.4,[],false,2);assert.equal(hard.options[hard.answer],'a big hard piece of the ground');
+  const p=Core.defaultProfile();assert.equal(Core.newRun('dash',p).gloss,1);assert.equal(Core.newRun('flash',p).gloss,0);
+  p.progress.dash.unlocked=8;assert.equal(Core.newRun('dash',p,6).gloss,1);assert.equal(Core.newRun('dash',p,8).gloss,2);
+  assert.match(Core.describeLevel('dash',1),/simple other words/);assert.match(Core.describeLevel('dash',3),/answers in other words/);
+});
+
 test('expert race: ten turtles of other-words and long sentences, each tier steadily harder, own save',()=>{
   assert.equal(Expert.EDITION.id,'expert');assert.equal(Expert.LEVEL_COUNT,10);assert.equal(Expert.STORAGE_KEY,'blitzword_turtle_race_expert_v1');
   assert.notEqual(Expert.STORAGE_KEY,Core.STORAGE_KEY);assert.equal(Expert.EDITION.dashboardTime,false);assert.equal(Core.EDITION.dashboardTime,true);

@@ -13,6 +13,8 @@
   };
   // The expert race asks for the sentence that means the same, and is read rather than narrated.
   if(Core.EDITION.id==='expert'){INFO.flash.how='The sentence shows for a moment. Then tap the sentence that means the same. Fast answers give Pip a blitz boost.';INFO.flash.tag='Quick look, same meaning';INFO.dash.tag='Answer in other words';}
+  // Main-race Turtle Dash answers in other words, so the child has to read and understand the sentence.
+  if(Core.EDITION.id==='main'){INFO.dash.tag='Read, then pick the meaning';INFO.dash.how='Read the sentence. The answers use other words, so you have to understand it. Right answers move Pip forward. Wrong answers move him back.';}
   const items=Data.items.filter(i=>i.tier==='expert'?Core.validateExpert(i):Core.validateItem(i));
 
   // ---------- saved stats (own key only) ----------
@@ -201,7 +203,7 @@
     run.asked++;
     const review=run.asked%4===0&&reviewQueue.length?reviewQueue.shift():null;
     if(review)run.reviews++;
-    question=Core.buildQuestion(run.mode,review||deck.next(),Math.random,lastYes,run.paraphrase);
+    question=Core.buildQuestion(run.mode,review||deck.next(),Math.random,lastYes,run.paraphrase,run.gloss);
     question.review=!!review;
     if(question.mode==='duel')lastYes.push(question.yes);
     question.item=items.find(i=>i.s===question.sentence);
