@@ -271,3 +271,5 @@ button{font-family:inherit;cursor:pointer;touch-action:manipulation}
 /* While a mistake is shown, give the explanation the room it needs. */
 .play.reviewMode .stage{min-height:90px;max-height:18dvh}
 .play.reviewMode .reader{max-height:none;flex:1 1 auto}
+.tierWords{display:block;font-size:13px;font-weight:600;color:#6b7a63;margin-top:2px}
+@media (max-width:760px){.tierWords{display:inline;margin-left:6px}}

@@ -6,8 +6,10 @@ const root=path.resolve(__dirname,'..');
 const seq=values=>{let i=0;return()=>values[i++%values.length];};
 
 test('every item is valid, core sentences use recorded audio, and choices are text only',()=>{
-  const core=Data.items.filter(i=>i.tier==='core'),core2=Data.items.filter(i=>i.tier==='core2'),expert=Data.items.filter(i=>i.tier==='expert');
-  assert.equal(core.length,51);assert.equal(core2.length,50);assert.ok(expert.length>=30);assert.equal(core.length+core2.length+expert.length,Data.items.length);
+  const core=Data.items.filter(i=>i.tier==='core'),later=Data.items.filter(i=>/^core[234]$/.test(i.tier)),core2=later.filter(i=>i.tier==='core2'),expert=Data.items.filter(i=>i.tier==='expert');
+  assert.equal(core.length,51);for(const t of ['core2','core3','core4'])assert.equal(later.filter(i=>i.tier===t).length,50,t);
+  assert.ok(expert.length>=30);assert.equal(core.length+later.length+expert.length,Data.items.length);
+  assert.equal(new Set(Data.items.map(i=>i.s)).size,Data.items.length,'no sentence is used twice');
   for(const item of core){
     assert.ok(Core.validateItem(item),item.s);assert.ok(Core.validateParaphrase(item),item.s);
     assert.ok(fs.existsSync(path.join(root,item.audio.file)),item.audio.file);
@@ -15,9 +17,9 @@ test('every item is valid, core sentences use recorded audio, and choices are te
   // The second word set uses different key words from the first, and every sentence is recorded.
   const firstKeys=new Set(core.map(i=>i.a));
   assert.ok(core2.filter(i=>!firstKeys.has(i.a)).length>=40,'mostly new key words');
-  for(const item of core2){assert.ok(Core.validateItem(item),item.s);assert.ok(fs.existsSync(path.join(root,item.audio.file)),item.audio.file);assert.ok(!core.some(c=>c.s===item.s));}
+  for(const item of later){assert.ok(Core.validateItem(item),item.s);assert.ok(fs.existsSync(path.join(root,item.audio.file)),item.audio.file);}
   for(const item of expert){assert.ok(Core.validateExpert(item),item.s);assert.equal(item.audio,null);assert.ok(item.s.split(/\s+/).length>=9,item.s);}
-  for(const item of Data.items)for(const mode of Core.MODES)for(const other of item.tier==='expert'?[true]:item.tier==='core2'?[false]:[false,true]){
+  for(const item of Data.items)for(const mode of Core.MODES)for(const other of item.tier==='expert'?[true]:item.tier==='core'?[false,true]:[false]){
     const q=Core.buildQuestion(mode,item,Math.random,[],other);
     assert.ok(q.answer>=0&&q.answer<q.options.length);
     for(const o of q.options)assert.equal(typeof o,'string');
@@ -53,21 +55,33 @@ test('yes/no answers never repeat three times in a row',()=>{
 
 const unlockAll=(p,mode,n)=>{p.progress[mode].unlocked=n;p.progress[mode].selected=n;return p;};
 
-test('main race: ten turtles, 6-10 repeat the rules of 1-5 with a second set of words',()=>{
-  assert.equal(Core.EDITION.id,'main');assert.equal(Core.LEVEL_COUNT,10);assert.deepEqual(Core.TIERS.map(t=>[t.from,t.to]),[[1,5],[6,10]]);
+test('main race: twenty turtles, every word set repeats the rules of turtles 1-5',()=>{
+  assert.equal(Core.EDITION.id,'main');assert.equal(Core.LEVEL_COUNT,20);
+  assert.deepEqual(Core.TIERS.map(t=>[t.from,t.to,t.pool]),[[1,5,'core'],[6,10,'core2'],[11,15,'core3'],[16,20,'core4']]);
   const rules=L=>{const {pool,maxWords,...r}=L;return r;};
   for(const mode of Core.MODES){
-    assert.equal(Core.LEVELS[mode].length,10);
-    for(let n=1;n<=5;n++){
-      assert.deepEqual(rules(Core.LEVELS[mode][n+4]),rules(Core.LEVELS[mode][n-1]),mode+n);
-      assert.equal(Core.LEVELS[mode][n-1].pool,'core');assert.equal(Core.LEVELS[mode][n+4].pool,'core2');
+    assert.equal(Core.LEVELS[mode].length,20);
+    for(const tier of Core.TIERS)for(let k=0;k<5;k++){
+      assert.deepEqual(rules(Core.LEVELS[mode][tier.from-1+k]),rules(Core.LEVELS[mode][k]),mode+tier.id+k);
+      assert.equal(Core.LEVELS[mode][tier.from-1+k].pool,tier.pool);
     }
-    for(let n=1;n<=10;n++){
+    for(let n=1;n<=20;n++){
       const L=Core.LEVELS[mode][n-1],pool=Core.itemsForLevel(Data.items,mode,n);assert.ok(pool.length>=25,mode+n);
       assert.equal(L.paraphrase,false);assert.ok(pool.every(i=>i.tier===L.pool&&i.s.split(/\s+/).length<=L.maxWords));
     }
   }
-  assert.equal(Core.NAMES[5],'River Turtle');assert.match(Core.describeLevel('dash',6),/^4 steps to the finish · new words/);
+  assert.equal(Core.NAMES[5],'River Turtle');assert.equal(Core.NAMES[10],'Sand Turtle');assert.equal(Core.NAMES[19],'Ocean Turtle');
+  assert.match(Core.describeLevel('dash',6),/^4 steps to the finish · new words/);assert.match(Core.describeLevel('duel',16),/super words/);
+});
+
+test('words mastered per set: two right answers with the latest one right',()=>{
+  const p=Core.defaultProfile(),items=Data.items,a=items.find(i=>i.tier==='core2'),b=items.find(i=>i.tier==='core2'&&i!==a);
+  Core.recordAnswer(p,a.s,true);let m=Core.masteryByTier(p,items).find(x=>x.tier==='new');assert.deepEqual([m.mastered,m.total],[0,50]);
+  Core.recordAnswer(p,a.s,true);Core.recordAnswer(p,b.s,true);Core.recordAnswer(p,b.s,true);Core.recordAnswer(p,b.s,false);
+  m=Core.masteryByTier(p,items).find(x=>x.tier==='new');assert.equal(m.mastered,1,'a wrong latest answer is not mastered');
+  assert.deepEqual(Core.masteryByTier(p,items).map(x=>x.total),[51,50,50,50]);
+  const back=Core.normalizeProfile(JSON.parse(JSON.stringify(p)));assert.deepEqual(back.words,p.words);
+  assert.deepEqual(Core.normalizeProfile({words:{'x':{right:-1,wrong:'a',last:'yes'}}}).words,{x:{right:0,wrong:0,last:false}});
 });
 
 test('expert race: ten turtles of other-words and long sentences, each tier steadily harder, own save',()=>{
@@ -89,10 +103,10 @@ test('expert race: ten turtles of other-words and long sentences, each tier stea
 
 test('main saves from before the split keep turtles 1-5 and drop the old other-words levels',()=>{
   const old=Core.normalizeProfile({version:2,progress:{dash:{unlocked:8,selected:7,wins:[1,1,1,1,1,1,1,0],plays:[1,1,1,1,1,2,1,1]},flash:{unlocked:3,selected:2,wins:[1,1,0]}}});
-  assert.deepEqual(old.progress.dash.wins,[1,1,1,1,1,0,0,0,0,0]);assert.deepEqual(old.progress.dash.plays,[1,1,1,1,1,0,0,0,0,0]);
+  assert.deepEqual(old.progress.dash.wins.slice(0,10),[1,1,1,1,1,0,0,0,0,0]);assert.deepEqual(old.progress.dash.plays.slice(0,10),[1,1,1,1,1,0,0,0,0,0]);
   assert.equal(old.progress.dash.unlocked,6,'Champion beaten opens River Turtle with new words');assert.equal(old.progress.dash.selected,5);
   assert.equal(old.progress.flash.unlocked,3);assert.equal(old.version,3);
-  const saved=Core.normalizeProfile(JSON.parse(JSON.stringify({...old,version:3,progress:{...old.progress,dash:{...old.progress.dash,unlocked:9,wins:[1,1,1,1,1,1,1,1,0,0]}}})));
+  const saved=Core.normalizeProfile(JSON.parse(JSON.stringify({...old,version:3,progress:{...old.progress,dash:{...old.progress.dash,unlocked:9,wins:[1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0]}}})));
   assert.equal(saved.progress.dash.unlocked,9,'new-format saves keep turtles 6-10');
   const x=Expert.normalizeProfile({progress:{duel:{unlocked:7,selected:7,wins:[1,1,1,1,1,1,0]}}});assert.equal(x.progress.duel.unlocked,7,'expert saves are never truncated');
 });
@@ -154,21 +168,21 @@ test('winning the hardest open turtle opens the next; he chooses among open turt
   assert.equal(p.progress.flash.unlocked,1,'each race unlocks separately');
   p.progress.duel.unlocked=5;p.progress.duel.selected=5;const five=Core.newRun('duel',p);for(let i=0;i<9;i++)Core.answer(five,true,500);
   assert.equal(Core.recordFinish(p,five,now),6,'beating Champion opens the first new-words turtle');
-  p.progress.duel.unlocked=10;p.progress.duel.selected=10;const top=Core.newRun('duel',p);for(let i=0;i<9;i++)Core.answer(top,true,500);
-  assert.equal(Core.recordFinish(p,top,now),null);assert.equal(p.progress.duel.unlocked,10);
+  p.progress.duel.unlocked=20;p.progress.duel.selected=20;const top=Core.newRun('duel',p);for(let i=0;i<9;i++)Core.answer(top,true,500);
+  assert.equal(Core.recordFinish(p,top,now),null);assert.equal(p.progress.duel.unlocked,20);
   const all=Expert.unlockAll(Expert.defaultProfile());for(const m of Expert.MODES)assert.equal(all.progress[m].unlocked,10);
 });
 
 test('stored profiles are repaired and earlier automatic difficulty is dropped',()=>{
   const old=Core.normalizeProfile({version:1,levels:{dash:{goal:14}},games:{dash:{started:3,finished:2,wins:1}}});
   assert.equal(old.levels,undefined);assert.equal(old.games.dash.started,3);
-  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:Array(10).fill(0),plays:Array(10).fill(0)});
+  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:Array(20).fill(0),plays:Array(20).fill(0)});
   const q=Core.normalizeProfile({progress:{flash:{unlocked:1,selected:4,wins:[2,1,'x',-1,0]}}});
   assert.equal(q.progress.flash.unlocked,3,'wins prove level 3 is open');
   assert.equal(q.progress.flash.selected,2);assert.deepEqual(q.progress.flash.wins.slice(0,5),[2,1,0,0,0]);
-  assert.equal(Core.normalizeProfile({version:3,progress:{duel:{unlocked:99}}}).progress.duel.unlocked,10);
+  assert.equal(Core.normalizeProfile({version:3,progress:{duel:{unlocked:99}}}).progress.duel.unlocked,20);
   const five=Core.normalizeProfile({progress:{dash:{unlocked:5,selected:5,wins:[1,1,1,1,1],plays:[1,1,1,1,2]}}});
-  assert.equal(five.progress.dash.unlocked,6,'yesterday’s Champion win opens the first new turtle');assert.equal(five.progress.dash.plays.length,10);
+  assert.equal(five.progress.dash.unlocked,6,'yesterday’s Champion win opens the first new turtle');assert.equal(five.progress.dash.plays.length,20);
 });
 
 test('stats record starts, finishes, quits and accuracy under their own storage key',()=>{

@@ -1190,3 +1190,7 @@ The user also asked for ten more levels, including expert levels tough for a 10-
 ## Turtle Race split into main and expert games — 26 October 2026
 
 The child mastered turtles 1–5, but other-words answers were far too hard. This supersedes the 15-turtle ladder in the main game. The BlitzWord Turtle Race has ten turtles: 1–5 as before, and 6–10 with the same rules and a second set of different words. The former levels 6–15 move to a standalone expert game at `assets/turtle-race-expert/` for an older reader, with its own save and no link into BlitzWord. [Details](turtle-race/RELEASE.md).
+
+## Turtle Race: at least 60 minutes of masterable content — 26 October 2026
+
+The user asked for at least 60 minutes of race content the child can master, noting that he masters turtle 5 of a set after several attempts once he knows its words. The main race has four word sets of about 50 recorded sentences. Each set uses the same five-turtle rules, for twenty turtles per race; sets follow curriculum order. Per-set "sentences mastered" (two right answers, latest right) is shown to the child and parents. [Details and time estimate](turtle-race/RELEASE.md).
