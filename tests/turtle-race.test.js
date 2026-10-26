@@ -1,18 +1,23 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const Core=require('../assets/turtle-race/race-core.js');
+const Expert=Core.edition('expert');
 const Data=require('../assets/turtle-race/items.js');
 const root=path.resolve(__dirname,'..');
 const seq=values=>{let i=0;return()=>values[i++%values.length];};
 
 test('every item is valid, core sentences use recorded audio, and choices are text only',()=>{
-  const core=Data.items.filter(i=>i.tier==='core'),expert=Data.items.filter(i=>i.tier==='expert');
-  assert.equal(core.length,51);assert.ok(expert.length>=30);assert.equal(core.length+expert.length,Data.items.length);
+  const core=Data.items.filter(i=>i.tier==='core'),core2=Data.items.filter(i=>i.tier==='core2'),expert=Data.items.filter(i=>i.tier==='expert');
+  assert.equal(core.length,51);assert.equal(core2.length,50);assert.ok(expert.length>=30);assert.equal(core.length+core2.length+expert.length,Data.items.length);
   for(const item of core){
     assert.ok(Core.validateItem(item),item.s);assert.ok(Core.validateParaphrase(item),item.s);
     assert.ok(fs.existsSync(path.join(root,item.audio.file)),item.audio.file);
   }
+  // The second word set uses different key words from the first, and every sentence is recorded.
+  const firstKeys=new Set(core.map(i=>i.a));
+  assert.ok(core2.filter(i=>!firstKeys.has(i.a)).length>=40,'mostly new key words');
+  for(const item of core2){assert.ok(Core.validateItem(item),item.s);assert.ok(fs.existsSync(path.join(root,item.audio.file)),item.audio.file);assert.ok(!core.some(c=>c.s===item.s));}
   for(const item of expert){assert.ok(Core.validateExpert(item),item.s);assert.equal(item.audio,null);assert.ok(item.s.split(/\s+/).length>=9,item.s);}
-  for(const item of Data.items)for(const mode of Core.MODES)for(const other of item.tier==='expert'?[true]:[false,true]){
+  for(const item of Data.items)for(const mode of Core.MODES)for(const other of item.tier==='expert'?[true]:item.tier==='core2'?[false]:[false,true]){
     const q=Core.buildQuestion(mode,item,Math.random,[],other);
     assert.ok(q.answer>=0&&q.answer<q.options.length);
     for(const o of q.options)assert.equal(typeof o,'string');
@@ -28,7 +33,7 @@ test('hard and expert answers describe the key word in other words without reusi
   assert.equal(flash.prompt,'Which one means the same?');assert.equal(flash.options[flash.answer],'Pip sits on top of a big stone.');
   const duel=Core.buildQuestion('duel',item,()=>.1,[],true);assert.equal(duel.prompt,'Is Pip on top of a big stone?');assert.equal(duel.answer,0);
   const hasWord=(t,w)=>new RegExp('\\b'+w+'\\b','i').test(t);
-  for(const i of Data.items){for(const t of [i.g[0],i.ps,i.pt])assert.ok(!hasWord(t,i.a),i.s+' → '+t);}
+  for(const i of Data.items.filter(i=>i.g)){for(const t of [i.g[0],i.ps,i.pt])assert.ok(!hasWord(t,i.a),i.s+' → '+t);}
   assert.equal(Core.validateParaphrase({...item,ps:'Pip sits on the rock.'}),false,'reusing the key word is rejected');
 });
 
@@ -48,21 +53,48 @@ test('yes/no answers never repeat three times in a row',()=>{
 
 const unlockAll=(p,mode,n)=>{p.progress[mode].unlocked=n;p.progress[mode].selected=n;return p;};
 
-test('fifteen turtles per race in three tiers, each tier steadily harder',()=>{
-  assert.equal(Core.LEVEL_COUNT,15);assert.deepEqual(Core.TIERS.map(t=>[t.from,t.to]),[[1,5],[6,10],[11,15]]);
-  for(const mode of Core.MODES)assert.equal(Core.LEVELS[mode].length,15);
-  for(const tier of Core.TIERS)for(let n=tier.from+1;n<=tier.to;n++){
-    const [a,b]=[Core.LEVELS.dash[n-2],Core.LEVELS.dash[n-1]];assert.ok(b.goal>a.goal);
-    const [f,g]=[Core.LEVELS.flash[n-2],Core.LEVELS.flash[n-1]];assert.ok(g.goal>f.goal&&g.flashMs<f.flashMs&&g.boostMs<=f.boostMs);
-    const [d,e]=[Core.LEVELS.duel[n-2],Core.LEVELS.duel[n-1]];assert.ok(e.shell>d.shell&&e.timerMs<d.timerMs&&e.hearts<=d.hearts);
+test('main race: ten turtles, 6-10 repeat the rules of 1-5 with a second set of words',()=>{
+  assert.equal(Core.EDITION.id,'main');assert.equal(Core.LEVEL_COUNT,10);assert.deepEqual(Core.TIERS.map(t=>[t.from,t.to]),[[1,5],[6,10]]);
+  const rules=L=>{const {pool,maxWords,...r}=L;return r;};
+  for(const mode of Core.MODES){
+    assert.equal(Core.LEVELS[mode].length,10);
+    for(let n=1;n<=5;n++){
+      assert.deepEqual(rules(Core.LEVELS[mode][n+4]),rules(Core.LEVELS[mode][n-1]),mode+n);
+      assert.equal(Core.LEVELS[mode][n-1].pool,'core');assert.equal(Core.LEVELS[mode][n+4].pool,'core2');
+    }
+    for(let n=1;n<=10;n++){
+      const L=Core.LEVELS[mode][n-1],pool=Core.itemsForLevel(Data.items,mode,n);assert.ok(pool.length>=25,mode+n);
+      assert.equal(L.paraphrase,false);assert.ok(pool.every(i=>i.tier===L.pool&&i.s.split(/\s+/).length<=L.maxWords));
+    }
   }
-  for(const mode of Core.MODES)for(let n=1;n<=15;n++){
-    const L=Core.LEVELS[mode][n-1],pool=Core.itemsForLevel(Data.items,mode,n);assert.ok(pool.length>=25,mode+n);
-    assert.ok(pool.every(i=>i.s.split(/\s+/).length<=L.maxWords&&i.tier===(n>10?'expert':'core')));
-    assert.equal(L.paraphrase,n>5);
+  assert.equal(Core.NAMES[5],'River Turtle');assert.match(Core.describeLevel('dash',6),/^4 steps to the finish · new words/);
+});
+
+test('expert race: ten turtles of other-words and long sentences, each tier steadily harder, own save',()=>{
+  assert.equal(Expert.EDITION.id,'expert');assert.equal(Expert.LEVEL_COUNT,10);assert.equal(Expert.STORAGE_KEY,'blitzword_turtle_race_expert_v1');
+  assert.notEqual(Expert.STORAGE_KEY,Core.STORAGE_KEY);assert.equal(Expert.EDITION.dashboardTime,false);assert.equal(Core.EDITION.dashboardTime,true);
+  for(const tier of Expert.TIERS)for(let n=tier.from+1;n<=tier.to;n++){
+    const [a,b]=[Expert.LEVELS.dash[n-2],Expert.LEVELS.dash[n-1]];assert.ok(b.goal>a.goal);
+    const [f,g]=[Expert.LEVELS.flash[n-2],Expert.LEVELS.flash[n-1]];assert.ok(g.goal>f.goal&&g.flashMs<f.flashMs&&g.boostMs<=f.boostMs);
+    const [d,e]=[Expert.LEVELS.duel[n-2],Expert.LEVELS.duel[n-1]];assert.ok(e.shell>d.shell&&e.timerMs<d.timerMs&&e.hearts<=d.hearts);
   }
-  assert.equal(Core.itemsForLevel(Data.items,'dash',5).length,51);assert.equal(Core.itemsForLevel(Data.items,'dash',15).length,Data.items.length-51);
-  assert.match(Core.describeLevel('flash',12),/long sentences · answers in other words/);
+  for(const mode of Expert.MODES)for(let n=1;n<=10;n++){
+    const L=Expert.LEVELS[mode][n-1],pool=Expert.itemsForLevel(Data.items,mode,n);assert.ok(pool.length>=25,mode+n);
+    assert.equal(L.paraphrase,true);assert.ok(pool.every(i=>i.tier===(n>5?'expert':'core')));
+  }
+  assert.deepEqual(Expert.NAMES.slice(0,2),['River Turtle','Forest Turtle']);assert.equal(Expert.NAMES[9],'Legend Turtle');
+  assert.match(Expert.describeLevel('flash',7),/long sentences · answers in other words/);
+  const p=Expert.defaultProfile(),run=Expert.newRun('dash',p);assert.equal(run.paraphrase,true);assert.equal(run.goal,6);
+});
+
+test('main saves from before the split keep turtles 1-5 and drop the old other-words levels',()=>{
+  const old=Core.normalizeProfile({version:2,progress:{dash:{unlocked:8,selected:7,wins:[1,1,1,1,1,1,1,0],plays:[1,1,1,1,1,2,1,1]},flash:{unlocked:3,selected:2,wins:[1,1,0]}}});
+  assert.deepEqual(old.progress.dash.wins,[1,1,1,1,1,0,0,0,0,0]);assert.deepEqual(old.progress.dash.plays,[1,1,1,1,1,0,0,0,0,0]);
+  assert.equal(old.progress.dash.unlocked,6,'Champion beaten opens River Turtle with new words');assert.equal(old.progress.dash.selected,5);
+  assert.equal(old.progress.flash.unlocked,3);assert.equal(old.version,3);
+  const saved=Core.normalizeProfile(JSON.parse(JSON.stringify({...old,version:3,progress:{...old.progress,dash:{...old.progress.dash,unlocked:9,wins:[1,1,1,1,1,1,1,1,0,0]}}})));
+  assert.equal(saved.progress.dash.unlocked,9,'new-format saves keep turtles 6-10');
+  const x=Expert.normalizeProfile({progress:{duel:{unlocked:7,selected:7,wins:[1,1,1,1,1,1,0]}}});assert.equal(x.progress.duel.unlocked,7,'expert saves are never truncated');
 });
 
 test('turtle dash level 1 never slips back; level 3 does, but not below the start',()=>{
@@ -121,22 +153,22 @@ test('winning the hardest open turtle opens the next; he chooses among open turt
   assert.ok(Core.selectLevel(p,'dash',2));assert.equal(Core.newRun('dash',p).level,2);
   assert.equal(p.progress.flash.unlocked,1,'each race unlocks separately');
   p.progress.duel.unlocked=5;p.progress.duel.selected=5;const five=Core.newRun('duel',p);for(let i=0;i<9;i++)Core.answer(five,true,500);
-  assert.equal(Core.recordFinish(p,five,now),6,'beating Champion opens the first Hard turtle');
-  p.progress.duel.unlocked=15;p.progress.duel.selected=15;const top=Core.newRun('duel',p);for(let i=0;i<9;i++)Core.answer(top,true,500);
-  assert.equal(Core.recordFinish(p,top,now),null);assert.equal(p.progress.duel.unlocked,15);
-  const all=Core.unlockAll(Core.defaultProfile());for(const m of Core.MODES)assert.equal(all.progress[m].unlocked,15);
+  assert.equal(Core.recordFinish(p,five,now),6,'beating Champion opens the first new-words turtle');
+  p.progress.duel.unlocked=10;p.progress.duel.selected=10;const top=Core.newRun('duel',p);for(let i=0;i<9;i++)Core.answer(top,true,500);
+  assert.equal(Core.recordFinish(p,top,now),null);assert.equal(p.progress.duel.unlocked,10);
+  const all=Expert.unlockAll(Expert.defaultProfile());for(const m of Expert.MODES)assert.equal(all.progress[m].unlocked,10);
 });
 
 test('stored profiles are repaired and earlier automatic difficulty is dropped',()=>{
   const old=Core.normalizeProfile({version:1,levels:{dash:{goal:14}},games:{dash:{started:3,finished:2,wins:1}}});
   assert.equal(old.levels,undefined);assert.equal(old.games.dash.started,3);
-  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:Array(15).fill(0),plays:Array(15).fill(0)});
+  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:Array(10).fill(0),plays:Array(10).fill(0)});
   const q=Core.normalizeProfile({progress:{flash:{unlocked:1,selected:4,wins:[2,1,'x',-1,0]}}});
   assert.equal(q.progress.flash.unlocked,3,'wins prove level 3 is open');
   assert.equal(q.progress.flash.selected,2);assert.deepEqual(q.progress.flash.wins.slice(0,5),[2,1,0,0,0]);
-  assert.equal(Core.normalizeProfile({progress:{duel:{unlocked:99}}}).progress.duel.unlocked,15);
+  assert.equal(Core.normalizeProfile({version:3,progress:{duel:{unlocked:99}}}).progress.duel.unlocked,10);
   const five=Core.normalizeProfile({progress:{dash:{unlocked:5,selected:5,wins:[1,1,1,1,1],plays:[1,1,1,1,2]}}});
-  assert.equal(five.progress.dash.unlocked,6,'yesterday’s Champion win opens the first new turtle');assert.equal(five.progress.dash.plays.length,15);
+  assert.equal(five.progress.dash.unlocked,6,'yesterday’s Champion win opens the first new turtle');assert.equal(five.progress.dash.plays.length,10);
 });
 
 test('stats record starts, finishes, quits and accuracy under their own storage key',()=>{
@@ -184,4 +216,9 @@ test('recorded voice-over is installed with matching receipts and the page does 
   assert.ok(!app.includes('blitzword_state_v1'));
   const html=fs.readFileSync(path.join(root,'assets/turtle-race/index.html'),'utf8');
   for(const f of ['race-core.js','items.js','app.js','style.css','pip.webp','turtle.webp'])assert.ok(html.includes(f)||app.includes(f),f);
+  // The standalone expert page reuses the same files, chooses the expert edition and has no link into BlitzWord.
+  const expert=fs.readFileSync(path.join(root,'assets/turtle-race-expert/index.html'),'utf8');
+  assert.match(expert,/TURTLE_RACE_EDITION='expert'/);assert.ok(!expert.includes('href="../../"'));
+  for(const f of ['../turtle-race/race-core.js','../turtle-race/items.js','../turtle-race/app.js','../turtle-race/style.css','../turtle-race/pip.webp'])assert.ok(expert.includes(f),f);
+  const v=html.match(/app\.js\?v=([\w-]+)/)[1];assert.ok(expert.includes('app.js?v='+v),'both pages load the same release');
 });

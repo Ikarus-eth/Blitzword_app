@@ -1,48 +1,47 @@
 /* Turtle Race: pure rules for three 60-second reading mini-games. No DOM, no learner-save access. */
+// Two editions share these rules: the main BlitzWord race and the standalone expert race, each with its own save.
 (function(root,factory){
-  const api=factory();
-  if(typeof module==='object'&&module.exports)module.exports=api;else root.TurtleRaceCore=api;
-})(typeof globalThis!=='undefined'?globalThis:this,function(){
+  if(typeof module==='object'&&module.exports){const api=factory('main');api.edition=name=>factory(name);module.exports=api;}
+  else root.TurtleRaceCore=factory(root.TURTLE_RACE_EDITION||'main');
+})(typeof globalThis!=='undefined'?globalThis:this,function(editionName){
   'use strict';
   const GAME_MS=60000;
-  const STORAGE_KEY='blitzword_turtle_race_v1';
   const MODES=['dash','flash','duel'];
-  // Fifteen fixed turtles per race in three tiers. Level 1 is meant to be won early; each win opens the next turtle.
-  // Easy (1-5): short sentences, same words. Hard (6-10): answers in other words. Expert (11-15): long sentences, answers in other words.
-  const NAMES=['Sleepy Turtle','Little Turtle','Brave Turtle','Speedy Turtle','Champion Turtle',
-    'River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle',
-    'Crystal Turtle','Shadow Turtle','Fire Turtle','Ancient Turtle','Legend Turtle'];
-  const TIERS=[{id:'easy',name:'Easy',from:1,to:5},{id:'hard',name:'Hard · other words',from:6,to:10},{id:'expert',name:'Expert',from:11,to:15}];
-  const core=(o)=>({pool:'core',paraphrase:false,...o}),hard=(o)=>({pool:'core',paraphrase:true,backOnWrong:true,maxWords:7,...o}),expert=(o)=>({pool:'expert',paraphrase:true,backOnWrong:true,maxWords:99,...o});
-  const LEVELS={
-    dash:[
-      core({goal:4,backOnWrong:false,maxWords:5}),
-      core({goal:6,backOnWrong:false,maxWords:5}),
-      core({goal:8,backOnWrong:true,maxWords:6}),
-      core({goal:10,backOnWrong:true,maxWords:7}),
-      core({goal:12,backOnWrong:true,maxWords:7}),
-      hard({goal:6}),hard({goal:7}),hard({goal:8}),hard({goal:9}),hard({goal:10}),
-      expert({goal:6}),expert({goal:7}),expert({goal:8}),expert({goal:9}),expert({goal:10})
-    ],
-    flash:[
-      core({goal:5,flashMs:5000,boostMs:5000,backOnWrong:false,maxWords:5}),
-      core({goal:7,flashMs:4000,boostMs:4000,backOnWrong:false,maxWords:5}),
-      core({goal:9,flashMs:3000,boostMs:3000,backOnWrong:true,maxWords:6}),
-      core({goal:11,flashMs:2500,boostMs:3000,backOnWrong:true,maxWords:7}),
-      core({goal:13,flashMs:2000,boostMs:2500,backOnWrong:true,maxWords:7}),
-      hard({goal:7,flashMs:4000,boostMs:4000}),hard({goal:8,flashMs:3500,boostMs:3500}),hard({goal:9,flashMs:3000,boostMs:3000}),hard({goal:10,flashMs:2500,boostMs:3000}),hard({goal:11,flashMs:2200,boostMs:2500}),
-      expert({goal:7,flashMs:6000,boostMs:6000}),expert({goal:8,flashMs:5000,boostMs:5000}),expert({goal:9,flashMs:4500,boostMs:4500}),expert({goal:10,flashMs:4000,boostMs:4000}),expert({goal:11,flashMs:3500,boostMs:3500})
-    ],
-    duel:[
-      core({shell:3,timerMs:12000,hearts:5,maxWords:5}),
-      core({shell:4,timerMs:10000,hearts:4,maxWords:5}),
-      core({shell:5,timerMs:8000,hearts:3,maxWords:6}),
-      core({shell:7,timerMs:6500,hearts:3,maxWords:7}),
-      core({shell:9,timerMs:5000,hearts:3,maxWords:7}),
-      hard({shell:5,timerMs:9000,hearts:3}),hard({shell:6,timerMs:8000,hearts:3}),hard({shell:7,timerMs:7000,hearts:3}),hard({shell:8,timerMs:6500,hearts:3}),hard({shell:9,timerMs:6000,hearts:3}),
-      expert({shell:5,timerMs:12000,hearts:3}),expert({shell:6,timerMs:11000,hearts:3}),expert({shell:7,timerMs:10000,hearts:3}),expert({shell:8,timerMs:9000,hearts:3}),expert({shell:9,timerMs:8000,hearts:3})
-    ]
+  // Level presets. "Easy" is the five-turtle ladder the child first mastered; it is reused with a second word set.
+  const easy=(pool,maxWords)=>({
+    dash:[{goal:4,backOnWrong:false},{goal:6,backOnWrong:false},{goal:8,backOnWrong:true},{goal:10,backOnWrong:true},{goal:12,backOnWrong:true}],
+    flash:[{goal:5,flashMs:5000,boostMs:5000,backOnWrong:false},{goal:7,flashMs:4000,boostMs:4000,backOnWrong:false},{goal:9,flashMs:3000,boostMs:3000,backOnWrong:true},{goal:11,flashMs:2500,boostMs:3000,backOnWrong:true},{goal:13,flashMs:2000,boostMs:2500,backOnWrong:true}],
+    duel:[{shell:3,timerMs:12000,hearts:5},{shell:4,timerMs:10000,hearts:4},{shell:5,timerMs:8000,hearts:3},{shell:7,timerMs:6500,hearts:3},{shell:9,timerMs:5000,hearts:3}]
+  });
+  const ladder=(preset,pool,maxWords,extra={})=>{const out={};for(const m of MODES)out[m]=preset[m].map((o,i)=>({pool,paraphrase:false,maxWords:maxWords[i],...o,...extra}));return out;};
+  const hard={
+    dash:[{goal:6},{goal:7},{goal:8},{goal:9},{goal:10}],
+    flash:[{goal:7,flashMs:4000,boostMs:4000},{goal:8,flashMs:3500,boostMs:3500},{goal:9,flashMs:3000,boostMs:3000},{goal:10,flashMs:2500,boostMs:3000},{goal:11,flashMs:2200,boostMs:2500}],
+    duel:[{shell:5,timerMs:9000,hearts:3},{shell:6,timerMs:8000,hearts:3},{shell:7,timerMs:7000,hearts:3},{shell:8,timerMs:6500,hearts:3},{shell:9,timerMs:6000,hearts:3}]
   };
+  const expert={
+    dash:[{goal:6},{goal:7},{goal:8},{goal:9},{goal:10}],
+    flash:[{goal:7,flashMs:6000,boostMs:6000},{goal:8,flashMs:5000,boostMs:5000},{goal:9,flashMs:4500,boostMs:4500},{goal:10,flashMs:4000,boostMs:4000},{goal:11,flashMs:3500,boostMs:3500}],
+    duel:[{shell:5,timerMs:12000,hearts:3},{shell:6,timerMs:11000,hearts:3},{shell:7,timerMs:10000,hearts:3},{shell:8,timerMs:9000,hearts:3},{shell:9,timerMs:8000,hearts:3}]
+  };
+  const join=(...parts)=>{const out={};for(const m of MODES)out[m]=parts.flatMap(p=>p[m]);return out;};
+  const EDITIONS={
+    // Main race in BlitzWord: the first five turtles, then the same five rules with a second set of words.
+    main:{id:'main',storageKey:'blitzword_turtle_race_v1',version:3,dashboardTime:true,openAll:false,
+      names:['Sleepy Turtle','Little Turtle','Brave Turtle','Speedy Turtle','Champion Turtle','River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle'],
+      tiers:[{id:'easy',name:'First words',from:1,to:5},{id:'new',name:'New words',from:6,to:10}],
+      levels:join(ladder(easy(),'core',[5,5,6,7,7]),ladder(easy(),'core2',[6,6,7,8,8])),
+      note:'Each race has ten turtles: 1–5 with the first words, then 6–10 with the same rules and a new set of words.'},
+    // Standalone expert race for an older reader: answers in other words, then long sentences.
+    expert:{id:'expert',storageKey:'blitzword_turtle_race_expert_v1',version:3,dashboardTime:false,openAll:true,
+      names:['River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle','Crystal Turtle','Shadow Turtle','Fire Turtle','Ancient Turtle','Legend Turtle'],
+      tiers:[{id:'hard',name:'Other words',from:1,to:5},{id:'expert',name:'Expert',from:6,to:10}],
+      levels:join(ladder(hard,'core',[7,7,7,7,7],{paraphrase:true,backOnWrong:true}),ladder(expert,'expert',[99,99,99,99,99],{paraphrase:true,backOnWrong:true})),
+      note:'Each race has ten turtles: 1–5 answer short sentences in other words, 6–10 use long sentences with harder words, also answered in other words.'}
+  };
+  const E=EDITIONS[editionName]||EDITIONS.main;
+  const STORAGE_KEY=E.storageKey,NAMES=E.names,TIERS=E.tiers,LEVELS=E.levels;
+  const EDITION={id:E.id,dashboardTime:E.dashboardTime,openAll:E.openAll,note:E.note};
   const LEVEL_COUNT=NAMES.length;
   const BOOST_MS=3000;
   const level=(mode,n)=>({...LEVELS[mode][n-1],level:n,name:NAMES[n-1]});
@@ -54,7 +53,7 @@
   }
   function describeLevel(mode,n){
     const L=LEVELS[mode][n-1],secs=ms=>(ms/1000).toFixed(ms%1000?1:0)+' s';
-    const extra=(L.pool==='expert'?' · long sentences':'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
+    const extra=(L.pool==='core2'?' · new words':'')+(L.pool==='expert'?' · long sentences':'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
     if(mode==='dash')return `${L.goal} steps to the finish`+extra;
     if(mode==='flash')return `${L.goal} steps · sentence shows ${secs(L.flashMs)}`+extra;
     return `${L.shell} shells · ${secs(L.timerMs)} per question · ${L.hearts} hearts`+extra;
@@ -64,7 +63,7 @@
   function emptyStats(){return {started:0,finished:0,wins:0,answers:0,correct:0,answerMs:0,lastPlayed:null};}
   function defaultProfile(){
     const games={},progress={};for(const m of MODES){games[m]=emptyStats();progress[m]=emptyProgress();}
-    return {version:2,games,progress,history:[],time:{days:{}}};
+    return {version:E.version,games,progress,history:[],time:{days:{}}};
   }
   // Local calendar day, matching the main game's parent dashboard.
   function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
@@ -85,9 +84,12 @@
       for(const k of ['started','finished','wins','answers','correct','answerMs'])p.games[m][k]=Number.isFinite(g[k])&&g[k]>=0?g[k]:0;
       p.games[m].lastPlayed=typeof g.lastPlayed==='string'?g.lastPlayed:null;
       const r=raw.progress?.[m]||{},q=p.progress[m];
-      for(let i=0;i<LEVEL_COUNT;i++){q.wins[i]=count(r.wins?.[i]);q.plays[i]=count(r.plays?.[i]);}
+      // Main saves from before 26 October 2026 held other-words levels 6-15; those moved to the expert race.
+      const keep=E.id==='main'&&!(raw.version>=3)?5:LEVEL_COUNT;
+      for(let i=0;i<LEVEL_COUNT;i++){q.wins[i]=i<keep?count(r.wins?.[i]):0;q.plays[i]=i<keep?count(r.plays?.[i]):0;}
       const won=q.wins.reduce((top,w,i)=>w>0?i+1:top,0);
-      q.unlocked=Math.min(LEVEL_COUNT,Math.max(1,Number.isInteger(r.unlocked)?r.unlocked:1,won+1));
+      const saved=Number.isInteger(r.unlocked)?Math.min(r.unlocked,keep+1):1;
+      q.unlocked=Math.min(LEVEL_COUNT,Math.max(1,saved,won+1));
       q.selected=Number.isInteger(r.selected)&&r.selected>=1&&r.selected<=q.unlocked?r.selected:Math.min(q.unlocked,Math.max(1,won||1));
     }
     if(Array.isArray(raw.history))p.history=raw.history.filter(h=>h&&MODES.includes(h.mode)).slice(-60);
@@ -230,5 +232,5 @@
     });
   }
 
-  return {dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
+  return {EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });
