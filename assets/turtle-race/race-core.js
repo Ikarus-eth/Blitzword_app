@@ -25,16 +25,22 @@
     duel:[{shell:5,timerMs:12000,hearts:3},{shell:6,timerMs:11000,hearts:3},{shell:7,timerMs:10000,hearts:3},{shell:8,timerMs:9000,hearts:3},{shell:9,timerMs:8000,hearts:3}]
   };
   const join=(...parts)=>{const out={};for(const m of MODES)out[m]=parts.flatMap(p=>p[m]);return out;};
-  // Turtle Dash answers in other words so the answer cannot be found by spotting a word from the sentence:
-  // simple other words for turtles 1-2 of each word set, slightly longer descriptions for turtles 3-5.
-  const dashOtherWords=levels=>{levels.dash=levels.dash.map((L,i)=>({...L,gloss:i%5<2?1:2}));return levels;};
+  // Turtle Dash only: ten more turtles after the four word sets, answering in other words so the answer
+  // cannot be found by spotting a word from the sentence. Turtles 21-25 use simple other words, 26-30 short descriptions.
+  // They draw on all four word sets ("all"), with the same five steps as turtles 1-5.
+  const dashOtherWords=levels=>{
+    const extra=gloss=>easy().dash.map(o=>({pool:'all',paraphrase:false,maxWords:8,...o,gloss}));
+    levels.dash=[...levels.dash,...extra(1),...extra(2)];return levels;
+  };
   const EDITIONS={
     // Main race in BlitzWord: the same five-turtle rules, repeated with four sets of about 50 recorded sentences.
     // Each set is mastered by replaying it until its words are known; level 5 of a set usually takes several tries.
     main:{id:'main',storageKey:'blitzword_turtle_race_v1',version:3,dashboardTime:true,openAll:false,
       names:['Sleepy Turtle','Little Turtle','Brave Turtle','Speedy Turtle','Champion Turtle','River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle',
-        'Sand Turtle','Moss Turtle','Cloud Turtle','Comet Turtle','Star Turtle','Pearl Turtle','Coral Turtle','Wave Turtle','Tide Turtle','Ocean Turtle'],
-      tiers:[{id:'easy',name:'First words',from:1,to:5,pool:'core'},{id:'new',name:'New words',from:6,to:10,pool:'core2'},{id:'more',name:'More words',from:11,to:15,pool:'core3'},{id:'super',name:'Super words',from:16,to:20,pool:'core4'}],
+        'Sand Turtle','Moss Turtle','Cloud Turtle','Comet Turtle','Star Turtle','Pearl Turtle','Coral Turtle','Wave Turtle','Tide Turtle','Ocean Turtle',
+        'Pebble Turtle','Shell Turtle','Lily Turtle','Maple Turtle','Willow Turtle','Glacier Turtle','Volcano Turtle','Aurora Turtle','Galaxy Turtle','Golden Turtle'],
+      tiers:[{id:'easy',name:'First words',from:1,to:5,pool:'core'},{id:'new',name:'New words',from:6,to:10,pool:'core2'},{id:'more',name:'More words',from:11,to:15,pool:'core3'},{id:'super',name:'Super words',from:16,to:20,pool:'core4'},
+        {id:'other1',name:'Simple other words',from:21,to:25,pool:'all',modes:['dash']},{id:'other2',name:'Other words',from:26,to:30,pool:'all',modes:['dash']}],
       levels:dashOtherWords(join(ladder(easy(),'core',[5,5,6,7,7]),ladder(easy(),'core2',[6,6,7,8,8]),ladder(easy(),'core3',[6,6,7,7,7]),ladder(easy(),'core4',[7,7,8,8,8]))),
       note:'Each race has twenty turtles in four word sets. Every set uses the same five rules with about 50 new recorded sentences, so the child can master a set by replaying it.'},
     // Standalone expert race for an older reader: answers in other words, then long sentences.
@@ -47,14 +53,18 @@
   const E=EDITIONS[editionName]||EDITIONS.main;
   const STORAGE_KEY=E.storageKey,NAMES=E.names,TIERS=E.tiers,LEVELS=E.levels;
   const EDITION={id:E.id,dashboardTime:E.dashboardTime,openAll:E.openAll,note:E.note};
-  const LEVEL_COUNT=NAMES.length;
+  const LEVEL_COUNT=NAMES.length; // array size; a race may have fewer turtles (Turtle Dash has the most)
+  const countFor=mode=>LEVELS[mode].length;
+  const tiersFor=mode=>TIERS.filter(t=>t.to<=countFor(mode)&&(!t.modes||t.modes.includes(mode)));
+  const POOLS={all:['core','core2','core3','core4']};
+  const inPool=(item,pool)=>(POOLS[pool]||[pool]).includes(item.tier||'core');
   const BOOST_MS=3000;
   const level=(mode,n)=>({...LEVELS[mode][n-1],level:n,name:NAMES[n-1]});
   const tierOf=n=>TIERS.find(t=>n>=t.from&&n<=t.to);
   const words=s=>s.trim().split(/\s+/).length;
   function itemsForLevel(items,mode,n){
     const L=LEVELS[mode][n-1];
-    return items.filter(i=>(i.tier||'core')===L.pool&&words(i.s)<=L.maxWords&&(!L.paraphrase||hasParaphrase(i))&&(!L.gloss||hasGloss(i)));
+    return items.filter(i=>inPool(i,L.pool)&&words(i.s)<=L.maxWords&&(!L.paraphrase||hasParaphrase(i))&&(!L.gloss||hasGloss(i)));
   }
   function describeLevel(mode,n){
     const L=LEVELS[mode][n-1],secs=ms=>(ms/1000).toFixed(ms%1000?1:0)+' s';
@@ -68,16 +78,21 @@
   function emptyStats(){return {started:0,finished:0,wins:0,answers:0,correct:0,answerMs:0,lastPlayed:null};}
   function defaultProfile(){
     const games={},progress={};for(const m of MODES){games[m]=emptyStats();progress[m]=emptyProgress();}
-    return {version:E.version,games,progress,history:[],time:{days:{}},words:{},seq:0};
+    return {version:E.version,games,progress,history:[],time:{days:{},replayDays:{}},words:{},seq:0};
   }
   // Local calendar day, matching the main game's parent dashboard.
   function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
   const DAY_MS=86400000;
   // Active race time only: the clock runs while questions are on screen and pauses when the page is hidden.
-  function addTime(profile,ms,now){
+  // Only reading towards a turtle not yet beaten counts as reading time; replays are kept apart so parents can still see them.
+  function addTime(profile,ms,now,replay=false){
     const add=Math.round(ms);if(!(add>0))return profile;
-    const key=dayKey(now);profile.time.days[key]=Math.min(DAY_MS,(profile.time.days[key]||0)+add);return profile;
+    const days=replay?(profile.time.replayDays ||= {}):profile.time.days,key=dayKey(now);
+    days[key]=Math.min(DAY_MS,(days[key]||0)+add);return profile;
   }
+  function replayTime(profile){return Object.values(profile.time.replayDays||{}).reduce((a,b)=>a+b,0);}
+  // A race counts as new reading when its turtle has not been beaten yet.
+  function countsAsNew(profile,run){return !(profile.progress[run.mode].wins[run.level-1]>0);}
   function totalTime(profile){return Object.values(profile.time.days).reduce((a,b)=>a+b,0);}
   // Accept any stored shape; keep valid values, repair the rest. Old automatic difficulty is dropped.
   function normalizeProfile(raw){
@@ -94,7 +109,7 @@
       for(let i=0;i<LEVEL_COUNT;i++){q.wins[i]=i<keep?count(r.wins?.[i]):0;q.plays[i]=i<keep?count(r.plays?.[i]):0;}
       const won=q.wins.reduce((top,w,i)=>w>0?i+1:top,0);
       const saved=Number.isInteger(r.unlocked)?Math.min(r.unlocked,keep+1):1;
-      q.unlocked=Math.min(LEVEL_COUNT,Math.max(1,saved,won+1));
+      q.unlocked=Math.min(countFor(m),Math.max(1,saved,won+1));
       q.selected=Number.isInteger(r.selected)&&r.selected>=1&&r.selected<=q.unlocked?r.selected:Math.min(q.unlocked,Math.max(1,won||1));
     }
     // Per-sentence evidence, using the BlitzWord parent-dashboard milestones (secured, kept after 7 / 30 days).
@@ -107,16 +122,18 @@
     }
     if(Array.isArray(raw.history))p.history=raw.history.filter(h=>h&&MODES.includes(h.mode)).slice(-60);
     const days=raw.time?.days;
+    const replays=raw.time?.replayDays;
+    if(replays&&typeof replays==='object')for(const [k,ms] of Object.entries(replays))if(/^\d{4}-\d{2}-\d{2}$/.test(k)&&Number.isSafeInteger(ms)&&ms>0)p.time.replayDays[k]=Math.min(DAY_MS,ms);
     if(days&&typeof days==='object'){
       for(const [k,ms] of Object.entries(days))if(/^\d{4}-\d{2}-\d{2}$/.test(k)&&Number.isSafeInteger(ms)&&ms>0)p.time.days[k]=Math.min(DAY_MS,ms);
-    }else{
+    }else if(!raw.time){
       // Saves from before time tracking: credit finished races from their history.
       for(const h of p.history){const at=Date.parse(h.at);if(Number.isFinite(at)&&Number.isFinite(h.elapsed)&&h.elapsed>0)addTime(p,Math.min(GAME_MS,h.elapsed),at);}
     }
     return p;
   }
   // Parent option for an older player: open every turtle in every race.
-  function unlockAll(profile){for(const m of MODES)profile.progress[m].unlocked=LEVEL_COUNT;return profile;}
+  function unlockAll(profile){for(const m of MODES)profile.progress[m].unlocked=countFor(m);return profile;}
   function selectLevel(profile,mode,n){
     const q=profile.progress[mode];
     if(!Number.isInteger(n)||n<1||n>q.unlocked)return false;
@@ -260,7 +277,8 @@
   }
   // Counts per word set. "mastered" = secured or better, the dashboard's highest-evidence states.
   function masteryByTier(profile,items){
-    return TIERS.map(t=>{
+    // Word sets only: the other-words turtles reuse all four sets and are not a set of their own.
+    return TIERS.filter(t=>t.pool!=='all').map(t=>{
       const pool=items.filter(i=>(i.tier||'core')===t.pool),c={new:0,learning:0,secured:0,kept7:0,kept30:0};
       for(const i of pool)c[sentenceStatus(profile,i.s)]++;
       return {tier:t.id,name:t.name,total:pool.length,...c,mastered:c.secured+c.kept7+c.kept30,kept7plus:c.kept7+c.kept30};
@@ -279,7 +297,7 @@
     g.finished++;if(run.won)g.wins++;g.answers+=run.answers;g.correct+=run.correct;g.answerMs+=run.answerMs;g.lastPlayed=now;
     q.plays[run.level-1]++;
     let unlockedNow=null;
-    if(run.won){q.wins[run.level-1]++;if(run.level===q.unlocked&&q.unlocked<LEVEL_COUNT){q.unlocked++;unlockedNow=q.unlocked;}}
+    if(run.won){q.wins[run.level-1]++;if(run.level===q.unlocked&&q.unlocked<countFor(run.mode)){q.unlocked++;unlockedNow=q.unlocked;}}
     profile.history.push({mode:run.mode,level:run.level,at:now,won:!!run.won,reason:run.reason,answers:run.answers,correct:run.correct,avgMs:run.answers?Math.round(run.answerMs/run.answers):0,elapsed:Math.round(run.elapsed)});
     profile.history=profile.history.slice(-60);
     return unlockedNow;
@@ -287,9 +305,9 @@
   function summary(profile){
     return MODES.map(mode=>{
       const g=profile.games[mode],q=profile.progress[mode];
-      return {mode,started:g.started,finished:g.finished,wins:g.wins,quit:Math.max(0,g.started-g.finished),accuracy:g.answers?Math.round(100*g.correct/g.answers):null,avgSeconds:g.answers?Math.round(g.answerMs/g.answers/100)/10:null,lastPlayed:g.lastPlayed,unlocked:q.unlocked,levelWins:q.wins.slice(),levelPlays:q.plays.slice()};
+      return {mode,started:g.started,finished:g.finished,wins:g.wins,quit:Math.max(0,g.started-g.finished),accuracy:g.answers?Math.round(100*g.correct/g.answers):null,avgSeconds:g.answers?Math.round(g.answerMs/g.answers/100)/10:null,lastPlayed:g.lastPlayed,unlocked:q.unlocked,count:countFor(mode),levelWins:q.wins.slice(0,countFor(mode)),levelPlays:q.plays.slice(0,countFor(mode))};
     });
   }
 
-  return {hasGloss,recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
+  return {replayTime,countsAsNew,countFor,tiersFor,hasGloss,recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });

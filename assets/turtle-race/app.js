@@ -14,7 +14,6 @@
   // The expert race asks for the sentence that means the same, and is read rather than narrated.
   if(Core.EDITION.id==='expert'){INFO.flash.how='The sentence shows for a moment. Then tap the sentence that means the same. Fast answers give Pip a blitz boost.';INFO.flash.tag='Quick look, same meaning';INFO.dash.tag='Answer in other words';}
   // Main-race Turtle Dash answers in other words, so the child has to read and understand the sentence.
-  if(Core.EDITION.id==='main'){INFO.dash.tag='Read, then pick the meaning';INFO.dash.how='Read the sentence. The answers use other words, so you have to understand it. Right answers move Pip forward. Wrong answers move him back.';}
   const items=Data.items.filter(i=>i.tier==='expert'?Core.validateExpert(i):Core.validateItem(i));
 
   // ---------- saved stats (own key only) ----------
@@ -74,19 +73,19 @@
       const info=INFO[mode],g=profile.games[mode];
       const b=document.createElement('button');b.type='button';b.className='card card-'+mode;
       const q=profile.progress[mode];
-      b.innerHTML=`<span class="cardArt">${art(mode,true)}</span><span class="cardText"><strong>${info.title}</strong><small>${info.tag}</small>${starRow(q)}</span>`;
+      b.innerHTML=`<span class="cardArt">${art(mode,true)}</span><span class="cardText"><strong>${info.title}</strong><small>${info.tag}</small>${starRow(q,mode)}</span>`;
       b.onclick=()=>{Sound.unlock();openIntro(mode);};
       cards.append(b);
     }
     renderParents();
   }
   // Card progress: five stars for the word set being played now, plus one dot per word set (filled when all five are beaten).
-  function starRow(q){
-    const open=Math.min(q.unlocked,Core.LEVEL_COUNT),tier=Core.TIERS.find(t=>open>=t.from&&open<=t.to)||Core.TIERS[0];
+  function starRow(q,currentCardMode){
+    const tiers=Core.tiersFor(currentCardMode),open=Math.min(q.unlocked,Core.countFor(currentCardMode)),tier=tiers.find(t=>open>=t.from&&open<=t.to)||tiers[0];
     const wins=q.wins.slice(tier.from-1,tier.to),beaten=wins.filter(w=>w>0).length;
-    const dots=Core.TIERS.map(t=>{const n=q.wins.slice(t.from-1,t.to).filter(w=>w>0).length;return `<i class="${n===t.to-t.from+1?'done':n?'part':''}" title="${t.name}"></i>`;}).join('');
-    const done=Core.TIERS.filter(t=>q.wins.slice(t.from-1,t.to).every(w=>w>0)).length;
-    return `<span class="cardProgress"><span class="cardStars" aria-label="${tier.name}: ${beaten} of ${wins.length} turtles beaten">${wins.map(w=>`<i class="${w>0?'on':''}">★</i>`).join('')}</span><span class="cardSet">${tier.name}</span><span class="setDots" aria-label="${done} of ${Core.TIERS.length} word sets complete">${dots}</span></span>`;
+    const dots=tiers.map(t=>{const n=q.wins.slice(t.from-1,t.to).filter(w=>w>0).length;return `<i class="${n===t.to-t.from+1?'done':n?'part':''}" title="${t.name}"></i>`;}).join('');
+    const done=tiers.filter(t=>q.wins.slice(t.from-1,t.to).every(w=>w>0)).length;
+    return `<span class="cardProgress"><span class="cardStars" aria-label="${tier.name}: ${beaten} of ${wins.length} turtles beaten">${wins.map(w=>`<i class="${w>0?'on':''}">★</i>`).join('')}</span><span class="cardSet">${tier.name}</span><span class="setDots" aria-label="${done} of ${tiers.length} word sets complete">${dots}</span></span>`;
   }
   function art(mode,small){
     const cls=small?'mini':'';
@@ -97,9 +96,9 @@
     const rows=Core.summary(profile).map(r=>`<tr><th>${INFO[r.mode].title}</th><td>${r.started}</td><td>${r.finished}</td><td>${r.quit}</td><td>${r.wins}</td><td>${r.accuracy==null?'–':r.accuracy+'%'}</td><td>${r.avgSeconds==null?'–':r.avgSeconds+' s'}</td><td>${r.lastPlayed?new Date(r.lastPlayed).toLocaleString([], {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'–'}</td></tr>`).join('');
     const due=Core.reviewDue(profile,reviewPool(),Date.now()).length;
     const sets=`<div class="tableWrap"><table><thead><tr><th>Word set</th><th>New</th><th>Learning</th><th>Secured</th><th>Kept after 7 days</th><th>Kept after 30 days</th></tr></thead><tbody>${Core.masteryByTier(profile,items).map(m=>`<tr><th>${m.name}</th><td>${m.new}</td><td>${m.learning}</td><td>${m.secured}</td><td>${m.kept7}</td><td>${m.kept30}</td></tr>`).join('')}</tbody></table></div>`;
-    const levels=Core.summary(profile).map(r=>`${INFO[r.mode].title}: level ${r.unlocked} of ${Core.LEVEL_COUNT} open · wins per level ${r.levelWins.join(' / ')} · races per level ${r.levelPlays.join(' / ')}`).join('<br>');
+    const levels=Core.summary(profile).map(r=>`${INFO[r.mode].title}: level ${r.unlocked} of ${r.count} open · wins per level ${r.levelWins.join(' / ')} · races per level ${r.levelPlays.join(' / ')}`).join('<br>');
     const today=profile.time.days[Core.dayKey(Date.now())]||0,mins=ms=>Math.floor(ms/60000)+' min '+String(Math.floor(ms/1000)%60).padStart(2,'0')+' sec';
-    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}.${Core.EDITION.dashboardTime?' It also counts in active play on the main Parents dashboard.':' This race has its own save and does not count on the BlitzWord Parents dashboard.'}</p><p>Which race is picked and finished? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><h3 class="parentsHeading">Sentences, using the BlitzWord word milestones</h3>${sets}<p>Secured: three separated right answers across at least two races. Kept after 7 / 30 days: a right answer at least 7 / 30 full days after the sentence was last answered; each sentence shows its highest milestone, and a later miss does not erase it. Secured sentences come back for a check after 7 days, and again after 30 days, mixed into any race (at most one in four questions). ${due?due+' sentence'+(due===1?' is':'s are')+' waiting for a check.':'No checks are due right now.'} The ✓ count on each word set shows secured or better.</p><p>${Core.EDITION.note} Winning against the hardest open turtle opens the next one; the player chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p>`+(Core.EDITION.openAll?`<p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles</button> <span id="openAllNote"></span></p>`:'');
+    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}. Only races against a turtle not yet beaten count; replays of beaten turtles are not counted (today ${mins((profile.time.replayDays||{})[Core.dayKey(Date.now())]||0)} · total ${mins(Core.replayTime(profile))}).${Core.EDITION.dashboardTime?' It also counts in active play on the main Parents dashboard.':' This race has its own save and does not count on the BlitzWord Parents dashboard.'}</p><p>Which race is picked and finished? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><h3 class="parentsHeading">Sentences, using the BlitzWord word milestones</h3>${sets}<p>Secured: three separated right answers across at least two races. Kept after 7 / 30 days: a right answer at least 7 / 30 full days after the sentence was last answered; each sentence shows its highest milestone, and a later miss does not erase it. Secured sentences come back for a check after 7 days, and again after 30 days, mixed into any race (at most one in four questions). ${due?due+' sentence'+(due===1?' is':'s are')+' waiting for a check.':'No checks are due right now.'} The ✓ count on each word set shows secured or better.</p><p>${Core.EDITION.note} Winning against the hardest open turtle opens the next one; the player chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p>`+(Core.EDITION.openAll?`<p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles</button> <span id="openAllNote"></span></p>`:'');
     if(Core.EDITION.openAll)$('#openAll').onclick=()=>{Core.unlockAll(profile);store();renderPick();$('#parentStats').closest('details').open=true;$('#openAllNote').textContent=`All ${Core.LEVEL_COUNT} turtles are open in every race.`;};
   }
 
@@ -116,24 +115,24 @@
   function renderLevels(){
     const mode=currentMode,q=profile.progress[mode],box=$('#levels');box.innerHTML='';
     const mastery=Object.fromEntries(Core.masteryByTier(profile,items).map(m=>[m.tier,m]));
-    for(const tier of Core.TIERS){
+    for(const tier of Core.tiersFor(mode)){
       const row=document.createElement('div');row.className='tierRow tier-'+tier.id;
       const m=mastery[tier.id];
-      row.innerHTML=`<span class="tierName">${tier.name}<small class="tierWords" aria-label="${m.mastered} of ${m.total} sentences secured, ${m.kept7plus} kept after 7 days">${m.mastered}/${m.total} ✓${m.kept7plus?` · ${m.kept7plus} kept`:''}</small></span>`;
+      row.innerHTML=m?`<span class="tierName">${tier.name}<small class="tierWords" aria-label="${m.mastered} of ${m.total} sentences secured, ${m.kept7plus} kept after 7 days">${m.mastered}/${m.total} ✓${m.kept7plus?` · ${m.kept7plus} kept`:''}</small></span>`:`<span class="tierName">${tier.name}<small class="tierWords">all words</small></span>`;
       const tiles=document.createElement('div');tiles.className='tierTiles';
       for(let n=tier.from;n<=tier.to;n++){
         const open=n<=q.unlocked,won=q.wins[n-1]>0,b=document.createElement('button');
-        b.type='button';b.className='levelTile'+(n===q.selected?' selected':'')+(open?'':' locked')+(won?' won':'');b.disabled=!open;
+        const frontier=open&&!won&&n===q.unlocked;b.type='button';b.className='levelTile'+(n===q.selected?' selected':'')+(open?'':' locked')+(won?' won':'')+(frontier?' frontier':'');b.disabled=!open;
         b.dataset.level=n;b.setAttribute('aria-pressed',String(n===q.selected));
         b.setAttribute('aria-label',`${Core.NAMES[n-1]}, level ${n}${open?'':', locked'}${won?', beaten':''}`);
-        b.innerHTML=`<span class="tileNum">${open?n:'🔒'}</span><span class="tileStar">${won?'★':''}</span>`;
+        b.innerHTML=`<span class="tileNum">${open?n:'🔒'}</span><span class="tileStar">${won?'★':''}</span>${frontier?'<span class="tileNew">new</span>':''}`;
         b.onclick=()=>{Sound.unlock();if(Core.selectLevel(profile,mode,n)){store();renderLevels();Sound.tick();}};
         tiles.append(b);
       }
       row.append(tiles);box.append(row);
     }
-    const n=q.selected,won=q.wins[n-1]>0,next=q.unlocked<Core.LEVEL_COUNT?Core.NAMES[q.unlocked]:null;
-    $('#levelDetail').innerHTML=`<strong>${n}. ${Core.NAMES[n-1]}${won?' <span class="detailStar">★</span>':''}</strong><small>${Core.describeLevel(mode,n)}</small>`+(next?`<small class="nextLock">🔒 Beat the ${Core.NAMES[q.unlocked-1]} to open the ${next}.</small>`:'');
+    const n=q.selected,won=q.wins[n-1]>0,next=q.unlocked<Core.countFor(mode)?Core.NAMES[q.unlocked]:null;
+    $('#levelDetail').innerHTML=`<strong>${n}. ${Core.NAMES[n-1]}${won?' <span class="detailStar">★</span>':''}</strong><small>${Core.describeLevel(mode,n)}</small>`+(won?'<small class="practiceNote">Already beaten: practice race, not counted as reading time.</small>':'')+(next?`<small class="nextLock">🔒 Beat the ${Core.NAMES[q.unlocked-1]} to open the ${next}.</small>`:'');
     $('#introStart').textContent='Race the '+Core.NAMES[n-1];
   }
   $('#introListen').onclick=()=>{Sound.unlock();Sound.line('how-'+currentMode);};
@@ -145,13 +144,15 @@
   // ---------- run loop ----------
   let run=null,deck=null,question=null,phase='idle',shownAt=0,phaseEnd=0,raf=0,last=0,lastYes=[],lastCallout={},token=0;
   // Credit race time as it happens, so leaving or closing mid-race still counts.
-  function flushTime(r=run){if(!r)return;const d=r.elapsed-(r.loggedMs||0);if(d>0){Core.addTime(profile,d,Date.now());r.loggedMs=r.elapsed;store();}}
+  function flushTime(r=run){if(!r)return;const d=r.elapsed-(r.loggedMs||0);if(d>0){Core.addTime(profile,d,Date.now(),!r.countsAsNew);r.loggedMs=r.elapsed;store();}}
   function stopRun(){flushTime();$('#play').classList.remove('reviewMode');token++;cancelAnimationFrame(raf);raf=0;run=null;phase='idle';$('#countdown').hidden=true;}
 
   function startRun(mode){
     stopRun();const my=token;
     currentMode=mode;run=Core.newRun(mode,profile);deck=Core.createDeck(Core.itemsForLevel(items,mode,run.level),Math.random);lastYes=[];lastCallout={};
     run.id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);run.asked=0;run.reviews=0;
+    // Replaying a turtle already beaten does not count as reading time (it is recorded separately).
+    run.countsAsNew=Core.countsAsNew(profile,run);
     reviewQueue=Core.reviewDue(profile,reviewPool(),Date.now());
     profile=Core.recordStart(profile,mode,new Date().toISOString());store();
     $('#playTitle').textContent=INFO[mode].title+' · '+run.levelName;
@@ -195,7 +196,7 @@
   function clearReader(){$('#review').hidden=true;$('#sentence').textContent='';$('#prompt').textContent='';$('#options').innerHTML='';$('#duelTimer').hidden=true;$('#reader').className='reader';}
 
   // Sentences this race can ask: every word set of this edition (literal sets need wrong words; other-words sets need rewordings).
-  function reviewPool(){const pools=new Set(Core.TIERS.map(t=>t.pool));return items.filter(i=>pools.has(i.tier||'core')&&(Core.EDITION.id==='expert'?Core.hasParaphrase(i):Array.isArray(i.w)));}
+  function reviewPool(){const pools=new Set(Core.TIERS.filter(t=>t.pool!=='all').map(t=>t.pool));return items.filter(i=>pools.has(i.tier||'core')&&(Core.EDITION.id==='expert'?Core.hasParaphrase(i):Array.isArray(i.w)));}
   let reviewQueue=[];
   function nextQuestion(){
     if(!run||run.over)return;
@@ -282,7 +283,7 @@
   $('#reviewGo').onclick=()=>{
     if(phase!=='review'||!run)return;
     // Reading the correction counts as reading time (up to a minute per mistake).
-    Core.addTime(profile,Math.min(60000,performance.now()-reviewStarted),Date.now());store();
+    Core.addTime(profile,Math.min(60000,performance.now()-reviewStarted),Date.now(),!run.countsAsNew);store();
     Sound.stopVoice();$('#reader').classList.remove('reviewing');$('#play').classList.remove('reviewMode');$('#review').hidden=true;
     last=performance.now();
     if(run.over){phase='feedback';endRun();}else nextQuestion();
