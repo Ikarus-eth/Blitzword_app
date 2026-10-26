@@ -1,4 +1,4 @@
-name: Verify live turtle race stars
+name: Verify live turtle dash other words
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 524547c661261f142b6d769d15c670fbe3cce7ec
-      - name: Compare every live turtle race file with merge 524547c
+          ref: 927c3982e563b86a69848796fe4283341602b4fb
+      - name: Compare every live turtle race file with merge 927c398
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 15 minutes) for Pages to publish the merge, then require every file to match.
