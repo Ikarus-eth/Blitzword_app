@@ -94,3 +94,22 @@ Main race (`assets/turtle-race/`, linked from the BlitzWord home): ten turtles p
 Expert race (`assets/turtle-race-expert/`, https://ikarus-eth.github.io/Blitzword_app/assets/turtle-race-expert/): the former levels 6–15 as ten turtles. Turtles 1–5 answer short sentences in other words; turtles 6–10 are the 36 long expert sentences. It shares the code, pictures and recordings of the main race, but runs as its own edition with its own save (`blitzword_turtle_race_expert_v1`), stars, stats, unlocks and "Open all turtles" button. It has no link into BlitzWord, its time does not count on the BlitzWord dashboard, and it does not auto-play the how-to narration. Mistake panels give more room so "Got it" stays on screen.
 
 Verification: 17 Turtle Race unit tests (both editions, rule equality of 1–5 and 6–10, word pools, migration, separate saves and the expert page wiring). Full suite: 436 unit/backend tests and 125 UI-flow groups pass. Headless Chromium at 1194×834, 834×1194 and 390×844 covers the main-race migration, a new-words turtle, a mistake, a win that unlocks Forest Turtle, the expert page pictures and edition, an other-words question and mistake, and open-all. It also confirms that the BlitzWord save and the main race save are unchanged by expert play. "Got it" fits on screen at four sizes. Physical iPad is not verified.
+
+## Four word sets in the main race — 26 October 2026
+
+The user asked for at least 60 minutes of race content the child can master. He masters turtle 5 of a set after several attempts, once he knows that set's words. The main race now has twenty turtles per race in four word sets. Each set repeats the exact five-turtle rules of turtles 1–5 with about 50 recorded sentences:
+
+| Set | Turtles | Sentences | Examples of new words |
+|---|---|---|---|
+| First words | 1–5 (Sleepy → Champion) | 51 (`turtle-race-items.json`) | already mastered |
+| New words | 6–10 (River → Thunder) | 50 (`turtle-race-items-2.json`) | sun, whale, lemon, kite, doctor |
+| More words | 11–15 (Sand → Star) | 50 (`turtle-race-items-3.json`) | forest, coin, spell, desk, ground |
+| Super words | 16–20 (Pearl → Ocean) | 50 (`turtle-race-items-4.json`) | school, birthday, elephant, homework, lightning |
+
+All 200 sentences reuse existing recordings, so no audio or images were generated. Sentences follow curriculum order: sets 3–4 draw on later Core 200 and early 200–400 words, with up to 7–8 words for the higher turtles. Answers use the words in the sentence; there are no other-words levels in the main race.
+
+Estimated content (an inference, not observed). A finished race attempt takes about 75 s, counting countdown, result screen and mistake pauses. Suppose a set takes 1 try each for turtles 1–3, 2 for turtle 4 and 3 for turtle 5. That is 8 attempts per race and 24 across the three races, about 30 minutes per set. The three sets he has not mastered then give about 90 minutes. If he wins every turtle at the first try, it is about 45 races, roughly 40–50 minutes. Losses and replays push it above 2 hours.
+
+Words mastered: the race now records answers per sentence. A sentence counts as mastered after two right answers with the latest one right. Each set row on the turtle picker shows "mastered / total", and "For parents" lists all sets. Existing saves keep their turtles; the expert race is unchanged apart from sharing the release.
+
+Verification: 18 Turtle Race unit tests (all four sets repeat the 1–5 rules, pools, no duplicate sentences, mastery rules, migration, both editions). Full suite: 437 unit/backend tests and 125 UI-flow groups pass. Headless Chromium plays turtle 16 at three sizes, checks the unlock of Coral Turtle and checks that the mastery counts update. Physical iPad is not verified.

@@ -87,9 +87,10 @@
   }
   function renderParents(){
     const rows=Core.summary(profile).map(r=>`<tr><th>${INFO[r.mode].title}</th><td>${r.started}</td><td>${r.finished}</td><td>${r.quit}</td><td>${r.wins}</td><td>${r.accuracy==null?'–':r.accuracy+'%'}</td><td>${r.avgSeconds==null?'–':r.avgSeconds+' s'}</td><td>${r.lastPlayed?new Date(r.lastPlayed).toLocaleString([], {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'–'}</td></tr>`).join('');
+    const sets=Core.masteryByTier(profile,items).map(m=>`${m.name}: ${m.mastered} of ${m.total} sentences mastered`).join(' · ');
     const levels=Core.summary(profile).map(r=>`${INFO[r.mode].title}: level ${r.unlocked} of ${Core.LEVEL_COUNT} open · wins per level ${r.levelWins.join(' / ')} · races per level ${r.levelPlays.join(' / ')}`).join('<br>');
     const today=profile.time.days[Core.dayKey(Date.now())]||0,mins=ms=>Math.floor(ms/60000)+' min '+String(Math.floor(ms/1000)%60).padStart(2,'0')+' sec';
-    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}.${Core.EDITION.dashboardTime?' It also counts in active play on the main Parents dashboard.':' This race has its own save and does not count on the BlitzWord Parents dashboard.'}</p><p>Which race is picked and finished? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>${Core.EDITION.note} Winning against the hardest open turtle opens the next one; the player chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p>`+(Core.EDITION.openAll?`<p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles</button> <span id="openAllNote"></span></p>`:'');
+    $('#parentStats').innerHTML=`<p>Race reading time: today ${mins(today)} · total ${mins(Core.totalTime(profile))}.${Core.EDITION.dashboardTime?' It also counts in active play on the main Parents dashboard.':' This race has its own save and does not count on the BlitzWord Parents dashboard.'}</p><p>Which race is picked and finished? Started minus finished shows races he left early. Stats stay on this device and are separate from the main game save.</p><div class="tableWrap"><table><thead><tr><th>Race</th><th>Started</th><th>Finished</th><th>Left early</th><th>Won</th><th>Right</th><th>Avg answer</th><th>Last played</th></tr></thead><tbody>${rows}</tbody></table></div><p>${levels}</p><p>${sets}. A sentence counts as mastered after two right answers with the latest one right.</p><p>${Core.EDITION.note} Winning against the hardest open turtle opens the next one; the player chooses which open turtle to race. A wrong or slow answer pauses the race to show the mistake.</p>`+(Core.EDITION.openAll?`<p><button id="openAll" class="ghostButton smallButton" type="button">Open all turtles</button> <span id="openAllNote"></span></p>`:'');
     if(Core.EDITION.openAll)$('#openAll').onclick=()=>{Core.unlockAll(profile);store();renderPick();$('#parentStats').closest('details').open=true;$('#openAllNote').textContent=`All ${Core.LEVEL_COUNT} turtles are open in every race.`;};
   }
 
@@ -105,9 +106,11 @@
   }
   function renderLevels(){
     const mode=currentMode,q=profile.progress[mode],box=$('#levels');box.innerHTML='';
+    const mastery=Object.fromEntries(Core.masteryByTier(profile,items).map(m=>[m.tier,m]));
     for(const tier of Core.TIERS){
       const row=document.createElement('div');row.className='tierRow tier-'+tier.id;
-      row.innerHTML=`<span class="tierName">${tier.name}</span>`;
+      const m=mastery[tier.id];
+      row.innerHTML=`<span class="tierName">${tier.name}<small class="tierWords" aria-label="${m.mastered} of ${m.total} sentences mastered">${m.mastered}/${m.total} ✓</small></span>`;
       const tiles=document.createElement('div');tiles.className='tierTiles';
       for(let n=tier.from;n<=tier.to;n++){
         const open=n<=q.unlocked,won=q.wins[n-1]>0,b=document.createElement('button');
@@ -211,6 +214,7 @@
     phase='feedback';
     const timedOut=i<0,correct=!timedOut&&i===question.answer,ms=run.elapsed-shownAt;
     const out=Core.answer(run,timedOut?null:correct,ms);
+    Core.recordAnswer(profile,question.sentence,correct);
     const buttons=[...$('#options').children];
     buttons.forEach((b,j)=>{b.disabled=true;if(j===question.answer)b.classList.add('right');else if(j===i)b.classList.add('wrong');});
     if(run.mode==='flash'){$('#sentence').textContent=question.sentence;$('#reader').classList.remove('hiddenSentence');}
