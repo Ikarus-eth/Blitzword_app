@@ -1202,3 +1202,7 @@ The user asked that race "mastered" follow the BlitzWord retention concept. Race
 ## Turtle Dash answers in other words — 27 October 2026
 
 The child had learned to scan for the one choice that appeared in the sentence. Main-race Turtle Dash now answers in other words at two levels per word set: simple other words for turtles 1–2 (one to four easy words) and short descriptions for turtles 3–5. A right answer never reuses a content word of its sentence. Flash Dash, Shell Duel and the expert race are unchanged. [Details](turtle-race/RELEASE.md).
+
+## Turtle Dash turtles 21–30; replays are not reading time — 27 October 2026
+
+This supersedes the same-morning rewording of Turtle Dash turtles 1–20. Those turtles keep the sentence words. Turtle Dash adds turtles 21–25 with simple other words and 26–30 with short descriptions, across all four word sets. Only races against a turtle not yet beaten count as race reading time; replays are recorded separately and never reach the BlitzWord dashboard. [Details](turtle-race/RELEASE.md).

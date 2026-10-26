@@ -291,3 +291,9 @@ button{font-family:inherit;cursor:pointer;touch-action:manipulation}
 .card .artRace img,.card .artDuel img{max-width:44%;object-fit:contain}
 .card .artVs{flex-shrink:0}
 .play.reviewMode .callout{top:7%}
+/* The next turtle to beat stands out; beaten turtles are marked as practice. */
+.levelTile.frontier{border-color:#e2a81e;box-shadow:0 0 0 3px #f6d77a;animation:frontierGlow 1.6s ease-in-out infinite alternate}
+.levelTile.frontier.selected{border-color:#2f8a4f}
+.tileNew{position:absolute;left:50%;bottom:2px;transform:translateX(-50%);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8d6a10}
+.levelDetail .practiceNote{color:#8a5a12}
+@keyframes frontierGlow{from{box-shadow:0 0 0 2px #f6d77a}to{box-shadow:0 0 0 6px #f6d77a88}}

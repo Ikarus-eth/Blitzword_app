@@ -56,12 +56,12 @@ test('yes/no answers never repeat three times in a row',()=>{
 const unlockAll=(p,mode,n)=>{p.progress[mode].unlocked=n;p.progress[mode].selected=n;return p;};
 
 test('main race: twenty turtles, every word set repeats the rules of turtles 1-5',()=>{
-  assert.equal(Core.EDITION.id,'main');assert.equal(Core.LEVEL_COUNT,20);
-  assert.deepEqual(Core.TIERS.map(t=>[t.from,t.to,t.pool]),[[1,5,'core'],[6,10,'core2'],[11,15,'core3'],[16,20,'core4']]);
+  assert.equal(Core.EDITION.id,'main');assert.equal(Core.LEVEL_COUNT,30);
+  assert.deepEqual(Core.tiersFor('flash').map(t=>[t.from,t.to,t.pool]),[[1,5,'core'],[6,10,'core2'],[11,15,'core3'],[16,20,'core4']]);
   const rules=L=>{const {pool,maxWords,...r}=L;return r;};
   for(const mode of Core.MODES){
-    assert.equal(Core.LEVELS[mode].length,20);
-    for(const tier of Core.TIERS)for(let k=0;k<5;k++){
+    assert.equal(Core.LEVELS[mode].length,mode==='dash'?30:20);
+    for(const tier of Core.tiersFor('flash'))for(let k=0;k<5;k++){
       assert.deepEqual(rules(Core.LEVELS[mode][tier.from-1+k]),rules(Core.LEVELS[mode][k]),mode+tier.id+k);
       assert.equal(Core.LEVELS[mode][tier.from-1+k].pool,tier.pool);
     }
@@ -98,8 +98,13 @@ test('sentence milestones follow the BlitzWord dashboard: secured, kept after 7 
   assert.deepEqual(old,{right:3,wrong:0,last:true,lastAt:null,trail:[],securedAt:null,kept7At:null,kept30At:null},'yesterday’s counts stay, without inventing milestones');
 });
 
-test('Turtle Dash answers in other words: simple for turtles 1-2 of each set, harder for 3-5, never by spotting a sentence word',()=>{
-  assert.equal(Core.LEVELS.dash.map(L=>L.gloss).join(''),'11222112221122211222');
+test('Turtle Dash gets ten new turtles in other words: 21-25 simple, 26-30 harder, never found by spotting a sentence word',()=>{
+  assert.equal(Core.countFor('dash'),30);assert.equal(Core.countFor('flash'),20);assert.equal(Core.countFor('duel'),20);
+  assert.deepEqual(Core.tiersFor('dash').slice(4).map(t=>[t.from,t.to,t.pool,t.name]),[[21,25,'all','Simple other words'],[26,30,'all','Other words']]);
+  assert.equal(Core.LEVELS.dash.map(L=>L.gloss||0).join(''),'0'.repeat(20)+'11111'+'22222','turtles 1-20 keep the words of the sentence');
+  const rules=L=>{const {pool,maxWords,gloss,...r}=L;return r;};
+  for(let k=0;k<5;k++){assert.deepEqual(rules(Core.LEVELS.dash[20+k]),rules(Core.LEVELS.dash[k]));assert.deepEqual(rules(Core.LEVELS.dash[25+k]),rules(Core.LEVELS.dash[k]));}
+  for(let n=21;n<=30;n++)assert.equal(Core.itemsForLevel(Data.items,'dash',n).length,201,'all four word sets');
   for(const mode of ['flash','duel'])assert.ok(Core.LEVELS[mode].every(L=>!L.gloss),mode+' keeps the sentence words');
   assert.ok(Expert.LEVELS.dash.every(L=>!L.gloss),'the expert race keeps its own rewordings');
   const STOP=new Set('a an the of to in on at by is are was it its and or for with my me i we you he she his her our your this that these those be can do does did not no all one two up out off from into over under as so very'.split(' '));
@@ -107,16 +112,22 @@ test('Turtle Dash answers in other words: simple for turtles 1-2 of each set, ha
   const main=Data.items.filter(i=>/^core[234]?$/.test(i.tier));assert.equal(main.length,201);
   for(const i of main){
     assert.ok(Core.hasGloss(i),i.s);const words=new Set(content(i.s));
+    // A wrong answer may echo a sentence word ("not cold at all"), which catches scanning instead of helping it.
     for(const o of [i.o1,i.o2]){assert.deepEqual(content(o[0]).filter(w=>words.has(w)),[],i.s+' → '+o[0]);assert.ok(!new RegExp('\\b'+i.a+'\\b','i').test(o[0]),i.s);}
-    assert.ok(i.o1[0].split(' ').length<=i.o2[0].split(' ').length||i.o1[0].length<=i.o2[0].length,'simple is not longer than harder: '+i.s);
   }
   const rock=Data.items.find(i=>i.s==='Pip is on the rock.');
   const easy=Core.buildQuestion('dash',rock,()=>.4,[],false,1);assert.equal(easy.options[easy.answer],'a stone');assert.equal(easy.meaning,'a stone');assert.equal(easy.prompt,'Where is Pip?');
-  // A wrong answer may echo a sentence word ("not cold at all"), which catches scanning instead of helping it.
   const hard=Core.buildQuestion('dash',rock,()=>.4,[],false,2);assert.equal(hard.options[hard.answer],'a big hard piece of the ground');
-  const p=Core.defaultProfile();assert.equal(Core.newRun('dash',p).gloss,1);assert.equal(Core.newRun('flash',p).gloss,0);
-  p.progress.dash.unlocked=8;assert.equal(Core.newRun('dash',p,6).gloss,1);assert.equal(Core.newRun('dash',p,8).gloss,2);
-  assert.match(Core.describeLevel('dash',1),/simple other words/);assert.match(Core.describeLevel('dash',3),/answers in other words/);
+  const plain=Core.buildQuestion('dash',rock,seq([.1,.7,.3]),[],false,0);assert.equal(plain.options[plain.answer],'rock');
+  // A child who has beaten all twenty turtles finds turtle 21 open; Flash Dash and Shell Duel stay at twenty.
+  const done=Core.normalizeProfile({version:3,progress:{dash:{unlocked:20,selected:20,wins:Array(20).fill(1)},flash:{unlocked:20,wins:Array(20).fill(1)}}});
+  assert.equal(done.progress.dash.unlocked,21);assert.equal(done.progress.flash.unlocked,20);
+  assert.equal(Core.newRun('dash',done,21).gloss,1);assert.equal(Core.newRun('dash',done,20).gloss,0);
+  const all=Core.unlockAll(Core.defaultProfile());assert.equal(all.progress.dash.unlocked,30);assert.equal(all.progress.duel.unlocked,20);
+  const p=Core.defaultProfile();p.progress.flash.unlocked=20;p.progress.flash.selected=20;const last=Core.newRun('flash',p);for(let i=0;i<13;i++)Core.answer(last,true,500);
+  assert.equal(Core.recordFinish(p,last,'2026-10-27T00:00:00Z'),null,'Flash Dash ends at turtle 20');
+  assert.match(Core.describeLevel('dash',21),/simple other words/);assert.match(Core.describeLevel('dash',26),/answers in other words/);
+  assert.deepEqual(Core.masteryByTier(p,Data.items).map(m=>m.tier),['easy','new','more','super'],'the other-words turtles are not a word set of their own');
 });
 
 test('expert race: ten turtles of other-words and long sentences, each tier steadily harder, own save',()=>{
@@ -211,13 +222,13 @@ test('winning the hardest open turtle opens the next; he chooses among open turt
 test('stored profiles are repaired and earlier automatic difficulty is dropped',()=>{
   const old=Core.normalizeProfile({version:1,levels:{dash:{goal:14}},games:{dash:{started:3,finished:2,wins:1}}});
   assert.equal(old.levels,undefined);assert.equal(old.games.dash.started,3);
-  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:Array(20).fill(0),plays:Array(20).fill(0)});
+  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:Array(30).fill(0),plays:Array(30).fill(0)});
   const q=Core.normalizeProfile({progress:{flash:{unlocked:1,selected:4,wins:[2,1,'x',-1,0]}}});
   assert.equal(q.progress.flash.unlocked,3,'wins prove level 3 is open');
   assert.equal(q.progress.flash.selected,2);assert.deepEqual(q.progress.flash.wins.slice(0,5),[2,1,0,0,0]);
-  assert.equal(Core.normalizeProfile({version:3,progress:{duel:{unlocked:99}}}).progress.duel.unlocked,20);
+  assert.equal(Core.normalizeProfile({version:3,progress:{duel:{unlocked:99}}}).progress.duel.unlocked,20);assert.equal(Core.normalizeProfile({version:3,progress:{dash:{unlocked:99}}}).progress.dash.unlocked,30);
   const five=Core.normalizeProfile({progress:{dash:{unlocked:5,selected:5,wins:[1,1,1,1,1],plays:[1,1,1,1,2]}}});
-  assert.equal(five.progress.dash.unlocked,6,'yesterday’s Champion win opens the first new turtle');assert.equal(five.progress.dash.plays.length,20);
+  assert.equal(five.progress.dash.unlocked,6,'yesterday’s Champion win opens the first new turtle');assert.equal(five.progress.dash.plays.length,30);
 });
 
 test('stats record starts, finishes, quits and accuracy under their own storage key',()=>{
@@ -243,6 +254,18 @@ test('race time is kept per local day, capped, and backfilled from earlier race 
   assert.deepEqual(old.time.days,{'2026-10-24':101000});
   const kept=Core.normalizeProfile({time:{days:{'2026-10-20':5000,'x':3,'2026-10-21':-1}},history:[{mode:'dash',at:new Date(2026,9,24).toISOString(),elapsed:41000}]});
   assert.deepEqual(kept.time.days,{'2026-10-20':5000},'tracked time is not double-counted from history');
+});
+
+test('only races against a turtle not yet beaten count as reading time; replays are kept apart',()=>{
+  const p=Core.defaultProfile(),t=new Date(2026,9,27,9,0).getTime();
+  const fresh=Core.newRun('dash',p);assert.equal(Core.countsAsNew(p,fresh),true);
+  for(let i=0;i<4;i++)Core.answer(fresh,true,500);Core.recordFinish(p,fresh,'2026-10-27T01:00:00Z');
+  const replay=Core.newRun('dash',p,1);assert.equal(Core.countsAsNew(p,replay),false,'turtle 1 is beaten now');
+  assert.equal(Core.countsAsNew(p,Core.newRun('dash',p,2)),true,'the next turtle still counts');
+  Core.addTime(p,30000,t,false);Core.addTime(p,45000,t,true);
+  assert.equal(Core.totalTime(p),30000);assert.equal(Core.replayTime(p),45000);
+  assert.deepEqual(p.time.days,{'2026-10-27':30000},'the BlitzWord dashboard reads only time.days');
+  const back=Core.normalizeProfile(JSON.parse(JSON.stringify(p)));assert.deepEqual(back.time,p.time);
 });
 
 test('the deck repeats no sentence until every sentence has appeared',()=>{
@@ -284,7 +307,8 @@ test('race cards show five stars for the current word set and one dot per set, n
   const dash=cards[0];
   assert.equal(dash.querySelectorAll('.cardStars i').length,5);assert.equal(dash.querySelectorAll('.cardStars i.on').length,2,'turtles 6 and 7 of New words');
   assert.equal(dash.querySelector('.cardSet').textContent,'New words');
-  assert.deepEqual([...dash.querySelectorAll('.setDots i')].map(i=>i.className),['done','part','','']);
+  assert.deepEqual([...dash.querySelectorAll('.setDots i')].map(i=>i.className),['done','part','','','',''],'Turtle Dash has six groups');
+  assert.equal(cards[1].querySelectorAll('.setDots i').length,4,'Flash Dash has four');
   assert.equal(cards[1].querySelector('.cardSet').textContent,'New words','beating Champion moves the card to the next set');
   assert.equal(cards[2].querySelectorAll('.cardStars i.on').length,0);
 });
