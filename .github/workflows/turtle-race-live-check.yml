@@ -1,4 +1,4 @@
-name: Verify live turtle race expert tiers
+name: Verify live turtle race editions
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 41015e749930f5573a8800191e609a6e1629b1ec
-      - name: Compare every live turtle race file with merge 41015e7
+          ref: 9a4c6a756a71d65088f7452364146480f470d26d
+      - name: Compare every live turtle race file with merge 9a4c6a7
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 10 minutes) for Pages to publish the merge, then require every file to match.
@@ -22,7 +22,7 @@ jobs:
             sleep 30
           done
           bad=0; n=0
-          for f in index.html app.js game-core.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3; do
+          for f in index.html app.js game-core.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race assets/turtle-race-expert) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
