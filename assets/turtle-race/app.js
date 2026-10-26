@@ -72,14 +72,20 @@
       const info=INFO[mode],g=profile.games[mode];
       const b=document.createElement('button');b.type='button';b.className='card card-'+mode;
       const q=profile.progress[mode];
-      b.innerHTML=`<span class="cardArt">${art(mode,true)}</span><span class="cardText"><strong>${info.title}</strong><small>${info.tag}</small><span class="cardStars" aria-label="${stars(q)} of ${Core.LEVEL_COUNT} turtles beaten">${starRow(q)}</span></span>`;
+      b.innerHTML=`<span class="cardArt">${art(mode,true)}</span><span class="cardText"><strong>${info.title}</strong><small>${info.tag}</small>${starRow(q)}</span>`;
       b.onclick=()=>{Sound.unlock();openIntro(mode);};
       cards.append(b);
     }
     renderParents();
   }
-  const stars=q=>q.wins.filter(w=>w>0).length;
-  const starRow=q=>q.wins.map(w=>`<i class="${w>0?'on':''}">★</i>`).join('');
+  // Card progress: five stars for the word set being played now, plus one dot per word set (filled when all five are beaten).
+  function starRow(q){
+    const open=Math.min(q.unlocked,Core.LEVEL_COUNT),tier=Core.TIERS.find(t=>open>=t.from&&open<=t.to)||Core.TIERS[0];
+    const wins=q.wins.slice(tier.from-1,tier.to),beaten=wins.filter(w=>w>0).length;
+    const dots=Core.TIERS.map(t=>{const n=q.wins.slice(t.from-1,t.to).filter(w=>w>0).length;return `<i class="${n===t.to-t.from+1?'done':n?'part':''}" title="${t.name}"></i>`;}).join('');
+    const done=Core.TIERS.filter(t=>q.wins.slice(t.from-1,t.to).every(w=>w>0)).length;
+    return `<span class="cardProgress"><span class="cardStars" aria-label="${tier.name}: ${beaten} of ${wins.length} turtles beaten">${wins.map(w=>`<i class="${w>0?'on':''}">★</i>`).join('')}</span><span class="cardSet">${tier.name}</span><span class="setDots" aria-label="${done} of ${Core.TIERS.length} word sets complete">${dots}</span></span>`;
+  }
   function art(mode,small){
     const cls=small?'mini':'';
     if(mode==='duel')return `<span class="artDuel ${cls}"><img src="${ASSET}pip.webp" alt=""><span class="artVs">${INFO.duel.icon}</span><img class="flip" src="${ASSET}turtle.webp" alt=""></span>`;

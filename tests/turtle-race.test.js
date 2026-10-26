@@ -250,3 +250,20 @@ test('recorded voice-over is installed with matching receipts and the page does 
   for(const f of ['../turtle-race/race-core.js','../turtle-race/items.js','../turtle-race/app.js','../turtle-race/style.css','../turtle-race/pip.webp'])assert.ok(expert.includes(f),f);
   const v=html.match(/app\.js\?v=([\w-]+)/)[1];assert.ok(expert.includes('app.js?v='+v),'both pages load the same release');
 });
+
+test('race cards show five stars for the current word set and one dot per set, never all turtles at once',()=>{
+  const {parseHTML}=require('linkedom');
+  const html=fs.readFileSync(path.join(root,'assets/turtle-race/index.html'),'utf8').replace(/<script[\s\S]*?<\/script>/g,'');
+  const {window,document}=parseHTML(html);
+  const store=new Map([[Core.STORAGE_KEY,JSON.stringify({version:3,progress:{dash:{unlocked:8,selected:7,wins:[1,1,1,1,1,1,1]},flash:{unlocked:6,wins:[1,1,1,1,1]}}})]]);
+  const ctx={window,document,localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v)},performance:{now:()=>0},requestAnimationFrame:()=>0,cancelAnimationFrame(){},setTimeout:()=>0,console};
+  window.localStorage=ctx.localStorage;window.TurtleRaceCore=Core;window.TurtleRaceData=Data;
+  require('node:vm').runInNewContext(fs.readFileSync(path.join(root,'assets/turtle-race/app.js'),'utf8'),{...ctx,...window,window,document});
+  const cards=[...document.querySelectorAll('.card')];assert.equal(cards.length,3);
+  const dash=cards[0];
+  assert.equal(dash.querySelectorAll('.cardStars i').length,5);assert.equal(dash.querySelectorAll('.cardStars i.on').length,2,'turtles 6 and 7 of New words');
+  assert.equal(dash.querySelector('.cardSet').textContent,'New words');
+  assert.deepEqual([...dash.querySelectorAll('.setDots i')].map(i=>i.className),['done','part','','']);
+  assert.equal(cards[1].querySelector('.cardSet').textContent,'New words','beating Champion moves the card to the next set');
+  assert.equal(cards[2].querySelectorAll('.cardStars i.on').length,0);
+});

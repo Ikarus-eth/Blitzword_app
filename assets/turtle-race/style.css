@@ -276,3 +276,17 @@ button{font-family:inherit;cursor:pointer;touch-action:manipulation}
 /* 7- and 30-day checks mixed into races */
 .reader.reviewCheck{box-shadow:inset 0 0 0 4px #e2be75,0 8px 24px #0007}
 .parents .parentsHeading{font-size:17px;margin:14px 0 4px;color:#f3e2b5}
+/* Card progress: current word set's five stars and one dot per set (26 October 2026) */
+.cardProgress{display:flex;flex-direction:column;align-items:center;gap:4px;margin-top:6px}
+.cardStars{flex-wrap:nowrap;justify-content:center;gap:2px;font-size:26px;line-height:1;margin:0}
+.cardSet{font-size:15px;font-weight:700;color:#4a6751}
+.setDots{display:flex;gap:6px}
+.setDots i{width:12px;height:12px;border-radius:50%;border:2px solid #b49a68;background:transparent}
+.setDots i.part{background:linear-gradient(90deg,#e2a81e 50%,transparent 50%)}
+.setDots i.done{background:#e2a81e;border-color:#8d6a10}
+@media (max-width:760px){.cardProgress{align-items:flex-start}.cardStars{font-size:20px}}
+/* Keep the card pictures inside narrow cards (iPad portrait). */
+.card .cardArt{max-width:100%;display:flex;justify-content:center}
+.card .artRace,.card .artDuel{max-width:100%}
+.card .artRace img,.card .artDuel img{max-width:44%;object-fit:contain}
+.card .artVs{flex-shrink:0}
