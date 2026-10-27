@@ -4,11 +4,11 @@ No retries and no account/plan changes. Successful paid outputs survive errors.
 import base64, hashlib, json, os, pathlib, shutil, subprocess, sys, urllib.request, urllib.error
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 MODE=sys.argv[1] if len(sys.argv)>1 else 'budget'
-CONFIG={'budget':('NARRATION_BUDGET_REQUEST.json','narration-budget',8000),'story-riddle':('NARRATION_STORY_RIDDLE_REQUEST.json','narration-story-riddle',6000),'approved-enemies':('NARRATION_APPROVED_ENEMIES_REQUEST.json','narration-approved-enemies',7000),'turtle-race':('turtle-race/NARRATION_REQUEST.json','narration-turtle-race',1000)}
+CONFIG={'budget':('NARRATION_BUDGET_REQUEST.json','narration-budget',8000),'story-riddle':('NARRATION_STORY_RIDDLE_REQUEST.json','narration-story-riddle',6000),'approved-enemies':('NARRATION_APPROVED_ENEMIES_REQUEST.json','narration-approved-enemies',7000),'turtle-race':('turtle-race/NARRATION_REQUEST.json','narration-turtle-race',1000),'turtle-race-2':('turtle-race/NARRATION_REQUEST_2.json','narration-turtle-race',1000)}
 assert MODE in CONFIG,'Unknown narration scope'
 request_file,folder,cap=CONFIG[MODE]
 PLAN=json.loads((ROOT/'docs'/request_file).read_text())
-OUT=ROOT/(folder+'-output');OUT.mkdir(exist_ok=True)
+OUT=ROOT/((folder+'-2' if MODE=='turtle-race-2' else folder)+'-output');OUT.mkdir(exist_ok=True)
 KEY=os.environ['ELEVENLABS_API_KEY']
 assert KEY and PLAN['voiceId']=='JBFqnCBsd6RMkjVDRZzb'
 assert PLAN['model']=='eleven_multilingual_v2' and PLAN['characters']<=cap
