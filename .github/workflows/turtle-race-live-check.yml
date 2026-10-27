@@ -1,4 +1,4 @@
-name: Verify live turtle dash 21-30
+name: Verify live turtle race opponents
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: a8d1d6a32175065c91700fb2c7a1ce26a1cab657
-      - name: Compare every live turtle race file with merge a8d1d6a
+          ref: 3a8f3945e455744e05ba808a1ec2154ab77d9a38
+      - name: Compare every live turtle race file with merge 3a8f394
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 15 minutes) for Pages to publish the merge, then require every file to match.
@@ -22,7 +22,7 @@ jobs:
             sleep 30
           done
           bad=0; n=0
-          for f in index.html app.js game-core.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race assets/turtle-race-expert) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3; do
+          for f in index.html app.js game-core.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race assets/turtle-race-expert) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3 assets/narration/turtle-race-003.mp3 assets/narration/turtle-race-004.mp3; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
