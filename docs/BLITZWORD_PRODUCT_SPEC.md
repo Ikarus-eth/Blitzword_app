@@ -1206,3 +1206,7 @@ The child had learned to scan for the one choice that appeared in the sentence. 
 ## Turtle Dash turtles 21–30; replays are not reading time — 27 October 2026
 
 This supersedes the same-morning rewording of Turtle Dash turtles 1–20. Those turtles keep the sentence words. Turtle Dash adds turtles 21–25 with simple other words and 26–30 with short descriptions, across all four word sets. Only races against a turtle not yet beaten count as race reading time; replays are recorded separately and never reach the BlitzWord dashboard. [Details](turtle-race/RELEASE.md).
+
+## Turtle Race opponents by row — 27 October 2026
+
+Each row of five race levels has its own opponent from the approved enemy art: turtle (1–5), hare (6–10), fox (11–15), lynx (16–20), falcon (21–25, Turtle Dash) and leopard (26–30, Turtle Dash); the expert edition races turtles at 1–5 and ravens at 6–10. Every row uses the Sleepy, Little, Brave, Speedy, Champion ladder of names. Rules, sentences, unlocks, saves and reading time do not change. [Details](turtle-race/RELEASE.md).

@@ -32,23 +32,32 @@
     const extra=gloss=>easy().dash.map(o=>({pool:'all',paraphrase:false,maxWords:8,...o,gloss}));
     levels.dash=[...levels.dash,...extra(1),...extra(2)];return levels;
   };
+  // Opponents: approved creature cutouts. Each row of turtles brings a new challenger.
+  const OPP={
+    turtle:{id:'turtle',noun:'turtle',creature:'Brook Turtle',art:'turtle.webp'},
+    hare:{id:'hare',noun:'hare',creature:'Hazel Hare',art:'opponents/hazel-hare.webp'},
+    fox:{id:'fox',noun:'fox',creature:'Ember Fox',art:'opponents/ember-fox.webp'},
+    lynx:{id:'lynx',noun:'lynx',creature:'Frost Lynx',art:'opponents/frost-lynx.webp'},
+    falcon:{id:'falcon',noun:'falcon',creature:'Gale Falcon',art:'opponents/gale-falcon.webp'},
+    leopard:{id:'leopard',noun:'leopard',creature:'Mist Leopard',art:'opponents/mist-leopard.webp'},
+    raven:{id:'raven',noun:'raven',creature:'Ink Raven',art:'opponents/ink-raven.webp'}
+  };
+  const ladderNames=noun=>['Sleepy','Little','Brave','Speedy','Champion'].map(a=>a+' '+noun[0].toUpperCase()+noun.slice(1));
   const EDITIONS={
     // Main race in BlitzWord: the same five-turtle rules, repeated with four sets of about 50 recorded sentences.
     // Each set is mastered by replaying it until its words are known; level 5 of a set usually takes several tries.
     main:{id:'main',storageKey:'blitzword_turtle_race_v1',version:3,dashboardTime:true,openAll:false,
-      names:['Sleepy Turtle','Little Turtle','Brave Turtle','Speedy Turtle','Champion Turtle','River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle',
-        'Sand Turtle','Moss Turtle','Cloud Turtle','Comet Turtle','Star Turtle','Pearl Turtle','Coral Turtle','Wave Turtle','Tide Turtle','Ocean Turtle',
-        'Pebble Turtle','Shell Turtle','Lily Turtle','Maple Turtle','Willow Turtle','Glacier Turtle','Volcano Turtle','Aurora Turtle','Galaxy Turtle','Golden Turtle'],
-      tiers:[{id:'easy',name:'First words',from:1,to:5,pool:'core'},{id:'new',name:'New words',from:6,to:10,pool:'core2'},{id:'more',name:'More words',from:11,to:15,pool:'core3'},{id:'super',name:'Super words',from:16,to:20,pool:'core4'},
-        {id:'other1',name:'Simple other words',from:21,to:25,pool:'all',modes:['dash']},{id:'other2',name:'Other words',from:26,to:30,pool:'all',modes:['dash']}],
+      names:[...ladderNames('turtle'),...ladderNames('hare'),...ladderNames('fox'),...ladderNames('lynx'),...ladderNames('falcon'),...ladderNames('leopard')],
+      tiers:[{id:'easy',name:'First words',from:1,to:5,pool:'core',opponent:OPP.turtle},{id:'new',name:'New words',from:6,to:10,pool:'core2',opponent:OPP.hare},{id:'more',name:'More words',from:11,to:15,pool:'core3',opponent:OPP.fox},{id:'super',name:'Super words',from:16,to:20,pool:'core4',opponent:OPP.lynx},
+        {id:'other1',name:'Simple other words',from:21,to:25,pool:'all',modes:['dash'],opponent:OPP.falcon},{id:'other2',name:'Other words',from:26,to:30,pool:'all',modes:['dash'],opponent:OPP.leopard}],
       levels:dashOtherWords(join(ladder(easy(),'core',[5,5,6,7,7]),ladder(easy(),'core2',[6,6,7,8,8]),ladder(easy(),'core3',[6,6,7,7,7]),ladder(easy(),'core4',[7,7,8,8,8]))),
-      note:'Each race has twenty turtles in four word sets. Every set uses the same five rules with about 50 new recorded sentences, so the child can master a set by replaying it.'},
+      note:'Each race has twenty opponents in four word sets (Turtle Dash has thirty). Every set uses the same five rules with about 50 new recorded sentences, so the child can master a set by replaying it.'},
     // Standalone expert race for an older reader: answers in other words, then long sentences.
     expert:{id:'expert',storageKey:'blitzword_turtle_race_expert_v1',version:3,dashboardTime:false,openAll:true,
-      names:['River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle','Crystal Turtle','Shadow Turtle','Fire Turtle','Ancient Turtle','Legend Turtle'],
-      tiers:[{id:'hard',name:'Other words',from:1,to:5,pool:'core'},{id:'expert',name:'Expert',from:6,to:10,pool:'expert'}],
+      names:['River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle','Shadow Raven','Night Raven','Storm Raven','Ancient Raven','Legend Raven'],
+      tiers:[{id:'hard',name:'Other words',from:1,to:5,pool:'core',opponent:OPP.turtle},{id:'expert',name:'Expert',from:6,to:10,pool:'expert',opponent:OPP.raven}],
       levels:join(ladder(hard,'core',[7,7,7,7,7],{paraphrase:true,backOnWrong:true}),ladder(expert,'expert',[99,99,99,99,99],{paraphrase:true,backOnWrong:true})),
-      note:'Each race has ten turtles: 1–5 answer short sentences in other words, 6–10 use long sentences with harder words, also answered in other words.'}
+      note:'Each race has ten opponents: 1–5 answer short sentences in other words, 6–10 use long sentences with harder words, also answered in other words.'}
   };
   const E=EDITIONS[editionName]||EDITIONS.main;
   const STORAGE_KEY=E.storageKey,NAMES=E.names,TIERS=E.tiers,LEVELS=E.levels;
@@ -61,6 +70,7 @@
   const BOOST_MS=3000;
   const level=(mode,n)=>({...LEVELS[mode][n-1],level:n,name:NAMES[n-1]});
   const tierOf=n=>TIERS.find(t=>n>=t.from&&n<=t.to);
+  const opponentFor=n=>(tierOf(n)||TIERS[0]).opponent||OPP.turtle;
   const words=s=>s.trim().split(/\s+/).length;
   function itemsForLevel(items,mode,n){
     const L=LEVELS[mode][n-1];
@@ -206,7 +216,7 @@
     const chosen=Number.isInteger(n)?n:profile.progress[mode].selected;
     if(chosen<1||chosen>profile.progress[mode].unlocked)throw Error('Level locked');
     const L=level(mode,chosen);
-    const run={mode,level:chosen,levelName:L.name,elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,gloss:L.gloss||0,pool:L.pool};
+    const run={mode,level:chosen,levelName:L.name,opponent:opponentFor(chosen),elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,gloss:L.gloss||0,pool:L.pool};
     if(mode==='duel')Object.assign(run,{hearts:L.hearts,maxHearts:L.hearts,shell:L.shell,maxShell:L.shell,timerMs:L.timerMs});
     else Object.assign(run,{steps:0,goal:L.goal});
     if(mode==='flash')Object.assign(run,{flashMs:L.flashMs,boostMs:L.boostMs});
@@ -309,5 +319,5 @@
     });
   }
 
-  return {replayTime,countsAsNew,countFor,tiersFor,hasGloss,recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
+  return {OPPONENTS:OPP,opponentFor,replayTime,countsAsNew,countFor,tiersFor,hasGloss,recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });

@@ -70,7 +70,7 @@ test('main race: twenty turtles, every word set repeats the rules of turtles 1-5
       assert.equal(L.paraphrase,false);assert.ok(pool.every(i=>i.tier===L.pool&&i.s.split(/\s+/).length<=L.maxWords));
     }
   }
-  assert.equal(Core.NAMES[5],'River Turtle');assert.equal(Core.NAMES[10],'Sand Turtle');assert.equal(Core.NAMES[19],'Ocean Turtle');
+  assert.equal(Core.NAMES[0],'Sleepy Turtle');assert.equal(Core.NAMES[5],'Sleepy Hare');assert.equal(Core.NAMES[10],'Sleepy Fox');assert.equal(Core.NAMES[19],'Champion Lynx');
   assert.match(Core.describeLevel('dash',6),/^4 steps to the finish · new words/);assert.match(Core.describeLevel('duel',16),/super words/);
 });
 
@@ -142,7 +142,7 @@ test('expert race: ten turtles of other-words and long sentences, each tier stea
     const L=Expert.LEVELS[mode][n-1],pool=Expert.itemsForLevel(Data.items,mode,n);assert.ok(pool.length>=25,mode+n);
     assert.equal(L.paraphrase,true);assert.ok(pool.every(i=>i.tier===(n>5?'expert':'core')));
   }
-  assert.deepEqual(Expert.NAMES.slice(0,2),['River Turtle','Forest Turtle']);assert.equal(Expert.NAMES[9],'Legend Turtle');
+  assert.deepEqual(Expert.NAMES.slice(0,2),['River Turtle','Forest Turtle']);assert.equal(Expert.NAMES[9],'Legend Raven');
   assert.match(Expert.describeLevel('flash',7),/long sentences · answers in other words/);
   const p=Expert.defaultProfile(),run=Expert.newRun('dash',p);assert.equal(run.paraphrase,true);assert.equal(run.goal,6);
 });
@@ -275,15 +275,16 @@ test('the deck repeats no sentence until every sentence has appeared',()=>{
 });
 
 test('recorded voice-over is installed with matching receipts and the page does not touch the main save',()=>{
-  const plan=require('../docs/turtle-race/NARRATION_REQUEST.json');
-  assert.equal(Object.keys(Data.voice).length,plan.segmentCount);
-  for(const batch of plan.batches){
+  const plans=['NARRATION_REQUEST.json','NARRATION_REQUEST_2.json'].map(f=>require('../docs/turtle-race/'+f));
+  const challengers=Object.values(Core.OPPONENTS).filter(o=>o.id!=='turtle');
+  assert.equal(Object.keys(Data.voice).length,plans.reduce((n,p)=>n+p.segmentCount,0)+challengers.length);
+  for(const batch of plans.flatMap(p=>p.batches)){
     const bytes=fs.readFileSync(path.join(root,'assets/narration',batch.id+'.mp3'));
     const receipt=JSON.parse(fs.readFileSync(path.join(root,'docs/narration-turtle-race/receipts',batch.id+'.json'),'utf8'));
     assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),receipt.sha256);
     assert.equal(receipt.text,batch.text);
   }
-  for(const clip of Object.values(Data.voice))assert.ok(clip.duration>.15&&clip.file.startsWith('assets/narration/turtle-race-'));
+  for(const [key,clip] of Object.entries(Data.voice))assert.ok(clip.duration>.15&&clip.file.startsWith(key.startsWith('intro-')?'assets/narration/approved-enemies-':'assets/narration/turtle-race-'),key);
   const app=fs.readFileSync(path.join(root,'assets/turtle-race/app.js'),'utf8');
   assert.ok(!app.includes('blitzword_state_v1'));
   const html=fs.readFileSync(path.join(root,'assets/turtle-race/index.html'),'utf8');
@@ -311,4 +312,23 @@ test('race cards show five stars for the current word set and one dot per set, n
   assert.equal(cards[1].querySelectorAll('.setDots i').length,4,'Flash Dash has four');
   assert.equal(cards[1].querySelector('.cardSet').textContent,'New words','beating Champion moves the card to the next set');
   assert.equal(cards[2].querySelectorAll('.cardStars i.on').length,0);
+});
+
+test('each row of five has its own opponent, with art, lose lines and an approved introduction',()=>{
+  const want={1:'turtle',5:'turtle',6:'hare',10:'hare',11:'fox',16:'lynx',20:'lynx',21:'falcon',26:'leopard',30:'leopard'};
+  for(const [n,id] of Object.entries(want))assert.equal(Core.opponentFor(+n).id,id,'level '+n);
+  for(const tier of Core.TIERS)for(let n=tier.from;n<=tier.to;n++)assert.ok(Core.NAMES[n-1].endsWith(tier.opponent.creature.split(' ')[1]),Core.NAMES[n-1]);
+  const Expert=Core.edition('expert');
+  assert.equal(Expert.opponentFor(5).id,'turtle');assert.equal(Expert.opponentFor(6).id,'raven');assert.equal(Expert.opponentFor(10).noun,'raven');
+  const p6=Core.defaultProfile();p6.progress.duel.unlocked=6;const run=Core.newRun('duel',p6,6);assert.equal(run.opponent.id,'hare');
+  const used=new Set([...Core.TIERS,...Expert.TIERS].map(t=>t.opponent.id));
+  for(const id of used){
+    const o=Core.OPPONENTS[id];assert.ok(fs.existsSync(path.join(root,'assets/turtle-race',o.art)),o.art);
+    if(id==='turtle')continue;
+    for(const k of ['race-lose-'+id,'duel-lose-'+id,'intro-'+id])assert.ok(Data.voice[k],k);
+    assert.equal(Data.voice['race-lose-'+id].text,`The ${o.noun} wins this time. Try again!`);
+    assert.match(Data.voice['intro-'+id].text,new RegExp(o.creature+' is on the path'));
+  }
+  const app=fs.readFileSync(path.join(root,'assets/turtle-race/app.js'),'utf8');
+  assert.match(app,/run\.opponent\.art/);assert.match(app,/'intro-'\+opp\.id/);
 });

@@ -1,0 +1,90 @@
+{
+  "version": 2,
+  "base": "31c00716321a568d1f44afea32e7fe864651574c",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "maxCharacters": 1000,
+  "characters": 444,
+  "segmentCount": 12,
+  "batches": [
+    {
+      "id": "turtle-race-003",
+      "text": "The hare wins this time. Try again!\n\nThe hare wins the duel. Try again!\n\nThe fox wins this time. Try again!\n\nThe fox wins the duel. Try again!\n\nThe lynx wins this time. Try again!\n\nThe lynx wins the duel. Try again!\n\nThe falcon wins this time. Try again!\n\nThe falcon wins the duel. Try again!\n\nThe leopard wins this time. Try again!\n\nThe leopard wins the duel. Try again!\n\nThe raven wins this time. Try again!",
+      "segments": [
+        {
+          "key": "turtle-race:race-lose-hare",
+          "text": "The hare wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:duel-lose-hare",
+          "text": "The hare wins the duel. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-fox",
+          "text": "The fox wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:duel-lose-fox",
+          "text": "The fox wins the duel. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-lynx",
+          "text": "The lynx wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:duel-lose-lynx",
+          "text": "The lynx wins the duel. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-falcon",
+          "text": "The falcon wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:duel-lose-falcon",
+          "text": "The falcon wins the duel. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-leopard",
+          "text": "The leopard wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:duel-lose-leopard",
+          "text": "The leopard wins the duel. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-raven",
+          "text": "The raven wins this time. Try again!",
+          "kind": "turtle-race"
+        }
+      ]
+    },
+    {
+      "id": "turtle-race-004",
+      "text": "The raven wins the duel. Try again!",
+      "segments": [
+        {
+          "key": "turtle-race:duel-lose-raven",
+          "text": "The raven wins the duel. Try again!",
+          "kind": "turtle-race"
+        }
+      ]
+    }
+  ]
+}
