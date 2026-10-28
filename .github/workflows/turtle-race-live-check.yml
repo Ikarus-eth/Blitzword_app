@@ -1,4 +1,4 @@
-name: Verify live quest shield fix
+name: Verify live open-word cap
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 6f2dad5751c59f82333426ba3159390b218b7b65
-      - name: Compare every live turtle race file with merge 6f2dad5
+          ref: 5d3211bcff072d7f79e7157e4ab3ea8f05e1f9d5
+      - name: Compare every live turtle race file with merge 5d3211b
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 15 minutes) for Pages to publish the merge, then require every file to match.
