@@ -1222,3 +1222,7 @@ This supersedes the ten other-words turtles. Turtle Dash turtles 21–55 form se
 ## Quest shields after a lost fight — 28 October 2026
 
 This supersedes "two per quest, surviving retry/reload" from 11 October 2026. A retry after a defeat restores the shield allowance (up to two per attempt, one per fight, one held). After the first lost fight in a quest, five accurate answers in a row or four quick ones earn a shield instead of eight or six. The team animal's once-per-quest block and chapter battle shields are unchanged. [Details](adventures/SHIELD_AFTER_DEFEAT_RELEASE.md).
+
+## Open-word cap — 28 October 2026
+
+At most 15 words may be open (introduced but not yet secured, shown as Learning on the Parents dashboard). At or above 15, no new word opens; turns cycle through due reviews, finishing open words and easier secured words, and new words return below 15. [Details](OPEN_WORD_CAP_RELEASE.md).

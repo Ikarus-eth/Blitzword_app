@@ -15,7 +15,8 @@ test('lossless word tables preserve nulls, optional fields, legacy entries and r
  const future=Core.copy(packed);future.wordTables.version=99;assert.throws(()=>Core.unpackSave(future),/Unsupported/);
 });
 function completedCore(){const s=fresh();s.profile.name='Existing reader';s.assessment.done=true;s.dragon.xp=19000;s.dragon.stage=1;
- for(const item of C.coreWords)Object.assign(s.learning.words[item.w],{introducedAt:new Date(NOW-Core.DAY).toISOString(),practiceSuccesses:2,independentCorrect:4,reviewStage:1,dueAt:NOW+Core.DAY});
+ // A completed core means secured words: unsecured ones would hold back new words under the open-word cap.
+ for(const item of C.coreWords)Object.assign(s.learning.words[item.w],{introducedAt:new Date(NOW-Core.DAY).toISOString(),practiceSuccesses:2,independentCorrect:4,reviewStage:1,dueAt:NOW+Core.DAY,securedAt:new Date(NOW-Core.DAY).toISOString(),wordXPClaimed:true});
  s.story.completedChapters=C.chapters.map(x=>x.id);s.story.clearedAreas=C.areas.map(x=>x.id);s.story.chapterComplete=true;return s;}
 test('approved 800 are appended exactly once; core and story allocation stay fixed',()=>{
  assert.equal(C.words.length,1000);assert.equal(C.coreWords.length,200);

@@ -113,19 +113,32 @@ test('help lowers challenge; interruptions, guided work and assessment do not di
     {task:'battle',correct:false,supported:true,timingValid:false,supportReasons:['help-request','interrupted-exposure']}])s.campaign.battleRecords.push(r);
   assert.deepEqual(Core.adaptiveChallenge(s),before);
 });
-test('easy words leave routine practice after two separated successes; learning moves beyond the next field',()=>{
+// 28 October 2026: the parent asked for a cap on open (unsecured) words. A single battle cannot secure a word,
+// so one long battle now stops at the cap instead of opening 45+ words; learning ahead continues across battles.
+test('one long battle opens at most the capped number of words, then finishes them; no comfort filler',()=>{
   const s=fresh();Core.startBattle(s,NOW,{strength:300});const seen={};
   for(let i=0;i<100;i++){
+    const capped=Core.openWords(s)>=Core.OPEN_WORD_CAP;
     const q=answer(s,NOW+i*8000);seen[q.target]=(seen[q.target]||0)+1;
-    assert.ok(seen[q.target]<=2,'unnecessary repetition: '+q.target);
+    if(!capped)assert.ok(seen[q.target]<=2,'unnecessary repetition: '+q.target);else assert.notEqual(q.isNew,true,'no new word while capped');
     assert.notEqual(q.practiceKind,'comfort');assert.notEqual(q.practiceKind,'speed-refill');
-    assert.equal(q.exposureMs,1800);
+    if(q.isNew)assert.equal(q.exposureMs,1800);
+    assert.ok(Core.openWords(s)<=Core.OPEN_WORD_CAP);
     const unfinished=Content.words.filter(x=>s.learning.words[x.w].introducedAt&&s.learning.words[x.w].practiceSuccesses<2);
     assert.ok(unfinished.length<=6);
   }
-  assert.ok(Object.keys(seen).length>=45);assert.ok(Content.areas[3].words.some(w=>seen[w]));
+  assert.equal(Object.keys(seen).length,Core.OPEN_WORD_CAP);
   assert.equal(s.story.clearedAreas.length,0,'learning ahead never bypasses chapter gates');
   assert.ok(Object.values(s.learning.words).every(w=>!w.securedAt),'two quick successes are not secured or retained mastery');
+});
+test('across battles, open words get secured and new words keep coming; learning moves beyond the next field',()=>{
+  const s=fresh();const seen=new Set();let t=NOW,most=0;
+  for(let i=0;i<600;i++){
+    if(i%20===0&&s.battle&&!s.battle.resolved){s.battle.enemyHealth=0;Core.resolveBattle(s,t);s.math.round=null;s.activity='battle';}
+    const q=answer(s,t);seen.add(q.target);most=Math.max(most,Core.openWords(s));t+=8000;
+  }
+  assert.ok(most<=Core.OPEN_WORD_CAP);assert.ok(seen.size>=45,'words seen: '+seen.size);assert.ok(Content.areas[3].words.some(w=>seen.has(w)));
+  assert.ok(Object.values(s.learning.words).some(w=>w.securedAt),'spaced answers in different battles secure words');
 });
 test('due reviews include future-field words and stop repeating after success',()=>{
   const s=field(1),old=Content.areas[0].words[0],ahead=Content.areas[8].words[0];
@@ -162,7 +175,7 @@ test('adaptation preserves pending questions, chosen speeds, locked modes and th
 });
 test('all-known curriculum offers bounded review without throwing or silently accelerating',()=>{
   const s=field(34);history(s,20);const before=Core.copy(s.settings);
-  for(const item of Content.words)Object.assign(s.learning.words[item.w],{introducedAt:new Date(NOW).toISOString(),practiceSuccesses:2,dueAt:NOW+DAY});
+  for(const item of Content.words)Object.assign(s.learning.words[item.w],{introducedAt:new Date(NOW).toISOString(),practiceSuccesses:2,dueAt:NOW+DAY,securedAt:new Date(NOW).toISOString(),wordXPClaimed:true});
   for(let i=0;i<20;i++){const q=answer(s,NOW+i*8000);assert.equal(q.practiceKind,'comfort');assert.ok(Content.words.some(w=>w.w===q.target));}
   assert.deepEqual(s.settings,before);
 });
@@ -215,4 +228,20 @@ test('speed XP follows the chosen pace, so automatic speed-ups do not change the
   Core.answerBattle(s,q.target,NOW);const rec=s.campaign.battleRecords.at(-1);
   assert.equal(rec.speedXP,0);assert.equal(rec.chosenExposureMs,1800);assert.equal(rec.exposureMs,800);
   assert.equal(s.rewards.speedHistory['800'].length,20,'challenge exposures do not start a separate speed history');
+});
+test('with too many open words no new word opens; turns mix finishing open words, due reviews and easy secured words',()=>{
+  const s=fresh();const words=Content.words.slice(0,70).map(x=>x.w);
+  words.forEach((w,i)=>Object.assign(s.learning.words[w],i<30
+    ?{introducedAt:new Date(NOW-DAY).toISOString(),practiceSuccesses:2,independentCorrect:2,reviewStage:0,dueAt:NOW+DAY,xpEvidence:[{sequence:1,battleId:'old-a'},{sequence:5,battleId:'old-b'}]}
+    :{introducedAt:new Date(NOW-DAY).toISOString(),practiceSuccesses:3,independentCorrect:4,reviewStage:1,dueAt:NOW+DAY,securedAt:new Date(NOW-DAY).toISOString(),wordXPClaimed:true}));
+  s.learning.sequence=50;
+  assert.equal(Core.openWords(s),30);
+  const kinds={};
+  for(let i=0;i<9;i++){const q=answer(s,NOW+i*8000);assert.notEqual(q.isNew,true,'no new word while 30 are open');kinds[q.practiceKind]=(kinds[q.practiceKind]||0)+1;}
+  assert.ok(kinds.finish>=5,JSON.stringify(kinds));assert.ok(kinds.easy>=2,JSON.stringify(kinds));
+  assert.ok(Core.openWords(s)<=25,'correct spaced answers in a new battle secure open words: '+Core.openWords(s));
+  // Below the cap, new words return.
+  for(const w of words.slice(0,30))Object.assign(s.learning.words[w],{securedAt:new Date(NOW).toISOString(),wordXPClaimed:true});
+  let opened=false;for(let i=9;i<40&&!opened;i++)opened=!!answer(s,NOW+i*8000).isNew;
+  assert.ok(opened,'a new word opens again once fewer than the cap are open');
 });
