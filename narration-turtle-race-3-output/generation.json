@@ -1,0 +1,65 @@
+{
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "charactersRequested": 183,
+  "before": {
+    "character_count": 84706,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  },
+  "batches": [
+    {
+      "id": "turtle-race-005",
+      "duration": 13.97551,
+      "sha256": "dd6b3674b3ea0b73ba8480165560f6cd1a409900dd4eab8bd7efabbd5bb68602",
+      "requestId": "zmw8Yx9yF0SdK5dhSGWW",
+      "characters": 183,
+      "segments": 5
+    }
+  ],
+  "clips": {
+    "turtle-race:race-lose-bear": {
+      "file": "assets/narration/turtle-race-005.mp3",
+      "offset": 0,
+      "duration": 2.5835,
+      "sha256": "dd6b3674b3ea0b73ba8480165560f6cd1a409900dd4eab8bd7efabbd5bb68602"
+    },
+    "turtle-race:race-lose-seal": {
+      "file": "assets/narration/turtle-race-005.mp3",
+      "offset": 2.5835,
+      "duration": 2.786,
+      "sha256": "dd6b3674b3ea0b73ba8480165560f6cd1a409900dd4eab8bd7efabbd5bb68602"
+    },
+    "turtle-race:race-lose-owl": {
+      "file": "assets/narration/turtle-race-005.mp3",
+      "offset": 5.3695,
+      "duration": 2.856,
+      "sha256": "dd6b3674b3ea0b73ba8480165560f6cd1a409900dd4eab8bd7efabbd5bb68602"
+    },
+    "turtle-race:race-lose-otter": {
+      "file": "assets/narration/turtle-race-005.mp3",
+      "offset": 8.2255,
+      "duration": 2.7285,
+      "sha256": "dd6b3674b3ea0b73ba8480165560f6cd1a409900dd4eab8bd7efabbd5bb68602"
+    },
+    "turtle-race:race-lose-stag": {
+      "file": "assets/narration/turtle-race-005.mp3",
+      "offset": 10.954,
+      "duration": 3.0215,
+      "sha256": "dd6b3674b3ea0b73ba8480165560f6cd1a409900dd4eab8bd7efabbd5bb68602"
+    }
+  },
+  "status": "complete",
+  "after": {
+    "character_count": 84706,
+    "character_limit": 121026,
+    "next_character_count_reset_unix": 1793158386
+  }
+}
