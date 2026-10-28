@@ -181,3 +181,27 @@ Words: every other-words answer for Turtle Dash 21–30 was rewritten to use onl
 Time pressure: turtles 21–25 and 26–30 now need 3, 4, 5, 6 and 7 steps (before: 4, 6, 8, 10 and 12), and a wrong answer never slips Pip back. The race is still 60 seconds, and the mistake pause still stops the clock. Unlocks, wins, saves and reading time are unchanged; turtles 1–20, Flash Dash, Shell Duel and the expert edition are unchanged. No audio or images were generated.
 
 Verification: 23 Turtle Race unit tests, including a new test that every answer uses only known words, and the new step goals. One existing test changed on purpose because the step goals and the harder answer for "rock" changed. Full suite: 442 unit/backend tests and 125 UI-flow groups pass. Headless Chromium at 1024×768, 768×1024 and 390×844 plays turtles 21 and 26 with the new answers and no horizontal overflow. Physical iPad is not verified.
+
+## Turtle Dash other words as a slower ladder of 35 turtles — 28 October 2026
+
+The user reported that the other-words turtles were still too difficult and asked to start easier, ramp up more slowly and add more levels.
+
+Turtle Dash turtles 21–30 are replaced by 35 other-words turtles, 21–55, in seven rows of five. Each row changes one thing:
+
+| Turtles | Opponent | Answers | Choices | Sentences | Steps |
+|---|---|---|---|---|---|
+| 21–25 | Falcon | short meanings | 2 | first words (51) | 2, 3, 3, 4, 4 |
+| 26–30 | Leopard | short meanings | 3 | first words | 3, 3, 4, 4, 5 |
+| 31–35 | Bear | short meanings | 3 | first and new words (101) | 3, 4, 4, 5, 5 |
+| 36–40 | Seal | short meanings | 3 | all four sets (201) | 3, 4, 5, 5, 6 |
+| 41–45 | Owl | long meanings | 2 | first words | 2, 3, 3, 4, 4 |
+| 46–50 | Otter | long meanings | 3 | first and new words | 3, 3, 4, 4, 5 |
+| 51–55 | Stag | long meanings | 3 | all four sets | 3, 4, 5, 5, 6 |
+
+A wrong answer never slips Pip back on any of them, and the race is still 60 seconds with the clock paused while a mistake is shown. With two choices, the wrong one is picked at random from the two recorded wrong answers. The answers are the known-words glossary from the previous entry. Retention checks during a race come only from the sentences that turtle uses, so an early row never brings in a harder word set. The picker shows each row's name and a short note ("2 choices · first words").
+
+Saves: results on the old turtles 21–30 belonged to different levels, so they are dropped once and the child starts the new ladder at turtle 21 (marked by `dashLadder: 2` in the race save). Turtles 1–20, Flash Dash, Shell Duel, reading time, sentence milestones and the expert race are unchanged.
+
+Opponents: five new approved creatures cropped from the enemy atlases (Moss Bear, Glacier Seal, Snow Owl, Lily Otter, Rowan Stag). Their introductions reuse existing BlitzWord recordings. Five new George lines, "The <creature> wins this time. Try again!" (183 characters, batch `turtle-race-005`), were generated on the generation-only branch and installed with receipts (`NARRATION_REQUEST_3.json`, `NARRATION_GENERATION_3.json`). No images were generated.
+
+Verification: 23 Turtle Race unit tests. The other-words test was rewritten on purpose for the new ladder (rows, choices, steps, word sets, two-choice questions and the one-time save change). Level-count, save and card-dot expectations changed from 30 to 55 turtles, and the voice and opponent tests now cover the third voice set and the Turtle-Dash-only creatures. Full suite: 442 unit/backend tests and 125 UI-flow groups pass. Headless Chromium at 1024×768, 768×1024 and 390×844 loads a save with old turtles 21–23 beaten: it opens on turtle 21 (2 steps, 2 choices), keeps turtles 1–20 and reading time, plays a two-choice race and shows no horizontal overflow. Physical iPad is not verified.

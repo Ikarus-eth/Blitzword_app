@@ -119,7 +119,7 @@
     for(const tier of Core.tiersFor(mode)){
       const row=document.createElement('div');row.className='tierRow tier-'+tier.id;
       const m=mastery[tier.id],face=`<img class="tierOpp" src="${ASSET}${tier.opponent.art}" alt="" title="${tier.opponent.creature}">`;
-      row.innerHTML=face+(m?`<span class="tierName">${tier.name}<small class="tierWords" aria-label="${m.mastered} of ${m.total} sentences secured, ${m.kept7plus} kept after 7 days">${m.mastered}/${m.total} ✓${m.kept7plus?` · ${m.kept7plus} kept`:''}</small></span>`:`<span class="tierName">${tier.name}<small class="tierWords">all words</small></span>`);
+      row.innerHTML=face+(m?`<span class="tierName">${tier.name}<small class="tierWords" aria-label="${m.mastered} of ${m.total} sentences secured, ${m.kept7plus} kept after 7 days">${m.mastered}/${m.total} ✓${m.kept7plus?` · ${m.kept7plus} kept`:''}</small></span>`:`<span class="tierName">${tier.name}<small class="tierWords">${tier.words||'all words'}</small></span>`);
       const tiles=document.createElement('div');tiles.className='tierTiles';
       for(let n=tier.from;n<=tier.to;n++){
         const open=n<=q.unlocked,won=q.wins[n-1]>0,b=document.createElement('button');
@@ -154,7 +154,9 @@
     run.id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);run.asked=0;run.reviews=0;
     // Replaying a turtle already beaten does not count as reading time (it is recorded separately).
     run.countsAsNew=Core.countsAsNew(profile,run);
-    reviewQueue=Core.reviewDue(profile,reviewPool(),Date.now());
+    // Retention checks come only from the sentences this turtle uses, so an early row never gets a harder set.
+    const levelItems=new Set(Core.itemsForLevel(items,mode,run.level));
+    reviewQueue=Core.reviewDue(profile,reviewPool().filter(i=>levelItems.has(i)),Date.now());
     profile=Core.recordStart(profile,mode,new Date().toISOString());store();
     $('#playTitle').textContent=INFO[mode].title+' · '+run.levelName;
     $('#play').classList.toggle('expertPlay',run.pool==='expert');
@@ -197,7 +199,7 @@
   function clearReader(){$('#review').hidden=true;$('#sentence').textContent='';$('#prompt').textContent='';$('#options').innerHTML='';$('#duelTimer').hidden=true;$('#reader').className='reader';}
 
   // Sentences this race can ask: every word set of this edition (literal sets need wrong words; other-words sets need rewordings).
-  function reviewPool(){const pools=new Set(Core.TIERS.filter(t=>t.pool!=='all').map(t=>t.pool));return items.filter(i=>pools.has(i.tier||'core')&&(Core.EDITION.id==='expert'?Core.hasParaphrase(i):Array.isArray(i.w)));}
+  function reviewPool(){const pools=new Set(Core.TIERS.filter(t=>!t.other).map(t=>t.pool));return items.filter(i=>pools.has(i.tier||'core')&&(Core.EDITION.id==='expert'?Core.hasParaphrase(i):Array.isArray(i.w)));}
   let reviewQueue=[];
   function nextQuestion(){
     if(!run||run.over)return;
@@ -205,7 +207,7 @@
     run.asked++;
     const review=run.asked%4===0&&reviewQueue.length?reviewQueue.shift():null;
     if(review)run.reviews++;
-    question=Core.buildQuestion(run.mode,review||deck.next(),Math.random,lastYes,run.paraphrase,run.gloss);
+    question=Core.buildQuestion(run.mode,review||deck.next(),Math.random,lastYes,run.paraphrase,run.gloss,run.choices);
     question.review=!!review;
     if(question.mode==='duel')lastYes.push(question.yes);
     question.item=items.find(i=>i.s===question.sentence);
@@ -222,7 +224,7 @@
     const box=$('#options');box.innerHTML='';
     if(run.mode==='flash'){$('#reader').classList.remove('flashing');$('#reader').classList.add('hiddenSentence');$('#sentence').textContent='✦ ✦ ✦';}
     $('#prompt').textContent=question.prompt;
-    box.className='options options-'+run.mode;
+    box.className='options options-'+run.mode+(question.options.length===2?' options-two':'');
     question.options.forEach((text,i)=>{
       const b=document.createElement('button');b.type='button';b.className='option'+(run.mode==='duel'?(i===0?' yes':' no'):'');b.textContent=text;
       b.onpointerdown=e=>{e.preventDefault();choose(i);};b.onclick=()=>choose(i);

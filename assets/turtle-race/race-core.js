@@ -25,14 +25,22 @@
     duel:[{shell:5,timerMs:12000,hearts:3},{shell:6,timerMs:11000,hearts:3},{shell:7,timerMs:10000,hearts:3},{shell:8,timerMs:9000,hearts:3},{shell:9,timerMs:8000,hearts:3}]
   };
   const join=(...parts)=>{const out={};for(const m of MODES)out[m]=parts.flatMap(p=>p[m]);return out;};
-  // Turtle Dash only: ten more turtles after the four word sets, answering in other words so the answer
-  // cannot be found by spotting a word from the sentence. Turtles 21-25 use simple other words, 26-30 short descriptions.
-  // They draw on all four word sets ("all"). Reading other words takes longer, so these rows ask for fewer
-  // steps (3, 4, 5, 6, 7) and a wrong answer never slips Pip back (28 October 2026).
-  const OTHER_WORDS_GOALS=[3,4,5,6,7];
+  // Turtle Dash only: a slow ladder of other-words turtles after the four word sets (28 October 2026).
+  // The answer cannot be found by spotting a sentence word. Each row changes one thing at a time:
+  // two choices -> three choices -> first and new words -> all words, first with short meanings (gloss 1),
+  // then with longer ones (gloss 2). Every row starts with few steps, and a wrong answer never slips Pip back.
+  const OTHER_ROWS=[
+    {gloss:1,choices:2,pool:'core',goals:[2,3,3,4,4]},
+    {gloss:1,choices:3,pool:'core',goals:[3,3,4,4,5]},
+    {gloss:1,choices:3,pool:'first2',goals:[3,4,4,5,5]},
+    {gloss:1,choices:3,pool:'all',goals:[3,4,5,5,6]},
+    {gloss:2,choices:2,pool:'core',goals:[2,3,3,4,4]},
+    {gloss:2,choices:3,pool:'first2',goals:[3,3,4,4,5]},
+    {gloss:2,choices:3,pool:'all',goals:[3,4,5,5,6]}
+  ];
   const dashOtherWords=levels=>{
-    const extra=gloss=>OTHER_WORDS_GOALS.map(goal=>({pool:'all',paraphrase:false,maxWords:8,goal,backOnWrong:false,gloss}));
-    levels.dash=[...levels.dash,...extra(1),...extra(2)];return levels;
+    const extra=OTHER_ROWS.flatMap(r=>r.goals.map(goal=>({pool:r.pool,paraphrase:false,maxWords:8,goal,backOnWrong:false,gloss:r.gloss,choices:r.choices})));
+    levels.dash=[...levels.dash,...extra];return levels;
   };
   // Opponents: approved creature cutouts. Each row of turtles brings a new challenger.
   const OPP={
@@ -42,18 +50,29 @@
     lynx:{id:'lynx',noun:'lynx',creature:'Frost Lynx',art:'opponents/frost-lynx.webp'},
     falcon:{id:'falcon',noun:'falcon',creature:'Gale Falcon',art:'opponents/gale-falcon.webp'},
     leopard:{id:'leopard',noun:'leopard',creature:'Mist Leopard',art:'opponents/mist-leopard.webp'},
-    raven:{id:'raven',noun:'raven',creature:'Ink Raven',art:'opponents/ink-raven.webp'}
+    raven:{id:'raven',noun:'raven',creature:'Ink Raven',art:'opponents/ink-raven.webp'},
+    bear:{id:'bear',noun:'bear',creature:'Moss Bear',art:'opponents/moss-bear.webp'},
+    seal:{id:'seal',noun:'seal',creature:'Glacier Seal',art:'opponents/glacier-seal.webp'},
+    owl:{id:'owl',noun:'owl',creature:'Snow Owl',art:'opponents/snow-owl.webp'},
+    otter:{id:'otter',noun:'otter',creature:'Lily Otter',art:'opponents/lily-otter.webp'},
+    stag:{id:'stag',noun:'stag',creature:'Rowan Stag',art:'opponents/rowan-stag.webp'}
   };
   const ladderNames=noun=>['Sleepy','Little','Brave','Speedy','Champion'].map(a=>a+' '+noun[0].toUpperCase()+noun.slice(1));
   const EDITIONS={
     // Main race in BlitzWord: the same five-turtle rules, repeated with four sets of about 50 recorded sentences.
     // Each set is mastered by replaying it until its words are known; level 5 of a set usually takes several tries.
-    main:{id:'main',storageKey:'blitzword_turtle_race_v1',version:3,dashboardTime:true,openAll:false,
-      names:[...ladderNames('turtle'),...ladderNames('hare'),...ladderNames('fox'),...ladderNames('lynx'),...ladderNames('falcon'),...ladderNames('leopard')],
+    main:{id:'main',storageKey:'blitzword_turtle_race_v1',version:3,dashLadder:2,dashboardTime:true,openAll:false,
+      names:['turtle','hare','fox','lynx','falcon','leopard','bear','seal','owl','otter','stag'].flatMap(ladderNames),
       tiers:[{id:'easy',name:'First words',from:1,to:5,pool:'core',opponent:OPP.turtle},{id:'new',name:'New words',from:6,to:10,pool:'core2',opponent:OPP.hare},{id:'more',name:'More words',from:11,to:15,pool:'core3',opponent:OPP.fox},{id:'super',name:'Super words',from:16,to:20,pool:'core4',opponent:OPP.lynx},
-        {id:'other1',name:'Simple other words',from:21,to:25,pool:'all',modes:['dash'],opponent:OPP.falcon},{id:'other2',name:'Other words',from:26,to:30,pool:'all',modes:['dash'],opponent:OPP.leopard}],
+        {id:'other1',name:'Pick the meaning',words:'2 choices · first words',from:21,to:25,pool:'core',other:true,modes:['dash'],opponent:OPP.falcon},
+        {id:'other2',name:'Three meanings',words:'3 choices · first words',from:26,to:30,pool:'core',other:true,modes:['dash'],opponent:OPP.leopard},
+        {id:'other3',name:'More meanings',words:'first and new words',from:31,to:35,pool:'first2',other:true,modes:['dash'],opponent:OPP.bear},
+        {id:'other4',name:'All meanings',words:'all four word sets',from:36,to:40,pool:'all',other:true,modes:['dash'],opponent:OPP.seal},
+        {id:'other5',name:'Long meanings',words:'2 choices · first words',from:41,to:45,pool:'core',other:true,modes:['dash'],opponent:OPP.owl},
+        {id:'other6',name:'More long meanings',words:'first and new words',from:46,to:50,pool:'first2',other:true,modes:['dash'],opponent:OPP.otter},
+        {id:'other7',name:'All long meanings',words:'all four word sets',from:51,to:55,pool:'all',other:true,modes:['dash'],opponent:OPP.stag}],
       levels:dashOtherWords(join(ladder(easy(),'core',[5,5,6,7,7]),ladder(easy(),'core2',[6,6,7,8,8]),ladder(easy(),'core3',[6,6,7,7,7]),ladder(easy(),'core4',[7,7,8,8,8]))),
-      note:'Each race has twenty opponents in four word sets (Turtle Dash has thirty). Every set uses the same five rules with about 50 new recorded sentences, so the child can master a set by replaying it.'},
+      note:'Each race has twenty opponents in four word sets; Turtle Dash adds 35 answered in other words. Every set uses the same five rules with about 50 new recorded sentences, so the child can master a set by replaying it.'},
     // Standalone expert race for an older reader: answers in other words, then long sentences.
     expert:{id:'expert',storageKey:'blitzword_turtle_race_expert_v1',version:3,dashboardTime:false,openAll:true,
       names:['River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle','Shadow Raven','Night Raven','Storm Raven','Ancient Raven','Legend Raven'],
@@ -67,7 +86,7 @@
   const LEVEL_COUNT=NAMES.length; // array size; a race may have fewer turtles (Turtle Dash has the most)
   const countFor=mode=>LEVELS[mode].length;
   const tiersFor=mode=>TIERS.filter(t=>t.to<=countFor(mode)&&(!t.modes||t.modes.includes(mode)));
-  const POOLS={all:['core','core2','core3','core4']};
+  const POOLS={all:['core','core2','core3','core4'],first2:['core','core2']};
   const inPool=(item,pool)=>(POOLS[pool]||[pool]).includes(item.tier||'core');
   const BOOST_MS=3000;
   const level=(mode,n)=>({...LEVELS[mode][n-1],level:n,name:NAMES[n-1]});
@@ -80,7 +99,7 @@
   }
   function describeLevel(mode,n){
     const L=LEVELS[mode][n-1],secs=ms=>(ms/1000).toFixed(ms%1000?1:0)+' s';
-    const extra=({core2:' · new words',core3:' · more words',core4:' · super words'}[L.pool]||'')+(L.gloss===1?' · answers in simple other words':L.gloss===2?' · answers in other words':'')+(L.pool==='expert'?' · long sentences':'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
+    const extra=(L.gloss?'':({core2:' · new words',core3:' · more words',core4:' · super words'}[L.pool]||''))+(L.gloss===1?' · short meanings':L.gloss===2?' · long meanings':'')+(L.choices===2?' · 2 choices':'')+(L.gloss?({core:' · first words',first2:' · first and new words',all:' · all words'}[L.pool]):'')+(L.pool==='expert'?' · long sentences':'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
     if(mode==='dash')return `${L.goal} steps to the finish`+extra;
     if(mode==='flash')return `${L.goal} steps · sentence shows ${secs(L.flashMs)}`+extra;
     return `${L.shell} shells · ${secs(L.timerMs)} per question · ${L.hearts} hearts`+extra;
@@ -90,7 +109,7 @@
   function emptyStats(){return {started:0,finished:0,wins:0,answers:0,correct:0,answerMs:0,lastPlayed:null};}
   function defaultProfile(){
     const games={},progress={};for(const m of MODES){games[m]=emptyStats();progress[m]=emptyProgress();}
-    return {version:E.version,games,progress,history:[],time:{days:{},replayDays:{}},words:{},seq:0};
+    return {version:E.version,...(E.dashLadder?{dashLadder:E.dashLadder}:{}),games,progress,history:[],time:{days:{},replayDays:{}},words:{},seq:0};
   }
   // Local calendar day, matching the main game's parent dashboard.
   function dayKey(now){const d=new Date(now);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
@@ -117,12 +136,15 @@
       p.games[m].lastPlayed=typeof g.lastPlayed==='string'?g.lastPlayed:null;
       const r=raw.progress?.[m]||{},q=p.progress[m];
       // Main saves from before 26 October 2026 held other-words levels 6-15; those moved to the expert race.
-      const keep=E.id==='main'&&!(raw.version>=3)?5:LEVEL_COUNT;
+      // Turtle Dash turtles above 20 were rebuilt on 28 October 2026 as a gentler ladder; old results there are dropped.
+      const rebuilt=E.id==='main'&&m==='dash'&&raw.version>=3&&raw.dashLadder!==E.dashLadder;
+      const keep=E.id==='main'&&!(raw.version>=3)?5:rebuilt?20:LEVEL_COUNT;
       for(let i=0;i<LEVEL_COUNT;i++){q.wins[i]=i<keep?count(r.wins?.[i]):0;q.plays[i]=i<keep?count(r.plays?.[i]):0;}
       const won=q.wins.reduce((top,w,i)=>w>0?i+1:top,0);
       const saved=Number.isInteger(r.unlocked)?Math.min(r.unlocked,keep+1):1;
       q.unlocked=Math.min(countFor(m),Math.max(1,saved,won+1));
       q.selected=Number.isInteger(r.selected)&&r.selected>=1&&r.selected<=q.unlocked?r.selected:Math.min(q.unlocked,Math.max(1,won||1));
+      if(rebuilt&&r.selected>20)q.selected=q.unlocked; // he was on the old other-words turtles: start the new ladder
     }
     // Per-sentence evidence, using the BlitzWord parent-dashboard milestones (secured, kept after 7 / 30 days).
     p.seq=count(raw.seq);
@@ -180,9 +202,9 @@
   function shuffle(list,rand){const a=list.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
   // Builds one question in the chosen format. Options never include artwork.
-  function buildQuestion(mode,item,rand,lastYes,paraphrase,gloss){
+  function buildQuestion(mode,item,rand,lastYes,paraphrase,gloss,choices=3){
     if(mode==='dash'&&(gloss===1||gloss===2)&&hasGloss(item)){
-      const set=gloss===1?item.o1:item.o2,options=shuffle(set,rand);
+      const all=gloss===1?item.o1:item.o2,set=choices===2?[all[0],all[1+Math.floor(rand()*2)]]:all,options=shuffle(set,rand);
       return {mode,sentence:item.s,key:item.a,meaning:set[0],prompt:item.q,options,answer:options.indexOf(set[0]),gloss};
     }
     const base={mode,sentence:item.s,key:item.a,meaning:paraphrase?item.g[0]:null};
@@ -218,7 +240,7 @@
     const chosen=Number.isInteger(n)?n:profile.progress[mode].selected;
     if(chosen<1||chosen>profile.progress[mode].unlocked)throw Error('Level locked');
     const L=level(mode,chosen);
-    const run={mode,level:chosen,levelName:L.name,opponent:opponentFor(chosen),elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,gloss:L.gloss||0,pool:L.pool};
+    const run={mode,level:chosen,levelName:L.name,opponent:opponentFor(chosen),elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,gloss:L.gloss||0,choices:L.choices||3,pool:L.pool};
     if(mode==='duel')Object.assign(run,{hearts:L.hearts,maxHearts:L.hearts,shell:L.shell,maxShell:L.shell,timerMs:L.timerMs});
     else Object.assign(run,{steps:0,goal:L.goal});
     if(mode==='flash')Object.assign(run,{flashMs:L.flashMs,boostMs:L.boostMs});
@@ -290,7 +312,7 @@
   // Counts per word set. "mastered" = secured or better, the dashboard's highest-evidence states.
   function masteryByTier(profile,items){
     // Word sets only: the other-words turtles reuse all four sets and are not a set of their own.
-    return TIERS.filter(t=>t.pool!=='all').map(t=>{
+    return TIERS.filter(t=>!t.other).map(t=>{
       const pool=items.filter(i=>(i.tier||'core')===t.pool),c={new:0,learning:0,secured:0,kept7:0,kept30:0};
       for(const i of pool)c[sentenceStatus(profile,i.s)]++;
       return {tier:t.id,name:t.name,total:pool.length,...c,mastered:c.secured+c.kept7+c.kept30,kept7plus:c.kept7+c.kept30};

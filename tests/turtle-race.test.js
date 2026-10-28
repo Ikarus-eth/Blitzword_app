@@ -56,11 +56,11 @@ test('yes/no answers never repeat three times in a row',()=>{
 const unlockAll=(p,mode,n)=>{p.progress[mode].unlocked=n;p.progress[mode].selected=n;return p;};
 
 test('main race: twenty turtles, every word set repeats the rules of turtles 1-5',()=>{
-  assert.equal(Core.EDITION.id,'main');assert.equal(Core.LEVEL_COUNT,30);
+  assert.equal(Core.EDITION.id,'main');assert.equal(Core.LEVEL_COUNT,55);
   assert.deepEqual(Core.tiersFor('flash').map(t=>[t.from,t.to,t.pool]),[[1,5,'core'],[6,10,'core2'],[11,15,'core3'],[16,20,'core4']]);
   const rules=L=>{const {pool,maxWords,...r}=L;return r;};
   for(const mode of Core.MODES){
-    assert.equal(Core.LEVELS[mode].length,mode==='dash'?30:20);
+    assert.equal(Core.LEVELS[mode].length,mode==='dash'?55:20);
     for(const tier of Core.tiersFor('flash'))for(let k=0;k<5;k++){
       assert.deepEqual(rules(Core.LEVELS[mode][tier.from-1+k]),rules(Core.LEVELS[mode][k]),mode+tier.id+k);
       assert.equal(Core.LEVELS[mode][tier.from-1+k].pool,tier.pool);
@@ -98,14 +98,15 @@ test('sentence milestones follow the BlitzWord dashboard: secured, kept after 7 
   assert.deepEqual(old,{right:3,wrong:0,last:true,lastAt:null,trail:[],securedAt:null,kept7At:null,kept30At:null},'yesterday’s counts stay, without inventing milestones');
 });
 
-test('Turtle Dash gets ten new turtles in other words: 21-25 simple, 26-30 harder, never found by spotting a sentence word',()=>{
-  assert.equal(Core.countFor('dash'),30);assert.equal(Core.countFor('flash'),20);assert.equal(Core.countFor('duel'),20);
-  assert.deepEqual(Core.tiersFor('dash').slice(4).map(t=>[t.from,t.to,t.pool,t.name]),[[21,25,'all','Simple other words'],[26,30,'all','Other words']]);
-  assert.equal(Core.LEVELS.dash.map(L=>L.gloss||0).join(''),'0'.repeat(20)+'11111'+'22222','turtles 1-20 keep the words of the sentence');
-  // Reading other words takes longer: fewer steps than turtles 1-5 and never slipping back (28 October 2026).
-  for(const from of [20,25])assert.deepEqual(Core.LEVELS.dash.slice(from,from+5).map(L=>[L.goal,L.backOnWrong]),[[3,false],[4,false],[5,false],[6,false],[7,false]]);
-  for(let k=0;k<5;k++)assert.ok(Core.LEVELS.dash[20+k].goal<Core.LEVELS.dash[k].goal);
-  for(let n=21;n<=30;n++)assert.equal(Core.itemsForLevel(Data.items,'dash',n).length,201,'all four word sets');
+test('Turtle Dash other words: a slow ladder of 35 turtles that changes one thing per row',()=>{
+  assert.equal(Core.countFor('dash'),55);assert.equal(Core.countFor('flash'),20);assert.equal(Core.countFor('duel'),20);
+  assert.deepEqual(Core.tiersFor('dash').slice(4).map(t=>[t.from,t.to,t.pool]),[[21,25,'core'],[26,30,'core'],[31,35,'first2'],[36,40,'all'],[41,45,'core'],[46,50,'first2'],[51,55,'all']]);
+  const row=from=>Core.LEVELS.dash.slice(from-1,from+4);
+  assert.equal(Core.LEVELS.dash.map(L=>L.gloss||0).join(''),'0'.repeat(20)+'1'.repeat(20)+'2'.repeat(15),'turtles 1-20 keep the words of the sentence; short meanings before long ones');
+  assert.deepEqual([21,26,31,36,41,46,51].map(n=>Core.LEVELS.dash[n-1].choices),[2,3,3,3,2,3,3],'two choices to start each kind of meaning');
+  assert.deepEqual(row(21).map(L=>L.goal),[2,3,3,4,4]);assert.deepEqual(row(41).map(L=>L.goal),[2,3,3,4,4]);
+  for(let n=21;n<=55;n++){const L=Core.LEVELS.dash[n-1];assert.equal(L.backOnWrong,false,'never slips back: '+n);assert.ok(L.goal<=6);if((n-21)%5)assert.ok(L.goal>=Core.LEVELS.dash[n-2].goal,'steps never drop inside a row: '+n);}
+  assert.deepEqual([21,31,36].map(n=>Core.itemsForLevel(Data.items,'dash',n).length),[51,101,201],'first words, then first and new words, then all');
   for(const mode of ['flash','duel'])assert.ok(Core.LEVELS[mode].every(L=>!L.gloss),mode+' keeps the sentence words');
   assert.ok(Expert.LEVELS.dash.every(L=>!L.gloss),'the expert race keeps its own rewordings');
   const STOP=new Set('a an the of to in on at by is are was it its and or for with my me i we you he she his her our your this that these those be can do does did not no all one two up out off from into over under as so very'.split(' '));
@@ -117,17 +118,24 @@ test('Turtle Dash gets ten new turtles in other words: 21-25 simple, 26-30 harde
     for(const o of [i.o1,i.o2]){assert.deepEqual(content(o[0]).filter(w=>words.has(w)),[],i.s+' → '+o[0]);assert.ok(!new RegExp('\\b'+i.a+'\\b','i').test(o[0]),i.s);}
   }
   const rock=Data.items.find(i=>i.s==='Pip is on the rock.');
-  const easy=Core.buildQuestion('dash',rock,()=>.4,[],false,1);assert.equal(easy.options[easy.answer],'a stone');assert.equal(easy.meaning,'a stone');assert.equal(easy.prompt,'Where is Pip?');
+  const two=Core.buildQuestion('dash',rock,()=>.4,[],false,1,2);assert.equal(two.options.length,2);assert.equal(two.options[two.answer],'a stone');assert.ok(rock.o1.includes(two.options[1-two.answer]));
+  const easy=Core.buildQuestion('dash',rock,()=>.4,[],false,1);assert.equal(easy.options.length,3);assert.equal(easy.options[easy.answer],'a stone');assert.equal(easy.meaning,'a stone');assert.equal(easy.prompt,'Where is Pip?');
   const hard=Core.buildQuestion('dash',rock,()=>.4,[],false,2);assert.equal(hard.options[hard.answer],'a big hard stone');
   const plain=Core.buildQuestion('dash',rock,seq([.1,.7,.3]),[],false,0);assert.equal(plain.options[plain.answer],'rock');
   // A child who has beaten all twenty turtles finds turtle 21 open; Flash Dash and Shell Duel stay at twenty.
   const done=Core.normalizeProfile({version:3,progress:{dash:{unlocked:20,selected:20,wins:Array(20).fill(1)},flash:{unlocked:20,wins:Array(20).fill(1)}}});
   assert.equal(done.progress.dash.unlocked,21);assert.equal(done.progress.flash.unlocked,20);
-  assert.equal(Core.newRun('dash',done,21).gloss,1);assert.equal(Core.newRun('dash',done,20).gloss,0);
-  const all=Core.unlockAll(Core.defaultProfile());assert.equal(all.progress.dash.unlocked,30);assert.equal(all.progress.duel.unlocked,20);
+  assert.equal(Core.newRun('dash',done,21).gloss,1);assert.equal(Core.newRun('dash',done,21).choices,2);assert.equal(Core.newRun('dash',done,20).gloss,0);
+  // Saves from before the gentler ladder: results on the old turtles 21-30 belong to different levels and are dropped,
+  // so the child starts the new ladder at turtle 21. Turtles 1-20 and the other races are untouched.
+  const before=Core.normalizeProfile({version:3,progress:{dash:{unlocked:24,selected:23,wins:[...Array(20).fill(1),2,1,1],plays:[...Array(20).fill(1),5,3,4]},flash:{unlocked:12,wins:Array(11).fill(1)}}});
+  assert.equal(before.progress.dash.unlocked,21);assert.equal(before.progress.dash.selected,21,'he lands on the first new turtle');assert.deepEqual(before.progress.dash.wins.slice(19,24),[1,0,0,0,0]);assert.equal(before.progress.flash.unlocked,12);assert.equal(before.dashLadder,2);
+  const after=Core.normalizeProfile(JSON.parse(JSON.stringify({...before,progress:{...before.progress,dash:{...before.progress.dash,unlocked:23,wins:[...Array(20).fill(1),1,1]}}})));
+  assert.equal(after.progress.dash.unlocked,23,'once on the new ladder, progress is kept');
+  const all=Core.unlockAll(Core.defaultProfile());assert.equal(all.progress.dash.unlocked,55);assert.equal(all.progress.duel.unlocked,20);
   const p=Core.defaultProfile();p.progress.flash.unlocked=20;p.progress.flash.selected=20;const last=Core.newRun('flash',p);for(let i=0;i<13;i++)Core.answer(last,true,500);
   assert.equal(Core.recordFinish(p,last,'2026-10-27T00:00:00Z'),null,'Flash Dash ends at turtle 20');
-  assert.match(Core.describeLevel('dash',21),/simple other words/);assert.match(Core.describeLevel('dash',26),/answers in other words/);
+  assert.match(Core.describeLevel('dash',21),/2 steps.*short meanings · 2 choices · first words/);assert.match(Core.describeLevel('dash',51),/long meanings · all words/);
   assert.deepEqual(Core.masteryByTier(p,Data.items).map(m=>m.tier),['easy','new','more','super'],'the other-words turtles are not a word set of their own');
 });
 
@@ -223,13 +231,13 @@ test('winning the hardest open turtle opens the next; he chooses among open turt
 test('stored profiles are repaired and earlier automatic difficulty is dropped',()=>{
   const old=Core.normalizeProfile({version:1,levels:{dash:{goal:14}},games:{dash:{started:3,finished:2,wins:1}}});
   assert.equal(old.levels,undefined);assert.equal(old.games.dash.started,3);
-  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:Array(30).fill(0),plays:Array(30).fill(0)});
+  assert.deepEqual(old.progress.dash,{unlocked:1,selected:1,wins:Array(55).fill(0),plays:Array(55).fill(0)});
   const q=Core.normalizeProfile({progress:{flash:{unlocked:1,selected:4,wins:[2,1,'x',-1,0]}}});
   assert.equal(q.progress.flash.unlocked,3,'wins prove level 3 is open');
   assert.equal(q.progress.flash.selected,2);assert.deepEqual(q.progress.flash.wins.slice(0,5),[2,1,0,0,0]);
-  assert.equal(Core.normalizeProfile({version:3,progress:{duel:{unlocked:99}}}).progress.duel.unlocked,20);assert.equal(Core.normalizeProfile({version:3,progress:{dash:{unlocked:99}}}).progress.dash.unlocked,30);
+  assert.equal(Core.normalizeProfile({version:3,progress:{duel:{unlocked:99}}}).progress.duel.unlocked,20);assert.equal(Core.normalizeProfile({version:3,dashLadder:2,progress:{dash:{unlocked:99}}}).progress.dash.unlocked,55);
   const five=Core.normalizeProfile({progress:{dash:{unlocked:5,selected:5,wins:[1,1,1,1,1],plays:[1,1,1,1,2]}}});
-  assert.equal(five.progress.dash.unlocked,6,'yesterday’s Champion win opens the first new turtle');assert.equal(five.progress.dash.plays.length,30);
+  assert.equal(five.progress.dash.unlocked,6,'yesterday’s Champion win opens the first new turtle');assert.equal(five.progress.dash.plays.length,55);
 });
 
 test('stats record starts, finishes, quits and accuracy under their own storage key',()=>{
@@ -276,7 +284,7 @@ test('the deck repeats no sentence until every sentence has appeared',()=>{
 });
 
 test('recorded voice-over is installed with matching receipts and the page does not touch the main save',()=>{
-  const plans=['NARRATION_REQUEST.json','NARRATION_REQUEST_2.json'].map(f=>require('../docs/turtle-race/'+f));
+  const plans=['NARRATION_REQUEST.json','NARRATION_REQUEST_2.json','NARRATION_REQUEST_3.json'].map(f=>require('../docs/turtle-race/'+f));
   const challengers=Object.values(Core.OPPONENTS).filter(o=>o.id!=='turtle');
   assert.equal(Object.keys(Data.voice).length,plans.reduce((n,p)=>n+p.segmentCount,0)+challengers.length);
   for(const batch of plans.flatMap(p=>p.batches)){
@@ -309,14 +317,14 @@ test('race cards show five stars for the current word set and one dot per set, n
   const dash=cards[0];
   assert.equal(dash.querySelectorAll('.cardStars i').length,5);assert.equal(dash.querySelectorAll('.cardStars i.on').length,2,'turtles 6 and 7 of New words');
   assert.equal(dash.querySelector('.cardSet').textContent,'New words');
-  assert.deepEqual([...dash.querySelectorAll('.setDots i')].map(i=>i.className),['done','part','','','',''],'Turtle Dash has six groups');
+  assert.deepEqual([...dash.querySelectorAll('.setDots i')].map(i=>i.className),['done','part','','','','','','','','',''],'Turtle Dash has eleven groups');
   assert.equal(cards[1].querySelectorAll('.setDots i').length,4,'Flash Dash has four');
   assert.equal(cards[1].querySelector('.cardSet').textContent,'New words','beating Champion moves the card to the next set');
   assert.equal(cards[2].querySelectorAll('.cardStars i.on').length,0);
 });
 
 test('each row of five has its own opponent, with art, lose lines and an approved introduction',()=>{
-  const want={1:'turtle',5:'turtle',6:'hare',10:'hare',11:'fox',16:'lynx',20:'lynx',21:'falcon',26:'leopard',30:'leopard'};
+  const want={1:'turtle',5:'turtle',6:'hare',10:'hare',11:'fox',16:'lynx',20:'lynx',21:'falcon',26:'leopard',30:'leopard',31:'bear',36:'seal',41:'owl',46:'otter',51:'stag',55:'stag'};
   for(const [n,id] of Object.entries(want))assert.equal(Core.opponentFor(+n).id,id,'level '+n);
   for(const tier of Core.TIERS)for(let n=tier.from;n<=tier.to;n++)assert.ok(Core.NAMES[n-1].endsWith(tier.opponent.creature.split(' ')[1]),Core.NAMES[n-1]);
   const Expert=Core.edition('expert');
@@ -326,7 +334,9 @@ test('each row of five has its own opponent, with art, lose lines and an approve
   for(const id of used){
     const o=Core.OPPONENTS[id];assert.ok(fs.existsSync(path.join(root,'assets/turtle-race',o.art)),o.art);
     if(id==='turtle')continue;
-    for(const k of ['race-lose-'+id,'duel-lose-'+id,'intro-'+id])assert.ok(Data.voice[k],k);
+    // Shell Duel lines only for creatures that appear in Shell Duel; Turtle Dash rows need the race line.
+    const inDuel=[...Core.TIERS,...Expert.TIERS].some(t=>t.opponent.id===id&&(!t.modes||t.modes.includes('duel')));
+    for(const k of ['race-lose-'+id,'intro-'+id,...(inDuel?['duel-lose-'+id]:[])])assert.ok(Data.voice[k],k);
     assert.equal(Data.voice['race-lose-'+id].text,`The ${o.noun} wins this time. Try again!`);
     assert.match(Data.voice['intro-'+id].text,new RegExp(o.creature+' is on the path'));
   }

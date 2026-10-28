@@ -301,3 +301,6 @@ button{font-family:inherit;cursor:pointer;touch-action:manipulation}
 .tierRow{grid-template-columns:40px 104px 1fr}
 .tierOpp{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 2px rgba(0,0,0,.18))}
 @media (max-width:760px){.tierRow{grid-template-columns:34px 1fr}.tierRow .tierTiles{grid-column:1/-1}.tierOpp{width:34px;height:34px}.tierName{text-align:left}}
+/* Two-choice other-words turtles (28 October 2026) */
+.options-dash.options-two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:680px}
+@media (max-width:760px){.options-dash.options-two{grid-template-columns:1fr}}
