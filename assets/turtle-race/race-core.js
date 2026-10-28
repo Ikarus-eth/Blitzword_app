@@ -27,9 +27,11 @@
   const join=(...parts)=>{const out={};for(const m of MODES)out[m]=parts.flatMap(p=>p[m]);return out;};
   // Turtle Dash only: ten more turtles after the four word sets, answering in other words so the answer
   // cannot be found by spotting a word from the sentence. Turtles 21-25 use simple other words, 26-30 short descriptions.
-  // They draw on all four word sets ("all"), with the same five steps as turtles 1-5.
+  // They draw on all four word sets ("all"). Reading other words takes longer, so these rows ask for fewer
+  // steps (3, 4, 5, 6, 7) and a wrong answer never slips Pip back (28 October 2026).
+  const OTHER_WORDS_GOALS=[3,4,5,6,7];
   const dashOtherWords=levels=>{
-    const extra=gloss=>easy().dash.map(o=>({pool:'all',paraphrase:false,maxWords:8,...o,gloss}));
+    const extra=gloss=>OTHER_WORDS_GOALS.map(goal=>({pool:'all',paraphrase:false,maxWords:8,goal,backOnWrong:false,gloss}));
     levels.dash=[...levels.dash,...extra(1),...extra(2)];return levels;
   };
   // Opponents: approved creature cutouts. Each row of turtles brings a new challenger.

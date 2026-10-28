@@ -1210,3 +1210,7 @@ This supersedes the same-morning rewording of Turtle Dash turtles 1–20. Those 
 ## Turtle Race opponents by row — 27 October 2026
 
 Each row of five race levels has its own opponent from the approved enemy art: turtle (1–5), hare (6–10), fox (11–15), lynx (16–20), falcon (21–25, Turtle Dash) and leopard (26–30, Turtle Dash); the expert edition races turtles at 1–5 and ravens at 6–10. Every row uses the Sleepy, Little, Brave, Speedy, Champion ladder of names. Rules, sentences, unlocks, saves and reading time do not change. [Details](turtle-race/RELEASE.md).
+
+## Turtle Dash other words use known words — 28 October 2026
+
+Other-words answers in Turtle Dash 21–30 use only words the child already reads: the BlitzWord 200 list and the words of the main-race sentences, questions and choices. These rows ask for 3, 4, 5, 6 and 7 steps and never slip Pip back, because reading other words takes longer. [Details](turtle-race/RELEASE.md).
