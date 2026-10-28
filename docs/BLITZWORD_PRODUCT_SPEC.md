@@ -1218,3 +1218,7 @@ Other-words answers in Turtle Dash 21–30 use only words the child already read
 ## Turtle Dash other words: slower ladder of 35 turtles — 28 October 2026
 
 This supersedes the ten other-words turtles. Turtle Dash turtles 21–55 form seven rows that change one thing at a time: two choices, then three; first words, then first and new words, then all four sets; short meanings, then long meanings. Each row starts at two or three steps, rises to at most six, and never slips Pip back. Results on the old turtles 21–30 are dropped once, so the child starts the new ladder at turtle 21. Five more approved creatures take the new rows (bear, seal, owl, otter, stag). [Details](turtle-race/RELEASE.md).
+
+## Quest shields after a lost fight — 28 October 2026
+
+This supersedes "two per quest, surviving retry/reload" from 11 October 2026. A retry after a defeat restores the shield allowance (up to two per attempt, one per fight, one held). After the first lost fight in a quest, five accurate answers in a row or four quick ones earn a shield instead of eight or six. The team animal's once-per-quest block and chapter battle shields are unchanged. [Details](adventures/SHIELD_AFTER_DEFEAT_RELEASE.md).

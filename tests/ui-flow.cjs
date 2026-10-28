@@ -1383,6 +1383,20 @@ console.log('PASS all 45 new enemies render through real battle feedback, score 
  console.log('PASS earned shield chooser, inert background, chosen animal, reload and departure on protected hit');
 }
 {
+ const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,9,28);s.profile.name='Reader';s.assessment.done=true;
+ Core.startMission(s,'first-spark',now);A.reveal(s,'moon-moth',now);A.reveal(s,'moss-golem',now);A.selectCompanion(s,'moon-moth');Core.startMissionBattle(s,now);s.battle.introPending=false;
+ s.expedition.current.supportEarned=2;s.battle.heroHealth=0;Core.resolveBattle(s,now);Core.startMissionBattle(s,now);s.battle.introPending=false;
+ for(const w of Object.values(s.learning.words)){w.familiar=true;w.independentCorrect=2;w.introducedAt=new Date(now).toISOString();}
+ Core.prepareBattle(s,now);s.battle.question.phase='choices';s.battle.supportMeter={accurate:3,quick:0,earned:false};
+ let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));let q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
+ assert.match(ui.get('feedback').textContent,/4 \/ 5 accurate · 0 \/ 4 quick/);
+ ui.until(()=>ui.state().battle.question?.phase==='choices'||ui.state().battle.question?.id!==q.id);ui.ready();q=ui.state().battle.question;
+ if(q.phase!=='choices'){ui.state().battle.question.phase='choices';}
+ ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===ui.state().battle.question.target));
+ ui.until(()=>!!ui.get('questDialogTitle'));assert.equal(ui.get('questDialogTitle').textContent,'You earned a shield!');assert.match(ui.document.body.textContent,/After a lost fight, five accurate answers/);
+ console.log('PASS after a lost fight the retry shows a five-answer shield meter and earns a shield');
+}
+{
  const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,9,11);s.profile.name='Reader';s.assessment.done=true;
  for(const m of A.Data.missions)if(m.id!=='crab-ferry')A.stats(s,m.id).completedAt=new Date(now).toISOString();Core.startMission(s,'crab-ferry',now);const c=s.expedition.current;c.step=3;c.phase='puzzle';c.puzzle={solved:true};A.next(s,now);
  let ui=boot(s,{adventures:true,geometry:true});ui.click(ui.get('missionResume'));let q=A.mapQuestion(ui.state());ui.click(ui.get('mission').querySelector('[data-map-choice="'+q.options.find(o=>o.id!==q.answer).id+'"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.get('questDialogTitle').textContent,'Take another look');const time=A.report(ui.state()).riddleMs;ui.advance(12000);ui.click(ui.document.querySelector('.questDialogButton'));assert.equal(A.report(ui.state()).riddleMs,time);
