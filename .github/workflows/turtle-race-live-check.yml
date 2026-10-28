@@ -1,4 +1,4 @@
-name: Verify live turtle dash gentle ladder
+name: Verify live quest shield fix
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,18 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 4eae44b6c304abd85780e2150a56f710bfdac827
-      - name: Compare every live turtle race file with merge 4eae44b
+          ref: 6f2dad5751c59f82333426ba3159390b218b7b65
+      - name: Compare every live turtle race file with merge 6f2dad5
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 15 minutes) for Pages to publish the merge, then require every file to match.
           for attempt in $(seq 1 30); do
-            curl -s -o probe.html "$B/assets/turtle-race/index.html?cb=$GITHUB_RUN_ID-$attempt"
-            if cmp -s probe.html assets/turtle-race/index.html; then echo "live after attempt $attempt"; break; fi
+            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
             sleep 30
           done
           bad=0; n=0
-          for f in index.html app.js game-core.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race assets/turtle-race-expert) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3 assets/narration/turtle-race-003.mp3 assets/narration/turtle-race-004.mp3 assets/narration/turtle-race-005.mp3; do
+          for f in index.html app.js game-core.js adventure-core.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race assets/turtle-race-expert) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3 assets/narration/turtle-race-003.mp3 assets/narration/turtle-race-004.mp3 assets/narration/turtle-race-005.mp3; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
