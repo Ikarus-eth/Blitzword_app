@@ -1,0 +1,49 @@
+{
+  "version": 3,
+  "base": "3b94e6d7ed8b11fe1946b236adc8ad1611799ea3",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "maxCharacters": 1000,
+  "characters": 183,
+  "segmentCount": 5,
+  "batches": [
+    {
+      "id": "turtle-race-005",
+      "text": "The bear wins this time. Try again!\n\nThe seal wins this time. Try again!\n\nThe owl wins this time. Try again!\n\nThe otter wins this time. Try again!\n\nThe stag wins this time. Try again!",
+      "segments": [
+        {
+          "key": "turtle-race:race-lose-bear",
+          "text": "The bear wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-seal",
+          "text": "The seal wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-owl",
+          "text": "The owl wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-otter",
+          "text": "The otter wins this time. Try again!",
+          "kind": "turtle-race"
+        },
+        {
+          "key": "turtle-race:race-lose-stag",
+          "text": "The stag wins this time. Try again!",
+          "kind": "turtle-race"
+        }
+      ]
+    }
+  ]
+}

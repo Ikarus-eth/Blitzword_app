@@ -1214,3 +1214,7 @@ Each row of five race levels has its own opponent from the approved enemy art: t
 ## Turtle Dash other words use known words — 28 October 2026
 
 Other-words answers in Turtle Dash 21–30 use only words the child already reads: the BlitzWord 200 list and the words of the main-race sentences, questions and choices. These rows ask for 3, 4, 5, 6 and 7 steps and never slip Pip back, because reading other words takes longer. [Details](turtle-race/RELEASE.md).
+
+## Turtle Dash other words: slower ladder of 35 turtles — 28 October 2026
+
+This supersedes the ten other-words turtles. Turtle Dash turtles 21–55 form seven rows that change one thing at a time: two choices, then three; first words, then first and new words, then all four sets; short meanings, then long meanings. Each row starts at two or three steps, rises to at most six, and never slips Pip back. Results on the old turtles 21–30 are dropped once, so the child starts the new ladder at turtle 21. Five more approved creatures take the new rows (bear, seal, owl, otter, stag). [Details](turtle-race/RELEASE.md).
