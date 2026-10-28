@@ -62,7 +62,7 @@
       const choices=A.supportChoices(s);if(!choices.length)return false;
       let selected=choices.includes(A.of(s).supportFavourite)?A.of(s).supportFavourite:choices[0];
       const grid=el('div','supportChoices');
-      const card=window.BlitzFeedback.show({title:force?'Choose your shield friend':'You earned a shield!',message:'Your friend will stop one hit, then head home.',detail:'Eight accurate answers, or six quick accurate answers, can call a friend.',content:grid,actions:[{label:'Join my team',run:()=>{if(!ctx.active()||!A.selectSupport(s,selected)||!ctx.save())return false;return true;}}],onClose:()=>{renderBattleTeam();done();}});
+      const card=window.BlitzFeedback.show({title:force?'Choose your shield friend':'You earned a shield!',message:'Your friend will stop one hit, then head home.',detail:A.supportNeed(s).accurate<8?'After a lost fight, five accurate answers, or four quick ones, can call a friend.':'Eight accurate answers, or six quick accurate answers, can call a friend.',content:grid,actions:[{label:'Join my team',run:()=>{if(!ctx.active()||!A.selectSupport(s,selected)||!ctx.save())return false;return true;}}],onClose:()=>{renderBattleTeam();done();}});
       choices.forEach(family=>{const b=button('','supportChoice',()=>{selected=family;for(const option of grid.children)option.setAttribute('aria-pressed',String(option===b));});b.setAttribute('aria-pressed',String(selected===family));const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);b.append(art,el('span','',Content.enemyAt(family).name));grid.append(b);});
       card.querySelector('.supportChoice')?.focus?.();return true;
     }

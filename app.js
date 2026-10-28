@@ -724,7 +724,7 @@ function correctFeedback(record=null) {
     reward.addEventListener('animationend',()=>reward.remove(),{once:true});
     $('#battleScroll').append(reward);
   }
-  const meter=state.battle.supportMeter;if(!supported&&meter&&!meter.earned&&(state.expedition.current?.supportEarned||0)<2&&!state.rewards.shield){$('#feedback').textContent=meter.accurate+' / 8 accurate · '+meter.quick+' / 6 quick';$('#feedback').classList.add('show');}
+  const meter=state.battle.supportMeter,need=Core.Adventure.supportNeed(state);if(!supported&&meter&&Core.Adventure.supportOpen(state)){$('#feedback').textContent=Math.min(meter.accurate,need.accurate)+' / '+need.accurate+' accurate · '+Math.min(meter.quick,need.quick)+' / '+need.quick+' quick';$('#feedback').classList.add('show');}
   if(q.supportEarned){$('#feedback').textContent='Shield earned! A friend can help.';$('#feedback').classList.add('show');}
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
   speak(Core.byWord[q.target]?.spoken||q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});

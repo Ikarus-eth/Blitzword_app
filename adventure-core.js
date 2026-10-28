@@ -91,14 +91,20 @@
     if(s.rewards.shield&&s.rewards.earnedSupport){s.rewards.supportFamily=family;s.rewards.supportPending=false;}
     return true;
   }
+  // Answers in a row needed to call a shield friend. After a lost fight in this quest the bar is lower,
+  // so a child who keeps losing can still earn help (28 October 2026).
+  const SUPPORT_NEED={accurate:8,quick:6},COMEBACK_NEED={accurate:5,quick:4};
+  function supportNeed(s){return of(s).current?.defeats>0?COMEBACK_NEED:SUPPORT_NEED;}
+  // Can this fight still grant a shield? One per fight, two per attempt at the quest, one held at a time.
+  function supportOpen(s){const b=s.battle,c=of(s).current;return !!(b?.missionId&&c&&!b.supportMeter?.earned&&(c.supportEarned||0)<2&&!s.rewards.shield);}
   function earnSupport(s,rec,quick){
     const b=s.battle,c=of(s).current;
     if(b?.demo||!b?.missionId||of(s).context!=='mission'||c?.missionId!==b.missionId)return false;
-    const meter=b.supportMeter ||= {accurate:0,quick:0,earned:false};
+    const meter=b.supportMeter ||= {accurate:0,quick:0,earned:false},need=supportNeed(s);
     if(rec.supported)return false;
     if(!rec.correct){meter.accurate=0;meter.quick=0;return false;}
-    meter.accurate=Math.min(8,meter.accurate+1);meter.quick=quick?Math.min(6,meter.quick+1):0;
-    if(meter.earned||(c.supportEarned||0)>=2||s.rewards.shield||meter.accurate<8&&meter.quick<6)return false;
+    meter.accurate=Math.min(SUPPORT_NEED.accurate,meter.accurate+1);meter.quick=quick?Math.min(SUPPORT_NEED.quick,meter.quick+1):0;
+    if(meter.earned||(c.supportEarned||0)>=2||s.rewards.shield||meter.accurate<need.accurate&&meter.quick<need.quick)return false;
     meter.earned=true;c.supportEarned=(c.supportEarned||0)+1;
     const preferred=of(s).supportFavourite,family=supportChoices(s).includes(preferred)?preferred:null;
     Object.assign(s.rewards,{shield:true,earnedSupport:true,supportFamily:family,supportPending:!family});
@@ -155,6 +161,7 @@
   }
   function retreat(s,fromRiddle){
     const c=of(s).current;if(!c||c.phase==='retry')return false;
+    c.defeats=(c.defeats||0)+1;
     const from=c.phase==='search'?8:c.step*2+(fromRiddle?1:0);
     c.retryFromStep=from;c.retryTargetStep=Math.max(0,from-2);c.phase='retry';return true;
   }
@@ -162,6 +169,8 @@
     const c=of(s).current;if(!c||c.phase!=='retry')return false;
     const target=Number.isInteger(c.retryTargetStep)?c.retryTargetStep:Math.max(0,c.step*2-2);
     c.step=Math.floor(target/2);c.hearts=QUEST_HEARTS;c.maxHearts=QUEST_HEARTS;c.puzzle=null;
+    // A new attempt after a defeat can earn shields again (earlier attempts no longer use up the allowance).
+    c.supportEarned=0;
     if(c.search){c.search.selection=null;c.search.wrong=false;}
     delete c.retryFromStep;delete c.retryTargetStep;
     s.battle=null;s.result=null;s.teaching=null;s.activity='mission';
@@ -217,5 +226,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport};
+  return {Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen};
 });
