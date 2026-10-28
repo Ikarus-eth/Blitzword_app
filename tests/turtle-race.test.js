@@ -102,8 +102,9 @@ test('Turtle Dash gets ten new turtles in other words: 21-25 simple, 26-30 harde
   assert.equal(Core.countFor('dash'),30);assert.equal(Core.countFor('flash'),20);assert.equal(Core.countFor('duel'),20);
   assert.deepEqual(Core.tiersFor('dash').slice(4).map(t=>[t.from,t.to,t.pool,t.name]),[[21,25,'all','Simple other words'],[26,30,'all','Other words']]);
   assert.equal(Core.LEVELS.dash.map(L=>L.gloss||0).join(''),'0'.repeat(20)+'11111'+'22222','turtles 1-20 keep the words of the sentence');
-  const rules=L=>{const {pool,maxWords,gloss,...r}=L;return r;};
-  for(let k=0;k<5;k++){assert.deepEqual(rules(Core.LEVELS.dash[20+k]),rules(Core.LEVELS.dash[k]));assert.deepEqual(rules(Core.LEVELS.dash[25+k]),rules(Core.LEVELS.dash[k]));}
+  // Reading other words takes longer: fewer steps than turtles 1-5 and never slipping back (28 October 2026).
+  for(const from of [20,25])assert.deepEqual(Core.LEVELS.dash.slice(from,from+5).map(L=>[L.goal,L.backOnWrong]),[[3,false],[4,false],[5,false],[6,false],[7,false]]);
+  for(let k=0;k<5;k++)assert.ok(Core.LEVELS.dash[20+k].goal<Core.LEVELS.dash[k].goal);
   for(let n=21;n<=30;n++)assert.equal(Core.itemsForLevel(Data.items,'dash',n).length,201,'all four word sets');
   for(const mode of ['flash','duel'])assert.ok(Core.LEVELS[mode].every(L=>!L.gloss),mode+' keeps the sentence words');
   assert.ok(Expert.LEVELS.dash.every(L=>!L.gloss),'the expert race keeps its own rewordings');
@@ -117,7 +118,7 @@ test('Turtle Dash gets ten new turtles in other words: 21-25 simple, 26-30 harde
   }
   const rock=Data.items.find(i=>i.s==='Pip is on the rock.');
   const easy=Core.buildQuestion('dash',rock,()=>.4,[],false,1);assert.equal(easy.options[easy.answer],'a stone');assert.equal(easy.meaning,'a stone');assert.equal(easy.prompt,'Where is Pip?');
-  const hard=Core.buildQuestion('dash',rock,()=>.4,[],false,2);assert.equal(hard.options[hard.answer],'a big hard piece of the ground');
+  const hard=Core.buildQuestion('dash',rock,()=>.4,[],false,2);assert.equal(hard.options[hard.answer],'a big hard stone');
   const plain=Core.buildQuestion('dash',rock,seq([.1,.7,.3]),[],false,0);assert.equal(plain.options[plain.answer],'rock');
   // A child who has beaten all twenty turtles finds turtle 21 open; Flash Dash and Shell Duel stay at twenty.
   const done=Core.normalizeProfile({version:3,progress:{dash:{unlocked:20,selected:20,wins:Array(20).fill(1)},flash:{unlocked:20,wins:Array(20).fill(1)}}});
@@ -331,4 +332,22 @@ test('each row of five has its own opponent, with art, lose lines and an approve
   }
   const app=fs.readFileSync(path.join(root,'assets/turtle-race/app.js'),'utf8');
   assert.match(app,/run\.opponent\.art/);assert.match(app,/'intro-'\+opp\.id/);
+});
+
+test('Turtle Dash other-words answers only use words he already reads: the BlitzWord 200 and the race sentences',()=>{
+  const glossary=require('../scripts/turtle-dash-glossary.json');
+  const tokens=t=>t.toLowerCase().replace(/'s\b/g,'').match(/[a-z]+(?:'[a-z]+)?/g)||[];
+  const known=new Set(require('../scripts/turtle-dash-known-words.json').core200);
+  assert.equal(known.size,200);
+  const main=Data.items.filter(i=>/^core[234]?$/.test(i.tier));
+  for(const i of main)for(const t of [i.s,i.q,i.t,i.f,i.a,...i.w])for(const w of tokens(t))known.add(w);
+  const ok=w=>known.has(w)||known.has(w+'s')||(w.endsWith('s')&&known.has(w.slice(0,-1)))||(w.endsWith('es')&&known.has(w.slice(0,-2)))||(w.endsWith('ies')&&known.has(w.slice(0,-3)+'y'));
+  for(const [word,pair] of Object.entries(glossary))for(const text of pair){
+    assert.deepEqual(tokens(text).filter(w=>!ok(w)),[],word+' → '+text);
+    assert.ok(!tokens(text).includes(word),word+' → '+text);
+  }
+  // Words from the first glossary that he did not know are gone.
+  const all=Object.values(glossary).flat().join(' ');
+  for(const w of ['kitty','crunchy','sack','feathers','beak','flour','grains','vegetable','fruit','meal'])assert.ok(!new RegExp('\\b'+w+'\\b').test(all),w);
+  for(const i of main)assert.deepEqual(i.o1,[i.a,...i.w].map(w=>glossary[w.toLowerCase()][0]),i.s);
 });
