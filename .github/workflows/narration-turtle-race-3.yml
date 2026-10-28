@@ -1,0 +1,31 @@
+name: Generate turtle dash new opponent narration
+on:
+  push:
+    branches: [claude/turtle-race-narration-30261024]
+    paths: [docs/turtle-race/NARRATION_REQUEST_3.json, .github/workflows/narration-turtle-race-3.yml]
+permissions:
+  contents: write
+concurrency:
+  group: turtle-race-narration-3
+  cancel-in-progress: false
+jobs:
+  generate:
+    if: github.repository == 'Ikarus-eth/Blitzword_app'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install audio validation tools
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Generate opponent lines (bounded, no retries)
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/generate-budget-narration.py turtle-race-3
+      - name: Commit paid output to this generation-only branch, even on failure
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898275+github-actions[bot]@users.noreply.github.com"
+          git add narration-turtle-race-3-output || exit 0
+          git commit -m "Deliver paid turtle race opponent narration output" || exit 0
+          git push origin HEAD:claude/turtle-race-narration-30261024
