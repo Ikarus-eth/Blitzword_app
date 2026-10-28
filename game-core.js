@@ -652,6 +652,11 @@
     return {mode,correct,total,accuracy,activeLimit:mode==='support'?2:mode==='stretch'?6:4,
       low:ADAPTIVE_RULES.low,high:ADAPTIVE_RULES.high};
   }
+  // Open words: introduced in practice but not yet secured (the Parents dashboard calls them "Learning").
+  // New words wait while this many are open; the game then finishes open words first (28 October 2026).
+  const OPEN_WORD_CAP=15;
+  const openWord=w=>!!w?.introducedAt&&!w.familiar&&!w.securedAt&&!w.wordXPClaimed;
+  function openWords(s){return Content.words.filter(item=>openWord(s.learning.words[item.w])).length;}
   function selectPracticeWord(s,now) {
     const L=s.learning,recent=L.recent.slice(-2),challenge=adaptiveChallenge(s);
     const eligible=item=>!recent.includes(item.w)&&L.sequence>=L.words[item.w].eligibleAfter;
@@ -669,11 +674,26 @@
     if(due.length&&L.sequence%3===2)return pick(due[0],'review');
     const practice=available.filter(item=>L.words[item.w].practiceSuccesses<2);
     const unseen=Content.words.find(item=>!L.words[item.w].introducedAt&&eligible(item));
-    const introduce=()=>unseen&&unfinished.length<challenge.activeLimit;
+    const capped=introduced.filter(item=>openWord(L.words[item.w])).length>=OPEN_WORD_CAP;
+    const introduce=()=>unseen&&!capped&&unfinished.length<challenge.activeLimit;
     // Above the band, open new words more often; below it, finish the small active set first.
     const newTurn=challenge.mode==='stretch'?L.sequence%3!==2:challenge.mode==='support'?L.sequence%6===0:L.sequence%2===0;
     if(introduce()&&newTurn)return pick(unseen,'new');
     if(practice.length)return pick(practice[0],'practice');
+    if(capped){
+      // Too many open words: one turn in three finishes an open word (the one with most evidence, earliest
+      // in the curriculum), one is a due review, and one is an easier secured word so battles stay winnable.
+      const order=Object.fromEntries(Content.words.map((item,i)=>[item.w,i]));
+      // First the words this answer could secure now (spaced, and not all earlier evidence from this battle).
+      const ready=w=>{const t=w.xpEvidence||[];return t.length>=2&&L.sequence-t.at(-1).sequence>=3&&new Set([...t.slice(-2).map(x=>x.battleId),s.battle?.id]).size>=2;};
+      const finish=available.filter(item=>openWord(L.words[item.w]))
+        .sort((a,b)=>ready(L.words[b.w])-ready(L.words[a.w])||(L.words[b.w].xpEvidence?.length||0)-(L.words[a.w].xpEvidence?.length||0)||order[a.w]-order[b.w]);
+      const easy=available.filter(item=>!openWord(L.words[item.w]))
+        .sort((a,b)=>dailyCorrect(s,a.w,now)-dailyCorrect(s,b.w,now)||leastRecent(a,b));
+      if(L.sequence%3===1&&easy.length)return pick(easy[0],'easy');
+      if(finish.length)return pick(finish[0],'finish');
+      if(easy.length)return pick(easy[0],'easy');
+    }
     if(introduce()&&(challenge.mode!=='support'||!unfinished.length))return pick(unseen,'new');
     if(due.length)return pick(due[0],'review');
     // Recovery and finite-curriculum fallback only: never select easy not-due words ahead of new work.
@@ -682,7 +702,10 @@
       .sort((a,b)=>dailyCorrect(s,a.w,now)-dailyCorrect(s,b.w,now)||leastRecent(a,b));
     if(comfort.length)return pick(comfort[0],'comfort');
     // At the start, two words cannot supply two DISTINCT intervening answers after help.
-    if(unseen)return pick(unseen,'spacing');
+    if(unseen&&!capped)return pick(unseen,'spacing');
+    // Capped: spacing never opens another word; reuse the least recent introduced word instead.
+    const spaced=capped?introduced.filter(item=>!recent.includes(item.w)).sort(leastRecent):[];
+    if(spaced.length)return pick(spaced[0],openWord(L.words[spaced[0].w])?'finish':'easy');
     if(available.length)return pick(available[0],'practice');
     throw new Error('No eligible reviewed word');
   }
@@ -1168,6 +1191,6 @@
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,
     startMath,prepareMath,answerMath,tickMath,finishMath,leaveMath,mathScore,speedChoices,practiceExposure,chooseSpeed,speedSuggestion,respondSpeedSuggestion,wordSpeeds,quickAnswer,
     HISTORY_LIMITS,GAP_DAYS,compactHistory,answerCount,editDistance,correctionLetters,middleGuess,shapeClues,oneLetterGiveaway,fairChoice,choiceSets,chooseOptions,
-    WORD_STATUS,parentLearning,parentWordHistory,weekKey,ADAPTIVE_RULES,adaptiveChallenge,
+    OPEN_WORD_CAP,openWords,    WORD_STATUS,parentLearning,parentWordHistory,weekKey,ADAPTIVE_RULES,adaptiveChallenge,
     CHALLENGE_PACE,challengeExposure,challengePaceSummary,RIDDLE_KEY,RACE_KEY,riddleTime};
 });
