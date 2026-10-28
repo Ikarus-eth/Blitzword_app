@@ -1,7 +1,7 @@
 name: Generate turtle dash new opponent narration
 on:
   push:
-    branches: [claude/turtle-race-narration-30261024]
+    branches: [claude/turtle-race-narration-20261024]
     paths: [docs/turtle-race/NARRATION_REQUEST_3.json, .github/workflows/narration-turtle-race-3.yml]
 permissions:
   contents: write
@@ -28,4 +28,4 @@ jobs:
           git config user.email "41898275+github-actions[bot]@users.noreply.github.com"
           git add narration-turtle-race-3-output || exit 0
           git commit -m "Deliver paid turtle race opponent narration output" || exit 0
-          git push origin HEAD:claude/turtle-race-narration-30261024
+          git push origin HEAD:claude/turtle-race-narration-20261024
