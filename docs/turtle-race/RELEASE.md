@@ -223,3 +223,31 @@ The picker shows four rows; the Master row counts its 40 sentences as a set, and
 Saves: expert saves keep all results. A player who has beaten Legend Raven finds turtle 11 open and marked "new". A parent who used "Open all turtles" before this release presses it again to open 11–20.
 
 Verification: 23 Turtle Race unit tests. The expert-race test changed on purpose from ten to twenty turtles (pools, names, descriptions, the mixed row, the open-11 save case), the item test now counts both expert sets, and the opponent and open-all tests cover turtles 11–20. Full suite: 445 unit/backend tests and 126 UI-flow groups pass. Headless Chromium at 1194×834, 834×1194 and 390×844 shows the four-row picker without overflow, races turtle 11 and Grandmaster Lynx in Shell Duel with all choices on screen and no console errors. Physical iPad is not verified. Build `turtle-race-expert-levels-20261029-r1`.
+
+
+## Shell Duel clock from rounds, and expert turtles 21–30 — 30 October 2026
+
+The user reported that in Shell Duel the 60-second clock ran out before the player could beat the opponent, and asked that the duel time follow how many rounds are played and how long a round lasts. The user also asked for more expert levels.
+
+Shell Duel clock, both editions: a win can need every shell plus all but one heart lost, and each round may use its whole question timer plus the 650 ms hit animation; a mistake already pauses the clock. The clock is (shells + hearts − 1) × (question time + 0.65 s) + 0.9 s, rounded up to 5 s and never below 60 s. A duel is now only lost on hearts, never on the clock, when each question is answered inside its timer. The HUD clock, its ring, the last-five-seconds ticks and the level detail ("145 s clock") use the level's own time. Turtle Dash and Flash Dash remain 60-second races against the turtle.
+
+| Edition | Turtles | Shell Duel clock |
+|---|---|---|
+| Main | 1–20 (each word set) | 90, 80, 65, 70, 65 s |
+| Expert | 1–5 | 70–75 s |
+| Expert | 6–10 | 90–100 s |
+| Expert | 11–20 | 110–120 s |
+| Expert | 21–30 | 140–155 s |
+
+Expert turtles 21–30, 30 opponents per race:
+
+| Turtles | Opponent | Sentences | Turtle Dash steps | Flash Dash | Shell Duel |
+|---|---|---|---|---|---|
+| 21–25 Champion | Falcon (Dawn → Champion Falcon) | 40 new sentences of 16–23 words with the hardest words (meticulously, exasperated, conspicuous, compassionate …) | 6–10 | 6–10 steps, sentence shows 7 → 5 s | 7–11 shells, 15 → 11 s, 3 hearts |
+| 26–30 Legend | Fox (Clever → Legend Fox) | all three long sets mixed, 116 sentences | 7–11 | 7–11 steps, sentence shows 6.5 → 4.5 s | 8–12 shells, 13 → 9 s, 3 hearts |
+
+Turtle Dash and Flash Dash goals for the longest sentences start lower than turtles 16–20, because those races stay 60 seconds and these sentences take longer to read. All answers are in other words; every expert sentence tests a different key word; the build rejects a sentence under 15 words in the new set. Content: `scripts/turtle-race-expert-3.json`, no recordings. Falcon and fox reuse approved art and existing voice lines; no images or audio were generated.
+
+Saves: kept. Beating turtle 20 opens turtle 21. A parent who used "Open all turtles" earlier presses it again.
+
+Verification: 24 Turtle Race unit tests (full suite: 446 unit/backend tests and 126 UI-flow groups pass), including a new test that plays the slowest possible win on every duel level of both editions (every allowed heart lost on a timeout, every shell hit just before its timer) and checks that the clock never runs out, while races stay 60 s. The expert-race test changed on purpose from 20 to 30 turtles. Headless Chromium at 1194×834, 834×1194 and 390×844 shows the six-row picker, the 145 s clock on Dawn Falcon and all choices on screen with no console errors. Physical iPad is not verified. Build `turtle-race-expert-30-20261030-r1`.

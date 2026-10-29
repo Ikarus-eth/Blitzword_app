@@ -36,6 +36,17 @@
     flash:[{goal:9,flashMs:6000,boostMs:6000},{goal:10,flashMs:5500,boostMs:5500},{goal:11,flashMs:5000,boostMs:5000},{goal:12,flashMs:4500,boostMs:4500},{goal:13,flashMs:4000,boostMs:4000}],
     duel:[{shell:7,timerMs:11500,hearts:3},{shell:8,timerMs:10500,hearts:3},{shell:9,timerMs:9500,hearts:3},{shell:10,timerMs:8500,hearts:3},{shell:11,timerMs:7500,hearts:3}]
   };
+  // Expert turtles 21-30 (30 October 2026): the longest sentences with the hardest words, then all three long sets mixed.
+  const champion={
+    dash:[{goal:6},{goal:7},{goal:8},{goal:9},{goal:10}],
+    flash:[{goal:6,flashMs:7000,boostMs:7000},{goal:7,flashMs:6500,boostMs:6500},{goal:8,flashMs:6000,boostMs:6000},{goal:9,flashMs:5500,boostMs:5500},{goal:10,flashMs:5000,boostMs:5000}],
+    duel:[{shell:7,timerMs:15000,hearts:3},{shell:8,timerMs:14000,hearts:3},{shell:9,timerMs:13000,hearts:3},{shell:10,timerMs:12000,hearts:3},{shell:11,timerMs:11000,hearts:3}]
+  };
+  const legend={
+    dash:[{goal:7},{goal:8},{goal:9},{goal:10},{goal:11}],
+    flash:[{goal:7,flashMs:6500,boostMs:6500},{goal:8,flashMs:6000,boostMs:6000},{goal:9,flashMs:5500,boostMs:5500},{goal:10,flashMs:5000,boostMs:5000},{goal:11,flashMs:4500,boostMs:4500}],
+    duel:[{shell:8,timerMs:13000,hearts:3},{shell:9,timerMs:12000,hearts:3},{shell:10,timerMs:11000,hearts:3},{shell:11,timerMs:10000,hearts:3},{shell:12,timerMs:9000,hearts:3}]
+  };
   const join=(...parts)=>{const out={};for(const m of MODES)out[m]=parts.flatMap(p=>p[m]);return out;};
   // Turtle Dash only: a slow ladder of other-words turtles after the four word sets (28 October 2026).
   // The answer cannot be found by spotting a sentence word. Each row changes one thing at a time:
@@ -88,13 +99,17 @@
     // Standalone expert race for an older reader: answers in other words, then long sentences.
     expert:{id:'expert',storageKey:'blitzword_turtle_race_expert_v1',version:3,dashboardTime:false,openAll:true,
       names:['River Turtle','Forest Turtle','Mountain Turtle','Storm Turtle','Thunder Turtle','Shadow Raven','Night Raven','Storm Raven','Ancient Raven','Legend Raven',
-        'Silent Leopard','Swift Leopard','Fierce Leopard','Royal Leopard','Master Leopard','Silver Lynx','Moon Lynx','Comet Lynx','Crown Lynx','Grandmaster Lynx'],
+        'Silent Leopard','Swift Leopard','Fierce Leopard','Royal Leopard','Master Leopard','Silver Lynx','Moon Lynx','Comet Lynx','Crown Lynx','Grandmaster Lynx',
+        'Dawn Falcon','Sky Falcon','Thunder Falcon','Golden Falcon','Champion Falcon','Clever Fox','Sly Fox','Shadow Fox','Wise Fox','Legend Fox'],
       tiers:[{id:'hard',name:'Other words',from:1,to:5,pool:'core',opponent:OPP.turtle},{id:'expert',name:'Expert',from:6,to:10,pool:'expert',opponent:OPP.raven},
         {id:'master',name:'Master',from:11,to:15,pool:'expert2',opponent:OPP.leopard},
-        {id:'grandmaster',name:'Grandmaster',words:'both expert sets mixed',from:16,to:20,pool:'expertAll',opponent:OPP.lynx}],
+        {id:'grandmaster',name:'Grandmaster',words:'both expert sets mixed',from:16,to:20,pool:'expertAll',opponent:OPP.lynx},
+        {id:'champion',name:'Champion',from:21,to:25,pool:'expert3',opponent:OPP.falcon},
+        {id:'legend',name:'Legend',words:'all three expert sets mixed',from:26,to:30,pool:'expertMax',opponent:OPP.fox}],
       levels:join(ladder(hard,'core',[7,7,7,7,7],{paraphrase:true,backOnWrong:true}),ladder(expert,'expert',[99,99,99,99,99],{paraphrase:true,backOnWrong:true}),
-        ladder(master,'expert2',[99,99,99,99,99],{paraphrase:true,backOnWrong:true}),ladder(grandmaster,'expertAll',[99,99,99,99,99],{paraphrase:true,backOnWrong:true})),
-      note:'Each race has twenty opponents: 1–5 answer short sentences in other words, 6–10 use long sentences with harder words, 11–15 longer sentences with rarer words, and 16–20 mix both long sets with faster clocks, all answered in other words.'}
+        ladder(master,'expert2',[99,99,99,99,99],{paraphrase:true,backOnWrong:true}),ladder(grandmaster,'expertAll',[99,99,99,99,99],{paraphrase:true,backOnWrong:true}),
+        ladder(champion,'expert3',[99,99,99,99,99],{paraphrase:true,backOnWrong:true}),ladder(legend,'expertMax',[99,99,99,99,99],{paraphrase:true,backOnWrong:true})),
+      note:'Each race has thirty opponents: 1–5 answer short sentences in other words, 6–10 use long sentences with harder words, 11–15 longer sentences with rarer words, 16–20 mix both, 21–25 the longest sentences with the hardest words, and 26–30 mix all three long sets, all answered in other words.'}
   };
   const E=EDITIONS[editionName]||EDITIONS.main;
   const STORAGE_KEY=E.storageKey,NAMES=E.names,TIERS=E.tiers,LEVELS=E.levels;
@@ -102,10 +117,19 @@
   const LEVEL_COUNT=NAMES.length; // array size; a race may have fewer turtles (Turtle Dash has the most)
   const countFor=mode=>LEVELS[mode].length;
   const tiersFor=mode=>TIERS.filter(t=>t.to<=countFor(mode)&&(!t.modes||t.modes.includes(mode)));
-  const POOLS={all:['core','core2','core3','core4'],first2:['core','core2'],expertAll:['expert','expert2']};
+  const POOLS={all:['core','core2','core3','core4'],first2:['core','core2'],expertAll:['expert','expert2'],expertMax:['expert','expert2','expert3']};
   const inPool=(item,pool)=>(POOLS[pool]||[pool]).includes(item.tier||'core');
   const BOOST_MS=3000;
   const level=(mode,n)=>({...LEVELS[mode][n-1],level:n,name:NAMES[n-1]});
+  // Shell Duel clock (30 October 2026): long enough for every round the duel can take.
+  // A win can need every shell plus all but one heart lost; each round may use its whole question timer
+  // plus the 650 ms hit animation (a mistake pauses the clock). Never below 60 s; rounded up to 5 s.
+  const FEEDBACK_MS=650;
+  function gameMsFor(mode,n){
+    const L=LEVELS[mode][n-1];if(mode!=='duel'||!L)return GAME_MS;
+    const need=(L.shell+L.hearts-1)*(L.timerMs+FEEDBACK_MS)+900;
+    return Math.max(GAME_MS,Math.ceil(need/5000)*5000);
+  }
   const tierOf=n=>TIERS.find(t=>n>=t.from&&n<=t.to);
   const opponentFor=n=>(tierOf(n)||TIERS[0]).opponent||OPP.turtle;
   const words=s=>s.trim().split(/\s+/).length;
@@ -115,10 +139,10 @@
   }
   function describeLevel(mode,n){
     const L=LEVELS[mode][n-1],secs=ms=>(ms/1000).toFixed(ms%1000?1:0)+' s';
-    const extra=(L.gloss?'':({core2:' · new words',core3:' · more words',core4:' · super words'}[L.pool]||''))+(L.gloss===1?' · short meanings':L.gloss===2?' · long meanings':'')+(L.choices===2?' · 2 choices':'')+(L.gloss?({core:' · first words',first2:' · first and new words',all:' · all words'}[L.pool]):'')+({expert:' · long sentences',expert2:' · longer sentences, rarer words',expertAll:' · all long sentences'}[L.pool]||'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
+    const extra=(L.gloss?'':({core2:' · new words',core3:' · more words',core4:' · super words'}[L.pool]||''))+(L.gloss===1?' · short meanings':L.gloss===2?' · long meanings':'')+(L.choices===2?' · 2 choices':'')+(L.gloss?({core:' · first words',first2:' · first and new words',all:' · all words'}[L.pool]):'')+({expert:' · long sentences',expert2:' · longer sentences, rarer words',expertAll:' · all long sentences',expert3:' · longest sentences, hardest words',expertMax:' · all three long sets'}[L.pool]||'')+(L.paraphrase?' · answers in other words':'')+(L.backOnWrong?'':' · no slipping back');
     if(mode==='dash')return `${L.goal} steps to the finish`+extra;
     if(mode==='flash')return `${L.goal} steps · sentence shows ${secs(L.flashMs)}`+extra;
-    return `${L.shell} shells · ${secs(L.timerMs)} per question · ${L.hearts} hearts`+extra;
+    return `${L.shell} shells · ${secs(L.timerMs)} per question · ${L.hearts} hearts · ${gameMsFor(mode,n)/1000} s clock`+extra;
   }
 
   function emptyProgress(){return {unlocked:1,selected:1,wins:Array(LEVEL_COUNT).fill(0),plays:Array(LEVEL_COUNT).fill(0)};}
@@ -213,7 +237,7 @@
     return ![item.g[0],item.ps,item.pt].some(text=>hasWord(text,item.a));
   }
   function validateExpert(item){
-    return !!item&&(item.tier==='expert'||item.tier==='expert2')&&typeof item.s==='string'&&typeof item.q==='string'&&validateParaphrase(item);
+    return !!item&&/^expert[23]?$/.test(item.tier||'')&&typeof item.s==='string'&&typeof item.q==='string'&&validateParaphrase(item);
   }
   function shuffle(list,rand){const a=list.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
@@ -256,20 +280,21 @@
     const chosen=Number.isInteger(n)?n:profile.progress[mode].selected;
     if(chosen<1||chosen>profile.progress[mode].unlocked)throw Error('Level locked');
     const L=level(mode,chosen);
-    const run={mode,level:chosen,levelName:L.name,opponent:opponentFor(chosen),elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,gloss:L.gloss||0,choices:L.choices||3,pool:L.pool};
+    const run={mode,level:chosen,levelName:L.name,gameMs:gameMsFor(mode,chosen),opponent:opponentFor(chosen),elapsed:0,over:false,won:null,reason:null,answers:0,correct:0,answerMs:0,fastCorrect:0,streak:0,bestStreak:0,history:[],backOnWrong:L.backOnWrong!==false,paraphrase:!!L.paraphrase,gloss:L.gloss||0,choices:L.choices||3,pool:L.pool};
     if(mode==='duel')Object.assign(run,{hearts:L.hearts,maxHearts:L.hearts,shell:L.shell,maxShell:L.shell,timerMs:L.timerMs});
     else Object.assign(run,{steps:0,goal:L.goal});
     if(mode==='flash')Object.assign(run,{flashMs:L.flashMs,boostMs:L.boostMs});
     return run;
   }
   // Turtle position for races, 0..1; it crosses the line exactly at 60 seconds.
-  function turtleProgress(run){return Math.min(1,run.elapsed/GAME_MS);}
+  function turtleProgress(run){return Math.min(1,run.elapsed/(run.gameMs||GAME_MS));}
   function pipProgress(run){return run.mode==='duel'?0:Math.min(1,run.steps/run.goal);}
 
   function tick(run,elapsed){
     if(run.over)return run;
-    run.elapsed=Math.min(GAME_MS,Math.max(run.elapsed,elapsed));
-    if(run.elapsed>=GAME_MS)finish(run,false,'time');
+    const limit=run.gameMs||GAME_MS;
+    run.elapsed=Math.min(limit,Math.max(run.elapsed,elapsed));
+    if(run.elapsed>=limit)finish(run,false,'time');
     return run;
   }
   function finish(run,won,reason){run.over=true;run.won=won;run.reason=reason;return run;}
@@ -360,5 +385,5 @@
     });
   }
 
-  return {OPPONENTS:OPP,opponentFor,replayTime,countsAsNew,countFor,tiersFor,hasGloss,recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
+  return {gameMsFor,FEEDBACK_MS,OPPONENTS:OPP,opponentFor,replayTime,countsAsNew,countFor,tiersFor,hasGloss,recordAnswer,sentenceStatus,masteryByTier,reviewDue,STATUS,STATUS_LABEL,EDITION,EDITION_NAMES:Object.keys(EDITIONS),dayKey,addTime,totalTime,GAME_MS,STORAGE_KEY,MODES,NAMES,TIERS,LEVELS,LEVEL_COUNT,BOOST_MS,level,tierOf,itemsForLevel,describeLevel,defaultProfile,normalizeProfile,unlockAll,selectLevel,validateItem,hasParaphrase,validateParaphrase,validateExpert,wordSwap,buildQuestion,createDeck,shuffle,newRun,tick,answer,turtleProgress,pipProgress,recordStart,recordFinish,summary};
 });

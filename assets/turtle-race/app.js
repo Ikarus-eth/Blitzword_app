@@ -176,7 +176,8 @@
     if(phase==='review'){last=now;raf=requestAnimationFrame(frame);return;}
     const dt=Math.min(250,Math.max(0,now-last));last=now;
     const before=run.elapsed;Core.tick(run,run.elapsed+dt);
-    if(Math.ceil((Core.GAME_MS-run.elapsed)/1000)<=5&&Math.ceil((Core.GAME_MS-before)/1000)!==Math.ceil((Core.GAME_MS-run.elapsed)/1000))Sound.tick();
+    const limit=run.gameMs||Core.GAME_MS;
+    if(Math.ceil((limit-run.elapsed)/1000)<=5&&Math.ceil((limit-before)/1000)!==Math.ceil((limit-run.elapsed)/1000))Sound.tick();
     updateClock();drawTurtle();
     if(run.over&&phase!=='end'){endRun();return;}
     if(phase==='flash'&&run.elapsed>=phaseEnd)showChoices();
@@ -190,9 +191,9 @@
   }
 
   function updateClock(){
-    const left=run?Math.max(0,Core.GAME_MS-run.elapsed):Core.GAME_MS;
+    const limit=run&&run.gameMs||Core.GAME_MS,left=run?Math.max(0,limit-run.elapsed):limit;
     $('#clockText').textContent=Math.ceil(left/1000);
-    $('#clockArc').style.strokeDashoffset=String(119.4*(1-left/Core.GAME_MS));
+    $('#clockArc').style.strokeDashoffset=String(119.4*(1-left/limit));
     $('#clock').classList.toggle('low',left<=10000);
   }
 
@@ -354,7 +355,7 @@
       const avg=r.answers?(r.answerMs/r.answers/1000).toFixed(1):'–';
       let line;
       if(duel)line=r.won?`The ${noun}'s shells are gone. ${r.hearts} heart${r.hearts===1?'':'s'} left.`:(r.reason==='time'?`Time is up. The ${noun} had ${r.shell} shell${r.shell===1?'':'s'} left.`:`The ${noun} had ${r.shell} shell${r.shell===1?'':'s'} left.`);
-      else line=r.won?`Pip crossed the line with ${Math.ceil((Core.GAME_MS-r.elapsed)/1000)} seconds to spare.`:`Pip got ${r.steps} of ${r.goal} steps.`;
+      else line=r.won?`Pip crossed the line with ${Math.ceil(((r.gameMs||Core.GAME_MS)-r.elapsed)/1000)} seconds to spare.`:`Pip got ${r.steps} of ${r.goal} steps.`;
       $('#resultLine').textContent=line;
       const q=profile.progress[r.mode];
       $('#resultUnlock').hidden=!opened;

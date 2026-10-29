@@ -1231,3 +1231,7 @@ At most 15 words may be open (introduced but not yet secured, shown as Learning 
 ## Expert race turtles 11–20 — 29 October 2026
 
 The user asked for more expert levels. This supersedes the ten-turtle expert race. The standalone expert race has twenty opponents per race: 1–10 as before, Master 11–15 with 40 new longer sentences (12 words or more) using rarer words, and Grandmaster 16–20 mixing both long sets with faster clocks. All answers stay in other words, each expert sentence tests a different key word, and the main BlitzWord race is unchanged. [Details](turtle-race/RELEASE.md).
+
+## Shell Duel clock from rounds; expert turtles 21–30 — 30 October 2026
+
+The user found the 60-second Shell Duel clock ran out before a win was possible and asked that duel time follow the number of rounds and the length of a round. This supersedes the fixed 60 s for Shell Duel in both editions: the clock is (shells + hearts − 1) × (question time + 0.65 s), rounded up to 5 s and at least 60 s, so a duel is decided by shells and hearts. Turtle Dash and Flash Dash stay 60-second races. The user also asked for more expert levels: the expert race has 30 opponents, adding Champion 21–25 (40 new sentences of 16 words or more with the hardest words) and Legend 26–30 (all three long sets mixed). [Details](turtle-race/RELEASE.md).
