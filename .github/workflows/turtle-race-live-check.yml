@@ -1,4 +1,4 @@
-name: Verify live expert race turtles 11-20
+name: Verify live duel clock and expert turtles 21-30
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 28dece1647616586057d09a0f70b98f0d04289e3
-      - name: Compare every live turtle race file with merge 28dece1
+          ref: 436d6bf081f3420cd1cbfcccb379198aa2f5907b
+      - name: Compare every live turtle race file with merge 436d6bf
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 15 minutes) for Pages to publish the merge, then require every file to match.
