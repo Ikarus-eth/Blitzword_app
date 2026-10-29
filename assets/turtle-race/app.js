@@ -14,7 +14,7 @@
   // The expert race asks for the sentence that means the same, and is read rather than narrated.
   if(Core.EDITION.id==='expert'){INFO.flash.how='The sentence shows for a moment. Then tap the sentence that means the same. Fast answers give Pip a blitz boost.';INFO.flash.tag='Quick look, same meaning';INFO.dash.tag='Answer in other words';}
   // Main-race Turtle Dash answers in other words, so the child has to read and understand the sentence.
-  const items=Data.items.filter(i=>i.tier==='expert'?Core.validateExpert(i):Core.validateItem(i));
+  const items=Data.items.filter(i=>/^expert/.test(i.tier)?Core.validateExpert(i):Core.validateItem(i));
 
   // ---------- saved stats (own key only) ----------
   let profile=load();
@@ -159,7 +159,7 @@
     reviewQueue=Core.reviewDue(profile,reviewPool().filter(i=>levelItems.has(i)),Date.now());
     profile=Core.recordStart(profile,mode,new Date().toISOString());store();
     $('#playTitle').textContent=INFO[mode].title+' · '+run.levelName;
-    $('#play').classList.toggle('expertPlay',run.pool==='expert');
+    $('#play').classList.toggle('expertPlay',/^expert/.test(run.pool));
     buildStage();clearReader();updateClock();show('play');
     const cd=$('#countdown');cd.hidden=false;
     const steps=['3','2','1','Go!'];let i=0;
