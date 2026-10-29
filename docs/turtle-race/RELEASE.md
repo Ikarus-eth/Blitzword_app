@@ -213,7 +213,7 @@ The user asked for more expert levels. The standalone expert race (`assets/turtl
 
 | Turtles | Opponent | Sentences | Turtle Dash steps | Flash Dash | Shell Duel |
 |---|---|---|---|---|---|
-| 11–15 Master | Leopard (Silent → Master Leopard) | 40 new sentences of 12–17 words with rarer words (reluctantly, bewildered, scarce, triumphant …) | 7–11 | 8–12 steps, sentence shows 7 → 5 s | 6–10 shells, 13 → 9 s, 3 hearts |
+| 11–15 Master | Leopard (Silent → Master Leopard) | 40 new sentences of 12–20 words with rarer words (reluctantly, bewildered, scarce, triumphant …) | 7–11 | 8–12 steps, sentence shows 7 → 5 s | 6–10 shells, 13 → 9 s, 3 hearts |
 | 16–20 Grandmaster | Lynx (Silver → Grandmaster Lynx) | both long sets mixed, 76 sentences | 8–12 | 9–13 steps, sentence shows 6 → 4 s | 7–11 shells, 11.5 → 7.5 s, 3 hearts |
 
 All answers are in other words, as in turtles 1–10, and a wrong answer slips Pip back. Every expert sentence tests a different key word; the build rejects a repeated key word, a sentence under 12 words in the new set, and any right answer, matching sentence or yes-question that reuses the key word. Content: `scripts/turtle-race-expert-2.json`. The new sentences have no recording, like the first expert set; the review screen shows them in writing.

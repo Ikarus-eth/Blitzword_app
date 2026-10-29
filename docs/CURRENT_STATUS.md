@@ -1,6 +1,6 @@
 ## Expert race turtles 11–20 — 29 October 2026
 
-**Implemented and tested, not yet deployed.** The standalone expert race now has twenty opponents per race. Master 11–15 (leopard) uses 40 new sentences of 12–17 words with rarer words; Grandmaster 16–20 (lynx) mixes both long sets (76 sentences) with faster clocks. All answers are in other words. A save that beat turtle 10 finds turtle 11 open. The main BlitzWord race is unchanged; no images or audio were generated. Build `turtle-race-expert-levels-20261029-r1`. 445 unit/backend tests and 126 UI-flow groups pass; headless browser checks pass at three sizes. Physical iPad is not verified. [Details](turtle-race/RELEASE.md).
+**Implemented and tested, not yet deployed.** The standalone expert race now has twenty opponents per race. Master 11–15 (leopard) uses 40 new sentences of 12–20 words with rarer words; Grandmaster 16–20 (lynx) mixes both long sets (76 sentences) with faster clocks. All answers are in other words. A save that beat turtle 10 finds turtle 11 open. The main BlitzWord race is unchanged; no images or audio were generated. Build `turtle-race-expert-levels-20261029-r1`. 445 unit/backend tests and 126 UI-flow groups pass; headless browser checks pass at three sizes. Physical iPad is not verified. [Details](turtle-race/RELEASE.md).
 
 ## Open-word cap — 28 October 2026
 
