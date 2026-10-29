@@ -1,4 +1,4 @@
-name: Verify live open-word cap
+name: Verify live expert race turtles 11-20
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,14 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 5d3211bcff072d7f79e7157e4ab3ea8f05e1f9d5
-      - name: Compare every live turtle race file with merge 5d3211b
+          ref: 28dece1647616586057d09a0f70b98f0d04289e3
+      - name: Compare every live turtle race file with merge 28dece1
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           # Wait (up to 15 minutes) for Pages to publish the merge, then require every file to match.
           for attempt in $(seq 1 30); do
-            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
-            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
+            curl -s -o probe.html "$B/assets/turtle-race-expert/index.html?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.html assets/turtle-race-expert/index.html; then echo "live after attempt $attempt"; break; fi
             sleep 30
           done
           bad=0; n=0
