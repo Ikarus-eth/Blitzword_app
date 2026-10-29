@@ -205,3 +205,21 @@ Saves: results on the old turtles 21–30 belonged to different levels, so they 
 Opponents: five new approved creatures cropped from the enemy atlases (Moss Bear, Glacier Seal, Snow Owl, Lily Otter, Rowan Stag). Their introductions reuse existing BlitzWord recordings. Five new George lines, "The <creature> wins this time. Try again!" (183 characters, batch `turtle-race-005`), were generated on the generation-only branch and installed with receipts (`NARRATION_REQUEST_3.json`, `NARRATION_GENERATION_3.json`). No images were generated.
 
 Verification: 23 Turtle Race unit tests. The other-words test was rewritten on purpose for the new ladder (rows, choices, steps, word sets, two-choice questions and the one-time save change). Level-count, save and card-dot expectations changed from 30 to 55 turtles, and the voice and opponent tests now cover the third voice set and the Turtle-Dash-only creatures. Full suite: 442 unit/backend tests and 125 UI-flow groups pass. Headless Chromium at 1024×768, 768×1024 and 390×844 loads a save with old turtles 21–23 beaten: it opens on turtle 21 (2 steps, 2 choices), keeps turtles 1–20 and reading time, plays a two-choice race and shows no horizontal overflow. Physical iPad is not verified.
+
+
+## Expert race turtles 11–20 — 29 October 2026
+
+The user asked for more expert levels. The standalone expert race (`assets/turtle-race-expert/`) grows from ten to twenty opponents in every race, in two new rows of five. The main BlitzWord race is unchanged.
+
+| Turtles | Opponent | Sentences | Turtle Dash steps | Flash Dash | Shell Duel |
+|---|---|---|---|---|---|
+| 11–15 Master | Leopard (Silent → Master Leopard) | 40 new sentences of 12–20 words with rarer words (reluctantly, bewildered, scarce, triumphant …) | 7–11 | 8–12 steps, sentence shows 7 → 5 s | 6–10 shells, 13 → 9 s, 3 hearts |
+| 16–20 Grandmaster | Lynx (Silver → Grandmaster Lynx) | both long sets mixed, 76 sentences | 8–12 | 9–13 steps, sentence shows 6 → 4 s | 7–11 shells, 11.5 → 7.5 s, 3 hearts |
+
+All answers are in other words, as in turtles 1–10, and a wrong answer slips Pip back. Every expert sentence tests a different key word; the build rejects a repeated key word, a sentence under 12 words in the new set, and any right answer, matching sentence or yes-question that reuses the key word. Content: `scripts/turtle-race-expert-2.json`. The new sentences have no recording, like the first expert set; the review screen shows them in writing.
+
+The picker shows four rows; the Master row counts its 40 sentences as a set, and the mixed Grandmaster row is not counted as a set of its own. Leopard and lynx reuse their approved art and existing voice lines; no images or audio were generated.
+
+Saves: expert saves keep all results. A player who has beaten Legend Raven finds turtle 11 open and marked "new". A parent who used "Open all turtles" before this release presses it again to open 11–20.
+
+Verification: 23 Turtle Race unit tests. The expert-race test changed on purpose from ten to twenty turtles (pools, names, descriptions, the mixed row, the open-11 save case), the item test now counts both expert sets, and the opponent and open-all tests cover turtles 11–20. Full suite: 445 unit/backend tests and 126 UI-flow groups pass. Headless Chromium at 1194×834, 834×1194 and 390×844 shows the four-row picker without overflow, races turtle 11 and Grandmaster Lynx in Shell Duel with all choices on screen and no console errors. Physical iPad is not verified. Build `turtle-race-expert-levels-20261029-r1`.

@@ -1226,3 +1226,8 @@ This supersedes "two per quest, surviving retry/reload" from 11 October 2026. A 
 ## Open-word cap — 28 October 2026
 
 At most 15 words may be open (introduced but not yet secured, shown as Learning on the Parents dashboard). At or above 15, no new word opens; turns cycle through due reviews, finishing open words and easier secured words, and new words return below 15. [Details](OPEN_WORD_CAP_RELEASE.md).
+
+
+## Expert race turtles 11–20 — 29 October 2026
+
+The user asked for more expert levels. This supersedes the ten-turtle expert race. The standalone expert race has twenty opponents per race: 1–10 as before, Master 11–15 with 40 new longer sentences (12 words or more) using rarer words, and Grandmaster 16–20 mixing both long sets with faster clocks. All answers stay in other words, each expert sentence tests a different key word, and the main BlitzWord race is unchanged. [Details](turtle-race/RELEASE.md).

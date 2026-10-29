@@ -218,6 +218,9 @@ button{font-family:inherit;cursor:pointer;touch-action:manipulation}
 .levelTile{position:relative;min-height:56px;border-radius:14px;border:3px solid #d8c79a;background:#fff;color:var(--ink);font-size:24px;font-weight:700;padding:0}
 .tier-hard .levelTile{border-color:#e2be75;background:#fff8e6}
 .tier-expert .levelTile{border-color:#d99a8e;background:#fff0ec}
+.tier-master .tierName{color:#6a2c7a}.tier-grandmaster .tierName{color:#1f4f7a}
+.tier-master .levelTile{border-color:#c39ad3;background:#f8effb}
+.tier-grandmaster .levelTile{border-color:#93b4d6;background:#eef4fb}
 .levelTile.selected{border-color:#2f8a4f;background:#e9f7e4;box-shadow:0 0 0 3px #b7f0c4}
 .levelTile.locked{background:#eee6d2;color:#8b8672;border-style:dashed;font-size:18px}
 .tileStar{position:absolute;top:1px;right:5px;font-size:16px;color:#e2a81e}
