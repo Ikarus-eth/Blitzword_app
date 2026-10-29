@@ -6,9 +6,9 @@ const root=path.resolve(__dirname,'..');
 const seq=values=>{let i=0;return()=>values[i++%values.length];};
 
 test('every item is valid, core sentences use recorded audio, and choices are text only',()=>{
-  const core=Data.items.filter(i=>i.tier==='core'),later=Data.items.filter(i=>/^core[234]$/.test(i.tier)),core2=later.filter(i=>i.tier==='core2'),expert=Data.items.filter(i=>/^expert2?$/.test(i.tier));
+  const core=Data.items.filter(i=>i.tier==='core'),later=Data.items.filter(i=>/^core[234]$/.test(i.tier)),core2=later.filter(i=>i.tier==='core2'),expert=Data.items.filter(i=>/^expert[23]?$/.test(i.tier));
   assert.equal(core.length,51);for(const t of ['core2','core3','core4'])assert.equal(later.filter(i=>i.tier===t).length,50,t);
-  assert.ok(expert.length>=70);assert.equal(expert.filter(i=>i.tier==='expert2').length,40);assert.equal(core.length+later.length+expert.length,Data.items.length);
+  assert.ok(expert.length>=110);for(const t of ['expert2','expert3'])assert.equal(expert.filter(i=>i.tier===t).length,40,t);assert.equal(core.length+later.length+expert.length,Data.items.length);
   assert.equal(new Set(Data.items.map(i=>i.s)).size,Data.items.length,'no sentence is used twice');
   for(const item of core){
     assert.ok(Core.validateItem(item),item.s);assert.ok(Core.validateParaphrase(item),item.s);
@@ -18,7 +18,7 @@ test('every item is valid, core sentences use recorded audio, and choices are te
   const firstKeys=new Set(core.map(i=>i.a));
   assert.ok(core2.filter(i=>!firstKeys.has(i.a)).length>=40,'mostly new key words');
   for(const item of later){assert.ok(Core.validateItem(item),item.s);assert.ok(fs.existsSync(path.join(root,item.audio.file)),item.audio.file);}
-  for(const item of expert){assert.ok(Core.validateExpert(item),item.s);assert.equal(item.audio,null);assert.ok(item.s.split(/\s+/).length>=(item.tier==='expert2'?12:9),item.s);}
+  for(const item of expert){assert.ok(Core.validateExpert(item),item.s);assert.equal(item.audio,null);assert.ok(item.s.split(/\s+/).length>=({expert2:12,expert3:15}[item.tier]||9),item.s);}
   assert.equal(new Set(expert.map(i=>i.a.toLowerCase())).size,expert.length,'every expert sentence tests a different word');
   for(const item of Data.items)for(const mode of Core.MODES)for(const other of /^expert/.test(item.tier)?[true]:item.tier==='core'?[false,true]:[false]){
     const q=Core.buildQuestion(mode,item,Math.random,[],other);
@@ -140,31 +140,33 @@ test('Turtle Dash other words: a slow ladder of 35 turtles that changes one thin
   assert.deepEqual(Core.masteryByTier(p,Data.items).map(m=>m.tier),['easy','new','more','super'],'the other-words turtles are not a word set of their own');
 });
 
-test('expert race: twenty turtles of other-words and long sentences, each tier steadily harder, own save',()=>{
-  // 29 October 2026: turtles 11-20 added on purpose (was ten).
-  assert.equal(Expert.EDITION.id,'expert');assert.equal(Expert.LEVEL_COUNT,20);for(const m of Expert.MODES)assert.equal(Expert.countFor(m),20);assert.equal(Expert.STORAGE_KEY,'blitzword_turtle_race_expert_v1');
+test('expert race: thirty turtles of other-words and long sentences, each tier steadily harder, own save',()=>{
+  // 30 October 2026: turtles 21-30 added on purpose (was twenty).
+  assert.equal(Expert.EDITION.id,'expert');assert.equal(Expert.LEVEL_COUNT,30);for(const m of Expert.MODES)assert.equal(Expert.countFor(m),30);assert.equal(Expert.STORAGE_KEY,'blitzword_turtle_race_expert_v1');
   assert.notEqual(Expert.STORAGE_KEY,Core.STORAGE_KEY);assert.equal(Expert.EDITION.dashboardTime,false);assert.equal(Core.EDITION.dashboardTime,true);
   for(const tier of Expert.TIERS)for(let n=tier.from+1;n<=tier.to;n++){
     const [a,b]=[Expert.LEVELS.dash[n-2],Expert.LEVELS.dash[n-1]];assert.ok(b.goal>a.goal);
     const [f,g]=[Expert.LEVELS.flash[n-2],Expert.LEVELS.flash[n-1]];assert.ok(g.goal>f.goal&&g.flashMs<f.flashMs&&g.boostMs<=f.boostMs);
     const [d,e]=[Expert.LEVELS.duel[n-2],Expert.LEVELS.duel[n-1]];assert.ok(e.shell>d.shell&&e.timerMs<d.timerMs&&e.hearts<=d.hearts);
   }
-  const want=n=>n>15?['expert','expert2']:n>10?['expert2']:n>5?['expert']:['core'];
-  for(const mode of Expert.MODES)for(let n=1;n<=20;n++){
+  const want=n=>n>25?['expert','expert2','expert3']:n>20?['expert3']:n>15?['expert','expert2']:n>10?['expert2']:n>5?['expert']:['core'];
+  for(const mode of Expert.MODES)for(let n=1;n<=30;n++){
     const L=Expert.LEVELS[mode][n-1],pool=Expert.itemsForLevel(Data.items,mode,n);assert.ok(pool.length>=25,mode+n);
     assert.equal(L.paraphrase,true);assert.ok(pool.every(i=>want(n).includes(i.tier)),mode+n);
-    if(n>15)assert.equal(pool.length,76,'grandmaster mixes both long sets');
+    if(n>15&&n<=20)assert.equal(pool.length,76,'grandmaster mixes both long sets');
+    if(n>25)assert.equal(pool.length,116,'legend mixes all three long sets');
   }
   // The new rows are harder than the row before them at the same position, apart from reading time for longer sentences.
   for(let i=0;i<5;i++){
     assert.ok(Expert.LEVELS.dash[10+i].goal>Expert.LEVELS.dash[5+i].goal&&Expert.LEVELS.dash[15+i].goal>Expert.LEVELS.dash[10+i].goal);
     assert.ok(Expert.LEVELS.duel[15+i].timerMs<Expert.LEVELS.duel[10+i].timerMs&&Expert.LEVELS.flash[15+i].flashMs<Expert.LEVELS.flash[10+i].flashMs);
   }
-  assert.deepEqual(Expert.NAMES.slice(0,2),['River Turtle','Forest Turtle']);assert.equal(Expert.NAMES[9],'Legend Raven');assert.equal(Expert.NAMES[14],'Master Leopard');assert.equal(Expert.NAMES[19],'Grandmaster Lynx');
-  assert.match(Expert.describeLevel('dash',12),/longer sentences, rarer words · answers in other words/);assert.match(Expert.describeLevel('duel',18),/all long sentences/);
-  assert.deepEqual(Expert.masteryByTier(Expert.defaultProfile(),Data.items).map(m=>[m.tier,m.total]),[['hard',51],['expert',36],['master',40]],'the mixed row is not a word set of its own');
+  assert.deepEqual(Expert.NAMES.slice(0,2),['River Turtle','Forest Turtle']);assert.equal(Expert.NAMES[9],'Legend Raven');assert.equal(Expert.NAMES[14],'Master Leopard');assert.equal(Expert.NAMES[19],'Grandmaster Lynx');assert.equal(Expert.NAMES[24],'Champion Falcon');assert.equal(Expert.NAMES[29],'Legend Fox');
+  assert.match(Expert.describeLevel('dash',12),/longer sentences, rarer words · answers in other words/);assert.match(Expert.describeLevel('duel',18),/all long sentences/);assert.match(Expert.describeLevel('dash',22),/longest sentences, hardest words/);assert.match(Expert.describeLevel('flash',28),/all three long sets/);
+  assert.deepEqual(Expert.masteryByTier(Expert.defaultProfile(),Data.items).map(m=>[m.tier,m.total]),[['hard',51],['expert',36],['master',40],['champion',40]],'the mixed rows are not word sets of their own');
   // A save that had beaten Legend Raven opens turtle 11 straight away.
-  const beat=Expert.normalizeProfile({version:3,progress:{dash:{unlocked:10,selected:10,wins:[1,1,1,1,1,1,1,1,1,1]}}});assert.equal(beat.progress.dash.unlocked,11);assert.equal(beat.progress.dash.wins.length,20);
+  const beat=Expert.normalizeProfile({version:3,progress:{dash:{unlocked:10,selected:10,wins:[1,1,1,1,1,1,1,1,1,1]}}});assert.equal(beat.progress.dash.unlocked,11);assert.equal(beat.progress.dash.wins.length,30);
+  const beat20=Expert.normalizeProfile({version:3,progress:{duel:{unlocked:20,selected:20,wins:Array(20).fill(1)}}});assert.equal(beat20.progress.duel.unlocked,21,"beating Grandmaster Lynx opens turtle 21");
   assert.match(Expert.describeLevel('flash',7),/long sentences · answers in other words/);
   const p=Expert.defaultProfile(),run=Expert.newRun('dash',p);assert.equal(run.paraphrase,true);assert.equal(run.goal,6);
 });
@@ -238,7 +240,7 @@ test('winning the hardest open turtle opens the next; he chooses among open turt
   assert.equal(Core.recordFinish(p,five,now),6,'beating Champion opens the first new-words turtle');
   p.progress.duel.unlocked=20;p.progress.duel.selected=20;const top=Core.newRun('duel',p);for(let i=0;i<9;i++)Core.answer(top,true,500);
   assert.equal(Core.recordFinish(p,top,now),null);assert.equal(p.progress.duel.unlocked,20);
-  const all=Expert.unlockAll(Expert.defaultProfile());for(const m of Expert.MODES)assert.equal(all.progress[m].unlocked,20);
+  const all=Expert.unlockAll(Expert.defaultProfile());for(const m of Expert.MODES)assert.equal(all.progress[m].unlocked,30);
 });
 
 test('stored profiles are repaired and earlier automatic difficulty is dropped',()=>{
@@ -342,7 +344,7 @@ test('each row of five has its own opponent, with art, lose lines and an approve
   for(const tier of Core.TIERS)for(let n=tier.from;n<=tier.to;n++)assert.ok(Core.NAMES[n-1].endsWith(tier.opponent.creature.split(' ')[1]),Core.NAMES[n-1]);
   const Expert=Core.edition('expert');
   assert.equal(Expert.opponentFor(5).id,'turtle');assert.equal(Expert.opponentFor(6).id,'raven');assert.equal(Expert.opponentFor(10).noun,'raven');
-  assert.equal(Expert.opponentFor(11).id,'leopard');assert.equal(Expert.opponentFor(16).id,'lynx');assert.equal(Expert.opponentFor(20).id,'lynx');
+  assert.equal(Expert.opponentFor(11).id,'leopard');assert.equal(Expert.opponentFor(16).id,'lynx');assert.equal(Expert.opponentFor(20).id,'lynx');assert.equal(Expert.opponentFor(21).id,'falcon');assert.equal(Expert.opponentFor(30).id,'fox');
   const p6=Core.defaultProfile();p6.progress.duel.unlocked=6;const run=Core.newRun('duel',p6,6);assert.equal(run.opponent.id,'hare');
   const used=new Set([...Core.TIERS,...Expert.TIERS].map(t=>t.opponent.id));
   for(const id of used){
@@ -374,4 +376,22 @@ test('Turtle Dash other-words answers only use words he already reads: the Blitz
   const all=Object.values(glossary).flat().join(' ');
   for(const w of ['kitty','crunchy','sack','feathers','beak','flour','grains','vegetable','fruit','meal'])assert.ok(!new RegExp('\\b'+w+'\\b').test(all),w);
   for(const i of main)assert.deepEqual(i.o1,[i.a,...i.w].map(w=>glossary[w.toLowerCase()][0]),i.s);
+});
+
+test('Shell Duel clock fits every round a win can take, in both editions; races stay 60 s',()=>{
+  for(const E of [Core,Expert]){
+    for(let n=1;n<=E.countFor('duel');n++){
+      const L=E.LEVELS.duel[n-1],ms=E.gameMsFor('duel',n);
+      assert.ok(ms>=60000&&ms%5000===0,E.EDITION.id+n);
+      assert.ok(ms>=(L.shell+L.hearts-1)*(L.timerMs+E.FEEDBACK_MS),E.EDITION.id+n);
+      // Slowest possible win: every lost heart but one, each on a timeout, then every shell right at the last moment.
+      const p=E.defaultProfile();p.progress.duel.unlocked=n;const run=E.newRun('duel',p,n);assert.equal(run.gameMs,ms);
+      for(let h=1;h<L.hearts;h++){E.tick(run,run.elapsed+L.timerMs);assert.equal(run.over,false);E.answer(run,null,L.timerMs);}
+      for(let k=0;k<L.shell;k++){E.tick(run,run.elapsed+L.timerMs-1);assert.equal(run.over,false,E.EDITION.id+n+' timed out');E.answer(run,true,L.timerMs-1);E.tick(run,run.elapsed+E.FEEDBACK_MS);}
+      assert.equal(run.won,true,E.EDITION.id+n);
+    }
+    for(const m of ['dash','flash'])for(let n=1;n<=E.countFor(m);n++)assert.equal(E.gameMsFor(m,n),60000);
+  }
+  assert.equal(Expert.gameMsFor('duel',20),110000);assert.match(Expert.describeLevel('duel',20),/110 s clock/);
+  const r=Expert.newRun('duel',Expert.unlockAll(Expert.defaultProfile()),20);Expert.tick(r,70000);assert.equal(r.over,false,'no longer ends at 60 s');
 });
