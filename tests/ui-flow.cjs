@@ -1231,6 +1231,18 @@ function missionButton(ui,label){return [...ui.get('mission').querySelectorAll('
  assert.match(ui.get('mission').querySelector('.missionScene img').src,/wizard-map-awakens/);
  console.log('PASS mapmaker cover and step-specific scene/text, completed mission replay keeps chapter identity');
 }
+{
+ const s=Core.migrate(Core.fresh()),A=Core.Adventure,now=Date.UTC(2026,10,1),at=new Date(now).toISOString();s.profile.name='Reader';s.assessment.done=true;
+ for(const m of A.Data.missions.slice(0,12))A.stats(s,m.id).completedAt=at;
+ for(const id of ['star-post','crystal-pass','snow-garden','cloud-lift','wind-tower'])A.stats(s,id).completedAt=at;
+ s.expedition.selectedCampaign='star-trail';Core.startMission(s,'wind-tower',now);
+ let ui=boot(s,{adventures:true});
+ const hub=ui.get('adventureHub'),pine=hub.querySelector('[data-mission="pine-store"]');
+ assert.match(ui.get('missionResume').textContent,/Keep playing again: The Falcon’s Wind Tower/);assert.equal(pine.disabled,false);
+ assert.match(hub.querySelector('[data-mission="wind-tower"]').textContent,/Treasure found · playing again/);assert.equal(hub.querySelector('[data-mission="moon-steps"]').disabled,true);
+ ui.click(pine);assert.equal(ui.state().expedition.current.missionId,'pine-store');assert.match(ui.get('mission').textContent,/Marmot/);assert.equal(ui.state().expedition.missions['wind-tower'].completedAt,at);
+ console.log('PASS a replay of a finished quest leaves the next open quest playable');
+}
 for(const chosen of ['made','wade'])for(const options of [['made','wade','have','hide'],['hide','have','wade','made']]){
  const s=impactSave(),q=s.battle.question;q.target='have';q.options=options;q.isNew=false;q.supportReasons=[];q.phase='choices';s.learning.words.have.introducedAt=new Date().toISOString();s.learning.words.have.independentCorrect=3;
  const ui=boot(s,{heldNarration:true});ui.resume();ui.ready();const b=[...ui.get('battleAnswers').children].find(b=>b.textContent===chosen);ui.click(b);

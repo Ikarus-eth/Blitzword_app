@@ -1235,3 +1235,7 @@ The user asked for more expert levels. This supersedes the ten-turtle expert rac
 ## Shell Duel clock from rounds; expert turtles 21–30 — 30 October 2026
 
 The user found the 60-second Shell Duel clock ran out before a win was possible and asked that duel time follow the number of rounds and the length of a round. This supersedes the fixed 60 s for Shell Duel in both editions: the clock is (shells + hearts − 1) × (question time + 0.65 s), rounded up to 5 s and at least 60 s, so a duel is decided by shells and hearts. Turtle Dash and Flash Dash stay 60-second races. The user also asked for more expert levels: the expert race has 30 opponents, adding Champion 21–25 (40 new sentences of 16 words or more with the hardest words) and Legend 26–30 (all three long sets mixed). [Details](turtle-race/RELEASE.md).
+
+## Playing a finished quest again — 1 November 2026
+
+A replay of a quest whose treasure is already earned never blocks other quests. Outside a running reading fight, choosing any open quest leaves the replay; the earned treasure, stamps, XP and evidence stay. A first attempt still has to be finished or retried before another quest starts. [Details](adventures/QUEST_REPLAY_RELEASE.md).

@@ -95,18 +95,18 @@
       screen.append(heading('Adventure '+(D.campaigns.indexOf(c)+1)+' · '+done+'/'+c.missions.length+' treasures',c.name,done===c.missions.length?c.ending:c.intro));
       if(c.id==='star-trail')screen.append(button('Read a star message · about 1 minute','greenButton',()=>{if(ctx.save())location.href='assets/oral-reading/?sky='+encodeURIComponent(e.current?.missionId&&c.missions.includes(e.current.missionId)?e.current.missionId:c.missions.find(id=>!e.missions[id]?.completedAt)||c.missions[0]);}));
       if(e.current&&e.current.phase!=='complete'){
-        const current=D.byId[e.current.missionId],resume=button('Continue '+current.name+' · '+A.progress(s).left+' steps left','greenButton missionResume',()=>ctx.launch(current.id));resume.id='missionResume';screen.append(resume);
+        const current=D.byId[e.current.missionId],resume=button((e.current.replay?'Keep playing again: ':'Continue ')+current.name+' · '+A.progress(s).left+' steps left','greenButton missionResume',()=>ctx.launch(current.id));resume.id='missionResume';screen.append(resume);
       }
       const grid=el('div','missionGrid');
       c.missions.forEach((id,i)=>{
-        const m=D.byId[id],open=A.unlocked(s,id),complete=!!e.missions[id]?.completedAt,busy=e.current&&e.current.phase!=='complete'&&e.current.missionId!==id;
+        const m=D.byId[id],open=A.unlocked(s,id),complete=!!e.missions[id]?.completedAt,busy=A.blocking(s,id);
         const card=button('','missionCard'+(complete?' complete':'')+(!open?' locked':''),()=>ctx.launch(id));card.dataset.mission=id;card.disabled=!open||busy;
         card.setAttribute('aria-label',(complete?'Play again: ':open?'Start mission: ':'Locked mission: ')+m.name);
         const art=el('div','missionCardArt');art.style.backgroundImage='url("'+missionArt(m)+'")';
         const medal=el('span','missionNumber',complete?'✓':String(i+1));art.append(medal);
         const creatures=el('span','missionCreatures');for(const family of m.families){const face=el('span','missionCreature sceneSprite');ctx.paintEnemy(face,family,8);if(!e.book[family]?.seen)face.classList.add('undiscovered');creatures.append(face);}art.append(creatures);
         const copy=el('div','missionCardCopy');copy.append(el('h2','',m.name),el('p','',m.goal));
-        const status=e.current?.missionId===id&&e.current.phase!=='complete'?A.progress(s).left+' steps left':complete?'Treasure found · play again':!open?'Follow the earlier paths':busy?'Your current mission is saved':m.finale?'Final mission':'Choose this path';copy.append(el('span','missionCardStatus',status));card.append(art,copy);grid.append(card);
+        const status=e.current?.missionId===id&&e.current.phase!=='complete'?(e.current.replay?'Treasure found · playing again · ':'')+A.progress(s).left+' steps left':complete?'Treasure found · play again':!open?'Follow the earlier paths':busy?'Your current mission is saved':m.finale?'Final mission':'Choose this path';copy.append(el('span','missionCardStatus',status));card.append(art,copy);grid.append(card);
       });screen.append(grid);
       const camp=el('footer','adventureCamp'),pip=button('','campPip',ctx.growth);pip.setAttribute('aria-label','See Pip’s growth');const pipArt=el('span','sceneSprite');ctx.paintPip(pipArt);pip.append(pipArt,el('span','',ctx.dragonText('Pip')+' · '+Math.floor(s.dragon.xp||0)+' XP'));camp.append(pip);
       if(A.companion(s)){const friend=button('','campFriend',()=>openBook(e.favourite));const art=el('span','sceneSprite');ctx.paintEnemy(art,e.favourite,8);friend.append(art,el('span','','Your team · '+Content.enemyAt(e.favourite).name));camp.append(friend);}
