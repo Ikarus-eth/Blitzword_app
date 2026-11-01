@@ -48,3 +48,18 @@ test('unfinished old quest, answer choices and evidence survive with the third c
  const question=C.copy(s.battle.question),quest=C.copy(s.expedition.current),xp=s.dragon.xp;
  s=S.readBackup(S.backupFile(s).text).state;assert.deepEqual(s.battle.question,question);assert.deepEqual(s.expedition.current,quest);assert.equal(s.dragon.xp,xp);assert.equal(C.startMission(s,'star-post',NOW),false);
 });
+test('playing a finished quest again never locks the next quests (wind tower replay, 1 Nov 2026)',()=>{
+ const s=fresh();previous(s);const at=new Date(NOW).toISOString();
+ for(const id of ['star-post','crystal-pass','snow-garden','cloud-lift','wind-tower'])A.stats(s,id).completedAt=at;
+ assert.equal(C.startMission(s,'wind-tower',NOW),true);const c=A.of(s).current;assert.equal(c.replay,true);
+ assert.equal(A.blocking(s,'pine-store'),false);assert.equal(A.unlocked(s,'moon-steps'),false,'the replay does not count as the stores');
+ // In a live fight the replay holds until the fight ends; any other phase can be left.
+ assert.equal(C.startMissionBattle(s,NOW),true);assert.equal(A.blocking(s,'pine-store'),true);assert.equal(C.startMission(s,'pine-store',NOW),false);
+ s.battle=null;c.phase='retry';c.retryFromStep=2;c.retryTargetStep=0;assert.equal(A.blocking(s,'pine-store'),false);
+ assert.equal(C.startMission(s,'pine-store',NOW),true);assert.equal(A.of(s).current.missionId,'pine-store');assert.equal(A.of(s).current.replay,false);
+ assert.equal(A.stats(s,'wind-tower').completedAt,at,'the gold star piece stays earned');
+ A.stats(s,'pine-store').completedAt=at;A.of(s).current.phase='complete';assert.equal(A.unlocked(s,'moon-steps'),true);assert.equal(C.startMission(s,'moon-steps',NOW),true);
+ // A first attempt (no treasure yet) still has to be finished or retried before another quest starts.
+ const t=fresh();previous(t);for(const id of ['star-post','crystal-pass','snow-garden','cloud-lift'])A.stats(t,id).completedAt=at;
+ assert.equal(C.startMission(t,'wind-tower',NOW),true);assert.equal(A.blocking(t,'pine-store'),true);assert.equal(C.startMission(t,'pine-store',NOW),false);
+});

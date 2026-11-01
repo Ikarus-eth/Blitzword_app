@@ -56,9 +56,19 @@
     else {e.runtime=snapshot(s);restore(s,e.legacy);e.legacy=null;}
     e.context=context;
   }
+  // Playing a finished quest again must never hold the trail hostage: outside a live fight,
+  // the replay can be left for any open quest. Its treasure stays earned (1 November 2026).
+  function leavableReplay(s){
+    const c=of(s).current;
+    return !!(c&&c.replay&&c.phase!=='complete'&&c.phase!=='battle'&&of(s).missions[c.missionId]?.completedAt);
+  }
+  function blocking(s,id){
+    const c=of(s).current;
+    return !!(c&&c.phase!=='complete'&&c.missionId!==id&&!leavableReplay(s));
+  }
   function begin(s,id,now){
     const e=of(s),m=Data.byId[id];
-    if(!m||!unlocked(s,id)||e.current&&e.current.phase!=='complete'&&e.current.missionId!==id)return false;
+    if(!m||!unlocked(s,id)||blocking(s,id))return false;
     switchTo(s,'mission');e.preferLegacy=false;e.selectedCampaign=m.campaign;
     if(e.current?.missionId===id&&e.current.phase!=='complete')return true;
     e.current={missionId:id,step:0,phase:'intro',puzzle:null,startedAt:date(now),replay:!!stats(s,id).completedAt,ninthRequired:!!Maps?.[id],hearts:QUEST_HEARTS,maxHearts:QUEST_HEARTS,companionHelpUsed:false};
@@ -226,5 +236,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen};
+  return {leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen};
 });
