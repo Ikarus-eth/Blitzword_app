@@ -1,4 +1,4 @@
-name: Verify live duel clock and expert turtles 21-30
+name: Verify live quest replay fix
 on:
   push:
     branches: [claude/turtle-race-live-check]
@@ -11,18 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 436d6bf081f3420cd1cbfcccb379198aa2f5907b
-      - name: Compare every live turtle race file with merge 436d6bf
+          ref: 3b6a5cf00ad803f9c0620bf0118acdb75f3567f9
+      - name: Compare live game files with merge 3b6a5cf
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
-          # Wait (up to 15 minutes) for Pages to publish the merge, then require every file to match.
           for attempt in $(seq 1 30); do
-            curl -s -o probe.html "$B/assets/turtle-race-expert/index.html?cb=$GITHUB_RUN_ID-$attempt"
-            if cmp -s probe.html assets/turtle-race-expert/index.html; then echo "live after attempt $attempt"; break; fi
+            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
             sleep 30
           done
           bad=0; n=0
-          for f in index.html app.js game-core.js adventure-core.js adventure-ui.js adventures.css $(git ls-tree -r --name-only HEAD assets/turtle-race assets/turtle-race-expert) assets/narration/turtle-race-001.mp3 assets/narration/turtle-race-002.mp3 assets/narration/turtle-race-003.mp3 assets/narration/turtle-race-004.mp3 assets/narration/turtle-race-005.mp3; do
+          for f in index.html app.js game-core.js missions.js adventure-core.js adventure-ui.js adventures.css assets/adventures/star-trail/campaign.js assets/adventures/star-trail/search.js; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
