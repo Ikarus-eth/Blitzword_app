@@ -1,0 +1,52 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "batch": "docs/adventures/thunder-mountain/art-scenes-retake-2.json",
+  "requests": {
+    "tm-jet-missing-2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip\u2019s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Image 5 is the exact identity of the old grandmother dragon. At the cottage doorway, the old rose-red grandmother dragon from image 5 points a claw out across the valley to a tall mountain under dark rumbling clouds. Artus and Pip look where she points with brave, determined faces. The grandmother is fully a dragon exactly like image 5: a dragon head with snout, short curled horns, scales, small wings and a tail, round spectacles and a yellow knitted shawl. She has no human face and no human hair. Exactly one boy (Artus) and exactly one orange dragon (Pip) appear; do not duplicate any character. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/story-mountain-20261102/assets/adventures/thunder-mountain/ref-jet.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/story-mountain-20261102/assets/adventures/thunder-mountain/ref-grandma.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a199c9-86a4-7562-bbee-a7ba213e5a0d",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c9-86a4-7562-bbee-a7ba213e5a0d",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c9-86a4-7562-bbee-a7ba213e5a0d/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c9-86a4-7562-bbee-a7ba213e5a0d/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 1,
+      "user_queued_count": 2,
+      "bytes": 119552,
+      "image_url": "https://v3b.fal.media/files/b/0ab0c9c4/i09JWIxtmes3_utS1shHE_7eKtKu4b.webp"
+    },
+    "tm-home-2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip\u2019s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Image 5 is the exact identity of the old grandmother dragon. At the cottage door, the old rose-red grandmother dragon from image 5 joyfully hugs Jet (small red dragon with green wings, image 4). Jet holds up a small glowing white star-shaped crystal. Artus and Pip stand nearby, smiling. Warm afternoon light. The grandmother is fully a dragon exactly like image 5: a dragon head with snout, short curled horns, scales, small wings and a tail, round spectacles and a yellow knitted shawl. She has no human face and no human hair. Exactly one boy (Artus) and exactly one orange dragon (Pip) appear; do not duplicate any character. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/story-mountain-20261102/assets/adventures/thunder-mountain/ref-jet.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/story-mountain-20261102/assets/adventures/thunder-mountain/ref-grandma.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a199c9-869d-7792-8ed7-e08e2e68d83e",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c9-869d-7792-8ed7-e08e2e68d83e",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c9-869d-7792-8ed7-e08e2e68d83e/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c9-869d-7792-8ed7-e08e2e68d83e/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 120628,
+      "image_url": "https://v3b.fal.media/files/b/0ab0c9c4/QBYnwPIjH8R9aehCQftQC_8F9ta3sK.webp"
+    }
+  }
+}
