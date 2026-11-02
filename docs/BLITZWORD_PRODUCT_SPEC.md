@@ -1,3 +1,14 @@
+## Story quests: Thunder Mountain — approved 2 November 2026
+
+The parent reviewed Artus's export of 2 November 2026: 373 words introduced, 92 open (above the 15-word cap), accuracy 85–90%, but 6+-letter words only about half right, and the story pilot stalled on 5–10 words per page (piece, brought, star, space, fitted). Decisions: build one campaign that pre-teaches the words of a longer story in its fights, then lets the child read it alone with every word tappable, followed by questions he cannot guess; words may be pre-taught out of curriculum order; meanings may come from AI; new art via fal.ai; at least 90 minutes of material.
+
+- Fourth campaign, after Sky Stars: six quests, one per story part (about 130 words, three pages). Each quest keeps four fights (10/11/12/14 health) and four short logic clues, then a ninth step: read the part, then answer three questions.
+- Each part has eight target words (48 in all, all from the 1,000-word curriculum, mostly from his open words). In story fights two of three turns (one of two while struggling) show a target; unseen targets open even above the open-word cap, at most three unfinished at once (two while struggling). Outside story fights the cap is unchanged. Up to four words tapped while reading earlier parts join the next part's targets.
+- Text rule: every word in a part is secured, a name, earlier story text or a pre-taught target, so coverage is 100% with pre-teaching and 83–91% on secured words alone. Question words and answers also come from the story.
+- Every word is a button: it plays the recorded word (device speech where none exists) and opens a card with the word in syllables, the tricky letters marked, and a simple written and spoken meaning for this story. Meanings are pre-written for every content word, so no AI key is needed for this story. A tap is recorded as listening support for curriculum words.
+- Reading to the last page earns 100 XP once; each question 50 XP once. A wrong answer costs no heart: the child must look back at the page that holds the answer and then try again. Options are shuffled once and saved. Reading time counts up to 3 seconds per word per page; questions up to 90 seconds each.
+- Completion shows words read, words tapped and questions right first time; the campaign ending shows the whole story's word count.
+
 ## Automatic reading submission — approved 12 October 2026
 
 Selecting a recording or stopping capture should submit automatically once connected. Preserve an unsent local recovery copy; explain pairing failures and offer connection on the reading page. Default to assisted practice, allow parent-supplied helped words and updates to comprehension/help context after upload without repeating speech assessment. Spoken parental help is not automatically separated by Azure; never interpret it as independent fluency. [Implementation](oral-reading/AUTO_UPLOAD.md). This supersedes the earlier explicit Send-button requirement.

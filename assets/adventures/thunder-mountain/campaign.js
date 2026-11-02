@@ -176,8 +176,9 @@
       pick("tm-window","The right window",["Grandma’s house has three windows: red, green and blue.","The star piece goes in a window that is up high.","It is not the green one."],"Which window is it?",["Down · red","Up high · green","Up high · blue"],2,"Find the windows up high first.","Only the blue window up high fits both clues.","Grandma opens the window."),
       order("tm-night","Good night",["Put the star piece in the window before night.","Look at the sky after the star goes up."],["Look at the sky","The star goes up","Star in the window"],[2,1,0],"Where does the star piece go first?","Window first, then the star goes up, then look at the sky.","A new star shines!")]}
   ];
-  for(const m of missions){m.campaign='thunder-mountain';m.art='assets/adventures/thunder-mountain/'+m.id+'.webp';m.artAlt='Artus and Pip on the way to Thunder Mountain: '+m.place+'.';
+  for(const m of missions){m.campaign='thunder-mountain';
     m.scenes=m.story.pages.map((p,i)=>({art:'assets/adventures/thunder-mountain/'+m.id+'-'+(i+1)+'.webp',alt:'Story picture '+(i+1)+' for '+m.name+'.'}));
+    m.art=m.scenes[0].art;m.artAlt='Artus and Pip: '+m.place+'.';m.endingArt=m.scenes[2].art;m.endingArtAlt='The end of '+m.name+'.';
     m.story.words=m.story.pages.flat().join(' ').split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).length;}
   const campaign={id:'thunder-mountain',name:'Pip and the Thunder Mountain',shortName:'Story mountain',scene:'assets/adventures/thunder-mountain/cover.webp',story:true,
     intro:'Jet is lost on Thunder Mountain. In each quest, learn the new words in fights. Then read the next part of the story by yourself!',
