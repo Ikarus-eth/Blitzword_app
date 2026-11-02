@@ -9,7 +9,7 @@ on:
         default: ''
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: mission-art
@@ -32,6 +32,17 @@ jobs:
           FAL_KEY: ${{ secrets.AL_AI_API }}
           BATCH: ${{ inputs.batch }}
         run: python3 scripts/generate-story-art.py "$BATCH"
+      # Story batches are also committed to their own branch for review, never to main.
+      - name: Commit the story batch for review on this branch
+        if: ${{ always() && inputs.batch != '' && github.ref_name != 'main' }}
+        env:
+          BATCH: ${{ inputs.batch }}
+        run: |
+          name=$(basename "$BATCH" .json)
+          dest="$(dirname "$BATCH")/generated/$name"
+          mkdir -p "$dest" && cp generated-story-art/* "$dest"/
+          git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$dest" && git commit -m "Story art for review: $name [skip ci]" && git push
       - uses: actions/upload-artifact@v4
         if: always()
         with:
