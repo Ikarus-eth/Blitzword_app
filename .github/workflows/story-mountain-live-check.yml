@@ -1,0 +1,28 @@
+name: Verify live story quests
+on:
+  push:
+    branches: [claude/story-mountain-live-check]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: c063bf0148f8172b6d2150e4632d3f96424474ff
+      - name: Compare live game and story files with merge c063bf0
+        run: |
+          B=https://ikarus-eth.github.io/Blitzword_app
+          for attempt in $(seq 1 30); do
+            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
+            sleep 30
+          done
+          bad=0; n=0
+          for f in index.html app.js game-core.js missions.js adventure-core.js adventure-ui.js adventures.css assets/adventures/star-trail/campaign.js assets/adventures/thunder-mountain/*; do
+            n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
+            if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
+          done
+          echo "checked=$n mismatched=$bad"; test $bad -eq 0
