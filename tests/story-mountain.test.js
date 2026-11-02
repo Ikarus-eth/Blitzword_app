@@ -99,3 +99,8 @@ test('an in-progress Star Trail save migrates unchanged and the whole story camp
   let now=NOW;for(const id of D.campaigns.at(-1).missions){({now}=toStory(s,id,now));readAll(s,now);for(const q of A.current(s).story.questions){A.chooseStory(s,'0',q.id);C.checkStory(s,now,q.id);}s=C.migrate(JSON.parse(JSON.stringify(s)));}
   assert.equal(A.campaignComplete(s,'thunder-mountain'),true);
 });
+test('every story page, quest card and the campaign cover has its painted scene',()=>{
+  const fs=require('node:fs'),path=require('node:path'),file=p=>path.join(__dirname,'..',p);
+  assert.ok(fs.existsSync(file(D.campaigns.at(-1).scene)));
+  for(const m of T.missions){assert.equal(m.scenes.length,3);for(const s of m.scenes)assert.ok(fs.existsSync(file(s.art)),s.art);assert.equal(m.art,m.scenes[0].art);assert.equal(m.endingArt,m.scenes[2].art);}
+});
