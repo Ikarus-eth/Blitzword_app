@@ -378,6 +378,25 @@
     }
     return result;
   }
+  // Story quests: reading a chapter to its last page earns 100 XP the first time; each question
+  // answered (after any look-back) earns 50 XP once.
+  function finishStoryReading(s,now=Date.now(),random=Math.random){
+    const result=Adventure.finishReading(s,now,random);
+    if(result?.first){awardDaily(s,now);result.xpEarned=awardXP(s,100,'riddles',now,{boost:true,trackBattle:false});Adventure.story(s).readXP=result.xpEarned;syncProgress(s,now);}
+    return result;
+  }
+  function checkStory(s,now=Date.now(),expected){
+    const result=Adventure.checkStory(s,now,expected);
+    if(result?.correct&&result.firstSolve){awardDaily(s,now);result.xpEarned=awardXP(s,50,'riddles',now,{boost:true,trackBattle:false});Adventure.stats(s).storyQuestions[result.id].xpEarned=result.xpEarned;syncProgress(s,now);}
+    return result;
+  }
+  // A tap on a story word is listening support: curriculum words are noted like other support, so their
+  // review schedule notices the help, and later story fights practise the tapped words.
+  function noteStoryTap(s,word,kind='sound',now=Date.now()){
+    const key=Adventure.noteStoryTap(s,word,kind);
+    if(key&&kind==='sound'&&byWord[key]&&s.learning.words[key])noteSupport(s,key,'story-tap',now);
+    return key;
+  }
   function checkMap(s,now=Date.now(),expected){
     const result=Adventure.checkMap(s,now,expected);
     if(result?.correct&&result.firstSolve){awardDaily(s,now);const earned=awardXP(s,50,'riddles',now,{boost:true,trackBattle:false});Adventure.stats(s).mapQuestions[result.id].xpEarned=earned;result.xpEarned=earned;syncProgress(s,now);}
@@ -672,6 +691,18 @@
     if(repair)return pick(repair,'repair');
     // Reserve at least one in three turns for actual due reviews, including words learned ahead.
     if(due.length&&L.sequence%3===2)return pick(due[0],'review');
+    // Story quests pre-teach the next chapter's words (2 November 2026): in two turns of three (one in two
+    // while struggling) the fight shows one of them. Unseen ones open even when the open-word cap is reached,
+    // but no more than three (two while struggling) are unfinished at once.
+    const focus=(Adventure.focusWords?.(s)||[]).map(w=>byWord[w]).filter(item=>item&&L.words[item.w]);
+    if(focus.length&&(challenge.mode==='support'?L.sequence%2===0:L.sequence%3!==2)){
+      const ready=focus.filter(eligible),fresh=ready.filter(item=>!L.words[item.w].introducedAt);
+      const learning=focus.filter(item=>L.words[item.w].introducedAt&&L.words[item.w].practiceSuccesses<2).length;
+      if(fresh.length&&learning<(challenge.mode==='support'?2:3))return pick(fresh[0],'story-new');
+      const seen=ready.filter(item=>L.words[item.w].introducedAt)
+        .sort((a,b)=>(L.words[a.w].practiceSuccesses>=2)-(L.words[b.w].practiceSuccesses>=2)||leastRecent(a,b));
+      if(seen.length)return pick(seen[0],'story');
+    }
     const practice=available.filter(item=>L.words[item.w].practiceSuccesses<2);
     const unseen=Content.words.find(item=>!L.words[item.w].introducedAt&&eligible(item));
     const capped=introduced.filter(item=>openWord(L.words[item.w])).length>=OPEN_WORD_CAP;
@@ -1185,7 +1216,7 @@
       q.phase='ready';
     }
   }
-  return {packSave,unpackSave,Adventure,recordRiddleTime,checkRiddle,checkMap,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
+  return {packSave,unpackSave,Adventure,recordRiddleTime,checkRiddle,checkMap,finishStoryReading,checkStory,noteStoryTap,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,canRequestBattleHelp,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,

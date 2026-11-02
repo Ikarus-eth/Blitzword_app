@@ -1,0 +1,210 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "stage": "scenes",
+ "count": 19,
+ "images": [
+  {
+   "id": "cover",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Cover scene for the story ‘Pip and the Thunder Mountain’: on a grassy hill at dusk, Artus, Pip and Jet stand together looking towards a tall faraway mountain with dark storm clouds and a single bright star above it. Hopeful, adventurous mood. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-jet-missing-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Image 5 is the exact identity of Grandma, Jet’s old grandmother dragon. Inside a cosy stone cottage on a cold windy evening: Artus and Pip sit on a rug by a crackling fire with an open picture book. The front door is open, autumn leaves blow in, and Grandma stands in the doorway looking very worried. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-jet-missing-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Image 5 is the exact identity of Grandma, Jet’s old grandmother dragon. At the cottage doorway, Grandma points out across the valley to a tall mountain under dark rumbling clouds. Artus and Pip look where she points with brave, determined faces. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-jet-missing-3",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Image 5 is the exact identity of Grandma, Jet’s old grandmother dragon. Outside the cottage door: Grandma hands Artus a rolled old paper map; Artus puts it into his brown leather shoulder bag. Pip holds up one small round glowing blue coin. Evening light, the mountain far away. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-stream-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. A sunny, hot forest path leads to a clear, fast mountain stream. Pip leans down and drinks the cold water while Artus smiles and wipes his brow. Dappled light, ferns, smooth river stones. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-stream-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. By the stream, Artus shares bread and a wedge of cheese with Pip. A silver fish leaps out of the water. On a flat rock at the water’s edge lies a small red bag. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-stream-3",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Artus and Pip cross the fast stream by jumping from rock to rock. Pip carries a small red bag on his back. Artus holds an old paper map with one red mark on it. Forest behind, mountain ahead. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-mountain-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. A long rocky mountain path climbs up into a thick white cloud. Artus and Pip walk slowly and look tired; mist swirls around them and the rocks fade into white. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-mountain-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. On the misty mountain path they meet a kind old grey-brown mule carrying two big bags on his back. The mule looks at them in a friendly way; Artus asks him a question. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-mountain-3",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. On the windy mountain path, the kind old mule gives Artus a round loaf of bread from his bag. Artus’s red cape blows in the cold wind and Pip holds his wings close. The path goes on up the slope. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-storm-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. High on the mountain the sky turns dark. A flash of lightning lights the rocks far away and rain begins to fall. Pip hides behind Artus, a little afraid; Artus looks for shelter. Dramatic but not frightening. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-storm-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Inside a small dry cave under a big rock, Artus and Pip sit close together beside a little campfire that Pip has lit. Rain pours down outside the cave mouth. Warm firelight, cosy and safe. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-storm-3",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. The rain has stopped. From the mouth of the small cave at night, Artus and Pip look up the dark mountain, where a tiny red glow of dragon fire shines high on the rocks. Pip’s wing is around Artus. Stars peek through clouds. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-hidden-star-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Inside a huge dark mountain cave with glittering crystal walls, Artus and Pip search between big boulders, Pip lighting the way with a small flame. Nobody else is visible. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-hidden-star-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. In the big cave, Jet sits high up on a tall rock ledge with one wet, drooping green wing. Pip climbs up towards him carrying a coil of rope while Artus holds the other end safely from below. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-hidden-star-3",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. On the cave floor, Jet happily lifts one green wing to show a small white star-shaped crystal that glows with bright light. Pip offers Jet bread and cheese; Artus smiles, the rope coiled at his feet. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-home-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Morning on the mountain: a big rainbow arches over the peak and the sky is blue. Artus walks down the path carrying a big leather bag with Jet peeking happily out of it; Pip trots beside them. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-home-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Image 5 is the exact identity of Grandma, Jet’s old grandmother dragon. At Grandma’s cottage door, Grandma joyfully hugs Jet. Jet holds up the small glowing white star piece. Artus and Pip stand nearby, smiling. Warm afternoon light. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "tm-home-3",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 3: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 2 is the exact identity of Pip, his small dragon: orange-gold scales, cream fluffy chest, amber eyes, small dark-membrane wings, leafy tail tuft; Pip is about knee high to Artus. Image 3 is a style reference only; do not copy its fox, tunnel or composition. Image 4 is the exact identity of Jet, Pip’s cousin: a small young dragon the same size as Pip with bright red scales, cream belly and big green wings. Night outside Grandma’s cottage: the glowing star piece floats up from her open window into the dark sky, leaving a soft trail of light. Jet, Pip and Artus sit together on the grass looking up at a new bright star. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: no danger shown as frightening, no injuries. Keep every character fully inside the frame."
+  }
+ ]
+}

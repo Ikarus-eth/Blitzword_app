@@ -1,0 +1,25 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "stage": "characters",
+ "count": 2,
+ "images": [
+  {
+   "id": "ref-jet",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "1:1",
+   "prompt": "Use case: character reference sheet. Image 1 is Pip, a small friendly dragon. Image 2 is the painted storybook style reference only. Paint Jet, Pip’s little cousin: the same young dragon species, body shape and size as Pip, but with bright red scales, a cream belly, small cream horns, big friendly amber eyes and large leaf-green wings opened a little. Cheerful, curious, slightly cheeky. One full-body figure standing on a plain warm cream background with a soft ground shadow, three-quarter view. Painterly children’s picture-book style matching image 2. No text, no other characters, no props."
+  },
+  {
+   "id": "ref-grandma",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "1:1",
+   "prompt": "Use case: character reference sheet. Image 1 is Pip, a small friendly dragon. Image 2 is the painted storybook style reference only. Paint Grandma, an old grandmother dragon of the same friendly species: about twice Pip’s size, soft dusty rose-red scales fading to grey, a cream belly, kind wrinkled eyes behind small round spectacles, short curled grey horns, folded faded green wings, and a knitted honey-yellow shawl over her shoulders. Warm, gentle and a little worried. One full-body figure standing on a plain warm cream background with a soft ground shadow, three-quarter view. Painterly children’s picture-book style matching image 2. No text, no other characters."
+  }
+ ]
+}

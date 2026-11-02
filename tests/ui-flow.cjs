@@ -1366,7 +1366,7 @@ console.log('PASS all 45 new enemies render through real battle feedback, score 
 
 {
  const A=Core.Adventure,s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
- let ui=boot(s,{adventures:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,3);assert.ok(tabs[2].disabled);
+ let ui=boot(s,{adventures:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,4);assert.ok(tabs[2].disabled);assert.ok(tabs[3].disabled);
  ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="snow-owl"]'));
  assert.match(ui.get('creatureDetail').textContent,/The Letter from the Snow Owl/);ui.click([...ui.get('creatureDetail').querySelectorAll('button')].find(b=>b.textContent==='Find this path'));
  assert.equal(ui.get('adventureHub').querySelectorAll('.missionCard').length,8);assert.ok([...ui.get('adventureHub').querySelectorAll('.missionCard')].every(b=>b.disabled));
@@ -1485,4 +1485,40 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  ui=boot(disabled,{adventures:true,activityDefaults:true});assert.ok(ui.get('adventureHub').classList.contains('active'));
  assert.equal(ui.state().settings.storiesEnabled,false);assert.equal(ui.state().settings.legacyEnabled,false);
  console.log('PASS parent activity defaults, guarded launches, panel navigation, toggles, preserved progress and reload');
+}
+{
+ // Story quest reader: tap-to-hear words, meanings, page turns, look-back after a miss and the reading summary.
+ const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,10,2);s.profile.name='Reader';s.assessment.done=true;s.dragon.name='Ron';s.dragon.named=true;
+ for(const m of A.Data.missions)if(m.campaign!=='thunder-mountain')A.stats(s,m.id).completedAt=new Date(now).toISOString();
+ s.expedition.selectedCampaign='thunder-mountain';
+ let ui=boot(s,{adventures:true,heldNarration:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,4);assert.ok(!tabs[3].disabled);
+ assert.match(ui.get('adventureHub').textContent,/0\/6 treasures/);ui.click(ui.get('adventureHub').querySelector('[data-mission="tm-jet-missing"]'));
+ assert.match(ui.get('mission').textContent,/A story quest/);assert.equal(ui.get('mission').querySelectorAll('.storyPreviewWord').length,8);
+ ui.click(ui.get('mission').querySelector('.storyPreviewWord'));assert.equal(ui.speechTexts.at(-1),'thunder');ui.finishSpeech();
+ const t=ui.state();const c=t.expedition.current;c.step=3;c.phase='puzzle';c.puzzle={solved:true};A.next(t,now);
+ ui=boot(t,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));
+ const screen=ui.get('mission');assert.equal(screen.querySelector('[role="progressbar"]').getAttribute('aria-valuemax'),'9');assert.match(screen.querySelector('.questSteps').textContent,/Story$/);
+ assert.match(screen.textContent,/Page 1 of 3/);assert.match(screen.querySelector('.storyText').textContent,/Ron sat by the fire/);
+ const words=[...screen.querySelectorAll('.storyWord')];assert.equal(words.length,A.current(ui.state()).story.pages[0].join(' ').split(/\s+/).length);
+ ui.click(words.find(b=>b.textContent==='worried.'));assert.equal(ui.speechTexts.at(-1),'worried');ui.finishSpeech();
+ assert.equal(ui.get('questDialogTitle').textContent,'worried');const letters=[...ui.document.querySelectorAll('.storyChunk')].map(e=>e.textContent);assert.deepEqual(letters,['wor','ried']);
+ assert.equal([...ui.document.querySelectorAll('.storyLetter.tricky')].map(e=>e.textContent).join(''),'or');
+ ui.click([...ui.document.querySelectorAll('.storyWordTools button')].find(b=>b.textContent==='What does it mean?'));assert.match(ui.document.querySelector('.storyMeaning').textContent,/something bad may happen/);ui.finishSpeech();
+ ui.click(ui.document.querySelector('.questDialogButton'));assert.equal(ui.get('questDialogTitle'),null);
+ assert.equal(ui.state().expedition.current.read.taps.worried,1);assert.equal(ui.state().expedition.current.read.meanings.worried,1);assert.equal(ui.state().learning.supportExposures.at(-1).kind,'story-tap');
+ ui.click([...screen.querySelectorAll('.storyWord')].find(b=>b.textContent==='Ron'));assert.equal(ui.speechTexts.at(-1),'Ron');ui.finishSpeech();
+ assert.match([...ui.document.querySelectorAll('.storyWordTools button')].map(b=>b.textContent).join('|'),/What does it mean/);ui.click(ui.document.querySelector('.questDialogButton'));
+ assert.equal(missionButton(ui,'I read it! Answer 3 questions'),undefined);
+ ui.click(missionButton(ui,'Next page →'));assert.match(screen.textContent,/Page 2 of 3/);ui.click(missionButton(ui,'Next page →'));
+ ui=boot(ui.state(),{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').textContent,/Page 3 of 3/);
+ ui.click(missionButton(ui,'I read it! Answer 3 questions'));assert.equal(ui.get('questDialogTitle').textContent,'You read part 1!');assert.match(ui.get('questDialogMessage').textContent,/100 XP/);ui.click(ui.document.querySelector('.questDialogButton'));
+ let q=A.storyQuestion(ui.state());assert.match(ui.get('mission').textContent,/Question 1 of 3/);const hearts=ui.state().expedition.current.hearts;
+ ui.click(ui.get('mission').querySelector('[data-story-choice="1"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.get('questDialogTitle').textContent,'Not quite');
+ ui.click(ui.document.querySelector('.questDialogButton'));assert.equal(ui.state().expedition.current.hearts,hearts);
+ assert.match(ui.get('mission').textContent,new RegExp('Page '+q.page+' of 3'));assert.match(ui.get('mission').querySelector('.storyLookback').textContent,/Why did Jet go up Thunder Mountain/);
+ ui.click(missionButton(ui,'Back to the question'));
+ for(let i=0;i<3;i++){q=A.storyQuestion(ui.state());ui.click(ui.get('mission').querySelector('[data-story-choice="0"]'));ui.click(missionButton(ui,'Check my answer'));assert.match(ui.get('questDialogTitle').textContent,i<2?/That’s right/:/You finished the story part/);ui.click(ui.document.querySelector('.questDialogButton'));}
+ assert.equal(ui.state().expedition.current.phase,'complete');const summary=ui.get('mission').querySelector('.storySummary').textContent;
+ assert.match(summary,/You read 131 words by yourself!/);assert.match(summary,/You tapped 2 words/);assert.match(summary,/2 of 3 questions right the first time/);
+ console.log('PASS story quest reader: hub tab, word preview, tappable words with chunks and meanings, page turns, reload, look-back and summary');
 }
