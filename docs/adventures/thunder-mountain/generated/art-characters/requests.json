@@ -1,0 +1,46 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "batch": "docs/adventures/thunder-mountain/art-characters.json",
+  "requests": {
+    "ref-jet": {
+      "state": "downloaded",
+      "prompt": "Use case: character reference sheet. Image 1 is Pip, a small friendly dragon. Image 2 is the painted storybook style reference only. Paint Jet, Pip\u2019s little cousin: the same young dragon species, body shape and size as Pip, but with bright red scales, a cream belly, small cream horns, big friendly amber eyes and large leaf-green wings opened a little. Cheerful, curious, slightly cheeky. One full-body figure standing on a plain warm cream background with a soft ground shadow, three-quarter view. Painterly children\u2019s picture-book style matching image 2. No text, no other characters, no props.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a199c3-0073-7023-b62a-29f917775d77",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c3-0073-7023-b62a-29f917775d77",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c3-0073-7023-b62a-29f917775d77/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c3-0073-7023-b62a-29f917775d77/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 59606,
+      "image_url": "https://v3b.fal.media/files/b/0ab0c999/4QsukSYH9poW1zAg04JLH_46x2IG2Q.webp"
+    },
+    "ref-grandma": {
+      "state": "downloaded",
+      "prompt": "Use case: character reference sheet. Image 1 is Pip, a small friendly dragon. Image 2 is the painted storybook style reference only. Paint Grandma, an old grandmother dragon of the same friendly species: about twice Pip\u2019s size, soft dusty rose-red scales fading to grey, a cream belly, kind wrinkled eyes behind small round spectacles, short curled grey horns, folded faded green wings, and a knitted honey-yellow shawl over her shoulders. Warm, gentle and a little worried. One full-body figure standing on a plain warm cream background with a soft ground shadow, three-quarter view. Painterly children\u2019s picture-book style matching image 2. No text, no other characters.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a199c3-007e-7ee1-a263-331494d9ef32",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c3-007e-7ee1-a263-331494d9ef32",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c3-007e-7ee1-a263-331494d9ef32/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a199c3-007e-7ee1-a263-331494d9ef32/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 1,
+      "user_queued_count": 2,
+      "bytes": 59412,
+      "image_url": "https://v3b.fal.media/files/b/0ab0c999/6WSnrBIxmrcDyPisfQ_VB_FUMYBacY.webp"
+    }
+  }
+}

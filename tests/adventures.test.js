@@ -9,7 +9,7 @@ function win(s,now=NOW){
 }
 function solve(s,now=NOW){assert.equal(A.startPuzzle(s,()=>0.4),true);const q=D.puzzles[s.expedition.current.puzzle.id];for(const id of [q.answer].flat())A.choose(s,id);assert.equal(A.check(s,now).correct,true);A.next(s,now);}
 test('the original two campaigns retain 48 puzzles, all 20 creatures and original pacing',()=>{
-  assert.equal(D.campaigns.length,3);assert.equal(D.missions.length,20);assert.equal(D.missions.slice(0,12).flatMap(m=>m.riddles).length,48);assert.equal(D.legacyPuzzles.length,8);
+  assert.equal(D.campaigns.length,4);assert.equal(D.missions.length,26);assert.equal(D.missions.slice(0,12).flatMap(m=>m.riddles).length,48);assert.equal(D.legacyPuzzles.length,8);
   assert.deepEqual([...new Set(D.missions.slice(0,12).flatMap(m=>m.families))].sort(),Content.enemies.map(e=>e.id).sort());
   const seen=new Set();for(const m of D.missions.slice(0,12)){assert.equal(m.riddles.length,4);for(const id of m.requires)assert.ok(seen.has(id));seen.add(m.id);
     assert.ok(Content.chapterBackgrounds[m.area]);

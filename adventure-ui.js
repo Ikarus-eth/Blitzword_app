@@ -33,9 +33,10 @@
     };
     function icon(name){return '<svg viewBox="0 0 40 42" aria-hidden="true"><path d="'+(paths[name]||paths.mark)+'"/></svg>';}
     function timeTap(){
-      const s=ctx.state(),p=A.of(s).current?.phase==='search'?{solved:false}:A.of(s).current?.puzzle,now=performance.now();
+      const s=ctx.state(),phase=A.of(s).current?.phase,p=['search','story'].includes(phase)?{solved:false}:A.of(s).current?.puzzle,now=performance.now();
       const delta=stamp===null||window.BlitzFeedback.isOpen()?0:Math.max(0,now-stamp);
-      if(s.screen==='mission'&&p&&!p.solved&&ctx.active()&&!document.hidden&&delta<=5000)Core.recordRiddleTime(s,delta,Date.now());
+      // Reading a story page takes longer than a tap gap; the core caps each page by its word count.
+      if(s.screen==='mission'&&p&&!p.solved&&ctx.active()&&!document.hidden&&delta<=(phase==='story'?180000:5000))Core.recordRiddleTime(s,delta,Date.now());
       stamp=now;
     }
     function stopTiming(){stamp=null;}
@@ -47,8 +48,8 @@
       element.classList.add('questProgress');element.classList.toggle('compactQuest',compact);
       if(!p||!m)return;
       element.append(el('strong','questProgressTitle',compact?'Quest':m.name),el('span','questProgressCount',p.done+' of '+p.total+' steps done · '+p.left+' left'));
-      const track=el('div','questSteps');if(compact)track.style.gridTemplateColumns='repeat('+p.total+',minmax(0,1fr))';track.setAttribute('role','progressbar');track.setAttribute('aria-label',p.total===9?'Quest: four fights, four clues and a map search':'Quest: four fights and four clues');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.done));
-      for(let i=0;i<p.total;i++){const step=el('span','questStep'+(i<p.done?' done':i===p.done?' current':''),compact?'':(i===8?'Map':i%2?'Clue':'Fight'));step.setAttribute('aria-hidden','true');track.append(step);}element.append(track);
+      const track=el('div','questSteps');if(compact)track.style.gridTemplateColumns='repeat('+p.total+',minmax(0,1fr))';track.setAttribute('role','progressbar');track.setAttribute('aria-label',p.total===9?(m.story?'Quest: four fights, four clues and a story to read':'Quest: four fights, four clues and a map search'):'Quest: four fights and four clues');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.done));
+      for(let i=0;i<p.total;i++){const step=el('span','questStep'+(i<p.done?' done':i===p.done?' current':''),compact?'':(i===8?(m.story?'Story':'Map'):i%2?'Clue':'Fight'));step.setAttribute('aria-hidden','true');track.append(step);}element.append(track);
       if(!compact)element.append(el('small','questNext',p.left?'Next: '+p.next.toLowerCase()+' · Treasure after step '+p.total:'All done! Your treasure is ready.'));
     }
     function teamCard(){
@@ -119,10 +120,11 @@
       if(mapViewer){mapCamera=mapViewer.snapshot();mapViewer.destroy();mapViewer=null;}
       ctx.show('mission');screen.replaceChildren();screen.dataset.view=view;
       if(c.phase==='search'){renderSearch(screen,s,c,m);screen.scrollTop=scroll;return;}
+      if(c.phase==='story'){renderStory(screen,s,c,m);screen.scrollTop=scroll;return;}
       const complete=c.phase==='complete',p=c.puzzle,q=D.puzzles[p?.id],solving=c.phase==='puzzle';
       const top=el('div','missionTop');renderProgress(top);screen.append(top);
       const body=el('div','missionBody'),scene=el('figure','missionScene');
-      const image=el('img');const pageArt=c.phase==='complete'?{art:m.endingArt||m.art,alt:m.endingArtAlt||m.artAlt}:m.scenes?.[c.step];image.src=pageArt?.art||missionArt(m);image.alt=pageArt?.alt||m.artAlt||m.place;image.decoding='async';scene.append(image);
+      const image=el('img');const pageArt=c.phase==='complete'?{art:m.endingArt||m.art,alt:m.endingArtAlt||m.artAlt}:m.story?null:m.scenes?.[c.step];image.src=pageArt?.art||missionArt(m);image.alt=pageArt?.alt||m.artAlt||m.place;image.decoding='async';scene.append(image);
       const medallion=el('div','missionSceneMedallion');medallion.innerHTML=icon(complete?m.symbol:solving?'map':m.finale?'star':'leaf');scene.append(medallion);
       scene.append(el('figcaption','',complete?m.item:solving?q.reward.replace(/\.$/,''):'Your goal: '+m.goal));
       // Before an answer, the caption states the task rather than giving away its outcome.
@@ -133,12 +135,14 @@
         const campaign=D.campaigns.find(x=>x.id===m.campaign),all=A.campaignComplete(s,m.campaign);
         panel.append(heading(all?'Campaign complete!':'Mission complete!',all?campaign.prize:m.item,ctx.dragonText(m.ending)));
         const badge=el('div','treasureBadge');badge.innerHTML=icon(m.symbol);panel.append(badge);
+        const read=e.missions[m.id]?.storyLast;if(m.story&&read)panel.append(storySummary(m,read,all,campaign));
         const friends=el('div','missionFriends');for(const family of m.families){const b=button('','friendReward',()=>openBook(family));const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);b.append(art,el('strong','',Content.enemyAt(family).name),el('small','','Clue stamp earned'));friends.append(b);}panel.append(friends);
         const nextCampaign=all?D.campaigns[D.campaigns.indexOf(campaign)+1]:null;
         panel.append(button(nextCampaign?'Explore '+nextCampaign.shortName:'Choose another mission','greenButton',()=>{if(nextCampaign)e.selectedCampaign=nextCampaign.id;if(ctx.save())ctx.home();}),button('Rest here','textButton',ctx.home));
       }else if(!solving){
         const family=m.encounters[c.step],first=c.step===0;
-        panel.append(heading(first?'A new quest':c.step>=2?'Big fight':'Next fight',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:m.scenes?.[c.step]?.intro||'Win this fight. Get the next clue.')));
+        panel.append(heading(first?(m.story?'A story quest':'A new quest'):c.step>=2?'Big fight':'Next fight',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:m.story?'Win this fight. These words are in the next part of the story.':m.scenes?.[c.step]?.intro||'Win this fight. Get the next clue.')));
+        if(m.story)panel.append(storyWordPreview(m));
         if(first&&m.campaign==='star-trail')panel.append(button('Read a star message','greenButton',()=>{if(ctx.save())location.href='assets/oral-reading/?sky='+encodeURIComponent(m.id);}));
         const actor=el('div','missionIntroEnemy sceneSprite');ctx.paintEnemy(actor,family,m.health[c.step]);panel.append(actor);
         panel.append(button(first?'Let’s go':'Start the fight','greenButton',()=>{if(!ctx.active())return;if(Core.startMissionBattle(s,Date.now())&&ctx.save())ctx.enter();}),button('Back to camp','textButton',ctx.home));
@@ -168,6 +172,82 @@
         }if(p.solved){panel.classList.add('riddleSolved');const answer=el('p','riddleSolvedAnswer',[q.answer].flat().map(id=>q.options.find(o=>o.id===id).label).join(' → '));feedback.insertBefore(answer,feedback.querySelector('p'));feedback.insertBefore(actions,feedback.querySelector('p'));}else panel.append(actions);
       }
       const picture=el('div','missionPicture');picture.append(scene,teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;if(solving&&p.solved){const feedback=panel.querySelector('.riddleFeedback');feedback.focus?.({preventScroll:true});feedback.scrollIntoView?.({block:'start'});}stamp=solving&&!p.solved?performance.now():null;
+    }
+
+    // ---- Story quests: a chapter to read with every word tappable (2 November 2026) ----
+    const STORY_FUNCTION_WORDS=new Set('a an and the to of in on at by is it was he she we you i they them him his her my me be am are were do did not no so but for from with this that there then too can will'.split(' '));
+    function storyKey(word){return word.toLowerCase().replace(/[’']s$/,'').replace(/[^a-z]/g,'');}
+    function glossaryEntry(key){const s=ctx.state(),name=(s.dragon.name||'Pip').toLowerCase();return D.glossary[key===name?'pip':key]||null;}
+    function chunked(word,entry){
+      const box=el('div','storyChunks');box.setAttribute('aria-hidden','true');
+      const parts=(entry?.[1]||word).split('|'),plain=parts.join(''),lower=plain.toLowerCase(),marks=new Set(),pattern=entry?.[2];
+      // 'a_e' marks a split vowel (came, home); other patterns mark one letter group (ou, igh).
+      if(pattern&&pattern.includes('_')){const [v,e]=pattern.split('_'),at=lower.search(new RegExp(v+'[^aeiou]'+e+'s?$'));if(at>=0){marks.add(at);marks.add(at+2);}}
+      else if(pattern){const at=lower.indexOf(pattern);if(at>=0)for(let k=0;k<pattern.length;k++)marks.add(at+k);}
+      let index=0;parts.forEach((part,n)=>{if(n)box.append(el('span','storyChunkDot','·'));const chunk=el('span','storyChunk');for(const ch of part){const letter=el('span',marks.has(index)?'storyLetter tricky':'storyLetter',ch);chunk.append(letter);index++;}box.append(chunk);});
+      return box;
+    }
+    function openStoryWord(word){
+      const s=ctx.state(),key=storyKey(word),entry=glossaryEntry(key),spoken=word.replace(/[^A-Za-z’']/g,'').replace(/’/g,"'");
+      if(!key||!ctx.active())return;timeTap();Core.noteStoryTap(s,word,'sound',Date.now());if(!ctx.save())return;ctx.speak(spoken);
+      const content=el('div','storyWordCard');content.append(chunked(spoken.replace(/'s$/,''),entry));
+      const tools=el('div','storyWordTools');
+      tools.append(button('Hear it again','secondaryButton',()=>ctx.speak(spoken)));
+      const meaning=el('p','storyMeaning');meaning.hidden=true;
+      if(entry&&!STORY_FUNCTION_WORDS.has(key)){tools.append(button('What does it mean?','secondaryButton',()=>{if(!ctx.active())return;Core.noteStoryTap(ctx.state(),word,'meaning',Date.now());ctx.save();meaning.hidden=false;meaning.textContent=ctx.dragonText(entry[0]);ctx.speak(entry[0]);}));}
+      content.append(tools,meaning);
+      window.BlitzFeedback.show({kind:'success',title:spoken,message:'Tap a button to hear it again or find out what it means.',content,actions:[{label:'Back to the story'}],onClose:()=>{stamp=performance.now();}});
+    }
+    function tappableText(text,cls='storyParagraph'){
+      const row=el('p',cls);ctx.dragonText(text).split(/(\s+)/).forEach(token=>{if(!token)return;if(/^\s+$/.test(token)){row.append(document.createTextNode(token));return;}
+        if(!/[A-Za-z]/.test(token)){row.append(document.createTextNode(token));return;}
+        const b=button(token,'storyWord',()=>openStoryWord(token));b.setAttribute('aria-label','Hear '+token.replace(/[^A-Za-z’']/g,''));row.append(b);});
+      return row;
+    }
+    function storyWordPreview(m){
+      const box=el('div','storyPreview');box.append(el('p','storyPreviewLabel','Words for the next part of the story:'));
+      const list=el('div','storyPreviewWords');for(const w of m.story.targets){const b=button(w,'storyPreviewWord',()=>{if(ctx.active())ctx.speak(w);});b.setAttribute('aria-label','Hear '+w);list.append(b);}box.append(list);return box;
+    }
+    function storySummary(m,read,all,campaign){
+      const box=el('div','storySummary');
+      const words=all?campaign.missions.reduce((n,id)=>n+D.byId[id].story.words,0):read.words;
+      box.append(el('p','storySummaryBig',all?'You read the whole story: '+words+' words!':'You read '+read.words+' words by yourself!'));
+      box.append(el('p','',read.taps?'You tapped '+read.taps+(read.taps===1?' word':' words')+' to hear them. Great reading!':'You did not need any help. Wow!'));
+      box.append(el('p','',read.firstTry+' of 3 questions right the first time.'));return box;
+    }
+    function storyFeedback(result,q){
+      if(!result)return;const s=ctx.state(),c=A.of(s).current,done=c.phase==='complete';
+      if(result.correct)window.BlitzFeedback.show({kind:'success',title:done?'You finished the story part!':'That’s right!',message:(done?'You read it and you understood it.':'Great reading.')+(result.xpEarned?' +'+result.xpEarned+' XP':''),actions:[{label:done?'See my treasure':'Next question'}],onClose:()=>renderMission()});
+      else window.BlitzFeedback.show({kind:'retry',title:'Not quite',message:'The answer is on page '+result.page+'. Let’s look again.',actions:[{label:'Look at page '+result.page,run:()=>{if(!ctx.active()||!A.lookBack(s)||!ctx.save())return false;return true;}}],onClose:()=>renderMission()});
+    }
+    function renderStory(screen,s,c,m){
+      const r=c.read,st=m.story,top=el('div','missionTop');renderProgress(top);screen.append(top);
+      const partNo=D.campaigns.find(x=>x.id===m.campaign).missions.indexOf(m.id)+1,quiz=r.stage==='quiz';
+      const body=el('div','missionBody storyBody'),scene=el('figure','missionScene'),image=el('img');const art=m.scenes?.[quiz?st.pages.length-1:r.page];
+      image.src=art?.art||missionArt(m);image.alt=art?.alt||m.artAlt;image.decoding='async';image.onerror=()=>{image.onerror=null;image.src=missionArt(m);};scene.append(image);
+      scene.append(el('figcaption','',quiz?'Three questions about the story':'Part '+partNo+' · Page '+(r.page+1)+' of '+st.pages.length));
+      const panel=el('section','missionReading parchment storyPanel');
+      if(!quiz){
+        if(r.stage==='lookback'){const q=A.storyQuestion(s),hint=el('div','storyLookback');hint.append(el('strong','','Find the answer:'),tappableText(q.prompt,'storyLookbackQuestion'));panel.append(hint);}
+        panel.append(heading('Part '+partNo+' · Page '+(r.page+1)+' of '+st.pages.length,st.title));
+        const text=el('div','storyText');st.pages[r.page].forEach(p=>text.append(tappableText(p)));panel.append(text);
+        panel.append(el('p','storyTip','Tap any word to hear it.'));
+        const nav=el('div','storyNav');
+        if(r.page>0)nav.append(button('← Page '+r.page,'secondaryButton',()=>act(()=>A.turnStoryPage(s,r.page-1))));
+        if(r.stage==='lookback')nav.append(button('Back to the question','greenButton',()=>act(()=>A.backToQuestion(s))));
+        if(r.page<st.pages.length-1)nav.append(button('Next page →','greenButton',()=>act(()=>A.turnStoryPage(s,r.page+1))));
+        else if(r.stage==='read')nav.append(button('I read it! Answer 3 questions','greenButton',()=>{let result;act(()=>{result=Core.finishStoryReading(s,Date.now());});if(result?.xpEarned&&ctx.active())window.BlitzFeedback.show({kind:'success',title:'You read part '+partNo+'!',message:'+'+result.xpEarned+' XP for reading. Now answer three questions.',actions:[{label:'Let’s go'}]});}));
+        panel.append(nav);
+      }else{
+        const q=A.storyQuestion(s);panel.append(heading('Question '+(r.index+1)+' of '+st.questions.length,'What happened?'));
+        panel.append(tappableText(q.prompt,'storyQuestion'));
+        const choices=el('div','storyAnswers');choices.setAttribute('role','group');choices.setAttribute('aria-label',q.prompt);
+        r.orders[r.index].forEach(id=>{const o=q.options.find(x=>x.id===id),b=button(ctx.dragonText(o.label),'searchAnswer storyAnswer'+(r.selection===id?' selected':''),()=>{if(!b.isConnected||!ctx.active())return;act(()=>A.chooseStory(s,id,q.id));});b.dataset.storyChoice=id;b.setAttribute('aria-pressed',String(r.selection===id));choices.append(b);});panel.append(choices);
+        const actions=el('div','storyNav'),submit=button('Check my answer','greenButton',()=>{if(!submit.isConnected||!ctx.active())return;let result;act(()=>{result=Core.checkStory(s,Date.now(),q.id);});if(ctx.active())storyFeedback(result,q);});submit.disabled=!r.selection||r.wrong;
+        actions.append(submit,button('Listen to the question','textButton',()=>{if(ctx.active())ctx.speak(q.prompt);}));panel.append(actions);
+      }
+      panel.append(button('Back to camp','textButton storyCamp',ctx.home));
+      const picture=el('div','missionPicture');picture.append(scene);body.append(picture,panel);screen.append(body);stamp=performance.now();
     }
     function renderSearch(screen,s,c,m){
       const map=A.Maps[m.id],q=A.mapQuestion(s),p=c.search;if(!map||!q){ctx.home();return;}
