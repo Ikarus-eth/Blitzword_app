@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-02",
+  "generator": "built-in image_gen",
+  "approval": "User requested direct replacement after reviewing both generated images.",
+  "prompts": "Generated using the built-in image generation tool.\n\nScene 1\nLandscape 3:2 painted children's storybook illustration, warm painterly style, no text. Use the supplied reference images strictly as character references: image 1 old rose-red grandmother DRAGON wearing round spectacles and a yellow knitted shawl, image 2 knight boy Artus, image 3 small orange dragon Pip. Preserve their character designs and clothing. Grandmother is fully a dragon: snout, curled horns, scales, small wings and a tail, no human face or hair. Scene: at her cottage doorway she points a claw across a green valley to a tall mountain under dark rumbling storm clouds. Artus and Pip stand beside her and look where she points, brave and determined. Exactly one boy, one orange dragon, one grandmother dragon. Wide landscape composition with doorway and characters in foreground and clear view of distant mountain. No lettering, no watermark.\n\nScene 2\nLandscape 3:2 painted children's storybook illustration. Warm rich painterly style matching the provided fifth reference scene, same cottage architecture and character designs. Input references: 1 grandmother dragon; 2 Jet; 3 knight boy Artus; 4 Pip; 5 preceding story illustration for style and cottage continuity. Scene: warm afternoon at the grandmother dragon's cottage door. The old rose-red grandmother DRAGON with round spectacles and a yellow knitted shawl joyfully hugs Jet, the small red dragon with big green wings. Jet holds up a small glowing white star-shaped crystal clearly visible in one foreclaw while being hugged. Artus and Pip stand nearby smiling at the reunion. Exactly one boy Artus, exactly one orange dragon Pip, exactly one small red dragon Jet, exactly one grandmother dragon. Grandmother is fully a dragon with a snout, curled horns, scales, small wings and a tail, no human face or hair. Preserve Artus's curly golden hair, armor, green tunic and red cloak, Pip's orange scales, cream chest and dark wings with golden flame markings, and Jet's red scales, cream belly, big green wings. Tender joyful readable embrace, distinct characters and anatomically coherent limbs. No text, no watermark.\n",
+  "images": [
+    {
+      "path": "assets/adventures/thunder-mountain/tm-jet-missing-2.webp",
+      "sha256": "89de99769accf4f8f8bfab88ac2fe90b283d0012407c5972edf7ecd0be5889cb",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/adventures/thunder-mountain/tm-home-2.webp",
+      "sha256": "8a838d925773865f8fa3a26c7148a0afe6e4af7786a55d657ef2a72516bfea5a",
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}

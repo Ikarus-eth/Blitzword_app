@@ -1,3 +1,7 @@
+## Approved Grandma corrections — 2 November 2026
+
+The user approved direct replacement of Thunder Mountain part 1 page 2 and part 6 page 2 with the two built-in ImageGen illustrations. Grandma remains fully dragon: rose-red scales, snout, curled horns, wings, tail, round spectacles and yellow knitted shawl. Artus uses Knight boy D, Pip uses Small Pip, and Jet uses the existing red dragon with green wings reference. [Prompts and production hashes](adventures/thunder-mountain/art-grandma-correction.json). These supersede the earlier fal.ai images for these two pages only.
+
 ## Thunder Mountain story art — 2 November 2026
 
 Story illustrations follow the story-pilot decision: Artus is Knight boy D (`assets/family-review/images/knight-boy-d.webp`), Pip is Small Pip (`assets/evolution/pip-stage-0.webp`), and the fox-call pilot scene is the painted-style reference. Two new character references were generated first and then used in every scene: Jet, Pip's cousin (a small red dragon with big green wings, `assets/adventures/thunder-mountain/ref-jet.webp`), and Grandma, his old dragon grandmother with spectacles and a yellow shawl (`ref-grandma.webp`). Nineteen fal.ai scenes (cover plus three per part) illustrate the pages. Exact prompts and references: [characters](adventures/thunder-mountain/art-characters.json), [scenes](adventures/thunder-mountain/art-scenes.json). These are story illustrations only; battle and hero assets are unchanged.

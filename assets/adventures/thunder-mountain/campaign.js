@@ -178,6 +178,7 @@
   ];
   for(const m of missions){m.campaign='thunder-mountain';
     m.scenes=m.story.pages.map((p,i)=>({art:'assets/adventures/thunder-mountain/'+m.id+'-'+(i+1)+'.webp',alt:'Story picture '+(i+1)+' for '+m.name+'.'}));
+    if(m.id==='tm-jet-missing'||m.id==='tm-home')m.scenes[1].art+='?v=dragon-grandma-20261102';
     m.art=m.scenes[0].art;m.artAlt='Artus and Pip: '+m.place+'.';m.endingArt=m.scenes[2].art;m.endingArtAlt='The end of '+m.name+'.';
     m.story.words=m.story.pages.flat().join(' ').split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).length;}
   const campaign={id:'thunder-mountain',name:'Pip and the Thunder Mountain',shortName:'Story mountain',scene:'assets/adventures/thunder-mountain/cover.webp',story:true,
