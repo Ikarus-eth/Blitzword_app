@@ -1,3 +1,12 @@
+## Story quests: more story, fewer fights — approved 4 November 2026
+
+The parent found the first Thunder Mountain story great but asked for less fighting and more story: add mid-chapter stories, remove the clues (they were small story quizzes), and run each quest as fight, fight, story, then fight, fight, story.
+
+- Each Thunder Mountain quest now has six steps: two fights, a mid-chapter story, two fights, the chapter's end story. The four logic clues are removed from these quests (other campaigns keep theirs). A lost story fight is simply fought again with four hearts, without going back a step.
+- Six new mid-chapter stories (73–108 words, two pages, two questions each) tell what Jet did just before Artus and Pip reach each place, and the last one shows Grandma waiting. They follow the same text rule: every word is secured, a name, earlier story text or one of the part's eight pre-taught targets. The end stories are unchanged.
+- Questions show the campaign cover instead of a page picture, so no picture gives an answer away.
+- Reading XP (100) is earned once per story; quests finished before this change keep their end-story reward, so replaying one earns reading XP only for its new mid story. Saves in progress continue: a won fight followed by a clue becomes the next fight, or the story if it was the second or fourth fight.
+
 ## Story quests: Thunder Mountain — approved 2 November 2026
 
 The parent reviewed Artus's export of 2 November 2026: 373 words introduced, 92 open (above the 15-word cap), accuracy 85–90%, but 6+-letter words only about half right, and the story pilot stalled on 5–10 words per page (piece, brought, star, space, fitted). Decisions: build one campaign that pre-teaches the words of a longer story in its fights, then lets the child read it alone with every word tappable, followed by questions he cannot guess; words may be pre-taught out of curriculum order; meanings may come from AI; new art via fal.ai; at least 90 minutes of material.
