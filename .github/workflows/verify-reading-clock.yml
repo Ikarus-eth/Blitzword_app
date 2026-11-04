@@ -1,0 +1,21 @@
+name: Verify reading clock live
+on:
+  push:
+    branches: [claude/verify-reading-clock]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: b695f5ac552a32c551bf5452e86470c3a0a49bc2
+      - name: Compare live files with merged source
+        run: |
+          base=https://ikarus-eth.github.io/Blitzword_app
+          fail=0
+          for f in index.html app.js styles.css game-core.js adventure-core.js adventure-ui.js; do
+            curl -fsSL "$base/$f?cb=$GITHUB_RUN_ID" -o live
+            if cmp -s live "$f"; then echo "MATCH $f $(sha256sum < $f | cut -c1-16)"; else echo "DIFF $f"; fail=1; fi
+          done
+          curl -fsSL "$base/index.html?cb=$GITHUB_RUN_ID" | grep -o 'blitzword-build" content="[^"]*"'
+          exit $fail
