@@ -105,8 +105,17 @@
   // so a child who keeps losing can still earn help (28 October 2026).
   const SUPPORT_NEED={accurate:8,quick:6},COMEBACK_NEED={accurate:5,quick:4};
   function supportNeed(s){return of(s).current?.defeats>0?COMEBACK_NEED:SUPPORT_NEED;}
-  // Can this fight still grant a shield? One per fight, two per attempt at the quest, one held at a time.
-  function supportOpen(s){const b=s.battle,c=of(s).current;return !!(b?.missionId&&c&&!b.supportMeter?.earned&&(c.supportEarned||0)<2&&!s.rewards.shield);}
+  // Up to two earned shields can be held at once (4 November 2026); before, only one.
+  // `rewards.shield` stays true while any is held, so older code and saves keep working.
+  const MAX_SHIELDS=2;
+  function heldShields(s){const r=s.rewards||{};if(r.shield!==true)return 0;const n=Math.floor(Number(r.shields));return Number.isFinite(n)?Math.max(1,Math.min(MAX_SHIELDS,n)):1;}
+  function setShields(s,n){
+    const r=s.rewards,k=Math.max(0,Math.min(MAX_SHIELDS,Math.floor(n)||0));r.shields=k;r.shield=k>0;
+    if(!k){r.earnedSupport=false;r.supportFamily=null;r.supportPending=false;}
+    return k;
+  }
+  // Can this fight still grant a shield? One per fight, two per attempt at the quest, two held at a time.
+  function supportOpen(s){const b=s.battle,c=of(s).current;return !!(b?.missionId&&c&&!b.supportMeter?.earned&&(c.supportEarned||0)<2&&heldShields(s)<MAX_SHIELDS);}
   function earnSupport(s,rec,quick){
     const b=s.battle,c=of(s).current;
     if(b?.demo||!b?.missionId||of(s).context!=='mission'||c?.missionId!==b.missionId)return false;
@@ -114,11 +123,13 @@
     if(rec.supported)return false;
     if(!rec.correct){meter.accurate=0;meter.quick=0;return false;}
     meter.accurate=Math.min(SUPPORT_NEED.accurate,meter.accurate+1);meter.quick=quick?Math.min(SUPPORT_NEED.quick,meter.quick+1):0;
-    if(meter.earned||(c.supportEarned||0)>=2||s.rewards.shield||meter.accurate<need.accurate&&meter.quick<need.quick)return false;
+    if(meter.earned||(c.supportEarned||0)>=2||heldShields(s)>=MAX_SHIELDS||meter.accurate<need.accurate&&meter.quick<need.quick)return false;
     meter.earned=true;c.supportEarned=(c.supportEarned||0)+1;
     const preferred=of(s).supportFavourite,family=supportChoices(s).includes(preferred)?preferred:null;
-    Object.assign(s.rewards,{shield:true,earnedSupport:true,supportFamily:family,supportPending:!family});
-    b.question.supportEarned=true;rec.supportEarned=true;return true;
+    const second=heldShields(s)>0;setShields(s,heldShields(s)+1);s.rewards.earnedSupport=true;
+    // A second shield stays with the friend already on the team (shown as ×2).
+    if(!s.rewards.supportFamily&&!s.rewards.supportPending){s.rewards.supportFamily=family;s.rewards.supportPending=!family;}
+    b.question.supportEarned=true;rec.supportEarned=true;if(second){b.question.secondShield=true;rec.secondShield=true;}return true;
   }
   function protect(s){
     const e=of(s),c=e.current,friend=companion(s);
@@ -297,5 +308,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {story,beginStory,turnStoryPage,finishReading,storyQuestion,lookBack,backToQuestion,chooseStory,checkStory,noteStoryTap,focusWords,STORY_PAGE_MS_PER_WORD,leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen};
+  return {story,beginStory,turnStoryPage,finishReading,storyQuestion,lookBack,backToQuestion,chooseStory,checkStory,noteStoryTap,focusWords,STORY_PAGE_MS_PER_WORD,leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen,MAX_SHIELDS,heldShields,setShields};
 });

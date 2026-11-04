@@ -49,6 +49,9 @@ const COMBAT_MS=1200;
 const IMPACT_MS=Math.round(COMBAT_MS*.55);
 let impactTimer=null,pendingHealth=null;
 const shieldIcon='<svg viewBox="0 0 40 44" aria-hidden="true"><path d="M20 3L35 9V23Q34 33 20 41Q6 33 5 23V9Z"/><path d="M20 10V32M12 20H28"/></svg>';
+// Up to two shields can be held; a second one shows as ×2 (4 November 2026).
+const shieldBadge=n=>n>1?'<b class="shieldCount" aria-hidden="true">×'+n+'</b>':'';
+const shieldWords=n=>n>1?n+' shields':'one shield';
 // Separate the original staff and gripping hand; retain the approved artwork.
 const mageRig={
   0:{pivot:[112,234],tip:[107,102],path:'M24 25H175V193L139 209L132 263L159 538H129L110 273L87 253L78 218L93 195L25 190Z',repair:'M110 273L132 263L159 538H129Z'},
@@ -186,7 +189,7 @@ function renderMap(deferEvolution=false){
   const fraction=growth.fraction;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext','XP towards growth. '+growthCaption(growth));
   bar.classList.add('steppedGrowth');bar.setAttribute('aria-valuetext',growthStepCaption(growth)+'. '+growthCaption(growth));
   $('#dragonTapHint').textContent=dragonText(growth.next?'XP · Tap Pip':'Tap Pip');
-  $('#mapShield').hidden=!state.rewards.shield;$('#mapShield').innerHTML=shieldIcon;
+  {const n=Core.heldShields(state);$('#mapShield').hidden=!n;$('#mapShield').innerHTML=shieldIcon+shieldBadge(n);$('#mapShield').setAttribute('aria-label',n>1?'Two shields ready: they protect the next two hits':'One shield ready: protects the next hit');}
   const stages=$('#dragonStages');stages.replaceChildren();Content.dragonStages.forEach((stage,i)=>{
     const item=document.createElement('li');item.className=i===growth.stage?'current':i<growth.stage?'earned':'future';
     const art=document.createElement('span');art.className='stagePortrait';paintPip(art,i);
@@ -642,7 +645,7 @@ function renderMath(){
     $('#mathResultGoal').textContent=String(r.target);
     $('#mathResultDetail').textContent='+'+xpText(r.xpEarned??r.correct)+' XP';
     $('#mathResultBest').textContent=r.newBest&&r.beaten?'New best!':'Best '+state.math.best;
-    $('#mathShieldReward').hidden=!r.shieldEarned;$('#mathShieldReward').innerHTML=shieldIcon+'<span>+1 shield</span>';
+    $('#mathShieldReward').hidden=!r.shieldEarned;$('#mathShieldReward').innerHTML=shieldIcon+'<span>+1 shield'+(r.shieldsHeld>1?' · 2 held':'')+'</span>';
     $('#mathResultMessage').textContent=Core.mathScore(r)+' points. Goal '+r.target+'. '+r.correct+' correct, '+(r.wrong||0)+' wrong. '+(r.beaten?'Number duel won.':'Number duel lost. Your reading victory and earned XP are safe.');
     resultSound(r,r.beaten);if(!r.beaten)defeatReaction(r,r.enemyId,state.battle?.maxHealth||3);return;
   }
@@ -713,7 +716,7 @@ if(typeof window!=='undefined')window.addEventListener('resize',refitAnswers);
 function answer(option,questionId=Core.getQuestion(state)?.id) {
   if(paused||blocked||!['battle','assessment'].includes(state.activity)||Core.getQuestion(state)?.id!==questionId)return;
   if(!confirmActivity())return;const assessment=state.activity==='assessment';
-  const shieldBefore=!!state.rewards.shield;
+  const shieldBefore=Core.heldShields(state);
   const rec=assessment?Core.answerAssessment(state,option,Date.now()):Core.answerBattle(state,option,Date.now());
   if(!rec)return;
   cancelWork();stageElements()[1].replaceChildren();$('#assessmentUnsure').hidden=true;$('#battleUnsure').hidden=true;
@@ -742,7 +745,7 @@ function correctFeedback(record=null) {
     $('#battleScroll').append(reward);
   }
   const meter=state.battle.supportMeter,need=Core.Adventure.supportNeed(state);if(!supported&&meter&&Core.Adventure.supportOpen(state)){$('#feedback').textContent=Math.min(meter.accurate,need.accurate)+' / '+need.accurate+' accurate · '+Math.min(meter.quick,need.quick)+' / '+need.quick+' quick';$('#feedback').classList.add('show');}
-  if(q.supportEarned){$('#feedback').textContent='Shield earned! A friend can help.';$('#feedback').classList.add('show');}
+  if(q.supportEarned){$('#feedback').textContent=q.secondShield?'Second shield earned! Your friend can stop two hits.':'Shield earned! A friend can help.';$('#feedback').classList.add('show');}
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
   speak(Core.byWord[q.target]?.spoken||q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
@@ -831,15 +834,16 @@ function correction(animate=false) {
 
 function advanceBattle(){if(adventures.chooseSupport(()=>{playClock.reset(performance.now());advanceBattle();}))return;account();cancelWork();Core.prepareBattle(state,Date.now());if(save())renderActivity();}
 function renderHealth(animate=false) {
-  const b=state.battle;if(!b)return;adventures.renderBattleTeam(pendingHealth?b.question?.supportSaved:null);
+  const b=state.battle;if(!b)return;
   const shown=pendingHealth&&pendingHealth.questionId===b.question?.id?pendingHealth:b;
-  const shieldHeld=shown===pendingHealth?shown.shield:state.rewards.shield;
+  const shieldHeld=shown===pendingHealth?Number(shown.shield)||0:Core.heldShields(state);
+  adventures.renderBattleTeam(pendingHealth?b.question?.supportSaved:null,shieldHeld);
   $('#heroHearts').replaceChildren();
   const maximum=b.heroMaxHealth||3;
   for(let i=0;i<(maximum>3?1:3);i++){const heart=document.createElement('span');heart.className='heart'+(i<shown.heroHealth?'':' off');heart.textContent='♥';$('#heroHearts').append(heart);}
   if(maximum>3){const count=document.createElement('span');count.className='heartCount';count.textContent=shown.heroHealth+' / '+maximum;$('#heroHearts').append(count);}
   $('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of ${maximum} hearts`);
-  if(shieldHeld&&!b.demo){const shield=document.createElement('span');shield.className='heldShield';shield.innerHTML=shieldIcon;$('#heroHearts').append(shield);$('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of ${maximum} hearts, one shield protects the next hit`);}
+  if(shieldHeld&&!b.demo){const shield=document.createElement('span');shield.className='heldShield';shield.innerHTML=shieldIcon+shieldBadge(shieldHeld);$('#heroHearts').append(shield);$('#heroHearts').setAttribute('aria-label',`${shown.heroHealth} of ${maximum} hearts, ${shieldWords(shieldHeld)} ${shieldHeld>1?'protect the next hits':'protects the next hit'}`);}
   $('#enemyFill').style.width=(100*shown.enemyHealth/b.maxHealth)+'%';
   $('#enemyHealth').setAttribute('aria-label',`Enemy health: ${shown.enemyHealth} of ${b.maxHealth}`);
   $('#enemyCount').textContent=shown.enemyHealth+' / '+b.maxHealth;
@@ -1027,7 +1031,7 @@ function renderResult() {
   $('#resultXPDetail').textContent=xpText(growth.xp)+' / '+xpText(growth.next?.xp||growth.xp)+' XP';
   $('#resultGrowthFill').style.width=(growth.fraction*100)+'%';$('#resultGrowthBar').setAttribute('aria-valuenow',String(Math.round(growth.fraction*100)));
   $('#resultGrowthNote').textContent=growthStepCaption(growth)+' · Tap to see';$('#resultGrowthBar').classList.add('steppedGrowth');$('#resultGrowthBar').setAttribute('aria-valuetext',growthStepCaption(growth));
-  $('#resultShield').hidden=!state.rewards.shield;$('#resultShield').innerHTML=shieldIcon+'<span>1 shield</span>';
+  {const n=Core.heldShields(state);$('#resultShield').hidden=!n;$('#resultShield').innerHTML=shieldIcon+'<span>'+n+' shield'+(n>1?'s':'')+'</span>';}
   if(result.missionId){$('#speedSuggestion').hidden=true;adventures.renderResult();resultSound(result,result.victory);if(result.victory)window.BlitzMotion?.celebrate($('#result'),$('#resultHero'));else retreatReaction(result);maybeOfferName();return;}
   const progress=Core.chapterProgress(state);
   $('#checkpoint').textContent=progress.nextCheckpoint?'◆ ◇':progress.checkpoint?'◆ ◆':'◇ ◇';$('#checkpoint').setAttribute('aria-label',progress.nextCheckpoint?'One win to the next checkpoint':'Checkpoint progress');

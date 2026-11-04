@@ -73,10 +73,13 @@
       stamp=null;
     }
     function checkPuzzle(q,options={}){let result;act(()=>{result=Core.checkRiddle(ctx.state(),Date.now(),options);});if(!ctx.active())return;puzzleFeedback(result,q);}
-    function renderBattleTeam(heldAtImpact=null){
+    function renderBattleTeam(heldAtImpact=null,shown=null){
       const s=ctx.state(),family=s.battle?.missionId?A.companion(s):null,box=$('#battleCompanion');box.hidden=!family;$('#battle').classList.toggle('hasQuestCompanion',!!family);
       const support=heldAtImpact||(s.rewards.shield?s.rewards.supportFamily:null),extra=$('#battleSupport');extra.hidden=!support;$('#battle').classList.toggle('hasShieldSupport',!!support);
-      if(support){const art=$('#battleSupportArt');if(art.dataset.family!==support){ctx.paintEnemy(art,support,8);art.dataset.family=support;}extra.setAttribute('role','img');extra.setAttribute('aria-label',Content.enemyAt(support).name+' shield friend');}
+      // Shields shown until the hit lands; a second held shield is a ×2 badge on the same friend.
+      const count=Math.max(support?1:0,shown??A.heldShields(s));let badge=extra.querySelector('.shieldCount');
+      if(support&&count>1){if(!badge){badge=el('b','shieldCount');badge.setAttribute('aria-hidden','true');extra.append(badge);}badge.textContent='×'+count;}else badge?.remove();
+      if(support){const art=$('#battleSupportArt');if(art.dataset.family!==support){ctx.paintEnemy(art,support,8);art.dataset.family=support;}extra.setAttribute('role','img');extra.setAttribute('aria-label',Content.enemyAt(support).name+' shield friend'+(count>1?', '+count+' shields':''));}
       if(!family)return;
       const art=$('#battleCompanionArt');if(art.dataset.family!==family){ctx.paintEnemy(art,family,8);art.dataset.family=family;}
       box.setAttribute('role','img');box.setAttribute('aria-label',Content.enemyAt(family).name+' companion');
