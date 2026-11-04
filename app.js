@@ -233,6 +233,7 @@ function account(){
   const q=Core.getQuestion(state);
   if(category&&category!=='math'&&q&&!q.answeredAt){if(q.phase==='word')q.wordViewedMs+=delta;if(q.phase==='choices')q.responseMs+=delta;}
   if((category||state.activity==='chapterStory')&&playClock.expired&&!document.hidden&&windowFocused)pause('idle');
+  updateReadingClock();
 }
 function confirmActivity(){
   account();if(paused||blocked)return false;
@@ -242,6 +243,32 @@ function confirmActivity(){
   drainExcluded();updateDailyXP();return true;
 }
 function formatTime(ms){const seconds=Math.floor(ms/1000);return Math.floor(seconds/60)+' min '+String(seconds%60).padStart(2,'0')+' sec';}
+// Active play today: the same sum as the Parents "Active play today" card (battles, teaching, number duels,
+// placement checks, quest riddles and story quests, plus first-time Turtle Race time from its own save).
+function activeTodayMs(raceMs,now=Date.now()){
+  const day=Core.dayKey(now),d=state.timing.days[day]||{};
+  return (d.practice||0)+(d.math||0)+(d.assessment||0)+(d.demo||0)+(state.expedition?.riddleDays?.[day]||0)+raceMs;
+}
+// The race save cannot change while this page is open, so it is read once per day or on return to the tab.
+let raceTodayCache=null,readingShown={day:null,ms:0};
+function raceTodayMs(now=Date.now()){
+  const day=Core.dayKey(now);
+  if(raceTodayCache?.day!==day){let text=null;try{text=window.localStorage.getItem(Core.RACE_KEY);}catch{}const race=Core.riddleTime(text,now);raceTodayCache={day,ms:race.unreadable?0:race.todayMs};}
+  return raceTodayCache.ms;
+}
+const READING_CLOCK_SCREENS=['adventureHub','mission','creatureBook','route','campaignMap','teaching','assessment','battle','chapterStory','handoff','result','mathIntro','mathChallenge','mathResult','summary'];
+function clockText(ms){const total=Math.floor(ms/1000),h=Math.floor(total/3600),m=Math.floor(total%3600/60),sec=String(total%60).padStart(2,'0');return h?h+':'+String(m).padStart(2,'0')+':'+sec:m+':'+sec;}
+// Shows confirmed time plus the provisional time of the current question, so it ticks while he reads.
+// Provisional time can still be discarded after 30 s idle; the display never steps back within a day.
+function updateReadingClock(){
+  const clock=$('#readingClock');if(!clock||!state)return;
+  clock.hidden=!state.profile?.name||!READING_CLOCK_SCREENS.includes(state.screen);$('#app').classList.toggle('readingClockOn',!clock.hidden);if(clock.hidden)return;
+  const now=Date.now(),day=Core.dayKey(now),pending=playClock.expired?0:playClock.pending.reduce((sum,x)=>sum+x.ms,0);
+  const ms=Math.max(activeTodayMs(raceTodayMs(now),now)+pending,readingShown.day===day?readingShown.ms:0);readingShown={day,ms};
+  const text=clockText(ms);if(clock.dataset.text===text)return;clock.dataset.text=text;
+  clock.querySelector('.readingClockTime').textContent=text;
+  const minutes=Math.floor(ms/60000);clock.setAttribute('aria-label','Reading time today: '+minutes+' minute'+(minutes===1?'':'s'));
+}
 function numberInWords(value){
   const small=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
   const tens=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
@@ -261,7 +288,7 @@ function renderParent(){
   // Turtle Race reading time (its own device-local save) counts as active play; it never earns the daily boost.
   let raceText=null;try{raceText=window.localStorage.getItem(Core.RACE_KEY);}catch{}
   const race=Core.riddleTime(raceText,Date.now());
-  $('#parentToday').textContent=formatTime(p.today.practice+(p.today.math||0)+p.today.assessment+p.today.demo+(state.expedition?.riddleDays?.[Core.dayKey(Date.now())]||0)+race.todayMs);
+  raceTodayCache={day:Core.dayKey(Date.now()),ms:race.unreadable?0:race.todayMs};$('#parentToday').textContent=formatTime(activeTodayMs(race.todayMs));
   $('#parentTotal').textContent=formatTime(p.activeMs+Core.Adventure.report(state).riddleMs+race.totalMs);
   $('#parentRace').textContent=race.unreadable?'Unreadable':formatTime(race.totalMs);
   $('#parentRaceToday').textContent=race.unreadable?'The Turtle Race save could not be read; it was left unchanged.':'Today: '+formatTime(race.todayMs);$('#parentPractice').textContent=formatTime(p.totals.practice+p.totals.math+Core.Adventure.report(state).riddleMs);
@@ -459,7 +486,7 @@ function show(id) {
   $('#homeBtn').hidden=['setup','route','campaignMap','adventureHub','parentDashboard'].includes(id);
   $('#backBtn').hidden=id!=='hero';
   if(!['battle','assessment'].includes(id))$('#wordReady').hidden=true;
-  state.screen=id;syncSound();updateDailyXP();updateDragonLabels();
+  state.screen=id;syncSound();updateDailyXP();updateDragonLabels();updateReadingClock();
   renderScenery(id);
   $$('#'+id+' [data-sprite="6"]').forEach(element=>paintPip(element));
 }
@@ -1308,7 +1335,7 @@ $('#resetBtn').onclick=()=>{if(confirm('Erase the profile and all saved reading 
   progressSync?.detach();
   for(const suffix of ['','_backup','_legacy_backup','_unreadable_backup','_before_restore'])localStorage.removeItem(KEY+suffix);location.reload();
 }};
-document.addEventListener('visibilitychange',()=>{if(document.hidden){account();pause('away');narrator.cancel();}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){account();pause('away');narrator.cancel();}else raceTodayCache=null;});
 window.addEventListener('pagehide',()=>{narrator.cancel();if(!blocked){account();pause('away');if(!playing)save();void progressSync?.flush(true);}});
 window.addEventListener('blur',()=>{windowFocused=false;account();pause('away');narrator.cancel();});
 window.addEventListener('focus',()=>{windowFocused=true;});
