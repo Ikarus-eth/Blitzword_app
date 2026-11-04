@@ -1,3 +1,7 @@
+## Thunder Mountain mid-chapter story art — 4 November 2026
+
+Twelve fal.ai scenes (two per mid-chapter story, `assets/adventures/thunder-mountain/<quest>-a1.webp` and `-a2.webp`) show Jet's own journey and Grandma waiting. They use the Jet and Grandma references, the fox-call style reference, and existing pages for the mule and the crystal cave. Grandma's two night/morning pages were generated first and then used as her reference for the opening window scene. [Prompts](adventures/thunder-mountain/art-mid-stories.json).
+
 ## Approved Grandma corrections — 2 November 2026
 
 The user approved direct replacement of Thunder Mountain part 1 page 2 and part 6 page 2 with the two built-in ImageGen illustrations. Grandma remains fully dragon: rose-red scales, snout, curled horns, wings, tail, round spectacles and yellow knitted shawl. Artus uses Knight boy D, Pip uses Small Pip, and Jet uses the existing red dragon with green wings reference. [Prompts and production hashes](adventures/thunder-mountain/art-grandma-correction.json). These supersede the earlier fal.ai images for these two pages only.

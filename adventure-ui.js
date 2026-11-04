@@ -48,8 +48,8 @@
       element.classList.add('questProgress');element.classList.toggle('compactQuest',compact);
       if(!p||!m)return;
       element.append(el('strong','questProgressTitle',compact?'Quest':m.name),el('span','questProgressCount',p.done+' of '+p.total+' steps done · '+p.left+' left'));
-      const track=el('div','questSteps');if(compact)track.style.gridTemplateColumns='repeat('+p.total+',minmax(0,1fr))';track.setAttribute('role','progressbar');track.setAttribute('aria-label',p.total===9?(m.story?'Quest: four fights, four clues and a story to read':'Quest: four fights, four clues and a map search'):'Quest: four fights and four clues');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.done));
-      for(let i=0;i<p.total;i++){const step=el('span','questStep'+(i<p.done?' done':i===p.done?' current':''),compact?'':(i===8?(m.story?'Story':'Map'):i%2?'Clue':'Fight'));step.setAttribute('aria-hidden','true');track.append(step);}element.append(track);
+      const track=el('div','questSteps');if(compact)track.style.gridTemplateColumns='repeat('+p.total+',minmax(0,1fr))';track.setAttribute('role','progressbar');track.setAttribute('aria-label',p.labels?'Quest: two fights and a story, then two fights and a story':p.total===9?(m.story?'Quest: four fights, four clues and a story to read':'Quest: four fights, four clues and a map search'):'Quest: four fights and four clues');track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(p.total));track.setAttribute('aria-valuenow',String(p.done));
+      for(let i=0;i<p.total;i++){const step=el('span','questStep'+(i<p.done?' done':i===p.done?' current':''),compact?'':p.labels?p.labels[i]:(i===8?(m.story?'Story':'Map'):i%2?'Clue':'Fight'));step.setAttribute('aria-hidden','true');track.append(step);}element.append(track);
       if(!compact)element.append(el('small','questNext',p.left?'Next: '+p.next.toLowerCase()+' · Treasure after step '+p.total:'All done! Your treasure is ready.'));
     }
     function teamCard(){
@@ -144,7 +144,7 @@
         panel.append(button(nextCampaign?'Explore '+nextCampaign.shortName:'Choose another mission','greenButton',()=>{if(nextCampaign)e.selectedCampaign=nextCampaign.id;if(ctx.save())ctx.home();}),button('Rest here','textButton',ctx.home));
       }else if(!solving){
         const family=m.encounters[c.step],first=c.step===0;
-        panel.append(heading(first?(m.story?'A story quest':'A new quest'):c.step>=2?'Big fight':'Next fight',first?m.name:m.riddles[c.step].title,ctx.dragonText(first?m.intro:m.story?'Win this fight. These words are in the next part of the story.':m.scenes?.[c.step]?.intro||'Win this fight. Get the next clue.')));
+        panel.append(heading(first?(m.story?'A story quest':'A new quest'):c.step>=2?'Big fight':'Next fight',first?m.name:m.stories?'Fight '+(c.step+1)+' of 4':m.riddles[c.step].title,ctx.dragonText(first?m.intro:m.stories?(c.step%2?'Win this fight, then read a story.':'Win this fight. These words are in the next story.'):m.scenes?.[c.step]?.intro||'Win this fight. Get the next clue.')));
         if(m.story)panel.append(storyWordPreview(m));
         if(first&&m.campaign==='star-trail')panel.append(button('Read a star message','greenButton',()=>{if(ctx.save())location.href='assets/oral-reading/?sky='+encodeURIComponent(m.id);}));
         const actor=el('div','missionIntroEnemy sceneSprite');ctx.paintEnemy(actor,family,m.health[c.step]);panel.append(actor);
@@ -209,37 +209,38 @@
     }
     function storyWordPreview(m){
       const box=el('div','storyPreview');box.append(el('p','storyPreviewLabel','Words for the next part of the story:'));
-      const list=el('div','storyPreviewWords');for(const w of m.story.targets){const b=button(w,'storyPreviewWord',()=>{if(ctx.active())ctx.speak(w);});b.setAttribute('aria-label','Hear '+w);list.append(b);}box.append(list);return box;
+      const list=el('div','storyPreviewWords');for(const w of m.targets){const b=button(w,'storyPreviewWord',()=>{if(ctx.active())ctx.speak(w);});b.setAttribute('aria-label','Hear '+w);list.append(b);}box.append(list);return box;
     }
     function storySummary(m,read,all,campaign){
       const box=el('div','storySummary');
-      const words=all?campaign.missions.reduce((n,id)=>n+D.byId[id].story.words,0):read.words;
-      box.append(el('p','storySummaryBig',all?'You read the whole story: '+words+' words!':'You read '+read.words+' words by yourself!'));
+      const words=all?campaign.missions.reduce((n,id)=>n+D.byId[id].stories.reduce((t,st)=>t+st.words,0),0):read.words;
+      box.append(el('p','storySummaryBig',all?'You read the whole story: '+words+' words!':'You read '+(read.stories===2?'two stories, ':'')+read.words+' words, by yourself!'));
       box.append(el('p','',read.taps?'You tapped '+read.taps+(read.taps===1?' word':' words')+' to hear them. Great reading!':'You did not need any help. Wow!'));
-      box.append(el('p','',read.firstTry+' of 3 questions right the first time.'));return box;
+      box.append(el('p','',read.firstTry+' of '+(read.questions||3)+' questions right the first time.'));return box;
     }
     function storyFeedback(result,q){
-      if(!result)return;const s=ctx.state(),c=A.of(s).current,done=c.phase==='complete';
-      if(result.correct)window.BlitzFeedback.show({kind:'success',title:done?'You finished the story part!':'That’s right!',message:(done?'You read it and you understood it.':'Great reading.')+(result.xpEarned?' +'+result.xpEarned+' XP':''),actions:[{label:done?'See my treasure':'Next question'}],onClose:()=>renderMission()});
+      if(!result)return;const s=ctx.state(),done=result.storyDone==='end',mid=result.storyDone==='mid';
+      if(result.correct)window.BlitzFeedback.show({kind:'success',title:done?'You finished the story part!':mid?'You finished the story!':'That’s right!',message:(done||mid?'You read it and you understood it.':'Great reading.')+(result.xpEarned?' +'+result.xpEarned+' XP':''),actions:[{label:done?'See my treasure':mid?'Next fight':'Next question'}],onClose:()=>renderMission()});
       else window.BlitzFeedback.show({kind:'retry',title:'Not quite',message:'The answer is on page '+result.page+'. Let’s look again.',actions:[{label:'Look at page '+result.page,run:()=>{if(!ctx.active()||!A.lookBack(s)||!ctx.save())return false;return true;}}],onClose:()=>renderMission()});
     }
     function renderStory(screen,s,c,m){
-      const r=c.read,st=m.story,top=el('div','missionTop');renderProgress(top);screen.append(top);
-      const partNo=D.campaigns.find(x=>x.id===m.campaign).missions.indexOf(m.id)+1,quiz=r.stage==='quiz';
-      const body=el('div','missionBody storyBody'),scene=el('figure','missionScene'),image=el('img');const art=m.scenes?.[quiz?st.pages.length-1:r.page];
-      image.src=art?.art||missionArt(m);image.alt=art?.alt||m.artAlt;image.decoding='async';image.onerror=()=>{image.onerror=null;image.src=missionArt(m);};scene.append(image);
-      scene.append(el('figcaption','',quiz?'Three questions about the story':'Part '+partNo+' · Page '+(r.page+1)+' of '+st.pages.length));
+      const r=c.read,st=A.currentStory(s),top=el('div','missionTop');renderProgress(top);screen.append(top);
+      const partNo=D.campaigns.find(x=>x.id===m.campaign).missions.indexOf(m.id)+1,quiz=r.stage==='quiz',label='Part '+partNo+(m.stories?' · Story '+(r.which===0?1:2)+' of 2':''),count=st.questions.length,words=['','one','two','three','four'][count]||String(count);
+      const body=el('div','missionBody storyBody'),scene=el('figure','missionScene'),image=el('img');// Questions show the campaign cover, so no page picture gives an answer away.
+      const art=quiz?D.campaigns.find(x=>x.id===m.campaign).scene:st.art?.[r.page];
+      image.src=art||missionArt(m);image.alt=quiz?'Artus, Pip and Jet look at Thunder Mountain.':st.title+' · picture '+(r.page+1);image.decoding='async';image.onerror=()=>{image.onerror=null;image.src=missionArt(m);};scene.append(image);
+      scene.append(el('figcaption','',quiz?words[0].toUpperCase()+words.slice(1)+' questions about the story':label+' · Page '+(r.page+1)+' of '+st.pages.length));
       const panel=el('section','missionReading parchment storyPanel');
       if(!quiz){
         if(r.stage==='lookback'){const q=A.storyQuestion(s),hint=el('div','storyLookback');hint.append(el('strong','','Find the answer:'),tappableText(q.prompt,'storyLookbackQuestion'));panel.append(hint);}
-        panel.append(heading('Part '+partNo+' · Page '+(r.page+1)+' of '+st.pages.length,st.title));
+        panel.append(heading(label+' · Page '+(r.page+1)+' of '+st.pages.length,st.title));
         const text=el('div','storyText');st.pages[r.page].forEach(p=>text.append(tappableText(p)));panel.append(text);
         panel.append(el('p','storyTip','Tap any word to hear it.'));
         const nav=el('div','storyNav');
         if(r.page>0)nav.append(button('← Page '+r.page,'secondaryButton',()=>act(()=>A.turnStoryPage(s,r.page-1))));
         if(r.stage==='lookback')nav.append(button('Back to the question','greenButton',()=>act(()=>A.backToQuestion(s))));
         if(r.page<st.pages.length-1)nav.append(button('Next page →','greenButton',()=>act(()=>A.turnStoryPage(s,r.page+1))));
-        else if(r.stage==='read')nav.append(button('I read it! Answer 3 questions','greenButton',()=>{let result;act(()=>{result=Core.finishStoryReading(s,Date.now());});if(result?.xpEarned&&ctx.active())window.BlitzFeedback.show({kind:'success',title:'You read part '+partNo+'!',message:'+'+result.xpEarned+' XP for reading. Now answer three questions.',actions:[{label:'Let’s go'}]});}));
+        else if(r.stage==='read')nav.append(button('I read it! Answer '+count+' questions','greenButton',()=>{let result;act(()=>{result=Core.finishStoryReading(s,Date.now());});if(result?.xpEarned&&ctx.active())window.BlitzFeedback.show({kind:'success',title:'You read “'+st.title+'”!',message:'+'+result.xpEarned+' XP for reading. Now answer '+words+' questions.',actions:[{label:'Let’s go'}]});}));
         panel.append(nav);
       }else{
         const q=A.storyQuestion(s);panel.append(heading('Question '+(r.index+1)+' of '+st.questions.length,'What happened?'));
@@ -271,6 +272,13 @@
     }
     function renderResult(){
       const s=ctx.state(),e=A.of(s),m=A.current(s),r=s.result,c=e.current;if(!r?.missionId||!m)return false;
+      if(m.stories){const reading=c.phase==='story';
+        $('#resultMessage').textContent=r.victory?(r.newDiscovery?'New creature discovered! ':'')+(reading?'Now read the story!':'On to the next fight!'):'No hearts left. Try this fight again with four hearts. Your XP stays safe.';
+        $('#checkpoint').textContent='';const box=$('#opponents');box.replaceChildren();box.classList.add('missionResultActions');
+        box.append(button(r.victory?(reading?'Read the story':'Next fight'):'Try again · 4 hearts','greenButton',()=>{if(!ctx.active())return;if(!r.victory)Core.startMissionBattle(s,Date.now());else s.activity='mission';if(ctx.save())ctx.enter();}));
+        const family=A.companion(s),friend=$('#resultCompanion');friend.hidden=!family;if(family)ctx.paintEnemy(friend,family,8);
+        $('#resultNext').textContent='Back to camp';return true;
+      }
       $('#resultMessage').textContent=r.victory?(r.newDiscovery?'New creature discovered!':'A new clue is ready.'): 'No hearts left. '+(c.retryFromStep===0?'Try the first step again.':'Go back '+((c.retryFromStep??c.step*2)-(c.retryTargetStep??Math.max(0,c.step*2-2)))+' steps. Your XP stays safe.');
       $('#checkpoint').textContent='';const box=$('#opponents');box.replaceChildren();box.classList.add('missionResultActions');
       box.append(button(r.victory?'Read the next clue':'Try again · 4 hearts','greenButton',()=>{if(!ctx.active())return;if(r.victory)A.startPuzzle(s);else Core.startMissionBattle(s,Date.now());if(ctx.save())ctx.enter();}));
