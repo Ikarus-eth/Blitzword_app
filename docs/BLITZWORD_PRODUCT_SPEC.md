@@ -1250,3 +1250,7 @@ The user found the 60-second Shell Duel clock ran out before a win was possible 
 ## Playing a finished quest again — 1 November 2026
 
 A replay of a quest whose treasure is already earned never blocks other quests. Outside a running reading fight, choosing any open quest leaves the replay; the earned treasure, stamps, XP and evidence stay. A first attempt still has to be finished or retried before another quest starts. [Details](adventures/QUEST_REPLAY_RELEASE.md).
+
+## Pip's size in fights — 4 November 2026
+
+The user found Pip still very small during fights and asked to fix the size ratio. Small Pip's art now stands about half the hero's height in every battle layout (plain, quest animal, shield animal, both; iPad and phone, landscape and portrait), up from about a quarter in quest fights and about a third elsewhere. Later forms grow by their existing stage scale (Big, Bigger and Ride on Pip reach roughly 55, 62 and 70 % of the hero), which quest fights previously ignored. Pip stands in the front lane beside the hero; the quest and shield animals keep their enlarged widths and stand in a back row. This supersedes the 7 October rule that the battle animal is sized between Pip and the hero; the animal may now appear smaller than Pip. Artwork, attack motion, rules and saves are unchanged.
