@@ -14,7 +14,7 @@ test('third campaign opens only after both earlier adventures; branch joins cann
 });
 test('eight complete ninth-task chapters use exactly eight approved new families and unique clue identities',()=>{
  assert.equal(D.campaigns.length,4);assert.equal(Stars.missions.length,8);assert.deepEqual(Stars.missions.map(m=>m.families[0]),families);
- assert.equal(new Set(D.missions.flatMap(m=>m.riddles.map(q=>q.id))).size,104);
+ assert.equal(new Set(D.missions.flatMap(m=>m.riddles.map(q=>q.id))).size,80);
  assert.equal(new Set(Object.values(A.Maps).flatMap(m=>m.questions.map(q=>q.id))).size,39);
  for(const m of Stars.missions){assert.equal(m.riddles.length,4);assert.ok(A.findMission(m.families[0]));assert.equal(Maps[m.id].questions.length,3);
   const bytes=fs.readFileSync(m.art);assert.equal(bytes.readUInt32BE(16),Maps[m.id].width);assert.equal(bytes.readUInt32BE(20),Maps[m.id].height);

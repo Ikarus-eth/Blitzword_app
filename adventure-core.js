@@ -22,6 +22,7 @@
       c.companionHelpUsed=!!c.companionHelpUsed;
       if(c.ninthRequired===undefined)c.ninthRequired=(!!Maps?.[c.missionId]||!!Data.byId[c.missionId].story)&&c.phase!=='complete';
       syncMapRevision(c);
+      if(Data.byId[c.missionId].stories)migrateStoryQuest(s,c);
     }
     // The old record proves an encounter, not a win or a completed creature quest.
     if(!old){
@@ -140,15 +141,25 @@
     const e=of(s),c=e.current,b=s.battle;
     if(e.context==='mission'&&c&&b?.missionId===c.missionId)c.hearts=b.heroHealth;
   }
+  // Story quests run fight, fight, story, fight, fight, story (4 November 2026).
+  const STORY_STEPS=['Fight','Fight','Story','Fight','Fight','Story'];
+  function storyIndex(c){
+    if(c.phase==='complete')return 6;
+    if(c.phase==='story')return c.read?.which===0?2:5;
+    return c.step<2?c.step:c.step+1;
+  }
   function progress(s){
     const c=of(s).current;if(!c)return null;
+    if(current(s)?.stories){const done=storyIndex(c);return {done,left:6-done,total:6,labels:STORY_STEPS,next:done===6?'Treasure':STORY_STEPS[done]};}
     const total=c.ninthRequired?9:8;
     const done=c.phase==='complete'?total:['search','story'].includes(c.phase)?8:c.phase==='retry'&&Number.isInteger(c.retryFromStep)?c.retryFromStep:c.step*2+(['spoils','puzzle'].includes(c.phase)?1:0)+(c.phase==='puzzle'&&c.puzzle?.solved?1:0);
     return {done,left:total-done,total,next:done===total?'Treasure':done===8?(current(s)?.story?'Story':'Map search'):done%2?'Clue':'Fight'};
   }
   function won(s,victory,now){
     const c=of(s).current,m=current(s);if(!c||!m||c.phase!=='battle')return false;
-    if(victory){stats(s).wins++;c.phase='spoils';if(c.step>=2){const b=of(s).book[m.encounters[c.step]];b.champion=true;b.championAt ||=date(now);}}
+    if(victory){stats(s).wins++;c.phase='spoils';if(c.step>=2){const b=of(s).book[m.encounters[c.step]];b.champion=true;b.championAt ||=date(now);}
+      // Story quests have no clues: after the second and fourth fight a story follows, otherwise the next fight.
+      if(m.stories){if(c.step===1||c.step===3)beginStory(s,now,c.step===1?0:1);else{c.step++;c.phase='intro';}}}
     else retreat(s,false);
     return true;
   }
@@ -183,11 +194,15 @@
   function retreat(s,fromRiddle){
     const c=of(s).current;if(!c||c.phase==='retry')return false;
     c.defeats=(c.defeats||0)+1;
+    // A lost story fight is tried again from the same fight: no step back (4 November 2026).
+    if(current(s)?.stories){c.retryFromStep=c.retryTargetStep=storyIndex(c);c.storyRetry=true;c.phase='retry';return true;}
     const from=c.phase==='search'?8:c.step*2+(fromRiddle?1:0);
     c.retryFromStep=from;c.retryTargetStep=Math.max(0,from-2);c.phase='retry';return true;
   }
   function retry(s){
     const c=of(s).current;if(!c||c.phase!=='retry')return false;
+    if(current(s)?.stories){c.hearts=QUEST_HEARTS;c.maxHearts=QUEST_HEARTS;c.supportEarned=0;c.puzzle=null;delete c.retryFromStep;delete c.retryTargetStep;delete c.storyRetry;
+      s.battle=null;s.result=null;s.teaching=null;s.activity='mission';c.phase='intro';return true;}
     const target=Number.isInteger(c.retryTargetStep)?c.retryTargetStep:Math.max(0,c.step*2-2);
     c.step=Math.floor(target/2);c.hearts=QUEST_HEARTS;c.maxHearts=QUEST_HEARTS;c.puzzle=null;
     // A new attempt after a defeat can earn shields again (earlier attempts no longer use up the allowance).
@@ -228,49 +243,64 @@
     return {correct:true,firstSolve,id:q.id};
   }
 
-  // Story quests (Thunder Mountain, 2 November 2026). After four fights and four clues the child reads
-  // one chapter page by page, taps any word for its sound or meaning, then answers three questions.
+  // Story quests (Thunder Mountain, 2 November 2026; mid-chapter stories 4 November 2026). After two fights the
+  // child reads a story page by page, taps any word for its sound or meaning, then answers its questions.
   // A wrong answer costs no heart: the child is sent back to the page that holds the answer.
   const STORY_PAGE_MS_PER_WORD=3000,STORY_QUESTION_CAP_MS=90000;
   function story(s){const c=of(s).current;return c?.phase==='story'?c.read:null;}
-  function beginStory(s,now){
+  function storyOf(m,r){return m?.stories?.[r?.which??1]||m?.story||null;}
+  function currentStory(s){return storyOf(current(s),story(s));}
+  function beginStory(s,now,which=1){
     const c=of(s).current,m=current(s);if(!c||!m?.story)return false;
-    c.read ||= {page:0,reached:0,stage:'read',index:0,selection:null,wrong:false,orders:null,answers:[],taps:{},meanings:{},startedAt:date(now)};
+    if(!c.read||c.read.which!==which)c.read={which,page:0,reached:0,stage:'read',index:0,selection:null,wrong:false,orders:null,answers:[],taps:{},meanings:{},startedAt:date(now)};
     c.phase='story';s.activity='mission';return true;
   }
-  function storyPageWords(m,page){return m.story.pages[page].join(' ').split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).length;}
-  function storyTimeId(s){const r=story(s),m=current(s);if(!r||!m)return null;return 'story:'+m.id+':'+(r.stage==='quiz'?'q'+r.index:'p'+r.page);}
-  function storyTimeCap(s){const r=story(s),m=current(s);return r?.stage==='quiz'?STORY_QUESTION_CAP_MS:Math.max(20000,storyPageWords(m,r.page)*STORY_PAGE_MS_PER_WORD);}
+  // Saves from the first release (four clues, one story) continue in the new order without losing a won fight.
+  function migrateStoryQuest(s,c){
+    const fresh=which=>({which,page:0,reached:0,stage:'read',index:0,selection:null,wrong:false,orders:null,answers:[],taps:{},meanings:{},startedAt:c.startedAt});
+    if(['spoils','puzzle'].includes(c.phase)){const k=c.step;c.puzzle=null;if(k===1||k===3){c.read=fresh(k===1?0:1);c.phase='story';}else{c.step=k+1;c.phase='intro';}}
+    if(c.phase==='retry'&&!c.storyRetry){c.storyRetry=true;c.retryFromStep=c.retryTargetStep=storyIndex(c);}
+    if(c.phase==='story'&&c.read&&c.read.which===undefined)c.read.which=1;
+  }
+  function storyPageWords(st,page){return st.pages[page].join(' ').split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).length;}
+  function storyTimeId(s){const r=story(s),m=current(s);if(!r||!m)return null;return 'story:'+m.id+':'+(r.which===0?'mid:':'')+(r.stage==='quiz'?'q'+r.index:'p'+r.page);}
+  function storyTimeCap(s){const r=story(s);return r?.stage==='quiz'?STORY_QUESTION_CAP_MS:Math.max(20000,storyPageWords(currentStory(s),r.page)*STORY_PAGE_MS_PER_WORD);}
   function turnStoryPage(s,page){
-    const r=story(s),m=current(s);if(!r||!Number.isInteger(page)||page<0||page>=m.story.pages.length)return false;
+    const r=story(s),st=currentStory(s);if(!r||!Number.isInteger(page)||page<0||page>=st.pages.length)return false;
     if(r.stage==='quiz')return false;
     r.page=page;r.reached=Math.max(r.reached,page);return true;
   }
   function finishReading(s,now,random=Math.random){
-    const r=story(s),m=current(s);if(!r||r.stage!=='read'||r.reached<m.story.pages.length-1)return false;
-    const first=!r.readAt;r.readAt ||= date(now);r.stage='quiz';
-    r.orders ||= m.story.questions.map(q=>{const o=q.options.map(x=>x.id);for(let i=o.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[o[i],o[j]]=[o[j],o[i]];}return o;});
-    const st=stats(s);st.storyReads=(st.storyReads||0)+1;return {first};
+    const r=story(s),st=currentStory(s);if(!r||r.stage!=='read'||r.reached<st.pages.length-1)return false;
+    r.readAt ||= date(now);r.stage='quiz';
+    r.orders ||= st.questions.map(q=>{const o=q.options.map(x=>x.id);for(let i=o.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[o[i],o[j]]=[o[j],o[i]];}return o;});
+    // Reading XP once per story; quests finished before 4 November already earned it for the end story.
+    const t=stats(s);t.storyReads=(t.storyReads||0)+1;const rewarded=t.storyReadXP ||= (t.completedAt?{end:true}:{});
+    const first=!rewarded[st.id||'end'];rewarded[st.id||'end']=true;return {first};
   }
-  function storyQuestion(s){const r=story(s),m=current(s);return r?.stage==='quiz'||r?.stage==='lookback'?m.story.questions[r.index]:null;}
+  function storyQuestion(s){const r=story(s);return r?.stage==='quiz'||r?.stage==='lookback'?currentStory(s).questions[r.index]:null;}
   function lookBack(s){const r=story(s),q=storyQuestion(s);if(!r||r.stage!=='quiz'||!q)return false;r.stage='lookback';r.page=q.page-1;return true;}
   function backToQuestion(s){const r=story(s);if(!r||r.stage!=='lookback')return false;r.stage='quiz';r.wrong=false;r.selection=null;return true;}
   function chooseStory(s,id,expected){
     const r=story(s),q=storyQuestion(s);if(!r||r.stage!=='quiz'||!q||q.id!==expected||!q.options.some(o=>o.id===id))return false;
     r.selection=id;r.wrong=false;return true;
   }
+  function readSummary(r,st){return {words:st.words,taps:Object.values(r.taps).reduce((a,b)=>a+b,0),meanings:Object.keys(r.meanings).length,firstTry:r.answers.filter(a=>a.firstTry).length,questions:st.questions.length};}
   function checkStory(s,now,expected){
-    const r=story(s),q=storyQuestion(s);if(!r||r.stage!=='quiz'||!q||q.id!==expected||r.wrong||!q.options.some(o=>o.id===r.selection))return false;
+    const r=story(s),q=storyQuestion(s),st=currentStory(s),c=of(s).current;if(!r||r.stage!=='quiz'||!q||q.id!==expected||r.wrong||!q.options.some(o=>o.id===r.selection))return false;
     const correct=r.selection===q.answer,records=stats(s).storyQuestions ||= {},record=records[q.id] ||= {attempts:0,solves:0};
     record.attempts++;record.first ||= {selection:r.selection,correct,at:date(now),taps:Object.values(r.taps).reduce((a,b)=>a+b,0)};
     if(!correct){r.wrong=true;r.missedCurrent=true;r.misses=(r.misses||0)+1;return {correct:false,page:q.page};}
     record.solves++;record.solvedAt=date(now);r.answers[r.index]={id:q.id,firstTry:!r.missedCurrent};
     r.index++;r.selection=null;r.wrong=false;r.missedCurrent=false;
-    const firstSolve=record.solves===1;
-    if(r.index===m_questions(s)){const st=stats(s);st.storyLast={words:current(s).story.words,taps:Object.values(r.taps).reduce((a,b)=>a+b,0),meanings:Object.keys(r.meanings).length,firstTry:r.answers.filter(a=>a.firstTry).length,at:date(now)};complete(s,now);}
-    return {correct:true,firstSolve,id:q.id,done:of(s).current.phase==='complete'};
+    const firstSolve=record.solves===1,finished=r.index===st.questions.length;
+    if(finished&&r.which===0){c.midRead=readSummary(r,st);c.step=2;c.phase='intro';s.activity='mission';}
+    else if(finished){
+      const end=readSummary(r,st),mid=c.midRead,both=mid?Object.fromEntries(Object.keys(end).map(k=>[k,end[k]+mid[k]])):end;
+      stats(s).storyLast={...both,stories:mid?2:1,at:date(now)};complete(s,now);
+    }
+    return {correct:true,firstSolve,id:q.id,done:finished,storyDone:finished?(r.which===0?'mid':'end'):null};
   }
-  function m_questions(s){return current(s).story.questions.length;}
   function noteStoryTap(s,word,kind='sound'){
     const r=story(s);if(!r||typeof word!=='string')return false;
     const key=word.toLowerCase().replace(/[’']s$/,'').replace(/[^a-z]/g,'');if(!key)return false;
@@ -285,8 +315,8 @@
     const m=Data.byId[b.missionId];if(!m?.story)return [];
     const campaign=Data.campaigns.find(x=>x.id===m.campaign),earlier=campaign.missions.slice(0,campaign.missions.indexOf(m.id));
     const taps={};for(const id of earlier)for(const [w,n] of Object.entries(e.missions[id]?.storyTaps||{}))taps[w]=(taps[w]||0)+n;
-    const extra=Object.keys(taps).filter(w=>!m.story.targets.includes(w)).sort((a,b)=>taps[b]-taps[a]).slice(0,4);
-    return [...m.story.targets,...extra];
+    const extra=Object.keys(taps).filter(w=>!m.targets.includes(w)).sort((a,b)=>taps[b]-taps[a]).slice(0,4);
+    return [...m.targets,...extra];
   }
   const RIDDLE_CAP_MS=180000,MAP_READING_CAP_MS=30000;
   function recordRiddleTime(s,ms,now){
@@ -308,5 +338,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {story,beginStory,turnStoryPage,finishReading,storyQuestion,lookBack,backToQuestion,chooseStory,checkStory,noteStoryTap,focusWords,STORY_PAGE_MS_PER_WORD,leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen,MAX_SHIELDS,heldShields,setShields};
+  return {story,currentStory,storyOf,beginStory,turnStoryPage,finishReading,storyQuestion,lookBack,backToQuestion,chooseStory,checkStory,noteStoryTap,focusWords,STORY_PAGE_MS_PER_WORD,leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen,MAX_SHIELDS,heldShields,setShields};
 });

@@ -1541,9 +1541,19 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  assert.match(ui.get('adventureHub').textContent,/0\/6 treasures/);ui.click(ui.get('adventureHub').querySelector('[data-mission="tm-jet-missing"]'));
  assert.match(ui.get('mission').textContent,/A story quest/);assert.equal(ui.get('mission').querySelectorAll('.storyPreviewWord').length,8);
  ui.click(ui.get('mission').querySelector('.storyPreviewWord'));assert.equal(ui.speechTexts.at(-1),'thunder');ui.finishSpeech();
- const t=ui.state();const c=t.expedition.current;c.step=3;c.phase='puzzle';c.puzzle={solved:true};A.next(t,now);
+ // Two fights won: the mid story (two pages, two questions), then the third fight.
+ let t=ui.state();t.expedition.current.step=1;A.beginStory(t,now,0);
  ui=boot(t,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));
- const screen=ui.get('mission');assert.equal(screen.querySelector('[role="progressbar"]').getAttribute('aria-valuemax'),'9');assert.match(screen.querySelector('.questSteps').textContent,/Story$/);
+ assert.equal(ui.get('mission').querySelector('[role="progressbar"]').getAttribute('aria-valuemax'),'6');assert.equal(ui.get('mission').querySelector('.questSteps').textContent,'FightFightStoryFightFightStory');
+ assert.match(ui.get('mission').textContent,/Story 1 of 2 · Page 1 of 2/);assert.match(ui.get('mission').querySelector('.storyText').textContent,/Jet is a little red dragon/);
+ ui.click(missionButton(ui,'Next page →'));ui.click(missionButton(ui,'I read it! Answer 2 questions'));assert.equal(ui.get('questDialogTitle').textContent,'You read “Jet Goes Out”!');ui.click(ui.document.querySelector('.questDialogButton'));
+ assert.match(ui.get('mission').querySelector('.missionScene img').getAttribute('src'),/cover\.webp/);
+ for(let i=0;i<2;i++){ui.click(ui.get('mission').querySelector('[data-story-choice="0"]'));ui.click(missionButton(ui,'Check my answer'));assert.match(ui.get('questDialogTitle').textContent,i<1?/That’s right/:/You finished the story!/);if(i)assert.equal(ui.document.querySelector('.questDialogButton').textContent,'Next fight');ui.click(ui.document.querySelector('.questDialogButton'));}
+ assert.match(ui.get('mission').textContent,/Fight 3 of 4/);assert.deepEqual([ui.state().expedition.current.phase,ui.state().expedition.current.step],['intro',2]);
+ // Fights three and four won: the end story.
+ t=ui.state();t.expedition.current.step=3;A.beginStory(t,now,1);
+ ui=boot(t,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));
+ const screen=ui.get('mission');assert.match(screen.textContent,/Story 2 of 2/);
  assert.match(screen.textContent,/Page 1 of 3/);assert.match(screen.querySelector('.storyText').textContent,/Ron sat by the fire/);
  const words=[...screen.querySelectorAll('.storyWord')];assert.equal(words.length,A.current(ui.state()).story.pages[0].join(' ').split(/\s+/).length);
  ui.click(words.find(b=>b.textContent==='worried.'));assert.equal(ui.speechTexts.at(-1),'worried');ui.finishSpeech();
@@ -1557,7 +1567,7 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  assert.equal(missionButton(ui,'I read it! Answer 3 questions'),undefined);
  ui.click(missionButton(ui,'Next page →'));assert.match(screen.textContent,/Page 2 of 3/);ui.click(missionButton(ui,'Next page →'));
  ui=boot(ui.state(),{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));assert.match(ui.get('mission').textContent,/Page 3 of 3/);
- ui.click(missionButton(ui,'I read it! Answer 3 questions'));assert.equal(ui.get('questDialogTitle').textContent,'You read part 1!');assert.match(ui.get('questDialogMessage').textContent,/100 XP/);ui.click(ui.document.querySelector('.questDialogButton'));
+ ui.click(missionButton(ui,'I read it! Answer 3 questions'));assert.equal(ui.get('questDialogTitle').textContent,'You read “Jet Is Not Home”!');assert.match(ui.get('questDialogMessage').textContent,/100 XP/);ui.click(ui.document.querySelector('.questDialogButton'));
  let q=A.storyQuestion(ui.state());assert.match(ui.get('mission').textContent,/Question 1 of 3/);const hearts=ui.state().expedition.current.hearts;
  ui.click(ui.get('mission').querySelector('[data-story-choice="1"]'));ui.click(missionButton(ui,'Check my answer'));assert.equal(ui.get('questDialogTitle').textContent,'Not quite');
  ui.click(ui.document.querySelector('.questDialogButton'));assert.equal(ui.state().expedition.current.hearts,hearts);
@@ -1565,6 +1575,6 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  ui.click(missionButton(ui,'Back to the question'));
  for(let i=0;i<3;i++){q=A.storyQuestion(ui.state());ui.click(ui.get('mission').querySelector('[data-story-choice="0"]'));ui.click(missionButton(ui,'Check my answer'));assert.match(ui.get('questDialogTitle').textContent,i<2?/That’s right/:/You finished the story part/);ui.click(ui.document.querySelector('.questDialogButton'));}
  assert.equal(ui.state().expedition.current.phase,'complete');const summary=ui.get('mission').querySelector('.storySummary').textContent;
- assert.match(summary,/You read 131 words by yourself!/);assert.match(summary,/You tapped 2 words/);assert.match(summary,/2 of 3 questions right the first time/);
- console.log('PASS story quest reader: hub tab, word preview, tappable words with chunks and meanings, page turns, reload, look-back and summary');
+ assert.match(summary,/You read two stories, 238 words, by yourself!/);assert.match(summary,/You tapped 2 words/);assert.match(summary,/4 of 5 questions right the first time/);
+ console.log('PASS story quest reader: hub tab, word preview, mid story then next fight, cover during questions, tappable words with chunks and meanings, page turns, reload, look-back and summary');
 }
