@@ -23,7 +23,7 @@
       dragon:{awards:{},stage:0,xp:null,name:'Pip',named:false,evolutionSeen:0,evolution:null},story:{clearedAreas:[],chapterComplete:false,completedChapters:[],mapPending:false,chapters:{},dailyChapters:{},scenes:{},scene:null},
       timing:{version:1,days:{},firstPracticeAt:null},
       math:{best:null,winStreak:0,round:null,records:[]},
-      rewards:{shield:false,readingWins:0,shieldEarnedAt:null,xpDays:{},speedHistory:{}},
+      rewards:{shield:false,shields:0,readingWins:0,shieldEarnedAt:null,xpDays:{},speedHistory:{}},
       settings:{storiesEnabled:false,legacyEnabled:false,selfPaced:false,speed:null,soundscape:true}, activity:'route', screen:'setup', battle:null,
       teaching:null, handoff:null, result:null, session:null, sessions:[], demoComplete:false, archive:archiveBase()};
   }
@@ -76,7 +76,7 @@
     const s = {...base,...copy(old)};
     for (const key of ['profile','assessment','learning','campaign','settings','dragon','story','timing','math','rewards']) s[key] = {...base[key],...s[key]};
     Adventure.init(s);
-    s.rewards.shield=s.rewards.shield===true;
+    s.rewards.shield=s.rewards.shield===true;Adventure.setShields(s,Adventure.heldShields(s));
     s.rewards.readingWins=Math.max(0,Math.min(3,Number(s.rewards.readingWins)||0));
     // Convert the pending UI only. Keep time, factors, accepted answers and old PRs.
     if(s.math.round){
@@ -992,7 +992,7 @@
       if (rec.correct) b.enemyHealth=Math.max(b.requiredAnswers?.length?1:0,b.enemyHealth-1);
       else if (b.firstMistakeFree) b.firstMistakeFree=false;
       else if(b.missionId&&(q.companionSaved=Adventure.protect(s))){q.shieldUsed=true;rec.shieldUsed=true;rec.companionSaved=q.companionSaved;}
-      else if(!b.demo&&s.rewards.shield){q.supportSaved=s.rewards.supportFamily||null;s.rewards.shield=false;s.rewards.earnedSupport=false;s.rewards.supportFamily=null;s.rewards.supportPending=false;q.shieldUsed=true;rec.shieldUsed=true;rec.supportSaved=q.supportSaved;}
+      else if(!b.demo&&s.rewards.shield){q.supportSaved=s.rewards.supportFamily||null;q.shieldsLeft=Adventure.setShields(s,Adventure.heldShields(s)-1);q.shieldUsed=true;rec.shieldUsed=true;rec.supportSaved=q.supportSaved;}
       else b.heroHealth--;
     }
     if(b.missionId){Adventure.syncHearts(s);Adventure.earnSupport(s,rec,quickAnswer(rec));}
@@ -1136,8 +1136,8 @@
     const score=mathScore(r);
     r.status='result';r.finishedAt=iso(now);r.beaten=score>=r.target;r.newBest=s.math.best===null||score>s.math.best;
     s.math.best=Math.max(s.math.best??score,score);
-    r.shieldEarned=!!(r.beaten&&r.shieldEligible&&s.rewards.readingWins>=3&&!s.rewards.shield);
-    if(r.shieldEarned){s.rewards.shield=true;s.rewards.shieldEarnedAt=iso(now);}
+    r.shieldEarned=!!(r.beaten&&r.shieldEligible&&s.rewards.readingWins>=3&&Adventure.heldShields(s)<Adventure.MAX_SHIELDS);
+    if(r.shieldEarned){r.shieldsHeld=Adventure.setShields(s,Adventure.heldShields(s)+1);s.rewards.shieldEarnedAt=iso(now);}
     s.rewards.readingWins=0;
     if(r.areaId)activeChapterState(s).duels++;
     syncProgress(s,now);r.xpEarned=s.dragon.xp-(r.xpStart??s.dragon.xp-r.correct);
@@ -1216,7 +1216,8 @@
       q.phase='ready';
     }
   }
-  return {packSave,unpackSave,Adventure,recordRiddleTime,checkRiddle,checkMap,finishStoryReading,checkStory,noteStoryTap,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
+  const heldShields=s=>Adventure.heldShields(s);
+  return {heldShields,MAX_SHIELDS:Adventure.MAX_SHIELDS,packSave,unpackSave,Adventure,recordRiddleTime,checkRiddle,checkMap,finishStoryReading,checkStory,noteStoryTap,grantParentXP,startMission,startMissionBattle,fresh,migrate,copy,byWord,TARGET_MS,DAY,GAPS,XP_MULTIPLIER,DAILY_XP,XP_REWARDS,bonusProgress,nameDragon,beginEvolution,advanceEvolution,finishEvolution,chapterState,activeChapterState,beginSession,completeSession,addActiveTime,isSessionDue,
     getQuestion,startBattle,prepareBattle,answerBattle,canRequestBattleHelp,startTeaching,leaveTeaching,noteSupport,resolveBattle,
     startAssessment,leaveHandoff,prepareAssessment,answerAssessment,interruptQuestion,shouldStopAssessment,
     enemyChoices,enemyScale,chapterProgress,areaProgress,dragonProgress,storyProgress,currentChapter,chapterLocation,beginChapterStory,advanceChapterStory,answerChapterStory,noteStoryHelp,storyPictureFailed,recordTime,parentProgress,dayKey,

@@ -1254,3 +1254,7 @@ A replay of a quest whose treasure is already earned never blocks other quests. 
 ## Pip's size in fights — 4 November 2026
 
 The user found Pip still very small during fights and asked to fix the size ratio. Small Pip's art now stands about half the hero's height in every battle layout (plain, quest animal, shield animal, both; iPad and phone, landscape and portrait), up from about a quarter in quest fights and about a third elsewhere. Later forms grow by their existing stage scale (Big, Bigger and Ride on Pip reach roughly 55, 62 and 70 % of the hero), which quest fights previously ignored. Pip stands in the front lane beside the hero; the quest and shield animals keep their enlarged widths and stand in a back row. This supersedes the 7 October rule that the battle animal is sized between Pip and the hero; the animal may now appear smaller than Pip. Artwork, attack motion, rules and saves are unchanged.
+
+## Two shields at once — 4 November 2026
+
+The child wants to be able to earn a second shield. This supersedes "one held" from 11 and 28 October 2026. Up to two shields can be held at once, in creature quests and chapter battles alike; quest and duel shields share the two slots. The quest meter keeps running while one is held (still one per fight and two per attempt). A second quest shield stays with the friend already on the team, shown as a ×2 badge, and the friend leaves after the last shield is used. [Details](adventures/TWO_SHIELDS_RELEASE.md).
