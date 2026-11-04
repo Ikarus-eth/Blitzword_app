@@ -1,0 +1,254 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "batch": "docs/adventures/thunder-mountain/art-mid-stories.json",
+  "requests": {
+    "tm-jet-missing-a1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Image 3 is the exact identity of Grandma, Jet\u2019s old grandmother dragon: dusty rose-red scales, round spectacles, a yellow knitted shawl, curled grey horns, small wings and a tail. Image 4 shows her correctly in an earlier page of this book. She is fully a dragon with a snout and scales, never a human woman, with no human hair. Scene: night inside a small cosy cottage at the edge of a forest. Grandma and little Jet lean together at an open round window, looking up at a sky full of twinkling stars. Grandma gazes wistfully at one bright star. In the far distance, a tall dark mountain. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/tm-jet-missing-2.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a40f-3f70-7101-bf4a-e9e2149c97ee",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-3f70-7101-bf4a-e9e2149c97ee",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-3f70-7101-bf4a-e9e2149c97ee/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-3f70-7101-bf4a-e9e2149c97ee/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 1,
+      "user_queued_count": 2,
+      "bytes": 101046,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d16/CBUNRM5kD25_mZoUmOoOO_teU6Syj4.webp"
+    },
+    "tm-jet-missing-a2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Scene: early morning outside a small stone cottage at the edge of a forest. Little Jet tiptoes out of the door carrying a small red shoulder bag with a rolled paper map sticking out of it. He looks eagerly at a tall faraway mountain. A path leads into the forest. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a40f-3f69-7c93-905a-3833a0a83b10",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-3f69-7c93-905a-3833a0a83b10",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-3f69-7c93-905a-3833a0a83b10/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-3f69-7c93-905a-3833a0a83b10/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 119712,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d16/wLt032JALOSRNrB2ToZgt_iWeBOlA9.webp"
+    },
+    "tm-stream-a1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Scene: a hot sunny forest. Jet kneels at the edge of a clear, fast stream to drink; a big silver fish leaps away just out of reach and Jet looks surprised. Ferns, smooth stones, dappled light. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a40f-7f03-74a3-9f50-7babd51379c9",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-7f03-74a3-9f50-7babd51379c9",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-7f03-74a3-9f50-7babd51379c9/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-7f03-74a3-9f50-7babd51379c9/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 142440,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d18/Glxul_GzTBqsRHOX4Z6ba_V2e9rbuK.webp"
+    },
+    "tm-stream-a2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Scene: Jet hops from rock to rock across the fast stream, looking ahead up the path. Behind him, forgotten on a flat rock at the water\u2019s edge, lies his small red bag. Forest around, mountain ahead. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a40f-800f-75e2-8ea6-089e1b48c785",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-800f-75e2-8ea6-089e1b48c785",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-800f-75e2-8ea6-089e1b48c785/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-800f-75e2-8ea6-089e1b48c785/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 161926,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d18/oFbkETpWmCEY-y_Br-gGu_VgPIxaPT.webp"
+    },
+    "tm-mountain-a1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Image 3 shows the old grey-brown mule with two big bags; keep the same mule. Scene: on a rocky mountain path in the morning, tired little Jet looks up hopefully at the kind old mule and asks him something. The mule shakes his head kindly. No other characters. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/tm-mountain-2.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a40f-bed9-7e92-b27b-91ec12bcb0c0",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-bed9-7e92-b27b-91ec12bcb0c0",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-bed9-7e92-b27b-91ec12bcb0c0/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-bed9-7e92-b27b-91ec12bcb0c0/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 116880,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d1a/qrjR_lE_rT0uRrnhitZCi_o6zXOKGJ.webp"
+    },
+    "tm-mountain-a2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Scene: high on the mountain, little Jet flies up on his big green wings over a thick white cloud that covers the path, the cold wind blowing. The mouth of a big cave is visible on the slope above. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a40f-bfa7-7b41-b817-d5a238990a4d",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-bfa7-7b41-b817-d5a238990a4d",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-bfa7-7b41-b817-d5a238990a4d/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a40f-bfa7-7b41-b817-d5a238990a4d/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 131348,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d1a/w7qQbntblhZ72tfArcRUP_BpVCuUNG.webp"
+    },
+    "tm-storm-a1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Scene: high on a rocky mountain the sky turns dark grey; a flash of lightning far away lights the clouds and rain begins. Little Jet hurries towards the mouth of a big cave, looking a little afraid. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a410-12ec-7073-81ff-d3e274201be3",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-12ec-7073-81ff-d3e274201be3",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-12ec-7073-81ff-d3e274201be3/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-12ec-7073-81ff-d3e274201be3/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 111604,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d1c/0XMnzogwJwj4bpTfeNSMR_HMqX386A.webp"
+    },
+    "tm-storm-a2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Image 3 shows the big crystal cave; keep its look. Scene: inside the big dark cave, little Jet sits by a tiny campfire he has made, looking out at the pouring rain at the cave mouth. He looks thoughtful and a little lonely. Warm firelight. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/tm-hidden-star-1.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a410-13ba-7fe3-bd20-12291d95d9f8",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-13ba-7fe3-bd20-12291d95d9f8",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-13ba-7fe3-bd20-12291d95d9f8/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-13ba-7fe3-bd20-12291d95d9f8/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 2,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 122718,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d1c/cHAAcvzvUxVm4F7TWC9_h_IP3e25FG.webp"
+    },
+    "tm-hidden-star-a1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Image 3 shows the big crystal cave; keep its look. Scene: after the rain, little Jet searches between big boulders in the cave and looks up in wonder: high on top of a tall rock shines a small glowing white star-shaped crystal. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/tm-hidden-star-1.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a410-52fe-7170-877e-f3e18a247e06",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-52fe-7170-877e-f3e18a247e06",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-52fe-7170-877e-f3e18a247e06/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-52fe-7170-877e-f3e18a247e06/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 81350,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d1d/xzfwYmmF9a-612L0rqYZP_qpBxrPWu.webp"
+    },
+    "tm-hidden-star-a2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone and wood, gentle expressive faces. Image 1 is a style reference only; do not copy its characters or composition. Image 2 is the exact identity of Jet: a small young dragon with bright red scales, a cream belly, small cream horns, amber eyes and big leaf-green wings. Image 3 shows the big crystal cave; keep its look. Scene: little Jet sits high on a tall rock ledge, holding a small glowing white star-shaped crystal under one wing. Drops of water drip from the cave roof onto his droopy wet green wing. Far below, his little campfire has gone out with a thin curl of smoke. He looks lonely but hopeful. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/tm-hidden-star-1.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a410-53d0-73b2-b9bc-eddc4c58c135",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-53d0-73b2-b9bc-eddc4c58c135",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-53d0-73b2-b9bc-eddc4c58c135/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-53d0-73b2-b9bc-eddc4c58c135/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 86664,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d1d/Iy6_g9HEXsx3pa9tTHhMZ_EwjtgPZ9.webp"
+    },
+    "tm-home-a1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1. Image 1 is a style reference only. Image 2 is the exact identity of Grandma, an old grandmother dragon: dusty rose-red scales, round spectacles, a yellow knitted shawl, curled grey horns, small wings and a tail. Image 3 shows her correctly in an earlier page of this book. She is fully a dragon with a snout and scales, never a human woman, with no human hair. Scene: night inside her cosy cottage; Grandma sits by the window with a small candle, looking out at a tall dark mountain far away, worried. Starry sky. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/tm-jet-missing-2.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a410-93ca-7f11-a831-f2292b28dacd",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-93ca-7f11-a831-f2292b28dacd",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-93ca-7f11-a831-f2292b28dacd/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-93ca-7f11-a831-f2292b28dacd/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 95108,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d1f/ra7SGtxClVwut3UrZ5pz6_8m1aQRFg.webp"
+    },
+    "tm-home-a2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1. Image 1 is a style reference only. Image 2 is the exact identity of Grandma, an old grandmother dragon: dusty rose-red scales, round spectacles, a yellow knitted shawl, curled grey horns, small wings and a tail. Image 3 shows her correctly in an earlier page of this book. She is fully a dragon with a snout and scales, never a human woman, with no human hair. Scene: early morning, a big bright rainbow arches over a tall mountain. Grandma sits on the step of her stone cottage door beside a plate of bread and cheese, smiling hopefully and looking along the path to the mountain. Draw new natural poses. Full scene, edge-to-edge, coherent perspective and shared lighting. No humans, no boy, no orange dragon. No text, letters, numbers, UI, borders or panels. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/tm-jet-missing-2.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1a410-9463-7162-afb9-20024b48770f",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-9463-7162-afb9-20024b48770f",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-9463-7162-afb9-20024b48770f/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1a410-9463-7162-afb9-20024b48770f/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 143418,
+      "image_url": "https://v3b.fal.media/files/b/0ab10d1f/1Rwhhi6X02JCklikowKwI_GWiLfuqe.webp"
+    }
+  }
+}
