@@ -1,6 +1,6 @@
 ## Story quests: fight, fight, story — twice — 4 November 2026
 
-**Implemented and tested; deployment pending.** Branch `story-mid-chapters-20261104`. Thunder Mountain quests now run fight, fight, mid story, fight, fight, end story; the clues are gone. Six new two-page mid stories (537 words, 12 questions) and 12 fal.ai pictures were added, so the whole book is now 1,331 words. Rules are in the [product spec](BLITZWORD_PRODUCT_SPEC.md); prompts and request records in [docs/adventures/thunder-mountain](adventures/thunder-mountain/).
+**Deployed and verified.** [PR #238](https://github.com/Ikarus-eth/Blitzword_app/pull/238) merged as `ec492a784a79e6c1069cee27bd8bb5a8a22d30f4`; [Pages run 41753203036](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/41753203036) succeeded. Live `index.html` (build `story-mid-chapters-20261104-r1`), the game scripts and all Thunder Mountain files match the merged source byte for byte ([verification run 41753647143](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/41753647143), 42 files). 460 unit/backend tests and 130 UI-flow groups pass. Physical iPad play is unverified. Thunder Mountain quests now run fight, fight, mid story, fight, fight, end story; the clues are gone. Six new two-page mid stories (537 words, 12 questions) and 12 fal.ai pictures were added, so the whole book is now 1,331 words. Rules are in the [product spec](BLITZWORD_PRODUCT_SPEC.md); prompts and request records in [docs/adventures/thunder-mountain](adventures/thunder-mountain/).
 
 ## Two shields at once — 4 November 2026
 
