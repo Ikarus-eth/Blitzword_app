@@ -1476,6 +1476,26 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  console.log('PASS Turtle race time joins active play with its own card and column, excluded from the daily boost');
 }
 
+// The corner reading clock shows today's active play (same sum as Parents), ticks during a question and never steps back.
+{
+ const s=impactSave(),today=Core.dayKey(Date.UTC(2026,8,22));s.timing.days={[today]:{practice:600000,math:0,assessment:0,demo:0,idle:0},'2026-09-18':{practice:900000,math:0,assessment:0,demo:0,idle:0}};
+ Core.Adventure.of(s).riddleDays={[today]:60000};
+ const ui=boot(s,{heldNarration:true});
+ ui.memory.set(Core.RACE_KEY,JSON.stringify({version:2,games:{},progress:{},history:[],time:{days:{[today]:125000}}}));
+ const clock=ui.get('readingClock'),time=()=>clock.querySelector('.readingClockTime').textContent,secs=t=>t.split(':').reduce((n,x)=>n*60+Number(x),0);
+ ui.visibility(false);ui.resume();ui.ready();assert.ok(ui.get('battle').classList.contains('active'));
+ assert.equal(clock.hidden,false);assert.match(time(),/^13:0\d$/,'10 min battles + 1 min quests + 2 min 05 sec racing; yesterday not counted');
+ const start=secs(time());ui.advance(10000);assert.ok(secs(time())>=start+9,'ticks while a question is on screen');
+ const ticked=secs(time());ui.advance(45000);assert.ok(secs(time())>=ticked,'idle discard never steps the display back');
+ assert.match(clock.getAttribute('aria-label'),/^Reading time today: 13 minutes$/);
+ ui.click(ui.get('homeBtn'));assert.equal(clock.hidden,false,'shown on the home map');
+ ui.click(ui.get('mapParents'));ui.get('parentAnswer').value=String(parentGateAnswer(ui));ui.click(ui.get('parentUnlock'));
+ assert.equal(clock.hidden,true,'hidden on the Parents dashboard');
+ const [m,sec]=ui.get('parentToday').textContent.match(/^(\d+) min (\d+) sec$/).slice(1).map(Number);assert.ok(Math.abs(m*60+sec-secs(time()))<=45,'clock agrees with Active play today');
+ const fresh=boot(null);assert.equal(fresh.get('readingClock').hidden,true,'not shown before the child has a name');
+ console.log('PASS reading clock: top-corner active time today matches Parents, ticks in battle, never steps back, hidden on Parents and setup');
+}
+
 // The home hub always offers Turtle Race; launching saves first and leaves learning state intact.
 {
  const original=impactSave();delete original.settings.storiesEnabled;delete original.settings.legacyEnabled;

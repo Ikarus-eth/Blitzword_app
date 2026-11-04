@@ -677,3 +677,16 @@ img,svg{-webkit-user-drag:none;user-drag:none}
 
 /* Keep Safari rotation text sizing in step with the authored reading controls. */
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
+/* Reading time today, top-right beside the game buttons (4 Nov 2026). */
+.readingClock{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font:600 20px/1 var(--reading-font);font-variant-numeric:tabular-nums;color:#ffedbd;background:#203f33f2;border:1px solid #c8ae74;border-radius:22px;padding:0 12px 0 10px;min-height:44px;box-shadow:0 3px 8px #10261e44;pointer-events:none;order:11}
+.readingClock[hidden]{display:none}.readingClock svg{width:22px;height:22px;fill:none;stroke:#f4dba4;stroke-width:1.8;stroke-linejoin:round}
+@media(max-width:600px){.readingClock{font-size:18px;min-height:42px;padding:0 9px 0 8px;gap:4px}.readingClock svg{width:19px;height:19px}}
+/* Room for the clock in each header that already reserves space for the top-right buttons (clock, XP boost, three buttons). */
+.app.readingClockOn .topHud{padding-right:385px}.app.readingClockOn .missionTop,.app.readingClockOn .missionTop.questProgress{padding-right:385px}.app.readingClockOn .bookTop{padding-right:233px}.app.readingClockOn .adventureTop{padding-right:183px}
+.app.mapHome.readingClockOn .gameTools .readingClock{margin-right:62px}
+@media(orientation:portrait){.app.readingClockOn .topHud{padding-right:0}}
+@media(max-width:950px){.app.readingClockOn .adventureTop{padding-right:173px}}
+@media(max-width:700px){.app.readingClockOn .missionTop,.app.readingClockOn .missionTop.questProgress,.app.readingClockOn .bookTop,.app.readingClockOn .adventureTop{padding-right:0}}
+@media(max-width:600px){.app.mapHome.readingClockOn .gameTools .readingClock{position:absolute;top:50px;right:0;margin:0;min-height:38px}}
+@media(max-height:580px) and (orientation:landscape){.app.readingClockOn .resultCard{padding-top:60px}}
