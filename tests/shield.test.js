@@ -5,11 +5,13 @@ function battle(s,win=true,demo=false){C.startBattle(s,NOW,{strength:3,demo});s.
 function cycle(s){for(let i=0;i<3;i++)battle(s);C.startMath(s,NOW);}
 function finish(s,win=true){if(win)for(let i=0;i<s.math.round.target;i++){const q=C.prepareMath(s);C.answerMath(s,q.a*q.b,NOW);}C.tickMath(s,60000,NOW);}
 function question(s){const q=C.prepareBattle(s,NOW);q.phase='choices';return q;}
-test('three reading victories and a won number duel earn exactly one persistent shield',()=>{
+// 4 November 2026: a second won duel cycle adds a second shield; a third adds none while two are held.
+test('three reading victories and a won number duel earn a persistent shield, up to two held',()=>{
  let s=fresh();battle(s);battle(s);assert.equal(s.rewards.shield,false);battle(s);assert.equal(s.math.round.shieldEligible,true);C.startMath(s,NOW);finish(s);
  assert.equal(s.math.round.shieldEarned,true);assert.equal(s.rewards.shield,true);assert.equal(s.rewards.readingWins,0);assert.equal(s.math.records[0].shieldEarned,true);
  s=C.migrate(C.copy(s));assert.equal(s.rewards.shield,true);assert.equal(C.finishMath(s,NOW),false);C.leaveMath(s,NOW);assert.equal(s.rewards.shield,true);
- cycle(s);finish(s);assert.equal(s.rewards.shield,true);assert.equal(s.math.round.shieldEarned,false);assert.equal(s.math.records.filter(r=>r.shieldEarned).length,1);
+ cycle(s);finish(s);assert.equal(s.math.round.shieldEarned,true);assert.equal(C.heldShields(s),2);assert.equal(s.math.round.shieldsHeld,2);
+ C.leaveMath(s,NOW);cycle(s);finish(s);assert.equal(s.math.round.shieldEarned,false);assert.equal(C.heldShields(s),2);assert.equal(s.math.records.filter(r=>r.shieldEarned).length,2);
 });
 test('a shield absorbs one damaging reading mistake, without changing its learning evidence',()=>{
  let s=fresh();s.rewards.shield=true;C.startBattle(s,NOW);let q=question(s);const wrong=q.options.find(w=>w!==q.target);

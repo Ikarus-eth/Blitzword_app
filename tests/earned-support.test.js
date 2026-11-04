@@ -13,11 +13,28 @@ test('six quick accurate answers earn earlier; help pauses; wrong resets both st
 test('support leaves on a blocked hit, records a miss, and never repeats within the same fight',()=>{
  const s=fresh();s.expedition.current.companionHelpUsed=true;for(let i=0;i<8;i++)answer(s);A.selectSupport(s,'moss-golem');const hp=s.battle.heroHealth,xp=s.dragon.xp,r=answer(s,{correct:false});assert.equal(r.correct,false);assert.equal(r.supportSaved,'moss-golem');assert.equal(r.xpEarned,0);assert.equal(s.dragon.xp,xp);assert.equal(s.battle.heroHealth,hp);assert.equal(s.rewards.shield,false);assert.equal(s.rewards.supportFamily,null);for(let i=0;i<8;i++)answer(s);assert.equal(s.rewards.shield,false);
 });
-test('a legacy shield occupies the slot; within one attempt a quest grants at most two',()=>{
- let s=fresh();s.rewards.shield=true;for(let i=0;i<8;i++)answer(s);assert.equal(s.expedition.current.supportEarned,undefined);s.rewards.shield=false;answer(s);assert.equal(s.expedition.current.supportEarned,1);
- // A second fight in the same attempt may grant the second shield; a third grant in that attempt is refused.
- s.rewards.shield=false;s.battle.supportMeter={accurate:0,quick:0,earned:false};for(let i=0;i<8;i++)answer(s);assert.equal(s.expedition.current.supportEarned,2);
- s.rewards.shield=false;s.battle.supportMeter={accurate:0,quick:0,earned:false};for(let i=0;i<8;i++)answer(s);assert.equal(s.rewards.shield,false,'two per attempt');
+// 4 November 2026: up to two shields are held at once (the parent asked for a second shield).
+// This replaces "a legacy shield occupies the slot": a held shield no longer stops the meter.
+test('a held shield leaves room for one more; at most two held and two per attempt',()=>{
+ let s=fresh();s.rewards.shield=true;assert.equal(A.heldShields(s),1);for(let i=0;i<8;i++)answer(s);
+ assert.equal(s.expedition.current.supportEarned,1);assert.equal(A.heldShields(s),2);assert.equal(s.battle.question.secondShield,true);
+ s=C.migrate(C.copy(s));assert.equal(A.heldShields(s),2,'two shields survive reload');assert.equal(s.rewards.shields,2);
+ // Two held: another fight cannot grant a third.
+ s.battle.supportMeter={accurate:0,quick:0,earned:false};for(let i=0;i<8;i++)answer(s);assert.equal(s.expedition.current.supportEarned,1);assert.equal(A.heldShields(s),2);
+ // One used: the next fight may grant the second of this attempt, a further fight may not.
+ A.setShields(s,1);s.battle.supportMeter={accurate:0,quick:0,earned:false};for(let i=0;i<8;i++)answer(s);assert.equal(s.expedition.current.supportEarned,2);assert.equal(A.heldShields(s),2);
+ A.setShields(s,0);s.battle.supportMeter={accurate:0,quick:0,earned:false};for(let i=0;i<8;i++)answer(s);assert.equal(s.rewards.shield,false,'two per attempt');
+});
+test('two earned shields stop two hits one at a time and the friend leaves after the last',()=>{
+ const s=fresh();s.expedition.current.companionHelpUsed=true;for(let i=0;i<8;i++)answer(s);A.selectSupport(s,'moss-golem');
+ A.setShields(s,2);assert.equal(s.rewards.supportFamily,'moss-golem');const hp=s.battle.heroHealth;
+ let r=answer(s,{correct:false});assert.equal(r.shieldUsed,true);assert.equal(r.supportSaved,'moss-golem');assert.equal(s.battle.question.shieldsLeft,1);
+ assert.equal(A.heldShields(s),1);assert.equal(s.rewards.supportFamily,'moss-golem','friend stays while a shield is held');assert.equal(s.battle.heroHealth,hp);
+ r=answer(s,{correct:false});assert.equal(r.shieldUsed,true);assert.equal(A.heldShields(s),0);assert.equal(s.rewards.supportFamily,null);assert.equal(s.rewards.earnedSupport,false);assert.equal(s.battle.heroHealth,hp);
+ r=answer(s,{correct:false});assert.equal(r.shieldUsed,undefined);assert.equal(s.battle.heroHealth,hp-1);
+});
+test('older saves migrate: a held shield counts as one and bad counts are clamped',()=>{
+ for(const [shield,shields,want] of [[true,undefined,1],[false,2,0],[true,7,2],[true,'x',1],[true,0,1]]){const s=C.fresh();s.rewards.shield=shield;if(shields===undefined)delete s.rewards.shields;else s.rewards.shields=shields;const m=C.migrate(s);assert.equal(C.heldShields(m),want);assert.equal(m.rewards.shields,want);assert.equal(m.rewards.shield,want>0);}
 });
 test('after losing, every retry can earn shields again, and five accurate answers (or four quick) are enough',()=>{
  // He earned both shields in the first attempt and lost: before 28 October 2026 no retry could earn another.

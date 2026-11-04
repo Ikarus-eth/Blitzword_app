@@ -1132,6 +1132,8 @@ Keep the collected animal visibly separate from the hero and Pip during battles,
 
 The battle animal must be sized between Pip and the hero, with no visible title/caption underneath. Keep separate character lanes. Number answer options display their label once. Wrong submitted riddles lose one shared quest heart; incomplete answers, hints/listening and worked reveals do not. Duplicate submission without a new selection does not charge again. At zero hearts, explicitly rest and retry the same riddle with the saved maximum hearts, keeping earlier solved clues, first-answer evidence and spent companion protection. Correct answers and revealed solutions put a large next-step button directly in compact success feedback; the old clue/choice section is hidden in this completed view. Retry, help and ordering controls have large touch targets.
 
+Battle and assessment answer words always fit inside their buttons. When the longest of the four words (for example breakfast or playground) would overflow, all four buttons shrink to one shared font size, so a smaller button never hints at the answer. Short-word rounds keep the full size, and the size is recalculated when the screen rotates or the reading font finishes loading.
+
 
 ## Boy-and-book chapter and defeat setback — approved 6 October 2026
 
@@ -1255,6 +1257,9 @@ A replay of a quest whose treasure is already earned never blocks other quests. 
 
 The user found Pip still very small during fights and asked to fix the size ratio. Small Pip's art now stands about half the hero's height in every battle layout (plain, quest animal, shield animal, both; iPad and phone, landscape and portrait), up from about a quarter in quest fights and about a third elsewhere. Later forms grow by their existing stage scale (Big, Bigger and Ride on Pip reach roughly 55, 62 and 70 % of the hero), which quest fights previously ignored. Pip stands in the front lane beside the hero; the quest and shield animals keep their enlarged widths and stand in a back row. This supersedes the 7 October rule that the battle animal is sized between Pip and the hero; the animal may now appear smaller than Pip. Artwork, attack motion, rules and saves are unchanged.
 
+## Two shields at once — 4 November 2026
+
+The child wants to be able to earn a second shield. This supersedes "one held" from 11 and 28 October 2026. Up to two shields can be held at once, in creature quests and chapter battles alike; quest and duel shields share the two slots. The quest meter keeps running while one is held (still one per fight and two per attempt). A second quest shield stays with the friend already on the team, shown as a ×2 badge, and the friend leaves after the last shield is used. [Details](adventures/TWO_SHIELDS_RELEASE.md).
 
 ## Reading clock in the top corner — 4 November 2026
 
