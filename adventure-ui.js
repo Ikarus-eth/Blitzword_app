@@ -226,8 +226,9 @@
     function renderStory(screen,s,c,m){
       const r=c.read,st=A.currentStory(s),top=el('div','missionTop');renderProgress(top);screen.append(top);
       const partNo=D.campaigns.find(x=>x.id===m.campaign).missions.indexOf(m.id)+1,quiz=r.stage==='quiz',label='Part '+partNo+(m.stories?' · Story '+(r.which===0?1:2)+' of 2':''),count=st.questions.length,words=['','one','two','three','four'][count]||String(count);
-      const body=el('div','missionBody storyBody'),scene=el('figure','missionScene'),image=el('img');const art=st.art?.[quiz?st.pages.length-1:r.page];
-      image.src=art||missionArt(m);image.alt=st.title+' · picture '+((quiz?st.pages.length-1:r.page)+1);image.decoding='async';image.onerror=()=>{image.onerror=null;image.src=missionArt(m);};scene.append(image);
+      const body=el('div','missionBody storyBody'),scene=el('figure','missionScene'),image=el('img');// Questions show the campaign cover, so no page picture gives an answer away.
+      const art=quiz?D.campaigns.find(x=>x.id===m.campaign).scene:st.art?.[r.page];
+      image.src=art||missionArt(m);image.alt=quiz?'Artus, Pip and Jet look at Thunder Mountain.':st.title+' · picture '+(r.page+1);image.decoding='async';image.onerror=()=>{image.onerror=null;image.src=missionArt(m);};scene.append(image);
       scene.append(el('figcaption','',quiz?words[0].toUpperCase()+words.slice(1)+' questions about the story':label+' · Page '+(r.page+1)+' of '+st.pages.length));
       const panel=el('section','missionReading parchment storyPanel');
       if(!quiz){
