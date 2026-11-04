@@ -19,6 +19,10 @@ for(const viewport of [{width:1024,height:768},{width:1194,height:834},{width:13
  await page.screenshot({path:output+'/friends-'+viewport.width+'.png'});await page.locator('.supportChoice').filter({hasText:'Moss Golem'}).click();await page.getByRole('button',{name:'Join my team',exact:true}).click();await page.waitForTimeout(250);
  const widths=await page.locator('#battleHeroImg,.battlePip,#battleCompanion,#battleSupport').evaluateAll(es=>es.map(e=>e.getBoundingClientRect().width));assert.ok(widths[0]>=viewport.width*.26);assert.ok(widths[1]>=viewport.width*.16);assert.ok(widths[2]>=viewport.width*.23);assert.ok(widths[3]>=viewport.width*.23);
  await page.screenshot({path:output+'/team-'+viewport.width+'.png'});
+ // Long answer words (reported: breakfast) stay inside their buttons, all four at one size.
+ for(const opts of [['breakfast','brekfast','braekfast','brakfest'],['everywhere','evarywhere','averywhere','avarywhere']]){const long=fresh();for(const m of A.Data.missions)A.stats(long,m.id).completedAt=new Date().toISOString();C.startMission(long,'first-spark',Date.now());C.startMissionBattle(long,Date.now());long.battle.introPending=false;C.prepareBattle(long,Date.now());Object.assign(long.battle.question,{target:opts[0],options:opts,phase:'choices'});await seed(long);await page.waitForTimeout(150);
+  await contained('.answer');const sizes=await page.locator('.answer').evaluateAll(es=>es.map(e=>getComputedStyle(e).fontSize));assert.equal(new Set(sizes).size,1,'one answer size '+viewport.width);}
+ await page.screenshot({path:output+'/long-answers-'+viewport.width+'.png'});
  const encounter=fresh();for(const m of A.Data.missions)A.stats(encounter,m.id).completedAt=new Date().toISOString();C.startMission(encounter,'crab-ferry',Date.now());C.startMissionBattle(encounter,Date.now());await seed(encounter);await contained('#encounterChapter .questStep');await page.screenshot({path:output+'/encounter-'+viewport.width+'.png'});
  checks.push({viewport,mapButtons:'fit including 30px text',friendChooser:'scrollable full-size cards',battle:'four enlarged allies',nineSteps:'contained'});await page.close();
 }

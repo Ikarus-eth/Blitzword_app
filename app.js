@@ -694,8 +694,25 @@ function drawChoices() {
   const q=Core.getQuestion(state),[scroll,answers]=stageElements();
   scroll.innerHTML=galaxyMask();answers.replaceChildren();
   q.options.forEach(option=>{const button=document.createElement('button');button.className='answer';button.textContent=option;button.dataset.questionId=q.id;button.dataset.answer=option;button.onclick=()=>{if(button.isConnected)answer(option,q.id);};answers.append(button);});
+  fitAnswers(answers);document.fonts?.ready?.then(()=>{if(answers.isConnected)fitAnswers(answers);});
   $('#assessmentUnsure').hidden=state.activity!=='assessment';$('#battleUnsure').hidden=state.activity!=='battle'||!Core.canRequestBattleHelp(state);lastTick=performance.now();
 }
+// Long words (breakfast, playground) must stay inside their answer button.
+// All four buttons share one size so a smaller word never hints at the answer.
+function fitAnswers(answers) {
+  const buttons=[...(answers?.querySelectorAll('.answer')||[])];if(!buttons.length)return;
+  buttons.forEach(b=>{b.style.fontSize='';});
+  let scale=1;
+  for(const b of buttons){
+    if(!b.clientWidth)continue;
+    const cs=getComputedStyle(b),room=b.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),range=document.createRange();
+    range.selectNodeContents(b);const width=range.getBoundingClientRect().width;
+    if(width>room&&width>0)scale=Math.min(scale,room/width);
+  }
+  if(scale<1){const size=Math.floor(parseFloat(getComputedStyle(buttons[0]).fontSize)*scale*0.96*10)/10;buttons.forEach(b=>{b.style.fontSize=size+'px';});}
+}
+function refitAnswers(){for(const id of ['#battleAnswers','#assessmentAnswers'])fitAnswers($(id));}
+if(typeof window!=='undefined')window.addEventListener('resize',refitAnswers);
 function answer(option,questionId=Core.getQuestion(state)?.id) {
   if(paused||blocked||!['battle','assessment'].includes(state.activity)||Core.getQuestion(state)?.id!==questionId)return;
   if(!confirmActivity())return;const assessment=state.activity==='assessment';

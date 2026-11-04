@@ -1132,6 +1132,8 @@ Keep the collected animal visibly separate from the hero and Pip during battles,
 
 The battle animal must be sized between Pip and the hero, with no visible title/caption underneath. Keep separate character lanes. Number answer options display their label once. Wrong submitted riddles lose one shared quest heart; incomplete answers, hints/listening and worked reveals do not. Duplicate submission without a new selection does not charge again. At zero hearts, explicitly rest and retry the same riddle with the saved maximum hearts, keeping earlier solved clues, first-answer evidence and spent companion protection. Correct answers and revealed solutions put a large next-step button directly in compact success feedback; the old clue/choice section is hidden in this completed view. Retry, help and ordering controls have large touch targets.
 
+Battle and assessment answer words always fit inside their buttons. When the longest of the four words (for example breakfast or playground) would overflow, all four buttons shrink to one shared font size, so a smaller button never hints at the answer. Short-word rounds keep the full size, and the size is recalculated when the screen rotates or the reading font finishes loading.
+
 
 ## Boy-and-book chapter and defeat setback — approved 6 October 2026
 
