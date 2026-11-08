@@ -3018,5 +3018,6 @@
    "text": "What does Pip have at the end?"
   }
  ],
- "run": "second recording (spaCy model retry)"
+ "run": "second listening check in groups",
+ "listenOnly": true
 }

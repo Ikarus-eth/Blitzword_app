@@ -47,12 +47,14 @@ jobs:
           [ -z "$req" ] && req=docs/adventures/moon-key/voice-request.json
           echo "REQUEST=$req" >> "$GITHUB_ENV"
       - name: Record and listen
-        run: python scripts/record-story-voice.py "$REQUEST"
+        run: |
+          if [ "$(jq -r '.listenOnly // false' "$REQUEST")" != "true" ]; then python scripts/record-story-voice.py "$REQUEST"; fi
+          python scripts/listen-story-voice.py "$REQUEST"
       - name: Commit the clips to this branch
         run: |
           out=$(jq -r '.output' "$REQUEST")
           git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A "$out" "$(dirname "$REQUEST")/voice-asr-report.json"
+          git add -A "$out" "$(dirname "$REQUEST")"/voice-*-report.json "$(dirname "$REQUEST")"/voice-asr-report.json
           git diff --cached --quiet && exit 0
           git commit -m "Story voice: Kokoro clips and listening check [skip ci]"
           git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin HEAD:"${GITHUB_REF_NAME}"
