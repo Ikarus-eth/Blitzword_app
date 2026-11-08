@@ -100,10 +100,6 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/dirty.webp",
 "alt": "My boots are dirty after our walk."
 },
-"during": {
-"source": "assets/teaching/words/during.webp",
-"alt": "The sun came out during our walk."
-},
 "end": {
 "source": "assets/teaching/words/end.webp",
 "alt": "We have reached the end of the story."
@@ -127,10 +123,6 @@ globalThis.BlitzWordPictures={
 "fork": {
 "source": "assets/teaching/words/fork.webp",
 "alt": "I pick up food with my fork."
-},
-"fourth": {
-"source": "assets/teaching/words/fourth.webp",
-"alt": "The fourth duck is the smallest."
 },
 "friendly": {
 "source": "assets/teaching/words/friendly.webp",
@@ -304,10 +296,6 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/scared.webp",
 "alt": "The loud noise made me feel scared."
 },
-"second": {
-"source": "assets/teaching/words/second.webp",
-"alt": "I came second in the race."
-},
 "secret": {
 "source": "assets/teaching/words/secret.webp",
 "alt": "The story has a secret door."
@@ -423,10 +411,6 @@ globalThis.BlitzWordPictures={
 "trunk": {
 "source": "assets/teaching/words/trunk.webp",
 "alt": "The tree has a thick trunk."
-},
-"until": {
-"source": "assets/teaching/words/until.webp",
-"alt": "We wait until the rain stops."
 },
 "village": {
 "source": "assets/teaching/words/village.webp",

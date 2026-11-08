@@ -52,7 +52,7 @@ def generate(item):
         records[w] = state
 
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
     list(pool.map(generate, spec['words']))
 Path(sys.argv[1]).with_suffix('.report.json').write_text(json.dumps(records, indent=1, sort_keys=True))
 saved = {i['word']: i for i in spec['words'] if records.get(i['word'], {}).get('state') == 'saved'}
