@@ -1,0 +1,28 @@
+name: Verify live Moon Key
+on:
+  push:
+    branches: [claude/moon-key-live-check]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: e4d08fd9bae6319a8bd1e484e2abcd9689f3ae5d
+      - name: Compare live files with merge e4d08fd
+        run: |
+          B=https://ikarus-eth.github.io/Blitzword_app
+          for attempt in $(seq 1 30); do
+            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
+            sleep 30
+          done
+          bad=0; n=0
+          for f in index.html app.js audio.js missions.js adventure-ui.js assets/adventures/moon-key/*.* assets/adventures/moon-key/voice/manifest.js $(ls assets/adventures/moon-key/voice/*.mp3 | head -40); do
+            n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
+            if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
+          done
+          echo "checked=$n mismatched=$bad"; test $bad -eq 0
