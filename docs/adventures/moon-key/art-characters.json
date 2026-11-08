@@ -1,0 +1,43 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "stage": "characters",
+ "count": 4,
+ "images": [
+  {
+   "id": "ref-sam",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "1:1",
+   "prompt": "Use case: character reference sheet. Image 1 is Pip, a small friendly orange dragon, shown only for scale and painting style. Image 2 is the painted storybook style reference only. Paint Sam, a kind old sailor: a short, round, smiling old man with white hair, a short white beard, rosy cheeks, bushy white eyebrows, a dark blue knitted sailor jumper, a faded red woollen cap, brown trousers and big boots. Warm, gentle and a little sad-eyed. About three times as tall as Pip. One full-body figure on a plain warm cream background with a soft ground shadow, three-quarter view. Painterly children’s picture-book style matching image 2. No text, no letters, no other characters unless named, no props unless named."
+  },
+  {
+   "id": "ref-may",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "1:1",
+   "prompt": "Use case: character reference sheet. Image 1 is Pip, a small friendly orange dragon, shown only for scale and painting style. Image 2 is the painted storybook style reference only. Paint May, a friendly little ghost girl about six years old: softly glowing pale blue-white and slightly see-through, round cheerful face, big kind dark eyes, short wavy hair with a small ribbon, a long old-fashioned nightdress whose hem fades into mist. She floats a little above the ground. Sweet and gentle, never scary; no skull, no dark eye holes. One full-body figure on a plain warm cream background with a soft ground shadow, three-quarter view. Painterly children’s picture-book style matching image 2. No text, no letters, no other characters unless named, no props unless named."
+  },
+  {
+   "id": "ref-blackbird",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "1:1",
+   "prompt": "Use case: character reference sheet. Image 1 is Pip, a small friendly orange dragon, shown only for scale and painting style. Image 2 is the painted storybook style reference only. Paint the black bird: a very big glossy black bird, like a huge friendly raven, with shimmering black-and-blue wings, a strong grey beak, bright clever eyes and a small tuft on her head; she is about twice as tall as Pip. Beside her feet sit her three tiny fluffy black chicks with round eyes. Proud and protective, not evil. One full-body figure on a plain warm cream background with a soft ground shadow, three-quarter view. Painterly children’s picture-book style matching image 2. No text, no letters, no other characters unless named, no props unless named."
+  },
+  {
+   "id": "ref-owl-queen",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "1:1",
+   "prompt": "Use case: character reference sheet. Image 1 is Pip, a small friendly orange dragon, shown only for scale and painting style. Image 2 is the painted storybook style reference only. Paint the Owl Queen: a large, wise, kind snowy owl with soft white and pale grey feathers, golden eyes and a small delicate gold crown on her head. Next to her stands one much smaller plain white owl, her messenger, for scale. Calm and royal, not frightening. One full-body figure on a plain warm cream background with a soft ground shadow, three-quarter view. Painterly children’s picture-book style matching image 2. No text, no letters, no other characters unless named, no props unless named."
+  }
+ ]
+}
