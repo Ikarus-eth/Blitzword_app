@@ -2,6 +2,16 @@
 
 Use the existing GitHub repository for automatic progress sharing with Codex and Claude. Because it is public, publish only authenticated encrypted reports on a separate data branch; keep reading and deployment keys server-side/private. Reopening the paired app retries the copy without a new pairing or changing the local save. Both assistants use the same project instructions. See [access, retry and deletion rules](progress-sync/GITHUB_MIRROR.md).
 
+## Story quests: Pip and the Moon Key — approved 8 November 2026
+
+The parent reported that Artus has only a few steps of Thunder Mountain left and asked for at least 120 minutes of new content, with much longer stories that he can read almost fluently from the words he knows and learnt in recent battles, every word tappable, with recorded voice made the way Juna's spelling app does it.
+
+- Fifth campaign, after Thunder Mountain: eight story quests in the same order as Thunder Mountain (fight, fight, mid story, fight, fight, end story; 10/11/12/14 health; no clues). Story: the moon is gone because a black bird took the Owl Queen's Moon Key for her chicks, who are afraid of the dark; Artus, Pip and Jet travel by river, ship and storm to an island castle, befriend a lonely ghost girl, and Pip gives the chicks his magic blue coin as a night light.
+- Length: 4,060 words in 16 stories (mid stories 4–5 pages, end stories 5 pages; 180–300 words each), about three times Thunder Mountain's 1,331. Mid stories have two questions, end stories three.
+- Each quest pre-teaches eight new curriculum words in its fights (64 in all, none taught in Thunder Mountain). Text rule, checked against Artus's progress of 8 November 2026 (365 secured or kept words, 21 learning): every word is one of his known or learning words, a name, an already pre-taught target, or one of six story words outside the curriculum (tap, ring, beaver, turtle, dam, peep). On his known words alone 87% of the text is known; with names 92%; the rest are pre-taught targets.
+- Every word is tappable as in Thunder Mountain, with a meaning written for every content word. Recorded voice: each spoken word form, each meaning and each question prompt has its own clip, recorded for free with Kokoro-82M (voice af_heart, the voice chosen for Juna's spelling app) on the GitHub runner, and a local Whisper model listens to every word clip. The reader plays the story's clip when it exists and the dragon is still called Pip; otherwise it uses the existing narration or device speech as before.
+- Pictures: one fal.ai painting per page plus a cover, with character references for the new characters (Sam the sailor, May the ghost girl, the black bird and the Owl Queen).
+
 ## Story quests: more story, fewer fights — approved 4 November 2026
 
 The parent found the first Thunder Mountain story great but asked for less fighting and more story: add mid-chapter stories, remove the clues (they were small story quizzes), and run each quest as fight, fight, story, then fight, fight, story.

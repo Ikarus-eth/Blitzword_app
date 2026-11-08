@@ -1,0 +1,60 @@
+name: Record story voice (local Kokoro, free)
+
+# Tap-to-hear clips for story campaigns, recorded on the runner like the Right Reader spelling voice.
+# Runs only on a review branch and commits the clips back to that branch, never to main.
+on:
+  # workflow_dispatch needs this file on main; until then a push of a request on a review branch starts it.
+  push:
+    branches-ignore: [main]
+    paths: ['docs/adventures/*/voice-request.json']
+  workflow_dispatch:
+    inputs:
+      request:
+        description: Voice request under docs/adventures/ (for example docs/adventures/moon-key/voice-request.json)
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: story-voice
+  cancel-in-progress: false
+
+jobs:
+  record:
+    if: ${{ github.ref_name != 'main' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg
+      - name: Install Kokoro and Whisper (CPU only)
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "kokoro>=0.9.4" soundfile faster-whisper
+          # misaki fetches this spaCy model on first use; a GitHub release download can time out, so retry it here.
+          for i in 1 2 3 4 5; do pip install -q https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl && break; sleep 30; done
+      - name: Find the request
+        env:
+          INPUT: ${{ inputs.request }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          req="$INPUT"
+          if [ -z "$req" ]; then git fetch -q --depth=50 origin "$GITHUB_REF_NAME"; req=$(git diff --name-only "$BEFORE" HEAD -- 'docs/adventures/*/voice-request.json' 2>/dev/null | head -1); fi
+          [ -z "$req" ] && req=docs/adventures/moon-key/voice-request.json
+          echo "REQUEST=$req" >> "$GITHUB_ENV"
+      - name: Record and listen
+        run: |
+          if [ "$(jq -r '.listenOnly // false' "$REQUEST")" != "true" ]; then python scripts/record-story-voice.py "$REQUEST"; fi
+          python scripts/listen-story-voice.py "$REQUEST"
+      - name: Commit the clips to this branch
+        run: |
+          out=$(jq -r '.output' "$REQUEST")
+          git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A "$out" "$(dirname "$REQUEST")"/voice-*-report.json "$(dirname "$REQUEST")"/voice-asr-report.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Story voice: Kokoro clips and listening check [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin HEAD:"${GITHUB_REF_NAME}"

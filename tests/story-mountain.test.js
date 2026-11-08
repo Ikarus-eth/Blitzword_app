@@ -26,7 +26,7 @@ function toStory(s,id,now=NOW){
 }
 
 test('six story quests: 48 curriculum target words, no clues, a two-page mid story and a three-page end story each, after Sky stars',()=>{
-  const c=D.campaigns.at(-1);assert.equal(c.id,'thunder-mountain');assert.equal(c.missions.length,6);assert.equal(T.missions.length,6);
+  const c=D.campaigns.find(c=>c.id==='thunder-mountain');assert.equal(c.id,'thunder-mountain');assert.equal(c.missions.length,6);assert.equal(T.missions.length,6);
   const targets=T.missions.flatMap(m=>m.story.targets);assert.equal(targets.length,48);assert.equal(new Set(targets).size,48);
   for(const w of targets)assert.ok(Content.words.some(i=>i.w===w),w);
   const s=fresh();delete s.expedition.missions['aurora-crown'];assert.equal(A.unlocked(s,'tm-jet-missing'),false);
@@ -104,12 +104,12 @@ test('an in-progress Star Trail save migrates unchanged and the whole story camp
   let s=fresh();delete s.expedition.missions['aurora-crown'];C.startMission(s,'aurora-crown',NOW);
   const before=JSON.stringify(s.expedition.current);s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(JSON.stringify(s.expedition.current),before);
   A.stats(s,'aurora-crown').completedAt=new Date(NOW).toISOString();A.of(s).current.phase='complete';
-  let now=NOW;for(const id of D.campaigns.at(-1).missions){({now}=toStory(s,id,now));readAll(s,now);answerAll(s,now);s=C.migrate(JSON.parse(JSON.stringify(s)));}
+  let now=NOW;for(const id of D.campaigns.find(c=>c.id==='thunder-mountain').missions){({now}=toStory(s,id,now));readAll(s,now);answerAll(s,now);s=C.migrate(JSON.parse(JSON.stringify(s)));}
   assert.equal(A.campaignComplete(s,'thunder-mountain'),true);
 });
 test('every story page, quest card and the campaign cover has its painted scene',()=>{
   const fs=require('node:fs'),path=require('node:path'),file=p=>path.join(__dirname,'..',p.split('?')[0]);
-  assert.ok(fs.existsSync(file(D.campaigns.at(-1).scene)));
+  assert.ok(fs.existsSync(file(D.campaigns.find(c=>c.id==='thunder-mountain').scene)));
   for(const m of T.missions){assert.equal(m.scenes.length,3);assert.equal(m.mid.art.length,2);for(const a of m.mid.art)assert.ok(fs.existsSync(file(a)),a);for(const s of m.scenes)assert.ok(fs.existsSync(file(s.art)),s.art);assert.equal(m.art,m.scenes[0].art);assert.equal(m.endingArt,m.scenes[2].art);}
 });
 test('each quest runs fight, fight, story, fight, fight, story; a lost fight is simply fought again',()=>{

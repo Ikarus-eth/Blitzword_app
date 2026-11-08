@@ -1,0 +1,2915 @@
+{
+ "model": "whisper small.en",
+ "checked": 387,
+ "matched_in_group": 342,
+ "matched_either": 359,
+ "retake": [
+  {
+   "id": "story:moon-key:w:brave",
+   "word": "brave",
+   "heard_in_group": "Braves, Animal, Please, Need, Gold, Island",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:artus",
+   "word": "Artus",
+   "heard_in_group": "Artist, can't, sleep, he, looks, out",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:no",
+   "word": "no",
+   "heard_in_group": "Dark. There. Are. Now. Stars. Moon.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:a",
+   "word": "a",
+   "heard_in_group": "Bread, cheese, gin, then, say, bird.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:an",
+   "word": "an",
+   "heard_in_group": "N. Opens. Isitsa. Thank. Your. Cold.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:sits",
+   "word": "sits",
+   "heard_in_group": "N. Opens. Isitsa. Thank. Your. Cold.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:she",
+   "word": "she",
+   "heard_in_group": "Asks, come from Queen Essie once.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:wants",
+   "word": "wants",
+   "heard_in_group": "Asks, come from Queen Essie once.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:your",
+   "word": "your",
+   "heard_in_group": "Animals know about happy we you're",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:been",
+   "word": "been",
+   "heard_in_group": "Now, bin, owls, there, food, little.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:knows",
+   "word": "knows",
+   "heard_in_group": "With, bag, grandma, nose, maid, love.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:than",
+   "word": "than",
+   "heard_in_group": "Friends then to put map more",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:puts",
+   "word": "puts",
+   "heard_in_group": "Friends then to put map more",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:path",
+   "word": "path",
+   "heard_in_group": "One. Peace. Enough. Almost. Paths. Wood.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:sit",
+   "word": "sit",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:too",
+   "word": "too",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:other",
+   "word": "other",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:sticks",
+   "word": "sticks",
+   "heard_in_group": "What, damn, work, do, just",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:dam",
+   "word": "dam",
+   "heard_in_group": "What, damn, work, do, just",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:be",
+   "word": "be",
+   "heard_in_group": "Bay, warm, green, turtle, old, wend.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:oh",
+   "word": "oh",
+   "heard_in_group": "Though, red, vox, some, best, must...",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:fox",
+   "word": "fox",
+   "heard_in_group": "Though, red, vox, some, best, must...",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:keys",
+   "word": "keys",
+   "heard_in_group": "Had.  Loves.  Coins.  Ickes.  Bells.  It's.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:her",
+   "word": "her",
+   "heard_in_group": "Stop. Wings. Wet. Lunder. Fur. Swims.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:wall",
+   "word": "wall",
+   "heard_in_group": "While. Here. Room. Cry. Name. Idea.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:sat",
+   "word": "sat",
+   "heard_in_group": "Funny, a seize, a sword, gate, open, zat.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:took",
+   "word": "took",
+   "heard_in_group": "Toki. Show. Shows. Whiles. Annie. Chicks.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:walls",
+   "word": "walls",
+   "heard_in_group": "Toki. Show. Shows. Whiles. Annie. Chicks.",
+   "match_in_group": false,
+   "match_alone": false
+  }
+ ],
+ "words": [
+  {
+   "id": "story:moon-key:w:brave",
+   "word": "brave",
+   "heard_in_group": "Braves, Animal, Please, Need, Gold, Island",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:animal",
+   "word": "animal",
+   "heard_in_group": "Braves, Animal, Please, Need, Gold, Island",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:please",
+   "word": "please",
+   "heard_in_group": "Braves, Animal, Please, Need, Gold, Island",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:need",
+   "word": "need",
+   "heard_in_group": "Braves, Animal, Please, Need, Gold, Island",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:gold",
+   "word": "gold",
+   "heard_in_group": "Braves, Animal, Please, Need, Gold, Island",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:island",
+   "word": "island",
+   "heard_in_group": "Braves, Animal, Please, Need, Gold, Island",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:cake",
+   "word": "cake",
+   "heard_in_group": "Cake, smile, it is night, and",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:smile",
+   "word": "smile",
+   "heard_in_group": "Cake, smile, it is night, and",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:it",
+   "word": "it",
+   "heard_in_group": "Cake, smile, it is night, and",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:is",
+   "word": "is",
+   "heard_in_group": "Cake, smile, it is night, and",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:night",
+   "word": "night",
+   "heard_in_group": "Cake, smile, it is night, and",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:and",
+   "word": "and",
+   "heard_in_group": "Cake, smile, it is night, and",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:artus",
+   "word": "Artus",
+   "heard_in_group": "Artist, can't, sleep, he, looks, out",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:can't",
+   "word": "can't",
+   "heard_in_group": "Artist, can't, sleep, he, looks, out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sleep",
+   "word": "sleep",
+   "heard_in_group": "Artist, can't, sleep, he, looks, out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:he",
+   "word": "he",
+   "heard_in_group": "Artist, can't, sleep, he, looks, out",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:looks",
+   "word": "looks",
+   "heard_in_group": "Artist, can't, sleep, he, looks, out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:out",
+   "word": "out",
+   "heard_in_group": "Artist, can't, sleep, he, looks, out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:of",
+   "word": "of",
+   "heard_in_group": "of his window, the sky, very.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:his",
+   "word": "his",
+   "heard_in_group": "of his window, the sky, very.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:window",
+   "word": "window",
+   "heard_in_group": "of his window, the sky, very.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:the",
+   "word": "the",
+   "heard_in_group": "of his window, the sky, very.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:sky",
+   "word": "sky",
+   "heard_in_group": "of his window, the sky, very.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:very",
+   "word": "very",
+   "heard_in_group": "of his window, the sky, very.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:dark",
+   "word": "dark",
+   "heard_in_group": "Dark. There. Are. Now. Stars. Moon.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:there",
+   "word": "there",
+   "heard_in_group": "Dark. There. Are. Now. Stars. Moon.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:are",
+   "word": "are",
+   "heard_in_group": "Dark. There. Are. Now. Stars. Moon.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:no",
+   "word": "no",
+   "heard_in_group": "Dark. There. Are. Now. Stars. Moon.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:stars",
+   "word": "stars",
+   "heard_in_group": "Dark. There. Are. Now. Stars. Moon.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:moon",
+   "word": "moon",
+   "heard_in_group": "Dark. There. Are. Now. Stars. Moon.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:where",
+   "word": "where",
+   "heard_in_group": "Where, says, Pip, bye, fire, sleepy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:says",
+   "word": "says",
+   "heard_in_group": "Where, says, Pip, bye, fire, sleepy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:pip",
+   "word": "Pip",
+   "heard_in_group": "Where, says, Pip, bye, fire, sleepy.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:by",
+   "word": "by",
+   "heard_in_group": "Where, says, Pip, bye, fire, sleepy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:fire",
+   "word": "fire",
+   "heard_in_group": "Where, says, Pip, bye, fire, sleepy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sleepy",
+   "word": "sleepy",
+   "heard_in_group": "Where, says, Pip, bye, fire, sleepy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:soon",
+   "word": "soon",
+   "heard_in_group": "soon going to a maybe we'll see",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:going",
+   "word": "going",
+   "heard_in_group": "soon going to a maybe we'll see",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:to",
+   "word": "to",
+   "heard_in_group": "soon going to a maybe we'll see",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:maybe",
+   "word": "maybe",
+   "heard_in_group": "soon going to a maybe we'll see",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:will",
+   "word": "will",
+   "heard_in_group": "soon going to a maybe we'll see",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:see",
+   "word": "see",
+   "heard_in_group": "soon going to a maybe we'll see",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:bread",
+   "word": "bread",
+   "heard_in_group": "Bread, cheese, gin, then, say, bird.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:cheese",
+   "word": "cheese",
+   "heard_in_group": "Bread, cheese, gin, then, say, bird.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:in",
+   "word": "in",
+   "heard_in_group": "Bread, cheese, gin, then, say, bird.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:then",
+   "word": "then",
+   "heard_in_group": "Bread, cheese, gin, then, say, bird.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:a",
+   "word": "a",
+   "heard_in_group": "Bread, cheese, gin, then, say, bird.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:bird",
+   "word": "bird",
+   "heard_in_group": "Bread, cheese, gin, then, say, bird.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:comes",
+   "word": "comes",
+   "heard_in_group": "Comes, tap, big, white, owl, add.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:tap",
+   "word": "tap",
+   "heard_in_group": "Comes, tap, big, white, owl, add.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:big",
+   "word": "big",
+   "heard_in_group": "Comes, tap, big, white, owl, add.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:white",
+   "word": "white",
+   "heard_in_group": "Comes, tap, big, white, owl, add.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:owl",
+   "word": "owl",
+   "heard_in_group": "Comes, tap, big, white, owl, add.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:at",
+   "word": "at",
+   "heard_in_group": "Comes, tap, big, white, owl, add.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:look",
+   "word": "look",
+   "heard_in_group": "Look up, morning, time for breakfast.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:up",
+   "word": "up",
+   "heard_in_group": "Look up, morning, time for breakfast.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:morning",
+   "word": "morning",
+   "heard_in_group": "Look up, morning, time for breakfast.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:time",
+   "word": "time",
+   "heard_in_group": "Look up, morning, time for breakfast.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:for",
+   "word": "for",
+   "heard_in_group": "Look up, morning, time for breakfast.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:breakfast",
+   "word": "breakfast",
+   "heard_in_group": "Look up, morning, time for breakfast.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:an",
+   "word": "an",
+   "heard_in_group": "N. Opens. Isitsa. Thank. Your. Cold.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:opens",
+   "word": "opens",
+   "heard_in_group": "N. Opens. Isitsa. Thank. Your. Cold.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sits",
+   "word": "sits",
+   "heard_in_group": "N. Opens. Isitsa. Thank. Your. Cold.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:thank",
+   "word": "thank",
+   "heard_in_group": "N. Opens. Isitsa. Thank. Your. Cold.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:you",
+   "word": "you",
+   "heard_in_group": "N. Opens. Isitsa. Thank. Your. Cold.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:cold",
+   "word": "cold",
+   "heard_in_group": "N. Opens. Isitsa. Thank. Your. Cold.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:i",
+   "word": "i",
+   "heard_in_group": "I... trees... find... my... way... who...",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:trees",
+   "word": "trees",
+   "heard_in_group": "I... trees... find... my... way... who...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:find",
+   "word": "find",
+   "heard_in_group": "I... trees... find... my... way... who...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:my",
+   "word": "my",
+   "heard_in_group": "I... trees... find... my... way... who...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:way",
+   "word": "way",
+   "heard_in_group": "I... trees... find... my... way... who...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:who",
+   "word": "who",
+   "heard_in_group": "I... trees... find... my... way... who...",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:asks",
+   "word": "asks",
+   "heard_in_group": "Asks, come from Queen Essie once.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:come",
+   "word": "come",
+   "heard_in_group": "Asks, come from Queen Essie once.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:from",
+   "word": "from",
+   "heard_in_group": "Asks, come from Queen Essie once.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:queen",
+   "word": "queen",
+   "heard_in_group": "Asks, come from Queen Essie once.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:she",
+   "word": "she",
+   "heard_in_group": "Asks, come from Queen Essie once.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:wants",
+   "word": "wants",
+   "heard_in_group": "Asks, come from Queen Essie once.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:why",
+   "word": "why",
+   "heard_in_group": "Why does want us is because kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:does",
+   "word": "does",
+   "heard_in_group": "Why does want us is because kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:want",
+   "word": "want",
+   "heard_in_group": "Why does want us is because kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:us",
+   "word": "us",
+   "heard_in_group": "Why does want us is because kind.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:because",
+   "word": "because",
+   "heard_in_group": "Why does want us is because kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:kind",
+   "word": "kind",
+   "heard_in_group": "Why does want us is because kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:found",
+   "word": "found",
+   "heard_in_group": "Found. Jet. On. Thunder. Mountain. All.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:jet",
+   "word": "Jet",
+   "heard_in_group": "Found. Jet. On. Thunder. Mountain. All.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:on",
+   "word": "on",
+   "heard_in_group": "Found. Jet. On. Thunder. Mountain. All.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:thunder",
+   "word": "thunder",
+   "heard_in_group": "Found. Jet. On. Thunder. Mountain. All.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:mountain",
+   "word": "mountain",
+   "heard_in_group": "Found. Jet. On. Thunder. Mountain. All.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:all",
+   "word": "all",
+   "heard_in_group": "Found. Jet. On. Thunder. Mountain. All.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:animals",
+   "word": "animals",
+   "heard_in_group": "Animals know about happy we you're",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:know",
+   "word": "know",
+   "heard_in_group": "Animals know about happy we you're",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:about",
+   "word": "about",
+   "heard_in_group": "Animals know about happy we you're",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:happy",
+   "word": "happy",
+   "heard_in_group": "Animals know about happy we you're",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:we",
+   "word": "we",
+   "heard_in_group": "Animals know about happy we you're",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:your",
+   "word": "your",
+   "heard_in_group": "Animals know about happy we you're",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:help",
+   "word": "help",
+   "heard_in_group": "Help only can bring back tells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:only",
+   "word": "only",
+   "heard_in_group": "Help only can bring back tells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:can",
+   "word": "can",
+   "heard_in_group": "Help only can bring back tells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:bring",
+   "word": "bring",
+   "heard_in_group": "Help only can bring back tells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:back",
+   "word": "back",
+   "heard_in_group": "Help only can bring back tells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:tells",
+   "word": "tells",
+   "heard_in_group": "Help only can bring back tells.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:them",
+   "word": "them",
+   "heard_in_group": "Them. Has. Castle. High. Rock. Every.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:has",
+   "word": "has",
+   "heard_in_group": "Them. Has. Castle. High. Rock. Every.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:castle",
+   "word": "castle",
+   "heard_in_group": "Them. Has. Castle. High. Rock. Every.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:high",
+   "word": "high",
+   "heard_in_group": "Them. Has. Castle. High. Rock. Every.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:rock",
+   "word": "rock",
+   "heard_in_group": "Them. Has. Castle. High. Rock. Every.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:every",
+   "word": "every",
+   "heard_in_group": "Them. Has. Castle. High. Rock. Every.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:takes",
+   "word": "takes",
+   "heard_in_group": "Takes. Key. Gives. Light. Did. Not.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:key",
+   "word": "key",
+   "heard_in_group": "Takes. Key. Gives. Light. Did. Not.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:gives",
+   "word": "gives",
+   "heard_in_group": "Takes. Key. Gives. Light. Did. Not.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:light",
+   "word": "light",
+   "heard_in_group": "Takes. Key. Gives. Light. Did. Not.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:did",
+   "word": "did",
+   "heard_in_group": "Takes. Key. Gives. Light. Did. Not.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:not",
+   "word": "not",
+   "heard_in_group": "Takes. Key. Gives. Light. Did. Not.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:that",
+   "word": "that",
+   "heard_in_group": "That, magic, but, black, came, got.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:magic",
+   "word": "magic",
+   "heard_in_group": "That, magic, but, black, came, got.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:but",
+   "word": "but",
+   "heard_in_group": "That, magic, but, black, came, got.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:black",
+   "word": "black",
+   "heard_in_group": "That, magic, but, black, came, got.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:came",
+   "word": "came",
+   "heard_in_group": "That, magic, but, black, came, got.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:got",
+   "word": "got",
+   "heard_in_group": "That, magic, but, black, came, got.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:went",
+   "word": "went",
+   "heard_in_group": "went away over vorist three nights",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:away",
+   "word": "away",
+   "heard_in_group": "went away over vorist three nights",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:over",
+   "word": "over",
+   "heard_in_group": "went away over vorist three nights",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:forest",
+   "word": "forest",
+   "heard_in_group": "went away over vorist three nights",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:three",
+   "word": "three",
+   "heard_in_group": "went away over vorist three nights",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:nights",
+   "word": "nights",
+   "heard_in_group": "went away over vorist three nights",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:now",
+   "word": "now",
+   "heard_in_group": "Now, bin, owls, there, food, little.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:been",
+   "word": "been",
+   "heard_in_group": "Now, bin, owls, there, food, little.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:owls",
+   "word": "owls",
+   "heard_in_group": "Now, bin, owls, there, food, little.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:their",
+   "word": "their",
+   "heard_in_group": "Now, bin, owls, there, food, little.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:food",
+   "word": "food",
+   "heard_in_group": "Now, bin, owls, there, food, little.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:little",
+   "word": "little",
+   "heard_in_group": "Now, bin, owls, there, food, little.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:afraid",
+   "word": "afraid",
+   "heard_in_group": "afraid, house, windows, go, think, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:house",
+   "word": "house",
+   "heard_in_group": "afraid, house, windows, go, think, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:windows",
+   "word": "windows",
+   "heard_in_group": "afraid, house, windows, go, think, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:go",
+   "word": "go",
+   "heard_in_group": "afraid, house, windows, go, think, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:think",
+   "word": "think",
+   "heard_in_group": "afraid, house, windows, go, think, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:home",
+   "word": "home",
+   "heard_in_group": "afraid, house, windows, go, think, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:ocean",
+   "word": "ocean",
+   "heard_in_group": "Ocean, down, river, ship, small, bell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:down",
+   "word": "down",
+   "heard_in_group": "Ocean, down, river, ship, small, bell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:river",
+   "word": "river",
+   "heard_in_group": "Ocean, down, river, ship, small, bell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:ship",
+   "word": "ship",
+   "heard_in_group": "Ocean, down, river, ship, small, bell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:small",
+   "word": "small",
+   "heard_in_group": "Ocean, down, river, ship, small, bell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:bell",
+   "word": "bell",
+   "heard_in_group": "Ocean, down, river, ship, small, bell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:if",
+   "word": "if",
+   "heard_in_group": "If ring, this flies into door.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:ring",
+   "word": "ring",
+   "heard_in_group": "If ring, this flies into door.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:this",
+   "word": "this",
+   "heard_in_group": "If ring, this flies into door.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:flies",
+   "word": "flies",
+   "heard_in_group": "If ring, this flies into door.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:into",
+   "word": "into",
+   "heard_in_group": "If ring, this flies into door.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:door",
+   "word": "door",
+   "heard_in_group": "If ring, this flies into door.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:with",
+   "word": "with",
+   "heard_in_group": "With, bag, grandma, nose, maid, love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:bag",
+   "word": "bag",
+   "heard_in_group": "With, bag, grandma, nose, maid, love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:grandma",
+   "word": "Grandma",
+   "heard_in_group": "With, bag, grandma, nose, maid, love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:knows",
+   "word": "knows",
+   "heard_in_group": "With, bag, grandma, nose, maid, love.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:made",
+   "word": "made",
+   "heard_in_group": "With, bag, grandma, nose, maid, love.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:love",
+   "word": "love",
+   "heard_in_group": "With, bag, grandma, nose, maid, love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:own",
+   "word": "own",
+   "heard_in_group": "own. Again. Better. Together. Smiles. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:again",
+   "word": "again",
+   "heard_in_group": "own. Again. Better. Together. Smiles. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:better",
+   "word": "better",
+   "heard_in_group": "own. Again. Better. Together. Smiles. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:together",
+   "word": "together",
+   "heard_in_group": "own. Again. Better. Together. Smiles. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:smiles",
+   "word": "smiles",
+   "heard_in_group": "own. Again. Better. Together. Smiles. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:yes",
+   "word": "yes",
+   "heard_in_group": "own. Again. Better. Together. Smiles. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:friends",
+   "word": "friends",
+   "heard_in_group": "Friends then to put map more",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:than",
+   "word": "than",
+   "heard_in_group": "Friends then to put map more",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:two",
+   "word": "two",
+   "heard_in_group": "Friends then to put map more",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:puts",
+   "word": "puts",
+   "heard_in_group": "Friends then to put map more",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:map",
+   "word": "map",
+   "heard_in_group": "Friends then to put map more",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:more",
+   "word": "more",
+   "heard_in_group": "Friends then to put map more",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:one",
+   "word": "one",
+   "heard_in_group": "One. Peace. Enough. Almost. Paths. Wood.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:piece",
+   "word": "piece",
+   "heard_in_group": "One. Peace. Enough. Almost. Paths. Wood.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:enough",
+   "word": "enough",
+   "heard_in_group": "One. Peace. Enough. Almost. Paths. Wood.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:almost",
+   "word": "almost",
+   "heard_in_group": "One. Peace. Enough. Almost. Paths. Wood.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:path",
+   "word": "path",
+   "heard_in_group": "One. Peace. Enough. Almost. Paths. Wood.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:wood",
+   "word": "wood",
+   "heard_in_group": "One. Peace. Enough. Almost. Paths. Wood.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:boat",
+   "word": "boat",
+   "heard_in_group": "Boat, stick, weight, strong, lot, angry.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:stick",
+   "word": "stick",
+   "heard_in_group": "Boat, stick, weight, strong, lot, angry.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:wait",
+   "word": "wait",
+   "heard_in_group": "Boat, stick, weight, strong, lot, angry.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:strong",
+   "word": "strong",
+   "heard_in_group": "Boat, stick, weight, strong, lot, angry.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:lot",
+   "word": "lot",
+   "heard_in_group": "Boat, stick, weight, strong, lot, angry.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:angry",
+   "word": "angry",
+   "heard_in_group": "Boat, stick, weight, strong, lot, angry.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:shell",
+   "word": "shell",
+   "heard_in_group": "Shell, walk, sun, hot, vast, blue.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:walk",
+   "word": "walk",
+   "heard_in_group": "Shell, walk, sun, hot, vast, blue.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sun",
+   "word": "sun",
+   "heard_in_group": "Shell, walk, sun, hot, vast, blue.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:hot",
+   "word": "hot",
+   "heard_in_group": "Shell, walk, sun, hot, vast, blue.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:fast",
+   "word": "fast",
+   "heard_in_group": "Shell, walk, sun, hot, vast, blue.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:blue",
+   "word": "blue",
+   "heard_in_group": "Shell, walk, sun, hot, vast, blue.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:birds",
+   "word": "birds",
+   "heard_in_group": "Birds, fly, water, long, days, a.m.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:fly",
+   "word": "fly",
+   "heard_in_group": "Birds, fly, water, long, days, a.m.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:water",
+   "word": "water",
+   "heard_in_group": "Birds, fly, water, long, days, a.m.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:long",
+   "word": "long",
+   "heard_in_group": "Birds, fly, water, long, days, a.m.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:days",
+   "word": "days",
+   "heard_in_group": "Birds, fly, water, long, days, a.m.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:am",
+   "word": "am",
+   "heard_in_group": "Birds, fly, water, long, days, a.m.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:tired",
+   "word": "tired",
+   "heard_in_group": "tired, already, have, lunch, they have, waterfall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:already",
+   "word": "already",
+   "heard_in_group": "tired, already, have, lunch, they have, waterfall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:have",
+   "word": "have",
+   "heard_in_group": "tired, already, have, lunch, they have, waterfall.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:lunch",
+   "word": "lunch",
+   "heard_in_group": "tired, already, have, lunch, they have, waterfall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:they",
+   "word": "they",
+   "heard_in_group": "tired, already, have, lunch, they have, waterfall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:waterfall",
+   "word": "waterfall",
+   "heard_in_group": "tired, already, have, lunch, they have, waterfall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:rocks",
+   "word": "rocks",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:safe",
+   "word": "safe",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:sit",
+   "word": "sit",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:too",
+   "word": "too",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:beaver",
+   "word": "beaver",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:other",
+   "word": "other",
+   "heard_in_group": "Rocks, safe, zit, zoo, beaver, leather.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:sticks",
+   "word": "sticks",
+   "heard_in_group": "What, damn, work, do, just",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:what",
+   "word": "what",
+   "heard_in_group": "What, damn, work, do, just",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:dam",
+   "word": "dam",
+   "heard_in_group": "What, damn, work, do, just",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:work",
+   "word": "work",
+   "heard_in_group": "What, damn, work, do, just",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:do",
+   "word": "do",
+   "heard_in_group": "What, damn, work, do, just",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:just",
+   "word": "just",
+   "heard_in_group": "What, damn, work, do, just",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:goes",
+   "word": "goes",
+   "heard_in_group": "goes, good, right, may, brings, here.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:good",
+   "word": "good",
+   "heard_in_group": "goes, good, right, may, brings, here.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:right",
+   "word": "right",
+   "heard_in_group": "goes, good, right, may, brings, here.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:me",
+   "word": "me",
+   "heard_in_group": "goes, good, right, may, brings, here.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:brings",
+   "word": "brings",
+   "heard_in_group": "goes, good, right, may, brings, here.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:here",
+   "word": "here",
+   "heard_in_group": "goes, good, right, may, brings, here.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:gets",
+   "word": "gets",
+   "heard_in_group": "gets, makes, round, take, carry, get.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:makes",
+   "word": "makes",
+   "heard_in_group": "gets, makes, round, take, carry, get.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:round",
+   "word": "round",
+   "heard_in_group": "gets, makes, round, take, carry, get.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:take",
+   "word": "take",
+   "heard_in_group": "gets, makes, round, take, carry, get.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:carry",
+   "word": "carry",
+   "heard_in_group": "gets, makes, round, take, carry, get.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:get",
+   "word": "get",
+   "heard_in_group": "gets, makes, round, take, carry, get.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:be",
+   "word": "be",
+   "heard_in_group": "Bay, warm, green, turtle, old, wend.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:warm",
+   "word": "warm",
+   "heard_in_group": "Bay, warm, green, turtle, old, wend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:green",
+   "word": "green",
+   "heard_in_group": "Bay, warm, green, turtle, old, wend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:turtle",
+   "word": "turtle",
+   "heard_in_group": "Bay, warm, green, turtle, old, wend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:old",
+   "word": "old",
+   "heard_in_group": "Bay, warm, green, turtle, old, wend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:when",
+   "word": "when",
+   "heard_in_group": "Bay, warm, green, turtle, old, wend.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:town",
+   "word": "town",
+   "heard_in_group": "town, eats, grandmas, was, hungry, looked.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:eats",
+   "word": "eats",
+   "heard_in_group": "town, eats, grandmas, was, hungry, looked.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:grandma's",
+   "word": "Grandma's",
+   "heard_in_group": "town, eats, grandmas, was, hungry, looked.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:was",
+   "word": "was",
+   "heard_in_group": "town, eats, grandmas, was, hungry, looked.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:hungry",
+   "word": "hungry",
+   "heard_in_group": "town, eats, grandmas, was, hungry, looked.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:looked",
+   "word": "looked",
+   "heard_in_group": "town, eats, grandmas, was, hungry, looked.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:lonely",
+   "word": "lonely",
+   "heard_in_group": "lonely, whole, quiet, voice, tale, land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:hole",
+   "word": "hole",
+   "heard_in_group": "lonely, whole, quiet, voice, tale, land.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:quiet",
+   "word": "quiet",
+   "heard_in_group": "lonely, whole, quiet, voice, tale, land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:voice",
+   "word": "voice",
+   "heard_in_group": "lonely, whole, quiet, voice, tale, land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:tail",
+   "word": "tail",
+   "heard_in_group": "lonely, whole, quiet, voice, tale, land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:land",
+   "word": "land",
+   "heard_in_group": "lonely, whole, quiet, voice, tale, land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:nest",
+   "word": "nest",
+   "heard_in_group": "Nest, mud, bright, fog, don't, like.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:mud",
+   "word": "mud",
+   "heard_in_group": "Nest, mud, bright, fog, don't, like.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:bright",
+   "word": "bright",
+   "heard_in_group": "Nest, mud, bright, fog, don't, like.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:fog",
+   "word": "fog",
+   "heard_in_group": "Nest, mud, bright, fog, don't, like.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:don't",
+   "word": "don't",
+   "heard_in_group": "Nest, mud, bright, fog, don't, like.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:like",
+   "word": "like",
+   "heard_in_group": "Nest, mud, bright, fog, don't, like.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:cloud",
+   "word": "cloud",
+   "heard_in_group": "The cloud runs full, rope, tree, poles.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:runs",
+   "word": "runs",
+   "heard_in_group": "The cloud runs full, rope, tree, poles.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:full",
+   "word": "full",
+   "heard_in_group": "The cloud runs full, rope, tree, poles.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:rope",
+   "word": "rope",
+   "heard_in_group": "The cloud runs full, rope, tree, poles.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:tree",
+   "word": "tree",
+   "heard_in_group": "The cloud runs full, rope, tree, poles.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:pulls",
+   "word": "pulls",
+   "heard_in_group": "The cloud runs full, rope, tree, poles.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:oh",
+   "word": "oh",
+   "heard_in_group": "Though, red, vox, some, best, must...",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:red",
+   "word": "red",
+   "heard_in_group": "Though, red, vox, some, best, must...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:fox",
+   "word": "fox",
+   "heard_in_group": "Though, red, vox, some, best, must...",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:some",
+   "word": "some",
+   "heard_in_group": "Though, red, vox, some, best, must...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:best",
+   "word": "best",
+   "heard_in_group": "Though, red, vox, some, best, must...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:must",
+   "word": "must",
+   "heard_in_group": "Though, red, vox, some, best, must...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:had",
+   "word": "had",
+   "heard_in_group": "Had.  Loves.  Coins.  Ickes.  Bells.  It's.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:loves",
+   "word": "loves",
+   "heard_in_group": "Had.  Loves.  Coins.  Ickes.  Bells.  It's.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:coins",
+   "word": "coins",
+   "heard_in_group": "Had.  Loves.  Coins.  Ickes.  Bells.  It's.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:keys",
+   "word": "keys",
+   "heard_in_group": "Had.  Loves.  Coins.  Ickes.  Bells.  It's.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:bells",
+   "word": "bells",
+   "heard_in_group": "Had.  Loves.  Coins.  Ickes.  Bells.  It's.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:its",
+   "word": "its",
+   "heard_in_group": "Had.  Loves.  Coins.  Ickes.  Bells.  It's.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:ghost",
+   "word": "ghost",
+   "heard_in_group": "Ghost, ghosts, likes, man, called Sam.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:ghosts",
+   "word": "ghosts",
+   "heard_in_group": "Ghost, ghosts, likes, man, called Sam.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:likes",
+   "word": "likes",
+   "heard_in_group": "Ghost, ghosts, likes, man, called Sam.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:man",
+   "word": "man",
+   "heard_in_group": "Ghost, ghosts, likes, man, called Sam.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:called",
+   "word": "called",
+   "heard_in_group": "Ghost, ghosts, likes, man, called Sam.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:sam",
+   "word": "Sam",
+   "heard_in_group": "Ghost, ghosts, likes, man, called Sam.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:tell",
+   "word": "tell",
+   "heard_in_group": "Tell him, after, end, hair, sad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:him",
+   "word": "him",
+   "heard_in_group": "Tell him, after, end, hair, sad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:after",
+   "word": "after",
+   "heard_in_group": "Tell him, after, end, hair, sad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:end",
+   "word": "end",
+   "heard_in_group": "Tell him, after, end, hair, sad.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:hair",
+   "word": "hair",
+   "heard_in_group": "Tell him, after, end, hair, sad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sad",
+   "word": "sad",
+   "heard_in_group": "Tell him, after, end, hair, sad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:stand",
+   "word": "stand",
+   "heard_in_group": "Stand, move, gray, girl, people, many.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:move",
+   "word": "move",
+   "heard_in_group": "Stand, move, gray, girl, people, many.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:grey",
+   "word": "grey",
+   "heard_in_group": "Stand, move, gray, girl, people, many.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:girl",
+   "word": "girl",
+   "heard_in_group": "Stand, move, gray, girl, people, many.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:people",
+   "word": "people",
+   "heard_in_group": "Stand, move, gray, girl, people, many.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:many",
+   "word": "many",
+   "heard_in_group": "Stand, move, gray, girl, people, many.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:houses",
+   "word": "houses",
+   "heard_in_group": "Houses, boats, waves, so, stands, versed.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:boats",
+   "word": "boats",
+   "heard_in_group": "Houses, boats, waves, so, stands, versed.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:waves",
+   "word": "waves",
+   "heard_in_group": "Houses, boats, waves, so, stands, versed.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:so",
+   "word": "so",
+   "heard_in_group": "Houses, boats, waves, so, stands, versed.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:stands",
+   "word": "stands",
+   "heard_in_group": "Houses, boats, waves, so, stands, versed.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:first",
+   "word": "first",
+   "heard_in_group": "Houses, boats, waves, so, stands, versed.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:fish",
+   "word": "fish",
+   "heard_in_group": "Vish put starts wind helps ropes",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:put",
+   "word": "put",
+   "heard_in_group": "Vish put starts wind helps ropes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:starts",
+   "word": "starts",
+   "heard_in_group": "Vish put starts wind helps ropes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:wind",
+   "word": "wind",
+   "heard_in_group": "Vish put starts wind helps ropes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:helps",
+   "word": "helps",
+   "heard_in_group": "Vish put starts wind helps ropes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:ropes",
+   "word": "ropes",
+   "heard_in_group": "Vish put starts wind helps ropes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:well",
+   "word": "well",
+   "heard_in_group": "Well, day, wood, shark, meat, friend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:day",
+   "word": "day",
+   "heard_in_group": "Well, day, wood, shark, meat, friend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:would",
+   "word": "would",
+   "heard_in_group": "Well, day, wood, shark, meat, friend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:shark",
+   "word": "shark",
+   "heard_in_group": "Well, day, wood, shark, meat, friend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:eat",
+   "word": "eat",
+   "heard_in_group": "Well, day, wood, shark, meat, friend.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:friend",
+   "word": "friend",
+   "heard_in_group": "Well, day, wood, shark, meat, friend.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:keeps",
+   "word": "keeps",
+   "heard_in_group": "Keeps a king, say, make, fires, dragons.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:king",
+   "word": "king",
+   "heard_in_group": "Keeps a king, say, make, fires, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:say",
+   "word": "say",
+   "heard_in_group": "Keeps a king, say, make, fires, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:make",
+   "word": "make",
+   "heard_in_group": "Keeps a king, say, make, fires, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:fires",
+   "word": "fires",
+   "heard_in_group": "Keeps a king, say, make, fires, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:dragons",
+   "word": "dragons",
+   "heard_in_group": "Keeps a king, say, make, fires, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:scared",
+   "word": "scared",
+   "heard_in_group": "scared, shout, break, fall, swim, everywhere.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:shout",
+   "word": "shout",
+   "heard_in_group": "scared, shout, break, fall, swim, everywhere.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:break",
+   "word": "break",
+   "heard_in_group": "scared, shout, break, fall, swim, everywhere.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:fall",
+   "word": "fall",
+   "heard_in_group": "scared, shout, break, fall, swim, everywhere.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:swim",
+   "word": "swim",
+   "heard_in_group": "scared, shout, break, fall, swim, everywhere.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:everywhere",
+   "word": "everywhere",
+   "heard_in_group": "scared, shout, break, fall, swim, everywhere.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:tall",
+   "word": "tall",
+   "heard_in_group": "tall, top, hold, lightning, rain, bigger.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:top",
+   "word": "top",
+   "heard_in_group": "tall, top, hold, lightning, rain, bigger.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:hold",
+   "word": "hold",
+   "heard_in_group": "tall, top, hold, lightning, rain, bigger.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:lightning",
+   "word": "lightning",
+   "heard_in_group": "tall, top, hold, lightning, rain, bigger.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:rain",
+   "word": "rain",
+   "heard_in_group": "tall, top, hold, lightning, rain, bigger.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:bigger",
+   "word": "bigger",
+   "heard_in_group": "tall, top, hold, lightning, rain, bigger.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:shouts",
+   "word": "shouts",
+   "heard_in_group": "Shouts, wing, wave, breaks, falls, holds.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:wing",
+   "word": "wing",
+   "heard_in_group": "Shouts, wing, wave, breaks, falls, holds.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:wave",
+   "word": "wave",
+   "heard_in_group": "Shouts, wing, wave, breaks, falls, holds.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:breaks",
+   "word": "breaks",
+   "heard_in_group": "Shouts, wing, wave, breaks, falls, holds.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:falls",
+   "word": "falls",
+   "heard_in_group": "Shouts, wing, wave, breaks, falls, holds.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:holds",
+   "word": "holds",
+   "heard_in_group": "Shouts, wing, wave, breaks, falls, holds.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:stop",
+   "word": "stop",
+   "heard_in_group": "Stop. Wings. Wet. Lunder. Fur. Swims.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:wings",
+   "word": "wings",
+   "heard_in_group": "Stop. Wings. Wet. Lunder. Fur. Swims.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:wet",
+   "word": "wet",
+   "heard_in_group": "Stop. Wings. Wet. Lunder. Fur. Swims.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:under",
+   "word": "under",
+   "heard_in_group": "Stop. Wings. Wet. Lunder. Fur. Swims.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:her",
+   "word": "her",
+   "heard_in_group": "Stop. Wings. Wet. Lunder. Fur. Swims.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:swims",
+   "word": "swims",
+   "heard_in_group": "Stop. Wings. Wet. Lunder. Fur. Swims.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:give",
+   "word": "give",
+   "heard_in_group": "Give.  It stops.  Rainbow.  Keep.  Cousin.  Careful.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:stops",
+   "word": "stops",
+   "heard_in_group": "Give.  It stops.  Rainbow.  Keep.  Cousin.  Careful.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:rainbow",
+   "word": "rainbow",
+   "heard_in_group": "Give.  It stops.  Rainbow.  Keep.  Cousin.  Careful.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:keep",
+   "word": "keep",
+   "heard_in_group": "Give.  It stops.  Rainbow.  Keep.  Cousin.  Careful.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:cousin",
+   "word": "cousin",
+   "heard_in_group": "Give.  It stops.  Rainbow.  Keep.  Cousin.  Careful.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:careful",
+   "word": "careful",
+   "heard_in_group": "Give.  It stops.  Rainbow.  Keep.  Cousin.  Careful.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:wall",
+   "word": "wall",
+   "heard_in_group": "While. Here. Room. Cry. Name. Idea.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:hear",
+   "word": "hear",
+   "heard_in_group": "While. Here. Room. Cry. Name. Idea.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:room",
+   "word": "room",
+   "heard_in_group": "While. Here. Room. Cry. Name. Idea.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:cry",
+   "word": "cry",
+   "heard_in_group": "While. Here. Room. Cry. Name. Idea.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:name",
+   "word": "name",
+   "heard_in_group": "While. Here. Room. Cry. Name. Idea.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:idea",
+   "word": "idea",
+   "heard_in_group": "While. Here. Room. Cry. Name. Idea.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:funny",
+   "word": "funny",
+   "heard_in_group": "Funny, a seize, a sword, gate, open, zat.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sees",
+   "word": "sees",
+   "heard_in_group": "Funny, a seize, a sword, gate, open, zat.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sword",
+   "word": "sword",
+   "heard_in_group": "Funny, a seize, a sword, gate, open, zat.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:gate",
+   "word": "gate",
+   "heard_in_group": "Funny, a seize, a sword, gate, open, zat.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:open",
+   "word": "open",
+   "heard_in_group": "Funny, a seize, a sword, gate, open, zat.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sat",
+   "word": "sat",
+   "heard_in_group": "Funny, a seize, a sword, gate, open, zat.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:rooms",
+   "word": "rooms",
+   "heard_in_group": "Rooms, doors, cries, through, hides, pips.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:doors",
+   "word": "doors",
+   "heard_in_group": "Rooms, doors, cries, through, hides, pips.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:cries",
+   "word": "cries",
+   "heard_in_group": "Rooms, doors, cries, through, hides, pips.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:through",
+   "word": "through",
+   "heard_in_group": "Rooms, doors, cries, through, hides, pips.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:hides",
+   "word": "hides",
+   "heard_in_group": "Rooms, doors, cries, through, hides, pips.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:pip's",
+   "word": "Pip's",
+   "heard_in_group": "Rooms, doors, cries, through, hides, pips.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:mum",
+   "word": "mum",
+   "heard_in_group": "Mum, Dad, Plays, May, Looking, Secret",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:dad",
+   "word": "dad",
+   "heard_in_group": "Mum, Dad, Plays, May, Looking, Secret",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:plays",
+   "word": "plays",
+   "heard_in_group": "Mum, Dad, Plays, May, Looking, Secret",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:may",
+   "word": "May",
+   "heard_in_group": "Mum, Dad, Plays, May, Looking, Secret",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:looking",
+   "word": "looking",
+   "heard_in_group": "Mum, Dad, Plays, May, Looking, Secret",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:secret",
+   "word": "secret",
+   "heard_in_group": "Mum, Dad, Plays, May, Looking, Secret",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:climb",
+   "word": "climb",
+   "heard_in_group": "Climb. Chick. Slowly. Middle. Hurt. Bad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:chick",
+   "word": "chick",
+   "heard_in_group": "Climb. Chick. Slowly. Middle. Hurt. Bad.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:slowly",
+   "word": "slowly",
+   "heard_in_group": "Climb. Chick. Slowly. Middle. Hurt. Bad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:middle",
+   "word": "middle",
+   "heard_in_group": "Climb. Chick. Slowly. Middle. Hurt. Bad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:hurt",
+   "word": "hurt",
+   "heard_in_group": "Climb. Chick. Slowly. Middle. Hurt. Bad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:bad",
+   "word": "bad",
+   "heard_in_group": "Climb. Chick. Slowly. Middle. Hurt. Bad.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:took",
+   "word": "took",
+   "heard_in_group": "Toki. Show. Shows. Whiles. Annie. Chicks.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:show",
+   "word": "show",
+   "heard_in_group": "Toki. Show. Shows. Whiles. Annie. Chicks.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:shows",
+   "word": "shows",
+   "heard_in_group": "Toki. Show. Shows. Whiles. Annie. Chicks.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:walls",
+   "word": "walls",
+   "heard_in_group": "Toki. Show. Shows. Whiles. Annie. Chicks.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:any",
+   "word": "any",
+   "heard_in_group": "Toki. Show. Shows. Whiles. Annie. Chicks.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:chicks",
+   "word": "chicks",
+   "heard_in_group": "Toki. Show. Shows. Whiles. Annie. Chicks.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:peep",
+   "word": "peep",
+   "heard_in_group": "peep, run, crown, sleeping, everyone, song.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:run",
+   "word": "run",
+   "heard_in_group": "peep, run, crown, sleeping, everyone, song.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:crown",
+   "word": "crown",
+   "heard_in_group": "peep, run, crown, sleeping, everyone, song.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sleeping",
+   "word": "sleeping",
+   "heard_in_group": "peep, run, crown, sleeping, everyone, song.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:everyone",
+   "word": "everyone",
+   "heard_in_group": "peep, run, crown, sleeping, everyone, song.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:song",
+   "word": "song",
+   "heard_in_group": "peep, run, crown, sleeping, everyone, song.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:world",
+   "word": "world",
+   "heard_in_group": "world, last, lovely, sing, coin, pretty.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:last",
+   "word": "last",
+   "heard_in_group": "world, last, lovely, sing, coin, pretty.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:lovely",
+   "word": "lovely",
+   "heard_in_group": "world, last, lovely, sing, coin, pretty.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:sing",
+   "word": "sing",
+   "heard_in_group": "world, last, lovely, sing, coin, pretty.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:moon-key:w:coin",
+   "word": "coin",
+   "heard_in_group": "world, last, lovely, sing, coin, pretty.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:pretty",
+   "word": "pretty",
+   "heard_in_group": "world, last, lovely, sing, coin, pretty.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:star",
+   "word": "star",
+   "heard_in_group": "Star needs dinner.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:needs",
+   "word": "needs",
+   "heard_in_group": "Star needs dinner.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:moon-key:w:dinner",
+   "word": "dinner",
+   "heard_in_group": "Star needs dinner.",
+   "match_in_group": true,
+   "match_alone": true
+  }
+ ]
+}

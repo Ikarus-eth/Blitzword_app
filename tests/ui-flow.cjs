@@ -12,12 +12,13 @@ function boot(saved,options={}){
  window.localStorage=storage;
  window.BlitzEnemyArt=require(root+'enemy-art');
  window.BlitzApprovedEnemies=require(root+'assets/enemies/approved-20261010/roster');
+ if(options.storyVoice)window.BlitzStoryVoice={clips:options.storyVoice};
  window.matchMedia=()=>({matches:!!options.reducedMotion,addEventListener(){},removeEventListener(){}});
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value||this.firstElementChild?.value||''},set(value){for(const option of this.querySelectorAll('option'))option.removeAttribute('selected');[...this.querySelectorAll('option')].find(option=>option.value===value)?.setAttribute('selected','');}});
  Object.defineProperty(window.HTMLImageElement.prototype,'complete',{get:()=>!options.pendingImages,configurable:true});Object.defineProperty(window.HTMLImageElement.prototype,'naturalWidth',{get:()=>1536,configurable:true});
- let speechEnd=null;const speechTexts=[];
- const ctx={Math:Object.assign(Object.create(Math),{random:options.random||Math.random}),window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;},assign(url){destinations.push(url);}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
+ let speechEnd=null;const speechTexts=[],speechClips=[];
+ const ctx={Math:Object.assign(Object.create(Math),{random:options.random||Math.random}),window,document,BlitzCore:Core,BlitzContent:Content,BlitzStorage:Storage,BlitzSound:options.sound||require(root+'soundscape'),BlitzEngagement:require(root+'engagement'),BlitzAudio:{...Audio,narrator:opts=>options.heldNarration?{speak(text,callbacks){speechTexts.push(text);speechClips.push(callbacks.clip||null);speechEnd=callbacks.onEnd;},cancel(){speechEnd=null;}}:Audio.narrator({...opts,schedule,unschedule:id=>jobs.delete(id)})},performance:{now:()=>now},Date:class extends Date{static now(){return now}},setTimeout:schedule,clearTimeout:id=>jobs.delete(id),setInterval(fn){heartbeat=fn;},location:{reload(){reloads++;},assign(url){destinations.push(url);}},confirm:options.confirm||(()=>false),navigator:options.navigator||window.navigator,localStorage:storage,Option:function(t,v){const el=document.createElement('option');el.textContent=t;el.value=v;return el;}};
  const motionDraws=[];
  if(options.motion){
    window.requestAnimationFrame=fn=>schedule(()=>fn(now),16);window.cancelAnimationFrame=id=>jobs.delete(id);
@@ -40,7 +41,7 @@ function boot(saved,options={}){
  function resume(){const map=get('campaignMap').classList.contains('active');assert.ok(map||get('route').classList.contains('active'));click(get(map?'mapContinue':'continueAdventure'));}
  function advance(ms,suspended=false){if(suspended){now+=ms;heartbeat();}else for(let elapsed=0;elapsed<ms;elapsed+=1000){now+=Math.min(1000,ms-elapsed);heartbeat();}}
  function visibility(hidden){Object.defineProperty(document,'hidden',{value:hidden,configurable:true});document.dispatchEvent(new window.Event('visibilitychange'));}
- return {motionDraws,destinations,state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
+ return {motionDraws,destinations,state,get,click,tick,elapse,until,ready,resume,advance,visibility,document,window,memory,reloads:()=>reloads,speechTexts,speechClips,pendingSpeech:()=>speechEnd,finishSpeech(){const callback=speechEnd;speechEnd=null;callback?.();},setFailWrites:value=>failWrites=value};
 }
 // Independent reading of the written-number parent gate for dashboard flow tests.
 function parentGateAnswer(ui){
@@ -1366,7 +1367,7 @@ console.log('PASS all 45 new enemies render through real battle feedback, score 
 
 {
  const A=Core.Adventure,s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
- let ui=boot(s,{adventures:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,4);assert.ok(tabs[2].disabled);assert.ok(tabs[3].disabled);
+ let ui=boot(s,{adventures:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,5);assert.ok(tabs[2].disabled);assert.ok(tabs[3].disabled);assert.ok(tabs[4].disabled);
  ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="snow-owl"]'));
  assert.match(ui.get('creatureDetail').textContent,/The Letter from the Snow Owl/);ui.click([...ui.get('creatureDetail').querySelectorAll('button')].find(b=>b.textContent==='Find this path'));
  assert.equal(ui.get('adventureHub').querySelectorAll('.missionCard').length,8);assert.ok([...ui.get('adventureHub').querySelectorAll('.missionCard')].every(b=>b.disabled));
@@ -1537,7 +1538,7 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,10,2);s.profile.name='Reader';s.assessment.done=true;s.dragon.name='Ron';s.dragon.named=true;
  for(const m of A.Data.missions)if(m.campaign!=='thunder-mountain')A.stats(s,m.id).completedAt=new Date(now).toISOString();
  s.expedition.selectedCampaign='thunder-mountain';
- let ui=boot(s,{adventures:true,heldNarration:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,4);assert.ok(!tabs[3].disabled);
+ let ui=boot(s,{adventures:true,heldNarration:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,5);assert.ok(!tabs[3].disabled);assert.ok(tabs[4].disabled);
  assert.match(ui.get('adventureHub').textContent,/0\/6 treasures/);ui.click(ui.get('adventureHub').querySelector('[data-mission="tm-jet-missing"]'));
  assert.match(ui.get('mission').textContent,/A story quest/);assert.equal(ui.get('mission').querySelectorAll('.storyPreviewWord').length,8);
  ui.click(ui.get('mission').querySelector('.storyPreviewWord'));assert.equal(ui.speechTexts.at(-1),'thunder');ui.finishSpeech();
@@ -1577,4 +1578,30 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  assert.equal(ui.state().expedition.current.phase,'complete');const summary=ui.get('mission').querySelector('.storySummary').textContent;
  assert.match(summary,/You read two stories, 238 words, by yourself!/);assert.match(summary,/You tapped 2 words/);assert.match(summary,/4 of 5 questions right the first time/);
  console.log('PASS story quest reader: hub tab, word preview, mid story then next fight, cover during questions, tappable words with chunks and meanings, page turns, reload, look-back and summary');
+}
+{
+ // Moon Key (8 November 2026): campaign 5 opens after Thunder Mountain; long stories use their own recorded word,
+ // meaning and question clips, and fall back to speech when no clip exists or the dragon has another name.
+ const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,10,8);s.profile.name='Reader';s.assessment.done=true;
+ for(const m of A.Data.missions)if(m.campaign!=='moon-key')A.stats(s,m.id).completedAt=new Date(now).toISOString();
+ s.expedition.selectedCampaign='moon-key';
+ const voice={'story:moon-key:w:dark':{file:'assets/adventures/moon-key/voice/w-dark.mp3'},'story:moon-key:m:dark':{file:'m-dark.mp3'},'story:moon-key:w:brave':{file:'w-brave.mp3'},'story:moon-key:q:mk-owl-m1':{file:'q.mp3'}};
+ let ui=boot(s,{adventures:true,heldNarration:true,storyVoice:voice});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,5);assert.ok(!tabs[4].disabled);
+ assert.match(ui.get('adventureHub').textContent,/0\/8 treasures/);ui.click(ui.get('adventureHub').querySelector('[data-mission="mk-owl"]'));
+ assert.equal(ui.get('mission').querySelectorAll('.storyPreviewWord').length,8);
+ ui.click(ui.get('mission').querySelector('.storyPreviewWord'));assert.equal(ui.speechTexts.at(-1),'brave');assert.equal(ui.speechClips.at(-1),'story:moon-key:w:brave');ui.finishSpeech();
+ let t=ui.state();t.expedition.current.step=1;A.beginStory(t,now,0);
+ ui=boot(t,{adventures:true,heldNarration:true,storyVoice:voice});ui.click(ui.get('missionResume'));
+ const screen=ui.get('mission');assert.match(screen.textContent,/Story 1 of 2 · Page 1 of 4/);assert.match(screen.querySelector('.storyText').textContent,/Artus can’t sleep/);
+ ui.click([...screen.querySelectorAll('.storyWord')].find(b=>b.textContent==='dark.'));assert.equal(ui.speechTexts.at(-1),'dark');assert.equal(ui.speechClips.at(-1),'story:moon-key:w:dark');ui.finishSpeech();
+ ui.click([...ui.document.querySelectorAll('.storyWordTools button')].find(b=>b.textContent==='What does it mean?'));assert.equal(ui.speechClips.at(-1),'story:moon-key:m:dark');ui.finishSpeech();ui.click(ui.document.querySelector('.questDialogButton'));
+ ui.click([...screen.querySelectorAll('.storyWord')].find(b=>b.textContent==='window.'));assert.equal(ui.speechTexts.at(-1),'window');assert.equal(ui.speechClips.at(-1),null);ui.finishSpeech();ui.click(ui.document.querySelector('.questDialogButton'));
+ for(let p=1;p<4;p++)ui.click(missionButton(ui,'Next page →'));ui.click(missionButton(ui,'I read it! Answer 2 questions'));ui.click(ui.document.querySelector('.questDialogButton'));
+ ui.click(missionButton(ui,'Listen to the question'));assert.equal(ui.speechClips.at(-1),'story:moon-key:q:mk-owl-m1');ui.finishSpeech();
+ assert.equal(ui.get('mission').querySelector('.missionScene img').getAttribute('alt'),'Artus, Pip and Jet look up at the night sky with no moon.');
+ // A renamed dragon hears its own name, never the recorded “Pip”.
+ t=ui.state();t.dragon.name='Ron';t.dragon.named=true;t.expedition.current.read.stage='read';t.expedition.current.read.page=0;
+ ui=boot(t,{adventures:true,heldNarration:true,storyVoice:{...voice,'story:moon-key:w:pip':{file:'w-pip.mp3'}}});ui.click(ui.get('missionResume'));
+ ui.click([...ui.get('mission').querySelectorAll('.storyWord')].find(b=>b.textContent==='Ron'));assert.equal(ui.speechTexts.at(-1),'Ron');assert.equal(ui.speechClips.at(-1),null);ui.finishSpeech();
+ console.log('PASS Moon Key: campaign 5 after Thunder Mountain, long four-page stories, recorded word, meaning and question clips with speech fallback');
 }
