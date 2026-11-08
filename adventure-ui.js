@@ -180,6 +180,10 @@
     // ---- Story quests: a chapter to read with every word tappable (2 November 2026) ----
     const STORY_FUNCTION_WORDS=new Set('a an and the to of in on at by is it was he she we you i they them him his her my me be am are were do did not no so but for from with this that there then too can will'.split(' '));
     function storyKey(word){return word.toLowerCase().replace(/[’']s$/,'').replace(/[^a-z]/g,'');}
+    // Recorded tap-to-hear clips for a story campaign (Moon Key, 8 November 2026): 'story:<campaign>:w:<word>',
+    // ':m:<word>' for its meaning and ':q:<question>'. Without a clip the words are spoken as before.
+    function storyClip(id){const c=A.current(ctx.state())?.campaign,key=c&&'story:'+c+':'+id;return key&&window.BlitzStoryVoice?.clips?.[key]?key:null;}
+    function sayStory(text,id){ctx.speak(text,{clip:storyClip(id)});}
     function glossaryEntry(key){const s=ctx.state(),name=(s.dragon.name||'Pip').toLowerCase();return D.glossary[key===name?'pip':key]||null;}
     function chunked(word,entry){
       const box=el('div','storyChunks');box.setAttribute('aria-hidden','true');
@@ -192,12 +196,12 @@
     }
     function openStoryWord(word){
       const s=ctx.state(),key=storyKey(word),entry=glossaryEntry(key),spoken=word.replace(/[^A-Za-z’']/g,'').replace(/’/g,"'");
-      if(!key||!ctx.active())return;timeTap();Core.noteStoryTap(s,word,'sound',Date.now());if(!ctx.save())return;ctx.speak(spoken);
+      if(!key||!ctx.active())return;timeTap();Core.noteStoryTap(s,word,'sound',Date.now());if(!ctx.save())return;const wordClip='w:'+spoken.toLowerCase();sayStory(spoken,wordClip);
       const content=el('div','storyWordCard');content.append(chunked(spoken.replace(/'s$/,''),entry));
       const tools=el('div','storyWordTools');
-      tools.append(button('Hear it again','secondaryButton',()=>ctx.speak(spoken)));
+      tools.append(button('Hear it again','secondaryButton',()=>sayStory(spoken,wordClip)));
       const meaning=el('p','storyMeaning');meaning.hidden=true;
-      if(entry&&!STORY_FUNCTION_WORDS.has(key)){tools.append(button('What does it mean?','secondaryButton',()=>{if(!ctx.active())return;Core.noteStoryTap(ctx.state(),word,'meaning',Date.now());ctx.save();meaning.hidden=false;meaning.textContent=ctx.dragonText(entry[0]);ctx.speak(entry[0]);}));}
+      if(entry&&!STORY_FUNCTION_WORDS.has(key)){tools.append(button('What does it mean?','secondaryButton',()=>{if(!ctx.active())return;Core.noteStoryTap(ctx.state(),word,'meaning',Date.now());ctx.save();meaning.hidden=false;meaning.textContent=ctx.dragonText(entry[0]);sayStory(entry[0],'m:'+key);}));}
       content.append(tools,meaning);
       window.BlitzFeedback.show({kind:'success',title:spoken,message:'Tap a button to hear it again or find out what it means.',content,actions:[{label:'Back to the story'}],onClose:()=>{stamp=performance.now();}});
     }
@@ -207,9 +211,10 @@
         const b=button(token,'storyWord',()=>openStoryWord(token));b.setAttribute('aria-label','Hear '+token.replace(/[^A-Za-z’']/g,''));row.append(b);});
       return row;
     }
+    function previewClip(m,w){const key='story:'+m.campaign+':w:'+w.toLowerCase();return window.BlitzStoryVoice?.clips?.[key]?key:null;}
     function storyWordPreview(m){
       const box=el('div','storyPreview');box.append(el('p','storyPreviewLabel','Words for the next part of the story:'));
-      const list=el('div','storyPreviewWords');for(const w of m.targets){const b=button(w,'storyPreviewWord',()=>{if(ctx.active())ctx.speak(w);});b.setAttribute('aria-label','Hear '+w);list.append(b);}box.append(list);return box;
+      const list=el('div','storyPreviewWords');for(const w of m.targets){const b=button(w,'storyPreviewWord',()=>{if(ctx.active())ctx.speak(w,{clip:previewClip(m,w)});});b.setAttribute('aria-label','Hear '+w);list.append(b);}box.append(list);return box;
     }
     function storySummary(m,read,all,campaign){
       const box=el('div','storySummary');
@@ -228,7 +233,7 @@
       const partNo=D.campaigns.find(x=>x.id===m.campaign).missions.indexOf(m.id)+1,quiz=r.stage==='quiz',label='Part '+partNo+(m.stories?' · Story '+(r.which===0?1:2)+' of 2':''),count=st.questions.length,words=['','one','two','three','four'][count]||String(count);
       const body=el('div','missionBody storyBody'),scene=el('figure','missionScene'),image=el('img');// Questions show the campaign cover, so no page picture gives an answer away.
       const art=quiz?D.campaigns.find(x=>x.id===m.campaign).scene:st.art?.[r.page];
-      image.src=art||missionArt(m);image.alt=quiz?'Artus, Pip and Jet look at Thunder Mountain.':st.title+' · picture '+(r.page+1);image.decoding='async';image.onerror=()=>{image.onerror=null;image.src=missionArt(m);};scene.append(image);
+      image.src=art||missionArt(m);image.alt=quiz?(D.campaigns.find(x=>x.id===m.campaign).coverAlt||'Artus, Pip and Jet look at Thunder Mountain.'):st.title+' · picture '+(r.page+1);image.decoding='async';image.onerror=()=>{image.onerror=null;image.src=missionArt(m);};scene.append(image);
       scene.append(el('figcaption','',quiz?words[0].toUpperCase()+words.slice(1)+' questions about the story':label+' · Page '+(r.page+1)+' of '+st.pages.length));
       const panel=el('section','missionReading parchment storyPanel');
       if(!quiz){
@@ -248,7 +253,7 @@
         const choices=el('div','storyAnswers');choices.setAttribute('role','group');choices.setAttribute('aria-label',q.prompt);
         r.orders[r.index].forEach(id=>{const o=q.options.find(x=>x.id===id),b=button(ctx.dragonText(o.label),'searchAnswer storyAnswer'+(r.selection===id?' selected':''),()=>{if(!b.isConnected||!ctx.active())return;act(()=>A.chooseStory(s,id,q.id));});b.dataset.storyChoice=id;b.setAttribute('aria-pressed',String(r.selection===id));choices.append(b);});panel.append(choices);
         const actions=el('div','storyNav'),submit=button('Check my answer','greenButton',()=>{if(!submit.isConnected||!ctx.active())return;let result;act(()=>{result=Core.checkStory(s,Date.now(),q.id);});if(ctx.active())storyFeedback(result,q);});submit.disabled=!r.selection||r.wrong;
-        actions.append(submit,button('Listen to the question','textButton',()=>{if(ctx.active())ctx.speak(q.prompt);}));panel.append(actions);
+        actions.append(submit,button('Listen to the question','textButton',()=>{if(ctx.active())sayStory(q.prompt,'q:'+q.id);}));panel.append(actions);
       }
       panel.append(button('Back to camp','textButton storyCamp',ctx.home));
       const picture=el('div','missionPicture');picture.append(scene);body.append(picture,panel);screen.append(body);stamp=performance.now();

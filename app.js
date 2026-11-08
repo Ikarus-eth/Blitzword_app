@@ -11,7 +11,7 @@ const sound=BlitzSound.create({AudioContext:window.AudioContext||window.webkitAu
 const maleHeroSheet='assets/rowanfire-boys-2026-09-21.png';
 const heroAssets=[maleHeroSheet,maleHeroSheet,maleHeroSheet,'assets/hero4.webp','assets/hero5.webp','assets/hero6.webp'];
 const malePortraitCrops=[{x:183,y:145},{x:636,y:145},{x:1099,y:145}];
-const narrator=BlitzAudio.narrator({synth:window.speechSynthesis,Utterance:window.SpeechSynthesisUtterance,AudioContext:window.AudioContext||window.webkitAudioContext,fetchAudio:window.fetch?.bind(window),clips:window.BlitzNarration?.clips||{}});
+const narrator=BlitzAudio.narrator({synth:window.speechSynthesis,Utterance:window.SpeechSynthesisUtterance,AudioContext:window.AudioContext||window.webkitAudioContext,fetchAudio:window.fetch?.bind(window),clips:{...(window.BlitzNarration?.clips||{}),...(window.BlitzStoryVoice?.clips||{})}});
 let progressSync=null;
 let store,state,paused=true,playing=false,blocked=false,lastTick=performance.now(),timer=null,epoch=0;
 const spriteCrops=[{x:0,y:0,w:384,h:538},{x:384,y:0,w:426,h:538},{x:780,y:0,w:374,h:538},{x:1154,y:0,w:382,h:538},{x:0,y:538,w:384,h:486},{x:384,y:538,w:384,h:486},{x:768,y:630,w:384,h:370},{x:1152,y:650,w:384,h:350}];
@@ -512,9 +512,11 @@ function renderScenery(screen){
   // Multiple CSS layers give an immediate fallback on 404/slow image loading. No preload loop.
   layer.style.backgroundImage=`url("${art.src}"),url("assets/forest-clearing.webp")`;
 }
-function speak(text,{onEnd=null,onBoundary=null}={}) {
+function speak(text,{onEnd=null,onBoundary=null,clip=null}={}) {
   const token=epoch;syncSound();sound.configure({narrating:true});
-  narrator.speak(dragonText(text),{preferred:state.settings.voiceURI||'',
+  // A recorded story clip says the original words, so it is used only when the dragon is still called Pip.
+  const shown=dragonText(text);
+  narrator.speak(shown,{preferred:state.settings.voiceURI||'',clip:shown===text?clip:null,
     onEnd:()=>{if(token===epoch)sound.configure({narrating:false});if(token===epoch&&!paused&&!blocked&&onEnd)onEnd();},
     onBoundary:event=>{if(token===epoch&&!paused&&!blocked&&onBoundary)onBoundary(event);}});
 }

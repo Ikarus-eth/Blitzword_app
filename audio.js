@@ -73,7 +73,7 @@
     }
     function stopRecording(){unschedule(boundaryTimer);boundaryTimer=null;if(source){source.onended=null;try{source.stop();}catch{}source.disconnect();source=null;}}
     function cancel(){generation++;unschedule(watchdog);watchdog=null;stopRecording();if(synth)synth.cancel();}
-    function speak(text,{preferred='',onEnd=()=>{},onBoundary=()=>{}}={}) {
+    function speak(text,{preferred='',onEnd=()=>{},onBoundary=()=>{},clip=null}={}) {
       cancel();const token=generation;let finished=false;
       // Single-word ate uses its clear homophone; sentence spelling/boundaries stay intact.
       // The gate helper preserves character positions for local sentence speech.
@@ -93,7 +93,8 @@
         watchdog=schedule(()=>{if(current())synth.cancel();finish();},Math.max(2200,text.split(/\s+/).length*800+1400));
         try{synth.resume();synth.speak(utterance);}catch{finish();}
       }
-      const parts=recordedParts(text,clips);
+      // A story reader can name its own recording (8 November 2026); the text stays the fallback.
+      const parts=clip&&clips[clip]?[clip]:recordedParts(text,clips);
       if(!parts||!AudioContext||!fetchAudio){fallback();return;}
       unlock();if(!context){fallback();return;}
       // Download every clause before starting, so failure speaks the whole correction once.
