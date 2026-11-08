@@ -1,0 +1,74 @@
+{
+ "bad": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "bright": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "cake": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "during": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "everyone": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "fourth": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "funny": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "hair": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "hole": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "hurt": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "lot": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "middle": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "quiet": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "sat": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "second": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "snow": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "tall": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ },
+ "until": {
+  "error": "HTTPError",
+  "state": "needs-review"
+ }
+}
