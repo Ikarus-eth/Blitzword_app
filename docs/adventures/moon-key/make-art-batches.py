@@ -124,7 +124,27 @@ PAGES = [
     ('mk-moon-5', 'AP', 'Night at home in Artus’s cosy bedroom: Artus looks out of the window at a big bright full moon. Pip sits by the warm fireplace happily holding the last piece of cake.'),
 ]
 
-RETAKES = {}
+RETAKES = {  # Review of batches 1-4, 8 November 2026: what went wrong, said plainly in the retake prompt.
+    'mk-owl-3': 'Jet is not in this scene. There is no moon anywhere in the sky or window.',
+    'mk-owl-a2': 'No moon is visible in the window or sky. The painting fills the whole frame with no white border.',
+    'mk-owl-4': 'Jet must be clearly visible at the door with his bag and holding the cake; Pip stands beside him, excited.',
+    'mk-river-5': 'No moon in the sky. Exactly one orange-gold Pip and one red Jet in the boat.',
+    'mk-fog-2': 'The misty sky is plain: no colourful swirl, no magic shapes, no birds.',
+    'mk-fog-3': 'The fox is an ordinary red fox with no wings. Exactly two dragons: orange-gold Pip and red Jet.',
+    'mk-town-1': 'Sam faces us at the rope, smiling. The painting fills the whole frame with no white border.',
+    'mk-town-a3': 'Sam wears only his blue knitted jumper and red woollen cap: no armour, no cape. Artus is the only one in armour.',
+    'mk-castle-4': 'Exactly one Artus in the picture.',
+    'mk-castle-5': 'Jet is sitting with them eating cake too. No moon in any window; the windows show only stars.',
+    'mk-castle-a1': 'The painting fills the whole frame with no white border or margin.',
+    'mk-storm-a3': 'Artus must look exactly like image 2: golden-ginger hair, freckles, silver armour, red scarf and cape.',
+    'mk-storm-5': 'The painting fills the whole frame with no white border or margin.',
+    'mk-moon-5': 'Exactly one dragon in the room: Pip by the fire with the cake. No other dragon.',
+    'mk-moon-a2': 'The nest is inside the stone tower room of the castle, not in a tree or forest.',
+    'mk-nest-4': 'Exactly two dragons: Pip is orange-gold, Jet is red with green wings.',
+    'mk-nest-a2': 'Pip is orange-gold; Jet is red with green wings. Exactly one of each.',
+    'mk-nest-a3': 'Pip is orange-gold; Jet is red with green wings. Exactly one of each.',
+    'mk-nest-a4': 'Indoors at the top of a dark winding stone staircase inside the castle tower, not outdoors. Pip is orange-gold, Jet is red.',
+}
 BATCHES = [('art-scenes-1', 'cover mk-owl mk-river'), ('art-scenes-2', 'mk-fog mk-town'), ('art-scenes-3', 'mk-storm mk-castle'), ('art-scenes-4', 'mk-nest mk-moon')]
 here = Path(__file__).parent
 done = set()
@@ -140,3 +160,13 @@ for name, prefixes in BATCHES:
     (here / (name + '.json')).write_text(json.dumps({'model': 'fal-ai/nano-banana/edit', 'stage': name, 'count': len(imgs), 'images': imgs}, indent=1, ensure_ascii=False))
     print(name, len(imgs))
 assert done == {p[0] for p in PAGES}, 'every page in a batch'
+
+imgs = []
+for pid, chars, scene in PAGES:
+    if pid in RETAKES:
+        order = [p[0] for p in PAGES]
+        night = order.index(pid) < order.index('mk-moon-3') and any(w in scene.lower() for w in ('night', 'dark sky', 'no moon'))
+        refs, text = prompt(chars, scene + ' ' + RETAKES[pid], night)
+        imgs.append({'id': pid, 'references': refs, 'aspect_ratio': '3:2', 'prompt': text})
+(here / 'art-retakes.json').write_text(json.dumps({'model': 'fal-ai/nano-banana/edit', 'stage': 'retakes', 'count': len(imgs), 'images': imgs}, indent=1, ensure_ascii=False))
+print('art-retakes', len(imgs))
