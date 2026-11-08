@@ -19,7 +19,7 @@ SAFE = ('Draw new natural poses, not the reference poses pasted on. Full scene, 
         'natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. '
         'Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame.')
 
-def prompt(chars, scene):
+def prompt(chars, scene, night=False):
     lines = ['Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, '
              'in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, '
              'gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition.']
@@ -28,6 +28,10 @@ def prompt(chars, scene):
         url, desc = CHARS[c]
         refs.append(url)
         lines.append(f'Image {len(refs)} is the exact identity of {desc}.')
+    if 'P' in chars and 'J' in chars:
+        lines.append('Pip is orange-gold, never red; Jet is the red dragon with green wings. Draw exactly one of each.')
+    if night:
+        lines.append('The night sky has NO moon at all: no full moon, no crescent moon, no moon reflection anywhere. Only stars or clouds.')
     absent = [n for c, n in [('A', 'no boy'), ('M', 'no ghost'), ('S', 'no old man')] if c not in chars]
     lines.append('Scene: ' + scene)
     if absent:
@@ -120,6 +124,7 @@ PAGES = [
     ('mk-moon-5', 'AP', 'Night at home in Artus’s cosy bedroom: Artus looks out of the window at a big bright full moon. Pip sits by the warm fireplace happily holding the last piece of cake.'),
 ]
 
+RETAKES = {}
 BATCHES = [('art-scenes-1', 'cover mk-owl mk-river'), ('art-scenes-2', 'mk-fog mk-town'), ('art-scenes-3', 'mk-storm mk-castle'), ('art-scenes-4', 'mk-nest mk-moon')]
 here = Path(__file__).parent
 done = set()
@@ -127,7 +132,9 @@ for name, prefixes in BATCHES:
     imgs = []
     for pid, chars, scene in PAGES:
         if any(pid == p or pid.startswith(p + '-') for p in prefixes.split()):
-            refs, text = prompt(chars, scene)
+            order = [p[0] for p in PAGES]
+            night = order.index(pid) < order.index('mk-moon-3') and any(w in scene.lower() for w in ('night', 'dark sky', 'no moon'))
+            refs, text = prompt(chars, scene, night)
             imgs.append({'id': pid, 'references': refs, 'aspect_ratio': '3:2', 'prompt': text})
             done.add(pid)
     (here / (name + '.json')).write_text(json.dumps({'model': 'fal-ai/nano-banana/edit', 'stage': name, 'count': len(imgs), 'images': imgs}, indent=1, ensure_ascii=False))
