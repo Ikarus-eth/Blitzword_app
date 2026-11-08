@@ -995,7 +995,7 @@ function narrateChapterStory(word=null){
 }
 function renderTeaching() {
   show('teaching');$('#wordReady').hidden=true;
-  const item={...Core.byWord[state.teaching.target],...Content.teachingVisuals.words[state.teaching.target]};item.sentence=dragonText(item.sentence);const sentence=$('#teachSentence');sentence.replaceChildren();
+  const item={...Core.byWord[state.teaching.target],...Content.teachingVisuals.words[state.teaching.target],...(window.BlitzWordPictures?.[state.teaching.target]||{})};item.sentence=dragonText(item.sentence);const sentence=$('#teachSentence');sentence.replaceChildren();
   const pattern=new RegExp('\\b'+item.w+'\\b','i'),match=pattern.exec(item.sentence),start=match.index;
   sentence.append(document.createTextNode(item.sentence.slice(0,start)));
   const target=document.createElement('span');target.className='targetWord';target.textContent=match[0];sentence.append(target,document.createTextNode(item.sentence.slice(start+match[0].length)));

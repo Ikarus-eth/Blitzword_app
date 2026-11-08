@@ -1,0 +1,42 @@
+name: Teaching pictures for words (fal.ai)
+
+# Starts when a picture request is pushed on a review branch; commits the pictures back to that branch only.
+on:
+  push:
+    branches-ignore: [main]
+    paths: ['docs/word-pictures/request-*.json']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: word-pictures
+  cancel-in-progress: false
+
+jobs:
+  pictures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q pillow
+      - name: Generate
+        env:
+          FAL_KEY: ${{ secrets.AL_AI_API }}
+        run: |
+          req=$(git diff --name-only HEAD~1 HEAD -- 'docs/word-pictures/request-*.json' | grep -v report | head -1)
+          echo "REQUEST=$req" >> "$GITHUB_ENV"
+          python3 scripts/generate-word-pictures.py "$req"
+      - name: Commit the pictures to this branch
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets/teaching/words docs/word-pictures
+          git diff --cached --quiet && exit 0
+          git commit -m "Word teaching pictures [skip ci]"
+          git pull --rebase origin "$GITHUB_REF_NAME" && git push origin HEAD:"$GITHUB_REF_NAME"
