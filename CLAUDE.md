@@ -1,21 +1,38 @@
-# BlitzWord: working rules for Claude
+# BlitzWord shared project instructions
 
-BlitzWord is an iPad-first English reading game for children. GitHub Pages deploys `main` to https://ikarus-eth.github.io/Blitzword_app/.
+Use these same instructions for Codex and Claude.
 
-## Working method
+BlitzWord is Ikarus's existing iPad-first English reading game for his son Artus (born 2 May 2019). Use Asia/Makassar for progress timestamps.
 
-- One approved point at a time; stop and report after each. Wait for the user's "go" before starting the next point.
-- Each report gives: pull request(s), merge commit(s), Pages workflow run and result, live build marker, what the user should check on the iPad, and a two-line plan for the next point.
-- The approved plan, its order and the parked items are in [current status](docs/CURRENT_STATUS.md) under "Outstanding work".
+Repository: https://github.com/Ikarus-eth/Blitzword_app
+Game: https://ikarus-eth.github.io/Blitzword_app/
 
-## Standing rules
+## Source and maintenance
 
-- Current `main` is the source of truth for docs, code, curriculum and approved assets. Before working, read `README.md` and `docs/CURRENT_STATUS.md`. Use `docs/BLITZWORD_PRODUCT_SPEC.md` for approved product rules and `docs/BLITZWORD_REFERENCE_IMAGES.md` for artwork. Curriculum source: `curriculum/BLITZWORD_CURRICULUM_200_1000.xlsx`. Playable content: `content.js`.
-- The user's latest explicit decisions override older docs. Record accepted changes in GitHub: decisions in the spec, verified implementation in `docs/CURRENT_STATUS.md`. Historical release notes are not the backlog.
-- Continue the existing app. Preserve learner saves (localStorage key `blitzword_state_v1` and its `_backup`, `_legacy_backup`, `_unreadable_backup` and `_before_restore` keys) and parallel work. Never reset learner data to roll anything back.
-- Deploy only through the existing workflow (`.github/workflows/pages.yml`). One task branch and pull request per change. Check current `main` right before merging and keep intervening changes. No force-push, no direct commits to `main`.
-- For any runtime change, bump the `blitzword-build` meta tag and the `?v=` cache version of each changed file in `index.html`, as earlier releases did, so iPads load the new files. Confirm the live marker after deployment.
-- Run `npm ci --ignore-scripts && npm test` before every pull request that changes code. Add tests for new behaviour. Change an existing test only when behaviour changes on purpose, and say why.
-- Keep proposed, implemented, tested and deployed apart. Verify deployment before calling anything live. If access fails, report the exact error. Retry only with new evidence or a concrete fix.
-- Re-check each finding in the approved plan against current `main` before acting on it.
-- Reply style: direct, recommendation first, short. Tag non-trivial claims [F] verified, [I] inference, [S] speculation.
+Use current main as the source of truth. Before working, read README.md and docs/CURRENT_STATUS.md. Consult docs/BLITZWORD_PRODUCT_SPEC.md for approved rules and docs/BLITZWORD_REFERENCE_IMAGES.md for artwork. Original curriculum: curriculum/BLITZWORD_CURRICULUM_200_1000.xlsx; playable content: content.js.
+
+Continue the existing app. Retired mockups and historical release notes are not current requirements or backlog. Latest explicit user decisions override earlier documentation. Preserve learner saves, pairing and parallel work; never reset progress to fix deployment. Record accepted rules and verified implementation in the repository.
+
+Use separate task branches and pull requests. Check current main before merging, preserve intervening changes and coordinate so only one assistant merges or deploys at a time. No force pushes or direct main commits. Use the existing GitHub Pages workflow. For changed runtime files, update cache versions and the build marker. Run npm ci --ignore-scripts and npm test for code changes. Distinguish proposed, implemented, tested and deployed; verify deployment before claiming it is live. Report exact access failures and retry only with new evidence or a concrete fix.
+
+## Reading Artus's automatically shared progress
+
+The existing paired iPad uploads redacted progress to the protected service. The service encrypts a readable report and writes it to the **progress-data** branch of the same repository, file **latest.enc.json**. This branch is data only; never merge it into main. Reopening/resuming the updated app and foreground sync request an update, including when the saved answers have not changed. No new pairing is needed for the already-connected iPad.
+
+Read docs/progress-sync/GITHUB_MIRROR.md. Obtain PROGRESS_READING_KEY from the user's private project instructions or the local private key file. It is deliberately absent from GitHub. A GitHub deployment token is not the reading key. Never commit keys, decrypted reports, learner exports or credentials, and never put secrets in URLs, command arguments, app code or logs.
+
+With Node 22 or newer, run scripts/read-progress.mjs from current main and pass the reading key through standard input. The script fetches and decrypts the latest report. It can also accept a downloaded encrypted file path as its only argument. No GitHub login is needed to download the ciphertext. A Claude session needs code execution with network access, or the encrypted file plus code execution; project instructions alone do not add tools.
+
+The decrypted report contains capturedAt, receivedAt, sequence, summary, per-word reports, expanded learning progress and saved oral-reading reports. Quote capturedAt in Bali time and report stale snapshots honestly. Do not interpret word recognition response time as oral reading speed. Older compacted answers survive as aggregates; additional uploaded event history remains in the authenticated Sites database. Individual timestamps are UTC; archived daily totals use device-local dates, whose historical offsets can be unknown. This report is not a restorable backup.
+
+For a refresh without the iPad, POST an empty JSON object to https://blitzword-progress.ikarus-janzenoa.chatgpt.site/api/mirror/refresh with the reading key as an Authorization Bearer header. This only republishes the latest server-stored report; it cannot retrieve unsent iPad activity or modify the game. Never describe that as fresh play data unless capturedAt changed.
+
+Codex can additionally use authenticated Sites read_database_overview and read_database_table_rows for project appgprj_6acb06fb7e2c8191abedb468be5f0812, binding DB. Use returned table names, pagination and complete reassembled parts. Do not infer missing values from truncated cells.
+
+For future curriculum or chapter design, review the latest learning evidence first; quest position is not mastery. The original chapter-four checkpoint has already been fulfilled by later supplied exports and implementation; do not repeat an obsolete request for that export.
+
+## Privacy and concurrent work
+
+Only ciphertext goes to the public repository. The reading key grants decryption and refreshing the encrypted copy, not write access to the iPad or GitHub. Both assistants can read simultaneously. Pausing sharing stops further iPad uploads; previously shared reports remain. Deleting sharing removes the current report, but old encrypted versions remain in Git history. Do not promise historical erasure. A closed iPad does not continuously upload.
+
+Answer first and keep ordinary replies short. Separate checked evidence from inference. Ask only when a missing detail materially changes the result.

@@ -1,3 +1,7 @@
+## Automatic progress access for Codex and Claude
+
+Use the identical [shared project instructions](docs/SHARED_PROJECT_INSTRUCTIONS.md) and the private reading key to read the encrypted progress report from this repository’s `progress-data` branch. [How it works](docs/progress-sync/GITHUB_MIRROR.md). Check [current status](docs/CURRENT_STATUS.md) for deployment verification.
+
 ## Oral reading recordings — 11 October 2026
 
 **Deployed; Azure authentication activated 12 October 2026.** [PR #183](https://github.com/Ikarus-eth/Blitzword_app/pull/183) merged; [Pages run 38142580448](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/38142580448) succeeded. Six live frontend files match tested source. Sync-service version 4 is deployed; report tables and unauthenticated access rejection are verified. Parents can submit a recording and passage, review estimated speed, word differences and pauses, and sync results privately for progress review. Audio is sent to Azure but not retained by BlitzWord. The Free-tier Southeast Asia Speech resource is configured through a server secret. Environment revision 4 is deployed and Microsoft token authentication returned HTTP 200. Real recording recognition and end-to-end result sync still await the first sample. 413 unit/backend tests, 123 UI groups and isolated browser recovery checks pass. [Setup, costs, limitations and verification](docs/oral-reading/RELEASE.md).

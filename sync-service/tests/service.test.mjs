@@ -111,3 +111,12 @@ test('parent context updates after auto-upload preserve speech evidence and requ
  await call(base+'report',{id:meta.id,phrases:[]},token);assert.deepEqual(read(),after,'report retries must preserve updated context');
  await call(base+'context',{...context,notes:'Short'},token);assert.equal(read().notes,'Short','rewritten report parts have no trailing old chunks');
 });
+
+test('mirror refresh requires the reading key; paired mirror route requires the owning device',async()=>{
+ const {call}=setup({PROGRESS_READING_KEY:'d'.repeat(64)}),p=await paired(call);
+ assert.equal((await call('/api/mirror/refresh',{})).status,401);
+ assert.equal((await call('/api/mirror/refresh',{},token)).status,401);
+ assert.equal((await(await call('/api/mirror/refresh',{},'d'.repeat(64))).json()).status,'disabled');
+ assert.equal((await call('/api/devices/'+p.deviceId+'/mirror',{})).status,401);
+ assert.equal((await(await call('/api/devices/'+p.deviceId+'/mirror',{},token)).json()).status,'disabled');
+});

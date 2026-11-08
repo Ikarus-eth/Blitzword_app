@@ -70,3 +70,7 @@ export const progress_trends = sqliteTable('progress_trends', {
  part: integer('part').notNull(), parts: integer('parts').notNull(),
  sequence: integer('sequence').notNull(), data: text('data').notNull(),
 }, t => [primaryKey({columns:[t.deviceId,t.recordKey,t.part]})]);
+
+export const github_mirror_locks = sqliteTable('github_mirror_locks', {
+ deviceId: text('device_id').primaryKey(), owner: text('owner').notNull(), expiresAt: integer('expires_at').notNull(),
+});

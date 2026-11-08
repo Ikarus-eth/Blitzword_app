@@ -1,3 +1,4 @@
+import {mirrorLatest,deleteMirror,withMirrorLock} from './github-mirror.mjs';
 import {TABLES,writeProjection,writeEvents} from './history.mjs';
 import {ORAL_TABLES,oralRoute} from './oral-service.mjs';
 export const GAME_ORIGIN='https://ikarus-eth.github.io';
@@ -21,9 +22,13 @@ export async function handle(request,env,now=Date.now(),send=fetch){
   const reply=(body,status=200)=>new Response(JSON.stringify(body),{status,headers});
   if(origin&&origin!==GAME_ORIGIN)return reply({error:'Origin not allowed'},403);
   if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
-  if(path==='/api/health'&&request.method==='GET')return reply({service:'BlitzWord progress',version:2});
+  if(path==='/api/health'&&request.method==='GET')return reply({service:'BlitzWord progress',version:3,githubMirror:true});
   const bearer=request.headers.get('authorization')?.replace(/^Bearer /,'');
   try{
+    if(path==='/api/mirror/refresh'&&request.method==='POST'){
+      if(!validToken(env.PROGRESS_READING_KEY)||!validToken(bearer)||await hash(bearer)!==await hash(env.PROGRESS_READING_KEY))return reply({error:'Unauthorized'},401);
+      return reply(await mirrorLatest(env,env.GITHUB_MIRROR_DEVICE_ID,now,send));
+    }
     if(path==='/api/admin/pair'&&request.method==='POST'){
       if(!validToken(ADMIN_KEY)||!validToken(bearer)||await hash(bearer)!==await hash(ADMIN_KEY))return reply({error:'Unauthorized'},401);
       const code=random(),id=crypto.randomUUID();
@@ -47,15 +52,19 @@ export async function handle(request,env,now=Date.now(),send=fetch){
       const details=await writeProjection(DB,row.id,JSON.parse(row.snapshot));
       return reply({indexed:true,...details});
     }
-    const match=path.match(/^\/api\/devices\/([0-9a-f-]{36})(\/(?:snapshot|events|oral\/(?:status|token|report|context)))?$/);
+    const match=path.match(/^\/api\/devices\/([0-9a-f-]{36})(\/(?:snapshot|events|mirror|oral\/(?:status|token|report|context)))?$/);
     if(!match||!['POST','DELETE'].includes(request.method))return reply({error:'Not found'},404);
     if(!validToken(bearer))return reply({error:'Unauthorized'},401);
     const tokenHash=await hash(bearer),id=match[1];
     const device=await DB.prepare('SELECT id, sequence FROM devices WHERE id = ? AND token_hash = ? AND revoked = 0').bind(id,tokenHash).first();
     if(!device)return reply({error:'Unauthorized'},401);
+    if(request.method==='POST'&&match[2]==='/mirror')return reply(await mirrorLatest(env,id,now,send));
     if(match[2]?.startsWith('/oral/'))return await oralRoute(request,env,id,match[2].slice(6),readJSON,reply,now,send);
     if(request.method==='DELETE'&&!match[2]){
+      await withMirrorLock(env,id,now,async()=>{
+      await deleteMirror(env,id,send);
       await DB.batch([DB.prepare('UPDATE devices SET snapshot = NULL, summary = NULL, received_at = NULL, history_sequence = 0, token_hash = NULL, revoked = 1 WHERE id = ? AND token_hash = ?').bind(id,tokenHash),...[...TABLES,...ORAL_TABLES].map(table=>DB.prepare(`DELETE FROM ${table} WHERE device_id=?`).bind(id))]);
+      });
       return reply({deleted:true});
     }
     if(request.method==='POST'&&match[2]==='/events'){
