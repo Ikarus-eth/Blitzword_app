@@ -71,7 +71,7 @@
   },
   {
    "id": "m:cant",
-   "text": "Can’t means can not."
+   "text": "Can\u2019t means can not."
   },
   {
    "id": "w:sleep",
@@ -187,7 +187,7 @@
   },
   {
    "id": "m:says",
-   "text": "Says means say. “Look!” says Artus."
+   "text": "Says means say. \u201cLook!\u201d says Artus."
   },
   {
    "id": "w:pip",
@@ -195,7 +195,7 @@
   },
   {
    "id": "m:pip",
-   "text": "Pip is the little orange dragon. He is Artus’s friend."
+   "text": "Pip is the little orange dragon. He is Artus\u2019s friend."
   },
   {
    "id": "w:by",
@@ -567,7 +567,7 @@
   },
   {
    "id": "m:jet",
-   "text": "Jet is Pip’s cousin. He is a little red dragon."
+   "text": "Jet is Pip\u2019s cousin. He is a little red dragon."
   },
   {
    "id": "w:on",
@@ -895,7 +895,7 @@
   },
   {
    "id": "m:their",
-   "text": "Their means it is for them. The owls can’t see their food."
+   "text": "Their means it is for them. The owls can\u2019t see their food."
   },
   {
    "id": "w:food",
@@ -1071,7 +1071,7 @@
   },
   {
    "id": "m:grandma",
-   "text": "Your mum’s mum or your dad’s mum. Here she is Jet’s grandma."
+   "text": "Your mum\u2019s mum or your dad\u2019s mum. Here she is Jet\u2019s grandma."
   },
   {
    "id": "w:knows",
@@ -1535,7 +1535,7 @@
   },
   {
    "id": "q:mk-river-m1",
-   "text": "Why can’t Artus go down the waterfall?"
+   "text": "Why can\u2019t Artus go down the waterfall?"
   },
   {
    "id": "q:mk-river-m2",
@@ -1755,7 +1755,7 @@
   },
   {
    "id": "m:fog",
-   "text": "Fog is a cloud near the ground. In fog, you can’t see far."
+   "text": "Fog is a cloud near the ground. In fog, you can\u2019t see far."
   },
   {
    "id": "w:don't",
@@ -1763,7 +1763,7 @@
   },
   {
    "id": "m:dont",
-   "text": "Don’t means do not."
+   "text": "Don\u2019t means do not."
   },
   {
    "id": "w:like",
@@ -1955,7 +1955,7 @@
   },
   {
    "id": "m:nest",
-   "text": "A nest is a bird’s home. Birds make nests with sticks."
+   "text": "A nest is a bird\u2019s home. Birds make nests with sticks."
   },
   {
    "id": "w:ghost",
@@ -2035,7 +2035,7 @@
   },
   {
    "id": "q:mk-fog-q2",
-   "text": "Where is the black bird’s nest?"
+   "text": "Where is the black bird\u2019s nest?"
   },
   {
    "id": "q:mk-fog-q3",
@@ -2151,7 +2151,7 @@
   },
   {
    "id": "q:mk-town-m2",
-   "text": "Who is Pip’s big cake for?"
+   "text": "Who is Pip\u2019s big cake for?"
   },
   {
    "id": "w:put",
@@ -2467,7 +2467,7 @@
   },
   {
    "id": "q:mk-storm-m2",
-   "text": "Why can’t Jet fly out of the water?"
+   "text": "Why can\u2019t Jet fly out of the water?"
   },
   {
    "id": "w:under",
@@ -2639,7 +2639,7 @@
   },
   {
    "id": "q:mk-castle-m1",
-   "text": "Why can’t they go into the castle?"
+   "text": "Why can\u2019t they go into the castle?"
   },
   {
    "id": "q:mk-castle-m2",
@@ -3017,5 +3017,6 @@
    "id": "q:mk-moon-q3",
    "text": "What does Pip have at the end?"
   }
- ]
+ ],
+ "run": "first recording"
 }

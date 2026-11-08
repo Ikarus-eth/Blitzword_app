@@ -3,6 +3,10 @@ name: Record story voice (local Kokoro, free)
 # Tap-to-hear clips for story campaigns, recorded on the runner like the Right Reader spelling voice.
 # Runs only on a review branch and commits the clips back to that branch, never to main.
 on:
+  # workflow_dispatch needs this file on main; until then a push of a request on a review branch starts it.
+  push:
+    branches-ignore: [main]
+    paths: ['docs/adventures/*/voice-request.json']
   workflow_dispatch:
     inputs:
       request:
@@ -31,13 +35,18 @@ jobs:
         run: |
           pip install -q torch --index-url https://download.pytorch.org/whl/cpu
           pip install -q "kokoro>=0.9.4" soundfile faster-whisper
-      - name: Record and listen
+      - name: Find the request
         env:
-          REQUEST: ${{ inputs.request }}
+          INPUT: ${{ inputs.request }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          req="$INPUT"
+          if [ -z "$req" ]; then git fetch -q --depth=50 origin "$GITHUB_REF_NAME"; req=$(git diff --name-only "$BEFORE" HEAD -- 'docs/adventures/*/voice-request.json' 2>/dev/null | head -1); fi
+          [ -z "$req" ] && req=docs/adventures/moon-key/voice-request.json
+          echo "REQUEST=$req" >> "$GITHUB_ENV"
+      - name: Record and listen
         run: python scripts/record-story-voice.py "$REQUEST"
       - name: Commit the clips to this branch
-        env:
-          REQUEST: ${{ inputs.request }}
         run: |
           out=$(jq -r '.output' "$REQUEST")
           git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
