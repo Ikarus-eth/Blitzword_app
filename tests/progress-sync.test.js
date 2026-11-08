@@ -5,7 +5,7 @@ function setup(){
  const map=new Map(),storage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)};
  let state=Core.migrate({}),now=100000,offline=false,serverSeq=0;const requests=[];
  state.profile.name='Private child';state.profile.age=7;state.dragon.name='Private dragon';
- const fetch=async(url,options)=>{requests.push({url,options});if(offline)throw new Error('offline');let body=options.body?JSON.parse(options.body):null;if(url.endsWith('/pair'))return Response.json({deviceId:'12345678-1234-1234-1234-123456789abc'});if(options.method==='DELETE')return Response.json({deleted:true});serverSeq=Math.max(serverSeq,body.sequence);return Response.json({sequence:serverSeq,receivedAt:new Date(now).toISOString()});};
+ const fetch=async(url,options)=>{requests.push({url,options});if(offline)throw new Error('offline');let body=options.body?JSON.parse(options.body):null;if(url.endsWith('/pair'))return Response.json({deviceId:'12345678-1234-1234-1234-123456789abc'});if(url.endsWith('/mirror'))return Response.json({status:'synced'});if(options.method==='DELETE')return Response.json({deleted:true});serverSeq=Math.max(serverSeq,body.sequence);return Response.json({sequence:serverSeq,receivedAt:new Date(now).toISOString()});};
  const build=()=>Sync.create({storage,readState:()=>state,fetch,crypto:webcrypto,now:()=>now,build:'test',pack:Core.packSave});
  const tick=()=>new Promise(r=>setTimeout(r,20));
  return {map,storage,requests,state,build,tick,offline:v=>offline=v,advance:()=>now+=31000};
@@ -13,17 +13,17 @@ function setup(){
 test('unpaired device never sends progress',async()=>{const t=setup();await t.build().flush(true);assert.equal(t.requests.length,0);});
 test('pairing sends redacted, compact progress without modifying playable save',async()=>{
  const t=setup(),sync=t.build(),before=JSON.stringify(t.state);assert.equal(sync.pair('a'.repeat(64)),true);await waitFor(()=>sync.status().lastSyncedAt);
- const p=JSON.parse(t.requests.at(-1).options.body);assert.equal(p.format,'blitzword-progress-v1');assert.equal(p.progress.schemaVersion,3);assert.equal(JSON.stringify(p).includes('Private'),false);assert.equal(p.progress.profile,undefined);assert.equal(JSON.stringify(t.state),before);assert.ok(sync.status().lastSyncedAt);
- t.advance();await sync.flush();assert.equal(t.requests.length,2,'unchanged state is not uploaded again');
+ const p=JSON.parse(t.requests.filter(r=>r.url.endsWith('/snapshot')).at(-1).options.body);assert.equal(p.format,'blitzword-progress-v1');assert.equal(p.progress.schemaVersion,3);assert.equal(JSON.stringify(p).includes('Private'),false);assert.equal(p.progress.profile,undefined);assert.equal(JSON.stringify(t.state),before);assert.ok(sync.status().lastSyncedAt);
+ t.advance();await sync.flush();assert.equal(t.requests.filter(r=>r.url.endsWith('/snapshot')).length,1,'unchanged state is not uploaded again');assert.equal(t.requests.filter(r=>r.url.endsWith('/mirror')).length,2,'unchanged saves retry the mirror');
 });
 test('offline updates survive reload and restore with lower game revision',async()=>{
  const t=setup();let sync=t.build();sync.pair('a'.repeat(64));await t.tick();t.offline(true);t.state.dragon.xp=40;t.advance();await sync.flush();const n=JSON.parse(t.storage.getItem(Sync.KEY)).sequence;
  sync=t.build();t.offline(false);t.state.revision=0;t.state.dragon.xp=50;await sync.flush(true);
- const p=JSON.parse(t.requests.at(-1).options.body);assert.ok(p.sequence>n);assert.equal(p.progress.dragon.xp,50);assert.ok(sync.status().lastSyncedAt);
+ const p=JSON.parse(t.requests.filter(r=>r.url.endsWith('/snapshot')).at(-1).options.body);assert.ok(p.sequence>n);assert.equal(p.progress.dragon.xp,50);assert.ok(sync.status().lastSyncedAt);
 });
 test('pause prevents upload, resume catches up, delete does not change save',async()=>{
  const t=setup(),sync=t.build();sync.pair('a'.repeat(64));await waitFor(()=>sync.status().lastSyncedAt);sync.pause(true);const n=t.requests.length,previousAck=sync.status().lastSyncedAt;t.state.dragon.xp=30;t.advance();await sync.flush(true);assert.equal(t.requests.length,n);
- sync.pause(false);await waitFor(()=>sync.status().lastSyncedAt!==previousAck);assert.equal(t.requests.length,n+1);const before=JSON.stringify(t.state);sync.remove();await waitFor(()=>t.storage.getItem(Sync.KEY)===null);assert.equal(t.storage.getItem(Sync.KEY),null);assert.equal(JSON.stringify(t.state),before);
+ sync.pause(false);await waitFor(()=>sync.status().lastSyncedAt!==previousAck);assert.equal(t.requests.length,n+2);const before=JSON.stringify(t.state);sync.remove();await waitFor(()=>t.storage.getItem(Sync.KEY)===null);assert.equal(t.storage.getItem(Sync.KEY),null);assert.equal(JSON.stringify(t.state),before);
 });
 test('delete request survives offline reload and blocks further uploads',async()=>{
  const t=setup(),sync=t.build();sync.pair('a'.repeat(64));await t.tick();t.offline(true);sync.remove();await t.tick();assert.equal(sync.status().deleting,true);
@@ -56,4 +56,17 @@ test('event acknowledgements are required before clearing offline queue',async()
  const history={capture:async()=>{},pending:async()=>rows,acknowledge:async()=>{cleared=true;rows=[];},clear:async()=>{}};
  const sync=Sync.create({storage:t.storage,readState:()=>t.state,crypto:webcrypto,history,fetch:async(url,o)=>url.endsWith('/pair')?Response.json({deviceId:'12345678-1234-1234-1234-123456789abc'}):url.endsWith('/events')?Response.json({accepted:accept?['event']:[]}):Response.json({sequence:JSON.parse(o.body).sequence,receivedAt:new Date().toISOString(),historyVersion:2})});
  sync.pair('a'.repeat(64));await t.tick();assert.equal(cleared,false);accept=true;await sync.flush(true);assert.equal(cleared,true);assert.equal(sync.status().pendingEvents,0);
+});
+
+test('GitHub failure keeps local save and snapshot acknowledgement, retries unchanged progress on reopen',async()=>{
+ const t=setup();let mirrors=0,uploads=0,fail=true;
+ const send=async(url,o)=>{
+  if(url.endsWith('/pair'))return Response.json({deviceId:'12345678-1234-1234-1234-123456789abc'});
+  if(url.endsWith('/mirror')){mirrors++;if(fail)return Response.json({}, {status:503});return Response.json({status:'synced'});}
+  uploads++;return Response.json({sequence:JSON.parse(o.body).sequence,receivedAt:new Date().toISOString()});
+ };
+ const build=()=>Sync.create({storage:t.storage,readState:()=>t.state,crypto:webcrypto,fetch:send});
+ const before=JSON.stringify(t.state);let sync=build();sync.pair('a'.repeat(64));await waitFor(()=>sync.status().mirrorStatus.includes('retry'));
+ assert.equal(sync.status().paused,false);assert.ok(sync.status().lastSyncedAt);assert.equal(uploads,1);
+ fail=false;sync=build();await sync.flush(true);assert.equal(uploads,1);assert.equal(mirrors,2);assert.match(sync.status().mirrorStatus,/available/);assert.equal(JSON.stringify(t.state),before);
 });

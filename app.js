@@ -397,6 +397,7 @@ function renderSyncStatus(info=progressSync?.status()){
   info=info||{message:'Progress sharing is unavailable in this browser.'};
   el.textContent=info.message||(info.paired?(info.paused?'Sharing paused.':info.lastSyncedAt?'Last synced: '+new Date(info.lastSyncedAt).toLocaleString()+'. Updates send automatically while the game is open.':'Connected. Waiting for the first update.'):'Not connected. Open your personal pairing link on this iPad.');
   if(info.paired){el.textContent+=' '+(info.historyError||('Events waiting: '+(info.pendingEvents||0)+'. '+(info.historyVersion===2?'Detailed reports available. ':'Detailed report upgrade pending. ')+(info.historySince?'Retained history starts '+new Date(info.historySince).toLocaleDateString()+'. ':'')+(info.archivedAnswers?info.archivedAnswers+' older answers were compacted locally; only their totals may be available.':'')));}
+  if(info.mirrorStatus)el.textContent+=' '+info.mirrorStatus;
   for(const id of ['syncNow','syncPause','syncDelete']){const b=$('#'+id);b.hidden=!info.paired&&!info.pendingPair;b.disabled=!!info.deleting;}
   $('#syncPairForm').hidden=!!info.paired||!!info.pendingPair;
   $('#syncPause').textContent=info.paused?'Resume sharing':'Pause sharing';
@@ -418,7 +419,7 @@ function startProgressSync(){
     $('#syncPairLink').addEventListener('keydown',event=>{if(event.key==='Enter')$('#syncConnect').click();});
     $('#syncNow').onclick=()=>progressSync.flush(true);
     $('#syncPause').onclick=()=>progressSync.pause(!progressSync.status().paused);
-    $('#syncDelete').onclick=()=>{if(confirm('Delete the shared progress copy and disconnect this iPad? The game and its local save will stay unchanged.'))progressSync.remove();};
+    $('#syncDelete').onclick=()=>{if(confirm('Delete the shared progress copy and disconnect this iPad? The game and its local save will stay unchanged. The latest encrypted GitHub report will be removed; older encrypted versions remain in Git history.'))progressSync.remove();};
     setInterval(()=>{if(!document.hidden)void progressSync.flush();},30000);
     window.addEventListener('online',()=>void progressSync.flush(true));
     document.addEventListener('visibilitychange',()=>{if(!document.hidden)void progressSync.flush(true);});

@@ -33,3 +33,7 @@ Tests: `node --test tests/service.test.mjs` (Node with `node:sqlite`). Build wit
 ## History v2
 
 The receiver additionally maintains bounded `progress_*` tables and accepts authenticated device `/events` batches. Read `devices.history_sequence` against `sequence` to check full projection completion. Reassemble row parts before analysis; no public read route exists. Owner-only `/api/admin/reindex` with `{deviceId}` backfills the current stored snapshot without changing the iPad save or token. See maintained `docs/progress-sync/HISTORY_RELEASE.md` for the review protocol, provenance and historical limits.
+
+## Encrypted GitHub mirror
+
+The optional automatic mirror is maintained in lib/github-mirror.mjs. Runtime secrets: GITHUB_MIRROR_TOKEN, PROGRESS_READING_KEY, GITHUB_MIRROR_DEVICE_ID. It publishes ciphertext only to the existing repository’s progress-data branch. The paired app calls /mirror after uploads and while unchanged; reading-key holders may refresh the already-stored report. See ../docs/progress-sync/GITHUB_MIRROR.md.

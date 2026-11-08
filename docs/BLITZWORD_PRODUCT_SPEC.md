@@ -1,3 +1,7 @@
+## Automatic cross-assistant progress access — approved 8 November 2026
+
+Use the existing GitHub repository for automatic progress sharing with Codex and Claude. Because it is public, publish only authenticated encrypted reports on a separate data branch; keep reading and deployment keys server-side/private. Reopening the paired app retries the copy without a new pairing or changing the local save. Both assistants use the same project instructions. See [access, retry and deletion rules](progress-sync/GITHUB_MIRROR.md).
+
 ## Story quests: more story, fewer fights — approved 4 November 2026
 
 The parent found the first Thunder Mountain story great but asked for less fighting and more story: add mid-chapter stories, remove the clues (they were small story quizzes), and run each quest as fight, fight, story, then fight, fight, story.
