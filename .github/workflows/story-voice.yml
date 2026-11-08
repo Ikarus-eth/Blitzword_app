@@ -35,6 +35,8 @@ jobs:
         run: |
           pip install -q torch --index-url https://download.pytorch.org/whl/cpu
           pip install -q "kokoro>=0.9.4" soundfile faster-whisper
+          # misaki fetches this spaCy model on first use; a GitHub release download can time out, so retry it here.
+          for i in 1 2 3 4 5; do pip install -q https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl && break; sleep 30; done
       - name: Find the request
         env:
           INPUT: ${{ inputs.request }}
