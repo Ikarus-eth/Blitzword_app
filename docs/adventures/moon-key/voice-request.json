@@ -1,5 +1,5 @@
 {
- "version": "moon-key-voice-20261108-r1",
+ "version": "moon-key-voice-20261108-r2",
  "campaign": "moon-key",
  "voice": "af_heart",
  "output": "assets/adventures/moon-key/voice",
@@ -3018,6 +3018,35 @@
    "text": "What does Pip have at the end?"
   }
  ],
- "run": "second listening check in groups",
- "listenOnly": true
+ "run": "third recording: lead-in, slower retakes",
+ "slow": [
+  "w:brave",
+  "w:artus",
+  "w:no",
+  "w:a",
+  "w:an",
+  "w:sits",
+  "w:she",
+  "w:wants",
+  "w:your",
+  "w:been",
+  "w:knows",
+  "w:than",
+  "w:puts",
+  "w:path",
+  "w:sit",
+  "w:too",
+  "w:other",
+  "w:sticks",
+  "w:dam",
+  "w:be",
+  "w:oh",
+  "w:fox",
+  "w:keys",
+  "w:her",
+  "w:wall",
+  "w:sat",
+  "w:took",
+  "w:walls"
+ ]
 }

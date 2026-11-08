@@ -23,6 +23,8 @@ OUT.mkdir(parents=True, exist_ok=True)
 pipe = KPipeline(lang_code='b' if VOICE.startswith('b') else 'a', repo_id='hexgrad/Kokoro-82M')
 # Kokoro reads some names oddly; the text it is given can differ from the word on screen.
 SAY = req.get('say', {})
+# Words the listening checks could not hear are read a little slower.
+SLOW = set(req.get('slow', []))
 
 
 def synth(text, speed):
@@ -39,9 +41,10 @@ def synth(text, speed):
 def to_mp3(audio, dest):
     with tempfile.NamedTemporaryFile(suffix='.wav') as tmp:
         sf.write(tmp.name, audio, 24000)
+        # A short lead-in keeps the first sound when an iPad starts playback (8 November 2026).
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', tmp.name, '-ac', '1',
                         '-af', 'silenceremove=start_periods=1:start_threshold=-60dB,areverse,'
-                               'silenceremove=start_periods=1:start_threshold=-60dB,areverse,apad=pad_dur=0.15',
+                               'silenceremove=start_periods=1:start_threshold=-60dB,areverse,apad=pad_dur=0.15,adelay=120',
                         '-b:a', '64k', str(dest)], check=True)
 
 
@@ -50,7 +53,7 @@ for n, item in enumerate(req['items'], 1):
     word = item['id'].startswith('w:')
     text = SAY.get(item['id'], item['text'])
     spoken = text if not word or text.endswith(('.', '!', '?')) else text + '.'
-    audio = synth(spoken, 0.9 if word else 0.95)
+    audio = synth(spoken, (0.8 if item['id'] in SLOW else 0.9) if word else 0.95)
     slug = re.sub(r'[^a-z0-9]+', '-', item['id'].lower()).strip('-')[:40]
     tag = hashlib.sha256((VOICE + '|' + spoken).encode()).hexdigest()[:8]
     dest = OUT / f'{slug}-{tag}.mp3'
