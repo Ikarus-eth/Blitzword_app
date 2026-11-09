@@ -60,6 +60,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/break.webp",
 "alt": "Do not let the cup break."
 },
+"bright": {
+"source": "assets/teaching/words/bright.webp",
+"alt": "The sun is very bright."
+},
 "brought": {
 "source": "assets/teaching/words/brought.webp",
 "alt": "My friend brought a book to share."
@@ -107,6 +111,10 @@ globalThis.BlitzWordPictures={
 "dirty": {
 "source": "assets/teaching/words/dirty.webp",
 "alt": "My boots are dirty after our walk."
+},
+"during": {
+"source": "assets/teaching/words/during.webp",
+"alt": "The sun came out during our walk."
 },
 "end": {
 "source": "assets/teaching/words/end.webp",
@@ -203,6 +211,10 @@ globalThis.BlitzWordPictures={
 "hundred": {
 "source": "assets/teaching/words/hundred.webp",
 "alt": "There are one hundred beads in the jar."
+},
+"hurt": {
+"source": "assets/teaching/words/hurt.webp",
+"alt": "I hurt my knee when I fell."
 },
 "idea": {
 "source": "assets/teaching/words/idea.webp",
@@ -332,9 +344,17 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/salt.webp",
 "alt": "We put a little salt in the soup."
 },
+"sat": {
+"source": "assets/teaching/words/sat.webp",
+"alt": "The cat sat on the mat."
+},
 "scared": {
 "source": "assets/teaching/words/scared.webp",
 "alt": "The loud noise made me feel scared."
+},
+"second": {
+"source": "assets/teaching/words/second.webp",
+"alt": "I came second in the race."
 },
 "secret": {
 "source": "assets/teaching/words/secret.webp",
@@ -384,6 +404,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/smile.webp",
 "alt": "Your smile makes me happy."
 },
+"snow": {
+"source": "assets/teaching/words/snow.webp",
+"alt": "White snow covers the ground."
+},
 "song": {
 "source": "assets/teaching/words/song.webp",
 "alt": "We sing a happy song."
@@ -428,6 +452,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/tail.webp",
 "alt": "The fox has a long tail."
 },
+"tall": {
+"source": "assets/teaching/words/tall.webp",
+"alt": "The tall tree reaches above the house."
+},
 "third": {
 "source": "assets/teaching/words/third.webp",
 "alt": "Open the book at the third page."
@@ -451,6 +479,10 @@ globalThis.BlitzWordPictures={
 "trunk": {
 "source": "assets/teaching/words/trunk.webp",
 "alt": "The tree has a thick trunk."
+},
+"until": {
+"source": "assets/teaching/words/until.webp",
+"alt": "We wait until the rain stops."
 },
 "village": {
 "source": "assets/teaching/words/village.webp",
