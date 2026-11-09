@@ -46,8 +46,14 @@ def generate(item):
         state = {'state': 'saved', 'request_id': q.get('request_id')}
         print(w + ': saved', flush=True)
     except Exception as exc:
-        state = {'state': 'needs-review', 'error': type(exc).__name__}
-        print(w + ': needs review (' + type(exc).__name__ + ')', flush=True)
+        detail = ''
+        if hasattr(exc, 'code'):
+            try:
+                detail = f" {exc.code} {exc.read()[:200].decode(errors='replace')}"
+            except Exception:
+                detail = f' {exc.code}'
+        state = {'state': 'needs-review', 'error': type(exc).__name__ + detail}
+        print(w + ': needs review (' + state['error'] + ')', flush=True)
     with lock:
         records[w] = state
 
