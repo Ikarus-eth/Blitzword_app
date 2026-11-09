@@ -1,0 +1,1195 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "output": "assets/teaching/words",
+ "count": 132,
+ "words": [
+  {
+   "word": "along",
+   "file": "along",
+   "alt": "The dog runs along the path.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “along”. Paint one clear, simple scene showing this sentence: “The dog runs along the path.”. The meaning of “along” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "behind",
+   "file": "behind",
+   "alt": "The boy hides behind the tree.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “behind”. Paint one clear, simple scene showing this sentence: “The boy hides behind the tree.”. The meaning of “behind” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "boat",
+   "file": "boat",
+   "alt": "The boat floats on the lake.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “boat”. Paint one clear, simple scene showing this sentence: “The boat floats on the lake.”. The meaning of “boat” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "village",
+   "file": "village",
+   "alt": "The village has a few houses and a shop.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “village”. Paint one clear, simple scene showing this sentence: “The village has a few houses and a shop.”. The meaning of “village” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "chocolate",
+   "file": "chocolate",
+   "alt": "The cake has chocolate on top.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “chocolate”. Paint one clear, simple scene showing this sentence: “The cake has chocolate on top.”. The meaning of “chocolate” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "biscuit",
+   "file": "biscuit",
+   "alt": "May I have a biscuit with my milk?",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “biscuit”. Paint one clear, simple scene showing this sentence: “May I have a biscuit with my milk?”. The meaning of “biscuit” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "jumping",
+   "file": "jumping",
+   "alt": "The frog is jumping over a stone.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “jumping”. Paint one clear, simple scene showing this sentence: “The frog is jumping over a stone.”. The meaning of “jumping” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "silly",
+   "file": "silly",
+   "alt": "The clown makes a silly face.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “silly”. Paint one clear, simple scene showing this sentence: “The clown makes a silly face.”. The meaning of “silly” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "root",
+   "file": "root",
+   "alt": "The root takes water from the soil.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “root”. Paint one clear, simple scene showing this sentence: “The root takes water from the soil.”. The meaning of “root” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "ninety",
+   "file": "ninety",
+   "alt": "The puzzle has ninety pieces.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “ninety”. Paint one clear, simple scene showing this sentence: “The puzzle has ninety pieces.”. The meaning of “ninety” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "beside",
+   "file": "beside",
+   "alt": "Come and sit beside me.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “beside”. Paint one clear, simple scene showing this sentence: “Come and sit beside me.”. The meaning of “beside” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "inside",
+   "file": "inside",
+   "alt": "The toy is inside the box.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “inside”. Paint one clear, simple scene showing this sentence: “The toy is inside the box.”. The meaning of “inside” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "snow",
+   "file": "snow",
+   "alt": "White snow covers the ground.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “snow”. Paint one clear, simple scene showing this sentence: “White snow covers the ground.”. The meaning of “snow” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "hill",
+   "file": "hill",
+   "alt": "We walk up the little hill.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hill”. Paint one clear, simple scene showing this sentence: “We walk up the little hill.”. The meaning of “hill” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "cookie",
+   "file": "cookie",
+   "alt": "I put a cookie on my plate.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “cookie”. Paint one clear, simple scene showing this sentence: “I put a cookie on my plate.”. The meaning of “cookie” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "sweet",
+   "file": "sweet",
+   "alt": "The honey tastes sweet.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “sweet”. Paint one clear, simple scene showing this sentence: “The honey tastes sweet.”. The meaning of “sweet” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "hop",
+   "file": "hop",
+   "alt": "A rabbit can hop.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hop”. Paint one clear, simple scene showing this sentence: “A rabbit can hop.”. The meaning of “hop” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "friendly",
+   "file": "friendly",
+   "alt": "The friendly dog wags its tail.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “friendly”. Paint one clear, simple scene showing this sentence: “The friendly dog wags its tail.”. The meaning of “friendly” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "trunk",
+   "file": "trunk",
+   "alt": "The tree has a thick trunk.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “trunk”. Paint one clear, simple scene showing this sentence: “The tree has a thick trunk.”. The meaning of “trunk” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "hundred",
+   "file": "hundred",
+   "alt": "There are one hundred beads in the jar.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hundred”. Paint one clear, simple scene showing this sentence: “There are one hundred beads in the jar.”. The meaning of “hundred” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "outside",
+   "file": "outside",
+   "alt": "The children play outside the house.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “outside”. Paint one clear, simple scene showing this sentence: “The children play outside the house.”. The meaning of “outside” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "without",
+   "file": "without",
+   "alt": "I cannot see without my glasses.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “without”. Paint one clear, simple scene showing this sentence: “I cannot see without my glasses.”. The meaning of “without” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "boy",
+   "file": "boy",
+   "alt": "The boy is reading a book.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “boy”. Paint one clear, simple scene showing this sentence: “The boy is reading a book.”. The meaning of “boy” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "lake",
+   "file": "lake",
+   "alt": "The lake is full of clear water.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “lake”. Paint one clear, simple scene showing this sentence: “The lake is full of clear water.”. The meaning of “lake” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "honey",
+   "file": "honey",
+   "alt": "Bees make honey.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “honey”. Paint one clear, simple scene showing this sentence: “Bees make honey.”. The meaning of “honey” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "salt",
+   "file": "salt",
+   "alt": "We put a little salt in the soup.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “salt”. Paint one clear, simple scene showing this sentence: “We put a little salt in the soup.”. The meaning of “salt” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "skip",
+   "file": "skip",
+   "alt": "I can skip along the path.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “skip”. Paint one clear, simple scene showing this sentence: “I can skip along the path.”. The meaning of “skip” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "gentle",
+   "file": "gentle",
+   "alt": "Be gentle when you hold the kitten.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “gentle”. Paint one clear, simple scene showing this sentence: “Be gentle when you hold the kitten.”. The meaning of “gentle” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "bark",
+   "file": "bark",
+   "alt": "The bark covers the tree's trunk.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “bark”. Paint one clear, simple scene showing this sentence: “The bark covers the tree's trunk.”. The meaning of “bark” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "thousand",
+   "file": "thousand",
+   "alt": "The big puzzle has one thousand pieces.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “thousand”. Paint one clear, simple scene showing this sentence: “The big puzzle has one thousand pieces.”. The meaning of “thousand” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "until",
+   "file": "until",
+   "alt": "We wait until the rain stops.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “until”. Paint one clear, simple scene showing this sentence: “We wait until the rain stops.”. The meaning of “until” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "while",
+   "file": "while",
+   "alt": "I read while the baby sleeps.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “while”. Paint one clear, simple scene showing this sentence: “I read while the baby sleeps.”. The meaning of “while” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "set",
+   "file": "set",
+   "alt": "Please set the cup on the table.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “set”. Paint one clear, simple scene showing this sentence: “Please set the cup on the table.”. The meaning of “set” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "stone",
+   "file": "stone",
+   "alt": "I found a smooth stone on the beach.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “stone”. Paint one clear, simple scene showing this sentence: “I found a smooth stone on the beach.”. The meaning of “stone” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "juice",
+   "file": "juice",
+   "alt": "I drink orange juice.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “juice”. Paint one clear, simple scene showing this sentence: “I drink orange juice.”. The meaning of “juice” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "cup",
+   "file": "cup",
+   "alt": "My cup is full of milk.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “cup”. Paint one clear, simple scene showing this sentence: “My cup is full of milk.”. The meaning of “cup” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "climb",
+   "file": "climb",
+   "alt": "The cat can climb the tree.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “climb”. Paint one clear, simple scene showing this sentence: “The cat can climb the tree.”. The meaning of “climb” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "careful",
+   "file": "careful",
+   "alt": "Be careful with the full cup.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “careful”. Paint one clear, simple scene showing this sentence: “Be careful with the full cup.”. The meaning of “careful” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "seed",
+   "file": "seed",
+   "alt": "We plant a seed in the ground.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “seed”. Paint one clear, simple scene showing this sentence: “We plant a seed in the ground.”. The meaning of “seed” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "second",
+   "file": "second",
+   "alt": "I came second in the race.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “second”. Paint one clear, simple scene showing this sentence: “I came second in the race.”. The meaning of “second” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "during",
+   "file": "during",
+   "alt": "The sun came out during our walk.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “during”. Paint one clear, simple scene showing this sentence: “The sun came out during our walk.”. The meaning of “during” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "against",
+   "file": "against",
+   "alt": "The bike rests against the wall.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “against”. Paint one clear, simple scene showing this sentence: “The bike rests against the wall.”. The meaning of “against” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "men",
+   "file": "men",
+   "alt": "Two men carry the heavy box.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “men”. Paint one clear, simple scene showing this sentence: “Two men carry the heavy box.”. The meaning of “men” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "hand",
+   "file": "hand",
+   "alt": "Hold my hand as we cross the road.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hand”. Paint one clear, simple scene showing this sentence: “Hold my hand as we cross the road.”. The meaning of “hand” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "plate",
+   "file": "plate",
+   "alt": "The sandwich is on my plate.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “plate”. Paint one clear, simple scene showing this sentence: “The sandwich is on my plate.”. The meaning of “plate” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "bowl",
+   "file": "bowl",
+   "alt": "I eat soup from a bowl.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “bowl”. Paint one clear, simple scene showing this sentence: “I eat soup from a bowl.”. The meaning of “bowl” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "stopped",
+   "file": "stopped",
+   "alt": "The bus stopped at the gate.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “stopped”. Paint one clear, simple scene showing this sentence: “The bus stopped at the gate.”. The meaning of “stopped” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "lovely",
+   "file": "lovely",
+   "alt": "We had a lovely day together.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “lovely”. Paint one clear, simple scene showing this sentence: “We had a lovely day together.”. The meaning of “lovely” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "bush",
+   "file": "bush",
+   "alt": "The bird hides in the bush.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “bush”. Paint one clear, simple scene showing this sentence: “The bird hides in the bush.”. The meaning of “bush” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "third",
+   "file": "third",
+   "alt": "Open the book at the third page.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “third”. Paint one clear, simple scene showing this sentence: “Open the book at the third page.”. The meaning of “third” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "towards",
+   "file": "towards",
+   "alt": "The puppy runs towards me.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “towards”. Paint one clear, simple scene showing this sentence: “The puppy runs towards me.”. The meaning of “towards” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "let",
+   "file": "let",
+   "alt": "Please let me have a turn.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “let”. Paint one clear, simple scene showing this sentence: “Please let me have a turn.”. The meaning of “let” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "mother",
+   "file": "mother",
+   "alt": "My mother reads with me.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “mother”. Paint one clear, simple scene showing this sentence: “My mother reads with me.”. The meaning of “mother” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "father",
+   "file": "father",
+   "alt": "My father helps me ride my bike.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “father”. Paint one clear, simple scene showing this sentence: “My father helps me ride my bike.”. The meaning of “father” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "spoon",
+   "file": "spoon",
+   "alt": "I use a spoon to eat soup.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “spoon”. Paint one clear, simple scene showing this sentence: “I use a spoon to eat soup.”. The meaning of “spoon” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "fork",
+   "file": "fork",
+   "alt": "I pick up food with my fork.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “fork”. Paint one clear, simple scene showing this sentence: “I pick up food with my fork.”. The meaning of “fork” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "sitting",
+   "file": "sitting",
+   "alt": "The girl is sitting on a chair.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “sitting”. Paint one clear, simple scene showing this sentence: “The girl is sitting on a chair.”. The meaning of “sitting” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "dirty",
+   "file": "dirty",
+   "alt": "My boots are dirty after our walk.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “dirty”. Paint one clear, simple scene showing this sentence: “My boots are dirty after our walk.”. The meaning of “dirty” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "woods",
+   "file": "woods",
+   "alt": "We walk among the trees in the woods.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “woods”. Paint one clear, simple scene showing this sentence: “We walk among the trees in the woods.”. The meaning of “woods” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "fourth",
+   "file": "fourth",
+   "alt": "The fourth duck is the smallest.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “fourth”. Paint one clear, simple scene showing this sentence: “The fourth duck is the smallest.”. The meaning of “fourth” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "girl",
+   "file": "girl",
+   "alt": "The girl kicks the ball.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “girl”. Paint one clear, simple scene showing this sentence: “The girl kicks the ball.”. The meaning of “girl” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "fly",
+   "file": "fly",
+   "alt": "A bird can fly over the tree.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “fly”. Paint one clear, simple scene showing this sentence: “A bird can fly over the tree.”. The meaning of “fly” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "sing",
+   "file": "sing",
+   "alt": "We sing a song together.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “sing”. Paint one clear, simple scene showing this sentence: “We sing a song together.”. The meaning of “sing” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "tail",
+   "file": "tail",
+   "alt": "The fox has a long tail.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “tail”. Paint one clear, simple scene showing this sentence: “The fox has a long tail.”. The meaning of “tail” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "safe",
+   "file": "safe",
+   "alt": "We keep the baby safe.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “safe”. Paint one clear, simple scene showing this sentence: “We keep the baby safe.”. The meaning of “safe” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "sleeping",
+   "file": "sleeping",
+   "alt": "The baby is sleeping in bed.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “sleeping”. Paint one clear, simple scene showing this sentence: “The baby is sleeping in bed.”. The meaning of “sleeping” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "fall",
+   "file": "fall",
+   "alt": "Do not let the cup fall.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “fall”. Paint one clear, simple scene showing this sentence: “Do not let the cup fall.”. The meaning of “fall” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "room",
+   "file": "room",
+   "alt": "My bed is in my room.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “room”. Paint one clear, simple scene showing this sentence: “My bed is in my room.”. The meaning of “room” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "please",
+   "file": "please",
+   "alt": "Can you help me, please?",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “please”. Paint one clear, simple scene showing this sentence: “Can you help me, please?”. The meaning of “please” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "strong",
+   "file": "strong",
+   "alt": "The strong horse pulls the cart.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “strong”. Paint one clear, simple scene showing this sentence: “The strong horse pulls the cart.”. The meaning of “strong” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "wind",
+   "file": "wind",
+   "alt": "The wind blows the leaves.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “wind”. Paint one clear, simple scene showing this sentence: “The wind blows the leaves.”. The meaning of “wind” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "rope",
+   "file": "rope",
+   "alt": "The boat is tied with a rope.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “rope”. Paint one clear, simple scene showing this sentence: “The boat is tied with a rope.”. The meaning of “rope” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "wood",
+   "file": "wood",
+   "alt": "The little chair is made of wood.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “wood”. Paint one clear, simple scene showing this sentence: “The little chair is made of wood.”. The meaning of “wood” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "people",
+   "file": "people",
+   "alt": "There are many people in the park.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “people”. Paint one clear, simple scene showing this sentence: “There are many people in the park.”. The meaning of “people” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "window",
+   "file": "window",
+   "alt": "I can see the garden through the window.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “window”. Paint one clear, simple scene showing this sentence: “I can see the garden through the window.”. The meaning of “window” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "sad",
+   "file": "sad",
+   "alt": "I feel sad when my friend leaves.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “sad”. Paint one clear, simple scene showing this sentence: “I feel sad when my friend leaves.”. The meaning of “sad” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "star",
+   "file": "star",
+   "alt": "A bright star shines at night.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “star”. Paint one clear, simple scene showing this sentence: “A bright star shines at night.”. The meaning of “star” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "grey",
+   "file": "grey",
+   "alt": "The grey cloud covers the sun.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “grey”. Paint one clear, simple scene showing this sentence: “The grey cloud covers the sun.”. The meaning of “grey” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "name",
+   "file": "name",
+   "alt": "Please tell me your name.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “name”. Paint one clear, simple scene showing this sentence: “Please tell me your name.”. The meaning of “name” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "end",
+   "file": "end",
+   "alt": "We have reached the end of the story.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “end”. Paint one clear, simple scene showing this sentence: “We have reached the end of the story.”. The meaning of “end” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "shell",
+   "file": "shell",
+   "alt": "The snail has a shell on its back.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “shell”. Paint one clear, simple scene showing this sentence: “The snail has a shell on its back.”. The meaning of “shell” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "need",
+   "file": "need",
+   "alt": "Plants need water and light.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “need”. Paint one clear, simple scene showing this sentence: “Plants need water and light.”. The meaning of “need” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "land",
+   "file": "land",
+   "alt": "The boat comes back to land.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “land”. Paint one clear, simple scene showing this sentence: “The boat comes back to land.”. The meaning of “land” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "move",
+   "file": "move",
+   "alt": "Please move the chair beside the table.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “move”. Paint one clear, simple scene showing this sentence: “Please move the chair beside the table.”. The meaning of “move” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "animal",
+   "file": "animal",
+   "alt": "A rabbit is a small animal.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “animal”. Paint one clear, simple scene showing this sentence: “A rabbit is a small animal.”. The meaning of “animal” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "smile",
+   "file": "smile",
+   "alt": "Your smile makes me happy.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “smile”. Paint one clear, simple scene showing this sentence: “Your smile makes me happy.”. The meaning of “smile” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "everywhere",
+   "file": "everywhere",
+   "alt": "There are flowers everywhere in the garden.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “everywhere”. Paint one clear, simple scene showing this sentence: “There are flowers everywhere in the garden.”. The meaning of “everywhere” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "cry",
+   "file": "cry",
+   "alt": "The baby starts to cry.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “cry”. Paint one clear, simple scene showing this sentence: “The baby starts to cry.”. The meaning of “cry” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "shout",
+   "file": "shout",
+   "alt": "We shout to be heard across the field.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “shout”. Paint one clear, simple scene showing this sentence: “We shout to be heard across the field.”. The meaning of “shout” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "world",
+   "file": "world",
+   "alt": "People live all around the world.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “world”. Paint one clear, simple scene showing this sentence: “People live all around the world.”. The meaning of “world” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "high",
+   "file": "high",
+   "alt": "The bird flies high above the tree.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “high”. Paint one clear, simple scene showing this sentence: “The bird flies high above the tree.”. The meaning of “high” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "last",
+   "file": "last",
+   "alt": "I ate the last apple.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “last”. Paint one clear, simple scene showing this sentence: “I ate the last apple.”. The meaning of “last” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "crown",
+   "file": "crown",
+   "alt": "The queen wears a crown.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “crown”. Paint one clear, simple scene showing this sentence: “The queen wears a crown.”. The meaning of “crown” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "gold",
+   "file": "gold",
+   "alt": "The ring is made of gold.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “gold”. Paint one clear, simple scene showing this sentence: “The ring is made of gold.”. The meaning of “gold” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "idea",
+   "file": "idea",
+   "alt": "I have an idea for a new game.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “idea”. Paint one clear, simple scene showing this sentence: “I have an idea for a new game.”. The meaning of “idea” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "began",
+   "file": "began",
+   "alt": "The rain began after lunch.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “began”. Paint one clear, simple scene showing this sentence: “The rain began after lunch.”. The meaning of “began” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "took",
+   "file": "took",
+   "alt": "I took my book to school.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “took”. Paint one clear, simple scene showing this sentence: “I took my book to school.”. The meaning of “took” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "hear",
+   "file": "hear",
+   "alt": "I can hear a bird singing.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hear”. Paint one clear, simple scene showing this sentence: “I can hear a bird singing.”. The meaning of “hear” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "secret",
+   "file": "secret",
+   "alt": "The story has a secret door.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “secret”. Paint one clear, simple scene showing this sentence: “The story has a secret door.”. The meaning of “secret” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "song",
+   "file": "song",
+   "alt": "We sing a happy song.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “song”. Paint one clear, simple scene showing this sentence: “We sing a happy song.”. The meaning of “song” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "break",
+   "file": "break",
+   "alt": "Do not let the cup break.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “break”. Paint one clear, simple scene showing this sentence: “Do not let the cup break.”. The meaning of “break” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "stand",
+   "file": "stand",
+   "alt": "Please stand beside the door.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “stand”. Paint one clear, simple scene showing this sentence: “Please stand beside the door.”. The meaning of “stand” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "stick",
+   "file": "stick",
+   "alt": "The dog carries a stick.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “stick”. Paint one clear, simple scene showing this sentence: “The dog carries a stick.”. The meaning of “stick” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "piece",
+   "file": "piece",
+   "alt": "May I have a piece of cake?",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “piece”. Paint one clear, simple scene showing this sentence: “May I have a piece of cake?”. The meaning of “piece” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "nest",
+   "file": "nest",
+   "alt": "The bird builds a nest.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “nest”. Paint one clear, simple scene showing this sentence: “The bird builds a nest.”. The meaning of “nest” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "chick",
+   "file": "chick",
+   "alt": "The chick comes out of its egg.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “chick”. Paint one clear, simple scene showing this sentence: “The chick comes out of its egg.”. The meaning of “chick” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "heard",
+   "file": "heard",
+   "alt": "We heard the school bell.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “heard”. Paint one clear, simple scene showing this sentence: “We heard the school bell.”. The meaning of “heard” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "top",
+   "file": "top",
+   "alt": "The bird sits at the top of the tree.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “top”. Paint one clear, simple scene showing this sentence: “The bird sits at the top of the tree.”. The meaning of “top” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "slowly",
+   "file": "slowly",
+   "alt": "The snail moves slowly.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “slowly”. Paint one clear, simple scene showing this sentence: “The snail moves slowly.”. The meaning of “slowly” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "voice",
+   "file": "voice",
+   "alt": "I know my mother's voice.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “voice”. Paint one clear, simple scene showing this sentence: “I know my mother's voice.”. The meaning of “voice” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "wait",
+   "file": "wait",
+   "alt": "Please wait for me.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “wait”. Paint one clear, simple scene showing this sentence: “Please wait for me.”. The meaning of “wait” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "brought",
+   "file": "brought",
+   "alt": "My friend brought a book to share.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “brought”. Paint one clear, simple scene showing this sentence: “My friend brought a book to share.”. The meaning of “brought” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "swim",
+   "file": "swim",
+   "alt": "Fish swim in water.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “swim”. Paint one clear, simple scene showing this sentence: “Fish swim in water.”. The meaning of “swim” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "wall",
+   "file": "wall",
+   "alt": "The picture hangs on the wall.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “wall”. Paint one clear, simple scene showing this sentence: “The picture hangs on the wall.”. The meaning of “wall” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "angry",
+   "file": "angry",
+   "alt": "I felt angry when my tower fell.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “angry”. Paint one clear, simple scene showing this sentence: “I felt angry when my tower fell.”. The meaning of “angry” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "brave",
+   "file": "brave",
+   "alt": "The brave child asks for help.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “brave”. Paint one clear, simple scene showing this sentence: “The brave child asks for help.”. The meaning of “brave” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "mud",
+   "file": "mud",
+   "alt": "My boots are covered in mud.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “mud”. Paint one clear, simple scene showing this sentence: “My boots are covered in mud.”. The meaning of “mud” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "path",
+   "file": "path",
+   "alt": "We follow the path through the woods.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “path”. Paint one clear, simple scene showing this sentence: “We follow the path through the woods.”. The meaning of “path” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "scared",
+   "file": "scared",
+   "alt": "The loud noise made me feel scared.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “scared”. Paint one clear, simple scene showing this sentence: “The loud noise made me feel scared.”. The meaning of “scared” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "sat",
+   "file": "sat",
+   "alt": "The cat sat on the mat.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “sat”. Paint one clear, simple scene showing this sentence: “The cat sat on the mat.”. The meaning of “sat” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "tall",
+   "file": "tall",
+   "alt": "The tall tree reaches above the house.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “tall”. Paint one clear, simple scene showing this sentence: “The tall tree reaches above the house.”. The meaning of “tall” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "bright",
+   "file": "bright",
+   "alt": "The sun is very bright.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “bright”. Paint one clear, simple scene showing this sentence: “The sun is very bright.”. The meaning of “bright” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "everyone",
+   "file": "everyone",
+   "alt": "There is a seat for everyone.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “everyone”. Paint one clear, simple scene showing this sentence: “There is a seat for everyone.”. The meaning of “everyone” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "hair",
+   "file": "hair",
+   "alt": "I brush my hair in the morning.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hair”. Paint one clear, simple scene showing this sentence: “I brush my hair in the morning.”. The meaning of “hair” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "quiet",
+   "file": "quiet",
+   "alt": "Please be quiet while the baby sleeps.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “quiet”. Paint one clear, simple scene showing this sentence: “Please be quiet while the baby sleeps.”. The meaning of “quiet” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "lot",
+   "file": "lot",
+   "alt": "There is a lot of sand on the beach.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “lot”. Paint one clear, simple scene showing this sentence: “There is a lot of sand on the beach.”. The meaning of “lot” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "middle",
+   "file": "middle",
+   "alt": "The jam is in the middle of the sandwich.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “middle”. Paint one clear, simple scene showing this sentence: “The jam is in the middle of the sandwich.”. The meaning of “middle” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "hole",
+   "file": "hole",
+   "alt": "The rabbit runs into a hole.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hole”. Paint one clear, simple scene showing this sentence: “The rabbit runs into a hole.”. The meaning of “hole” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "cake",
+   "file": "cake",
+   "alt": "We share a birthday cake.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “cake”. Paint one clear, simple scene showing this sentence: “We share a birthday cake.”. The meaning of “cake” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "bad",
+   "file": "bad",
+   "alt": "The bad weather kept us inside.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “bad”. Paint one clear, simple scene showing this sentence: “The bad weather kept us inside.”. The meaning of “bad” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "hurt",
+   "file": "hurt",
+   "alt": "I hurt my knee when I fell.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hurt”. Paint one clear, simple scene showing this sentence: “I hurt my knee when I fell.”. The meaning of “hurt” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  },
+  {
+   "word": "funny",
+   "file": "funny",
+   "alt": "That funny dog makes us smile.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “funny”. Paint one clear, simple scene showing this sentence: “That funny dog makes us smile.”. The meaning of “funny” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels. Child-friendly."
+  }
+ ]
+}

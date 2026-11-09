@@ -1,3 +1,7 @@
+## Teaching pictures for expansion words — 9 November 2026
+
+The parent saw new words (piece, smile, please) taught with no picture: only the first 400 words had teaching pictures. 114 new fal.ai pictures (768×512 WebP, `assets/teaching/words/`) now show for every expansion word Artus has met, all Thunder Mountain and Moon Key targets and the next new words; the teaching card reads them from `pictures.js`. Reviewed on contact sheets; three that printed the word as text were removed. Still without a picture: bad, bright, cake, during, everyone, fourth, funny, hair, hole, hurt, lot, middle, quiet, sat, second, snow, tall, until — fal.ai answered "Exhausted balance"; after a top-up, push `docs/word-pictures/request-2.json` again on a review branch. About 660 later expansion words have no picture yet. 471 unit tests and 132 UI-flow groups pass.
+
 ## Moon Key voice, second recording — 8 November 2026
 
 Every Moon Key clip re-recorded with Kokoro af_heart, now with a 120 ms lead-in so an iPad does not swallow the first sound; the 28 words the first listening check could not hear were read slower. Whisper heard 356 of 387 word clips (alone or in groups; first recording 359). Slower reading did not help, so the unclear short words (Artus, no, see, a, sit, fox…) still need a human listen. Build `moon-key-voice-20261108-r2`.
