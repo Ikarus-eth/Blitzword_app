@@ -1,74 +1,74 @@
 {
  "bad": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "bright": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "cake": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "during": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "everyone": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "fourth": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "funny": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "hair": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "hole": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "hurt": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "lot": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "middle": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "quiet": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "sat": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "second": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "snow": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "tall": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  },
  "until": {
-  "error": "HTTPError",
+  "error": "HTTPError 403 {\"detail\":\"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.\"}",
   "state": "needs-review"
  }
 }
