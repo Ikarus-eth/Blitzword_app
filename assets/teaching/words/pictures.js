@@ -16,6 +16,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/animal.webp",
 "alt": "A rabbit is a small animal."
 },
+"bad": {
+"source": "assets/teaching/words/bad.webp",
+"alt": "The bad weather kept us inside."
+},
 "bark": {
 "source": "assets/teaching/words/bark.webp",
 "alt": "The bark covers the tree's trunk."
@@ -64,6 +68,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/bush.webp",
 "alt": "The bird hides in the bush."
 },
+"cake": {
+"source": "assets/teaching/words/cake.webp",
+"alt": "We share a birthday cake."
+},
 "careful": {
 "source": "assets/teaching/words/careful.webp",
 "alt": "Be careful with the full cup."
@@ -104,6 +112,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/end.webp",
 "alt": "We have reached the end of the story."
 },
+"everyone": {
+"source": "assets/teaching/words/everyone.webp",
+"alt": "There is a seat for everyone."
+},
 "everywhere": {
 "source": "assets/teaching/words/everywhere.webp",
 "alt": "There are flowers everywhere in the garden."
@@ -124,9 +136,17 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/fork.webp",
 "alt": "I pick up food with my fork."
 },
+"fourth": {
+"source": "assets/teaching/words/fourth.webp",
+"alt": "The fourth duck is the smallest."
+},
 "friendly": {
 "source": "assets/teaching/words/friendly.webp",
 "alt": "The friendly dog wags its tail."
+},
+"funny": {
+"source": "assets/teaching/words/funny.webp",
+"alt": "That funny dog makes us smile."
 },
 "gentle": {
 "source": "assets/teaching/words/gentle.webp",
@@ -143,6 +163,10 @@ globalThis.BlitzWordPictures={
 "grey": {
 "source": "assets/teaching/words/grey.webp",
 "alt": "The grey cloud covers the sun."
+},
+"hair": {
+"source": "assets/teaching/words/hair.webp",
+"alt": "I brush my hair in the morning."
 },
 "hand": {
 "source": "assets/teaching/words/hand.webp",
@@ -163,6 +187,10 @@ globalThis.BlitzWordPictures={
 "hill": {
 "source": "assets/teaching/words/hill.webp",
 "alt": "We walk up the little hill."
+},
+"hole": {
+"source": "assets/teaching/words/hole.webp",
+"alt": "The rabbit runs into a hole."
 },
 "honey": {
 "source": "assets/teaching/words/honey.webp",
@@ -208,6 +236,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/let.webp",
 "alt": "Please let me have a turn."
 },
+"lot": {
+"source": "assets/teaching/words/lot.webp",
+"alt": "There is a lot of sand on the beach."
+},
 "lovely": {
 "source": "assets/teaching/words/lovely.webp",
 "alt": "We had a lovely day together."
@@ -215,6 +247,10 @@ globalThis.BlitzWordPictures={
 "men": {
 "source": "assets/teaching/words/men.webp",
 "alt": "Two men carry the heavy box."
+},
+"middle": {
+"source": "assets/teaching/words/middle.webp",
+"alt": "The jam is in the middle of the sandwich."
 },
 "mother": {
 "source": "assets/teaching/words/mother.webp",
@@ -267,6 +303,10 @@ globalThis.BlitzWordPictures={
 "please": {
 "source": "assets/teaching/words/please.webp",
 "alt": "Can you help me, please?"
+},
+"quiet": {
+"source": "assets/teaching/words/quiet.webp",
+"alt": "Please be quiet while the baby sleeps."
 },
 "room": {
 "source": "assets/teaching/words/room.webp",
