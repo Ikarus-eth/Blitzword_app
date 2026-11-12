@@ -1,3 +1,7 @@
+## Painted fire for Pip — 12 November 2026
+
+The user found the drawn fire silly and asked for it to be made with fal.ai. Pip's fire breath is now three painted flame frames and a painted burst (fal.ai nano-banana edit, 4 images, about $0.16), made transparent and stored in `assets/battle-fire/`. The flame grows from Pip's mouth with a soft tip, flickers between the three paintings, and bursts on the enemy. Its thickness is capped so it fits short phone screens. The same painted fire is used when Pip stands beside Artus (Big Pip, every second right answer and the winning hit) and while Artus rides him. The lightning stays as before. With two shields, a second friend of the same kind as the enemy being fought is swapped for another friend on screen.
+
 ## One guardian at a time, creature facing and the riding attack — approved 12 November 2026
 
 The user asked for only one guardian in fights, for creatures to face the right way, and for the riding attack to look great. This supersedes the 4 November rule that a second shield stays with the same friend as ×2, and the 11 October layout that showed the quest companion and the shield friend together.

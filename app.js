@@ -840,7 +840,9 @@ function combatReaction(correct){
   }
   const assist=correct&&(mounted||Core.answerCount(state)%2===0||state.battle.enemyHealth<=0);
   const framed=!mounted&&window.BlitzMotion?.reaction({container:$('#battle'),hero:$('#battleHeroImg'),enemy:frameEnemy,pip:$('#battle .battlePip'),correct,defeated:memberAfter?memberAfter.health===0:state.battle.enemyHealth<=0,heroDefeated:state.battle.heroHealth<=0,assist,shield:q.shieldUsed});
-  if(framed){effects.classList.add('frameCombat');if(!correct)$('#battle .battlePip').classList.add('pipDodge');if(assist)sound.cue('pip',.45);if(q.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}return;}
+  // Big Pip and later have no motion frames, so the framed fight cannot draw their fire: Pip breathes the painted fire instead.
+  const paintedBreath=()=>{const pip=$('#battle .battlePip'),g=combatGeometry(effects);if(!g||!window.BlitzRiderFx||pip.dataset.motionActor==='pip')return false;pip.classList.add('pipAssist');window.BlitzRiderFx.breath(effects,{mouth:g.flame,target:g.end,blaze:state.battle.enemyHealth<=0,reduced:!!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches});return true;};
+  if(framed){effects.classList.add('frameCombat');if(!correct)$('#battle .battlePip').classList.add('pipDodge');if(assist){sound.cue('pip',.45);if(correct)paintedBreath();}if(q.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}return;}
   const geometry=correct?combatGeometry(effects):null;
   const blaze=mounted&&correct&&(riderStreak.count>=3||state.battle.enemyHealth<=0);
   if(correct&&mounted&&geometry&&window.BlitzRiderFx){
@@ -858,6 +860,7 @@ function combatReaction(correct){
   const pip=$('#battle .battlePip');
   // Riding: Pip breathes fire with every spell; three in a row, or the last hit, is a big blaze.
   if(correct&&mounted)sound.cue('pip',.45);
+  else if(correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0)&&paintedBreath())sound.cue('pip',.45);
   else if(correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip',.45);}
   else if(!correct)pip.classList.add('pipDodge');
 }
