@@ -1,7 +1,7 @@
 (function(root,factory){
-  if(typeof module==='object'&&module.exports)module.exports=factory(require('./assets/enemies/approved-20261010/roster.js'),require('./assets/adventures/star-trail/campaign.js'),require('./assets/adventures/thunder-mountain/campaign.js'),require('./assets/adventures/moon-key/campaign.js'));
-  else root.BlitzMissions=factory(root.BlitzApprovedEnemies,root.BlitzStarCampaign,root.BlitzThunderCampaign,root.BlitzMoonCampaign);
-})(typeof globalThis!=='undefined'?globalThis:this,function(Approved,Stars,Thunder,Moon){
+  if(typeof module==='object'&&module.exports)module.exports=factory(require('./assets/enemies/approved-20261010/roster.js'),require('./assets/adventures/star-trail/campaign.js'),require('./assets/adventures/thunder-mountain/campaign.js'),require('./assets/adventures/moon-key/campaign.js'),require('./assets/adventures/pip-grows/campaign.js'));
+  else root.BlitzMissions=factory(root.BlitzApprovedEnemies,root.BlitzStarCampaign,root.BlitzThunderCampaign,root.BlitzMoonCampaign,root.BlitzGrowCampaign);
+})(typeof globalThis!=='undefined'?globalThis:this,function(Approved,Stars,Thunder,Moon,Grow){
   'use strict';
   const choice=(id,label,icon='mark',colour=null)=>({id,label,icon,colour});
   const pick=(id,title,text,prompt,labels,answer,hint,explanation,reward,extra={})=>({
@@ -188,6 +188,8 @@
   if(Thunder){campaigns.push(Thunder.campaign);missions.push(...Thunder.missions);}
   // Campaign 5, Pip and the Moon Key (8 November 2026), opens after Thunder Mountain.
   if(Moon){campaigns.push(Moon.campaign);missions.push(...Moon.missions);}
+  // Pip Grows Up is a story-only chapter that opens by XP, not by finishing the campaign before it (12 November 2026).
+  if(Grow){campaigns.push(Grow.campaign);missions.push(...Grow.missions);}
   const legacyPuzzles=[
         pick('vault-tool','The ticklish lock',['Use something soft with no sharp teeth.','It must brush dust from a tiny lock.'],'Which tool should you take?',[
           choice('saw','Saw','tool'),choice('brush','Soft brush','tool'),choice('comb','Hard comb','tool')],'brush','Think about both the soft bristles and the job.','A soft brush can clear the lock without scratching it.','The dusty lock is clean.'),
@@ -233,6 +235,7 @@
   for(const m of Stars.missions)lore[m.families[0]]=['Find me at '+m.place+'.',lore[m.families[0]][1]];
   for(const m of [...(Thunder?.missions||[]),...(Moon?.missions||[])])for(const f of m.families)lore[f]=['Find me in the story quest '+m.name+'.',lore[f][1]];
   for(const m of missions){
+    if(m.storyOnly)continue;
     m.art ||= 'assets/adventures/'+m.id+'.webp';
     m.artAlt ||= 'The young mage and small Pip meet '+m.families[0].replace(/-/g,' ')+' at '+m.place+'.';
     m.health ||= [8,9,10,12];
@@ -241,5 +244,5 @@
   }
   const byId=Object.fromEntries(missions.map(m=>[m.id,m]));
   const puzzles=Object.fromEntries([...legacyPuzzles,...missions.flatMap(m=>m.riddles)].map(r=>[r.id,r]));
-  return {version:1,campaigns,missions,byId,puzzles,legacyPuzzles,lore,glossary:{...(Thunder?.glossary||{}),...(Moon?.glossary||{})}};
+  return {version:1,campaigns,missions,byId,puzzles,legacyPuzzles,lore,glossary:{...(Thunder?.glossary||{}),...(Moon?.glossary||{}),...(Grow?.glossary||{})}};
 });

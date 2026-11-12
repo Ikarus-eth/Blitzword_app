@@ -1536,7 +1536,7 @@ console.log('PASS failed expansion illustration retains listening and Continue')
 {
  // Story quest reader: tap-to-hear words, meanings, page turns, look-back after a miss and the reading summary.
  const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,10,2);s.profile.name='Reader';s.assessment.done=true;s.dragon.name='Ron';s.dragon.named=true;
- for(const m of A.Data.missions)if(m.campaign!=='thunder-mountain')A.stats(s,m.id).completedAt=new Date(now).toISOString();
+ for(const m of A.Data.missions)if(m.campaign!=='thunder-mountain'&&!A.isGrowth(m.id))A.stats(s,m.id).completedAt=new Date(now).toISOString();
  s.expedition.selectedCampaign='thunder-mountain';
  let ui=boot(s,{adventures:true,heldNarration:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,5);assert.ok(!tabs[3].disabled);assert.ok(tabs[4].disabled);
  assert.match(ui.get('adventureHub').textContent,/0\/6 treasures/);ui.click(ui.get('adventureHub').querySelector('[data-mission="tm-jet-missing"]'));
@@ -1583,7 +1583,7 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  // Moon Key (8 November 2026): campaign 5 opens after Thunder Mountain; long stories use their own recorded word,
  // meaning and question clips, and fall back to speech when no clip exists or the dragon has another name.
  const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,10,8);s.profile.name='Reader';s.assessment.done=true;
- for(const m of A.Data.missions)if(m.campaign!=='moon-key')A.stats(s,m.id).completedAt=new Date(now).toISOString();
+ for(const m of A.Data.missions)if(m.campaign!=='moon-key'&&!A.isGrowth(m.id))A.stats(s,m.id).completedAt=new Date(now).toISOString();
  s.expedition.selectedCampaign='moon-key';
  const voice={'story:moon-key:w:dark':{file:'assets/adventures/moon-key/voice/w-dark.mp3'},'story:moon-key:m:dark':{file:'m-dark.mp3'},'story:moon-key:w:brave':{file:'w-brave.mp3'},'story:moon-key:q:mk-owl-m1':{file:'q.mp3'}};
  let ui=boot(s,{adventures:true,heldNarration:true,storyVoice:voice});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,5);assert.ok(!tabs[4].disabled);
@@ -1604,4 +1604,28 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  ui=boot(t,{adventures:true,heldNarration:true,storyVoice:{...voice,'story:moon-key:w:pip':{file:'w-pip.mp3'}}});ui.click(ui.get('missionResume'));
  ui.click([...ui.get('mission').querySelectorAll('.storyWord')].find(b=>b.textContent==='Ron'));assert.equal(ui.speechTexts.at(-1),'Ron');assert.equal(ui.speechClips.at(-1),null);ui.finishSpeech();
  console.log('PASS Moon Key: campaign 5 after Thunder Mountain, long four-page stories, recorded word, meaning and question clips with speech fallback');
+}
+{
+ // Pip Grows Up (12 November 2026): at 44,000 XP the camp shows Pip glowing, the open quest waits behind Pip's
+ // story, the story reads and asks without fights, and the last right answer starts the riding evolution.
+ const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.now();s.profile.name='Artus';s.assessment.done=true;
+ for(const m of A.Data.missions)if(!A.isGrowth(m.id)&&!['mk-storm','mk-castle','mk-nest','mk-moon'].includes(m.id))A.stats(s,m.id).completedAt=new Date(now).toISOString();
+ s.expedition.selectedCampaign='moon-key';Core.startMission(s,'mk-storm',now);Object.assign(s.dragon,{xp:44000,stage:1,evolutionSeen:1,named:true,namingPromptSeen:true});
+ let ui=boot(s,{adventures:true,heldNarration:true});
+ const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,6);assert.ok(!tabs[5].disabled);
+ assert.ok(ui.get('growthStart'));assert.ok(ui.get('adventureHub').querySelector('[data-mission="mk-castle"]').disabled);
+ ui.click(ui.get('missionResume'));assert.match(ui.get('mission').textContent,/This quest will wait for you/);
+ ui.click(ui.get('growthStartQuest'));assert.equal(ui.state().expedition.parked.missionId,'mk-storm');assert.match(ui.get('mission').textContent,/No fights in this story/);
+ ui.click(missionButton(ui,'Read the story'));assert.match(ui.get('mission').querySelector('.storyText').textContent,/It is evening/);
+ for(let p=1;p<4;p++)ui.click(missionButton(ui,'Next page →'));ui.click(missionButton(ui,'I read it! Answer 3 questions'));ui.click(ui.document.querySelector('.questDialogButton'));
+ assert.equal(ui.state().dragon.xp,44100);
+ // The last question of the last part: Pip grows.
+ const t=ui.state();for(const id of ['grow-egg','grow-little','grow-big'])A.stats(t,id).completedAt=new Date(now).toISOString();t.expedition.current=null;t.dragon.xp=44950;
+ Core.startMission(t,'grow-ride',now);A.beginStory(t,now,1);for(let p=1;p<4;p++)A.turnStoryPage(t,p);A.finishReading(t,now);
+ for(const q of A.currentStory(t).questions.slice(0,2)){A.chooseStory(t,q.answer,q.id);A.checkStory(t,now,q.id);}
+ ui=boot(t,{adventures:true,heldNarration:true});ui.click(ui.get('missionResume'));
+ const q=A.currentStory(t).questions[2];ui.click(ui.get('mission').querySelector('[data-story-choice="'+q.answer+'"]'));ui.click(missionButton(ui,'Check my answer'));
+ assert.equal(ui.state().dragon.xp,45000);assert.equal(ui.state().dragon.stage,2);
+ ui.click(ui.document.querySelector('.questDialogButton'));assert.ok(ui.get('evolution').classList.contains('active'));assert.equal(ui.state().dragon.evolution.stage,2);
+ console.log('PASS Pip Grows Up: 44,000 XP banner, waiting quest parked, story without fights, last answer grows Pip to 45,000 XP and opens the riding evolution');
 }

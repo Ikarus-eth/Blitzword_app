@@ -30,7 +30,8 @@ test('recovered runtime covers all current approved words, teaching and correcti
  }
  const recordedEnemies=['Thornling', 'Moss Golem', 'Moon Moth', 'Root Sprite', 'Cave Troll'];
  for(const name of recordedEnemies){assert.ok(C.enemies.some(enemy=>enemy.name===name));presentOrFallback('A '+name+' is on the path. Ready to battle?');presentOrFallback('Reading check complete. Now your first chapter begins. A '+name+' is on the path. Ready to battle?');}
- for(const [i,text] of [C.evolution.intro,...C.evolution.lines.slice(1).map(lines=>lines.join(' '))].entries())assert.equal(manifest.clips[text]?.file,'assets/narration/evolution-'+i+'.mp3',text);
+ // 12 November 2026: riding moved to stage 2, so its lines reuse the evolution-3 recording and flying (stage 3) reuses evolution-2.
+ for(const [i,text] of [C.evolution.intro,...C.evolution.lines.slice(1).map(lines=>lines.join(' '))].entries())assert.equal(manifest.clips[text]?.file,'assets/narration/evolution-'+[0,1,3,2][i]+'.mp3',text);
  presentOrFallback('Pip is on the rock.');presentOrFallback('Let’s try a few words. Look at the word. When it hides, tap the same word. Tap the question mark if you are not sure.');
  assert.equal(fallbackOnly.size,0);for(const text of ['gate','The gate is by the castle.','Practice turn. You keep your heart. The gate is by the castle.','The word was gate.','Practice turn. You keep your heart. The word was gate.'])assert.ok(manifest.clips[text],text);
 });

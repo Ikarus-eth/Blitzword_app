@@ -1,6 +1,10 @@
 const test=require('node:test'),assert=require('node:assert/strict'),C=require('../game-core'),Content=require('../content');
 test('evolution keeps the XP thresholds, queues each earned stage and changes no learning evidence',()=>{
- const s=C.migrate(C.fresh());s.dragon.xp=70000;const grown=C.migrate(s);
+ const s=C.migrate(C.fresh());s.dragon.xp=70000;
+ // Riding (stage 2) waits for the Pip Grows Up story; once it is read, every earned stage is queued.
+ assert.equal(C.migrate(C.copy(s)).dragon.stage,1);
+ for(const id of C.Adventure.Data.campaigns.find(c=>c.growth).missions)C.Adventure.stats(s,id).completedAt=new Date().toISOString();
+ const grown=C.migrate(s);
  assert.deepEqual(Content.dragonStages.map(x=>x.xp),[0,15000,45000,70000]);
  const learning=JSON.stringify(grown.learning),timing=JSON.stringify(grown.timing);
  for(let stage=1;stage<=3;stage++){
