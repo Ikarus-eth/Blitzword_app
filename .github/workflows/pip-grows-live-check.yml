@@ -1,0 +1,28 @@
+name: Verify live Pip Grows Up
+on:
+  push:
+    branches: [claude/pip-grows-live-check]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: 6b0b1da5418e80188c5137f2418d32fa87d7034d
+      - name: Compare live files with merge 6b0b1da
+        run: |
+          B=https://ikarus-eth.github.io/Blitzword_app
+          for attempt in $(seq 1 30); do
+            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
+            sleep 30
+          done
+          bad=0; n=0
+          for f in index.html app.js content.js game-core.js adventure-core.js missions.js adventure-ui.js adventures.css assets/battle-rider/rider.webp assets/adventures/pip-grows/*.* assets/adventures/pip-grows/voice/manifest.js $(ls assets/adventures/pip-grows/voice/*.mp3 | head -40); do
+            n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
+            if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
+          done
+          echo "checked=$n mismatched=$bad"; test $bad -eq 0
