@@ -1,0 +1,138 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "stage": "art-batch-1",
+ "count": 13,
+ "images": [
+  {
+   "id": "grow-egg-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip is now big: his back is as high as Artus’s shoulder. Scene: Evening. Inside a cosy wooden cottage room at evening, a stone fireplace with a warm fire, wooden beams, a rug, a little table. Artus sits on the rug by the fire and looks with surprise and care at Pip, who lies beside him. A soft gold glow shimmers all over Pip’s scales; Pip looks at his own wing, puzzled. A plate with a piece of cake sits untouched next to Pip. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-egg-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Scene: A dreamy memory scene in a deep green forest with soft sunbeams. Artus kneels in the moss under a huge old tree with big roots and gently picks up a little smooth red egg with tiny gold speckles; the egg glows faintly warm. No dragon is visible in this picture, only the egg. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-egg-3",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 shows Pip’s colours and face: orange-gold scales, cream fluffy chest, big amber eyes, leafy tail tuft. In this scene Pip is a tiny newborn baby dragon, as small as a teacup, with very big eyes, stubby legs and tiny soft wings; cute, round, wobbly. Scene: Morning. Inside a cosy wooden cottage room in the morning, a stone fireplace with a warm fire, wooden beams, a rug, a little table. By the fireplace, a cracked red egg with gold speckles lies on a folded blanket; eggshell pieces around it. Tiny newborn baby Pip has just popped out and looks up at Artus with huge hopeful eyes and an open mouth, as if asking for breakfast. Artus kneels close and laughs with delight. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-egg-4",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-0.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 shows Pip’s colours and face: orange-gold scales, cream fluffy chest, big amber eyes, leafy tail tuft. In this scene Pip is a tiny newborn baby dragon, as small as a teacup, with very big eyes, stubby legs and tiny soft wings; cute, round, wobbly. Scene:  Inside a cosy wooden cottage room at evening, a stone fireplace with a warm fire, wooden beams, a rug, a little table. Tiny baby Pip sleeps curled up inside Artus’s open brown leather shoulder bag on the table, and only his little leafy-tufted tail hangs out over the edge. Next to the bag: two apple cores, bread crumbs and a bit of cheese rind. Artus sits at the table, chin on his hand, smiling softly at the bag. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-big-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip is now big: his back is as high as Artus’s shoulder. Scene: Night outside a small wooden cottage with a round door that is clearly too small for Pip. Pip, big now, sleeps curled up on the grass beside the cottage under a starry sky with fireflies. Artus leans out of the lit cottage window in his tunic, smiling and waving goodnight to Pip. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-ride-1",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip is now big: his back is as high as Artus’s shoulder. Scene: Evening. Inside a cosy wooden cottage room at evening, a stone fireplace with a warm fire, wooden beams, a rug, a little table. Pip glows bright gold now, the light much stronger, warm sparkles around his wings. Artus sits beside him, happy and proud, holding a big open storybook with many pages. They smile at each other. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-ride-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip is now big: his back is as high as Artus’s shoulder. Image 4 is the exact identity of Jet, Pip’s cousin: a young dragon with bright red scales, cream belly, small cream horns and big leaf-green wings; Jet is smaller than Pip now. Image 5 is the exact identity of Grandma, Jet’s grandmother: an old rose-pink DRAGON with round spectacles and a yellow knitted shawl. Grandma is fully a dragon: snout, curled horns, scales, small green wings and a tail; no human face, no human hands, no hair. Scene: Night, at the open round wooden door of the cottage, warm light from inside. Grandma dragon and Jet stand at the door. Grandma holds open a big cloth bag, and a soft brown leather riding saddle peeks out of it. Artus, inside, looks at the saddle amazed; glowing Pip peeks over Artus’s shoulder. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-ride-3",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-jet.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/adventures/thunder-mountain/ref-grandma.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip is now big: his back is as high as Artus’s shoulder. Image 4 is the exact identity of Jet, Pip’s cousin: a young dragon with bright red scales, cream belly, small cream horns and big leaf-green wings; Jet is smaller than Pip now. Image 5 is the exact identity of Grandma, Jet’s grandmother: an old rose-pink DRAGON with round spectacles and a yellow knitted shawl. Grandma is fully a dragon: snout, curled horns, scales, small green wings and a tail; no human face, no human hands, no hair. Scene: Inside the cosy cottage by the fire. The brown leather saddle sits on Pip’s back but it is much too big and has slipped forward so its flap covers Pip’s eyes; Pip looks silly and surprised. Jet, Grandma dragon and Artus all laugh warmly. Pip still has a gold glow. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-ride-4",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip is now big: his back is as high as Artus’s shoulder. Scene: Inside the cottage. Pip glows so brightly that warm white-gold light fills the whole room and makes rays and sparkles; Pip stands tall in the centre of the light, wings spreading, eyes closed happily. Artus shields his eyes with one arm, smiling in wonder. Magical, joyful, not scary. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "grow-cover",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-3.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, now grown: a large orange-gold dragon, the size of a horse, with cream chest, curved cream horns, blue-grey wings with a flame mark, leafy tail tuft and a brown leather riding saddle with a small gold buckle. Scene: Sunrise over a green meadow with flowers and a forest path. Artus sits in the saddle on grown Pip’s back, riding happily, one hand on the saddle, his red cape flying. Pip runs joyfully along the path, wings half open but not flying. Side view, both fully visible, wide sky. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every character fully inside the frame."
+  },
+  {
+   "id": "rider-a",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-3.webp"
+   ],
+   "aspect_ratio": "4:3",
+   "prompt": "Use case: game character sprite. Image 1 is the exact identity of Artus the young boy mage hero: brown hair, gentle face, cream embroidered tunic, long green embroidered cloak with red lining, brown boots, and a wooden staff topped with a glowing orange flame crystal. Image 2 is the exact identity of Pip, a large orange-gold dragon the size of a horse, cream fluffy chest, curved cream horns, blue-grey wings with a pale flame mark, leafy tail tuft, wearing a brown leather riding saddle with a small gold buckle. Draw Artus sitting astride in the saddle on Pip’s back, legs on both sides, riding. Full side view, both facing right towards the viewer’s right, whole bodies visible from Pip’s tail tip to his nose and from Artus’s staff tip to Pip’s claws, centred with a small margin. Same painted game-art style as the references: clean painted character art with soft shading and crisp outline. Plain flat light grey background (#d8d8d8) with no ground, no shadow on the background, no scenery, no frame, no text. Pose: Artus holds the staff up and forward in his right hand, ready to cast; Pip stands firmly on all four legs, head raised, mouth closed, wings folded."
+  },
+  {
+   "id": "rider-b",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-3.webp"
+   ],
+   "aspect_ratio": "4:3",
+   "prompt": "Use case: game character sprite. Image 1 is the exact identity of Artus the young boy mage hero: brown hair, gentle face, cream embroidered tunic, long green embroidered cloak with red lining, brown boots, and a wooden staff topped with a glowing orange flame crystal. Image 2 is the exact identity of Pip, a large orange-gold dragon the size of a horse, cream fluffy chest, curved cream horns, blue-grey wings with a pale flame mark, leafy tail tuft, wearing a brown leather riding saddle with a small gold buckle. Draw Artus sitting astride in the saddle on Pip’s back, legs on both sides, riding. Full side view, both facing right towards the viewer’s right, whole bodies visible from Pip’s tail tip to his nose and from Artus’s staff tip to Pip’s claws, centred with a small margin. Same painted game-art style as the references: clean painted character art with soft shading and crisp outline. Plain flat light grey background (#d8d8d8) with no ground, no shadow on the background, no scenery, no frame, no text. Pose: Artus raises the staff high and points it forward at an enemy off to the right; Pip stands on all four legs, leaning slightly forward, wings half open, mouth closed."
+  },
+  {
+   "id": "rider-c",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/battle-motion/mage-still.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-3.webp"
+   ],
+   "aspect_ratio": "4:3",
+   "prompt": "Use case: game character sprite. Image 1 is the exact identity of Artus the young boy mage hero: brown hair, gentle face, cream embroidered tunic, long green embroidered cloak with red lining, brown boots, and a wooden staff topped with a glowing orange flame crystal. Image 2 is the exact identity of Pip, a large orange-gold dragon the size of a horse, cream fluffy chest, curved cream horns, blue-grey wings with a pale flame mark, leafy tail tuft, wearing a brown leather riding saddle with a small gold buckle. Draw Artus sitting astride in the saddle on Pip’s back, legs on both sides, riding. Full side view, both facing right towards the viewer’s right, whole bodies visible from Pip’s tail tip to his nose and from Artus’s staff tip to Pip’s claws, centred with a small margin. Same painted game-art style as the references: clean painted character art with soft shading and crisp outline. Plain flat light grey background (#d8d8d8) with no ground, no shadow on the background, no scenery, no frame, no text. Pose: calm and proud; Artus holds the staff upright beside him; Pip stands on all four legs, head up, wings folded."
+  }
+ ]
+}
