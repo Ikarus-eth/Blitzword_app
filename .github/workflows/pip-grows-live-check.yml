@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 6b0b1da5418e80188c5137f2418d32fa87d7034d
-      - name: Compare live files with merge 6b0b1da
+          ref: a0821affba5247d42465057c1416800babfbccfb
+      - name: Compare live files with merge a0821af
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           for attempt in $(seq 1 30); do
@@ -21,7 +21,7 @@ jobs:
             sleep 30
           done
           bad=0; n=0
-          for f in index.html app.js content.js game-core.js adventure-core.js missions.js adventure-ui.js adventures.css assets/battle-rider/rider.webp assets/adventures/pip-grows/*.* assets/adventures/pip-grows/voice/manifest.js $(ls assets/adventures/pip-grows/voice/*.mp3 | head -40); do
+          for f in index.html app.js content.js game-core.js adventure-core.js missions.js adventure-ui.js adventures.css rider-fx.js assets/battle-rider/rider.webp assets/adventures/pip-grows/campaign.js; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
