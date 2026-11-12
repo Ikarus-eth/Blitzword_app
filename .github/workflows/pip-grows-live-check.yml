@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: a0821affba5247d42465057c1416800babfbccfb
-      - name: Compare live files with merge a0821af
+          ref: d2ca215973e1d26e8fc8c9d67ededc511779628b
+      - name: Compare live files with merge d2ca215
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           for attempt in $(seq 1 30); do
