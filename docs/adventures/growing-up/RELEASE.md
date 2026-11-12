@@ -27,7 +27,7 @@ fal.ai `fal-ai/nano-banana/edit`, two batches through the existing `mission-art.
 
 ## Voice
 
-Free local Kokoro af_heart clips through `story-voice.yml`: [voice-request.json](voice-request.json) (486 clips: 264 words, 210 meanings, 12 questions), made by [make-voice-request.js](make-voice-request.js). Until the clips are in the build, the reader falls back to speech.
+Free local Kokoro af_heart clips through `story-voice.yml`: [voice-request.json](voice-request.json) (486 clips: 264 words, 210 meanings, 12 questions), made by [make-voice-request.js](make-voice-request.js). The clips are in `assets/adventures/pip-grows/voice/` and loaded by `index.html`. The Whisper listening check heard 250 of 264 word clips correctly alone or in a group (Moon Key: 356 of 387); the misses are mostly very short words and names (Artus, Pip, the, he, I), which need a human listen. Clips for any other dragon name fall back to speech.
 
 ## Implementation
 
