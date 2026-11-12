@@ -53,3 +53,24 @@ test('after losing, every retry can earn shields again, and five accurate answer
 });
 test('changing the regular companion swaps an active support animal without consuming protection',()=>{const s=fresh();for(let i=0;i<8;i++)answer(s);A.selectSupport(s,'moss-golem');A.selectCompanion(s,'moss-golem');assert.equal(A.companion(s),'moss-golem');assert.equal(s.rewards.supportFamily,'moon-moth');assert.equal(s.rewards.shield,true);});
 test('demo and legacy Word trails never grant quest support',()=>{for(const demo of [true,false]){const s=C.migrate(C.fresh());s.assessment.done=true;C.startBattle(s,NOW,{demo});s.battle.introPending=false;s.battle.enemyHealth=100;for(let i=0;i<8;i++)answer(s);assert.equal(s.rewards.shield,false);}});
+test('one guardian at a time: the second shield brings a second friend, who blocks first; then the first friend, then the companion',()=>{
+ const s=fresh();A.reveal(s,'thornling',NOW);A.reveal(s,'bog-toad',NOW);
+ A.setShields(s,1);Object.assign(s.rewards,{earnedSupport:true,supportFamily:'moss-golem',supportPending:false});
+ assert.deepEqual(A.guardian(s),{family:'moss-golem',kind:'shield',shield:1});
+ A.setShields(s,2);s.rewards.supportFamily2=A.secondFriend(s);const second=s.rewards.supportFamily2;
+ assert.ok(second&&second!=='moss-golem'&&second!==A.companion(s),second);
+ const foe=C.Content?.enemyAt?.(s.battle.enemyId)?.family;if(foe)assert.notEqual(second,foe);
+ assert.equal(A.guardian(s).family,second);
+ let r=answer(s,{correct:false});if(r.freeMistake)r=answer(s,{correct:false});assert.equal(r.supportSaved,second);assert.equal(A.heldShields(s),1);assert.equal(s.rewards.supportFamily2,null);assert.equal(A.guardian(s).family,'moss-golem');
+ r=answer(s,{correct:false});assert.equal(r.supportSaved,'moss-golem');assert.equal(A.heldShields(s),0);
+ const g=A.guardian(s);if(A.companion(s)&&!s.expedition.current.companionHelpUsed){assert.equal(g.kind,'companion');r=answer(s,{correct:false});assert.equal(r.companionSaved,A.companion(s));}
+ // A save from before this change, holding two shields with one friend, gets a second friend.
+ const old=C.migrate(C.fresh());old.assessment.done=true;for(const f of ['moon-moth','moss-golem','thornling'])A.reveal(old,f,NOW);A.selectCompanion(old,'moon-moth');A.setShields(old,2);Object.assign(old.rewards,{earnedSupport:true,supportFamily:'moss-golem'});delete old.rewards.supportFamily2;
+ const loaded=C.migrate(C.copy(old));assert.equal(loaded.rewards.supportFamily2,'thornling');
+});
+test('creature art facing: right-facing paintings are listed so enemies look at the hero and guardians look at the enemy',()=>{
+ const Content=require('../content');const ids=new Set(Content.creatures.map(c=>c.id));
+ for(const id of ['ember-fox','shell-lobster','moss-bear','cloud-yak'])assert.equal(Content.artFacing(id),'right');
+ for(const id of ['bog-toad','thornling','crystal-crab','ripple-salamander'])assert.equal(Content.artFacing(id),'left');
+ for(const id of ['ember-fox','rowan-stag','moon-hare-knight'])assert.ok(ids.has(id));
+});

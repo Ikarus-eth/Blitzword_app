@@ -77,15 +77,17 @@ test('older active and parked mission saves keep existing hearts and selected fr
     assert.equal(s.expedition.current.hearts,5);assert.equal(s.expedition.current.maxHearts,6);assert.equal(A.companion(s),'thornling');
   }
 });
-test('a collected teammate blocks one unaided miss per quest without changing reading evidence or spending a shield',()=>{
+test('a collected teammate blocks one unaided miss per quest, after any held shield, without changing reading evidence',()=>{
   let s=fresh();C.startMission(s,'first-spark',NOW);C.startMissionBattle(s,NOW);
   assert.equal(A.selectCompanion(s,'moon-moth'),false);assert.equal(A.selectCompanion(s,'fake'),false);assert.equal(A.selectCompanion(s,'thornling'),true);
   const xp=s.dragon.xp,enemy=s.battle.enemyHealth;s.rewards.shield=true;
   const helped=answer(s,{help:true});assert.equal(helped.supported,true);assert.equal(s.expedition.current.companionHelpUsed,false);
+  // 12 November 2026: the guardian on screen blocks first, so a held shield is used before the companion.
+  const first=answer(s,{wrong:true});assert.equal(first.shieldUsed,true);assert.equal(first.companionSaved,undefined);assert.equal(s.rewards.shield,false);assert.equal(s.expedition.current.companionHelpUsed,false);
   const miss=answer(s,{wrong:true});assert.equal(miss.companionSaved,'thornling');assert.equal(miss.correct,false);assert.equal(miss.supported,false);assert.equal(miss.healthChanged,false);
-  assert.equal(s.battle.heroHealth,4);assert.equal(s.battle.enemyHealth,enemy);assert.equal(s.dragon.xp,xp);assert.equal(s.rewards.shield,true);assert.equal(s.expedition.current.companionHelpUsed,true);
+  assert.equal(s.battle.heroHealth,4);assert.equal(s.battle.enemyHealth,enemy);assert.equal(s.dragon.xp,xp);assert.equal(s.expedition.current.companionHelpUsed,true);
   const recordCount=s.campaign.battleRecords.length;assert.equal(C.answerBattle(s,s.battle.question.target,NOW),null);assert.equal(s.campaign.battleRecords.length,recordCount);
-  s=Storage.readBackup(Storage.backupFile(s).text).state;assert.equal(s.expedition.current.companionHelpUsed,true);A.reveal(s,'moon-moth',NOW);A.selectCompanion(s,'moon-moth');
+  s=Storage.readBackup(Storage.backupFile(s).text).state;assert.equal(s.expedition.current.companionHelpUsed,true);A.reveal(s,'moon-moth',NOW);A.selectCompanion(s,'moon-moth');s.rewards.shield=true;
   const shield=answer(s,{wrong:true});assert.equal(shield.shieldUsed,true);assert.equal(shield.companionSaved,undefined);assert.equal(s.rewards.shield,false);
   answer(s,{wrong:true});assert.equal(s.battle.heroHealth,3);assert.equal(s.expedition.current.hearts,3);
   s.battle.heroHealth=0;C.resolveBattle(s,NOW);const family=s.battle.enemyId;C.startMissionBattle(s,NOW);

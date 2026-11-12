@@ -14,6 +14,7 @@
     for(const key of ['missions','book','riddleDays'])if(!valid(e[key]))throw new Error('Invalid mission records');
     if(e.current&&!Data.byId[e.current.missionId])throw new Error('Unknown saved mission');
     if(e.parked&&!Data.byId[e.parked.missionId])e.parked=null;
+    if(s.rewards&&heldShields(s)>=2&&s.rewards.supportFamily&&!s.rewards.supportFamily2)s.rewards.supportFamily2=secondFriend(s);
     if(e.current){
       // Keep hearts already earned in an older in-progress quest, even when parked in Word trails.
       const b=e.context==='mission'?s.battle:e.runtime?.battle,c=e.current;
@@ -108,6 +109,7 @@
     if(!Data.lore[family]||!of(s).book[family]?.seen)return false;
     const e=of(s),previous=e.favourite;e.favourite=family;
     if(s.rewards?.earnedSupport&&s.rewards.supportFamily===family&&previous&&previous!==family)selectSupport(s,previous);
+    if(s.rewards?.supportFamily2===family)s.rewards.supportFamily2=secondFriend(s);
     return true;
   }
   function supportChoices(s){
@@ -132,7 +134,25 @@
   function setShields(s,n){
     const r=s.rewards,k=Math.max(0,Math.min(MAX_SHIELDS,Math.floor(n)||0));r.shields=k;r.shield=k>0;
     if(!k){r.earnedSupport=false;r.supportFamily=null;r.supportPending=false;}
+    if(k<2)r.supportFamily2=null;
     return k;
+  }
+  // One guardian at a time (12 November 2026). Each held shield has its own friend: the second shield brings a
+  // second friend, who replaces the first on screen and blocks the next hit; when that shield is used, the first
+  // friend comes back. With no shield, the quest companion guards. The guardian shown is always the next to block.
+  function secondFriend(s){
+    // Not the kind of creature being fought right now, so friend and enemy are never the same picture.
+    const foe=s.battle?.enemyId?Content.enemyAt(s.battle.enemyId)?.family||s.battle.enemyId:null;
+    const first=s.rewards.supportFamily,choices=supportChoices(s),others=choices.filter(id=>id!==first&&id!==foe);
+    // Last resorts: the kind being fought (still a different picture from the first friend), then the first kind again.
+    const liked=of(s).supportFavourite2;return others.includes(liked)?liked:others[0]||choices.find(id=>id!==first)||first||choices[0]||null;
+  }
+  function guardian(s){
+    const r=s.rewards||{},n=heldShields(s);
+    if(n>=2&&(r.supportFamily2||r.supportFamily))return {family:r.supportFamily2||r.supportFamily,kind:'shield',shield:2};
+    if(n>=1&&r.supportFamily)return {family:r.supportFamily,kind:'shield',shield:1};
+    const friend=s.battle?.missionId?companion(s):null;
+    return friend?{family:friend,kind:'companion',used:!!of(s).current?.companionHelpUsed}:null;
   }
   // Can this fight still grant a shield? One per fight, two per attempt at the quest, two held at a time.
   function supportOpen(s){const b=s.battle,c=of(s).current;return !!(b?.missionId&&c&&!b.supportMeter?.earned&&(c.supportEarned||0)<2&&heldShields(s)<MAX_SHIELDS);}
@@ -147,8 +167,9 @@
     meter.earned=true;c.supportEarned=(c.supportEarned||0)+1;
     const preferred=of(s).supportFavourite,family=supportChoices(s).includes(preferred)?preferred:null;
     const second=heldShields(s)>0;setShields(s,heldShields(s)+1);s.rewards.earnedSupport=true;
-    // A second shield stays with the friend already on the team (shown as ×2).
     if(!s.rewards.supportFamily&&!s.rewards.supportPending){s.rewards.supportFamily=family;s.rewards.supportPending=!family;}
+    // A second shield brings a second friend, who takes the first one's place (12 November 2026).
+    if(second){s.rewards.supportFamily2=secondFriend(s);b.question.secondFriend=s.rewards.supportFamily2;}
     b.question.supportEarned=true;rec.supportEarned=true;if(second){b.question.secondShield=true;rec.secondShield=true;}return true;
   }
   function protect(s){
@@ -359,5 +380,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {GROWTH,isGrowth,growthRead,growthHeld,growthDue,growthOpen,growthNext,parkable,story,currentStory,storyOf,beginStory,turnStoryPage,finishReading,storyQuestion,lookBack,backToQuestion,chooseStory,checkStory,noteStoryTap,focusWords,STORY_PAGE_MS_PER_WORD,leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen,MAX_SHIELDS,heldShields,setShields};
+  return {guardian,secondFriend,GROWTH,isGrowth,growthRead,growthHeld,growthDue,growthOpen,growthNext,parkable,story,currentStory,storyOf,beginStory,turnStoryPage,finishReading,storyQuestion,lookBack,backToQuestion,chooseStory,checkStory,noteStoryTap,focusWords,STORY_PAGE_MS_PER_WORD,leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen,MAX_SHIELDS,heldShields,setShields};
 });
