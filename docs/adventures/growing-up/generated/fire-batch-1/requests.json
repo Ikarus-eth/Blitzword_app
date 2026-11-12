@@ -1,0 +1,82 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "batch": "docs/adventures/growing-up/fire-batch-1.json",
+  "requests": {
+    "fire-a": {
+      "state": "downloaded",
+      "prompt": "Use case: game visual effect sprite. Image 1 is ONLY a reference for the painted game-art style and the warm orange-gold colours of the dragon; do NOT draw the dragon, the boy, any creature, person, ground or scenery. The new picture contains nothing but fire on a pure, flat, completely black background (#000000) with no glow on the edges of the canvas, no frame, no text. Style: rich hand-painted fantasy game art, crisp and vivid, not photographic, not cartoon-flat. Subject: a dragon's fire breath seen from the side, flowing from left to right. At the far left edge, exactly halfway down, it starts as a narrow, intense white-yellow jet; it rushes to the right and widens into a big roaring billowing stream of curling orange and red flame tongues, with a bright yellow-white core, small glowing embers and sparks, reaching almost to the right edge and ending in rounded licking flames. The fire stays in the middle band of the picture, with black above and below it. ",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-rider/rider.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1cdfb-1fa3-70b0-a69b-7a975fb182d9",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-1fa3-70b0-a69b-7a975fb182d9",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-1fa3-70b0-a69b-7a975fb182d9/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-1fa3-70b0-a69b-7a975fb182d9/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 1,
+      "user_queued_count": 2,
+      "bytes": 66982,
+      "image_url": "https://v3b.fal.media/files/b/0ab21fd3/pzCc2suw0RXdsdFnaDi55_XjCDOTfD.webp"
+    },
+    "fire-b": {
+      "state": "downloaded",
+      "prompt": "Use case: game visual effect sprite. Image 1 is ONLY a reference for the painted game-art style and the warm orange-gold colours of the dragon; do NOT draw the dragon, the boy, any creature, person, ground or scenery. The new picture contains nothing but fire on a pure, flat, completely black background (#000000) with no glow on the edges of the canvas, no frame, no text. Style: rich hand-painted fantasy game art, crisp and vivid, not photographic, not cartoon-flat. Subject: a dragon's fire breath seen from the side, flowing from left to right. At the far left edge, exactly halfway down, it starts as a narrow, intense white-yellow jet; it rushes to the right and widens into a big roaring billowing stream of curling orange and red flame tongues, with a bright yellow-white core, small glowing embers and sparks, reaching almost to the right edge and ending in rounded licking flames. The fire stays in the middle band of the picture, with black above and below it. Make the flame tongues swirl upward a little more at the right end.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-rider/rider.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1cdfb-1f9f-7ba2-b1c0-94ab08e33fed",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-1f9f-7ba2-b1c0-94ab08e33fed",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-1f9f-7ba2-b1c0-94ab08e33fed/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-1f9f-7ba2-b1c0-94ab08e33fed/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 66150,
+      "image_url": "https://v3b.fal.media/files/b/0ab21fd3/4UaWddF7aBWFWFJFuhBZt_Dg5D5qzc.webp"
+    },
+    "fire-c": {
+      "state": "downloaded",
+      "prompt": "Use case: game visual effect sprite. Image 1 is ONLY a reference for the painted game-art style and the warm orange-gold colours of the dragon; do NOT draw the dragon, the boy, any creature, person, ground or scenery. The new picture contains nothing but fire on a pure, flat, completely black background (#000000) with no glow on the edges of the canvas, no frame, no text. Style: rich hand-painted fantasy game art, crisp and vivid, not photographic, not cartoon-flat. Subject: a dragon's fire breath seen from the side, flowing from left to right. At the far left edge, exactly halfway down, it starts as a narrow, intense white-yellow jet; it rushes to the right and widens into a big roaring billowing stream of curling orange and red flame tongues, with a bright yellow-white core, small glowing embers and sparks, reaching almost to the right edge and ending in rounded licking flames. The fire stays in the middle band of the picture, with black above and below it. Make the stream slightly thicker in the middle, with more embers flying off.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-rider/rider.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1cdfb-4a10-7f50-bbef-7c032c75f4e2",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-4a10-7f50-bbef-7c032c75f4e2",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-4a10-7f50-bbef-7c032c75f4e2/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-4a10-7f50-bbef-7c032c75f4e2/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 62938,
+      "image_url": "https://v3b.fal.media/files/b/0ab21fd4/On2tusejJ5cSOghk5X770_8VeZfaRm.webp"
+    },
+    "fire-burst": {
+      "state": "downloaded",
+      "prompt": "Use case: game visual effect sprite. Image 1 is ONLY a reference for the painted game-art style and the warm orange-gold colours of the dragon; do NOT draw the dragon, the boy, any creature, person, ground or scenery. The new picture contains nothing but fire on a pure, flat, completely black background (#000000) with no glow on the edges of the canvas, no frame, no text. Style: rich hand-painted fantasy game art, crisp and vivid, not photographic, not cartoon-flat. Subject: a round burst of fire where a fire breath hits: a bright yellow-white centre exploding outward into a ring of orange and red flame tongues and flying sparks and embers, centred in the picture, filling about two thirds of it, surrounded by black.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/battle-rider/rider.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1cdfb-4a55-7af2-870a-f7d987996c67",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-4a55-7af2-870a-f7d987996c67",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-4a55-7af2-870a-f7d987996c67/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1cdfb-4a55-7af2-870a-f7d987996c67/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 85700,
+      "image_url": "https://v3b.fal.media/files/b/0ab21fd4/xNIXLd4nbIHSCsDkWZ-Zu_R3Z5LlqO.webp"
+    }
+  }
+}
