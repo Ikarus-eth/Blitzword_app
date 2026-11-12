@@ -1,6 +1,8 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const C=require('../game-core'),Content=require('../content');
 const NOW=new Date(2026,8,23,12).getTime(),fresh=()=>C.migrate(C.fresh()),reload=s=>C.migrate(C.copy(s));
+// Riding at 45,000 XP waits for the Pip Grows Up story (12 November 2026); these fixtures have read it.
+const readGrowth=s=>{for(const id of C.Adventure.Data.campaigns.find(c=>c.growth).missions)C.Adventure.stats(s,id).completedAt=new Date(NOW).toISOString();return s;};
 function response(s,word='on',{now=NOW,correct=true,support=false,retention=false,speed=null}={}){
  C.startBattle(s,now,{strength:5});const q=C.prepareBattle(s,now);Object.assign(q,{target:word,options:C.byWord[word].d,phase:'choices',supportReasons:support?['help-request']:[],retentionDue:retention,exposureMs:speed});
  return C.answerBattle(s,correct?word:q.options.find(x=>x!==word),now);
@@ -58,7 +60,8 @@ test('chapter waits for learning objectives and a played number duel, but a duel
  const t=fresh();readyChapter(t,10);t.learning.words.on.practiceSuccesses=0;t.learning.words.tree.practiceSuccesses=0;assert.equal(C.storyProgress(reload(t)).cleared,0);
 });
 test('growth is XP-only and grandfathered forms and old completed chapters never regress',()=>{
- for(const [xp,stage] of [[14999,0],[15000,1],[45000,2],[70000,3]]){const s=fresh();s.dragon.xp=xp;assert.equal(reload(s).dragon.stage,stage);}
+ for(const [xp,stage] of [[14999,0],[15000,1],[45000,2],[70000,3]]){const s=readGrowth(fresh());s.dragon.xp=xp;assert.equal(reload(s).dragon.stage,stage);}
+ for(const xp of [45000,70000]){const s=fresh();s.dragon.xp=xp;assert.equal(reload(s).dragon.stage,1);}
  const old=fresh();delete old.xpRulesVersion;delete old.chapterRulesVersion;old.dragon.xp=250;old.dragon.stage=1;old.story.clearedAreas=['lantern-trail'];C.startBattle(old,NOW);const q=C.copy(C.prepareBattle(old,NOW));
  const s=reload(old);assert.equal(s.dragon.stage,1);assert.equal(s.dragon.xp,250);assert.deepEqual(s.story.clearedAreas,old.story.clearedAreas);assert.deepEqual(s.battle.question,q);assert.equal(s.profile.name,old.profile.name);
 });
@@ -132,7 +135,7 @@ test('new awards are whole XP and legacy fractions survive many answers and comp
 });
 test('growth steps use the current stage, cross exact boundaries and do not grant rewards',()=>{
  for(const [xp,stage,steps,next,remaining] of [[0,0,0,1500,1500],[1499.75,0,0,1500,1],[1500,0,1,3000,1500],[14999.5,0,9,15000,1],[15000,1,0,18000,3000],[24000,1,3,27000,3000],[45000,2,0,47500,2500],[70000,3,10,null,0]]){
-  let s=fresh();s.dragon.xp=xp;s=reload(s);const before=C.copy(s),p=C.dragonProgress(s,NOW);
+  let s=readGrowth(fresh());s.dragon.xp=xp;s=reload(s);const before=C.copy(s),p=C.dragonProgress(s,NOW);
   assert.equal(p.stage,stage);assert.equal(p.steps,steps);assert.equal(p.nextStepXP,next);assert.equal(p.stepRemaining,remaining);assert.deepEqual(s,before);
  }
  const legacy=fresh();delete legacy.growthRulesVersion;delete legacy.dragon.growthOrigin;legacy.dragon.stage=1;legacy.dragon.xp=250;const p=C.dragonProgress(reload(legacy),NOW);assert.equal(p.steps,0);assert.equal(p.stepRemaining,4475);
@@ -154,6 +157,6 @@ test('grandfathered forms keep a stable step origin, pending evolution and acces
   const pending=C.copy(s.dragon.evolution);s=reload(s);const origin=C.copy(s.dragon.growthOrigin);
   assert.equal(s.dragon.xp,xp);assert.equal(s.dragon.stage,stage);assert.equal(origin.xp,start);assert.deepEqual(s.dragon.evolution,pending);assert.equal(C.nameDragon(s,'Ember'),true);
   s=reload(s);assert.deepEqual(s.dragon.growthOrigin,origin);assert.equal(s.dragon.xp,xp);assert.equal(s.dragon.stage,stage);
-  if(stage<3){s.dragon.xp=Content.dragonStages[stage+1].xp;s=reload(s);assert.equal(s.dragon.stage,stage+1);assert.equal(s.dragon.growthOrigin.xp,s.dragon.xp);assert.equal(C.dragonProgress(s).steps,stage===2?10:0);}
+  if(stage<3){readGrowth(s);s.dragon.xp=Content.dragonStages[stage+1].xp;s=reload(s);assert.equal(s.dragon.stage,stage+1);assert.equal(s.dragon.growthOrigin.xp,s.dragon.xp);assert.equal(C.dragonProgress(s).steps,stage===2?10:0);}
  }
 });

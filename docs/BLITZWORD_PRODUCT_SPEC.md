@@ -1,3 +1,15 @@
+## Pip Grows Up and riding Pip — approved 12 November 2026
+
+The user asked for Pip's next evolution to come with a story chapter, and for Artus to ride Pip from then on. Choices made by the user: riding at 45,000 XP and flying at 70,000 XP; quests locked and Pip's XP held until the story is read; four parts of about 1,000 words; a team attack in fights.
+
+- At **44,000 XP**, while Pip is below the riding stage and the story is unread, every ordinary XP award stops at 44,000 (parent XP included) and no new quest can start. The camp shows a glowing-Pip banner and a sixth campaign tab, **Pip Grows Up**, which opens by XP rather than by finishing Moon Key and never blocks later campaigns.
+- A quest that is already open can be continued. If it is between fights (intro, story or retry), its next fight shows "Pip is glowing!" instead, and starting the story **parks** the quest; after the story, the parked quest is resumed before any other quest. A running fight is finished first.
+- The chapter is four story-only parts (no fights, no hearts): read every page, then three questions; a wrong answer sends the child back to the page, as in story quests. Every word is tappable, with meanings for new words.
+- Story XP is not boosted: 100 for reading each part and 50 per first right answer, 1,000 in all from 44,000. Until the last answer, story XP stops at 44,999; the **last right answer** of part 4 takes Pip to at least 45,000 XP and he grows at once ("Watch Pip grow" opens the evolution scene; its lines are "Hop on my back. We can go far.").
+- Stages are now Small Pip 0, Big Pip 15,000, **Ride on Pip 45,000** (the saddled art), **Flying Pip 70,000** (until its own art exists it shows the saddled picture; the evolution lines reuse "My wings are big. I can help you."). Saves already past 45,000 at the old Bigger Pip stage are not held or sent back. The Ride and Fly reading speeds still unlock at stage 3, unchanged.
+- In fights, from the riding evolution, the mage hero is drawn **riding Pip** as one picture in the hero's place; the separate Pip is hidden. Every right answer is a team attack: Artus's lightning from the staff plus Pip's fire breath from his mouth; three right in a row, or the hit that wins, is a bigger blaze. Wrong answers use the existing hit and shield reactions.
+- Story: [docs/adventures/growing-up](adventures/growing-up/). Release record: [RELEASE.md](adventures/growing-up/RELEASE.md).
+
 ## Automatic cross-assistant progress access — approved 8 November 2026
 
 Use the existing GitHub repository for automatic progress sharing with Codex and Claude. Because it is public, publish only authenticated encrypted reports on a separate data branch; keep reading and deployment keys server-side/private. Reopening the paired app retries the copy without a new pairing or changing the local save. Both assistants use the same project instructions. See [access, retry and deletion rules](progress-sync/GITHUB_MIRROR.md).
@@ -165,7 +177,7 @@ When implementation differs from this spec unintentionally, treat it as a discre
 ## Current rule map
 
 - A chapter is one map field: at least ten active minutes, three reading wins, a completed number duel and its learning objectives. A campaign contains five chapters; seven campaigns contain the fixed Core 200.
-- Growth is XP-only at **15,000 / 45,000 / 70,000**, with whole XP awards, ten visible steps and the returning-day bonus. Earned forms and learner saves remain preserved. See [point 9](#point-9-whole-xp-and-slower-growth--24-september-2026).
+- Growth is XP-only at **15,000 / 45,000 / 70,000**, except that riding at 45,000 also needs the Pip Grows Up story (12 November 2026), with whole XP awards, ten visible steps and the returning-day bonus. Earned forms and learner saves remain preserved. See [point 9](#point-9-whole-xp-and-slower-growth--24-september-2026).
 - Practice uses rotating reviewed distractors; the 26 reading-check items use fair fixed sets. All 34 story sentences/picture pairs are approved and deployed. Their earlier review gates are closed.
 - Narration recovery and gate pronunciation review are complete. The 4 October focused release covers corrections and battle introductions; story/riddle recordings and synchronized highlighting remain separate. Draft #80 is retained as historical paid work, not a current quota report.
 - Points 1, 2, 3, 4, 6, 7 and 8 and the later point 9 are complete; point 5’s final narration batch remains open. Number-duel changes remain discussion items; the enemy extensions were authorized on 25 September; native/commercial packaging is later work. See [current status](CURRENT_STATUS.md#outstanding-work-and-ownership).

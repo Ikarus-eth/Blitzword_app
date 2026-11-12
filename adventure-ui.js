@@ -84,13 +84,41 @@
       const art=$('#battleCompanionArt');if(art.dataset.family!==family){ctx.paintEnemy(art,family,8);art.dataset.family=family;}
       box.setAttribute('role','img');box.setAttribute('aria-label',Content.enemyAt(family).name+' companion');
     }
+    // ---- Pip Grows Up (12 November 2026): quests pause at 44,000 XP until Pip's story is read ----
+    function startGrowth(){const s=ctx.state(),next=A.growthNext(s);if(!next)return;A.of(s).selectedCampaign=A.GROWTH.campaign;ctx.launch(next);}
+    function growthBanner(s,inQuest=false){
+      const box=el('section','growthBanner parchment'),art=el('span','sceneSprite growthBannerPip');ctx.paintPip(art);art.setAttribute('aria-hidden','true');
+      const copy=el('div','growthBannerCopy'),next=A.growthNext(s),stuck=next&&A.blocking(s,next);
+      copy.append(el('strong','',ctx.dragonText('Pip is glowing!')),el('p','',ctx.dragonText(inQuest?'Pip is ready to grow. Read Pip’s story now. Your quest will wait for you.':'Pip is ready to grow. Read Pip’s story first. Then your quests go on.')));
+      const go=button(ctx.dragonText('Read Pip’s story'),'greenButton',startGrowth);go.id=inQuest?'growthStartQuest':'growthStart';go.disabled=!next||stuck;copy.append(go);
+      if(stuck)copy.append(el('small','growthBannerNote','Finish this fight first.'));
+      box.append(art,copy);return box;
+    }
+    function renderGrowthGate(screen,s,m){
+      const top=el('div','missionTop');renderProgress(top);screen.append(top);
+      const body=el('div','missionBody'),scene=el('figure','missionScene'),image=el('img');
+      const cover=D.campaigns.find(c=>c.id===A.GROWTH.campaign);image.src=cover.scene;image.alt=cover.coverAlt||'';image.decoding='async';image.onerror=()=>{image.onerror=null;image.src=missionArt(m);};scene.append(image);
+      const panel=el('div','missionReading parchment');panel.append(heading(m.name,ctx.dragonText('Pip is glowing!'),ctx.dragonText('Pip has 44,000 XP. He is ready to grow! First read his story with him. This quest will wait for you, and you can go on after the story.')));
+      panel.append(growthBanner(s,true),button('Back to camp','textButton',ctx.home));
+      const picture=el('div','missionPicture');picture.append(scene);body.append(picture,panel);screen.append(body);
+    }
+    function renderReadIntro(screen,s,c,m){
+      const top=el('div','missionTop');renderProgress(top);screen.append(top);
+      const campaign=D.campaigns.find(x=>x.id===m.campaign),part=campaign.missions.indexOf(m.id)+1;
+      const body=el('div','missionBody'),scene=el('figure','missionScene'),image=el('img');image.src=m.art;image.alt=m.artAlt;image.decoding='async';scene.append(image);scene.append(el('figcaption','',m.goal));
+      const panel=el('div','missionReading parchment');
+      panel.append(heading(campaign.name+' · Part '+part+' of '+campaign.missions.length,m.name,ctx.dragonText(m.intro)));
+      panel.append(el('p','storyTip','No fights in this story. Read it, then answer three questions.'));
+      panel.append(button('Read the story','greenButton',()=>act(()=>A.beginStory(s,Date.now(),1))),button('Back to camp','textButton',ctx.home));
+      const picture=el('div','missionPicture');picture.append(scene);body.append(picture,panel);screen.append(body);
+    }
     function renderHub(){
       stopTiming();if(mapViewer){mapCamera=mapViewer.snapshot();mapViewer.destroy();mapViewer=null;}const s=ctx.state(),e=A.of(s),report=A.report(s);ctx.show('adventureHub');
       const screen=$('#adventureHub');screen.replaceChildren();
       const c=D.campaigns.find(c=>c.id===e.selectedCampaign)||D.campaigns[0];
       screen.style.backgroundImage='linear-gradient(180deg,#10282088,#10282044 40%,#102820bb),url("'+c.scene+'")';
       const top=el('div','adventureTop'),tabs=el('nav','campaignTabs');tabs.setAttribute('aria-label','Choose a campaign');
-      D.campaigns.forEach((campaign,i)=>{const open=D.campaigns.slice(0,i).every(prior=>A.campaignComplete(s,prior.id));const b=button((i+1)+'. '+campaign.shortName,'campaignTab'+(c.id===campaign.id?' selected':''),()=>{e.selectedCampaign=campaign.id;if(ctx.save())renderHub();});b.disabled=!open;b.setAttribute('aria-pressed',String(c.id===campaign.id));if(!open)b.title='Finish '+D.campaigns[i-1].shortName+' to open this campaign.';tabs.append(b);});
+      D.campaigns.forEach((campaign,i)=>{if(campaign.growth&&!A.growthOpen(s))return;const open=campaign.growth||D.campaigns.slice(0,i).every(prior=>prior.growth||A.campaignComplete(s,prior.id));const b=button((i+1)+'. '+campaign.shortName,'campaignTab'+(c.id===campaign.id?' selected':''),()=>{e.selectedCampaign=campaign.id;if(ctx.save())renderHub();});b.disabled=!open;b.setAttribute('aria-pressed',String(c.id===campaign.id));if(!open)b.title='Finish '+D.campaigns[i-1].shortName+' to open this campaign.';if(campaign.growth)b.classList.add('growthTab');tabs.append(b);});
       const book=button('Creature Book · '+report.seen+'/'+Content.creatures.length,'bookLauncher',()=>openBook());book.insertAdjacentHTML('afterbegin',icon('leaf'));
       // Turtle Race is always offered: a separate page with its own stats, never the learner save.
       const race=button('Turtle race','raceLauncher',ctx.turtleRace);race.id='hubTurtleRace';race.setAttribute('aria-label','Open Turtle race: three reading races against the turtle');race.insertAdjacentHTML('afterbegin','<img src="assets/turtle-race/turtle.webp" alt="" aria-hidden="true">');
@@ -98,8 +126,11 @@
       const done=c.missions.filter(id=>e.missions[id]?.completedAt).length;
       screen.append(heading('Adventure '+(D.campaigns.indexOf(c)+1)+' · '+done+'/'+c.missions.length+' treasures',c.name,done===c.missions.length?c.ending:c.intro));
       if(c.id==='star-trail')screen.append(button('Read a star message · about 1 minute','greenButton',()=>{if(ctx.save())location.href='assets/oral-reading/?sky='+encodeURIComponent(e.current?.missionId&&c.missions.includes(e.current.missionId)?e.current.missionId:c.missions.find(id=>!e.missions[id]?.completedAt)||c.missions[0]);}));
+      if(A.growthDue(s))screen.append(growthBanner(s));
       if(e.current&&e.current.phase!=='complete'){
         const current=D.byId[e.current.missionId],resume=button((e.current.replay?'Keep playing again: ':'Continue ')+current.name+' · '+A.progress(s).left+' steps left','greenButton missionResume',()=>ctx.launch(current.id));resume.id='missionResume';screen.append(resume);
+      }else if(e.parked&&!A.growthDue(s)){
+        const parked=D.byId[e.parked.missionId],resume=button('Continue '+parked.name,'greenButton missionResume',()=>ctx.launch(parked.id));resume.id='missionResume';screen.append(resume);
       }
       const grid=el('div','missionGrid');
       c.missions.forEach((id,i)=>{
@@ -110,7 +141,7 @@
         const medal=el('span','missionNumber',complete?'✓':String(i+1));art.append(medal);
         const creatures=el('span','missionCreatures');for(const family of m.families){const face=el('span','missionCreature sceneSprite');ctx.paintEnemy(face,family,8);if(!e.book[family]?.seen)face.classList.add('undiscovered');creatures.append(face);}art.append(creatures);
         const copy=el('div','missionCardCopy');copy.append(el('h2','',m.name),el('p','',m.goal));
-        const status=e.current?.missionId===id&&e.current.phase!=='complete'?(e.current.replay?'Treasure found · playing again · ':'')+A.progress(s).left+' steps left':complete?'Treasure found · play again':!open?'Follow the earlier paths':busy?'Your current mission is saved':m.finale?'Final mission':'Choose this path';copy.append(el('span','missionCardStatus',status));card.append(art,copy);grid.append(card);
+        const status=e.current?.missionId===id&&e.current.phase!=='complete'?(e.current.replay?'Treasure found · playing again · ':'')+A.progress(s).left+' steps left':complete?'Treasure found · play again':!open&&A.growthDue(s)&&!A.isGrowth(id)?ctx.dragonText('After Pip’s story'):!open?'Follow the earlier paths':busy?'Your current mission is saved':m.finale?'Final mission':'Choose this path';copy.append(el('span','missionCardStatus',status));card.append(art,copy);grid.append(card);
       });screen.append(grid);
       const camp=el('footer','adventureCamp'),pip=button('','campPip',ctx.growth);pip.setAttribute('aria-label','See Pip’s growth');const pipArt=el('span','sceneSprite');ctx.paintPip(pipArt);pip.append(pipArt,el('span','',ctx.dragonText('Pip')+' · '+Math.floor(s.dragon.xp||0)+' XP'));camp.append(pip);
       if(A.companion(s)){const friend=button('','campFriend',()=>openBook(e.favourite));const art=el('span','sceneSprite');ctx.paintEnemy(art,e.favourite,8);friend.append(art,el('span','','Your team · '+Content.enemyAt(e.favourite).name));camp.append(friend);}
@@ -124,6 +155,8 @@
       ctx.show('mission');screen.replaceChildren();screen.dataset.view=view;
       if(c.phase==='search'){renderSearch(screen,s,c,m);screen.scrollTop=scroll;return;}
       if(c.phase==='story'){renderStory(screen,s,c,m);screen.scrollTop=scroll;return;}
+      if(c.phase==='intro'&&A.growthDue(s)&&!A.isGrowth(m.id)){renderGrowthGate(screen,s,m);return;}
+      if(c.phase==='intro'&&m.storyOnly){renderReadIntro(screen,s,c,m);return;}
       const complete=c.phase==='complete',p=c.puzzle,q=D.puzzles[p?.id],solving=c.phase==='puzzle';
       const top=el('div','missionTop');renderProgress(top);screen.append(top);
       const body=el('div','missionBody'),scene=el('figure','missionScene');
@@ -140,8 +173,11 @@
         const badge=el('div','treasureBadge');badge.innerHTML=icon(m.symbol);panel.append(badge);
         const read=e.missions[m.id]?.storyLast;if(m.story&&read)panel.append(storySummary(m,read,all,campaign));
         const friends=el('div','missionFriends');for(const family of m.families){const b=button('','friendReward',()=>openBook(family));const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);b.append(art,el('strong','',Content.enemyAt(family).name),el('small','','Clue stamp earned'));friends.append(b);}panel.append(friends);
-        const nextCampaign=all?D.campaigns[D.campaigns.indexOf(campaign)+1]:null;
-        panel.append(button(nextCampaign?'Explore '+nextCampaign.shortName:'Choose another mission','greenButton',()=>{if(nextCampaign)e.selectedCampaign=nextCampaign.id;if(ctx.save())ctx.home();}),button('Rest here','textButton',ctx.home));
+        const nextCampaign=all?D.campaigns[D.campaigns.indexOf(campaign)+1]:null,parked=e.parked&&D.byId[e.parked.missionId];
+        if(m.storyOnly&&!all){const next=D.byId[campaign.missions[campaign.missions.indexOf(m.id)+1]];panel.append(button('Read part '+(campaign.missions.indexOf(m.id)+2)+': '+next.name,'greenButton',()=>ctx.launch(next.id)),button('Rest here','textButton',ctx.home));}
+        else if(campaign.growth&&parked)panel.append(button(ctx.dragonText('Ride on Pip: back to '+parked.name),'greenButton',()=>ctx.launch(parked.id)),button('Rest here','textButton',ctx.home));
+        else if(campaign.growth)panel.append(button('Choose a quest','greenButton',()=>{e.selectedCampaign=D.campaigns.find(x=>!x.growth&&!A.campaignComplete(s,x.id))?.id||e.selectedCampaign;if(ctx.save())ctx.home();}),button('Rest here','textButton',ctx.home));
+        else panel.append(button(nextCampaign&&!nextCampaign.growth?'Explore '+nextCampaign.shortName:'Choose another mission','greenButton',()=>{if(nextCampaign&&!nextCampaign.growth)e.selectedCampaign=nextCampaign.id;if(ctx.save())ctx.home();}),button('Rest here','textButton',ctx.home));
       }else if(!solving){
         const family=m.encounters[c.step],first=c.step===0;
         panel.append(heading(first?(m.story?'A story quest':'A new quest'):c.step>=2?'Big fight':'Next fight',first?m.name:m.stories?'Fight '+(c.step+1)+' of 4':m.riddles[c.step].title,ctx.dragonText(first?m.intro:m.stories?(c.step%2?'Win this fight, then read a story.':'Win this fight. These words are in the next story.'):m.scenes?.[c.step]?.intro||'Win this fight. Get the next clue.')));
@@ -174,7 +210,7 @@
           if(p.attempts)actions.append(button('Show me how','textButton',()=>checkPuzzle(q,{reveal:true})));
         }if(p.solved){panel.classList.add('riddleSolved');const answer=el('p','riddleSolvedAnswer',[q.answer].flat().map(id=>q.options.find(o=>o.id===id).label).join(' → '));feedback.insertBefore(answer,feedback.querySelector('p'));feedback.insertBefore(actions,feedback.querySelector('p'));}else panel.append(actions);
       }
-      const picture=el('div','missionPicture');picture.append(scene,teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;if(solving&&p.solved){const feedback=panel.querySelector('.riddleFeedback');feedback.focus?.({preventScroll:true});feedback.scrollIntoView?.({block:'start'});}stamp=solving&&!p.solved?performance.now():null;
+      const picture=el('div','missionPicture');picture.append(scene);if(!m.storyOnly)picture.append(teamCard());body.append(picture,panel);screen.append(body);screen.scrollTop=scroll;if(solving&&p.solved){const feedback=panel.querySelector('.riddleFeedback');feedback.focus?.({preventScroll:true});feedback.scrollIntoView?.({block:'start'});}stamp=solving&&!p.solved?performance.now():null;
     }
 
     // ---- Story quests: a chapter to read with every word tappable (2 November 2026) ----
@@ -218,14 +254,15 @@
     }
     function storySummary(m,read,all,campaign){
       const box=el('div','storySummary');
-      const words=all?campaign.missions.reduce((n,id)=>n+D.byId[id].stories.reduce((t,st)=>t+st.words,0),0):read.words;
+      const words=all?campaign.missions.reduce((n,id)=>n+(D.byId[id].stories||[D.byId[id].story]).reduce((t,st)=>t+st.words,0),0):read.words;
       box.append(el('p','storySummaryBig',all?'You read the whole story: '+words+' words!':'You read '+(read.stories===2?'two stories, ':'')+read.words+' words, by yourself!'));
       box.append(el('p','',read.taps?'You tapped '+read.taps+(read.taps===1?' word':' words')+' to hear them. Great reading!':'You did not need any help. Wow!'));
       box.append(el('p','',read.firstTry+' of '+(read.questions||3)+' questions right the first time.'));return box;
     }
     function storyFeedback(result,q){
       if(!result)return;const s=ctx.state(),done=result.storyDone==='end',mid=result.storyDone==='mid';
-      if(result.correct)window.BlitzFeedback.show({kind:'success',title:done?'You finished the story part!':mid?'You finished the story!':'That’s right!',message:(done||mid?'You read it and you understood it.':'Great reading.')+(result.xpEarned?' +'+result.xpEarned+' XP':''),actions:[{label:done?'See my treasure':mid?'Next fight':'Next question'}],onClose:()=>renderMission()});
+      if(result.correct&&result.grows)window.BlitzFeedback.show({kind:'success',title:ctx.dragonText('Pip is growing!'),message:'You read the whole story!'+(result.xpEarned?' +'+result.xpEarned+' XP':'')+ctx.dragonText(' Pip has 45,000 XP now.'),actions:[{label:'Watch Pip grow'}],onClose:()=>{if(!ctx.evolve())renderMission();}});
+      else if(result.correct)window.BlitzFeedback.show({kind:'success',title:done?'You finished the story part!':mid?'You finished the story!':'That’s right!',message:(done||mid?'You read it and you understood it.':'Great reading.')+(result.xpEarned?' +'+result.xpEarned+' XP':''),actions:[{label:done?'See my treasure':mid?'Next fight':'Next question'}],onClose:()=>renderMission()});
       else window.BlitzFeedback.show({kind:'retry',title:'Not quite',message:'The answer is on page '+result.page+'. Let’s look again.',actions:[{label:'Look at page '+result.page,run:()=>{if(!ctx.active()||!A.lookBack(s)||!ctx.save())return false;return true;}}],onClose:()=>renderMission()});
     }
     function renderStory(screen,s,c,m){

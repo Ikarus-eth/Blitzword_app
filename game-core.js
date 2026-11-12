@@ -299,8 +299,17 @@
     return {activeMs,active:activeMs>=TARGET_MS,multiplier:activeMs>=TARGET_MS?XP_MULTIPLIER:1,remainingMs:Math.max(0,TARGET_MS-activeMs),chapters:s.story.dailyChapters?.[dayKey(now)]||0,
       practiceDays:previousDays+(activeMs>=TARGET_MS?1:0),consistencyXP:Math.min(XP_REWARDS.consistencyMax,previousDays*XP_REWARDS.consistencyPerDay),consistencyEarned:s.rewards.xpDays[dayKey(now)]?.consistency||0};
   }
-  function awardXP(s,base,kind,now,{boost=false,trackBattle=true}={}){
-    const extra=boost&&bonusProgress(s,now).active?Math.round(base*XP_MULTIPLIER)-base:0,amount=base+extra;
+  // While Pip waits for his growth story, ordinary XP stops at the hold (44,000); the story's own XP stops one
+  // short of the next form, and only its last right answer (`final`) takes Pip there (12 November 2026).
+  function xpRoom(s,kind,final){
+    if(!Adventure.growthHeld(s))return Infinity;
+    const G=Adventure.GROWTH,cap=kind==='growth'?(final?Infinity:Content.dragonStages[G.stage].xp-1):G.holdXP;
+    return Math.max(0,cap-(s.dragon.xp||0));
+  }
+  function awardXP(s,base,kind,now,{boost=false,trackBattle=true,final=false}={}){
+    let extra=boost&&bonusProgress(s,now).active?Math.round(base*XP_MULTIPLIER)-base:0,amount=base+extra;
+    const room=xpRoom(s,kind,final);if(amount>room){amount=room;extra=Math.max(0,Math.min(extra,amount-base));base=amount-extra;}
+    if(kind==='growth'&&final)amount=Math.max(amount,Content.dragonStages[Adventure.GROWTH.stage].xp-(s.dragon.xp||0));
     s.dragon.xp+=amount;
     const day=s.rewards.xpDays[dayKey(now)] ||= {total:0,boost:0};day.total+=amount;day.boost+=extra;day[kind]=(day[kind]||0)+base;
     if(trackBattle&&s.battle&&!s.battle.demo)s.battle.xpEarned=(s.battle.xpEarned||0)+amount;
@@ -380,14 +389,15 @@
   }
   // Story quests: reading a chapter to its last page earns 100 XP the first time; each question
   // answered (after any look-back) earns 50 XP once.
+  function growthStory(s){return Adventure.isGrowth(Adventure.of(s).current?.missionId);}
   function finishStoryReading(s,now=Date.now(),random=Math.random){
     const result=Adventure.finishReading(s,now,random);
-    if(result?.first){awardDaily(s,now);result.xpEarned=awardXP(s,100,'riddles',now,{boost:true,trackBattle:false});Adventure.story(s).readXP=result.xpEarned;syncProgress(s,now);}
+    if(result?.first){awardDaily(s,now);const grow=growthStory(s);result.xpEarned=awardXP(s,100,grow?'growth':'riddles',now,{boost:!grow,trackBattle:false});Adventure.story(s).readXP=result.xpEarned;syncProgress(s,now);}
     return result;
   }
   function checkStory(s,now=Date.now(),expected){
-    const result=Adventure.checkStory(s,now,expected);
-    if(result?.correct&&result.firstSolve){awardDaily(s,now);result.xpEarned=awardXP(s,50,'riddles',now,{boost:true,trackBattle:false});Adventure.stats(s).storyQuestions[result.id].xpEarned=result.xpEarned;syncProgress(s,now);}
+    const grow=growthStory(s),result=Adventure.checkStory(s,now,expected);
+    if(result?.correct&&result.firstSolve){awardDaily(s,now);const final=grow&&Adventure.growthRead(s);result.xpEarned=awardXP(s,50,grow?'growth':'riddles',now,{boost:!grow,trackBattle:false,final});if(final)result.grows=true;Adventure.stats(s).storyQuestions[result.id].xpEarned=result.xpEarned;syncProgress(s,now);}
     return result;
   }
   // A tap on a story word is listening support: curriculum words are noted like other support, so their
@@ -834,7 +844,8 @@
     const activeMs=Object.values(s.timing.days).reduce((sum,d)=>sum+(d.practice||0)+(d.math||0),0);
     return {xp,stage,current:Content.dragonStages[stage],next,remaining:next?Math.max(0,next.xp-xp):0,activeMs,
       minutesRemaining:0,daysRemaining:0,elapsedDays:0,
-      fraction,startXP:start,steps,nextStepXP,stepRemaining:next?Math.ceil(Math.max(0,nextStepXP-xp)):0};
+      fraction,startXP:start,steps,nextStepXP,stepRemaining:next?Math.ceil(Math.max(0,nextStepXP-xp)):0,
+      growthStory:Adventure.growthDue(s)};
   }
   function syncProgress(s,now=Date.now()){
     for (let i=0;i<Content.areas.length&&s.expedition?.context!=='mission';i++){
@@ -853,6 +864,7 @@
     }
     if(s.expedition?.context!=='mission')completeReviewChapter(s,now);
     for(let stage=s.dragon.stage+1;stage<Content.dragonStages.length;stage++){
+      if(stage===Adventure.GROWTH.stage&&!Adventure.growthRead(s))break;
       if(s.dragon.xp>=Content.dragonStages[stage].xp){s.dragon.stage=stage;s.dragon.growthOrigin={stage,xp:Content.dragonStages[stage].xp};}else break;
     }
   }

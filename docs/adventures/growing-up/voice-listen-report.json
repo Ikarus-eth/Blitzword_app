@@ -1,0 +1,1956 @@
+{
+ "model": "whisper small.en",
+ "checked": 264,
+ "matched_in_group": 246,
+ "matched_either": 250,
+ "retake": [
+  {
+   "id": "story:pip-grows:w:artus",
+   "word": "Artus",
+   "heard_in_group": "It is evening and artist pip.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:a",
+   "word": "a",
+   "heard_in_group": "Zay, little, light, on, meh, looks",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:me",
+   "word": "me",
+   "heard_in_group": "Zay, little, light, on, meh, looks",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:egg",
+   "word": "egg",
+   "heard_in_group": "Yes, were, in, an, zag, long.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:green",
+   "word": "green",
+   "heard_in_group": "Agreeing. Went. Sleep. Artises. With. Only.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:artus's",
+   "word": "Artus's",
+   "heard_in_group": "Agreeing. Went. Sleep. Artises. With. Only.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:pip's",
+   "word": "Pip's",
+   "heard_in_group": "Every day where find hips fell",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:fox",
+   "word": "fox",
+   "heard_in_group": "Vox, help, lights, lost, trees, dark",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:for",
+   "word": "for",
+   "heard_in_group": "them, last, a seed, before, everything, nothing.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:no",
+   "word": "no",
+   "heard_in_group": "River. Now. Song. Boats. Rang. Bells.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:too",
+   "word": "too",
+   "heard_in_group": "Etude, carry, ding, good, bell, ran.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:sail",
+   "word": "sail",
+   "heard_in_group": "a sale, learned, new, words, lot, food",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:than",
+   "word": "than",
+   "heard_in_group": "Four, five, better, then, owl, window.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:be",
+   "word": "be",
+   "heard_in_group": "Okay, just, right, soon, fly, yet.",
+   "match_in_group": false,
+   "match_alone": false
+  }
+ ],
+ "words": [
+  {
+   "id": "story:pip-grows:w:it",
+   "word": "it",
+   "heard_in_group": "It is evening and artist pip.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:is",
+   "word": "is",
+   "heard_in_group": "It is evening and artist pip.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:evening",
+   "word": "evening",
+   "heard_in_group": "It is evening and artist pip.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:and",
+   "word": "and",
+   "heard_in_group": "It is evening and artist pip.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:artus",
+   "word": "Artus",
+   "heard_in_group": "It is evening and artist pip.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:pip",
+   "word": "Pip",
+   "heard_in_group": "It is evening and artist pip.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:sit",
+   "word": "sit",
+   "heard_in_group": "Sit by the fire, very quiet.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:by",
+   "word": "by",
+   "heard_in_group": "Sit by the fire, very quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:the",
+   "word": "the",
+   "heard_in_group": "Sit by the fire, very quiet.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:fire",
+   "word": "fire",
+   "heard_in_group": "Sit by the fire, very quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:very",
+   "word": "very",
+   "heard_in_group": "Sit by the fire, very quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:quiet",
+   "word": "quiet",
+   "heard_in_group": "Sit by the fire, very quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:he",
+   "word": "he",
+   "heard_in_group": "He does not want any cake.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:does",
+   "word": "does",
+   "heard_in_group": "He does not want any cake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:not",
+   "word": "not",
+   "heard_in_group": "He does not want any cake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:want",
+   "word": "want",
+   "heard_in_group": "He does not want any cake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:any",
+   "word": "any",
+   "heard_in_group": "He does not want any cake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:cake",
+   "word": "cake",
+   "heard_in_group": "He does not want any cake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:what",
+   "word": "what",
+   "heard_in_group": "What, asks, my, back, hot, says.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:asks",
+   "word": "asks",
+   "heard_in_group": "What, asks, my, back, hot, says.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:my",
+   "word": "my",
+   "heard_in_group": "What, asks, my, back, hot, says.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:back",
+   "word": "back",
+   "heard_in_group": "What, asks, my, back, hot, says.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:hot",
+   "word": "hot",
+   "heard_in_group": "What, asks, my, back, hot, says.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:says",
+   "word": "says",
+   "heard_in_group": "What, asks, my, back, hot, says.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:wings",
+   "word": "wings",
+   "heard_in_group": "Wings. Feel. Funny. Look. I. Have.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:feel",
+   "word": "feel",
+   "heard_in_group": "Wings. Feel. Funny. Look. I. Have.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:funny",
+   "word": "funny",
+   "heard_in_group": "Wings. Feel. Funny. Look. I. Have.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:look",
+   "word": "look",
+   "heard_in_group": "Wings. Feel. Funny. Look. I. Have.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:i",
+   "word": "i",
+   "heard_in_group": "Wings. Feel. Funny. Look. I. Have.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:have",
+   "word": "have",
+   "heard_in_group": "Wings. Feel. Funny. Look. I. Have.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:a",
+   "word": "a",
+   "heard_in_group": "Zay, little, light, on, meh, looks",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:little",
+   "word": "little",
+   "heard_in_group": "Zay, little, light, on, meh, looks",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:light",
+   "word": "light",
+   "heard_in_group": "Zay, little, light, on, meh, looks",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:on",
+   "word": "on",
+   "heard_in_group": "Zay, little, light, on, meh, looks",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:me",
+   "word": "me",
+   "heard_in_group": "Zay, little, light, on, meh, looks",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:looks",
+   "word": "looks",
+   "heard_in_group": "Zay, little, light, on, meh, looks",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:there",
+   "word": "there",
+   "heard_in_group": "There, soft, gold, all, over, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:soft",
+   "word": "soft",
+   "heard_in_group": "There, soft, gold, all, over, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:gold",
+   "word": "gold",
+   "heard_in_group": "There, soft, gold, all, over, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:all",
+   "word": "all",
+   "heard_in_group": "There, soft, gold, all, over, think.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:over",
+   "word": "over",
+   "heard_in_group": "There, soft, gold, all, over, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:think",
+   "word": "think",
+   "heard_in_group": "There, soft, gold, all, over, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:you",
+   "word": "you",
+   "heard_in_group": "You are going to grow again.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:are",
+   "word": "are",
+   "heard_in_group": "You are going to grow again.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:going",
+   "word": "going",
+   "heard_in_group": "You are going to grow again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:to",
+   "word": "to",
+   "heard_in_group": "You are going to grow again.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:grow",
+   "word": "grow",
+   "heard_in_group": "You are going to grow again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:again",
+   "word": "again",
+   "heard_in_group": "You are going to grow again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:at",
+   "word": "at",
+   "heard_in_group": "At Zoo, Remember, Went, Was, Smiles",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:do",
+   "word": "do",
+   "heard_in_group": "At Zoo, Remember, Went, Was, Smiles",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:remember",
+   "word": "remember",
+   "heard_in_group": "At Zoo, Remember, Went, Was, Smiles",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:when",
+   "word": "when",
+   "heard_in_group": "At Zoo, Remember, Went, Was, Smiles",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:was",
+   "word": "was",
+   "heard_in_group": "At Zoo, Remember, Went, Was, Smiles",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:smiles",
+   "word": "smiles",
+   "heard_in_group": "At Zoo, Remember, Went, Was, Smiles",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:yes",
+   "word": "yes",
+   "heard_in_group": "Yes, were, in, an, zag, long.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:were",
+   "word": "were",
+   "heard_in_group": "Yes, were, in, an, zag, long.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:in",
+   "word": "in",
+   "heard_in_group": "Yes, were, in, an, zag, long.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:an",
+   "word": "an",
+   "heard_in_group": "Yes, were, in, an, zag, long.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:egg",
+   "word": "egg",
+   "heard_in_group": "Yes, were, in, an, zag, long.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:long",
+   "word": "long",
+   "heard_in_group": "Yes, were, in, an, zag, long.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:time",
+   "word": "time",
+   "heard_in_group": "Time, ago, forest, I saw, red, under",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:ago",
+   "word": "ago",
+   "heard_in_group": "Time, ago, forest, I saw, red, under",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:forest",
+   "word": "forest",
+   "heard_in_group": "Time, ago, forest, I saw, red, under",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:saw",
+   "word": "saw",
+   "heard_in_group": "Time, ago, forest, I saw, red, under",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:red",
+   "word": "red",
+   "heard_in_group": "Time, ago, forest, I saw, red, under",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:under",
+   "word": "under",
+   "heard_in_group": "Time, ago, forest, I saw, red, under",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:old",
+   "word": "old",
+   "heard_in_group": "Old. Tree. Warm. Put. His. Bag.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:tree",
+   "word": "tree",
+   "heard_in_group": "Old. Tree. Warm. Put. His. Bag.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:warm",
+   "word": "warm",
+   "heard_in_group": "Old. Tree. Warm. Put. His. Bag.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:put",
+   "word": "put",
+   "heard_in_group": "Old. Tree. Warm. Put. His. Bag.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:his",
+   "word": "his",
+   "heard_in_group": "Old. Tree. Warm. Put. His. Bag.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:bag",
+   "word": "bag",
+   "heard_in_group": "Old. Tree. Warm. Put. His. Bag.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:took",
+   "word": "took",
+   "heard_in_group": "Took. Home. Waited. Then. One. Morning.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:home",
+   "word": "home",
+   "heard_in_group": "Took. Home. Waited. Then. One. Morning.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:waited",
+   "word": "waited",
+   "heard_in_group": "Took. Home. Waited. Then. One. Morning.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:then",
+   "word": "then",
+   "heard_in_group": "Took. Home. Waited. Then. One. Morning.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:one",
+   "word": "one",
+   "heard_in_group": "Took. Home. Waited. Then. One. Morning.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:morning",
+   "word": "morning",
+   "heard_in_group": "Took. Home. Waited. Then. One. Morning.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:sound",
+   "word": "sound",
+   "heard_in_group": "Sound, crack, small, dragon, came, out.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:crack",
+   "word": "crack",
+   "heard_in_group": "Sound, crack, small, dragon, came, out.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:small",
+   "word": "small",
+   "heard_in_group": "Sound, crack, small, dragon, came, out.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:dragon",
+   "word": "dragon",
+   "heard_in_group": "Sound, crack, small, dragon, came, out.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:came",
+   "word": "came",
+   "heard_in_group": "Sound, crack, small, dragon, came, out.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:out",
+   "word": "out",
+   "heard_in_group": "Sound, crack, small, dragon, came, out.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:of",
+   "word": "of",
+   "heard_in_group": "of, as, cup, had, big, eyes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:as",
+   "word": "as",
+   "heard_in_group": "of, as, cup, had, big, eyes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:cup",
+   "word": "cup",
+   "heard_in_group": "of, as, cup, had, big, eyes.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:had",
+   "word": "had",
+   "heard_in_group": "of, as, cup, had, big, eyes.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:big",
+   "word": "big",
+   "heard_in_group": "of, as, cup, had, big, eyes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:eyes",
+   "word": "eyes",
+   "heard_in_group": "of, as, cup, had, big, eyes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:looked",
+   "word": "looked",
+   "heard_in_group": "Looked, up, breakfast, said, laughed, Will.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:up",
+   "word": "up",
+   "heard_in_group": "Looked, up, breakfast, said, laughed, Will.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:breakfast",
+   "word": "breakfast",
+   "heard_in_group": "Looked, up, breakfast, said, laughed, Will.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:said",
+   "word": "said",
+   "heard_in_group": "Looked, up, breakfast, said, laughed, Will.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:laughed",
+   "word": "laughed",
+   "heard_in_group": "Looked, up, breakfast, said, laughed, Will.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:will",
+   "word": "will",
+   "heard_in_group": "Looked, up, breakfast, said, laughed, Will.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:call",
+   "word": "call",
+   "heard_in_group": "Call that first word now still",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:that",
+   "word": "that",
+   "heard_in_group": "Call that first word now still",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:first",
+   "word": "first",
+   "heard_in_group": "Call that first word now still",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:word",
+   "word": "word",
+   "heard_in_group": "Call that first word now still",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:now",
+   "word": "now",
+   "heard_in_group": "Call that first word now still",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:still",
+   "word": "still",
+   "heard_in_group": "Call that first word now still",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:best",
+   "word": "best",
+   "heard_in_group": "Best, hungry, ate, bread, cheese, apple.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:hungry",
+   "word": "hungry",
+   "heard_in_group": "Best, hungry, ate, bread, cheese, apple.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:ate",
+   "word": "ate",
+   "heard_in_group": "Best, hungry, ate, bread, cheese, apple.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:bread",
+   "word": "bread",
+   "heard_in_group": "Best, hungry, ate, bread, cheese, apple.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:cheese",
+   "word": "cheese",
+   "heard_in_group": "Best, hungry, ate, bread, cheese, apple.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:apple",
+   "word": "apple",
+   "heard_in_group": "Best, hungry, ate, bread, cheese, apple.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:green",
+   "word": "green",
+   "heard_in_group": "Agreeing. Went. Sleep. Artises. With. Only.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:went",
+   "word": "went",
+   "heard_in_group": "Agreeing. Went. Sleep. Artises. With. Only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:sleep",
+   "word": "sleep",
+   "heard_in_group": "Agreeing. Went. Sleep. Artises. With. Only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:artus's",
+   "word": "Artus's",
+   "heard_in_group": "Agreeing. Went. Sleep. Artises. With. Only.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:with",
+   "word": "with",
+   "heard_in_group": "Agreeing. Went. Sleep. Artises. With. Only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:only",
+   "word": "only",
+   "heard_in_group": "Agreeing. Went. Sleep. Artises. With. Only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:tail",
+   "word": "tail",
+   "heard_in_group": "tail, so keep him safe did",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:so",
+   "word": "so",
+   "heard_in_group": "tail, so keep him safe did",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:keep",
+   "word": "keep",
+   "heard_in_group": "tail, so keep him safe did",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:him",
+   "word": "him",
+   "heard_in_group": "tail, so keep him safe did",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:safe",
+   "word": "safe",
+   "heard_in_group": "tail, so keep him safe did",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:did",
+   "word": "did",
+   "heard_in_group": "tail, so keep him safe did",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:every",
+   "word": "every",
+   "heard_in_group": "Every day where find hips fell",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:day",
+   "word": "day",
+   "heard_in_group": "Every day where find hips fell",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:where",
+   "word": "where",
+   "heard_in_group": "Every day where find hips fell",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:find",
+   "word": "find",
+   "heard_in_group": "Every day where find hips fell",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:pip's",
+   "word": "Pip's",
+   "heard_in_group": "Every day where find hips fell",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:fell",
+   "word": "fell",
+   "heard_in_group": "Every day where find hips fell",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:your",
+   "word": "your",
+   "heard_in_group": "Your own feet could jump a stream",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:own",
+   "word": "own",
+   "heard_in_group": "Your own feet could jump a stream",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:feet",
+   "word": "feet",
+   "heard_in_group": "Your own feet could jump a stream",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:could",
+   "word": "could",
+   "heard_in_group": "Your own feet could jump a stream",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:jump",
+   "word": "jump",
+   "heard_in_group": "Your own feet could jump a stream",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:stream",
+   "word": "stream",
+   "heard_in_group": "Your own feet could jump a stream",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:fox",
+   "word": "fox",
+   "heard_in_group": "Vox, help, lights, lost, trees, dark",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:help",
+   "word": "help",
+   "heard_in_group": "Vox, help, lights, lost, trees, dark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:lights",
+   "word": "lights",
+   "heard_in_group": "Vox, help, lights, lost, trees, dark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:lost",
+   "word": "lost",
+   "heard_in_group": "Vox, help, lights, lost, trees, dark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:trees",
+   "word": "trees",
+   "heard_in_group": "Vox, help, lights, lost, trees, dark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:dark",
+   "word": "dark",
+   "heard_in_group": "Vox, help, lights, lost, trees, dark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:like",
+   "word": "like",
+   "heard_in_group": "Like. Walked. Close. But. Go. They have to-",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:walked",
+   "word": "walked",
+   "heard_in_group": "Like. Walked. Close. But. Go. They have to-",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:close",
+   "word": "close",
+   "heard_in_group": "Like. Walked. Close. But. Go. They have to-",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:but",
+   "word": "but",
+   "heard_in_group": "Like. Walked. Close. But. Go. They have to-",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:go",
+   "word": "go",
+   "heard_in_group": "Like. Walked. Close. But. Go. They have to-",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:they",
+   "word": "they",
+   "heard_in_group": "Like. Walked. Close. But. Go. They have to-",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:found",
+   "word": "found",
+   "heard_in_group": "Found six seeds shine ship shark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:six",
+   "word": "six",
+   "heard_in_group": "Found six seeds shine ship shark",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:seeds",
+   "word": "seeds",
+   "heard_in_group": "Found six seeds shine ship shark",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:shine",
+   "word": "shine",
+   "heard_in_group": "Found six seeds shine ship shark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:ship",
+   "word": "ship",
+   "heard_in_group": "Found six seeds shine ship shark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:shark",
+   "word": "shark",
+   "heard_in_group": "Found six seeds shine ship shark",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:swam",
+   "word": "swam",
+   "heard_in_group": "Swam. Water. Afraid. Eat. Asked. Kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:water",
+   "word": "water",
+   "heard_in_group": "Swam. Water. Afraid. Eat. Asked. Kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:afraid",
+   "word": "afraid",
+   "heard_in_group": "Swam. Water. Afraid. Eat. Asked. Kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:eat",
+   "word": "eat",
+   "heard_in_group": "Swam. Water. Afraid. Eat. Asked. Kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:asked",
+   "word": "asked",
+   "heard_in_group": "Swam. Water. Afraid. Eat. Asked. Kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:kind",
+   "word": "kind",
+   "heard_in_group": "Swam. Water. Afraid. Eat. Asked. Kind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:them",
+   "word": "them",
+   "heard_in_group": "them, last, a seed, before, everything, nothing.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:last",
+   "word": "last",
+   "heard_in_group": "them, last, a seed, before, everything, nothing.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:seed",
+   "word": "seed",
+   "heard_in_group": "them, last, a seed, before, everything, nothing.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:for",
+   "word": "for",
+   "heard_in_group": "them, last, a seed, before, everything, nothing.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:everything",
+   "word": "everything",
+   "heard_in_group": "them, last, a seed, before, everything, nothing.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:nothing",
+   "word": "nothing",
+   "heard_in_group": "them, last, a seed, before, everything, nothing.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:river",
+   "word": "river",
+   "heard_in_group": "River. Now. Song. Boats. Rang. Bells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:no",
+   "word": "no",
+   "heard_in_group": "River. Now. Song. Boats. Rang. Bells.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:song",
+   "word": "song",
+   "heard_in_group": "River. Now. Song. Boats. Rang. Bells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:boats",
+   "word": "boats",
+   "heard_in_group": "River. Now. Song. Boats. Rang. Bells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:rang",
+   "word": "rang",
+   "heard_in_group": "River. Now. Song. Boats. Rang. Bells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:bells",
+   "word": "bells",
+   "heard_in_group": "River. Now. Song. Boats. Rang. Bells.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:too",
+   "word": "too",
+   "heard_in_group": "Etude, carry, ding, good, bell, ran.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:carry",
+   "word": "carry",
+   "heard_in_group": "Etude, carry, ding, good, bell, ran.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:ding",
+   "word": "ding",
+   "heard_in_group": "Etude, carry, ding, good, bell, ran.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:good",
+   "word": "good",
+   "heard_in_group": "Etude, carry, ding, good, bell, ran.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:bell",
+   "word": "bell",
+   "heard_in_group": "Etude, carry, ding, good, bell, ran.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:ran",
+   "word": "ran",
+   "heard_in_group": "Etude, carry, ding, good, bell, ran.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:sail",
+   "word": "sail",
+   "heard_in_group": "a sale, learned, new, words, lot, food",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:learned",
+   "word": "learned",
+   "heard_in_group": "a sale, learned, new, words, lot, food",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:new",
+   "word": "new",
+   "heard_in_group": "a sale, learned, new, words, lot, food",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:words",
+   "word": "words",
+   "heard_in_group": "a sale, learned, new, words, lot, food",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:lot",
+   "word": "lot",
+   "heard_in_group": "a sale, learned, new, words, lot, food",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:food",
+   "word": "food",
+   "heard_in_group": "a sale, learned, new, words, lot, food",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:got",
+   "word": "got",
+   "heard_in_group": "Got. Bit. Bigger. Helped. Fight. Brave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:bit",
+   "word": "bit",
+   "heard_in_group": "Got. Bit. Bigger. Helped. Fight. Brave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:bigger",
+   "word": "bigger",
+   "heard_in_group": "Got. Bit. Bigger. Helped. Fight. Brave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:helped",
+   "word": "helped",
+   "heard_in_group": "Got. Bit. Bigger. Helped. Fight. Brave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:fight",
+   "word": "fight",
+   "heard_in_group": "Got. Bit. Bigger. Helped. Fight. Brave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:brave",
+   "word": "brave",
+   "heard_in_group": "Got. Bit. Bigger. Helped. Fight. Brave.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:who",
+   "word": "who",
+   "heard_in_group": "Who, laughs, hit, head, door, true.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:laughs",
+   "word": "laughs",
+   "heard_in_group": "Who, laughs, hit, head, door, true.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:hit",
+   "word": "hit",
+   "heard_in_group": "Who, laughs, hit, head, door, true.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:head",
+   "word": "head",
+   "heard_in_group": "Who, laughs, hit, head, door, true.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:door",
+   "word": "door",
+   "heard_in_group": "Who, laughs, hit, head, door, true.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:true",
+   "word": "true",
+   "heard_in_group": "Who, laughs, hit, head, door, true.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:woke",
+   "word": "woke",
+   "heard_in_group": "Woke, get, night, house, stars, into",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:get",
+   "word": "get",
+   "heard_in_group": "Woke, get, night, house, stars, into",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:night",
+   "word": "night",
+   "heard_in_group": "Woke, get, night, house, stars, into",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:house",
+   "word": "house",
+   "heard_in_group": "Woke, get, night, house, stars, into",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:stars",
+   "word": "stars",
+   "heard_in_group": "Woke, get, night, house, stars, into",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:into",
+   "word": "into",
+   "heard_in_group": "Woke, get, night, house, stars, into",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:snow",
+   "word": "snow",
+   "heard_in_group": "Snow, sky, eight, star, pieces, made.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:sky",
+   "word": "sky",
+   "heard_in_group": "Snow, sky, eight, star, pieces, made.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:eight",
+   "word": "eight",
+   "heard_in_group": "Snow, sky, eight, star, pieces, made.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:star",
+   "word": "star",
+   "heard_in_group": "Snow, sky, eight, star, pieces, made.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:pieces",
+   "word": "pieces",
+   "heard_in_group": "Snow, sky, eight, star, pieces, made.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:made",
+   "word": "made",
+   "heard_in_group": "Snow, sky, eight, star, pieces, made.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:friends",
+   "word": "friends",
+   "heard_in_group": "Friends, Thunder, Mountain, Storm, Jet, Cave",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:thunder",
+   "word": "thunder",
+   "heard_in_group": "Friends, Thunder, Mountain, Storm, Jet, Cave",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:mountain",
+   "word": "mountain",
+   "heard_in_group": "Friends, Thunder, Mountain, Storm, Jet, Cave",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:storm",
+   "word": "storm",
+   "heard_in_group": "Friends, Thunder, Mountain, Storm, Jet, Cave",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:jet",
+   "word": "Jet",
+   "heard_in_group": "Friends, Thunder, Mountain, Storm, Jet, Cave",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:cave",
+   "word": "cave",
+   "heard_in_group": "Friends, Thunder, Mountain, Storm, Jet, Cave",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:kept",
+   "word": "kept",
+   "heard_in_group": "Kept. Friend. Peace. Grandma. Happy. She.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:friend",
+   "word": "friend",
+   "heard_in_group": "Kept. Friend. Peace. Grandma. Happy. She.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:piece",
+   "word": "piece",
+   "heard_in_group": "Kept. Friend. Peace. Grandma. Happy. She.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:grandma",
+   "word": "Grandma",
+   "heard_in_group": "Kept. Friend. Peace. Grandma. Happy. She.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:happy",
+   "word": "happy",
+   "heard_in_group": "Kept. Friend. Peace. Grandma. Happy. She.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:she",
+   "word": "she",
+   "heard_in_group": "Kept. Friend. Peace. Grandma. Happy. She.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:four",
+   "word": "four",
+   "heard_in_group": "Four, five, better, then, owl, window.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:five",
+   "word": "five",
+   "heard_in_group": "Four, five, better, then, owl, window.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:better",
+   "word": "better",
+   "heard_in_group": "Four, five, better, then, owl, window.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:than",
+   "word": "than",
+   "heard_in_group": "Four, five, better, then, owl, window.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:owl",
+   "word": "owl",
+   "heard_in_group": "Four, five, better, then, owl, window.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:window",
+   "word": "window",
+   "heard_in_group": "Four, five, better, then, owl, window.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:moon",
+   "word": "moon",
+   "heard_in_group": "Moon. Beaver. Strong. Boat. A.M. Because",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:beaver",
+   "word": "beaver",
+   "heard_in_group": "Moon. Beaver. Strong. Boat. A.M. Because",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:strong",
+   "word": "strong",
+   "heard_in_group": "Moon. Beaver. Strong. Boat. A.M. Because",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:boat",
+   "word": "boat",
+   "heard_in_group": "Moon. Beaver. Strong. Boat. A.M. Because",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:am",
+   "word": "am",
+   "heard_in_group": "Moon. Beaver. Strong. Boat. A.M. Because",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:because",
+   "word": "because",
+   "heard_in_group": "Moon. Beaver. Strong. Boat. A.M. Because",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:why",
+   "word": "why",
+   "heard_in_group": "Y. Bright. Gets. Brighter. Grew. Read.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:bright",
+   "word": "bright",
+   "heard_in_group": "Y. Bright. Gets. Brighter. Grew. Read.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:gets",
+   "word": "gets",
+   "heard_in_group": "Y. Bright. Gets. Brighter. Grew. Read.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:brighter",
+   "word": "brighter",
+   "heard_in_group": "Y. Bright. Gets. Brighter. Grew. Read.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:grew",
+   "word": "grew",
+   "heard_in_group": "Y. Bright. Gets. Brighter. Grew. Read.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:read",
+   "word": "read",
+   "heard_in_group": "Y. Bright. Gets. Brighter. Grew. Read.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:can",
+   "word": "can",
+   "heard_in_group": "CAN. STORY. YOURSELF. WE. TOGETHER. KNOCK.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:story",
+   "word": "story",
+   "heard_in_group": "CAN. STORY. YOURSELF. WE. TOGETHER. KNOCK.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:yourself",
+   "word": "yourself",
+   "heard_in_group": "CAN. STORY. YOURSELF. WE. TOGETHER. KNOCK.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:we",
+   "word": "we",
+   "heard_in_group": "CAN. STORY. YOURSELF. WE. TOGETHER. KNOCK.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:together",
+   "word": "together",
+   "heard_in_group": "CAN. STORY. YOURSELF. WE. TOGETHER. KNOCK.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:knock",
+   "word": "knock",
+   "heard_in_group": "CAN. STORY. YOURSELF. WE. TOGETHER. KNOCK.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:has",
+   "word": "has",
+   "heard_in_group": "Has. This. Saddle. Brown. Seat. Ride.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:this",
+   "word": "this",
+   "heard_in_group": "Has. This. Saddle. Brown. Seat. Ride.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:saddle",
+   "word": "saddle",
+   "heard_in_group": "Has. This. Saddle. Brown. Seat. Ride.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:brown",
+   "word": "brown",
+   "heard_in_group": "Has. This. Saddle. Brown. Seat. Ride.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:seat",
+   "word": "seat",
+   "heard_in_group": "Has. This. Saddle. Brown. Seat. Ride.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:ride",
+   "word": "ride",
+   "heard_in_group": "Has. This. Saddle. Brown. Seat. Ride.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:puts",
+   "word": "puts",
+   "heard_in_group": "Puts. Goes. Down. Can't. See. Wait.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:goes",
+   "word": "goes",
+   "heard_in_group": "Puts. Goes. Down. Can't. See. Wait.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:down",
+   "word": "down",
+   "heard_in_group": "Puts. Goes. Down. Can't. See. Wait.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:can't",
+   "word": "can't",
+   "heard_in_group": "Puts. Goes. Down. Can't. See. Wait.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:see",
+   "word": "see",
+   "heard_in_group": "Puts. Goes. Down. Can't. See. Wait.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:wait",
+   "word": "wait",
+   "heard_in_group": "Puts. Goes. Down. Can't. See. Wait.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:be",
+   "word": "be",
+   "heard_in_group": "Okay, just, right, soon, fly, yet.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:just",
+   "word": "just",
+   "heard_in_group": "Okay, just, right, soon, fly, yet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:right",
+   "word": "right",
+   "heard_in_group": "Okay, just, right, soon, fly, yet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:soon",
+   "word": "soon",
+   "heard_in_group": "Okay, just, right, soon, fly, yet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:fly",
+   "word": "fly",
+   "heard_in_group": "Okay, just, right, soon, fly, yet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:yet",
+   "word": "yet",
+   "heard_in_group": "Okay, just, right, soon, fly, yet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:enough",
+   "word": "enough",
+   "heard_in_group": "Enough. To. Run. Here. Ready. Grandma's.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:two",
+   "word": "two",
+   "heard_in_group": "Enough. To. Run. Here. Ready. Grandma's.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:pip-grows:w:run",
+   "word": "run",
+   "heard_in_group": "Enough. To. Run. Here. Ready. Grandma's.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:here",
+   "word": "here",
+   "heard_in_group": "Enough. To. Run. Here. Ready. Grandma's.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:ready",
+   "word": "ready",
+   "heard_in_group": "Enough. To. Run. Here. Ready. Grandma's.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:pip-grows:w:grandma's",
+   "word": "Grandma's",
+   "heard_in_group": "Enough. To. Run. Here. Ready. Grandma's.",
+   "match_in_group": true,
+   "match_alone": true
+  }
+ ]
+}

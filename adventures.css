@@ -188,3 +188,45 @@
  #battle.hasQuestCompanion.hasShieldSupport .battleCompanion{left:36%;bottom:122px}
  #battle.hasQuestCompanion.hasShieldSupport .battleSupport{left:52%;bottom:100px}
 }
+
+/* Riding Pip, 12 November 2026: from the 45,000 XP evolution the mage rides Pip. One painted rider replaces the
+   separate hero and Pip; it stands in the hero's place, a little lower and wider, and the quest and shield animals
+   keep their back row. Every right answer is a team attack: the spell and Pip's fire together. */
+#battle.riding .battlePip{display:none}
+#battle.riding .battleHero{left:var(--rider-left,1%);bottom:var(--rider-bottom,128px);height:var(--rider-h,50%);width:auto;aspect-ratio:777/617;max-width:var(--rider-max,50vw);z-index:3}
+.riderArt{display:block;width:100%;height:100%;object-fit:contain;object-position:left bottom;pointer-events:none;user-select:none;-webkit-user-drag:none}
+#battle.riding .battleHero .riderArt{animation:rider-idle 2.6s ease-in-out infinite}
+#battle.riding .battleHero.riderCast{animation:rider-cast 1.2s ease both}
+#battle.riding .battleHero.heroHit{animation:hero-recoil 1.2s ease both}
+/* Pip's fire while riding is a breath from his mouth to the enemy, a little after the spell. */
+.teamStrike.pipStrike .pipEmber{width:var(--pip-distance,30vw);height:30px;margin-top:-15px;border-radius:40% 50% 50% 40%;transform-origin:0 50%;
+ background:radial-gradient(ellipse at 100% 50%,#fff3c4 0,#ffc25a 18%,transparent 42%),linear-gradient(90deg,#fff6bd,#ffb347 22%,#f0782d 64%,#ff9b3d00);
+ filter:drop-shadow(0 0 10px #f6be69);animation:team-fire 1.2s ease-out both}
+.teamStrike.blaze .pipEmber{height:58px;margin-top:-29px;filter:drop-shadow(0 0 18px #ffb347) saturate(1.2)}
+@keyframes team-fire{0%,30%{opacity:0;transform:scaleX(.05)}38%{opacity:1;transform:scaleX(.35)}55%{opacity:1;transform:scaleX(1)}72%{opacity:.85;transform:scaleX(1)}100%{opacity:0;transform:scaleX(1)}}
+@keyframes rider-idle{0%,100%{translate:0 0}50%{translate:0 -5px}}
+@keyframes rider-cast{0%{translate:0 0;rotate:0deg}22%{translate:-10px 3px;rotate:-1.5deg}42%{translate:24px -8px;rotate:1deg}70%{translate:8px 0;rotate:0deg}100%{translate:0 0;rotate:0deg}}
+#battle.riding.hasQuestCompanion,#battle.riding.hasShieldSupport{--rider-h:46%}
+#battle.riding.hasQuestCompanion .battleCompanion,#battle.riding.hasShieldSupport .battleSupport{left:44%}
+@media(orientation:portrait){
+ #battle.riding{--rider-h:27%;--rider-left:1%;--rider-bottom:206px;--rider-max:66vw}
+ #battle.riding.hasQuestCompanion,#battle.riding.hasShieldSupport{--rider-h:24%}
+}
+@media(max-width:700px) and (orientation:portrait){
+ #battle.riding{--rider-h:20%;--rider-bottom:192px;--rider-max:70vw}
+ #battle.riding.hasQuestCompanion,#battle.riding.hasShieldSupport{--rider-h:18%}
+}
+@media(max-height:580px) and (orientation:landscape){
+ #battle.riding{--rider-h:38%;--rider-bottom:96px;--rider-max:40vw}
+ #battle.riding.hasQuestCompanion,#battle.riding.hasShieldSupport{--rider-h:36%}
+}
+@media(prefers-reduced-motion:reduce){#battle.riding .battleHero .riderArt,#battle.riding .battleHero.riderCast{animation:none}.teamStrike.pipStrike .pipEmber{display:none}}
+/* Pip Grows Up banner: shown in camp and before a waiting quest while Pip's XP is held at 44,000. */
+.growthBanner{display:grid;grid-template-columns:clamp(96px,14vw,150px) 1fr;gap:6px 18px;align-items:center;margin:4px 0 18px;padding:14px 18px;border-radius:18px;color:#26472c;box-shadow:0 0 0 3px #f5c56588,0 0 26px #f5c56566}
+.growthBannerPip{display:block;width:100%;aspect-ratio:1.25;filter:drop-shadow(0 0 12px #ffd36e) drop-shadow(0 0 4px #ffe9a8);animation:growth-glow 2.4s ease-in-out infinite}
+.growthBannerCopy{display:grid;gap:6px;justify-items:start}.growthBannerCopy strong{font:700 clamp(24px,2.6vw,30px)/1.2 var(--reading-font,Georgia,serif)}
+.growthBannerCopy p{margin:0;font:clamp(18px,1.8vw,21px)/1.45 var(--reading-font,Georgia,serif)}.growthBannerNote{color:#7a5a2c;font-size:16px}
+.campaignTab.growthTab{box-shadow:0 0 0 2px #f5c565,0 0 14px #f5c56599}
+@keyframes growth-glow{0%,100%{filter:drop-shadow(0 0 8px #ffd36e) drop-shadow(0 0 3px #ffe9a8)}50%{filter:drop-shadow(0 0 22px #ffd36e) drop-shadow(0 0 8px #fff3c4)}}
+@media(max-width:560px){.growthBanner{grid-template-columns:84px 1fr;padding:12px}}
+@media(prefers-reduced-motion:reduce){.growthBannerPip{animation:none}}

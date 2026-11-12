@@ -35,7 +35,9 @@ test('old saves recover XP only from qualifying campaign observations, once',()=
 });
 test('XP-only growth no longer waits for minutes, elapsed days or a chapter gate',()=>{
  let s=fresh();s.dragon.xp=15000;s=roundtrip(s);assert.equal(s.dragon.stage,1);assert.equal(Core.dragonProgress(s).activeMs,0);
- s.dragon.xp=70000;s=roundtrip(s);assert.equal(s.dragon.stage,3);assert.equal(s.story.chapterComplete,false);
+ s.dragon.xp=70000;s=roundtrip(s);assert.equal(s.dragon.stage,1);assert.equal(Core.Adventure.growthDue(s),true);
+ for(const id of Core.Adventure.Data.campaigns.find(c=>c.growth).missions)Core.Adventure.stats(s,id).completedAt=new Date(NOW).toISOString();
+ s=roundtrip(s);assert.equal(s.dragon.stage,3);assert.equal(s.story.chapterComplete,false);
 });
 test('chapter progress requires its words, practice, three wins, duel and ten minutes; later areas unlock in story order',()=>{
  let s=fresh();practiced(s);s.campaign.wins=1;s=roundtrip(s);assert.equal(Core.storyProgress(s).cleared,0);

@@ -20,7 +20,7 @@ let selectedMapArea=null;
 let storyControls=null;
 let parentReport=null,parentWordReturn=null;
 const adventures=window.BlitzAdventureUI.create({Core,Content,state:()=>state,save,show,home,enter,cancelWork,
-  paintEnemy,paintPip,paintHero,heroIndex,dragonText:text=>dragonText(text),speak,growth:()=>openGrowth(),
+  paintEnemy,paintPip,paintHero,heroIndex,dragonText:text=>dragonText(text),speak,growth:()=>openGrowth(),evolve:()=>maybeEvolution(),
   parents:()=>openParentGate(),speed:()=>openSpeed(),legacy:legacyAdventure,launch:launchMission,wimmelbild:openWimmelbild,turtleRace:()=>{if(!blocked&&suspendAdventureUI())location.assign('assets/turtle-race/');},stories:()=>{if(!blocked&&state.settings.storiesEnabled===true&&suspendAdventureUI())location.assign('assets/story-pilot/');},
   suspend:suspendAdventureUI,active:()=>!paused&&!blocked&&playing});
 function suspendAdventureUI(){
@@ -70,7 +70,19 @@ function paintSprite(element,index) {
     element.innerHTML=`<svg viewBox="${crop.x} ${crop.y} ${crop.w} ${crop.h}" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="display:block;overflow:visible"><defs><clipPath id="${clip}-body"><path d="${body}" clip-rule="evenodd"/></clipPath><clipPath id="${clip}-arm"><path d="${rig.path}"/></clipPath></defs>${repair}<image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip}-body)"/><g transform="translate(${px} ${py})"><g class="staffArm"><g transform="translate(${-px} ${-py})"><image href="assets/forest-characters.webp" width="1536" height="1024" clip-path="url(#${clip}-arm)"/></g></g></g></svg>`;
   }
 }
+// From the Pip Grows Up evolution (45,000 XP), the mage hero rides Pip in fights: one painted rider replaces
+// the separate hero and Pip, and every right answer is a team attack (12 November 2026).
+const RIDER={src:'assets/battle-rider/rider.webp',staff:[.92,.075],mouth:[.965,.47]};
+function shownStage(){return Math.min(state.dragon.stage,state.dragon.evolutionSeen??state.dragon.stage);}
+function riding(index=heroIndex()){return index===0&&shownStage()>=(Content.growth?.stage??Infinity);}
+function paintRider(element){
+  delete element.dataset.motionActor;element.dataset.rider='1';element.style.backgroundImage='none';
+  if(!element.querySelector('.riderArt'))element.innerHTML='<img class="riderArt" src="'+RIDER.src+'" alt="" draggable="false" decoding="async">';
+  element.setAttribute('role','img');element.setAttribute('aria-label',dragonText('Artus riding Pip'));
+}
 function paintHero(element,index) {
+  if(element.id==='battleHeroImg'){$('#battle').classList.toggle('riding',riding(index));if(riding(index)){paintRider(element);return;}}
+  delete element.dataset.rider;
   delete element.dataset.motionActor;
   if(index===0&&element.classList.contains('sceneSprite')&&window.BlitzMotion?.render('mage')){
     element.dataset.motionActor='mage';element.style.backgroundImage='none';element.innerHTML=window.BlitzMotion.render('mage');element.setAttribute('aria-label','Mage hero');
@@ -138,10 +150,11 @@ function updateDailyXP(){
 function openNaming(){if(state.dragon.stage<1)return;$('#growthPanel').hidden=true;$('#dragonNameInput').value=state.dragon.name||'Pip';$('#dragonNameMessage').textContent='';$('#dragonNamePanel').hidden=false;$('#dragonNameInput').focus();}
 function maybeOfferName(){if(!state.dragon.evolution&&state.dragon.evolutionSeen>=1&&state.dragon.stage>=1&&!state.dragon.named&&!state.dragon.namingPromptSeen){state.dragon.namingPromptSeen=true;if(save())openNaming();}}
 function growthCaption(p){
-  if(!p.next)return dragonText('Pip is ready to ride');
+  if(p.growthStory)return dragonText('Pip is glowing! Read his story to grow');
+  if(!p.next)return dragonText('Pip can fly');
   return Math.ceil(p.remaining)+' XP to '+dragonText(p.next.name);
 }
-function growthStepCaption(p){return p.next?xpText(p.stepRemaining)+' XP to step '+(p.steps+1)+' of 10':dragonText('Pip is ready to ride');}
+function growthStepCaption(p){if(p.growthStory)return dragonText('Read Pip’s story to help him grow');return p.next?xpText(p.stepRemaining)+' XP to step '+(p.steps+1)+' of 10':dragonText('Pip can fly');}
 function renderChapter(element,compact=false){
   if(state.battle?.missionId){adventures.renderProgress(element,compact);return;}
   element.classList.remove('questProgress','compactQuest');
@@ -185,7 +198,7 @@ function renderMap(deferEvolution=false){
   $('#mapStory').textContent=progress.cleared+' / '+progress.total+' chapters';
   $('#mapStory').setAttribute('aria-label','Campaign '+location.campaignNumber+': '+progress.cleared+' of '+progress.total+' chapters completed');
   paintPip($('#mapPip'));$('#dragonStage').textContent=dragonText(growth.current.name);$('#dragonXP').textContent=xpText(growth.xp)+' XP';
-  $('#dragonNext').textContent=growth.next?growth.steps+' / 10 growth steps':'Ready to ride';$('#mapGrowthSummary').textContent='';
+  $('#dragonNext').textContent=growth.growthStory?dragonText('Pip is glowing!'):growth.next?growth.steps+' / 10 growth steps':'Ready to fly';$('#mapGrowthSummary').textContent='';
   const fraction=growth.fraction;const bar=$('#dragonProgress');bar.querySelector('span').style.width=(100*fraction)+'%';bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax','100');bar.setAttribute('aria-valuenow',String(Math.floor(100*fraction)));bar.setAttribute('aria-valuetext','XP towards growth. '+growthCaption(growth));
   bar.classList.add('steppedGrowth');bar.setAttribute('aria-valuetext',growthStepCaption(growth)+'. '+growthCaption(growth));
   $('#dragonTapHint').textContent=dragonText(growth.next?'XP · Tap Pip':'Tap Pip');
@@ -205,7 +218,7 @@ function clearCombat(){
   $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
   $('#heroHearts').classList.remove('shieldBlocked');
   $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();
-  $('#battleHeroImg').classList.remove('attack','mageCast','heroHit','heroDefeated');
+  $('#battleHeroImg').classList.remove('attack','mageCast','riderCast','heroHit','heroDefeated');
   $('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
   for(const el of $$('#enemyFace .memberMotion'))el.classList.remove('enemyHit','enemyAttack','enemyDefeated');
   for(const el of $$('#enemyFace .retiring'))el.classList.remove('retiring');
@@ -609,7 +622,7 @@ function renderActivity() {
   if(state.dragon.evolution){renderEvolution();return;}
   if(['result','summary'].includes(state.activity)&&maybeEvolution())return;
   $('#xpReward').hidden=true;
-  $('#battleHeroImg').classList.remove('attack','heroHit','heroDefeated');$('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
+  $('#battleHeroImg').classList.remove('attack','heroHit','heroDefeated','riderCast');$('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
   $('#battle .battlePip').classList.remove('pipAssist','pipCelebrate','pipDodge');
   $('#combatEffects').className='combatEffects';$('#battle').classList.remove('correcting');
   $('#encounterIntro').hidden=true;$('#assessmentIntro').hidden=true;
@@ -779,6 +792,7 @@ function correctFeedback(record=null) {
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
   speak(Core.byWord[q.target]?.spoken||q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
+let riderStreak={battle:null,count:0};
 function combatGeometry(effects){
   const box=effects.getBoundingClientRect?.();
   if(!box?.width||!box?.height)return null;
@@ -786,8 +800,13 @@ function combatGeometry(effects){
   const hero=$('#battleHeroImg'),enemy=$('#enemyFace'),pip=$('#battle .battlePip');
   const target=enemy.querySelector('.enemyMember:not(.retired) .memberMotion')||enemy;
   const end=point(target,.5,.45),start=point(hero,.65,.45),flame=point(pip,.86,.35);
-  const rig=mageRig[heroIndex()];
-  if(hero.dataset.motionActor==='mage'&&window.BlitzMotion){const r=hero.getBoundingClientRect(),p=window.BlitzMotion.point('mage',{x:r.left-box.left,y:r.top-box.top,w:r.width,h:r.height},window.BlitzMotion.asset('mage').spell);start.x=p.x;start.y=p.y;}
+  const rig=mageRig[heroIndex()],rider=hero.dataset.rider&&hero.querySelector('.riderArt');
+  if(rider){
+    // The picture is contained at the left bottom of its box; map fractions of the picture, not the box.
+    const r=rider.getBoundingClientRect(),ratio=(rider.naturalWidth||777)/(rider.naturalHeight||617),w=Math.min(r.width,r.height*ratio),h=w/ratio;
+    const at=([x,y])=>({x:r.left-box.left+w*x,y:r.bottom-box.top-h+h*y});Object.assign(start,at(RIDER.staff));Object.assign(flame,at(RIDER.mouth));
+  }
+  else if(hero.dataset.motionActor==='mage'&&window.BlitzMotion){const r=hero.getBoundingClientRect(),p=window.BlitzMotion.point('mage',{x:r.left-box.left,y:r.top-box.top,w:r.width,h:r.height},window.BlitzMotion.asset('mage').spell);start.x=p.x;start.y=p.y;}
   else if(rig){
     const r=hero.getBoundingClientRect(),crop=spriteCrops[heroIndex()],scale=Math.min(r.width/crop.w,r.height/crop.h),angle=32*Math.PI/180;
     const [px,py]=rig.pivot,dx=rig.tip[0]-px,dy=rig.tip[1]-py;
@@ -814,20 +833,27 @@ function combatReaction(correct){
   effects.removeAttribute('style');
   const frameEnemy=$('#enemyFace').querySelector('.enemyMember:not(.retired) .memberMotion')||$('#enemyFace');
   const member=frameEnemy.closest('.enemyMember'),memberAfter=member&&Content.enemyMembers(state.battle.enemyId,state.battle.maxHealth,state.battle.enemyHealth).find(m=>m.index===Number(member.dataset.member));
-  const assist=correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0);
-  const framed=window.BlitzMotion?.reaction({container:$('#battle'),hero:$('#battleHeroImg'),enemy:frameEnemy,pip:$('#battle .battlePip'),correct,defeated:memberAfter?memberAfter.health===0:state.battle.enemyHealth<=0,heroDefeated:state.battle.heroHealth<=0,assist,shield:q.shieldUsed});
+  const mounted=$('#battleHeroImg').dataset.rider==='1';
+  if(mounted){
+    if(riderStreak.battle!==state.battle.id)riderStreak={battle:state.battle.id,count:0};
+    riderStreak.count=correct?riderStreak.count+1:0;
+  }
+  const assist=correct&&(mounted||Core.answerCount(state)%2===0||state.battle.enemyHealth<=0);
+  const framed=!mounted&&window.BlitzMotion?.reaction({container:$('#battle'),hero:$('#battleHeroImg'),enemy:frameEnemy,pip:$('#battle .battlePip'),correct,defeated:memberAfter?memberAfter.health===0:state.battle.enemyHealth<=0,heroDefeated:state.battle.heroHealth<=0,assist,shield:q.shieldUsed});
   if(framed){effects.classList.add('frameCombat');if(!correct)$('#battle .battlePip').classList.add('pipDodge');if(assist)sound.cue('pip',.45);if(q.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}return;}
   const geometry=correct?combatGeometry(effects):null;
-  if(correct&&activeHeroClass()==='Mage'&&geometry){
+  if(correct&&(mounted||activeHeroClass()==='Mage')&&geometry){
     const {box,start,end}=geometry,dx=end.x-start.x,dy=end.y-start.y;
     const points=[0,.18,.31,.43,.58,.72,.87,1].map((t,i)=>`${start.x+dx*t},${start.y+dy*t+(i===0||i===7?0:(i%2?12:-12))}`).join(' ');
     effects.insertAdjacentHTML('beforeend',`<svg class="castBeam" viewBox="0 0 ${box.width} ${box.height}" preserveAspectRatio="none"><polyline class="lightningGlow" points="${points}"/><polyline class="lightningCore" points="${points}"/><circle class="staffSpark" cx="${start.x}" cy="${start.y}" r="10"/></svg>`);
   }
   const enemyTarget=$('#enemyFace').querySelector('.enemyMember:not(.retired) .memberMotion')||$('#enemyFace');
-  if(correct){$('#battleHeroImg').classList.add(activeHeroClass()==='Mage'?'mageCast':'attack');enemyTarget.classList.add(state.battle.enemyHealth<=0?'enemyDefeated':'enemyHit');}
+  if(correct){$('#battleHeroImg').classList.add(mounted?'riderCast':activeHeroClass()==='Mage'?'mageCast':'attack');enemyTarget.classList.add(state.battle.enemyHealth<=0?'enemyDefeated':'enemyHit');}
   else{enemyTarget.classList.add('enemyAttack');if(state.battle.question.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}else $('#battleHeroImg').classList.add(state.battle.heroHealth<=0?'heroDefeated':'heroHit');}
   const pip=$('#battle .battlePip');
-  if(correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip',.45);}
+  // Riding: Pip breathes fire with every spell; three in a row, or the last hit, is a big blaze.
+  if(correct&&mounted){effects.classList.add('pipStrike','teamStrike');if(riderStreak.count>=3||state.battle.enemyHealth<=0)effects.classList.add('blaze');sound.cue('pip',.45);}
+  else if(correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip',.45);}
   else if(!correct)pip.classList.add('pipDodge');
 }
 function correction(animate=false) {
@@ -1202,14 +1228,14 @@ function openSpeed(){
 }
 function openGrowth(){
   const g=Core.dragonProgress(state);paintPip($('#growthPip'));paintPip($('#growthNextPip'),Math.min(g.stage+1,3));
-  $('#growthTitle').textContent=dragonText(g.next?'Pip is growing':'Pip can ride');
+  $('#growthTitle').textContent=dragonText(g.growthStory?'Pip is glowing!':g.next?'Pip is growing':'Pip can fly');
   $('#growthNextName').textContent=dragonText(g.next?.name||g.current.name);
   $('#growthStepNote').textContent=growthStepCaption(g);
   const rows=$('#growthMeters');rows.replaceChildren();
   const meters=[['XP',Math.floor(g.xp),g.next?.xp||Math.max(1,Math.floor(g.xp))]];
   meters.forEach(([label,value,max])=>{const row=document.createElement('div');row.className='growthMeter';const heading=document.createElement('span');heading.textContent=label;const valueEl=document.createElement('strong');valueEl.textContent=Math.min(value,max)+' / '+max;const track=document.createElement('div');track.className='growthTrack';track.setAttribute('role','progressbar');track.setAttribute('aria-label',label);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(max));track.setAttribute('aria-valuenow',String(Math.min(value,max)));const fill=document.createElement('span');fill.style.width=(Math.min(1,value/max)*100)+'%';track.append(fill);row.append(heading,valueEl,track);rows.append(row);});
   const track=rows.querySelector('.growthTrack');track.classList.add('steppedGrowth');track.querySelector('span').style.width=(g.fraction*100)+'%';track.setAttribute('aria-valuemin',String(g.startXP));track.setAttribute('aria-valuenow',String(Math.max(g.startXP,Math.min(g.xp,g.next?.xp||g.xp))));track.setAttribute('aria-valuetext',growthStepCaption(g)+'. '+xpText(g.xp)+' XP earned');
-  $('#growthChapterGate').hidden=true;$('#renameDragon').hidden=g.stage<1;$('#renameDragon').textContent=state.dragon.named?'Change name':'Choose a name';
+  $('#growthChapterGate').hidden=!g.growthStory;$('#growthChapterGate').textContent=dragonText('Pip has 44,000 XP and is glowing. Read Pip’s story in the camp to help him grow. Until then, Pip’s XP waits at 44,000.');$('#renameDragon').hidden=g.stage<1;$('#renameDragon').textContent=state.dragon.named?'Change name':'Choose a name';
   $('#evolutionReplay').hidden=g.stage<1||!!(state.battle&&!state.battle.resolved)||!!(state.math.round&&state.math.round.status!=='result');
   $('#growthPanel').hidden=false;
 }

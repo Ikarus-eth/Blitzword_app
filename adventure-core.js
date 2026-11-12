@@ -13,6 +13,7 @@
     const e=s.expedition={...empty(),...old};
     for(const key of ['missions','book','riddleDays'])if(!valid(e[key]))throw new Error('Invalid mission records');
     if(e.current&&!Data.byId[e.current.missionId])throw new Error('Unknown saved mission');
+    if(e.parked&&!Data.byId[e.parked.missionId])e.parked=null;
     if(e.current){
       // Keep hearts already earned in an older in-progress quest, even when parked in Word trails.
       const b=e.context==='mission'?s.battle:e.runtime?.battle,c=e.current;
@@ -40,10 +41,20 @@
     return of(s).missions[id] ||= {wins:0,attempts:0,correct:0,activeMs:0,duels:0,riddles:{},completedAt:null,plays:0};
   }
   function campaignComplete(s,id){return Data.campaigns.find(c=>c.id===id)?.missions.every(id=>of(s).missions[id]?.completedAt)||false;}
+  // Pip Grows Up (12 November 2026). From 44,000 XP, until its story is read, Pip's XP is held and quests pause.
+  const GROWTH=Content.growth||{holdXP:Infinity,stage:Infinity,campaign:null};
+  function isGrowth(id){return !!GROWTH.campaign&&Data.byId[id]?.campaign===GROWTH.campaign;}
+  function growthRead(s){return !!GROWTH.campaign&&campaignComplete(s,GROWTH.campaign);}
+  function growthHeld(s){return (s.dragon?.stage||0)<GROWTH.stage&&!growthRead(s);}
+  function growthDue(s){return growthHeld(s)&&(s.dragon?.xp||0)>=GROWTH.holdXP;}
+  function growthOpen(s){return growthRead(s)||(s.dragon?.xp||0)>=GROWTH.holdXP;}
+  function growthNext(s){return Data.campaigns.find(c=>c.id===GROWTH.campaign)?.missions.find(id=>!of(s).missions[id]?.completedAt)||null;}
   function unlocked(s,id){
     const m=Data.byId[id];if(!m)return false;
+    if(isGrowth(id))return growthOpen(s)&&m.requires.every(id=>of(s).missions[id]?.completedAt);
+    if(growthDue(s))return false;
     const index=Data.campaigns.findIndex(c=>c.id===m.campaign);
-    return index>=0&&Data.campaigns.slice(0,index).every(c=>campaignComplete(s,c.id))&&m.requires.every(id=>of(s).missions[id]?.completedAt);
+    return index>=0&&Data.campaigns.slice(0,index).every(c=>c.growth||campaignComplete(s,c.id))&&m.requires.every(id=>of(s).missions[id]?.completedAt);
   }
   function snapshot(s){return copy({battle:s.battle,result:s.result,teaching:s.teaching,handoff:s.handoff,round:s.math.round,scene:s.story.scene,mapPending:s.story.mapPending,activity:s.activity,session:s.session});}
   function restore(s,r){
@@ -63,15 +74,23 @@
     const c=of(s).current;
     return !!(c&&c.replay&&c.phase!=='complete'&&c.phase!=='battle'&&of(s).missions[c.missionId]?.completedAt);
   }
+  // A quest waiting for Pip's story is parked; it is resumed before any other quest starts.
+  function parkable(s){const c=of(s).current;return !!(c&&['intro','story','retry'].includes(c.phase)&&!isGrowth(c.missionId));}
   function blocking(s,id){
-    const c=of(s).current;
-    return !!(c&&c.phase!=='complete'&&c.missionId!==id&&!leavableReplay(s));
+    const e=of(s),c=e.current;
+    if(isGrowth(id)&&c&&!isGrowth(c.missionId)&&c.phase!=='complete')return !parkable(s)&&!leavableReplay(s);
+    if(c&&c.phase!=='complete'&&c.missionId!==id&&!leavableReplay(s))return true;
+    return !!(e.parked&&e.parked.missionId!==id&&!isGrowth(id));
   }
   function begin(s,id,now){
     const e=of(s),m=Data.byId[id];
-    if(!m||!unlocked(s,id)||blocking(s,id))return false;
+    // The quest already under way can always be continued; a held growth only stops new quests from starting.
+    const resuming=e.current?.missionId===id&&e.current.phase!=='complete';
+    if(!m||!resuming&&!unlocked(s,id)||blocking(s,id))return false;
     switchTo(s,'mission');e.preferLegacy=false;e.selectedCampaign=m.campaign;
     if(e.current?.missionId===id&&e.current.phase!=='complete')return true;
+    if(e.parked?.missionId===id){e.current=e.parked;e.parked=null;s.activity='mission';return true;}
+    if(isGrowth(id)&&e.current&&e.current.phase!=='complete'&&!isGrowth(e.current.missionId)&&!leavableReplay(s)){if(e.current.phase==='retry')retry(s);e.parked=copy(e.current);s.battle=null;}
     e.current={missionId:id,step:0,phase:'intro',puzzle:null,startedAt:date(now),replay:!!stats(s,id).completedAt,ninthRequired:!!Maps?.[id]||!!m.story,hearts:QUEST_HEARTS,maxHearts:QUEST_HEARTS,companionHelpUsed:false};
     stats(s,id).plays++;s.battle=null;s.result=null;s.teaching=null;s.math.round=null;s.story.scene=null;s.story.mapPending=false;s.activity='mission';return true;
   }
@@ -148,8 +167,10 @@
     if(c.phase==='story')return c.read?.which===0?2:5;
     return c.step<2?c.step:c.step+1;
   }
+  const READ_STEPS=['Read','Questions'];
   function progress(s){
     const c=of(s).current;if(!c)return null;
+    if(current(s)?.storyOnly){const done=c.phase==='complete'?2:c.phase==='story'&&c.read?.stage!=='read'?1:0;return {done,left:2-done,total:2,labels:READ_STEPS,next:done===2?'Treasure':READ_STEPS[done]};}
     if(current(s)?.stories){const done=storyIndex(c);return {done,left:6-done,total:6,labels:STORY_STEPS,next:done===6?'Treasure':STORY_STEPS[done]};}
     const total=c.ninthRequired?9:8;
     const done=c.phase==='complete'?total:['search','story'].includes(c.phase)?8:c.phase==='retry'&&Number.isInteger(c.retryFromStep)?c.retryFromStep:c.step*2+(['spoils','puzzle'].includes(c.phase)?1:0)+(c.phase==='puzzle'&&c.puzzle?.solved?1:0);
@@ -338,5 +359,5 @@
       riddleMs:Object.values(e.riddleDays).reduce((sum,n)=>sum+n,0),days:e.riddleDays};
   }
   function findMission(family){return Data.missions.find(m=>m.families.includes(family));}
-  return {story,currentStory,storyOf,beginStory,turnStoryPage,finishReading,storyQuestion,lookBack,backToQuestion,chooseStory,checkStory,noteStoryTap,focusWords,STORY_PAGE_MS_PER_WORD,leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen,MAX_SHIELDS,heldShields,setShields};
+  return {GROWTH,isGrowth,growthRead,growthHeld,growthDue,growthOpen,growthNext,parkable,story,currentStory,storyOf,beginStory,turnStoryPage,finishReading,storyQuestion,lookBack,backToQuestion,chooseStory,checkStory,noteStoryTap,focusWords,STORY_PAGE_MS_PER_WORD,leavableReplay,blocking,Data,Maps,mapQuestion,chooseMap,checkMap,RIDDLE_CAP_MS,MAP_READING_CAP_MS,QUEST_HEARTS,empty,init,of,current,stats,campaignComplete,unlocked,switchTo,begin,reveal,fight,won,startPuzzle,choose,check,retreat,retry,next,recordRiddleTime,report,findMission,companion,selectCompanion,protect,syncHearts,progress,supportChoices,selectSupport,earnSupport,supportNeed,supportOpen,MAX_SHIELDS,heldShields,setShields};
 });
