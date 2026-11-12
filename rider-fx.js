@@ -28,6 +28,48 @@
     for(let i=1;i<stops.length;i++)if(f<=stops[i][0]){const [a,ca]=stops[i-1],[b,cb]=stops[i],k=(f-a)/(b-a);return ca.map((c,j)=>Math.round(c+(cb[j]-c)*k));}
     return stops.at(-1)[1];
   }
+  // Painted fire (fal.ai): frames are RGBA with the jet starting at the left edge, halfway down.
+  const FIRE_DIR='assets/battle-fire/',FIRE={frames:[],burst:null};
+  if(typeof Image!=='undefined'){
+    FIRE.frames=['fire-a','fire-b','fire-c'].map(name=>{const im=new Image();im.decoding='async';im.src=FIRE_DIR+name+'.webp';return im;});
+    FIRE.burst=new Image();FIRE.burst.decoding='async';FIRE.burst.src=FIRE_DIR+'fire-burst.webp';
+  }
+  const ready=im=>!!(im&&im.complete&&im.naturalWidth);
+  function drawBreath(ctx,t,{mouth,target,angle,dist,blaze,unit,from=0}){
+    const span=blaze?820:680,life=t-from;if(life<0||life>span+260)return;
+    const frames=FIRE.frames.filter(ready);if(!frames.length)return;
+    const reach=ease(clamp(life/230))*1.25,fade=life<span?1:1-clamp((life-span)/260);
+    const L=dist*(blaze?1.1:1.04),grow=blaze?1.45:1.1,cap=(blaze?150:105)*unit,hOf=f=>Math.min(cap*(f.naturalHeight/f.naturalWidth)/(369/1200),L*(f.naturalHeight/f.naturalWidth)*grow),H=Math.max(...frames.map(hOf));
+    const step=life/75,i=Math.floor(step)%frames.length,mix=step-Math.floor(step);
+    // Drawn on a scratch canvas, then faded out past the front of the flame, so the flame grows with a soft tip.
+    const pad=8*unit,W=Math.ceil(L+pad*2),Hc=Math.ceil(H*1.1+pad*2);
+    const scratch=FIRE.scratch||=(typeof document!=='undefined'?document.createElement('canvas'):null);if(!scratch)return;
+    if(scratch.width<W||scratch.height<Hc){scratch.width=Math.max(W,scratch.width);scratch.height=Math.max(Hc,scratch.height);}
+    const sc=scratch.getContext('2d');sc.setTransform(1,0,0,1,0,0);sc.globalCompositeOperation='source-over';sc.globalAlpha=1;sc.clearRect(0,0,scratch.width,scratch.height);
+    const wob=1+.04*Math.sin(life/45),mid=Hc/2;
+    for(const [f,a] of [[frames[i],1-mix],[frames[(i+1)%frames.length],mix]]){const h=hOf(f)*wob;sc.globalAlpha=a;sc.drawImage(f,pad,mid-h/2,L,h);}
+    const front=pad+L*reach,soft=Math.max(40*unit,L*.18);
+    sc.globalAlpha=1;sc.globalCompositeOperation='destination-in';const g=sc.createLinearGradient(front-soft,0,front,0);g.addColorStop(0,'rgba(0,0,0,1)');g.addColorStop(1,'rgba(0,0,0,0)');sc.fillStyle=g;sc.fillRect(0,0,W,Hc);
+    ctx.save();ctx.translate(mouth.x,mouth.y);ctx.rotate(angle);ctx.globalAlpha=fade;ctx.drawImage(scratch,0,0,W,Hc,-pad,-mid,W,Hc);ctx.restore();
+    const hit=life-160;
+    if(ready(FIRE.burst)&&hit>0&&hit<span+200){
+      const k=ease(clamp(hit/260)),size=(blaze?230:170)*unit*(.55+.6*k),a=hit<span-100?1:1-clamp((hit-(span-100))/300);
+      ctx.save();ctx.globalAlpha=a;ctx.translate(target.x,target.y);ctx.rotate(.4*Math.sin(hit/300));ctx.drawImage(FIRE.burst,-size/2,-size/2,size,size);ctx.restore();
+    }
+  }
+  // Pip's fire alone, for fights where Pip stands beside Artus (Big Pip and later, not riding).
+  function breath(container,{mouth,target,blaze=false,reduced=false}={}){
+    if(!container||!mouth||!target||reduced)return null;
+    const box=container.getBoundingClientRect(),dpr=Math.min(2,root.devicePixelRatio||1);
+    const canvas=document.createElement('canvas');canvas.className='riderFx pipBreath';canvas.setAttribute('aria-hidden','true');
+    canvas.width=Math.max(1,Math.round(box.width*dpr));canvas.height=Math.max(1,Math.round(box.height*dpr));
+    canvas.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:6';
+    container.append(canvas);const ctx=canvas.getContext('2d');if(!ctx){canvas.remove();return null;}ctx.scale(dpr,dpr);
+    const unit=clamp(Math.min(box.width,box.height)/700,.55,1.4),to={x:target.x-6*unit,y:target.y+12*unit},dx=to.x-mouth.x,dy=to.y-mouth.y,dist=Math.hypot(dx,dy)||1,angle=Math.atan2(dy,dx);
+    let start=null,frame=0;const end=(blaze?820:680)+460;
+    function draw(ts){start??=ts;const t=(ts-start)*SPEED;ctx.clearRect(0,0,box.width,box.height);drawBreath(ctx,t,{mouth,target:to,angle,dist,blaze,unit,from:0});if(t<end)frame=root.requestAnimationFrame(draw);else canvas.remove();}
+    frame=root.requestAnimationFrame(draw);return {canvas,stop(){root.cancelAnimationFrame(frame);canvas.remove();}};
+  }
   function play(container,{staff,mouth,target,blaze=false,reduced=false,random=Math.random}={}){
     if(!container||!staff||!mouth||!target)return null;
     const box=container.getBoundingClientRect(),dpr=Math.min(2,root.devicePixelRatio||1);
@@ -40,10 +82,6 @@
     const fireTo={x:target.x-6*unit,y:target.y+18*unit},dx=fireTo.x-mouth.x,dy=fireTo.y-mouth.y,dist=Math.hypot(dx,dy)||1,angle=Math.atan2(dy,dx);
     const flames=[],sparks=[],embers=[];let bolt=null,branches=[],boltAt=-1,emitted=0,burst=false,start=null,frame=0;
     const spread=blaze?.17:.1,rate=blaze?1.2:.8,emitEnd=blaze?1120:980,grow=blaze?46:34;
-    function emitFlame(now){
-      const a=angle+(random()-.5)*spread*2,speed=dist/(300+random()*90);
-      flames.push({x:mouth.x,y:mouth.y,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,born:now,life:dist/speed*(.92+random()*.16),r0:(7+random()*5)*unit,r1:(grow*.6+random()*grow*.6)*unit,wob:random()*6.28});
-    }
     function makeBurst(now){
       const n=blaze?34:22;
       for(let i=0;i<n;i++){const a=random()*6.28,v=(.18+random()*.45)*unit*(blaze?1.35:1);sparks.push({x:target.x,y:target.y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-.12*unit,born:now,life:380+random()*380});}
@@ -73,38 +111,15 @@
         // contact flash
         const fg=ctx.createRadialGradient(target.x,target.y,0,target.x,target.y,46*unit);fg.addColorStop(0,`rgba(255,255,240,${.9*strike})`);fg.addColorStop(1,'rgba(255,200,90,0)');ctx.fillStyle=fg;ctx.beginPath();ctx.arc(target.x,target.y,46*unit,0,7);ctx.fill();
       }
-      // 3. Fire breath from Pip's mouth
-      if(!reduced&&t>=380&&t<=emitEnd){const want=Math.floor((t-380)*rate);while(emitted<want){emitFlame(t);emitted++;}}
-      ctx.globalCompositeOperation='lighter';
-      for(let i=flames.length-1;i>=0;i--){
-        const p=flames[i],age=t-p.born,f=age/p.life;if(f>=1){flames.splice(i,1);continue;}
-        const k=Math.min(1,age*p.vx/(dx||1)>.98?1:1),x=p.x+p.vx*age,y=p.y+p.vy*age+Math.sin(p.wob+age/40)*3*unit*f,r=p.r0+(p.r1-p.r0)*ease(f);
-        const [cr,cg,cb]=fireColour(Math.min(1,f*1.25+.08)),alpha=(f<.12?f/.12:1)*(1-f)*.62*k;
-        const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,`rgba(${cr},${cg},${cb},${alpha})`);g.addColorStop(.55,`rgba(${cr},${Math.round(cg*.7)},${Math.round(cb*.5)},${alpha*.45})`);g.addColorStop(1,`rgba(${cr},${cg},${cb},0)`);
-        ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();
-      }
-      // the body of the breath: flickering tapered cones under the flame puffs
-      const cone=envelope(t,400,emitEnd+120,90,200);
-      if(cone>0&&!reduced){
-        const reach=dist*ease(clamp((t-400)/260));
-        for(let k=0;k<3;k++){
-          const a=angle+(random()-.5)*.05,w0=(5+k*3)*unit,w1=(blaze?70:46)*unit*(1-k*.22)*(.9+random()*.2),ex=mouth.x+Math.cos(a)*reach,ey=mouth.y+Math.sin(a)*reach,nx=-Math.sin(a),ny=Math.cos(a);
-          const g=ctx.createLinearGradient(mouth.x,mouth.y,ex,ey);g.addColorStop(0,`rgba(255,252,225,${.85*cone})`);g.addColorStop(.25,`rgba(255,212,90,${.6*cone})`);g.addColorStop(.7,`rgba(255,120,35,${.42*cone})`);g.addColorStop(1,'rgba(220,60,20,0)');
-          ctx.fillStyle=g;ctx.beginPath();ctx.moveTo(mouth.x+nx*w0,mouth.y+ny*w0);ctx.quadraticCurveTo(mouth.x+Math.cos(a)*reach*.55+nx*w1*.8,mouth.y+Math.sin(a)*reach*.55+ny*w1*.8,ex+nx*w1*.5,ey+ny*w1*.5);
-          ctx.lineTo(ex-nx*w1*.5,ey-ny*w1*.5);ctx.quadraticCurveTo(mouth.x+Math.cos(a)*reach*.55-nx*w1*.8,mouth.y+Math.sin(a)*reach*.55-ny*w1*.8,mouth.x-nx*w0,mouth.y-ny*w0);ctx.closePath();ctx.fill();
-        }
-      }
-      // fire splashing on the enemy
-      if(!reduced&&t>=640&&t<=emitEnd+150&&random()<.8){const a=angle+Math.PI+(random()-.5)*2.6,v=(.05+random()*.12)*unit;flames.push({x:fireTo.x,y:fireTo.y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-.05*unit,born:t,life:300+random()*200,r0:10*unit,r1:(26+random()*18)*unit*(blaze?1.3:1),wob:random()*6.28});}
-      // mouth glow while breathing
-      const breath=envelope(t,360,emitEnd+80,60,160);
-      if(breath>0&&!reduced){const mg=ctx.createRadialGradient(mouth.x,mouth.y,0,mouth.x,mouth.y,22*unit);mg.addColorStop(0,`rgba(255,250,220,${.9*breath})`);mg.addColorStop(1,'rgba(255,170,60,0)');ctx.fillStyle=mg;ctx.beginPath();ctx.arc(mouth.x,mouth.y,22*unit,0,7);ctx.fill();}
+      // 3. Pip's fire breath: painted fire frames from fal.ai (12 November 2026), flickering between three
+      //    paintings, growing out of his mouth towards the enemy, with a painted burst where it hits.
+      if(!reduced)drawBreath(ctx,t,{mouth,target:fireTo,angle,dist,blaze,unit,from:380});
       // 4. Impact burst
       if(!burst&&t>=560){burst=true;makeBurst(t);}
       const hit=envelope(t,560,1000,40,300);
       if(hit>0){
         const rr=(30+90*ease(clamp((t-560)/420)))*unit*(blaze?1.3:1);
-        ctx.lineWidth=(6*(1-clamp((t-560)/440))+1)*unit;ctx.strokeStyle=`rgba(255,226,140,${.75*hit})`;ctx.beginPath();ctx.arc(target.x,target.y,rr,0,7);ctx.stroke();
+        ctx.lineWidth=(6*(1-clamp((t-560)/440))+1)*unit;ctx.strokeStyle=`rgba(255,226,140,${.3*hit})`;ctx.beginPath();ctx.arc(target.x,target.y,rr,0,7);ctx.stroke();
         const hg=ctx.createRadialGradient(target.x,target.y,0,target.x,target.y,rr*.8);hg.addColorStop(0,`rgba(255,250,225,${.8*hit})`);hg.addColorStop(.5,`rgba(255,160,60,${.35*hit})`);hg.addColorStop(1,'rgba(255,120,40,0)');ctx.fillStyle=hg;ctx.beginPath();ctx.arc(target.x,target.y,rr*.8,0,7);ctx.fill();
       }
       for(let i=sparks.length-1;i>=0;i--){const p=sparks[i],age=t-p.born,f=age/p.life;if(f>=1){sparks.splice(i,1);continue;}
@@ -113,10 +128,10 @@
       ctx.globalCompositeOperation='source-over';
       for(let i=embers.length-1;i>=0;i--){const p=embers[i],age=t-p.born,f=age/p.life;if(f>=1){embers.splice(i,1);continue;}
         const x=p.x+p.vx*age+Math.sin(age/90+i)*4*unit,y=p.y+p.vy*age;ctx.fillStyle=`rgba(255,${Math.round(200-110*f)},70,${(1-f)*.95})`;ctx.beginPath();ctx.arc(x,y,p.r*(1-f*.5),0,7);ctx.fill();}
-      if(t<DURATION||flames.length||sparks.length||embers.length)frame=root.requestAnimationFrame(draw);else canvas.remove();
+      if(t<DURATION||sparks.length||embers.length)frame=root.requestAnimationFrame(draw);else canvas.remove();
     }
     frame=root.requestAnimationFrame(draw);
     return {canvas,stop(){root.cancelAnimationFrame(frame);canvas.remove();}};
   }
-  root.BlitzRiderFx={play,DURATION:DURATION/SPEED};
+  root.BlitzRiderFx={play,breath,DURATION:DURATION/SPEED};
 })(typeof window!=='undefined'?window:globalThis);

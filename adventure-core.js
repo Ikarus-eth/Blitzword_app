@@ -149,7 +149,9 @@
   }
   function guardian(s){
     const r=s.rewards||{},n=heldShields(s);
-    if(n>=2&&(r.supportFamily2||r.supportFamily))return {family:r.supportFamily2||r.supportFamily,kind:'shield',shield:2};
+    // A second friend chosen outside a fight may be the kind being fought now; then another friend comes instead.
+    const foe=s.battle?.enemyId?Content.enemyAt(s.battle.enemyId)?.family||s.battle.enemyId:null;
+    if(n>=2&&(r.supportFamily2||r.supportFamily)){const other=secondFriend(s),family=r.supportFamily2&&r.supportFamily2===foe?(other&&other!==foe?other:r.supportFamily||r.supportFamily2):r.supportFamily2||r.supportFamily;return {family,kind:'shield',shield:2};}
     if(n>=1&&r.supportFamily)return {family:r.supportFamily,kind:'shield',shield:1};
     const friend=s.battle?.missionId?companion(s):null;
     return friend?{family:friend,kind:'companion',used:!!of(s).current?.companionHelpUsed}:null;
