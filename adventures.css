@@ -206,19 +206,20 @@
 @keyframes team-fire{0%,30%{opacity:0;transform:scaleX(.05)}38%{opacity:1;transform:scaleX(.35)}55%{opacity:1;transform:scaleX(1)}72%{opacity:.85;transform:scaleX(1)}100%{opacity:0;transform:scaleX(1)}}
 @keyframes rider-idle{0%,100%{translate:0 0}50%{translate:0 -5px}}
 @keyframes rider-cast{0%{translate:0 0;rotate:0deg}22%{translate:-10px 3px;rotate:-1.5deg}42%{translate:24px -8px;rotate:1deg}70%{translate:8px 0;rotate:0deg}100%{translate:0 0;rotate:0deg}}
-#battle.riding.hasQuestCompanion,#battle.riding.hasShieldSupport{--rider-h:46%}
-#battle.riding.hasQuestCompanion .battleCompanion,#battle.riding.hasShieldSupport .battleSupport{left:44%}
+#battle.riding.hasQuestCompanion{--rider-h:48%}
+/* While riding, the one guardian walks beside Pip's front legs, below the spell and the fire. */
+#battle.riding.hasQuestCompanion .battleCompanion{left:var(--guard-left,36%);bottom:calc(var(--rider-bottom,128px) - 6px);width:var(--guard-w,17%);height:var(--guard-h,25%);z-index:4}
 @media(orientation:portrait){
- #battle.riding{--rider-h:27%;--rider-left:1%;--rider-bottom:206px;--rider-max:66vw}
- #battle.riding.hasQuestCompanion,#battle.riding.hasShieldSupport{--rider-h:24%}
+ #battle.riding{--rider-h:31%;--rider-left:1%;--rider-bottom:206px;--rider-max:68vw;--guard-left:46%;--guard-w:24%;--guard-h:15%}
+ #battle.riding.hasQuestCompanion{--rider-h:30%}
 }
 @media(max-width:700px) and (orientation:portrait){
- #battle.riding{--rider-h:20%;--rider-bottom:192px;--rider-max:70vw}
- #battle.riding.hasQuestCompanion,#battle.riding.hasShieldSupport{--rider-h:18%}
+ #battle.riding{--rider-h:22%;--rider-bottom:192px;--rider-max:72vw;--guard-left:47%;--guard-w:26%;--guard-h:12%}
+ #battle.riding.hasQuestCompanion{--rider-h:21%}
 }
 @media(max-height:580px) and (orientation:landscape){
- #battle.riding{--rider-h:38%;--rider-bottom:96px;--rider-max:40vw}
- #battle.riding.hasQuestCompanion,#battle.riding.hasShieldSupport{--rider-h:36%}
+ #battle.riding{--rider-h:38%;--rider-bottom:96px;--rider-max:40vw;--guard-left:34%;--guard-w:14%;--guard-h:24%}
+ #battle.riding.hasQuestCompanion{--rider-h:37%}
 }
 @media(prefers-reduced-motion:reduce){#battle.riding .battleHero .riderArt,#battle.riding .battleHero.riderCast{animation:none}.teamStrike.pipStrike .pipEmber{display:none}}
 /* Pip Grows Up banner: shown in camp and before a waiting quest while Pip's XP is held at 44,000. */
@@ -230,3 +231,18 @@
 @keyframes growth-glow{0%,100%{filter:drop-shadow(0 0 8px #ffd36e) drop-shadow(0 0 3px #ffe9a8)}50%{filter:drop-shadow(0 0 22px #ffd36e) drop-shadow(0 0 8px #fff3c4)}}
 @media(max-width:560px){.growthBanner{grid-template-columns:84px 1fr;padding:12px}}
 @media(prefers-reduced-motion:reduce){.growthBannerPip{animation:none}}
+
+/* One guardian at a time (12 November 2026). The guardian box shows whoever blocks the next hit; a shield friend
+   has a soft gold ring. A new guardian steps in from behind the hero. Creatures face the enemy: art that looks
+   right is not mirrored as a guardian, and is mirrored as an enemy so that it looks at the hero. */
+.battleCompanion>.sceneSprite[data-faces="right"]{transform:none}
+.resultCompanions #resultCompanion[data-faces="right"]{transform:none}
+:is(#enemyFace,#encounterEnemy,#mathEnemy,#mathRevivedEnemy,#mathResultEnemy,#defeatEnemy)[data-faces="right"] :is(svg.approvedCreature,svg.motionStill){transform:scaleX(-1)}
+.battleCompanion.isShield{filter:drop-shadow(0 0 12px #f7df9680)}
+.battleCompanion.isShield:after{content:' ';position:absolute;bottom:-8px;left:15%;width:70%;height:12px;border-radius:50%;border:2px solid #e1c984;background:#fcdfa326;box-shadow:0 0 18px #ffe1a077}
+.battleCompanion.guardianArrive{animation:guardian-arrive .7s cubic-bezier(.2,.9,.3,1.15) both}
+@keyframes guardian-arrive{0%{opacity:0;translate:-60px 6px;scale:.85}60%{opacity:1}100%{opacity:1;translate:0 0;scale:1}}
+#battleSupport{display:none!important}
+#battle.blazeShake{animation:blaze-shake .5s .56s ease-out both}
+@keyframes blaze-shake{0%,100%{translate:0 0}20%{translate:-6px 3px}40%{translate:5px -3px}60%{translate:-3px 2px}80%{translate:2px -1px}}
+@media(prefers-reduced-motion:reduce){#battle.blazeShake{animation:none}}

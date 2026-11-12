@@ -107,7 +107,7 @@ function paintEnemy(element,enemyId,health=3,remaining=health){
   if(motionArt&&count===1)element.dataset.motionActor=motionKey;
   if(motionArt&&element.id==='enemyFace')window.BlitzMotion.warm(motionKey);
   element.classList.toggle('enemyGroup',count>1);element.dataset.count=String(count);
-  element.dataset.enemy=enemy.id;element.style.setProperty('--enemy-scale',Core.enemyScale(health));
+  element.dataset.enemy=enemy.id;element.dataset.faces=Content.artFacing(enemy.family||enemy.id);element.style.setProperty('--enemy-scale',Core.enemyScale(health));
   element.style.setProperty('--enemy-aspect',rig?1:enemy.crop?enemy.crop[2]/enemy.crop[3]:spriteCrops[enemy.sprite??7].w/spriteCrops[enemy.sprite??7].h);
   element.setAttribute('role','img');element.setAttribute('aria-label',enemy.name);
   if(rig){element.style.backgroundImage='none';element.innerHTML=count===1?rig:
@@ -217,7 +217,7 @@ function clearCombat(){
   $('#resultRetreat').classList.remove('retreatMoving');
   $('#defeatScene').hidden=true;$('#defeatScene').classList.remove('escaping');sound.cancelEffects();
   $('#heroHearts').classList.remove('shieldBlocked');
-  $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();
+  $('#combatEffects').className='combatEffects';$('#combatEffects .castBeam')?.remove();for(const fx of $$('#combatEffects .riderFx'))fx.remove();$('#battle').classList.remove('blazeShake');
   $('#battleHeroImg').classList.remove('attack','mageCast','riderCast','heroHit','heroDefeated');
   $('#enemyFace').classList.remove('enemyHit','enemyAttack','enemyDefeated');
   for(const el of $$('#enemyFace .memberMotion'))el.classList.remove('enemyHit','enemyAttack','enemyDefeated');
@@ -788,7 +788,7 @@ function correctFeedback(record=null) {
     $('#battleScroll').append(reward);
   }
   const meter=state.battle.supportMeter,need=Core.Adventure.supportNeed(state);if(!supported&&meter&&Core.Adventure.supportOpen(state)){$('#feedback').textContent=Math.min(meter.accurate,need.accurate)+' / '+need.accurate+' accurate · '+Math.min(meter.quick,need.quick)+' / '+need.quick+' quick';$('#feedback').classList.add('show');}
-  if(q.supportEarned){$('#feedback').textContent=q.secondShield?'Second shield earned! Your friend can stop two hits.':'Shield earned! A friend can help.';$('#feedback').classList.add('show');}
+  if(q.supportEarned){$('#feedback').textContent=q.secondShield?'Second shield earned! '+(q.secondFriend?Content.enemyAt(q.secondFriend).name:'A second friend')+' comes to guard you.':'Shield earned! A friend can help.';$('#feedback').classList.add('show');}
   if(q.xpEarned){$('#xpReward').hidden=false;$('#xpReward').textContent=q.grewTo!==null&&q.grewTo!==undefined?dragonText('Pip is glowing!'):'+'+xpText(q.xpEarned)+' XP';paintPip($('#battle .battlePip'));}
   speak(Core.byWord[q.target]?.spoken||q.target,{onEnd:()=>{if(!supported)combatReaction(true);later(advanceBattle,COMBAT_MS+100);}});
 }
@@ -817,7 +817,7 @@ function combatGeometry(effects){
   effects.style.setProperty('--pip-x',flame.x+'px');effects.style.setProperty('--pip-y',flame.y+'px');
   effects.style.setProperty('--pip-distance',Math.hypot(end.x-flame.x,end.y-flame.y)+'px');
   effects.style.setProperty('--pip-angle',Math.atan2(end.y-flame.y,end.x-flame.x)+'rad');
-  return {box,start,end};
+  return {box,start,end,flame};
 }
 function combatReaction(correct){
   const q=state.battle?.question;
@@ -842,7 +842,12 @@ function combatReaction(correct){
   const framed=!mounted&&window.BlitzMotion?.reaction({container:$('#battle'),hero:$('#battleHeroImg'),enemy:frameEnemy,pip:$('#battle .battlePip'),correct,defeated:memberAfter?memberAfter.health===0:state.battle.enemyHealth<=0,heroDefeated:state.battle.heroHealth<=0,assist,shield:q.shieldUsed});
   if(framed){effects.classList.add('frameCombat');if(!correct)$('#battle .battlePip').classList.add('pipDodge');if(assist)sound.cue('pip',.45);if(q.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}return;}
   const geometry=correct?combatGeometry(effects):null;
-  if(correct&&(mounted||activeHeroClass()==='Mage')&&geometry){
+  const blaze=mounted&&correct&&(riderStreak.count>=3||state.battle.enemyHealth<=0);
+  if(correct&&mounted&&geometry&&window.BlitzRiderFx){
+    window.BlitzRiderFx.play(effects,{staff:geometry.start,mouth:geometry.flame,target:geometry.end,blaze,reduced:!!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches});
+    if(blaze)$('#battle').classList.add('blazeShake');
+  }
+  else if(correct&&(mounted||activeHeroClass()==='Mage')&&geometry){
     const {box,start,end}=geometry,dx=end.x-start.x,dy=end.y-start.y;
     const points=[0,.18,.31,.43,.58,.72,.87,1].map((t,i)=>`${start.x+dx*t},${start.y+dy*t+(i===0||i===7?0:(i%2?12:-12))}`).join(' ');
     effects.insertAdjacentHTML('beforeend',`<svg class="castBeam" viewBox="0 0 ${box.width} ${box.height}" preserveAspectRatio="none"><polyline class="lightningGlow" points="${points}"/><polyline class="lightningCore" points="${points}"/><circle class="staffSpark" cx="${start.x}" cy="${start.y}" r="10"/></svg>`);
@@ -852,7 +857,7 @@ function combatReaction(correct){
   else{enemyTarget.classList.add('enemyAttack');if(state.battle.question.shieldUsed){effects.classList.add('shieldBlock');$('#heroHearts').classList.add('shieldBlocked');}else $('#battleHeroImg').classList.add(state.battle.heroHealth<=0?'heroDefeated':'heroHit');}
   const pip=$('#battle .battlePip');
   // Riding: Pip breathes fire with every spell; three in a row, or the last hit, is a big blaze.
-  if(correct&&mounted){effects.classList.add('pipStrike','teamStrike');if(riderStreak.count>=3||state.battle.enemyHealth<=0)effects.classList.add('blaze');sound.cue('pip',.45);}
+  if(correct&&mounted)sound.cue('pip',.45);
   else if(correct&&(Core.answerCount(state)%2===0||state.battle.enemyHealth<=0)){effects.classList.add('pipStrike');pip.classList.add('pipAssist');if(state.battle.enemyHealth<=0)pip.classList.add('pipFinisher');sound.cue('pip',.45);}
   else if(!correct)pip.classList.add('pipDodge');
 }
@@ -893,7 +898,7 @@ function renderHealth(animate=false) {
   const b=state.battle;if(!b)return;
   const shown=pendingHealth&&pendingHealth.questionId===b.question?.id?pendingHealth:b;
   const shieldHeld=shown===pendingHealth?Number(shown.shield)||0:Core.heldShields(state);
-  adventures.renderBattleTeam(pendingHealth?b.question?.supportSaved:null,shieldHeld);
+  adventures.renderBattleTeam(pendingHealth?b.question?.supportSaved||b.question?.companionSaved:null);
   $('#heroHearts').replaceChildren();
   const maximum=b.heroMaxHealth||3;
   for(let i=0;i<(maximum>3?1:3);i++){const heart=document.createElement('span');heart.className='heart'+(i<shown.heroHealth?'':' off');heart.textContent='♥';$('#heroHearts').append(heart);}
@@ -913,7 +918,7 @@ function renderHealth(animate=false) {
   $('#enemyFace').setAttribute('aria-label',Content.enemyAt(b.enemyId).name+(members.length>1?`, ${members.filter(m=>m.health>0).length} remaining`:''));
 }
 function renderHud() {
-  const b=state.battle;adventures.renderBattleTeam(pendingHealth?b.question?.supportSaved:null);
+  const b=state.battle;adventures.renderBattleTeam(pendingHealth?b.question?.supportSaved||b.question?.companionSaved:null);
   paintEnemy($('#enemyFace'),b.enemyId,b.maxHealth,pendingHealth?.enemyHealth??b.enemyHealth);renderHealth();
   $('#battleChapter').hidden=b.demo;if(!b.demo)renderChapter($('#battleChapter'),true);
 }

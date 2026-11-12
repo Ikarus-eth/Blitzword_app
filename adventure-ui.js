@@ -63,7 +63,7 @@
       const choices=A.supportChoices(s);if(!choices.length)return false;
       let selected=choices.includes(A.of(s).supportFavourite)?A.of(s).supportFavourite:choices[0];
       const grid=el('div','supportChoices');
-      const card=window.BlitzFeedback.show({title:force?'Choose your shield friend':'You earned a shield!',message:'Your friend will stop one hit, then head home.',detail:A.supportNeed(s).accurate<8?'After a lost fight, five accurate answers, or four quick ones, can call a friend.':'Eight accurate answers, or six quick accurate answers, can call a friend.',content:grid,actions:[{label:'Join my team',run:()=>{if(!ctx.active()||!A.selectSupport(s,selected)||!ctx.save())return false;return true;}}],onClose:()=>{renderBattleTeam();done();}});
+      const card=window.BlitzFeedback.show({title:force?'Choose your shield friend':'You earned a shield!',message:'Your friend will guard you and stop one hit, then head home.',detail:A.supportNeed(s).accurate<8?'After a lost fight, five accurate answers, or four quick ones, can call a friend.':'Eight accurate answers, or six quick accurate answers, can call a friend.',content:grid,actions:[{label:'Join my team',run:()=>{if(!ctx.active()||!A.selectSupport(s,selected)||!ctx.save())return false;return true;}}],onClose:()=>{renderBattleTeam();done();}});
       choices.forEach(family=>{const b=button('','supportChoice',()=>{selected=family;for(const option of grid.children)option.setAttribute('aria-pressed',String(option===b));});b.setAttribute('aria-pressed',String(selected===family));const art=el('span','sceneSprite');ctx.paintEnemy(art,family,8);b.append(art,el('span','',Content.enemyAt(family).name));grid.append(b);});
       card.querySelector('.supportChoice')?.focus?.();return true;
     }
@@ -73,16 +73,18 @@
       stamp=null;
     }
     function checkPuzzle(q,options={}){let result;act(()=>{result=Core.checkRiddle(ctx.state(),Date.now(),options);});if(!ctx.active())return;puzzleFeedback(result,q);}
-    function renderBattleTeam(heldAtImpact=null,shown=null){
-      const s=ctx.state(),family=s.battle?.missionId?A.companion(s):null,box=$('#battleCompanion');box.hidden=!family;$('#battle').classList.toggle('hasQuestCompanion',!!family);
-      const support=heldAtImpact||(s.rewards.shield?s.rewards.supportFamily:null),extra=$('#battleSupport');extra.hidden=!support;$('#battle').classList.toggle('hasShieldSupport',!!support);
-      // Shields shown until the hit lands; a second held shield is a ×2 badge on the same friend.
-      const count=Math.max(support?1:0,shown??A.heldShields(s));let badge=extra.querySelector('.shieldCount');
-      if(support&&count>1){if(!badge){badge=el('b','shieldCount');badge.setAttribute('aria-hidden','true');extra.append(badge);}badge.textContent='×'+count;}else badge?.remove();
-      if(support){const art=$('#battleSupportArt');if(art.dataset.family!==support){ctx.paintEnemy(art,support,8);art.dataset.family=support;}extra.setAttribute('role','img');extra.setAttribute('aria-label',Content.enemyAt(support).name+' shield friend'+(count>1?', '+count+' shields':''));}
-      if(!family)return;
-      const art=$('#battleCompanionArt');if(art.dataset.family!==family){ctx.paintEnemy(art,family,8);art.dataset.family=family;}
-      box.setAttribute('role','img');box.setAttribute('aria-label',Content.enemyAt(family).name+' companion');
+    // One guardian at a time (12 November 2026): the friend who will block the next hit. While a blocked hit
+    // is still landing, the friend who blocked it stays (`blocking`); then the next guardian steps in.
+    function renderBattleTeam(blocking=null){
+      const s=ctx.state(),next=A.guardian(s),g=blocking?{family:blocking,kind:next?.family===blocking?next.kind:'shield'}:next;
+      const box=$('#battleCompanion'),art=$('#battleCompanionArt');$('#battleSupport').hidden=true;$('#battle').classList.remove('hasShieldSupport');
+      box.hidden=!g;$('#battle').classList.toggle('hasQuestCompanion',!!g);if(!g){delete art.dataset.family;return;}
+      box.classList.toggle('isShield',g.kind==='shield');
+      if(art.dataset.family!==g.family){
+        const arriving=!!art.dataset.family;ctx.paintEnemy(art,g.family,8);art.dataset.family=g.family;
+        if(arriving&&!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches){box.classList.remove('guardianArrive');void box.offsetWidth;box.classList.add('guardianArrive');}
+      }
+      box.setAttribute('role','img');box.setAttribute('aria-label',Content.enemyAt(g.family).name+(g.kind==='shield'?' guards you with a shield':' companion'));
     }
     // ---- Pip Grows Up (12 November 2026): quests pause at 44,000 XP until Pip's story is read ----
     function startGrowth(){const s=ctx.state(),next=A.growthNext(s);if(!next)return;A.of(s).selectedCampaign=A.GROWTH.campaign;ctx.launch(next);}

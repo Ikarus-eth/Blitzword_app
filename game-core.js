@@ -1003,8 +1003,9 @@
     if (!rec.supported) {
       if (rec.correct) b.enemyHealth=Math.max(b.requiredAnswers?.length?1:0,b.enemyHealth-1);
       else if (b.firstMistakeFree) b.firstMistakeFree=false;
+      // The guardian on screen blocks first: the newest shield friend, then the first, then the quest companion (12 November 2026).
+      else if(!b.demo&&s.rewards.shield){q.supportSaved=Adventure.guardian(s)?.family||s.rewards.supportFamily||null;q.shieldsLeft=Adventure.setShields(s,Adventure.heldShields(s)-1);q.shieldUsed=true;rec.shieldUsed=true;rec.supportSaved=q.supportSaved;}
       else if(b.missionId&&(q.companionSaved=Adventure.protect(s))){q.shieldUsed=true;rec.shieldUsed=true;rec.companionSaved=q.companionSaved;}
-      else if(!b.demo&&s.rewards.shield){q.supportSaved=s.rewards.supportFamily||null;q.shieldsLeft=Adventure.setShields(s,Adventure.heldShields(s)-1);q.shieldUsed=true;rec.shieldUsed=true;rec.supportSaved=q.supportSaved;}
       else b.heroHealth--;
     }
     if(b.missionId){Adventure.syncHearts(s);Adventure.earnSupport(s,rec,quickAnswer(rec));}

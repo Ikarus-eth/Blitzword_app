@@ -1,3 +1,14 @@
+## One guardian at a time, creature facing and the riding attack — approved 12 November 2026
+
+The user asked for only one guardian in fights, for creatures to face the right way, and for the riding attack to look great. This supersedes the 4 November rule that a second shield stays with the same friend as ×2, and the 11 October layout that showed the quest companion and the shield friend together.
+
+- **One guardian on screen**: always the one who blocks the next hit. With two shields, the second shield's friend has replaced the first; the next hit is blocked by the second friend, who then goes home, and the first friend comes back. With one shield, the first shield friend guards. With no shield, the quest companion guards (once per quest, as before).
+- **Order of protection**: shields now block before the companion. Previously the companion's once-per-quest block came first, which meant the friend on screen was not always the one who blocked.
+- **The second friend** is a different creature from the first friend, the quest companion and the creature being fought, when the child has met one. The ×2 badge on the friend is gone; the shield icon by the hearts still shows ×2. Old saves holding two shields get a second friend when they load.
+- **Facing**: 34 creature paintings face right in their art (listed in `content.js`, `artFacing`). Every enemy now faces left towards the hero, and every guardian faces right towards the enemy, before and after riding.
+- **Riding attack**: drawn by `rider-fx.js` on one canvas in about 1.1 seconds. The staff charges, a forked flickering lightning bolt hits the enemy, Pip breathes a stream of fire from his mouth onto it, and a ring with sparks and embers bursts on the hit. A blaze (three right in a row, or the winning hit) is a wider, longer flame with a bigger burst and a small screen shake. Reduced motion keeps only the staff glow and the hit.
+- **While riding**, the one guardian walks beside Pip's front legs, below the spell and the fire.
+
 ## Pip Grows Up and riding Pip — approved 12 November 2026
 
 The user asked for Pip's next evolution to come with a story chapter, and for Artus to ride Pip from then on. Choices made by the user: riding at 45,000 XP and flying at 70,000 XP; quests locked and Pip's XP held until the story is read; four parts of about 1,000 words; a team attack in fights.

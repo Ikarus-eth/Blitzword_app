@@ -1391,30 +1391,32 @@ console.log('PASS all 45 new enemies render through real battle feedback, score 
  let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
  ui.until(()=>!!ui.get('questDialogTitle'));assert.equal(ui.get('questDialogTitle').textContent,'You earned a shield!');assert.equal(ui.get('app').hasAttribute('inert'),true);assert.equal(ui.state().rewards.supportPending,true);
  ui.advance(60000);assert.equal(ui.get('pausePanel').hidden,true);
- const choice=[...ui.document.querySelectorAll('.supportChoice')].find(b=>b.textContent==='Moss Golem');ui.click(choice);ui.click(ui.document.querySelector('.questDialogButton'));assert.equal(ui.state().rewards.supportFamily,'moss-golem');assert.equal(ui.get('battleSupport').hidden,false);assert.equal(ui.get('app').hasAttribute('inert'),false);assert.equal(ui.get('pausePanel').hidden,true);
- const saved=ui.state();saved.expedition.current.companionHelpUsed=true;ui=boot(saved,{adventures:true});ui.click(ui.get('missionResume'));ui.ready();const next=ui.state().battle.question,hp=ui.state().battle.heroHealth;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==next.target));ui.until(()=>!ui.get('heroHearts').querySelector('.heldShield'));assert.equal(ui.state().battle.heroHealth,hp);assert.equal(ui.get('battleSupport').hidden,true);assert.equal(ui.get('battleCompanion').hidden,false);
+ const choice=[...ui.document.querySelectorAll('.supportChoice')].find(b=>b.textContent==='Moss Golem');ui.click(choice);ui.click(ui.document.querySelector('.questDialogButton'));assert.equal(ui.state().rewards.supportFamily,'moss-golem');assert.equal(ui.get('battleCompanionArt').dataset.family,'moss-golem','the shield friend replaces the companion');assert.equal(ui.get('app').hasAttribute('inert'),false);assert.equal(ui.get('pausePanel').hidden,true);
+ const saved=ui.state();saved.expedition.current.companionHelpUsed=true;ui=boot(saved,{adventures:true});ui.click(ui.get('missionResume'));ui.ready();const next=ui.state().battle.question,hp=ui.state().battle.heroHealth;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==next.target));ui.until(()=>!ui.get('heroHearts').querySelector('.heldShield'));assert.equal(ui.state().battle.heroHealth,hp);assert.equal(ui.get('battleSupport').hidden,true);assert.equal(ui.get('battleCompanion').hidden,false);ui.until(()=>ui.get('battleCompanionArt').dataset.family==='moon-moth');
  console.log('PASS earned shield chooser, inert background, chosen animal, reload and departure on protected hit');
 }
 {
- // 4 November 2026: a second shield stacks on the same friend as ×2, and one hit removes one shield.
+ // 12 November 2026 (supersedes 4 November): one guardian at a time. A second shield brings a second friend, who
+ // replaces the first on screen; the hit it blocks sends it home and the first friend comes back.
  const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,10,4);s.profile.name='Reader';s.assessment.done=true;
- Core.startMission(s,'first-spark',now);A.reveal(s,'moon-moth',now);A.reveal(s,'moss-golem',now);A.selectCompanion(s,'moon-moth');Core.startMissionBattle(s,now);s.battle.introPending=false;
+ Core.startMission(s,'first-spark',now);for(const f of ['moon-moth','moss-golem','thornling','bog-toad'])A.reveal(s,f,now);A.selectCompanion(s,'moon-moth');Core.startMissionBattle(s,now);s.battle.introPending=false;
  for(const w of Object.values(s.learning.words)){w.familiar=true;w.independentCorrect=2;w.introducedAt=new Date(now).toISOString();}
  A.setShields(s,1);Object.assign(s.rewards,{earnedSupport:true,supportFamily:'moss-golem',supportPending:false});s.expedition.current.companionHelpUsed=true;
  Core.prepareBattle(s,now);s.battle.question.phase='choices';s.battle.supportMeter={accurate:7,quick:0,earned:false};
  let ui=boot(s,{adventures:true});ui.click(ui.get('missionResume'));
- assert.equal(ui.get('heroHearts').querySelector('.shieldCount'),null);assert.equal(ui.get('battleSupport').querySelector('.shieldCount'),null);
+ assert.equal(ui.get('heroHearts').querySelector('.shieldCount'),null);assert.equal(ui.get('battleCompanionArt').dataset.family,'moss-golem');assert.equal(ui.get('battleSupport').hidden,true);
  const q=ui.state().battle.question;ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent===q.target));
- assert.equal(ui.get('feedback').textContent,'Second shield earned! Your friend can stop two hits.');assert.equal(ui.get('questDialogTitle'),null);
+ const second=ui.state().rewards.supportFamily2;assert.ok(second&&second!=='moss-golem'&&second!=='moon-moth',second);
+ assert.match(ui.get('feedback').textContent,/^Second shield earned! .+ comes to guard you\.$/);assert.equal(ui.get('questDialogTitle'),null);
  assert.equal(Core.heldShields(ui.state()),2);ui.until(()=>!!ui.get('heroHearts').querySelector('.shieldCount'));assert.equal(ui.get('heroHearts').querySelector('.shieldCount').textContent,'×2');
- assert.equal(ui.get('battleSupport').querySelector('.shieldCount').textContent,'×2');assert.match(ui.get('battleSupport').getAttribute('aria-label'),/2 shields/);assert.match(ui.get('heroHearts').getAttribute('aria-label'),/2 shields protect/);
+ assert.equal(ui.get('battleCompanionArt').dataset.family,second,'the second friend replaces the first');assert.equal(ui.get('battle').querySelectorAll('.battleCompanion:not([hidden])').length,1);
  ui=boot(ui.state(),{adventures:true});ui.click(ui.get('missionResume'));ui.ready();const next=ui.state().battle.question,hp=ui.state().battle.heroHealth;
- assert.equal(ui.get('heroHearts').querySelector('.shieldCount').textContent,'×2','badge survives reload');
+ assert.equal(ui.get('battleCompanionArt').dataset.family,second,'second friend survives reload');
  ui.click([...ui.get('battleAnswers').children].find(b=>b.textContent!==next.target));
- assert.equal(ui.get('heroHearts').querySelector('.shieldCount').textContent,'×2','count waits for the impact');
+ assert.equal(ui.get('heroHearts').querySelector('.shieldCount').textContent,'×2','count waits for the impact');assert.equal(ui.get('battleCompanionArt').dataset.family,second,'the blocker stays for the hit');
  ui.until(()=>!ui.get('heroHearts').querySelector('.shieldCount'));assert.equal(ui.state().battle.heroHealth,hp);assert.equal(Core.heldShields(ui.state()),1);
- assert.equal(ui.get('heroHearts').querySelectorAll('.heldShield').length,1);assert.equal(ui.get('battleSupport').hidden,false);assert.equal(ui.get('battleSupport').querySelector('.shieldCount'),null);
- console.log('PASS a second quest shield shows as ×2 on the same friend and one blocked hit leaves one shield');
+ assert.equal(ui.get('heroHearts').querySelectorAll('.heldShield').length,1);assert.equal(ui.get('battleCompanionArt').dataset.family,'moss-golem','the first friend comes back');
+ console.log('PASS one guardian at a time: a second shield brings a second friend, and after its hit the first friend returns');
 }
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;Core.Adventure.setShields(s,2);
