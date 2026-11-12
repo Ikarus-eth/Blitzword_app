@@ -1,0 +1,39 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "stage": "fire-batch-1",
+ "count": 4,
+ "images": [
+  {
+   "id": "fire-a",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/battle-rider/rider.webp"
+   ],
+   "aspect_ratio": "21:9",
+   "prompt": "Use case: game visual effect sprite. Image 1 is ONLY a reference for the painted game-art style and the warm orange-gold colours of the dragon; do NOT draw the dragon, the boy, any creature, person, ground or scenery. The new picture contains nothing but fire on a pure, flat, completely black background (#000000) with no glow on the edges of the canvas, no frame, no text. Style: rich hand-painted fantasy game art, crisp and vivid, not photographic, not cartoon-flat. Subject: a dragon's fire breath seen from the side, flowing from left to right. At the far left edge, exactly halfway down, it starts as a narrow, intense white-yellow jet; it rushes to the right and widens into a big roaring billowing stream of curling orange and red flame tongues, with a bright yellow-white core, small glowing embers and sparks, reaching almost to the right edge and ending in rounded licking flames. The fire stays in the middle band of the picture, with black above and below it. "
+  },
+  {
+   "id": "fire-b",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/battle-rider/rider.webp"
+   ],
+   "aspect_ratio": "21:9",
+   "prompt": "Use case: game visual effect sprite. Image 1 is ONLY a reference for the painted game-art style and the warm orange-gold colours of the dragon; do NOT draw the dragon, the boy, any creature, person, ground or scenery. The new picture contains nothing but fire on a pure, flat, completely black background (#000000) with no glow on the edges of the canvas, no frame, no text. Style: rich hand-painted fantasy game art, crisp and vivid, not photographic, not cartoon-flat. Subject: a dragon's fire breath seen from the side, flowing from left to right. At the far left edge, exactly halfway down, it starts as a narrow, intense white-yellow jet; it rushes to the right and widens into a big roaring billowing stream of curling orange and red flame tongues, with a bright yellow-white core, small glowing embers and sparks, reaching almost to the right edge and ending in rounded licking flames. The fire stays in the middle band of the picture, with black above and below it. Make the flame tongues swirl upward a little more at the right end."
+  },
+  {
+   "id": "fire-c",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/battle-rider/rider.webp"
+   ],
+   "aspect_ratio": "21:9",
+   "prompt": "Use case: game visual effect sprite. Image 1 is ONLY a reference for the painted game-art style and the warm orange-gold colours of the dragon; do NOT draw the dragon, the boy, any creature, person, ground or scenery. The new picture contains nothing but fire on a pure, flat, completely black background (#000000) with no glow on the edges of the canvas, no frame, no text. Style: rich hand-painted fantasy game art, crisp and vivid, not photographic, not cartoon-flat. Subject: a dragon's fire breath seen from the side, flowing from left to right. At the far left edge, exactly halfway down, it starts as a narrow, intense white-yellow jet; it rushes to the right and widens into a big roaring billowing stream of curling orange and red flame tongues, with a bright yellow-white core, small glowing embers and sparks, reaching almost to the right edge and ending in rounded licking flames. The fire stays in the middle band of the picture, with black above and below it. Make the stream slightly thicker in the middle, with more embers flying off."
+  },
+  {
+   "id": "fire-burst",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/battle-rider/rider.webp"
+   ],
+   "aspect_ratio": "1:1",
+   "prompt": "Use case: game visual effect sprite. Image 1 is ONLY a reference for the painted game-art style and the warm orange-gold colours of the dragon; do NOT draw the dragon, the boy, any creature, person, ground or scenery. The new picture contains nothing but fire on a pure, flat, completely black background (#000000) with no glow on the edges of the canvas, no frame, no text. Style: rich hand-painted fantasy game art, crisp and vivid, not photographic, not cartoon-flat. Subject: a round burst of fire where a fire breath hits: a bright yellow-white centre exploding outward into a ring of orange and red flame tongues and flying sparks and embers, centred in the picture, filling about two thirds of it, surrounded by black."
+  }
+ ]
+}
