@@ -1,0 +1,23 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "stage": "art-characters",
+ "count": 2,
+ "images": [
+  {
+   "id": "ref-oren",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "2:3",
+   "prompt": "Use case: character reference. Paint one full-length character on a plain warm cream background, standing, three-quarter view, friendly smile, in the exact painted children’s picture-book style of image 1 (style only; do not copy its fox, tunnel or scene). Character: Oren, a very old, kind and slightly silly wizard: very long white hair, a very long soft white beard that reaches his belt, bushy white eyebrows, rosy cheeks, twinkly blue eyes, no glasses, a tall pointed deep-blue hat with small gold stars, a long deep-blue robe with small gold stars and a plain brown belt, a knobbly wooden staff topped with a small glowing white crystal. Original character design. Whole figure visible from hat to boots with a little space around. No other characters, no scenery, no text, no letters, no border, no turnaround sheet: one single pose."
+  },
+  {
+   "id": "ref-gus",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "aspect_ratio": "2:3",
+   "prompt": "Use case: character reference. Paint one full-length character on a plain warm cream background, standing, three-quarter view, friendly smile, in the exact painted children’s picture-book style of image 1 (style only; do not copy its fox, tunnel or scene). Character: Gus, a gentle young giant about six times as tall as a boy: broad shoulders, round friendly freckled face, big kind blue eyes, short curly ginger-red hair and a short neat ginger-red beard, a wide straw farmer’s hat, a cream shirt with rolled-up sleeves, green farmer’s dungarees with one very large patch pocket on the chest bib, big brown boots. Original character design. Whole figure visible from hat to boots with a little space around. No other characters, no scenery, no text, no letters, no border, no turnaround sheet: one single pose."
+  }
+ ]
+}
