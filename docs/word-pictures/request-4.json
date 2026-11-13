@@ -1,0 +1,44 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "output": "assets/teaching/words",
+ "count": 4,
+ "words": [
+  {
+   "word": "giant",
+   "file": "giant",
+   "alt": "The giant in the story is taller than a house.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-gus.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “giant”. Paint one clear, simple scene showing this sentence: “The giant in the story is taller than a house.”. The meaning of “giant” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Image 2 is Gus, a friendly giant; keep his look exactly. Show him as a true giant standing beside a small cottage, his head far above its roof. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels; book pages show only soft wavy lines. Child-friendly."
+  },
+  {
+   "word": "pocket",
+   "file": "pocket",
+   "alt": "I keep a shell in my pocket.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “pocket”. Paint one clear, simple scene showing this sentence: “I keep a shell in my pocket.”. The meaning of “pocket” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels; book pages show only soft wavy lines. Child-friendly."
+  },
+  {
+   "word": "hat",
+   "file": "hat",
+   "alt": "I wear a hat in the sun.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “hat”. Paint one clear, simple scene showing this sentence: “I wear a hat in the sun.”. The meaning of “hat” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels; book pages show only soft wavy lines. Child-friendly."
+  },
+  {
+   "word": "page",
+   "file": "page",
+   "alt": "Turn the page to read more.",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp"
+   ],
+   "prompt": "Use case: a picture card that teaches a seven-year-old the English word “page”. Paint one clear, simple scene showing this sentence: “Turn the page to read more.”. The meaning of “page” must be obvious at a glance: make it big and central, with a calm, uncluttered background. Painted children’s picture-book style like image 1, warm light, friendly faces. Image 1 is a style reference only; do not copy its fox, tunnel or layout. Landscape 3:2, full scene edge to edge. No text, no letters, no numbers, no labels, no speech bubbles, no borders, no panels; book pages show only soft wavy lines. Child-friendly."
+  }
+ ]
+}
