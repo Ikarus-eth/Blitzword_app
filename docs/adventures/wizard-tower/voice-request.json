@@ -1,0 +1,3112 @@
+{
+ "version": "wizard-tower-voice-20261114-r1",
+ "campaign": "wizard-tower",
+ "voice": "af_heart",
+ "output": "assets/adventures/wizard-tower/voice",
+ "say": {},
+ "slow": [
+  "w:artus",
+  "w:no",
+  "w:a",
+  "w:an",
+  "w:she",
+  "w:your",
+  "w:than",
+  "w:puts",
+  "w:too",
+  "w:be",
+  "w:egg",
+  "w:cup",
+  "w:yet"
+ ],
+ "items": [
+  {
+   "id": "w:giant",
+   "text": "giant"
+  },
+  {
+   "id": "w:shy",
+   "text": "shy"
+  },
+  {
+   "id": "w:gentle",
+   "text": "gentle"
+  },
+  {
+   "id": "w:friendly",
+   "text": "friendly"
+  },
+  {
+   "id": "w:hand",
+   "text": "hand"
+  },
+  {
+   "id": "w:behind",
+   "text": "behind"
+  },
+  {
+   "id": "w:letter",
+   "text": "letter"
+  },
+  {
+   "id": "w:pocket",
+   "text": "pocket"
+  },
+  {
+   "id": "w:farm",
+   "text": "farm"
+  },
+  {
+   "id": "w:carrot",
+   "text": "carrot"
+  },
+  {
+   "id": "w:bean",
+   "text": "bean"
+  },
+  {
+   "id": "w:egg",
+   "text": "egg"
+  },
+  {
+   "id": "w:field",
+   "text": "field"
+  },
+  {
+   "id": "w:honey",
+   "text": "honey"
+  },
+  {
+   "id": "w:leaves",
+   "text": "leaves"
+  },
+  {
+   "id": "w:sick",
+   "text": "sick"
+  },
+  {
+   "id": "w:road",
+   "text": "road"
+  },
+  {
+   "id": "w:woods",
+   "text": "woods"
+  },
+  {
+   "id": "w:lake",
+   "text": "lake"
+  },
+  {
+   "id": "w:across",
+   "text": "across"
+  },
+  {
+   "id": "w:along",
+   "text": "along"
+  },
+  {
+   "id": "w:below",
+   "text": "below"
+  },
+  {
+   "id": "w:stone",
+   "text": "stone"
+  },
+  {
+   "id": "w:proud",
+   "text": "proud"
+  },
+  {
+   "id": "w:hill",
+   "text": "hill"
+  },
+  {
+   "id": "w:hundred",
+   "text": "hundred"
+  },
+  {
+   "id": "w:above",
+   "text": "above"
+  },
+  {
+   "id": "w:silly",
+   "text": "silly"
+  },
+  {
+   "id": "w:sitting",
+   "text": "sitting"
+  },
+  {
+   "id": "w:beside",
+   "text": "beside"
+  },
+  {
+   "id": "w:hat",
+   "text": "hat"
+  },
+  {
+   "id": "w:until",
+   "text": "until"
+  },
+  {
+   "id": "w:jumping",
+   "text": "jumping"
+  },
+  {
+   "id": "w:hop",
+   "text": "hop"
+  },
+  {
+   "id": "w:stopped",
+   "text": "stopped"
+  },
+  {
+   "id": "w:let",
+   "text": "let"
+  },
+  {
+   "id": "w:while",
+   "text": "while"
+  },
+  {
+   "id": "w:without",
+   "text": "without"
+  },
+  {
+   "id": "w:against",
+   "text": "against"
+  },
+  {
+   "id": "w:page",
+   "text": "page"
+  },
+  {
+   "id": "w:snow",
+   "text": "snow"
+  },
+  {
+   "id": "w:ground",
+   "text": "ground"
+  },
+  {
+   "id": "w:root",
+   "text": "root"
+  },
+  {
+   "id": "w:trunk",
+   "text": "trunk"
+  },
+  {
+   "id": "w:bark",
+   "text": "bark"
+  },
+  {
+   "id": "w:dirt",
+   "text": "dirt"
+  },
+  {
+   "id": "w:dirty",
+   "text": "dirty"
+  },
+  {
+   "id": "w:seed",
+   "text": "seed"
+  },
+  {
+   "id": "w:second",
+   "text": "second"
+  },
+  {
+   "id": "w:third",
+   "text": "third"
+  },
+  {
+   "id": "w:fourth",
+   "text": "fourth"
+  },
+  {
+   "id": "w:cup",
+   "text": "cup"
+  },
+  {
+   "id": "w:sweet",
+   "text": "sweet"
+  },
+  {
+   "id": "w:cookie",
+   "text": "cookie"
+  },
+  {
+   "id": "w:chocolate",
+   "text": "chocolate"
+  },
+  {
+   "id": "w:word",
+   "text": "word"
+  },
+  {
+   "id": "w:village",
+   "text": "village"
+  },
+  {
+   "id": "w:men",
+   "text": "men"
+  },
+  {
+   "id": "w:mother",
+   "text": "mother"
+  },
+  {
+   "id": "w:father",
+   "text": "father"
+  },
+  {
+   "id": "w:boy",
+   "text": "boy"
+  },
+  {
+   "id": "w:thousand",
+   "text": "thousand"
+  },
+  {
+   "id": "w:plate",
+   "text": "plate"
+  },
+  {
+   "id": "w:bowl",
+   "text": "bowl"
+  },
+  {
+   "id": "w:it",
+   "text": "it"
+  },
+  {
+   "id": "w:is",
+   "text": "is"
+  },
+  {
+   "id": "w:a",
+   "text": "a"
+  },
+  {
+   "id": "w:sunny",
+   "text": "sunny"
+  },
+  {
+   "id": "m:sunny",
+   "text": "Sunny means the sun is out."
+  },
+  {
+   "id": "w:morning",
+   "text": "morning"
+  },
+  {
+   "id": "m:morning",
+   "text": "Morning is the start of the day."
+  },
+  {
+   "id": "w:artus",
+   "text": "Artus"
+  },
+  {
+   "id": "m:artus",
+   "text": "Artus is the boy in the story."
+  },
+  {
+   "id": "w:at",
+   "text": "at"
+  },
+  {
+   "id": "w:home",
+   "text": "home"
+  },
+  {
+   "id": "m:home",
+   "text": "Home is the place where you live."
+  },
+  {
+   "id": "w:and",
+   "text": "and"
+  },
+  {
+   "id": "w:he",
+   "text": "he"
+  },
+  {
+   "id": "w:reads",
+   "text": "reads"
+  },
+  {
+   "id": "m:reads",
+   "text": "Reads means read. He reads a book."
+  },
+  {
+   "id": "w:book",
+   "text": "book"
+  },
+  {
+   "id": "m:book",
+   "text": "A book has pages with words and pictures."
+  },
+  {
+   "id": "w:about",
+   "text": "about"
+  },
+  {
+   "id": "m:about",
+   "text": "About tells you what something is on. A story about owls."
+  },
+  {
+   "id": "w:magic",
+   "text": "magic"
+  },
+  {
+   "id": "m:magic",
+   "text": "Magic can make strange and wonderful things happen."
+  },
+  {
+   "id": "w:pip",
+   "text": "Pip"
+  },
+  {
+   "id": "m:pip",
+   "text": "Pip is the little orange dragon. He is Artus’s friend."
+  },
+  {
+   "id": "w:by",
+   "text": "by"
+  },
+  {
+   "id": "w:the",
+   "text": "the"
+  },
+  {
+   "id": "w:fire",
+   "text": "fire"
+  },
+  {
+   "id": "m:fire",
+   "text": "Hot, bright flames. A fire keeps you warm."
+  },
+  {
+   "id": "w:eats",
+   "text": "eats"
+  },
+  {
+   "id": "m:eats",
+   "text": "Eats means eat. He eats the cake."
+  },
+  {
+   "id": "w:bread",
+   "text": "bread"
+  },
+  {
+   "id": "m:bread",
+   "text": "You make toast and sandwiches with bread."
+  },
+  {
+   "id": "w:cheese",
+   "text": "cheese"
+  },
+  {
+   "id": "m:cheese",
+   "text": "Cheese is a food made from milk."
+  },
+  {
+   "id": "w:then",
+   "text": "then"
+  },
+  {
+   "id": "w:house",
+   "text": "house"
+  },
+  {
+   "id": "m:house",
+   "text": "A house is a home. People live in a house."
+  },
+  {
+   "id": "w:starts",
+   "text": "starts"
+  },
+  {
+   "id": "m:starts",
+   "text": "Starts means start. It begins."
+  },
+  {
+   "id": "w:to",
+   "text": "to"
+  },
+  {
+   "id": "w:move",
+   "text": "move"
+  },
+  {
+   "id": "m:move",
+   "text": "To move is to go from one place to another."
+  },
+  {
+   "id": "w:boom",
+   "text": "boom"
+  },
+  {
+   "id": "m:boom",
+   "text": "Boom is a big, loud sound, like a giant walking."
+  },
+  {
+   "id": "w:what",
+   "text": "what"
+  },
+  {
+   "id": "m:what",
+   "text": "What is a question word. What is that?"
+  },
+  {
+   "id": "w:that",
+   "text": "that"
+  },
+  {
+   "id": "w:says",
+   "text": "says"
+  },
+  {
+   "id": "m:says",
+   "text": "Says means say. “Look!” says Artus."
+  },
+  {
+   "id": "w:thunder",
+   "text": "thunder"
+  },
+  {
+   "id": "m:thunder",
+   "text": "The big BOOM you hear in a storm."
+  },
+  {
+   "id": "w:no",
+   "text": "no"
+  },
+  {
+   "id": "w:sky",
+   "text": "sky"
+  },
+  {
+   "id": "m:sky",
+   "text": "The sky is above you. The sun and stars are in the sky."
+  },
+  {
+   "id": "w:blue",
+   "text": "blue"
+  },
+  {
+   "id": "m:blue",
+   "text": "Blue is the colour of the sky on a sunny day."
+  },
+  {
+   "id": "w:not",
+   "text": "not"
+  },
+  {
+   "id": "w:stops",
+   "text": "stops"
+  },
+  {
+   "id": "m:stops",
+   "text": "Stops means stop. It does not go on."
+  },
+  {
+   "id": "w:looks",
+   "text": "looks"
+  },
+  {
+   "id": "m:looks",
+   "text": "Looks means look. He looks out of the window."
+  },
+  {
+   "id": "w:out",
+   "text": "out"
+  },
+  {
+   "id": "m:out",
+   "text": "Out means not in. They went outside."
+  },
+  {
+   "id": "w:of",
+   "text": "of"
+  },
+  {
+   "id": "w:window",
+   "text": "window"
+  },
+  {
+   "id": "m:window",
+   "text": "A window is glass in a wall. You can look out of it."
+  },
+  {
+   "id": "w:up",
+   "text": "up"
+  },
+  {
+   "id": "m:up",
+   "text": "Up means to a higher place."
+  },
+  {
+   "id": "m:giant",
+   "text": "A giant is a very, very big person, as tall as a tree."
+  },
+  {
+   "id": "w:as",
+   "text": "as"
+  },
+  {
+   "id": "m:as",
+   "text": "As big as means just the same size as. A tomato as big as Pip!"
+  },
+  {
+   "id": "w:tall",
+   "text": "tall"
+  },
+  {
+   "id": "m:tall",
+   "text": "Tall means very high, like a big tree."
+  },
+  {
+   "id": "w:tree",
+   "text": "tree"
+  },
+  {
+   "id": "m:tree",
+   "text": "A tree is a big plant with a trunk and leaves."
+  },
+  {
+   "id": "w:has",
+   "text": "has"
+  },
+  {
+   "id": "m:has",
+   "text": "Has means have. She has a castle."
+  },
+  {
+   "id": "w:red",
+   "text": "red"
+  },
+  {
+   "id": "m:red",
+   "text": "Red is the colour of fire and of some apples."
+  },
+  {
+   "id": "w:hair",
+   "text": "hair"
+  },
+  {
+   "id": "m:hair",
+   "text": "Hair grows on your head."
+  },
+  {
+   "id": "w:big",
+   "text": "big"
+  },
+  {
+   "id": "m:big",
+   "text": "Big means large. Not small."
+  },
+  {
+   "id": "w:beard",
+   "text": "beard"
+  },
+  {
+   "id": "m:beard",
+   "text": "A beard is the hair on a man’s face, under his mouth."
+  },
+  {
+   "id": "w:very",
+   "text": "very"
+  },
+  {
+   "id": "m:very",
+   "text": "Very means a lot. Very big is bigger than big."
+  },
+  {
+   "id": "m:pocket",
+   "text": "A pocket is a little bag on your clothes."
+  },
+  {
+   "id": "w:hides",
+   "text": "hides"
+  },
+  {
+   "id": "m:hides",
+   "text": "Hides means hide. He goes where no one can see him."
+  },
+  {
+   "id": "m:behind",
+   "text": "Behind means at the back. Pip hides behind the door."
+  },
+  {
+   "id": "w:door",
+   "text": "door"
+  },
+  {
+   "id": "m:door",
+   "text": "You open a door to go into a house or out of it."
+  },
+  {
+   "id": "w:giants",
+   "text": "giants"
+  },
+  {
+   "id": "m:giants",
+   "text": "Giants are very, very big people, as tall as trees."
+  },
+  {
+   "id": "w:eat",
+   "text": "eat"
+  },
+  {
+   "id": "m:eat",
+   "text": "To eat is to put food in your mouth."
+  },
+  {
+   "id": "w:little",
+   "text": "little"
+  },
+  {
+   "id": "m:little",
+   "text": "Little means small."
+  },
+  {
+   "id": "w:dragons",
+   "text": "dragons"
+  },
+  {
+   "id": "m:dragons",
+   "text": "Dragons are big animals with wings. Some dragons can make fire."
+  },
+  {
+   "id": "w:all",
+   "text": "all"
+  },
+  {
+   "id": "w:know",
+   "text": "know"
+  },
+  {
+   "id": "m:know",
+   "text": "To know is to have it in your head. I know the way."
+  },
+  {
+   "id": "w:sits",
+   "text": "sits"
+  },
+  {
+   "id": "m:sits",
+   "text": "Sits means sit."
+  },
+  {
+   "id": "w:down",
+   "text": "down"
+  },
+  {
+   "id": "m:down",
+   "text": "Down means to a lower place."
+  },
+  {
+   "id": "w:in",
+   "text": "in"
+  },
+  {
+   "id": "w:eyes",
+   "text": "eyes"
+  },
+  {
+   "id": "m:eyes",
+   "text": "Your eyes are what you see with."
+  },
+  {
+   "id": "w:they",
+   "text": "they"
+  },
+  {
+   "id": "w:are",
+   "text": "are"
+  },
+  {
+   "id": "w:kind",
+   "text": "kind"
+  },
+  {
+   "id": "m:kind",
+   "text": "Kind means good to others. You help them."
+  },
+  {
+   "id": "w:hello",
+   "text": "hello"
+  },
+  {
+   "id": "m:hello",
+   "text": "Hello is what you say when you meet someone."
+  },
+  {
+   "id": "w:small",
+   "text": "small"
+  },
+  {
+   "id": "m:small",
+   "text": "Small means little. Not big."
+  },
+  {
+   "id": "w:voice",
+   "text": "voice"
+  },
+  {
+   "id": "m:voice",
+   "text": "Your voice is the sound you make when you talk."
+  },
+  {
+   "id": "w:please",
+   "text": "please"
+  },
+  {
+   "id": "m:please",
+   "text": "You say please when you ask for something nicely."
+  },
+  {
+   "id": "w:don't",
+   "text": "don't"
+  },
+  {
+   "id": "m:dont",
+   "text": "Don’t means do not."
+  },
+  {
+   "id": "w:be",
+   "text": "be"
+  },
+  {
+   "id": "w:afraid",
+   "text": "afraid"
+  },
+  {
+   "id": "m:afraid",
+   "text": "Afraid means you feel scared."
+  },
+  {
+   "id": "w:my",
+   "text": "my"
+  },
+  {
+   "id": "w:name",
+   "text": "name"
+  },
+  {
+   "id": "m:name",
+   "text": "Your name is what people call you."
+  },
+  {
+   "id": "w:gus",
+   "text": "Gus"
+  },
+  {
+   "id": "m:gus",
+   "text": "Gus is a friendly giant. He lives on a big farm."
+  },
+  {
+   "id": "w:i",
+   "text": "i"
+  },
+  {
+   "id": "w:do",
+   "text": "do"
+  },
+  {
+   "id": "w:soup",
+   "text": "soup"
+  },
+  {
+   "id": "m:soup",
+   "text": "Soup is hot food that you eat with a spoon."
+  },
+  {
+   "id": "w:cake",
+   "text": "cake"
+  },
+  {
+   "id": "m:cake",
+   "text": "Cake is a sweet food. You can have cake on your birthday."
+  },
+  {
+   "id": "w:from",
+   "text": "from"
+  },
+  {
+   "id": "w:like",
+   "text": "like"
+  },
+  {
+   "id": "m:like",
+   "text": "To like something means you think it is nice."
+  },
+  {
+   "id": "w:you",
+   "text": "you"
+  },
+  {
+   "id": "w:already",
+   "text": "already"
+  },
+  {
+   "id": "m:already",
+   "text": "Already means before now. I am tired already."
+  },
+  {
+   "id": "m:shy",
+   "text": "Shy means a little afraid to talk to people."
+  },
+  {
+   "id": "w:his",
+   "text": "his"
+  },
+  {
+   "id": "w:hands",
+   "text": "hands"
+  },
+  {
+   "id": "m:hands",
+   "text": "Your hands are at the end of your arms."
+  },
+  {
+   "id": "w:have",
+   "text": "have"
+  },
+  {
+   "id": "m:letter",
+   "text": "A letter is a note you write to someone. A, B and C are letters too."
+  },
+  {
+   "id": "w:for",
+   "text": "for"
+  },
+  {
+   "id": "w:oren",
+   "text": "Oren"
+  },
+  {
+   "id": "m:oren",
+   "text": "Oren is a very old wizard. He lives in a tall tower."
+  },
+  {
+   "id": "w:old",
+   "text": "old"
+  },
+  {
+   "id": "m:old",
+   "text": "Old means not new. It is from long ago."
+  },
+  {
+   "id": "w:wizard",
+   "text": "wizard"
+  },
+  {
+   "id": "m:wizard",
+   "text": "A wizard is a person who can do magic."
+  },
+  {
+   "id": "w:who",
+   "text": "who"
+  },
+  {
+   "id": "m:who",
+   "text": "Who asks about a person. Who are you?"
+  },
+  {
+   "id": "w:does",
+   "text": "does"
+  },
+  {
+   "id": "m:does",
+   "text": "Does is a form of do. What does it do?"
+  },
+  {
+   "id": "q:wt-giant-m1",
+   "text": "Who is at the window?"
+  },
+  {
+   "id": "q:wt-giant-m2",
+   "text": "What does Gus have for Artus?"
+  },
+  {
+   "id": "w:holds",
+   "text": "holds"
+  },
+  {
+   "id": "m:holds",
+   "text": "Holds means hold. He holds the rope and does not let go."
+  },
+  {
+   "id": "m:hand",
+   "text": "Your hand is at the end of your arm. You hold things with your hand."
+  },
+  {
+   "id": "w:opens",
+   "text": "opens"
+  },
+  {
+   "id": "m:opens",
+   "text": "Opens means open. She opens the window."
+  },
+  {
+   "id": "w:am",
+   "text": "am"
+  },
+  {
+   "id": "w:tower",
+   "text": "tower"
+  },
+  {
+   "id": "m:tower",
+   "text": "A tower is a very tall, thin building."
+  },
+  {
+   "id": "w:well",
+   "text": "well"
+  },
+  {
+   "id": "m:well",
+   "text": "Well means in a good way. You work well."
+  },
+  {
+   "id": "w:need",
+   "text": "need"
+  },
+  {
+   "id": "m:need",
+   "text": "To need something is to have to have it."
+  },
+  {
+   "id": "w:brave",
+   "text": "brave"
+  },
+  {
+   "id": "m:brave",
+   "text": "Brave means you do the right thing, even when you are afraid."
+  },
+  {
+   "id": "w:help",
+   "text": "help"
+  },
+  {
+   "id": "m:help",
+   "text": "Help! means: please come and help me!"
+  },
+  {
+   "id": "w:me",
+   "text": "me"
+  },
+  {
+   "id": "w:come",
+   "text": "come"
+  },
+  {
+   "id": "m:come",
+   "text": "To come is to move to here."
+  },
+  {
+   "id": "w:will",
+   "text": "will"
+  },
+  {
+   "id": "w:bring",
+   "text": "bring"
+  },
+  {
+   "id": "m:bring",
+   "text": "To bring is to take something with you to a place."
+  },
+  {
+   "id": "w:wants",
+   "text": "wants"
+  },
+  {
+   "id": "m:wants",
+   "text": "Wants means want."
+  },
+  {
+   "id": "w:excited",
+   "text": "excited"
+  },
+  {
+   "id": "m:excited",
+   "text": "Excited means very happy about something."
+  },
+  {
+   "id": "w:long",
+   "text": "long"
+  },
+  {
+   "id": "m:long",
+   "text": "Long means it takes a lot of time, or it goes far."
+  },
+  {
+   "id": "w:way",
+   "text": "way"
+  },
+  {
+   "id": "m:way",
+   "text": "The way is how you go to a place."
+  },
+  {
+   "id": "w:away",
+   "text": "away"
+  },
+  {
+   "id": "m:away",
+   "text": "Away means to another place, not here. Go away!"
+  },
+  {
+   "id": "w:asks",
+   "text": "asks"
+  },
+  {
+   "id": "m:asks",
+   "text": "Asks means ask. He asks a question."
+  },
+  {
+   "id": "w:but",
+   "text": "but"
+  },
+  {
+   "id": "w:can",
+   "text": "can"
+  },
+  {
+   "id": "w:jump",
+   "text": "jump"
+  },
+  {
+   "id": "m:jump",
+   "text": "To jump is to go up into the air with your legs."
+  },
+  {
+   "id": "w:over",
+   "text": "over"
+  },
+  {
+   "id": "m:over",
+   "text": "Over means across, from one side to the other."
+  },
+  {
+   "id": "w:river",
+   "text": "river"
+  },
+  {
+   "id": "m:river",
+   "text": "A river is a long, long line of water that goes to the ocean."
+  },
+  {
+   "id": "w:sit",
+   "text": "sit"
+  },
+  {
+   "id": "m:sit",
+   "text": "To sit is to be on a chair or on the ground."
+  },
+  {
+   "id": "w:puts",
+   "text": "puts"
+  },
+  {
+   "id": "m:puts",
+   "text": "Puts means put. He puts the map in his bag."
+  },
+  {
+   "id": "w:map",
+   "text": "map"
+  },
+  {
+   "id": "m:map",
+   "text": "A map is a picture that shows you the way to go."
+  },
+  {
+   "id": "w:some",
+   "text": "some"
+  },
+  {
+   "id": "m:some",
+   "text": "Some means a few, or a little."
+  },
+  {
+   "id": "w:food",
+   "text": "food"
+  },
+  {
+   "id": "m:food",
+   "text": "Food is what you eat, like bread and cheese."
+  },
+  {
+   "id": "w:bag",
+   "text": "bag"
+  },
+  {
+   "id": "m:bag",
+   "text": "You carry things in a bag."
+  },
+  {
+   "id": "w:lot",
+   "text": "lot"
+  },
+  {
+   "id": "m:lot",
+   "text": "A lot means very much, or very many."
+  },
+  {
+   "id": "w:piece",
+   "text": "piece"
+  },
+  {
+   "id": "m:piece",
+   "text": "A piece is a small part of something."
+  },
+  {
+   "id": "w:get",
+   "text": "get"
+  },
+  {
+   "id": "m:get",
+   "text": "To get means to go and take something."
+  },
+  {
+   "id": "w:hungry",
+   "text": "hungry"
+  },
+  {
+   "id": "m:hungry",
+   "text": "Hungry means you want to eat."
+  },
+  {
+   "id": "w:this",
+   "text": "this"
+  },
+  {
+   "id": "w:smiles",
+   "text": "smiles"
+  },
+  {
+   "id": "m:smiles",
+   "text": "Smiles means smile. He makes a happy face."
+  },
+  {
+   "id": "w:knows",
+   "text": "knows"
+  },
+  {
+   "id": "m:knows",
+   "text": "Knows means know. Grandma knows about the moon."
+  },
+  {
+   "id": "w:on",
+   "text": "on"
+  },
+  {
+   "id": "w:warm",
+   "text": "warm"
+  },
+  {
+   "id": "m:warm",
+   "text": "Warm means a little hot. Nice, not cold."
+  },
+  {
+   "id": "m:gentle",
+   "text": "Gentle means soft and careful, so you do not hurt anyone."
+  },
+  {
+   "id": "w:them",
+   "text": "them"
+  },
+  {
+   "id": "w:room",
+   "text": "room"
+  },
+  {
+   "id": "m:room",
+   "text": "A room is one part of a house, with walls and a door."
+  },
+  {
+   "id": "w:there",
+   "text": "there"
+  },
+  {
+   "id": "w:tomato",
+   "text": "tomato"
+  },
+  {
+   "id": "m:tomato",
+   "text": "A tomato is a round red food."
+  },
+  {
+   "id": "w:walks",
+   "text": "walks"
+  },
+  {
+   "id": "m:walks",
+   "text": "Walks means walk."
+  },
+  {
+   "id": "w:soon",
+   "text": "soon"
+  },
+  {
+   "id": "m:soon",
+   "text": "Soon means after a short time."
+  },
+  {
+   "id": "w:go",
+   "text": "go"
+  },
+  {
+   "id": "w:trees",
+   "text": "trees"
+  },
+  {
+   "id": "m:trees",
+   "text": "Trees are big plants with leaves."
+  },
+  {
+   "id": "w:forest",
+   "text": "forest"
+  },
+  {
+   "id": "m:forest",
+   "text": "A forest is a place with lots and lots of trees."
+  },
+  {
+   "id": "w:wind",
+   "text": "wind"
+  },
+  {
+   "id": "m:wind",
+   "text": "Wind is air that moves. You can feel it blow."
+  },
+  {
+   "id": "w:their",
+   "text": "their"
+  },
+  {
+   "id": "m:their",
+   "text": "Their means it is for them. The owls can’t see their food."
+  },
+  {
+   "id": "w:better",
+   "text": "better"
+  },
+  {
+   "id": "m:better",
+   "text": "Better means more good."
+  },
+  {
+   "id": "w:than",
+   "text": "than"
+  },
+  {
+   "id": "m:than",
+   "text": "Than helps you say which is more. Five is more than four."
+  },
+  {
+   "id": "w:boat",
+   "text": "boat"
+  },
+  {
+   "id": "m:boat",
+   "text": "A boat takes you over water. A boat is smaller than a ship."
+  },
+  {
+   "id": "m:friendly",
+   "text": "Friendly means kind, like a good friend."
+  },
+  {
+   "id": "w:first",
+   "text": "first"
+  },
+  {
+   "id": "m:first",
+   "text": "First means before all the others. Number one."
+  },
+  {
+   "id": "w:we",
+   "text": "we"
+  },
+  {
+   "id": "w:stop",
+   "text": "stop"
+  },
+  {
+   "id": "m:stop",
+   "text": "To stop is to not go on."
+  },
+  {
+   "id": "w:where",
+   "text": "where"
+  },
+  {
+   "id": "m:where",
+   "text": "Where asks about a place. Where is the moon?"
+  },
+  {
+   "id": "q:wt-giant-q1",
+   "text": "What does Oren need?"
+  },
+  {
+   "id": "q:wt-giant-q2",
+   "text": "Where can Artus and Pip sit?"
+  },
+  {
+   "id": "q:wt-giant-q3",
+   "text": "What is in the pocket?"
+  },
+  {
+   "id": "w:lunch",
+   "text": "lunch"
+  },
+  {
+   "id": "m:lunch",
+   "text": "Lunch is the food you eat in the middle of the day."
+  },
+  {
+   "id": "w:time",
+   "text": "time"
+  },
+  {
+   "id": "m:time",
+   "text": "Time is how long something takes."
+  },
+  {
+   "id": "w:castle",
+   "text": "castle"
+  },
+  {
+   "id": "m:castle",
+   "text": "A castle is a big, strong house of stone. Kings and queens have castles."
+  },
+  {
+   "id": "m:farm",
+   "text": "A farm is a place where people grow food and keep animals."
+  },
+  {
+   "id": "w:around",
+   "text": "around"
+  },
+  {
+   "id": "m:around",
+   "text": "Around means all the way round. They fly around the room."
+  },
+  {
+   "id": "m:carrot",
+   "text": "A carrot is a long orange food that grows in the ground."
+  },
+  {
+   "id": "w:beans",
+   "text": "beans"
+  },
+  {
+   "id": "m:beans",
+   "text": "Beans are long green food that grow on a plant."
+  },
+  {
+   "id": "w:boats",
+   "text": "boats"
+  },
+  {
+   "id": "m:boats",
+   "text": "Boats take you over water."
+  },
+  {
+   "id": "m:field",
+   "text": "A field is a big open place with grass or food plants."
+  },
+  {
+   "id": "w:tomatoes",
+   "text": "tomatoes"
+  },
+  {
+   "id": "m:tomatoes",
+   "text": "Tomatoes are round red food."
+  },
+  {
+   "id": "w:every",
+   "text": "every"
+  },
+  {
+   "id": "m:every",
+   "text": "Every means all of them, one by one."
+  },
+  {
+   "id": "w:ball",
+   "text": "ball"
+  },
+  {
+   "id": "m:ball",
+   "text": "A ball is round. You can play with a ball."
+  },
+  {
+   "id": "w:yes",
+   "text": "yes"
+  },
+  {
+   "id": "m:yes",
+   "text": "Yes means you agree."
+  },
+  {
+   "id": "w:gives",
+   "text": "gives"
+  },
+  {
+   "id": "m:gives",
+   "text": "Gives means give. She gives him a bell."
+  },
+  {
+   "id": "w:night",
+   "text": "night"
+  },
+  {
+   "id": "m:night",
+   "text": "Night is when it is dark and you sleep."
+  },
+  {
+   "id": "w:light",
+   "text": "light"
+  },
+  {
+   "id": "m:light",
+   "text": "Light helps you see. The sun gives light."
+  },
+  {
+   "id": "w:comes",
+   "text": "comes"
+  },
+  {
+   "id": "m:comes",
+   "text": "Comes means come. The owl comes in."
+  },
+  {
+   "id": "w:makes",
+   "text": "makes"
+  },
+  {
+   "id": "m:makes",
+   "text": "Makes means make. The beaver makes a boat."
+  },
+  {
+   "id": "w:strong",
+   "text": "strong"
+  },
+  {
+   "id": "m:strong",
+   "text": "Strong means you can carry big, heavy things."
+  },
+  {
+   "id": "w:brown",
+   "text": "brown"
+  },
+  {
+   "id": "m:brown",
+   "text": "Brown is the colour of wood and of chocolate."
+  },
+  {
+   "id": "w:chicken",
+   "text": "chicken"
+  },
+  {
+   "id": "m:chicken",
+   "text": "A chicken is a farm bird. A chicken makes eggs."
+  },
+  {
+   "id": "w:she",
+   "text": "she"
+  },
+  {
+   "id": "w:horse",
+   "text": "horse"
+  },
+  {
+   "id": "m:horse",
+   "text": "A horse is a big animal. You can sit on its back."
+  },
+  {
+   "id": "w:when",
+   "text": "when"
+  },
+  {
+   "id": "w:gets",
+   "text": "gets"
+  },
+  {
+   "id": "m:gets",
+   "text": "Gets means get. He gets the rope."
+  },
+  {
+   "id": "w:an",
+   "text": "an"
+  },
+  {
+   "id": "m:egg",
+   "text": "An egg is round and has a shell. Baby birds and baby dragons come out of eggs."
+  },
+  {
+   "id": "w:made",
+   "text": "made"
+  },
+  {
+   "id": "m:made",
+   "text": "Made means make, but in the past."
+  },
+  {
+   "id": "w:your",
+   "text": "your"
+  },
+  {
+   "id": "w:with",
+   "text": "with"
+  },
+  {
+   "id": "m:honey",
+   "text": "Honey is a sweet, gold food. Bees make it."
+  },
+  {
+   "id": "w:more",
+   "text": "more"
+  },
+  {
+   "id": "m:more",
+   "text": "More means extra. A bigger amount."
+  },
+  {
+   "id": "q:wt-farm-m1",
+   "text": "What makes the food on the farm big?"
+  },
+  {
+   "id": "q:wt-farm-m2",
+   "text": "What do they eat for lunch?"
+  },
+  {
+   "id": "w:after",
+   "text": "after"
+  },
+  {
+   "id": "m:after",
+   "text": "After means later. First this, and after that, the next thing."
+  },
+  {
+   "id": "w:shows",
+   "text": "shows"
+  },
+  {
+   "id": "m:shows",
+   "text": "Shows means show. May shows them a door."
+  },
+  {
+   "id": "w:good",
+   "text": "good"
+  },
+  {
+   "id": "m:good",
+   "text": "Good means nice, or right."
+  },
+  {
+   "id": "w:end",
+   "text": "end"
+  },
+  {
+   "id": "m:end",
+   "text": "The end is the last part of something."
+  },
+  {
+   "id": "m:leaves",
+   "text": "Leaves are the green parts of a tree. One leaf, two leaves."
+  },
+  {
+   "id": "w:grey",
+   "text": "grey"
+  },
+  {
+   "id": "m:grey",
+   "text": "Grey is the colour of rain clouds."
+  },
+  {
+   "id": "w:carrots",
+   "text": "carrots"
+  },
+  {
+   "id": "m:carrots",
+   "text": "Carrots are long orange food that grow in the ground."
+  },
+  {
+   "id": "w:thin",
+   "text": "thin"
+  },
+  {
+   "id": "m:thin",
+   "text": "Thin means not fat. A thin stick."
+  },
+  {
+   "id": "w:why",
+   "text": "why"
+  },
+  {
+   "id": "m:why",
+   "text": "Why asks for a reason. Why are you sad?"
+  },
+  {
+   "id": "w:sad",
+   "text": "sad"
+  },
+  {
+   "id": "m:sad",
+   "text": "Sad means not happy. You feel like you want to cry."
+  },
+  {
+   "id": "m:sick",
+   "text": "Sick means not well. You feel bad."
+  },
+  {
+   "id": "w:bright",
+   "text": "bright"
+  },
+  {
+   "id": "m:bright",
+   "text": "Bright means full of light. The sun is bright."
+  },
+  {
+   "id": "w:day",
+   "text": "day"
+  },
+  {
+   "id": "m:day",
+   "text": "The time when the sun is up."
+  },
+  {
+   "id": "w:just",
+   "text": "just"
+  },
+  {
+   "id": "m:just",
+   "text": "Just means only."
+  },
+  {
+   "id": "w:land",
+   "text": "land"
+  },
+  {
+   "id": "m:land",
+   "text": "Land is the ground, not the water."
+  },
+  {
+   "id": "w:town",
+   "text": "town"
+  },
+  {
+   "id": "m:town",
+   "text": "A town is a place with lots of houses and people."
+  },
+  {
+   "id": "w:animals",
+   "text": "animals"
+  },
+  {
+   "id": "m:animals",
+   "text": "Animals are living things like owls, foxes, fish and dragons."
+  },
+  {
+   "id": "w:cold",
+   "text": "cold"
+  },
+  {
+   "id": "m:cold",
+   "text": "Not warm. Ice and snow are cold."
+  },
+  {
+   "id": "w:too",
+   "text": "too"
+  },
+  {
+   "id": "w:goes",
+   "text": "goes"
+  },
+  {
+   "id": "m:goes",
+   "text": "Goes means go. The boat goes down the river."
+  },
+  {
+   "id": "w:takes",
+   "text": "takes"
+  },
+  {
+   "id": "m:takes",
+   "text": "Takes means take."
+  },
+  {
+   "id": "w:here",
+   "text": "here"
+  },
+  {
+   "id": "m:here",
+   "text": "Here means in this place."
+  },
+  {
+   "id": "w:helps",
+   "text": "helps"
+  },
+  {
+   "id": "m:helps",
+   "text": "Helps means help. Artus helps Bell."
+  },
+  {
+   "id": "w:thank",
+   "text": "thank"
+  },
+  {
+   "id": "m:thank",
+   "text": "You say thank you when someone is kind to you."
+  },
+  {
+   "id": "w:friend",
+   "text": "friend"
+  },
+  {
+   "id": "m:friend",
+   "text": "A friend is someone you like, and who likes you."
+  },
+  {
+   "id": "w:stands",
+   "text": "stands"
+  },
+  {
+   "id": "m:stands",
+   "text": "Stands means stand. He gets up on his feet."
+  },
+  {
+   "id": "w:needs",
+   "text": "needs"
+  },
+  {
+   "id": "m:needs",
+   "text": "Needs means need."
+  },
+  {
+   "id": "w:must",
+   "text": "must"
+  },
+  {
+   "id": "m:must",
+   "text": "Must means you have to."
+  },
+  {
+   "id": "w:now",
+   "text": "now"
+  },
+  {
+   "id": "w:back",
+   "text": "back"
+  },
+  {
+   "id": "m:back",
+   "text": "On his back means behind him, on his body."
+  },
+  {
+   "id": "w:path",
+   "text": "path"
+  },
+  {
+   "id": "m:path",
+   "text": "A path is a small way to walk on."
+  },
+  {
+   "id": "w:fall",
+   "text": "fall"
+  },
+  {
+   "id": "m:fall",
+   "text": "To fall is to go down fast, by mistake."
+  },
+  {
+   "id": "w:give",
+   "text": "give"
+  },
+  {
+   "id": "m:give",
+   "text": "To give is to let someone have something."
+  },
+  {
+   "id": "w:take",
+   "text": "take"
+  },
+  {
+   "id": "m:take",
+   "text": "To take is to get something and hold it, or go with it."
+  },
+  {
+   "id": "q:wt-farm-q1",
+   "text": "Why are the leaves brown?"
+  },
+  {
+   "id": "q:wt-farm-q2",
+   "text": "What does Pip give Gus?"
+  },
+  {
+   "id": "q:wt-farm-q3",
+   "text": "What does Gus take for Oren?"
+  },
+  {
+   "id": "m:along",
+   "text": "Along means on, going the long way. Walk along the road."
+  },
+  {
+   "id": "m:road",
+   "text": "A road is a long way for people and horses to go on."
+  },
+  {
+   "id": "w:into",
+   "text": "into"
+  },
+  {
+   "id": "m:into",
+   "text": "Into means going inside."
+  },
+  {
+   "id": "m:woods",
+   "text": "Woods are a lot of trees, like a little forest."
+  },
+  {
+   "id": "w:dark",
+   "text": "dark"
+  },
+  {
+   "id": "m:dark",
+   "text": "Dark means there is no light."
+  },
+  {
+   "id": "w:quiet",
+   "text": "quiet"
+  },
+  {
+   "id": "m:quiet",
+   "text": "Quiet means with very little sound."
+  },
+  {
+   "id": "w:careful",
+   "text": "careful"
+  },
+  {
+   "id": "m:careful",
+   "text": "Careful means you go slowly and look, so nothing bad happens."
+  },
+  {
+   "id": "w:look",
+   "text": "look"
+  },
+  {
+   "id": "m:look",
+   "text": "To look is to use your eyes."
+  },
+  {
+   "id": "w:birds",
+   "text": "birds"
+  },
+  {
+   "id": "m:birds",
+   "text": "Birds are animals with wings and feathers."
+  },
+  {
+   "id": "w:can't",
+   "text": "can't"
+  },
+  {
+   "id": "m:cant",
+   "text": "Can’t means can not."
+  },
+  {
+   "id": "w:fly",
+   "text": "fly"
+  },
+  {
+   "id": "m:fly",
+   "text": "To fly is to move in the air, like a bird."
+  },
+  {
+   "id": "w:going",
+   "text": "going"
+  },
+  {
+   "id": "m:going",
+   "text": "Going means moving to a place."
+  },
+  {
+   "id": "w:jumps",
+   "text": "jumps"
+  },
+  {
+   "id": "m:jumps",
+   "text": "Jumps means jump."
+  },
+  {
+   "id": "w:again",
+   "text": "again"
+  },
+  {
+   "id": "m:again",
+   "text": "Again means one more time."
+  },
+  {
+   "id": "w:one",
+   "text": "one"
+  },
+  {
+   "id": "w:bird",
+   "text": "bird"
+  },
+  {
+   "id": "m:bird",
+   "text": "A bird is an animal with wings and feathers. Most birds can fly."
+  },
+  {
+   "id": "w:flies",
+   "text": "flies"
+  },
+  {
+   "id": "m:flies",
+   "text": "Flies means fly. The owl flies up into the sky."
+  },
+  {
+   "id": "w:two",
+   "text": "two"
+  },
+  {
+   "id": "m:two",
+   "text": "Two is the number after one."
+  },
+  {
+   "id": "w:happy",
+   "text": "happy"
+  },
+  {
+   "id": "m:happy",
+   "text": "Happy means you feel good and glad."
+  },
+  {
+   "id": "m:proud",
+   "text": "Proud means happy because you did something good."
+  },
+  {
+   "id": "w:did",
+   "text": "did"
+  },
+  {
+   "id": "w:see",
+   "text": "see"
+  },
+  {
+   "id": "m:see",
+   "text": "To see is to use your eyes."
+  },
+  {
+   "id": "w:dragon",
+   "text": "dragon"
+  },
+  {
+   "id": "m:dragon",
+   "text": "A big animal with wings. Some dragons can make fire."
+  },
+  {
+   "id": "w:best",
+   "text": "best"
+  },
+  {
+   "id": "m:best",
+   "text": "Best means better than all the others."
+  },
+  {
+   "id": "w:snack",
+   "text": "snack"
+  },
+  {
+   "id": "m:snack",
+   "text": "A snack is a little food between meals."
+  },
+  {
+   "id": "w:him",
+   "text": "him"
+  },
+  {
+   "id": "w:walk",
+   "text": "walk"
+  },
+  {
+   "id": "m:walk",
+   "text": "To walk is to go on your feet, not fast."
+  },
+  {
+   "id": "w:how",
+   "text": "how"
+  },
+  {
+   "id": "m:how",
+   "text": "How asks the way to do something. How can we get there?"
+  },
+  {
+   "id": "q:wt-lake-m1",
+   "text": "Why can’t the birds fly?"
+  },
+  {
+   "id": "q:wt-lake-m2",
+   "text": "How does Pip help the birds?"
+  },
+  {
+   "id": "m:lake",
+   "text": "A lake is a lot of still water with land all around it."
+  },
+  {
+   "id": "w:water",
+   "text": "water"
+  },
+  {
+   "id": "m:water",
+   "text": "You drink water. Rain is water."
+  },
+  {
+   "id": "w:still",
+   "text": "still"
+  },
+  {
+   "id": "m:still",
+   "text": "Here, still means the path keeps going for a long way."
+  },
+  {
+   "id": "m:across",
+   "text": "Across means from one side to the other. Walk across the road."
+  },
+  {
+   "id": "w:hold",
+   "text": "hold"
+  },
+  {
+   "id": "m:hold",
+   "text": "To hold is to have something in your hands."
+  },
+  {
+   "id": "m:below",
+   "text": "Below means under, lower down. The stones are below the water."
+  },
+  {
+   "id": "w:oh",
+   "text": "oh"
+  },
+  {
+   "id": "m:oh",
+   "text": "Oh is what you say when you are surprised."
+  },
+  {
+   "id": "w:stones",
+   "text": "stones"
+  },
+  {
+   "id": "m:stones",
+   "text": "Stones are little rocks."
+  },
+  {
+   "id": "w:if",
+   "text": "if"
+  },
+  {
+   "id": "m:if",
+   "text": "If tells you what will happen when something else happens."
+  },
+  {
+   "id": "w:make",
+   "text": "make"
+  },
+  {
+   "id": "m:make",
+   "text": "To make is to put things together, so there is a new thing."
+  },
+  {
+   "id": "w:spell",
+   "text": "spell"
+  },
+  {
+   "id": "m:spell",
+   "text": "A spell is magic words that make magic happen."
+  },
+  {
+   "id": "w:white",
+   "text": "white"
+  },
+  {
+   "id": "m:white",
+   "text": "White is the colour of snow and clouds."
+  },
+  {
+   "id": "w:three",
+   "text": "three"
+  },
+  {
+   "id": "m:three",
+   "text": "Three is the number after two. One, two, three."
+  },
+  {
+   "id": "w:worried",
+   "text": "worried"
+  },
+  {
+   "id": "m:worried",
+   "text": "Worried means you think something bad may happen, and you feel upset."
+  },
+  {
+   "id": "w:top",
+   "text": "top"
+  },
+  {
+   "id": "m:top",
+   "text": "The top is the highest part."
+  },
+  {
+   "id": "q:wt-lake-q1",
+   "text": "Why must Gus see the stones?"
+  },
+  {
+   "id": "q:wt-lake-q2",
+   "text": "How does Artus help?"
+  },
+  {
+   "id": "q:wt-lake-q3",
+   "text": "Why is Artus a little worried?"
+  },
+  {
+   "id": "m:hill",
+   "text": "A hill is like a little mountain."
+  },
+  {
+   "id": "m:above",
+   "text": "Above means over, higher up. The sky is above us."
+  },
+  {
+   "id": "w:clouds",
+   "text": "clouds"
+  },
+  {
+   "id": "m:clouds",
+   "text": "Clouds are white or grey, high up in the sky."
+  },
+  {
+   "id": "w:wait",
+   "text": "wait"
+  },
+  {
+   "id": "m:wait",
+   "text": "To wait is to stay here until something happens."
+  },
+  {
+   "id": "m:beside",
+   "text": "Beside means next to. Gus sits beside the door."
+  },
+  {
+   "id": "w:so",
+   "text": "so"
+  },
+  {
+   "id": "w:stairs",
+   "text": "stairs"
+  },
+  {
+   "id": "m:stairs",
+   "text": "Stairs are steps that go up and down in a house or a tower."
+  },
+  {
+   "id": "w:ten",
+   "text": "ten"
+  },
+  {
+   "id": "m:ten",
+   "text": "Ten is the number after nine. 10."
+  },
+  {
+   "id": "w:eleven",
+   "text": "eleven"
+  },
+  {
+   "id": "m:eleven",
+   "text": "Eleven is the number after ten. 11."
+  },
+  {
+   "id": "w:twelve",
+   "text": "twelve"
+  },
+  {
+   "id": "m:twelve",
+   "text": "Twelve is the number after eleven. 12."
+  },
+  {
+   "id": "m:hundred",
+   "text": "A hundred is ten tens. 100."
+  },
+  {
+   "id": "w:tired",
+   "text": "tired"
+  },
+  {
+   "id": "m:tired",
+   "text": "Tired means you want to rest or sleep."
+  },
+  {
+   "id": "w:books",
+   "text": "books"
+  },
+  {
+   "id": "m:books",
+   "text": "Books are things you read. They have pages with words."
+  },
+  {
+   "id": "w:maps",
+   "text": "maps"
+  },
+  {
+   "id": "m:maps",
+   "text": "Maps are pictures that show the way."
+  },
+  {
+   "id": "w:man",
+   "text": "man"
+  },
+  {
+   "id": "m:man",
+   "text": "A man is a grown-up boy."
+  },
+  {
+   "id": "m:sitting",
+   "text": "Sitting means sit. He is sitting by the fire."
+  },
+  {
+   "id": "m:hat",
+   "text": "You put a hat on your head."
+  },
+  {
+   "id": "w:gold",
+   "text": "gold"
+  },
+  {
+   "id": "m:gold",
+   "text": "Gold is a yellow, very bright metal. Crowns and coins can be gold."
+  },
+  {
+   "id": "w:stars",
+   "text": "stars"
+  },
+  {
+   "id": "m:stars",
+   "text": "Stars are small bright lights in the night sky."
+  },
+  {
+   "id": "w:find",
+   "text": "find"
+  },
+  {
+   "id": "m:find",
+   "text": "To find is to look and then see the thing you want."
+  },
+  {
+   "id": "w:head",
+   "text": "head"
+  },
+  {
+   "id": "m:head",
+   "text": "Your head is the top part of you, with your eyes, nose and mouth."
+  },
+  {
+   "id": "m:silly",
+   "text": "Silly means funny, not very clever."
+  },
+  {
+   "id": "w:oren's",
+   "text": "Oren's"
+  },
+  {
+   "id": "q:wt-tower-m1",
+   "text": "Why does Gus wait by the door?"
+  },
+  {
+   "id": "q:wt-tower-m2",
+   "text": "Where is Oren’s hat?"
+  },
+  {
+   "id": "w:only",
+   "text": "only"
+  },
+  {
+   "id": "m:only",
+   "text": "Only means just this one, no more."
+  },
+  {
+   "id": "w:round",
+   "text": "round"
+  },
+  {
+   "id": "m:round",
+   "text": "Round is the shape of a ball or a coin. Round and round means in a circle."
+  },
+  {
+   "id": "m:stone",
+   "text": "A stone is a little rock."
+  },
+  {
+   "id": "w:hills",
+   "text": "hills"
+  },
+  {
+   "id": "m:hills",
+   "text": "Hills are like little mountains."
+  },
+  {
+   "id": "w:star",
+   "text": "star"
+  },
+  {
+   "id": "m:star",
+   "text": "A small bright light in the night sky."
+  },
+  {
+   "id": "w:farms",
+   "text": "farms"
+  },
+  {
+   "id": "m:farms",
+   "text": "Farms are places where people grow food and keep animals."
+  },
+  {
+   "id": "w:green",
+   "text": "green"
+  },
+  {
+   "id": "m:green",
+   "text": "Green is the colour of grass and leaves."
+  },
+  {
+   "id": "w:keeps",
+   "text": "keeps"
+  },
+  {
+   "id": "m:keeps",
+   "text": "Keeps means keep. She keeps the ship safe."
+  },
+  {
+   "id": "w:years",
+   "text": "years"
+  },
+  {
+   "id": "m:years",
+   "text": "A year is a long time: 365 days. A hundred years is a very long time."
+  },
+  {
+   "id": "w:new",
+   "text": "new"
+  },
+  {
+   "id": "m:new",
+   "text": "New means you did not have it before."
+  },
+  {
+   "id": "w:letters",
+   "text": "letters"
+  },
+  {
+   "id": "m:letters",
+   "text": "Letters make words: a, b, c. A letter is also a note you send."
+  },
+  {
+   "id": "w:read",
+   "text": "read"
+  },
+  {
+   "id": "m:read",
+   "text": "To read is to look at words and know what they say."
+  },
+  {
+   "id": "w:yet",
+   "text": "yet"
+  },
+  {
+   "id": "m:yet",
+   "text": "Not yet means not now, but later."
+  },
+  {
+   "id": "w:think",
+   "text": "think"
+  },
+  {
+   "id": "m:think",
+   "text": "To think is to use your mind."
+  },
+  {
+   "id": "m:until",
+   "text": "Until means up to the time when."
+  },
+  {
+   "id": "q:wt-tower-q1",
+   "text": "What does the Star Stone do?"
+  },
+  {
+   "id": "q:wt-tower-q2",
+   "text": "Why does Oren need Artus?"
+  },
+  {
+   "id": "q:wt-tower-q3",
+   "text": "When will the books sit still?"
+  },
+  {
+   "id": "w:everywhere",
+   "text": "everywhere"
+  },
+  {
+   "id": "m:everywhere",
+   "text": "Everywhere means in all places."
+  },
+  {
+   "id": "m:hop",
+   "text": "To hop is to jump in little jumps."
+  },
+  {
+   "id": "m:jumping",
+   "text": "Jumping means going up into the air with your feet."
+  },
+  {
+   "id": "w:high",
+   "text": "high"
+  },
+  {
+   "id": "m:high",
+   "text": "High means a long way up."
+  },
+  {
+   "id": "w:falls",
+   "text": "falls"
+  },
+  {
+   "id": "m:falls",
+   "text": "Falls means fall. It goes down fast."
+  },
+  {
+   "id": "w:walls",
+   "text": "walls"
+  },
+  {
+   "id": "m:walls",
+   "text": "Walls are the sides of a room or a castle."
+  },
+  {
+   "id": "m:against",
+   "text": "Against means up on something, touching it. The book hits against the wall."
+  },
+  {
+   "id": "w:sees",
+   "text": "sees"
+  },
+  {
+   "id": "m:sees",
+   "text": "Sees means see. Jet sees a hole."
+  },
+  {
+   "id": "m:while",
+   "text": "While means at the same time. The book is still while he reads."
+  },
+  {
+   "id": "w:other",
+   "text": "other"
+  },
+  {
+   "id": "m:other",
+   "text": "Other means a different one, not this one."
+  },
+  {
+   "id": "w:want",
+   "text": "want"
+  },
+  {
+   "id": "m:want",
+   "text": "To want something means you would like to have it."
+  },
+  {
+   "id": "w:hear",
+   "text": "hear"
+  },
+  {
+   "id": "m:hear",
+   "text": "To hear is to use your ears."
+  },
+  {
+   "id": "m:stopped",
+   "text": "Stopped means stop, in the past. The books have stopped."
+  },
+  {
+   "id": "w:love",
+   "text": "love"
+  },
+  {
+   "id": "m:love",
+   "text": "To love is to like something very, very much."
+  },
+  {
+   "id": "q:wt-books-m1",
+   "text": "What does a book do when Pip jumps up?"
+  },
+  {
+   "id": "q:wt-books-m2",
+   "text": "How does Artus get the books to stop?"
+  },
+  {
+   "id": "m:let",
+   "text": "Let me help means please can I help."
+  },
+  {
+   "id": "w:mum",
+   "text": "mum"
+  },
+  {
+   "id": "m:mum",
+   "text": "Mum means mother."
+  },
+  {
+   "id": "w:pages",
+   "text": "pages"
+  },
+  {
+   "id": "m:pages",
+   "text": "Pages are the pieces of paper in a book."
+  },
+  {
+   "id": "w:was",
+   "text": "was"
+  },
+  {
+   "id": "w:open",
+   "text": "open"
+  },
+  {
+   "id": "m:open",
+   "text": "To open is to make a way in. Open the door!"
+  },
+  {
+   "id": "w:got",
+   "text": "got"
+  },
+  {
+   "id": "m:got",
+   "text": "Got Jet down means they helped him come down."
+  },
+  {
+   "id": "m:without",
+   "text": "Without means not with. We can’t do it without the pages."
+  },
+  {
+   "id": "m:page",
+   "text": "A page is one piece of paper in a book."
+  },
+  {
+   "id": "w:mountain",
+   "text": "mountain"
+  },
+  {
+   "id": "m:mountain",
+   "text": "A very, very big hill. It is high and has rocks."
+  },
+  {
+   "id": "w:let's",
+   "text": "let's"
+  },
+  {
+   "id": "w:right",
+   "text": "right"
+  },
+  {
+   "id": "m:right",
+   "text": "All right means yes, OK."
+  },
+  {
+   "id": "q:wt-books-q1",
+   "text": "Where is the big spell book?"
+  },
+  {
+   "id": "q:wt-books-q2",
+   "text": "What is not right with the spell book?"
+  },
+  {
+   "id": "q:wt-books-q3",
+   "text": "Who sees where the pages are?"
+  },
+  {
+   "id": "m:snow",
+   "text": "Snow is soft and white and very cold. It comes down from the sky in winter."
+  },
+  {
+   "id": "w:wings",
+   "text": "wings"
+  },
+  {
+   "id": "m:wings",
+   "text": "Wings help a bird or a dragon fly."
+  },
+  {
+   "id": "w:under",
+   "text": "under"
+  },
+  {
+   "id": "m:under",
+   "text": "Under means below."
+  },
+  {
+   "id": "w:pulls",
+   "text": "pulls"
+  },
+  {
+   "id": "m:pulls",
+   "text": "Pulls means pull. He pulls the rope to him."
+  },
+  {
+   "id": "w:hot",
+   "text": "hot"
+  },
+  {
+   "id": "m:hot",
+   "text": "Hot means very warm. The sun is hot."
+  },
+  {
+   "id": "w:thinks",
+   "text": "thinks"
+  },
+  {
+   "id": "m:thinks",
+   "text": "Thinks means think. Pip thinks of a good idea."
+  },
+  {
+   "id": "w:sun",
+   "text": "sun"
+  },
+  {
+   "id": "m:sun",
+   "text": "The sun is the big bright light in the sky in the day."
+  },
+  {
+   "id": "w:work",
+   "text": "work"
+  },
+  {
+   "id": "m:work",
+   "text": "Work is a job that you do."
+  },
+  {
+   "id": "w:idea",
+   "text": "idea"
+  },
+  {
+   "id": "m:idea",
+   "text": "An idea is a new thought. A good plan in your head."
+  },
+  {
+   "id": "q:wt-pages-m1",
+   "text": "Why can’t Pip make a big fire?"
+  },
+  {
+   "id": "q:wt-pages-m2",
+   "text": "How does Pip get the page out?"
+  },
+  {
+   "id": "m:trunk",
+   "text": "A trunk is the big wood part of a tree, under the leaves."
+  },
+  {
+   "id": "w:its",
+   "text": "its"
+  },
+  {
+   "id": "m:its",
+   "text": "Its means it has it. The fox has a red tail: its tail is red."
+  },
+  {
+   "id": "m:bark",
+   "text": "Bark is the hard skin on a tree."
+  },
+  {
+   "id": "w:face",
+   "text": "face"
+  },
+  {
+   "id": "m:face",
+   "text": "Your face is the front of your head, with your eyes, nose and mouth."
+  },
+  {
+   "id": "w:looking",
+   "text": "looking"
+  },
+  {
+   "id": "m:looking",
+   "text": "Looking means using your eyes to find something."
+  },
+  {
+   "id": "w:put",
+   "text": "put"
+  },
+  {
+   "id": "m:put",
+   "text": "To put is to move something to a place."
+  },
+  {
+   "id": "w:roots",
+   "text": "roots"
+  },
+  {
+   "id": "m:roots",
+   "text": "Roots are the parts of a tree under the ground."
+  },
+  {
+   "id": "m:dirt",
+   "text": "Dirt is the brown ground that plants grow in."
+  },
+  {
+   "id": "w:finds",
+   "text": "finds"
+  },
+  {
+   "id": "m:finds",
+   "text": "Finds means find. He finds the page."
+  },
+  {
+   "id": "m:dirty",
+   "text": "Dirty means not clean. Pip has dirt on his hands."
+  },
+  {
+   "id": "m:seed",
+   "text": "A seed is a very small thing that a plant grows from."
+  },
+  {
+   "id": "w:artus's",
+   "text": "Artus's"
+  },
+  {
+   "id": "m:ground",
+   "text": "The ground is what you stand on outside."
+  },
+  {
+   "id": "w:smile",
+   "text": "smile"
+  },
+  {
+   "id": "m:smile",
+   "text": "A smile is the happy face you make when you are glad."
+  },
+  {
+   "id": "q:wt-pages-q1",
+   "text": "Where is the other page?"
+  },
+  {
+   "id": "q:wt-pages-q2",
+   "text": "How does Gus help the tree?"
+  },
+  {
+   "id": "q:wt-pages-q3",
+   "text": "What does the tree give Artus?"
+  },
+  {
+   "id": "w:friends",
+   "text": "friends"
+  },
+  {
+   "id": "m:friends",
+   "text": "Friends are people you like, and who like you."
+  },
+  {
+   "id": "w:moon",
+   "text": "moon"
+  },
+  {
+   "id": "m:moon",
+   "text": "The moon is big and round, and it gives light in the night sky."
+  },
+  {
+   "id": "m:chocolate",
+   "text": "Chocolate is a sweet brown food. Hot chocolate is a warm drink."
+  },
+  {
+   "id": "w:pan",
+   "text": "pan"
+  },
+  {
+   "id": "m:pan",
+   "text": "A pan is a pot for making hot food."
+  },
+  {
+   "id": "m:cup",
+   "text": "A cup is a small thing you drink from."
+  },
+  {
+   "id": "w:biggest",
+   "text": "biggest"
+  },
+  {
+   "id": "m:biggest",
+   "text": "Biggest means more big than all the others."
+  },
+  {
+   "id": "w:drinks",
+   "text": "drinks"
+  },
+  {
+   "id": "m:drinks",
+   "text": "Drinks means drink. Gus drinks it all."
+  },
+  {
+   "id": "w:once",
+   "text": "once"
+  },
+  {
+   "id": "m:once",
+   "text": "At once means all of it, very fast."
+  },
+  {
+   "id": "w:cookies",
+   "text": "cookies"
+  },
+  {
+   "id": "m:cookies",
+   "text": "Cookies are small, sweet, round food."
+  },
+  {
+   "id": "m:sweet",
+   "text": "Sweet means it tastes like cake or honey."
+  },
+  {
+   "id": "m:cookie",
+   "text": "A cookie is a small, sweet, round food."
+  },
+  {
+   "id": "m:second",
+   "text": "Second means number two. First, second. A second is also a very short time."
+  },
+  {
+   "id": "m:third",
+   "text": "Third means number three. First, second, third."
+  },
+  {
+   "id": "m:fourth",
+   "text": "Fourth means number four. First, second, third, fourth."
+  },
+  {
+   "id": "w:many",
+   "text": "many"
+  },
+  {
+   "id": "m:many",
+   "text": "Many means a lot of."
+  },
+  {
+   "id": "q:wt-spell-m1",
+   "text": "When must they do the spell?"
+  },
+  {
+   "id": "q:wt-spell-m2",
+   "text": "How many cookies does Pip have?"
+  },
+  {
+   "id": "w:almost",
+   "text": "almost"
+  },
+  {
+   "id": "m:almost",
+   "text": "Almost means very close, but not yet."
+  },
+  {
+   "id": "m:word",
+   "text": "A word is a group of letters that means something. Cat is a word."
+  },
+  {
+   "id": "w:four",
+   "text": "four"
+  },
+  {
+   "id": "m:four",
+   "text": "Four is 4."
+  },
+  {
+   "id": "w:words",
+   "text": "words"
+  },
+  {
+   "id": "m:words",
+   "text": "Words are groups of letters that mean something."
+  },
+  {
+   "id": "w:bigger",
+   "text": "bigger"
+  },
+  {
+   "id": "m:bigger",
+   "text": "Bigger means more big."
+  },
+  {
+   "id": "w:say",
+   "text": "say"
+  },
+  {
+   "id": "m:say",
+   "text": "To say is to tell something with words."
+  },
+  {
+   "id": "w:slowly",
+   "text": "slowly"
+  },
+  {
+   "id": "m:slowly",
+   "text": "Slowly means not fast."
+  },
+  {
+   "id": "w:sound",
+   "text": "sound"
+  },
+  {
+   "id": "m:sound",
+   "text": "A sound is something you hear."
+  },
+  {
+   "id": "q:wt-spell-q1",
+   "text": "How many words are in the spell?"
+  },
+  {
+   "id": "q:wt-spell-q2",
+   "text": "What does Oren say to do with the long word?"
+  },
+  {
+   "id": "q:wt-spell-q3",
+   "text": "What does the stone do after the fourth word?"
+  },
+  {
+   "id": "m:thousand",
+   "text": "A thousand is ten hundreds. 1,000. A lot!"
+  },
+  {
+   "id": "m:village",
+   "text": "A village is a very small town."
+  },
+  {
+   "id": "w:houses",
+   "text": "houses"
+  },
+  {
+   "id": "m:houses",
+   "text": "Houses are buildings where people live."
+  },
+  {
+   "id": "w:were",
+   "text": "were"
+  },
+  {
+   "id": "m:men",
+   "text": "Men are grown-up boys. One man, two men."
+  },
+  {
+   "id": "w:mothers",
+   "text": "mothers"
+  },
+  {
+   "id": "m:mothers",
+   "text": "Mothers are mums."
+  },
+  {
+   "id": "w:fathers",
+   "text": "fathers"
+  },
+  {
+   "id": "m:fathers",
+   "text": "Fathers are dads."
+  },
+  {
+   "id": "w:girls",
+   "text": "girls"
+  },
+  {
+   "id": "m:girls",
+   "text": "Girls are children who will grow up to be women."
+  },
+  {
+   "id": "w:boys",
+   "text": "boys"
+  },
+  {
+   "id": "m:boys",
+   "text": "Boys are children who will grow up to be men."
+  },
+  {
+   "id": "q:wt-light-m1",
+   "text": "What comes out in the sky?"
+  },
+  {
+   "id": "q:wt-light-m2",
+   "text": "How long will the stone be bright now?"
+  },
+  {
+   "id": "w:people",
+   "text": "people"
+  },
+  {
+   "id": "m:people",
+   "text": "People means men, women and children."
+  },
+  {
+   "id": "m:boy",
+   "text": "A boy is a child who will grow up to be a man."
+  },
+  {
+   "id": "w:had",
+   "text": "had"
+  },
+  {
+   "id": "m:had",
+   "text": "Had means have, but in the past."
+  },
+  {
+   "id": "m:plate",
+   "text": "A plate is a flat round dish for food."
+  },
+  {
+   "id": "m:bowl",
+   "text": "A bowl is a round dish for soup or cake."
+  },
+  {
+   "id": "w:show",
+   "text": "show"
+  },
+  {
+   "id": "m:show",
+   "text": "To show is to let someone see something."
+  },
+  {
+   "id": "w:sleeps",
+   "text": "sleeps"
+  },
+  {
+   "id": "m:sleeps",
+   "text": "Sleeps means sleep. Pip sleeps in the pocket."
+  },
+  {
+   "id": "w:full",
+   "text": "full"
+  },
+  {
+   "id": "m:full",
+   "text": "Full means there is no more room."
+  },
+  {
+   "id": "q:wt-light-q1",
+   "text": "What does Gus bring on a big plate?"
+  },
+  {
+   "id": "q:wt-light-q2",
+   "text": "What does Artus do with the seed?"
+  },
+  {
+   "id": "q:wt-light-q3",
+   "text": "What does Oren give Artus?"
+  }
+ ]
+}
