@@ -39,6 +39,8 @@ def prompt(chars, scene):
         lines.append(f'Image {len(refs)} is the exact identity of {desc}.')
     if 'G' in chars:
         lines.append(SCALE)
+    if 'A' in chars and ('G' in chars or 'O' in chars):
+        lines.append('Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves.')
     absent = [n for c, n in [('A', 'no boy'), ('O', 'no old man'), ('G', 'no giant')] if c not in chars]
     lines.append('Scene: ' + scene)
     lines.append('Only the characters named in the scene appear' + ('; ' + ', '.join(absent) if absent else '') + '.')
@@ -105,11 +107,25 @@ PAGES = [
 
 
 def batch(name, items):
+    # A batch that was already sent is the record of its prompts, so it is never rewritten.
+    if (HERE / (name + '.json')).exists():
+        return print(name, 'already sent; kept')
     spec = {'model': MODEL, 'stage': name, 'count': len(items), 'images': items}
     (HERE / (name + '.json')).write_text(json.dumps(spec, indent=1, ensure_ascii=False) + '\n')
     print(name, len(items))
 
 
+# Retakes after review (14 November 2026): the giant or the wizard took Artus's armour, Gus was missing from the
+# cover or drawn too small, Oren wore armour, and Artus was missing from the last picture.
+RETAKES = [
+    ('cover', 'APOG', 'Golden late afternoon. A tall round stone wizard’s tower with a pointed blue roof stands on a green hill above soft clouds. Gus stands on the hill right beside the tower and is almost as tall as it: his head is level with its top window. Artus and Pip peek out of Gus’s chest pocket and wave. Old Oren waves from the top window of the tower. A silver lake and a dark wood lie far below.'),
+    ('wt-giant-1', 'APG', 'Sunny morning on the grass by a small cottage. Gus kneels on one knee and lowers his huge open hand towards Artus; even kneeling, Gus is taller than the cottage door. Artus stands on the grass and reads an unfolded letter with excitement (the paper shows only faint wavy lines, no letters). Pip stands beside Artus and looks up at Gus with growing trust.'),
+    ('wt-farm-1', 'APG', 'The end of the giant’s farm field: big trees with brown, falling leaves, small grey bean pods, thin carrots. Gus, in his green dungarees and straw hat, sits on the ground, very sad, his huge shoulders down; even sitting he is far taller than Artus. Artus and Pip stand by his big boot, looking around with concern. Soft grey light.'),
+    ('wt-tower-a2', 'APO', 'Inside a warm round wizard’s room full of shelves of books, rolled maps and a crackling fireplace. Oren, wearing only his long deep-blue starry robe and tall starry hat, stands beside the fire, looking around puzzled for his hat while his tall starry hat is right on his head. Artus points at the hat and grins; Pip laughs.'),
+    ('wt-lake-1', 'APG', 'Evening. Gus is a huge giant who fills most of the picture’s height; he wades into a wide, still, dark lake and the water reaches up to his chest pocket. Artus and Pip look down from the pocket into the dark water, worried. On the far side of the lake, on a hill, stands a tall stone tower with a pointed blue roof and a tiny light at its top.'),
+    ('wt-pages-2', 'APG', 'At the roots of a huge ancient tree whose bark has a gentle, kind face: Gus kneels behind and tips water from his big straw hat onto the roots; kneeling, he is still three times as tall as Artus. Pip, with very muddy hands and dirt on his nose, proudly holds up a white page he dug out of the dirt. Artus holds a little brown seed in his palm, smiling.'),
+    ('wt-light-2', 'APOG', 'Morning on top of a green hill beside a small new green sapling tree. Artus, in his silver armour and red cape, holds out both hands; Oren bends down and places a little shining gold star in Artus’s hands. Artus beams. Pip sits beside Artus. Gus stands behind them, smiling shyly.'),
+]
 batch('art-characters', [{'id': i, 'references': [STYLE], 'aspect_ratio': '2:3', 'prompt': ref_prompt(d)} for i, d in REFS])
 scenes = []
 for pid, chars, scene in PAGES:
@@ -117,3 +133,4 @@ for pid, chars, scene in PAGES:
     scenes.append({'id': pid, 'references': refs, 'aspect_ratio': '3:2', 'prompt': text})
 batch('art-scenes-1', scenes[:17])
 batch('art-scenes-2', scenes[17:])
+batch('art-retakes-1', [{'id': pid, 'references': prompt(chars, scene)[0], 'aspect_ratio': '3:2', 'prompt': prompt(chars, scene)[1]} for pid, chars, scene in RETAKES])
