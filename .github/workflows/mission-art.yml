@@ -42,7 +42,9 @@ jobs:
           dest="$(dirname "$BATCH")/generated/$name"
           mkdir -p "$dest" && cp generated-story-art/* "$dest"/
           git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$dest" && git commit -m "Story art for review: $name [skip ci]" && git push
+          git add "$dest" && git commit -m "Story art for review: $name [skip ci]"
+          # Other review workflows push to the same branch, so rebase before pushing (two batches were lost to a race on 14 Nov 2026).
+          for i in 1 2 3 4 5; do git pull --rebase origin "$GITHUB_REF_NAME" && git push origin HEAD:"$GITHUB_REF_NAME" && break; sleep 10; done
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -160,6 +160,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/gentle.webp",
 "alt": "Be gentle when you hold the kitten."
 },
+"giant": {
+"source": "assets/teaching/words/giant.webp",
+"alt": "The giant in the story is taller than a house."
+},
 "girl": {
 "source": "assets/teaching/words/girl.webp",
 "alt": "The girl kicks the ball."
@@ -179,6 +183,10 @@ globalThis.BlitzWordPictures={
 "hand": {
 "source": "assets/teaching/words/hand.webp",
 "alt": "Hold my hand as we cross the road."
+},
+"hat": {
+"source": "assets/teaching/words/hat.webp",
+"alt": "I wear a hat in the sun."
 },
 "hear": {
 "source": "assets/teaching/words/hear.webp",
@@ -296,6 +304,10 @@ globalThis.BlitzWordPictures={
 "source": "assets/teaching/words/outside.webp",
 "alt": "The children play outside the house."
 },
+"page": {
+"source": "assets/teaching/words/page.webp",
+"alt": "Turn the page to read more."
+},
 "path": {
 "source": "assets/teaching/words/path.webp",
 "alt": "We follow the path through the woods."
@@ -315,6 +327,10 @@ globalThis.BlitzWordPictures={
 "please": {
 "source": "assets/teaching/words/please.webp",
 "alt": "Can you help me, please?"
+},
+"pocket": {
+"source": "assets/teaching/words/pocket.webp",
+"alt": "I keep a shell in my pocket."
 },
 "quiet": {
 "source": "assets/teaching/words/quiet.webp",

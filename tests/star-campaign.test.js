@@ -13,7 +13,7 @@ test('third campaign opens only after both earlier adventures; branch joins cann
  A.stats(s,'snow-garden').completedAt=new Date(NOW).toISOString();assert.equal(A.unlocked(s,'cloud-lift'),true);
 });
 test('eight complete ninth-task chapters use exactly eight approved new families and unique clue identities',()=>{
- assert.equal(D.campaigns.length,6);assert.equal(Stars.missions.length,8);assert.deepEqual(Stars.missions.map(m=>m.families[0]),families);
+ assert.equal(D.campaigns.length,7);assert.equal(Stars.missions.length,8);assert.deepEqual(Stars.missions.map(m=>m.families[0]),families);
  assert.equal(new Set(D.missions.flatMap(m=>m.riddles.map(q=>q.id))).size,80);
  assert.equal(new Set(Object.values(A.Maps).flatMap(m=>m.questions.map(q=>q.id))).size,39);
  for(const m of Stars.missions){assert.equal(m.riddles.length,4);assert.ok(A.findMission(m.families[0]));assert.equal(Maps[m.id].questions.length,3);

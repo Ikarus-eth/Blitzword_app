@@ -1,0 +1,29 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "stage": "art-retakes-2",
+ "count": 2,
+ "images": [
+  {
+   "id": "cover",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+    "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-gus.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip’s back is about as high as Artus’s chest. Image 4 is the exact identity of Gus, a gentle young giant about six times as tall as a boy: broad shoulders, round friendly freckled face, big kind blue eyes, short curly ginger-red hair and a short neat ginger-red beard, a wide straw farmer’s hat, a cream shirt with rolled-up sleeves, green farmer’s dungarees with one very large patch pocket on the chest bib, big brown boots. Scale: Gus is a true giant, about six times as tall as Artus; Artus and Pip together fit easily in his chest pocket. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: Golden late afternoon. A tall round stone tower with a pointed blue roof stands on a green hill above soft clouds. Gus stands on the hill right beside the tower, smiling; his head is level with its top window. Artus (golden-ginger hair, silver armour, red cape) and Pip both lean out of the big chest pocket of Gus’s dungarees and wave happily. In the tower’s top window, a tiny old wizard with a long white beard and a tall blue starry hat waves. A silver lake lies far below. Only the characters named in the scene appear; no old man. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise."
+  },
+  {
+   "id": "wt-light-2",
+   "references": [
+    "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+    "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+    "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-oren.webp"
+   ],
+   "aspect_ratio": "3:2",
+   "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children’s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip’s back is about as high as Artus’s chest. Image 4 is the exact identity of Oren, a very old, kind and slightly silly wizard: very long white hair, a very long soft white beard that reaches his belt, bushy white eyebrows, rosy cheeks, twinkly blue eyes, no glasses, a tall pointed deep-blue hat with small gold stars, a long deep-blue robe with small gold stars and a plain brown belt, a knobbly wooden staff topped with a small glowing white crystal. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: Morning on top of a green hill beside a small new green sapling tree. Artus, the boy from image 2 with golden-ginger hair, freckles, silver armour, green tunic and red cape, holds out both hands, beaming; Oren bends down and places a little shining gold star in Artus’s hands. Pip sits beside Artus, happy. Far below, a little village and a lake. Only the characters named in the scene appear; no giant. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise."
+  }
+ ]
+}

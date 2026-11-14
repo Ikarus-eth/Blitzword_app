@@ -13,6 +13,18 @@ The user asked for only one guardian in fights, for creatures to face the right 
 - **Riding attack**: drawn by `rider-fx.js` on one canvas in about 1.1 seconds. The staff charges, a forked flickering lightning bolt hits the enemy, Pip breathes a stream of fire from his mouth onto it, and a ring with sparks and embers bursts on the hit. A blaze (three right in a row, or the winning hit) is a wider, longer flame with a bigger burst and a small screen shake. Reduced motion keeps only the staff glow and the hit.
 - **While riding**, the one guardian walks beside Pip's front legs, below the spell and the fire.
 
+## Story quests: Pip and the Wizard's Tower — approved 14 November 2026
+
+The parent saw that Artus was nearly through the Moon Key (seven of eight quests done on 14 November 2026) and asked for another big chapter like it, with a wise old wizard and a big friendly giant in the story, and pictures from fal.ai for at most $2.
+
+- Sixth campaign, after the Moon Key and before the Pip Grows Up tab: eight story quests in the Moon Key order (fight, fight, mid story, fight, fight, end story; 10/11/12/14 health; no clues). Story: Gus, a shy giant farmer, brings a letter from Oren, a very old and slightly silly wizard. The Star Stone on top of Oren's tower gives light and magic to the land and needs a new spell every hundred years, but Oren can no longer read the small letters. Artus calms the flying books by reading to them, finds two lost pages (one in the snow, one in the roots of an old talking tree), and reads the four-word spell, sounding out the long word letter by letter. Oren gives him a gold star.
+- Oren and Gus are original characters. They are not the characters from any book or film and carry none of their names, places or signature looks (no half-moon glasses, no school of magic, no black-bearded groundskeeper in a long coat).
+- Length: 3,575 words in 16 stories (mid stories 4 pages and 164–215 words, end stories 5 pages and 226–293 words); two questions per mid story, three per end story, 40 in all.
+- Each quest pre-teaches eight new curriculum words (64 in all, none taught in earlier campaigns). Checked against Artus's progress of 14 November 2026 07:40 Bali time (414 secured or kept words, 23 learning): 86.2% of the text is known, 91.8% with names; the rest are pre-taught targets, four story words outside the curriculum (tower, beard, boom, hello) and seven tappable curriculum words used 17 times (stairs, eyes, face, years, slowly, sound, head).
+- Every word is tappable with a meaning; each word form, meaning and question has a Kokoro af_heart clip recorded free on the GitHub runner.
+- Pictures: to stay inside the $2 budget there is one fal.ai painting for every two story pages (four per quest) plus a cover. New teaching pictures for the targets giant, pocket, hat and page; letter and word have none, because their pictures would need printed letters.
+- Sources, prompts and the shipped-art record: [docs/adventures/wizard-tower](adventures/wizard-tower/). Release record: [RELEASE.md](adventures/wizard-tower/RELEASE.md).
+
 ## Pip Grows Up and riding Pip — approved 12 November 2026
 
 The user asked for Pip's next evolution to come with a story chapter, and for Artus to ride Pip from then on. Choices made by the user: riding at 45,000 XP and flying at 70,000 XP; quests locked and Pip's XP held until the story is read; four parts of about 1,000 words; a team attack in fights.

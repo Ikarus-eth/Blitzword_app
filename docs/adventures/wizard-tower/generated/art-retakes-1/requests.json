@@ -1,0 +1,162 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "batch": "docs/adventures/wizard-tower/art-retakes-1.json",
+  "requests": {
+    "cover": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip\u2019s back is about as high as Artus\u2019s chest. Image 4 is the exact identity of Oren, a very old, kind and slightly silly wizard: very long white hair, a very long soft white beard that reaches his belt, bushy white eyebrows, rosy cheeks, twinkly blue eyes, no glasses, a tall pointed deep-blue hat with small gold stars, a long deep-blue robe with small gold stars and a plain brown belt, a knobbly wooden staff topped with a small glowing white crystal. Image 5 is the exact identity of Gus, a gentle young giant about six times as tall as a boy: broad shoulders, round friendly freckled face, big kind blue eyes, short curly ginger-red hair and a short neat ginger-red beard, a wide straw farmer\u2019s hat, a cream shirt with rolled-up sleeves, green farmer\u2019s dungarees with one very large patch pocket on the chest bib, big brown boots. Scale: Gus is a true giant, about six times as tall as Artus; Artus and Pip together fit easily in his chest pocket. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: Golden late afternoon. A tall round stone wizard\u2019s tower with a pointed blue roof stands on a green hill above soft clouds. Gus stands on the hill right beside the tower and is almost as tall as it: his head is level with its top window. Artus and Pip peek out of Gus\u2019s chest pocket and wave. Old Oren waves from the top window of the tower. A silver lake and a dark wood lie far below. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-oren.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-gus.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1d75e-6af9-7391-81d0-8d58e71b014b",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-6af9-7391-81d0-8d58e71b014b",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-6af9-7391-81d0-8d58e71b014b/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-6af9-7391-81d0-8d58e71b014b/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 1,
+      "user_queued_count": 2,
+      "bytes": 78372,
+      "image_url": "https://v3b.fal.media/files/b/0ab25d59/gFHI4c4OeZRCSbEEzGp3u_GNKNEA0u.webp"
+    },
+    "wt-giant-1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip\u2019s back is about as high as Artus\u2019s chest. Image 4 is the exact identity of Gus, a gentle young giant about six times as tall as a boy: broad shoulders, round friendly freckled face, big kind blue eyes, short curly ginger-red hair and a short neat ginger-red beard, a wide straw farmer\u2019s hat, a cream shirt with rolled-up sleeves, green farmer\u2019s dungarees with one very large patch pocket on the chest bib, big brown boots. Scale: Gus is a true giant, about six times as tall as Artus; Artus and Pip together fit easily in his chest pocket. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: Sunny morning on the grass by a small cottage. Gus kneels on one knee and lowers his huge open hand towards Artus; even kneeling, Gus is taller than the cottage door. Artus stands on the grass and reads an unfolded letter with excitement (the paper shows only faint wavy lines, no letters). Pip stands beside Artus and looks up at Gus with growing trust. Only the characters named in the scene appear; no old man. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-gus.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1d75e-6af6-75f0-8a31-a83f8bd26c73",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-6af6-75f0-8a31-a83f8bd26c73",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-6af6-75f0-8a31-a83f8bd26c73/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-6af6-75f0-8a31-a83f8bd26c73/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 104304,
+      "image_url": "https://v3b.fal.media/files/b/0ab25d59/gimKudd4RqB_1irJkNE1A_Z4uCnSKa.webp"
+    },
+    "wt-farm-1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip\u2019s back is about as high as Artus\u2019s chest. Image 4 is the exact identity of Gus, a gentle young giant about six times as tall as a boy: broad shoulders, round friendly freckled face, big kind blue eyes, short curly ginger-red hair and a short neat ginger-red beard, a wide straw farmer\u2019s hat, a cream shirt with rolled-up sleeves, green farmer\u2019s dungarees with one very large patch pocket on the chest bib, big brown boots. Scale: Gus is a true giant, about six times as tall as Artus; Artus and Pip together fit easily in his chest pocket. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: The end of the giant\u2019s farm field: big trees with brown, falling leaves, small grey bean pods, thin carrots. Gus, in his green dungarees and straw hat, sits on the ground, very sad, his huge shoulders down; even sitting he is far taller than Artus. Artus and Pip stand by his big boot, looking around with concern. Soft grey light. Only the characters named in the scene appear; no old man. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-gus.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1d75e-ac9f-7961-b0f2-0c99bdc1f909",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-ac9f-7961-b0f2-0c99bdc1f909",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-ac9f-7961-b0f2-0c99bdc1f909/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-ac9f-7961-b0f2-0c99bdc1f909/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 116400,
+      "image_url": "https://v3b.fal.media/files/b/0ab25d5b/HeLCUSemYzJqiLcLKXllg_lgKkkYTW.webp"
+    },
+    "wt-tower-a2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip\u2019s back is about as high as Artus\u2019s chest. Image 4 is the exact identity of Oren, a very old, kind and slightly silly wizard: very long white hair, a very long soft white beard that reaches his belt, bushy white eyebrows, rosy cheeks, twinkly blue eyes, no glasses, a tall pointed deep-blue hat with small gold stars, a long deep-blue robe with small gold stars and a plain brown belt, a knobbly wooden staff topped with a small glowing white crystal. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: Inside a warm round wizard\u2019s room full of shelves of books, rolled maps and a crackling fireplace. Oren, wearing only his long deep-blue starry robe and tall starry hat, stands beside the fire, looking around puzzled for his hat while his tall starry hat is right on his head. Artus points at the hat and grins; Pip laughs. Only the characters named in the scene appear; no giant. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-oren.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1d75e-bec5-7d13-94f7-3a7c9abad732",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-bec5-7d13-94f7-3a7c9abad732",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-bec5-7d13-94f7-3a7c9abad732/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-bec5-7d13-94f7-3a7c9abad732/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 141704,
+      "image_url": "https://v3b.fal.media/files/b/0ab25d5b/_gAxQAbdWvsZwON6R5_qQ_U8CfBJXX.webp"
+    },
+    "wt-lake-1": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip\u2019s back is about as high as Artus\u2019s chest. Image 4 is the exact identity of Gus, a gentle young giant about six times as tall as a boy: broad shoulders, round friendly freckled face, big kind blue eyes, short curly ginger-red hair and a short neat ginger-red beard, a wide straw farmer\u2019s hat, a cream shirt with rolled-up sleeves, green farmer\u2019s dungarees with one very large patch pocket on the chest bib, big brown boots. Scale: Gus is a true giant, about six times as tall as Artus; Artus and Pip together fit easily in his chest pocket. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: Evening. Gus is a huge giant who fills most of the picture\u2019s height; he wades into a wide, still, dark lake and the water reaches up to his chest pocket. Artus and Pip look down from the pocket into the dark water, worried. On the far side of the lake, on a hill, stands a tall stone tower with a pointed blue roof and a tiny light at its top. Only the characters named in the scene appear; no old man. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-gus.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1d75e-ff05-74e3-9507-92743dc66f01",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-ff05-74e3-9507-92743dc66f01",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-ff05-74e3-9507-92743dc66f01/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75e-ff05-74e3-9507-92743dc66f01/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 79058,
+      "image_url": "https://v3b.fal.media/files/b/0ab25d5d/DDYQe1dfxsKGEtJV0KQfS_62mKDGhS.webp"
+    },
+    "wt-pages-2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip\u2019s back is about as high as Artus\u2019s chest. Image 4 is the exact identity of Gus, a gentle young giant about six times as tall as a boy: broad shoulders, round friendly freckled face, big kind blue eyes, short curly ginger-red hair and a short neat ginger-red beard, a wide straw farmer\u2019s hat, a cream shirt with rolled-up sleeves, green farmer\u2019s dungarees with one very large patch pocket on the chest bib, big brown boots. Scale: Gus is a true giant, about six times as tall as Artus; Artus and Pip together fit easily in his chest pocket. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: At the roots of a huge ancient tree whose bark has a gentle, kind face: Gus kneels behind and tips water from his big straw hat onto the roots; kneeling, he is still three times as tall as Artus. Pip, with very muddy hands and dirt on his nose, proudly holds up a white page he dug out of the dirt. Artus holds a little brown seed in his palm, smiling. Only the characters named in the scene appear; no old man. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-gus.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1d75f-0160-7852-8a0f-bae8def2774b",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75f-0160-7852-8a0f-bae8def2774b",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75f-0160-7852-8a0f-bae8def2774b/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75f-0160-7852-8a0f-bae8def2774b/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 136664,
+      "image_url": "https://v3b.fal.media/files/b/0ab25d5d/6z2rlQpG4vARJ2rvIyBBC_DKT5LvIJ.webp"
+    },
+    "wt-light-2": {
+      "state": "downloaded",
+      "prompt": "Use case: illustration-story. Create one polished landscape 3:2 children\u2019s fantasy storybook painting for a seven-year-old, in the exact painted style of image 1: richly detailed painterly picture book, warm light, tactile moss, stone, wood and water, gentle expressive faces. Image 1 is a style reference only; do not copy its fox, tunnel or composition. Image 2 is the exact identity of Artus, a young boy knight and mage: tousled golden-ginger hair, freckles, green eyes, green botanical tunic, worn silver armour, red scarf and cape. Keep child proportions. Image 3 is the exact identity of Pip, his dragon: orange-gold scales, cream fluffy chest, amber eyes, curved cream horns, blue-grey wing membranes with a pale flame mark, leafy tail tuft. Pip\u2019s back is about as high as Artus\u2019s chest. Image 4 is the exact identity of Oren, a very old, kind and slightly silly wizard: very long white hair, a very long soft white beard that reaches his belt, bushy white eyebrows, rosy cheeks, twinkly blue eyes, no glasses, a tall pointed deep-blue hat with small gold stars, a long deep-blue robe with small gold stars and a plain brown belt, a knobbly wooden staff topped with a small glowing white crystal. Image 5 is the exact identity of Gus, a gentle young giant about six times as tall as a boy: broad shoulders, round friendly freckled face, big kind blue eyes, short curly ginger-red hair and a short neat ginger-red beard, a wide straw farmer\u2019s hat, a cream shirt with rolled-up sleeves, green farmer\u2019s dungarees with one very large patch pocket on the chest bib, big brown boots. Scale: Gus is a true giant, about six times as tall as Artus; Artus and Pip together fit easily in his chest pocket. Only Artus wears armour and a red cape; Gus and Oren never wear armour, capes or scarves. Scene: Morning on top of a green hill beside a small new green sapling tree. Artus, in his silver armour and red cape, holds out both hands; Oren bends down and places a little shining gold star in Artus\u2019s hands. Artus beams. Pip sits beside Artus. Gus stands behind them, smiling shyly. Only the characters named in the scene appear. Draw new natural poses, not the reference poses pasted on. Full scene, edge-to-edge, coherent perspective and shared lighting, natural contact shadows. No text, no letters, no numbers, no writing on pages or signs, no UI, no borders, no panels, no inset portraits. Child-friendly: nothing frightening, no injuries. Keep every named character fully inside the frame unless the scene says otherwise.",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/story-pilot/scenes/fox-call.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/family-review/images/knight-boy-d.webp",
+        "https://ikarus-eth.github.io/Blitzword_app/assets/evolution/pip-stage-1.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-oren.webp",
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/wizard-tower/docs/adventures/wizard-tower/generated/art-characters/ref-gus.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1d75f-406b-77b1-93e7-78193ce5b15d",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75f-406b-77b1-93e7-78193ce5b15d",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75f-406b-77b1-93e7-78193ce5b15d/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1d75f-406b-77b1-93e7-78193ce5b15d/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 99304,
+      "image_url": "https://v3b.fal.media/files/b/0ab25d5e/UGZ5NzwrzXbYSYWPWvO0J_Gj70hUjP.webp"
+    }
+  }
+}
