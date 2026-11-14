@@ -1,0 +1,3034 @@
+{
+ "model": "whisper small.en",
+ "checked": 395,
+ "matched_in_group": 342,
+ "matched_either": 358,
+ "retake": [
+  {
+   "id": "story:wizard-tower:w:bean",
+   "word": "bean",
+   "heard_in_group": "Letter, pocket, farm, carrot, ban, zeg.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:egg",
+   "word": "egg",
+   "heard_in_group": "Letter, pocket, farm, carrot, ban, zeg.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:across",
+   "word": "across",
+   "heard_in_group": "A lake, a cross, a long, below, stone, proud.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:hundred",
+   "word": "hundred",
+   "heard_in_group": "Hill, 100, Above, Silly, Sitting, Beside",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:page",
+   "word": "page",
+   "heard_in_group": "while without, against, pay it, snow, ground.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:a",
+   "word": "a",
+   "heard_in_group": "Zay, sunny, morning, artist, at, home.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:artus",
+   "word": "Artus",
+   "heard_in_group": "Zay, sunny, morning, artist, at, home.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:no",
+   "word": "no",
+   "heard_in_group": "Boom. What. That. Says. Thunder. Now.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:know",
+   "word": "know",
+   "heard_in_group": "All, now, is it down, then, eyes.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sits",
+   "word": "sits",
+   "heard_in_group": "All, now, is it down, then, eyes.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:i",
+   "word": "i",
+   "heard_in_group": "Gus, sai, zu, soup, cake, frum.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:oren",
+   "word": "Oren",
+   "heard_in_group": "For, Warren, old, wizard, who, does.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:brave",
+   "word": "brave",
+   "heard_in_group": "Braves, help, may, come, will, bring.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:me",
+   "word": "me",
+   "heard_in_group": "Braves, help, may, come, will, bring.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:wants",
+   "word": "wants",
+   "heard_in_group": "Once excited, long way away asks",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sit",
+   "word": "sit",
+   "heard_in_group": "but can jump over river zit",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:knows",
+   "word": "knows",
+   "heard_in_group": "Peace. Get. Hungry. This. Smiles. Nose.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:than",
+   "word": "than",
+   "heard_in_group": "There. Better. Then. Boat. Versed. We.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:she",
+   "word": "she",
+   "heard_in_group": "Brown, Chicken, Esi, Horse, Wend, Getz",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:an",
+   "word": "an",
+   "heard_in_group": "and made your with more after.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:too",
+   "word": "too",
+   "heard_in_group": "town, animals, cold, etu, goes, takes",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:path",
+   "word": "path",
+   "heard_in_group": "Must. Now. Back. Paths. Fall. Give.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:two",
+   "word": "two",
+   "heard_in_group": "1. Bird. Flies. 2. Happy. Did.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:how",
+   "word": "how",
+   "heard_in_group": "Ow, water, still, hold, though, stones",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:oh",
+   "word": "oh",
+   "heard_in_group": "Ow, water, still, hold, though, stones",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:eleven",
+   "word": "eleven",
+   "heard_in_group": "11, 12, tired, books, maps, man",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:twelve",
+   "word": "twelve",
+   "heard_in_group": "11, 12, tired, books, maps, man",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:round",
+   "word": "round",
+   "heard_in_group": "Around, hills, a star, farms, a green, heaps of...",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:keeps",
+   "word": "keeps",
+   "heard_in_group": "Around, hills, a star, farms, a green, heaps of...",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:walls",
+   "word": "walls",
+   "heard_in_group": "Everywhere. High. Falls. Wiles. A seas. Other.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sees",
+   "word": "sees",
+   "heard_in_group": "Everywhere. High. Falls. Wiles. A seas. Other.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:under",
+   "word": "under",
+   "heard_in_group": "Thunder, pulls, hot, thanks, sun, work",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:thinks",
+   "word": "thinks",
+   "heard_in_group": "Thunder, pulls, hot, thanks, sun, work",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:face",
+   "word": "face",
+   "heard_in_group": "Idea it's vase looking put roots",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:artus's",
+   "word": "Artus's",
+   "heard_in_group": "Finds, artises, smile, friends, moon, pan",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:four",
+   "word": "four",
+   "heard_in_group": "4. Words. Bigger. Say. Slowly. Sound.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sleeps",
+   "word": "sleeps",
+   "heard_in_group": "People had show as leaps full",
+   "match_in_group": false,
+   "match_alone": false
+  }
+ ],
+ "words": [
+  {
+   "id": "story:wizard-tower:w:giant",
+   "word": "giant",
+   "heard_in_group": "Giant, shy, gentle, friendly, hand, behind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:shy",
+   "word": "shy",
+   "heard_in_group": "Giant, shy, gentle, friendly, hand, behind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:gentle",
+   "word": "gentle",
+   "heard_in_group": "Giant, shy, gentle, friendly, hand, behind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:friendly",
+   "word": "friendly",
+   "heard_in_group": "Giant, shy, gentle, friendly, hand, behind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hand",
+   "word": "hand",
+   "heard_in_group": "Giant, shy, gentle, friendly, hand, behind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:behind",
+   "word": "behind",
+   "heard_in_group": "Giant, shy, gentle, friendly, hand, behind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:letter",
+   "word": "letter",
+   "heard_in_group": "Letter, pocket, farm, carrot, ban, zeg.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:pocket",
+   "word": "pocket",
+   "heard_in_group": "Letter, pocket, farm, carrot, ban, zeg.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:farm",
+   "word": "farm",
+   "heard_in_group": "Letter, pocket, farm, carrot, ban, zeg.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:carrot",
+   "word": "carrot",
+   "heard_in_group": "Letter, pocket, farm, carrot, ban, zeg.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:bean",
+   "word": "bean",
+   "heard_in_group": "Letter, pocket, farm, carrot, ban, zeg.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:egg",
+   "word": "egg",
+   "heard_in_group": "Letter, pocket, farm, carrot, ban, zeg.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:field",
+   "word": "field",
+   "heard_in_group": "field, honey, leaves, zig, road, woods",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:honey",
+   "word": "honey",
+   "heard_in_group": "field, honey, leaves, zig, road, woods",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:leaves",
+   "word": "leaves",
+   "heard_in_group": "field, honey, leaves, zig, road, woods",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sick",
+   "word": "sick",
+   "heard_in_group": "field, honey, leaves, zig, road, woods",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:road",
+   "word": "road",
+   "heard_in_group": "field, honey, leaves, zig, road, woods",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:woods",
+   "word": "woods",
+   "heard_in_group": "field, honey, leaves, zig, road, woods",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:lake",
+   "word": "lake",
+   "heard_in_group": "A lake, a cross, a long, below, stone, proud.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:across",
+   "word": "across",
+   "heard_in_group": "A lake, a cross, a long, below, stone, proud.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:along",
+   "word": "along",
+   "heard_in_group": "A lake, a cross, a long, below, stone, proud.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:below",
+   "word": "below",
+   "heard_in_group": "A lake, a cross, a long, below, stone, proud.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:stone",
+   "word": "stone",
+   "heard_in_group": "A lake, a cross, a long, below, stone, proud.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:proud",
+   "word": "proud",
+   "heard_in_group": "A lake, a cross, a long, below, stone, proud.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hill",
+   "word": "hill",
+   "heard_in_group": "Hill, 100, Above, Silly, Sitting, Beside",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hundred",
+   "word": "hundred",
+   "heard_in_group": "Hill, 100, Above, Silly, Sitting, Beside",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:above",
+   "word": "above",
+   "heard_in_group": "Hill, 100, Above, Silly, Sitting, Beside",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:silly",
+   "word": "silly",
+   "heard_in_group": "Hill, 100, Above, Silly, Sitting, Beside",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:sitting",
+   "word": "sitting",
+   "heard_in_group": "Hill, 100, Above, Silly, Sitting, Beside",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:beside",
+   "word": "beside",
+   "heard_in_group": "Hill, 100, Above, Silly, Sitting, Beside",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hat",
+   "word": "hat",
+   "heard_in_group": "Hat. Until. Jumping. Hop. Stopped. Let.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:until",
+   "word": "until",
+   "heard_in_group": "Hat. Until. Jumping. Hop. Stopped. Let.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:jumping",
+   "word": "jumping",
+   "heard_in_group": "Hat. Until. Jumping. Hop. Stopped. Let.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hop",
+   "word": "hop",
+   "heard_in_group": "Hat. Until. Jumping. Hop. Stopped. Let.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:stopped",
+   "word": "stopped",
+   "heard_in_group": "Hat. Until. Jumping. Hop. Stopped. Let.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:let",
+   "word": "let",
+   "heard_in_group": "Hat. Until. Jumping. Hop. Stopped. Let.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:while",
+   "word": "while",
+   "heard_in_group": "while without, against, pay it, snow, ground.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:without",
+   "word": "without",
+   "heard_in_group": "while without, against, pay it, snow, ground.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:against",
+   "word": "against",
+   "heard_in_group": "while without, against, pay it, snow, ground.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:page",
+   "word": "page",
+   "heard_in_group": "while without, against, pay it, snow, ground.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:snow",
+   "word": "snow",
+   "heard_in_group": "while without, against, pay it, snow, ground.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:ground",
+   "word": "ground",
+   "heard_in_group": "while without, against, pay it, snow, ground.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:root",
+   "word": "root",
+   "heard_in_group": "root, trunk, bark, dirt, dirty, a seed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:trunk",
+   "word": "trunk",
+   "heard_in_group": "root, trunk, bark, dirt, dirty, a seed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:bark",
+   "word": "bark",
+   "heard_in_group": "root, trunk, bark, dirt, dirty, a seed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:dirt",
+   "word": "dirt",
+   "heard_in_group": "root, trunk, bark, dirt, dirty, a seed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:dirty",
+   "word": "dirty",
+   "heard_in_group": "root, trunk, bark, dirt, dirty, a seed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:seed",
+   "word": "seed",
+   "heard_in_group": "root, trunk, bark, dirt, dirty, a seed",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:second",
+   "word": "second",
+   "heard_in_group": "Second, third, fourth, cup, sweet, cookie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:third",
+   "word": "third",
+   "heard_in_group": "Second, third, fourth, cup, sweet, cookie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:fourth",
+   "word": "fourth",
+   "heard_in_group": "Second, third, fourth, cup, sweet, cookie.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:cup",
+   "word": "cup",
+   "heard_in_group": "Second, third, fourth, cup, sweet, cookie.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sweet",
+   "word": "sweet",
+   "heard_in_group": "Second, third, fourth, cup, sweet, cookie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:cookie",
+   "word": "cookie",
+   "heard_in_group": "Second, third, fourth, cup, sweet, cookie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:chocolate",
+   "word": "chocolate",
+   "heard_in_group": "Chocolate. Word. Village. Men. Mother. Father.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:word",
+   "word": "word",
+   "heard_in_group": "Chocolate. Word. Village. Men. Mother. Father.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:village",
+   "word": "village",
+   "heard_in_group": "Chocolate. Word. Village. Men. Mother. Father.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:men",
+   "word": "men",
+   "heard_in_group": "Chocolate. Word. Village. Men. Mother. Father.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:mother",
+   "word": "mother",
+   "heard_in_group": "Chocolate. Word. Village. Men. Mother. Father.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:father",
+   "word": "father",
+   "heard_in_group": "Chocolate. Word. Village. Men. Mother. Father.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:boy",
+   "word": "boy",
+   "heard_in_group": "Boy, a thousand, a plate, bowl, it is",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:thousand",
+   "word": "thousand",
+   "heard_in_group": "Boy, a thousand, a plate, bowl, it is",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:plate",
+   "word": "plate",
+   "heard_in_group": "Boy, a thousand, a plate, bowl, it is",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:bowl",
+   "word": "bowl",
+   "heard_in_group": "Boy, a thousand, a plate, bowl, it is",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:it",
+   "word": "it",
+   "heard_in_group": "Boy, a thousand, a plate, bowl, it is",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:is",
+   "word": "is",
+   "heard_in_group": "Boy, a thousand, a plate, bowl, it is",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:a",
+   "word": "a",
+   "heard_in_group": "Zay, sunny, morning, artist, at, home.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sunny",
+   "word": "sunny",
+   "heard_in_group": "Zay, sunny, morning, artist, at, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:morning",
+   "word": "morning",
+   "heard_in_group": "Zay, sunny, morning, artist, at, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:artus",
+   "word": "Artus",
+   "heard_in_group": "Zay, sunny, morning, artist, at, home.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:at",
+   "word": "at",
+   "heard_in_group": "Zay, sunny, morning, artist, at, home.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:home",
+   "word": "home",
+   "heard_in_group": "Zay, sunny, morning, artist, at, home.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:and",
+   "word": "and",
+   "heard_in_group": "And he reads book about magic.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:he",
+   "word": "he",
+   "heard_in_group": "And he reads book about magic.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:reads",
+   "word": "reads",
+   "heard_in_group": "And he reads book about magic.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:book",
+   "word": "book",
+   "heard_in_group": "And he reads book about magic.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:about",
+   "word": "about",
+   "heard_in_group": "And he reads book about magic.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:magic",
+   "word": "magic",
+   "heard_in_group": "And he reads book about magic.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:pip",
+   "word": "Pip",
+   "heard_in_group": "Pip, buy, the, fire, eats, bread.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:by",
+   "word": "by",
+   "heard_in_group": "Pip, buy, the, fire, eats, bread.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:the",
+   "word": "the",
+   "heard_in_group": "Pip, buy, the, fire, eats, bread.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:fire",
+   "word": "fire",
+   "heard_in_group": "Pip, buy, the, fire, eats, bread.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:eats",
+   "word": "eats",
+   "heard_in_group": "Pip, buy, the, fire, eats, bread.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:bread",
+   "word": "bread",
+   "heard_in_group": "Pip, buy, the, fire, eats, bread.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:cheese",
+   "word": "cheese",
+   "heard_in_group": "Cheese, then, house, starts, to, uh, move.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:then",
+   "word": "then",
+   "heard_in_group": "Cheese, then, house, starts, to, uh, move.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:house",
+   "word": "house",
+   "heard_in_group": "Cheese, then, house, starts, to, uh, move.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:starts",
+   "word": "starts",
+   "heard_in_group": "Cheese, then, house, starts, to, uh, move.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:to",
+   "word": "to",
+   "heard_in_group": "Cheese, then, house, starts, to, uh, move.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:move",
+   "word": "move",
+   "heard_in_group": "Cheese, then, house, starts, to, uh, move.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:boom",
+   "word": "boom",
+   "heard_in_group": "Boom. What. That. Says. Thunder. Now.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:what",
+   "word": "what",
+   "heard_in_group": "Boom. What. That. Says. Thunder. Now.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:that",
+   "word": "that",
+   "heard_in_group": "Boom. What. That. Says. Thunder. Now.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:says",
+   "word": "says",
+   "heard_in_group": "Boom. What. That. Says. Thunder. Now.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:thunder",
+   "word": "thunder",
+   "heard_in_group": "Boom. What. That. Says. Thunder. Now.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:no",
+   "word": "no",
+   "heard_in_group": "Boom. What. That. Says. Thunder. Now.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sky",
+   "word": "sky",
+   "heard_in_group": "Sky blue not it stops it looks out",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:blue",
+   "word": "blue",
+   "heard_in_group": "Sky blue not it stops it looks out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:not",
+   "word": "not",
+   "heard_in_group": "Sky blue not it stops it looks out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:stops",
+   "word": "stops",
+   "heard_in_group": "Sky blue not it stops it looks out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:looks",
+   "word": "looks",
+   "heard_in_group": "Sky blue not it stops it looks out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:out",
+   "word": "out",
+   "heard_in_group": "Sky blue not it stops it looks out",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:of",
+   "word": "of",
+   "heard_in_group": "of window up as tall tree",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:window",
+   "word": "window",
+   "heard_in_group": "of window up as tall tree",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:up",
+   "word": "up",
+   "heard_in_group": "of window up as tall tree",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:as",
+   "word": "as",
+   "heard_in_group": "of window up as tall tree",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:tall",
+   "word": "tall",
+   "heard_in_group": "of window up as tall tree",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:tree",
+   "word": "tree",
+   "heard_in_group": "of window up as tall tree",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:has",
+   "word": "has",
+   "heard_in_group": "has red, hair, big, beard, very",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:red",
+   "word": "red",
+   "heard_in_group": "has red, hair, big, beard, very",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hair",
+   "word": "hair",
+   "heard_in_group": "has red, hair, big, beard, very",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:big",
+   "word": "big",
+   "heard_in_group": "has red, hair, big, beard, very",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:beard",
+   "word": "beard",
+   "heard_in_group": "has red, hair, big, beard, very",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:very",
+   "word": "very",
+   "heard_in_group": "has red, hair, big, beard, very",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hides",
+   "word": "hides",
+   "heard_in_group": "hides, door, giants, meat, little, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:door",
+   "word": "door",
+   "heard_in_group": "hides, door, giants, meat, little, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:giants",
+   "word": "giants",
+   "heard_in_group": "hides, door, giants, meat, little, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:eat",
+   "word": "eat",
+   "heard_in_group": "hides, door, giants, meat, little, dragons.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:little",
+   "word": "little",
+   "heard_in_group": "hides, door, giants, meat, little, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:dragons",
+   "word": "dragons",
+   "heard_in_group": "hides, door, giants, meat, little, dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:all",
+   "word": "all",
+   "heard_in_group": "All, now, is it down, then, eyes.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:know",
+   "word": "know",
+   "heard_in_group": "All, now, is it down, then, eyes.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sits",
+   "word": "sits",
+   "heard_in_group": "All, now, is it down, then, eyes.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:down",
+   "word": "down",
+   "heard_in_group": "All, now, is it down, then, eyes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:in",
+   "word": "in",
+   "heard_in_group": "All, now, is it down, then, eyes.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:eyes",
+   "word": "eyes",
+   "heard_in_group": "All, now, is it down, then, eyes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:they",
+   "word": "they",
+   "heard_in_group": "They are kind, hello, small, voice.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:are",
+   "word": "are",
+   "heard_in_group": "They are kind, hello, small, voice.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:kind",
+   "word": "kind",
+   "heard_in_group": "They are kind, hello, small, voice.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hello",
+   "word": "hello",
+   "heard_in_group": "They are kind, hello, small, voice.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:small",
+   "word": "small",
+   "heard_in_group": "They are kind, hello, small, voice.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:voice",
+   "word": "voice",
+   "heard_in_group": "They are kind, hello, small, voice.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:please",
+   "word": "please",
+   "heard_in_group": "Please, don't, be, afraid, my, name.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:don't",
+   "word": "don't",
+   "heard_in_group": "Please, don't, be, afraid, my, name.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:be",
+   "word": "be",
+   "heard_in_group": "Please, don't, be, afraid, my, name.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:afraid",
+   "word": "afraid",
+   "heard_in_group": "Please, don't, be, afraid, my, name.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:my",
+   "word": "my",
+   "heard_in_group": "Please, don't, be, afraid, my, name.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:name",
+   "word": "name",
+   "heard_in_group": "Please, don't, be, afraid, my, name.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:gus",
+   "word": "Gus",
+   "heard_in_group": "Gus, sai, zu, soup, cake, frum.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:i",
+   "word": "i",
+   "heard_in_group": "Gus, sai, zu, soup, cake, frum.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:do",
+   "word": "do",
+   "heard_in_group": "Gus, sai, zu, soup, cake, frum.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:soup",
+   "word": "soup",
+   "heard_in_group": "Gus, sai, zu, soup, cake, frum.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:cake",
+   "word": "cake",
+   "heard_in_group": "Gus, sai, zu, soup, cake, frum.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:from",
+   "word": "from",
+   "heard_in_group": "Gus, sai, zu, soup, cake, frum.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:like",
+   "word": "like",
+   "heard_in_group": "Like, you, already, his, hands, have.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:you",
+   "word": "you",
+   "heard_in_group": "Like, you, already, his, hands, have.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:already",
+   "word": "already",
+   "heard_in_group": "Like, you, already, his, hands, have.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:his",
+   "word": "his",
+   "heard_in_group": "Like, you, already, his, hands, have.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hands",
+   "word": "hands",
+   "heard_in_group": "Like, you, already, his, hands, have.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:have",
+   "word": "have",
+   "heard_in_group": "Like, you, already, his, hands, have.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:for",
+   "word": "for",
+   "heard_in_group": "For, Warren, old, wizard, who, does.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:oren",
+   "word": "Oren",
+   "heard_in_group": "For, Warren, old, wizard, who, does.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:old",
+   "word": "old",
+   "heard_in_group": "For, Warren, old, wizard, who, does.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:wizard",
+   "word": "wizard",
+   "heard_in_group": "For, Warren, old, wizard, who, does.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:who",
+   "word": "who",
+   "heard_in_group": "For, Warren, old, wizard, who, does.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:does",
+   "word": "does",
+   "heard_in_group": "For, Warren, old, wizard, who, does.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:holds",
+   "word": "holds",
+   "heard_in_group": "Holds. Opens. AM. Tower. Well. Naid.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:opens",
+   "word": "opens",
+   "heard_in_group": "Holds. Opens. AM. Tower. Well. Naid.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:am",
+   "word": "am",
+   "heard_in_group": "Holds. Opens. AM. Tower. Well. Naid.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:tower",
+   "word": "tower",
+   "heard_in_group": "Holds. Opens. AM. Tower. Well. Naid.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:well",
+   "word": "well",
+   "heard_in_group": "Holds. Opens. AM. Tower. Well. Naid.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:need",
+   "word": "need",
+   "heard_in_group": "Holds. Opens. AM. Tower. Well. Naid.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:brave",
+   "word": "brave",
+   "heard_in_group": "Braves, help, may, come, will, bring.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:help",
+   "word": "help",
+   "heard_in_group": "Braves, help, may, come, will, bring.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:me",
+   "word": "me",
+   "heard_in_group": "Braves, help, may, come, will, bring.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:come",
+   "word": "come",
+   "heard_in_group": "Braves, help, may, come, will, bring.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:will",
+   "word": "will",
+   "heard_in_group": "Braves, help, may, come, will, bring.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:bring",
+   "word": "bring",
+   "heard_in_group": "Braves, help, may, come, will, bring.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:wants",
+   "word": "wants",
+   "heard_in_group": "Once excited, long way away asks",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:excited",
+   "word": "excited",
+   "heard_in_group": "Once excited, long way away asks",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:long",
+   "word": "long",
+   "heard_in_group": "Once excited, long way away asks",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:way",
+   "word": "way",
+   "heard_in_group": "Once excited, long way away asks",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:away",
+   "word": "away",
+   "heard_in_group": "Once excited, long way away asks",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:asks",
+   "word": "asks",
+   "heard_in_group": "Once excited, long way away asks",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:but",
+   "word": "but",
+   "heard_in_group": "but can jump over river zit",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:can",
+   "word": "can",
+   "heard_in_group": "but can jump over river zit",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:jump",
+   "word": "jump",
+   "heard_in_group": "but can jump over river zit",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:over",
+   "word": "over",
+   "heard_in_group": "but can jump over river zit",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:river",
+   "word": "river",
+   "heard_in_group": "but can jump over river zit",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:sit",
+   "word": "sit",
+   "heard_in_group": "but can jump over river zit",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:puts",
+   "word": "puts",
+   "heard_in_group": "Puts map some food bag lot",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:map",
+   "word": "map",
+   "heard_in_group": "Puts map some food bag lot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:some",
+   "word": "some",
+   "heard_in_group": "Puts map some food bag lot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:food",
+   "word": "food",
+   "heard_in_group": "Puts map some food bag lot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:bag",
+   "word": "bag",
+   "heard_in_group": "Puts map some food bag lot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:lot",
+   "word": "lot",
+   "heard_in_group": "Puts map some food bag lot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:piece",
+   "word": "piece",
+   "heard_in_group": "Peace. Get. Hungry. This. Smiles. Nose.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:get",
+   "word": "get",
+   "heard_in_group": "Peace. Get. Hungry. This. Smiles. Nose.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hungry",
+   "word": "hungry",
+   "heard_in_group": "Peace. Get. Hungry. This. Smiles. Nose.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:this",
+   "word": "this",
+   "heard_in_group": "Peace. Get. Hungry. This. Smiles. Nose.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:smiles",
+   "word": "smiles",
+   "heard_in_group": "Peace. Get. Hungry. This. Smiles. Nose.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:knows",
+   "word": "knows",
+   "heard_in_group": "Peace. Get. Hungry. This. Smiles. Nose.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:on",
+   "word": "on",
+   "heard_in_group": "On. Warm. Them. Room. There. Tomato.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:warm",
+   "word": "warm",
+   "heard_in_group": "On. Warm. Them. Room. There. Tomato.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:them",
+   "word": "them",
+   "heard_in_group": "On. Warm. Them. Room. There. Tomato.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:room",
+   "word": "room",
+   "heard_in_group": "On. Warm. Them. Room. There. Tomato.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:there",
+   "word": "there",
+   "heard_in_group": "On. Warm. Them. Room. There. Tomato.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:tomato",
+   "word": "tomato",
+   "heard_in_group": "On. Warm. Them. Room. There. Tomato.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:walks",
+   "word": "walks",
+   "heard_in_group": "Walks. Soon. Go. Trees. Forest. Wind.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:soon",
+   "word": "soon",
+   "heard_in_group": "Walks. Soon. Go. Trees. Forest. Wind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:go",
+   "word": "go",
+   "heard_in_group": "Walks. Soon. Go. Trees. Forest. Wind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:trees",
+   "word": "trees",
+   "heard_in_group": "Walks. Soon. Go. Trees. Forest. Wind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:forest",
+   "word": "forest",
+   "heard_in_group": "Walks. Soon. Go. Trees. Forest. Wind.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:wind",
+   "word": "wind",
+   "heard_in_group": "Walks. Soon. Go. Trees. Forest. Wind.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:their",
+   "word": "their",
+   "heard_in_group": "There. Better. Then. Boat. Versed. We.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:better",
+   "word": "better",
+   "heard_in_group": "There. Better. Then. Boat. Versed. We.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:than",
+   "word": "than",
+   "heard_in_group": "There. Better. Then. Boat. Versed. We.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:boat",
+   "word": "boat",
+   "heard_in_group": "There. Better. Then. Boat. Versed. We.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:first",
+   "word": "first",
+   "heard_in_group": "There. Better. Then. Boat. Versed. We.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:we",
+   "word": "we",
+   "heard_in_group": "There. Better. Then. Boat. Versed. We.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:stop",
+   "word": "stop",
+   "heard_in_group": "Stop, where, lunch, time, castle, around.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:where",
+   "word": "where",
+   "heard_in_group": "Stop, where, lunch, time, castle, around.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:lunch",
+   "word": "lunch",
+   "heard_in_group": "Stop, where, lunch, time, castle, around.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:time",
+   "word": "time",
+   "heard_in_group": "Stop, where, lunch, time, castle, around.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:castle",
+   "word": "castle",
+   "heard_in_group": "Stop, where, lunch, time, castle, around.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:around",
+   "word": "around",
+   "heard_in_group": "Stop, where, lunch, time, castle, around.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:beans",
+   "word": "beans",
+   "heard_in_group": "Bands. Boats. Tomatoes. Every. Bell. Yes.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:boats",
+   "word": "boats",
+   "heard_in_group": "Bands. Boats. Tomatoes. Every. Bell. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:tomatoes",
+   "word": "tomatoes",
+   "heard_in_group": "Bands. Boats. Tomatoes. Every. Bell. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:every",
+   "word": "every",
+   "heard_in_group": "Bands. Boats. Tomatoes. Every. Bell. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:ball",
+   "word": "ball",
+   "heard_in_group": "Bands. Boats. Tomatoes. Every. Bell. Yes.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:yes",
+   "word": "yes",
+   "heard_in_group": "Bands. Boats. Tomatoes. Every. Bell. Yes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:gives",
+   "word": "gives",
+   "heard_in_group": "gives, night, light, comes, makes, strong.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:night",
+   "word": "night",
+   "heard_in_group": "gives, night, light, comes, makes, strong.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:light",
+   "word": "light",
+   "heard_in_group": "gives, night, light, comes, makes, strong.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:comes",
+   "word": "comes",
+   "heard_in_group": "gives, night, light, comes, makes, strong.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:makes",
+   "word": "makes",
+   "heard_in_group": "gives, night, light, comes, makes, strong.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:strong",
+   "word": "strong",
+   "heard_in_group": "gives, night, light, comes, makes, strong.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:brown",
+   "word": "brown",
+   "heard_in_group": "Brown, Chicken, Esi, Horse, Wend, Getz",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:chicken",
+   "word": "chicken",
+   "heard_in_group": "Brown, Chicken, Esi, Horse, Wend, Getz",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:she",
+   "word": "she",
+   "heard_in_group": "Brown, Chicken, Esi, Horse, Wend, Getz",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:horse",
+   "word": "horse",
+   "heard_in_group": "Brown, Chicken, Esi, Horse, Wend, Getz",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:when",
+   "word": "when",
+   "heard_in_group": "Brown, Chicken, Esi, Horse, Wend, Getz",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:gets",
+   "word": "gets",
+   "heard_in_group": "Brown, Chicken, Esi, Horse, Wend, Getz",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:an",
+   "word": "an",
+   "heard_in_group": "and made your with more after.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:made",
+   "word": "made",
+   "heard_in_group": "and made your with more after.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:your",
+   "word": "your",
+   "heard_in_group": "and made your with more after.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:with",
+   "word": "with",
+   "heard_in_group": "and made your with more after.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:more",
+   "word": "more",
+   "heard_in_group": "and made your with more after.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:after",
+   "word": "after",
+   "heard_in_group": "and made your with more after.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:shows",
+   "word": "shows",
+   "heard_in_group": "Shows good and gray carrots thin",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:good",
+   "word": "good",
+   "heard_in_group": "Shows good and gray carrots thin",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:end",
+   "word": "end",
+   "heard_in_group": "Shows good and gray carrots thin",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:grey",
+   "word": "grey",
+   "heard_in_group": "Shows good and gray carrots thin",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:carrots",
+   "word": "carrots",
+   "heard_in_group": "Shows good and gray carrots thin",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:thin",
+   "word": "thin",
+   "heard_in_group": "Shows good and gray carrots thin",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:why",
+   "word": "why",
+   "heard_in_group": "Why? Sad. Bright. Day. Just. Land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:sad",
+   "word": "sad",
+   "heard_in_group": "Why? Sad. Bright. Day. Just. Land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:bright",
+   "word": "bright",
+   "heard_in_group": "Why? Sad. Bright. Day. Just. Land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:day",
+   "word": "day",
+   "heard_in_group": "Why? Sad. Bright. Day. Just. Land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:just",
+   "word": "just",
+   "heard_in_group": "Why? Sad. Bright. Day. Just. Land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:land",
+   "word": "land",
+   "heard_in_group": "Why? Sad. Bright. Day. Just. Land.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:town",
+   "word": "town",
+   "heard_in_group": "town, animals, cold, etu, goes, takes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:animals",
+   "word": "animals",
+   "heard_in_group": "town, animals, cold, etu, goes, takes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:cold",
+   "word": "cold",
+   "heard_in_group": "town, animals, cold, etu, goes, takes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:too",
+   "word": "too",
+   "heard_in_group": "town, animals, cold, etu, goes, takes",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:goes",
+   "word": "goes",
+   "heard_in_group": "town, animals, cold, etu, goes, takes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:takes",
+   "word": "takes",
+   "heard_in_group": "town, animals, cold, etu, goes, takes",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:here",
+   "word": "here",
+   "heard_in_group": "Here, helps, thank, friend, stands, needs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:helps",
+   "word": "helps",
+   "heard_in_group": "Here, helps, thank, friend, stands, needs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:thank",
+   "word": "thank",
+   "heard_in_group": "Here, helps, thank, friend, stands, needs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:friend",
+   "word": "friend",
+   "heard_in_group": "Here, helps, thank, friend, stands, needs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:stands",
+   "word": "stands",
+   "heard_in_group": "Here, helps, thank, friend, stands, needs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:needs",
+   "word": "needs",
+   "heard_in_group": "Here, helps, thank, friend, stands, needs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:must",
+   "word": "must",
+   "heard_in_group": "Must. Now. Back. Paths. Fall. Give.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:now",
+   "word": "now",
+   "heard_in_group": "Must. Now. Back. Paths. Fall. Give.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:back",
+   "word": "back",
+   "heard_in_group": "Must. Now. Back. Paths. Fall. Give.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:path",
+   "word": "path",
+   "heard_in_group": "Must. Now. Back. Paths. Fall. Give.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:fall",
+   "word": "fall",
+   "heard_in_group": "Must. Now. Back. Paths. Fall. Give.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:give",
+   "word": "give",
+   "heard_in_group": "Must. Now. Back. Paths. Fall. Give.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:take",
+   "word": "take",
+   "heard_in_group": "Take into dark, quiet, careful look.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:into",
+   "word": "into",
+   "heard_in_group": "Take into dark, quiet, careful look.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:dark",
+   "word": "dark",
+   "heard_in_group": "Take into dark, quiet, careful look.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:quiet",
+   "word": "quiet",
+   "heard_in_group": "Take into dark, quiet, careful look.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:careful",
+   "word": "careful",
+   "heard_in_group": "Take into dark, quiet, careful look.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:look",
+   "word": "look",
+   "heard_in_group": "Take into dark, quiet, careful look.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:birds",
+   "word": "birds",
+   "heard_in_group": "Birds, can't, fly, going, jumps, again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:can't",
+   "word": "can't",
+   "heard_in_group": "Birds, can't, fly, going, jumps, again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:fly",
+   "word": "fly",
+   "heard_in_group": "Birds, can't, fly, going, jumps, again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:going",
+   "word": "going",
+   "heard_in_group": "Birds, can't, fly, going, jumps, again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:jumps",
+   "word": "jumps",
+   "heard_in_group": "Birds, can't, fly, going, jumps, again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:again",
+   "word": "again",
+   "heard_in_group": "Birds, can't, fly, going, jumps, again.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:one",
+   "word": "one",
+   "heard_in_group": "1. Bird. Flies. 2. Happy. Did.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:bird",
+   "word": "bird",
+   "heard_in_group": "1. Bird. Flies. 2. Happy. Did.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:flies",
+   "word": "flies",
+   "heard_in_group": "1. Bird. Flies. 2. Happy. Did.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:two",
+   "word": "two",
+   "heard_in_group": "1. Bird. Flies. 2. Happy. Did.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:happy",
+   "word": "happy",
+   "heard_in_group": "1. Bird. Flies. 2. Happy. Did.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:did",
+   "word": "did",
+   "heard_in_group": "1. Bird. Flies. 2. Happy. Did.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:see",
+   "word": "see",
+   "heard_in_group": "A sea, dragon, best, snack, hymn, walk.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:dragon",
+   "word": "dragon",
+   "heard_in_group": "A sea, dragon, best, snack, hymn, walk.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:best",
+   "word": "best",
+   "heard_in_group": "A sea, dragon, best, snack, hymn, walk.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:snack",
+   "word": "snack",
+   "heard_in_group": "A sea, dragon, best, snack, hymn, walk.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:him",
+   "word": "him",
+   "heard_in_group": "A sea, dragon, best, snack, hymn, walk.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:walk",
+   "word": "walk",
+   "heard_in_group": "A sea, dragon, best, snack, hymn, walk.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:how",
+   "word": "how",
+   "heard_in_group": "Ow, water, still, hold, though, stones",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:water",
+   "word": "water",
+   "heard_in_group": "Ow, water, still, hold, though, stones",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:still",
+   "word": "still",
+   "heard_in_group": "Ow, water, still, hold, though, stones",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hold",
+   "word": "hold",
+   "heard_in_group": "Ow, water, still, hold, though, stones",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:oh",
+   "word": "oh",
+   "heard_in_group": "Ow, water, still, hold, though, stones",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:stones",
+   "word": "stones",
+   "heard_in_group": "Ow, water, still, hold, though, stones",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:if",
+   "word": "if",
+   "heard_in_group": "If, make, spell, white, three, worried.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:make",
+   "word": "make",
+   "heard_in_group": "If, make, spell, white, three, worried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:spell",
+   "word": "spell",
+   "heard_in_group": "If, make, spell, white, three, worried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:white",
+   "word": "white",
+   "heard_in_group": "If, make, spell, white, three, worried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:three",
+   "word": "three",
+   "heard_in_group": "If, make, spell, white, three, worried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:worried",
+   "word": "worried",
+   "heard_in_group": "If, make, spell, white, three, worried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:top",
+   "word": "top",
+   "heard_in_group": "Top. Clouds. Wait. So. Stairs. Ten.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:clouds",
+   "word": "clouds",
+   "heard_in_group": "Top. Clouds. Wait. So. Stairs. Ten.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:wait",
+   "word": "wait",
+   "heard_in_group": "Top. Clouds. Wait. So. Stairs. Ten.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:so",
+   "word": "so",
+   "heard_in_group": "Top. Clouds. Wait. So. Stairs. Ten.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:stairs",
+   "word": "stairs",
+   "heard_in_group": "Top. Clouds. Wait. So. Stairs. Ten.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:ten",
+   "word": "ten",
+   "heard_in_group": "Top. Clouds. Wait. So. Stairs. Ten.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:eleven",
+   "word": "eleven",
+   "heard_in_group": "11, 12, tired, books, maps, man",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:twelve",
+   "word": "twelve",
+   "heard_in_group": "11, 12, tired, books, maps, man",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:tired",
+   "word": "tired",
+   "heard_in_group": "11, 12, tired, books, maps, man",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:books",
+   "word": "books",
+   "heard_in_group": "11, 12, tired, books, maps, man",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:maps",
+   "word": "maps",
+   "heard_in_group": "11, 12, tired, books, maps, man",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:man",
+   "word": "man",
+   "heard_in_group": "11, 12, tired, books, maps, man",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:gold",
+   "word": "gold",
+   "heard_in_group": "Gold, stars, find, head, orange, only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:stars",
+   "word": "stars",
+   "heard_in_group": "Gold, stars, find, head, orange, only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:find",
+   "word": "find",
+   "heard_in_group": "Gold, stars, find, head, orange, only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:head",
+   "word": "head",
+   "heard_in_group": "Gold, stars, find, head, orange, only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:oren's",
+   "word": "Oren's",
+   "heard_in_group": "Gold, stars, find, head, orange, only.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:only",
+   "word": "only",
+   "heard_in_group": "Gold, stars, find, head, orange, only.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:round",
+   "word": "round",
+   "heard_in_group": "Around, hills, a star, farms, a green, heaps of...",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:hills",
+   "word": "hills",
+   "heard_in_group": "Around, hills, a star, farms, a green, heaps of...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:star",
+   "word": "star",
+   "heard_in_group": "Around, hills, a star, farms, a green, heaps of...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:farms",
+   "word": "farms",
+   "heard_in_group": "Around, hills, a star, farms, a green, heaps of...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:green",
+   "word": "green",
+   "heard_in_group": "Around, hills, a star, farms, a green, heaps of...",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:keeps",
+   "word": "keeps",
+   "heard_in_group": "Around, hills, a star, farms, a green, heaps of...",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:years",
+   "word": "years",
+   "heard_in_group": "Years, new, letters, read, yet, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:new",
+   "word": "new",
+   "heard_in_group": "Years, new, letters, read, yet, think.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:letters",
+   "word": "letters",
+   "heard_in_group": "Years, new, letters, read, yet, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:read",
+   "word": "read",
+   "heard_in_group": "Years, new, letters, read, yet, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:yet",
+   "word": "yet",
+   "heard_in_group": "Years, new, letters, read, yet, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:think",
+   "word": "think",
+   "heard_in_group": "Years, new, letters, read, yet, think.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:everywhere",
+   "word": "everywhere",
+   "heard_in_group": "Everywhere. High. Falls. Wiles. A seas. Other.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:high",
+   "word": "high",
+   "heard_in_group": "Everywhere. High. Falls. Wiles. A seas. Other.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:falls",
+   "word": "falls",
+   "heard_in_group": "Everywhere. High. Falls. Wiles. A seas. Other.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:walls",
+   "word": "walls",
+   "heard_in_group": "Everywhere. High. Falls. Wiles. A seas. Other.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sees",
+   "word": "sees",
+   "heard_in_group": "Everywhere. High. Falls. Wiles. A seas. Other.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:other",
+   "word": "other",
+   "heard_in_group": "Everywhere. High. Falls. Wiles. A seas. Other.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:want",
+   "word": "want",
+   "heard_in_group": "Want, hear, love, mum, pages, was",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:hear",
+   "word": "hear",
+   "heard_in_group": "Want, hear, love, mum, pages, was",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:love",
+   "word": "love",
+   "heard_in_group": "Want, hear, love, mum, pages, was",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:mum",
+   "word": "mum",
+   "heard_in_group": "Want, hear, love, mum, pages, was",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:pages",
+   "word": "pages",
+   "heard_in_group": "Want, hear, love, mum, pages, was",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:was",
+   "word": "was",
+   "heard_in_group": "Want, hear, love, mum, pages, was",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:open",
+   "word": "open",
+   "heard_in_group": "Open. Got. Mountain. Let's. Right. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:got",
+   "word": "got",
+   "heard_in_group": "Open. Got. Mountain. Let's. Right. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:mountain",
+   "word": "mountain",
+   "heard_in_group": "Open. Got. Mountain. Let's. Right. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:let's",
+   "word": "let's",
+   "heard_in_group": "Open. Got. Mountain. Let's. Right. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:right",
+   "word": "right",
+   "heard_in_group": "Open. Got. Mountain. Let's. Right. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:wings",
+   "word": "wings",
+   "heard_in_group": "Open. Got. Mountain. Let's. Right. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:under",
+   "word": "under",
+   "heard_in_group": "Thunder, pulls, hot, thanks, sun, work",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:pulls",
+   "word": "pulls",
+   "heard_in_group": "Thunder, pulls, hot, thanks, sun, work",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:hot",
+   "word": "hot",
+   "heard_in_group": "Thunder, pulls, hot, thanks, sun, work",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:thinks",
+   "word": "thinks",
+   "heard_in_group": "Thunder, pulls, hot, thanks, sun, work",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:sun",
+   "word": "sun",
+   "heard_in_group": "Thunder, pulls, hot, thanks, sun, work",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:work",
+   "word": "work",
+   "heard_in_group": "Thunder, pulls, hot, thanks, sun, work",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:idea",
+   "word": "idea",
+   "heard_in_group": "Idea it's vase looking put roots",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:its",
+   "word": "its",
+   "heard_in_group": "Idea it's vase looking put roots",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:face",
+   "word": "face",
+   "heard_in_group": "Idea it's vase looking put roots",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:looking",
+   "word": "looking",
+   "heard_in_group": "Idea it's vase looking put roots",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:put",
+   "word": "put",
+   "heard_in_group": "Idea it's vase looking put roots",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:roots",
+   "word": "roots",
+   "heard_in_group": "Idea it's vase looking put roots",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:finds",
+   "word": "finds",
+   "heard_in_group": "Finds, artises, smile, friends, moon, pan",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:artus's",
+   "word": "Artus's",
+   "heard_in_group": "Finds, artises, smile, friends, moon, pan",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:smile",
+   "word": "smile",
+   "heard_in_group": "Finds, artises, smile, friends, moon, pan",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:friends",
+   "word": "friends",
+   "heard_in_group": "Finds, artises, smile, friends, moon, pan",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:moon",
+   "word": "moon",
+   "heard_in_group": "Finds, artises, smile, friends, moon, pan",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:pan",
+   "word": "pan",
+   "heard_in_group": "Finds, artises, smile, friends, moon, pan",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:biggest",
+   "word": "biggest",
+   "heard_in_group": "Biggest drinks once cookies many almost",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:drinks",
+   "word": "drinks",
+   "heard_in_group": "Biggest drinks once cookies many almost",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:once",
+   "word": "once",
+   "heard_in_group": "Biggest drinks once cookies many almost",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:cookies",
+   "word": "cookies",
+   "heard_in_group": "Biggest drinks once cookies many almost",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:many",
+   "word": "many",
+   "heard_in_group": "Biggest drinks once cookies many almost",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:almost",
+   "word": "almost",
+   "heard_in_group": "Biggest drinks once cookies many almost",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:four",
+   "word": "four",
+   "heard_in_group": "4. Words. Bigger. Say. Slowly. Sound.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:words",
+   "word": "words",
+   "heard_in_group": "4. Words. Bigger. Say. Slowly. Sound.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:bigger",
+   "word": "bigger",
+   "heard_in_group": "4. Words. Bigger. Say. Slowly. Sound.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:say",
+   "word": "say",
+   "heard_in_group": "4. Words. Bigger. Say. Slowly. Sound.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:slowly",
+   "word": "slowly",
+   "heard_in_group": "4. Words. Bigger. Say. Slowly. Sound.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:sound",
+   "word": "sound",
+   "heard_in_group": "4. Words. Bigger. Say. Slowly. Sound.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:houses",
+   "word": "houses",
+   "heard_in_group": "Houses were mothers, fathers, girls, boys.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:were",
+   "word": "were",
+   "heard_in_group": "Houses were mothers, fathers, girls, boys.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:mothers",
+   "word": "mothers",
+   "heard_in_group": "Houses were mothers, fathers, girls, boys.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:fathers",
+   "word": "fathers",
+   "heard_in_group": "Houses were mothers, fathers, girls, boys.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:girls",
+   "word": "girls",
+   "heard_in_group": "Houses were mothers, fathers, girls, boys.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:boys",
+   "word": "boys",
+   "heard_in_group": "Houses were mothers, fathers, girls, boys.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:people",
+   "word": "people",
+   "heard_in_group": "People had show as leaps full",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:had",
+   "word": "had",
+   "heard_in_group": "People had show as leaps full",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:show",
+   "word": "show",
+   "heard_in_group": "People had show as leaps full",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:wizard-tower:w:sleeps",
+   "word": "sleeps",
+   "heard_in_group": "People had show as leaps full",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:wizard-tower:w:full",
+   "word": "full",
+   "heard_in_group": "People had show as leaps full",
+   "match_in_group": true,
+   "match_alone": true
+  }
+ ]
+}

@@ -1,0 +1,3362 @@
+{
+ "voice": "af_heart",
+ "checked": 395,
+ "matched": 311,
+ "mismatches": [
+  {
+   "id": "story:wizard-tower:w:pocket",
+   "word": "pocket",
+   "heard": "Market.",
+   "match": false,
+   "confidence": -0.505
+  },
+  {
+   "id": "story:wizard-tower:w:carrot",
+   "word": "carrot",
+   "heard": "care it.",
+   "match": false,
+   "confidence": -0.802
+  },
+  {
+   "id": "story:wizard-tower:w:bean",
+   "word": "bean",
+   "heard": "the bin.",
+   "match": false,
+   "confidence": -1.076
+  },
+  {
+   "id": "story:wizard-tower:w:egg",
+   "word": "egg",
+   "heard": "Zag.",
+   "match": false,
+   "confidence": -0.684
+  },
+  {
+   "id": "story:wizard-tower:w:leaves",
+   "word": "leaves",
+   "heard": "lives.",
+   "match": false,
+   "confidence": -1.148
+  },
+  {
+   "id": "story:wizard-tower:w:across",
+   "word": "across",
+   "heard": "It crossed.",
+   "match": false,
+   "confidence": -0.505
+  },
+  {
+   "id": "story:wizard-tower:w:hundred",
+   "word": "hundred",
+   "heard": "100.",
+   "match": false,
+   "confidence": -0.607
+  },
+  {
+   "id": "story:wizard-tower:w:while",
+   "word": "while",
+   "heard": "Meanwhile.",
+   "match": false,
+   "confidence": -0.959
+  },
+  {
+   "id": "story:wizard-tower:w:page",
+   "word": "page",
+   "heard": "Pay it.",
+   "match": false,
+   "confidence": -0.559
+  },
+  {
+   "id": "story:wizard-tower:w:seed",
+   "word": "seed",
+   "heard": "I see it.",
+   "match": false,
+   "confidence": -0.667
+  },
+  {
+   "id": "story:wizard-tower:w:fourth",
+   "word": "fourth",
+   "heard": "4th",
+   "match": false,
+   "confidence": -0.904
+  },
+  {
+   "id": "story:wizard-tower:w:cup",
+   "word": "cup",
+   "heard": "and carpet.",
+   "match": false,
+   "confidence": -0.644
+  },
+  {
+   "id": "story:wizard-tower:w:chocolate",
+   "word": "chocolate",
+   "heard": "Chocolat",
+   "match": false,
+   "confidence": -0.904
+  },
+  {
+   "id": "story:wizard-tower:w:a",
+   "word": "a",
+   "heard": "Good night.",
+   "match": false,
+   "confidence": -0.498
+  },
+  {
+   "id": "story:wizard-tower:w:artus",
+   "word": "Artus",
+   "heard": "Artists.",
+   "match": false,
+   "confidence": -0.773
+  },
+  {
+   "id": "story:wizard-tower:w:at",
+   "word": "at",
+   "heard": "Add.",
+   "match": false,
+   "confidence": -0.707
+  },
+  {
+   "id": "story:wizard-tower:w:he",
+   "word": "he",
+   "heard": "Here.",
+   "match": false,
+   "confidence": -0.524
+  },
+  {
+   "id": "story:wizard-tower:w:pip",
+   "word": "Pip",
+   "heard": "I'm happy",
+   "match": false,
+   "confidence": -0.675
+  },
+  {
+   "id": "story:wizard-tower:w:the",
+   "word": "the",
+   "heard": "There.",
+   "match": false,
+   "confidence": -0.532
+  },
+  {
+   "id": "story:wizard-tower:w:cheese",
+   "word": "cheese",
+   "heard": "Jeez.",
+   "match": false,
+   "confidence": -0.592
+  },
+  {
+   "id": "story:wizard-tower:w:to",
+   "word": "to",
+   "heard": "Sewer.",
+   "match": false,
+   "confidence": -1.059
+  },
+  {
+   "id": "story:wizard-tower:w:move",
+   "word": "move",
+   "heard": "mouth",
+   "match": false,
+   "confidence": -1.397
+  },
+  {
+   "id": "story:wizard-tower:w:no",
+   "word": "no",
+   "heard": "And now...",
+   "match": false,
+   "confidence": -0.356
+  },
+  {
+   "id": "story:wizard-tower:w:sky",
+   "word": "sky",
+   "heard": "This guy.",
+   "match": false,
+   "confidence": -0.453
+  },
+  {
+   "id": "story:wizard-tower:w:tall",
+   "word": "tall",
+   "heard": "Tull.",
+   "match": false,
+   "confidence": -0.76
+  },
+  {
+   "id": "story:wizard-tower:w:hair",
+   "word": "hair",
+   "heard": "Here.",
+   "match": false,
+   "confidence": -0.665
+  },
+  {
+   "id": "story:wizard-tower:w:all",
+   "word": "all",
+   "heard": "Oh.",
+   "match": false,
+   "confidence": -0.793
+  },
+  {
+   "id": "story:wizard-tower:w:know",
+   "word": "know",
+   "heard": "Now.",
+   "match": false,
+   "confidence": -0.531
+  },
+  {
+   "id": "story:wizard-tower:w:sits",
+   "word": "sits",
+   "heard": "Is answer.",
+   "match": false,
+   "confidence": -0.744
+  },
+  {
+   "id": "story:wizard-tower:w:they",
+   "word": "they",
+   "heard": "There you go.",
+   "match": false,
+   "confidence": -0.558
+  },
+  {
+   "id": "story:wizard-tower:w:are",
+   "word": "are",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.621
+  },
+  {
+   "id": "story:wizard-tower:w:be",
+   "word": "be",
+   "heard": "Bye!",
+   "match": false,
+   "confidence": -1.16
+  },
+  {
+   "id": "story:wizard-tower:w:i",
+   "word": "i",
+   "heard": "Sorry.",
+   "match": false,
+   "confidence": -0.352
+  },
+  {
+   "id": "story:wizard-tower:w:like",
+   "word": "like",
+   "heard": "alike.",
+   "match": false,
+   "confidence": -0.778
+  },
+  {
+   "id": "story:wizard-tower:w:you",
+   "word": "you",
+   "heard": "You're...",
+   "match": false,
+   "confidence": -0.907
+  },
+  {
+   "id": "story:wizard-tower:w:have",
+   "word": "have",
+   "heard": "Heavs.",
+   "match": false,
+   "confidence": -0.843
+  },
+  {
+   "id": "story:wizard-tower:w:for",
+   "word": "for",
+   "heard": "before.",
+   "match": false,
+   "confidence": -0.577
+  },
+  {
+   "id": "story:wizard-tower:w:oren",
+   "word": "Oren",
+   "heard": "A foreign.",
+   "match": false,
+   "confidence": -0.981
+  },
+  {
+   "id": "story:wizard-tower:w:who",
+   "word": "who",
+   "heard": "Hill.",
+   "match": false,
+   "confidence": -0.292
+  },
+  {
+   "id": "story:wizard-tower:w:brave",
+   "word": "brave",
+   "heard": "Braves.",
+   "match": false,
+   "confidence": -0.646
+  },
+  {
+   "id": "story:wizard-tower:w:me",
+   "word": "me",
+   "heard": "May.",
+   "match": false,
+   "confidence": -0.526
+  },
+  {
+   "id": "story:wizard-tower:w:wants",
+   "word": "wants",
+   "heard": "Once.",
+   "match": false,
+   "confidence": -0.63
+  },
+  {
+   "id": "story:wizard-tower:w:long",
+   "word": "long",
+   "heard": "Belong.",
+   "match": false,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:wizard-tower:w:sit",
+   "word": "sit",
+   "heard": "Is it?",
+   "match": false,
+   "confidence": -0.216
+  },
+  {
+   "id": "story:wizard-tower:w:puts",
+   "word": "puts",
+   "heard": "Poetzer",
+   "match": false,
+   "confidence": -1.375
+  },
+  {
+   "id": "story:wizard-tower:w:knows",
+   "word": "knows",
+   "heard": "nose.",
+   "match": false,
+   "confidence": -0.894
+  },
+  {
+   "id": "story:wizard-tower:w:walks",
+   "word": "walks",
+   "heard": "Wux",
+   "match": false,
+   "confidence": -0.874
+  },
+  {
+   "id": "story:wizard-tower:w:forest",
+   "word": "forest",
+   "heard": "VORAST",
+   "match": false,
+   "confidence": -1.269
+  },
+  {
+   "id": "story:wizard-tower:w:than",
+   "word": "than",
+   "heard": "But then...",
+   "match": false,
+   "confidence": -0.49
+  },
+  {
+   "id": "story:wizard-tower:w:she",
+   "word": "she",
+   "heard": "S E.",
+   "match": false,
+   "confidence": -0.694
+  },
+  {
+   "id": "story:wizard-tower:w:an",
+   "word": "an",
+   "heard": "And then...",
+   "match": false,
+   "confidence": -0.48
+  },
+  {
+   "id": "story:wizard-tower:w:your",
+   "word": "your",
+   "heard": "You're",
+   "match": false,
+   "confidence": -0.619
+  },
+  {
+   "id": "story:wizard-tower:w:grey",
+   "word": "grey",
+   "heard": "Gray.",
+   "match": false,
+   "confidence": -0.512
+  },
+  {
+   "id": "story:wizard-tower:w:too",
+   "word": "too",
+   "heard": "It's you.",
+   "match": false,
+   "confidence": -0.526
+  },
+  {
+   "id": "story:wizard-tower:w:path",
+   "word": "path",
+   "heard": "Pass.",
+   "match": false,
+   "confidence": -0.472
+  },
+  {
+   "id": "story:wizard-tower:w:look",
+   "word": "look",
+   "heard": "Good luck.",
+   "match": false,
+   "confidence": -0.605
+  },
+  {
+   "id": "story:wizard-tower:w:two",
+   "word": "two",
+   "heard": "Thank you.",
+   "match": false,
+   "confidence": -0.541
+  },
+  {
+   "id": "story:wizard-tower:w:snack",
+   "word": "snack",
+   "heard": "is NAC.",
+   "match": false,
+   "confidence": -0.619
+  },
+  {
+   "id": "story:wizard-tower:w:how",
+   "word": "how",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.834
+  },
+  {
+   "id": "story:wizard-tower:w:oh",
+   "word": "oh",
+   "heard": "No.",
+   "match": false,
+   "confidence": -0.258
+  },
+  {
+   "id": "story:wizard-tower:w:if",
+   "word": "if",
+   "heard": "Yeah.",
+   "match": false,
+   "confidence": -0.535
+  },
+  {
+   "id": "story:wizard-tower:w:ten",
+   "word": "ten",
+   "heard": "10.",
+   "match": false,
+   "confidence": -0.472
+  },
+  {
+   "id": "story:wizard-tower:w:eleven",
+   "word": "eleven",
+   "heard": "11",
+   "match": false,
+   "confidence": -0.317
+  },
+  {
+   "id": "story:wizard-tower:w:twelve",
+   "word": "twelve",
+   "heard": "12.",
+   "match": false,
+   "confidence": -0.501
+  },
+  {
+   "id": "story:wizard-tower:w:round",
+   "word": "round",
+   "heard": "around.",
+   "match": false,
+   "confidence": -0.38
+  },
+  {
+   "id": "story:wizard-tower:w:green",
+   "word": "green",
+   "heard": "Agreed.",
+   "match": false,
+   "confidence": -0.724
+  },
+  {
+   "id": "story:wizard-tower:w:keeps",
+   "word": "keeps",
+   "heard": "Heapsa.",
+   "match": false,
+   "confidence": -0.41
+  },
+  {
+   "id": "story:wizard-tower:w:new",
+   "word": "new",
+   "heard": "Now.",
+   "match": false,
+   "confidence": -0.857
+  },
+  {
+   "id": "story:wizard-tower:w:high",
+   "word": "high",
+   "heard": "Hi.",
+   "match": false,
+   "confidence": -0.277
+  },
+  {
+   "id": "story:wizard-tower:w:walls",
+   "word": "walls",
+   "heard": "Wiles.",
+   "match": false,
+   "confidence": -0.766
+  },
+  {
+   "id": "story:wizard-tower:w:sees",
+   "word": "sees",
+   "heard": "A C is.",
+   "match": false,
+   "confidence": -0.677
+  },
+  {
+   "id": "story:wizard-tower:w:other",
+   "word": "other",
+   "heard": "Another.",
+   "match": false,
+   "confidence": -0.87
+  },
+  {
+   "id": "story:wizard-tower:w:mum",
+   "word": "mum",
+   "heard": "Mom.",
+   "match": false,
+   "confidence": -0.593
+  },
+  {
+   "id": "story:wizard-tower:w:under",
+   "word": "under",
+   "heard": "Thunder.",
+   "match": false,
+   "confidence": -0.634
+  },
+  {
+   "id": "story:wizard-tower:w:pulls",
+   "word": "pulls",
+   "heard": "Pause.",
+   "match": false,
+   "confidence": -0.616
+  },
+  {
+   "id": "story:wizard-tower:w:hot",
+   "word": "hot",
+   "heard": "Heart.",
+   "match": false,
+   "confidence": -0.552
+  },
+  {
+   "id": "story:wizard-tower:w:thinks",
+   "word": "thinks",
+   "heard": "Thanks.",
+   "match": false,
+   "confidence": -0.211
+  },
+  {
+   "id": "story:wizard-tower:w:sun",
+   "word": "sun",
+   "heard": "A son.",
+   "match": false,
+   "confidence": -0.75
+  },
+  {
+   "id": "story:wizard-tower:w:face",
+   "word": "face",
+   "heard": "Vase.",
+   "match": false,
+   "confidence": -0.669
+  },
+  {
+   "id": "story:wizard-tower:w:artus's",
+   "word": "Artus's",
+   "heard": "Artises.",
+   "match": false,
+   "confidence": -0.685
+  },
+  {
+   "id": "story:wizard-tower:w:moon",
+   "word": "moon",
+   "heard": "Good morning.",
+   "match": false,
+   "confidence": -0.66
+  },
+  {
+   "id": "story:wizard-tower:w:four",
+   "word": "four",
+   "heard": "4.",
+   "match": false,
+   "confidence": -0.636
+  },
+  {
+   "id": "story:wizard-tower:w:had",
+   "word": "had",
+   "heard": "Head.",
+   "match": false,
+   "confidence": -0.572
+  },
+  {
+   "id": "story:wizard-tower:w:sleeps",
+   "word": "sleeps",
+   "heard": "It's leaps.",
+   "match": false,
+   "confidence": -0.879
+  }
+ ],
+ "words": [
+  {
+   "id": "story:wizard-tower:w:giant",
+   "word": "giant",
+   "heard": "Giant.",
+   "match": true,
+   "confidence": -0.513
+  },
+  {
+   "id": "story:wizard-tower:w:shy",
+   "word": "shy",
+   "heard": "It's shy.",
+   "match": true,
+   "confidence": -0.573
+  },
+  {
+   "id": "story:wizard-tower:w:gentle",
+   "word": "gentle",
+   "heard": "Gentle.",
+   "match": true,
+   "confidence": -0.476
+  },
+  {
+   "id": "story:wizard-tower:w:friendly",
+   "word": "friendly",
+   "heard": "Friendly.",
+   "match": true,
+   "confidence": -0.574
+  },
+  {
+   "id": "story:wizard-tower:w:hand",
+   "word": "hand",
+   "heard": "Hand.",
+   "match": true,
+   "confidence": -0.406
+  },
+  {
+   "id": "story:wizard-tower:w:behind",
+   "word": "behind",
+   "heard": "behind.",
+   "match": true,
+   "confidence": -0.53
+  },
+  {
+   "id": "story:wizard-tower:w:letter",
+   "word": "letter",
+   "heard": "the letter.",
+   "match": true,
+   "confidence": -0.652
+  },
+  {
+   "id": "story:wizard-tower:w:pocket",
+   "word": "pocket",
+   "heard": "Market.",
+   "match": false,
+   "confidence": -0.505
+  },
+  {
+   "id": "story:wizard-tower:w:farm",
+   "word": "farm",
+   "heard": "Farm.",
+   "match": true,
+   "confidence": -0.458
+  },
+  {
+   "id": "story:wizard-tower:w:carrot",
+   "word": "carrot",
+   "heard": "care it.",
+   "match": false,
+   "confidence": -0.802
+  },
+  {
+   "id": "story:wizard-tower:w:bean",
+   "word": "bean",
+   "heard": "the bin.",
+   "match": false,
+   "confidence": -1.076
+  },
+  {
+   "id": "story:wizard-tower:w:egg",
+   "word": "egg",
+   "heard": "Zag.",
+   "match": false,
+   "confidence": -0.684
+  },
+  {
+   "id": "story:wizard-tower:w:field",
+   "word": "field",
+   "heard": "Field.",
+   "match": true,
+   "confidence": -0.611
+  },
+  {
+   "id": "story:wizard-tower:w:honey",
+   "word": "honey",
+   "heard": "Honey.",
+   "match": true,
+   "confidence": -0.515
+  },
+  {
+   "id": "story:wizard-tower:w:leaves",
+   "word": "leaves",
+   "heard": "lives.",
+   "match": false,
+   "confidence": -1.148
+  },
+  {
+   "id": "story:wizard-tower:w:sick",
+   "word": "sick",
+   "heard": "Sick.",
+   "match": true,
+   "confidence": -0.691
+  },
+  {
+   "id": "story:wizard-tower:w:road",
+   "word": "road",
+   "heard": "Road.",
+   "match": true,
+   "confidence": -0.405
+  },
+  {
+   "id": "story:wizard-tower:w:woods",
+   "word": "woods",
+   "heard": "Woods.",
+   "match": true,
+   "confidence": -0.437
+  },
+  {
+   "id": "story:wizard-tower:w:lake",
+   "word": "lake",
+   "heard": "A lake.",
+   "match": true,
+   "confidence": -0.629
+  },
+  {
+   "id": "story:wizard-tower:w:across",
+   "word": "across",
+   "heard": "It crossed.",
+   "match": false,
+   "confidence": -0.505
+  },
+  {
+   "id": "story:wizard-tower:w:along",
+   "word": "along",
+   "heard": "a long.",
+   "match": true,
+   "confidence": -0.641
+  },
+  {
+   "id": "story:wizard-tower:w:below",
+   "word": "below",
+   "heard": "below.",
+   "match": true,
+   "confidence": -0.405
+  },
+  {
+   "id": "story:wizard-tower:w:stone",
+   "word": "stone",
+   "heard": "Stone.",
+   "match": true,
+   "confidence": -0.387
+  },
+  {
+   "id": "story:wizard-tower:w:proud",
+   "word": "proud",
+   "heard": "Proud.",
+   "match": true,
+   "confidence": -0.34
+  },
+  {
+   "id": "story:wizard-tower:w:hill",
+   "word": "hill",
+   "heard": "Hill.",
+   "match": true,
+   "confidence": -0.57
+  },
+  {
+   "id": "story:wizard-tower:w:hundred",
+   "word": "hundred",
+   "heard": "100.",
+   "match": false,
+   "confidence": -0.607
+  },
+  {
+   "id": "story:wizard-tower:w:above",
+   "word": "above",
+   "heard": "above.",
+   "match": true,
+   "confidence": -0.686
+  },
+  {
+   "id": "story:wizard-tower:w:silly",
+   "word": "silly",
+   "heard": "Silly.",
+   "match": true,
+   "confidence": -0.491
+  },
+  {
+   "id": "story:wizard-tower:w:sitting",
+   "word": "sitting",
+   "heard": "is sitting.",
+   "match": true,
+   "confidence": -0.61
+  },
+  {
+   "id": "story:wizard-tower:w:beside",
+   "word": "beside",
+   "heard": "Beside.",
+   "match": true,
+   "confidence": -0.319
+  },
+  {
+   "id": "story:wizard-tower:w:hat",
+   "word": "hat",
+   "heard": "Hat.",
+   "match": true,
+   "confidence": -0.562
+  },
+  {
+   "id": "story:wizard-tower:w:until",
+   "word": "until",
+   "heard": "Until...",
+   "match": true,
+   "confidence": -0.551
+  },
+  {
+   "id": "story:wizard-tower:w:jumping",
+   "word": "jumping",
+   "heard": "Jumping.",
+   "match": true,
+   "confidence": -0.373
+  },
+  {
+   "id": "story:wizard-tower:w:hop",
+   "word": "hop",
+   "heard": "and hop it.",
+   "match": true,
+   "confidence": -0.657
+  },
+  {
+   "id": "story:wizard-tower:w:stopped",
+   "word": "stopped",
+   "heard": "is stopped.",
+   "match": true,
+   "confidence": -0.414
+  },
+  {
+   "id": "story:wizard-tower:w:let",
+   "word": "let",
+   "heard": "Let.",
+   "match": true,
+   "confidence": -0.854
+  },
+  {
+   "id": "story:wizard-tower:w:while",
+   "word": "while",
+   "heard": "Meanwhile.",
+   "match": false,
+   "confidence": -0.959
+  },
+  {
+   "id": "story:wizard-tower:w:without",
+   "word": "without",
+   "heard": "without",
+   "match": true,
+   "confidence": -0.446
+  },
+  {
+   "id": "story:wizard-tower:w:against",
+   "word": "against",
+   "heard": "against.",
+   "match": true,
+   "confidence": -0.394
+  },
+  {
+   "id": "story:wizard-tower:w:page",
+   "word": "page",
+   "heard": "Pay it.",
+   "match": false,
+   "confidence": -0.559
+  },
+  {
+   "id": "story:wizard-tower:w:snow",
+   "word": "snow",
+   "heard": "Snow.",
+   "match": true,
+   "confidence": -0.476
+  },
+  {
+   "id": "story:wizard-tower:w:ground",
+   "word": "ground",
+   "heard": "A ground.",
+   "match": true,
+   "confidence": -0.557
+  },
+  {
+   "id": "story:wizard-tower:w:root",
+   "word": "root",
+   "heard": "Root.",
+   "match": true,
+   "confidence": -0.533
+  },
+  {
+   "id": "story:wizard-tower:w:trunk",
+   "word": "trunk",
+   "heard": "Trunk.",
+   "match": true,
+   "confidence": -0.632
+  },
+  {
+   "id": "story:wizard-tower:w:bark",
+   "word": "bark",
+   "heard": "Bark.",
+   "match": true,
+   "confidence": -0.63
+  },
+  {
+   "id": "story:wizard-tower:w:dirt",
+   "word": "dirt",
+   "heard": "Dirt.",
+   "match": true,
+   "confidence": -0.717
+  },
+  {
+   "id": "story:wizard-tower:w:dirty",
+   "word": "dirty",
+   "heard": "Dirty.",
+   "match": true,
+   "confidence": -0.403
+  },
+  {
+   "id": "story:wizard-tower:w:seed",
+   "word": "seed",
+   "heard": "I see it.",
+   "match": false,
+   "confidence": -0.667
+  },
+  {
+   "id": "story:wizard-tower:w:second",
+   "word": "second",
+   "heard": "Second.",
+   "match": true,
+   "confidence": -0.909
+  },
+  {
+   "id": "story:wizard-tower:w:third",
+   "word": "third",
+   "heard": "Third.",
+   "match": true,
+   "confidence": -0.428
+  },
+  {
+   "id": "story:wizard-tower:w:fourth",
+   "word": "fourth",
+   "heard": "4th",
+   "match": false,
+   "confidence": -0.904
+  },
+  {
+   "id": "story:wizard-tower:w:cup",
+   "word": "cup",
+   "heard": "and carpet.",
+   "match": false,
+   "confidence": -0.644
+  },
+  {
+   "id": "story:wizard-tower:w:sweet",
+   "word": "sweet",
+   "heard": "Sweet.",
+   "match": true,
+   "confidence": -0.621
+  },
+  {
+   "id": "story:wizard-tower:w:cookie",
+   "word": "cookie",
+   "heard": "Cookie!",
+   "match": true,
+   "confidence": -0.556
+  },
+  {
+   "id": "story:wizard-tower:w:chocolate",
+   "word": "chocolate",
+   "heard": "Chocolat",
+   "match": false,
+   "confidence": -0.904
+  },
+  {
+   "id": "story:wizard-tower:w:word",
+   "word": "word",
+   "heard": "Word.",
+   "match": true,
+   "confidence": -0.248
+  },
+  {
+   "id": "story:wizard-tower:w:village",
+   "word": "village",
+   "heard": "Village.",
+   "match": true,
+   "confidence": -0.542
+  },
+  {
+   "id": "story:wizard-tower:w:men",
+   "word": "men",
+   "heard": "Men.",
+   "match": true,
+   "confidence": -0.351
+  },
+  {
+   "id": "story:wizard-tower:w:mother",
+   "word": "mother",
+   "heard": "Mother.",
+   "match": true,
+   "confidence": -0.585
+  },
+  {
+   "id": "story:wizard-tower:w:father",
+   "word": "father",
+   "heard": "Father.",
+   "match": true,
+   "confidence": -0.659
+  },
+  {
+   "id": "story:wizard-tower:w:boy",
+   "word": "boy",
+   "heard": "Boy.",
+   "match": true,
+   "confidence": -0.569
+  },
+  {
+   "id": "story:wizard-tower:w:thousand",
+   "word": "thousand",
+   "heard": "A thousand.",
+   "match": true,
+   "confidence": -0.568
+  },
+  {
+   "id": "story:wizard-tower:w:plate",
+   "word": "plate",
+   "heard": "A plate.",
+   "match": true,
+   "confidence": -0.358
+  },
+  {
+   "id": "story:wizard-tower:w:bowl",
+   "word": "bowl",
+   "heard": "Bowl.",
+   "match": true,
+   "confidence": -0.941
+  },
+  {
+   "id": "story:wizard-tower:w:it",
+   "word": "it",
+   "heard": "It.",
+   "match": true,
+   "confidence": -0.954
+  },
+  {
+   "id": "story:wizard-tower:w:is",
+   "word": "is",
+   "heard": "is.",
+   "match": true,
+   "confidence": -0.495
+  },
+  {
+   "id": "story:wizard-tower:w:a",
+   "word": "a",
+   "heard": "Good night.",
+   "match": false,
+   "confidence": -0.498
+  },
+  {
+   "id": "story:wizard-tower:w:sunny",
+   "word": "sunny",
+   "heard": "Sunny.",
+   "match": true,
+   "confidence": -0.997
+  },
+  {
+   "id": "story:wizard-tower:w:morning",
+   "word": "morning",
+   "heard": "Morning.",
+   "match": true,
+   "confidence": -0.754
+  },
+  {
+   "id": "story:wizard-tower:w:artus",
+   "word": "Artus",
+   "heard": "Artists.",
+   "match": false,
+   "confidence": -0.773
+  },
+  {
+   "id": "story:wizard-tower:w:at",
+   "word": "at",
+   "heard": "Add.",
+   "match": false,
+   "confidence": -0.707
+  },
+  {
+   "id": "story:wizard-tower:w:home",
+   "word": "home",
+   "heard": "Home.",
+   "match": true,
+   "confidence": -0.558
+  },
+  {
+   "id": "story:wizard-tower:w:and",
+   "word": "and",
+   "heard": "And...",
+   "match": true,
+   "confidence": -0.749
+  },
+  {
+   "id": "story:wizard-tower:w:he",
+   "word": "he",
+   "heard": "Here.",
+   "match": false,
+   "confidence": -0.524
+  },
+  {
+   "id": "story:wizard-tower:w:reads",
+   "word": "reads",
+   "heard": "Reads.",
+   "match": true,
+   "confidence": -0.523
+  },
+  {
+   "id": "story:wizard-tower:w:book",
+   "word": "book",
+   "heard": "Book.",
+   "match": true,
+   "confidence": -0.54
+  },
+  {
+   "id": "story:wizard-tower:w:about",
+   "word": "about",
+   "heard": "about.",
+   "match": true,
+   "confidence": -0.497
+  },
+  {
+   "id": "story:wizard-tower:w:magic",
+   "word": "magic",
+   "heard": "Magic",
+   "match": true,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:wizard-tower:w:pip",
+   "word": "Pip",
+   "heard": "I'm happy",
+   "match": false,
+   "confidence": -0.675
+  },
+  {
+   "id": "story:wizard-tower:w:by",
+   "word": "by",
+   "heard": "Bye!",
+   "match": true,
+   "confidence": -0.323
+  },
+  {
+   "id": "story:wizard-tower:w:the",
+   "word": "the",
+   "heard": "There.",
+   "match": false,
+   "confidence": -0.532
+  },
+  {
+   "id": "story:wizard-tower:w:fire",
+   "word": "fire",
+   "heard": "Fire.",
+   "match": true,
+   "confidence": -0.421
+  },
+  {
+   "id": "story:wizard-tower:w:eats",
+   "word": "eats",
+   "heard": "Eats.",
+   "match": true,
+   "confidence": -0.644
+  },
+  {
+   "id": "story:wizard-tower:w:bread",
+   "word": "bread",
+   "heard": "Bread.",
+   "match": true,
+   "confidence": -0.531
+  },
+  {
+   "id": "story:wizard-tower:w:cheese",
+   "word": "cheese",
+   "heard": "Jeez.",
+   "match": false,
+   "confidence": -0.592
+  },
+  {
+   "id": "story:wizard-tower:w:then",
+   "word": "then",
+   "heard": "Then...",
+   "match": true,
+   "confidence": -0.671
+  },
+  {
+   "id": "story:wizard-tower:w:house",
+   "word": "house",
+   "heard": "House.",
+   "match": true,
+   "confidence": -0.693
+  },
+  {
+   "id": "story:wizard-tower:w:starts",
+   "word": "starts",
+   "heard": "It starts.",
+   "match": true,
+   "confidence": -0.246
+  },
+  {
+   "id": "story:wizard-tower:w:to",
+   "word": "to",
+   "heard": "Sewer.",
+   "match": false,
+   "confidence": -1.059
+  },
+  {
+   "id": "story:wizard-tower:w:move",
+   "word": "move",
+   "heard": "mouth",
+   "match": false,
+   "confidence": -1.397
+  },
+  {
+   "id": "story:wizard-tower:w:boom",
+   "word": "boom",
+   "heard": "Boom!",
+   "match": true,
+   "confidence": -0.431
+  },
+  {
+   "id": "story:wizard-tower:w:what",
+   "word": "what",
+   "heard": "What?",
+   "match": true,
+   "confidence": -0.201
+  },
+  {
+   "id": "story:wizard-tower:w:that",
+   "word": "that",
+   "heard": "That.",
+   "match": true,
+   "confidence": -0.696
+  },
+  {
+   "id": "story:wizard-tower:w:says",
+   "word": "says",
+   "heard": "It says",
+   "match": true,
+   "confidence": -0.429
+  },
+  {
+   "id": "story:wizard-tower:w:thunder",
+   "word": "thunder",
+   "heard": "Thunder.",
+   "match": true,
+   "confidence": -0.467
+  },
+  {
+   "id": "story:wizard-tower:w:no",
+   "word": "no",
+   "heard": "And now...",
+   "match": false,
+   "confidence": -0.356
+  },
+  {
+   "id": "story:wizard-tower:w:sky",
+   "word": "sky",
+   "heard": "This guy.",
+   "match": false,
+   "confidence": -0.453
+  },
+  {
+   "id": "story:wizard-tower:w:blue",
+   "word": "blue",
+   "heard": "Blue.",
+   "match": true,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:wizard-tower:w:not",
+   "word": "not",
+   "heard": "Not.",
+   "match": true,
+   "confidence": -0.482
+  },
+  {
+   "id": "story:wizard-tower:w:stops",
+   "word": "stops",
+   "heard": "It stops.",
+   "match": true,
+   "confidence": -0.254
+  },
+  {
+   "id": "story:wizard-tower:w:looks",
+   "word": "looks",
+   "heard": "It looks",
+   "match": true,
+   "confidence": -0.499
+  },
+  {
+   "id": "story:wizard-tower:w:out",
+   "word": "out",
+   "heard": "Out.",
+   "match": true,
+   "confidence": -0.507
+  },
+  {
+   "id": "story:wizard-tower:w:of",
+   "word": "of",
+   "heard": "of",
+   "match": true,
+   "confidence": -0.627
+  },
+  {
+   "id": "story:wizard-tower:w:window",
+   "word": "window",
+   "heard": "window",
+   "match": true,
+   "confidence": -0.515
+  },
+  {
+   "id": "story:wizard-tower:w:up",
+   "word": "up",
+   "heard": "Up.",
+   "match": true,
+   "confidence": -0.701
+  },
+  {
+   "id": "story:wizard-tower:w:as",
+   "word": "as",
+   "heard": "as.",
+   "match": true,
+   "confidence": -0.876
+  },
+  {
+   "id": "story:wizard-tower:w:tall",
+   "word": "tall",
+   "heard": "Tull.",
+   "match": false,
+   "confidence": -0.76
+  },
+  {
+   "id": "story:wizard-tower:w:tree",
+   "word": "tree",
+   "heard": "Tree.",
+   "match": true,
+   "confidence": -0.448
+  },
+  {
+   "id": "story:wizard-tower:w:has",
+   "word": "has",
+   "heard": "has.",
+   "match": true,
+   "confidence": -0.925
+  },
+  {
+   "id": "story:wizard-tower:w:red",
+   "word": "red",
+   "heard": "Red.",
+   "match": true,
+   "confidence": -0.485
+  },
+  {
+   "id": "story:wizard-tower:w:hair",
+   "word": "hair",
+   "heard": "Here.",
+   "match": false,
+   "confidence": -0.665
+  },
+  {
+   "id": "story:wizard-tower:w:big",
+   "word": "big",
+   "heard": "Big.",
+   "match": true,
+   "confidence": -0.288
+  },
+  {
+   "id": "story:wizard-tower:w:beard",
+   "word": "beard",
+   "heard": "Beard.",
+   "match": true,
+   "confidence": -0.54
+  },
+  {
+   "id": "story:wizard-tower:w:very",
+   "word": "very",
+   "heard": "Very.",
+   "match": true,
+   "confidence": -0.449
+  },
+  {
+   "id": "story:wizard-tower:w:hides",
+   "word": "hides",
+   "heard": "Hides",
+   "match": true,
+   "confidence": -0.901
+  },
+  {
+   "id": "story:wizard-tower:w:door",
+   "word": "door",
+   "heard": "Door.",
+   "match": true,
+   "confidence": -0.575
+  },
+  {
+   "id": "story:wizard-tower:w:giants",
+   "word": "giants",
+   "heard": "Giants",
+   "match": true,
+   "confidence": -0.378
+  },
+  {
+   "id": "story:wizard-tower:w:eat",
+   "word": "eat",
+   "heard": "And we eat.",
+   "match": true,
+   "confidence": -0.724
+  },
+  {
+   "id": "story:wizard-tower:w:little",
+   "word": "little",
+   "heard": "a little",
+   "match": true,
+   "confidence": -0.803
+  },
+  {
+   "id": "story:wizard-tower:w:dragons",
+   "word": "dragons",
+   "heard": "Dragons",
+   "match": true,
+   "confidence": -0.547
+  },
+  {
+   "id": "story:wizard-tower:w:all",
+   "word": "all",
+   "heard": "Oh.",
+   "match": false,
+   "confidence": -0.793
+  },
+  {
+   "id": "story:wizard-tower:w:know",
+   "word": "know",
+   "heard": "Now.",
+   "match": false,
+   "confidence": -0.531
+  },
+  {
+   "id": "story:wizard-tower:w:sits",
+   "word": "sits",
+   "heard": "Is answer.",
+   "match": false,
+   "confidence": -0.744
+  },
+  {
+   "id": "story:wizard-tower:w:down",
+   "word": "down",
+   "heard": "Down.",
+   "match": true,
+   "confidence": -0.587
+  },
+  {
+   "id": "story:wizard-tower:w:in",
+   "word": "in",
+   "heard": "In.",
+   "match": true,
+   "confidence": -0.778
+  },
+  {
+   "id": "story:wizard-tower:w:eyes",
+   "word": "eyes",
+   "heard": "Eyes.",
+   "match": true,
+   "confidence": -0.358
+  },
+  {
+   "id": "story:wizard-tower:w:they",
+   "word": "they",
+   "heard": "There you go.",
+   "match": false,
+   "confidence": -0.558
+  },
+  {
+   "id": "story:wizard-tower:w:are",
+   "word": "are",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.621
+  },
+  {
+   "id": "story:wizard-tower:w:kind",
+   "word": "kind",
+   "heard": "Kind.",
+   "match": true,
+   "confidence": -0.217
+  },
+  {
+   "id": "story:wizard-tower:w:hello",
+   "word": "hello",
+   "heard": "Hello.",
+   "match": true,
+   "confidence": -0.318
+  },
+  {
+   "id": "story:wizard-tower:w:small",
+   "word": "small",
+   "heard": "Small.",
+   "match": true,
+   "confidence": -0.64
+  },
+  {
+   "id": "story:wizard-tower:w:voice",
+   "word": "voice",
+   "heard": "Voice.",
+   "match": true,
+   "confidence": -0.74
+  },
+  {
+   "id": "story:wizard-tower:w:please",
+   "word": "please",
+   "heard": "Please.",
+   "match": true,
+   "confidence": -0.263
+  },
+  {
+   "id": "story:wizard-tower:w:don't",
+   "word": "don't",
+   "heard": "Don't.",
+   "match": true,
+   "confidence": -0.379
+  },
+  {
+   "id": "story:wizard-tower:w:be",
+   "word": "be",
+   "heard": "Bye!",
+   "match": false,
+   "confidence": -1.16
+  },
+  {
+   "id": "story:wizard-tower:w:afraid",
+   "word": "afraid",
+   "heard": "Afraid.",
+   "match": true,
+   "confidence": -0.215
+  },
+  {
+   "id": "story:wizard-tower:w:my",
+   "word": "my",
+   "heard": "My.",
+   "match": true,
+   "confidence": -0.586
+  },
+  {
+   "id": "story:wizard-tower:w:name",
+   "word": "name",
+   "heard": "Name.",
+   "match": true,
+   "confidence": -0.461
+  },
+  {
+   "id": "story:wizard-tower:w:gus",
+   "word": "Gus",
+   "heard": "Gus.",
+   "match": true,
+   "confidence": -0.333
+  },
+  {
+   "id": "story:wizard-tower:w:i",
+   "word": "i",
+   "heard": "Sorry.",
+   "match": false,
+   "confidence": -0.352
+  },
+  {
+   "id": "story:wizard-tower:w:do",
+   "word": "do",
+   "heard": "Do.",
+   "match": true,
+   "confidence": -0.599
+  },
+  {
+   "id": "story:wizard-tower:w:soup",
+   "word": "soup",
+   "heard": "A soup.",
+   "match": true,
+   "confidence": -0.71
+  },
+  {
+   "id": "story:wizard-tower:w:cake",
+   "word": "cake",
+   "heard": "Cake.",
+   "match": true,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:wizard-tower:w:from",
+   "word": "from",
+   "heard": "from.",
+   "match": true,
+   "confidence": -0.795
+  },
+  {
+   "id": "story:wizard-tower:w:like",
+   "word": "like",
+   "heard": "alike.",
+   "match": false,
+   "confidence": -0.778
+  },
+  {
+   "id": "story:wizard-tower:w:you",
+   "word": "you",
+   "heard": "You're...",
+   "match": false,
+   "confidence": -0.907
+  },
+  {
+   "id": "story:wizard-tower:w:already",
+   "word": "already",
+   "heard": "Already.",
+   "match": true,
+   "confidence": -0.565
+  },
+  {
+   "id": "story:wizard-tower:w:his",
+   "word": "his",
+   "heard": "his.",
+   "match": true,
+   "confidence": -0.738
+  },
+  {
+   "id": "story:wizard-tower:w:hands",
+   "word": "hands",
+   "heard": "Hands.",
+   "match": true,
+   "confidence": -0.4
+  },
+  {
+   "id": "story:wizard-tower:w:have",
+   "word": "have",
+   "heard": "Heavs.",
+   "match": false,
+   "confidence": -0.843
+  },
+  {
+   "id": "story:wizard-tower:w:for",
+   "word": "for",
+   "heard": "before.",
+   "match": false,
+   "confidence": -0.577
+  },
+  {
+   "id": "story:wizard-tower:w:oren",
+   "word": "Oren",
+   "heard": "A foreign.",
+   "match": false,
+   "confidence": -0.981
+  },
+  {
+   "id": "story:wizard-tower:w:old",
+   "word": "old",
+   "heard": "Old.",
+   "match": true,
+   "confidence": -0.689
+  },
+  {
+   "id": "story:wizard-tower:w:wizard",
+   "word": "wizard",
+   "heard": "Wizard.",
+   "match": true,
+   "confidence": -0.667
+  },
+  {
+   "id": "story:wizard-tower:w:who",
+   "word": "who",
+   "heard": "Hill.",
+   "match": false,
+   "confidence": -0.292
+  },
+  {
+   "id": "story:wizard-tower:w:does",
+   "word": "does",
+   "heard": "Does.",
+   "match": true,
+   "confidence": -0.332
+  },
+  {
+   "id": "story:wizard-tower:w:holds",
+   "word": "holds",
+   "heard": "Holds.",
+   "match": true,
+   "confidence": -0.298
+  },
+  {
+   "id": "story:wizard-tower:w:opens",
+   "word": "opens",
+   "heard": "opens.",
+   "match": true,
+   "confidence": -0.658
+  },
+  {
+   "id": "story:wizard-tower:w:am",
+   "word": "am",
+   "heard": "AM",
+   "match": true,
+   "confidence": -0.505
+  },
+  {
+   "id": "story:wizard-tower:w:tower",
+   "word": "tower",
+   "heard": "Tower.",
+   "match": true,
+   "confidence": -0.544
+  },
+  {
+   "id": "story:wizard-tower:w:well",
+   "word": "well",
+   "heard": "Well.",
+   "match": true,
+   "confidence": -0.533
+  },
+  {
+   "id": "story:wizard-tower:w:need",
+   "word": "need",
+   "heard": "Need.",
+   "match": true,
+   "confidence": -0.469
+  },
+  {
+   "id": "story:wizard-tower:w:brave",
+   "word": "brave",
+   "heard": "Braves.",
+   "match": false,
+   "confidence": -0.646
+  },
+  {
+   "id": "story:wizard-tower:w:help",
+   "word": "help",
+   "heard": "Help.",
+   "match": true,
+   "confidence": -0.558
+  },
+  {
+   "id": "story:wizard-tower:w:me",
+   "word": "me",
+   "heard": "May.",
+   "match": false,
+   "confidence": -0.526
+  },
+  {
+   "id": "story:wizard-tower:w:come",
+   "word": "come",
+   "heard": "Come.",
+   "match": true,
+   "confidence": -0.28
+  },
+  {
+   "id": "story:wizard-tower:w:will",
+   "word": "will",
+   "heard": "Will.",
+   "match": true,
+   "confidence": -0.419
+  },
+  {
+   "id": "story:wizard-tower:w:bring",
+   "word": "bring",
+   "heard": "Bring.",
+   "match": true,
+   "confidence": -0.482
+  },
+  {
+   "id": "story:wizard-tower:w:wants",
+   "word": "wants",
+   "heard": "Once.",
+   "match": false,
+   "confidence": -0.63
+  },
+  {
+   "id": "story:wizard-tower:w:excited",
+   "word": "excited",
+   "heard": "Excited.",
+   "match": true,
+   "confidence": -0.171
+  },
+  {
+   "id": "story:wizard-tower:w:long",
+   "word": "long",
+   "heard": "Belong.",
+   "match": false,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:wizard-tower:w:way",
+   "word": "way",
+   "heard": "Way.",
+   "match": true,
+   "confidence": -0.563
+  },
+  {
+   "id": "story:wizard-tower:w:away",
+   "word": "away",
+   "heard": "Away.",
+   "match": true,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:wizard-tower:w:asks",
+   "word": "asks",
+   "heard": "Asks.",
+   "match": true,
+   "confidence": -0.368
+  },
+  {
+   "id": "story:wizard-tower:w:but",
+   "word": "but",
+   "heard": "But...",
+   "match": true,
+   "confidence": -0.468
+  },
+  {
+   "id": "story:wizard-tower:w:can",
+   "word": "can",
+   "heard": "Can.",
+   "match": true,
+   "confidence": -0.532
+  },
+  {
+   "id": "story:wizard-tower:w:jump",
+   "word": "jump",
+   "heard": "Jump.",
+   "match": true,
+   "confidence": -0.337
+  },
+  {
+   "id": "story:wizard-tower:w:over",
+   "word": "over",
+   "heard": "And over.",
+   "match": true,
+   "confidence": -0.584
+  },
+  {
+   "id": "story:wizard-tower:w:river",
+   "word": "river",
+   "heard": "River.",
+   "match": true,
+   "confidence": -0.359
+  },
+  {
+   "id": "story:wizard-tower:w:sit",
+   "word": "sit",
+   "heard": "Is it?",
+   "match": false,
+   "confidence": -0.216
+  },
+  {
+   "id": "story:wizard-tower:w:puts",
+   "word": "puts",
+   "heard": "Poetzer",
+   "match": false,
+   "confidence": -1.375
+  },
+  {
+   "id": "story:wizard-tower:w:map",
+   "word": "map",
+   "heard": "map",
+   "match": true,
+   "confidence": -0.523
+  },
+  {
+   "id": "story:wizard-tower:w:some",
+   "word": "some",
+   "heard": "Some.",
+   "match": true,
+   "confidence": -0.689
+  },
+  {
+   "id": "story:wizard-tower:w:food",
+   "word": "food",
+   "heard": "Food.",
+   "match": true,
+   "confidence": -0.44
+  },
+  {
+   "id": "story:wizard-tower:w:bag",
+   "word": "bag",
+   "heard": "Bag.",
+   "match": true,
+   "confidence": -0.655
+  },
+  {
+   "id": "story:wizard-tower:w:lot",
+   "word": "lot",
+   "heard": "A lot.",
+   "match": true,
+   "confidence": -0.367
+  },
+  {
+   "id": "story:wizard-tower:w:piece",
+   "word": "piece",
+   "heard": "Peace!",
+   "match": true,
+   "confidence": -0.305
+  },
+  {
+   "id": "story:wizard-tower:w:get",
+   "word": "get",
+   "heard": "Get.",
+   "match": true,
+   "confidence": -0.756
+  },
+  {
+   "id": "story:wizard-tower:w:hungry",
+   "word": "hungry",
+   "heard": "Hungry.",
+   "match": true,
+   "confidence": -0.719
+  },
+  {
+   "id": "story:wizard-tower:w:this",
+   "word": "this",
+   "heard": "This.",
+   "match": true,
+   "confidence": -0.526
+  },
+  {
+   "id": "story:wizard-tower:w:smiles",
+   "word": "smiles",
+   "heard": "It smiles.",
+   "match": true,
+   "confidence": -0.277
+  },
+  {
+   "id": "story:wizard-tower:w:knows",
+   "word": "knows",
+   "heard": "nose.",
+   "match": false,
+   "confidence": -0.894
+  },
+  {
+   "id": "story:wizard-tower:w:on",
+   "word": "on",
+   "heard": "On.",
+   "match": true,
+   "confidence": -0.398
+  },
+  {
+   "id": "story:wizard-tower:w:warm",
+   "word": "warm",
+   "heard": "warm",
+   "match": true,
+   "confidence": -0.379
+  },
+  {
+   "id": "story:wizard-tower:w:them",
+   "word": "them",
+   "heard": "to them.",
+   "match": true,
+   "confidence": -0.616
+  },
+  {
+   "id": "story:wizard-tower:w:room",
+   "word": "room",
+   "heard": "Room.",
+   "match": true,
+   "confidence": -0.735
+  },
+  {
+   "id": "story:wizard-tower:w:there",
+   "word": "there",
+   "heard": "There.",
+   "match": true,
+   "confidence": -0.36
+  },
+  {
+   "id": "story:wizard-tower:w:tomato",
+   "word": "tomato",
+   "heard": "tomato",
+   "match": true,
+   "confidence": -0.473
+  },
+  {
+   "id": "story:wizard-tower:w:walks",
+   "word": "walks",
+   "heard": "Wux",
+   "match": false,
+   "confidence": -0.874
+  },
+  {
+   "id": "story:wizard-tower:w:soon",
+   "word": "soon",
+   "heard": "soon.",
+   "match": true,
+   "confidence": -0.814
+  },
+  {
+   "id": "story:wizard-tower:w:go",
+   "word": "go",
+   "heard": "Go.",
+   "match": true,
+   "confidence": -0.555
+  },
+  {
+   "id": "story:wizard-tower:w:trees",
+   "word": "trees",
+   "heard": "Trees.",
+   "match": true,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:wizard-tower:w:forest",
+   "word": "forest",
+   "heard": "VORAST",
+   "match": false,
+   "confidence": -1.269
+  },
+  {
+   "id": "story:wizard-tower:w:wind",
+   "word": "wind",
+   "heard": "Wind.",
+   "match": true,
+   "confidence": -0.353
+  },
+  {
+   "id": "story:wizard-tower:w:their",
+   "word": "their",
+   "heard": "There.",
+   "match": true,
+   "confidence": -0.338
+  },
+  {
+   "id": "story:wizard-tower:w:better",
+   "word": "better",
+   "heard": "Better.",
+   "match": true,
+   "confidence": -0.386
+  },
+  {
+   "id": "story:wizard-tower:w:than",
+   "word": "than",
+   "heard": "But then...",
+   "match": false,
+   "confidence": -0.49
+  },
+  {
+   "id": "story:wizard-tower:w:boat",
+   "word": "boat",
+   "heard": "boat",
+   "match": true,
+   "confidence": -0.354
+  },
+  {
+   "id": "story:wizard-tower:w:first",
+   "word": "first",
+   "heard": "First.",
+   "match": true,
+   "confidence": -0.964
+  },
+  {
+   "id": "story:wizard-tower:w:we",
+   "word": "we",
+   "heard": "We are.",
+   "match": true,
+   "confidence": -0.983
+  },
+  {
+   "id": "story:wizard-tower:w:stop",
+   "word": "stop",
+   "heard": "Stop.",
+   "match": true,
+   "confidence": -0.465
+  },
+  {
+   "id": "story:wizard-tower:w:where",
+   "word": "where",
+   "heard": "Where?",
+   "match": true,
+   "confidence": -0.527
+  },
+  {
+   "id": "story:wizard-tower:w:lunch",
+   "word": "lunch",
+   "heard": "The lunch.",
+   "match": true,
+   "confidence": -0.58
+  },
+  {
+   "id": "story:wizard-tower:w:time",
+   "word": "time",
+   "heard": "Time.",
+   "match": true,
+   "confidence": -0.422
+  },
+  {
+   "id": "story:wizard-tower:w:castle",
+   "word": "castle",
+   "heard": "Castle",
+   "match": true,
+   "confidence": -0.49
+  },
+  {
+   "id": "story:wizard-tower:w:around",
+   "word": "around",
+   "heard": "around.",
+   "match": true,
+   "confidence": -0.238
+  },
+  {
+   "id": "story:wizard-tower:w:beans",
+   "word": "beans",
+   "heard": "Beans.",
+   "match": true,
+   "confidence": -0.93
+  },
+  {
+   "id": "story:wizard-tower:w:boats",
+   "word": "boats",
+   "heard": "Boats.",
+   "match": true,
+   "confidence": -0.446
+  },
+  {
+   "id": "story:wizard-tower:w:tomatoes",
+   "word": "tomatoes",
+   "heard": "Tomatoes.",
+   "match": true,
+   "confidence": -0.371
+  },
+  {
+   "id": "story:wizard-tower:w:every",
+   "word": "every",
+   "heard": "Every.",
+   "match": true,
+   "confidence": -0.694
+  },
+  {
+   "id": "story:wizard-tower:w:ball",
+   "word": "ball",
+   "heard": "Ball.",
+   "match": true,
+   "confidence": -0.452
+  },
+  {
+   "id": "story:wizard-tower:w:yes",
+   "word": "yes",
+   "heard": "Yes.",
+   "match": true,
+   "confidence": -0.256
+  },
+  {
+   "id": "story:wizard-tower:w:gives",
+   "word": "gives",
+   "heard": "Gives",
+   "match": true,
+   "confidence": -0.789
+  },
+  {
+   "id": "story:wizard-tower:w:night",
+   "word": "night",
+   "heard": "Night.",
+   "match": true,
+   "confidence": -0.36
+  },
+  {
+   "id": "story:wizard-tower:w:light",
+   "word": "light",
+   "heard": "The light.",
+   "match": true,
+   "confidence": -0.653
+  },
+  {
+   "id": "story:wizard-tower:w:comes",
+   "word": "comes",
+   "heard": "comes.",
+   "match": true,
+   "confidence": -0.667
+  },
+  {
+   "id": "story:wizard-tower:w:makes",
+   "word": "makes",
+   "heard": "makes",
+   "match": true,
+   "confidence": -0.399
+  },
+  {
+   "id": "story:wizard-tower:w:strong",
+   "word": "strong",
+   "heard": "Strong.",
+   "match": true,
+   "confidence": -0.291
+  },
+  {
+   "id": "story:wizard-tower:w:brown",
+   "word": "brown",
+   "heard": "Brown.",
+   "match": true,
+   "confidence": -0.317
+  },
+  {
+   "id": "story:wizard-tower:w:chicken",
+   "word": "chicken",
+   "heard": "chicken",
+   "match": true,
+   "confidence": -0.538
+  },
+  {
+   "id": "story:wizard-tower:w:she",
+   "word": "she",
+   "heard": "S E.",
+   "match": false,
+   "confidence": -0.694
+  },
+  {
+   "id": "story:wizard-tower:w:horse",
+   "word": "horse",
+   "heard": "A horse.",
+   "match": true,
+   "confidence": -0.593
+  },
+  {
+   "id": "story:wizard-tower:w:when",
+   "word": "when",
+   "heard": "When?",
+   "match": true,
+   "confidence": -0.526
+  },
+  {
+   "id": "story:wizard-tower:w:gets",
+   "word": "gets",
+   "heard": "It gets.",
+   "match": true,
+   "confidence": -0.499
+  },
+  {
+   "id": "story:wizard-tower:w:an",
+   "word": "an",
+   "heard": "And then...",
+   "match": false,
+   "confidence": -0.48
+  },
+  {
+   "id": "story:wizard-tower:w:made",
+   "word": "made",
+   "heard": "Made.",
+   "match": true,
+   "confidence": -0.345
+  },
+  {
+   "id": "story:wizard-tower:w:your",
+   "word": "your",
+   "heard": "You're",
+   "match": false,
+   "confidence": -0.619
+  },
+  {
+   "id": "story:wizard-tower:w:with",
+   "word": "with",
+   "heard": "with.",
+   "match": true,
+   "confidence": -0.92
+  },
+  {
+   "id": "story:wizard-tower:w:more",
+   "word": "more",
+   "heard": "More.",
+   "match": true,
+   "confidence": -0.42
+  },
+  {
+   "id": "story:wizard-tower:w:after",
+   "word": "after",
+   "heard": "after",
+   "match": true,
+   "confidence": -0.603
+  },
+  {
+   "id": "story:wizard-tower:w:shows",
+   "word": "shows",
+   "heard": "It shows.",
+   "match": true,
+   "confidence": -0.446
+  },
+  {
+   "id": "story:wizard-tower:w:good",
+   "word": "good",
+   "heard": "Good.",
+   "match": true,
+   "confidence": -0.158
+  },
+  {
+   "id": "story:wizard-tower:w:end",
+   "word": "end",
+   "heard": "End.",
+   "match": true,
+   "confidence": -0.607
+  },
+  {
+   "id": "story:wizard-tower:w:grey",
+   "word": "grey",
+   "heard": "Gray.",
+   "match": false,
+   "confidence": -0.512
+  },
+  {
+   "id": "story:wizard-tower:w:carrots",
+   "word": "carrots",
+   "heard": "Carrots.",
+   "match": true,
+   "confidence": -0.782
+  },
+  {
+   "id": "story:wizard-tower:w:thin",
+   "word": "thin",
+   "heard": "Thin.",
+   "match": true,
+   "confidence": -0.54
+  },
+  {
+   "id": "story:wizard-tower:w:why",
+   "word": "why",
+   "heard": "Why?",
+   "match": true,
+   "confidence": -0.225
+  },
+  {
+   "id": "story:wizard-tower:w:sad",
+   "word": "sad",
+   "heard": "is sad.",
+   "match": true,
+   "confidence": -0.713
+  },
+  {
+   "id": "story:wizard-tower:w:bright",
+   "word": "bright",
+   "heard": "Bright.",
+   "match": true,
+   "confidence": -0.722
+  },
+  {
+   "id": "story:wizard-tower:w:day",
+   "word": "day",
+   "heard": "Day.",
+   "match": true,
+   "confidence": -0.373
+  },
+  {
+   "id": "story:wizard-tower:w:just",
+   "word": "just",
+   "heard": "Just.",
+   "match": true,
+   "confidence": -0.535
+  },
+  {
+   "id": "story:wizard-tower:w:land",
+   "word": "land",
+   "heard": "The land.",
+   "match": true,
+   "confidence": -0.407
+  },
+  {
+   "id": "story:wizard-tower:w:town",
+   "word": "town",
+   "heard": "Town.",
+   "match": true,
+   "confidence": -0.642
+  },
+  {
+   "id": "story:wizard-tower:w:animals",
+   "word": "animals",
+   "heard": "Animals.",
+   "match": true,
+   "confidence": -0.511
+  },
+  {
+   "id": "story:wizard-tower:w:cold",
+   "word": "cold",
+   "heard": "Cold.",
+   "match": true,
+   "confidence": -0.335
+  },
+  {
+   "id": "story:wizard-tower:w:too",
+   "word": "too",
+   "heard": "It's you.",
+   "match": false,
+   "confidence": -0.526
+  },
+  {
+   "id": "story:wizard-tower:w:goes",
+   "word": "goes",
+   "heard": "goes",
+   "match": true,
+   "confidence": -0.63
+  },
+  {
+   "id": "story:wizard-tower:w:takes",
+   "word": "takes",
+   "heard": "It takes.",
+   "match": true,
+   "confidence": -0.578
+  },
+  {
+   "id": "story:wizard-tower:w:here",
+   "word": "here",
+   "heard": "Here.",
+   "match": true,
+   "confidence": -0.401
+  },
+  {
+   "id": "story:wizard-tower:w:helps",
+   "word": "helps",
+   "heard": "It helps.",
+   "match": true,
+   "confidence": -0.215
+  },
+  {
+   "id": "story:wizard-tower:w:thank",
+   "word": "thank",
+   "heard": "Thank.",
+   "match": true,
+   "confidence": -0.588
+  },
+  {
+   "id": "story:wizard-tower:w:friend",
+   "word": "friend",
+   "heard": "Friend.",
+   "match": true,
+   "confidence": -0.669
+  },
+  {
+   "id": "story:wizard-tower:w:stands",
+   "word": "stands",
+   "heard": "It stands.",
+   "match": true,
+   "confidence": -0.323
+  },
+  {
+   "id": "story:wizard-tower:w:needs",
+   "word": "needs",
+   "heard": "needs.",
+   "match": true,
+   "confidence": -0.763
+  },
+  {
+   "id": "story:wizard-tower:w:must",
+   "word": "must",
+   "heard": "Must.",
+   "match": true,
+   "confidence": -0.519
+  },
+  {
+   "id": "story:wizard-tower:w:now",
+   "word": "now",
+   "heard": "Now.",
+   "match": true,
+   "confidence": -0.427
+  },
+  {
+   "id": "story:wizard-tower:w:back",
+   "word": "back",
+   "heard": "Back.",
+   "match": true,
+   "confidence": -0.393
+  },
+  {
+   "id": "story:wizard-tower:w:path",
+   "word": "path",
+   "heard": "Pass.",
+   "match": false,
+   "confidence": -0.472
+  },
+  {
+   "id": "story:wizard-tower:w:fall",
+   "word": "fall",
+   "heard": "Fall.",
+   "match": true,
+   "confidence": -0.306
+  },
+  {
+   "id": "story:wizard-tower:w:give",
+   "word": "give",
+   "heard": "Give.",
+   "match": true,
+   "confidence": -0.759
+  },
+  {
+   "id": "story:wizard-tower:w:take",
+   "word": "take",
+   "heard": "Take.",
+   "match": true,
+   "confidence": -0.529
+  },
+  {
+   "id": "story:wizard-tower:w:into",
+   "word": "into",
+   "heard": "into.",
+   "match": true,
+   "confidence": -0.496
+  },
+  {
+   "id": "story:wizard-tower:w:dark",
+   "word": "dark",
+   "heard": "Dark.",
+   "match": true,
+   "confidence": -0.398
+  },
+  {
+   "id": "story:wizard-tower:w:quiet",
+   "word": "quiet",
+   "heard": "Quiet.",
+   "match": true,
+   "confidence": -0.341
+  },
+  {
+   "id": "story:wizard-tower:w:careful",
+   "word": "careful",
+   "heard": "Be careful.",
+   "match": true,
+   "confidence": -0.199
+  },
+  {
+   "id": "story:wizard-tower:w:look",
+   "word": "look",
+   "heard": "Good luck.",
+   "match": false,
+   "confidence": -0.605
+  },
+  {
+   "id": "story:wizard-tower:w:birds",
+   "word": "birds",
+   "heard": "Birds.",
+   "match": true,
+   "confidence": -0.536
+  },
+  {
+   "id": "story:wizard-tower:w:can't",
+   "word": "can't",
+   "heard": "Can't.",
+   "match": true,
+   "confidence": -0.431
+  },
+  {
+   "id": "story:wizard-tower:w:fly",
+   "word": "fly",
+   "heard": "Fly.",
+   "match": true,
+   "confidence": -0.56
+  },
+  {
+   "id": "story:wizard-tower:w:going",
+   "word": "going",
+   "heard": "Going.",
+   "match": true,
+   "confidence": -0.653
+  },
+  {
+   "id": "story:wizard-tower:w:jumps",
+   "word": "jumps",
+   "heard": "jumps",
+   "match": true,
+   "confidence": -0.685
+  },
+  {
+   "id": "story:wizard-tower:w:again",
+   "word": "again",
+   "heard": "Again.",
+   "match": true,
+   "confidence": -0.515
+  },
+  {
+   "id": "story:wizard-tower:w:one",
+   "word": "one",
+   "heard": "One.",
+   "match": true,
+   "confidence": -0.538
+  },
+  {
+   "id": "story:wizard-tower:w:bird",
+   "word": "bird",
+   "heard": "Bird.",
+   "match": true,
+   "confidence": -0.444
+  },
+  {
+   "id": "story:wizard-tower:w:flies",
+   "word": "flies",
+   "heard": "Flies.",
+   "match": true,
+   "confidence": -0.441
+  },
+  {
+   "id": "story:wizard-tower:w:two",
+   "word": "two",
+   "heard": "Thank you.",
+   "match": false,
+   "confidence": -0.541
+  },
+  {
+   "id": "story:wizard-tower:w:happy",
+   "word": "happy",
+   "heard": "Happy",
+   "match": true,
+   "confidence": -0.477
+  },
+  {
+   "id": "story:wizard-tower:w:did",
+   "word": "did",
+   "heard": "Did.",
+   "match": true,
+   "confidence": -0.415
+  },
+  {
+   "id": "story:wizard-tower:w:see",
+   "word": "see",
+   "heard": "I see.",
+   "match": true,
+   "confidence": -0.416
+  },
+  {
+   "id": "story:wizard-tower:w:dragon",
+   "word": "dragon",
+   "heard": "Dragon.",
+   "match": true,
+   "confidence": -0.678
+  },
+  {
+   "id": "story:wizard-tower:w:best",
+   "word": "best",
+   "heard": "Best.",
+   "match": true,
+   "confidence": -0.536
+  },
+  {
+   "id": "story:wizard-tower:w:snack",
+   "word": "snack",
+   "heard": "is NAC.",
+   "match": false,
+   "confidence": -0.619
+  },
+  {
+   "id": "story:wizard-tower:w:him",
+   "word": "him",
+   "heard": "Him.",
+   "match": true,
+   "confidence": -0.615
+  },
+  {
+   "id": "story:wizard-tower:w:walk",
+   "word": "walk",
+   "heard": "Walk.",
+   "match": true,
+   "confidence": -0.794
+  },
+  {
+   "id": "story:wizard-tower:w:how",
+   "word": "how",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.834
+  },
+  {
+   "id": "story:wizard-tower:w:water",
+   "word": "water",
+   "heard": "Water.",
+   "match": true,
+   "confidence": -0.535
+  },
+  {
+   "id": "story:wizard-tower:w:still",
+   "word": "still",
+   "heard": "Still.",
+   "match": true,
+   "confidence": -0.434
+  },
+  {
+   "id": "story:wizard-tower:w:hold",
+   "word": "hold",
+   "heard": "Hold.",
+   "match": true,
+   "confidence": -0.211
+  },
+  {
+   "id": "story:wizard-tower:w:oh",
+   "word": "oh",
+   "heard": "No.",
+   "match": false,
+   "confidence": -0.258
+  },
+  {
+   "id": "story:wizard-tower:w:stones",
+   "word": "stones",
+   "heard": "The stones.",
+   "match": true,
+   "confidence": -0.783
+  },
+  {
+   "id": "story:wizard-tower:w:if",
+   "word": "if",
+   "heard": "Yeah.",
+   "match": false,
+   "confidence": -0.535
+  },
+  {
+   "id": "story:wizard-tower:w:make",
+   "word": "make",
+   "heard": "Make.",
+   "match": true,
+   "confidence": -0.46
+  },
+  {
+   "id": "story:wizard-tower:w:spell",
+   "word": "spell",
+   "heard": "Spell.",
+   "match": true,
+   "confidence": -0.686
+  },
+  {
+   "id": "story:wizard-tower:w:white",
+   "word": "white",
+   "heard": "White.",
+   "match": true,
+   "confidence": -0.534
+  },
+  {
+   "id": "story:wizard-tower:w:three",
+   "word": "three",
+   "heard": "Three.",
+   "match": true,
+   "confidence": -0.52
+  },
+  {
+   "id": "story:wizard-tower:w:worried",
+   "word": "worried",
+   "heard": "Worried.",
+   "match": true,
+   "confidence": -0.243
+  },
+  {
+   "id": "story:wizard-tower:w:top",
+   "word": "top",
+   "heard": "Top.",
+   "match": true,
+   "confidence": -0.621
+  },
+  {
+   "id": "story:wizard-tower:w:clouds",
+   "word": "clouds",
+   "heard": "Clouds.",
+   "match": true,
+   "confidence": -0.704
+  },
+  {
+   "id": "story:wizard-tower:w:wait",
+   "word": "wait",
+   "heard": "Wait.",
+   "match": true,
+   "confidence": -0.254
+  },
+  {
+   "id": "story:wizard-tower:w:so",
+   "word": "so",
+   "heard": "So.",
+   "match": true,
+   "confidence": -0.636
+  },
+  {
+   "id": "story:wizard-tower:w:stairs",
+   "word": "stairs",
+   "heard": "The stairs.",
+   "match": true,
+   "confidence": -0.607
+  },
+  {
+   "id": "story:wizard-tower:w:ten",
+   "word": "ten",
+   "heard": "10.",
+   "match": false,
+   "confidence": -0.472
+  },
+  {
+   "id": "story:wizard-tower:w:eleven",
+   "word": "eleven",
+   "heard": "11",
+   "match": false,
+   "confidence": -0.317
+  },
+  {
+   "id": "story:wizard-tower:w:twelve",
+   "word": "twelve",
+   "heard": "12.",
+   "match": false,
+   "confidence": -0.501
+  },
+  {
+   "id": "story:wizard-tower:w:tired",
+   "word": "tired",
+   "heard": "Tired?",
+   "match": true,
+   "confidence": -0.325
+  },
+  {
+   "id": "story:wizard-tower:w:books",
+   "word": "books",
+   "heard": "Books.",
+   "match": true,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:wizard-tower:w:maps",
+   "word": "maps",
+   "heard": "Maps.",
+   "match": true,
+   "confidence": -0.499
+  },
+  {
+   "id": "story:wizard-tower:w:man",
+   "word": "man",
+   "heard": "Man.",
+   "match": true,
+   "confidence": -0.531
+  },
+  {
+   "id": "story:wizard-tower:w:gold",
+   "word": "gold",
+   "heard": "Gold.",
+   "match": true,
+   "confidence": -0.337
+  },
+  {
+   "id": "story:wizard-tower:w:stars",
+   "word": "stars",
+   "heard": "It stars.",
+   "match": true,
+   "confidence": -0.817
+  },
+  {
+   "id": "story:wizard-tower:w:find",
+   "word": "find",
+   "heard": "Find.",
+   "match": true,
+   "confidence": -0.608
+  },
+  {
+   "id": "story:wizard-tower:w:head",
+   "word": "head",
+   "heard": "Head.",
+   "match": true,
+   "confidence": -0.322
+  },
+  {
+   "id": "story:wizard-tower:w:oren's",
+   "word": "Oren's",
+   "heard": "Orens.",
+   "match": true,
+   "confidence": -0.819
+  },
+  {
+   "id": "story:wizard-tower:w:only",
+   "word": "only",
+   "heard": "Only.",
+   "match": true,
+   "confidence": -0.527
+  },
+  {
+   "id": "story:wizard-tower:w:round",
+   "word": "round",
+   "heard": "around.",
+   "match": false,
+   "confidence": -0.38
+  },
+  {
+   "id": "story:wizard-tower:w:hills",
+   "word": "hills",
+   "heard": "Hills.",
+   "match": true,
+   "confidence": -0.251
+  },
+  {
+   "id": "story:wizard-tower:w:star",
+   "word": "star",
+   "heard": "A star.",
+   "match": true,
+   "confidence": -0.639
+  },
+  {
+   "id": "story:wizard-tower:w:farms",
+   "word": "farms",
+   "heard": "Farms.",
+   "match": true,
+   "confidence": -0.617
+  },
+  {
+   "id": "story:wizard-tower:w:green",
+   "word": "green",
+   "heard": "Agreed.",
+   "match": false,
+   "confidence": -0.724
+  },
+  {
+   "id": "story:wizard-tower:w:keeps",
+   "word": "keeps",
+   "heard": "Heapsa.",
+   "match": false,
+   "confidence": -0.41
+  },
+  {
+   "id": "story:wizard-tower:w:years",
+   "word": "years",
+   "heard": "Years.",
+   "match": true,
+   "confidence": -0.536
+  },
+  {
+   "id": "story:wizard-tower:w:new",
+   "word": "new",
+   "heard": "Now.",
+   "match": false,
+   "confidence": -0.857
+  },
+  {
+   "id": "story:wizard-tower:w:letters",
+   "word": "letters",
+   "heard": "The letters.",
+   "match": true,
+   "confidence": -0.384
+  },
+  {
+   "id": "story:wizard-tower:w:read",
+   "word": "read",
+   "heard": "Read.",
+   "match": true,
+   "confidence": -0.273
+  },
+  {
+   "id": "story:wizard-tower:w:yet",
+   "word": "yet",
+   "heard": "Yet.",
+   "match": true,
+   "confidence": -0.769
+  },
+  {
+   "id": "story:wizard-tower:w:think",
+   "word": "think",
+   "heard": "Think.",
+   "match": true,
+   "confidence": -0.626
+  },
+  {
+   "id": "story:wizard-tower:w:everywhere",
+   "word": "everywhere",
+   "heard": "Everywhere.",
+   "match": true,
+   "confidence": -0.346
+  },
+  {
+   "id": "story:wizard-tower:w:high",
+   "word": "high",
+   "heard": "Hi.",
+   "match": false,
+   "confidence": -0.277
+  },
+  {
+   "id": "story:wizard-tower:w:falls",
+   "word": "falls",
+   "heard": "Falls.",
+   "match": true,
+   "confidence": -0.883
+  },
+  {
+   "id": "story:wizard-tower:w:walls",
+   "word": "walls",
+   "heard": "Wiles.",
+   "match": false,
+   "confidence": -0.766
+  },
+  {
+   "id": "story:wizard-tower:w:sees",
+   "word": "sees",
+   "heard": "A C is.",
+   "match": false,
+   "confidence": -0.677
+  },
+  {
+   "id": "story:wizard-tower:w:other",
+   "word": "other",
+   "heard": "Another.",
+   "match": false,
+   "confidence": -0.87
+  },
+  {
+   "id": "story:wizard-tower:w:want",
+   "word": "want",
+   "heard": "Want.",
+   "match": true,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:wizard-tower:w:hear",
+   "word": "hear",
+   "heard": "Here.",
+   "match": true,
+   "confidence": -0.397
+  },
+  {
+   "id": "story:wizard-tower:w:love",
+   "word": "love",
+   "heard": "Love.",
+   "match": true,
+   "confidence": -0.778
+  },
+  {
+   "id": "story:wizard-tower:w:mum",
+   "word": "mum",
+   "heard": "Mom.",
+   "match": false,
+   "confidence": -0.593
+  },
+  {
+   "id": "story:wizard-tower:w:pages",
+   "word": "pages",
+   "heard": "pages",
+   "match": true,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:wizard-tower:w:was",
+   "word": "was",
+   "heard": "was.",
+   "match": true,
+   "confidence": -0.586
+  },
+  {
+   "id": "story:wizard-tower:w:open",
+   "word": "open",
+   "heard": "Open.",
+   "match": true,
+   "confidence": -0.237
+  },
+  {
+   "id": "story:wizard-tower:w:got",
+   "word": "got",
+   "heard": "I got.",
+   "match": true,
+   "confidence": -0.929
+  },
+  {
+   "id": "story:wizard-tower:w:mountain",
+   "word": "mountain",
+   "heard": "Mountain",
+   "match": true,
+   "confidence": -0.434
+  },
+  {
+   "id": "story:wizard-tower:w:let's",
+   "word": "let's",
+   "heard": "Let's...",
+   "match": true,
+   "confidence": -0.57
+  },
+  {
+   "id": "story:wizard-tower:w:right",
+   "word": "right",
+   "heard": "Right.",
+   "match": true,
+   "confidence": -0.218
+  },
+  {
+   "id": "story:wizard-tower:w:wings",
+   "word": "wings",
+   "heard": "Wings.",
+   "match": true,
+   "confidence": -0.353
+  },
+  {
+   "id": "story:wizard-tower:w:under",
+   "word": "under",
+   "heard": "Thunder.",
+   "match": false,
+   "confidence": -0.634
+  },
+  {
+   "id": "story:wizard-tower:w:pulls",
+   "word": "pulls",
+   "heard": "Pause.",
+   "match": false,
+   "confidence": -0.616
+  },
+  {
+   "id": "story:wizard-tower:w:hot",
+   "word": "hot",
+   "heard": "Heart.",
+   "match": false,
+   "confidence": -0.552
+  },
+  {
+   "id": "story:wizard-tower:w:thinks",
+   "word": "thinks",
+   "heard": "Thanks.",
+   "match": false,
+   "confidence": -0.211
+  },
+  {
+   "id": "story:wizard-tower:w:sun",
+   "word": "sun",
+   "heard": "A son.",
+   "match": false,
+   "confidence": -0.75
+  },
+  {
+   "id": "story:wizard-tower:w:work",
+   "word": "work",
+   "heard": "Work.",
+   "match": true,
+   "confidence": -0.248
+  },
+  {
+   "id": "story:wizard-tower:w:idea",
+   "word": "idea",
+   "heard": "idea.",
+   "match": true,
+   "confidence": -0.543
+  },
+  {
+   "id": "story:wizard-tower:w:its",
+   "word": "its",
+   "heard": "It's.",
+   "match": true,
+   "confidence": -0.555
+  },
+  {
+   "id": "story:wizard-tower:w:face",
+   "word": "face",
+   "heard": "Vase.",
+   "match": false,
+   "confidence": -0.669
+  },
+  {
+   "id": "story:wizard-tower:w:looking",
+   "word": "looking",
+   "heard": "Looking.",
+   "match": true,
+   "confidence": -0.608
+  },
+  {
+   "id": "story:wizard-tower:w:put",
+   "word": "put",
+   "heard": "Put.",
+   "match": true,
+   "confidence": -1.269
+  },
+  {
+   "id": "story:wizard-tower:w:roots",
+   "word": "roots",
+   "heard": "Roots.",
+   "match": true,
+   "confidence": -0.525
+  },
+  {
+   "id": "story:wizard-tower:w:finds",
+   "word": "finds",
+   "heard": "Finds.",
+   "match": true,
+   "confidence": -0.39
+  },
+  {
+   "id": "story:wizard-tower:w:artus's",
+   "word": "Artus's",
+   "heard": "Artises.",
+   "match": false,
+   "confidence": -0.685
+  },
+  {
+   "id": "story:wizard-tower:w:smile",
+   "word": "smile",
+   "heard": "Smile.",
+   "match": true,
+   "confidence": -0.34
+  },
+  {
+   "id": "story:wizard-tower:w:friends",
+   "word": "friends",
+   "heard": "Friends.",
+   "match": true,
+   "confidence": -0.493
+  },
+  {
+   "id": "story:wizard-tower:w:moon",
+   "word": "moon",
+   "heard": "Good morning.",
+   "match": false,
+   "confidence": -0.66
+  },
+  {
+   "id": "story:wizard-tower:w:pan",
+   "word": "pan",
+   "heard": "Pan.",
+   "match": true,
+   "confidence": -0.385
+  },
+  {
+   "id": "story:wizard-tower:w:biggest",
+   "word": "biggest",
+   "heard": "Biggest.",
+   "match": true,
+   "confidence": -0.386
+  },
+  {
+   "id": "story:wizard-tower:w:drinks",
+   "word": "drinks",
+   "heard": "Drinks.",
+   "match": true,
+   "confidence": -0.331
+  },
+  {
+   "id": "story:wizard-tower:w:once",
+   "word": "once",
+   "heard": "Once.",
+   "match": true,
+   "confidence": -0.571
+  },
+  {
+   "id": "story:wizard-tower:w:cookies",
+   "word": "cookies",
+   "heard": "Cookies.",
+   "match": true,
+   "confidence": -0.636
+  },
+  {
+   "id": "story:wizard-tower:w:many",
+   "word": "many",
+   "heard": "Many.",
+   "match": true,
+   "confidence": -0.842
+  },
+  {
+   "id": "story:wizard-tower:w:almost",
+   "word": "almost",
+   "heard": "Almost.",
+   "match": true,
+   "confidence": -0.274
+  },
+  {
+   "id": "story:wizard-tower:w:four",
+   "word": "four",
+   "heard": "4.",
+   "match": false,
+   "confidence": -0.636
+  },
+  {
+   "id": "story:wizard-tower:w:words",
+   "word": "words",
+   "heard": "Words",
+   "match": true,
+   "confidence": -0.552
+  },
+  {
+   "id": "story:wizard-tower:w:bigger",
+   "word": "bigger",
+   "heard": "Bigger.",
+   "match": true,
+   "confidence": -0.248
+  },
+  {
+   "id": "story:wizard-tower:w:say",
+   "word": "say",
+   "heard": "Say.",
+   "match": true,
+   "confidence": -0.959
+  },
+  {
+   "id": "story:wizard-tower:w:slowly",
+   "word": "slowly",
+   "heard": "Slowly.",
+   "match": true,
+   "confidence": -0.34
+  },
+  {
+   "id": "story:wizard-tower:w:sound",
+   "word": "sound",
+   "heard": "Sound.",
+   "match": true,
+   "confidence": -0.463
+  },
+  {
+   "id": "story:wizard-tower:w:houses",
+   "word": "houses",
+   "heard": "houses",
+   "match": true,
+   "confidence": -0.619
+  },
+  {
+   "id": "story:wizard-tower:w:were",
+   "word": "were",
+   "heard": "were.",
+   "match": true,
+   "confidence": -0.966
+  },
+  {
+   "id": "story:wizard-tower:w:mothers",
+   "word": "mothers",
+   "heard": "mothers",
+   "match": true,
+   "confidence": -0.679
+  },
+  {
+   "id": "story:wizard-tower:w:fathers",
+   "word": "fathers",
+   "heard": "Fathers.",
+   "match": true,
+   "confidence": -1.087
+  },
+  {
+   "id": "story:wizard-tower:w:girls",
+   "word": "girls",
+   "heard": "Good girls.",
+   "match": true,
+   "confidence": -0.618
+  },
+  {
+   "id": "story:wizard-tower:w:boys",
+   "word": "boys",
+   "heard": "Boys.",
+   "match": true,
+   "confidence": -0.649
+  },
+  {
+   "id": "story:wizard-tower:w:people",
+   "word": "people",
+   "heard": "People.",
+   "match": true,
+   "confidence": -0.592
+  },
+  {
+   "id": "story:wizard-tower:w:had",
+   "word": "had",
+   "heard": "Head.",
+   "match": false,
+   "confidence": -0.572
+  },
+  {
+   "id": "story:wizard-tower:w:show",
+   "word": "show",
+   "heard": "Show.",
+   "match": true,
+   "confidence": -0.638
+  },
+  {
+   "id": "story:wizard-tower:w:sleeps",
+   "word": "sleeps",
+   "heard": "It's leaps.",
+   "match": false,
+   "confidence": -0.879
+  },
+  {
+   "id": "story:wizard-tower:w:full",
+   "word": "full",
+   "heard": "Full.",
+   "match": true,
+   "confidence": -0.293
+  }
+ ]
+}
