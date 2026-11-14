@@ -1,4 +1,4 @@
-name: Verify live Pip Grows Up
+name: Verify live Wizard Tower
 on:
   push:
     branches: [claude/pip-grows-live-check]
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 809bbf80b0acc64d47b046804a19064573e4a99a
-      - name: Compare live files with merge 809bbf8
+          ref: 54772be94313d8dfd03e6477e5deecb67a807bdb
+      - name: Compare live files with merge 54772be
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           for attempt in $(seq 1 30); do
@@ -21,7 +21,7 @@ jobs:
             sleep 30
           done
           bad=0; n=0
-          for f in index.html app.js content.js game-core.js adventure-core.js missions.js adventure-ui.js adventures.css rider-fx.js assets/battle-fire/*.webp assets/battle-rider/rider.webp assets/adventures/pip-grows/campaign.js; do
+          for f in index.html missions.js assets/adventures/wizard-tower/campaign.js assets/adventures/wizard-tower/*.webp assets/adventures/wizard-tower/voice/manifest.js $(ls assets/adventures/wizard-tower/voice/*.mp3 | head -40) assets/teaching/words/pictures.js assets/teaching/words/giant.webp assets/teaching/words/pocket.webp assets/teaching/words/hat.webp assets/teaching/words/page.webp; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
