@@ -126,6 +126,11 @@ RETAKES = [
     ('wt-pages-2', 'APG', 'At the roots of a huge ancient tree whose bark has a gentle, kind face: Gus kneels behind and tips water from his big straw hat onto the roots; kneeling, he is still three times as tall as Artus. Pip, with very muddy hands and dirt on his nose, proudly holds up a white page he dug out of the dirt. Artus holds a little brown seed in his palm, smiling.'),
     ('wt-light-2', 'APOG', 'Morning on top of a green hill beside a small new green sapling tree. Artus, in his silver armour and red cape, holds out both hands; Oren bends down and places a little shining gold star in Artus’s hands. Artus beams. Pip sits beside Artus. Gus stands behind them, smiling shyly.'),
 ]
+# Second retakes: the first cover retake lost Artus and the star picture drew a different boy twice. Fewer references.
+RETAKES_2 = [
+    ('cover', 'APG', 'Golden late afternoon. A tall round stone tower with a pointed blue roof stands on a green hill above soft clouds. Gus stands on the hill right beside the tower, smiling; his head is level with its top window. Artus (golden-ginger hair, silver armour, red cape) and Pip both lean out of the big chest pocket of Gus’s dungarees and wave happily. In the tower’s top window, a tiny old wizard with a long white beard and a tall blue starry hat waves. A silver lake lies far below.'),
+    ('wt-light-2', 'APO', 'Morning on top of a green hill beside a small new green sapling tree. Artus, the boy from image 2 with golden-ginger hair, freckles, silver armour, green tunic and red cape, holds out both hands, beaming; Oren bends down and places a little shining gold star in Artus’s hands. Pip sits beside Artus, happy. Far below, a little village and a lake.'),
+]
 batch('art-characters', [{'id': i, 'references': [STYLE], 'aspect_ratio': '2:3', 'prompt': ref_prompt(d)} for i, d in REFS])
 scenes = []
 for pid, chars, scene in PAGES:
@@ -134,3 +139,4 @@ for pid, chars, scene in PAGES:
 batch('art-scenes-1', scenes[:17])
 batch('art-scenes-2', scenes[17:])
 batch('art-retakes-1', [{'id': pid, 'references': prompt(chars, scene)[0], 'aspect_ratio': '3:2', 'prompt': prompt(chars, scene)[1]} for pid, chars, scene in RETAKES])
+batch('art-retakes-2', [{'id': pid, 'references': prompt(chars, scene)[0], 'aspect_ratio': '3:2', 'prompt': prompt(chars, scene)[1]} for pid, chars, scene in RETAKES_2])
