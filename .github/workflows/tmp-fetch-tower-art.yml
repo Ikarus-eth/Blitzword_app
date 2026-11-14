@@ -1,0 +1,27 @@
+name: Temporary - fetch Wizard's Tower art artifacts
+# Branch-only helper: two art runs generated their pictures but could not push them back (a concurrent push).
+# This copies their saved artifacts to the review branch. Removed again before the pull request is merged.
+on:
+  push:
+    branches: [claude/wizard-tower]
+    paths: ['.github/workflows/tmp-fetch-tower-art.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {name: mission-illustrations, run-id: '43530695458', github-token: '${{ github.token }}', path: a1}
+      - uses: actions/download-artifact@v4
+        with: {name: mission-illustrations, run-id: '43530706285', github-token: '${{ github.token }}', path: a2}
+      - run: |
+          d=docs/adventures/wizard-tower/generated
+          mkdir -p $d/art-scenes-1 $d/art-scenes-2
+          cp a1/generated-story-art/* $d/art-scenes-1/ && cp a2/generated-story-art/* $d/art-scenes-2/
+          ls $d/art-scenes-1 | wc -l; ls $d/art-scenes-2 | wc -l
+          git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add $d && git commit -m "Story art for review: art-scenes-1 and art-scenes-2 [skip ci]"
+          for i in 1 2 3 4 5; do git pull --rebase origin claude/wizard-tower && git push origin HEAD:claude/wizard-tower && break; sleep 10; done
