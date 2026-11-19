@@ -1,0 +1,11 @@
+{
+  "note": "Cells chosen after visual review (19 Nov 2026): the koala/penguin reference leaked into Bolt Kangaroo, the Sunmane Lion Champion, the Ruby Hummingbird Elemental and the Sun Phoenix Champion on the retake sheets; the final sheet replaces them.",
+  "cells": {
+    "17a": {"batch": "sheets-4-final", "sheet": "final-01", "row": 0, "column": 0, "rows": 2},
+    "17b": {"batch": "sheets-4-final", "sheet": "final-01", "row": 0, "column": 1, "rows": 2},
+    "17c": {"batch": "sheets-4-final", "sheet": "final-01", "row": 0, "column": 2, "rows": 2},
+    "19c": {"batch": "sheets-4-final", "sheet": "final-01", "row": 1, "column": 0, "rows": 2},
+    "20b": {"batch": "sheets-4-final", "sheet": "final-01", "row": 1, "column": 1, "rows": 2},
+    "10c": {"batch": "sheets-4-final", "sheet": "final-01", "row": 1, "column": 2, "rows": 2}
+  }
+}
