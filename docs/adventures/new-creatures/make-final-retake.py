@@ -1,0 +1,21 @@
+"""Last retake (1 image, about $0.039) for cells where the koala/penguin reference leaked in:
+Bolt Kangaroo (all three), Sunmane Lion Champion, Ruby Hummingbird Elemental, plus a spare Sun Phoenix Champion.
+The reference shows the right species (kangaroo, lion, hummingbird) instead of other animals."""
+import json
+from pathlib import Path
+HERE = Path(__file__).parent
+REF = 'https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-vote/docs/adventures/new-creatures/reference-species.webp'
+prompt = ("Use case: creature design vote for a children's reading game. Image 1 shows the exact species and painting style: "
+          "left a KANGAROO, middle a LION, right a HUMMINGBIRD. Keep these species exactly; do not mix animals, no koala, no penguin, no bear. "
+          "Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators, warm ivory background, "
+          "NO text, captions, letters or numbers anywhere. Painterly premium children's fantasy storybook art, soft hand-painted textures, rich strong colours, "
+          "friendly-but-brave eyes, no scenery, no cartoon outlines, exactly one full-body creature per cell with an empty margin. "
+          "TOP ROW = Bolt Kangaroo three times, a tan kangaroo with a long narrow kangaroo head, tall pointed ears, big strong back legs and a thick long tail. "
+          "Top left STORYBOOK: natural kangaroo standing tall, NO glow, NO gear. Top middle ELEMENTAL: kangaroo with bright yellow lightning crackling down its legs and tail, NO gear. "
+          "Top right CHAMPION: kangaroo with red boxing gloves, a leather chest strap and a gold champion belt, NO lightning. "
+          "BOTTOM ROW: bottom left = Sunmane Lion CHAMPION: the golden lion from image 1 with its big shaggy mane and lion face, wearing gold and bronze armour plates and a royal blue cape. "
+          "Bottom middle = Ruby Hummingbird ELEMENTAL: the tiny green and red hummingbird from image 1 with its long thin beak, hovering, wings glowing ruby red with light trails, no clothing. "
+          "Bottom right = Sun Phoenix CHAMPION: a red and gold phoenix bird with long tail feathers wearing golden feather armour and a sun disc on its chest.")
+batch = {'model': 'fal-ai/nano-banana/edit', 'stage': 'new-creatures-vote-final-retake', 'count': 1,
+         'images': [{'id': 'final-01', 'creatures': ['17'], 'aspect_ratio': '3:2', 'references': [REF], 'prompt': prompt}]}
+(HERE / 'sheets-4-final.json').write_text(json.dumps(batch, indent=2) + '\n')
