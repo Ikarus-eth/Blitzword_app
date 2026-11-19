@@ -1,0 +1,19 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "stage": "new-creatures-vote",
+  "count": 1,
+  "images": [
+    {
+      "id": "sheet-01",
+      "creatures": [
+        "01",
+        "02"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Tide Octopus. BOTTOM ROW = three styles of Lava Rhino. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Tide Octopus (sea). Column 1 = STORYBOOK style: round friendly orange octopus with curling striped arms and big clever eyes. Column 2 = ELEMENTAL style, same animal with a strong glowing power: sea-green octopus with swirling glowing water whirlpools around its arms. Column 3 = CHAMPION style, same animal as a braver armoured hero: octopus wearing a coral crown and polished shell shoulder plates, holding a small round shell shield. BOTTOM ROW: Lava Rhino (volcano). Column 1 = STORYBOOK style: sturdy grey young rhino with a curved horn and thick wrinkled skin. Column 2 = ELEMENTAL style, same animal with a strong glowing power: dark rhino with glowing orange lava cracks and a burning ember horn. Column 3 = CHAMPION style, same animal as a braver armoured hero: rhino in black volcanic-stone armour plates with a gold-tipped horn."
+    }
+  ]
+}

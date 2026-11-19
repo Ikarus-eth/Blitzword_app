@@ -1,0 +1,210 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "stage": "new-creatures-vote",
+  "count": 17,
+  "images": [
+    {
+      "id": "sheet-02",
+      "creatures": [
+        "03",
+        "04"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Sand Meerkat. BOTTOM ROW = three styles of Coral Seahorse. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Sand Meerkat (desert). Column 1 = STORYBOOK style: alert sandy meerkat standing up tall on its back legs. Column 2 = ELEMENTAL style, same animal with a strong glowing power: meerkat with a swirling golden sand tornado around its feet and amber eyes. Column 3 = CHAMPION style, same animal as a braver armoured hero: meerkat scout with a tiny leather lookout helmet, scarf and telescope on its belt. BOTTOM ROW: Coral Seahorse (sea). Column 1 = STORYBOOK style: pink and peach seahorse with a curled tail and fan fins. Column 2 = ELEMENTAL style, same animal with a strong glowing power: turquoise seahorse trailing glowing bubbles and bright sea-light. Column 3 = CHAMPION style, same animal as a braver armoured hero: seahorse knight with coral armour plates and a pearl on its chest."
+    },
+    {
+      "id": "sheet-03",
+      "creatures": [
+        "05",
+        "06"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Glow Jellyfish. BOTTOM ROW = three styles of Banyan Gorilla. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Glow Jellyfish (sea). Column 1 = STORYBOOK style: soft lilac jellyfish with a round bell and long ribbon tentacles. Column 2 = ELEMENTAL style, same animal with a strong glowing power: deep-blue jellyfish crackling with little electric sparks. Column 3 = CHAMPION style, same animal as a braver armoured hero: jellyfish with a crystal crown bell and long braided golden tentacles. BOTTOM ROW: Banyan Gorilla (jungle). Column 1 = STORYBOOK style: big gentle dark-grey gorilla knuckle-walking, strong arms. Column 2 = ELEMENTAL style, same animal with a strong glowing power: gorilla with hanging banyan roots and glowing green leaf markings. Column 3 = CHAMPION style, same animal as a braver armoured hero: gorilla in carved wooden chest armour with a vine belt, standing proud."
+    },
+    {
+      "id": "sheet-04",
+      "creatures": [
+        "07",
+        "08"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Storm Lemur. BOTTOM ROW = three styles of Jade Tiger. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Storm Lemur (jungle). Column 1 = STORYBOOK style: ring-tailed lemur with a long black-and-white striped tail and orange eyes. Column 2 = ELEMENTAL style, same animal with a strong glowing power: lemur with a lightning-striped tail and small storm clouds sparking around it. Column 3 = CHAMPION style, same animal as a braver armoured hero: lemur acrobat with a blue headband, wrist guards and a short staff. BOTTOM ROW: Jade Tiger (jungle). Column 1 = STORYBOOK style: orange tiger with bold black stripes and a powerful walk. Column 2 = ELEMENTAL style, same animal with a strong glowing power: pale tiger with glowing jade-green stripes and drifting green spirit leaves. Column 3 = CHAMPION style, same animal as a braver armoured hero: tiger wearing jade and bronze shoulder armour and a red cloth sash."
+    },
+    {
+      "id": "sheet-05",
+      "creatures": [
+        "09",
+        "10"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Frost Mammoth. BOTTOM ROW = three styles of Sun Phoenix. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Frost Mammoth (snow). Column 1 = STORYBOOK style: shaggy brown woolly mammoth with long curved tusks. Column 2 = ELEMENTAL style, same animal with a strong glowing power: white-blue mammoth with ice-crystal tusks and a cold misty breath. Column 3 = CHAMPION style, same animal as a braver armoured hero: mammoth wearing a patterned blanket saddle and silver tusk rings. BOTTOM ROW: Sun Phoenix (sky). Column 1 = STORYBOOK style: red and gold bird with long tail feathers and a bright crest. Column 2 = ELEMENTAL style, same animal with a strong glowing power: phoenix made of glowing flames, wings spread, tail like fire ribbons. Column 3 = CHAMPION style, same animal as a braver armoured hero: phoenix with golden feather armour and a sun-disc on its chest."
+    },
+    {
+      "id": "sheet-06",
+      "creatures": [
+        "11",
+        "12"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Star Unicorn. BOTTOM ROW = three styles of Cloud Whale. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Star Unicorn (night sky). Column 1 = STORYBOOK style: white pony unicorn with a pale spiral horn and silver mane. Column 2 = ELEMENTAL style, same animal with a strong glowing power: midnight-blue unicorn with a mane full of twinkling stars and a glowing horn. Column 3 = CHAMPION style, same animal as a braver armoured hero: unicorn with silver barding, a star-shaped chest plate and a proud stance. BOTTOM ROW: Cloud Whale (sky). Column 1 = STORYBOOK style: small round blue whale floating in the air with a white belly. Column 2 = ELEMENTAL style, same animal with a strong glowing power: whale made of soft swirling cloud with rain drifting from its fins. Column 3 = CHAMPION style, same animal as a braver armoured hero: whale with a little sky-ship saddle, brass fittings and a flag."
+    },
+    {
+      "id": "sheet-07",
+      "creatures": [
+        "13",
+        "14"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Boulder Hippo. BOTTOM ROW = three styles of Mud Crocodile. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Boulder Hippo (river). Column 1 = STORYBOOK style: round grey-pink hippo with a wide mouth and small ears. Column 2 = ELEMENTAL style, same animal with a strong glowing power: hippo whose back is covered in mossy river stones and splashing water. Column 3 = CHAMPION style, same animal as a braver armoured hero: hippo with heavy bronze-studded leather armour and a stone shield. BOTTOM ROW: Mud Crocodile (swamp). Column 1 = STORYBOOK style: olive-green crocodile with a long snout and bumpy back. Column 2 = ELEMENTAL style, same animal with a strong glowing power: crocodile dripping with glowing swamp mud and floating marsh lights. Column 3 = CHAMPION style, same animal as a braver armoured hero: crocodile with bark armour scales and a reed cape."
+    },
+    {
+      "id": "sheet-08",
+      "creatures": [
+        "15",
+        "16"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Wind Manta. BOTTOM ROW = three styles of Autumn Red Panda. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Wind Manta (sky). Column 1 = STORYBOOK style: wide dark-blue manta ray gliding with a white belly. Column 2 = ELEMENTAL style, same animal with a strong glowing power: manta ray with glowing wind trails curling off its wing tips. Column 3 = CHAMPION style, same animal as a braver armoured hero: manta ray with silver wing-edge plates and a small rider saddle. BOTTOM ROW: Autumn Red Panda (forest). Column 1 = STORYBOOK style: fluffy rust-red red panda with a ringed tail and white face marks. Column 2 = ELEMENTAL style, same animal with a strong glowing power: red panda with swirling falling autumn leaves and warm glowing fur tips. Column 3 = CHAMPION style, same animal as a braver armoured hero: red panda with a little leaf-pattern cloak, a satchel and a wooden sword."
+    },
+    {
+      "id": "sheet-09",
+      "creatures": [
+        "17",
+        "18"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Bolt Kangaroo. BOTTOM ROW = three styles of Iceberg Penguin. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Bolt Kangaroo (outback). Column 1 = STORYBOOK style: tan kangaroo standing tall on strong back legs with a long tail. Column 2 = ELEMENTAL style, same animal with a strong glowing power: kangaroo with yellow lightning running down its legs and tail. Column 3 = CHAMPION style, same animal as a braver armoured hero: kangaroo with red boxing wraps, a chest strap and a champion belt. BOTTOM ROW: Iceberg Penguin (snow). Column 1 = STORYBOOK style: small black-and-white penguin with a yellow neck patch. Column 2 = ELEMENTAL style, same animal with a strong glowing power: penguin with ice-crystal flippers and swirling snow around it. Column 3 = CHAMPION style, same animal as a braver armoured hero: penguin with a blue knitted scarf, ice-plate armour and a tiny ice spear."
+    },
+    {
+      "id": "sheet-10",
+      "creatures": [
+        "19",
+        "20"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Sunmane Lion. BOTTOM ROW = three styles of Ruby Hummingbird. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Sunmane Lion (savanna). Column 1 = STORYBOOK style: golden lion with a big shaggy mane, calm and strong. Column 2 = ELEMENTAL style, same animal with a strong glowing power: lion with a mane like glowing sun rays. Column 3 = CHAMPION style, same animal as a braver armoured hero: lion with gold and bronze armour plates and a royal blue cape. BOTTOM ROW: Ruby Hummingbird (flower garden). Column 1 = STORYBOOK style: tiny green and red hummingbird hovering with a long beak. Column 2 = ELEMENTAL style, same animal with a strong glowing power: hummingbird with blurred glowing ruby-red wings leaving light trails. Column 3 = CHAMPION style, same animal as a braver armoured hero: hummingbird with gem-tipped feathers and a tiny golden helmet."
+    },
+    {
+      "id": "sheet-11",
+      "creatures": [
+        "21",
+        "22"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Pearl Narwhal. BOTTOM ROW = three styles of Abyss Angler. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Pearl Narwhal (arctic sea). Column 1 = STORYBOOK style: speckled grey narwhal with a long spiral tusk. Column 2 = ELEMENTAL style, same animal with a strong glowing power: narwhal with a glowing pearl-white tusk and swirling sea foam. Column 3 = CHAMPION style, same animal as a braver armoured hero: narwhal with silver fin armour and a pearl-studded tusk ring. BOTTOM ROW: Abyss Angler (deep sea). Column 1 = STORYBOOK style: dark round anglerfish with a glowing lure and big toothy grin. Column 2 = ELEMENTAL style, same animal with a strong glowing power: anglerfish whose lure and spots glow bright cyan in the dark. Column 3 = CHAMPION style, same animal as a braver armoured hero: anglerfish with barnacle armour plates and a lantern lure."
+    },
+    {
+      "id": "sheet-12",
+      "creatures": [
+        "23",
+        "24"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Tusk Walrus. BOTTOM ROW = three styles of Bubble Platypus. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Tusk Walrus (arctic shore). Column 1 = STORYBOOK style: big brown walrus with long white tusks and bristly whiskers. Column 2 = ELEMENTAL style, same animal with a strong glowing power: walrus with frosty ice tusks and icicles on its whiskers. Column 3 = CHAMPION style, same animal as a braver armoured hero: walrus with a fur-trimmed chest plate and gold tusk caps. BOTTOM ROW: Bubble Platypus (river). Column 1 = STORYBOOK style: brown platypus with a duck bill, webbed feet and flat tail. Column 2 = ELEMENTAL style, same animal with a strong glowing power: platypus surrounded by floating shiny water bubbles. Column 3 = CHAMPION style, same animal as a braver armoured hero: platypus explorer with goggles, a small backpack and a bill guard."
+    },
+    {
+      "id": "sheet-13",
+      "creatures": [
+        "25",
+        "26"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Glass Dragonfly. BOTTOM ROW = three styles of Sky Giraffe. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Glass Dragonfly (pond). Column 1 = STORYBOOK style: large blue dragonfly with four see-through wings. Column 2 = ELEMENTAL style, same animal with a strong glowing power: dragonfly with glass-crystal wings sparkling like rainbows. Column 3 = CHAMPION style, same animal as a braver armoured hero: dragonfly with emerald armoured body segments and gold wing edges. BOTTOM ROW: Sky Giraffe (savanna). Column 1 = STORYBOOK style: tall spotted giraffe with a long neck and gentle face. Column 2 = ELEMENTAL style, same animal with a strong glowing power: giraffe with spots that look like small clouds and wind swirls. Column 3 = CHAMPION style, same animal as a braver armoured hero: giraffe with a long patterned neck banner and bronze hoof guards."
+    },
+    {
+      "id": "sheet-14",
+      "creatures": [
+        "27",
+        "28"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Gum Koala. BOTTOM ROW = three styles of Vine Sloth. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Gum Koala (eucalyptus forest). Column 1 = STORYBOOK style: fluffy grey koala hugging a eucalyptus branch. Column 2 = ELEMENTAL style, same animal with a strong glowing power: koala with glowing mint-green eucalyptus leaves swirling around it. Column 3 = CHAMPION style, same animal as a braver armoured hero: koala with a leaf crown and a small bark shield, standing ready. BOTTOM ROW: Vine Sloth (jungle). Column 1 = STORYBOOK style: smiling brown sloth hanging from a branch with long claws. Column 2 = ELEMENTAL style, same animal with a strong glowing power: sloth with flowering vines growing over its fur and tiny glowing blossoms. Column 3 = CHAMPION style, same animal as a braver armoured hero: sloth with woven vine armour and a hanging seed-pod medal."
+    },
+    {
+      "id": "sheet-15",
+      "creatures": [
+        "29",
+        "30"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Spike Puffer. BOTTOM ROW = three styles of Rainbow Toucan. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Spike Puffer (reef). Column 1 = STORYBOOK style: round yellow pufferfish with small spikes and big eyes. Column 2 = ELEMENTAL style, same animal with a strong glowing power: puffed-up pufferfish with glowing purple spikes. Column 3 = CHAMPION style, same animal as a braver armoured hero: pufferfish with a spiky shell helmet and a tiny coral trident. BOTTOM ROW: Rainbow Toucan (jungle). Column 1 = STORYBOOK style: black toucan with a huge rainbow-coloured beak. Column 2 = ELEMENTAL style, same animal with a strong glowing power: toucan whose beak glows with bright rainbow light trails. Column 3 = CHAMPION style, same animal as a braver armoured hero: toucan with feather armour and a gold beak band."
+    },
+    {
+      "id": "sheet-16",
+      "creatures": [
+        "31",
+        "32"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Sunset Flamingo. BOTTOM ROW = three styles of Snow Yeti. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Sunset Flamingo (lagoon). Column 1 = STORYBOOK style: pink flamingo standing on one long leg. Column 2 = ELEMENTAL style, same animal with a strong glowing power: flamingo with feathers glowing orange and pink like a sunset. Column 3 = CHAMPION style, same animal as a braver armoured hero: flamingo with a pink feather cape and golden leg bands. BOTTOM ROW: Snow Yeti (high mountain). Column 1 = STORYBOOK style: big friendly white-furred yeti with blue face and large feet. Column 2 = ELEMENTAL style, same animal with a strong glowing power: yeti with a swirling blizzard around it and glowing ice-blue eyes. Column 3 = CHAMPION style, same animal as a braver armoured hero: yeti with fur-lined iron shoulder guards and a carved ice club."
+    },
+    {
+      "id": "sheet-17",
+      "creatures": [
+        "33",
+        "34"
+      ],
+      "aspect_ratio": "3:2",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators at one third and two thirds of the width and at half the height. TOP ROW = three styles of Burrow Wombat. BOTTOM ROW = three styles of Steam Capybara. Do not swap rows. Each row is the same species in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. TOP ROW: Burrow Wombat (outback). Column 1 = STORYBOOK style: chunky brown wombat with a round nose and small ears. Column 2 = ELEMENTAL style, same animal with a strong glowing power: wombat with glowing earth cracks and floating pebbles around it. Column 3 = CHAMPION style, same animal as a braver armoured hero: wombat with a miner's helmet lamp and a sturdy digging shovel. BOTTOM ROW: Steam Capybara (hot spring). Column 1 = STORYBOOK style: calm brown capybara sitting peacefully. Column 2 = ELEMENTAL style, same animal with a strong glowing power: capybara wrapped in soft warm steam swirls with an orange on its head. Column 3 = CHAMPION style, same animal as a braver armoured hero: capybara with a bamboo chest plate and a calm warrior headband."
+    },
+    {
+      "id": "sheet-18",
+      "creatures": [
+        "35"
+      ],
+      "aspect_ratio": "16:9",
+      "references": [
+        "https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pair-05.png"
+      ],
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW wide 16:9 sheet: STRICT single row of THREE equal cells side by side, thin light separators at one third and two thirds of the width. All three cells show Dream Tapir in three clearly different looks, not recolours. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell with an empty margin. Dream Tapir (night forest). Column 1 = STORYBOOK style: black-and-white tapir with a short trunk-like nose. Column 2 = ELEMENTAL style, same animal with a strong glowing power: tapir with glowing dream bubbles and little moons floating around it. Column 3 = CHAMPION style, same animal as a braver armoured hero: tapir with a starry night cape and silver forehead charm."
+    }
+  ]
+}
