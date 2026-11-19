@@ -13,12 +13,13 @@ REF = 'https://ikarus-eth.github.io/Blitzword_app/assets/enemy-finals/sheets/pai
 STYLE = ("Painterly premium children's fantasy storybook art in the exact painting language of image 1: "
          "warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, "
          "expressive friendly-but-brave eyes, rich strong colours, adventurous not babyish. Image 1 shows style and "
-         "layout only: do NOT copy its bear or otter, and do NOT draw any text, letters, labels or numbers. "
+         "layout only: do NOT copy its bear or otter. Image 1 has captions under each animal; your sheet must have NO captions, "
+         "text, letters, labels or numbers anywhere: leave plain ivory background below every creature. "
          "No scenery, no gore, no huge weapons, no cartoon outlines, no photorealism. Anatomically readable, "
          "no extra limbs, exactly one creature per cell, the whole body (feet, tail, wings, tentacles) inside its own cell "
          "with an empty margin.")
 STYLES = ("Column 1 = STORYBOOK style: {base}. Column 2 = ELEMENTAL style, same animal with a strong glowing power: "
-          "{elemental}. Column 3 = CHAMPION style, same animal as a braver armoured hero: {champion}.")
+          "{elemental}. Column 3 = CHAMPION style, same animal as a braver armoured hero, clearly wearing armour or hero gear: {champion}.")
 
 
 def row(c):
