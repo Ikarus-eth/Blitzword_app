@@ -2,6 +2,8 @@
 
 Vote page: https://ikarus-eth.github.io/Blitzword_app/assets/new-creatures-vote/
 
+**Deployed and verified.** [PR #259](https://github.com/Ikarus-eth/Blitzword_app/pull/259) merged as `2be921ea79d6ce9cbff5eb1b83c8533cb357b35e`; [Pages run 44465415942](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/44465415942) succeeded. The live page, scripts, catalog, manifest and all 23 sheets match the merge byte for byte ([verification run 44465888617](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/44465888617), 30 files). Headless Chrome checked rating, reload persistence and layout at 1180×820, 820×1180 and 390×844 without overflow. Physical iPad not checked.
+
 ## Why
 
 Artus's 19 November report (07:53 Bali time) showed 64 of the 65 Creature Book families met. All 65 are placed in campaigns; the Wizard's Tower placed the last nine. There was no creature backlog: the October vote's other 139 looks were alternatives for the same 45 creatures, and Ore Ant was rejected. The user asked for 35 new creatures, three styles each for Artus to vote on, with at most $1 of generation cost.
