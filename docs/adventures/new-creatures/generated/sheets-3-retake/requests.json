@@ -1,0 +1,101 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "batch": "docs/adventures/new-creatures/sheets-3-retake.json",
+  "requests": {
+    "retake-01": {
+      "state": "downloaded",
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators. TOP ROW = Sunmane Lion three times. BOTTOM ROW = Ruby Hummingbird three times. Do not swap rows. Column 1 STORYBOOK: the natural animal only, NO glow, NO magic, NO armour or clothing. Column 2 ELEMENTAL: strong glowing magic power, NO armour or clothing. Column 3 CHAMPION: clearly wearing armour or hero gear, NO glow or magic effects. The three must look clearly different. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours. Image 1 shows style, layout and how the three columns differ; do NOT draw a koala or penguin. NO text, captions, letters or numbers anywhere. No scenery, no gore, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body inside its own cell with an empty margin. TOP ROW: Sunmane Lion (savanna).  Column 1: Sunmane Lion, golden lion with a big shaggy mane, calm and strong. Column 2: Sunmane Lion, lion with a mane like glowing sun rays. Column 3: Sunmane Lion, lion with gold and bronze armour plates and a royal blue cape. BOTTOM ROW: Ruby Hummingbird (flower garden).  Column 1: Ruby Hummingbird, tiny green and red hummingbird hovering with a long beak. Column 2: Ruby Hummingbird, hummingbird with blurred glowing ruby-red wings leaving light trails. Column 3: Ruby Hummingbird, hummingbird with gem-tipped feathers and a tiny golden helmet.",
+      "references": [
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-vote/docs/adventures/new-creatures/reference-clean.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1f23d-e884-73e3-afdf-3978ba9bca50",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23d-e884-73e3-afdf-3978ba9bca50",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23d-e884-73e3-afdf-3978ba9bca50/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23d-e884-73e3-afdf-3978ba9bca50/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 98692,
+      "image_url": "https://v3b.fal.media/files/b/0ab30d76/dYJgV5QtwQVVAe9jdE6z__gR44ipqC.webp"
+    },
+    "retake-02": {
+      "state": "downloaded",
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators. TOP ROW = Mud Crocodile three times. BOTTOM ROW = Sunset Flamingo three times. Do not swap rows. Column 1 STORYBOOK: the natural animal only, NO glow, NO magic, NO armour or clothing. Column 2 ELEMENTAL: strong glowing magic power, NO armour or clothing. Column 3 CHAMPION: clearly wearing armour or hero gear, NO glow or magic effects. The three must look clearly different. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours. Image 1 shows style, layout and how the three columns differ; do NOT draw a koala or penguin. NO text, captions, letters or numbers anywhere. No scenery, no gore, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body inside its own cell with an empty margin. TOP ROW: Mud Crocodile (swamp). Every cell in this row is a CROCODILE. Column 1: Mud Crocodile, olive-green crocodile with a long snout and bumpy back. Column 2: Mud Crocodile, crocodile dripping with glowing swamp mud and floating marsh lights. Column 3: Mud Crocodile, crocodile with bark armour scales and a reed cape. BOTTOM ROW: Sunset Flamingo (lagoon). Every cell in this row is a FLAMINGO bird with long thin legs and a curved beak. Column 1: Sunset Flamingo, pink flamingo standing on one long leg. Column 2: Sunset Flamingo, flamingo with feathers glowing orange and pink like a sunset. Column 3: Sunset Flamingo, flamingo with a pink feather cape and golden leg bands.",
+      "references": [
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-vote/docs/adventures/new-creatures/reference-clean.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1f23d-e889-7c32-beb4-17bc4d7fbd4e",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23d-e889-7c32-beb4-17bc4d7fbd4e",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23d-e889-7c32-beb4-17bc4d7fbd4e/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23d-e889-7c32-beb4-17bc4d7fbd4e/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 1,
+      "user_queued_count": 2,
+      "bytes": 88170,
+      "image_url": "https://v3b.fal.media/files/b/0ab30d76/0EXZjAks6cX2THkYeYTAy_Fv5yMmIO.webp"
+    },
+    "retake-03": {
+      "state": "downloaded",
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators. TOP ROW = Bolt Kangaroo three times. BOTTOM ROW = Sand Meerkat three times. Do not swap rows. Column 1 STORYBOOK: the natural animal only, NO glow, NO magic, NO armour or clothing. Column 2 ELEMENTAL: strong glowing magic power, NO armour or clothing. Column 3 CHAMPION: clearly wearing armour or hero gear, NO glow or magic effects. The three must look clearly different. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours. Image 1 shows style, layout and how the three columns differ; do NOT draw a koala or penguin. NO text, captions, letters or numbers anywhere. No scenery, no gore, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body inside its own cell with an empty margin. TOP ROW: Bolt Kangaroo (outback).  Column 1: Bolt Kangaroo, tan kangaroo standing tall on strong back legs with a long tail. Column 2: Bolt Kangaroo, kangaroo with yellow lightning running down its legs and tail. Column 3: Bolt Kangaroo, kangaroo with red boxing wraps, a chest strap and a champion belt. BOTTOM ROW: Sand Meerkat (desert).  Column 1: Sand Meerkat, alert sandy meerkat standing up tall on its back legs. Column 2: Sand Meerkat, meerkat with a swirling golden sand tornado around its feet and amber eyes. Column 3: Sand Meerkat, meerkat scout with a tiny leather lookout helmet, scarf and telescope on its belt.",
+      "references": [
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-vote/docs/adventures/new-creatures/reference-clean.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1f23e-13cf-7ab1-a4f2-e16abf9f1d14",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-13cf-7ab1-a4f2-e16abf9f1d14",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-13cf-7ab1-a4f2-e16abf9f1d14/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-13cf-7ab1-a4f2-e16abf9f1d14/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 94236,
+      "image_url": "https://v3b.fal.media/files/b/0ab30d77/fRysuFIqE5L07HrdHV_I2_lSfU0mZF.webp"
+    },
+    "retake-04": {
+      "state": "downloaded",
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators. TOP ROW = Glass Dragonfly three times. BOTTOM ROW = Jade Tiger three times. Do not swap rows. Column 1 STORYBOOK: the natural animal only, NO glow, NO magic, NO armour or clothing. Column 2 ELEMENTAL: strong glowing magic power, NO armour or clothing. Column 3 CHAMPION: clearly wearing armour or hero gear, NO glow or magic effects. The three must look clearly different. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours. Image 1 shows style, layout and how the three columns differ; do NOT draw a koala or penguin. NO text, captions, letters or numbers anywhere. No scenery, no gore, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body inside its own cell with an empty margin. TOP ROW: Glass Dragonfly (pond). It is an INSECT: slim segmented body, six thin legs, two pairs of long clear wings, big round eyes; no fur, not a mammal, no four legs. Column 1: Glass Dragonfly, large blue dragonfly with four see-through wings. Column 2: Glass Dragonfly, dragonfly with glass-crystal wings sparkling like rainbows. Column 3: Glass Dragonfly, dragonfly with emerald armoured body segments and gold wing edges. BOTTOM ROW: Jade Tiger (jungle).  Column 1: Jade Tiger, orange tiger with bold black stripes and a powerful walk. Column 2: Jade Tiger, pale tiger with glowing jade-green stripes and drifting green spirit leaves. Column 3: Jade Tiger, tiger wearing jade and bronze shoulder armour and a red cloth sash.",
+      "references": [
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-vote/docs/adventures/new-creatures/reference-clean.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1f23e-1407-7451-b4be-acf773478278",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-1407-7451-b4be-acf773478278",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-1407-7451-b4be-acf773478278/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-1407-7451-b4be-acf773478278/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 100798,
+      "image_url": "https://v3b.fal.media/files/b/0ab30d77/ITSNVx3n68HbW_sm2bzzM_1KZ18oy5.webp"
+    },
+    "retake-05": {
+      "state": "downloaded",
+      "prompt": "Use case: creature design vote for a children's reading game. Create a NEW landscape 3:2 sheet: STRICT grid of THREE columns by TWO rows, SIX equal square cells, thin light separators. TOP ROW = Sun Phoenix three times. BOTTOM ROW = Burrow Wombat three times. Do not swap rows. Column 1 STORYBOOK: the natural animal only, NO glow, NO magic, NO armour or clothing. Column 2 ELEMENTAL: strong glowing magic power, NO armour or clothing. Column 3 CHAMPION: clearly wearing armour or hero gear, NO glow or magic effects. The three must look clearly different. Painterly premium children's fantasy storybook art in the exact painting language of image 1: warm ivory background, soft hand-painted textures, detailed natural fur, feathers, skin or scales, expressive friendly-but-brave eyes, rich strong colours. Image 1 shows style, layout and how the three columns differ; do NOT draw a koala or penguin. NO text, captions, letters or numbers anywhere. No scenery, no gore, no cartoon outlines, no photorealism. Anatomically readable, no extra limbs, exactly one creature per cell, the whole body inside its own cell with an empty margin. TOP ROW: Sun Phoenix (sky).  Column 1: Sun Phoenix, red and gold bird with long tail feathers and a bright crest. Column 2: Sun Phoenix, phoenix made of glowing flames, wings spread, tail like fire ribbons. Column 3: Sun Phoenix, phoenix with golden feather armour and a sun-disc on its chest. BOTTOM ROW: Burrow Wombat (outback). A wombat is a small round marsupial with a short nose and tiny ears, not a bear. Column 1: Burrow Wombat, chunky brown wombat with a round nose and small ears. Column 2: Burrow Wombat, wombat with glowing earth cracks and floating pebbles around it. Column 3: Burrow Wombat, wombat with a miner's helmet lamp and a sturdy digging shovel.",
+      "references": [
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-vote/docs/adventures/new-creatures/reference-clean.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1f23e-3e49-76f1-855d-0c9b981ec024",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-3e49-76f1-855d-0c9b981ec024",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-3e49-76f1-855d-0c9b981ec024/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f23e-3e49-76f1-855d-0c9b981ec024/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 102322,
+      "image_url": "https://v3b.fal.media/files/b/0ab30d78/nn4Xk_hk0-t5M1tjpcvl7_5keece6P.webp"
+    }
+  }
+}
