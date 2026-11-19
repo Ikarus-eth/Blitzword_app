@@ -1,4 +1,4 @@
-name: Verify live Wizard Tower
+name: Verify live new creatures vote
 on:
   push:
     branches: [claude/pip-grows-live-check]
@@ -11,17 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 54772be94313d8dfd03e6477e5deecb67a807bdb
-      - name: Compare live files with merge 54772be
+          ref: 2be921ea79d6ce9cbff5eb1b83c8533cb357b35e
+      - name: Compare live files with merge 2be921e
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
+          P=assets/new-creatures-vote
           for attempt in $(seq 1 30); do
-            curl -s -o probe.html "$B/index.html?cb=$GITHUB_RUN_ID-$attempt"
-            if cmp -s probe.html index.html; then echo "live after attempt $attempt"; break; fi
+            curl -s -o probe.json "$B/$P/catalog.json?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe.json $P/catalog.json; then echo "live after attempt $attempt"; break; fi
             sleep 30
           done
           bad=0; n=0
-          for f in index.html missions.js assets/adventures/wizard-tower/campaign.js assets/adventures/wizard-tower/*.webp assets/adventures/wizard-tower/voice/manifest.js $(ls assets/adventures/wizard-tower/voice/*.mp3 | head -40) assets/teaching/words/pictures.js assets/teaching/words/giant.webp assets/teaching/words/pocket.webp assets/teaching/words/hat.webp assets/teaching/words/page.webp; do
+          for f in index.html $P/index.html $P/review.js $P/selection.js $P/review.css $P/catalog.json $P/artwork-manifest.json $P/sheets/*.webp; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
