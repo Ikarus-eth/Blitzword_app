@@ -19,6 +19,8 @@ BATCHES = ['sheets-1-test', 'sheets-2-rest', 'sheets-3-retake']
 TITLES = {'a': 'Storybook', 'b': 'Elemental', 'c': 'Champion'}
 FIELD = {'a': 'base', 'b': 'elemental', 'c': 'champion'}
 KEEP = 0.87  # keep the top of each cell; the model sometimes writes a caption along the bottom
+# Single cells taken from another sheet after review: (creature, style) -> (batch, sheet, row, column, rows).
+OVERRIDES = json.loads((HERE / 'cell-overrides.json').read_text())['cells']
 by_id = {c['id']: c for c in concepts['creatures']}
 placement = {}
 for name in BATCHES:
@@ -36,8 +38,15 @@ if dest_sheets.exists():
     shutil.rmtree(dest_sheets)
 dest_sheets.mkdir(parents=True)
 entities, manifest, copied = [], [], {}
-for cid in sorted(by_id):
-    src, row, rows = placement[cid]
+
+
+def crop(column, row, rows, cw, ch, height, inset):
+    if rows == 1:  # the one-row 16:9 sheet (Dream Tapir) has its animals in the upper middle and captions below them
+        return [round(column * cw) + inset, round(height * 0.08), round(cw) - 2 * inset, round(height * 0.56)]
+    return [round(column * cw) + inset, round(row * ch) + inset, round(cw) - 2 * inset, round(ch * KEEP) - inset]
+
+
+def sheet_file(src):
     if src not in copied:
         out = dest_sheets / (src.parent.name.split('-')[-1] + '-' + src.name)
         shutil.copyfile(src, out)
@@ -45,15 +54,25 @@ for cid in sorted(by_id):
         copied[src] = (out, width, height)
         manifest.append({'file': 'sheets/' + out.name, 'source': str(src.relative_to(ROOT)), 'width': width, 'height': height,
                          'sha256': hashlib.sha256(out.read_bytes()).hexdigest()})
-    out, width, height = copied[src]
-    cw, ch = width / 3, height / rows
-    inset = round(cw * 0.012)
+    return copied[src]
+
+
+for cid in sorted(by_id):
     c = by_id[cid]
-    options = [{'id': key, 'title': TITLES[key], 'description': c[FIELD[key]], 'src': 'sheets/' + out.name + '?v=20261119',
-                'width': width, 'height': height,
-                'crop': [round(col * cw) + inset, round(row * ch) + inset, round(cw) - 2 * inset, round(ch * KEEP) - inset]}
-               for col, key in enumerate(['a', 'b', 'c'])]
-    entities.append({'id': cid, 'name': c['name'], 'habitat': c['habitat'], 'sheet': out.name, 'options': options})
+    options = []
+    for col, key in enumerate(['a', 'b', 'c']):
+        src, row, rows = placement[cid]
+        column = col
+        o = OVERRIDES.get(cid + key)
+        if o:
+            src, row, column, rows = HERE / 'generated' / o['batch'] / (o['sheet'] + '.webp'), o['row'], o['column'], o['rows']
+        out, width, height = sheet_file(src)
+        cw, ch = width / 3, height / rows
+        inset = round(cw * 0.012)
+        options.append({'id': key, 'title': TITLES[key], 'description': c[FIELD[key]], 'src': 'sheets/' + out.name + '?v=20261119',
+                        'width': width, 'height': height,
+                        'crop': crop(column, row, rows, cw, ch, height, inset)})
+    entities.append({'id': cid, 'name': c['name'], 'habitat': c['habitat'], 'options': options})
 entities.sort(key=lambda e: e['id'])
 catalog = {'version': 1, 'reviewId': concepts['reviewId'], 'names': ['Artus', 'Juna'], 'styles': TITLES, 'entities': entities}
 (DEST / 'catalog.json').write_text(json.dumps(catalog, indent=1, ensure_ascii=False) + '\n')

@@ -1,0 +1,171 @@
+{
+ "model": "fal-ai/nano-banana/edit",
+ "prompts": [
+  "docs/adventures/new-creatures/sheets-1-test.json",
+  "docs/adventures/new-creatures/sheets-2-rest.json",
+  "docs/adventures/new-creatures/sheets-3-retake.json"
+ ],
+ "sheets": [
+  {
+   "file": "sheets/test-sheet-01.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-1-test/sheet-01.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "88026a70a19d3b5f505e655a7607591de6086de34d5ba43084d5df3060758474"
+  },
+  {
+   "file": "sheets/retake-retake-03.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-03.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "da3b24e2600e5630ec849288f7040d63c19facc1f1c4dc0beac6d4c79b7cbbc8"
+  },
+  {
+   "file": "sheets/rest-sheet-02.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-02.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "ab3cbaf85f7992756a976b20ec6f7ffb1cad1f433ed43749f109ea0284b0e709"
+  },
+  {
+   "file": "sheets/rest-sheet-03.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-03.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "ccd42d968a58bc8cc3d59f3a7c4b07248ed9378aca957d9e67df16fe637869ff"
+  },
+  {
+   "file": "sheets/rest-sheet-04.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-04.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "7523052edf55517bd527d0ec32f63585c3b5614176f786d018ccb3e1756c75cf"
+  },
+  {
+   "file": "sheets/retake-retake-04.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-04.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "6b3e73f7702cd10879b4816ddd69bb52e78232f6a268067e437cdd4a54772847"
+  },
+  {
+   "file": "sheets/rest-sheet-05.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-05.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "69de7d26aa8f1b212472d86bd622c47cbbe317aeea302dce27e291141aa466bf"
+  },
+  {
+   "file": "sheets/retake-retake-05.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-05.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "c8570cca961a2ec0ff7d3ad52c3c118d7221a4d6171b01c45598a18147b5b48d"
+  },
+  {
+   "file": "sheets/final-final-01.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-4-final/final-01.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "41e539054f174c73644ddb44742a8219c5abfaec3fd0847f44f96275a38f3242"
+  },
+  {
+   "file": "sheets/rest-sheet-06.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-06.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "7b5ff013f75582070dace5ac5220f5d30c17e84f531a6929bb184719512e97aa"
+  },
+  {
+   "file": "sheets/rest-sheet-07.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-07.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "f57fa2db3feb7e4afa1ef1900d262026b7cff41ac35a2d9e87116d6b0e9c44d7"
+  },
+  {
+   "file": "sheets/retake-retake-02.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-02.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "19aa8ce06255ee5d6cb28f2316be22383645f8c4273d9c0918db9e2ae51d4bcf"
+  },
+  {
+   "file": "sheets/rest-sheet-08.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-08.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "4af09691c2995399c7d57266d7e0b97172aa562b43346449452e39dbbc4beca6"
+  },
+  {
+   "file": "sheets/rest-sheet-09.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-09.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "81cdd7bb263f6d274953beb96f715cda0b7186d474f6f2c86ca538a934543f8c"
+  },
+  {
+   "file": "sheets/retake-retake-01.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-01.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "b173e8eeb8f93d5d2ee168c09c523e110b6d472c00ea46b07edb91dc0397920b"
+  },
+  {
+   "file": "sheets/rest-sheet-11.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-11.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "6be969153972da9860c8cd2d97f15eadd17e46154f98589e5938cb6ecbab870f"
+  },
+  {
+   "file": "sheets/rest-sheet-12.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-12.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "02d7190feb7e432471897bfadea8e30fc8056095476a08f49e368e908b04e7c3"
+  },
+  {
+   "file": "sheets/rest-sheet-13.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-13.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "db8926e0770e3f02cff181cd89f63ffd8083a51fc614e3f6643020e40b04ae5a"
+  },
+  {
+   "file": "sheets/rest-sheet-14.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-14.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "90259f653acace32e1c17d765934d879590bda9b14c123918ec4bbd99ef0ede2"
+  },
+  {
+   "file": "sheets/rest-sheet-15.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-15.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "902f3ecf22e156cb805271d43338178df3e27e5fba471871f853a59451b75d50"
+  },
+  {
+   "file": "sheets/rest-sheet-16.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-16.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "74b2cb8df031f856ec6f1d87786bbce7cbd330365b6df70dac750124a557a29e"
+  },
+  {
+   "file": "sheets/rest-sheet-17.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-17.webp",
+   "width": 1248,
+   "height": 832,
+   "sha256": "0743f7fb13ea6fffd61b31c8bcc255c7d02733cf4fafe7c311a515e04a7fa8c6"
+  },
+  {
+   "file": "sheets/rest-sheet-18.webp",
+   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-18.webp",
+   "width": 1344,
+   "height": 768,
+   "sha256": "883eb6737800a402e4876ae83a8902942f110a09a7e58cb5ef2fe856a86883ac"
+  }
+ ]
+}

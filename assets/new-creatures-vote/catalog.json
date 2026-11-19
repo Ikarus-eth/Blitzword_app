@@ -1,0 +1,1730 @@
+{
+ "version": 1,
+ "reviewId": "new-creatures-20261119",
+ "names": [
+  "Artus",
+  "Juna"
+ ],
+ "styles": {
+  "a": "Storybook",
+  "b": "Elemental",
+  "c": "Champion"
+ },
+ "entities": [
+  {
+   "id": "01",
+   "name": "Tide Octopus",
+   "habitat": "sea",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "round friendly orange octopus with curling striped arms and big clever eyes",
+     "src": "sheets/test-sheet-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "sea-green octopus with swirling glowing water whirlpools around its arms",
+     "src": "sheets/test-sheet-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "octopus wearing a coral crown and polished shell shoulder plates, holding a small round shell shield",
+     "src": "sheets/test-sheet-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "02",
+   "name": "Lava Rhino",
+   "habitat": "volcano",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "sturdy grey young rhino with a curved horn and thick wrinkled skin",
+     "src": "sheets/test-sheet-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "dark rhino with glowing orange lava cracks and a burning ember horn",
+     "src": "sheets/test-sheet-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "rhino in black volcanic-stone armour plates with a gold-tipped horn",
+     "src": "sheets/test-sheet-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "03",
+   "name": "Sand Meerkat",
+   "habitat": "desert",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "alert sandy meerkat standing up tall on its back legs",
+     "src": "sheets/retake-retake-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "meerkat with a swirling golden sand tornado around its feet and amber eyes",
+     "src": "sheets/retake-retake-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "meerkat scout with a tiny leather lookout helmet, scarf and telescope on its belt",
+     "src": "sheets/retake-retake-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "04",
+   "name": "Coral Seahorse",
+   "habitat": "sea",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "pink and peach seahorse with a curled tail and fan fins",
+     "src": "sheets/rest-sheet-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "turquoise seahorse trailing glowing bubbles and bright sea-light",
+     "src": "sheets/rest-sheet-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "seahorse knight with coral armour plates and a pearl on its chest",
+     "src": "sheets/rest-sheet-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "05",
+   "name": "Glow Jellyfish",
+   "habitat": "sea",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "soft lilac jellyfish with a round bell and long ribbon tentacles",
+     "src": "sheets/rest-sheet-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "deep-blue jellyfish crackling with little electric sparks",
+     "src": "sheets/rest-sheet-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "jellyfish with a crystal crown bell and long braided golden tentacles",
+     "src": "sheets/rest-sheet-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "06",
+   "name": "Banyan Gorilla",
+   "habitat": "jungle",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "big gentle dark-grey gorilla knuckle-walking, strong arms",
+     "src": "sheets/rest-sheet-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "gorilla with hanging banyan roots and glowing green leaf markings",
+     "src": "sheets/rest-sheet-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "gorilla in carved wooden chest armour with a vine belt, standing proud",
+     "src": "sheets/rest-sheet-03.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "07",
+   "name": "Storm Lemur",
+   "habitat": "jungle",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "ring-tailed lemur with a long black-and-white striped tail and orange eyes",
+     "src": "sheets/rest-sheet-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "lemur with a lightning-striped tail and small storm clouds sparking around it",
+     "src": "sheets/rest-sheet-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "lemur acrobat with a blue headband, wrist guards and a short staff",
+     "src": "sheets/rest-sheet-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "08",
+   "name": "Jade Tiger",
+   "habitat": "jungle",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "orange tiger with bold black stripes and a powerful walk",
+     "src": "sheets/retake-retake-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "pale tiger with glowing jade-green stripes and drifting green spirit leaves",
+     "src": "sheets/retake-retake-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "tiger wearing jade and bronze shoulder armour and a red cloth sash",
+     "src": "sheets/retake-retake-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "09",
+   "name": "Frost Mammoth",
+   "habitat": "snow",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "shaggy brown woolly mammoth with long curved tusks",
+     "src": "sheets/rest-sheet-05.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "white-blue mammoth with ice-crystal tusks and a cold misty breath",
+     "src": "sheets/rest-sheet-05.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "mammoth wearing a patterned blanket saddle and silver tusk rings",
+     "src": "sheets/rest-sheet-05.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "10",
+   "name": "Sun Phoenix",
+   "habitat": "sky",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "red and gold bird with long tail feathers and a bright crest",
+     "src": "sheets/retake-retake-05.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "phoenix made of glowing flames, wings spread, tail like fire ribbons",
+     "src": "sheets/retake-retake-05.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "phoenix with golden feather armour and a sun-disc on its chest",
+     "src": "sheets/final-final-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "11",
+   "name": "Star Unicorn",
+   "habitat": "night sky",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "white pony unicorn with a pale spiral horn and silver mane",
+     "src": "sheets/rest-sheet-06.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "midnight-blue unicorn with a mane full of twinkling stars and a glowing horn",
+     "src": "sheets/rest-sheet-06.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "unicorn with silver barding, a star-shaped chest plate and a proud stance",
+     "src": "sheets/rest-sheet-06.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "12",
+   "name": "Cloud Whale",
+   "habitat": "sky",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "small round blue whale floating in the air with a white belly",
+     "src": "sheets/rest-sheet-06.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "whale made of soft swirling cloud with rain drifting from its fins",
+     "src": "sheets/rest-sheet-06.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "whale with a little sky-ship saddle, brass fittings and a flag",
+     "src": "sheets/rest-sheet-06.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "13",
+   "name": "Boulder Hippo",
+   "habitat": "river",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "round grey-pink hippo with a wide mouth and small ears",
+     "src": "sheets/rest-sheet-07.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "hippo whose back is covered in mossy river stones and splashing water",
+     "src": "sheets/rest-sheet-07.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "hippo with heavy bronze-studded leather armour and a stone shield",
+     "src": "sheets/rest-sheet-07.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "14",
+   "name": "Mud Crocodile",
+   "habitat": "swamp",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "olive-green crocodile with a long snout and bumpy back",
+     "src": "sheets/retake-retake-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "crocodile dripping with glowing swamp mud and floating marsh lights",
+     "src": "sheets/retake-retake-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "crocodile with bark armour scales and a reed cape",
+     "src": "sheets/retake-retake-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "15",
+   "name": "Wind Manta",
+   "habitat": "sky",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "wide dark-blue manta ray gliding with a white belly",
+     "src": "sheets/rest-sheet-08.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "manta ray with glowing wind trails curling off its wing tips",
+     "src": "sheets/rest-sheet-08.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "manta ray with silver wing-edge plates and a small rider saddle",
+     "src": "sheets/rest-sheet-08.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "16",
+   "name": "Autumn Red Panda",
+   "habitat": "forest",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "fluffy rust-red red panda with a ringed tail and white face marks",
+     "src": "sheets/rest-sheet-08.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "red panda with swirling falling autumn leaves and warm glowing fur tips",
+     "src": "sheets/rest-sheet-08.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "red panda with a little leaf-pattern cloak, a satchel and a wooden sword",
+     "src": "sheets/rest-sheet-08.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "17",
+   "name": "Bolt Kangaroo",
+   "habitat": "outback",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "tan kangaroo standing tall on strong back legs with a long tail",
+     "src": "sheets/final-final-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "kangaroo with yellow lightning running down its legs and tail",
+     "src": "sheets/final-final-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "kangaroo with red boxing wraps, a chest strap and a champion belt",
+     "src": "sheets/final-final-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "18",
+   "name": "Iceberg Penguin",
+   "habitat": "snow",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "small black-and-white penguin with a yellow neck patch",
+     "src": "sheets/rest-sheet-09.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "penguin with ice-crystal flippers and swirling snow around it",
+     "src": "sheets/rest-sheet-09.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "penguin with a blue knitted scarf, ice-plate armour and a tiny ice spear",
+     "src": "sheets/rest-sheet-09.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "19",
+   "name": "Sunmane Lion",
+   "habitat": "savanna",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "golden lion with a big shaggy mane, calm and strong",
+     "src": "sheets/retake-retake-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "lion with a mane like glowing sun rays",
+     "src": "sheets/retake-retake-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "lion with gold and bronze armour plates and a royal blue cape",
+     "src": "sheets/final-final-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "20",
+   "name": "Ruby Hummingbird",
+   "habitat": "flower garden",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "tiny green and red hummingbird hovering with a long beak",
+     "src": "sheets/retake-retake-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "hummingbird with blurred glowing ruby-red wings leaving light trails",
+     "src": "sheets/final-final-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "hummingbird with gem-tipped feathers and a tiny golden helmet",
+     "src": "sheets/retake-retake-01.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "21",
+   "name": "Pearl Narwhal",
+   "habitat": "arctic sea",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "speckled grey narwhal with a long spiral tusk",
+     "src": "sheets/rest-sheet-11.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "narwhal with a glowing pearl-white tusk and swirling sea foam",
+     "src": "sheets/rest-sheet-11.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "narwhal with silver fin armour and a pearl-studded tusk ring",
+     "src": "sheets/rest-sheet-11.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "22",
+   "name": "Abyss Angler",
+   "habitat": "deep sea",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "dark round anglerfish with a glowing lure and big toothy grin",
+     "src": "sheets/rest-sheet-11.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "anglerfish whose lure and spots glow bright cyan in the dark",
+     "src": "sheets/rest-sheet-11.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "anglerfish with barnacle armour plates and a lantern lure",
+     "src": "sheets/rest-sheet-11.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "23",
+   "name": "Tusk Walrus",
+   "habitat": "arctic shore",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "big brown walrus with long white tusks and bristly whiskers",
+     "src": "sheets/rest-sheet-12.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "walrus with frosty ice tusks and icicles on its whiskers",
+     "src": "sheets/rest-sheet-12.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "walrus with a fur-trimmed chest plate and gold tusk caps",
+     "src": "sheets/rest-sheet-12.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "24",
+   "name": "Bubble Platypus",
+   "habitat": "river",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "brown platypus with a duck bill, webbed feet and flat tail",
+     "src": "sheets/rest-sheet-12.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "platypus surrounded by floating shiny water bubbles",
+     "src": "sheets/rest-sheet-12.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "platypus explorer with goggles, a small backpack and a bill guard",
+     "src": "sheets/rest-sheet-12.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "25",
+   "name": "Glass Dragonfly",
+   "habitat": "pond",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "large blue dragonfly with four see-through wings",
+     "src": "sheets/retake-retake-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "dragonfly with glass-crystal wings sparkling like rainbows",
+     "src": "sheets/retake-retake-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "dragonfly with emerald armoured body segments and gold wing edges",
+     "src": "sheets/retake-retake-04.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "26",
+   "name": "Sky Giraffe",
+   "habitat": "savanna",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "tall spotted giraffe with a long neck and gentle face",
+     "src": "sheets/rest-sheet-13.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "giraffe with spots that look like small clouds and wind swirls",
+     "src": "sheets/rest-sheet-13.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "giraffe with a long patterned neck banner and bronze hoof guards",
+     "src": "sheets/rest-sheet-13.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "27",
+   "name": "Gum Koala",
+   "habitat": "eucalyptus forest",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "fluffy grey koala hugging a eucalyptus branch",
+     "src": "sheets/rest-sheet-14.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "koala with glowing mint-green eucalyptus leaves swirling around it",
+     "src": "sheets/rest-sheet-14.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "koala with a leaf crown and a small bark shield, standing ready",
+     "src": "sheets/rest-sheet-14.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "28",
+   "name": "Vine Sloth",
+   "habitat": "jungle",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "smiling brown sloth hanging from a branch with long claws",
+     "src": "sheets/rest-sheet-14.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "sloth with flowering vines growing over its fur and tiny glowing blossoms",
+     "src": "sheets/rest-sheet-14.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "sloth with woven vine armour and a hanging seed-pod medal",
+     "src": "sheets/rest-sheet-14.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "29",
+   "name": "Spike Puffer",
+   "habitat": "reef",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "round yellow pufferfish with small spikes and big eyes",
+     "src": "sheets/rest-sheet-15.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "puffed-up pufferfish with glowing purple spikes",
+     "src": "sheets/rest-sheet-15.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      5,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "pufferfish with a spiky shell helmet and a tiny coral trident",
+     "src": "sheets/rest-sheet-15.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      5,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "30",
+   "name": "Rainbow Toucan",
+   "habitat": "jungle",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "black toucan with a huge rainbow-coloured beak",
+     "src": "sheets/rest-sheet-15.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "toucan whose beak glows with bright rainbow light trails",
+     "src": "sheets/rest-sheet-15.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "toucan with feather armour and a gold beak band",
+     "src": "sheets/rest-sheet-15.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "31",
+   "name": "Sunset Flamingo",
+   "habitat": "lagoon",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "pink flamingo standing on one long leg",
+     "src": "sheets/retake-retake-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "flamingo with feathers glowing orange and pink like a sunset",
+     "src": "sheets/retake-retake-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "flamingo with a pink feather cape and golden leg bands",
+     "src": "sheets/retake-retake-02.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "32",
+   "name": "Snow Yeti",
+   "habitat": "high mountain",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "big friendly white-furred yeti with blue face and large feet",
+     "src": "sheets/rest-sheet-16.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "yeti with a swirling blizzard around it and glowing ice-blue eyes",
+     "src": "sheets/rest-sheet-16.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "yeti with fur-lined iron shoulder guards and a carved ice club",
+     "src": "sheets/rest-sheet-16.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "33",
+   "name": "Burrow Wombat",
+   "habitat": "outback",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "chunky brown wombat with a round nose and small ears",
+     "src": "sheets/retake-retake-05.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "wombat with glowing earth cracks and floating pebbles around it",
+     "src": "sheets/retake-retake-05.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "wombat with a miner's helmet lamp and a sturdy digging shovel",
+     "src": "sheets/retake-retake-05.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "34",
+   "name": "Steam Capybara",
+   "habitat": "hot spring",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "calm brown capybara sitting peacefully",
+     "src": "sheets/rest-sheet-17.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      5,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "capybara wrapped in soft warm steam swirls with an orange on its head",
+     "src": "sheets/rest-sheet-17.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      421,
+      421,
+      406,
+      357
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "capybara with a bamboo chest plate and a calm warrior headband",
+     "src": "sheets/rest-sheet-17.webp?v=20261119",
+     "width": 1248,
+     "height": 832,
+     "crop": [
+      837,
+      421,
+      406,
+      357
+     ]
+    }
+   ]
+  },
+  {
+   "id": "35",
+   "name": "Dream Tapir",
+   "habitat": "night forest",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "black-and-white tapir with a short trunk-like nose",
+     "src": "sheets/rest-sheet-18.webp?v=20261119",
+     "width": 1344,
+     "height": 768,
+     "crop": [
+      5,
+      61,
+      438,
+      430
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "tapir with glowing dream bubbles and little moons floating around it",
+     "src": "sheets/rest-sheet-18.webp?v=20261119",
+     "width": 1344,
+     "height": 768,
+     "crop": [
+      453,
+      61,
+      438,
+      430
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "tapir with a starry night cape and silver forehead charm",
+     "src": "sheets/rest-sheet-18.webp?v=20261119",
+     "width": 1344,
+     "height": 768,
+     "crop": [
+      901,
+      61,
+      438,
+      430
+     ]
+    }
+   ]
+  }
+ ]
+}
