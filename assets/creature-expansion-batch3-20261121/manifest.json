@@ -1,0 +1,219 @@
+{
+  "created": "2026-11-21",
+  "method": "Built-in ImageGen",
+  "status": "Proposed selection artwork; not implemented or deployed",
+  "baseMain": "f9e75ab59bf2d921ff24b13e23a40ccf3cb2f068",
+  "visualReview": "All final pictures inspected for subjects, labels, framing and style. Mantis B and C corrected to six legs using Mantis A anatomy reference.",
+  "assets": [
+    {
+      "file": "zebra-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2895908,
+      "sha256": "befec5fc763cb7a6bf1ae42531855cf5562f09d4ae29246a29ba9b76bb28b757"
+    },
+    {
+      "file": "zebra-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2954268,
+      "sha256": "67b2c39abbda44b69b6007c6fbdc91b1e1ea0db6e1f8d0c9ae47047d34f8b6a1"
+    },
+    {
+      "file": "zebra-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2978450,
+      "sha256": "60522844af67646d7fe5e276f11432b0e8a0dfd8ca37884936ce7ad796c2ee9a"
+    },
+    {
+      "file": "saiga-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2852917,
+      "sha256": "8568ed6b924b90d3ae2247109c354021c4625f8ccfa168689b8878c026b4b144"
+    },
+    {
+      "file": "saiga-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2902611,
+      "sha256": "2bf01501da46be6801e25137b534bb8b61dd319fe2c5426f37eb048aaeaf69a2"
+    },
+    {
+      "file": "saiga-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2774916,
+      "sha256": "d50b9126d292fb1644a73c88f2ad54913d148c2abaffdbb1449c9a251f3bfb6c"
+    },
+    {
+      "file": "echidna-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3197648,
+      "sha256": "5de22052e5b8d82ed9181f05def5b642b8473ef5db83a8c1a5e431a4a01120ab"
+    },
+    {
+      "file": "echidna-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3149610,
+      "sha256": "88f8a4b6921a2d28ee3b0ffb92a8b8d0769b70519373b18b324bcbf136af17f6"
+    },
+    {
+      "file": "echidna-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3226232,
+      "sha256": "8cb9fa5bcd7e2739f78c83fff55c1516b108fd4ec82ba790d7c1cc2401688b58"
+    },
+    {
+      "file": "swan-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2797750,
+      "sha256": "5bb9e92d494cc4b249aca96762fb56cff3dfd3b3b524082f154be48f69298e53"
+    },
+    {
+      "file": "swan-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2909483,
+      "sha256": "43ab524a7b0998ebad9c31898bf8dbb635c93afeff35f7409e65b28e918b9ba7"
+    },
+    {
+      "file": "swan-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2854551,
+      "sha256": "bed711c29553712c119e5bc9d17847291a4f8384adef13c5e15abee42492ee07"
+    },
+    {
+      "file": "kiwi-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2992278,
+      "sha256": "f29401fd5f14274518c20658b59d624a20ec0275b6acc620ffef4fe592e2836c"
+    },
+    {
+      "file": "kiwi-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2938203,
+      "sha256": "8f4f3d9e62362d4c0b330144850d0d16d56a7e6bec15c6fe47c90f9a3f8762c7"
+    },
+    {
+      "file": "kiwi-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2906691,
+      "sha256": "c3f5a2b0d6793ce1c7fe48e208220aca290c8a2400cc750f1c3e5fe946288611"
+    },
+    {
+      "file": "woodpecker-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2916204,
+      "sha256": "3ae793ab85c1860ed96c528e320aa4f5b49585df4dfb6a51cb045174fab651ca"
+    },
+    {
+      "file": "woodpecker-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2833327,
+      "sha256": "bff1f2124f8369f7c94eeffad3400095b4140ab0267a0581285f548620b52fb1"
+    },
+    {
+      "file": "woodpecker-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2868166,
+      "sha256": "bce44bddb86d553c6e7f4e8f8d66ce86c70c97585975dd2659f61752137cde80"
+    },
+    {
+      "file": "mantis-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2895095,
+      "sha256": "878ebe0b13e771d0d5a1fa9ff556b53b85c0c6931cc79530a1fd1e1e163bb6b5"
+    },
+    {
+      "file": "mantis-b-final.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2674137,
+      "sha256": "a1290668d179e46ec406cee5022c8b53089534d18c1c207aa621f152b9ff94e1"
+    },
+    {
+      "file": "mantis-c-final.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2511973,
+      "sha256": "4f24e96f138e4400d8363aa58c35e68ecf0c66e0ee766d286e6f94e69e303597"
+    },
+    {
+      "file": "cicada-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3101421,
+      "sha256": "ac77a9ddb2b08e62c3ab9c9b8125ce72c5d54eaedbbaaf186964148fe3255044"
+    },
+    {
+      "file": "cicada-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3137815,
+      "sha256": "548e8ade7ece96bfe381c0d14cf22b7137780ebcf786215c0925d01927066698"
+    },
+    {
+      "file": "cicada-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2923745,
+      "sha256": "162f7b101c9f192a730ba2c19c5d8c7e01c3b51a302041bb00535a5fa4bdce29"
+    },
+    {
+      "file": "dugong-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2958808,
+      "sha256": "1de67a4ee07e941b61576c4617c5fb76e77dd1e82a8312a203db77ad5e4269d2"
+    },
+    {
+      "file": "dugong-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3009693,
+      "sha256": "3c5688fc69ab4eaa2b5bea0d0842a2242f0ec90bd47ba4e437a81b55c5548262"
+    },
+    {
+      "file": "dugong-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2849730,
+      "sha256": "811f00228b67c3486d7bb84e41b6863a4ad4575167d2dfd1066b6f8ccda0bc9a"
+    },
+    {
+      "file": "hammerhead-shark-a.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2877806,
+      "sha256": "10f88314c1e26eaac48e77e9bd2732d0838c920e470e10acbed9c53bb1d0ea19"
+    },
+    {
+      "file": "hammerhead-shark-b.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2944704,
+      "sha256": "10094948c44b60300a5f296fcfe8320416d689303d08add55eccd15d163c5b09"
+    },
+    {
+      "file": "hammerhead-shark-c.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2787763,
+      "sha256": "a7151388225b7fa5af72a1d7ad60df1d242b5c7c4d59c2de7cab8cdebe7d8096"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "method": "Built-in ImageGen",
+  "status": "Proposed selection art; not implemented or deployed",
+  "prompts": [
+    {
+      "id": "zebra-a",
+      "name": "Zebra",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Zebra option A, Storybook. Subject: Warm ivory and charcoal stripes, tiny leaf pendant. Essential anatomy: Four hoofed legs, striped horse body, upright short mane and tufted tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Zebra A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "zebra-b",
+      "name": "Zebra",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Zebra option B, Elemental. Subject: Indigo stripes with restrained silver lightning glowing along mane and hooves. Essential anatomy: Four hoofed legs, striped horse body, upright short mane and tufted tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Zebra B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "zebra-c",
+      "name": "Zebra",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Zebra option C, Champion. Subject: Natural stripes, forest-green shoulder cloth, bronze leaf chest guard and leather satchel. Essential anatomy: Four hoofed legs, striped horse body, upright short mane and tufted tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Zebra C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "saiga-a",
+      "name": "Saiga",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Saiga option A, Storybook. Subject: Sandy coat and cream belly, tiny green pendant. Essential anatomy: Stocky antelope, distinctive large bulbous drooping nose, four slender hoofed legs, two upright translucent ridged horns. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Saiga A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "saiga-b",
+      "name": "Saiga",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Saiga option B, Elemental. Subject: Pale sandy coat, glowing amber horns and curling dust magic at hooves. Essential anatomy: Stocky antelope, distinctive large bulbous drooping nose, four slender hoofed legs, two upright translucent ridged horns. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Saiga B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "saiga-c",
+      "name": "Saiga",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Saiga option C, Champion. Subject: Warm russet coat, green woven collar, restrained bronze shoulder guards. Essential anatomy: Stocky antelope, distinctive large bulbous drooping nose, four slender hoofed legs, two upright translucent ridged horns. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Saiga C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "echidna-a",
+      "name": "Echidna",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Echidna option A, Storybook. Subject: Brown and cream spines, tiny woodland neck ribbon. Essential anatomy: Low round body, short strong legs, dense cream-tipped brown spines, long narrow snout; no porcupine tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Echidna A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "echidna-b",
+      "name": "Echidna",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Echidna option B, Elemental. Subject: Mossy green spines with glowing amber tips and a few floating leaf sparks. Essential anatomy: Low round body, short strong legs, dense cream-tipped brown spines, long narrow snout; no porcupine tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Echidna B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "echidna-c",
+      "name": "Echidna",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Echidna option C, Champion. Subject: Natural spines, small bronze collar and leather side pouch, leave spines exposed. Essential anatomy: Low round body, short strong legs, dense cream-tipped brown spines, long narrow snout; no porcupine tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Echidna C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "swan-a",
+      "name": "Swan",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Swan option A, Storybook. Subject: Ivory feathers, tiny sea-glass pendant, wings gently lifted. Essential anatomy: Graceful long curved neck, white feathered body, two wings, two webbed feet, orange beak with black base. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Swan A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "swan-b",
+      "name": "Swan",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Swan option B, Elemental. Subject: Pearl feathers, softly luminous icy-blue wing edges and frost wisps. Essential anatomy: Graceful long curved neck, white feathered body, two wings, two webbed feet, orange beak with black base. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Swan B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "swan-c",
+      "name": "Swan",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Swan option C, Champion. Subject: Ivory feathers, green shoulder mantle and bronze botanical clasp; no crown. Essential anatomy: Graceful long curved neck, white feathered body, two wings, two webbed feet, orange beak with black base. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Swan C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "kiwi-a",
+      "name": "Kiwi",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Kiwi option A, Storybook. Subject: Chestnut feathers, tiny leaf charm. Essential anatomy: Small round flightless bird, shaggy brown feathers, very long slender beak, stout legs, tiny hidden wings, no visible tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Kiwi A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "kiwi-b",
+      "name": "Kiwi",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Kiwi option B, Elemental. Subject: Deep plum feathers with golden star speckles, softly glowing beak tip. Essential anatomy: Small round flightless bird, shaggy brown feathers, very long slender beak, stout legs, tiny hidden wings, no visible tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Kiwi B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "kiwi-c",
+      "name": "Kiwi",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Kiwi option C, Champion. Subject: Russet feathers, small green scarf, light bronze chest clasp and side pouch. Essential anatomy: Small round flightless bird, shaggy brown feathers, very long slender beak, stout legs, tiny hidden wings, no visible tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Kiwi C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "woodpecker-a",
+      "name": "Woodpecker",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Woodpecker option A, Storybook. Subject: Black and cream feathers, red crest, small leaf pendant. Essential anatomy: Bird with pointed chisel beak, red crest, black-and-cream wings, two gripping feet, stiff supporting tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Woodpecker A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "woodpecker-b",
+      "name": "Woodpecker",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Woodpecker option B, Elemental. Subject: Copper-red crest glowing like embers, charcoal wings with warm gold markings. Essential anatomy: Bird with pointed chisel beak, red crest, black-and-cream wings, two gripping feet, stiff supporting tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Woodpecker B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "woodpecker-c",
+      "name": "Woodpecker",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Woodpecker option C, Champion. Subject: Natural red crest, forest-green shoulder cloth and restrained bronze breast guard. Essential anatomy: Bird with pointed chisel beak, red crest, black-and-cream wings, two gripping feet, stiff supporting tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Woodpecker C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "mantis-a",
+      "name": "Mantis",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Mantis option A, Storybook. Subject: Fresh leaf-green body, warm olive wing veins, gentle alert expression. Essential anatomy: Exactly six legs total: two folded raptorial forelegs and four walking legs; triangular head, two antennae, slender thorax, folded wings. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Mantis A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "mantis-b",
+      "name": "Mantis",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Mantis option B, Elemental. Subject: Jade body, softly luminous emerald wing veins and tiny floating leaf motes. Essential anatomy: Exactly six legs total: two folded raptorial forelegs and four walking legs; triangular head, two antennae, slender thorax, folded wings. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Mantis B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "mantis-c",
+      "name": "Mantis",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Mantis option C, Champion. Subject: Green body with restrained bronze thorax plate and small botanical clasp; all six legs clear. Essential anatomy: Exactly six legs total: two folded raptorial forelegs and four walking legs; triangular head, two antennae, slender thorax, folded wings. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Mantis C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "cicada-a",
+      "name": "Cicada",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Cicada option A, Storybook. Subject: Chestnut and olive body, transparent amber-veined wings. Essential anatomy: Exactly six small jointed legs, broad head with two prominent eyes, compact thorax, tapering abdomen and four clear veined wings. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Cicada A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "cicada-b",
+      "name": "Cicada",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Cicada option B, Elemental. Subject: Deep blue body, translucent violet wings with luminous silver veins and subtle sound rings. Essential anatomy: Exactly six small jointed legs, broad head with two prominent eyes, compact thorax, tapering abdomen and four clear veined wings. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Cicada B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "cicada-c",
+      "name": "Cicada",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Cicada option C, Champion. Subject: Warm copper body, bronze thorax guard with leaf engraving, transparent wings fully clear. Essential anatomy: Exactly six small jointed legs, broad head with two prominent eyes, compact thorax, tapering abdomen and four clear veined wings. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Cicada C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "dugong-a",
+      "name": "Dugong",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Dugong option A, Storybook. Subject: Warm grey and cream body, small sea-grass pendant, gentle swimming pose. Essential anatomy: Plump grey marine mammal, rounded downturned grazing snout, two foreflippers, horizontal fluked tail; no dorsal fin, no tusks. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Dugong A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "dugong-b",
+      "name": "Dugong",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Dugong option B, Elemental. Subject: Seafoam green body, luminous aqua seagrass patterns and soft water ribbons. Essential anatomy: Plump grey marine mammal, rounded downturned grazing snout, two foreflippers, horizontal fluked tail; no dorsal fin, no tusks. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Dugong B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "dugong-c",
+      "name": "Dugong",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Dugong option C, Champion. Subject: Slate body, small bronze shoulder guard and green sea-glass clasp; swimming naturally. Essential anatomy: Plump grey marine mammal, rounded downturned grazing snout, two foreflippers, horizontal fluked tail; no dorsal fin, no tusks. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Dugong C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "hammerhead-shark-a",
+      "name": "Hammerhead Shark",
+      "style": "Storybook",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Hammerhead Shark option A, Storybook. Subject: Slate blue and cream, calm closed mouth, small sea-glass charm. Essential anatomy: Broad flattened hammer-shaped head with an eye at each outer end, gill slits, tall dorsal fin, two pectoral fins, vertical asymmetrical tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Hammerhead Shark A · Storybook\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "hammerhead-shark-b",
+      "name": "Hammerhead Shark",
+      "style": "Elemental",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Hammerhead Shark option B, Elemental. Subject: Deep teal body, glowing turquoise markings across hammer head and fins, subtle water spirals. Essential anatomy: Broad flattened hammer-shaped head with an eye at each outer end, gill slits, tall dorsal fin, two pectoral fins, vertical asymmetrical tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Hammerhead Shark B · Elemental\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    },
+    {
+      "id": "hammerhead-shark-c",
+      "name": "Hammerhead Shark",
+      "style": "Champion",
+      "prompt": "Use case: stylized-concept. Exactly ONE standalone BlitzWord creature selection card, Hammerhead Shark option C, Champion. Subject: Blue-grey body, restrained bronze dorsal guard and small green clasp, calm proud swimming pose. Essential anatomy: Broad flattened hammer-shaped head with an eye at each outer end, gill slits, tall dorsal fin, two pectoral fins, vertical asymmetrical tail. Match the established BlitzWord creature concept series: sophisticated warm painted storybook fantasy, fine gouache brushwork, natural animal proportions, dimensional shading, expressive believable animal eyes, textured natural materials. Full body three-quarter view facing left, centered with generous margins and ALL extremities visible. Warm cream parchment background with a restrained thin botanical border and soft grounding shadow. No landscape or other creatures. Caption below in small dark brown serif lettering EXACTLY \"Hammerhead Shark C · Champion\". No humanoid anatomy, weapons, chibi, anime, plastic 3D, photorealism, cropped parts, excessive armour. Single square illustration, not collage."
+    }
+  ]
+}

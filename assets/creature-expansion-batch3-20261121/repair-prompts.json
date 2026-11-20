@@ -1,0 +1,18 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "variant": "b",
+      "prompt": "Use this Mantis A image as the exact anatomy and pose reference. Preserve its SIX legs exactly: two raised folded forelegs and four walking legs, every joint and foot position unchanged. Make the B Elemental variant: jade green body, softly luminous emerald veins on leaf wings and a few tiny floating leaf motes. Change the bottom caption to exactly \"Mantis B · Elemental\". Preserve the warm gouache painting, cream parchment, thin botanical border, full body framing, and the same face. Do not add, remove or move any legs.",
+      "path": "/Users/ikarusjanzen/.codex/generated_images/01a1f644-57ac-75a3-ac3c-d3a018296c74/exec-d64031c7-e6d8-4c59-a07d-cf83d9dc2f44.png"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "variant": "c",
+      "prompt": "Use this Mantis A image as the exact anatomy and pose reference. Preserve its SIX legs exactly: two raised folded forelegs and four walking legs, every joint and foot position unchanged. Make the C Champion variant: add one restrained bronze thorax plate with a small botanical clasp, leave the wings and all legs unobstructed. Change the bottom caption to exactly \"Mantis C · Champion\". Preserve the warm gouache painting, cream parchment, thin botanical border, full body framing, and the same face. Do not add, remove or move any legs.",
+      "path": "/Users/ikarusjanzen/.codex/generated_images/01a1f644-57ac-75a3-ac3c-d3a018296c74/exec-8f7068be-fa44-458d-9f1e-dbfa5260c7d8.png"
+    }
+  }
+]
