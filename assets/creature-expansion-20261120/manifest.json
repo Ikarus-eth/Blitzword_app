@@ -1,0 +1,276 @@
+{
+  "method": "Built-in ImageGen",
+  "status": "Selection concepts only; not implemented or deployed",
+  "assets": [
+    {
+      "file": "aardvark-a.png",
+      "name": "Aardvark",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2968845,
+      "sha256": "a670280ff9c9b16ca7023ea46d348b3a2d6e93300e57dbf7a4443e60ddb2afd9"
+    },
+    {
+      "file": "aardvark-b.png",
+      "name": "Aardvark",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2962632,
+      "sha256": "cbe95592dcb7e1fb4f9f656b84c3850280e23fbaca481c80dbbc1fafefc41dcd"
+    },
+    {
+      "file": "aardvark-c.png",
+      "name": "Aardvark",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2915639,
+      "sha256": "cc2c7606da7bd7532e11c7bb9e902a60e2e37ca0c51ad4c08d9ca20aa274a054"
+    },
+    {
+      "file": "bison-a.png",
+      "name": "Bison",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2852195,
+      "sha256": "e963dee580cc9cc40d54480b84ece6ba1613461802ef961191d10ec58df483c7"
+    },
+    {
+      "file": "bison-b.png",
+      "name": "Bison",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2896224,
+      "sha256": "0fedb7e2bcf984c79060fa06da3f97d00a04e48fcf16f49ea0d998459f8e0dca"
+    },
+    {
+      "file": "bison-c.png",
+      "name": "Bison",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2919494,
+      "sha256": "9440a8f15d212b417eb9be665731aeea05dbf561dbe48e9309c1ec670f9a818e"
+    },
+    {
+      "file": "camel-a.png",
+      "name": "Camel",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2706547,
+      "sha256": "42d9c8d496cca18500c0208d7f16e01b48b2cadb61d5704a55b6a52ce3a37d24"
+    },
+    {
+      "file": "camel-b.png",
+      "name": "Camel",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2758920,
+      "sha256": "4cf59d393ab01c2bfb2e0a5312ab4c6e33964c2edc784e767a83db08744d413f"
+    },
+    {
+      "file": "camel-c.png",
+      "name": "Camel",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2792087,
+      "sha256": "8d2b71967aee82af9fc6afeb3d2c2469c750e2c299475c197c62c6635203e5aa"
+    },
+    {
+      "file": "nautilus-a.png",
+      "name": "Nautilus",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2832585,
+      "sha256": "fe074163d6232c3817df0456407d0f7ea94900389a674b55df264c2f5a828133"
+    },
+    {
+      "file": "nautilus-b.png",
+      "name": "Nautilus",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2940330,
+      "sha256": "e0a6795d38afd346b7bd03bb630581c5c80ae1222a7102669e0b43ce9a170bdd"
+    },
+    {
+      "file": "nautilus-c.png",
+      "name": "Nautilus",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2907084,
+      "sha256": "fed2afc353b745ca19a5f1b659de9c87e4dddfe068c0b3dda311f873346baa9c"
+    },
+    {
+      "file": "pelican-a.png",
+      "name": "Pelican",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2757854,
+      "sha256": "d20c554ddb0d7e9c76e4707ad08fec9e4ef317db0be392bdc0cef804d8043aa8"
+    },
+    {
+      "file": "pelican-b.png",
+      "name": "Pelican",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2912289,
+      "sha256": "ad056cf1dd91c24a34e1817569194912b0288aab9484a12d7dcebd0fa0d26e91"
+    },
+    {
+      "file": "pelican-c.png",
+      "name": "Pelican",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2950523,
+      "sha256": "7fd24573de257dde04fae614efbf396fba27bc1610ca1f925256f94b40c1dc5d"
+    },
+    {
+      "file": "flying-fish-a.png",
+      "name": "Flying Fish",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2911610,
+      "sha256": "8a08a6d9d9c32d0ea56dedc83d4bd20c3c8d547fb8a374805d5ebbc23655fce5"
+    },
+    {
+      "file": "flying-fish-b.png",
+      "name": "Flying Fish",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2919189,
+      "sha256": "ff2e44c60d4b933826788846ced11b5369fe0d3f7d325a156b519e368021623e"
+    },
+    {
+      "file": "flying-fish-c.png",
+      "name": "Flying Fish",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2828009,
+      "sha256": "8edfd2a68c7eb85483ffe67a670bec8c7ff5286268e479840ad9e8984db8ad59"
+    },
+    {
+      "file": "okapi-a.png",
+      "name": "Okapi",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2764947,
+      "sha256": "523419911f09b26f3ed27cf4db166dc6091e651977b410025220eec4d0112c16"
+    },
+    {
+      "file": "okapi-b.png",
+      "name": "Okapi",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2745213,
+      "sha256": "5c0db3f718152f8af546f6f22354f485f2999d9ce56bc1f778b95d9db34c4ef1"
+    },
+    {
+      "file": "okapi-c.png",
+      "name": "Okapi",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2773951,
+      "sha256": "887526680d0fa0f8167c756ffb75256d96d9242b31932c04cde8fb6698de59e0"
+    },
+    {
+      "file": "cassowary-a.png",
+      "name": "Cassowary",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2692658,
+      "sha256": "58d999e085d184f74671e3f7648eb44e8181424aa7dd667ca5b56d513fc06bdb"
+    },
+    {
+      "file": "cassowary-b.png",
+      "name": "Cassowary",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2778361,
+      "sha256": "f0a9fdc23087c910ffb6ff5d0b2e183c642d8c8cdf404a8890f0d50fd56639ad"
+    },
+    {
+      "file": "cassowary-c.png",
+      "name": "Cassowary",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2781863,
+      "sha256": "ac0bc81514fb1296796bf00271860a4b1f09c2a446cb6406cc249676449a11ef"
+    },
+    {
+      "file": "stick-insect-a.png",
+      "name": "Stick Insect",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2713354,
+      "sha256": "7477165f01da2f17f1793a8d4b1f67f9c232d7106c9641fcfc9bc7038f17f0da"
+    },
+    {
+      "file": "stick-insect-b.png",
+      "name": "Stick Insect",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2638042,
+      "sha256": "5bc3229be0aff084eff83b09dc9dc12e26d0cbd94d0e0fb3fde2676166526858"
+    },
+    {
+      "file": "stick-insect-c.png",
+      "name": "Stick Insect",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2609712,
+      "sha256": "1ceebaca496c4fcfd295eb9c00e1b38367df18b1ba4da3f5d929558b53310a6e"
+    },
+    {
+      "file": "triceratops-a.png",
+      "name": "Triceratops",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2914114,
+      "sha256": "3e92f950358712566ee831ae97be4736c3f48d8759aa6f83d1a0cf66d2ec6f33"
+    },
+    {
+      "file": "triceratops-b.png",
+      "name": "Triceratops",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2800697,
+      "sha256": "a3b32b7badc5d77cf2e8b95af68adfaac742c1c3c57977d591535b8654967f87"
+    },
+    {
+      "file": "triceratops-c.png",
+      "name": "Triceratops",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2879221,
+      "sha256": "d966a242147e14ca7df3e728b4ac1e456a3021ca2f292a89b0681f9c53722416"
+    }
+  ]
+}
