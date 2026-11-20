@@ -1,0 +1,309 @@
+{
+  "created": "2026-11-20",
+  "method": "Built-in ImageGen",
+  "status": "Proposed selection concepts; not implemented or deployed",
+  "baseMain": "a800d4a923944158dc59629c96c5899e32781538",
+  "visualReview": "All 30 images inspected for subject, style, framing and option labels",
+  "assets": [
+    {
+      "file": "cockatoo-a.png",
+      "species": "cockatoo",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2747301,
+      "sha256": "9fd51d7d3ba64e6b6ff8a3b47978aad6f34adcb9140c99584462a1712a9f1a80"
+    },
+    {
+      "file": "cockatoo-b.png",
+      "species": "cockatoo",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2992201,
+      "sha256": "c02ae9319cc658d1fe1911749a7bffa33573977a9f725c8b5d8f2d4cd0ff8947"
+    },
+    {
+      "file": "cockatoo-c.png",
+      "species": "cockatoo",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2721122,
+      "sha256": "07143dce8ae3c6a660aabf88f363b54292aef1d5d667ad7795129356ddce9e7b"
+    },
+    {
+      "file": "dolphin-a.png",
+      "species": "dolphin",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3020366,
+      "sha256": "55e413f40fbd91f44f573dd22fcbc3e05c8caec59e481425f1cfceb6dba824c3"
+    },
+    {
+      "file": "dolphin-b.png",
+      "species": "dolphin",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2931175,
+      "sha256": "96c962dec357def8d39f7e6aba459761783418850e60699aef3d5a24c8af7b35"
+    },
+    {
+      "file": "dolphin-c.png",
+      "species": "dolphin",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2850080,
+      "sha256": "b37f9ab414e4590fe6574ce9482ab90518ca8e6fc5fb08b146367ae69f72cc0a"
+    },
+    {
+      "file": "hyena-a.png",
+      "species": "hyena",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3019615,
+      "sha256": "e026635bfaedd04de03f7c43aca932a8d7cd68b647eb4b6d856c5ad57fc9b95c"
+    },
+    {
+      "file": "hyena-b.png",
+      "species": "hyena",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3215704,
+      "sha256": "9dff5aa14b28d97804c7165484d97df4f546afafb6b22d77f9a203845b1af56c"
+    },
+    {
+      "file": "hyena-c.png",
+      "species": "hyena",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2862297,
+      "sha256": "4ed3b66443da774e43bfe3dca0dd9fb6646ad82027c3780a2f3512f009199518"
+    },
+    {
+      "file": "jerboa-a.png",
+      "species": "jerboa",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2841614,
+      "sha256": "97f6a589112f361675ea1d2ff3e673f237966eca9251afe31aa78f73c504be50"
+    },
+    {
+      "file": "jerboa-b.png",
+      "species": "jerboa",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2976365,
+      "sha256": "27224f019835dcfc6348f392773418529d7f6c08414634ab77776b39b5b45e76"
+    },
+    {
+      "file": "jerboa-c.png",
+      "species": "jerboa",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3033816,
+      "sha256": "5b8776b44d6fd07e658fe37a7018a65be414c107232374ad0f921cc7506fe99c"
+    },
+    {
+      "file": "puffin-a.png",
+      "species": "puffin",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3021443,
+      "sha256": "fd4859a3dbbda23cdfb6cab4b0d7525628ad1ae7f6f587fa76a398c366dc5f15"
+    },
+    {
+      "file": "puffin-b.png",
+      "species": "puffin",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3034424,
+      "sha256": "f468b507e2943ae4ae86bbe37297b366a8900da64eaf6f48dbca9321670eb5b6"
+    },
+    {
+      "file": "puffin-c.png",
+      "species": "puffin",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2983603,
+      "sha256": "a98b7686131521bd4ad9e112f8c4f4c9dacb97dc18de957b90cba68283de3b96"
+    },
+    {
+      "file": "sea-slug-a.png",
+      "species": "sea-slug",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2732095,
+      "sha256": "a83950f645926b8f21c7e6a4d6bd62341f844436452e03cba5326abf71b8dfd1"
+    },
+    {
+      "file": "sea-slug-b.png",
+      "species": "sea-slug",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3045450,
+      "sha256": "871608ed8da9ec955b1450385e1c738842a9cc1eb84c462f25f295d7c3450782"
+    },
+    {
+      "file": "sea-slug-c.png",
+      "species": "sea-slug",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2920485,
+      "sha256": "fd1cd6910869d01a25f8b3ec56451378eafca567025d158d35525715f3415a70"
+    },
+    {
+      "file": "skunk-a.png",
+      "species": "skunk",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3036462,
+      "sha256": "f03eb4281198475b4b8b788a119a3328fd2af62778c80c8f75fd46814b627bfb"
+    },
+    {
+      "file": "skunk-b.png",
+      "species": "skunk",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2978325,
+      "sha256": "32319f76a773850853b1d67dcf71bdfb163b373c27fb27efc038c579dcacf12a"
+    },
+    {
+      "file": "skunk-c.png",
+      "species": "skunk",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3154552,
+      "sha256": "252323a31cb24269ddfa77ac94ae613724ff5f60162afe7e3151d2478e136792"
+    },
+    {
+      "file": "starfish-a.png",
+      "species": "starfish",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2993767,
+      "sha256": "f8323e92e08d9133580d60116d45b451a47249ba234c7180fd8469a058cd4bc6"
+    },
+    {
+      "file": "starfish-b.png",
+      "species": "starfish",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3075404,
+      "sha256": "a480b2d8841890b0590e2196d8226dc7ab0eea4e8a61f641775cbadc72088b96"
+    },
+    {
+      "file": "starfish-c.png",
+      "species": "starfish",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2973202,
+      "sha256": "1ad8953a6d741cf5bb8ce87dc85325901ddee9b1053a1ed4ebd9d16a79c28e45"
+    },
+    {
+      "file": "stegosaurus-a.png",
+      "species": "stegosaurus",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2870415,
+      "sha256": "16e2b06b590abfae10968293b0533b90010c40d4147708ea25670d1e5ef5b815"
+    },
+    {
+      "file": "stegosaurus-b.png",
+      "species": "stegosaurus",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2909437,
+      "sha256": "23f3e21d05edde9ccf5d824c74815c86d511ff56766237b5ab1ba7fb28af9a67"
+    },
+    {
+      "file": "stegosaurus-c.png",
+      "species": "stegosaurus",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2975523,
+      "sha256": "47f0bc70d9ce315a7a03ed97ebcfbc62761256c1bee88646b192285b532b0bc3"
+    },
+    {
+      "file": "swordfish-a.png",
+      "species": "swordfish",
+      "variant": "A",
+      "style": "Storybook",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2852236,
+      "sha256": "b31d138715d9f5f2aed2862bf347a7b42d24f614d25ae52616a35e967036183b"
+    },
+    {
+      "file": "swordfish-b.png",
+      "species": "swordfish",
+      "variant": "B",
+      "style": "Elemental",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2915273,
+      "sha256": "4056ff7a005acf08e9ed589bb4a793057a2a5bfb48fc2dab9ec755cab535013d"
+    },
+    {
+      "file": "swordfish-c.png",
+      "species": "swordfish",
+      "variant": "C",
+      "style": "Champion",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2863200,
+      "sha256": "a14172ee2b0a2441c776a7686562fb6c0e515cc117d9397d350f5caabc8607b5"
+    }
+  ]
+}
