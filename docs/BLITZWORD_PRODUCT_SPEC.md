@@ -1329,3 +1329,5 @@ The user asked that the child can see his current active reading time in the top
 
 
 The user asked on 19 November 2026 for 35 new creatures, each in three styles for Artus to vote on, at most $1 of generation cost. The vote page uses Storybook, Elemental and Champion styles and the October final-look decision rules (Artus decides; Juna only breaks his ties; all below 3/5 excludes). It is artwork review only; chosen creatures enter the game only through a later campaign. [Details](enemies/NEW_CREATURES_VOTE.md).
+
+On 20 November 2026 the user rejected the fal.ai creature sheets as off-style and approved ChatGPT ImageGen pictures (one picture per look, warm painted storybook style on parchment) as the standard for new creature concepts. The vote page shows 13 such creatures.

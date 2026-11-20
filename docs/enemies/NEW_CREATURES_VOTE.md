@@ -1,4 +1,15 @@
-# New creatures vote — 19 November 2026
+# New creatures vote — 19–20 November 2026
+
+## Replaced on 20 November 2026: ChatGPT-painted creatures
+
+The 19 November fal.ai sheets did not match the game's art style (too soft and pastel), so that page was replaced at the same address with review id `new-creatures-20261120` (fresh vote storage key `blitzword-new-creatures-20261120-v1`). The user approved ChatGPT's built-in ImageGen pictures instead, one picture per look: 13 creatures × A Storybook / B Elemental / C Champion = 39 pictures.
+
+- Tiger, Phoenix, Octopus: branch `concepts/tiger-phoenix-octopus-20261120`, `assets/creature-concepts-20261120`.
+- Aardvark, Bison, Camel, Nautilus, Pelican, Flying Fish, Okapi, Cassowary, Stick Insect, Triceratops: branch `concepts/ten-creatures-20261120`, `assets/creature-expansion-20261120` (species check in its `roster-check.json`).
+
+The 1254 px PNG originals stay on those branches; the page uses 900 px WebP copies (about 4.5 MB in total), listed with source and copy hashes in `assets/new-creatures-vote/artwork-manifest.json`. Pictures are shown whole, captions included. Voting rules are unchanged. The fal.ai concepts and prompts below remain as history only; they are not on the page.
+
+## History: 19 November fal.ai version
 
 Vote page: https://ikarus-eth.github.io/Blitzword_app/assets/new-creatures-vote/
 

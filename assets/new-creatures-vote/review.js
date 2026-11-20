@@ -1,7 +1,7 @@
 (async function () {
   'use strict';
   const Core = window.CreatureVote;
-  const KEY = 'blitzword-new-creatures-20261119-v1';
+  const KEY = 'blitzword-new-creatures-20261120-v1';
   const $ = id => document.getElementById(id);
   const NS = 'http://www.w3.org/2000/svg';
   let catalog, ids, total = 0, state, index = 0, person = 'Artus', memoryOnly = false, serial = 0;
