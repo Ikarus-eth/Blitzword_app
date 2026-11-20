@@ -4,7 +4,6 @@ const fs = require('node:fs');
 const path = require('node:path');
 const Core = require('../assets/new-creatures-vote/selection.js');
 const catalog = require('../assets/new-creatures-vote/catalog.json');
-const concepts = require('../docs/adventures/new-creatures/concepts.json');
 const Missions = require('../missions.js');
 const round = (a, j = [null, null, null]) => ({ ratings: { Artus: a, Juna: j }, notes: { Artus: '', Juna: '' } });
 
@@ -33,23 +32,23 @@ test('new creature vote: restore validates and copies', () => {
   assert.throws(() => Core.validate({ version: 1, reviewId: 'enemy-finals-20261010', rounds: {} }, ids));
 });
 
-test('new creature vote: 35 new species, three distinct crops each, none already in the game', () => {
-  assert.equal(catalog.entities.length, 35);
+test('new creature vote: 13 ChatGPT-painted creatures, three pictures each, none already in the game', () => {
+  assert.equal(catalog.entities.length, 13);
   assert.equal(catalog.reviewId, Core.REVIEW_ID);
   const existing = Object.keys(Missions.lore).map(id => id.split('-').pop());
-  const seen = new Set();
+  const files = new Set();
   for (const entity of catalog.entities) {
     const species = entity.name.toLowerCase().split(' ').pop();
     assert.ok(!existing.includes(species), entity.name + ' repeats an existing species');
     assert.deepEqual(entity.options.map(o => o.id), Core.OPTIONS);
     for (const option of entity.options) {
-      const key = option.src + '|' + option.crop.join(',');
-      assert.ok(!seen.has(key)); seen.add(key);
-      const [x, y, w, h] = option.crop;
-      assert.ok(x >= 0 && y >= 0 && x + w <= option.width && y + h <= option.height);
-      assert.ok(fs.existsSync(path.join(__dirname, '../assets/new-creatures-vote', option.src.split('?')[0])));
+      const file = option.src.split('?')[0];
+      assert.ok(!files.has(file)); files.add(file);
+      assert.deepEqual(option.crop, [0, 0, option.width, option.height]);
+      assert.ok(fs.existsSync(path.join(__dirname, '../assets/new-creatures-vote', file)));
     }
   }
-  assert.equal(seen.size, 105);
-  assert.equal(new Set(concepts.creatures.map(c => c.name)).size, 35);
+  assert.equal(files.size, 39);
+  const manifest = require('../assets/new-creatures-vote/artwork-manifest.json');
+  assert.equal(manifest.pictures.length, 39);
 });

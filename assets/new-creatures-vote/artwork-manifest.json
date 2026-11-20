@@ -1,171 +1,278 @@
 {
- "model": "fal-ai/nano-banana/edit",
- "prompts": [
-  "docs/adventures/new-creatures/sheets-1-test.json",
-  "docs/adventures/new-creatures/sheets-2-rest.json",
-  "docs/adventures/new-creatures/sheets-3-retake.json"
- ],
- "sheets": [
+ "method": "Built-in ImageGen (ChatGPT), 1254 px PNG originals on the concept branches; resized to 900 px WebP q84 for the vote page",
+ "pictures": [
   {
-   "file": "sheets/test-sheet-01.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-1-test/sheet-01.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "88026a70a19d3b5f505e655a7607591de6086de34d5ba43084d5df3060758474"
+   "file": "pictures/tiger-a.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/tiger-a.png",
+   "sourceSha256": "b360355a88cbec7c7e4f04d22667eb27060deb2d76058054dc458cabb9cf35b1",
+   "sha256": "8333d3dc920ba4d0f191278120bdab6865c57e5b431a3d5b529e7a09135cf491",
+   "bytes": 125694
   },
   {
-   "file": "sheets/retake-retake-03.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-03.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "da3b24e2600e5630ec849288f7040d63c19facc1f1c4dc0beac6d4c79b7cbbc8"
+   "file": "pictures/tiger-b.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/tiger-b.png",
+   "sourceSha256": "3e5ba9172b73c70405e2df7087f5d07c38b690268def5b8fb121906d8f261fd5",
+   "sha256": "df6e2faaa1ce255a6b9c74245d19223ca6419da8e1a25a8d65b57797bcc7e06d",
+   "bytes": 145974
   },
   {
-   "file": "sheets/rest-sheet-02.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-02.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "ab3cbaf85f7992756a976b20ec6f7ffb1cad1f433ed43749f109ea0284b0e709"
+   "file": "pictures/tiger-c.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/tiger-c.png",
+   "sourceSha256": "ca44a0fd05a4cb7464338e6d96ca991fe19e3f81c2b830c01aa981132fa20ad1",
+   "sha256": "1e7b3a1c9be52d27e0d299309485cb2f0c6f9453047c8e8f3c51e534e36a4f54",
+   "bytes": 115682
   },
   {
-   "file": "sheets/rest-sheet-03.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-03.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "ccd42d968a58bc8cc3d59f3a7c4b07248ed9378aca957d9e67df16fe637869ff"
+   "file": "pictures/phoenix-a.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/phoenix-a.png",
+   "sourceSha256": "6280fd8bbca8c982241075d7f6010f0ab47b498a69e918e6e7bd6781c89daa63",
+   "sha256": "b13ca1e79c0dcab58e6b5ba80475a3b95d3604364027ea7c3421d1fe8d56bf68",
+   "bytes": 158728
   },
   {
-   "file": "sheets/rest-sheet-04.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-04.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "7523052edf55517bd527d0ec32f63585c3b5614176f786d018ccb3e1756c75cf"
+   "file": "pictures/phoenix-b.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/phoenix-b.png",
+   "sourceSha256": "04692ce84f472401f73dfe909e3a929432697a7a3bcd1540039caaf27d6c5fe6",
+   "sha256": "9f08e18ae37c2af8fdd67fea016c675ea6df128f1c4c71d0f31fe2bff127ce85",
+   "bytes": 146950
   },
   {
-   "file": "sheets/retake-retake-04.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-04.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "6b3e73f7702cd10879b4816ddd69bb52e78232f6a268067e437cdd4a54772847"
+   "file": "pictures/phoenix-c.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/phoenix-c.png",
+   "sourceSha256": "5c07ebfe62e9fe9e03f6d88302016e8cca26364827fb2c237b82be80cd37637c",
+   "sha256": "78a3393869b9ebe118a86d836bd588c9ad0da9723c7235b648c893db867fde69",
+   "bytes": 156378
   },
   {
-   "file": "sheets/rest-sheet-05.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-05.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "69de7d26aa8f1b212472d86bd622c47cbbe317aeea302dce27e291141aa466bf"
+   "file": "pictures/octopus-a.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/octopus-a.png",
+   "sourceSha256": "334ef26fde57d3e99802662658815dec51ed00cd3bb7a64346455ff4e51a9a58",
+   "sha256": "e9f78840e868708b3031aecbfdf04fded1932719f5127624df3634df6c3d54b6",
+   "bytes": 152370
   },
   {
-   "file": "sheets/retake-retake-05.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-05.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "c8570cca961a2ec0ff7d3ad52c3c118d7221a4d6171b01c45598a18147b5b48d"
+   "file": "pictures/octopus-b.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/octopus-b.png",
+   "sourceSha256": "7ec5ff864aeb53e068b5503b7cf3b3b86bb910ffed887c3c7ab216cb8b598301",
+   "sha256": "8c6843034264fd1d8c5bc1fd47047c17ca122d1b6afc026be60355460bd989b9",
+   "bytes": 154320
   },
   {
-   "file": "sheets/final-final-01.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-4-final/final-01.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "41e539054f174c73644ddb44742a8219c5abfaec3fd0847f44f96275a38f3242"
+   "file": "pictures/octopus-c.webp",
+   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/octopus-c.png",
+   "sourceSha256": "7e2f83adebc4a79e4eba6fd12533c400665c4ccff5ed5ea0adaca81f56c8b287",
+   "sha256": "33e46e108280402bf6e7c8f0c1eacb112e041764880862c008e42e1811aae0c1",
+   "bytes": 144460
   },
   {
-   "file": "sheets/rest-sheet-06.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-06.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "7b5ff013f75582070dace5ac5220f5d30c17e84f531a6929bb184719512e97aa"
+   "file": "pictures/aardvark-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/aardvark-a.png",
+   "sourceSha256": "a670280ff9c9b16ca7023ea46d348b3a2d6e93300e57dbf7a4443e60ddb2afd9",
+   "sha256": "5c532875353d8e9c19656572a2f83b97924dd151e7a4358a0a098f7ec554d3f8",
+   "bytes": 122464
   },
   {
-   "file": "sheets/rest-sheet-07.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-07.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "f57fa2db3feb7e4afa1ef1900d262026b7cff41ac35a2d9e87116d6b0e9c44d7"
+   "file": "pictures/aardvark-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/aardvark-b.png",
+   "sourceSha256": "cbe95592dcb7e1fb4f9f656b84c3850280e23fbaca481c80dbbc1fafefc41dcd",
+   "sha256": "4107f3092ddc85cf17946812620f16c29a294c1cf1d24e4cd178e453199418cd",
+   "bytes": 143508
   },
   {
-   "file": "sheets/retake-retake-02.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-02.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "19aa8ce06255ee5d6cb28f2316be22383645f8c4273d9c0918db9e2ae51d4bcf"
+   "file": "pictures/aardvark-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/aardvark-c.png",
+   "sourceSha256": "cc2c7606da7bd7532e11c7bb9e902a60e2e37ca0c51ad4c08d9ca20aa274a054",
+   "sha256": "00f10a8f8d86b47bbb11c9ef0fd11c728cb820c8b317566d5e1c159db86e27d4",
+   "bytes": 129302
   },
   {
-   "file": "sheets/rest-sheet-08.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-08.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "4af09691c2995399c7d57266d7e0b97172aa562b43346449452e39dbbc4beca6"
+   "file": "pictures/bison-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/bison-a.png",
+   "sourceSha256": "e963dee580cc9cc40d54480b84ece6ba1613461802ef961191d10ec58df483c7",
+   "sha256": "94821259832f59071adec2c0a3c9e574386942736d4e1e4d644accf0893686ce",
+   "bytes": 115822
   },
   {
-   "file": "sheets/rest-sheet-09.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-09.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "81cdd7bb263f6d274953beb96f715cda0b7186d474f6f2c86ca538a934543f8c"
+   "file": "pictures/bison-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/bison-b.png",
+   "sourceSha256": "0fedb7e2bcf984c79060fa06da3f97d00a04e48fcf16f49ea0d998459f8e0dca",
+   "sha256": "5fedc71bb00a12b6dedf0fd094984bcd8764c4dff61f8d8cba5aea4553eddb83",
+   "bytes": 125844
   },
   {
-   "file": "sheets/retake-retake-01.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-3-retake/retake-01.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "b173e8eeb8f93d5d2ee168c09c523e110b6d472c00ea46b07edb91dc0397920b"
+   "file": "pictures/bison-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/bison-c.png",
+   "sourceSha256": "9440a8f15d212b417eb9be665731aeea05dbf561dbe48e9309c1ec670f9a818e",
+   "sha256": "53fc3ed397b5e0906649c18de8b23cbfaa3084950f2ce67c958f6d91e0b65dd4",
+   "bytes": 132770
   },
   {
-   "file": "sheets/rest-sheet-11.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-11.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "6be969153972da9860c8cd2d97f15eadd17e46154f98589e5938cb6ecbab870f"
+   "file": "pictures/camel-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/camel-a.png",
+   "sourceSha256": "42d9c8d496cca18500c0208d7f16e01b48b2cadb61d5704a55b6a52ce3a37d24",
+   "sha256": "fa529e91c71705b636b23f4437a2416a4d2f78daedf6b728254ef475b7fef6e2",
+   "bytes": 94006
   },
   {
-   "file": "sheets/rest-sheet-12.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-12.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "02d7190feb7e432471897bfadea8e30fc8056095476a08f49e368e908b04e7c3"
+   "file": "pictures/camel-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/camel-b.png",
+   "sourceSha256": "4cf59d393ab01c2bfb2e0a5312ab4c6e33964c2edc784e767a83db08744d413f",
+   "sha256": "f35e3153c8b74c24f17db469ecd70d76269ba1cd7f7e7c37c4162413a4148a2c",
+   "bytes": 110108
   },
   {
-   "file": "sheets/rest-sheet-13.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-13.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "db8926e0770e3f02cff181cd89f63ffd8083a51fc614e3f6643020e40b04ae5a"
+   "file": "pictures/camel-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/camel-c.png",
+   "sourceSha256": "8d2b71967aee82af9fc6afeb3d2c2469c750e2c299475c197c62c6635203e5aa",
+   "sha256": "577101c16a9c688c9f40490ca3a911ebbb3bde0f23fdabac541446ca18c4d5f2",
+   "bytes": 107296
   },
   {
-   "file": "sheets/rest-sheet-14.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-14.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "90259f653acace32e1c17d765934d879590bda9b14c123918ec4bbd99ef0ede2"
+   "file": "pictures/nautilus-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/nautilus-a.png",
+   "sourceSha256": "fe074163d6232c3817df0456407d0f7ea94900389a674b55df264c2f5a828133",
+   "sha256": "fd68c76074e1e7c057de23d546a663787fcd1b61b0112de3646a9609ee06d190",
+   "bytes": 122020
   },
   {
-   "file": "sheets/rest-sheet-15.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-15.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "902f3ecf22e156cb805271d43338178df3e27e5fba471871f853a59451b75d50"
+   "file": "pictures/nautilus-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/nautilus-b.png",
+   "sourceSha256": "e0a6795d38afd346b7bd03bb630581c5c80ae1222a7102669e0b43ce9a170bdd",
+   "sha256": "10996eeebf54b48f4247e56d52c1c1562925e1afbd6e4889529d1daf7a21488b",
+   "bytes": 143328
   },
   {
-   "file": "sheets/rest-sheet-16.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-16.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "74b2cb8df031f856ec6f1d87786bbce7cbd330365b6df70dac750124a557a29e"
+   "file": "pictures/nautilus-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/nautilus-c.png",
+   "sourceSha256": "fed2afc353b745ca19a5f1b659de9c87e4dddfe068c0b3dda311f873346baa9c",
+   "sha256": "d536b6aa1f291a76d366af358ed066777e8f8063d4b0750eaa10e36cb6face85",
+   "bytes": 126982
   },
   {
-   "file": "sheets/rest-sheet-17.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-17.webp",
-   "width": 1248,
-   "height": 832,
-   "sha256": "0743f7fb13ea6fffd61b31c8bcc255c7d02733cf4fafe7c311a515e04a7fa8c6"
+   "file": "pictures/pelican-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/pelican-a.png",
+   "sourceSha256": "d20c554ddb0d7e9c76e4707ad08fec9e4ef317db0be392bdc0cef804d8043aa8",
+   "sha256": "67a7d0089f92ebdecc2c29b2e980ac0218698cfdef6ef9676d878cec4b1cbd5e",
+   "bytes": 102758
   },
   {
-   "file": "sheets/rest-sheet-18.webp",
-   "source": "docs/adventures/new-creatures/generated/sheets-2-rest/sheet-18.webp",
-   "width": 1344,
-   "height": 768,
-   "sha256": "883eb6737800a402e4876ae83a8902942f110a09a7e58cb5ef2fe856a86883ac"
+   "file": "pictures/pelican-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/pelican-b.png",
+   "sourceSha256": "ad056cf1dd91c24a34e1817569194912b0288aab9484a12d7dcebd0fa0d26e91",
+   "sha256": "efffd267b1aad05cd67a24402399d240f0fee6c252655f87c54ca02a9ccbd949",
+   "bytes": 137624
+  },
+  {
+   "file": "pictures/pelican-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/pelican-c.png",
+   "sourceSha256": "7fd24573de257dde04fae614efbf396fba27bc1610ca1f925256f94b40c1dc5d",
+   "sha256": "4029703d69d64b1087d84d14b48e8091c45ae6d419c83bce686d7cf3c43d06d6",
+   "bytes": 124570
+  },
+  {
+   "file": "pictures/flying-fish-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/flying-fish-a.png",
+   "sourceSha256": "8a08a6d9d9c32d0ea56dedc83d4bd20c3c8d547fb8a374805d5ebbc23655fce5",
+   "sha256": "e2a5dfd9caddc3639549d227886324eaa3b01eba1b1b54e9cc1e4c40692dfb41",
+   "bytes": 124508
+  },
+  {
+   "file": "pictures/flying-fish-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/flying-fish-b.png",
+   "sourceSha256": "ff2e44c60d4b933826788846ced11b5369fe0d3f7d325a156b519e368021623e",
+   "sha256": "0e456026a9bd7e69b89154cd369ea28d36ac780d4d41124005d36bfee1497bdd",
+   "bytes": 129558
+  },
+  {
+   "file": "pictures/flying-fish-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/flying-fish-c.png",
+   "sourceSha256": "8edfd2a68c7eb85483ffe67a670bec8c7ff5286268e479840ad9e8984db8ad59",
+   "sha256": "896501f370928bea7a5d50db04347d35ba7e04586998c3092ca9806250503ad4",
+   "bytes": 111728
+  },
+  {
+   "file": "pictures/okapi-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/okapi-a.png",
+   "sourceSha256": "523419911f09b26f3ed27cf4db166dc6091e651977b410025220eec4d0112c16",
+   "sha256": "e482e0e8ad10be4f6701bb4e312d8cf1a3cbfd453f2a0034f2cf5a48d7555dbd",
+   "bytes": 93860
+  },
+  {
+   "file": "pictures/okapi-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/okapi-b.png",
+   "sourceSha256": "5c0db3f718152f8af546f6f22354f485f2999d9ce56bc1f778b95d9db34c4ef1",
+   "sha256": "62df1017003af98b4582ff0ece6163b0fe4cb735e6d708efd90ce4a74a73f6e1",
+   "bytes": 97658
+  },
+  {
+   "file": "pictures/okapi-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/okapi-c.png",
+   "sourceSha256": "887526680d0fa0f8167c756ffb75256d96d9242b31932c04cde8fb6698de59e0",
+   "sha256": "c773a1ed4c4d1add61ebd8f9c53d66ca1857d08a13f883f36f174fdbafd41959",
+   "bytes": 98132
+  },
+  {
+   "file": "pictures/cassowary-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/cassowary-a.png",
+   "sourceSha256": "58d999e085d184f74671e3f7648eb44e8181424aa7dd667ca5b56d513fc06bdb",
+   "sha256": "5e6cf4e55c9e783b811081122fc39766ab13ed5705d23644c080ffcbeb7e71d1",
+   "bytes": 104570
+  },
+  {
+   "file": "pictures/cassowary-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/cassowary-b.png",
+   "sourceSha256": "f0a9fdc23087c910ffb6ff5d0b2e183c642d8c8cdf404a8890f0d50fd56639ad",
+   "sha256": "76a7a8efa80b73736c2645b8e00b6eb7181ff1827703164e051509f0a916e215",
+   "bytes": 104520
+  },
+  {
+   "file": "pictures/cassowary-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/cassowary-c.png",
+   "sourceSha256": "ac0bc81514fb1296796bf00271860a4b1f09c2a446cb6406cc249676449a11ef",
+   "sha256": "bbecc0ba3704248ddd0ccde70a8ed1db0a73d7d0f590d0919816487d8babf842",
+   "bytes": 106182
+  },
+  {
+   "file": "pictures/stick-insect-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/stick-insect-a.png",
+   "sourceSha256": "7477165f01da2f17f1793a8d4b1f67f9c232d7106c9641fcfc9bc7038f17f0da",
+   "sha256": "9cb00d473d01de6d231faa9b2cc882ccc18f705c8598c4f47614da7dad5c166f",
+   "bytes": 93302
+  },
+  {
+   "file": "pictures/stick-insect-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/stick-insect-b.png",
+   "sourceSha256": "5bc3229be0aff084eff83b09dc9dc12e26d0cbd94d0e0fb3fde2676166526858",
+   "sha256": "5dc6fc309e690f00efc13dea5710f25559b1c780b196eb704bd3f9da1cacd100",
+   "bytes": 76264
+  },
+  {
+   "file": "pictures/stick-insect-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/stick-insect-c.png",
+   "sourceSha256": "1ceebaca496c4fcfd295eb9c00e1b38367df18b1ba4da3f5d929558b53310a6e",
+   "sha256": "9e9aebd24df9f8bf879296faacf88ff2e6d00690ac738a6e5cac901e72130bb0",
+   "bytes": 83744
+  },
+  {
+   "file": "pictures/triceratops-a.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/triceratops-a.png",
+   "sourceSha256": "3e92f950358712566ee831ae97be4736c3f48d8759aa6f83d1a0cf66d2ec6f33",
+   "sha256": "66a98c11fe63fdcc380e25d1bfe2c988df4eb18e20fcc97af372f92a523c205f",
+   "bytes": 124122
+  },
+  {
+   "file": "pictures/triceratops-b.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/triceratops-b.png",
+   "sourceSha256": "a3b32b7badc5d77cf2e8b95af68adfaac742c1c3c57977d591535b8654967f87",
+   "sha256": "7e3e388eff582d34d6b05cdd6f81ae8f31e577f56b6e8369de6e7c28120d8a6f",
+   "bytes": 122496
+  },
+  {
+   "file": "pictures/triceratops-c.webp",
+   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/triceratops-c.png",
+   "sourceSha256": "d966a242147e14ca7df3e728b4ac1e456a3021ca2f292a89b0681f9c53722416",
+   "sha256": "51ee4a6b8255e93564ac8b1de02e5dc208c0d46ba890e330ce99dfc40b1b66db",
+   "bytes": 128724
   }
  ]
 }
