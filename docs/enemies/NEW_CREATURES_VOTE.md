@@ -7,7 +7,7 @@ The 19 November fal.ai sheets did not match the game's art style (too soft and p
 - Tiger, Phoenix, Octopus: branch `concepts/tiger-phoenix-octopus-20261120`, `assets/creature-concepts-20261120`.
 - Aardvark, Bison, Camel, Nautilus, Pelican, Flying Fish, Okapi, Cassowary, Stick Insect, Triceratops: branch `concepts/ten-creatures-20261120`, `assets/creature-expansion-20261120` (species check in its `roster-check.json`).
 
-The 1254 px PNG originals stay on those branches; the page uses 900 px WebP copies (about 4.5 MB in total), listed with source and copy hashes in `assets/new-creatures-vote/artwork-manifest.json`. Pictures are shown whole, captions included. Voting rules are unchanged. The fal.ai concepts and prompts below remain as history only; they are not on the page.
+The 1254 px PNG originals stay on those branches; the page uses 900 px WebP copies (about 4.5 MB in total), listed with source and copy hashes in `assets/new-creatures-vote/artwork-manifest.json`. Pictures are shown whole, captions included. Voting rules are unchanged. **Deployed and verified.** [PR #261](https://github.com/Ikarus-eth/Blitzword_app/pull/261) merged as `be2495a5a29b55a9da07e50dfb6cc834f894d350`; [Pages run 44683381951](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/44683381951) succeeded; the live page, scripts, catalog, manifest and all 39 pictures match the merge byte for byte ([verification run 44683749148](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/44683749148), 46 files). Headless Chrome checked rating, reload persistence and layout at iPad and phone sizes; physical iPad not checked. The fal.ai concepts and prompts below remain as history only; they are not on the page.
 
 ## History: 19 November fal.ai version
 
