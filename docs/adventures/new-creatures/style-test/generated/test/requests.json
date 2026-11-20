@@ -1,0 +1,63 @@
+{
+  "model": "fal-ai/nano-banana/edit",
+  "batch": "docs/adventures/new-creatures/style-test/test.json",
+  "requests": {
+    "jade-tiger": {
+      "state": "downloaded",
+      "prompt": "Use case: new creature designs for a children's fantasy reading game. Create a NEW wide 16:9 sheet: a STRICT single row of THREE equal cells side by side with thin light separators. All three cells show Jade Tiger, a jungle tiger with bold black stripes. Cell 1 WILD: the natural animal with a few nature-material details, no glow and no gear. Cell 2 ELEMENTAL: the same animal whose body is partly made of its element, like the ember fox, crystal porcupine and waterfall turtle; no gear. Cell 3 GUARDIAN: the same animal carrying handmade gear (shield, sash, amulet, light armour) like the beaver and kingfisher; no glow. The three must look clearly different. Cell 1: Jade Tiger, natural. Cell 2: Jade Tiger, jade-green crystal stripes and drifting jungle leaves. Cell 3: Jade Tiger, bronze-and-jade shoulder guard, red cloth sash and a round leaf-pattern shield. Match image 1 EXACTLY in rendering: these are creatures from the same fantasy reading game. Detailed fantasy RPG creature illustration, crisp dark contour lines, high contrast, rich saturated natural colours, fine individual fur, feather and scale strokes, realistic natural-history anatomy with a slightly heroic stance, natural materials worked into the animal (moss, bark, leaves, stone, crystal, water, fire) exactly like the fox, stag, turtle and porcupine in image 1, small handmade ornaments like the beaver's shield and the kingfisher's amulet. NOT soft, NOT pastel, NOT plush or chibi, no big baby eyes, no watercolour wash. Do not copy the animals in image 1. Plain flat parchment background (#EFE5CD), no ground, no shadow, no scenery, NO text, captions, letters or numbers. Exactly one full-body creature per cell, whole body inside the cell with an empty margin.",
+      "references": [
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-style-test/docs/adventures/new-creatures/style-test/reference-game-style.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1f641-0f8f-75d3-8b68-dbbcf0e79c8b",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-0f8f-75d3-8b68-dbbcf0e79c8b",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-0f8f-75d3-8b68-dbbcf0e79c8b/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-0f8f-75d3-8b68-dbbcf0e79c8b/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 1,
+      "user_queue_position": 1,
+      "user_queued_count": 2,
+      "bytes": 85904,
+      "image_url": "https://v3b.fal.media/files/b/0ab327c2/SsiKY6pl8HT3FuXdZcoeJ_J2TB1ZnN.webp"
+    },
+    "sun-phoenix": {
+      "state": "downloaded",
+      "prompt": "Use case: new creature designs for a children's fantasy reading game. Create a NEW wide 16:9 sheet: a STRICT single row of THREE equal cells side by side with thin light separators. All three cells show Sun Phoenix, a large red-and-gold bird with a long tail and bright crest. Cell 1 WILD: the natural animal with a few nature-material details, no glow and no gear. Cell 2 ELEMENTAL: the same animal whose body is partly made of its element, like the ember fox, crystal porcupine and waterfall turtle; no gear. Cell 3 GUARDIAN: the same animal carrying handmade gear (shield, sash, amulet, light armour) like the beaver and kingfisher; no glow. The three must look clearly different. Cell 1: Sun Phoenix, natural. Cell 2: Sun Phoenix, wings and tail feathers made of living flame. Cell 3: Sun Phoenix, golden feather breastplate and a sun-disc amulet. Match image 1 EXACTLY in rendering: these are creatures from the same fantasy reading game. Detailed fantasy RPG creature illustration, crisp dark contour lines, high contrast, rich saturated natural colours, fine individual fur, feather and scale strokes, realistic natural-history anatomy with a slightly heroic stance, natural materials worked into the animal (moss, bark, leaves, stone, crystal, water, fire) exactly like the fox, stag, turtle and porcupine in image 1, small handmade ornaments like the beaver's shield and the kingfisher's amulet. NOT soft, NOT pastel, NOT plush or chibi, no big baby eyes, no watercolour wash. Do not copy the animals in image 1. Plain flat parchment background (#EFE5CD), no ground, no shadow, no scenery, NO text, captions, letters or numbers. Exactly one full-body creature per cell, whole body inside the cell with an empty margin.",
+      "references": [
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-style-test/docs/adventures/new-creatures/style-test/reference-game-style.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1f641-0f90-77e3-8f4c-3804c2d4780c",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-0f90-77e3-8f4c-3804c2d4780c",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-0f90-77e3-8f4c-3804c2d4780c/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-0f90-77e3-8f4c-3804c2d4780c/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 138616,
+      "image_url": "https://v3b.fal.media/files/b/0ab327c2/mm5UhQecraPj6WJH0pNl4_6nzaFrMt.webp"
+    },
+    "tide-octopus": {
+      "state": "downloaded",
+      "prompt": "Use case: new creature designs for a children's fantasy reading game. Create a NEW wide 16:9 sheet: a STRICT single row of THREE equal cells side by side with thin light separators. All three cells show Tide Octopus, a sea octopus with curling striped arms and clever eyes. Cell 1 WILD: the natural animal with a few nature-material details, no glow and no gear. Cell 2 ELEMENTAL: the same animal whose body is partly made of its element, like the ember fox, crystal porcupine and waterfall turtle; no gear. Cell 3 GUARDIAN: the same animal carrying handmade gear (shield, sash, amulet, light armour) like the beaver and kingfisher; no glow. The three must look clearly different. Cell 1: Tide Octopus, natural. Cell 2: Tide Octopus, arms swirling with seawater and sea-foam, shell and coral growing on its head. Cell 3: Tide Octopus, coral crown, shell shoulder plate and a small round shell shield held in one arm. Match image 1 EXACTLY in rendering: these are creatures from the same fantasy reading game. Detailed fantasy RPG creature illustration, crisp dark contour lines, high contrast, rich saturated natural colours, fine individual fur, feather and scale strokes, realistic natural-history anatomy with a slightly heroic stance, natural materials worked into the animal (moss, bark, leaves, stone, crystal, water, fire) exactly like the fox, stag, turtle and porcupine in image 1, small handmade ornaments like the beaver's shield and the kingfisher's amulet. NOT soft, NOT pastel, NOT plush or chibi, no big baby eyes, no watercolour wash. Do not copy the animals in image 1. Plain flat parchment background (#EFE5CD), no ground, no shadow, no scenery, NO text, captions, letters or numbers. Exactly one full-body creature per cell, whole body inside the cell with an empty margin.",
+      "references": [
+        "https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/new-creatures-style-test/docs/adventures/new-creatures/style-test/reference-game-style.webp"
+      ],
+      "status": "IN_QUEUE",
+      "request_id": "01a1f641-4f8e-72c2-806a-969d822ec362",
+      "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-4f8e-72c2-806a-969d822ec362",
+      "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-4f8e-72c2-806a-969d822ec362/status",
+      "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/01a1f641-4f8e-72c2-806a-969d822ec362/cancel",
+      "logs": null,
+      "metrics": {},
+      "queue_position": 0,
+      "user_queue_position": 0,
+      "user_queued_count": 1,
+      "bytes": 131396,
+      "image_url": "https://v3b.fal.media/files/b/0ab327c3/23b0dfOBGAEGHSTL-aGUD_4VAVmSiz.webp"
+    }
+  }
+}
