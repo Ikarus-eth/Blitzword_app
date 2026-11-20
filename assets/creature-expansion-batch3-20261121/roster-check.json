@@ -1,0 +1,173 @@
+{
+  "existingFamilies": [
+    "Thornling",
+    "Moss Golem",
+    "Moon Moth",
+    "Root Sprite",
+    "Cave Troll",
+    "Acorn Imp",
+    "Mushroom Guard",
+    "Bark Beetle",
+    "Bramble Boar",
+    "Reed Serpent",
+    "Bog Toad",
+    "Lantern Wisp",
+    "Crystal Crab",
+    "Hollow Owl",
+    "Fern Wolf",
+    "Stone Ram",
+    "Briar Bat",
+    "Snail Knight",
+    "Chest Mimic",
+    "Storm Griffin",
+    "Snow Owl",
+    "Bramble Badger",
+    "Ember Fox",
+    "Rowan Stag",
+    "Pine Marten",
+    "Hazel Hare",
+    "Cloak Raccoon",
+    "Chestnut Squirrel",
+    "Moss Bear",
+    "Lily Otter",
+    "Dam Beaver",
+    "Amber Newt",
+    "Cattail Heron",
+    "Brook Turtle",
+    "Willow Kingfisher",
+    "Ripple Salamander",
+    "Shell Lobster",
+    "Marsh Crane",
+    "Coal Salamander",
+    "Quartz Mole",
+    "Copper Scorpion",
+    "Lantern Gecko",
+    "Slate Pangolin",
+    "Cinder Porcupine",
+    "Gem Spider",
+    "Echo Lizard",
+    "Flint Armadillo",
+    "Frost Lynx",
+    "Aurora Elk",
+    "Snow Hare",
+    "Cloud Yak",
+    "Pinecone Marmot",
+    "Gale Falcon",
+    "Lichen Ibex",
+    "Hail Wolverine",
+    "Mist Leopard",
+    "Glacier Seal",
+    "Ink Raven",
+    "Bramble Peacock",
+    "Bell Tortoise",
+    "Honey Wasp",
+    "Velvet Shrew",
+    "Dusk Firefly",
+    "Petal Chameleon",
+    "Moon Hare Knight"
+  ],
+  "earlierConcepts": [
+    "Tide Octopus",
+    "Lava Rhino",
+    "Sand Meerkat",
+    "Coral Seahorse",
+    "Glow Jellyfish",
+    "Banyan Gorilla",
+    "Storm Lemur",
+    "Jade Tiger",
+    "Frost Mammoth",
+    "Sun Phoenix",
+    "Star Unicorn",
+    "Cloud Whale",
+    "Boulder Hippo",
+    "Mud Crocodile",
+    "Wind Manta",
+    "Autumn Red Panda",
+    "Bolt Kangaroo",
+    "Iceberg Penguin",
+    "Sunmane Lion",
+    "Ruby Hummingbird",
+    "Pearl Narwhal",
+    "Abyss Angler",
+    "Tusk Walrus",
+    "Bubble Platypus",
+    "Glass Dragonfly",
+    "Sky Giraffe",
+    "Gum Koala",
+    "Vine Sloth",
+    "Spike Puffer",
+    "Rainbow Toucan",
+    "Sunset Flamingo",
+    "Snow Yeti",
+    "Burrow Wombat",
+    "Steam Capybara",
+    "Dream Tapir"
+  ],
+  "previousBatch": [
+    {
+      "name": "Aardvark",
+      "rationale": "Long snout and digging stance add a distinct burrowing animal."
+    },
+    {
+      "name": "Bison",
+      "rationale": "Heavy shoulder-led silhouette adds a grassland guardian distinct from the existing yak."
+    },
+    {
+      "name": "Camel",
+      "rationale": "Long legs and single hump expand the desert set."
+    },
+    {
+      "name": "Nautilus",
+      "rationale": "Spiral external shell adds a marine silhouette unlike the octopus and existing crustaceans."
+    },
+    {
+      "name": "Pelican",
+      "rationale": "Large throat pouch adds a coastal waterbird distinct from herons and cranes."
+    },
+    {
+      "name": "Flying Fish",
+      "rationale": "Broad gliding fins add a small ocean-to-sky creature."
+    },
+    {
+      "name": "Okapi",
+      "rationale": "Short neck, large ears and striped legs add an understory hoofed animal distinct from the giraffe."
+    },
+    {
+      "name": "Cassowary",
+      "rationale": "Casque and strong running legs add a flightless rainforest bird."
+    },
+    {
+      "name": "Stick Insect",
+      "rationale": "Twig body and six long legs add a camouflage insect without repeating beetle, wasp or dragonfly."
+    },
+    {
+      "name": "Triceratops",
+      "rationale": "Three horns and a broad frill introduce a prehistoric quadruped."
+    }
+  ],
+  "batchTwo": [
+    "Dolphin",
+    "Swordfish",
+    "Sea Slug",
+    "Starfish",
+    "Puffin",
+    "Cockatoo",
+    "Skunk",
+    "Jerboa",
+    "Hyena",
+    "Stegosaurus"
+  ],
+  "newSpecies": [
+    "Zebra",
+    "Saiga",
+    "Echidna",
+    "Swan",
+    "Kiwi",
+    "Woodpecker",
+    "Mantis",
+    "Cicada",
+    "Dugong",
+    "Hammerhead Shark"
+  ],
+  "notes": "Avoids exact species repeats in the 65-family roster and preceding concept lists. Echidna uses a narrow snout and low body to differ from porcupine; dugong has no dorsal fin and a downturned muzzle to differ from dolphin; hammerhead has a distinctive wide head. These are proposed concepts, not approved game additions."
+}
