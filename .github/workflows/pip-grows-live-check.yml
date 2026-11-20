@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 2be921ea79d6ce9cbff5eb1b83c8533cb357b35e
-      - name: Compare live files with merge 2be921e
+          ref: be2495a5a29b55a9da07e50dfb6cc834f894d350
+      - name: Compare live files with merge be2495a
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           P=assets/new-creatures-vote
@@ -22,7 +22,7 @@ jobs:
             sleep 30
           done
           bad=0; n=0
-          for f in index.html $P/index.html $P/review.js $P/selection.js $P/review.css $P/catalog.json $P/artwork-manifest.json $P/sheets/*.webp; do
+          for f in index.html $P/index.html $P/review.js $P/selection.js $P/review.css $P/catalog.json $P/artwork-manifest.json $P/pictures/*.webp; do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then echo "OK $f"; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
