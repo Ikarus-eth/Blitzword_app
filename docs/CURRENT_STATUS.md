@@ -1,6 +1,6 @@
 ## Creature vote: 20 Nov results recorded; batch 3 vote — 21 November 2026
 
-**Review page, not gameplay.** 11 creatures won the 20 Nov vote (Stick Insect and Nautilus excluded by Artus's notes); results in [NEW_CREATURES_VOTE.md](enemies/NEW_CREATURES_VOTE.md). The [vote page](https://ikarus-eth.github.io/Blitzword_app/assets/new-creatures-vote/) now shows batch 3: Zebra, Saiga, Echidna, Swan, Kiwi, Woodpecker, Mantis, Cicada, Dugong, Hammerhead Shark. Batch 2 is still unvoted. New chapters wait for these votes.
+**Review page, not gameplay.** 11 creatures won the 20 Nov vote (Stick Insect and Nautilus excluded by Artus's notes); results in [NEW_CREATURES_VOTE.md](enemies/NEW_CREATURES_VOTE.md). The [vote page](https://ikarus-eth.github.io/Blitzword_app/assets/new-creatures-vote/) now shows batch 3: Zebra, Saiga, Echidna, Swan, Kiwi, Woodpecker, Mantis, Cicada, Dugong, Hammerhead Shark. Batch 2 is still unvoted. New chapters wait for these votes. Deployed and verified: [PR #264](https://github.com/Ikarus-eth/Blitzword_app/pull/264) merged as `00a1e30`; [Pages run 44862300876](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/44862300876); live files match byte for byte ([verification run 44862608627](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/44862608627), 37 files).
 
 ## New creatures vote replaced with ChatGPT pictures: 13 creatures × 3 looks — 20 November 2026
 
