@@ -1,0 +1,4685 @@
+{
+ "voice": "af_heart",
+ "checked": 550,
+ "matched": 432,
+ "mismatches": [
+  {
+   "id": "story:dark-wizard:w:laughed",
+   "word": "laughed",
+   "heard": "The left.",
+   "match": false,
+   "confidence": -0.567
+  },
+  {
+   "id": "story:dark-wizard:w:eye",
+   "word": "eye",
+   "heard": "Bye!",
+   "match": false,
+   "confidence": -0.504
+  },
+  {
+   "id": "story:dark-wizard:w:woke",
+   "word": "woke",
+   "heard": "Ewoke.",
+   "match": false,
+   "confidence": -0.717
+  },
+  {
+   "id": "story:dark-wizard:w:sea",
+   "word": "sea",
+   "heard": "I see.",
+   "match": false,
+   "confidence": -0.415
+  },
+  {
+   "id": "story:dark-wizard:w:coat",
+   "word": "coat",
+   "heard": "Code.",
+   "match": false,
+   "confidence": -0.608
+  },
+  {
+   "id": "story:dark-wizard:w:believe",
+   "word": "believe",
+   "heard": "believes.",
+   "match": false,
+   "confidence": -0.838
+  },
+  {
+   "id": "story:dark-wizard:w:drank",
+   "word": "drank",
+   "heard": "Drink.",
+   "match": false,
+   "confidence": -0.778
+  },
+  {
+   "id": "story:dark-wizard:w:led",
+   "word": "led",
+   "heard": "The lead.",
+   "match": false,
+   "confidence": -0.913
+  },
+  {
+   "id": "story:dark-wizard:w:near",
+   "word": "near",
+   "heard": "in there.",
+   "match": false,
+   "confidence": -0.944
+  },
+  {
+   "id": "story:dark-wizard:w:knew",
+   "word": "knew",
+   "heard": "Now.",
+   "match": false,
+   "confidence": -0.87
+  },
+  {
+   "id": "story:dark-wizard:w:trap",
+   "word": "trap",
+   "heard": "Drap.",
+   "match": false,
+   "confidence": -0.834
+  },
+  {
+   "id": "story:dark-wizard:w:climbed",
+   "word": "climbed",
+   "heard": "Acclimbed.",
+   "match": false,
+   "confidence": -0.397
+  },
+  {
+   "id": "story:dark-wizard:w:weak",
+   "word": "weak",
+   "heard": "Week.",
+   "match": false,
+   "confidence": -0.362
+  },
+  {
+   "id": "story:dark-wizard:w:felt",
+   "word": "felt",
+   "heard": "Velt.",
+   "match": false,
+   "confidence": -0.477
+  },
+  {
+   "id": "story:dark-wizard:w:ever",
+   "word": "ever",
+   "heard": "Never.",
+   "match": false,
+   "confidence": -0.33
+  },
+  {
+   "id": "story:dark-wizard:w:a",
+   "word": "a",
+   "heard": "Good night.",
+   "match": false,
+   "confidence": -0.438
+  },
+  {
+   "id": "story:dark-wizard:w:artus",
+   "word": "Artus",
+   "heard": "Artists.",
+   "match": false,
+   "confidence": -0.772
+  },
+  {
+   "id": "story:dark-wizard:w:pip",
+   "word": "Pip",
+   "heard": "I'm happy",
+   "match": false,
+   "confidence": -0.84
+  },
+  {
+   "id": "story:dark-wizard:w:at",
+   "word": "at",
+   "heard": "Add.",
+   "match": false,
+   "confidence": -0.763
+  },
+  {
+   "id": "story:dark-wizard:w:hot",
+   "word": "hot",
+   "heard": "Heart.",
+   "match": false,
+   "confidence": -0.545
+  },
+  {
+   "id": "story:dark-wizard:w:they",
+   "word": "they",
+   "heard": "There you go.",
+   "match": false,
+   "confidence": -0.595
+  },
+  {
+   "id": "story:dark-wizard:w:ate",
+   "word": "ate",
+   "heard": "8.",
+   "match": false,
+   "confidence": -0.489
+  },
+  {
+   "id": "story:dark-wizard:w:the",
+   "word": "the",
+   "heard": "There.",
+   "match": false,
+   "confidence": -0.547
+  },
+  {
+   "id": "story:dark-wizard:w:he",
+   "word": "he",
+   "heard": "Here.",
+   "match": false,
+   "confidence": -0.483
+  },
+  {
+   "id": "story:dark-wizard:w:sit",
+   "word": "sit",
+   "heard": "Is it?",
+   "match": false,
+   "confidence": -0.254
+  },
+  {
+   "id": "story:dark-wizard:w:had",
+   "word": "had",
+   "heard": "Head.",
+   "match": false,
+   "confidence": -0.449
+  },
+  {
+   "id": "story:dark-wizard:w:no",
+   "word": "no",
+   "heard": "And now...",
+   "match": false,
+   "confidence": -0.352
+  },
+  {
+   "id": "story:dark-wizard:w:to",
+   "word": "to",
+   "heard": "Tua.",
+   "match": false,
+   "confidence": -1.179
+  },
+  {
+   "id": "story:dark-wizard:w:roof",
+   "word": "roof",
+   "heard": "Ruth.",
+   "match": false,
+   "confidence": -0.4
+  },
+  {
+   "id": "story:dark-wizard:w:look",
+   "word": "look",
+   "heard": "Good luck.",
+   "match": false,
+   "confidence": -0.618
+  },
+  {
+   "id": "story:dark-wizard:w:me",
+   "word": "me",
+   "heard": "May.",
+   "match": false,
+   "confidence": -0.577
+  },
+  {
+   "id": "story:dark-wizard:w:i",
+   "word": "i",
+   "heard": "Sorry.",
+   "match": false,
+   "confidence": -0.326
+  },
+  {
+   "id": "story:dark-wizard:w:you",
+   "word": "you",
+   "heard": "You're...",
+   "match": false,
+   "confidence": -0.902
+  },
+  {
+   "id": "story:dark-wizard:w:are",
+   "word": "are",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.568
+  },
+  {
+   "id": "story:dark-wizard:w:all",
+   "word": "all",
+   "heard": "Oh.",
+   "match": false,
+   "confidence": -0.784
+  },
+  {
+   "id": "story:dark-wizard:w:for",
+   "word": "for",
+   "heard": "before.",
+   "match": false,
+   "confidence": -0.583
+  },
+  {
+   "id": "story:dark-wizard:w:too",
+   "word": "too",
+   "heard": "It's you.",
+   "match": false,
+   "confidence": -0.604
+  },
+  {
+   "id": "story:dark-wizard:w:oh",
+   "word": "oh",
+   "heard": "No.",
+   "match": false,
+   "confidence": -0.284
+  },
+  {
+   "id": "story:dark-wizard:w:she",
+   "word": "she",
+   "heard": "S E.",
+   "match": false,
+   "confidence": -0.753
+  },
+  {
+   "id": "story:dark-wizard:w:an",
+   "word": "an",
+   "heard": "And then...",
+   "match": false,
+   "confidence": -0.45
+  },
+  {
+   "id": "story:dark-wizard:w:see",
+   "word": "see",
+   "heard": "A C.",
+   "match": false,
+   "confidence": -0.405
+  },
+  {
+   "id": "story:dark-wizard:w:moon",
+   "word": "moon",
+   "heard": "Come on.",
+   "match": false,
+   "confidence": -0.579
+  },
+  {
+   "id": "story:dark-wizard:w:slept",
+   "word": "slept",
+   "heard": "is leapt.",
+   "match": false,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:dark-wizard:w:rain",
+   "word": "rain",
+   "heard": "brain.",
+   "match": false,
+   "confidence": -0.839
+  },
+  {
+   "id": "story:dark-wizard:w:came",
+   "word": "came",
+   "heard": "C.A.M.",
+   "match": false,
+   "confidence": -0.788
+  },
+  {
+   "id": "story:dark-wizard:w:sat",
+   "word": "sat",
+   "heard": "Is that?",
+   "match": false,
+   "confidence": -0.36
+  },
+  {
+   "id": "story:dark-wizard:w:saw",
+   "word": "saw",
+   "heard": "It's all.",
+   "match": false,
+   "confidence": -0.658
+  },
+  {
+   "id": "story:dark-wizard:w:under",
+   "word": "under",
+   "heard": "Thunder.",
+   "match": false,
+   "confidence": -0.847
+  },
+  {
+   "id": "story:dark-wizard:w:mouth",
+   "word": "mouth",
+   "heard": "Mouse.",
+   "match": false,
+   "confidence": -0.752
+  },
+  {
+   "id": "story:dark-wizard:w:lights",
+   "word": "lights",
+   "heard": "Elites.",
+   "match": false,
+   "confidence": -0.533
+  },
+  {
+   "id": "story:dark-wizard:w:long",
+   "word": "long",
+   "heard": "Belong.",
+   "match": false,
+   "confidence": -0.255
+  },
+  {
+   "id": "story:dark-wizard:w:green",
+   "word": "green",
+   "heard": "Agreein",
+   "match": false,
+   "confidence": -0.781
+  },
+  {
+   "id": "story:dark-wizard:w:like",
+   "word": "like",
+   "heard": "alike.",
+   "match": false,
+   "confidence": -0.843
+  },
+  {
+   "id": "story:dark-wizard:w:grax",
+   "word": "Grax",
+   "heard": "Gracks.",
+   "match": false,
+   "confidence": -0.88
+  },
+  {
+   "id": "story:dark-wizard:w:have",
+   "word": "have",
+   "heard": "Heavs.",
+   "match": false,
+   "confidence": -0.866
+  },
+  {
+   "id": "story:dark-wizard:w:sun",
+   "word": "sun",
+   "heard": "A son.",
+   "match": false,
+   "confidence": -0.744
+  },
+  {
+   "id": "story:dark-wizard:w:your",
+   "word": "your",
+   "heard": "You're",
+   "match": false,
+   "confidence": -0.584
+  },
+  {
+   "id": "story:dark-wizard:w:sky",
+   "word": "sky",
+   "heard": "This guy.",
+   "match": false,
+   "confidence": -0.497
+  },
+  {
+   "id": "story:dark-wizard:w:her",
+   "word": "her",
+   "heard": "Ever.",
+   "match": false,
+   "confidence": -0.781
+  },
+  {
+   "id": "story:dark-wizard:w:face",
+   "word": "face",
+   "heard": "Vase.",
+   "match": false,
+   "confidence": -0.638
+  },
+  {
+   "id": "story:dark-wizard:w:know",
+   "word": "know",
+   "heard": "Now.",
+   "match": false,
+   "confidence": -0.529
+  },
+  {
+   "id": "story:dark-wizard:w:how",
+   "word": "how",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.925
+  },
+  {
+   "id": "story:dark-wizard:w:pip's",
+   "word": "Pip's",
+   "heard": "Pipsa",
+   "match": false,
+   "confidence": -1.166
+  },
+  {
+   "id": "story:dark-wizard:w:oren",
+   "word": "Oren",
+   "heard": "A foreign.",
+   "match": false,
+   "confidence": -0.873
+  },
+  {
+   "id": "story:dark-wizard:w:knows",
+   "word": "knows",
+   "heard": "nose.",
+   "match": false,
+   "confidence": -0.89
+  },
+  {
+   "id": "story:dark-wizard:w:grey",
+   "word": "grey",
+   "heard": "Gray.",
+   "match": false,
+   "confidence": -0.509
+  },
+  {
+   "id": "story:dark-wizard:w:ago",
+   "word": "ago",
+   "heard": "It go.",
+   "match": false,
+   "confidence": -0.44
+  },
+  {
+   "id": "story:dark-wizard:w:wants",
+   "word": "wants",
+   "heard": "Once.",
+   "match": false,
+   "confidence": -0.59
+  },
+  {
+   "id": "story:dark-wizard:w:forest",
+   "word": "forest",
+   "heard": "Vorist",
+   "match": false,
+   "confidence": -1.301
+  },
+  {
+   "id": "story:dark-wizard:w:be",
+   "word": "be",
+   "heard": "Bye!",
+   "match": false,
+   "confidence": -1.136
+  },
+  {
+   "id": "story:dark-wizard:w:brave",
+   "word": "brave",
+   "heard": "Braves.",
+   "match": false,
+   "confidence": -0.707
+  },
+  {
+   "id": "story:dark-wizard:w:took",
+   "word": "took",
+   "heard": "It's okay.",
+   "match": false,
+   "confidence": -0.308
+  },
+  {
+   "id": "story:dark-wizard:w:other",
+   "word": "other",
+   "heard": "Another.",
+   "match": false,
+   "confidence": -0.737
+  },
+  {
+   "id": "story:dark-wizard:w:tricks",
+   "word": "tricks",
+   "heard": "IntraXa.",
+   "match": false,
+   "confidence": -0.73
+  },
+  {
+   "id": "story:dark-wizard:w:use",
+   "word": "use",
+   "heard": "Yes.",
+   "match": false,
+   "confidence": -0.906
+  },
+  {
+   "id": "story:dark-wizard:w:put",
+   "word": "put",
+   "heard": "I'm hurt.",
+   "match": false,
+   "confidence": -0.967
+  },
+  {
+   "id": "story:dark-wizard:w:cheese",
+   "word": "cheese",
+   "heard": "Geez.",
+   "match": false,
+   "confidence": -0.626
+  },
+  {
+   "id": "story:dark-wizard:w:each",
+   "word": "each",
+   "heard": "needs.",
+   "match": false,
+   "confidence": -0.859
+  },
+  {
+   "id": "story:dark-wizard:w:first",
+   "word": "first",
+   "heard": "...versed.",
+   "match": false,
+   "confidence": -0.682
+  },
+  {
+   "id": "story:dark-wizard:w:us",
+   "word": "us",
+   "heard": "Oh, this is...",
+   "match": false,
+   "confidence": -0.823
+  },
+  {
+   "id": "story:dark-wizard:w:if",
+   "word": "if",
+   "heard": "Yeah.",
+   "match": false,
+   "confidence": -0.587
+  },
+  {
+   "id": "story:dark-wizard:w:artus's",
+   "word": "Artus's",
+   "heard": "Artises.",
+   "match": false,
+   "confidence": -0.682
+  },
+  {
+   "id": "story:dark-wizard:w:two",
+   "word": "two",
+   "heard": "It's you.",
+   "match": false,
+   "confidence": -0.441
+  },
+  {
+   "id": "story:dark-wizard:w:called",
+   "word": "called",
+   "heard": "Cold.",
+   "match": false,
+   "confidence": -0.623
+  },
+  {
+   "id": "story:dark-wizard:w:grax's",
+   "word": "Grax's",
+   "heard": "Gracks is...",
+   "match": false,
+   "confidence": -1.06
+  },
+  {
+   "id": "story:dark-wizard:w:path",
+   "word": "path",
+   "heard": "Pass.",
+   "match": false,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:dark-wizard:w:move",
+   "word": "move",
+   "heard": "mouth",
+   "match": false,
+   "confidence": -1.412
+  },
+  {
+   "id": "story:dark-wizard:w:who",
+   "word": "who",
+   "heard": "Hill.",
+   "match": false,
+   "confidence": -0.319
+  },
+  {
+   "id": "story:dark-wizard:w:our",
+   "word": "our",
+   "heard": "hour.",
+   "match": false,
+   "confidence": -0.434
+  },
+  {
+   "id": "story:dark-wizard:w:ears",
+   "word": "ears",
+   "heard": "Years.",
+   "match": false,
+   "confidence": -0.502
+  },
+  {
+   "id": "story:dark-wizard:w:okapi",
+   "word": "okapi",
+   "heard": "Oh copy.",
+   "match": false,
+   "confidence": -0.566
+  },
+  {
+   "id": "story:dark-wizard:w:feet",
+   "word": "feet",
+   "heard": "Viet.",
+   "match": false,
+   "confidence": -1.06
+  },
+  {
+   "id": "story:dark-wizard:w:late",
+   "word": "late",
+   "heard": "Elite.",
+   "match": false,
+   "confidence": -0.93
+  },
+  {
+   "id": "story:dark-wizard:w:kept",
+   "word": "kept",
+   "heard": "Capped.",
+   "match": false,
+   "confidence": -0.965
+  },
+  {
+   "id": "story:dark-wizard:w:gave",
+   "word": "gave",
+   "heard": "Gabe.",
+   "match": false,
+   "confidence": -0.831
+  },
+  {
+   "id": "story:dark-wizard:w:tent",
+   "word": "tent",
+   "heard": "10.",
+   "match": false,
+   "confidence": -0.617
+  },
+  {
+   "id": "story:dark-wizard:w:cage",
+   "word": "cage",
+   "heard": "Kay.",
+   "match": false,
+   "confidence": -0.595
+  },
+  {
+   "id": "story:dark-wizard:w:seemed",
+   "word": "seemed",
+   "heard": "Assumed.",
+   "match": false,
+   "confidence": -0.891
+  },
+  {
+   "id": "story:dark-wizard:w:keep",
+   "word": "keep",
+   "heard": "Thank you.",
+   "match": false,
+   "confidence": -0.957
+  },
+  {
+   "id": "story:dark-wizard:w:push",
+   "word": "push",
+   "heard": "Pushy.",
+   "match": false,
+   "confidence": -0.613
+  },
+  {
+   "id": "story:dark-wizard:w:walls",
+   "word": "walls",
+   "heard": "Wiles.",
+   "match": false,
+   "confidence": -0.765
+  },
+  {
+   "id": "story:dark-wizard:w:noses",
+   "word": "noses",
+   "heard": "Nozes.",
+   "match": false,
+   "confidence": -0.663
+  },
+  {
+   "id": "story:dark-wizard:w:keeps",
+   "word": "keeps",
+   "heard": "Heapsa.",
+   "match": false,
+   "confidence": -0.343
+  },
+  {
+   "id": "story:dark-wizard:w:hole",
+   "word": "hole",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -1.008
+  },
+  {
+   "id": "story:dark-wizard:w:air",
+   "word": "air",
+   "heard": "There.",
+   "match": false,
+   "confidence": -0.404
+  },
+  {
+   "id": "story:dark-wizard:w:wall",
+   "word": "wall",
+   "heard": "Well.",
+   "match": false,
+   "confidence": -0.94
+  },
+  {
+   "id": "story:dark-wizard:w:high",
+   "word": "high",
+   "heard": "Hi.",
+   "match": false,
+   "confidence": -0.306
+  },
+  {
+   "id": "story:dark-wizard:w:low",
+   "word": "low",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.541
+  },
+  {
+   "id": "story:dark-wizard:w:round",
+   "word": "round",
+   "heard": "around.",
+   "match": false,
+   "confidence": -0.38
+  },
+  {
+   "id": "story:dark-wizard:w:cages",
+   "word": "cages",
+   "heard": "Cajas",
+   "match": false,
+   "confidence": -0.636
+  },
+  {
+   "id": "story:dark-wizard:w:key",
+   "word": "key",
+   "heard": "Okay.",
+   "match": false,
+   "confidence": -0.537
+  },
+  {
+   "id": "story:dark-wizard:w:shout",
+   "word": "shout",
+   "heard": "ish out.",
+   "match": false,
+   "confidence": -0.381
+  },
+  {
+   "id": "story:dark-wizard:w:staff",
+   "word": "staff",
+   "heard": "is Daph.",
+   "match": false,
+   "confidence": -0.741
+  },
+  {
+   "id": "story:dark-wizard:w:thinks",
+   "word": "thinks",
+   "heard": "Thanks.",
+   "match": false,
+   "confidence": -0.224
+  },
+  {
+   "id": "story:dark-wizard:w:leave",
+   "word": "leave",
+   "heard": "I believe.",
+   "match": false,
+   "confidence": -0.6
+  },
+  {
+   "id": "story:dark-wizard:w:choose",
+   "word": "choose",
+   "heard": "Jews.",
+   "match": false,
+   "confidence": -0.476
+  },
+  {
+   "id": "story:dark-wizard:w:thousand",
+   "word": "thousand",
+   "heard": "1,000",
+   "match": false,
+   "confidence": -0.527
+  },
+  {
+   "id": "story:dark-wizard:w:across",
+   "word": "across",
+   "heard": "It crossed.",
+   "match": false,
+   "confidence": -0.519
+  }
+ ],
+ "words": [
+  {
+   "id": "story:dark-wizard:w:smoke",
+   "word": "smoke",
+   "heard": "A smoke.",
+   "match": true,
+   "confidence": -0.833
+  },
+  {
+   "id": "story:dark-wizard:w:held",
+   "word": "held",
+   "heard": "Held.",
+   "match": true,
+   "confidence": -0.565
+  },
+  {
+   "id": "story:dark-wizard:w:flew",
+   "word": "flew",
+   "heard": "I flew.",
+   "match": true,
+   "confidence": -0.679
+  },
+  {
+   "id": "story:dark-wizard:w:ran",
+   "word": "ran",
+   "heard": "Ran.",
+   "match": true,
+   "confidence": -0.597
+  },
+  {
+   "id": "story:dark-wizard:w:laughed",
+   "word": "laughed",
+   "heard": "The left.",
+   "match": false,
+   "confidence": -0.567
+  },
+  {
+   "id": "story:dark-wizard:w:sound",
+   "word": "sound",
+   "heard": "Sound.",
+   "match": true,
+   "confidence": -0.488
+  },
+  {
+   "id": "story:dark-wizard:w:eye",
+   "word": "eye",
+   "heard": "Bye!",
+   "match": false,
+   "confidence": -0.504
+  },
+  {
+   "id": "story:dark-wizard:w:woke",
+   "word": "woke",
+   "heard": "Ewoke.",
+   "match": false,
+   "confidence": -0.717
+  },
+  {
+   "id": "story:dark-wizard:w:sea",
+   "word": "sea",
+   "heard": "I see.",
+   "match": false,
+   "confidence": -0.415
+  },
+  {
+   "id": "story:dark-wizard:w:torch",
+   "word": "torch",
+   "heard": "Torch.",
+   "match": true,
+   "confidence": -0.538
+  },
+  {
+   "id": "story:dark-wizard:w:something",
+   "word": "something",
+   "heard": "Something.",
+   "match": true,
+   "confidence": -0.604
+  },
+  {
+   "id": "story:dark-wizard:w:silver",
+   "word": "silver",
+   "heard": "Silver.",
+   "match": true,
+   "confidence": -0.565
+  },
+  {
+   "id": "story:dark-wizard:w:whispered",
+   "word": "whispered",
+   "heard": "Whispered.",
+   "match": true,
+   "confidence": -0.471
+  },
+  {
+   "id": "story:dark-wizard:w:journey",
+   "word": "journey",
+   "heard": "Journey.",
+   "match": true,
+   "confidence": -0.575
+  },
+  {
+   "id": "story:dark-wizard:w:sand",
+   "word": "sand",
+   "heard": "The sand.",
+   "match": true,
+   "confidence": -0.463
+  },
+  {
+   "id": "story:dark-wizard:w:trick",
+   "word": "trick",
+   "heard": "Trick.",
+   "match": true,
+   "confidence": -0.809
+  },
+  {
+   "id": "story:dark-wizard:w:tiger",
+   "word": "tiger",
+   "heard": "Tiger",
+   "match": true,
+   "confidence": -0.272
+  },
+  {
+   "id": "story:dark-wizard:w:creature",
+   "word": "creature",
+   "heard": "creature",
+   "match": true,
+   "confidence": -0.473
+  },
+  {
+   "id": "story:dark-wizard:w:walked",
+   "word": "walked",
+   "heard": "Walked.",
+   "match": true,
+   "confidence": -0.55
+  },
+  {
+   "id": "story:dark-wizard:w:huge",
+   "word": "huge",
+   "heard": "Huge.",
+   "match": true,
+   "confidence": -1.272
+  },
+  {
+   "id": "story:dark-wizard:w:quickly",
+   "word": "quickly",
+   "heard": "Quickly.",
+   "match": true,
+   "confidence": -0.29
+  },
+  {
+   "id": "story:dark-wizard:w:flame",
+   "word": "flame",
+   "heard": "Flame.",
+   "match": true,
+   "confidence": -0.508
+  },
+  {
+   "id": "story:dark-wizard:w:legs",
+   "word": "legs",
+   "heard": "The legs.",
+   "match": true,
+   "confidence": -0.555
+  },
+  {
+   "id": "story:dark-wizard:w:jumped",
+   "word": "jumped",
+   "heard": "Jumped.",
+   "match": true,
+   "confidence": -0.315
+  },
+  {
+   "id": "story:dark-wizard:w:tunnel",
+   "word": "tunnel",
+   "heard": "tunnel",
+   "match": true,
+   "confidence": -0.432
+  },
+  {
+   "id": "story:dark-wizard:w:coat",
+   "word": "coat",
+   "heard": "Code.",
+   "match": false,
+   "confidence": -0.608
+  },
+  {
+   "id": "story:dark-wizard:w:thought",
+   "word": "thought",
+   "heard": "thought.",
+   "match": true,
+   "confidence": -0.692
+  },
+  {
+   "id": "story:dark-wizard:w:believe",
+   "word": "believe",
+   "heard": "believes.",
+   "match": false,
+   "confidence": -0.838
+  },
+  {
+   "id": "story:dark-wizard:w:young",
+   "word": "young",
+   "heard": "Young.",
+   "match": true,
+   "confidence": -0.41
+  },
+  {
+   "id": "story:dark-wizard:w:later",
+   "word": "later",
+   "heard": "Later.",
+   "match": true,
+   "confidence": -0.35
+  },
+  {
+   "id": "story:dark-wizard:w:drank",
+   "word": "drank",
+   "heard": "Drink.",
+   "match": false,
+   "confidence": -0.778
+  },
+  {
+   "id": "story:dark-wizard:w:nothing",
+   "word": "nothing",
+   "heard": "Nothing.",
+   "match": true,
+   "confidence": -0.354
+  },
+  {
+   "id": "story:dark-wizard:w:head",
+   "word": "head",
+   "heard": "Head.",
+   "match": true,
+   "confidence": -0.341
+  },
+  {
+   "id": "story:dark-wizard:w:stood",
+   "word": "stood",
+   "heard": "I stood.",
+   "match": true,
+   "confidence": -0.346
+  },
+  {
+   "id": "story:dark-wizard:w:led",
+   "word": "led",
+   "heard": "The lead.",
+   "match": false,
+   "confidence": -0.913
+  },
+  {
+   "id": "story:dark-wizard:w:pushed",
+   "word": "pushed",
+   "heard": "Pushed.",
+   "match": true,
+   "confidence": -0.315
+  },
+  {
+   "id": "story:dark-wizard:w:heavy",
+   "word": "heavy",
+   "heard": "Heavy.",
+   "match": true,
+   "confidence": -0.44
+  },
+  {
+   "id": "story:dark-wizard:w:hard",
+   "word": "hard",
+   "heard": "Hard.",
+   "match": true,
+   "confidence": -0.443
+  },
+  {
+   "id": "story:dark-wizard:w:near",
+   "word": "near",
+   "heard": "in there.",
+   "match": false,
+   "confidence": -0.944
+  },
+  {
+   "id": "story:dark-wizard:w:knew",
+   "word": "knew",
+   "heard": "Now.",
+   "match": false,
+   "confidence": -0.87
+  },
+  {
+   "id": "story:dark-wizard:w:bridge",
+   "word": "bridge",
+   "heard": "Bridge",
+   "match": true,
+   "confidence": -0.351
+  },
+  {
+   "id": "story:dark-wizard:w:shouted",
+   "word": "shouted",
+   "heard": "Shouted.",
+   "match": true,
+   "confidence": -0.402
+  },
+  {
+   "id": "story:dark-wizard:w:fell",
+   "word": "fell",
+   "heard": "Fell.",
+   "match": true,
+   "confidence": -0.694
+  },
+  {
+   "id": "story:dark-wizard:w:wanted",
+   "word": "wanted",
+   "heard": "Wanted.",
+   "match": true,
+   "confidence": -0.407
+  },
+  {
+   "id": "story:dark-wizard:w:moment",
+   "word": "moment",
+   "heard": "moment.",
+   "match": true,
+   "confidence": -0.42
+  },
+  {
+   "id": "story:dark-wizard:w:floor",
+   "word": "floor",
+   "heard": "The floor.",
+   "match": true,
+   "confidence": -0.401
+  },
+  {
+   "id": "story:dark-wizard:w:opened",
+   "word": "opened",
+   "heard": "opened.",
+   "match": true,
+   "confidence": -0.884
+  },
+  {
+   "id": "story:dark-wizard:w:gone",
+   "word": "gone",
+   "heard": "Gone.",
+   "match": true,
+   "confidence": -0.168
+  },
+  {
+   "id": "story:dark-wizard:w:stair",
+   "word": "stair",
+   "heard": "A stair.",
+   "match": true,
+   "confidence": -0.5
+  },
+  {
+   "id": "story:dark-wizard:w:next",
+   "word": "next",
+   "heard": "Next.",
+   "match": true,
+   "confidence": -0.462
+  },
+  {
+   "id": "story:dark-wizard:w:closed",
+   "word": "closed",
+   "heard": "I closed.",
+   "match": true,
+   "confidence": -0.241
+  },
+  {
+   "id": "story:dark-wizard:w:smiled",
+   "word": "smiled",
+   "heard": "smiled",
+   "match": true,
+   "confidence": -0.6
+  },
+  {
+   "id": "story:dark-wizard:w:trap",
+   "word": "trap",
+   "heard": "Drap.",
+   "match": false,
+   "confidence": -0.834
+  },
+  {
+   "id": "story:dark-wizard:w:real",
+   "word": "real",
+   "heard": "are real.",
+   "match": true,
+   "confidence": -0.839
+  },
+  {
+   "id": "story:dark-wizard:w:anything",
+   "word": "anything",
+   "heard": "Anything.",
+   "match": true,
+   "confidence": -0.469
+  },
+  {
+   "id": "story:dark-wizard:w:tonight",
+   "word": "tonight",
+   "heard": "Tonight.",
+   "match": true,
+   "confidence": -0.299
+  },
+  {
+   "id": "story:dark-wizard:w:climbed",
+   "word": "climbed",
+   "heard": "Acclimbed.",
+   "match": false,
+   "confidence": -0.397
+  },
+  {
+   "id": "story:dark-wizard:w:great",
+   "word": "great",
+   "heard": "Great.",
+   "match": true,
+   "confidence": -0.585
+  },
+  {
+   "id": "story:dark-wizard:w:ready",
+   "word": "ready",
+   "heard": "Ready.",
+   "match": true,
+   "confidence": -0.456
+  },
+  {
+   "id": "story:dark-wizard:w:weak",
+   "word": "weak",
+   "heard": "Week.",
+   "match": false,
+   "confidence": -0.362
+  },
+  {
+   "id": "story:dark-wizard:w:making",
+   "word": "making",
+   "heard": "making",
+   "match": true,
+   "confidence": -0.465
+  },
+  {
+   "id": "story:dark-wizard:w:half",
+   "word": "half",
+   "heard": "Half.",
+   "match": true,
+   "confidence": -0.338
+  },
+  {
+   "id": "story:dark-wizard:w:taken",
+   "word": "taken",
+   "heard": "Taken.",
+   "match": true,
+   "confidence": -0.505
+  },
+  {
+   "id": "story:dark-wizard:w:remember",
+   "word": "remember",
+   "heard": "Remember.",
+   "match": true,
+   "confidence": -0.618
+  },
+  {
+   "id": "story:dark-wizard:w:told",
+   "word": "told",
+   "heard": "Told.",
+   "match": true,
+   "confidence": -0.278
+  },
+  {
+   "id": "story:dark-wizard:w:lie",
+   "word": "lie",
+   "heard": "Good lie.",
+   "match": true,
+   "confidence": -0.71
+  },
+  {
+   "id": "story:dark-wizard:w:felt",
+   "word": "felt",
+   "heard": "Velt.",
+   "match": false,
+   "confidence": -0.477
+  },
+  {
+   "id": "story:dark-wizard:w:midnight",
+   "word": "midnight",
+   "heard": "Midnight.",
+   "match": true,
+   "confidence": -0.682
+  },
+  {
+   "id": "story:dark-wizard:w:thing",
+   "word": "thing",
+   "heard": "Thing.",
+   "match": true,
+   "confidence": -0.578
+  },
+  {
+   "id": "story:dark-wizard:w:everything",
+   "word": "everything",
+   "heard": "Everything.",
+   "match": true,
+   "confidence": -0.367
+  },
+  {
+   "id": "story:dark-wizard:w:won't",
+   "word": "won't",
+   "heard": "Won't.",
+   "match": true,
+   "confidence": -0.725
+  },
+  {
+   "id": "story:dark-wizard:w:person",
+   "word": "person",
+   "heard": "person",
+   "match": true,
+   "confidence": -0.452
+  },
+  {
+   "id": "story:dark-wizard:w:hit",
+   "word": "hit",
+   "heard": "Hit.",
+   "match": true,
+   "confidence": -0.825
+  },
+  {
+   "id": "story:dark-wizard:w:broke",
+   "word": "broke",
+   "heard": "Broke.",
+   "match": true,
+   "confidence": -0.482
+  },
+  {
+   "id": "story:dark-wizard:w:life",
+   "word": "life",
+   "heard": "in life.",
+   "match": true,
+   "confidence": -0.291
+  },
+  {
+   "id": "story:dark-wizard:w:inside",
+   "word": "inside",
+   "heard": "inside.",
+   "match": true,
+   "confidence": -0.458
+  },
+  {
+   "id": "story:dark-wizard:w:ever",
+   "word": "ever",
+   "heard": "Never.",
+   "match": false,
+   "confidence": -0.33
+  },
+  {
+   "id": "story:dark-wizard:w:flying",
+   "word": "flying",
+   "heard": "Flying.",
+   "match": true,
+   "confidence": -0.611
+  },
+  {
+   "id": "story:dark-wizard:w:flower",
+   "word": "flower",
+   "heard": "Flower.",
+   "match": true,
+   "confidence": -0.681
+  },
+  {
+   "id": "story:dark-wizard:w:party",
+   "word": "party",
+   "heard": "Party.",
+   "match": true,
+   "confidence": -0.563
+  },
+  {
+   "id": "story:dark-wizard:w:everybody",
+   "word": "everybody",
+   "heard": "Everybody.",
+   "match": true,
+   "confidence": -0.357
+  },
+  {
+   "id": "story:dark-wizard:w:box",
+   "word": "box",
+   "heard": "Box.",
+   "match": true,
+   "confidence": -0.449
+  },
+  {
+   "id": "story:dark-wizard:w:lost",
+   "word": "lost",
+   "heard": "Lost.",
+   "match": true,
+   "confidence": -0.56
+  },
+  {
+   "id": "story:dark-wizard:w:cried",
+   "word": "cried",
+   "heard": "Cried.",
+   "match": true,
+   "confidence": -0.358
+  },
+  {
+   "id": "story:dark-wizard:w:outside",
+   "word": "outside",
+   "heard": "Outside.",
+   "match": true,
+   "confidence": -0.368
+  },
+  {
+   "id": "story:dark-wizard:w:table",
+   "word": "table",
+   "heard": "Table.",
+   "match": true,
+   "confidence": -0.443
+  },
+  {
+   "id": "story:dark-wizard:w:it",
+   "word": "it",
+   "heard": "It.",
+   "match": true,
+   "confidence": -0.847
+  },
+  {
+   "id": "story:dark-wizard:w:was",
+   "word": "was",
+   "heard": "was.",
+   "match": true,
+   "confidence": -0.636
+  },
+  {
+   "id": "story:dark-wizard:w:a",
+   "word": "a",
+   "heard": "Good night.",
+   "match": false,
+   "confidence": -0.438
+  },
+  {
+   "id": "story:dark-wizard:w:cold",
+   "word": "cold",
+   "heard": "Cold.",
+   "match": true,
+   "confidence": -0.315
+  },
+  {
+   "id": "story:dark-wizard:w:night",
+   "word": "night",
+   "heard": "Night.",
+   "match": true,
+   "confidence": -0.355
+  },
+  {
+   "id": "story:dark-wizard:w:artus",
+   "word": "Artus",
+   "heard": "Artists.",
+   "match": false,
+   "confidence": -0.772
+  },
+  {
+   "id": "story:dark-wizard:w:pip",
+   "word": "Pip",
+   "heard": "I'm happy",
+   "match": false,
+   "confidence": -0.84
+  },
+  {
+   "id": "story:dark-wizard:w:and",
+   "word": "and",
+   "heard": "And...",
+   "match": true,
+   "confidence": -0.775
+  },
+  {
+   "id": "story:dark-wizard:w:jet",
+   "word": "Jet",
+   "heard": "Jet.",
+   "match": true,
+   "confidence": -0.405
+  },
+  {
+   "id": "story:dark-wizard:w:were",
+   "word": "were",
+   "heard": "were.",
+   "match": true,
+   "confidence": -0.999
+  },
+  {
+   "id": "story:dark-wizard:w:at",
+   "word": "at",
+   "heard": "Add.",
+   "match": false,
+   "confidence": -0.763
+  },
+  {
+   "id": "story:dark-wizard:w:grandma's",
+   "word": "Grandma's",
+   "heard": "Grandmas.",
+   "match": true,
+   "confidence": -0.316
+  },
+  {
+   "id": "story:dark-wizard:w:house",
+   "word": "house",
+   "heard": "House.",
+   "match": true,
+   "confidence": -0.712
+  },
+  {
+   "id": "story:dark-wizard:w:grandma",
+   "word": "Grandma",
+   "heard": "Grandma.",
+   "match": true,
+   "confidence": -0.335
+  },
+  {
+   "id": "story:dark-wizard:w:made",
+   "word": "made",
+   "heard": "Made.",
+   "match": true,
+   "confidence": -0.337
+  },
+  {
+   "id": "story:dark-wizard:w:hot",
+   "word": "hot",
+   "heard": "Heart.",
+   "match": false,
+   "confidence": -0.545
+  },
+  {
+   "id": "story:dark-wizard:w:soup",
+   "word": "soup",
+   "heard": "A soup.",
+   "match": true,
+   "confidence": -0.792
+  },
+  {
+   "id": "story:dark-wizard:w:they",
+   "word": "they",
+   "heard": "There you go.",
+   "match": false,
+   "confidence": -0.595
+  },
+  {
+   "id": "story:dark-wizard:w:ate",
+   "word": "ate",
+   "heard": "8.",
+   "match": false,
+   "confidence": -0.489
+  },
+  {
+   "id": "story:dark-wizard:w:by",
+   "word": "by",
+   "heard": "Bye!",
+   "match": true,
+   "confidence": -0.318
+  },
+  {
+   "id": "story:dark-wizard:w:the",
+   "word": "the",
+   "heard": "There.",
+   "match": false,
+   "confidence": -0.547
+  },
+  {
+   "id": "story:dark-wizard:w:fire",
+   "word": "fire",
+   "heard": "Fire.",
+   "match": true,
+   "confidence": -0.409
+  },
+  {
+   "id": "story:dark-wizard:w:big",
+   "word": "big",
+   "heard": "Big.",
+   "match": true,
+   "confidence": -0.296
+  },
+  {
+   "id": "story:dark-wizard:w:now",
+   "word": "now",
+   "heard": "Now.",
+   "match": true,
+   "confidence": -0.424
+  },
+  {
+   "id": "story:dark-wizard:w:he",
+   "word": "he",
+   "heard": "Here.",
+   "match": false,
+   "confidence": -0.483
+  },
+  {
+   "id": "story:dark-wizard:w:as",
+   "word": "as",
+   "heard": "as.",
+   "match": true,
+   "confidence": -0.811
+  },
+  {
+   "id": "story:dark-wizard:w:horse",
+   "word": "horse",
+   "heard": "A horse.",
+   "match": true,
+   "confidence": -0.628
+  },
+  {
+   "id": "story:dark-wizard:w:could",
+   "word": "could",
+   "heard": "Could.",
+   "match": true,
+   "confidence": -0.638
+  },
+  {
+   "id": "story:dark-wizard:w:sit",
+   "word": "sit",
+   "heard": "Is it?",
+   "match": false,
+   "confidence": -0.254
+  },
+  {
+   "id": "story:dark-wizard:w:on",
+   "word": "on",
+   "heard": "On.",
+   "match": true,
+   "confidence": -0.398
+  },
+  {
+   "id": "story:dark-wizard:w:his",
+   "word": "his",
+   "heard": "his.",
+   "match": true,
+   "confidence": -0.671
+  },
+  {
+   "id": "story:dark-wizard:w:back",
+   "word": "back",
+   "heard": "Back.",
+   "match": true,
+   "confidence": -0.379
+  },
+  {
+   "id": "story:dark-wizard:w:but",
+   "word": "but",
+   "heard": "But...",
+   "match": true,
+   "confidence": -0.461
+  },
+  {
+   "id": "story:dark-wizard:w:not",
+   "word": "not",
+   "heard": "Not.",
+   "match": true,
+   "confidence": -0.536
+  },
+  {
+   "id": "story:dark-wizard:w:fly",
+   "word": "fly",
+   "heard": "Fly.",
+   "match": true,
+   "confidence": -0.588
+  },
+  {
+   "id": "story:dark-wizard:w:yet",
+   "word": "yet",
+   "heard": "Yet.",
+   "match": true,
+   "confidence": -0.789
+  },
+  {
+   "id": "story:dark-wizard:w:small",
+   "word": "small",
+   "heard": "Small.",
+   "match": true,
+   "confidence": -0.651
+  },
+  {
+   "id": "story:dark-wizard:w:had",
+   "word": "had",
+   "heard": "Head.",
+   "match": false,
+   "confidence": -0.449
+  },
+  {
+   "id": "story:dark-wizard:w:strong",
+   "word": "strong",
+   "heard": "Strong.",
+   "match": true,
+   "confidence": -0.3
+  },
+  {
+   "id": "story:dark-wizard:w:wings",
+   "word": "wings",
+   "heard": "Wings.",
+   "match": true,
+   "confidence": -0.335
+  },
+  {
+   "id": "story:dark-wizard:w:over",
+   "word": "over",
+   "heard": "And over.",
+   "match": true,
+   "confidence": -0.706
+  },
+  {
+   "id": "story:dark-wizard:w:trees",
+   "word": "trees",
+   "heard": "Trees.",
+   "match": true,
+   "confidence": -0.348
+  },
+  {
+   "id": "story:dark-wizard:w:again",
+   "word": "again",
+   "heard": "Again.",
+   "match": true,
+   "confidence": -0.539
+  },
+  {
+   "id": "story:dark-wizard:w:in",
+   "word": "in",
+   "heard": "In.",
+   "match": true,
+   "confidence": -0.784
+  },
+  {
+   "id": "story:dark-wizard:w:no",
+   "word": "no",
+   "heard": "And now...",
+   "match": false,
+   "confidence": -0.352
+  },
+  {
+   "id": "story:dark-wizard:w:time",
+   "word": "time",
+   "heard": "Time.",
+   "match": true,
+   "confidence": -0.422
+  },
+  {
+   "id": "story:dark-wizard:w:after",
+   "word": "after",
+   "heard": "after",
+   "match": true,
+   "confidence": -0.553
+  },
+  {
+   "id": "story:dark-wizard:w:dinner",
+   "word": "dinner",
+   "heard": "Dinner.",
+   "match": true,
+   "confidence": -0.501
+  },
+  {
+   "id": "story:dark-wizard:w:new",
+   "word": "new",
+   "heard": "New.",
+   "match": true,
+   "confidence": -0.804
+  },
+  {
+   "id": "story:dark-wizard:w:up",
+   "word": "up",
+   "heard": "Up.",
+   "match": true,
+   "confidence": -0.613
+  },
+  {
+   "id": "story:dark-wizard:w:to",
+   "word": "to",
+   "heard": "Tua.",
+   "match": false,
+   "confidence": -1.179
+  },
+  {
+   "id": "story:dark-wizard:w:roof",
+   "word": "roof",
+   "heard": "Ruth.",
+   "match": false,
+   "confidence": -0.4
+  },
+  {
+   "id": "story:dark-wizard:w:down",
+   "word": "down",
+   "heard": "Down.",
+   "match": true,
+   "confidence": -0.466
+  },
+  {
+   "id": "story:dark-wizard:w:very",
+   "word": "very",
+   "heard": "Very.",
+   "match": true,
+   "confidence": -0.459
+  },
+  {
+   "id": "story:dark-wizard:w:fast",
+   "word": "fast",
+   "heard": "Fast.",
+   "match": true,
+   "confidence": -0.622
+  },
+  {
+   "id": "story:dark-wizard:w:look",
+   "word": "look",
+   "heard": "Good luck.",
+   "match": false,
+   "confidence": -0.618
+  },
+  {
+   "id": "story:dark-wizard:w:me",
+   "word": "me",
+   "heard": "May.",
+   "match": false,
+   "confidence": -0.577
+  },
+  {
+   "id": "story:dark-wizard:w:said",
+   "word": "said",
+   "heard": "He said.",
+   "match": true,
+   "confidence": -0.752
+  },
+  {
+   "id": "story:dark-wizard:w:i",
+   "word": "i",
+   "heard": "Sorry.",
+   "match": false,
+   "confidence": -0.326
+  },
+  {
+   "id": "story:dark-wizard:w:am",
+   "word": "am",
+   "heard": "AM",
+   "match": true,
+   "confidence": -0.518
+  },
+  {
+   "id": "story:dark-wizard:w:best",
+   "word": "best",
+   "heard": "Best.",
+   "match": true,
+   "confidence": -0.547
+  },
+  {
+   "id": "story:dark-wizard:w:dragon",
+   "word": "dragon",
+   "heard": "Dragon.",
+   "match": true,
+   "confidence": -0.591
+  },
+  {
+   "id": "story:dark-wizard:w:land",
+   "word": "land",
+   "heard": "The land.",
+   "match": true,
+   "confidence": -0.419
+  },
+  {
+   "id": "story:dark-wizard:w:you",
+   "word": "you",
+   "heard": "You're...",
+   "match": false,
+   "confidence": -0.902
+  },
+  {
+   "id": "story:dark-wizard:w:are",
+   "word": "are",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.568
+  },
+  {
+   "id": "story:dark-wizard:w:only",
+   "word": "only",
+   "heard": "Only.",
+   "match": true,
+   "confidence": -0.521
+  },
+  {
+   "id": "story:dark-wizard:w:this",
+   "word": "this",
+   "heard": "This.",
+   "match": true,
+   "confidence": -0.566
+  },
+  {
+   "id": "story:dark-wizard:w:all",
+   "word": "all",
+   "heard": "Oh.",
+   "match": false,
+   "confidence": -0.784
+  },
+  {
+   "id": "story:dark-wizard:w:then",
+   "word": "then",
+   "heard": "Then...",
+   "match": true,
+   "confidence": -0.62
+  },
+  {
+   "id": "story:dark-wizard:w:them",
+   "word": "them",
+   "heard": "to them.",
+   "match": true,
+   "confidence": -0.497
+  },
+  {
+   "id": "story:dark-wizard:w:story",
+   "word": "story",
+   "heard": "story.",
+   "match": true,
+   "confidence": -0.863
+  },
+  {
+   "id": "story:dark-wizard:w:about",
+   "word": "about",
+   "heard": "about.",
+   "match": true,
+   "confidence": -0.519
+  },
+  {
+   "id": "story:dark-wizard:w:dark",
+   "word": "dark",
+   "heard": "Dark.",
+   "match": true,
+   "confidence": -0.396
+  },
+  {
+   "id": "story:dark-wizard:w:wizard",
+   "word": "wizard",
+   "heard": "Wizard.",
+   "match": true,
+   "confidence": -0.579
+  },
+  {
+   "id": "story:dark-wizard:w:magic",
+   "word": "magic",
+   "heard": "Magic.",
+   "match": true,
+   "confidence": -0.679
+  },
+  {
+   "id": "story:dark-wizard:w:for",
+   "word": "for",
+   "heard": "before.",
+   "match": false,
+   "confidence": -0.583
+  },
+  {
+   "id": "story:dark-wizard:w:himself",
+   "word": "himself",
+   "heard": "himself.",
+   "match": true,
+   "confidence": -0.261
+  },
+  {
+   "id": "story:dark-wizard:w:around",
+   "word": "around",
+   "heard": "around.",
+   "match": true,
+   "confidence": -0.216
+  },
+  {
+   "id": "story:dark-wizard:w:room",
+   "word": "room",
+   "heard": "The room.",
+   "match": true,
+   "confidence": -0.679
+  },
+  {
+   "id": "story:dark-wizard:w:little",
+   "word": "little",
+   "heard": "a little",
+   "match": true,
+   "confidence": -0.776
+  },
+  {
+   "id": "story:dark-wizard:w:too",
+   "word": "too",
+   "heard": "It's you.",
+   "match": false,
+   "confidence": -0.604
+  },
+  {
+   "id": "story:dark-wizard:w:went",
+   "word": "went",
+   "heard": "Went.",
+   "match": true,
+   "confidence": -0.466
+  },
+  {
+   "id": "story:dark-wizard:w:oh",
+   "word": "oh",
+   "heard": "No.",
+   "match": false,
+   "confidence": -0.284
+  },
+  {
+   "id": "story:dark-wizard:w:looked",
+   "word": "looked",
+   "heard": "We looked.",
+   "match": true,
+   "confidence": -0.643
+  },
+  {
+   "id": "story:dark-wizard:w:she",
+   "word": "she",
+   "heard": "S E.",
+   "match": false,
+   "confidence": -0.753
+  },
+  {
+   "id": "story:dark-wizard:w:that",
+   "word": "that",
+   "heard": "That.",
+   "match": true,
+   "confidence": -0.734
+  },
+  {
+   "id": "story:dark-wizard:w:is",
+   "word": "is",
+   "heard": "is.",
+   "match": true,
+   "confidence": -0.468
+  },
+  {
+   "id": "story:dark-wizard:w:good",
+   "word": "good",
+   "heard": "Good.",
+   "match": true,
+   "confidence": -0.157
+  },
+  {
+   "id": "story:dark-wizard:w:please",
+   "word": "please",
+   "heard": "Please.",
+   "match": true,
+   "confidence": -0.253
+  },
+  {
+   "id": "story:dark-wizard:w:do",
+   "word": "do",
+   "heard": "Do.",
+   "match": true,
+   "confidence": -0.478
+  },
+  {
+   "id": "story:dark-wizard:w:asked",
+   "word": "asked",
+   "heard": "asked.",
+   "match": true,
+   "confidence": -0.728
+  },
+  {
+   "id": "story:dark-wizard:w:just",
+   "word": "just",
+   "heard": "Just.",
+   "match": true,
+   "confidence": -0.521
+  },
+  {
+   "id": "story:dark-wizard:w:an",
+   "word": "an",
+   "heard": "And then...",
+   "match": false,
+   "confidence": -0.45
+  },
+  {
+   "id": "story:dark-wizard:w:old",
+   "word": "old",
+   "heard": "Old.",
+   "match": true,
+   "confidence": -0.732
+  },
+  {
+   "id": "story:dark-wizard:w:bed",
+   "word": "bed",
+   "heard": "Bed.",
+   "match": true,
+   "confidence": -0.565
+  },
+  {
+   "id": "story:dark-wizard:w:sleep",
+   "word": "sleep",
+   "heard": "is sleep.",
+   "match": true,
+   "confidence": -0.812
+  },
+  {
+   "id": "story:dark-wizard:w:window",
+   "word": "window",
+   "heard": "window",
+   "match": true,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:dark-wizard:w:because",
+   "word": "because",
+   "heard": "Because...",
+   "match": true,
+   "confidence": -0.686
+  },
+  {
+   "id": "story:dark-wizard:w:see",
+   "word": "see",
+   "heard": "A C.",
+   "match": false,
+   "confidence": -0.405
+  },
+  {
+   "id": "story:dark-wizard:w:moon",
+   "word": "moon",
+   "heard": "Come on.",
+   "match": false,
+   "confidence": -0.579
+  },
+  {
+   "id": "story:dark-wizard:w:got",
+   "word": "got",
+   "heard": "You got it.",
+   "match": true,
+   "confidence": -0.974
+  },
+  {
+   "id": "story:dark-wizard:w:into",
+   "word": "into",
+   "heard": "into.",
+   "match": true,
+   "confidence": -0.516
+  },
+  {
+   "id": "story:dark-wizard:w:warm",
+   "word": "warm",
+   "heard": "warm",
+   "match": true,
+   "confidence": -0.355
+  },
+  {
+   "id": "story:dark-wizard:w:soon",
+   "word": "soon",
+   "heard": "soon.",
+   "match": true,
+   "confidence": -0.694
+  },
+  {
+   "id": "story:dark-wizard:w:slept",
+   "word": "slept",
+   "heard": "is leapt.",
+   "match": false,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:dark-wizard:w:quiet",
+   "word": "quiet",
+   "heard": "Quiet.",
+   "match": true,
+   "confidence": -0.474
+  },
+  {
+   "id": "story:dark-wizard:w:middle",
+   "word": "middle",
+   "heard": "Middle.",
+   "match": true,
+   "confidence": -0.54
+  },
+  {
+   "id": "story:dark-wizard:w:of",
+   "word": "of",
+   "heard": "of",
+   "match": true,
+   "confidence": -0.603
+  },
+  {
+   "id": "story:dark-wizard:w:there",
+   "word": "there",
+   "heard": "There.",
+   "match": true,
+   "confidence": -0.346
+  },
+  {
+   "id": "story:dark-wizard:w:rain",
+   "word": "rain",
+   "heard": "brain.",
+   "match": false,
+   "confidence": -0.839
+  },
+  {
+   "id": "story:dark-wizard:w:came",
+   "word": "came",
+   "heard": "C.A.M.",
+   "match": false,
+   "confidence": -0.788
+  },
+  {
+   "id": "story:dark-wizard:w:stopped",
+   "word": "stopped",
+   "heard": "is stopped.",
+   "match": true,
+   "confidence": -0.419
+  },
+  {
+   "id": "story:dark-wizard:w:sat",
+   "word": "sat",
+   "heard": "Is that?",
+   "match": false,
+   "confidence": -0.36
+  },
+  {
+   "id": "story:dark-wizard:w:saw",
+   "word": "saw",
+   "heard": "It's all.",
+   "match": false,
+   "confidence": -0.658
+  },
+  {
+   "id": "story:dark-wizard:w:black",
+   "word": "black",
+   "heard": "Black.",
+   "match": true,
+   "confidence": -0.381
+  },
+  {
+   "id": "story:dark-wizard:w:coming",
+   "word": "coming",
+   "heard": "Coming.",
+   "match": true,
+   "confidence": -0.379
+  },
+  {
+   "id": "story:dark-wizard:w:under",
+   "word": "under",
+   "heard": "Thunder.",
+   "match": false,
+   "confidence": -0.847
+  },
+  {
+   "id": "story:dark-wizard:w:door",
+   "word": "door",
+   "heard": "The door.",
+   "match": true,
+   "confidence": -0.49
+  },
+  {
+   "id": "story:dark-wizard:w:why",
+   "word": "why",
+   "heard": "Why?",
+   "match": true,
+   "confidence": -0.227
+  },
+  {
+   "id": "story:dark-wizard:w:did",
+   "word": "did",
+   "heard": "Did.",
+   "match": true,
+   "confidence": -0.427
+  },
+  {
+   "id": "story:dark-wizard:w:laugh",
+   "word": "laugh",
+   "heard": "The laugh.",
+   "match": true,
+   "confidence": -0.619
+  },
+  {
+   "id": "story:dark-wizard:w:think",
+   "word": "think",
+   "heard": "Think.",
+   "match": true,
+   "confidence": -0.637
+  },
+  {
+   "id": "story:dark-wizard:w:out",
+   "word": "out",
+   "heard": "Out.",
+   "match": true,
+   "confidence": -0.542
+  },
+  {
+   "id": "story:dark-wizard:w:wake",
+   "word": "wake",
+   "heard": "Wake.",
+   "match": true,
+   "confidence": -0.288
+  },
+  {
+   "id": "story:dark-wizard:w:once",
+   "word": "once",
+   "heard": "Once.",
+   "match": true,
+   "confidence": -0.538
+  },
+  {
+   "id": "story:dark-wizard:w:mouth",
+   "word": "mouth",
+   "heard": "Mouse.",
+   "match": false,
+   "confidence": -0.752
+  },
+  {
+   "id": "story:dark-wizard:w:wind",
+   "word": "wind",
+   "heard": "Wind.",
+   "match": true,
+   "confidence": -0.383
+  },
+  {
+   "id": "story:dark-wizard:w:lights",
+   "word": "lights",
+   "heard": "Elites.",
+   "match": false,
+   "confidence": -0.533
+  },
+  {
+   "id": "story:dark-wizard:w:man",
+   "word": "man",
+   "heard": "Man.",
+   "match": true,
+   "confidence": -0.525
+  },
+  {
+   "id": "story:dark-wizard:w:tall",
+   "word": "tall",
+   "heard": "Tall.",
+   "match": true,
+   "confidence": -0.834
+  },
+  {
+   "id": "story:dark-wizard:w:thin",
+   "word": "thin",
+   "heard": "Thin.",
+   "match": true,
+   "confidence": -0.564
+  },
+  {
+   "id": "story:dark-wizard:w:long",
+   "word": "long",
+   "heard": "Belong.",
+   "match": false,
+   "confidence": -0.255
+  },
+  {
+   "id": "story:dark-wizard:w:eyes",
+   "word": "eyes",
+   "heard": "Eyes.",
+   "match": true,
+   "confidence": -0.423
+  },
+  {
+   "id": "story:dark-wizard:w:green",
+   "word": "green",
+   "heard": "Agreein",
+   "match": false,
+   "confidence": -0.781
+  },
+  {
+   "id": "story:dark-wizard:w:like",
+   "word": "like",
+   "heard": "alike.",
+   "match": false,
+   "confidence": -0.843
+  },
+  {
+   "id": "story:dark-wizard:w:cat",
+   "word": "cat",
+   "heard": "Cat.",
+   "match": true,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:dark-wizard:w:voice",
+   "word": "voice",
+   "heard": "Voice.",
+   "match": true,
+   "confidence": -0.724
+  },
+  {
+   "id": "story:dark-wizard:w:my",
+   "word": "my",
+   "heard": "My.",
+   "match": true,
+   "confidence": -0.584
+  },
+  {
+   "id": "story:dark-wizard:w:name",
+   "word": "name",
+   "heard": "Name.",
+   "match": true,
+   "confidence": -0.45
+  },
+  {
+   "id": "story:dark-wizard:w:grax",
+   "word": "Grax",
+   "heard": "Gracks.",
+   "match": false,
+   "confidence": -0.88
+  },
+  {
+   "id": "story:dark-wizard:w:what",
+   "word": "what",
+   "heard": "What?",
+   "match": true,
+   "confidence": -0.235
+  },
+  {
+   "id": "story:dark-wizard:w:want",
+   "word": "want",
+   "heard": "Want.",
+   "match": true,
+   "confidence": -0.566
+  },
+  {
+   "id": "story:dark-wizard:w:kind",
+   "word": "kind",
+   "heard": "Kind.",
+   "match": true,
+   "confidence": -0.219
+  },
+  {
+   "id": "story:dark-wizard:w:smile",
+   "word": "smile",
+   "heard": "Smile.",
+   "match": true,
+   "confidence": -0.332
+  },
+  {
+   "id": "story:dark-wizard:w:will",
+   "word": "will",
+   "heard": "Will.",
+   "match": true,
+   "confidence": -0.437
+  },
+  {
+   "id": "story:dark-wizard:w:have",
+   "word": "have",
+   "heard": "Heavs.",
+   "match": false,
+   "confidence": -0.866
+  },
+  {
+   "id": "story:dark-wizard:w:hand",
+   "word": "hand",
+   "heard": "Hand.",
+   "match": true,
+   "confidence": -0.346
+  },
+  {
+   "id": "story:dark-wizard:w:ball",
+   "word": "ball",
+   "heard": "Ball.",
+   "match": true,
+   "confidence": -0.398
+  },
+  {
+   "id": "story:dark-wizard:w:help",
+   "word": "help",
+   "heard": "Help.",
+   "match": true,
+   "confidence": -0.481
+  },
+  {
+   "id": "story:dark-wizard:w:with",
+   "word": "with",
+   "heard": "With",
+   "match": true,
+   "confidence": -0.648
+  },
+  {
+   "id": "story:dark-wizard:w:get",
+   "word": "get",
+   "heard": "You get.",
+   "match": true,
+   "confidence": -0.863
+  },
+  {
+   "id": "story:dark-wizard:w:sun",
+   "word": "sun",
+   "heard": "A son.",
+   "match": false,
+   "confidence": -0.744
+  },
+  {
+   "id": "story:dark-wizard:w:your",
+   "word": "your",
+   "heard": "You're",
+   "match": false,
+   "confidence": -0.584
+  },
+  {
+   "id": "story:dark-wizard:w:can't",
+   "word": "can't",
+   "heard": "Can't.",
+   "match": true,
+   "confidence": -0.47
+  },
+  {
+   "id": "story:dark-wizard:w:him",
+   "word": "him",
+   "heard": "Him.",
+   "match": true,
+   "confidence": -0.633
+  },
+  {
+   "id": "story:dark-wizard:w:sky",
+   "word": "sky",
+   "heard": "This guy.",
+   "match": false,
+   "confidence": -0.497
+  },
+  {
+   "id": "story:dark-wizard:w:cloud",
+   "word": "cloud",
+   "heard": "Cloud.",
+   "match": true,
+   "confidence": -0.422
+  },
+  {
+   "id": "story:dark-wizard:w:away",
+   "word": "away",
+   "heard": "Away.",
+   "match": true,
+   "confidence": -0.461
+  },
+  {
+   "id": "story:dark-wizard:w:mountains",
+   "word": "mountains",
+   "heard": "mountains",
+   "match": true,
+   "confidence": -0.475
+  },
+  {
+   "id": "story:dark-wizard:w:her",
+   "word": "her",
+   "heard": "Ever.",
+   "match": false,
+   "confidence": -0.781
+  },
+  {
+   "id": "story:dark-wizard:w:face",
+   "word": "face",
+   "heard": "Vase.",
+   "match": false,
+   "confidence": -0.638
+  },
+  {
+   "id": "story:dark-wizard:w:white",
+   "word": "white",
+   "heard": "White.",
+   "match": true,
+   "confidence": -0.597
+  },
+  {
+   "id": "story:dark-wizard:w:true",
+   "word": "true",
+   "heard": "True.",
+   "match": true,
+   "confidence": -0.303
+  },
+  {
+   "id": "story:dark-wizard:w:nobody",
+   "word": "nobody",
+   "heard": "Nobody.",
+   "match": true,
+   "confidence": -0.272
+  },
+  {
+   "id": "story:dark-wizard:w:tell",
+   "word": "tell",
+   "heard": "Tell.",
+   "match": true,
+   "confidence": -0.562
+  },
+  {
+   "id": "story:dark-wizard:w:any",
+   "word": "any",
+   "heard": "Any.",
+   "match": true,
+   "confidence": -0.846
+  },
+  {
+   "id": "story:dark-wizard:w:more",
+   "word": "more",
+   "heard": "More.",
+   "match": true,
+   "confidence": -0.438
+  },
+  {
+   "id": "story:dark-wizard:w:stories",
+   "word": "stories",
+   "heard": "Stories.",
+   "match": true,
+   "confidence": -0.775
+  },
+  {
+   "id": "story:dark-wizard:w:cousin",
+   "word": "cousin",
+   "heard": "Cousin",
+   "match": true,
+   "confidence": -0.424
+  },
+  {
+   "id": "story:dark-wizard:w:friend",
+   "word": "friend",
+   "heard": "Friend.",
+   "match": true,
+   "confidence": -0.673
+  },
+  {
+   "id": "story:dark-wizard:w:we",
+   "word": "we",
+   "heard": "We are.",
+   "match": true,
+   "confidence": -1.092
+  },
+  {
+   "id": "story:dark-wizard:w:don't",
+   "word": "don't",
+   "heard": "Don't.",
+   "match": true,
+   "confidence": -0.355
+  },
+  {
+   "id": "story:dark-wizard:w:know",
+   "word": "know",
+   "heard": "Now.",
+   "match": false,
+   "confidence": -0.529
+  },
+  {
+   "id": "story:dark-wizard:w:how",
+   "word": "how",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.925
+  },
+  {
+   "id": "story:dark-wizard:w:pip's",
+   "word": "Pip's",
+   "heard": "Pipsa",
+   "match": false,
+   "confidence": -1.166
+  },
+  {
+   "id": "story:dark-wizard:w:feel",
+   "word": "feel",
+   "heard": "Feel.",
+   "match": true,
+   "confidence": -0.489
+  },
+  {
+   "id": "story:dark-wizard:w:end",
+   "word": "end",
+   "heard": "End.",
+   "match": true,
+   "confidence": -0.692
+  },
+  {
+   "id": "story:dark-wizard:w:morning",
+   "word": "morning",
+   "heard": "Morning.",
+   "match": true,
+   "confidence": -0.723
+  },
+  {
+   "id": "story:dark-wizard:w:sad",
+   "word": "sad",
+   "heard": "is sad.",
+   "match": true,
+   "confidence": -0.761
+  },
+  {
+   "id": "story:dark-wizard:w:eat",
+   "word": "eat",
+   "heard": "We eat.",
+   "match": true,
+   "confidence": -1.009
+  },
+  {
+   "id": "story:dark-wizard:w:find",
+   "word": "find",
+   "heard": "Find.",
+   "match": true,
+   "confidence": -0.584
+  },
+  {
+   "id": "story:dark-wizard:w:stop",
+   "word": "stop",
+   "heard": "Stop.",
+   "match": true,
+   "confidence": -0.394
+  },
+  {
+   "id": "story:dark-wizard:w:until",
+   "word": "until",
+   "heard": "Until...",
+   "match": true,
+   "confidence": -0.557
+  },
+  {
+   "id": "story:dark-wizard:w:so",
+   "word": "so",
+   "heard": "So.",
+   "match": true,
+   "confidence": -0.661
+  },
+  {
+   "id": "story:dark-wizard:w:need",
+   "word": "need",
+   "heard": "Need.",
+   "match": true,
+   "confidence": -0.52
+  },
+  {
+   "id": "story:dark-wizard:w:go",
+   "word": "go",
+   "heard": "You go.",
+   "match": true,
+   "confidence": -0.569
+  },
+  {
+   "id": "story:dark-wizard:w:oren",
+   "word": "Oren",
+   "heard": "A foreign.",
+   "match": false,
+   "confidence": -0.873
+  },
+  {
+   "id": "story:dark-wizard:w:knows",
+   "word": "knows",
+   "heard": "nose.",
+   "match": false,
+   "confidence": -0.89
+  },
+  {
+   "id": "story:dark-wizard:w:day",
+   "word": "day",
+   "heard": "Day.",
+   "match": true,
+   "confidence": -0.344
+  },
+  {
+   "id": "story:dark-wizard:w:fields",
+   "word": "fields",
+   "heard": "Fields.",
+   "match": true,
+   "confidence": -0.713
+  },
+  {
+   "id": "story:dark-wizard:w:along",
+   "word": "along",
+   "heard": "a long.",
+   "match": true,
+   "confidence": -0.703
+  },
+  {
+   "id": "story:dark-wizard:w:river",
+   "word": "river",
+   "heard": "River.",
+   "match": true,
+   "confidence": -0.333
+  },
+  {
+   "id": "story:dark-wizard:w:oren's",
+   "word": "Oren's",
+   "heard": "Orens",
+   "match": true,
+   "confidence": -0.986
+  },
+  {
+   "id": "story:dark-wizard:w:tower",
+   "word": "tower",
+   "heard": "Tower.",
+   "match": true,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:dark-wizard:w:gus",
+   "word": "Gus",
+   "heard": "Gus.",
+   "match": true,
+   "confidence": -0.379
+  },
+  {
+   "id": "story:dark-wizard:w:giant",
+   "word": "giant",
+   "heard": "Giant.",
+   "match": true,
+   "confidence": -0.55
+  },
+  {
+   "id": "story:dark-wizard:w:here",
+   "word": "here",
+   "heard": "Here.",
+   "match": true,
+   "confidence": -0.392
+  },
+  {
+   "id": "story:dark-wizard:w:way",
+   "word": "way",
+   "heard": "Way.",
+   "match": true,
+   "confidence": -0.608
+  },
+  {
+   "id": "story:dark-wizard:w:right",
+   "word": "right",
+   "heard": "Right.",
+   "match": true,
+   "confidence": -0.233
+  },
+  {
+   "id": "story:dark-wizard:w:grass",
+   "word": "grass",
+   "heard": "Grass.",
+   "match": true,
+   "confidence": -0.483
+  },
+  {
+   "id": "story:dark-wizard:w:grey",
+   "word": "grey",
+   "heard": "Gray.",
+   "match": false,
+   "confidence": -0.509
+  },
+  {
+   "id": "story:dark-wizard:w:flowers",
+   "word": "flowers",
+   "heard": "Flowers.",
+   "match": true,
+   "confidence": -0.483
+  },
+  {
+   "id": "story:dark-wizard:w:farmer",
+   "word": "farmer",
+   "heard": "Farmer.",
+   "match": true,
+   "confidence": -0.389
+  },
+  {
+   "id": "story:dark-wizard:w:field",
+   "word": "field",
+   "heard": "field",
+   "match": true,
+   "confidence": -0.495
+  },
+  {
+   "id": "story:dark-wizard:w:going",
+   "word": "going",
+   "heard": "Going.",
+   "match": true,
+   "confidence": -0.59
+  },
+  {
+   "id": "story:dark-wizard:w:every",
+   "word": "every",
+   "heard": "Every",
+   "match": true,
+   "confidence": -0.507
+  },
+  {
+   "id": "story:dark-wizard:w:goes",
+   "word": "goes",
+   "heard": "goes",
+   "match": true,
+   "confidence": -0.584
+  },
+  {
+   "id": "story:dark-wizard:w:takes",
+   "word": "takes",
+   "heard": "It takes.",
+   "match": true,
+   "confidence": -0.526
+  },
+  {
+   "id": "story:dark-wizard:w:from",
+   "word": "from",
+   "heard": "from.",
+   "match": true,
+   "confidence": -0.753
+  },
+  {
+   "id": "story:dark-wizard:w:ago",
+   "word": "ago",
+   "heard": "It go.",
+   "match": false,
+   "confidence": -0.44
+  },
+  {
+   "id": "story:dark-wizard:w:wasn't",
+   "word": "wasn't",
+   "heard": "Wasn't.",
+   "match": true,
+   "confidence": -0.386
+  },
+  {
+   "id": "story:dark-wizard:w:bad",
+   "word": "bad",
+   "heard": "Bad.",
+   "match": true,
+   "confidence": -0.369
+  },
+  {
+   "id": "story:dark-wizard:w:wants",
+   "word": "wants",
+   "heard": "Once.",
+   "match": false,
+   "confidence": -0.59
+  },
+  {
+   "id": "story:dark-wizard:w:must",
+   "word": "must",
+   "heard": "Must.",
+   "match": true,
+   "confidence": -0.512
+  },
+  {
+   "id": "story:dark-wizard:w:rescue",
+   "word": "rescue",
+   "heard": "Rescue.",
+   "match": true,
+   "confidence": -0.52
+  },
+  {
+   "id": "story:dark-wizard:w:book",
+   "word": "book",
+   "heard": "Book.",
+   "match": true,
+   "confidence": -0.513
+  },
+  {
+   "id": "story:dark-wizard:w:plan",
+   "word": "plan",
+   "heard": "Plan.",
+   "match": true,
+   "confidence": -0.649
+  },
+  {
+   "id": "story:dark-wizard:w:lives",
+   "word": "lives",
+   "heard": "lives.",
+   "match": true,
+   "confidence": -0.361
+  },
+  {
+   "id": "story:dark-wizard:w:castle",
+   "word": "castle",
+   "heard": "Castle",
+   "match": true,
+   "confidence": -0.471
+  },
+  {
+   "id": "story:dark-wizard:w:island",
+   "word": "island",
+   "heard": "Island.",
+   "match": true,
+   "confidence": -0.43
+  },
+  {
+   "id": "story:dark-wizard:w:through",
+   "word": "through",
+   "heard": "through.",
+   "match": true,
+   "confidence": -0.772
+  },
+  {
+   "id": "story:dark-wizard:w:wild",
+   "word": "wild",
+   "heard": "Wild.",
+   "match": true,
+   "confidence": -0.559
+  },
+  {
+   "id": "story:dark-wizard:w:forest",
+   "word": "forest",
+   "heard": "Vorist",
+   "match": false,
+   "confidence": -1.301
+  },
+  {
+   "id": "story:dark-wizard:w:mountain",
+   "word": "mountain",
+   "heard": "Mountain.",
+   "match": true,
+   "confidence": -0.606
+  },
+  {
+   "id": "story:dark-wizard:w:be",
+   "word": "be",
+   "heard": "Bye!",
+   "match": false,
+   "confidence": -1.136
+  },
+  {
+   "id": "story:dark-wizard:w:brave",
+   "word": "brave",
+   "heard": "Braves.",
+   "match": false,
+   "confidence": -0.707
+  },
+  {
+   "id": "story:dark-wizard:w:say",
+   "word": "say",
+   "heard": "I say.",
+   "match": true,
+   "confidence": -0.896
+  },
+  {
+   "id": "story:dark-wizard:w:become",
+   "word": "become",
+   "heard": "Become.",
+   "match": true,
+   "confidence": -0.527
+  },
+  {
+   "id": "story:dark-wizard:w:took",
+   "word": "took",
+   "heard": "It's okay.",
+   "match": false,
+   "confidence": -0.308
+  },
+  {
+   "id": "story:dark-wizard:w:its",
+   "word": "its",
+   "heard": "It's.",
+   "match": true,
+   "confidence": -0.47
+  },
+  {
+   "id": "story:dark-wizard:w:light",
+   "word": "light",
+   "heard": "The light.",
+   "match": true,
+   "confidence": -0.665
+  },
+  {
+   "id": "story:dark-wizard:w:other",
+   "word": "other",
+   "heard": "Another.",
+   "match": false,
+   "confidence": -0.737
+  },
+  {
+   "id": "story:dark-wizard:w:can",
+   "word": "can",
+   "heard": "Can.",
+   "match": true,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:dark-wizard:w:tricks",
+   "word": "tricks",
+   "heard": "IntraXa.",
+   "match": false,
+   "confidence": -0.73
+  },
+  {
+   "id": "story:dark-wizard:w:lies",
+   "word": "lies",
+   "heard": "Lies.",
+   "match": true,
+   "confidence": -0.861
+  },
+  {
+   "id": "story:dark-wizard:w:does",
+   "word": "does",
+   "heard": "Does.",
+   "match": true,
+   "confidence": -0.372
+  },
+  {
+   "id": "story:dark-wizard:w:work",
+   "word": "work",
+   "heard": "Work.",
+   "match": true,
+   "confidence": -0.252
+  },
+  {
+   "id": "story:dark-wizard:w:hold",
+   "word": "hold",
+   "heard": "Hold.",
+   "match": true,
+   "confidence": -0.256
+  },
+  {
+   "id": "story:dark-wizard:w:show",
+   "word": "show",
+   "heard": "Show.",
+   "match": true,
+   "confidence": -0.564
+  },
+  {
+   "id": "story:dark-wizard:w:works",
+   "word": "works",
+   "heard": "Works.",
+   "match": true,
+   "confidence": -0.358
+  },
+  {
+   "id": "story:dark-wizard:w:three",
+   "word": "three",
+   "heard": "Three.",
+   "match": true,
+   "confidence": -0.522
+  },
+  {
+   "id": "story:dark-wizard:w:times",
+   "word": "times",
+   "heard": "times.",
+   "match": true,
+   "confidence": -0.665
+  },
+  {
+   "id": "story:dark-wizard:w:use",
+   "word": "use",
+   "heard": "Yes.",
+   "match": false,
+   "confidence": -0.906
+  },
+  {
+   "id": "story:dark-wizard:w:well",
+   "word": "well",
+   "heard": "Well...",
+   "match": true,
+   "confidence": -0.512
+  },
+  {
+   "id": "story:dark-wizard:w:put",
+   "word": "put",
+   "heard": "I'm hurt.",
+   "match": false,
+   "confidence": -0.967
+  },
+  {
+   "id": "story:dark-wizard:w:bag",
+   "word": "bag",
+   "heard": "Bag.",
+   "match": true,
+   "confidence": -0.604
+  },
+  {
+   "id": "story:dark-wizard:w:food",
+   "word": "food",
+   "heard": "Food.",
+   "match": true,
+   "confidence": -0.452
+  },
+  {
+   "id": "story:dark-wizard:w:bread",
+   "word": "bread",
+   "heard": "Bread.",
+   "match": true,
+   "confidence": -0.563
+  },
+  {
+   "id": "story:dark-wizard:w:cheese",
+   "word": "cheese",
+   "heard": "Geez.",
+   "match": false,
+   "confidence": -0.626
+  },
+  {
+   "id": "story:dark-wizard:w:apples",
+   "word": "apples",
+   "heard": "Apples.",
+   "match": true,
+   "confidence": -0.424
+  },
+  {
+   "id": "story:dark-wizard:w:cake",
+   "word": "cake",
+   "heard": "Cake.",
+   "match": true,
+   "confidence": -0.412
+  },
+  {
+   "id": "story:dark-wizard:w:each",
+   "word": "each",
+   "heard": "needs.",
+   "match": false,
+   "confidence": -0.859
+  },
+  {
+   "id": "story:dark-wizard:w:first",
+   "word": "first",
+   "heard": "...versed.",
+   "match": false,
+   "confidence": -0.682
+  },
+  {
+   "id": "story:dark-wizard:w:come",
+   "word": "come",
+   "heard": "Come.",
+   "match": true,
+   "confidence": -0.279
+  },
+  {
+   "id": "story:dark-wizard:w:us",
+   "word": "us",
+   "heard": "Oh, this is...",
+   "match": false,
+   "confidence": -0.823
+  },
+  {
+   "id": "story:dark-wizard:w:wish",
+   "word": "wish",
+   "heard": "Wish.",
+   "match": true,
+   "confidence": -0.263
+  },
+  {
+   "id": "story:dark-wizard:w:without",
+   "word": "without",
+   "heard": "without",
+   "match": true,
+   "confidence": -0.43
+  },
+  {
+   "id": "story:dark-wizard:w:water",
+   "word": "water",
+   "heard": "Water.",
+   "match": true,
+   "confidence": -0.546
+  },
+  {
+   "id": "story:dark-wizard:w:if",
+   "word": "if",
+   "heard": "Yeah.",
+   "match": false,
+   "confidence": -0.587
+  },
+  {
+   "id": "story:dark-wizard:w:call",
+   "word": "call",
+   "heard": "Call.",
+   "match": true,
+   "confidence": -0.72
+  },
+  {
+   "id": "story:dark-wizard:w:top",
+   "word": "top",
+   "heard": "Top.",
+   "match": true,
+   "confidence": -0.631
+  },
+  {
+   "id": "story:dark-wizard:w:bowl",
+   "word": "bowl",
+   "heard": "Bowl.",
+   "match": true,
+   "confidence": -0.852
+  },
+  {
+   "id": "story:dark-wizard:w:picture",
+   "word": "picture",
+   "heard": "picture",
+   "match": true,
+   "confidence": -0.239
+  },
+  {
+   "id": "story:dark-wizard:w:red",
+   "word": "red",
+   "heard": "Red.",
+   "match": true,
+   "confidence": -0.407
+  },
+  {
+   "id": "story:dark-wizard:w:candle",
+   "word": "candle",
+   "heard": "Candle.",
+   "match": true,
+   "confidence": -0.609
+  },
+  {
+   "id": "story:dark-wizard:w:jet's",
+   "word": "Jet's",
+   "heard": "Jets.",
+   "match": true,
+   "confidence": -0.563
+  },
+  {
+   "id": "story:dark-wizard:w:still",
+   "word": "still",
+   "heard": "Still.",
+   "match": true,
+   "confidence": -0.481
+  },
+  {
+   "id": "story:dark-wizard:w:bright",
+   "word": "bright",
+   "heard": "Bright.",
+   "match": true,
+   "confidence": -0.64
+  },
+  {
+   "id": "story:dark-wizard:w:lot",
+   "word": "lot",
+   "heard": "A lot.",
+   "match": true,
+   "confidence": -0.379
+  },
+  {
+   "id": "story:dark-wizard:w:afraid",
+   "word": "afraid",
+   "heard": "Afraid.",
+   "match": true,
+   "confidence": -0.202
+  },
+  {
+   "id": "story:dark-wizard:w:yes",
+   "word": "yes",
+   "heard": "Yes.",
+   "match": true,
+   "confidence": -0.257
+  },
+  {
+   "id": "story:dark-wizard:w:alone",
+   "word": "alone",
+   "heard": "Alone.",
+   "match": true,
+   "confidence": -0.274
+  },
+  {
+   "id": "story:dark-wizard:w:isn't",
+   "word": "isn't",
+   "heard": "Isn't",
+   "match": true,
+   "confidence": -0.427
+  },
+  {
+   "id": "story:dark-wizard:w:hands",
+   "word": "hands",
+   "heard": "Hands.",
+   "match": true,
+   "confidence": -0.363
+  },
+  {
+   "id": "story:dark-wizard:w:artus's",
+   "word": "Artus's",
+   "heard": "Artises.",
+   "match": false,
+   "confidence": -0.682
+  },
+  {
+   "id": "story:dark-wizard:w:both",
+   "word": "both",
+   "heard": "Both.",
+   "match": true,
+   "confidence": -0.453
+  },
+  {
+   "id": "story:dark-wizard:w:began",
+   "word": "began",
+   "heard": "I began.",
+   "match": true,
+   "confidence": -0.427
+  },
+  {
+   "id": "story:dark-wizard:w:two",
+   "word": "two",
+   "heard": "It's you.",
+   "match": false,
+   "confidence": -0.441
+  },
+  {
+   "id": "story:dark-wizard:w:days",
+   "word": "days",
+   "heard": "Days.",
+   "match": true,
+   "confidence": -0.368
+  },
+  {
+   "id": "story:dark-wizard:w:close",
+   "word": "close",
+   "heard": "Close.",
+   "match": true,
+   "confidence": -0.619
+  },
+  {
+   "id": "story:dark-wizard:w:together",
+   "word": "together",
+   "heard": "Together.",
+   "match": true,
+   "confidence": -0.423
+  },
+  {
+   "id": "story:dark-wizard:w:birds",
+   "word": "birds",
+   "heard": "Birds.",
+   "match": true,
+   "confidence": -0.516
+  },
+  {
+   "id": "story:dark-wizard:w:called",
+   "word": "called",
+   "heard": "Cold.",
+   "match": false,
+   "confidence": -0.623
+  },
+  {
+   "id": "story:dark-wizard:w:monkeys",
+   "word": "monkeys",
+   "heard": "Monkeys",
+   "match": true,
+   "confidence": -0.402
+  },
+  {
+   "id": "story:dark-wizard:w:leaves",
+   "word": "leaves",
+   "heard": "It leaves.",
+   "match": true,
+   "confidence": -1.034
+  },
+  {
+   "id": "story:dark-wizard:w:grax's",
+   "word": "Grax's",
+   "heard": "Gracks is...",
+   "match": false,
+   "confidence": -1.06
+  },
+  {
+   "id": "story:dark-wizard:w:follow",
+   "word": "follow",
+   "heard": "follow.",
+   "match": true,
+   "confidence": -0.732
+  },
+  {
+   "id": "story:dark-wizard:w:followed",
+   "word": "followed",
+   "heard": "Followed.",
+   "match": true,
+   "confidence": -0.277
+  },
+  {
+   "id": "story:dark-wizard:w:deep",
+   "word": "deep",
+   "heard": "Deep.",
+   "match": true,
+   "confidence": -0.179
+  },
+  {
+   "id": "story:dark-wizard:w:path",
+   "word": "path",
+   "heard": "Pass.",
+   "match": false,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:dark-wizard:w:slowly",
+   "word": "slowly",
+   "heard": "Slowly.",
+   "match": true,
+   "confidence": -0.396
+  },
+  {
+   "id": "story:dark-wizard:w:heard",
+   "word": "heard",
+   "heard": "Heard.",
+   "match": true,
+   "confidence": -0.638
+  },
+  {
+   "id": "story:dark-wizard:w:orange",
+   "word": "orange",
+   "heard": "Orange.",
+   "match": true,
+   "confidence": -0.587
+  },
+  {
+   "id": "story:dark-wizard:w:move",
+   "word": "move",
+   "heard": "mouth",
+   "match": false,
+   "confidence": -1.412
+  },
+  {
+   "id": "story:dark-wizard:w:who",
+   "word": "who",
+   "heard": "Hill.",
+   "match": false,
+   "confidence": -0.319
+  },
+  {
+   "id": "story:dark-wizard:w:or",
+   "word": "or",
+   "heard": "or",
+   "match": true,
+   "confidence": -0.658
+  },
+  {
+   "id": "story:dark-wizard:w:enemy",
+   "word": "enemy",
+   "heard": "Enemy.",
+   "match": true,
+   "confidence": -0.663
+  },
+  {
+   "id": "story:dark-wizard:w:friends",
+   "word": "friends",
+   "heard": "Friends.",
+   "match": true,
+   "confidence": -0.479
+  },
+  {
+   "id": "story:dark-wizard:w:our",
+   "word": "our",
+   "heard": "hour.",
+   "match": false,
+   "confidence": -0.434
+  },
+  {
+   "id": "story:dark-wizard:w:better",
+   "word": "better",
+   "heard": "Better.",
+   "match": true,
+   "confidence": -0.416
+  },
+  {
+   "id": "story:dark-wizard:w:behind",
+   "word": "behind",
+   "heard": "behind.",
+   "match": true,
+   "confidence": -0.463
+  },
+  {
+   "id": "story:dark-wizard:w:make",
+   "word": "make",
+   "heard": "Make.",
+   "match": true,
+   "confidence": -0.503
+  },
+  {
+   "id": "story:dark-wizard:w:walk",
+   "word": "walk",
+   "heard": "Walk.",
+   "match": true,
+   "confidence": -0.824
+  },
+  {
+   "id": "story:dark-wizard:w:dragons",
+   "word": "dragons",
+   "heard": "Dragons",
+   "match": true,
+   "confidence": -0.51
+  },
+  {
+   "id": "story:dark-wizard:w:hide",
+   "word": "hide",
+   "heard": "Hide.",
+   "match": true,
+   "confidence": -0.253
+  },
+  {
+   "id": "story:dark-wizard:w:happy",
+   "word": "happy",
+   "heard": "Happy",
+   "match": true,
+   "confidence": -0.4
+  },
+  {
+   "id": "story:dark-wizard:w:which",
+   "word": "which",
+   "heard": "Which",
+   "match": true,
+   "confidence": -0.883
+  },
+  {
+   "id": "story:dark-wizard:w:tree",
+   "word": "tree",
+   "heard": "Tree.",
+   "match": true,
+   "confidence": -0.471
+  },
+  {
+   "id": "story:dark-wizard:w:stone",
+   "word": "stone",
+   "heard": "Stone.",
+   "match": true,
+   "confidence": -0.383
+  },
+  {
+   "id": "story:dark-wizard:w:when",
+   "word": "when",
+   "heard": "When?",
+   "match": true,
+   "confidence": -0.531
+  },
+  {
+   "id": "story:dark-wizard:w:angry",
+   "word": "angry",
+   "heard": "Angry.",
+   "match": true,
+   "confidence": -0.663
+  },
+  {
+   "id": "story:dark-wizard:w:nose",
+   "word": "nose",
+   "heard": "Nose.",
+   "match": true,
+   "confidence": -0.864
+  },
+  {
+   "id": "story:dark-wizard:w:drink",
+   "word": "drink",
+   "heard": "Drink.",
+   "match": true,
+   "confidence": -0.806
+  },
+  {
+   "id": "story:dark-wizard:w:has",
+   "word": "has",
+   "heard": "has.",
+   "match": true,
+   "confidence": -0.908
+  },
+  {
+   "id": "story:dark-wizard:w:clean",
+   "word": "clean",
+   "heard": "Clean.",
+   "match": true,
+   "confidence": -0.235
+  },
+  {
+   "id": "story:dark-wizard:w:blue",
+   "word": "blue",
+   "heard": "Blue.",
+   "match": true,
+   "confidence": -0.502
+  },
+  {
+   "id": "story:dark-wizard:w:things",
+   "word": "things",
+   "heard": "Things.",
+   "match": true,
+   "confidence": -0.461
+  },
+  {
+   "id": "story:dark-wizard:w:animal",
+   "word": "animal",
+   "heard": "Animal.",
+   "match": true,
+   "confidence": -0.555
+  },
+  {
+   "id": "story:dark-wizard:w:ears",
+   "word": "ears",
+   "heard": "Years.",
+   "match": false,
+   "confidence": -0.502
+  },
+  {
+   "id": "story:dark-wizard:w:okapi",
+   "word": "okapi",
+   "heard": "Oh copy.",
+   "match": false,
+   "confidence": -0.566
+  },
+  {
+   "id": "story:dark-wizard:w:creatures",
+   "word": "creatures",
+   "heard": "Creatures.",
+   "match": true,
+   "confidence": -0.718
+  },
+  {
+   "id": "story:dark-wizard:w:sent",
+   "word": "sent",
+   "heard": "is sent.",
+   "match": true,
+   "confidence": -0.564
+  },
+  {
+   "id": "story:dark-wizard:w:many",
+   "word": "many",
+   "heard": "Many.",
+   "match": true,
+   "confidence": -0.768
+  },
+  {
+   "id": "story:dark-wizard:w:feet",
+   "word": "feet",
+   "heard": "Viet.",
+   "match": false,
+   "confidence": -1.06
+  },
+  {
+   "id": "story:dark-wizard:w:run",
+   "word": "run",
+   "heard": "Run.",
+   "match": true,
+   "confidence": -0.307
+  },
+  {
+   "id": "story:dark-wizard:w:late",
+   "word": "late",
+   "heard": "Elite.",
+   "match": false,
+   "confidence": -0.93
+  },
+  {
+   "id": "story:dark-wizard:w:their",
+   "word": "their",
+   "heard": "There.",
+   "match": true,
+   "confidence": -0.37
+  },
+  {
+   "id": "story:dark-wizard:w:spell",
+   "word": "spell",
+   "heard": "Spell.",
+   "match": true,
+   "confidence": -0.739
+  },
+  {
+   "id": "story:dark-wizard:w:kept",
+   "word": "kept",
+   "heard": "Capped.",
+   "match": false,
+   "confidence": -0.965
+  },
+  {
+   "id": "story:dark-wizard:w:thank",
+   "word": "thank",
+   "heard": "Thank.",
+   "match": true,
+   "confidence": -0.599
+  },
+  {
+   "id": "story:dark-wizard:w:place",
+   "word": "place",
+   "heard": "Place.",
+   "match": true,
+   "confidence": -0.335
+  },
+  {
+   "id": "story:dark-wizard:w:everywhere",
+   "word": "everywhere",
+   "heard": "Everywhere.",
+   "match": true,
+   "confidence": -0.371
+  },
+  {
+   "id": "story:dark-wizard:w:thirsty",
+   "word": "thirsty",
+   "heard": "Thirsty",
+   "match": true,
+   "confidence": -0.938
+  },
+  {
+   "id": "story:dark-wizard:w:gave",
+   "word": "gave",
+   "heard": "Gabe.",
+   "match": false,
+   "confidence": -0.831
+  },
+  {
+   "id": "story:dark-wizard:w:some",
+   "word": "some",
+   "heard": "Some.",
+   "match": true,
+   "confidence": -0.654
+  },
+  {
+   "id": "story:dark-wizard:w:camel",
+   "word": "camel",
+   "heard": "Camel.",
+   "match": true,
+   "confidence": -0.827
+  },
+  {
+   "id": "story:dark-wizard:w:purple",
+   "word": "purple",
+   "heard": "Purple.",
+   "match": true,
+   "confidence": -0.347
+  },
+  {
+   "id": "story:dark-wizard:w:stars",
+   "word": "stars",
+   "heard": "It stars.",
+   "match": true,
+   "confidence": -0.859
+  },
+  {
+   "id": "story:dark-wizard:w:star",
+   "word": "star",
+   "heard": "A star.",
+   "match": true,
+   "confidence": -0.627
+  },
+  {
+   "id": "story:dark-wizard:w:lake",
+   "word": "lake",
+   "heard": "A lake.",
+   "match": true,
+   "confidence": -0.686
+  },
+  {
+   "id": "story:dark-wizard:w:different",
+   "word": "different",
+   "heard": "Different.",
+   "match": true,
+   "confidence": -0.587
+  },
+  {
+   "id": "story:dark-wizard:w:camp",
+   "word": "camp",
+   "heard": "Camp.",
+   "match": true,
+   "confidence": -0.753
+  },
+  {
+   "id": "story:dark-wizard:w:tent",
+   "word": "tent",
+   "heard": "10.",
+   "match": false,
+   "confidence": -0.617
+  },
+  {
+   "id": "story:dark-wizard:w:one",
+   "word": "one",
+   "heard": "One.",
+   "match": true,
+   "confidence": -0.585
+  },
+  {
+   "id": "story:dark-wizard:w:beautiful",
+   "word": "beautiful",
+   "heard": "Beautiful.",
+   "match": true,
+   "confidence": -0.272
+  },
+  {
+   "id": "story:dark-wizard:w:someone",
+   "word": "someone",
+   "heard": "Someone.",
+   "match": true,
+   "confidence": -0.586
+  },
+  {
+   "id": "story:dark-wizard:w:walking",
+   "word": "walking",
+   "heard": "Walking.",
+   "match": true,
+   "confidence": -0.63
+  },
+  {
+   "id": "story:dark-wizard:w:tired",
+   "word": "tired",
+   "heard": "Tired?",
+   "match": true,
+   "confidence": -0.332
+  },
+  {
+   "id": "story:dark-wizard:w:rook",
+   "word": "Rook",
+   "heard": "Rook.",
+   "match": true,
+   "confidence": -0.44
+  },
+  {
+   "id": "story:dark-wizard:w:rook's",
+   "word": "Rook's",
+   "heard": "Rooks.",
+   "match": true,
+   "confidence": -0.495
+  },
+  {
+   "id": "story:dark-wizard:w:cage",
+   "word": "cage",
+   "heard": "Kay.",
+   "match": false,
+   "confidence": -0.595
+  },
+  {
+   "id": "story:dark-wizard:w:hurt",
+   "word": "hurt",
+   "heard": "Hurt.",
+   "match": true,
+   "confidence": -0.896
+  },
+  {
+   "id": "story:dark-wizard:w:hear",
+   "word": "hear",
+   "heard": "Here.",
+   "match": true,
+   "confidence": -0.451
+  },
+  {
+   "id": "story:dark-wizard:w:secret",
+   "word": "secret",
+   "heard": "A secret.",
+   "match": true,
+   "confidence": -0.463
+  },
+  {
+   "id": "story:dark-wizard:w:take",
+   "word": "take",
+   "heard": "Take.",
+   "match": true,
+   "confidence": -0.47
+  },
+  {
+   "id": "story:dark-wizard:w:seemed",
+   "word": "seemed",
+   "heard": "Assumed.",
+   "match": false,
+   "confidence": -0.891
+  },
+  {
+   "id": "story:dark-wizard:w:such",
+   "word": "such",
+   "heard": "as such.",
+   "match": true,
+   "confidence": -0.515
+  },
+  {
+   "id": "story:dark-wizard:w:keep",
+   "word": "keep",
+   "heard": "Thank you.",
+   "match": false,
+   "confidence": -0.957
+  },
+  {
+   "id": "story:dark-wizard:w:funny",
+   "word": "funny",
+   "heard": "Funny.",
+   "match": true,
+   "confidence": -0.403
+  },
+  {
+   "id": "story:dark-wizard:w:ground",
+   "word": "ground",
+   "heard": "A ground.",
+   "match": true,
+   "confidence": -0.549
+  },
+  {
+   "id": "story:dark-wizard:w:side",
+   "word": "side",
+   "heard": "side.",
+   "match": true,
+   "confidence": -0.515
+  },
+  {
+   "id": "story:dark-wizard:w:push",
+   "word": "push",
+   "heard": "Pushy.",
+   "match": false,
+   "confidence": -0.613
+  },
+  {
+   "id": "story:dark-wizard:w:lead",
+   "word": "lead",
+   "heard": "A lead.",
+   "match": true,
+   "confidence": -0.793
+  },
+  {
+   "id": "story:dark-wizard:w:walls",
+   "word": "walls",
+   "heard": "Wiles.",
+   "match": false,
+   "confidence": -0.765
+  },
+  {
+   "id": "story:dark-wizard:w:stones",
+   "word": "stones",
+   "heard": "The stones.",
+   "match": true,
+   "confidence": -0.81
+  },
+  {
+   "id": "story:dark-wizard:w:while",
+   "word": "while",
+   "heard": "a while.",
+   "match": true,
+   "confidence": -0.727
+  },
+  {
+   "id": "story:dark-wizard:w:ways",
+   "word": "ways",
+   "heard": "Ways.",
+   "match": true,
+   "confidence": -0.696
+  },
+  {
+   "id": "story:dark-wizard:w:found",
+   "word": "found",
+   "heard": "Found.",
+   "match": true,
+   "confidence": -0.364
+  },
+  {
+   "id": "story:dark-wizard:w:horns",
+   "word": "horns",
+   "heard": "horns",
+   "match": true,
+   "confidence": -0.253
+  },
+  {
+   "id": "story:dark-wizard:w:triceratops",
+   "word": "triceratops",
+   "heard": "Triceratops",
+   "match": true,
+   "confidence": -0.13
+  },
+  {
+   "id": "story:dark-wizard:w:noses",
+   "word": "noses",
+   "heard": "Nozes.",
+   "match": false,
+   "confidence": -0.663
+  },
+  {
+   "id": "story:dark-wizard:w:chain",
+   "word": "chain",
+   "heard": "chain.",
+   "match": true,
+   "confidence": -0.987
+  },
+  {
+   "id": "story:dark-wizard:w:keeps",
+   "word": "keeps",
+   "heard": "Heapsa.",
+   "match": false,
+   "confidence": -0.343
+  },
+  {
+   "id": "story:dark-wizard:w:people",
+   "word": "people",
+   "heard": "People.",
+   "match": true,
+   "confidence": -0.592
+  },
+  {
+   "id": "story:dark-wizard:w:last",
+   "word": "last",
+   "heard": "The last.",
+   "match": true,
+   "confidence": -0.57
+  },
+  {
+   "id": "story:dark-wizard:w:before",
+   "word": "before",
+   "heard": "before.",
+   "match": true,
+   "confidence": -0.262
+  },
+  {
+   "id": "story:dark-wizard:w:turned",
+   "word": "turned",
+   "heard": "Turned.",
+   "match": true,
+   "confidence": -0.326
+  },
+  {
+   "id": "story:dark-wizard:w:says",
+   "word": "says",
+   "heard": "It says",
+   "match": true,
+   "confidence": -0.404
+  },
+  {
+   "id": "story:dark-wizard:w:careful",
+   "word": "careful",
+   "heard": "Be careful.",
+   "match": true,
+   "confidence": -0.197
+  },
+  {
+   "id": "story:dark-wizard:w:didn't",
+   "word": "didn't",
+   "heard": "You didn't.",
+   "match": true,
+   "confidence": -0.316
+  },
+  {
+   "id": "story:dark-wizard:w:below",
+   "word": "below",
+   "heard": "below.",
+   "match": true,
+   "confidence": -0.401
+  },
+  {
+   "id": "story:dark-wizard:w:waves",
+   "word": "waves",
+   "heard": "Waves.",
+   "match": true,
+   "confidence": -0.321
+  },
+  {
+   "id": "story:dark-wizard:w:fall",
+   "word": "fall",
+   "heard": "Fall.",
+   "match": true,
+   "confidence": -0.239
+  },
+  {
+   "id": "story:dark-wizard:w:maybe",
+   "word": "maybe",
+   "heard": "Maybe.",
+   "match": true,
+   "confidence": -0.308
+  },
+  {
+   "id": "story:dark-wizard:w:done",
+   "word": "done",
+   "heard": "Done.",
+   "match": true,
+   "confidence": -0.25
+  },
+  {
+   "id": "story:dark-wizard:w:another",
+   "word": "another",
+   "heard": "Another.",
+   "match": true,
+   "confidence": -0.545
+  },
+  {
+   "id": "story:dark-wizard:w:break",
+   "word": "break",
+   "heard": "Break.",
+   "match": true,
+   "confidence": -0.47
+  },
+  {
+   "id": "story:dark-wizard:w:hole",
+   "word": "hole",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -1.008
+  },
+  {
+   "id": "story:dark-wizard:w:jump",
+   "word": "jump",
+   "heard": "Jump.",
+   "match": true,
+   "confidence": -0.384
+  },
+  {
+   "id": "story:dark-wizard:w:bird",
+   "word": "bird",
+   "heard": "Bird.",
+   "match": true,
+   "confidence": -0.446
+  },
+  {
+   "id": "story:dark-wizard:w:pelican",
+   "word": "pelican",
+   "heard": "Pelican",
+   "match": true,
+   "confidence": -0.346
+  },
+  {
+   "id": "story:dark-wizard:w:windows",
+   "word": "windows",
+   "heard": "Windows.",
+   "match": true,
+   "confidence": -0.515
+  },
+  {
+   "id": "story:dark-wizard:w:boom",
+   "word": "boom",
+   "heard": "Boom.",
+   "match": true,
+   "confidence": -0.446
+  },
+  {
+   "id": "story:dark-wizard:w:never",
+   "word": "never",
+   "heard": "Never.",
+   "match": true,
+   "confidence": -0.249
+  },
+  {
+   "id": "story:dark-wizard:w:give",
+   "word": "give",
+   "heard": "Give.",
+   "match": true,
+   "confidence": -0.803
+  },
+  {
+   "id": "story:dark-wizard:w:gold",
+   "word": "gold",
+   "heard": "Gold.",
+   "match": true,
+   "confidence": -0.362
+  },
+  {
+   "id": "story:dark-wizard:w:crown",
+   "word": "crown",
+   "heard": "Crown.",
+   "match": true,
+   "confidence": -0.388
+  },
+  {
+   "id": "story:dark-wizard:w:much",
+   "word": "much",
+   "heard": "Much.",
+   "match": true,
+   "confidence": -0.503
+  },
+  {
+   "id": "story:dark-wizard:w:where",
+   "word": "where",
+   "heard": "Where?",
+   "match": true,
+   "confidence": -0.501
+  },
+  {
+   "id": "story:dark-wizard:w:air",
+   "word": "air",
+   "heard": "There.",
+   "match": false,
+   "confidence": -0.404
+  },
+  {
+   "id": "story:dark-wizard:w:open",
+   "word": "open",
+   "heard": "Open.",
+   "match": true,
+   "confidence": -0.254
+  },
+  {
+   "id": "story:dark-wizard:w:wall",
+   "word": "wall",
+   "heard": "Well.",
+   "match": false,
+   "confidence": -0.94
+  },
+  {
+   "id": "story:dark-wizard:w:listen",
+   "word": "listen",
+   "heard": "A listen.",
+   "match": true,
+   "confidence": -0.681
+  },
+  {
+   "id": "story:dark-wizard:w:high",
+   "word": "high",
+   "heard": "Hi.",
+   "match": false,
+   "confidence": -0.306
+  },
+  {
+   "id": "story:dark-wizard:w:low",
+   "word": "low",
+   "heard": "Hello.",
+   "match": false,
+   "confidence": -0.541
+  },
+  {
+   "id": "story:dark-wizard:w:stairs",
+   "word": "stairs",
+   "heard": "The stairs.",
+   "match": true,
+   "confidence": -0.537
+  },
+  {
+   "id": "story:dark-wizard:w:try",
+   "word": "try",
+   "heard": "Try.",
+   "match": true,
+   "confidence": -0.443
+  },
+  {
+   "id": "story:dark-wizard:w:voices",
+   "word": "voices",
+   "heard": "voices",
+   "match": true,
+   "confidence": -0.477
+  },
+  {
+   "id": "story:dark-wizard:w:climb",
+   "word": "climb",
+   "heard": "Climb.",
+   "match": true,
+   "confidence": -0.272
+  },
+  {
+   "id": "story:dark-wizard:w:storm",
+   "word": "storm",
+   "heard": "a storm",
+   "match": true,
+   "confidence": -0.917
+  },
+  {
+   "id": "story:dark-wizard:w:fish",
+   "word": "fish",
+   "heard": "Fish.",
+   "match": true,
+   "confidence": -0.853
+  },
+  {
+   "id": "story:dark-wizard:w:round",
+   "word": "round",
+   "heard": "around.",
+   "match": false,
+   "confidence": -0.38
+  },
+  {
+   "id": "story:dark-wizard:w:full",
+   "word": "full",
+   "heard": "Full.",
+   "match": true,
+   "confidence": -0.258
+  },
+  {
+   "id": "story:dark-wizard:w:cages",
+   "word": "cages",
+   "heard": "Cajas",
+   "match": false,
+   "confidence": -0.636
+  },
+  {
+   "id": "story:dark-wizard:w:wait",
+   "word": "wait",
+   "heard": "Wait.",
+   "match": true,
+   "confidence": -0.265
+  },
+  {
+   "id": "story:dark-wizard:w:second",
+   "word": "second",
+   "heard": "Second.",
+   "match": true,
+   "confidence": -0.935
+  },
+  {
+   "id": "story:dark-wizard:w:glass",
+   "word": "glass",
+   "heard": "Glass.",
+   "match": true,
+   "confidence": -0.468
+  },
+  {
+   "id": "story:dark-wizard:w:it's",
+   "word": "it's",
+   "heard": "It's.",
+   "match": true,
+   "confidence": -0.538
+  },
+  {
+   "id": "story:dark-wizard:w:key",
+   "word": "key",
+   "heard": "Okay.",
+   "match": false,
+   "confidence": -0.537
+  },
+  {
+   "id": "story:dark-wizard:w:ring",
+   "word": "ring",
+   "heard": "Ring.",
+   "match": true,
+   "confidence": -0.408
+  },
+  {
+   "id": "story:dark-wizard:w:easy",
+   "word": "easy",
+   "heard": "Easy.",
+   "match": true,
+   "confidence": -0.197
+  },
+  {
+   "id": "story:dark-wizard:w:shout",
+   "word": "shout",
+   "heard": "ish out.",
+   "match": false,
+   "confidence": -0.381
+  },
+  {
+   "id": "story:dark-wizard:w:silly",
+   "word": "silly",
+   "heard": "Silly.",
+   "match": true,
+   "confidence": -0.506
+  },
+  {
+   "id": "story:dark-wizard:w:boy",
+   "word": "boy",
+   "heard": "Boy.",
+   "match": true,
+   "confidence": -0.555
+  },
+  {
+   "id": "story:dark-wizard:w:money",
+   "word": "money",
+   "heard": "money",
+   "match": true,
+   "confidence": -0.45
+  },
+  {
+   "id": "story:dark-wizard:w:hungry",
+   "word": "hungry",
+   "heard": "Hungry.",
+   "match": true,
+   "confidence": -0.798
+  },
+  {
+   "id": "story:dark-wizard:w:staff",
+   "word": "staff",
+   "heard": "is Daph.",
+   "match": false,
+   "confidence": -0.741
+  },
+  {
+   "id": "story:dark-wizard:w:piece",
+   "word": "piece",
+   "heard": "Peace!",
+   "match": true,
+   "confidence": -0.306
+  },
+  {
+   "id": "story:dark-wizard:w:paper",
+   "word": "paper",
+   "heard": "paper.",
+   "match": true,
+   "confidence": -0.631
+  },
+  {
+   "id": "story:dark-wizard:w:map",
+   "word": "map",
+   "heard": "map",
+   "match": true,
+   "confidence": -0.505
+  },
+  {
+   "id": "story:dark-wizard:w:thinks",
+   "word": "thinks",
+   "heard": "Thanks.",
+   "match": false,
+   "confidence": -0.224
+  },
+  {
+   "id": "story:dark-wizard:w:looks",
+   "word": "looks",
+   "heard": "It looks",
+   "match": true,
+   "confidence": -0.511
+  },
+  {
+   "id": "story:dark-wizard:w:looking",
+   "word": "looking",
+   "heard": "Looking.",
+   "match": true,
+   "confidence": -0.613
+  },
+  {
+   "id": "story:dark-wizard:w:hill",
+   "word": "hill",
+   "heard": "Hill.",
+   "match": true,
+   "confidence": -0.457
+  },
+  {
+   "id": "story:dark-wizard:w:let",
+   "word": "let",
+   "heard": "Let.",
+   "match": true,
+   "confidence": -0.875
+  },
+  {
+   "id": "story:dark-wizard:w:worst",
+   "word": "worst",
+   "heard": "Worst.",
+   "match": true,
+   "confidence": -0.524
+  },
+  {
+   "id": "story:dark-wizard:w:care",
+   "word": "care",
+   "heard": "Care.",
+   "match": true,
+   "confidence": -0.66
+  },
+  {
+   "id": "story:dark-wizard:w:leave",
+   "word": "leave",
+   "heard": "I believe.",
+   "match": false,
+   "confidence": -0.6
+  },
+  {
+   "id": "story:dark-wizard:w:choose",
+   "word": "choose",
+   "heard": "Jews.",
+   "match": false,
+   "confidence": -0.476
+  },
+  {
+   "id": "story:dark-wizard:w:boat",
+   "word": "boat",
+   "heard": "boat",
+   "match": true,
+   "confidence": -0.299
+  },
+  {
+   "id": "story:dark-wizard:w:rocks",
+   "word": "rocks",
+   "heard": "Rocks.",
+   "match": true,
+   "confidence": -0.586
+  },
+  {
+   "id": "story:dark-wizard:w:eight",
+   "word": "eight",
+   "heard": "Eight.",
+   "match": true,
+   "confidence": -0.461
+  },
+  {
+   "id": "story:dark-wizard:w:octopus",
+   "word": "octopus",
+   "heard": "Octopus",
+   "match": true,
+   "confidence": -0.382
+  },
+  {
+   "id": "story:dark-wizard:w:needs",
+   "word": "needs",
+   "heard": "needs.",
+   "match": true,
+   "confidence": -0.778
+  },
+  {
+   "id": "story:dark-wizard:w:biggest",
+   "word": "biggest",
+   "heard": "Biggest.",
+   "match": true,
+   "confidence": -0.395
+  },
+  {
+   "id": "story:dark-wizard:w:rock",
+   "word": "rock",
+   "heard": "Rock.",
+   "match": true,
+   "confidence": -0.67
+  },
+  {
+   "id": "story:dark-wizard:w:third",
+   "word": "third",
+   "heard": "Third.",
+   "match": true,
+   "confidence": -0.438
+  },
+  {
+   "id": "story:dark-wizard:w:always",
+   "word": "always",
+   "heard": "Always.",
+   "match": true,
+   "confidence": -0.293
+  },
+  {
+   "id": "story:dark-wizard:w:gets",
+   "word": "gets",
+   "heard": "He gets.",
+   "match": true,
+   "confidence": -0.576
+  },
+  {
+   "id": "story:dark-wizard:w:thousand",
+   "word": "thousand",
+   "heard": "1,000",
+   "match": false,
+   "confidence": -0.527
+  },
+  {
+   "id": "story:dark-wizard:w:pieces",
+   "word": "pieces",
+   "heard": "pieces.",
+   "match": true,
+   "confidence": -0.676
+  },
+  {
+   "id": "story:dark-wizard:w:thunder",
+   "word": "thunder",
+   "heard": "Thunder.",
+   "match": true,
+   "confidence": -0.44
+  },
+  {
+   "id": "story:dark-wizard:w:lightning",
+   "word": "lightning",
+   "heard": "Lightning.",
+   "match": true,
+   "confidence": -0.719
+  },
+  {
+   "id": "story:dark-wizard:w:love",
+   "word": "love",
+   "heard": "Love.",
+   "match": true,
+   "confidence": -0.878
+  },
+  {
+   "id": "story:dark-wizard:w:jumping",
+   "word": "jumping",
+   "heard": "Jumping.",
+   "match": true,
+   "confidence": -0.395
+  },
+  {
+   "id": "story:dark-wizard:w:home",
+   "word": "home",
+   "heard": "Home.",
+   "match": true,
+   "confidence": -0.541
+  },
+  {
+   "id": "story:dark-wizard:w:phoenix",
+   "word": "phoenix",
+   "heard": "Phoenix.",
+   "match": true,
+   "confidence": -0.806
+  },
+  {
+   "id": "story:dark-wizard:w:five",
+   "word": "five",
+   "heard": "Five.",
+   "match": true,
+   "confidence": -0.571
+  },
+  {
+   "id": "story:dark-wizard:w:across",
+   "word": "across",
+   "heard": "It crossed.",
+   "match": false,
+   "confidence": -0.519
+  },
+  {
+   "id": "story:dark-wizard:w:word",
+   "word": "word",
+   "heard": "Word.",
+   "match": true,
+   "confidence": -0.251
+  },
+  {
+   "id": "story:dark-wizard:w:worried",
+   "word": "worried",
+   "heard": "Worried.",
+   "match": true,
+   "confidence": -0.231
+  },
+  {
+   "id": "story:dark-wizard:w:comes",
+   "word": "comes",
+   "heard": "comes.",
+   "match": true,
+   "confidence": -0.674
+  },
+  {
+   "id": "story:dark-wizard:w:meet",
+   "word": "meet",
+   "heard": "Meet.",
+   "match": true,
+   "confidence": -0.45
+  },
+  {
+   "id": "story:dark-wizard:w:cry",
+   "word": "cry",
+   "heard": "Cry.",
+   "match": true,
+   "confidence": -0.351
+  }
+ ]
+}
