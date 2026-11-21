@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: be2495a5a29b55a9da07e50dfb6cc834f894d350
-      - name: Compare live files with merge be2495a
+          ref: 00a1e30454917940fd5f153c87e6d2a1536a258d
+      - name: Compare live files with merge 00a1e30
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           P=assets/new-creatures-vote
