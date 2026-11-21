@@ -30,9 +30,7 @@ test('all trail families, groups, first encounters and current mission introduct
   const text=(e.count||1)>1?e.name+' are on the path. Ready to battle?':(/^Acorn/.test(name)?'An ':'A ')+name+' is on the path. Ready to battle?';
   for(const prefix of ['', 'Reading check complete. Now your first chapter begins. '])assert.ok(recordedParts(prefix+text,N.clips),prefix+text);
  }
- // The eleven creatures voted on 20 November 2026 have no George recordings yet; the device voice says their names until they are recorded.
- const unrecorded=new Set(require('../assets/enemies/approved-20261121/roster').november.map(e=>e.id));
- for(const m of M.missions)for(const family of m.encounters){if(unrecorded.has(family))continue;const text=C.enemyAt(family).name+' is ready. Let’s play.';assert.ok(recordedParts(text,N.clips),text);}
+ for(const m of M.missions)for(const family of m.encounters){const text=C.enemyAt(family).name+' is ready. Let’s play.';assert.ok(recordedParts(text,N.clips),text);}
  for(const enemy of C.enemies)assert.ok(recordedParts(enemy.name+' stopped the hit.',N.clips));
 });
 test('new and reused audio has verified bytes and finite segments with no overlap',()=>{

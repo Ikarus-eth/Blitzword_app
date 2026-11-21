@@ -15,6 +15,7 @@ Artus’s report of 21 November 2026, 07:02 Bali time: 41,306 XP, 39 of 46 quest
 - Stretch words: the remaining unknown words (and all story words) carry a dotted underline in the reader and the tip says so; this quest’s targets stay unmarked so he reads them himself. At most 7 marked word types per 100 words (test). Taps were already counted and the most-tapped words already return in the next quest’s fights.
 - Harder questions: why, how, feelings, what came first, and wrong answers that use words from the same page.
 - Eleven voted creatures (Sun Tiger, Red Phoenix, Reef Octopus, Digger Aardvark, Frost Bison, Star Camel, Wave Pelican, Wind Fish, Guard Okapi, Crest Cassowary, Lava Triceratops): Artus’s chosen ChatGPT pictures cut out locally (rembg isnet-general-use, no redrawing) as 512 × 512 RGBA PNGs in `assets/enemies/approved-20261121/`, registered by a roster that extends the October roster. Each is first met in one of these quests. The okapi faces right.
+- Creature narration: 44 George lines (name, lore, two encounter lines per creature), ElevenLabs Multilingual v2 through fal.ai with the October voice and settings, 1,613 characters ≈ $0.16 at fal’s list price. `scripts/generate-creature-narration-fal.py`, workflow `creature-narration-fal.yml`, receipts in `docs/narration-november-creatures/`. Not yet listened to by a person.
 - Both chapters share one voice set (`voiceSet: 'dark-wizard'`); the reader now uses it for tap-to-hear clips.
 
 ## Files

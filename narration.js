@@ -1,6 +1,6 @@
 (function(root){
 const narration={
-  "version": "teaching-200-400-20261011-r1",
+  "version": "november-creatures-20261121-r1",
   "voice": "Mixed approved British male recordings",
   "voices": [
     {
@@ -15,8 +15,8 @@ const narration={
   ],
   "language": "en-GB",
   "recoveredClipCount": 994,
-  "recordedClipCount": 3489,
-  "runtimeClipCount": 3489,
+  "recordedClipCount": 3533,
+  "runtimeClipCount": 3533,
   "fallbackOnly": [],
   "clips": {
     "on": {
@@ -27747,6 +27747,270 @@ const narration={
       "file": "assets/narration/teach-200-400-397.mp3",
       "duration": 2.873438,
       "sha256": "01c7f354d56941ec1ce071efa21a65dc65d6ac32e1a8dc8a4a1a73122ee3049d"
+    },
+    "Sun Tiger": {
+      "file": "assets/narration/november-creatures/sun-tiger-name.mp3",
+      "offset": 0,
+      "duration": 1.201625,
+      "sha256": "f90ed9ee1357dd0195a916734a687317b06f75ad474ac536348f551b375ab002"
+    },
+    "It wears a green cape and a bronze guard, and it is never afraid.": {
+      "file": "assets/narration/november-creatures/sun-tiger-lore.mp3",
+      "offset": 0,
+      "duration": 4.54525,
+      "sha256": "7bb6a5d5d59d1452d911f00c30387e556d556392e1d70f1d93bcc0cf3fe0bda6"
+    },
+    "A Sun Tiger is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/sun-tiger-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.004063,
+      "sha256": "d4f6d3f9a5450c5c8ca76599270d51c7a24f92619be833dd5f4b59cb579e03f2"
+    },
+    "Sun Tiger is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/sun-tiger-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.40325,
+      "sha256": "fcbb87e9344ad96b88b2506f80f0a4f9f85440c29f79bba76bd11341b7486df1"
+    },
+    "Red Phoenix": {
+      "file": "assets/narration/november-creatures/red-phoenix-name.mp3",
+      "offset": 0,
+      "duration": 1.201625,
+      "sha256": "e4de756c86f3cd498b91a2a68fa343f885e4deaf3e46cee39bb02753aea19d38"
+    },
+    "Its red and gold wings are as bright as a fire.": {
+      "file": "assets/narration/november-creatures/red-phoenix-lore.mp3",
+      "offset": 0,
+      "duration": 3.291375,
+      "sha256": "9933f6dd8a7705a23f2263a155be3f719c43b49664ca8995ebaebea6a4f00e71"
+    },
+    "A Red Phoenix is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/red-phoenix-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.291375,
+      "sha256": "d977e9e8ac466e1b2687c042740124256ee25317de0b358c8b1646d4d592d580"
+    },
+    "Red Phoenix is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/red-phoenix-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.4555,
+      "sha256": "76159927702ab9c21a1fb18d893789545c95550266a6d1c556f36b9a42f3662a"
+    },
+    "Reef Octopus": {
+      "file": "assets/narration/november-creatures/reef-octopus-name.mp3",
+      "offset": 0,
+      "duration": 1.488938,
+      "sha256": "6b6b0a39af3aecdeb57a524057c045f31a3269cb4c4856f48e66411db697e299"
+    },
+    "It has a coral crown and eight strong arms with gold rings.": {
+      "file": "assets/narration/november-creatures/reef-octopus-lore.mp3",
+      "offset": 0,
+      "duration": 3.996688,
+      "sha256": "5d3da6b09f7fd6583e7ac0795ca40223fce4a7dc045e6bad4973659ddae2e729"
+    },
+    "A Reef Octopus is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/reef-octopus-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.422,
+      "sha256": "43becea932fa8940cd94d3864b1fe2ceb58efc396360ae46521485987f0af4d5"
+    },
+    "Reef Octopus is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/reef-octopus-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.768938,
+      "sha256": "960d88d6685e59b746edea5315b7d313f2c34d86ac62a97274cf370e72f9fd20"
+    },
+    "Digger Aardvark": {
+      "file": "assets/narration/november-creatures/digger-aardvark-name.mp3",
+      "offset": 0,
+      "duration": 1.384438,
+      "sha256": "d5c34f735f4095ed79901034f2925ce504dbd3ab40e6ca113dbf691bcbefb11d"
+    },
+    "It has a long nose, big ears and a bag for its tools.": {
+      "file": "assets/narration/november-creatures/digger-aardvark-lore.mp3",
+      "offset": 0,
+      "duration": 3.892188,
+      "sha256": "ce799302db6af49a7506ff26e1e5a6342da4d0715081f5339015331ae7d8abdd"
+    },
+    "A Digger Aardvark is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/digger-aardvark-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.5265,
+      "sha256": "347465ac543d9608a33950fac64169676240f19c135b8d213b58174152991a42"
+    },
+    "Digger Aardvark is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/digger-aardvark-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.586063,
+      "sha256": "917f58236d8560b022b77cadbd0d4a6ef1a4b7037154b4232a135f11bc2d0a22"
+    },
+    "Frost Bison": {
+      "file": "assets/narration/november-creatures/frost-bison-name.mp3",
+      "offset": 0,
+      "duration": 1.332188,
+      "sha256": "e5979fc550d7c6e718f8b07e40690bef21993c6433f902368ca6ff0521b15979"
+    },
+    "Its white fur is as cold as snow, and its breath is like ice.": {
+      "file": "assets/narration/november-creatures/frost-bison-lore.mp3",
+      "offset": 0,
+      "duration": 4.414688,
+      "sha256": "38d074a732a9f183130122782fbf983982f656baaf9c82210e2d5a8b570ed942"
+    },
+    "A Frost Bison is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/frost-bison-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.108563,
+      "sha256": "48b3685edb71dc9a4d07ec97aa06fee0d739718e1f868e326199b763e698c58d"
+    },
+    "Frost Bison is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/frost-bison-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.533875,
+      "sha256": "0cbb172af435afcb5f7c28f14eb1297e457622fda561d70b87a7837a74427cf9"
+    },
+    "Star Camel": {
+      "file": "assets/narration/november-creatures/star-camel-name.mp3",
+      "offset": 0,
+      "duration": 1.201625,
+      "sha256": "a769502b2ee6f350a460ca494a501b0b63268deb8ecdf123ec18fd05e3504fe7"
+    },
+    "It walks at night, and there are little stars in its coat.": {
+      "file": "assets/narration/november-creatures/star-camel-lore.mp3",
+      "offset": 0,
+      "duration": 3.57875,
+      "sha256": "f26a2b1631e797f1824a932f828a81f55a51c4cec959ae862901e86e054b2a24"
+    },
+    "A Star Camel is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/star-camel-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.160813,
+      "sha256": "f0a216ef1c7ac79aa1839354906b7145371540e13a8b6584c050eb4964e40634"
+    },
+    "Star Camel is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/star-camel-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.638313,
+      "sha256": "d23535c43239ffc32aa4134da73d8509893203ce2f0394d2f0a20ba7e475f0eb"
+    },
+    "Wave Pelican": {
+      "file": "assets/narration/november-creatures/wave-pelican-name.mp3",
+      "offset": 0,
+      "duration": 1.332188,
+      "sha256": "f19705a8da117e3b08c8be6f0db20033721cd6f2729984eb41ead66a6c106f3b"
+    },
+    "It can carry a little sea in its big beak.": {
+      "file": "assets/narration/november-creatures/wave-pelican-lore.mp3",
+      "offset": 0,
+      "duration": 2.742813,
+      "sha256": "ade83c57abfc262e3c262176341d5f911391797b25a4c044ae5425308b0c8a5a"
+    },
+    "A Wave Pelican is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/wave-pelican-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.239125,
+      "sha256": "30776a9d8203329116b7a5b924a410bcc02ecac77626d54b02ae0b6b238ab193"
+    },
+    "Wave Pelican is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/wave-pelican-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.638313,
+      "sha256": "027e669506d1e9b5554a3936fabca4f4f61669ba6ea140c29339080c286e3e64"
+    },
+    "Wind Fish": {
+      "file": "assets/narration/november-creatures/wind-fish-name.mp3",
+      "offset": 0,
+      "duration": 1.201625,
+      "sha256": "4ae7d3d679bdb39a55639a4619891e8bb60baae3176bb3f81211180c6afa9c5c"
+    },
+    "It jumps out of the sea and flies on the wind.": {
+      "file": "assets/narration/november-creatures/wind-fish-lore.mp3",
+      "offset": 0,
+      "duration": 2.951813,
+      "sha256": "3328a69272c42a4742daa03bdcf3e22457ed0b990a490cf6fbdefd1bab405462"
+    },
+    "A Wind Fish is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/wind-fish-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.239125,
+      "sha256": "1844cfa6c90462c49eddaf4d339fe20ab7884a5252c6d6ccb1a2691e61715446"
+    },
+    "Wind Fish is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/wind-fish-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.351,
+      "sha256": "aa96fa0d812af2cf075724076d4c7660e6fd5341d8d4688d7e0346473535eb6f"
+    },
+    "Guard Okapi": {
+      "file": "assets/narration/november-creatures/guard-okapi-name.mp3",
+      "offset": 0,
+      "duration": 1.253875,
+      "sha256": "708823775fe619069307c464c4e4b079d65484b5509afd918c9df7c5b897bade"
+    },
+    "It has stripes on its legs, and it guards the deep forest.": {
+      "file": "assets/narration/november-creatures/guard-okapi-lore.mp3",
+      "offset": 0,
+      "duration": 3.78775,
+      "sha256": "e41ed2abc13c49f81e739cdeee21555de26c7edc6c1e2917f370a076583edc3c"
+    },
+    "A Guard Okapi is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/guard-okapi-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.239125,
+      "sha256": "52c1a3f3fef6dfd5137ce8393aedc3b4af8d70e24a49cd00e6deafcd24e11e07"
+    },
+    "Guard Okapi is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/guard-okapi-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 2.742813,
+      "sha256": "3f01e800cb0fe9768e775ba184a4a6513e5c3f8fdc99730591a1d15d06d954e5"
+    },
+    "Crest Cassowary": {
+      "file": "assets/narration/november-creatures/crest-cassowary-name.mp3",
+      "offset": 0,
+      "duration": 1.567313,
+      "sha256": "76fc3f8ef089d1dbd5c1cf4088b6e1213bd2bface452159dbd2ab50fa1f61f6c"
+    },
+    "It can not fly, but it can run very fast on strong legs.": {
+      "file": "assets/narration/november-creatures/crest-cassowary-lore.mp3",
+      "offset": 0,
+      "duration": 3.892188,
+      "sha256": "c261ea8d3e29b91d20b30003e1bef2b48c6b55f2156cbb20402b98efd5131e93"
+    },
+    "A Crest Cassowary is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/crest-cassowary-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.657125,
+      "sha256": "6e4e38d49e6c91d35d5432dc3e27445b60a92977b2f14d9b15744c33fc621d5c"
+    },
+    "Crest Cassowary is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/crest-cassowary-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 3.004063,
+      "sha256": "9df3c37357fd5edf9cd5baf60fc0c32c79e71668ac96a8cebe9ad5cf4013e4e1"
+    },
+    "Lava Triceratops": {
+      "file": "assets/narration/november-creatures/lava-triceratops-name.mp3",
+      "offset": 0,
+      "duration": 1.671813,
+      "sha256": "e0ddd8dccc2c71b71dc62d19e02ffa953b6517eb2b84f8ea208ae64fa996c28f"
+    },
+    "It has three horns, and they are as hot as fire.": {
+      "file": "assets/narration/november-creatures/lava-triceratops-lore.mp3",
+      "offset": 0,
+      "duration": 3.343625,
+      "sha256": "c20e94dbf148209eddb8c932d7f32aa3e51e01960cd80669e6c571fccd264a0e"
+    },
+    "A Lava Triceratops is on the path. Ready to battle?": {
+      "file": "assets/narration/november-creatures/lava-triceratops-trail-encounter.mp3",
+      "offset": 0,
+      "duration": 3.78775,
+      "sha256": "2789d4ecc7a1239082f0c5ea3847791c8d38f3473e0733ee0355dd98a5a3cc5e"
+    },
+    "Lava Triceratops is ready. Let’s play.": {
+      "file": "assets/narration/november-creatures/lava-triceratops-mission-encounter.mp3",
+      "offset": 0,
+      "duration": 3.004063,
+      "sha256": "de7e5797acff8c4081081688c22f8e2c4733f9b15b938db5eebd3b07eca9a68f"
     }
   }
 };
