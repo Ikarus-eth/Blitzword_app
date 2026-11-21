@@ -1,602 +1,616 @@
 {
  "voice": "af_heart",
  "checked": 387,
- "matched": 302,
+ "matched": 300,
  "mismatches": [
   {
    "id": "story:moon-key:w:brave",
    "word": "brave",
    "heard": "Braves.",
    "match": false,
-   "confidence": -0.767
+   "confidence": -0.746
   },
   {
    "id": "story:moon-key:w:artus",
    "word": "Artus",
    "heard": "Artists.",
    "match": false,
-   "confidence": -0.731
+   "confidence": -0.738
   },
   {
    "id": "story:moon-key:w:he",
    "word": "he",
    "heard": "Here.",
    "match": false,
-   "confidence": -0.552
+   "confidence": -0.503
   },
   {
    "id": "story:moon-key:w:the",
    "word": "the",
    "heard": "There.",
    "match": false,
-   "confidence": -0.514
+   "confidence": -0.524
   },
   {
    "id": "story:moon-key:w:sky",
    "word": "sky",
    "heard": "This guy.",
    "match": false,
-   "confidence": -0.446
+   "confidence": -0.469
   },
   {
    "id": "story:moon-key:w:are",
    "word": "are",
-   "heard": "Hello.",
+   "heard": "All right.",
    "match": false,
-   "confidence": -0.617
+   "confidence": -0.727
   },
   {
    "id": "story:moon-key:w:no",
    "word": "no",
    "heard": "And now...",
    "match": false,
-   "confidence": -0.375
+   "confidence": -0.373
   },
   {
    "id": "story:moon-key:w:moon",
    "word": "moon",
    "heard": "Come on.",
    "match": false,
-   "confidence": -0.611
+   "confidence": -0.622
   },
   {
    "id": "story:moon-key:w:pip",
    "word": "Pip",
    "heard": "I'm happy",
    "match": false,
-   "confidence": -0.752
+   "confidence": -0.798
   },
   {
    "id": "story:moon-key:w:to",
    "word": "to",
    "heard": "Tua.",
    "match": false,
-   "confidence": -1.075
+   "confidence": -1.133
   },
   {
    "id": "story:moon-key:w:see",
    "word": "see",
    "heard": "A C.",
    "match": false,
-   "confidence": -0.382
+   "confidence": -0.463
   },
   {
    "id": "story:moon-key:w:cheese",
    "word": "cheese",
    "heard": "Jeez.",
    "match": false,
-   "confidence": -0.618
+   "confidence": -0.581
   },
   {
    "id": "story:moon-key:w:a",
    "word": "a",
    "heard": "Good night.",
    "match": false,
-   "confidence": -0.531
+   "confidence": -0.41
   },
   {
    "id": "story:moon-key:w:at",
    "word": "at",
    "heard": "Add.",
    "match": false,
-   "confidence": -0.857
+   "confidence": -0.791
   },
   {
    "id": "story:moon-key:w:look",
    "word": "look",
    "heard": "Good luck.",
    "match": false,
-   "confidence": -0.577
+   "confidence": -0.593
   },
   {
    "id": "story:moon-key:w:for",
    "word": "for",
    "heard": "before.",
    "match": false,
-   "confidence": -0.64
+   "confidence": -0.609
   },
   {
    "id": "story:moon-key:w:an",
    "word": "an",
    "heard": "And then...",
    "match": false,
-   "confidence": -0.456
+   "confidence": -0.622
   },
   {
    "id": "story:moon-key:w:sits",
    "word": "sits",
    "heard": "Is it?",
    "match": false,
-   "confidence": -0.398
+   "confidence": -0.307
   },
   {
    "id": "story:moon-key:w:you",
    "word": "you",
    "heard": "You're...",
    "match": false,
-   "confidence": -0.82
+   "confidence": -0.858
   },
   {
    "id": "story:moon-key:w:i",
    "word": "i",
    "heard": "Sorry.",
    "match": false,
-   "confidence": -0.333
+   "confidence": -0.389
   },
   {
    "id": "story:moon-key:w:who",
    "word": "who",
    "heard": "Hill.",
    "match": false,
-   "confidence": -0.315
+   "confidence": -0.34
   },
   {
    "id": "story:moon-key:w:she",
    "word": "she",
    "heard": "S E.",
    "match": false,
-   "confidence": -0.734
+   "confidence": -0.718
   },
   {
    "id": "story:moon-key:w:us",
    "word": "us",
    "heard": "Ah, this is...",
    "match": false,
-   "confidence": -0.84
+   "confidence": -0.884
   },
   {
    "id": "story:moon-key:w:all",
    "word": "all",
    "heard": "Oh.",
    "match": false,
-   "confidence": -0.821
+   "confidence": -0.765
   },
   {
    "id": "story:moon-key:w:know",
    "word": "know",
    "heard": "Now.",
    "match": false,
-   "confidence": -0.572
-  },
-  {
-   "id": "story:moon-key:w:we",
-   "word": "we",
-   "heard": "We're here.",
-   "match": false,
-   "confidence": -1.061
+   "confidence": -0.542
   },
   {
    "id": "story:moon-key:w:your",
    "word": "your",
    "heard": "You're",
    "match": false,
-   "confidence": -0.616
+   "confidence": -0.621
   },
   {
    "id": "story:moon-key:w:tells",
    "word": "tells",
    "heard": "Tails.",
    "match": false,
-   "confidence": -0.464
+   "confidence": -0.468
   },
   {
    "id": "story:moon-key:w:high",
    "word": "high",
    "heard": "Hi.",
    "match": false,
-   "confidence": -0.305
+   "confidence": -0.315
   },
   {
-   "id": "story:moon-key:w:gives",
-   "word": "gives",
-   "heard": "Gibbs.",
+   "id": "story:moon-key:w:key",
+   "word": "key",
+   "heard": "Okay.",
    "match": false,
-   "confidence": -0.722
+   "confidence": -0.585
   },
   {
    "id": "story:moon-key:w:came",
    "word": "came",
    "heard": "Cam.",
    "match": false,
-   "confidence": -1.005
+   "confidence": -0.97
   },
   {
    "id": "story:moon-key:w:forest",
    "word": "forest",
    "heard": "Vorist.",
    "match": false,
-   "confidence": -1.255
+   "confidence": -1.264
   },
   {
    "id": "story:moon-key:w:been",
    "word": "been",
    "heard": "Ben.",
    "match": false,
-   "confidence": -0.615
+   "confidence": -0.593
   },
   {
    "id": "story:moon-key:w:if",
    "word": "if",
-   "heard": "Yeah.",
+   "heard": "Yes.",
    "match": false,
-   "confidence": -0.516
+   "confidence": -0.5
   },
   {
    "id": "story:moon-key:w:than",
    "word": "than",
    "heard": "But then...",
    "match": false,
-   "confidence": -0.539
+   "confidence": -0.454
   },
   {
    "id": "story:moon-key:w:two",
    "word": "two",
    "heard": "It's you.",
    "match": false,
-   "confidence": -0.433
+   "confidence": -0.459
   },
   {
    "id": "story:moon-key:w:puts",
    "word": "puts",
-   "heard": "Poetzer.",
+   "heard": "Poetzer",
    "match": false,
-   "confidence": -1.262
+   "confidence": -1.267
   },
   {
    "id": "story:moon-key:w:path",
    "word": "path",
    "heard": "Pass.",
    "match": false,
-   "confidence": -0.796
+   "confidence": -0.775
   },
   {
    "id": "story:moon-key:w:shell",
    "word": "shell",
    "heard": "Ishael",
    "match": false,
-   "confidence": -0.786
+   "confidence": -0.837
   },
   {
    "id": "story:moon-key:w:sun",
    "word": "sun",
    "heard": "A son.",
    "match": false,
-   "confidence": -0.75
+   "confidence": -0.756
   },
   {
    "id": "story:moon-key:w:hot",
    "word": "hot",
    "heard": "Heart.",
    "match": false,
-   "confidence": -0.537
+   "confidence": -0.488
   },
   {
    "id": "story:moon-key:w:long",
    "word": "long",
    "heard": "Belong.",
    "match": false,
-   "confidence": -0.244
+   "confidence": -0.273
   },
   {
    "id": "story:moon-key:w:have",
    "word": "have",
-   "heard": "Haves.",
+   "heard": "Heavs.",
    "match": false,
-   "confidence": -1.198
+   "confidence": -0.875
   },
   {
    "id": "story:moon-key:w:they",
    "word": "they",
    "heard": "There you go.",
    "match": false,
-   "confidence": -0.471
+   "confidence": -0.652
+  },
+  {
+   "id": "story:moon-key:w:safe",
+   "word": "safe",
+   "heard": "and save.",
+   "match": false,
+   "confidence": -0.65
   },
   {
    "id": "story:moon-key:w:sit",
    "word": "sit",
    "heard": "Is it?",
    "match": false,
-   "confidence": -0.231
+   "confidence": -0.234
   },
   {
    "id": "story:moon-key:w:too",
    "word": "too",
    "heard": "It's you.",
    "match": false,
-   "confidence": -0.432
+   "confidence": -0.44
   },
   {
    "id": "story:moon-key:w:other",
    "word": "other",
    "heard": "Another.",
    "match": false,
-   "confidence": -0.625
+   "confidence": -0.679
   },
   {
    "id": "story:moon-key:w:sticks",
    "word": "sticks",
    "heard": "Estexa.",
    "match": false,
-   "confidence": -0.916
+   "confidence": -0.925
   },
   {
    "id": "story:moon-key:w:dam",
    "word": "dam",
    "heard": "Damn.",
    "match": false,
-   "confidence": -0.439
+   "confidence": -0.44
   },
   {
    "id": "story:moon-key:w:me",
    "word": "me",
    "heard": "May.",
    "match": false,
-   "confidence": -0.562
+   "confidence": -0.517
   },
   {
    "id": "story:moon-key:w:round",
    "word": "round",
    "heard": "around.",
    "match": false,
-   "confidence": -0.384
+   "confidence": -0.456
   },
   {
    "id": "story:moon-key:w:carry",
    "word": "carry",
    "heard": "Terry",
    "match": false,
-   "confidence": -0.528
+   "confidence": -0.504
   },
   {
    "id": "story:moon-key:w:be",
    "word": "be",
-   "heard": "Buh-Buh-Buh-Buh.",
+   "heard": "Bye!",
    "match": false,
-   "confidence": -1.205
+   "confidence": -1.236
   },
   {
    "id": "story:moon-key:w:green",
    "word": "green",
    "heard": "Agreed.",
    "match": false,
-   "confidence": -0.755
+   "confidence": -0.759
   },
   {
    "id": "story:moon-key:w:hole",
    "word": "hole",
    "heard": "Hold.",
    "match": false,
-   "confidence": -0.93
+   "confidence": -0.911
   },
   {
    "id": "story:moon-key:w:like",
    "word": "like",
    "heard": "alike.",
    "match": false,
-   "confidence": -0.695
+   "confidence": -0.68
+  },
+  {
+   "id": "story:moon-key:w:pulls",
+   "word": "pulls",
+   "heard": "Pause.",
+   "match": false,
+   "confidence": -0.677
   },
   {
    "id": "story:moon-key:w:oh",
    "word": "oh",
    "heard": "No.",
    "match": false,
-   "confidence": -0.406
+   "confidence": -0.351
   },
   {
    "id": "story:moon-key:w:fox",
    "word": "fox",
    "heard": "Evox.",
    "match": false,
-   "confidence": -0.98
+   "confidence": -0.922
   },
   {
    "id": "story:moon-key:w:had",
    "word": "had",
    "heard": "Head.",
    "match": false,
-   "confidence": -0.514
+   "confidence": -0.566
   },
   {
    "id": "story:moon-key:w:keys",
    "word": "keys",
    "heard": "like he is.",
    "match": false,
-   "confidence": -0.846
+   "confidence": -0.837
   },
   {
    "id": "story:moon-key:w:called",
    "word": "called",
    "heard": "Cold.",
    "match": false,
-   "confidence": -0.588
+   "confidence": -0.632
   },
   {
    "id": "story:moon-key:w:sam",
    "word": "Sam",
    "heard": "Assam.",
    "match": false,
-   "confidence": -0.656
+   "confidence": -0.727
   },
   {
    "id": "story:moon-key:w:hair",
    "word": "hair",
    "heard": "Here.",
    "match": false,
-   "confidence": -0.669
+   "confidence": -0.713
   },
   {
    "id": "story:moon-key:w:move",
    "word": "move",
-   "heard": "Moved.",
+   "heard": "moves.",
    "match": false,
-   "confidence": -1.002
+   "confidence": -1.122
   },
   {
    "id": "story:moon-key:w:grey",
    "word": "grey",
    "heard": "Gray.",
    "match": false,
-   "confidence": -0.611
+   "confidence": -0.402
   },
   {
-   "id": "story:moon-key:w:put",
-   "word": "put",
-   "heard": "I'm hurt.",
+   "id": "story:moon-key:w:many",
+   "word": "many",
+   "heard": "money.",
    "match": false,
-   "confidence": -1.057
+   "confidence": -0.962
+  },
+  {
+   "id": "story:moon-key:w:fish",
+   "word": "fish",
+   "heard": "Vish.",
+   "match": false,
+   "confidence": -0.703
   },
   {
    "id": "story:moon-key:w:would",
    "word": "would",
    "heard": "Wood.",
    "match": false,
-   "confidence": -0.471
+   "confidence": -0.42
+  },
+  {
+   "id": "story:moon-key:w:shark",
+   "word": "shark",
+   "heard": "Ishark.",
+   "match": false,
+   "confidence": -0.684
   },
   {
    "id": "story:moon-key:w:keeps",
    "word": "keeps",
    "heard": "Heapsa.",
    "match": false,
-   "confidence": -0.33
+   "confidence": -0.396
   },
   {
    "id": "story:moon-key:w:shout",
    "word": "shout",
-   "heard": "ish out.",
+   "heard": "Ish out.",
    "match": false,
-   "confidence": -0.415
-  },
-  {
-   "id": "story:moon-key:w:break",
-   "word": "break",
-   "heard": "Great.",
-   "match": false,
-   "confidence": -0.455
-  },
-  {
-   "id": "story:moon-key:w:tall",
-   "word": "tall",
-   "heard": "Tell.",
-   "match": false,
-   "confidence": -0.957
+   "confidence": -0.477
   },
   {
    "id": "story:moon-key:w:rain",
    "word": "rain",
    "heard": "brain.",
    "match": false,
-   "confidence": -0.865
+   "confidence": -0.849
   },
   {
    "id": "story:moon-key:w:under",
    "word": "under",
    "heard": "Thunder.",
    "match": false,
-   "confidence": -0.726
+   "confidence": -0.816
   },
   {
    "id": "story:moon-key:w:her",
    "word": "her",
-   "heard": "Ever.",
+   "heard": "differ",
    "match": false,
-   "confidence": -0.665
+   "confidence": -0.632
   },
   {
    "id": "story:moon-key:w:keep",
    "word": "keep",
-   "heard": "Thank you.",
+   "heard": "Akiba.",
    "match": false,
-   "confidence": -0.943
+   "confidence": -0.861
   },
   {
    "id": "story:moon-key:w:wall",
    "word": "wall",
-   "heard": "a while.",
+   "heard": "Be well.",
    "match": false,
-   "confidence": -0.766
+   "confidence": -0.804
   },
   {
    "id": "story:moon-key:w:sees",
    "word": "sees",
    "heard": "A C is.",
    "match": false,
-   "confidence": -0.774
+   "confidence": -0.712
   },
   {
    "id": "story:moon-key:w:sat",
    "word": "sat",
    "heard": "Is that?",
    "match": false,
-   "confidence": -0.474
+   "confidence": -0.484
   },
   {
    "id": "story:moon-key:w:pip's",
    "word": "Pip's",
    "heard": "Pipsa",
    "match": false,
-   "confidence": -1.23
+   "confidence": -1.207
   },
   {
    "id": "story:moon-key:w:mum",
    "word": "mum",
    "heard": "Mom.",
    "match": false,
-   "confidence": -0.619
+   "confidence": -0.569
   },
   {
    "id": "story:moon-key:w:chick",
    "word": "chick",
    "heard": "Check.",
    "match": false,
-   "confidence": -0.54
+   "confidence": -0.567
   },
   {
    "id": "story:moon-key:w:took",
    "word": "took",
    "heard": "It's okay.",
    "match": false,
-   "confidence": -0.312
+   "confidence": -0.331
   },
   {
    "id": "story:moon-key:w:walls",
    "word": "walls",
-   "heard": "Ewiles.",
+   "heard": "Wiles.",
    "match": false,
-   "confidence": -0.794
+   "confidence": -0.981
+  },
+  {
+   "id": "story:moon-key:w:any",
+   "word": "any",
+   "heard": "Anyways...",
+   "match": false,
+   "confidence": -1.024
   },
   {
    "id": "story:moon-key:w:chicks",
    "word": "chicks",
-   "heard": "and Jackson.",
+   "heard": "JAXA",
    "match": false,
-   "confidence": -0.891
+   "confidence": -0.893
   },
   {
    "id": "story:moon-key:w:peep",
    "word": "peep",
    "heard": "Heba.",
    "match": false,
-   "confidence": -0.872
+   "confidence": -0.94
   }
  ],
  "words": [
@@ -605,1316 +619,1316 @@
    "word": "brave",
    "heard": "Braves.",
    "match": false,
-   "confidence": -0.767
+   "confidence": -0.746
   },
   {
    "id": "story:moon-key:w:animal",
    "word": "animal",
    "heard": "Animal.",
    "match": true,
-   "confidence": -0.506
+   "confidence": -0.464
   },
   {
    "id": "story:moon-key:w:please",
    "word": "please",
    "heard": "Please.",
    "match": true,
-   "confidence": -0.246
+   "confidence": -0.243
   },
   {
    "id": "story:moon-key:w:need",
    "word": "need",
    "heard": "Need.",
    "match": true,
-   "confidence": -0.475
+   "confidence": -0.506
   },
   {
    "id": "story:moon-key:w:gold",
    "word": "gold",
    "heard": "Gold.",
    "match": true,
-   "confidence": -0.356
+   "confidence": -0.382
   },
   {
    "id": "story:moon-key:w:island",
    "word": "island",
    "heard": "Island.",
    "match": true,
-   "confidence": -0.418
+   "confidence": -0.468
   },
   {
    "id": "story:moon-key:w:cake",
    "word": "cake",
    "heard": "Cake.",
    "match": true,
-   "confidence": -0.438
+   "confidence": -0.442
   },
   {
    "id": "story:moon-key:w:smile",
    "word": "smile",
    "heard": "Smile.",
    "match": true,
-   "confidence": -0.344
+   "confidence": -0.303
   },
   {
    "id": "story:moon-key:w:it",
    "word": "it",
    "heard": "It.",
    "match": true,
-   "confidence": -0.831
+   "confidence": -0.833
   },
   {
    "id": "story:moon-key:w:is",
    "word": "is",
    "heard": "is.",
    "match": true,
-   "confidence": -0.539
+   "confidence": -0.496
   },
   {
    "id": "story:moon-key:w:night",
    "word": "night",
    "heard": "Night.",
    "match": true,
-   "confidence": -0.394
+   "confidence": -0.397
   },
   {
    "id": "story:moon-key:w:and",
    "word": "and",
    "heard": "And...",
    "match": true,
-   "confidence": -0.766
+   "confidence": -0.772
   },
   {
    "id": "story:moon-key:w:artus",
    "word": "Artus",
    "heard": "Artists.",
    "match": false,
-   "confidence": -0.731
+   "confidence": -0.738
   },
   {
    "id": "story:moon-key:w:can't",
    "word": "can't",
    "heard": "Can't.",
    "match": true,
-   "confidence": -0.432
+   "confidence": -0.407
   },
   {
    "id": "story:moon-key:w:sleep",
    "word": "sleep",
    "heard": "is sleep.",
    "match": true,
-   "confidence": -0.823
+   "confidence": -0.768
   },
   {
    "id": "story:moon-key:w:he",
    "word": "he",
    "heard": "Here.",
    "match": false,
-   "confidence": -0.552
+   "confidence": -0.503
   },
   {
    "id": "story:moon-key:w:looks",
    "word": "looks",
    "heard": "It looks",
    "match": true,
-   "confidence": -0.546
+   "confidence": -0.596
   },
   {
    "id": "story:moon-key:w:out",
    "word": "out",
    "heard": "Out.",
    "match": true,
-   "confidence": -0.495
+   "confidence": -0.457
   },
   {
    "id": "story:moon-key:w:of",
    "word": "of",
    "heard": "of",
    "match": true,
-   "confidence": -0.572
+   "confidence": -0.575
   },
   {
    "id": "story:moon-key:w:his",
    "word": "his",
-   "heard": "his.",
+   "heard": "his",
    "match": true,
-   "confidence": -0.777
+   "confidence": -0.541
   },
   {
    "id": "story:moon-key:w:window",
    "word": "window",
    "heard": "window",
    "match": true,
-   "confidence": -0.517
+   "confidence": -0.496
   },
   {
    "id": "story:moon-key:w:the",
    "word": "the",
    "heard": "There.",
    "match": false,
-   "confidence": -0.514
+   "confidence": -0.524
   },
   {
    "id": "story:moon-key:w:sky",
    "word": "sky",
    "heard": "This guy.",
    "match": false,
-   "confidence": -0.446
+   "confidence": -0.469
   },
   {
    "id": "story:moon-key:w:very",
    "word": "very",
    "heard": "Very.",
    "match": true,
-   "confidence": -0.498
+   "confidence": -0.514
   },
   {
    "id": "story:moon-key:w:dark",
    "word": "dark",
    "heard": "Dark.",
    "match": true,
-   "confidence": -0.409
+   "confidence": -0.406
   },
   {
    "id": "story:moon-key:w:there",
    "word": "there",
    "heard": "There.",
    "match": true,
-   "confidence": -0.347
+   "confidence": -0.349
   },
   {
    "id": "story:moon-key:w:are",
    "word": "are",
-   "heard": "Hello.",
+   "heard": "All right.",
    "match": false,
-   "confidence": -0.617
+   "confidence": -0.727
   },
   {
    "id": "story:moon-key:w:no",
    "word": "no",
    "heard": "And now...",
    "match": false,
-   "confidence": -0.375
+   "confidence": -0.373
   },
   {
    "id": "story:moon-key:w:stars",
    "word": "stars",
    "heard": "It stars.",
    "match": true,
-   "confidence": -0.782
+   "confidence": -0.857
   },
   {
    "id": "story:moon-key:w:moon",
    "word": "moon",
    "heard": "Come on.",
    "match": false,
-   "confidence": -0.611
+   "confidence": -0.622
   },
   {
    "id": "story:moon-key:w:where",
    "word": "where",
    "heard": "Where?",
    "match": true,
-   "confidence": -0.519
+   "confidence": -0.52
   },
   {
    "id": "story:moon-key:w:says",
    "word": "says",
    "heard": "It says",
    "match": true,
-   "confidence": -0.441
+   "confidence": -0.466
   },
   {
    "id": "story:moon-key:w:pip",
    "word": "Pip",
    "heard": "I'm happy",
    "match": false,
-   "confidence": -0.752
+   "confidence": -0.798
   },
   {
    "id": "story:moon-key:w:by",
    "word": "by",
    "heard": "Bye!",
    "match": true,
-   "confidence": -0.326
+   "confidence": -0.327
   },
   {
    "id": "story:moon-key:w:fire",
    "word": "fire",
    "heard": "Fire.",
    "match": true,
-   "confidence": -0.408
+   "confidence": -0.387
   },
   {
    "id": "story:moon-key:w:sleepy",
    "word": "sleepy",
    "heard": "Sleepy.",
    "match": true,
-   "confidence": -0.257
+   "confidence": -0.277
   },
   {
    "id": "story:moon-key:w:soon",
    "word": "soon",
    "heard": "soon.",
    "match": true,
-   "confidence": -0.734
+   "confidence": -0.762
   },
   {
    "id": "story:moon-key:w:going",
    "word": "going",
    "heard": "Going.",
    "match": true,
-   "confidence": -0.634
+   "confidence": -0.759
   },
   {
    "id": "story:moon-key:w:to",
    "word": "to",
    "heard": "Tua.",
    "match": false,
-   "confidence": -1.075
+   "confidence": -1.133
   },
   {
    "id": "story:moon-key:w:maybe",
    "word": "maybe",
    "heard": "Maybe.",
    "match": true,
-   "confidence": -0.296
+   "confidence": -0.325
   },
   {
    "id": "story:moon-key:w:will",
    "word": "will",
    "heard": "Will.",
    "match": true,
-   "confidence": -0.401
+   "confidence": -0.438
   },
   {
    "id": "story:moon-key:w:see",
    "word": "see",
    "heard": "A C.",
    "match": false,
-   "confidence": -0.382
+   "confidence": -0.463
   },
   {
    "id": "story:moon-key:w:bread",
    "word": "bread",
    "heard": "Bread.",
    "match": true,
-   "confidence": -0.53
+   "confidence": -0.577
   },
   {
    "id": "story:moon-key:w:cheese",
    "word": "cheese",
    "heard": "Jeez.",
    "match": false,
-   "confidence": -0.618
+   "confidence": -0.581
   },
   {
    "id": "story:moon-key:w:in",
    "word": "in",
    "heard": "In.",
    "match": true,
-   "confidence": -0.797
+   "confidence": -0.769
   },
   {
    "id": "story:moon-key:w:then",
    "word": "then",
    "heard": "Then...",
    "match": true,
-   "confidence": -0.61
+   "confidence": -0.566
   },
   {
    "id": "story:moon-key:w:a",
    "word": "a",
    "heard": "Good night.",
    "match": false,
-   "confidence": -0.531
+   "confidence": -0.41
   },
   {
    "id": "story:moon-key:w:bird",
    "word": "bird",
    "heard": "Bird.",
    "match": true,
-   "confidence": -0.431
+   "confidence": -0.488
   },
   {
    "id": "story:moon-key:w:comes",
    "word": "comes",
    "heard": "comes.",
    "match": true,
-   "confidence": -0.713
+   "confidence": -0.698
   },
   {
    "id": "story:moon-key:w:tap",
    "word": "tap",
    "heard": "Tap.",
    "match": true,
-   "confidence": -0.391
+   "confidence": -0.453
   },
   {
    "id": "story:moon-key:w:big",
    "word": "big",
    "heard": "Big.",
    "match": true,
-   "confidence": -0.284
+   "confidence": -0.296
   },
   {
    "id": "story:moon-key:w:white",
    "word": "white",
    "heard": "White.",
    "match": true,
-   "confidence": -0.505
+   "confidence": -0.544
   },
   {
    "id": "story:moon-key:w:owl",
    "word": "owl",
    "heard": "Owl.",
    "match": true,
-   "confidence": -0.738
+   "confidence": -0.636
   },
   {
    "id": "story:moon-key:w:at",
    "word": "at",
    "heard": "Add.",
    "match": false,
-   "confidence": -0.857
+   "confidence": -0.791
   },
   {
    "id": "story:moon-key:w:look",
    "word": "look",
    "heard": "Good luck.",
    "match": false,
-   "confidence": -0.577
+   "confidence": -0.593
   },
   {
    "id": "story:moon-key:w:up",
    "word": "up",
    "heard": "Up.",
    "match": true,
-   "confidence": -0.717
+   "confidence": -0.566
   },
   {
    "id": "story:moon-key:w:morning",
    "word": "morning",
    "heard": "Morning.",
    "match": true,
-   "confidence": -0.757
+   "confidence": -0.731
   },
   {
    "id": "story:moon-key:w:time",
    "word": "time",
    "heard": "Time.",
    "match": true,
-   "confidence": -0.426
+   "confidence": -0.403
   },
   {
    "id": "story:moon-key:w:for",
    "word": "for",
    "heard": "before.",
    "match": false,
-   "confidence": -0.64
+   "confidence": -0.609
   },
   {
    "id": "story:moon-key:w:breakfast",
    "word": "breakfast",
    "heard": "breakfast",
    "match": true,
-   "confidence": -0.337
+   "confidence": -0.298
   },
   {
    "id": "story:moon-key:w:an",
    "word": "an",
    "heard": "And then...",
    "match": false,
-   "confidence": -0.456
+   "confidence": -0.622
   },
   {
    "id": "story:moon-key:w:opens",
    "word": "opens",
-   "heard": "opens.",
+   "heard": "Opens.",
    "match": true,
-   "confidence": -0.705
+   "confidence": -0.339
   },
   {
    "id": "story:moon-key:w:sits",
    "word": "sits",
    "heard": "Is it?",
    "match": false,
-   "confidence": -0.398
+   "confidence": -0.307
   },
   {
    "id": "story:moon-key:w:thank",
    "word": "thank",
    "heard": "Thank.",
    "match": true,
-   "confidence": -0.556
+   "confidence": -0.561
   },
   {
    "id": "story:moon-key:w:you",
    "word": "you",
    "heard": "You're...",
    "match": false,
-   "confidence": -0.82
+   "confidence": -0.858
   },
   {
    "id": "story:moon-key:w:cold",
    "word": "cold",
    "heard": "Cold.",
    "match": true,
-   "confidence": -0.304
+   "confidence": -0.335
   },
   {
    "id": "story:moon-key:w:i",
    "word": "i",
    "heard": "Sorry.",
    "match": false,
-   "confidence": -0.333
+   "confidence": -0.389
   },
   {
    "id": "story:moon-key:w:trees",
    "word": "trees",
    "heard": "Trees.",
    "match": true,
-   "confidence": -0.388
+   "confidence": -0.38
   },
   {
    "id": "story:moon-key:w:find",
    "word": "find",
    "heard": "Find.",
    "match": true,
-   "confidence": -0.648
+   "confidence": -0.598
   },
   {
    "id": "story:moon-key:w:my",
    "word": "my",
    "heard": "My.",
    "match": true,
-   "confidence": -0.601
+   "confidence": -0.623
   },
   {
    "id": "story:moon-key:w:way",
    "word": "way",
    "heard": "Way.",
    "match": true,
-   "confidence": -0.592
+   "confidence": -0.529
   },
   {
    "id": "story:moon-key:w:who",
    "word": "who",
    "heard": "Hill.",
    "match": false,
-   "confidence": -0.315
+   "confidence": -0.34
   },
   {
    "id": "story:moon-key:w:asks",
    "word": "asks",
    "heard": "Asks.",
    "match": true,
-   "confidence": -0.338
+   "confidence": -0.395
   },
   {
    "id": "story:moon-key:w:come",
    "word": "come",
    "heard": "Come.",
    "match": true,
-   "confidence": -0.268
+   "confidence": -0.241
   },
   {
    "id": "story:moon-key:w:from",
    "word": "from",
    "heard": "from.",
    "match": true,
-   "confidence": -0.791
+   "confidence": -0.806
   },
   {
    "id": "story:moon-key:w:queen",
    "word": "queen",
    "heard": "Queen.",
    "match": true,
-   "confidence": -0.533
+   "confidence": -0.548
   },
   {
    "id": "story:moon-key:w:she",
    "word": "she",
    "heard": "S E.",
    "match": false,
-   "confidence": -0.734
+   "confidence": -0.718
   },
   {
    "id": "story:moon-key:w:wants",
    "word": "wants",
    "heard": "He wants.",
    "match": true,
-   "confidence": -0.402
+   "confidence": -0.394
   },
   {
    "id": "story:moon-key:w:why",
    "word": "why",
    "heard": "Why?",
    "match": true,
-   "confidence": -0.23
+   "confidence": -0.227
   },
   {
    "id": "story:moon-key:w:does",
    "word": "does",
    "heard": "Does.",
    "match": true,
-   "confidence": -0.337
+   "confidence": -0.328
   },
   {
    "id": "story:moon-key:w:want",
    "word": "want",
    "heard": "Want.",
    "match": true,
-   "confidence": -0.555
+   "confidence": -0.578
   },
   {
    "id": "story:moon-key:w:us",
    "word": "us",
    "heard": "Ah, this is...",
    "match": false,
-   "confidence": -0.84
+   "confidence": -0.884
   },
   {
    "id": "story:moon-key:w:because",
    "word": "because",
    "heard": "Because...",
    "match": true,
-   "confidence": -0.703
+   "confidence": -0.692
   },
   {
    "id": "story:moon-key:w:kind",
    "word": "kind",
    "heard": "Kind.",
    "match": true,
-   "confidence": -0.239
+   "confidence": -0.253
   },
   {
    "id": "story:moon-key:w:found",
    "word": "found",
    "heard": "Found.",
    "match": true,
-   "confidence": -0.377
+   "confidence": -0.348
   },
   {
    "id": "story:moon-key:w:jet",
    "word": "Jet",
    "heard": "Jet.",
    "match": true,
-   "confidence": -0.437
+   "confidence": -0.441
   },
   {
    "id": "story:moon-key:w:on",
    "word": "on",
    "heard": "On.",
    "match": true,
-   "confidence": -0.401
+   "confidence": -0.473
   },
   {
    "id": "story:moon-key:w:thunder",
    "word": "thunder",
    "heard": "Thunder.",
    "match": true,
-   "confidence": -0.45
+   "confidence": -0.453
   },
   {
    "id": "story:moon-key:w:mountain",
    "word": "mountain",
-   "heard": "Mountain",
+   "heard": "Mountain.",
    "match": true,
-   "confidence": -0.454
+   "confidence": -0.586
   },
   {
    "id": "story:moon-key:w:all",
    "word": "all",
    "heard": "Oh.",
    "match": false,
-   "confidence": -0.821
+   "confidence": -0.765
   },
   {
    "id": "story:moon-key:w:animals",
    "word": "animals",
    "heard": "Animals.",
    "match": true,
-   "confidence": -0.536
+   "confidence": -0.507
   },
   {
    "id": "story:moon-key:w:know",
    "word": "know",
    "heard": "Now.",
    "match": false,
-   "confidence": -0.572
+   "confidence": -0.542
   },
   {
    "id": "story:moon-key:w:about",
    "word": "about",
    "heard": "about.",
    "match": true,
-   "confidence": -0.494
+   "confidence": -0.479
   },
   {
    "id": "story:moon-key:w:happy",
    "word": "happy",
    "heard": "Happy",
    "match": true,
-   "confidence": -0.452
+   "confidence": -0.48
   },
   {
    "id": "story:moon-key:w:we",
    "word": "we",
-   "heard": "We're here.",
-   "match": false,
-   "confidence": -1.061
+   "heard": "We are.",
+   "match": true,
+   "confidence": -0.978
   },
   {
    "id": "story:moon-key:w:your",
    "word": "your",
    "heard": "You're",
    "match": false,
-   "confidence": -0.616
+   "confidence": -0.621
   },
   {
    "id": "story:moon-key:w:help",
    "word": "help",
    "heard": "Help.",
    "match": true,
-   "confidence": -0.492
+   "confidence": -0.491
   },
   {
    "id": "story:moon-key:w:only",
    "word": "only",
    "heard": "Only.",
    "match": true,
-   "confidence": -0.531
+   "confidence": -0.498
   },
   {
    "id": "story:moon-key:w:can",
    "word": "can",
    "heard": "Can.",
    "match": true,
-   "confidence": -0.513
+   "confidence": -0.539
   },
   {
    "id": "story:moon-key:w:bring",
    "word": "bring",
    "heard": "Bring.",
    "match": true,
-   "confidence": -0.495
+   "confidence": -0.466
   },
   {
    "id": "story:moon-key:w:back",
    "word": "back",
    "heard": "Back.",
    "match": true,
-   "confidence": -0.34
+   "confidence": -0.363
   },
   {
    "id": "story:moon-key:w:tells",
    "word": "tells",
    "heard": "Tails.",
    "match": false,
-   "confidence": -0.464
+   "confidence": -0.468
   },
   {
    "id": "story:moon-key:w:them",
    "word": "them",
    "heard": "to them.",
    "match": true,
-   "confidence": -0.598
+   "confidence": -0.583
   },
   {
    "id": "story:moon-key:w:has",
    "word": "has",
-   "heard": "has.",
+   "heard": "It has.",
    "match": true,
-   "confidence": -0.943
+   "confidence": -0.442
   },
   {
    "id": "story:moon-key:w:castle",
    "word": "castle",
    "heard": "Castle",
    "match": true,
-   "confidence": -0.468
+   "confidence": -0.483
   },
   {
    "id": "story:moon-key:w:high",
    "word": "high",
    "heard": "Hi.",
    "match": false,
-   "confidence": -0.305
+   "confidence": -0.315
   },
   {
    "id": "story:moon-key:w:rock",
    "word": "rock",
    "heard": "Rock.",
    "match": true,
-   "confidence": -0.66
+   "confidence": -0.603
   },
   {
    "id": "story:moon-key:w:every",
    "word": "every",
-   "heard": "Every.",
+   "heard": "Every",
    "match": true,
-   "confidence": -0.714
+   "confidence": -0.479
   },
   {
    "id": "story:moon-key:w:takes",
    "word": "takes",
    "heard": "It takes.",
    "match": true,
-   "confidence": -0.659
+   "confidence": -0.623
   },
   {
    "id": "story:moon-key:w:key",
    "word": "key",
-   "heard": "Key.",
-   "match": true,
-   "confidence": -0.619
+   "heard": "Okay.",
+   "match": false,
+   "confidence": -0.585
   },
   {
    "id": "story:moon-key:w:gives",
    "word": "gives",
-   "heard": "Gibbs.",
-   "match": false,
-   "confidence": -0.722
+   "heard": "Gives",
+   "match": true,
+   "confidence": -0.759
   },
   {
    "id": "story:moon-key:w:light",
    "word": "light",
    "heard": "The light.",
    "match": true,
-   "confidence": -0.636
+   "confidence": -0.677
   },
   {
    "id": "story:moon-key:w:did",
    "word": "did",
    "heard": "Did.",
    "match": true,
-   "confidence": -0.384
+   "confidence": -0.407
   },
   {
    "id": "story:moon-key:w:not",
    "word": "not",
    "heard": "Not.",
    "match": true,
-   "confidence": -0.533
+   "confidence": -0.522
   },
   {
    "id": "story:moon-key:w:that",
    "word": "that",
    "heard": "That.",
    "match": true,
-   "confidence": -0.696
+   "confidence": -0.726
   },
   {
    "id": "story:moon-key:w:magic",
    "word": "magic",
-   "heard": "Magic",
+   "heard": "Magic.",
    "match": true,
-   "confidence": -0.515
+   "confidence": -0.677
   },
   {
    "id": "story:moon-key:w:but",
    "word": "but",
    "heard": "But...",
    "match": true,
-   "confidence": -0.449
+   "confidence": -0.444
   },
   {
    "id": "story:moon-key:w:black",
    "word": "black",
    "heard": "Black.",
    "match": true,
-   "confidence": -0.347
+   "confidence": -0.374
   },
   {
    "id": "story:moon-key:w:came",
    "word": "came",
    "heard": "Cam.",
    "match": false,
-   "confidence": -1.005
+   "confidence": -0.97
   },
   {
    "id": "story:moon-key:w:got",
    "word": "got",
    "heard": "I got.",
    "match": true,
-   "confidence": -1.111
+   "confidence": -1.064
   },
   {
    "id": "story:moon-key:w:went",
    "word": "went",
    "heard": "Went.",
    "match": true,
-   "confidence": -0.481
+   "confidence": -0.476
   },
   {
    "id": "story:moon-key:w:away",
    "word": "away",
    "heard": "Away.",
    "match": true,
-   "confidence": -0.406
+   "confidence": -0.432
   },
   {
    "id": "story:moon-key:w:over",
    "word": "over",
    "heard": "And over.",
    "match": true,
-   "confidence": -0.625
+   "confidence": -0.737
   },
   {
    "id": "story:moon-key:w:forest",
    "word": "forest",
    "heard": "Vorist.",
    "match": false,
-   "confidence": -1.255
+   "confidence": -1.264
   },
   {
    "id": "story:moon-key:w:three",
    "word": "three",
    "heard": "Three.",
    "match": true,
-   "confidence": -0.506
+   "confidence": -0.501
   },
   {
    "id": "story:moon-key:w:nights",
    "word": "nights",
-   "heard": "nights.",
+   "heard": "nights",
    "match": true,
-   "confidence": -0.927
+   "confidence": -0.694
   },
   {
    "id": "story:moon-key:w:now",
    "word": "now",
    "heard": "Now.",
    "match": true,
-   "confidence": -0.452
+   "confidence": -0.474
   },
   {
    "id": "story:moon-key:w:been",
    "word": "been",
    "heard": "Ben.",
    "match": false,
-   "confidence": -0.615
+   "confidence": -0.593
   },
   {
    "id": "story:moon-key:w:owls",
    "word": "owls",
    "heard": "Owls.",
    "match": true,
-   "confidence": -0.398
+   "confidence": -0.445
   },
   {
    "id": "story:moon-key:w:their",
    "word": "their",
    "heard": "There.",
    "match": true,
-   "confidence": -0.332
+   "confidence": -0.356
   },
   {
    "id": "story:moon-key:w:food",
    "word": "food",
    "heard": "Food.",
    "match": true,
-   "confidence": -0.458
+   "confidence": -0.467
   },
   {
    "id": "story:moon-key:w:little",
    "word": "little",
    "heard": "a little",
    "match": true,
-   "confidence": -0.8
+   "confidence": -0.814
   },
   {
    "id": "story:moon-key:w:afraid",
    "word": "afraid",
    "heard": "Afraid.",
    "match": true,
-   "confidence": -0.209
+   "confidence": -0.221
   },
   {
    "id": "story:moon-key:w:house",
    "word": "house",
-   "heard": "House.",
+   "heard": "The house.",
    "match": true,
-   "confidence": -0.699
+   "confidence": -0.701
   },
   {
    "id": "story:moon-key:w:windows",
    "word": "windows",
    "heard": "Windows.",
    "match": true,
-   "confidence": -0.469
+   "confidence": -0.499
   },
   {
    "id": "story:moon-key:w:go",
    "word": "go",
-   "heard": "Go.",
+   "heard": "You go.",
    "match": true,
-   "confidence": -0.596
+   "confidence": -0.649
   },
   {
    "id": "story:moon-key:w:think",
    "word": "think",
    "heard": "Think.",
    "match": true,
-   "confidence": -0.624
+   "confidence": -0.726
   },
   {
    "id": "story:moon-key:w:home",
    "word": "home",
    "heard": "Home.",
    "match": true,
-   "confidence": -0.55
+   "confidence": -0.495
   },
   {
    "id": "story:moon-key:w:ocean",
    "word": "ocean",
-   "heard": "Ocean.",
+   "heard": "ocean",
    "match": true,
-   "confidence": -0.836
+   "confidence": -0.569
   },
   {
    "id": "story:moon-key:w:down",
    "word": "down",
    "heard": "Down.",
    "match": true,
-   "confidence": -0.5
+   "confidence": -0.519
   },
   {
    "id": "story:moon-key:w:river",
    "word": "river",
    "heard": "River.",
    "match": true,
-   "confidence": -0.378
+   "confidence": -0.4
   },
   {
    "id": "story:moon-key:w:ship",
    "word": "ship",
    "heard": "Ship.",
    "match": true,
-   "confidence": -1.076
+   "confidence": -0.883
   },
   {
    "id": "story:moon-key:w:small",
    "word": "small",
    "heard": "Small.",
    "match": true,
-   "confidence": -0.67
+   "confidence": -0.633
   },
   {
    "id": "story:moon-key:w:bell",
    "word": "bell",
    "heard": "Bell",
    "match": true,
-   "confidence": -0.331
+   "confidence": -0.322
   },
   {
    "id": "story:moon-key:w:if",
    "word": "if",
-   "heard": "Yeah.",
+   "heard": "Yes.",
    "match": false,
-   "confidence": -0.516
+   "confidence": -0.5
   },
   {
    "id": "story:moon-key:w:ring",
    "word": "ring",
    "heard": "Ring.",
    "match": true,
-   "confidence": -0.393
+   "confidence": -0.407
   },
   {
    "id": "story:moon-key:w:this",
    "word": "this",
    "heard": "This.",
    "match": true,
-   "confidence": -0.531
+   "confidence": -0.541
   },
   {
    "id": "story:moon-key:w:flies",
    "word": "flies",
    "heard": "Flies.",
    "match": true,
-   "confidence": -0.445
+   "confidence": -0.45
   },
   {
    "id": "story:moon-key:w:into",
    "word": "into",
    "heard": "into.",
    "match": true,
-   "confidence": -0.497
+   "confidence": -0.493
   },
   {
    "id": "story:moon-key:w:door",
    "word": "door",
    "heard": "Door.",
    "match": true,
-   "confidence": -0.621
+   "confidence": -0.601
   },
   {
    "id": "story:moon-key:w:with",
    "word": "with",
-   "heard": "With",
+   "heard": "with.",
    "match": true,
-   "confidence": -0.653
+   "confidence": -0.867
   },
   {
    "id": "story:moon-key:w:bag",
    "word": "bag",
    "heard": "Bag.",
    "match": true,
-   "confidence": -0.644
+   "confidence": -0.639
   },
   {
    "id": "story:moon-key:w:grandma",
    "word": "Grandma",
    "heard": "Grandma.",
    "match": true,
-   "confidence": -0.38
+   "confidence": -0.328
   },
   {
    "id": "story:moon-key:w:knows",
    "word": "knows",
-   "heard": "He knows.",
+   "heard": "It knows.",
    "match": true,
-   "confidence": -0.643
+   "confidence": -0.628
   },
   {
    "id": "story:moon-key:w:made",
    "word": "made",
    "heard": "Made.",
    "match": true,
-   "confidence": -0.337
+   "confidence": -0.332
   },
   {
    "id": "story:moon-key:w:love",
    "word": "love",
    "heard": "Love.",
    "match": true,
-   "confidence": -0.793
+   "confidence": -0.84
   },
   {
    "id": "story:moon-key:w:own",
    "word": "own",
    "heard": "own.",
    "match": true,
-   "confidence": -0.703
+   "confidence": -0.69
   },
   {
    "id": "story:moon-key:w:again",
    "word": "again",
    "heard": "Again.",
    "match": true,
-   "confidence": -0.506
+   "confidence": -0.552
   },
   {
    "id": "story:moon-key:w:better",
    "word": "better",
    "heard": "Better.",
    "match": true,
-   "confidence": -0.397
+   "confidence": -0.439
   },
   {
    "id": "story:moon-key:w:together",
    "word": "together",
    "heard": "Together.",
    "match": true,
-   "confidence": -0.362
+   "confidence": -0.414
   },
   {
    "id": "story:moon-key:w:smiles",
    "word": "smiles",
    "heard": "It smiles.",
    "match": true,
-   "confidence": -0.264
+   "confidence": -0.274
   },
   {
    "id": "story:moon-key:w:yes",
    "word": "yes",
    "heard": "Yes.",
    "match": true,
-   "confidence": -0.26
+   "confidence": -0.257
   },
   {
    "id": "story:moon-key:w:friends",
    "word": "friends",
    "heard": "Friends.",
    "match": true,
-   "confidence": -0.458
+   "confidence": -0.544
   },
   {
    "id": "story:moon-key:w:than",
    "word": "than",
    "heard": "But then...",
    "match": false,
-   "confidence": -0.539
+   "confidence": -0.454
   },
   {
    "id": "story:moon-key:w:two",
    "word": "two",
    "heard": "It's you.",
    "match": false,
-   "confidence": -0.433
+   "confidence": -0.459
   },
   {
    "id": "story:moon-key:w:puts",
    "word": "puts",
-   "heard": "Poetzer.",
+   "heard": "Poetzer",
    "match": false,
-   "confidence": -1.262
+   "confidence": -1.267
   },
   {
    "id": "story:moon-key:w:map",
    "word": "map",
    "heard": "map",
    "match": true,
-   "confidence": -0.405
+   "confidence": -0.429
   },
   {
    "id": "story:moon-key:w:more",
    "word": "more",
    "heard": "More.",
    "match": true,
-   "confidence": -0.428
+   "confidence": -0.409
   },
   {
    "id": "story:moon-key:w:one",
    "word": "one",
    "heard": "One.",
    "match": true,
-   "confidence": -0.578
+   "confidence": -0.554
   },
   {
    "id": "story:moon-key:w:piece",
    "word": "piece",
    "heard": "Peace!",
    "match": true,
-   "confidence": -0.293
+   "confidence": -0.302
   },
   {
    "id": "story:moon-key:w:enough",
    "word": "enough",
    "heard": "Enough.",
    "match": true,
-   "confidence": -0.261
+   "confidence": -0.277
   },
   {
    "id": "story:moon-key:w:almost",
    "word": "almost",
    "heard": "Almost.",
    "match": true,
-   "confidence": -0.287
+   "confidence": -0.278
   },
   {
    "id": "story:moon-key:w:path",
    "word": "path",
    "heard": "Pass.",
    "match": false,
-   "confidence": -0.796
+   "confidence": -0.775
   },
   {
    "id": "story:moon-key:w:wood",
    "word": "wood",
    "heard": "Wood.",
    "match": true,
-   "confidence": -0.522
+   "confidence": -0.473
   },
   {
    "id": "story:moon-key:w:boat",
    "word": "boat",
    "heard": "boat",
    "match": true,
-   "confidence": -0.349
+   "confidence": -0.302
   },
   {
    "id": "story:moon-key:w:stick",
    "word": "stick",
    "heard": "A stick.",
    "match": true,
-   "confidence": -0.44
+   "confidence": -0.398
   },
   {
    "id": "story:moon-key:w:wait",
    "word": "wait",
    "heard": "Wait.",
    "match": true,
-   "confidence": -0.291
+   "confidence": -0.316
   },
   {
    "id": "story:moon-key:w:strong",
    "word": "strong",
    "heard": "Strong.",
    "match": true,
-   "confidence": -0.327
+   "confidence": -0.285
   },
   {
    "id": "story:moon-key:w:lot",
    "word": "lot",
    "heard": "A lot.",
    "match": true,
-   "confidence": -0.364
+   "confidence": -0.375
   },
   {
    "id": "story:moon-key:w:angry",
    "word": "angry",
    "heard": "angry",
    "match": true,
-   "confidence": -0.492
+   "confidence": -0.484
   },
   {
    "id": "story:moon-key:w:shell",
    "word": "shell",
    "heard": "Ishael",
    "match": false,
-   "confidence": -0.786
+   "confidence": -0.837
   },
   {
    "id": "story:moon-key:w:walk",
    "word": "walk",
    "heard": "Walk.",
    "match": true,
-   "confidence": -0.724
+   "confidence": -0.803
   },
   {
    "id": "story:moon-key:w:sun",
    "word": "sun",
    "heard": "A son.",
    "match": false,
-   "confidence": -0.75
+   "confidence": -0.756
   },
   {
    "id": "story:moon-key:w:hot",
    "word": "hot",
    "heard": "Heart.",
    "match": false,
-   "confidence": -0.537
+   "confidence": -0.488
   },
   {
    "id": "story:moon-key:w:fast",
    "word": "fast",
    "heard": "Fast.",
    "match": true,
-   "confidence": -0.594
+   "confidence": -0.627
   },
   {
    "id": "story:moon-key:w:blue",
    "word": "blue",
    "heard": "Blue.",
    "match": true,
-   "confidence": -0.416
+   "confidence": -0.479
   },
   {
    "id": "story:moon-key:w:birds",
    "word": "birds",
    "heard": "Birds.",
    "match": true,
-   "confidence": -0.5
+   "confidence": -0.447
   },
   {
    "id": "story:moon-key:w:fly",
    "word": "fly",
    "heard": "Fly.",
    "match": true,
-   "confidence": -0.558
+   "confidence": -0.634
   },
   {
    "id": "story:moon-key:w:water",
@@ -1928,1386 +1942,1386 @@
    "word": "long",
    "heard": "Belong.",
    "match": false,
-   "confidence": -0.244
+   "confidence": -0.273
   },
   {
    "id": "story:moon-key:w:days",
    "word": "days",
    "heard": "Days.",
    "match": true,
-   "confidence": -0.363
+   "confidence": -0.362
   },
   {
    "id": "story:moon-key:w:am",
    "word": "am",
-   "heard": "AM.",
+   "heard": "AM",
    "match": true,
-   "confidence": -0.72
+   "confidence": -0.472
   },
   {
    "id": "story:moon-key:w:tired",
    "word": "tired",
    "heard": "Tired?",
    "match": true,
-   "confidence": -0.347
+   "confidence": -0.33
   },
   {
    "id": "story:moon-key:w:already",
    "word": "already",
    "heard": "Already.",
    "match": true,
-   "confidence": -0.562
+   "confidence": -0.596
   },
   {
    "id": "story:moon-key:w:have",
    "word": "have",
-   "heard": "Haves.",
+   "heard": "Heavs.",
    "match": false,
-   "confidence": -1.198
+   "confidence": -0.875
   },
   {
    "id": "story:moon-key:w:lunch",
    "word": "lunch",
    "heard": "The lunch.",
    "match": true,
-   "confidence": -0.509
+   "confidence": -0.438
   },
   {
    "id": "story:moon-key:w:they",
    "word": "they",
    "heard": "There you go.",
    "match": false,
-   "confidence": -0.471
+   "confidence": -0.652
   },
   {
    "id": "story:moon-key:w:waterfall",
    "word": "waterfall",
    "heard": "Waterfall.",
    "match": true,
-   "confidence": -0.196
+   "confidence": -0.215
   },
   {
    "id": "story:moon-key:w:rocks",
    "word": "rocks",
    "heard": "Rocks.",
    "match": true,
-   "confidence": -0.586
+   "confidence": -0.631
   },
   {
    "id": "story:moon-key:w:safe",
    "word": "safe",
-   "heard": "Safe.",
-   "match": true,
-   "confidence": -0.558
+   "heard": "and save.",
+   "match": false,
+   "confidence": -0.65
   },
   {
    "id": "story:moon-key:w:sit",
    "word": "sit",
    "heard": "Is it?",
    "match": false,
-   "confidence": -0.231
+   "confidence": -0.234
   },
   {
    "id": "story:moon-key:w:too",
    "word": "too",
    "heard": "It's you.",
    "match": false,
-   "confidence": -0.432
+   "confidence": -0.44
   },
   {
    "id": "story:moon-key:w:beaver",
    "word": "beaver",
    "heard": "Beaver.",
    "match": true,
-   "confidence": -0.391
+   "confidence": -0.431
   },
   {
    "id": "story:moon-key:w:other",
    "word": "other",
    "heard": "Another.",
    "match": false,
-   "confidence": -0.625
+   "confidence": -0.679
   },
   {
    "id": "story:moon-key:w:sticks",
    "word": "sticks",
    "heard": "Estexa.",
    "match": false,
-   "confidence": -0.916
+   "confidence": -0.925
   },
   {
    "id": "story:moon-key:w:what",
    "word": "what",
    "heard": "What?",
    "match": true,
-   "confidence": -0.236
+   "confidence": -0.223
   },
   {
    "id": "story:moon-key:w:dam",
    "word": "dam",
    "heard": "Damn.",
    "match": false,
-   "confidence": -0.439
+   "confidence": -0.44
   },
   {
    "id": "story:moon-key:w:work",
    "word": "work",
    "heard": "Work.",
    "match": true,
-   "confidence": -0.29
+   "confidence": -0.263
   },
   {
    "id": "story:moon-key:w:do",
    "word": "do",
    "heard": "Do.",
    "match": true,
-   "confidence": -0.54
+   "confidence": -0.516
   },
   {
    "id": "story:moon-key:w:just",
    "word": "just",
    "heard": "Just.",
    "match": true,
-   "confidence": -0.558
+   "confidence": -0.52
   },
   {
    "id": "story:moon-key:w:goes",
    "word": "goes",
    "heard": "goes",
    "match": true,
-   "confidence": -0.64
+   "confidence": -0.645
   },
   {
    "id": "story:moon-key:w:good",
    "word": "good",
    "heard": "Good.",
    "match": true,
-   "confidence": -0.155
+   "confidence": -0.17
   },
   {
    "id": "story:moon-key:w:right",
    "word": "right",
    "heard": "Right.",
    "match": true,
-   "confidence": -0.233
+   "confidence": -0.224
   },
   {
    "id": "story:moon-key:w:me",
    "word": "me",
    "heard": "May.",
    "match": false,
-   "confidence": -0.562
+   "confidence": -0.517
   },
   {
    "id": "story:moon-key:w:brings",
    "word": "brings",
    "heard": "Brings.",
    "match": true,
-   "confidence": -0.237
+   "confidence": -0.229
   },
   {
    "id": "story:moon-key:w:here",
    "word": "here",
    "heard": "Here.",
    "match": true,
-   "confidence": -0.421
+   "confidence": -0.394
   },
   {
    "id": "story:moon-key:w:gets",
    "word": "gets",
    "heard": "He gets.",
    "match": true,
-   "confidence": -0.542
+   "confidence": -0.536
   },
   {
    "id": "story:moon-key:w:makes",
    "word": "makes",
    "heard": "makes",
    "match": true,
-   "confidence": -0.411
+   "confidence": -0.433
   },
   {
    "id": "story:moon-key:w:round",
    "word": "round",
    "heard": "around.",
    "match": false,
-   "confidence": -0.384
+   "confidence": -0.456
   },
   {
    "id": "story:moon-key:w:take",
    "word": "take",
    "heard": "Take.",
    "match": true,
-   "confidence": -0.498
+   "confidence": -0.527
   },
   {
    "id": "story:moon-key:w:carry",
    "word": "carry",
    "heard": "Terry",
    "match": false,
-   "confidence": -0.528
+   "confidence": -0.504
   },
   {
    "id": "story:moon-key:w:get",
    "word": "get",
    "heard": "Get.",
    "match": true,
-   "confidence": -0.747
+   "confidence": -0.735
   },
   {
    "id": "story:moon-key:w:be",
    "word": "be",
-   "heard": "Buh-Buh-Buh-Buh.",
+   "heard": "Bye!",
    "match": false,
-   "confidence": -1.205
+   "confidence": -1.236
   },
   {
    "id": "story:moon-key:w:warm",
    "word": "warm",
    "heard": "warm",
    "match": true,
-   "confidence": -0.354
+   "confidence": -0.368
   },
   {
    "id": "story:moon-key:w:green",
    "word": "green",
    "heard": "Agreed.",
    "match": false,
-   "confidence": -0.755
+   "confidence": -0.759
   },
   {
    "id": "story:moon-key:w:turtle",
    "word": "turtle",
    "heard": "The turtle.",
    "match": true,
-   "confidence": -0.779
+   "confidence": -0.734
   },
   {
    "id": "story:moon-key:w:old",
    "word": "old",
    "heard": "Old.",
    "match": true,
-   "confidence": -0.737
+   "confidence": -0.767
   },
   {
    "id": "story:moon-key:w:when",
    "word": "when",
    "heard": "When?",
    "match": true,
-   "confidence": -0.526
+   "confidence": -0.532
   },
   {
    "id": "story:moon-key:w:town",
    "word": "town",
    "heard": "Town.",
    "match": true,
-   "confidence": -0.648
+   "confidence": -0.634
   },
   {
    "id": "story:moon-key:w:eats",
    "word": "eats",
    "heard": "Eats.",
    "match": true,
-   "confidence": -0.699
+   "confidence": -0.676
   },
   {
    "id": "story:moon-key:w:grandma's",
    "word": "Grandma's",
    "heard": "Grandmas.",
    "match": true,
-   "confidence": -0.297
+   "confidence": -0.304
   },
   {
    "id": "story:moon-key:w:was",
    "word": "was",
    "heard": "was.",
    "match": true,
-   "confidence": -0.626
+   "confidence": -0.644
   },
   {
    "id": "story:moon-key:w:hungry",
    "word": "hungry",
    "heard": "Hungry.",
    "match": true,
-   "confidence": -0.756
+   "confidence": -0.689
   },
   {
    "id": "story:moon-key:w:looked",
    "word": "looked",
    "heard": "We looked.",
    "match": true,
-   "confidence": -0.583
+   "confidence": -0.549
   },
   {
    "id": "story:moon-key:w:lonely",
    "word": "lonely",
    "heard": "Lonely.",
    "match": true,
-   "confidence": -0.724
+   "confidence": -0.762
   },
   {
    "id": "story:moon-key:w:hole",
    "word": "hole",
    "heard": "Hold.",
    "match": false,
-   "confidence": -0.93
+   "confidence": -0.911
   },
   {
    "id": "story:moon-key:w:quiet",
    "word": "quiet",
    "heard": "Quiet.",
    "match": true,
-   "confidence": -0.431
+   "confidence": -0.361
   },
   {
    "id": "story:moon-key:w:voice",
    "word": "voice",
-   "heard": "Voice.",
+   "heard": "voice.",
    "match": true,
-   "confidence": -0.793
+   "confidence": -0.767
   },
   {
    "id": "story:moon-key:w:tail",
    "word": "tail",
    "heard": "Tail.",
    "match": true,
-   "confidence": -0.674
+   "confidence": -0.688
   },
   {
    "id": "story:moon-key:w:land",
    "word": "land",
    "heard": "The land.",
    "match": true,
-   "confidence": -0.48
+   "confidence": -0.373
   },
   {
    "id": "story:moon-key:w:nest",
    "word": "nest",
    "heard": "Nest.",
    "match": true,
-   "confidence": -0.272
+   "confidence": -0.265
   },
   {
    "id": "story:moon-key:w:mud",
    "word": "mud",
-   "heard": "MUD.",
+   "heard": "Mud.",
    "match": true,
-   "confidence": -0.658
+   "confidence": -0.92
   },
   {
    "id": "story:moon-key:w:bright",
    "word": "bright",
    "heard": "Bright.",
    "match": true,
-   "confidence": -0.633
+   "confidence": -0.583
   },
   {
    "id": "story:moon-key:w:fog",
    "word": "fog",
    "heard": "Fog.",
    "match": true,
-   "confidence": -0.849
+   "confidence": -0.773
   },
   {
    "id": "story:moon-key:w:don't",
    "word": "don't",
    "heard": "Don't.",
    "match": true,
-   "confidence": -0.384
+   "confidence": -0.475
   },
   {
    "id": "story:moon-key:w:like",
    "word": "like",
    "heard": "alike.",
    "match": false,
-   "confidence": -0.695
+   "confidence": -0.68
   },
   {
    "id": "story:moon-key:w:cloud",
    "word": "cloud",
    "heard": "Cloud.",
    "match": true,
-   "confidence": -0.42
+   "confidence": -0.392
   },
   {
    "id": "story:moon-key:w:runs",
    "word": "runs",
    "heard": "It runs.",
    "match": true,
-   "confidence": -0.664
+   "confidence": -0.618
   },
   {
    "id": "story:moon-key:w:full",
    "word": "full",
    "heard": "Full.",
    "match": true,
-   "confidence": -0.253
+   "confidence": -0.293
   },
   {
    "id": "story:moon-key:w:rope",
    "word": "rope",
    "heard": "Rope.",
    "match": true,
-   "confidence": -0.31
+   "confidence": -0.305
   },
   {
    "id": "story:moon-key:w:tree",
    "word": "tree",
    "heard": "Tree.",
    "match": true,
-   "confidence": -0.432
+   "confidence": -0.429
   },
   {
    "id": "story:moon-key:w:pulls",
    "word": "pulls",
-   "heard": "Pulls.",
-   "match": true,
-   "confidence": -0.734
+   "heard": "Pause.",
+   "match": false,
+   "confidence": -0.677
   },
   {
    "id": "story:moon-key:w:oh",
    "word": "oh",
    "heard": "No.",
    "match": false,
-   "confidence": -0.406
+   "confidence": -0.351
   },
   {
    "id": "story:moon-key:w:red",
    "word": "red",
    "heard": "Red.",
    "match": true,
-   "confidence": -0.381
+   "confidence": -0.49
   },
   {
    "id": "story:moon-key:w:fox",
    "word": "fox",
    "heard": "Evox.",
    "match": false,
-   "confidence": -0.98
+   "confidence": -0.922
   },
   {
    "id": "story:moon-key:w:some",
    "word": "some",
    "heard": "Some.",
    "match": true,
-   "confidence": -0.693
+   "confidence": -0.711
   },
   {
    "id": "story:moon-key:w:best",
    "word": "best",
    "heard": "Best.",
    "match": true,
-   "confidence": -0.576
+   "confidence": -0.524
   },
   {
    "id": "story:moon-key:w:must",
    "word": "must",
    "heard": "Must.",
    "match": true,
-   "confidence": -0.536
+   "confidence": -0.526
   },
   {
    "id": "story:moon-key:w:had",
    "word": "had",
    "heard": "Head.",
    "match": false,
-   "confidence": -0.514
+   "confidence": -0.566
   },
   {
    "id": "story:moon-key:w:loves",
    "word": "loves",
    "heard": "Loves.",
    "match": true,
-   "confidence": -0.893
+   "confidence": -0.707
   },
   {
    "id": "story:moon-key:w:coins",
    "word": "coins",
    "heard": "coins",
    "match": true,
-   "confidence": -0.361
+   "confidence": -0.372
   },
   {
    "id": "story:moon-key:w:keys",
    "word": "keys",
    "heard": "like he is.",
    "match": false,
-   "confidence": -0.846
+   "confidence": -0.837
   },
   {
    "id": "story:moon-key:w:bells",
    "word": "bells",
    "heard": "Bells.",
    "match": true,
-   "confidence": -0.286
+   "confidence": -0.292
   },
   {
    "id": "story:moon-key:w:its",
    "word": "its",
    "heard": "It's.",
    "match": true,
-   "confidence": -0.501
+   "confidence": -0.51
   },
   {
    "id": "story:moon-key:w:ghost",
    "word": "ghost",
    "heard": "Ghost.",
    "match": true,
-   "confidence": -0.398
+   "confidence": -0.436
   },
   {
    "id": "story:moon-key:w:ghosts",
    "word": "ghosts",
    "heard": "Ghosts.",
    "match": true,
-   "confidence": -0.832
+   "confidence": -0.743
   },
   {
    "id": "story:moon-key:w:likes",
    "word": "likes",
    "heard": "He likes.",
    "match": true,
-   "confidence": -0.656
+   "confidence": -0.741
   },
   {
    "id": "story:moon-key:w:man",
    "word": "man",
    "heard": "Man.",
    "match": true,
-   "confidence": -0.504
+   "confidence": -0.462
   },
   {
    "id": "story:moon-key:w:called",
    "word": "called",
    "heard": "Cold.",
    "match": false,
-   "confidence": -0.588
+   "confidence": -0.632
   },
   {
    "id": "story:moon-key:w:sam",
    "word": "Sam",
    "heard": "Assam.",
    "match": false,
-   "confidence": -0.656
+   "confidence": -0.727
   },
   {
    "id": "story:moon-key:w:tell",
    "word": "tell",
    "heard": "Tell.",
    "match": true,
-   "confidence": -0.532
+   "confidence": -0.548
   },
   {
    "id": "story:moon-key:w:him",
    "word": "him",
    "heard": "Him.",
    "match": true,
-   "confidence": -0.605
+   "confidence": -0.632
   },
   {
    "id": "story:moon-key:w:after",
    "word": "after",
    "heard": "after",
    "match": true,
-   "confidence": -0.556
+   "confidence": -0.54
   },
   {
    "id": "story:moon-key:w:end",
    "word": "end",
    "heard": "End.",
    "match": true,
-   "confidence": -0.667
+   "confidence": -0.618
   },
   {
    "id": "story:moon-key:w:hair",
    "word": "hair",
    "heard": "Here.",
    "match": false,
-   "confidence": -0.669
+   "confidence": -0.713
   },
   {
    "id": "story:moon-key:w:sad",
    "word": "sad",
    "heard": "is sad.",
    "match": true,
-   "confidence": -0.681
+   "confidence": -0.751
   },
   {
    "id": "story:moon-key:w:stand",
    "word": "stand",
    "heard": "Stand.",
    "match": true,
-   "confidence": -0.503
+   "confidence": -0.415
   },
   {
    "id": "story:moon-key:w:move",
    "word": "move",
-   "heard": "Moved.",
+   "heard": "moves.",
    "match": false,
-   "confidence": -1.002
+   "confidence": -1.122
   },
   {
    "id": "story:moon-key:w:grey",
    "word": "grey",
    "heard": "Gray.",
    "match": false,
-   "confidence": -0.611
+   "confidence": -0.402
   },
   {
    "id": "story:moon-key:w:girl",
    "word": "girl",
    "heard": "Good girl.",
    "match": true,
-   "confidence": -0.393
+   "confidence": -0.425
   },
   {
    "id": "story:moon-key:w:people",
    "word": "people",
    "heard": "People.",
    "match": true,
-   "confidence": -0.579
+   "confidence": -0.602
   },
   {
    "id": "story:moon-key:w:many",
    "word": "many",
-   "heard": "Many.",
-   "match": true,
-   "confidence": -0.838
+   "heard": "money.",
+   "match": false,
+   "confidence": -0.962
   },
   {
    "id": "story:moon-key:w:houses",
    "word": "houses",
    "heard": "houses",
    "match": true,
-   "confidence": -0.565
+   "confidence": -0.597
   },
   {
    "id": "story:moon-key:w:boats",
    "word": "boats",
    "heard": "Boats.",
    "match": true,
-   "confidence": -0.407
+   "confidence": -0.402
   },
   {
    "id": "story:moon-key:w:waves",
    "word": "waves",
    "heard": "Waves.",
    "match": true,
-   "confidence": -0.36
+   "confidence": -0.323
   },
   {
    "id": "story:moon-key:w:so",
    "word": "so",
    "heard": "So.",
    "match": true,
-   "confidence": -0.621
+   "confidence": -0.65
   },
   {
    "id": "story:moon-key:w:stands",
    "word": "stands",
    "heard": "It stands.",
    "match": true,
-   "confidence": -0.364
+   "confidence": -0.394
   },
   {
    "id": "story:moon-key:w:first",
    "word": "first",
    "heard": "First.",
    "match": true,
-   "confidence": -0.97
+   "confidence": -0.957
   },
   {
    "id": "story:moon-key:w:fish",
    "word": "fish",
-   "heard": "Fish.",
-   "match": true,
-   "confidence": -0.812
+   "heard": "Vish.",
+   "match": false,
+   "confidence": -0.703
   },
   {
    "id": "story:moon-key:w:put",
    "word": "put",
-   "heard": "I'm hurt.",
-   "match": false,
-   "confidence": -1.057
+   "heard": "Put.",
+   "match": true,
+   "confidence": -1.081
   },
   {
    "id": "story:moon-key:w:starts",
    "word": "starts",
    "heard": "It starts.",
    "match": true,
-   "confidence": -0.223
+   "confidence": -0.233
   },
   {
    "id": "story:moon-key:w:wind",
    "word": "wind",
    "heard": "Wind.",
    "match": true,
-   "confidence": -0.337
+   "confidence": -0.363
   },
   {
    "id": "story:moon-key:w:helps",
    "word": "helps",
    "heard": "It helps.",
    "match": true,
-   "confidence": -0.192
+   "confidence": -0.205
   },
   {
    "id": "story:moon-key:w:ropes",
    "word": "ropes",
    "heard": "Ropes.",
    "match": true,
-   "confidence": -0.376
+   "confidence": -0.381
   },
   {
    "id": "story:moon-key:w:well",
    "word": "well",
    "heard": "Well...",
    "match": true,
-   "confidence": -0.496
+   "confidence": -0.517
   },
   {
    "id": "story:moon-key:w:day",
    "word": "day",
    "heard": "Day.",
    "match": true,
-   "confidence": -0.385
+   "confidence": -0.381
   },
   {
    "id": "story:moon-key:w:would",
    "word": "would",
    "heard": "Wood.",
    "match": false,
-   "confidence": -0.471
+   "confidence": -0.42
   },
   {
    "id": "story:moon-key:w:shark",
    "word": "shark",
-   "heard": "is shark.",
-   "match": true,
-   "confidence": -0.692
+   "heard": "Ishark.",
+   "match": false,
+   "confidence": -0.684
   },
   {
    "id": "story:moon-key:w:eat",
    "word": "eat",
-   "heard": "And we eat.",
+   "heard": "We eat.",
    "match": true,
-   "confidence": -0.905
+   "confidence": -0.979
   },
   {
    "id": "story:moon-key:w:friend",
    "word": "friend",
    "heard": "Friend.",
    "match": true,
-   "confidence": -0.644
+   "confidence": -0.648
   },
   {
    "id": "story:moon-key:w:keeps",
    "word": "keeps",
    "heard": "Heapsa.",
    "match": false,
-   "confidence": -0.33
+   "confidence": -0.396
   },
   {
    "id": "story:moon-key:w:king",
    "word": "king",
    "heard": "King.",
    "match": true,
-   "confidence": -0.514
+   "confidence": -0.512
   },
   {
    "id": "story:moon-key:w:say",
    "word": "say",
-   "heard": "A say.",
+   "heard": "I say.",
    "match": true,
-   "confidence": -0.914
+   "confidence": -0.879
   },
   {
    "id": "story:moon-key:w:make",
    "word": "make",
    "heard": "Make.",
    "match": true,
-   "confidence": -0.421
+   "confidence": -0.519
   },
   {
    "id": "story:moon-key:w:fires",
    "word": "fires",
    "heard": "fires.",
    "match": true,
-   "confidence": -0.59
+   "confidence": -0.586
   },
   {
    "id": "story:moon-key:w:dragons",
    "word": "dragons",
    "heard": "Dragons",
    "match": true,
-   "confidence": -0.55
+   "confidence": -0.556
   },
   {
    "id": "story:moon-key:w:scared",
    "word": "scared",
    "heard": "Scared.",
    "match": true,
-   "confidence": -0.429
+   "confidence": -0.467
   },
   {
    "id": "story:moon-key:w:shout",
    "word": "shout",
-   "heard": "ish out.",
+   "heard": "Ish out.",
    "match": false,
-   "confidence": -0.415
+   "confidence": -0.477
   },
   {
    "id": "story:moon-key:w:break",
    "word": "break",
-   "heard": "Great.",
-   "match": false,
-   "confidence": -0.455
+   "heard": "Break.",
+   "match": true,
+   "confidence": -0.471
   },
   {
    "id": "story:moon-key:w:fall",
    "word": "fall",
    "heard": "Fall.",
    "match": true,
-   "confidence": -0.26
+   "confidence": -0.327
   },
   {
    "id": "story:moon-key:w:swim",
    "word": "swim",
    "heard": "Swim.",
    "match": true,
-   "confidence": -0.438
+   "confidence": -0.404
   },
   {
    "id": "story:moon-key:w:everywhere",
    "word": "everywhere",
    "heard": "Everywhere.",
    "match": true,
-   "confidence": -0.364
+   "confidence": -0.352
   },
   {
    "id": "story:moon-key:w:tall",
    "word": "tall",
-   "heard": "Tell.",
-   "match": false,
-   "confidence": -0.957
+   "heard": "Tall.",
+   "match": true,
+   "confidence": -0.886
   },
   {
    "id": "story:moon-key:w:top",
    "word": "top",
    "heard": "Top.",
    "match": true,
-   "confidence": -0.587
+   "confidence": -0.654
   },
   {
    "id": "story:moon-key:w:hold",
    "word": "hold",
    "heard": "Hold.",
    "match": true,
-   "confidence": -0.212
+   "confidence": -0.209
   },
   {
    "id": "story:moon-key:w:lightning",
    "word": "lightning",
-   "heard": "Lightning.",
+   "heard": "The lightning.",
    "match": true,
-   "confidence": -0.702
+   "confidence": -0.792
   },
   {
    "id": "story:moon-key:w:rain",
    "word": "rain",
    "heard": "brain.",
    "match": false,
-   "confidence": -0.865
+   "confidence": -0.849
   },
   {
    "id": "story:moon-key:w:bigger",
    "word": "bigger",
    "heard": "Bigger.",
    "match": true,
-   "confidence": -0.255
+   "confidence": -0.223
   },
   {
    "id": "story:moon-key:w:shouts",
    "word": "shouts",
    "heard": "It shouts.",
    "match": true,
-   "confidence": -0.607
+   "confidence": -0.7
   },
   {
    "id": "story:moon-key:w:wing",
    "word": "wing",
    "heard": "Wing.",
    "match": true,
-   "confidence": -0.41
+   "confidence": -0.412
   },
   {
    "id": "story:moon-key:w:wave",
    "word": "wave",
    "heard": "Wave.",
    "match": true,
-   "confidence": -0.417
+   "confidence": -0.426
   },
   {
    "id": "story:moon-key:w:breaks",
    "word": "breaks",
-   "heard": "Breaks.",
+   "heard": "breaks.",
    "match": true,
-   "confidence": -0.78
+   "confidence": -0.704
   },
   {
    "id": "story:moon-key:w:falls",
    "word": "falls",
    "heard": "Falls.",
    "match": true,
-   "confidence": -0.8
+   "confidence": -0.795
   },
   {
    "id": "story:moon-key:w:holds",
    "word": "holds",
    "heard": "Holds.",
    "match": true,
-   "confidence": -0.299
+   "confidence": -0.287
   },
   {
    "id": "story:moon-key:w:stop",
    "word": "stop",
    "heard": "Stop.",
    "match": true,
-   "confidence": -0.468
+   "confidence": -0.479
   },
   {
    "id": "story:moon-key:w:wings",
    "word": "wings",
    "heard": "Wings.",
    "match": true,
-   "confidence": -0.326
+   "confidence": -0.348
   },
   {
    "id": "story:moon-key:w:wet",
    "word": "wet",
    "heard": "Wet.",
    "match": true,
-   "confidence": -0.472
+   "confidence": -0.412
   },
   {
    "id": "story:moon-key:w:under",
    "word": "under",
    "heard": "Thunder.",
    "match": false,
-   "confidence": -0.726
+   "confidence": -0.816
   },
   {
    "id": "story:moon-key:w:her",
    "word": "her",
-   "heard": "Ever.",
+   "heard": "differ",
    "match": false,
-   "confidence": -0.665
+   "confidence": -0.632
   },
   {
    "id": "story:moon-key:w:swims",
    "word": "swims",
    "heard": "It swims.",
    "match": true,
-   "confidence": -0.224
+   "confidence": -0.264
   },
   {
    "id": "story:moon-key:w:give",
    "word": "give",
    "heard": "Give.",
    "match": true,
-   "confidence": -0.741
+   "confidence": -0.747
   },
   {
    "id": "story:moon-key:w:stops",
    "word": "stops",
    "heard": "It stops.",
    "match": true,
-   "confidence": -0.247
+   "confidence": -0.254
   },
   {
    "id": "story:moon-key:w:rainbow",
    "word": "rainbow",
    "heard": "Rainbow.",
    "match": true,
-   "confidence": -0.807
+   "confidence": -0.809
   },
   {
    "id": "story:moon-key:w:keep",
    "word": "keep",
-   "heard": "Thank you.",
+   "heard": "Akiba.",
    "match": false,
-   "confidence": -0.943
+   "confidence": -0.861
   },
   {
    "id": "story:moon-key:w:cousin",
    "word": "cousin",
    "heard": "Cousin",
    "match": true,
-   "confidence": -0.423
+   "confidence": -0.448
   },
   {
    "id": "story:moon-key:w:careful",
    "word": "careful",
    "heard": "Be careful.",
    "match": true,
-   "confidence": -0.186
+   "confidence": -0.165
   },
   {
    "id": "story:moon-key:w:wall",
    "word": "wall",
-   "heard": "a while.",
+   "heard": "Be well.",
    "match": false,
-   "confidence": -0.766
+   "confidence": -0.804
   },
   {
    "id": "story:moon-key:w:hear",
    "word": "hear",
    "heard": "Here.",
    "match": true,
-   "confidence": -0.4
+   "confidence": -0.409
   },
   {
    "id": "story:moon-key:w:room",
    "word": "room",
-   "heard": "The room.",
+   "heard": "Room.",
    "match": true,
-   "confidence": -0.63
+   "confidence": -0.66
   },
   {
    "id": "story:moon-key:w:cry",
    "word": "cry",
    "heard": "Cry.",
    "match": true,
-   "confidence": -0.384
+   "confidence": -0.334
   },
   {
    "id": "story:moon-key:w:name",
    "word": "name",
    "heard": "Name.",
    "match": true,
-   "confidence": -0.471
+   "confidence": -0.504
   },
   {
    "id": "story:moon-key:w:idea",
    "word": "idea",
    "heard": "idea.",
    "match": true,
-   "confidence": -0.573
+   "confidence": -0.591
   },
   {
    "id": "story:moon-key:w:funny",
    "word": "funny",
    "heard": "Funny.",
    "match": true,
-   "confidence": -0.394
+   "confidence": -0.398
   },
   {
    "id": "story:moon-key:w:sees",
    "word": "sees",
    "heard": "A C is.",
    "match": false,
-   "confidence": -0.774
+   "confidence": -0.712
   },
   {
    "id": "story:moon-key:w:sword",
    "word": "sword",
    "heard": "The sword.",
    "match": true,
-   "confidence": -0.902
+   "confidence": -0.824
   },
   {
    "id": "story:moon-key:w:gate",
    "word": "gate",
    "heard": "Gate.",
    "match": true,
-   "confidence": -0.54
+   "confidence": -0.55
   },
   {
    "id": "story:moon-key:w:open",
    "word": "open",
    "heard": "Open.",
    "match": true,
-   "confidence": -0.26
+   "confidence": -0.23
   },
   {
    "id": "story:moon-key:w:sat",
    "word": "sat",
    "heard": "Is that?",
    "match": false,
-   "confidence": -0.474
+   "confidence": -0.484
   },
   {
    "id": "story:moon-key:w:rooms",
    "word": "rooms",
    "heard": "rooms.",
    "match": true,
-   "confidence": -0.403
+   "confidence": -0.475
   },
   {
    "id": "story:moon-key:w:doors",
    "word": "doors",
    "heard": "Doors.",
    "match": true,
-   "confidence": -0.423
+   "confidence": -0.409
   },
   {
    "id": "story:moon-key:w:cries",
    "word": "cries",
    "heard": "cries",
    "match": true,
-   "confidence": -0.289
+   "confidence": -0.331
   },
   {
    "id": "story:moon-key:w:through",
    "word": "through",
-   "heard": "through.",
+   "heard": "Through.",
    "match": true,
-   "confidence": -0.783
+   "confidence": -0.754
   },
   {
    "id": "story:moon-key:w:hides",
    "word": "hides",
    "heard": "Hides.",
    "match": true,
-   "confidence": -0.51
+   "confidence": -0.457
   },
   {
    "id": "story:moon-key:w:pip's",
    "word": "Pip's",
    "heard": "Pipsa",
    "match": false,
-   "confidence": -1.23
+   "confidence": -1.207
   },
   {
    "id": "story:moon-key:w:mum",
    "word": "mum",
    "heard": "Mom.",
    "match": false,
-   "confidence": -0.619
+   "confidence": -0.569
   },
   {
    "id": "story:moon-key:w:dad",
    "word": "dad",
    "heard": "Dad.",
    "match": true,
-   "confidence": -0.311
+   "confidence": -0.297
   },
   {
    "id": "story:moon-key:w:plays",
    "word": "plays",
    "heard": "Plays.",
    "match": true,
-   "confidence": -0.757
+   "confidence": -0.778
   },
   {
    "id": "story:moon-key:w:may",
    "word": "May",
    "heard": "May.",
    "match": true,
-   "confidence": -0.205
+   "confidence": -0.256
   },
   {
    "id": "story:moon-key:w:looking",
    "word": "looking",
    "heard": "Looking.",
    "match": true,
-   "confidence": -0.606
+   "confidence": -0.737
   },
   {
    "id": "story:moon-key:w:secret",
    "word": "secret",
    "heard": "A secret.",
    "match": true,
-   "confidence": -0.441
+   "confidence": -0.467
   },
   {
    "id": "story:moon-key:w:climb",
    "word": "climb",
    "heard": "Climb.",
    "match": true,
-   "confidence": -0.234
+   "confidence": -0.27
   },
   {
    "id": "story:moon-key:w:chick",
    "word": "chick",
    "heard": "Check.",
    "match": false,
-   "confidence": -0.54
+   "confidence": -0.567
   },
   {
    "id": "story:moon-key:w:slowly",
    "word": "slowly",
    "heard": "Slowly.",
    "match": true,
-   "confidence": -0.366
+   "confidence": -0.378
   },
   {
    "id": "story:moon-key:w:middle",
    "word": "middle",
    "heard": "Middle.",
    "match": true,
-   "confidence": -0.539
+   "confidence": -0.525
   },
   {
    "id": "story:moon-key:w:hurt",
    "word": "hurt",
-   "heard": "It hurt.",
+   "heard": "Hurt.",
    "match": true,
-   "confidence": -0.303
+   "confidence": -0.763
   },
   {
    "id": "story:moon-key:w:bad",
    "word": "bad",
    "heard": "Bad.",
    "match": true,
-   "confidence": -0.37
+   "confidence": -0.409
   },
   {
    "id": "story:moon-key:w:took",
    "word": "took",
    "heard": "It's okay.",
    "match": false,
-   "confidence": -0.312
+   "confidence": -0.331
   },
   {
    "id": "story:moon-key:w:show",
    "word": "show",
    "heard": "Show.",
    "match": true,
-   "confidence": -0.59
+   "confidence": -0.57
   },
   {
    "id": "story:moon-key:w:shows",
    "word": "shows",
    "heard": "It shows.",
    "match": true,
-   "confidence": -0.416
+   "confidence": -0.476
   },
   {
    "id": "story:moon-key:w:walls",
    "word": "walls",
-   "heard": "Ewiles.",
+   "heard": "Wiles.",
    "match": false,
-   "confidence": -0.794
+   "confidence": -0.981
   },
   {
    "id": "story:moon-key:w:any",
    "word": "any",
-   "heard": "Any.",
-   "match": true,
-   "confidence": -0.83
+   "heard": "Anyways...",
+   "match": false,
+   "confidence": -1.024
   },
   {
    "id": "story:moon-key:w:chicks",
    "word": "chicks",
-   "heard": "and Jackson.",
+   "heard": "JAXA",
    "match": false,
-   "confidence": -0.891
+   "confidence": -0.893
   },
   {
    "id": "story:moon-key:w:peep",
    "word": "peep",
    "heard": "Heba.",
    "match": false,
-   "confidence": -0.872
+   "confidence": -0.94
   },
   {
    "id": "story:moon-key:w:run",
    "word": "run",
    "heard": "Run.",
    "match": true,
-   "confidence": -0.301
+   "confidence": -0.304
   },
   {
    "id": "story:moon-key:w:crown",
    "word": "crown",
    "heard": "Crown.",
    "match": true,
-   "confidence": -0.425
+   "confidence": -0.416
   },
   {
    "id": "story:moon-key:w:sleeping",
    "word": "sleeping",
    "heard": "Sleeping.",
    "match": true,
-   "confidence": -0.523
+   "confidence": -0.591
   },
   {
    "id": "story:moon-key:w:everyone",
    "word": "everyone",
    "heard": "Everyone.",
    "match": true,
-   "confidence": -0.342
+   "confidence": -0.401
   },
   {
    "id": "story:moon-key:w:song",
    "word": "song",
    "heard": "A song.",
    "match": true,
-   "confidence": -0.639
+   "confidence": -0.674
   },
   {
    "id": "story:moon-key:w:world",
    "word": "world",
    "heard": "World.",
    "match": true,
-   "confidence": -0.455
+   "confidence": -0.45
   },
   {
    "id": "story:moon-key:w:last",
    "word": "last",
    "heard": "The last.",
    "match": true,
-   "confidence": -0.548
+   "confidence": -0.537
   },
   {
    "id": "story:moon-key:w:lovely",
    "word": "lovely",
-   "heard": "Lovely.",
+   "heard": "and lovely.",
    "match": true,
-   "confidence": -0.679
+   "confidence": -0.587
   },
   {
    "id": "story:moon-key:w:sing",
    "word": "sing",
    "heard": "A sing.",
    "match": true,
-   "confidence": -0.716
+   "confidence": -0.657
   },
   {
    "id": "story:moon-key:w:coin",
    "word": "coin",
    "heard": "Coin.",
    "match": true,
-   "confidence": -0.909
+   "confidence": -0.887
   },
   {
    "id": "story:moon-key:w:pretty",
    "word": "pretty",
    "heard": "Pretty.",
    "match": true,
-   "confidence": -0.483
+   "confidence": -0.425
   },
   {
    "id": "story:moon-key:w:star",
    "word": "star",
    "heard": "A star.",
    "match": true,
-   "confidence": -0.603
+   "confidence": -0.619
   },
   {
    "id": "story:moon-key:w:needs",
    "word": "needs",
    "heard": "needs.",
    "match": true,
-   "confidence": -0.679
+   "confidence": -0.707
   },
   {
    "id": "story:moon-key:w:dinner",
    "word": "dinner",
    "heard": "Dinner.",
    "match": true,
-   "confidence": -0.465
+   "confidence": -0.516
   }
  ]
 }
