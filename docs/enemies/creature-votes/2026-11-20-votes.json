@@ -1,0 +1,384 @@
+{
+ "version": 1,
+ "reviewId": "new-creatures-20261120",
+ "exportedAt": "2026-11-20T23:07:12.265Z",
+ "rounds": {
+  "10": {
+   "ratings": {
+    "Artus": [
+     3,
+     4,
+     5
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "11": {
+   "ratings": {
+    "Artus": [
+     3,
+     4,
+     5
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "12": {
+   "ratings": {
+    "Artus": [
+     null,
+     null,
+     null
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "don't add any",
+    "Juna": ""
+   }
+  },
+  "13": {
+   "ratings": {
+    "Artus": [
+     1,
+     5,
+     4
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "01": {
+   "ratings": {
+    "Artus": [
+     4,
+     4,
+     5
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "02": {
+   "ratings": {
+    "Artus": [
+     5,
+     4,
+     4
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "03": {
+   "ratings": {
+    "Artus": [
+     3,
+     4,
+     5
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "04": {
+   "ratings": {
+    "Artus": [
+     1,
+     2,
+     5
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "05": {
+   "ratings": {
+    "Artus": [
+     3,
+     5,
+     4
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "06": {
+   "ratings": {
+    "Artus": [
+     2,
+     4,
+     3
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "07": {
+   "ratings": {
+    "Artus": [
+     2,
+     3,
+     2
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "don't add any of these",
+    "Juna": ""
+   }
+  },
+  "08": {
+   "ratings": {
+    "Artus": [
+     2,
+     5,
+     4
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  },
+  "09": {
+   "ratings": {
+    "Artus": [
+     2,
+     5,
+     4
+    ],
+    "Juna": [
+     null,
+     null,
+     null
+    ]
+   },
+   "notes": {
+    "Artus": "",
+    "Juna": ""
+   }
+  }
+ },
+ "results": [
+  {
+   "id": "01",
+   "name": "Tiger",
+   "status": "selected",
+   "candidates": [
+    "c"
+   ],
+   "selected": "c",
+   "reason": "Artus chose C · 5/5.",
+   "style": "Champion · Suncrest Tiger"
+  },
+  {
+   "id": "02",
+   "name": "Phoenix",
+   "status": "selected",
+   "candidates": [
+    "a"
+   ],
+   "selected": "a",
+   "reason": "Artus chose A · 5/5.",
+   "style": "Storybook · Rowan Phoenix"
+  },
+  {
+   "id": "03",
+   "name": "Octopus",
+   "status": "selected",
+   "candidates": [
+    "c"
+   ],
+   "selected": "c",
+   "reason": "Artus chose C · 5/5.",
+   "style": "Champion · Reefkeeper Octopus"
+  },
+  {
+   "id": "04",
+   "name": "Aardvark",
+   "status": "selected",
+   "candidates": [
+    "c"
+   ],
+   "selected": "c",
+   "reason": "Artus chose C · 5/5.",
+   "style": "Champion"
+  },
+  {
+   "id": "05",
+   "name": "Bison",
+   "status": "selected",
+   "candidates": [
+    "b"
+   ],
+   "selected": "b",
+   "reason": "Artus chose B · 5/5.",
+   "style": "Elemental"
+  },
+  {
+   "id": "06",
+   "name": "Camel",
+   "status": "selected",
+   "candidates": [
+    "b"
+   ],
+   "selected": "b",
+   "reason": "Artus chose B · 4/5.",
+   "style": "Elemental"
+  },
+  {
+   "id": "07",
+   "name": "Nautilus",
+   "status": "selected",
+   "candidates": [
+    "b"
+   ],
+   "selected": "b",
+   "reason": "Artus chose B · 3/5.",
+   "style": "Elemental"
+  },
+  {
+   "id": "08",
+   "name": "Pelican",
+   "status": "selected",
+   "candidates": [
+    "b"
+   ],
+   "selected": "b",
+   "reason": "Artus chose B · 5/5.",
+   "style": "Elemental"
+  },
+  {
+   "id": "09",
+   "name": "Flying Fish",
+   "status": "selected",
+   "candidates": [
+    "b"
+   ],
+   "selected": "b",
+   "reason": "Artus chose B · 5/5.",
+   "style": "Elemental"
+  },
+  {
+   "id": "10",
+   "name": "Okapi",
+   "status": "selected",
+   "candidates": [
+    "c"
+   ],
+   "selected": "c",
+   "reason": "Artus chose C · 5/5.",
+   "style": "Champion"
+  },
+  {
+   "id": "11",
+   "name": "Cassowary",
+   "status": "selected",
+   "candidates": [
+    "c"
+   ],
+   "selected": "c",
+   "reason": "Artus chose C · 5/5.",
+   "style": "Champion"
+  },
+  {
+   "id": "12",
+   "name": "Stick Insect",
+   "status": "pending",
+   "candidates": [],
+   "selected": null,
+   "reason": "Artus: rate all three styles.",
+   "style": null
+  },
+  {
+   "id": "13",
+   "name": "Triceratops",
+   "status": "selected",
+   "candidates": [
+    "b"
+   ],
+   "selected": "b",
+   "reason": "Artus chose B · 5/5.",
+   "style": "Elemental"
+  }
+ ]
+}

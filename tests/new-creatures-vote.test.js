@@ -32,8 +32,8 @@ test('new creature vote: restore validates and copies', () => {
   assert.throws(() => Core.validate({ version: 1, reviewId: 'enemy-finals-20261010', rounds: {} }, ids));
 });
 
-test('new creature vote: 13 ChatGPT-painted creatures, three pictures each, none already in the game', () => {
-  assert.equal(catalog.entities.length, 13);
+test('new creature vote: ChatGPT-painted creatures (batch 3), three pictures each, none already in the game', () => {
+  assert.equal(catalog.entities.length, 10);
   assert.equal(catalog.reviewId, Core.REVIEW_ID);
   const existing = Object.keys(Missions.lore).map(id => id.split('-').pop());
   const files = new Set();
@@ -48,7 +48,7 @@ test('new creature vote: 13 ChatGPT-painted creatures, three pictures each, none
       assert.ok(fs.existsSync(path.join(__dirname, '../assets/new-creatures-vote', file)));
     }
   }
-  assert.equal(files.size, 39);
+  assert.equal(files.size, 30);
   const manifest = require('../assets/new-creatures-vote/artwork-manifest.json');
-  assert.equal(manifest.pictures.length, 39);
+  assert.equal(manifest.pictures.length, 30);
 });

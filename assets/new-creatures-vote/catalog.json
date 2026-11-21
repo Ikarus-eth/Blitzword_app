@@ -1,6 +1,6 @@
 {
  "version": 1,
- "reviewId": "new-creatures-20261120",
+ "reviewId": "new-creatures-20261121",
  "names": [
   "Artus",
   "Juna"
@@ -13,15 +13,15 @@
  "entities": [
   {
    "id": "01",
-   "key": "tiger",
-   "name": "Tiger",
-   "habitat": "jungle",
+   "key": "zebra",
+   "name": "Zebra",
+   "habitat": "",
    "options": [
     {
      "id": "a",
-     "title": "Storybook · Rowan Tiger",
+     "title": "Storybook",
      "description": "",
-     "src": "pictures/tiger-a.webp?v=20261120",
+     "src": "pictures/zebra-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -33,9 +33,9 @@
     },
     {
      "id": "b",
-     "title": "Elemental · Storm Tiger",
+     "title": "Elemental",
      "description": "",
-     "src": "pictures/tiger-b.webp?v=20261120",
+     "src": "pictures/zebra-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -47,9 +47,9 @@
     },
     {
      "id": "c",
-     "title": "Champion · Suncrest Tiger",
+     "title": "Champion",
      "description": "",
-     "src": "pictures/tiger-c.webp?v=20261120",
+     "src": "pictures/zebra-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -63,15 +63,15 @@
   },
   {
    "id": "02",
-   "key": "phoenix",
-   "name": "Phoenix",
-   "habitat": "sky",
+   "key": "saiga",
+   "name": "Saiga",
+   "habitat": "",
    "options": [
     {
      "id": "a",
-     "title": "Storybook · Rowan Phoenix",
+     "title": "Storybook",
      "description": "",
-     "src": "pictures/phoenix-a.webp?v=20261120",
+     "src": "pictures/saiga-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -83,9 +83,9 @@
     },
     {
      "id": "b",
-     "title": "Elemental · Dawnfire Phoenix",
+     "title": "Elemental",
      "description": "",
-     "src": "pictures/phoenix-b.webp?v=20261120",
+     "src": "pictures/saiga-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -97,9 +97,9 @@
     },
     {
      "id": "c",
-     "title": "Champion · Sunwarden Phoenix",
+     "title": "Champion",
      "description": "",
-     "src": "pictures/phoenix-c.webp?v=20261120",
+     "src": "pictures/saiga-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -113,15 +113,15 @@
   },
   {
    "id": "03",
-   "key": "octopus",
-   "name": "Octopus",
-   "habitat": "sea",
+   "key": "echidna",
+   "name": "Echidna",
+   "habitat": "",
    "options": [
     {
      "id": "a",
-     "title": "Storybook · Tide Octopus",
+     "title": "Storybook",
      "description": "",
-     "src": "pictures/octopus-a.webp?v=20261120",
+     "src": "pictures/echidna-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -133,9 +133,9 @@
     },
     {
      "id": "b",
-     "title": "Elemental · Moonwave Octopus",
+     "title": "Elemental",
      "description": "",
-     "src": "pictures/octopus-b.webp?v=20261120",
+     "src": "pictures/echidna-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -147,9 +147,9 @@
     },
     {
      "id": "c",
-     "title": "Champion · Reefkeeper Octopus",
+     "title": "Champion",
      "description": "",
-     "src": "pictures/octopus-c.webp?v=20261120",
+     "src": "pictures/echidna-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -163,15 +163,15 @@
   },
   {
    "id": "04",
-   "key": "aardvark",
-   "name": "Aardvark",
-   "habitat": "savanna",
+   "key": "swan",
+   "name": "Swan",
+   "habitat": "",
    "options": [
     {
      "id": "a",
      "title": "Storybook",
      "description": "",
-     "src": "pictures/aardvark-a.webp?v=20261120",
+     "src": "pictures/swan-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -185,7 +185,7 @@
      "id": "b",
      "title": "Elemental",
      "description": "",
-     "src": "pictures/aardvark-b.webp?v=20261120",
+     "src": "pictures/swan-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -199,7 +199,7 @@
      "id": "c",
      "title": "Champion",
      "description": "",
-     "src": "pictures/aardvark-c.webp?v=20261120",
+     "src": "pictures/swan-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -213,15 +213,15 @@
   },
   {
    "id": "05",
-   "key": "bison",
-   "name": "Bison",
-   "habitat": "grassland",
+   "key": "kiwi",
+   "name": "Kiwi",
+   "habitat": "",
    "options": [
     {
      "id": "a",
      "title": "Storybook",
      "description": "",
-     "src": "pictures/bison-a.webp?v=20261120",
+     "src": "pictures/kiwi-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -235,7 +235,7 @@
      "id": "b",
      "title": "Elemental",
      "description": "",
-     "src": "pictures/bison-b.webp?v=20261120",
+     "src": "pictures/kiwi-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -249,7 +249,7 @@
      "id": "c",
      "title": "Champion",
      "description": "",
-     "src": "pictures/bison-c.webp?v=20261120",
+     "src": "pictures/kiwi-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -263,15 +263,15 @@
   },
   {
    "id": "06",
-   "key": "camel",
-   "name": "Camel",
-   "habitat": "desert",
+   "key": "woodpecker",
+   "name": "Woodpecker",
+   "habitat": "",
    "options": [
     {
      "id": "a",
      "title": "Storybook",
      "description": "",
-     "src": "pictures/camel-a.webp?v=20261120",
+     "src": "pictures/woodpecker-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -285,7 +285,7 @@
      "id": "b",
      "title": "Elemental",
      "description": "",
-     "src": "pictures/camel-b.webp?v=20261120",
+     "src": "pictures/woodpecker-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -299,7 +299,7 @@
      "id": "c",
      "title": "Champion",
      "description": "",
-     "src": "pictures/camel-c.webp?v=20261120",
+     "src": "pictures/woodpecker-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -313,15 +313,15 @@
   },
   {
    "id": "07",
-   "key": "nautilus",
-   "name": "Nautilus",
-   "habitat": "sea",
+   "key": "mantis",
+   "name": "Mantis",
+   "habitat": "",
    "options": [
     {
      "id": "a",
      "title": "Storybook",
      "description": "",
-     "src": "pictures/nautilus-a.webp?v=20261120",
+     "src": "pictures/mantis-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -335,7 +335,7 @@
      "id": "b",
      "title": "Elemental",
      "description": "",
-     "src": "pictures/nautilus-b.webp?v=20261120",
+     "src": "pictures/mantis-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -349,7 +349,7 @@
      "id": "c",
      "title": "Champion",
      "description": "",
-     "src": "pictures/nautilus-c.webp?v=20261120",
+     "src": "pictures/mantis-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -363,15 +363,15 @@
   },
   {
    "id": "08",
-   "key": "pelican",
-   "name": "Pelican",
-   "habitat": "coast",
+   "key": "cicada",
+   "name": "Cicada",
+   "habitat": "",
    "options": [
     {
      "id": "a",
      "title": "Storybook",
      "description": "",
-     "src": "pictures/pelican-a.webp?v=20261120",
+     "src": "pictures/cicada-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -385,7 +385,7 @@
      "id": "b",
      "title": "Elemental",
      "description": "",
-     "src": "pictures/pelican-b.webp?v=20261120",
+     "src": "pictures/cicada-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -399,7 +399,7 @@
      "id": "c",
      "title": "Champion",
      "description": "",
-     "src": "pictures/pelican-c.webp?v=20261120",
+     "src": "pictures/cicada-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -413,15 +413,15 @@
   },
   {
    "id": "09",
-   "key": "flying-fish",
-   "name": "Flying Fish",
-   "habitat": "ocean",
+   "key": "dugong",
+   "name": "Dugong",
+   "habitat": "",
    "options": [
     {
      "id": "a",
      "title": "Storybook",
      "description": "",
-     "src": "pictures/flying-fish-a.webp?v=20261120",
+     "src": "pictures/dugong-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -435,7 +435,7 @@
      "id": "b",
      "title": "Elemental",
      "description": "",
-     "src": "pictures/flying-fish-b.webp?v=20261120",
+     "src": "pictures/dugong-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -449,7 +449,7 @@
      "id": "c",
      "title": "Champion",
      "description": "",
-     "src": "pictures/flying-fish-c.webp?v=20261120",
+     "src": "pictures/dugong-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -463,15 +463,15 @@
   },
   {
    "id": "10",
-   "key": "okapi",
-   "name": "Okapi",
-   "habitat": "rainforest",
+   "key": "hammerhead-shark",
+   "name": "Hammerhead Shark",
+   "habitat": "",
    "options": [
     {
      "id": "a",
      "title": "Storybook",
      "description": "",
-     "src": "pictures/okapi-a.webp?v=20261120",
+     "src": "pictures/hammerhead-shark-a.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -485,7 +485,7 @@
      "id": "b",
      "title": "Elemental",
      "description": "",
-     "src": "pictures/okapi-b.webp?v=20261120",
+     "src": "pictures/hammerhead-shark-b.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [
@@ -499,157 +499,7 @@
      "id": "c",
      "title": "Champion",
      "description": "",
-     "src": "pictures/okapi-c.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    }
-   ]
-  },
-  {
-   "id": "11",
-   "key": "cassowary",
-   "name": "Cassowary",
-   "habitat": "rainforest",
-   "options": [
-    {
-     "id": "a",
-     "title": "Storybook",
-     "description": "",
-     "src": "pictures/cassowary-a.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    },
-    {
-     "id": "b",
-     "title": "Elemental",
-     "description": "",
-     "src": "pictures/cassowary-b.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    },
-    {
-     "id": "c",
-     "title": "Champion",
-     "description": "",
-     "src": "pictures/cassowary-c.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    }
-   ]
-  },
-  {
-   "id": "12",
-   "key": "stick-insect",
-   "name": "Stick Insect",
-   "habitat": "forest floor",
-   "options": [
-    {
-     "id": "a",
-     "title": "Storybook",
-     "description": "",
-     "src": "pictures/stick-insect-a.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    },
-    {
-     "id": "b",
-     "title": "Elemental",
-     "description": "",
-     "src": "pictures/stick-insect-b.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    },
-    {
-     "id": "c",
-     "title": "Champion",
-     "description": "",
-     "src": "pictures/stick-insect-c.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    }
-   ]
-  },
-  {
-   "id": "13",
-   "key": "triceratops",
-   "name": "Triceratops",
-   "habitat": "prehistoric",
-   "options": [
-    {
-     "id": "a",
-     "title": "Storybook",
-     "description": "",
-     "src": "pictures/triceratops-a.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    },
-    {
-     "id": "b",
-     "title": "Elemental",
-     "description": "",
-     "src": "pictures/triceratops-b.webp?v=20261120",
-     "width": 900,
-     "height": 900,
-     "crop": [
-      0,
-      0,
-      900,
-      900
-     ]
-    },
-    {
-     "id": "c",
-     "title": "Champion",
-     "description": "",
-     "src": "pictures/triceratops-c.webp?v=20261120",
+     "src": "pictures/hammerhead-shark-c.webp?v=20261121",
      "width": 900,
      "height": 900,
      "crop": [

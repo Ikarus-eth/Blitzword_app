@@ -1,7 +1,7 @@
 (async function () {
   'use strict';
   const Core = window.CreatureVote;
-  const KEY = 'blitzword-new-creatures-20261120-v1';
+  const KEY = 'blitzword-new-creatures-20261121-v1';
   const $ = id => document.getElementById(id);
   const NS = 'http://www.w3.org/2000/svg';
   let catalog, ids, total = 0, state, index = 0, person = 'Artus', memoryOnly = false, serial = 0;
@@ -124,7 +124,7 @@
     renderScores();
   }
   function renderRound() {
-    $('round-number').textContent = 'CREATURE ' + (index + 1) + ' OF ' + catalog.entities.length + ' · ' + entity().habitat.toUpperCase();
+    $('round-number').textContent = 'CREATURE ' + (index + 1) + ' OF ' + catalog.entities.length + (entity().habitat ? ' · ' + entity().habitat.toUpperCase() : '');
     $('round-title').textContent = entity().name;
     $('round-description').textContent = 'A Storybook · B Elemental · C Champion';
     $('jump').value = entity().id;
