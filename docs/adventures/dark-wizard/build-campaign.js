@@ -58,8 +58,9 @@ const missions = story.quests.map((q, i) => {
     riddles: [],
   };
 });
-const campaigns = [7, 8].map(n => ({ id: chapters[n].id, name: chapters[n].name, shortName: chapters[n].shortName, scene: dir + chapters[n].id + '-cover.webp',
-  coverAlt: n === 7 ? 'Grax the dark wizard stands on a black cloud over Grandma’s house; Artus, Pip and Jet look up.' : 'Artus rides Pip in front of Grax’s dark castle on a black island in a stormy sea.',
+// Covers reuse a quest picture (no extra ChatGPT pictures): chapter 7 the black smoke, chapter 8 the final fight.
+const campaigns = [7, 8].map(n => ({ id: chapters[n].id, name: chapters[n].name, shortName: chapters[n].shortName, scene: dir + (n === 7 ? 'dw-storm-b' : 'wf-ring-b') + '.webp',
+  coverAlt: n === 7 ? 'Grax the dark wizard at the window at midnight; black smoke takes Jet.' : 'Pip’s flame breaks Grax’s staff on a black rock in the storm.',
   story: true, intro: chapters[n].intro, ending: chapters[n].ending, prize: chapters[n].prize, missions: missions.filter(m => m.campaign === chapters[n].id).map(m => m.id) }));
 
 const src = `(function(root,factory){const data=factory();if(typeof module==='object'&&module.exports)module.exports=data;else root.BlitzDarkCampaign=data;})(typeof globalThis!=='undefined'?globalThis:this,function(){
@@ -85,4 +86,4 @@ fs.writeFileSync(OUT, src);
 delete require.cache[OUT];
 const data = require(OUT);
 console.log('campaigns', data.campaigns.map(c => c.id + ':' + c.missions.length).join(' '), 'words', data.missions.reduce((n, m) => n + m.mid.words + m.story.words, 0),
-  'targets', data.missions.reduce((n, m) => n + m.targets.length, 0), 'pictures', 2 + data.missions.length * 2);
+  'targets', data.missions.reduce((n, m) => n + m.targets.length, 0), 'pictures', data.missions.length * 2);
