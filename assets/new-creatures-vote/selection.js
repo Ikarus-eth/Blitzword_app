@@ -1,7 +1,7 @@
 (function (root) {
   'use strict';
   // Same decision rules as the October final-look review, with three styles per creature.
-  const REVIEW_ID = 'new-creatures-20261120';
+  const REVIEW_ID = 'new-creatures-20261121';
   const OPTIONS = ['a', 'b', 'c'];
   const PEOPLE = ['Artus', 'Juna'];
   const blank = () => OPTIONS.map(() => null);

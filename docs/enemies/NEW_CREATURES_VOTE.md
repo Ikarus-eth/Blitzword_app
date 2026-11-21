@@ -1,5 +1,13 @@
 # New creatures vote — 19–20 November 2026
 
+## 20 November votes (13 creatures)
+
+Artus's file of 21 Nov 07:07 Bali time is saved as `creature-votes/2026-11-20-votes.json`. Selected looks: Tiger C (Suncrest), Phoenix A (Rowan), Octopus C (Reefkeeper), Aardvark C, Bison B, Camel B, Pelican B, Flying Fish B, Okapi C, Cassowary C, Triceratops B. Excluded by Artus's notes: Stick Insect (unrated, "don't add any") and Nautilus ("don't add any of these", although B scored 3/5). Not yet in the game. A local background-removal test (rembg isnet-general-use) cut the tiger, pelican and okapi out of their pictures cleanly, so the winners need no new images.
+
+## 21 November: batch 3 vote
+
+The page now shows batch 3 from `concepts/ten-creatures-batch3-20261121` (`assets/creature-expansion-batch3-20261121`): Zebra, Saiga, Echidna, Swan, Kiwi, Woodpecker, Mantis (B and C are the repaired `-final` pictures), Cicada, Dugong, Hammerhead Shark. Review id `new-creatures-20261121`, storage key `blitzword-new-creatures-20261121-v1`. Built with `docs/enemies/build-creature-vote.py`. Batch 2 (`concepts/next-ten-creatures-20261120`) has not been voted on yet.
+
 ## Replaced on 20 November 2026: ChatGPT-painted creatures
 
 The 19 November fal.ai sheets did not match the game's art style (too soft and pastel), so that page was replaced at the same address with review id `new-creatures-20261120` (fresh vote storage key `blitzword-new-creatures-20261120-v1`). The user approved ChatGPT's built-in ImageGen pictures instead, one picture per look: 13 creatures × A Storybook / B Elemental / C Champion = 39 pictures.

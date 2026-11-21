@@ -1,278 +1,215 @@
 {
- "method": "Built-in ImageGen (ChatGPT), 1254 px PNG originals on the concept branches; resized to 900 px WebP q84 for the vote page",
+ "method": "Built-in ImageGen (ChatGPT) 1254 px PNG originals on the concept branch; 900 px WebP q84 copies for the vote page",
  "pictures": [
   {
-   "file": "pictures/tiger-a.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/tiger-a.png",
-   "sourceSha256": "b360355a88cbec7c7e4f04d22667eb27060deb2d76058054dc458cabb9cf35b1",
-   "sha256": "8333d3dc920ba4d0f191278120bdab6865c57e5b431a3d5b529e7a09135cf491",
-   "bytes": 125694
+   "file": "pictures/zebra-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/zebra-a.png",
+   "sourceSha256": "befec5fc763cb7a6bf1ae42531855cf5562f09d4ae29246a29ba9b76bb28b757",
+   "sha256": "eb5ab8f7fc9145ab0f483af9f2d3c291abc41f03bf4cd4e344f2130783243381",
+   "bytes": 115318
   },
   {
-   "file": "pictures/tiger-b.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/tiger-b.png",
-   "sourceSha256": "3e5ba9172b73c70405e2df7087f5d07c38b690268def5b8fb121906d8f261fd5",
-   "sha256": "df6e2faaa1ce255a6b9c74245d19223ca6419da8e1a25a8d65b57797bcc7e06d",
-   "bytes": 145974
+   "file": "pictures/zebra-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/zebra-b.png",
+   "sourceSha256": "67b2c39abbda44b69b6007c6fbdc91b1e1ea0db6e1f8d0c9ae47047d34f8b6a1",
+   "sha256": "0a84cef5bb660471e830851cd153ad325d777ea4a7d3a18ea791404291712a29",
+   "bytes": 141514
   },
   {
-   "file": "pictures/tiger-c.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/tiger-c.png",
-   "sourceSha256": "ca44a0fd05a4cb7464338e6d96ca991fe19e3f81c2b830c01aa981132fa20ad1",
-   "sha256": "1e7b3a1c9be52d27e0d299309485cb2f0c6f9453047c8e8f3c51e534e36a4f54",
-   "bytes": 115682
+   "file": "pictures/zebra-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/zebra-c.png",
+   "sourceSha256": "60522844af67646d7fe5e276f11432b0e8a0dfd8ca37884936ce7ad796c2ee9a",
+   "sha256": "f515bfa80e74c21d4f81a54a6f5bebd87c5140774ad2d753f3c294a9bcf452f6",
+   "bytes": 128318
   },
   {
-   "file": "pictures/phoenix-a.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/phoenix-a.png",
-   "sourceSha256": "6280fd8bbca8c982241075d7f6010f0ab47b498a69e918e6e7bd6781c89daa63",
-   "sha256": "b13ca1e79c0dcab58e6b5ba80475a3b95d3604364027ea7c3421d1fe8d56bf68",
-   "bytes": 158728
+   "file": "pictures/saiga-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/saiga-a.png",
+   "sourceSha256": "8568ed6b924b90d3ae2247109c354021c4625f8ccfa168689b8878c026b4b144",
+   "sha256": "264c4cd4330a8d044f4b6294189a54acfc092975886bf5ae6ef5e1aa1417f198",
+   "bytes": 111984
   },
   {
-   "file": "pictures/phoenix-b.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/phoenix-b.png",
-   "sourceSha256": "04692ce84f472401f73dfe909e3a929432697a7a3bcd1540039caaf27d6c5fe6",
-   "sha256": "9f08e18ae37c2af8fdd67fea016c675ea6df128f1c4c71d0f31fe2bff127ce85",
-   "bytes": 146950
+   "file": "pictures/saiga-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/saiga-b.png",
+   "sourceSha256": "2bf01501da46be6801e25137b534bb8b61dd319fe2c5426f37eb048aaeaf69a2",
+   "sha256": "d0f41e3d8dc4540bbbca3e01396781bfa31ae8464277bdc243b635863fb7593a",
+   "bytes": 117574
   },
   {
-   "file": "pictures/phoenix-c.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/phoenix-c.png",
-   "sourceSha256": "5c07ebfe62e9fe9e03f6d88302016e8cca26364827fb2c237b82be80cd37637c",
-   "sha256": "78a3393869b9ebe118a86d836bd588c9ad0da9723c7235b648c893db867fde69",
-   "bytes": 156378
+   "file": "pictures/saiga-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/saiga-c.png",
+   "sourceSha256": "d50b9126d292fb1644a73c88f2ad54913d148c2abaffdbb1449c9a251f3bfb6c",
+   "sha256": "187851b6e95a85f8b1132b8bc65ab7ae4e3b8664fb64701f398241c11ee77883",
+   "bytes": 102972
   },
   {
-   "file": "pictures/octopus-a.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/octopus-a.png",
-   "sourceSha256": "334ef26fde57d3e99802662658815dec51ed00cd3bb7a64346455ff4e51a9a58",
-   "sha256": "e9f78840e868708b3031aecbfdf04fded1932719f5127624df3634df6c3d54b6",
-   "bytes": 152370
+   "file": "pictures/echidna-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/echidna-a.png",
+   "sourceSha256": "5de22052e5b8d82ed9181f05def5b642b8473ef5db83a8c1a5e431a4a01120ab",
+   "sha256": "1e7c326da0c8bb650defe4974550cc654272c02f3db9b00aa6daea1871d9b662",
+   "bytes": 173400
   },
   {
-   "file": "pictures/octopus-b.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/octopus-b.png",
-   "sourceSha256": "7ec5ff864aeb53e068b5503b7cf3b3b86bb910ffed887c3c7ab216cb8b598301",
-   "sha256": "8c6843034264fd1d8c5bc1fd47047c17ca122d1b6afc026be60355460bd989b9",
-   "bytes": 154320
+   "file": "pictures/echidna-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/echidna-b.png",
+   "sourceSha256": "88f8a4b6921a2d28ee3b0ffb92a8b8d0769b70519373b18b324bcbf136af17f6",
+   "sha256": "bcfe418e74a80bee03f2ea49c172315c9fcd24d2f75be5eb9a793b149bf525ff",
+   "bytes": 163190
   },
   {
-   "file": "pictures/octopus-c.webp",
-   "source": "concepts/tiger-phoenix-octopus-20261120:assets/creature-concepts-20261120/octopus-c.png",
-   "sourceSha256": "7e2f83adebc4a79e4eba6fd12533c400665c4ccff5ed5ea0adaca81f56c8b287",
-   "sha256": "33e46e108280402bf6e7c8f0c1eacb112e041764880862c008e42e1811aae0c1",
-   "bytes": 144460
+   "file": "pictures/echidna-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/echidna-c.png",
+   "sourceSha256": "8cb9fa5bcd7e2739f78c83fff55c1516b108fd4ec82ba790d7c1cc2401688b58",
+   "sha256": "1534b814c0c291a8f018d7bc29bb9ded0567a7f2d596ab55d2dcc927e2461e5b",
+   "bytes": 176752
   },
   {
-   "file": "pictures/aardvark-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/aardvark-a.png",
-   "sourceSha256": "a670280ff9c9b16ca7023ea46d348b3a2d6e93300e57dbf7a4443e60ddb2afd9",
-   "sha256": "5c532875353d8e9c19656572a2f83b97924dd151e7a4358a0a098f7ec554d3f8",
-   "bytes": 122464
+   "file": "pictures/swan-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/swan-a.png",
+   "sourceSha256": "5bb9e92d494cc4b249aca96762fb56cff3dfd3b3b524082f154be48f69298e53",
+   "sha256": "6f42858e8c833b4a9610b6c9ae9a4b7ce9b6f0704a2ce277806fbdf18899569a",
+   "bytes": 97782
   },
   {
-   "file": "pictures/aardvark-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/aardvark-b.png",
-   "sourceSha256": "cbe95592dcb7e1fb4f9f656b84c3850280e23fbaca481c80dbbc1fafefc41dcd",
-   "sha256": "4107f3092ddc85cf17946812620f16c29a294c1cf1d24e4cd178e453199418cd",
-   "bytes": 143508
+   "file": "pictures/swan-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/swan-b.png",
+   "sourceSha256": "43ab524a7b0998ebad9c31898bf8dbb635c93afeff35f7409e65b28e918b9ba7",
+   "sha256": "54e855c641dc52825c68fe928560679636c48bcbfabb115694f70d2d6d1632c2",
+   "bytes": 113652
   },
   {
-   "file": "pictures/aardvark-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/aardvark-c.png",
-   "sourceSha256": "cc2c7606da7bd7532e11c7bb9e902a60e2e37ca0c51ad4c08d9ca20aa274a054",
-   "sha256": "00f10a8f8d86b47bbb11c9ef0fd11c728cb820c8b317566d5e1c159db86e27d4",
-   "bytes": 129302
+   "file": "pictures/swan-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/swan-c.png",
+   "sourceSha256": "bed711c29553712c119e5bc9d17847291a4f8384adef13c5e15abee42492ee07",
+   "sha256": "2747e5997e7a23291c2f5df9b07ef30b489724177f497b62b1523ad89b1b3b14",
+   "bytes": 109132
   },
   {
-   "file": "pictures/bison-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/bison-a.png",
-   "sourceSha256": "e963dee580cc9cc40d54480b84ece6ba1613461802ef961191d10ec58df483c7",
-   "sha256": "94821259832f59071adec2c0a3c9e574386942736d4e1e4d644accf0893686ce",
-   "bytes": 115822
+   "file": "pictures/kiwi-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/kiwi-a.png",
+   "sourceSha256": "f29401fd5f14274518c20658b59d624a20ec0275b6acc620ffef4fe592e2836c",
+   "sha256": "5c0ce7667509ce4ea123f6c677ff79c9b38c5ab72f4e0534dabae79f64c5c712",
+   "bytes": 137490
   },
   {
-   "file": "pictures/bison-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/bison-b.png",
-   "sourceSha256": "0fedb7e2bcf984c79060fa06da3f97d00a04e48fcf16f49ea0d998459f8e0dca",
-   "sha256": "5fedc71bb00a12b6dedf0fd094984bcd8764c4dff61f8d8cba5aea4553eddb83",
-   "bytes": 125844
+   "file": "pictures/kiwi-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/kiwi-b.png",
+   "sourceSha256": "8f4f3d9e62362d4c0b330144850d0d16d56a7e6bec15c6fe47c90f9a3f8762c7",
+   "sha256": "880b1c7639bfb1e2a3b73be2dbaf2e530aec340c9bc47435caa9e0ea9754c707",
+   "bytes": 130172
   },
   {
-   "file": "pictures/bison-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/bison-c.png",
-   "sourceSha256": "9440a8f15d212b417eb9be665731aeea05dbf561dbe48e9309c1ec670f9a818e",
-   "sha256": "53fc3ed397b5e0906649c18de8b23cbfaa3084950f2ce67c958f6d91e0b65dd4",
-   "bytes": 132770
+   "file": "pictures/kiwi-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/kiwi-c.png",
+   "sourceSha256": "c3f5a2b0d6793ce1c7fe48e208220aca290c8a2400cc750f1c3e5fe946288611",
+   "sha256": "0fd2500a455df8fe6fa1c801f31a3d770ad71fed77fce0f128ec00a58e05b098",
+   "bytes": 124290
   },
   {
-   "file": "pictures/camel-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/camel-a.png",
-   "sourceSha256": "42d9c8d496cca18500c0208d7f16e01b48b2cadb61d5704a55b6a52ce3a37d24",
-   "sha256": "fa529e91c71705b636b23f4437a2416a4d2f78daedf6b728254ef475b7fef6e2",
-   "bytes": 94006
+   "file": "pictures/woodpecker-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/woodpecker-a.png",
+   "sourceSha256": "3ae793ab85c1860ed96c528e320aa4f5b49585df4dfb6a51cb045174fab651ca",
+   "sha256": "2f69dde409ccd93c522646a3e24959cd32dfb68ca97e6e00a2870a603b9dd728",
+   "bytes": 120176
   },
   {
-   "file": "pictures/camel-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/camel-b.png",
-   "sourceSha256": "4cf59d393ab01c2bfb2e0a5312ab4c6e33964c2edc784e767a83db08744d413f",
-   "sha256": "f35e3153c8b74c24f17db469ecd70d76269ba1cd7f7e7c37c4162413a4148a2c",
-   "bytes": 110108
+   "file": "pictures/woodpecker-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/woodpecker-b.png",
+   "sourceSha256": "bff1f2124f8369f7c94eeffad3400095b4140ab0267a0581285f548620b52fb1",
+   "sha256": "ed11911af1792f33203c748a5db9e574db09f71dd1080edb442c5dcb45b20972",
+   "bytes": 112436
   },
   {
-   "file": "pictures/camel-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/camel-c.png",
-   "sourceSha256": "8d2b71967aee82af9fc6afeb3d2c2469c750e2c299475c197c62c6635203e5aa",
-   "sha256": "577101c16a9c688c9f40490ca3a911ebbb3bde0f23fdabac541446ca18c4d5f2",
-   "bytes": 107296
+   "file": "pictures/woodpecker-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/woodpecker-c.png",
+   "sourceSha256": "bce44bddb86d553c6e7f4e8f8d66ce86c70c97585975dd2659f61752137cde80",
+   "sha256": "6b99df4e6810090b8300c22ad11991a521fef9e4c0bbdeca2ca4fd6b2bff5e95",
+   "bytes": 115804
   },
   {
-   "file": "pictures/nautilus-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/nautilus-a.png",
-   "sourceSha256": "fe074163d6232c3817df0456407d0f7ea94900389a674b55df264c2f5a828133",
-   "sha256": "fd68c76074e1e7c057de23d546a663787fcd1b61b0112de3646a9609ee06d190",
-   "bytes": 122020
+   "file": "pictures/mantis-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/mantis-a.png",
+   "sourceSha256": "878ebe0b13e771d0d5a1fa9ff556b53b85c0c6931cc79530a1fd1e1e163bb6b5",
+   "sha256": "8e17fb74a5a9b12213f7386e1b9eac5dc7444f644380e3a25f231c77b331be0a",
+   "bytes": 114682
   },
   {
-   "file": "pictures/nautilus-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/nautilus-b.png",
-   "sourceSha256": "e0a6795d38afd346b7bd03bb630581c5c80ae1222a7102669e0b43ce9a170bdd",
-   "sha256": "10996eeebf54b48f4247e56d52c1c1562925e1afbd6e4889529d1daf7a21488b",
-   "bytes": 143328
+   "file": "pictures/mantis-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/mantis-b-final.png",
+   "sourceSha256": "a1290668d179e46ec406cee5022c8b53089534d18c1c207aa621f152b9ff94e1",
+   "sha256": "c1a664a1143bfc080cef4ca1cb398bb7b68eacb354788e4274a54a70d629027c",
+   "bytes": 100698
   },
   {
-   "file": "pictures/nautilus-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/nautilus-c.png",
-   "sourceSha256": "fed2afc353b745ca19a5f1b659de9c87e4dddfe068c0b3dda311f873346baa9c",
-   "sha256": "d536b6aa1f291a76d366af358ed066777e8f8063d4b0750eaa10e36cb6face85",
-   "bytes": 126982
+   "file": "pictures/mantis-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/mantis-c-final.png",
+   "sourceSha256": "4f24e96f138e4400d8363aa58c35e68ecf0c66e0ee766d286e6f94e69e303597",
+   "sha256": "f5e77f318cca4750a902b85eefb0873e0342831afe14eac717d5d4745c341b43",
+   "bytes": 85300
   },
   {
-   "file": "pictures/pelican-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/pelican-a.png",
-   "sourceSha256": "d20c554ddb0d7e9c76e4707ad08fec9e4ef317db0be392bdc0cef804d8043aa8",
-   "sha256": "67a7d0089f92ebdecc2c29b2e980ac0218698cfdef6ef9676d878cec4b1cbd5e",
-   "bytes": 102758
+   "file": "pictures/cicada-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/cicada-a.png",
+   "sourceSha256": "ac77a9ddb2b08e62c3ab9c9b8125ce72c5d54eaedbbaaf186964148fe3255044",
+   "sha256": "fa49d89602be1a41f0e151d658e6c0307efe7752f64971d63a3249d3edd8c398",
+   "bytes": 160390
   },
   {
-   "file": "pictures/pelican-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/pelican-b.png",
-   "sourceSha256": "ad056cf1dd91c24a34e1817569194912b0288aab9484a12d7dcebd0fa0d26e91",
-   "sha256": "efffd267b1aad05cd67a24402399d240f0fee6c252655f87c54ca02a9ccbd949",
-   "bytes": 137624
+   "file": "pictures/cicada-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/cicada-b.png",
+   "sourceSha256": "548e8ade7ece96bfe381c0d14cf22b7137780ebcf786215c0925d01927066698",
+   "sha256": "9a1d92946655e54316810826cb4bfe7ddebbb0663fc2e8e9c90e5f18b19356cd",
+   "bytes": 158154
   },
   {
-   "file": "pictures/pelican-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/pelican-c.png",
-   "sourceSha256": "7fd24573de257dde04fae614efbf396fba27bc1610ca1f925256f94b40c1dc5d",
-   "sha256": "4029703d69d64b1087d84d14b48e8091c45ae6d419c83bce686d7cf3c43d06d6",
-   "bytes": 124570
+   "file": "pictures/cicada-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/cicada-c.png",
+   "sourceSha256": "162f7b101c9f192a730ba2c19c5d8c7e01c3b51a302041bb00535a5fa4bdce29",
+   "sha256": "78efab542fb6c8d54cb27e031f8575d3ee12978a6869db27b49caa531525f4a2",
+   "bytes": 131482
   },
   {
-   "file": "pictures/flying-fish-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/flying-fish-a.png",
-   "sourceSha256": "8a08a6d9d9c32d0ea56dedc83d4bd20c3c8d547fb8a374805d5ebbc23655fce5",
-   "sha256": "e2a5dfd9caddc3639549d227886324eaa3b01eba1b1b54e9cc1e4c40692dfb41",
-   "bytes": 124508
+   "file": "pictures/dugong-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/dugong-a.png",
+   "sourceSha256": "1de67a4ee07e941b61576c4617c5fb76e77dd1e82a8312a203db77ad5e4269d2",
+   "sha256": "87a4bec0793b86d2605cd941657f4d4c1b9613f85f6d5f2e8c5eb36ee926f99e",
+   "bytes": 120076
   },
   {
-   "file": "pictures/flying-fish-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/flying-fish-b.png",
-   "sourceSha256": "ff2e44c60d4b933826788846ced11b5369fe0d3f7d325a156b519e368021623e",
-   "sha256": "0e456026a9bd7e69b89154cd369ea28d36ac780d4d41124005d36bfee1497bdd",
-   "bytes": 129558
+   "file": "pictures/dugong-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/dugong-b.png",
+   "sourceSha256": "3c5688fc69ab4eaa2b5bea0d0842a2242f0ec90bd47ba4e437a81b55c5548262",
+   "sha256": "eb2bc0b7dd96051bafca0153c83f131edce6090b2a1509185f7657e82c1bffe3",
+   "bytes": 130152
   },
   {
-   "file": "pictures/flying-fish-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/flying-fish-c.png",
-   "sourceSha256": "8edfd2a68c7eb85483ffe67a670bec8c7ff5286268e479840ad9e8984db8ad59",
-   "sha256": "896501f370928bea7a5d50db04347d35ba7e04586998c3092ca9806250503ad4",
-   "bytes": 111728
+   "file": "pictures/dugong-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/dugong-c.png",
+   "sourceSha256": "811f00228b67c3486d7bb84e41b6863a4ad4575167d2dfd1066b6f8ccda0bc9a",
+   "sha256": "b889279fc9d663957711edeffdee7af539932fcdf16553ccfa5135ad72f28d97",
+   "bytes": 108908
   },
   {
-   "file": "pictures/okapi-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/okapi-a.png",
-   "sourceSha256": "523419911f09b26f3ed27cf4db166dc6091e651977b410025220eec4d0112c16",
-   "sha256": "e482e0e8ad10be4f6701bb4e312d8cf1a3cbfd453f2a0034f2cf5a48d7555dbd",
-   "bytes": 93860
+   "file": "pictures/hammerhead-shark-a.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/hammerhead-shark-a.png",
+   "sourceSha256": "10f88314c1e26eaac48e77e9bd2732d0838c920e470e10acbed9c53bb1d0ea19",
+   "sha256": "0678c8cf52fb26f3dacba70dac6625cf45d0d82b74f1e7d48132b510642bae3b",
+   "bytes": 111012
   },
   {
-   "file": "pictures/okapi-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/okapi-b.png",
-   "sourceSha256": "5c0db3f718152f8af546f6f22354f485f2999d9ce56bc1f778b95d9db34c4ef1",
-   "sha256": "62df1017003af98b4582ff0ece6163b0fe4cb735e6d708efd90ce4a74a73f6e1",
-   "bytes": 97658
+   "file": "pictures/hammerhead-shark-b.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/hammerhead-shark-b.png",
+   "sourceSha256": "10094948c44b60300a5f296fcfe8320416d689303d08add55eccd15d163c5b09",
+   "sha256": "7cf481134901c3a2e994a1895d9021ece29cbf00b2e42618e682c1cbf03330d8",
+   "bytes": 132140
   },
   {
-   "file": "pictures/okapi-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/okapi-c.png",
-   "sourceSha256": "887526680d0fa0f8167c756ffb75256d96d9242b31932c04cde8fb6698de59e0",
-   "sha256": "c773a1ed4c4d1add61ebd8f9c53d66ca1857d08a13f883f36f174fdbafd41959",
-   "bytes": 98132
-  },
-  {
-   "file": "pictures/cassowary-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/cassowary-a.png",
-   "sourceSha256": "58d999e085d184f74671e3f7648eb44e8181424aa7dd667ca5b56d513fc06bdb",
-   "sha256": "5e6cf4e55c9e783b811081122fc39766ab13ed5705d23644c080ffcbeb7e71d1",
-   "bytes": 104570
-  },
-  {
-   "file": "pictures/cassowary-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/cassowary-b.png",
-   "sourceSha256": "f0a9fdc23087c910ffb6ff5d0b2e183c642d8c8cdf404a8890f0d50fd56639ad",
-   "sha256": "76a7a8efa80b73736c2645b8e00b6eb7181ff1827703164e051509f0a916e215",
-   "bytes": 104520
-  },
-  {
-   "file": "pictures/cassowary-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/cassowary-c.png",
-   "sourceSha256": "ac0bc81514fb1296796bf00271860a4b1f09c2a446cb6406cc249676449a11ef",
-   "sha256": "bbecc0ba3704248ddd0ccde70a8ed1db0a73d7d0f590d0919816487d8babf842",
-   "bytes": 106182
-  },
-  {
-   "file": "pictures/stick-insect-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/stick-insect-a.png",
-   "sourceSha256": "7477165f01da2f17f1793a8d4b1f67f9c232d7106c9641fcfc9bc7038f17f0da",
-   "sha256": "9cb00d473d01de6d231faa9b2cc882ccc18f705c8598c4f47614da7dad5c166f",
-   "bytes": 93302
-  },
-  {
-   "file": "pictures/stick-insect-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/stick-insect-b.png",
-   "sourceSha256": "5bc3229be0aff084eff83b09dc9dc12e26d0cbd94d0e0fb3fde2676166526858",
-   "sha256": "5dc6fc309e690f00efc13dea5710f25559b1c780b196eb704bd3f9da1cacd100",
-   "bytes": 76264
-  },
-  {
-   "file": "pictures/stick-insect-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/stick-insect-c.png",
-   "sourceSha256": "1ceebaca496c4fcfd295eb9c00e1b38367df18b1ba4da3f5d929558b53310a6e",
-   "sha256": "9e9aebd24df9f8bf879296faacf88ff2e6d00690ac738a6e5cac901e72130bb0",
-   "bytes": 83744
-  },
-  {
-   "file": "pictures/triceratops-a.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/triceratops-a.png",
-   "sourceSha256": "3e92f950358712566ee831ae97be4736c3f48d8759aa6f83d1a0cf66d2ec6f33",
-   "sha256": "66a98c11fe63fdcc380e25d1bfe2c988df4eb18e20fcc97af372f92a523c205f",
-   "bytes": 124122
-  },
-  {
-   "file": "pictures/triceratops-b.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/triceratops-b.png",
-   "sourceSha256": "a3b32b7badc5d77cf2e8b95af68adfaac742c1c3c57977d591535b8654967f87",
-   "sha256": "7e3e388eff582d34d6b05cdd6f81ae8f31e577f56b6e8369de6e7c28120d8a6f",
-   "bytes": 122496
-  },
-  {
-   "file": "pictures/triceratops-c.webp",
-   "source": "concepts/ten-creatures-20261120:assets/creature-expansion-20261120/triceratops-c.png",
-   "sourceSha256": "d966a242147e14ca7df3e728b4ac1e456a3021ca2f292a89b0681f9c53722416",
-   "sha256": "51ee4a6b8255e93564ac8b1de02e5dc208c0d46ba890e330ce99dfc40b1b66db",
-   "bytes": 128724
+   "file": "pictures/hammerhead-shark-c.webp",
+   "source": "concepts/ten-creatures-batch3-20261121:assets/creature-expansion-batch3-20261121/hammerhead-shark-c.png",
+   "sourceSha256": "a7151388225b7fa5af72a1d7ad60df1d242b5c7c4d59c2de7cab8cdebe7d8096",
+   "sha256": "8a6641cd0d8fc69d80dc3fa5353646c1f72d7b2464f9a86e811a5bfc75292edd",
+   "bytes": 107904
   }
  ]
 }
