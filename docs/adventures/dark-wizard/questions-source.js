@@ -1,0 +1,82 @@
+// [prompt, page, right answer, wrong, wrong] — page is where the answer can be found (1-based).
+// Harder than earlier campaigns (parent, 21 November 2026: “he never gets them wrong”): why, how, feelings,
+// what happened first, and wrong answers that use words from the same page, so finding a word is not enough.
+module.exports = {
+  'dw-storm': {
+    mid: [['Why did Grandma laugh at Jet?', 3, 'He hit the soup, and it went on the floor', 'He was the only flying dragon', 'He told her a funny story'],
+          ['Why did Artus think the sound was the rain?', 5, 'It was night, and the sound was on the roof', 'Grandma said it was the rain', 'Pip was by the window']],
+    end: [['How did Artus know the smoke was magic?', 1, 'It was cold, not hot', 'It was black', 'It came out of Pip’s mouth'],
+          ['Why did Pip’s flame not help Jet?', 4, 'The smoke ate the flame', 'Pip could not make a flame', 'Grax was not near'],
+          ['How did Pip feel at the end of the night?', 6, 'Very sad, because Jet was gone', 'Happy, because the smoke went away', 'Tired, because he ate a lot of soup']],
+  },
+  'dw-trail': {
+    mid: [['What did the farmer say made the land grey?', 3, 'A black cloud that goes over every night', 'The river', 'Too much rain'],
+          ['Why did Grax become bad?', 4, 'He wanted more and more magic', 'Oren was not his friend', 'He lost his castle']],
+    end: [['What can the silver torch do?', 1, 'Show what is true and see through tricks', 'Make a big fire', 'Open every door'],
+          ['Why can’t Gus come on the journey?', 3, 'Grax will see him from a long way away', 'He has to make a cake', 'He is afraid of the sea'],
+          ['What did they see in Oren’s magic water?', 4, 'Jet’s little red light, still bright', 'Grax in the forest', 'A big black dragon']],
+  },
+  'dw-jungle': {
+    mid: [['How did they know which way to go?', 2, 'They followed the black smoke in the sky', 'A bird took them', 'Pip knew the forest'],
+          ['Why did the tiger help them?', 4, 'Grax is its enemy too', 'It wanted their food', 'Artus gave it a spell']],
+    end: [['What is a place like when Grax takes its magic?', 2, 'Grey and cold', 'Very hot', 'Full of water'],
+          ['What did Pip’s fire do to the black river?', 3, 'It made the water clean and blue again', 'It made the water hot to drink', 'It made the river go away'],
+          ['What stopped the smoke creatures first?', 5, 'Artus’s bright white light', 'The okapi’s long legs', 'Pip’s big flame']],
+  },
+  'dw-camp': {
+    mid: [['Why did Artus think the camel was lost?', 2, 'Star camels only walk at night', 'It was purple', 'It was very thirsty'],
+          ['What did Pip say about Jet and the camel?', 3, 'The camel is his best friend, but Jet is his best cousin', 'The camel is better than Jet', 'Jet does not like camels']],
+    end: [['What story did Rook tell them?', 1, 'Grax had him in his castle, and he got away', 'He was lost in the sand', 'He was looking for his dragon'],
+          ['Why did Artus not use the torch on Rook?', 4, 'He wanted to keep it for Grax', 'He did not know how it works', 'Pip said no'],
+          ['What did Artus see in Rook’s hand at night?', 5, 'A black stone that looked green, like Grax’s eyes', 'The silver torch', 'A gold crown']],
+  },
+  'dw-tunnel': {
+    mid: [['Who pushed the big stone?', 2, 'Pip, with his head', 'Rook, with his hands', 'Artus, with a spell'],
+          ['What did Rook do when the tunnel went two ways?', 4, 'He went down at once, with no stop to think', 'He asked Artus which way', 'He went up']],
+    end: [['Why was the triceratops not angry any more?', 3, 'It knew Pip was a fire creature and a friend', 'Rook told it to go away', 'It could not see them'],
+          ['Why was the triceratops in the tunnel?', 4, 'Grax kept it there with a chain', 'It lives by the river of fire', 'It was looking for Jet'],
+          ['What did the triceratops say about Rook?', 5, 'The man with the green eyes is not your friend', 'Rook is very kind', 'Rook knows a better way']],
+  },
+  'dw-trap': {
+    mid: [['What did Pip see about Rook on the bridge?', 2, 'The wind did not make him fall', 'He ran very fast', 'He could fly'],
+          ['How did they get over the hole in the bridge?', 3, 'A pelican made a bridge of water', 'Pip jumped over it', 'Artus made a stone bridge']],
+    end: [['What was in the cage in the long room?', 2, 'Black smoke that looked like a dragon', 'Jet, sleeping', 'A gold crown'],
+          ['Which came first?', 2, 'The door closed behind them', 'Grax laughed', 'Rook said he was sad'],
+          ['Why did Rook help Grax?', 5, 'Grax said he will give him a gold crown', 'Grax was his cousin', 'He was afraid of Pip']],
+  },
+  'wf-room': {
+    mid: [['What did the silver torch show about the smoke?', 2, 'It was only thin grey air', 'It was full of fire', 'It was a cage'],
+          ['Why was Pip angry with Rook?', 4, 'Pip gave him bread and laughed with him, and he took them to Grax', 'Rook ate all the cake', 'Rook made the smoke']],
+    end: [['How did Oren help them?', 2, 'He told them to find the stone that is not real', 'He came to the castle', 'He opened the big door'],
+          ['How did Pip find the right stone?', 3, 'It was cold, like the smoke', 'It was blue', 'It was very big'],
+          ['Why did Artus not believe Grax?', 6, 'Grax’s voice was cold when he said yes about the crown', 'Grax laughed at Rook', 'Grax said nothing']],
+  },
+  'wf-stairs': {
+    mid: [['What does a wind fish do when a storm is coming?', 3, 'It flies', 'It goes under the sea', 'It sleeps'],
+          ['What did Grax have in the room half way up?', 4, 'Birds in small cages', 'Dragon fire', 'Old books']],
+    end: [['Why did Artus use the torch before going to the cage?', 1, 'The last cage was a trick', 'It was dark in the room', 'Jet asked him to'],
+          ['Why was Jet weak and tired?', 2, 'Grax takes his fire from him', 'He flew too much', 'He did not sleep'],
+          ['Who has the key to the cage?', 4, 'Grax, on a black ring', 'Rook, in his coat', 'Jet, under his wing']],
+  },
+  'wf-hall': {
+    mid: [['What did Rook hear Grax say about him?', 2, 'Rook is a silly boy, and he won’t need him', 'Rook is his best friend', 'Rook will get a crown at midnight'],
+          ['What will Grax do at midnight?', 4, 'Put all the dragon fire in his staff', 'Go home', 'Open Jet’s cage']],
+    end: [['How did Grax know about Artus and Pip?', 2, 'He knows everything in his castle', 'Rook told him', 'He saw them on the bridge'],
+          ['What did Grax choose to do when Rook shouted?', 3, 'He did not stop the spell', 'He stopped the spell', 'He ran away'],
+          ['What did Pip say they will never do?', 6, 'Leave a friend', 'Go back to the castle', 'Eat cake again']],
+  },
+  'wf-ring': {
+    mid: [['Why did Pip not like going in the sea?', 3, 'Fire and water are not good friends', 'He could not see', 'The octopus was angry'],
+          ['How did Pip feel at the end?', 5, 'Ready, and not afraid', 'Very afraid', 'Tired and hungry']],
+    end: [['How many times did the silver torch work in all?', 1, 'Three times', 'Two times', 'One time'],
+          ['What came out when the staff broke?', 3, 'The dragon fire, and it went back to Jet', 'More black smoke', 'The black ring'],
+          ['What did they find on the rock?', 6, 'Grax’s black ring', 'Grax’s staff', 'Grax’s coat']],
+  },
+  'wf-home': {
+    mid: [['How was the island different after the storm?', 2, 'It was green, with flowers and birds', 'It was black and cold', 'It was under the sea'],
+          ['What did Artus wish?', 5, 'That Rook could see the green forest', 'That Grax will come back', 'That the camel was his']],
+    end: [['Why did Grandma cry?', 1, 'She was so happy', 'She was very sad', 'The soup was on the floor'],
+          ['Why is Oren worried?', 4, 'The ring still has some of Grax’s magic in it', 'Gus can’t get in the door', 'Pip ate too much cake'],
+          ['What did the ring do at the very end?', 6, 'For a moment, it was green like a cat’s eyes', 'It broke', 'It went back to the rock']],
+  },
+};
