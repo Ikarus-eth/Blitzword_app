@@ -143,6 +143,7 @@
 .storyText{font:clamp(24px,2.3vw,31px)/1.85 var(--reading-font);color:#22362a}
 .storyParagraph{margin:0 0 16px}
 .storyWord{font:inherit;color:inherit;background:none;border:0;border-radius:7px;padding:0 1px;margin:0;line-height:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.stretchWord{text-decoration:underline dotted #9b6a1f;text-decoration-thickness:2px;text-underline-offset:4px}
 .storyWord:active,.storyWord:focus-visible{background:#f2dfa4;outline:2px solid #b8913e;outline-offset:1px}
 .storyTip{font:18px/1.4 var(--reading-font);color:#6b6248;margin:4px 0 12px}
 .storyNav{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}.storyNav .greenButton{font-size:21px;min-height:56px;padding:10px 26px}.storyNav .secondaryButton{font-size:19px;min-height:52px}

@@ -1,7 +1,7 @@
 (function(root,factory){
-  if(typeof module==='object'&&module.exports)module.exports=factory(require('./assets/enemies/approved-20261010/roster.js'),require('./assets/adventures/star-trail/campaign.js'),require('./assets/adventures/thunder-mountain/campaign.js'),require('./assets/adventures/moon-key/campaign.js'),require('./assets/adventures/pip-grows/campaign.js'),require('./assets/adventures/wizard-tower/campaign.js'));
-  else root.BlitzMissions=factory(root.BlitzApprovedEnemies,root.BlitzStarCampaign,root.BlitzThunderCampaign,root.BlitzMoonCampaign,root.BlitzGrowCampaign,root.BlitzTowerCampaign);
-})(typeof globalThis!=='undefined'?globalThis:this,function(Approved,Stars,Thunder,Moon,Grow,Tower){
+  if(typeof module==='object'&&module.exports)module.exports=factory(require('./assets/enemies/approved-20261121/roster.js'),require('./assets/adventures/star-trail/campaign.js'),require('./assets/adventures/thunder-mountain/campaign.js'),require('./assets/adventures/moon-key/campaign.js'),require('./assets/adventures/pip-grows/campaign.js'),require('./assets/adventures/wizard-tower/campaign.js'),require('./assets/adventures/dark-wizard/campaign.js'));
+  else root.BlitzMissions=factory(root.BlitzApprovedEnemies,root.BlitzStarCampaign,root.BlitzThunderCampaign,root.BlitzMoonCampaign,root.BlitzGrowCampaign,root.BlitzTowerCampaign,root.BlitzDarkCampaign);
+})(typeof globalThis!=='undefined'?globalThis:this,function(Approved,Stars,Thunder,Moon,Grow,Tower,Dark){
   'use strict';
   const choice=(id,label,icon='mark',colour=null)=>({id,label,icon,colour});
   const pick=(id,title,text,prompt,labels,answer,hint,explanation,reward,extra={})=>({
@@ -191,6 +191,9 @@
   // Campaign 6, Pip and the Wizard's Tower (14 November 2026), opens after the Moon Key.
   const earlierFamilies=new Set(missions.flatMap(m=>m.families||[]));
   if(Tower){campaigns.push(Tower.campaign);missions.push(...Tower.missions);}
+  // Chapters 7 and 8, Pip and the Dark Wizard (21 November 2026): one story arc, two campaigns, after the Wizard's Tower.
+  const beforeDark=new Set(missions.flatMap(m=>m.families||[]));
+  if(Dark){campaigns.push(...Dark.campaigns);missions.push(...Dark.missions);}
   // Pip Grows Up is a story-only chapter that opens by XP, not by finishing the campaign before it (12 November 2026).
   if(Grow){campaigns.push(Grow.campaign);missions.push(...Grow.missions);}
   const legacyPuzzles=[
@@ -239,6 +242,7 @@
   for(const m of [...(Thunder?.missions||[]),...(Moon?.missions||[])])for(const f of m.families)lore[f]=['Find me in the story quest '+m.name+'.',lore[f][1]];
   // Creatures that first appear in the Wizard's Tower get its quest as their hint; earlier ones keep theirs.
   for(const m of Tower?.missions||[])for(const f of m.families)if(!earlierFamilies.has(f))lore[f]=['Find me in the story quest '+m.name+'.',lore[f][1]];
+  for(const m of Dark?.missions||[])for(const f of m.families)if(!beforeDark.has(f))lore[f]=['Find me in the story quest '+m.name+'.',lore[f][1]];
   for(const m of missions){
     if(m.storyOnly)continue;
     m.art ||= 'assets/adventures/'+m.id+'.webp';
@@ -249,5 +253,5 @@
   }
   const byId=Object.fromEntries(missions.map(m=>[m.id,m]));
   const puzzles=Object.fromEntries([...legacyPuzzles,...missions.flatMap(m=>m.riddles)].map(r=>[r.id,r]));
-  return {version:1,campaigns,missions,byId,puzzles,legacyPuzzles,lore,glossary:{...(Thunder?.glossary||{}),...(Moon?.glossary||{}),...(Grow?.glossary||{}),...(Tower?.glossary||{})}};
+  return {version:1,campaigns,missions,byId,puzzles,legacyPuzzles,lore,glossary:{...(Thunder?.glossary||{}),...(Moon?.glossary||{}),...(Grow?.glossary||{}),...(Tower?.glossary||{}),...(Dark?.glossary||{})}};
 });

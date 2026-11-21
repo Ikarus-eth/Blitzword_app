@@ -5,7 +5,7 @@ const DURATION=1200,IMPACT=660,active=new Set(),cache=new Map();
 let filterSerial=0;
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 const smooth=v=>{v=clamp(v);return v*v*(3-2*v);};
-const approved=typeof module==='object'&&module.exports?require('../enemies/approved-20261010/roster.js'):root.BlitzApprovedEnemies;
+const approved=typeof module==='object'&&module.exports?require('../enemies/approved-20261121/roster.js'):root.BlitzApprovedEnemies;
 const approvedMotion=Object.fromEntries((approved?.entries||[]).map(e=>{
   const a=e.art,[x,y,w,h]=a.view;
   const clips=Object.fromEntries(['attack','hit','defeat','victory'].map(action=>[action,{frames:1,cols:1,perSheet:1,tileW:w,tileH:h,crop:a.view,sheets:[a.source]}]));

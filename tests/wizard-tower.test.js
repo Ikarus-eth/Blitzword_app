@@ -17,7 +17,7 @@ function readAll(s,now=NOW){const st=A.currentStory(s);for(let p=0;p<st.pages.le
 function answerAll(s,now=NOW){let r;for(const q of A.currentStory(s).questions){A.chooseStory(s,'0',q.id);r=C.checkStory(s,now,q.id);assert.equal(r.correct,true);}return r;}
 
 test('Wizard’s Tower: eight story quests after the Moon Key, 64 new curriculum targets, mid and end stories',()=>{
-  const i=D.campaigns.findIndex(c=>c.id==='wizard-tower');assert.equal(i,D.campaigns.filter(c=>!c.growth).length-1);assert.equal(D.campaigns[i-1].id,'moon-key');
+  const i=D.campaigns.findIndex(c=>c.id==='wizard-tower');assert.equal(D.campaigns[i+1].id,'dark-wizard');assert.equal(D.campaigns[i-1].id,'moon-key');
   assert.equal(M.missions.length,8);assert.deepEqual(D.campaigns[i].missions,M.missions.map(m=>m.id));
   const targets=M.missions.flatMap(m=>m.story.targets);assert.equal(targets.length,64);assert.equal(new Set(targets).size,64);
   for(const w of targets)assert.ok(Content.words.some(i=>i.w===w),w);

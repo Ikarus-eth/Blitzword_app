@@ -2,7 +2,7 @@
 (function(root){
 'use strict';
 const data=typeof module!=='undefined'&&module.exports?require('./enemy-art-data'):root.BlitzEnemyArtData;
-const approved=typeof module!=='undefined'&&module.exports?require('./assets/enemies/approved-20261010/roster.js'):root.BlitzApprovedEnemies;
+const approved=typeof module!=='undefined'&&module.exports?require('./assets/enemies/approved-20261121/roster.js'):root.BlitzApprovedEnemies;
 let clipSequence=0;
 function render(id,{stage='adult',prefix=''}={}){
   const key=String(id||'').replace(/--(?:\d+|training)$/,'').replace(/-tier-\d+$/,''),art=data[key];
