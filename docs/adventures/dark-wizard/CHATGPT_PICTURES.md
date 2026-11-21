@@ -1,5 +1,7 @@
 # Pictures for chapters 7 and 8 (Pip and the Dark Wizard) — ChatGPT
 
+> Superseded on 22 November 2026: ChatGPT could not use this format. Use `CHATGPT_PROMPTS.txt` (22 self-contained prompts) with `reference-sheet.png` attached.
+
 22 pictures, one per story part (parent, 21 November 2026: ChatGPT, kept few). The two chapter covers reuse `dw-storm-b` and `wf-ring-b`, so they need no extra pictures.
 
 **How to deliver:** landscape 3:2 (for example 1536 × 1024), PNG or WebP, saved with the exact file names below in `assets/adventures/dark-wizard/` on a new branch (for example `pictures/dark-wizard-20261121`), or uploaded to the chat. Claude converts, checks and wires them in.
