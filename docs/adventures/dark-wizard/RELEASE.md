@@ -19,6 +19,7 @@ Artus’s report of 21 November 2026, 07:02 Bali time: 41,306 XP, 39 of 46 quest
 - Both chapters share one voice set (`voiceSet: 'dark-wizard'`); the reader now uses it for tap-to-hear clips.
 
 ## Release status (27 November 2026)
+- **Deployed and verified.** [PR #266](https://github.com/Ikarus-eth/Blitzword_app/pull/266) merged as `145009b`; [Pages run 45980544492](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/45980544492) succeeded; 119 live files (runtime, campaign, pictures, creatures, George clips, 40 sampled voice clips) match byte for byte ([verification run 45981024186](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/45981024186)). Physical iPad not checked.
 - Chapter 7 is released with its 12 ChatGPT pictures (parent's zip `dark-wizard-ch7.zip`, 1536×1024 PNG → 1248×832 WebP, hashes in `pictures-manifest.json`). Known picture slips: little Jet appears in `dw-trap-a` and `dw-trap-b` although he is captured, and Artus has dark hair in `dw-trap-b`; redo later if wanted.
 - Chapter 8 (5 quests, 10 pictures) is written, voiced and tested, but `build-campaign.js` releases only chapter 7 (`RELEASED = [7]`) until its pictures exist. Wind Fish and Reef Octopus first appear in chapter 8, so they stay locked in the Creature Book until then.
 - Picture prompts that worked: `CHATGPT_BATCHES.txt` (five pictures per message, reference sheet linked).
