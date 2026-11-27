@@ -1,4 +1,4 @@
-name: Verify live chapter 7 release
+name: Verify live creature vote page
 on:
   push:
     branches: [claude/pip-grows-live-check]
@@ -11,18 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 145009b354bb76325db8783d3c47aeda473fda18
-      - name: Compare live files with merge 145009b
+          ref: b5e24fce3b5aa4fd6bdad548b01ac47de08b833c
+      - name: Compare live vote page with merge b5e24fc
         run: |
           B=https://ikarus-eth.github.io/Blitzword_app
           for attempt in $(seq 1 30); do
-            curl -s -o probe "$B/assets/adventures/dark-wizard/campaign.js?cb=$GITHUB_RUN_ID-$attempt"
-            if cmp -s probe assets/adventures/dark-wizard/campaign.js; then echo "live after attempt $attempt"; break; fi
+            curl -s -o probe "$B/assets/new-creatures-vote/catalog.json?cb=$GITHUB_RUN_ID-$attempt"
+            if cmp -s probe assets/new-creatures-vote/catalog.json; then echo "live after attempt $attempt"; break; fi
             sleep 30
           done
           bad=0; n=0
-          files="index.html adventure-ui.js adventures.css content.js missions.js enemy-art.js narration.js assets/battle-motion/runtime.js assets/enemies/approved-20261121/roster.js $(git ls-files assets/adventures/dark-wizard | grep -v '/voice/w-\|/voice/m-\|/voice/q-') $(git ls-files assets/enemies/approved-20261121 assets/narration/november-creatures) $(git ls-files assets/adventures/dark-wizard/voice | shuf -n 40 --random-source=<(yes))"
-          for f in $files; do
+          for f in $(git ls-files assets/new-creatures-vote); do
             n=$((n+1)); code=$(curl -s -o live.bin -w '%{http_code}' "$B/$f?cb=$GITHUB_RUN_ID")
             if [ "$code" = 200 ] && cmp -s live.bin "$f"; then :; else echo "MISMATCH $f ($code)"; bad=$((bad+1)); fi
           done
