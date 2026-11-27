@@ -1,6 +1,6 @@
 ## Chapter 7, Pip and the Dark Wizard — 27 November 2026
 
-**Implemented and tested; deployment pending in this PR.** Six story quests after the Wizard’s Tower (Grax takes Jet; Rook leads Artus and Pip into a trap), 3,856 words, 48 new targets, 30 harder questions, dotted stretch words with tap-to-hear, 12 ChatGPT pictures, Kokoro story voice, and 9 of the 11 creatures Artus chose on 20 November (George names via fal.ai). Chapter 8 is written but waits for its 10 pictures. [Release notes](adventures/dark-wizard/RELEASE.md).
+**Deployed and verified.** [PR #266](https://github.com/Ikarus-eth/Blitzword_app/pull/266) merged as `145009b`; [Pages run 45980544492](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/45980544492) succeeded; 119 live files (runtime, campaign, pictures, creatures, George clips, 40 sampled voice clips) match byte for byte ([verification run 45981024186](https://github.com/Ikarus-eth/Blitzword_app/actions/runs/45981024186)). Physical iPad not checked. Six story quests after the Wizard’s Tower (Grax takes Jet; Rook leads Artus and Pip into a trap), 3,856 words, 48 new targets, 30 harder questions, dotted stretch words with tap-to-hear, 12 ChatGPT pictures, Kokoro story voice, and 9 of the 11 creatures Artus chose on 20 November (George names via fal.ai). Chapter 8 is written but waits for its 10 pictures. [Release notes](adventures/dark-wizard/RELEASE.md).
 
 ## Creature vote: 20 Nov results recorded; batch 3 vote — 21 November 2026
 
