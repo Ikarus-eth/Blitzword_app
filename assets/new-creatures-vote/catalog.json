@@ -510,6 +510,506 @@
      ]
     }
    ]
+  },
+  {
+   "id": "11",
+   "key": "dolphin",
+   "name": "Dolphin",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/dolphin-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/dolphin-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/dolphin-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "12",
+   "key": "swordfish",
+   "name": "Swordfish",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/swordfish-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/swordfish-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/swordfish-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "13",
+   "key": "sea-slug",
+   "name": "Sea Slug",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/sea-slug-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/sea-slug-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/sea-slug-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "14",
+   "key": "starfish",
+   "name": "Starfish",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/starfish-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/starfish-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/starfish-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "15",
+   "key": "puffin",
+   "name": "Puffin",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/puffin-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/puffin-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/puffin-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "16",
+   "key": "cockatoo",
+   "name": "Cockatoo",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/cockatoo-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/cockatoo-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/cockatoo-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "17",
+   "key": "jerboa",
+   "name": "Jerboa",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/jerboa-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/jerboa-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/jerboa-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "18",
+   "key": "skunk",
+   "name": "Skunk",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/skunk-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/skunk-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/skunk-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "19",
+   "key": "hyena",
+   "name": "Hyena",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/hyena-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/hyena-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/hyena-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
+  },
+  {
+   "id": "20",
+   "key": "stegosaurus",
+   "name": "Stegosaurus",
+   "habitat": "",
+   "options": [
+    {
+     "id": "a",
+     "title": "Storybook",
+     "description": "",
+     "src": "pictures/stegosaurus-a.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "b",
+     "title": "Elemental",
+     "description": "",
+     "src": "pictures/stegosaurus-b.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    },
+    {
+     "id": "c",
+     "title": "Champion",
+     "description": "",
+     "src": "pictures/stegosaurus-c.webp?v=20261121",
+     "width": 900,
+     "height": 900,
+     "crop": [
+      0,
+      0,
+      900,
+      900
+     ]
+    }
+   ]
   }
  ]
 }

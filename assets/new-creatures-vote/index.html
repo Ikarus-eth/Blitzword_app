@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#183e32"><meta name="blitzword-art-review" content="new-creatures-20261121-r1">
+<meta name="theme-color" content="#183e32"><meta name="blitzword-art-review" content="new-creatures-20261121-r2">
 <title>BlitzWord · New creatures vote</title>
-<link rel="stylesheet" href="review.css?v=20261121">
-<script src="selection.js?v=20261121" defer></script><script src="review.js?v=20261121" defer></script>
+<link rel="stylesheet" href="review.css?v=20261127">
+<script src="selection.js?v=20261127" defer></script><script src="review.js?v=20261127" defer></script>
 </head>
 <body>
 <header><a class="brand" href="../../">BlitzWord<span>NEW CREATURES VOTE</span></a><div class="tools"><button id="download" disabled>Download votes ↓</button><label class="upload">Restore votes<input id="restore" type="file" accept=".json,application/json" disabled></label></div></header>
 <main>
-<section class="intro"><div><p class="eyebrow">10 NEW CREATURES · THREE STYLES EACH</p><h1>Which look do you like best?</h1><p class="lead">A Storybook · B Elemental · C Champion<br>Give every picture a score from 1 to 5.</p></div><div class="progress-box"><strong id="total-count">0 / 60</strong><span>ratings done</span><progress id="progress" max="60" value="0"></progress></div></section>
+<section class="intro"><div><p class="eyebrow">20 NEW CREATURES · THREE STYLES EACH</p><h1>Which look do you like best?</h1><p class="lead">A Storybook · B Elemental · C Champion<br>Give every picture a score from 1 to 5.</p></div><div class="progress-box"><strong id="total-count">0 / 120</strong><span>ratings done</span><progress id="progress" max="120" value="0"></progress></div></section>
 <details class="rules"><summary>How the votes decide</summary><ol><li>Artus rates all three styles from 1 to 5. His highest rating wins.</li><li>If Artus gives two or three styles the same highest rating, Juna’s highest rating among those decides. If she also ties, the choice stays open.</li><li>If Artus rates all three below 3/5, the creature is left out, even if Juna likes it.</li><li>Unrated styles are not zero. Artus rates all three before a result shows.</li></ol><p>This is a vote on artwork only. The chosen creatures join the game later, in new story quests.</p></details>
 <section class="people-bar" aria-label="Choose who is rating"><div><p class="eyebrow">WHO’S RATING?</p><div id="people"><button disabled>Artus</button><button disabled>Juna</button></div></div><p id="save-status" role="status">Opening the vote…</p></section>
-<section class="round-heading"><div><p class="eyebrow" id="round-number">CREATURE 1 OF 10</p><h2 id="round-title">Loading creatures…</h2><p id="round-description"></p></div><div class="navigation"><label for="jump">Choose creature</label><select id="jump" disabled></select><div><button id="previous" aria-label="Previous creature" disabled>← Previous</button><button id="next-top" aria-label="Next creature" disabled>Next →</button></div></div></section>
+<section class="round-heading"><div><p class="eyebrow" id="round-number">CREATURE 1 OF 20</p><h2 id="round-title">Loading creatures…</h2><p id="round-description"></p></div><div class="navigation"><label for="jump">Choose creature</label><select id="jump" disabled></select><div><button id="previous" aria-label="Previous creature" disabled>← Previous</button><button id="next-top" aria-label="Next creature" disabled>Next →</button></div></div></section>
 <p class="guide"><b>1</b> Not for me · <b>3</b> It’s okay · <b>5</b> Love it <span>Tap a picture to make it big ↗</span></p>
 <p id="decision" class="decision" aria-live="polite">Artus: rate all three styles.</p>
 <section id="cards" class="cards three" aria-label="Three artwork styles"></section>
 <section class="notes"><label id="note-label" for="comment">Artus’s notes</label><textarea id="comment" maxlength="10000" rows="3" placeholder="What do you love? What should change?" disabled></textarea><p id="other-note"></p></section>
 <div class="round-footer"><span id="round-progress"></span><button id="next" class="primary" disabled>Next creature →</button></div>
-<details class="summary"><summary id="summary-title">Vote progress · 10 creatures</summary><p>Selected means a favourite look, not a change to the game yet.</p><div id="results"></div></details>
+<details class="summary"><summary id="summary-title">Vote progress · 20 creatures</summary><p>Selected means a favourite look, not a change to the game yet.</p><div id="results"></div></details>
 <p class="footnote">Votes stay in this browser on this device. When you are done, tap Download votes and send the file to Claude. Restore replaces this page’s votes only. Learner saves are separate.</p>
 </main>
 <dialog id="image-dialog"><button id="close-image" aria-label="Close enlarged artwork">Close ×</button><p class="eyebrow" id="large-label"></p><h2 id="large-title"></h2><div id="large-art"></div></dialog>

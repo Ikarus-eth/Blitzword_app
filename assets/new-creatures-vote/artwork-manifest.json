@@ -210,6 +210,216 @@
    "sourceSha256": "a7151388225b7fa5af72a1d7ad60df1d242b5c7c4d59c2de7cab8cdebe7d8096",
    "sha256": "8a6641cd0d8fc69d80dc3fa5353646c1f72d7b2464f9a86e811a5bfc75292edd",
    "bytes": 107904
+  },
+  {
+   "file": "pictures/dolphin-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/dolphin-a.png",
+   "sourceSha256": "55e413f40fbd91f44f573dd22fcbc3e05c8caec59e481425f1cfceb6dba824c3",
+   "sha256": "67ebbf78e23b774921121dda8c2681df3a834b57d6bed4b9150240e3770fbb4c",
+   "bytes": 134646
+  },
+  {
+   "file": "pictures/dolphin-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/dolphin-b.png",
+   "sourceSha256": "96c962dec357def8d39f7e6aba459761783418850e60699aef3d5a24c8af7b35",
+   "sha256": "ccb800cc18736de574c474c74547743d7c467e85b8f5dfd3db4327e6f81388e6",
+   "bytes": 124066
+  },
+  {
+   "file": "pictures/dolphin-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/dolphin-c.png",
+   "sourceSha256": "b37f9ab414e4590fe6574ce9482ab90518ca8e6fc5fb08b146367ae69f72cc0a",
+   "sha256": "4ff585b01f17c5918cb2ecb76332f61c4b1792b4cc2f132c34ff09e8980b059b",
+   "bytes": 110908
+  },
+  {
+   "file": "pictures/swordfish-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/swordfish-a.png",
+   "sourceSha256": "b31d138715d9f5f2aed2862bf347a7b42d24f614d25ae52616a35e967036183b",
+   "sha256": "b1005322c3c6180fa7e4ab5b9ad6b55794187414c9ade3ab7eac840b74585981",
+   "bytes": 107224
+  },
+  {
+   "file": "pictures/swordfish-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/swordfish-b.png",
+   "sourceSha256": "4056ff7a005acf08e9ed589bb4a793057a2a5bfb48fc2dab9ec755cab535013d",
+   "sha256": "9b3db0a4c58e2389bc9204a08b5c659f7458e694489e666cdaa5ba6aa6238539",
+   "bytes": 117192
+  },
+  {
+   "file": "pictures/swordfish-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/swordfish-c.png",
+   "sourceSha256": "a14172ee2b0a2441c776a7686562fb6c0e515cc117d9397d350f5caabc8607b5",
+   "sha256": "f34ba47669d2b19158849a05a983f0da0b5c807c6bf0929d7c066c9889a05e13",
+   "bytes": 107692
+  },
+  {
+   "file": "pictures/sea-slug-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/sea-slug-a.png",
+   "sourceSha256": "a83950f645926b8f21c7e6a4d6bd62341f844436452e03cba5326abf71b8dfd1",
+   "sha256": "864784ded349827e957f3e804ae742759c7f7e8c4d1d630660a73f3390f98840",
+   "bytes": 107152
+  },
+  {
+   "file": "pictures/sea-slug-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/sea-slug-b.png",
+   "sourceSha256": "871608ed8da9ec955b1450385e1c738842a9cc1eb84c462f25f295d7c3450782",
+   "sha256": "3e1758ecd088f128b5ebc917dd0f240a7507f8653ffa185f737ffcf7f3c772df",
+   "bytes": 147072
+  },
+  {
+   "file": "pictures/sea-slug-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/sea-slug-c.png",
+   "sourceSha256": "fd1cd6910869d01a25f8b3ec56451378eafca567025d158d35525715f3415a70",
+   "sha256": "45bd67880e9bc4be3a0de7d2530e27203ad03359cbbb95848a5fdb0faeb2040a",
+   "bytes": 136110
+  },
+  {
+   "file": "pictures/starfish-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/starfish-a.png",
+   "sourceSha256": "f8323e92e08d9133580d60116d45b451a47249ba234c7180fd8469a058cd4bc6",
+   "sha256": "6d5ff835b9cf33e511a967808f604484aa383d7aa6e891f77c5e5fb66794059f",
+   "bytes": 145948
+  },
+  {
+   "file": "pictures/starfish-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/starfish-b.png",
+   "sourceSha256": "a480b2d8841890b0590e2196d8226dc7ab0eea4e8a61f641775cbadc72088b96",
+   "sha256": "437a245311e7516b1e2cc0519634d65425e71d925e31d39ed2e3d8e4a582a36f",
+   "bytes": 145648
+  },
+  {
+   "file": "pictures/starfish-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/starfish-c.png",
+   "sourceSha256": "1ad8953a6d741cf5bb8ce87dc85325901ddee9b1053a1ed4ebd9d16a79c28e45",
+   "sha256": "023f05d92523f3b64e24d9feb169e207b7874fbbaa8eb0106a9ed86b808ab238",
+   "bytes": 138926
+  },
+  {
+   "file": "pictures/puffin-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/puffin-a.png",
+   "sourceSha256": "fd4859a3dbbda23cdfb6cab4b0d7525628ad1ae7f6f587fa76a398c366dc5f15",
+   "sha256": "f9de6df96a1d765fe46707baf5f63f9cb98ac4ae49b5ad2fe3bb643c37bc3c36",
+   "bytes": 135732
+  },
+  {
+   "file": "pictures/puffin-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/puffin-b.png",
+   "sourceSha256": "f468b507e2943ae4ae86bbe37297b366a8900da64eaf6f48dbca9321670eb5b6",
+   "sha256": "4335c366b33be360373d637542e0b10ba46b0a2a936f4eba35f9eeda504aab89",
+   "bytes": 136750
+  },
+  {
+   "file": "pictures/puffin-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/puffin-c.png",
+   "sourceSha256": "a98b7686131521bd4ad9e112f8c4f4c9dacb97dc18de957b90cba68283de3b96",
+   "sha256": "6ffa8dc30b1e81cc555bbcfb2a46abc036142e367981e7c707005662f80287c3",
+   "bytes": 129324
+  },
+  {
+   "file": "pictures/cockatoo-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/cockatoo-a.png",
+   "sourceSha256": "9fd51d7d3ba64e6b6ff8a3b47978aad6f34adcb9140c99584462a1712a9f1a80",
+   "sha256": "0e8b53a9c80e3764b1e237d668af83e23f47fdc28567c63b6ec34e0cb95d0c11",
+   "bytes": 106402
+  },
+  {
+   "file": "pictures/cockatoo-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/cockatoo-b.png",
+   "sourceSha256": "c02ae9319cc658d1fe1911749a7bffa33573977a9f725c8b5d8f2d4cd0ff8947",
+   "sha256": "cb68d659b533752f22284b7ca532c52f99fd352a2c6e1f4813a530fb12e63028",
+   "bytes": 148596
+  },
+  {
+   "file": "pictures/cockatoo-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/cockatoo-c.png",
+   "sourceSha256": "07143dce8ae3c6a660aabf88f363b54292aef1d5d667ad7795129356ddce9e7b",
+   "sha256": "830686785fbe98fd439696fa0f37fe10c07e20dd28ea951b9c582b591ca373a1",
+   "bytes": 99580
+  },
+  {
+   "file": "pictures/jerboa-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/jerboa-a.png",
+   "sourceSha256": "97f6a589112f361675ea1d2ff3e673f237966eca9251afe31aa78f73c504be50",
+   "sha256": "7369bd9c089fb78d56e9f0944562106a5298e2c97456aa6e572ebcd8422285da",
+   "bytes": 106440
+  },
+  {
+   "file": "pictures/jerboa-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/jerboa-b.png",
+   "sourceSha256": "27224f019835dcfc6348f392773418529d7f6c08414634ab77776b39b5b45e76",
+   "sha256": "0d3d5db60ca04f5847c378b754cc7fca0dc6b5900b41ec1377003adb1e38af59",
+   "bytes": 126766
+  },
+  {
+   "file": "pictures/jerboa-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/jerboa-c.png",
+   "sourceSha256": "5b8776b44d6fd07e658fe37a7018a65be414c107232374ad0f921cc7506fe99c",
+   "sha256": "ac828fb2622a62d01083445d3bd1c05469888d740b67e8e7804a2fa02299a696",
+   "bytes": 128866
+  },
+  {
+   "file": "pictures/skunk-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/skunk-a.png",
+   "sourceSha256": "f03eb4281198475b4b8b788a119a3328fd2af62778c80c8f75fd46814b627bfb",
+   "sha256": "cbcb500d32f29283acab3c89c78a72acf74bf4c1511af079c37697e99f0c3a6e",
+   "bytes": 140384
+  },
+  {
+   "file": "pictures/skunk-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/skunk-b.png",
+   "sourceSha256": "32319f76a773850853b1d67dcf71bdfb163b373c27fb27efc038c579dcacf12a",
+   "sha256": "6a748d8323e813e563156b0eaaa5ab5e52f3340c2cddbd5086fd55f4bc7b106a",
+   "bytes": 136826
+  },
+  {
+   "file": "pictures/skunk-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/skunk-c.png",
+   "sourceSha256": "252323a31cb24269ddfa77ac94ae613724ff5f60162afe7e3151d2478e136792",
+   "sha256": "155914355112b338d8f5cfc77b4b74b45cfb27d4888101dc18585d3437e4cf6c",
+   "bytes": 156502
+  },
+  {
+   "file": "pictures/hyena-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/hyena-a.png",
+   "sourceSha256": "e026635bfaedd04de03f7c43aca932a8d7cd68b647eb4b6d856c5ad57fc9b95c",
+   "sha256": "45ea5a7fa403a771a86b70cf429d5d1f57322994c176faff5bcd4316dd97c72c",
+   "bytes": 140646
+  },
+  {
+   "file": "pictures/hyena-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/hyena-b.png",
+   "sourceSha256": "9dff5aa14b28d97804c7165484d97df4f546afafb6b22d77f9a203845b1af56c",
+   "sha256": "3e2d3e274fd5118c1ceadd93266b67d6961d208e70a93632f086b83b9299083f",
+   "bytes": 162776
+  },
+  {
+   "file": "pictures/hyena-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/hyena-c.png",
+   "sourceSha256": "4ed3b66443da774e43bfe3dca0dd9fb6646ad82027c3780a2f3512f009199518",
+   "sha256": "71da2c35569e7d50c57e49223c9904e3c43991074bc3566a1dbbe2c7aa332e01",
+   "bytes": 117544
+  },
+  {
+   "file": "pictures/stegosaurus-a.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/stegosaurus-a.png",
+   "sourceSha256": "16e2b06b590abfae10968293b0533b90010c40d4147708ea25670d1e5ef5b815",
+   "sha256": "66501ee1637c9532188a6fc0cefca05fd55e30feba142953b36f0a51612f4b02",
+   "bytes": 123022
+  },
+  {
+   "file": "pictures/stegosaurus-b.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/stegosaurus-b.png",
+   "sourceSha256": "23f3e21d05edde9ccf5d824c74815c86d511ff56766237b5ab1ba7fb28af9a67",
+   "sha256": "04587f7fef341238e83f0ca01b9e40c9ae029011256984a1ede280845f656be8",
+   "bytes": 126624
+  },
+  {
+   "file": "pictures/stegosaurus-c.webp",
+   "source": "concepts/next-ten-creatures-20261120:assets/creature-expansion-batch2-20261120/stegosaurus-c.png",
+   "sourceSha256": "47f0bc70d9ce315a7a03ed97ebcfbc62761256c1bee88646b192285b532b0bc3",
+   "sha256": "61ba26544b953226a9323cbbfdead788f5e4c86dac9808e30b180ce424ac679a",
+   "bytes": 141674
   }
  ]
 }

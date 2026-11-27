@@ -32,8 +32,18 @@ test('new creature vote: restore validates and copies', () => {
   assert.throws(() => Core.validate({ version: 1, reviewId: 'enemy-finals-20261010', rounds: {} }, ids));
 });
 
-test('new creature vote: ChatGPT-painted creatures (batch 3), three pictures each, none already in the game', () => {
-  assert.equal(catalog.entities.length, 10);
+test('new creature vote: a save from the 10-creature page keeps its votes when batch 2 is added', () => {
+  const ids = catalog.entities.map(e => e.id), first = ids.slice(0, 10), old = Core.empty(first);
+  old.rounds['03'] = round([5, 2, 1]);
+  const restored = Core.validate(JSON.parse(JSON.stringify(old)), ids);
+  assert.deepEqual(restored.rounds['03'].ratings.Artus, [5, 2, 1]);
+  assert.deepEqual(restored.rounds['15'], Core.emptyRound());
+  assert.deepEqual(Object.keys(restored.rounds).sort(), [...ids].sort());
+});
+
+test('new creature vote: ChatGPT-painted creatures (batches 3 and 2), three pictures each, none already in the game', () => {
+  assert.equal(catalog.entities.length, 20);
+  assert.deepEqual(catalog.entities.slice(0, 10).map(e => e.key), ['zebra', 'saiga', 'echidna', 'swan', 'kiwi', 'woodpecker', 'mantis', 'cicada', 'dugong', 'hammerhead-shark']);
   assert.equal(catalog.reviewId, Core.REVIEW_ID);
   const existing = Object.keys(Missions.lore).map(id => id.split('-').pop());
   const files = new Set();
@@ -48,7 +58,7 @@ test('new creature vote: ChatGPT-painted creatures (batch 3), three pictures eac
       assert.ok(fs.existsSync(path.join(__dirname, '../assets/new-creatures-vote', file)));
     }
   }
-  assert.equal(files.size, 30);
+  assert.equal(files.size, 60);
   const manifest = require('../assets/new-creatures-vote/artwork-manifest.json');
-  assert.equal(manifest.pictures.length, 30);
+  assert.equal(manifest.pictures.length, 60);
 });

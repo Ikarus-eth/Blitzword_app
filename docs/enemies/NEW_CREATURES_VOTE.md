@@ -8,6 +8,10 @@ Artus's file of 21 Nov 07:07 Bali time is saved as `creature-votes/2026-11-20-vo
 
 The page now shows batch 3 from `concepts/ten-creatures-batch3-20261121` (`assets/creature-expansion-batch3-20261121`): Zebra, Saiga, Echidna, Swan, Kiwi, Woodpecker, Mantis (B and C are the repaired `-final` pictures), Cicada, Dugong, Hammerhead Shark. Review id `new-creatures-20261121`, storage key `blitzword-new-creatures-20261121-v1`. Built with `docs/enemies/build-creature-vote.py`. Batch 2 (`concepts/next-ten-creatures-20261120`) has not been voted on yet.
 
+## 27 November: batch 2 added to the same page
+
+Batch 2 from `concepts/next-ten-creatures-20261120` (`assets/creature-expansion-batch2-20261120`) was appended as creatures 11–20: Dolphin, Swordfish, Sea Slug, Starfish, Puffin, Cockatoo, Jerboa, Skunk, Hyena, Stegosaurus. The review id and storage key stay `new-creatures-20261121` / `blitzword-new-creatures-20261121-v1`, and creatures 01–10 keep their ids and byte-identical pictures, so votes already saved on the iPad carry over. `selection.js` now gives creatures missing from an older save an empty round instead of rejecting the save. Rebuild command: the 21 November one plus the ten batch 2 keys (Mantis uses `mantis-a.png,mantis-b-final.png,mantis-c-final.png`).
+
 ## Replaced on 20 November 2026: ChatGPT-painted creatures
 
 The 19 November fal.ai sheets did not match the game's art style (too soft and pastel), so that page was replaced at the same address with review id `new-creatures-20261120` (fresh vote storage key `blitzword-new-creatures-20261120-v1`). The user approved ChatGPT's built-in ImageGen pictures instead, one picture per look: 13 creatures × A Storybook / B Elemental / C Champion = 39 pictures.
