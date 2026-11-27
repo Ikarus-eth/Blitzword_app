@@ -39,7 +39,7 @@
     const out = empty(ids);
     for (const id of ids) {
       const round = raw.rounds[id];
-      if (!round) throw Error('The vote file is missing a creature.');
+      if (!round) continue; // creatures added after this save start unrated
       for (const person of PEOPLE) {
         const scores = round.ratings?.[person], note = round.notes?.[person];
         if (!Array.isArray(scores) || scores.length !== OPTIONS.length || scores.some(n => n !== null && (!Number.isInteger(n) || n < 1 || n > 5))) throw Error('Invalid ratings.');
