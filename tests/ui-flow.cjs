@@ -11,7 +11,7 @@ function boot(saved,options={}){
  const schedule=(fn,ms)=>(jobs.set(++uid,{fn,time:now+ms}),uid);
  window.localStorage=storage;
  window.BlitzEnemyArt=require(root+'enemy-art');
- window.BlitzApprovedEnemies=require(root+'assets/enemies/approved-20261010/roster');
+ window.BlitzApprovedEnemies=require(root+'assets/enemies/approved-20261121/roster');
  if(options.storyVoice)window.BlitzStoryVoice={clips:options.storyVoice};
  window.matchMedia=()=>({matches:!!options.reducedMotion,addEventListener(){},removeEventListener(){}});
  if(options.geometry)window.HTMLElement.prototype.getBoundingClientRect=function(){const r=this.id==='battleHeroImg'?[30,230,270,410]:this.id==='enemyFace'?[680,330,290,290]:this.classList.contains('battlePip')?[280,420,180,190]:[0,0,1024,768];return {left:r[0],top:r[1],width:r[2],height:r[3],right:r[0]+r[2],bottom:r[1]+r[3]};};
@@ -1348,7 +1348,7 @@ console.log('PASS 11 expansion lessons: speech, numbers, capitals, legacy sat an
 {
  const s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
  let ui=boot(s,{adventures:true});ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));
- assert.equal(ui.get('creatureBook').querySelectorAll('.creatureTile').length,65);
+ assert.equal(ui.get('creatureBook').querySelectorAll('.creatureTile').length,76);
  for(const e of Content.newEnemies.filter(e=>!Core.Adventure.findMission(e.id))){ui.click(ui.get('creatureBook').querySelector('[data-family="'+e.id+'"]'));assert.match(ui.get('creatureDetail').textContent,/A future chapter/);assert.ok(![...ui.get('creatureDetail').querySelectorAll('button')].some(b=>b.textContent==='Find this path'||b.textContent==='Choose for my team'));}
  Core.Adventure.reveal(s,'snow-owl',0);s.expedition.book['snow-owl'].studied=true;
  ui=boot(s,{adventures:true,heldNarration:true});ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="snow-owl"]'));
@@ -1363,11 +1363,11 @@ for(const e of Content.newEnemies){
  assert.ok(ui.motionDraws.includes(e.art.source),e.id);assert.equal(ui.state().battle.enemyHealth,3);
  ui.click(ui.get('homeBtn'));assert.equal(ui.document.querySelector('.motionOverlay'),null);assert.equal(ui.state().campaign.battleRecords.length,1);
 }
-console.log('PASS all 45 new enemies render through real battle feedback, score once and cancel on Home');
+console.log('PASS all '+Content.newEnemies.length+' new enemies render through real battle feedback, score once and cancel on Home');
 
 {
  const A=Core.Adventure,s=Core.migrate(Core.fresh());s.profile.name='Reader';s.assessment.done=true;
- let ui=boot(s,{adventures:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,6);assert.ok(tabs[2].disabled);assert.ok(tabs[3].disabled);assert.ok(tabs[4].disabled);assert.ok(tabs[5].disabled);
+ let ui=boot(s,{adventures:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,7);assert.ok(tabs[2].disabled);assert.ok(tabs[3].disabled);assert.ok(tabs[4].disabled);assert.ok(tabs[5].disabled);assert.ok(tabs[6].disabled);
  ui.click(ui.get('adventureHub').querySelector('.bookLauncher'));ui.click(ui.get('creatureBook').querySelector('[data-family="snow-owl"]'));
  assert.match(ui.get('creatureDetail').textContent,/The Letter from the Snow Owl/);ui.click([...ui.get('creatureDetail').querySelectorAll('button')].find(b=>b.textContent==='Find this path'));
  assert.equal(ui.get('adventureHub').querySelectorAll('.missionCard').length,8);assert.ok([...ui.get('adventureHub').querySelectorAll('.missionCard')].every(b=>b.disabled));
@@ -1540,7 +1540,7 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  const A=Core.Adventure,s=Core.migrate(Core.fresh()),now=Date.UTC(2026,10,2);s.profile.name='Reader';s.assessment.done=true;s.dragon.name='Ron';s.dragon.named=true;
  for(const m of A.Data.missions)if(m.campaign!=='thunder-mountain'&&!A.isGrowth(m.id))A.stats(s,m.id).completedAt=new Date(now).toISOString();
  s.expedition.selectedCampaign='thunder-mountain';
- let ui=boot(s,{adventures:true,heldNarration:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,6);assert.ok(!tabs[3].disabled);assert.ok(tabs[4].disabled);assert.ok(tabs[5].disabled);
+ let ui=boot(s,{adventures:true,heldNarration:true});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,7);assert.ok(!tabs[3].disabled);assert.ok(tabs[4].disabled);assert.ok(tabs[5].disabled);assert.ok(tabs[6].disabled);
  assert.match(ui.get('adventureHub').textContent,/0\/6 treasures/);ui.click(ui.get('adventureHub').querySelector('[data-mission="tm-jet-missing"]'));
  assert.match(ui.get('mission').textContent,/A story quest/);assert.equal(ui.get('mission').querySelectorAll('.storyPreviewWord').length,8);
  ui.click(ui.get('mission').querySelector('.storyPreviewWord'));assert.equal(ui.speechTexts.at(-1),'thunder');ui.finishSpeech();
@@ -1588,7 +1588,7 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  for(const m of A.Data.missions)if(m.campaign!=='moon-key'&&!A.isGrowth(m.id))A.stats(s,m.id).completedAt=new Date(now).toISOString();
  s.expedition.selectedCampaign='moon-key';
  const voice={'story:moon-key:w:dark':{file:'assets/adventures/moon-key/voice/w-dark.mp3'},'story:moon-key:m:dark':{file:'m-dark.mp3'},'story:moon-key:w:brave':{file:'w-brave.mp3'},'story:moon-key:q:mk-owl-m1':{file:'q.mp3'}};
- let ui=boot(s,{adventures:true,heldNarration:true,storyVoice:voice});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,6);assert.ok(!tabs[4].disabled);assert.ok(tabs[5].disabled);
+ let ui=boot(s,{adventures:true,heldNarration:true,storyVoice:voice});const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,7);assert.ok(!tabs[4].disabled);assert.ok(tabs[5].disabled);assert.ok(tabs[6].disabled);
  assert.match(ui.get('adventureHub').textContent,/0\/8 treasures/);ui.click(ui.get('adventureHub').querySelector('[data-mission="mk-owl"]'));
  assert.equal(ui.get('mission').querySelectorAll('.storyPreviewWord').length,8);
  ui.click(ui.get('mission').querySelector('.storyPreviewWord'));assert.equal(ui.speechTexts.at(-1),'brave');assert.equal(ui.speechClips.at(-1),'story:moon-key:w:brave');ui.finishSpeech();
@@ -1614,7 +1614,7 @@ console.log('PASS failed expansion illustration retains listening and Continue')
  for(const m of A.Data.missions)if(!A.isGrowth(m.id)&&!['mk-storm','mk-castle','mk-nest','mk-moon'].includes(m.id))A.stats(s,m.id).completedAt=new Date(now).toISOString();
  s.expedition.selectedCampaign='moon-key';Core.startMission(s,'mk-storm',now);Object.assign(s.dragon,{xp:44000,stage:1,evolutionSeen:1,named:true,namingPromptSeen:true});
  let ui=boot(s,{adventures:true,heldNarration:true});
- const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,7);assert.ok(!tabs[6].disabled);
+ const tabs=ui.get('adventureHub').querySelectorAll('.campaignTab');assert.equal(tabs.length,8);assert.ok(!tabs[7].disabled);
  assert.ok(ui.get('growthStart'));assert.ok(ui.get('adventureHub').querySelector('[data-mission="mk-castle"]').disabled);
  ui.click(ui.get('missionResume'));assert.match(ui.get('mission').textContent,/This quest will wait for you/);
  ui.click(ui.get('growthStartQuest'));assert.equal(ui.state().expedition.parked.missionId,'mk-storm');assert.match(ui.get('mission').textContent,/No fights in this story/);

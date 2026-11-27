@@ -39,12 +39,14 @@ const questions = (id, which) => Qs[id][which].map(([prompt, page, ...opts], i) 
 }));
 const chapters = { 7: { id: 'dark-wizard', name: 'Pip and the Dark Wizard', shortName: 'Dark Wizard', prize: 'Rescuer of the Dark Wizard’s Island',
   intro: 'A dark wizard took Jet! Win two fights to learn new words, then read a long story by yourself. Do it twice in every quest.',
-  ending: 'You finished chapter 7! But Rook led you into a trap. Read on in chapter 8.' },
+  ending: 'You finished chapter 7! But Rook led you into a trap. Chapter 8 is coming soon.' },
   8: { id: 'wizard-fall', name: 'Pip and the Wizard’s Fall', shortName: 'Wizard’s Fall', prize: 'Reader of the Wizard’s Fall',
   intro: 'You are in Grax’s trap! Win two fights to learn new words, then read on. Can you rescue Jet?',
   ending: 'You read the whole story by yourself! Jet is home. But is Grax gone for ever?' } };
 
-const missions = story.quests.map((q, i) => {
+// Chapters go live when their pictures exist (27 November 2026: chapter 7 first; chapter 8 waits for its 10 pictures).
+const RELEASED = [7];
+const missions = story.quests.filter(q => RELEASED.includes(q.chapter)).map((q, i) => {
   const m = meta[q.id];
   if (!m) throw new Error('No meta for ' + q.id);
   const c = chapters[q.chapter];
@@ -59,7 +61,7 @@ const missions = story.quests.map((q, i) => {
   };
 });
 // Covers reuse a quest picture (no extra ChatGPT pictures): chapter 7 the black smoke, chapter 8 the final fight.
-const campaigns = [7, 8].map(n => ({ id: chapters[n].id, name: chapters[n].name, shortName: chapters[n].shortName, scene: dir + (n === 7 ? 'dw-storm-b' : 'wf-ring-b') + '.webp',
+const campaigns = RELEASED.map(n => ({ id: chapters[n].id, name: chapters[n].name, shortName: chapters[n].shortName, scene: dir + (n === 7 ? 'dw-storm-b' : 'wf-ring-b') + '.webp',
   coverAlt: n === 7 ? 'Grax the dark wizard at the window at midnight; black smoke takes Jet.' : 'Pip’s flame breaks Grax’s staff on a black rock in the storm.',
   story: true, intro: chapters[n].intro, ending: chapters[n].ending, prize: chapters[n].prize, missions: missions.filter(m => m.campaign === chapters[n].id).map(m => m.id) }));
 

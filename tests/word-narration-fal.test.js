@@ -25,7 +25,7 @@ test('each newly recorded word has a matching receipt and intact MP3',()=>{
   assert.ok(Number.isFinite(clip.duration)&&clip.duration>.2&&clip.duration<20,item.key);
   const bytes=fs.readFileSync(path.join(__dirname,'..',clip.file));assert.equal(hash(bytes),clip.sha256,item.key);assert.equal(r.sha256,clip.sha256);
  }
- const added=new Set([...P.items.map(s=>s.key),...Object.keys(P.aliases),...require('../docs/TEACHING_200_400_AUDIO_REQUEST.json').items.map(i=>i.key)]);
+ const added=new Set([...P.items.map(s=>s.key),...Object.keys(P.aliases),...require('../docs/TEACHING_200_400_AUDIO_REQUEST.json').items.map(i=>i.key),...require('../docs/NARRATION_NOVEMBER_CREATURES_REQUEST.json').items.map(i=>i.key)]);
  const retained=Object.entries(N.clips).filter(([key])=>!added.has(key)).sort(([a],[b])=>a.localeCompare(b));
  assert.equal(retained.length,2416);assert.equal(hash(JSON.stringify(retained)),G.retainedManifestDigest,'every pre-existing clip must remain unchanged');
 });

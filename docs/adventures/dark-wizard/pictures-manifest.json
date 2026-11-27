@@ -1,0 +1,65 @@
+{
+ "source": "ChatGPT image generation, delivered by the parent as dark-wizard-ch7.zip on 27 November 2026; 1536\u00d71024 PNG originals not stored",
+ "pictures": [
+  {
+   "file": "assets/adventures/dark-wizard/dw-camp-a.webp",
+   "sourceSha256": "ba5dc8dd093745c783cfa4b1e63d4e8fc5e67d036ca2f410da6bfe9aac4c8705",
+   "sha256": "b3ce5907d7ae8c2ddce19877dda5c016ab722a44ff6d4603f118fba403749b78"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-camp-b.webp",
+   "sourceSha256": "3e6d2642fffe760bf34ca48f14c44190debc34345783a0820922c7930088749b",
+   "sha256": "fb1be36eb7ae6cc34b47daf405a85983e46ceb60dd63a0a3aa628267d859e916"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-jungle-a.webp",
+   "sourceSha256": "eb4e45375e7e48f98d3b4b91223bb52b0a289c12b4513eb4d3f7b82cf47eff0d",
+   "sha256": "c909dc2f4b1d3626dce9a7c9093d3bb1bfc72210354bb42d7d65159cc04cdaa1"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-jungle-b.webp",
+   "sourceSha256": "7c9dbb6f26197cde694d631be4588c7baf388f66e38edb52d9f58b6b0f13389d",
+   "sha256": "454c60746d0d7d07452bd46f20d57c41500198e52100c9c8c75c6dfd8a054735"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-storm-a.webp",
+   "sourceSha256": "f394c9150092c6ac4e39485f80583cf02f2e9674a7a3d9d54f781d72cf6c8a52",
+   "sha256": "190dfea06e2d047344d3e3b2414e144ce164cc5d0491e6d71b17aac1bad4042a"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-storm-b.webp",
+   "sourceSha256": "9b2b26116d871f33e7a682608e381d906a5620c3f269c445432cef9c2c369a5e",
+   "sha256": "25010077e9448e3aa48e7a8bcd7767cc55d1f347e8498cfdea436c9b07282e10"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-trail-a.webp",
+   "sourceSha256": "fd934aff84a8467ed9f4657844650103749605f9c9f7614d54c624323de11e45",
+   "sha256": "1f12006a144a5527f7884072da95e2a60c2e9796ee0dcb5eec3932d8b23f1579"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-trail-b.webp",
+   "sourceSha256": "0aa6e2b5ab93f68a9b2048309f1eedd6596b5b67390c4f5e0c404c2fa7f7f3e6",
+   "sha256": "d8fe46f2e15ecb7e0e76dc4e88347f6ac4d7bf3b583f370985c85b52bb95e68a"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-trap-a.webp",
+   "sourceSha256": "c5012604c8f12e53efdeeb129ab25977781ac1b471b4f4244ffbb4d8e418fb96",
+   "sha256": "ad637611e9c4ad738b54261f296c3b2bcad86804d2116b1478a9c205b491a9b2"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-trap-b.webp",
+   "sourceSha256": "9901da2b22f79bffb4db572a6e43b33817ecc38d39cda3173bead05b75423b4e",
+   "sha256": "1b8332b9d8343d3783b3f96597f643a0da023853a55798f72ab9c3392da132a7"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-tunnel-a.webp",
+   "sourceSha256": "856c6ebad2e9a7771ae838a28a96669d5b148e13abeeef66f5d88118fbd8a2b4",
+   "sha256": "d9470063bf431825ab00a82b9211fd081f3256bf14609860afecd65fb2187ff2"
+  },
+  {
+   "file": "assets/adventures/dark-wizard/dw-tunnel-b.webp",
+   "sourceSha256": "d63ecff1755004dab9ce948c554c20bdea9d6357f9b43e04c88c2d60579206a6",
+   "sha256": "0e68ea7f93fb588d9058374339e69ee30d33216d238c3d28951a42d39fdd11a6"
+  }
+ ]
+}

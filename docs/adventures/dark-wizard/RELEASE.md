@@ -1,4 +1,4 @@
-# Pip and the Dark Wizard — chapters 7 and 8 (21 November 2026)
+# Pip and the Dark Wizard — chapters 7 and 8 (21 November 2026; chapter 7 released 27 November)
 
 Two story campaigns that form one arc, after the Wizard’s Tower. Rules: [product spec](../../BLITZWORD_PRODUCT_SPEC.md).
 
@@ -17,6 +17,11 @@ Artus’s report of 21 November 2026, 07:02 Bali time: 41,306 XP, 39 of 46 quest
 - Eleven voted creatures (Sun Tiger, Red Phoenix, Reef Octopus, Digger Aardvark, Frost Bison, Star Camel, Wave Pelican, Wind Fish, Guard Okapi, Crest Cassowary, Lava Triceratops): Artus’s chosen ChatGPT pictures cut out locally (rembg isnet-general-use, no redrawing) as 512 × 512 RGBA PNGs in `assets/enemies/approved-20261121/`, registered by a roster that extends the October roster. Each is first met in one of these quests. The okapi faces right.
 - Creature narration: 44 George lines (name, lore, two encounter lines per creature), ElevenLabs Multilingual v2 through fal.ai with the October voice and settings, 1,613 characters ≈ $0.16 at fal’s list price. `scripts/generate-creature-narration-fal.py`, workflow `creature-narration-fal.yml`, receipts in `docs/narration-november-creatures/`. Not yet listened to by a person.
 - Both chapters share one voice set (`voiceSet: 'dark-wizard'`); the reader now uses it for tap-to-hear clips.
+
+## Release status (27 November 2026)
+- Chapter 7 is released with its 12 ChatGPT pictures (parent's zip `dark-wizard-ch7.zip`, 1536×1024 PNG → 1248×832 WebP, hashes in `pictures-manifest.json`). Known picture slips: little Jet appears in `dw-trap-a` and `dw-trap-b` although he is captured, and Artus has dark hair in `dw-trap-b`; redo later if wanted.
+- Chapter 8 (5 quests, 10 pictures) is written, voiced and tested, but `build-campaign.js` releases only chapter 7 (`RELEASED = [7]`) until its pictures exist. Wind Fish and Reef Octopus first appear in chapter 8, so they stay locked in the Creature Book until then.
+- Picture prompts that worked: `CHATGPT_BATCHES.txt` (five pictures per message, reference sheet linked).
 
 ## Files
 `story-source.js`, `questions-source.js`, `glossary-source.js` → `build-campaign.js` → `assets/adventures/dark-wizard/campaign.js`. `make-voice-request.js` → `voice-request.json` (Kokoro af_heart, free, 1,089 clips). `CHATGPT_PICTURES.md` lists the 22 pictures (one per story part; covers reuse two of them); `add-pictures.py` converts delivered pictures.

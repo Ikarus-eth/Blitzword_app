@@ -21,7 +21,7 @@ test('397 new files match retained paid receipts and every pre-existing recordin
  // Compare the historical batch after restoring the explicitly superseded ate entry.
  const historical={...N.clips,ate:require('../docs/NARRATION_WORDS_FAL_GENERATION.json').clips.ate};
  assert.deepEqual(N.clips.ate,N.clips.eight);
- const old=Object.entries(historical).filter(([k,c])=>!c.file.includes('teach-200-400-')).sort(([a],[b])=>a.localeCompare(b));assert.equal(old.length,3092);assert.equal(crypto.createHash('sha256').update(JSON.stringify(old)).digest('hex'),g.retainedManifestDigest);
+ const old=Object.entries(historical).filter(([k,c])=>!c.file.includes('teach-200-400-')&&!c.file.includes('november-creatures/')).sort(([a],[b])=>a.localeCompare(b));assert.equal(old.length,3092);assert.equal(crypto.createHash('sha256').update(JSON.stringify(old)).digest('hex'),g.retainedManifestDigest);
 });
 test('Pages packages the new runtime and the review page never loads learner storage',()=>{
  assert.match(fs.readFileSync(path.join(root,'.github/workflows/pages.yml'),'utf8'),/cp -R assets _site\/assets/);

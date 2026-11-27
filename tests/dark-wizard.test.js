@@ -16,15 +16,17 @@ function win(s,now=NOW){
 function readAll(s,now=NOW){const st=A.currentStory(s);for(let p=0;p<st.pages.length;p++)assert.equal(A.turnStoryPage(s,p),true);return C.finishStoryReading(s,now,()=>0.3);}
 function answerAll(s,now=NOW){let r;for(const q of A.currentStory(s).questions){A.chooseStory(s,'0',q.id);r=C.checkStory(s,now,q.id);assert.equal(r.correct,true);}return r;}
 
-test('Dark Wizard: two chapters after the Wizard’s Tower, eleven quests, new curriculum targets, longer stories',()=>{
-  const i=D.campaigns.findIndex(c=>c.id==='dark-wizard');assert.equal(D.campaigns[i-1].id,'wizard-tower');assert.equal(D.campaigns[i+1].id,'wizard-fall');
-  assert.deepEqual(M.campaigns.map(c=>c.missions.length),[6,5]);
-  const targets=M.missions.flatMap(m=>m.story.targets);assert.equal(new Set(targets).size,targets.length);assert.ok(targets.length>=80);
+// Chapter 7 is released first (27 November 2026); chapter 8 joins when its pictures exist.
+const CH8=M.campaigns.some(c=>c.id==='wizard-fall');
+test('Dark Wizard: chapter 7 (and 8 when released) after the Wizard’s Tower, new curriculum targets, longer stories',()=>{
+  const i=D.campaigns.findIndex(c=>c.id==='dark-wizard');assert.equal(D.campaigns[i-1].id,'wizard-tower');if(CH8)assert.equal(D.campaigns[i+1].id,'wizard-fall');
+  assert.deepEqual(M.campaigns.map(c=>c.missions.length),CH8?[6,5]:[6]);
+  const targets=M.missions.flatMap(m=>m.story.targets);assert.equal(new Set(targets).size,targets.length);assert.ok(targets.length>=(CH8?80:45));
   for(const w of targets)assert.ok(Content.words.some(i=>i.w===w),w);
   const earlier=D.missions.filter(m=>!ids.has(m.id)).flatMap(m=>m.targets||m.story?.targets||[]);
   for(const w of targets)assert.ok(!earlier.includes(w),'already taught: '+w);
   const s=fresh();delete s.expedition.missions['wt-light'];assert.equal(A.unlocked(s,'dw-storm'),false);
-  A.stats(s,'wt-light').completedAt=new Date(NOW).toISOString();assert.equal(A.unlocked(s,'dw-storm'),true);assert.equal(A.unlocked(s,'dw-trail'),false);assert.equal(A.unlocked(s,'wf-room'),false);
+  A.stats(s,'wt-light').completedAt=new Date(NOW).toISOString();assert.equal(A.unlocked(s,'dw-storm'),true);assert.equal(A.unlocked(s,'dw-trail'),false);if(CH8)assert.equal(A.unlocked(s,'wf-room'),false);
   let total=0;const qids=new Set();
   for(const m of M.missions){
     assert.equal(m.riddles.length,0);assert.deepEqual(m.stories,[m.mid,m.story]);assert.equal(m.voiceSet,'dark-wizard');
@@ -34,7 +36,7 @@ test('Dark Wizard: two chapters after the Wizard’s Tower, eleven quests, new c
     for(const st of m.stories)for(const q of st.questions){qids.add(q.id);assert.equal(new Set(q.options.map(o=>o.id)).size,3);assert.ok(q.options.some(o=>o.id===q.answer));assert.ok(q.page>=1&&q.page<=st.pages.length);}
     for(const f of m.families)assert.ok(Content.creatures.some(e=>e.id===f),f);
   }
-  assert.ok(total>=6500,String(total));assert.equal(qids.size,55);
+  assert.ok(total>=(CH8?6500:3500),String(total));assert.equal(qids.size,CH8?55:30);
 });
 test('Dark Wizard: every word is a name, a pre-taught target, a curriculum word or a listed story word',()=>{
   const curriculum=new Set(Content.words.map(i=>i.w.toLowerCase())),known=new Set([...NAMES,...EXTRA]);
@@ -60,7 +62,7 @@ test('Dark Wizard: every story word can be heard and every content word has a si
   for(const m of M.missions)for(const p of m.stories.flatMap(st=>st.pages.flat()))for(const w of words(p)){const k=readerKey(w);if(fn.has(k))continue;assert.ok(D.glossary[k],m.id+': '+k);}
   for(const [w,[meaning,parts]] of Object.entries(M.glossary)){assert.ok(meaning.length>5,w);if(parts)assert.equal(parts.replace(/\|/g,'').toLowerCase(),w.replace(/'/g,''));}
 });
-test('Dark Wizard: both chapters play through fight, fight, story, fight, fight, story and survive saves',()=>{
+test('Dark Wizard: the released chapters play through fight, fight, story, fight, fight, story and survive saves',()=>{
   let s=fresh(),now=NOW;
   for(const id of M.missions.map(m=>m.id)){
     assert.equal(C.startMission(s,id,now),true,id);
@@ -70,13 +72,14 @@ test('Dark Wizard: both chapters play through fight, fight, story, fight, fight,
     assert.equal(A.story(s).which,1);readAll(s,now);assert.equal(answerAll(s,now).storyDone,'end');
     s=C.migrate(JSON.parse(JSON.stringify(s)));
   }
-  assert.equal(A.campaignComplete(s,'dark-wizard'),true);assert.equal(A.campaignComplete(s,'wizard-fall'),true);
+  assert.equal(A.campaignComplete(s,'dark-wizard'),true);if(CH8)assert.equal(A.campaignComplete(s,'wizard-fall'),true);
 });
-test('Dark Wizard: the eleven voted creatures are cut-outs, each first met in one of these quests, and keep identity in saves',()=>{
+test('Dark Wizard: the eleven voted creatures are cut-outs, placed ones are first met in these quests, and all keep identity in saves',()=>{
   assert.equal(R.november.length,11);
-  for(const e of R.november){
+  const placed=R.november.filter(e=>M.missions.some(m=>m.families.includes(e.id)));assert.equal(placed.length,CH8?11:9);
+  for(const e of R.november){const isPlaced=placed.includes(e);
     const png=fs.readFileSync(path.join(__dirname,'..',e.art.source));assert.equal(png.readUInt32BE(16),512);assert.equal(png.readUInt32BE(20),512);assert.equal(png[25],6,'RGBA image');
-    assert.ok(M.missions.some(m=>m.families.includes(e.id)),e.id);assert.match(D.lore[e.id][0],/^Find me in the story quest /);
+    if(isPlaced)assert.match(D.lore[e.id][0],/^Find me in the story quest /);
     assert.match(Art.render(e.id,{stage:'adult'}),/<image/);
     let s=C.migrate(C.fresh());s.assessment.done=true;C.startBattle(s,0,{strength:e.minHealth,enemyId:e.id});s=C.migrate(JSON.parse(JSON.stringify(s)));assert.equal(s.battle.enemyId,e.id);
   }
