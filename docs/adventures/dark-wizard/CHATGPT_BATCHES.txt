@@ -1,0 +1,68 @@
+===== BATCH 1 of 5 =====
+Use this reference sheet for style and characters: https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/dark-wizard-arc/docs/adventures/dark-wizard/reference-sheet.png
+Make 5 separate landscape 3:2 picture-book paintings for a 7-year-old, one after another, in the warm painted style of the sheet. Keep Artus, Pip (big orange dragon), Jet (small red dragon), Grandma (old pink dragon), Oren and Gus exactly as on the sheet. Grax: tall thin dark wizard, long black coat, green cat eyes. Rook: thin nervous young man, old grey coat. No text in the pictures. Give each picture the file name shown.
+
+dw-storm-a — Night in Grandma's cosy cottage by the fire. Little Jet flies fast near the wooden roof beams; soup has splashed on the floor; Grandma laughs; Artus and big Pip laugh too. Window with a big moon.
+
+dw-storm-b — Midnight. Grax stands in the open bedroom window in his black coat, green eyes shining, one hand raised. Black smoke forms a ball around little Jet, who beats his wings inside it. Pip breathes a flame at it; Artus in nightclothes and his red scarf points a light spell.
+
+dw-trail-a — Oren's tall stone tower at sunset. Inside, old Oren shows a big open book to Artus; Pip listens sadly; Gus the giant looks in through a big window.
+
+dw-trail-b — Top of Oren's tower: Oren and Artus look into a big bowl of magic water showing a black island with a dark castle; Artus holds a small silver torch.
+
+dw-jungle-a — A wild green forest of huge trees and vines. A huge orange tiger with a green cape on its back steps onto the path; Artus rides Pip, both stop in surprise. A line of black smoke in the sky above the trees.
+
+
+===== BATCH 2 of 5 =====
+Use this reference sheet for style and characters: https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/dark-wizard-arc/docs/adventures/dark-wizard/reference-sheet.png
+Make 5 separate landscape 3:2 picture-book paintings for a 7-year-old, one after another, in the warm painted style of the sheet. Keep Artus, Pip (big orange dragon), Jet (small red dragon), Grandma (old pink dragon), Oren and Gus exactly as on the sheet. Grax: tall thin dark wizard, long black coat, green cat eyes. Rook: thin nervous young man, old grey coat. No text in the pictures. Give each picture the file name shown.
+
+dw-jungle-b — A grey, leafless part of the forest. Three huge grey creatures made of smoke and stone with green eyes; Artus holds up bright white light, Pip breathes fire, the tiger leaps, and an okapi with striped legs kicks.
+
+dw-camp-a — Night in the sand dunes. A small camp: Artus's little tent and Pip's fire by a small lake with three trees. A purple star camel with tiny glowing stars in its coat stands nearby; the starry sky.
+
+dw-camp-b — Morning at the camp. Rook, thin and tired in his grey coat, sits by the fire telling a funny story; Pip laughs with bread in his claws; Artus watches Rook, unsure. The fire mountain smokes far away.
+
+dw-tunnel-a — The side of a black fire mountain. Pip pushes a huge round stone with his head to show a dark tunnel; Rook points the way; Artus holds a little light in his hand.
+
+dw-tunnel-b — A huge red cave with a river of glowing fire. A brown triceratops with three glowing hot horns and a broken black chain on one back leg touches noses gently with Pip; Artus and Rook watch.
+
+
+===== BATCH 3 of 5 =====
+Use this reference sheet for style and characters: https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/dark-wizard-arc/docs/adventures/dark-wizard/reference-sheet.png
+Make 5 separate landscape 3:2 picture-book paintings for a 7-year-old, one after another, in the warm painted style of the sheet. Keep Artus, Pip (big orange dragon), Jet (small red dragon), Grandma (old pink dragon), Oren and Gus exactly as on the sheet. Grax: tall thin dark wizard, long black coat, green cat eyes. Rook: thin nervous young man, old grey coat. No text in the pictures. Give each picture the file name shown.
+
+dw-trap-a — A long old stone bridge over a stormy grey sea to a black island with a dark castle. Stones fall from the bridge; a huge white pelican with blue wings makes a bridge of water over the hole; Pip runs over it with Artus on his back; Rook ahead.
+
+dw-trap-b — A long dark stone room with no windows. A cage at the end holds a dragon made only of black smoke. The door is shut; Grax laughs by it; Rook looks down at the floor; Pip glares at Rook; Artus reaches into his bag. Black smoke rises from the walls.
+
+wf-room-a — The dark trap room. Artus holds up the silver torch; its silver light turns the black smoke into thin grey air; Pip sits on the floor, tired and angry.
+
+wf-room-b — In the trap room, one stone low in the wall glows blue; Pip pushes it with his head and a small secret door opens on old stone stairs going up into the dark; Artus kneels beside him.
+
+wf-stairs-a — Narrow old stone stairs inside the tower. A small window shows a stormy sea; a blue wind fish with long bright fins like wings flies at the window. Pip squeezes up the stairs; Artus with a light in his hand.
+
+
+===== BATCH 4 of 5 =====
+Use this reference sheet for style and characters: https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/dark-wizard-arc/docs/adventures/dark-wizard/reference-sheet.png
+Make 5 separate landscape 3:2 picture-book paintings for a 7-year-old, one after another, in the warm painted style of the sheet. Keep Artus, Pip (big orange dragon), Jet (small red dragon), Grandma (old pink dragon), Oren and Gus exactly as on the sheet. Grax: tall thin dark wizard, long black coat, green cat eyes. Rook: thin nervous young man, old grey coat. No text in the pictures. Give each picture the file name shown.
+
+wf-stairs-b — A round room at the top of the tower. Little Jet, weak and tired, is in a black cage; next to it a glass ball full of red and gold fire. Pip presses his face to the cage; Jet smiles a little; Artus holds the silver torch.
+
+wf-hall-a — A small dark stair landing. Rook, sad and serious, holds out a small paper map of the castle to Artus; Pip watches carefully.
+
+wf-hall-b — Pip runs very fast out of a huge dark hall with Artus on his back, through falling stones and grey dust; behind them, far back and small, Grax with his black staff glowing with red and gold light. Show only the escape.
+
+wf-ring-a — A stormy sea. A huge green and blue octopus with a coral crown and gold rings on its arms carries Pip and Artus through the waves; black rocks ahead with Grax on the biggest.
+
+wf-ring-b — The final fight on a black sea rock in a storm. Pip breathes a huge red, gold and white flame that cracks Grax's black staff; a river of red and gold light pours out into the sky; Artus holds up the silver torch; lightning.
+
+
+===== BATCH 5 of 5 =====
+Use this reference sheet for style and characters: https://raw.githubusercontent.com/Ikarus-eth/Blitzword_app/claude/dark-wizard-arc/docs/adventures/dark-wizard/reference-sheet.png
+Make 5 separate landscape 3:2 picture-book paintings for a 7-year-old, one after another, in the warm painted style of the sheet. Keep Artus, Pip (big orange dragon), Jet (small red dragon), Grandma (old pink dragon), Oren and Gus exactly as on the sheet. Grax: tall thin dark wizard, long black coat, green cat eyes. Rook: thin nervous young man, old grey coat. No text in the pictures. Give each picture the file name shown.
+
+wf-home-a — Sunny morning: the island is green with flowers. Jet flies happily around Pip and Artus; a red and gold phoenix flies overhead; the octopus, the pelican and the wind fish in the sparkling sea.
+
+wf-home-b — A party at night in Grandma's cottage: a huge cake, soup and bread; Jet on the table, Pip with cake, Grandma happy; Oren holds a small black ring and looks worried; Gus looks in through the window.
+
