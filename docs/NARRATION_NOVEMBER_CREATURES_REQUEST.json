@@ -1,0 +1,325 @@
+{
+ "version": "november-creatures-20261121-r1",
+ "model": "fal-ai/elevenlabs/tts/multilingual-v2",
+ "voice": "JBFqnCBsd6RMkjVDRZzb",
+ "voiceName": "George - Warm, Captivating Storyteller",
+ "settings": {
+  "stability": 0.65,
+  "similarity_boost": 0.8,
+  "style": 0,
+  "speed": 0.9
+ },
+ "note": "Names, lore and encounter lines for the eleven creatures Artus chose on 20 November 2026, in the same George voice and settings as the October creatures (docs/NARRATION_APPROVED_ENEMIES_REQUEST.json). One fal request per line. Parent approved fal.ai on 21 November 2026.",
+ "maxCharacters": 2000,
+ "characters": 1613,
+ "items": [
+  {
+   "id": "sun-tiger-name",
+   "key": "Sun Tiger",
+   "text": "Sun Tiger",
+   "kind": "name",
+   "family": "sun-tiger"
+  },
+  {
+   "id": "sun-tiger-lore",
+   "key": "It wears a green cape and a bronze guard, and it is never afraid.",
+   "text": "It wears a green cape and a bronze guard, and it is never afraid.",
+   "kind": "lore",
+   "family": "sun-tiger"
+  },
+  {
+   "id": "sun-tiger-trail-encounter",
+   "key": "A Sun Tiger is on the path. Ready to battle?",
+   "text": "A Sun Tiger is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "sun-tiger"
+  },
+  {
+   "id": "sun-tiger-mission-encounter",
+   "key": "Sun Tiger is ready. Let’s play.",
+   "text": "Sun Tiger is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "sun-tiger"
+  },
+  {
+   "id": "red-phoenix-name",
+   "key": "Red Phoenix",
+   "text": "Red Phoenix",
+   "kind": "name",
+   "family": "red-phoenix"
+  },
+  {
+   "id": "red-phoenix-lore",
+   "key": "Its red and gold wings are as bright as a fire.",
+   "text": "Its red and gold wings are as bright as a fire.",
+   "kind": "lore",
+   "family": "red-phoenix"
+  },
+  {
+   "id": "red-phoenix-trail-encounter",
+   "key": "A Red Phoenix is on the path. Ready to battle?",
+   "text": "A Red Phoenix is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "red-phoenix"
+  },
+  {
+   "id": "red-phoenix-mission-encounter",
+   "key": "Red Phoenix is ready. Let’s play.",
+   "text": "Red Phoenix is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "red-phoenix"
+  },
+  {
+   "id": "reef-octopus-name",
+   "key": "Reef Octopus",
+   "text": "Reef Octopus",
+   "kind": "name",
+   "family": "reef-octopus"
+  },
+  {
+   "id": "reef-octopus-lore",
+   "key": "It has a coral crown and eight strong arms with gold rings.",
+   "text": "It has a coral crown and eight strong arms with gold rings.",
+   "kind": "lore",
+   "family": "reef-octopus"
+  },
+  {
+   "id": "reef-octopus-trail-encounter",
+   "key": "A Reef Octopus is on the path. Ready to battle?",
+   "text": "A Reef Octopus is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "reef-octopus"
+  },
+  {
+   "id": "reef-octopus-mission-encounter",
+   "key": "Reef Octopus is ready. Let’s play.",
+   "text": "Reef Octopus is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "reef-octopus"
+  },
+  {
+   "id": "digger-aardvark-name",
+   "key": "Digger Aardvark",
+   "text": "Digger Aardvark",
+   "kind": "name",
+   "family": "digger-aardvark"
+  },
+  {
+   "id": "digger-aardvark-lore",
+   "key": "It has a long nose, big ears and a bag for its tools.",
+   "text": "It has a long nose, big ears and a bag for its tools.",
+   "kind": "lore",
+   "family": "digger-aardvark"
+  },
+  {
+   "id": "digger-aardvark-trail-encounter",
+   "key": "A Digger Aardvark is on the path. Ready to battle?",
+   "text": "A Digger Aardvark is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "digger-aardvark"
+  },
+  {
+   "id": "digger-aardvark-mission-encounter",
+   "key": "Digger Aardvark is ready. Let’s play.",
+   "text": "Digger Aardvark is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "digger-aardvark"
+  },
+  {
+   "id": "frost-bison-name",
+   "key": "Frost Bison",
+   "text": "Frost Bison",
+   "kind": "name",
+   "family": "frost-bison"
+  },
+  {
+   "id": "frost-bison-lore",
+   "key": "Its white fur is as cold as snow, and its breath is like ice.",
+   "text": "Its white fur is as cold as snow, and its breath is like ice.",
+   "kind": "lore",
+   "family": "frost-bison"
+  },
+  {
+   "id": "frost-bison-trail-encounter",
+   "key": "A Frost Bison is on the path. Ready to battle?",
+   "text": "A Frost Bison is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "frost-bison"
+  },
+  {
+   "id": "frost-bison-mission-encounter",
+   "key": "Frost Bison is ready. Let’s play.",
+   "text": "Frost Bison is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "frost-bison"
+  },
+  {
+   "id": "star-camel-name",
+   "key": "Star Camel",
+   "text": "Star Camel",
+   "kind": "name",
+   "family": "star-camel"
+  },
+  {
+   "id": "star-camel-lore",
+   "key": "It walks at night, and there are little stars in its coat.",
+   "text": "It walks at night, and there are little stars in its coat.",
+   "kind": "lore",
+   "family": "star-camel"
+  },
+  {
+   "id": "star-camel-trail-encounter",
+   "key": "A Star Camel is on the path. Ready to battle?",
+   "text": "A Star Camel is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "star-camel"
+  },
+  {
+   "id": "star-camel-mission-encounter",
+   "key": "Star Camel is ready. Let’s play.",
+   "text": "Star Camel is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "star-camel"
+  },
+  {
+   "id": "wave-pelican-name",
+   "key": "Wave Pelican",
+   "text": "Wave Pelican",
+   "kind": "name",
+   "family": "wave-pelican"
+  },
+  {
+   "id": "wave-pelican-lore",
+   "key": "It can carry a little sea in its big beak.",
+   "text": "It can carry a little sea in its big beak.",
+   "kind": "lore",
+   "family": "wave-pelican"
+  },
+  {
+   "id": "wave-pelican-trail-encounter",
+   "key": "A Wave Pelican is on the path. Ready to battle?",
+   "text": "A Wave Pelican is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "wave-pelican"
+  },
+  {
+   "id": "wave-pelican-mission-encounter",
+   "key": "Wave Pelican is ready. Let’s play.",
+   "text": "Wave Pelican is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "wave-pelican"
+  },
+  {
+   "id": "wind-fish-name",
+   "key": "Wind Fish",
+   "text": "Wind Fish",
+   "kind": "name",
+   "family": "wind-fish"
+  },
+  {
+   "id": "wind-fish-lore",
+   "key": "It jumps out of the sea and flies on the wind.",
+   "text": "It jumps out of the sea and flies on the wind.",
+   "kind": "lore",
+   "family": "wind-fish"
+  },
+  {
+   "id": "wind-fish-trail-encounter",
+   "key": "A Wind Fish is on the path. Ready to battle?",
+   "text": "A Wind Fish is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "wind-fish"
+  },
+  {
+   "id": "wind-fish-mission-encounter",
+   "key": "Wind Fish is ready. Let’s play.",
+   "text": "Wind Fish is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "wind-fish"
+  },
+  {
+   "id": "guard-okapi-name",
+   "key": "Guard Okapi",
+   "text": "Guard Okapi",
+   "kind": "name",
+   "family": "guard-okapi"
+  },
+  {
+   "id": "guard-okapi-lore",
+   "key": "It has stripes on its legs, and it guards the deep forest.",
+   "text": "It has stripes on its legs, and it guards the deep forest.",
+   "kind": "lore",
+   "family": "guard-okapi"
+  },
+  {
+   "id": "guard-okapi-trail-encounter",
+   "key": "A Guard Okapi is on the path. Ready to battle?",
+   "text": "A Guard Okapi is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "guard-okapi"
+  },
+  {
+   "id": "guard-okapi-mission-encounter",
+   "key": "Guard Okapi is ready. Let’s play.",
+   "text": "Guard Okapi is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "guard-okapi"
+  },
+  {
+   "id": "crest-cassowary-name",
+   "key": "Crest Cassowary",
+   "text": "Crest Cassowary",
+   "kind": "name",
+   "family": "crest-cassowary"
+  },
+  {
+   "id": "crest-cassowary-lore",
+   "key": "It can not fly, but it can run very fast on strong legs.",
+   "text": "It can not fly, but it can run very fast on strong legs.",
+   "kind": "lore",
+   "family": "crest-cassowary"
+  },
+  {
+   "id": "crest-cassowary-trail-encounter",
+   "key": "A Crest Cassowary is on the path. Ready to battle?",
+   "text": "A Crest Cassowary is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "crest-cassowary"
+  },
+  {
+   "id": "crest-cassowary-mission-encounter",
+   "key": "Crest Cassowary is ready. Let’s play.",
+   "text": "Crest Cassowary is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "crest-cassowary"
+  },
+  {
+   "id": "lava-triceratops-name",
+   "key": "Lava Triceratops",
+   "text": "Lava Triceratops",
+   "kind": "name",
+   "family": "lava-triceratops"
+  },
+  {
+   "id": "lava-triceratops-lore",
+   "key": "It has three horns, and they are as hot as fire.",
+   "text": "It has three horns, and they are as hot as fire.",
+   "kind": "lore",
+   "family": "lava-triceratops"
+  },
+  {
+   "id": "lava-triceratops-trail-encounter",
+   "key": "A Lava Triceratops is on the path. Ready to battle?",
+   "text": "A Lava Triceratops is on the path. Ready to battle?",
+   "kind": "trail-encounter",
+   "family": "lava-triceratops"
+  },
+  {
+   "id": "lava-triceratops-mission-encounter",
+   "key": "Lava Triceratops is ready. Let’s play.",
+   "text": "Lava Triceratops is ready. Let’s play.",
+   "kind": "mission-encounter",
+   "family": "lava-triceratops"
+  }
+ ]
+}

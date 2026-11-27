@@ -1,0 +1,4154 @@
+{
+ "model": "whisper small.en",
+ "checked": 550,
+ "matched_in_group": 492,
+ "matched_either": 508,
+ "retake": [
+  {
+   "id": "story:dark-wizard:w:eye",
+   "word": "eye",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:woke",
+   "word": "woke",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:sea",
+   "word": "sea",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:climbed",
+   "word": "climbed",
+   "heard_in_group": "Anything.  Tonight.  Acclaimed.  Great.  Ready.  Weak.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:felt",
+   "word": "felt",
+   "heard_in_group": "Veldt. Midnight. Thing. Everything. Won't. Person.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:ever",
+   "word": "ever",
+   "heard_in_group": "Hit. Broke. Life. Inside. Never. Flying.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:a",
+   "word": "a",
+   "heard_in_group": "Outside. Table. It. Was. They. Cold.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:artus",
+   "word": "Artus",
+   "heard_in_group": "Knight, Artist, Pip, and Jet were",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:no",
+   "word": "no",
+   "heard_in_group": "Over. Trees. Again. Then. Now. Time.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:me",
+   "word": "me",
+   "heard_in_group": "Down. Very. Vast. Look. May. Said.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:i",
+   "word": "i",
+   "heard_in_group": "site a.m. best dragon land you",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:oh",
+   "word": "oh",
+   "heard_in_group": "Though, it looked, as if, that, is, good.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:she",
+   "word": "she",
+   "heard_in_group": "Though, it looked, as if, that, is, good.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:slept",
+   "word": "slept",
+   "heard_in_group": "Got. Into. Warm. Soon. Is left. Quiet.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:sat",
+   "word": "sat",
+   "heard_in_group": "Isat, Isa, Black, Coming, Under, Door",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:saw",
+   "word": "saw",
+   "heard_in_group": "Isat, Isa, Black, Coming, Under, Door",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:mouth",
+   "word": "mouth",
+   "heard_in_group": "Once, mouse, wind, lights, man, tall.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:grax",
+   "word": "Grax",
+   "heard_in_group": "Voice. My. Name. Gracks. What. Want.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:her",
+   "word": "her",
+   "heard_in_group": "Him, sky, cloud, away, mountains, ever.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:face",
+   "word": "face",
+   "heard_in_group": "Vase, white, true, nobody, tell, any.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:know",
+   "word": "know",
+   "heard_in_group": "Now, how, pips, feel, and, morning.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:oren",
+   "word": "Oren",
+   "heard_in_group": "Need. Go. Orin. Nose. Day. Fields.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:knows",
+   "word": "knows",
+   "heard_in_group": "Need. Go. Orin. Nose. Day. Fields.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:ago",
+   "word": "ago",
+   "heard_in_group": "From Ego. Wasn't. Bad. Once. Must.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:wants",
+   "word": "wants",
+   "heard_in_group": "From Ego. Wasn't. Bad. Once. Must.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:be",
+   "word": "be",
+   "heard_in_group": "Through wild, forest, mountain, gabay, braves",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:brave",
+   "word": "brave",
+   "heard_in_group": "Through wild, forest, mountain, gabay, braves",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:each",
+   "word": "each",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:first",
+   "word": "first",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:us",
+   "word": "us",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:artus's",
+   "word": "Artus's",
+   "heard_in_group": "Artuses. Both. Began. Two. Days. Close.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:called",
+   "word": "called",
+   "heard_in_group": "Together, birds, culled, monkeys, leaves, graxes.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:grax's",
+   "word": "Grax's",
+   "heard_in_group": "Together, birds, culled, monkeys, leaves, graxes.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:cage",
+   "word": "cage",
+   "heard_in_group": "Walking. Tired. Rook. Rooks. Care. Hurt.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:seemed",
+   "word": "seemed",
+   "heard_in_group": "Here, secret, take, assumed, such, keep.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:walls",
+   "word": "walls",
+   "heard_in_group": "funny, ground, side, push, lead, whiles",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:keeps",
+   "word": "keeps",
+   "heard_in_group": "noses, chain, heaps, people, last, before.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:air",
+   "word": "air",
+   "heard_in_group": "Give, gold, crown, much, where, there.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:wall",
+   "word": "wall",
+   "heard_in_group": "Open, while, listen, high, low, stairs.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:thinks",
+   "word": "thinks",
+   "heard_in_group": "Thanks, looks, looking, hill, let, worst",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:choose",
+   "word": "choose",
+   "heard_in_group": "Care, leave, Jews, vote, rocks, eight.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:across",
+   "word": "across",
+   "heard_in_group": "Jumping.  Home.  Phoenix.  Fives.  Ecross.  Word.",
+   "match_in_group": false,
+   "match_alone": false
+  }
+ ],
+ "words": [
+  {
+   "id": "story:dark-wizard:w:smoke",
+   "word": "smoke",
+   "heard_in_group": "Smoke, held, flew, ran, laughed, sound",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:held",
+   "word": "held",
+   "heard_in_group": "Smoke, held, flew, ran, laughed, sound",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:flew",
+   "word": "flew",
+   "heard_in_group": "Smoke, held, flew, ran, laughed, sound",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:ran",
+   "word": "ran",
+   "heard_in_group": "Smoke, held, flew, ran, laughed, sound",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:laughed",
+   "word": "laughed",
+   "heard_in_group": "Smoke, held, flew, ran, laughed, sound",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:sound",
+   "word": "sound",
+   "heard_in_group": "Smoke, held, flew, ran, laughed, sound",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:eye",
+   "word": "eye",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:woke",
+   "word": "woke",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:sea",
+   "word": "sea",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:torch",
+   "word": "torch",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:something",
+   "word": "something",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:silver",
+   "word": "silver",
+   "heard_in_group": "Lie, awoke, essay, torch, something, silver.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:whispered",
+   "word": "whispered",
+   "heard_in_group": "Whispered, Journey, Sand, Trick, Tiger, Creature",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:journey",
+   "word": "journey",
+   "heard_in_group": "Whispered, Journey, Sand, Trick, Tiger, Creature",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:sand",
+   "word": "sand",
+   "heard_in_group": "Whispered, Journey, Sand, Trick, Tiger, Creature",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:trick",
+   "word": "trick",
+   "heard_in_group": "Whispered, Journey, Sand, Trick, Tiger, Creature",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tiger",
+   "word": "tiger",
+   "heard_in_group": "Whispered, Journey, Sand, Trick, Tiger, Creature",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:creature",
+   "word": "creature",
+   "heard_in_group": "Whispered, Journey, Sand, Trick, Tiger, Creature",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:walked",
+   "word": "walked",
+   "heard_in_group": "Walked. Huge. Quickly. Flame. Legs. Jumped.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:huge",
+   "word": "huge",
+   "heard_in_group": "Walked. Huge. Quickly. Flame. Legs. Jumped.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:quickly",
+   "word": "quickly",
+   "heard_in_group": "Walked. Huge. Quickly. Flame. Legs. Jumped.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:flame",
+   "word": "flame",
+   "heard_in_group": "Walked. Huge. Quickly. Flame. Legs. Jumped.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:legs",
+   "word": "legs",
+   "heard_in_group": "Walked. Huge. Quickly. Flame. Legs. Jumped.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:jumped",
+   "word": "jumped",
+   "heard_in_group": "Walked. Huge. Quickly. Flame. Legs. Jumped.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tunnel",
+   "word": "tunnel",
+   "heard_in_group": "tunnel, coat, thought, believe, young, later",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:coat",
+   "word": "coat",
+   "heard_in_group": "tunnel, coat, thought, believe, young, later",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:thought",
+   "word": "thought",
+   "heard_in_group": "tunnel, coat, thought, believe, young, later",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:believe",
+   "word": "believe",
+   "heard_in_group": "tunnel, coat, thought, believe, young, later",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:young",
+   "word": "young",
+   "heard_in_group": "tunnel, coat, thought, believe, young, later",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:later",
+   "word": "later",
+   "heard_in_group": "tunnel, coat, thought, believe, young, later",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:drank",
+   "word": "drank",
+   "heard_in_group": "drank, nothing, head, stood, led, pushed",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:nothing",
+   "word": "nothing",
+   "heard_in_group": "drank, nothing, head, stood, led, pushed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:head",
+   "word": "head",
+   "heard_in_group": "drank, nothing, head, stood, led, pushed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:stood",
+   "word": "stood",
+   "heard_in_group": "drank, nothing, head, stood, led, pushed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:led",
+   "word": "led",
+   "heard_in_group": "drank, nothing, head, stood, led, pushed",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:pushed",
+   "word": "pushed",
+   "heard_in_group": "drank, nothing, head, stood, led, pushed",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:heavy",
+   "word": "heavy",
+   "heard_in_group": "Heavy, hard, near, new, bridge, shouted.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hard",
+   "word": "hard",
+   "heard_in_group": "Heavy, hard, near, new, bridge, shouted.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:near",
+   "word": "near",
+   "heard_in_group": "Heavy, hard, near, new, bridge, shouted.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:knew",
+   "word": "knew",
+   "heard_in_group": "Heavy, hard, near, new, bridge, shouted.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:bridge",
+   "word": "bridge",
+   "heard_in_group": "Heavy, hard, near, new, bridge, shouted.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:shouted",
+   "word": "shouted",
+   "heard_in_group": "Heavy, hard, near, new, bridge, shouted.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:fell",
+   "word": "fell",
+   "heard_in_group": "Fell, wanted, moment, floor, opened, gone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:wanted",
+   "word": "wanted",
+   "heard_in_group": "Fell, wanted, moment, floor, opened, gone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:moment",
+   "word": "moment",
+   "heard_in_group": "Fell, wanted, moment, floor, opened, gone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:floor",
+   "word": "floor",
+   "heard_in_group": "Fell, wanted, moment, floor, opened, gone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:opened",
+   "word": "opened",
+   "heard_in_group": "Fell, wanted, moment, floor, opened, gone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:gone",
+   "word": "gone",
+   "heard_in_group": "Fell, wanted, moment, floor, opened, gone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:stair",
+   "word": "stair",
+   "heard_in_group": "A stair, next, closed, smiled, a trap, a reel.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:next",
+   "word": "next",
+   "heard_in_group": "A stair, next, closed, smiled, a trap, a reel.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:closed",
+   "word": "closed",
+   "heard_in_group": "A stair, next, closed, smiled, a trap, a reel.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:smiled",
+   "word": "smiled",
+   "heard_in_group": "A stair, next, closed, smiled, a trap, a reel.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:trap",
+   "word": "trap",
+   "heard_in_group": "A stair, next, closed, smiled, a trap, a reel.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:real",
+   "word": "real",
+   "heard_in_group": "A stair, next, closed, smiled, a trap, a reel.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:anything",
+   "word": "anything",
+   "heard_in_group": "Anything.  Tonight.  Acclaimed.  Great.  Ready.  Weak.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tonight",
+   "word": "tonight",
+   "heard_in_group": "Anything.  Tonight.  Acclaimed.  Great.  Ready.  Weak.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:climbed",
+   "word": "climbed",
+   "heard_in_group": "Anything.  Tonight.  Acclaimed.  Great.  Ready.  Weak.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:great",
+   "word": "great",
+   "heard_in_group": "Anything.  Tonight.  Acclaimed.  Great.  Ready.  Weak.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:ready",
+   "word": "ready",
+   "heard_in_group": "Anything.  Tonight.  Acclaimed.  Great.  Ready.  Weak.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:weak",
+   "word": "weak",
+   "heard_in_group": "Anything.  Tonight.  Acclaimed.  Great.  Ready.  Weak.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:making",
+   "word": "making",
+   "heard_in_group": "making, half, taken, remember, told, lie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:half",
+   "word": "half",
+   "heard_in_group": "making, half, taken, remember, told, lie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:taken",
+   "word": "taken",
+   "heard_in_group": "making, half, taken, remember, told, lie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:remember",
+   "word": "remember",
+   "heard_in_group": "making, half, taken, remember, told, lie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:told",
+   "word": "told",
+   "heard_in_group": "making, half, taken, remember, told, lie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:lie",
+   "word": "lie",
+   "heard_in_group": "making, half, taken, remember, told, lie.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:felt",
+   "word": "felt",
+   "heard_in_group": "Veldt. Midnight. Thing. Everything. Won't. Person.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:midnight",
+   "word": "midnight",
+   "heard_in_group": "Veldt. Midnight. Thing. Everything. Won't. Person.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:thing",
+   "word": "thing",
+   "heard_in_group": "Veldt. Midnight. Thing. Everything. Won't. Person.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:everything",
+   "word": "everything",
+   "heard_in_group": "Veldt. Midnight. Thing. Everything. Won't. Person.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:won't",
+   "word": "won't",
+   "heard_in_group": "Veldt. Midnight. Thing. Everything. Won't. Person.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:person",
+   "word": "person",
+   "heard_in_group": "Veldt. Midnight. Thing. Everything. Won't. Person.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hit",
+   "word": "hit",
+   "heard_in_group": "Hit. Broke. Life. Inside. Never. Flying.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:broke",
+   "word": "broke",
+   "heard_in_group": "Hit. Broke. Life. Inside. Never. Flying.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:life",
+   "word": "life",
+   "heard_in_group": "Hit. Broke. Life. Inside. Never. Flying.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:inside",
+   "word": "inside",
+   "heard_in_group": "Hit. Broke. Life. Inside. Never. Flying.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:ever",
+   "word": "ever",
+   "heard_in_group": "Hit. Broke. Life. Inside. Never. Flying.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:flying",
+   "word": "flying",
+   "heard_in_group": "Hit. Broke. Life. Inside. Never. Flying.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:flower",
+   "word": "flower",
+   "heard_in_group": "Flower. Party. Everybody. Box. Lost. Cried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:party",
+   "word": "party",
+   "heard_in_group": "Flower. Party. Everybody. Box. Lost. Cried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:everybody",
+   "word": "everybody",
+   "heard_in_group": "Flower. Party. Everybody. Box. Lost. Cried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:box",
+   "word": "box",
+   "heard_in_group": "Flower. Party. Everybody. Box. Lost. Cried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:lost",
+   "word": "lost",
+   "heard_in_group": "Flower. Party. Everybody. Box. Lost. Cried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:cried",
+   "word": "cried",
+   "heard_in_group": "Flower. Party. Everybody. Box. Lost. Cried.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:outside",
+   "word": "outside",
+   "heard_in_group": "Outside. Table. It. Was. They. Cold.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:table",
+   "word": "table",
+   "heard_in_group": "Outside. Table. It. Was. They. Cold.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:it",
+   "word": "it",
+   "heard_in_group": "Outside. Table. It. Was. They. Cold.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:was",
+   "word": "was",
+   "heard_in_group": "Outside. Table. It. Was. They. Cold.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:a",
+   "word": "a",
+   "heard_in_group": "Outside. Table. It. Was. They. Cold.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:cold",
+   "word": "cold",
+   "heard_in_group": "Outside. Table. It. Was. They. Cold.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:night",
+   "word": "night",
+   "heard_in_group": "Knight, Artist, Pip, and Jet were",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:artus",
+   "word": "Artus",
+   "heard_in_group": "Knight, Artist, Pip, and Jet were",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:pip",
+   "word": "Pip",
+   "heard_in_group": "Knight, Artist, Pip, and Jet were",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:and",
+   "word": "and",
+   "heard_in_group": "Knight, Artist, Pip, and Jet were",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:jet",
+   "word": "Jet",
+   "heard_in_group": "Knight, Artist, Pip, and Jet were",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:were",
+   "word": "were",
+   "heard_in_group": "Knight, Artist, Pip, and Jet were",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:at",
+   "word": "at",
+   "heard_in_group": "at Grandma's house Grandma made hot",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:grandma's",
+   "word": "Grandma's",
+   "heard_in_group": "at Grandma's house Grandma made hot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:house",
+   "word": "house",
+   "heard_in_group": "at Grandma's house Grandma made hot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:grandma",
+   "word": "Grandma",
+   "heard_in_group": "at Grandma's house Grandma made hot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:made",
+   "word": "made",
+   "heard_in_group": "at Grandma's house Grandma made hot",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hot",
+   "word": "hot",
+   "heard_in_group": "at Grandma's house Grandma made hot",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:soup",
+   "word": "soup",
+   "heard_in_group": "A soup they ate by the fire.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:they",
+   "word": "they",
+   "heard_in_group": "A soup they ate by the fire.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:ate",
+   "word": "ate",
+   "heard_in_group": "A soup they ate by the fire.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:by",
+   "word": "by",
+   "heard_in_group": "A soup they ate by the fire.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:the",
+   "word": "the",
+   "heard_in_group": "A soup they ate by the fire.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:fire",
+   "word": "fire",
+   "heard_in_group": "A soup they ate by the fire.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:big",
+   "word": "big",
+   "heard_in_group": "Big. Now. He. As. Horse. Could.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:now",
+   "word": "now",
+   "heard_in_group": "Big. Now. He. As. Horse. Could.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:he",
+   "word": "he",
+   "heard_in_group": "Big. Now. He. As. Horse. Could.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:as",
+   "word": "as",
+   "heard_in_group": "Big. Now. He. As. Horse. Could.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:horse",
+   "word": "horse",
+   "heard_in_group": "Big. Now. He. As. Horse. Could.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:could",
+   "word": "could",
+   "heard_in_group": "Big. Now. He. As. Horse. Could.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:sit",
+   "word": "sit",
+   "heard_in_group": "Sit on his back, but not",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:on",
+   "word": "on",
+   "heard_in_group": "Sit on his back, but not",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:his",
+   "word": "his",
+   "heard_in_group": "Sit on his back, but not",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:back",
+   "word": "back",
+   "heard_in_group": "Sit on his back, but not",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:but",
+   "word": "but",
+   "heard_in_group": "Sit on his back, but not",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:not",
+   "word": "not",
+   "heard_in_group": "Sit on his back, but not",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:fly",
+   "word": "fly",
+   "heard_in_group": "Fly. Yet. Small. Had. Strong. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:yet",
+   "word": "yet",
+   "heard_in_group": "Fly. Yet. Small. Had. Strong. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:small",
+   "word": "small",
+   "heard_in_group": "Fly. Yet. Small. Had. Strong. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:had",
+   "word": "had",
+   "heard_in_group": "Fly. Yet. Small. Had. Strong. Wings.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:strong",
+   "word": "strong",
+   "heard_in_group": "Fly. Yet. Small. Had. Strong. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:wings",
+   "word": "wings",
+   "heard_in_group": "Fly. Yet. Small. Had. Strong. Wings.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:over",
+   "word": "over",
+   "heard_in_group": "Over. Trees. Again. Then. Now. Time.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:trees",
+   "word": "trees",
+   "heard_in_group": "Over. Trees. Again. Then. Now. Time.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:again",
+   "word": "again",
+   "heard_in_group": "Over. Trees. Again. Then. Now. Time.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:in",
+   "word": "in",
+   "heard_in_group": "Over. Trees. Again. Then. Now. Time.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:no",
+   "word": "no",
+   "heard_in_group": "Over. Trees. Again. Then. Now. Time.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:time",
+   "word": "time",
+   "heard_in_group": "Over. Trees. Again. Then. Now. Time.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:after",
+   "word": "after",
+   "heard_in_group": "After dinner, now up to a roof.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:dinner",
+   "word": "dinner",
+   "heard_in_group": "After dinner, now up to a roof.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:new",
+   "word": "new",
+   "heard_in_group": "After dinner, now up to a roof.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:up",
+   "word": "up",
+   "heard_in_group": "After dinner, now up to a roof.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:to",
+   "word": "to",
+   "heard_in_group": "After dinner, now up to a roof.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:roof",
+   "word": "roof",
+   "heard_in_group": "After dinner, now up to a roof.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:down",
+   "word": "down",
+   "heard_in_group": "Down. Very. Vast. Look. May. Said.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:very",
+   "word": "very",
+   "heard_in_group": "Down. Very. Vast. Look. May. Said.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:fast",
+   "word": "fast",
+   "heard_in_group": "Down. Very. Vast. Look. May. Said.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:look",
+   "word": "look",
+   "heard_in_group": "Down. Very. Vast. Look. May. Said.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:me",
+   "word": "me",
+   "heard_in_group": "Down. Very. Vast. Look. May. Said.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:said",
+   "word": "said",
+   "heard_in_group": "Down. Very. Vast. Look. May. Said.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:i",
+   "word": "i",
+   "heard_in_group": "site a.m. best dragon land you",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:am",
+   "word": "am",
+   "heard_in_group": "site a.m. best dragon land you",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:best",
+   "word": "best",
+   "heard_in_group": "site a.m. best dragon land you",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:dragon",
+   "word": "dragon",
+   "heard_in_group": "site a.m. best dragon land you",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:land",
+   "word": "land",
+   "heard_in_group": "site a.m. best dragon land you",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:you",
+   "word": "you",
+   "heard_in_group": "site a.m. best dragon land you",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:are",
+   "word": "are",
+   "heard_in_group": "are only this, all, then, them.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:only",
+   "word": "only",
+   "heard_in_group": "are only this, all, then, them.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:this",
+   "word": "this",
+   "heard_in_group": "are only this, all, then, them.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:all",
+   "word": "all",
+   "heard_in_group": "are only this, all, then, them.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:then",
+   "word": "then",
+   "heard_in_group": "are only this, all, then, them.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:them",
+   "word": "them",
+   "heard_in_group": "are only this, all, then, them.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:story",
+   "word": "story",
+   "heard_in_group": "A story about dark wizard magic for",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:about",
+   "word": "about",
+   "heard_in_group": "A story about dark wizard magic for",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:dark",
+   "word": "dark",
+   "heard_in_group": "A story about dark wizard magic for",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:wizard",
+   "word": "wizard",
+   "heard_in_group": "A story about dark wizard magic for",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:magic",
+   "word": "magic",
+   "heard_in_group": "A story about dark wizard magic for",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:for",
+   "word": "for",
+   "heard_in_group": "A story about dark wizard magic for",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:himself",
+   "word": "himself",
+   "heard_in_group": "himself, around, room, little, too, went.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:around",
+   "word": "around",
+   "heard_in_group": "himself, around, room, little, too, went.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:room",
+   "word": "room",
+   "heard_in_group": "himself, around, room, little, too, went.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:little",
+   "word": "little",
+   "heard_in_group": "himself, around, room, little, too, went.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:too",
+   "word": "too",
+   "heard_in_group": "himself, around, room, little, too, went.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:went",
+   "word": "went",
+   "heard_in_group": "himself, around, room, little, too, went.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:oh",
+   "word": "oh",
+   "heard_in_group": "Though, it looked, as if, that, is, good.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:looked",
+   "word": "looked",
+   "heard_in_group": "Though, it looked, as if, that, is, good.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:she",
+   "word": "she",
+   "heard_in_group": "Though, it looked, as if, that, is, good.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:that",
+   "word": "that",
+   "heard_in_group": "Though, it looked, as if, that, is, good.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:is",
+   "word": "is",
+   "heard_in_group": "Though, it looked, as if, that, is, good.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:good",
+   "word": "good",
+   "heard_in_group": "Though, it looked, as if, that, is, good.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:please",
+   "word": "please",
+   "heard_in_group": "Please. Do. Asked. Just. An. Old.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:do",
+   "word": "do",
+   "heard_in_group": "Please. Do. Asked. Just. An. Old.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:asked",
+   "word": "asked",
+   "heard_in_group": "Please. Do. Asked. Just. An. Old.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:just",
+   "word": "just",
+   "heard_in_group": "Please. Do. Asked. Just. An. Old.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:an",
+   "word": "an",
+   "heard_in_group": "Please. Do. Asked. Just. An. Old.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:old",
+   "word": "old",
+   "heard_in_group": "Please. Do. Asked. Just. An. Old.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:bed",
+   "word": "bed",
+   "heard_in_group": "Bed.  Sleep.  Window.  Because.  See.  Moon.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:sleep",
+   "word": "sleep",
+   "heard_in_group": "Bed.  Sleep.  Window.  Because.  See.  Moon.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:window",
+   "word": "window",
+   "heard_in_group": "Bed.  Sleep.  Window.  Because.  See.  Moon.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:because",
+   "word": "because",
+   "heard_in_group": "Bed.  Sleep.  Window.  Because.  See.  Moon.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:see",
+   "word": "see",
+   "heard_in_group": "Bed.  Sleep.  Window.  Because.  See.  Moon.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:moon",
+   "word": "moon",
+   "heard_in_group": "Bed.  Sleep.  Window.  Because.  See.  Moon.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:got",
+   "word": "got",
+   "heard_in_group": "Got. Into. Warm. Soon. Is left. Quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:into",
+   "word": "into",
+   "heard_in_group": "Got. Into. Warm. Soon. Is left. Quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:warm",
+   "word": "warm",
+   "heard_in_group": "Got. Into. Warm. Soon. Is left. Quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:soon",
+   "word": "soon",
+   "heard_in_group": "Got. Into. Warm. Soon. Is left. Quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:slept",
+   "word": "slept",
+   "heard_in_group": "Got. Into. Warm. Soon. Is left. Quiet.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:quiet",
+   "word": "quiet",
+   "heard_in_group": "Got. Into. Warm. Soon. Is left. Quiet.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:middle",
+   "word": "middle",
+   "heard_in_group": "Middle of there rain came is stopped",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:of",
+   "word": "of",
+   "heard_in_group": "Middle of there rain came is stopped",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:there",
+   "word": "there",
+   "heard_in_group": "Middle of there rain came is stopped",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:rain",
+   "word": "rain",
+   "heard_in_group": "Middle of there rain came is stopped",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:came",
+   "word": "came",
+   "heard_in_group": "Middle of there rain came is stopped",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:stopped",
+   "word": "stopped",
+   "heard_in_group": "Middle of there rain came is stopped",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:sat",
+   "word": "sat",
+   "heard_in_group": "Isat, Isa, Black, Coming, Under, Door",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:saw",
+   "word": "saw",
+   "heard_in_group": "Isat, Isa, Black, Coming, Under, Door",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:black",
+   "word": "black",
+   "heard_in_group": "Isat, Isa, Black, Coming, Under, Door",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:coming",
+   "word": "coming",
+   "heard_in_group": "Isat, Isa, Black, Coming, Under, Door",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:under",
+   "word": "under",
+   "heard_in_group": "Isat, Isa, Black, Coming, Under, Door",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:door",
+   "word": "door",
+   "heard_in_group": "Isat, Isa, Black, Coming, Under, Door",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:why",
+   "word": "why",
+   "heard_in_group": "Why. Did. Laugh. Think. Out. Wake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:did",
+   "word": "did",
+   "heard_in_group": "Why. Did. Laugh. Think. Out. Wake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:laugh",
+   "word": "laugh",
+   "heard_in_group": "Why. Did. Laugh. Think. Out. Wake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:think",
+   "word": "think",
+   "heard_in_group": "Why. Did. Laugh. Think. Out. Wake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:out",
+   "word": "out",
+   "heard_in_group": "Why. Did. Laugh. Think. Out. Wake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:wake",
+   "word": "wake",
+   "heard_in_group": "Why. Did. Laugh. Think. Out. Wake.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:once",
+   "word": "once",
+   "heard_in_group": "Once, mouse, wind, lights, man, tall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:mouth",
+   "word": "mouth",
+   "heard_in_group": "Once, mouse, wind, lights, man, tall.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:wind",
+   "word": "wind",
+   "heard_in_group": "Once, mouse, wind, lights, man, tall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:lights",
+   "word": "lights",
+   "heard_in_group": "Once, mouse, wind, lights, man, tall.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:man",
+   "word": "man",
+   "heard_in_group": "Once, mouse, wind, lights, man, tall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tall",
+   "word": "tall",
+   "heard_in_group": "Once, mouse, wind, lights, man, tall.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:thin",
+   "word": "thin",
+   "heard_in_group": "thin, long, eyes, green, like, cat.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:long",
+   "word": "long",
+   "heard_in_group": "thin, long, eyes, green, like, cat.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:eyes",
+   "word": "eyes",
+   "heard_in_group": "thin, long, eyes, green, like, cat.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:green",
+   "word": "green",
+   "heard_in_group": "thin, long, eyes, green, like, cat.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:like",
+   "word": "like",
+   "heard_in_group": "thin, long, eyes, green, like, cat.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:cat",
+   "word": "cat",
+   "heard_in_group": "thin, long, eyes, green, like, cat.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:voice",
+   "word": "voice",
+   "heard_in_group": "Voice. My. Name. Gracks. What. Want.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:my",
+   "word": "my",
+   "heard_in_group": "Voice. My. Name. Gracks. What. Want.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:name",
+   "word": "name",
+   "heard_in_group": "Voice. My. Name. Gracks. What. Want.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:grax",
+   "word": "Grax",
+   "heard_in_group": "Voice. My. Name. Gracks. What. Want.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:what",
+   "word": "what",
+   "heard_in_group": "Voice. My. Name. Gracks. What. Want.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:want",
+   "word": "want",
+   "heard_in_group": "Voice. My. Name. Gracks. What. Want.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:kind",
+   "word": "kind",
+   "heard_in_group": "Kind, smile, will, have, hand, ball.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:smile",
+   "word": "smile",
+   "heard_in_group": "Kind, smile, will, have, hand, ball.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:will",
+   "word": "will",
+   "heard_in_group": "Kind, smile, will, have, hand, ball.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:have",
+   "word": "have",
+   "heard_in_group": "Kind, smile, will, have, hand, ball.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:hand",
+   "word": "hand",
+   "heard_in_group": "Kind, smile, will, have, hand, ball.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:ball",
+   "word": "ball",
+   "heard_in_group": "Kind, smile, will, have, hand, ball.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:help",
+   "word": "help",
+   "heard_in_group": "Help. With. Get. Son. Your. Can't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:with",
+   "word": "with",
+   "heard_in_group": "Help. With. Get. Son. Your. Can't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:get",
+   "word": "get",
+   "heard_in_group": "Help. With. Get. Son. Your. Can't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:sun",
+   "word": "sun",
+   "heard_in_group": "Help. With. Get. Son. Your. Can't.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:your",
+   "word": "your",
+   "heard_in_group": "Help. With. Get. Son. Your. Can't.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:can't",
+   "word": "can't",
+   "heard_in_group": "Help. With. Get. Son. Your. Can't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:him",
+   "word": "him",
+   "heard_in_group": "Him, sky, cloud, away, mountains, ever.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:sky",
+   "word": "sky",
+   "heard_in_group": "Him, sky, cloud, away, mountains, ever.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:cloud",
+   "word": "cloud",
+   "heard_in_group": "Him, sky, cloud, away, mountains, ever.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:away",
+   "word": "away",
+   "heard_in_group": "Him, sky, cloud, away, mountains, ever.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:mountains",
+   "word": "mountains",
+   "heard_in_group": "Him, sky, cloud, away, mountains, ever.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:her",
+   "word": "her",
+   "heard_in_group": "Him, sky, cloud, away, mountains, ever.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:face",
+   "word": "face",
+   "heard_in_group": "Vase, white, true, nobody, tell, any.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:white",
+   "word": "white",
+   "heard_in_group": "Vase, white, true, nobody, tell, any.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:true",
+   "word": "true",
+   "heard_in_group": "Vase, white, true, nobody, tell, any.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:nobody",
+   "word": "nobody",
+   "heard_in_group": "Vase, white, true, nobody, tell, any.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tell",
+   "word": "tell",
+   "heard_in_group": "Vase, white, true, nobody, tell, any.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:any",
+   "word": "any",
+   "heard_in_group": "Vase, white, true, nobody, tell, any.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:more",
+   "word": "more",
+   "heard_in_group": "More. Stories. Cousin. Friend. We. Don't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:stories",
+   "word": "stories",
+   "heard_in_group": "More. Stories. Cousin. Friend. We. Don't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:cousin",
+   "word": "cousin",
+   "heard_in_group": "More. Stories. Cousin. Friend. We. Don't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:friend",
+   "word": "friend",
+   "heard_in_group": "More. Stories. Cousin. Friend. We. Don't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:we",
+   "word": "we",
+   "heard_in_group": "More. Stories. Cousin. Friend. We. Don't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:don't",
+   "word": "don't",
+   "heard_in_group": "More. Stories. Cousin. Friend. We. Don't.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:know",
+   "word": "know",
+   "heard_in_group": "Now, how, pips, feel, and, morning.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:how",
+   "word": "how",
+   "heard_in_group": "Now, how, pips, feel, and, morning.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:pip's",
+   "word": "Pip's",
+   "heard_in_group": "Now, how, pips, feel, and, morning.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:feel",
+   "word": "feel",
+   "heard_in_group": "Now, how, pips, feel, and, morning.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:end",
+   "word": "end",
+   "heard_in_group": "Now, how, pips, feel, and, morning.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:morning",
+   "word": "morning",
+   "heard_in_group": "Now, how, pips, feel, and, morning.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:sad",
+   "word": "sad",
+   "heard_in_group": "Sad. Eat. Find. Stop. Until. So.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:eat",
+   "word": "eat",
+   "heard_in_group": "Sad. Eat. Find. Stop. Until. So.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:find",
+   "word": "find",
+   "heard_in_group": "Sad. Eat. Find. Stop. Until. So.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:stop",
+   "word": "stop",
+   "heard_in_group": "Sad. Eat. Find. Stop. Until. So.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:until",
+   "word": "until",
+   "heard_in_group": "Sad. Eat. Find. Stop. Until. So.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:so",
+   "word": "so",
+   "heard_in_group": "Sad. Eat. Find. Stop. Until. So.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:need",
+   "word": "need",
+   "heard_in_group": "Need. Go. Orin. Nose. Day. Fields.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:go",
+   "word": "go",
+   "heard_in_group": "Need. Go. Orin. Nose. Day. Fields.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:oren",
+   "word": "Oren",
+   "heard_in_group": "Need. Go. Orin. Nose. Day. Fields.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:knows",
+   "word": "knows",
+   "heard_in_group": "Need. Go. Orin. Nose. Day. Fields.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:day",
+   "word": "day",
+   "heard_in_group": "Need. Go. Orin. Nose. Day. Fields.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:fields",
+   "word": "fields",
+   "heard_in_group": "Need. Go. Orin. Nose. Day. Fields.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:along",
+   "word": "along",
+   "heard_in_group": "Along, river, orens, tower, gust, giant",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:river",
+   "word": "river",
+   "heard_in_group": "Along, river, orens, tower, gust, giant",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:oren's",
+   "word": "Oren's",
+   "heard_in_group": "Along, river, orens, tower, gust, giant",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tower",
+   "word": "tower",
+   "heard_in_group": "Along, river, orens, tower, gust, giant",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:gus",
+   "word": "Gus",
+   "heard_in_group": "Along, river, orens, tower, gust, giant",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:giant",
+   "word": "giant",
+   "heard_in_group": "Along, river, orens, tower, gust, giant",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:here",
+   "word": "here",
+   "heard_in_group": "Here way right grass gray flowers",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:way",
+   "word": "way",
+   "heard_in_group": "Here way right grass gray flowers",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:right",
+   "word": "right",
+   "heard_in_group": "Here way right grass gray flowers",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:grass",
+   "word": "grass",
+   "heard_in_group": "Here way right grass gray flowers",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:grey",
+   "word": "grey",
+   "heard_in_group": "Here way right grass gray flowers",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:flowers",
+   "word": "flowers",
+   "heard_in_group": "Here way right grass gray flowers",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:farmer",
+   "word": "farmer",
+   "heard_in_group": "Farmer, field, going, every, goes, takes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:field",
+   "word": "field",
+   "heard_in_group": "Farmer, field, going, every, goes, takes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:going",
+   "word": "going",
+   "heard_in_group": "Farmer, field, going, every, goes, takes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:every",
+   "word": "every",
+   "heard_in_group": "Farmer, field, going, every, goes, takes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:goes",
+   "word": "goes",
+   "heard_in_group": "Farmer, field, going, every, goes, takes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:takes",
+   "word": "takes",
+   "heard_in_group": "Farmer, field, going, every, goes, takes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:from",
+   "word": "from",
+   "heard_in_group": "From Ego. Wasn't. Bad. Once. Must.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:ago",
+   "word": "ago",
+   "heard_in_group": "From Ego. Wasn't. Bad. Once. Must.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:wasn't",
+   "word": "wasn't",
+   "heard_in_group": "From Ego. Wasn't. Bad. Once. Must.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:bad",
+   "word": "bad",
+   "heard_in_group": "From Ego. Wasn't. Bad. Once. Must.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:wants",
+   "word": "wants",
+   "heard_in_group": "From Ego. Wasn't. Bad. Once. Must.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:must",
+   "word": "must",
+   "heard_in_group": "From Ego. Wasn't. Bad. Once. Must.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:rescue",
+   "word": "rescue",
+   "heard_in_group": "Rescue. Book. Plan. Lives. Castle. Island.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:book",
+   "word": "book",
+   "heard_in_group": "Rescue. Book. Plan. Lives. Castle. Island.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:plan",
+   "word": "plan",
+   "heard_in_group": "Rescue. Book. Plan. Lives. Castle. Island.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:lives",
+   "word": "lives",
+   "heard_in_group": "Rescue. Book. Plan. Lives. Castle. Island.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:castle",
+   "word": "castle",
+   "heard_in_group": "Rescue. Book. Plan. Lives. Castle. Island.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:island",
+   "word": "island",
+   "heard_in_group": "Rescue. Book. Plan. Lives. Castle. Island.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:through",
+   "word": "through",
+   "heard_in_group": "Through wild, forest, mountain, gabay, braves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:wild",
+   "word": "wild",
+   "heard_in_group": "Through wild, forest, mountain, gabay, braves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:forest",
+   "word": "forest",
+   "heard_in_group": "Through wild, forest, mountain, gabay, braves",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:mountain",
+   "word": "mountain",
+   "heard_in_group": "Through wild, forest, mountain, gabay, braves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:be",
+   "word": "be",
+   "heard_in_group": "Through wild, forest, mountain, gabay, braves",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:brave",
+   "word": "brave",
+   "heard_in_group": "Through wild, forest, mountain, gabay, braves",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:say",
+   "word": "say",
+   "heard_in_group": "Say, become, took, it's, light, other.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:become",
+   "word": "become",
+   "heard_in_group": "Say, become, took, it's, light, other.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:took",
+   "word": "took",
+   "heard_in_group": "Say, become, took, it's, light, other.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:its",
+   "word": "its",
+   "heard_in_group": "Say, become, took, it's, light, other.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:light",
+   "word": "light",
+   "heard_in_group": "Say, become, took, it's, light, other.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:other",
+   "word": "other",
+   "heard_in_group": "Say, become, took, it's, light, other.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:can",
+   "word": "can",
+   "heard_in_group": "can, tricks, lies, does, work, hold",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tricks",
+   "word": "tricks",
+   "heard_in_group": "can, tricks, lies, does, work, hold",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:lies",
+   "word": "lies",
+   "heard_in_group": "can, tricks, lies, does, work, hold",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:does",
+   "word": "does",
+   "heard_in_group": "can, tricks, lies, does, work, hold",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:work",
+   "word": "work",
+   "heard_in_group": "can, tricks, lies, does, work, hold",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hold",
+   "word": "hold",
+   "heard_in_group": "can, tricks, lies, does, work, hold",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:show",
+   "word": "show",
+   "heard_in_group": "Show. Works. Three. Times. Use. Well.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:works",
+   "word": "works",
+   "heard_in_group": "Show. Works. Three. Times. Use. Well.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:three",
+   "word": "three",
+   "heard_in_group": "Show. Works. Three. Times. Use. Well.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:times",
+   "word": "times",
+   "heard_in_group": "Show. Works. Three. Times. Use. Well.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:use",
+   "word": "use",
+   "heard_in_group": "Show. Works. Three. Times. Use. Well.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:well",
+   "word": "well",
+   "heard_in_group": "Show. Works. Three. Times. Use. Well.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:put",
+   "word": "put",
+   "heard_in_group": "Put, Bag, Food, Bread, Cheese, Apples",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:bag",
+   "word": "bag",
+   "heard_in_group": "Put, Bag, Food, Bread, Cheese, Apples",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:food",
+   "word": "food",
+   "heard_in_group": "Put, Bag, Food, Bread, Cheese, Apples",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:bread",
+   "word": "bread",
+   "heard_in_group": "Put, Bag, Food, Bread, Cheese, Apples",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:cheese",
+   "word": "cheese",
+   "heard_in_group": "Put, Bag, Food, Bread, Cheese, Apples",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:apples",
+   "word": "apples",
+   "heard_in_group": "Put, Bag, Food, Bread, Cheese, Apples",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:cake",
+   "word": "cake",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:each",
+   "word": "each",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:first",
+   "word": "first",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:come",
+   "word": "come",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:us",
+   "word": "us",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:wish",
+   "word": "wish",
+   "heard_in_group": "Cake, niche, versed, cum, us-es, wish",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:without",
+   "word": "without",
+   "heard_in_group": "Without water if cull top bowl",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:water",
+   "word": "water",
+   "heard_in_group": "Without water if cull top bowl",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:if",
+   "word": "if",
+   "heard_in_group": "Without water if cull top bowl",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:call",
+   "word": "call",
+   "heard_in_group": "Without water if cull top bowl",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:top",
+   "word": "top",
+   "heard_in_group": "Without water if cull top bowl",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:bowl",
+   "word": "bowl",
+   "heard_in_group": "Without water if cull top bowl",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:picture",
+   "word": "picture",
+   "heard_in_group": "Picture, red, candle, jets, still, bright",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:red",
+   "word": "red",
+   "heard_in_group": "Picture, red, candle, jets, still, bright",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:candle",
+   "word": "candle",
+   "heard_in_group": "Picture, red, candle, jets, still, bright",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:jet's",
+   "word": "Jet's",
+   "heard_in_group": "Picture, red, candle, jets, still, bright",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:still",
+   "word": "still",
+   "heard_in_group": "Picture, red, candle, jets, still, bright",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:bright",
+   "word": "bright",
+   "heard_in_group": "Picture, red, candle, jets, still, bright",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:lot",
+   "word": "lot",
+   "heard_in_group": "Lot. Afraid. Yes. Alone. Isn't. Hands.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:afraid",
+   "word": "afraid",
+   "heard_in_group": "Lot. Afraid. Yes. Alone. Isn't. Hands.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:yes",
+   "word": "yes",
+   "heard_in_group": "Lot. Afraid. Yes. Alone. Isn't. Hands.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:alone",
+   "word": "alone",
+   "heard_in_group": "Lot. Afraid. Yes. Alone. Isn't. Hands.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:isn't",
+   "word": "isn't",
+   "heard_in_group": "Lot. Afraid. Yes. Alone. Isn't. Hands.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hands",
+   "word": "hands",
+   "heard_in_group": "Lot. Afraid. Yes. Alone. Isn't. Hands.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:artus's",
+   "word": "Artus's",
+   "heard_in_group": "Artuses. Both. Began. Two. Days. Close.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:both",
+   "word": "both",
+   "heard_in_group": "Artuses. Both. Began. Two. Days. Close.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:began",
+   "word": "began",
+   "heard_in_group": "Artuses. Both. Began. Two. Days. Close.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:two",
+   "word": "two",
+   "heard_in_group": "Artuses. Both. Began. Two. Days. Close.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:days",
+   "word": "days",
+   "heard_in_group": "Artuses. Both. Began. Two. Days. Close.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:close",
+   "word": "close",
+   "heard_in_group": "Artuses. Both. Began. Two. Days. Close.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:together",
+   "word": "together",
+   "heard_in_group": "Together, birds, culled, monkeys, leaves, graxes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:birds",
+   "word": "birds",
+   "heard_in_group": "Together, birds, culled, monkeys, leaves, graxes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:called",
+   "word": "called",
+   "heard_in_group": "Together, birds, culled, monkeys, leaves, graxes.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:monkeys",
+   "word": "monkeys",
+   "heard_in_group": "Together, birds, culled, monkeys, leaves, graxes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:leaves",
+   "word": "leaves",
+   "heard_in_group": "Together, birds, culled, monkeys, leaves, graxes.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:grax's",
+   "word": "Grax's",
+   "heard_in_group": "Together, birds, culled, monkeys, leaves, graxes.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:follow",
+   "word": "follow",
+   "heard_in_group": "Follow. Followed. Deep. Path. Slowly. Heard.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:followed",
+   "word": "followed",
+   "heard_in_group": "Follow. Followed. Deep. Path. Slowly. Heard.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:deep",
+   "word": "deep",
+   "heard_in_group": "Follow. Followed. Deep. Path. Slowly. Heard.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:path",
+   "word": "path",
+   "heard_in_group": "Follow. Followed. Deep. Path. Slowly. Heard.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:slowly",
+   "word": "slowly",
+   "heard_in_group": "Follow. Followed. Deep. Path. Slowly. Heard.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:heard",
+   "word": "heard",
+   "heard_in_group": "Follow. Followed. Deep. Path. Slowly. Heard.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:orange",
+   "word": "orange",
+   "heard_in_group": "Orange move who or enemy friends",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:move",
+   "word": "move",
+   "heard_in_group": "Orange move who or enemy friends",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:who",
+   "word": "who",
+   "heard_in_group": "Orange move who or enemy friends",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:or",
+   "word": "or",
+   "heard_in_group": "Orange move who or enemy friends",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:enemy",
+   "word": "enemy",
+   "heard_in_group": "Orange move who or enemy friends",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:friends",
+   "word": "friends",
+   "heard_in_group": "Orange move who or enemy friends",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:our",
+   "word": "our",
+   "heard_in_group": "Our. Better. Behind. Make. Walk. Dragons.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:better",
+   "word": "better",
+   "heard_in_group": "Our. Better. Behind. Make. Walk. Dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:behind",
+   "word": "behind",
+   "heard_in_group": "Our. Better. Behind. Make. Walk. Dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:make",
+   "word": "make",
+   "heard_in_group": "Our. Better. Behind. Make. Walk. Dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:walk",
+   "word": "walk",
+   "heard_in_group": "Our. Better. Behind. Make. Walk. Dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:dragons",
+   "word": "dragons",
+   "heard_in_group": "Our. Better. Behind. Make. Walk. Dragons.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hide",
+   "word": "hide",
+   "heard_in_group": "hide, happy, witch, tree, stone, wend",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:happy",
+   "word": "happy",
+   "heard_in_group": "hide, happy, witch, tree, stone, wend",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:which",
+   "word": "which",
+   "heard_in_group": "hide, happy, witch, tree, stone, wend",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tree",
+   "word": "tree",
+   "heard_in_group": "hide, happy, witch, tree, stone, wend",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:stone",
+   "word": "stone",
+   "heard_in_group": "hide, happy, witch, tree, stone, wend",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:when",
+   "word": "when",
+   "heard_in_group": "hide, happy, witch, tree, stone, wend",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:angry",
+   "word": "angry",
+   "heard_in_group": "Angry, nose, drink, has, clean, blue.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:nose",
+   "word": "nose",
+   "heard_in_group": "Angry, nose, drink, has, clean, blue.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:drink",
+   "word": "drink",
+   "heard_in_group": "Angry, nose, drink, has, clean, blue.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:has",
+   "word": "has",
+   "heard_in_group": "Angry, nose, drink, has, clean, blue.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:clean",
+   "word": "clean",
+   "heard_in_group": "Angry, nose, drink, has, clean, blue.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:blue",
+   "word": "blue",
+   "heard_in_group": "Angry, nose, drink, has, clean, blue.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:things",
+   "word": "things",
+   "heard_in_group": "Things. Animal. Ears. Okapi. Creatures. Ascent.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:animal",
+   "word": "animal",
+   "heard_in_group": "Things. Animal. Ears. Okapi. Creatures. Ascent.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:ears",
+   "word": "ears",
+   "heard_in_group": "Things. Animal. Ears. Okapi. Creatures. Ascent.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:okapi",
+   "word": "okapi",
+   "heard_in_group": "Things. Animal. Ears. Okapi. Creatures. Ascent.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:creatures",
+   "word": "creatures",
+   "heard_in_group": "Things. Animal. Ears. Okapi. Creatures. Ascent.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:sent",
+   "word": "sent",
+   "heard_in_group": "Things. Animal. Ears. Okapi. Creatures. Ascent.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:many",
+   "word": "many",
+   "heard_in_group": "Many. Feet. Run. Late. There. Spell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:feet",
+   "word": "feet",
+   "heard_in_group": "Many. Feet. Run. Late. There. Spell.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:run",
+   "word": "run",
+   "heard_in_group": "Many. Feet. Run. Late. There. Spell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:late",
+   "word": "late",
+   "heard_in_group": "Many. Feet. Run. Late. There. Spell.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:their",
+   "word": "their",
+   "heard_in_group": "Many. Feet. Run. Late. There. Spell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:spell",
+   "word": "spell",
+   "heard_in_group": "Many. Feet. Run. Late. There. Spell.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:kept",
+   "word": "kept",
+   "heard_in_group": "Kept. Thank. Place. Everywhere. Thirsty. Gave.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:thank",
+   "word": "thank",
+   "heard_in_group": "Kept. Thank. Place. Everywhere. Thirsty. Gave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:place",
+   "word": "place",
+   "heard_in_group": "Kept. Thank. Place. Everywhere. Thirsty. Gave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:everywhere",
+   "word": "everywhere",
+   "heard_in_group": "Kept. Thank. Place. Everywhere. Thirsty. Gave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:thirsty",
+   "word": "thirsty",
+   "heard_in_group": "Kept. Thank. Place. Everywhere. Thirsty. Gave.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:gave",
+   "word": "gave",
+   "heard_in_group": "Kept. Thank. Place. Everywhere. Thirsty. Gave.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:some",
+   "word": "some",
+   "heard_in_group": "some, camel, purple, stars, star, lake",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:camel",
+   "word": "camel",
+   "heard_in_group": "some, camel, purple, stars, star, lake",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:purple",
+   "word": "purple",
+   "heard_in_group": "some, camel, purple, stars, star, lake",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:stars",
+   "word": "stars",
+   "heard_in_group": "some, camel, purple, stars, star, lake",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:star",
+   "word": "star",
+   "heard_in_group": "some, camel, purple, stars, star, lake",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:lake",
+   "word": "lake",
+   "heard_in_group": "some, camel, purple, stars, star, lake",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:different",
+   "word": "different",
+   "heard_in_group": "Different. Camp. Tent. One. Beautiful. Someone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:camp",
+   "word": "camp",
+   "heard_in_group": "Different. Camp. Tent. One. Beautiful. Someone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tent",
+   "word": "tent",
+   "heard_in_group": "Different. Camp. Tent. One. Beautiful. Someone.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:one",
+   "word": "one",
+   "heard_in_group": "Different. Camp. Tent. One. Beautiful. Someone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:beautiful",
+   "word": "beautiful",
+   "heard_in_group": "Different. Camp. Tent. One. Beautiful. Someone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:someone",
+   "word": "someone",
+   "heard_in_group": "Different. Camp. Tent. One. Beautiful. Someone.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:walking",
+   "word": "walking",
+   "heard_in_group": "Walking. Tired. Rook. Rooks. Care. Hurt.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:tired",
+   "word": "tired",
+   "heard_in_group": "Walking. Tired. Rook. Rooks. Care. Hurt.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:rook",
+   "word": "Rook",
+   "heard_in_group": "Walking. Tired. Rook. Rooks. Care. Hurt.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:rook's",
+   "word": "Rook's",
+   "heard_in_group": "Walking. Tired. Rook. Rooks. Care. Hurt.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:cage",
+   "word": "cage",
+   "heard_in_group": "Walking. Tired. Rook. Rooks. Care. Hurt.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:hurt",
+   "word": "hurt",
+   "heard_in_group": "Walking. Tired. Rook. Rooks. Care. Hurt.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hear",
+   "word": "hear",
+   "heard_in_group": "Here, secret, take, assumed, such, keep.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:secret",
+   "word": "secret",
+   "heard_in_group": "Here, secret, take, assumed, such, keep.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:take",
+   "word": "take",
+   "heard_in_group": "Here, secret, take, assumed, such, keep.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:seemed",
+   "word": "seemed",
+   "heard_in_group": "Here, secret, take, assumed, such, keep.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:such",
+   "word": "such",
+   "heard_in_group": "Here, secret, take, assumed, such, keep.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:keep",
+   "word": "keep",
+   "heard_in_group": "Here, secret, take, assumed, such, keep.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:funny",
+   "word": "funny",
+   "heard_in_group": "funny, ground, side, push, lead, whiles",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:ground",
+   "word": "ground",
+   "heard_in_group": "funny, ground, side, push, lead, whiles",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:side",
+   "word": "side",
+   "heard_in_group": "funny, ground, side, push, lead, whiles",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:push",
+   "word": "push",
+   "heard_in_group": "funny, ground, side, push, lead, whiles",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:lead",
+   "word": "lead",
+   "heard_in_group": "funny, ground, side, push, lead, whiles",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:walls",
+   "word": "walls",
+   "heard_in_group": "funny, ground, side, push, lead, whiles",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:stones",
+   "word": "stones",
+   "heard_in_group": "stones, while, ways, found, horns, triceratops.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:while",
+   "word": "while",
+   "heard_in_group": "stones, while, ways, found, horns, triceratops.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:ways",
+   "word": "ways",
+   "heard_in_group": "stones, while, ways, found, horns, triceratops.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:found",
+   "word": "found",
+   "heard_in_group": "stones, while, ways, found, horns, triceratops.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:horns",
+   "word": "horns",
+   "heard_in_group": "stones, while, ways, found, horns, triceratops.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:triceratops",
+   "word": "triceratops",
+   "heard_in_group": "stones, while, ways, found, horns, triceratops.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:noses",
+   "word": "noses",
+   "heard_in_group": "noses, chain, heaps, people, last, before.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:chain",
+   "word": "chain",
+   "heard_in_group": "noses, chain, heaps, people, last, before.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:keeps",
+   "word": "keeps",
+   "heard_in_group": "noses, chain, heaps, people, last, before.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:people",
+   "word": "people",
+   "heard_in_group": "noses, chain, heaps, people, last, before.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:last",
+   "word": "last",
+   "heard_in_group": "noses, chain, heaps, people, last, before.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:before",
+   "word": "before",
+   "heard_in_group": "noses, chain, heaps, people, last, before.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:turned",
+   "word": "turned",
+   "heard_in_group": "turned, says, careful, didn't, below, waves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:says",
+   "word": "says",
+   "heard_in_group": "turned, says, careful, didn't, below, waves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:careful",
+   "word": "careful",
+   "heard_in_group": "turned, says, careful, didn't, below, waves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:didn't",
+   "word": "didn't",
+   "heard_in_group": "turned, says, careful, didn't, below, waves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:below",
+   "word": "below",
+   "heard_in_group": "turned, says, careful, didn't, below, waves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:waves",
+   "word": "waves",
+   "heard_in_group": "turned, says, careful, didn't, below, waves",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:fall",
+   "word": "fall",
+   "heard_in_group": "Fall. Maybe. Done. Another. Break. Whole.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:maybe",
+   "word": "maybe",
+   "heard_in_group": "Fall. Maybe. Done. Another. Break. Whole.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:done",
+   "word": "done",
+   "heard_in_group": "Fall. Maybe. Done. Another. Break. Whole.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:another",
+   "word": "another",
+   "heard_in_group": "Fall. Maybe. Done. Another. Break. Whole.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:break",
+   "word": "break",
+   "heard_in_group": "Fall. Maybe. Done. Another. Break. Whole.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hole",
+   "word": "hole",
+   "heard_in_group": "Fall. Maybe. Done. Another. Break. Whole.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:jump",
+   "word": "jump",
+   "heard_in_group": "Jump, bird, pelican, windows, boom, never.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:bird",
+   "word": "bird",
+   "heard_in_group": "Jump, bird, pelican, windows, boom, never.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:pelican",
+   "word": "pelican",
+   "heard_in_group": "Jump, bird, pelican, windows, boom, never.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:windows",
+   "word": "windows",
+   "heard_in_group": "Jump, bird, pelican, windows, boom, never.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:boom",
+   "word": "boom",
+   "heard_in_group": "Jump, bird, pelican, windows, boom, never.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:never",
+   "word": "never",
+   "heard_in_group": "Jump, bird, pelican, windows, boom, never.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:give",
+   "word": "give",
+   "heard_in_group": "Give, gold, crown, much, where, there.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:gold",
+   "word": "gold",
+   "heard_in_group": "Give, gold, crown, much, where, there.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:crown",
+   "word": "crown",
+   "heard_in_group": "Give, gold, crown, much, where, there.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:much",
+   "word": "much",
+   "heard_in_group": "Give, gold, crown, much, where, there.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:where",
+   "word": "where",
+   "heard_in_group": "Give, gold, crown, much, where, there.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:air",
+   "word": "air",
+   "heard_in_group": "Give, gold, crown, much, where, there.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:open",
+   "word": "open",
+   "heard_in_group": "Open, while, listen, high, low, stairs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:wall",
+   "word": "wall",
+   "heard_in_group": "Open, while, listen, high, low, stairs.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:listen",
+   "word": "listen",
+   "heard_in_group": "Open, while, listen, high, low, stairs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:high",
+   "word": "high",
+   "heard_in_group": "Open, while, listen, high, low, stairs.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:low",
+   "word": "low",
+   "heard_in_group": "Open, while, listen, high, low, stairs.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:stairs",
+   "word": "stairs",
+   "heard_in_group": "Open, while, listen, high, low, stairs.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:try",
+   "word": "try",
+   "heard_in_group": "Try, voices, climb, storm, vish, round.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:voices",
+   "word": "voices",
+   "heard_in_group": "Try, voices, climb, storm, vish, round.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:climb",
+   "word": "climb",
+   "heard_in_group": "Try, voices, climb, storm, vish, round.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:storm",
+   "word": "storm",
+   "heard_in_group": "Try, voices, climb, storm, vish, round.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:fish",
+   "word": "fish",
+   "heard_in_group": "Try, voices, climb, storm, vish, round.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:round",
+   "word": "round",
+   "heard_in_group": "Try, voices, climb, storm, vish, round.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:full",
+   "word": "full",
+   "heard_in_group": "Full. Cages. Wait. Second. Glass. It's...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:cages",
+   "word": "cages",
+   "heard_in_group": "Full. Cages. Wait. Second. Glass. It's...",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:wait",
+   "word": "wait",
+   "heard_in_group": "Full. Cages. Wait. Second. Glass. It's...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:second",
+   "word": "second",
+   "heard_in_group": "Full. Cages. Wait. Second. Glass. It's...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:glass",
+   "word": "glass",
+   "heard_in_group": "Full. Cages. Wait. Second. Glass. It's...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:it's",
+   "word": "it's",
+   "heard_in_group": "Full. Cages. Wait. Second. Glass. It's...",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:key",
+   "word": "key",
+   "heard_in_group": "Key. Ring. Easy. Shout. Silly. Boy.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:ring",
+   "word": "ring",
+   "heard_in_group": "Key. Ring. Easy. Shout. Silly. Boy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:easy",
+   "word": "easy",
+   "heard_in_group": "Key. Ring. Easy. Shout. Silly. Boy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:shout",
+   "word": "shout",
+   "heard_in_group": "Key. Ring. Easy. Shout. Silly. Boy.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:silly",
+   "word": "silly",
+   "heard_in_group": "Key. Ring. Easy. Shout. Silly. Boy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:boy",
+   "word": "boy",
+   "heard_in_group": "Key. Ring. Easy. Shout. Silly. Boy.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:money",
+   "word": "money",
+   "heard_in_group": "Money, hungry, staff, piece, paper, map.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hungry",
+   "word": "hungry",
+   "heard_in_group": "Money, hungry, staff, piece, paper, map.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:staff",
+   "word": "staff",
+   "heard_in_group": "Money, hungry, staff, piece, paper, map.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:piece",
+   "word": "piece",
+   "heard_in_group": "Money, hungry, staff, piece, paper, map.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:paper",
+   "word": "paper",
+   "heard_in_group": "Money, hungry, staff, piece, paper, map.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:map",
+   "word": "map",
+   "heard_in_group": "Money, hungry, staff, piece, paper, map.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:thinks",
+   "word": "thinks",
+   "heard_in_group": "Thanks, looks, looking, hill, let, worst",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:looks",
+   "word": "looks",
+   "heard_in_group": "Thanks, looks, looking, hill, let, worst",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:looking",
+   "word": "looking",
+   "heard_in_group": "Thanks, looks, looking, hill, let, worst",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:hill",
+   "word": "hill",
+   "heard_in_group": "Thanks, looks, looking, hill, let, worst",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:let",
+   "word": "let",
+   "heard_in_group": "Thanks, looks, looking, hill, let, worst",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:worst",
+   "word": "worst",
+   "heard_in_group": "Thanks, looks, looking, hill, let, worst",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:care",
+   "word": "care",
+   "heard_in_group": "Care, leave, Jews, vote, rocks, eight.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:leave",
+   "word": "leave",
+   "heard_in_group": "Care, leave, Jews, vote, rocks, eight.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:choose",
+   "word": "choose",
+   "heard_in_group": "Care, leave, Jews, vote, rocks, eight.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:boat",
+   "word": "boat",
+   "heard_in_group": "Care, leave, Jews, vote, rocks, eight.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:rocks",
+   "word": "rocks",
+   "heard_in_group": "Care, leave, Jews, vote, rocks, eight.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:eight",
+   "word": "eight",
+   "heard_in_group": "Care, leave, Jews, vote, rocks, eight.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:octopus",
+   "word": "octopus",
+   "heard_in_group": "Octopus needs biggest rock. Third always.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:needs",
+   "word": "needs",
+   "heard_in_group": "Octopus needs biggest rock. Third always.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:biggest",
+   "word": "biggest",
+   "heard_in_group": "Octopus needs biggest rock. Third always.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:rock",
+   "word": "rock",
+   "heard_in_group": "Octopus needs biggest rock. Third always.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:third",
+   "word": "third",
+   "heard_in_group": "Octopus needs biggest rock. Third always.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:always",
+   "word": "always",
+   "heard_in_group": "Octopus needs biggest rock. Third always.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:gets",
+   "word": "gets",
+   "heard_in_group": "Gets. Thousand. Pieces. Thunder. Lightning. Love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:thousand",
+   "word": "thousand",
+   "heard_in_group": "Gets. Thousand. Pieces. Thunder. Lightning. Love.",
+   "match_in_group": true,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:pieces",
+   "word": "pieces",
+   "heard_in_group": "Gets. Thousand. Pieces. Thunder. Lightning. Love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:thunder",
+   "word": "thunder",
+   "heard_in_group": "Gets. Thousand. Pieces. Thunder. Lightning. Love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:lightning",
+   "word": "lightning",
+   "heard_in_group": "Gets. Thousand. Pieces. Thunder. Lightning. Love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:love",
+   "word": "love",
+   "heard_in_group": "Gets. Thousand. Pieces. Thunder. Lightning. Love.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:jumping",
+   "word": "jumping",
+   "heard_in_group": "Jumping.  Home.  Phoenix.  Fives.  Ecross.  Word.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:home",
+   "word": "home",
+   "heard_in_group": "Jumping.  Home.  Phoenix.  Fives.  Ecross.  Word.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:phoenix",
+   "word": "phoenix",
+   "heard_in_group": "Jumping.  Home.  Phoenix.  Fives.  Ecross.  Word.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:five",
+   "word": "five",
+   "heard_in_group": "Jumping.  Home.  Phoenix.  Fives.  Ecross.  Word.",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:across",
+   "word": "across",
+   "heard_in_group": "Jumping.  Home.  Phoenix.  Fives.  Ecross.  Word.",
+   "match_in_group": false,
+   "match_alone": false
+  },
+  {
+   "id": "story:dark-wizard:w:word",
+   "word": "word",
+   "heard_in_group": "Jumping.  Home.  Phoenix.  Fives.  Ecross.  Word.",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:worried",
+   "word": "worried",
+   "heard_in_group": "Worried comes mate cry",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:comes",
+   "word": "comes",
+   "heard_in_group": "Worried comes mate cry",
+   "match_in_group": true,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:meet",
+   "word": "meet",
+   "heard_in_group": "Worried comes mate cry",
+   "match_in_group": false,
+   "match_alone": true
+  },
+  {
+   "id": "story:dark-wizard:w:cry",
+   "word": "cry",
+   "heard_in_group": "Worried comes mate cry",
+   "match_in_group": true,
+   "match_alone": true
+  }
+ ]
+}

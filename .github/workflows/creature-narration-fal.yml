@@ -1,0 +1,34 @@
+name: Record creature narration (fal.ai, George)
+# Paid and bounded: runs only when the November creature request changes on a task branch.
+on:
+  push:
+    branches: ['claude/**', 'codex/**']
+    paths: ['docs/NARRATION_NOVEMBER_CREATURES_REQUEST.json']
+permissions:
+  contents: write
+concurrency:
+  group: creature-narration-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Record with George through fal.ai
+        env:
+          FAL_KEY: ${{ secrets.AL_AI_API }}
+        run: python3 scripts/generate-creature-narration-fal.py
+      - name: Commit the recordings to this branch
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/narration/november-creatures docs/narration-november-creatures || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Creature narration: George via fal.ai [skip ci]"
+          for i in 1 2 3; do git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break; sleep 5; done

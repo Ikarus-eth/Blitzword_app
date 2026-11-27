@@ -220,7 +220,8 @@
     function storyKey(word){return word.toLowerCase().replace(/[’']s$/,'').replace(/[^a-z]/g,'');}
     // Recorded tap-to-hear clips for a story campaign (Moon Key, 8 November 2026): 'story:<campaign>:w:<word>',
     // ':m:<word>' for its meaning and ':q:<question>'. Without a clip the words are spoken as before.
-    function storyClip(id){const c=A.current(ctx.state())?.campaign,key=c&&'story:'+c+':'+id;return key&&window.BlitzStoryVoice?.clips?.[key]?key:null;}
+    // A two-chapter arc shares one voice set: missions may name it with voiceSet (21 November 2026).
+    function storyClip(id){const m=A.current(ctx.state()),c=m?.voiceSet||m?.campaign,key=c&&'story:'+c+':'+id;return key&&window.BlitzStoryVoice?.clips?.[key]?key:null;}
     function sayStory(text,id){ctx.speak(text,{clip:storyClip(id)});}
     function glossaryEntry(key){const s=ctx.state(),name=(s.dragon.name||'Pip').toLowerCase();return D.glossary[key===name?'pip':key]||null;}
     function chunked(word,entry){
@@ -243,13 +244,16 @@
       content.append(tools,meaning);
       window.BlitzFeedback.show({kind:'success',title:spoken,message:'Tap a button to hear it again or find out what it means.',content,actions:[{label:'Back to the story'}],onClose:()=>{stamp=performance.now();}});
     }
+    // Harder words a story deliberately stretches with (21 November 2026): a dotted underline invites a tap
+    // instead of a guess. Words taught in this quest's fights stay unmarked so he reads them by himself.
+    function stretchWords(){try{return new Set(A.currentStory(ctx.state())?.stretch||[]);}catch(e){return new Set();}}
     function tappableText(text,cls='storyParagraph'){
-      const row=el('p',cls);ctx.dragonText(text).split(/(\s+)/).forEach(token=>{if(!token)return;if(/^\s+$/.test(token)){row.append(document.createTextNode(token));return;}
+      const row=el('p',cls),stretch=stretchWords();ctx.dragonText(text).split(/(\s+)/).forEach(token=>{if(!token)return;if(/^\s+$/.test(token)){row.append(document.createTextNode(token));return;}
         if(!/[A-Za-z]/.test(token)){row.append(document.createTextNode(token));return;}
-        const b=button(token,'storyWord',()=>openStoryWord(token));b.setAttribute('aria-label','Hear '+token.replace(/[^A-Za-z’']/g,''));row.append(b);});
+        const b=button(token,stretch.has(storyKey(token))?'storyWord stretchWord':'storyWord',()=>openStoryWord(token));b.setAttribute('aria-label','Hear '+token.replace(/[^A-Za-z’']/g,''));row.append(b);});
       return row;
     }
-    function previewClip(m,w){const key='story:'+m.campaign+':w:'+w.toLowerCase();return window.BlitzStoryVoice?.clips?.[key]?key:null;}
+    function previewClip(m,w){const key='story:'+(m.voiceSet||m.campaign)+':w:'+w.toLowerCase();return window.BlitzStoryVoice?.clips?.[key]?key:null;}
     function storyWordPreview(m){
       const box=el('div','storyPreview');box.append(el('p','storyPreviewLabel','Words for the next part of the story:'));
       const list=el('div','storyPreviewWords');for(const w of m.targets){const b=button(w,'storyPreviewWord',()=>{if(ctx.active())ctx.speak(w,{clip:previewClip(m,w)});});b.setAttribute('aria-label','Hear '+w);list.append(b);}box.append(list);return box;
@@ -279,7 +283,7 @@
         if(r.stage==='lookback'){const q=A.storyQuestion(s),hint=el('div','storyLookback');hint.append(el('strong','','Find the answer:'),tappableText(q.prompt,'storyLookbackQuestion'));panel.append(hint);}
         panel.append(heading(label+' · Page '+(r.page+1)+' of '+st.pages.length,st.title));
         const text=el('div','storyText');st.pages[r.page].forEach(p=>text.append(tappableText(p)));panel.append(text);
-        panel.append(el('p','storyTip','Tap any word to hear it.'));
+        panel.append(el('p','storyTip',st.stretch?.length?'Tap any word to hear it. Words with dots under them are new and tricky.':'Tap any word to hear it.'));
         const nav=el('div','storyNav');
         if(r.page>0)nav.append(button('← Page '+r.page,'secondaryButton',()=>act(()=>A.turnStoryPage(s,r.page-1))));
         if(r.stage==='lookback')nav.append(button('Back to the question','greenButton',()=>act(()=>A.backToQuestion(s))));

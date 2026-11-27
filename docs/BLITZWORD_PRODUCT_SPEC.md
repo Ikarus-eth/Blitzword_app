@@ -1331,3 +1331,12 @@ The user asked that the child can see his current active reading time in the top
 The user asked on 19 November 2026 for 35 new creatures, each in three styles for Artus to vote on, at most $1 of generation cost. The vote page uses Storybook, Elemental and Champion styles and the October final-look decision rules (Artus decides; Juna only breaks his ties; all below 3/5 excludes). It is artwork review only; chosen creatures enter the game only through a later campaign. [Details](enemies/NEW_CREATURES_VOTE.md).
 
 On 20 November 2026 the user rejected the fal.ai creature sheets as off-style and approved ChatGPT ImageGen pictures (one picture per look, warm painted storybook style on parchment) as the standard for new creature concepts. The vote page shows 13 such creatures.
+
+## Chapters 7 and 8: Pip and the Dark Wizard — 21 November 2026
+
+The parent asked for the next two chapters as one story arc: a dark wizard takes Pip's friend; someone seems to help but leads them into a trap; in the fight the wizard accepts killing his own helper while the hero escapes; the wizard is beaten, but it is unclear if he can come back. Jet is the friend taken (parent's choice). The helper's death is told gently and not shown in pictures.
+- Stories are longer than before (about 600 words per quest); questions are harder (why, how, feelings, order, wrong answers using words from the same page). Artus answered 74 of 75 story questions right first time before this change.
+- Stretch words: story words Artus does not know yet, other than this quest's battle targets, are marked with a dotted underline and can be tapped to hear them. Battle targets stay unmarked so he reads them himself. Keep marked words few (at most about 7 per 100 words).
+- The parent declined more review turns in battles (21 November 2026); new words keep their share. Story reading is the main check of older words.
+- Story pictures for this arc come from ChatGPT, kept few: one picture per story part. The eleven creatures Artus chose on 20 November are cut out of his chosen pictures without redrawing.
+

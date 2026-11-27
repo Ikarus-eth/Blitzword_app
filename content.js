@@ -1,5 +1,5 @@
 (function(root, factory) {
-  const content = factory(typeof module==='object'&&module.exports?require('./assets/enemies/approved-20261010/roster.js'):root.BlitzApprovedEnemies,typeof module==='object'&&module.exports?require('./assets/teaching/200-400/visuals.js'):root.BlitzTeachingVisuals);
+  const content = factory(typeof module==='object'&&module.exports?require('./assets/enemies/approved-20261121/roster.js'):root.BlitzApprovedEnemies,typeof module==='object'&&module.exports?require('./assets/teaching/200-400/visuals.js'):root.BlitzTeachingVisuals);
   if (typeof module === 'object' && module.exports) module.exports = content;
   else root.BlitzContent = content;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function(Approved, TeachingVisuals) {
@@ -3197,7 +3197,7 @@
   const growth={holdXP:44000,stage:2,campaign:'pip-grows'};
   // Which way each creature's painting looks (12 November 2026). Most creatures face left, towards the hero;
   // these face right in their art, so they are mirrored as enemies and not mirrored as guardians.
-  const facesRight=new Set(['ember-fox','rowan-stag','pine-marten','hazel-hare','cloak-raccoon','chestnut-squirrel','moss-bear','lily-otter','dam-beaver',
+  const facesRight=new Set(['guard-okapi','ember-fox','rowan-stag','pine-marten','hazel-hare','cloak-raccoon','chestnut-squirrel','moss-bear','lily-otter','dam-beaver',
     'amber-newt','cattail-heron','brook-turtle','willow-kingfisher','shell-lobster','marsh-crane','coal-salamander','slate-pangolin','cinder-porcupine',
     'echo-lizard','frost-lynx','aurora-elk','snow-hare','cloud-yak','pinecone-marmot','gale-falcon','lichen-ibex','hail-wolverine','mist-leopard',
     'glacier-seal','ink-raven','honey-wasp','dusk-firefly','petal-chameleon','moon-hare-knight']);
